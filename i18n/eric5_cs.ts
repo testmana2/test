@@ -4604,37 +4604,37 @@ Nepřipojen
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>Start Debugger</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="148"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="151"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Python2 interpreter není nakonfigurován.&lt;/p&gt;</translation>
     </message>
@@ -6798,7 +6798,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3882"/>
+        <location filename="QScintilla/Editor.py" line="3885"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
@@ -6878,7 +6878,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Tisk byl zrušen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2365"/>
+        <location filename="QScintilla/Editor.py" line="2368"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
@@ -6888,202 +6888,202 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3419"/>
+        <location filename="QScintilla/Editor.py" line="3422"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3419"/>
+        <location filename="QScintilla/Editor.py" line="3422"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3885"/>
+        <location filename="QScintilla/Editor.py" line="3888"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4156"/>
+        <location filename="QScintilla/Editor.py" line="4159"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4156"/>
+        <location filename="QScintilla/Editor.py" line="4159"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4202"/>
+        <location filename="QScintilla/Editor.py" line="4205"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4198"/>
+        <location filename="QScintilla/Editor.py" line="4201"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4202"/>
+        <location filename="QScintilla/Editor.py" line="4205"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4294"/>
+        <location filename="QScintilla/Editor.py" line="4297"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4294"/>
+        <location filename="QScintilla/Editor.py" line="4297"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4410"/>
+        <location filename="QScintilla/Editor.py" line="4413"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4410"/>
+        <location filename="QScintilla/Editor.py" line="4413"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4549"/>
+        <location filename="QScintilla/Editor.py" line="4552"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4549"/>
+        <location filename="QScintilla/Editor.py" line="4552"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4577"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4617"/>
+        <location filename="QScintilla/Editor.py" line="4620"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4601"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4617"/>
+        <location filename="QScintilla/Editor.py" line="4620"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4634"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4649"/>
+        <location filename="QScintilla/Editor.py" line="4652"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4660"/>
+        <location filename="QScintilla/Editor.py" line="4663"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4660"/>
+        <location filename="QScintilla/Editor.py" line="4663"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4685"/>
+        <location filename="QScintilla/Editor.py" line="4688"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4685"/>
+        <location filename="QScintilla/Editor.py" line="4688"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4803"/>
+        <location filename="QScintilla/Editor.py" line="4806"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4807"/>
+        <location filename="QScintilla/Editor.py" line="4810"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="5006"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5024"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5028"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5027"/>
+        <location filename="QScintilla/Editor.py" line="5030"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5029"/>
+        <location filename="QScintilla/Editor.py" line="5032"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5032"/>
+        <location filename="QScintilla/Editor.py" line="5035"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5050"/>
+        <location filename="QScintilla/Editor.py" line="5053"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5066"/>
+        <location filename="QScintilla/Editor.py" line="5069"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5096"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5183"/>
+        <location filename="QScintilla/Editor.py" line="5186"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5183"/>
+        <location filename="QScintilla/Editor.py" line="5186"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
@@ -7103,12 +7103,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
@@ -7183,7 +7183,7 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5415"/>
+        <location filename="QScintilla/Editor.py" line="5418"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
@@ -7193,12 +7193,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5420"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5419"/>
+        <location filename="QScintilla/Editor.py" line="5422"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
@@ -7243,12 +7243,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4591"/>
+        <location filename="QScintilla/Editor.py" line="4594"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4601"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
@@ -7258,27 +7258,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4649"/>
+        <location filename="QScintilla/Editor.py" line="4652"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4801"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4886"/>
+        <location filename="QScintilla/Editor.py" line="4889"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="5006"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5096"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -7303,22 +7303,22 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Vyčistit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4533"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4533"/>
         <source>No py3flakes warning message available.</source>
         <translation>Varování py3flakes není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2365"/>
+        <location filename="QScintilla/Editor.py" line="2368"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4634"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22134,19 +22134,29 @@ Do you want to save your changes?</source>
         <translation>&lt;p&gt;Certifikáty:&lt;br/&gt;{0}&lt;br/&gt;Chcete akceptovat všechny certifikáty?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="262"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="266"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Vydatavel: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="265"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="269"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Neplatný před: {0}&lt;br/&gt;Platný do: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="272"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>&lt;br/&gt;Alternativní jména:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
+        <translation type="obsolete">&lt;br/&gt;Alternativní jména:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="260"/>
+        <source>Name: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="263"/>
+        <source>&lt;br/&gt;Organization: {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -29975,51 +29985,51 @@ Not connected</source>
 &lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="62"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="101"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="104"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;
 &lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="108"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="78"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;
 &lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="115"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="131"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="134"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -30028,78 +30038,78 @@ Not connected</source>
 &lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="205"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="214"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>Vybrat pro vymazání shromážděných informací z pokrytí</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="208"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat informace z pokrytí&lt;/b&gt;
 &lt;p&gt;Před dalším spuštěním procesu pokrytí vyberte toto pro vymazání předchozích nashromážděných informací.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="212"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="221"/>
         <source>Erase &amp;coverage information</source>
         <translation>&amp;Vymazat info pokrytí</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="215"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="155"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="158"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;
 &lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="162"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="165"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="175"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="178"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="181"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="191"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="194"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;
 &lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="198"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
@@ -30112,51 +30122,51 @@ Not connected</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="131"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="134"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="115"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="78"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne ladění. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="101"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="104"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="108"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="62"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
@@ -30177,123 +30187,123 @@ Not connected</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="155"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="158"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="162"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="165"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="205"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="214"/>
         <source>Select to trace into the Python library</source>
         <translation>Výběr pro trasování do Python knihovny</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="208"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="217"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>&amp;Trasovat do knihoven inerpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="211"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="220"/>
         <source>Alt+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="175"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="178"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí ladicí klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="181"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="218"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="227"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>Vybrat pro zastavení debugeru na první spustitelné řádce.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="221"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="230"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nezastavovat na první řádce&lt;/b&gt;&lt;p&gt;Toto debugeru zabrání zastavit se na první spustitelné řádce.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="224"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="233"/>
         <source>Don&apos;t stop at first line</source>
         <translation>Nezastavovat na prvním řádku</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="191"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="194"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="198"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="234"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
         <source>Forking</source>
         <translation>Forkování</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="240"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="249"/>
         <source>Select to go through the fork without asking</source>
         <translation>Neptat se když se prochází přes fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="252"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork bez zastavení&lt;/b&gt;
 &lt;p&gt;Procházet přes fork bez ptaní a provést rozhodnutí pro fork založeném na výběru Rodič/Potomek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="247"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="256"/>
         <source>Fork without pausing</source>
         <translation>Fork bez zastavení</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="257"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="266"/>
         <source>Select to debug the child process after forking</source>
         <translation>Vybrat pro ladění potomka procesu po forku</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="260"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="269"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ladit potomka procesu&lt;/b&gt;
 &lt;p&gt;Výběr debugování potomka procesu po forku. Není-li toto vybráno, je laděn rodičovský proces. Toto nastavení nemá efekt, není-li nastaveno forkování bez zastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="264"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
         <translation>Ladit proces potomka</translation>
     </message>
@@ -30314,146 +30324,146 @@ Not connected</source>
 <context>
     <name>StartProfileDialog</name>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="13"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="14"/>
         <source>Start profiling</source>
         <translation>Spustit profilování</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="130"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="133"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="77"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="80"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="100"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="103"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="61"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="38"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="39"/>
         <source>Enter the commandline parameters</source>
         <translation>Zadejte parametry příkazového řádku</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="41"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="42"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;&lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="22"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="23"/>
         <source>Command&amp;line:</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="204"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
         <source>Select this to erase the collected timing data</source>
         <translation>Vybrat pro vymazání shromážděných informací z timig</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat timig data&lt;/b&gt;
 &lt;p&gt;Vyberete pro vymazání shomážděných timing dat před dalším spuštěním profilování.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="211"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="221"/>
         <source>Erase &amp;timing data</source>
         <translation>Vymazat &amp;timing data</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="154"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="157"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="161"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="177"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="180"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="193"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="197"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
@@ -30482,142 +30492,142 @@ Not connected</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;&lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="62"/>
+        <location filename="Debugger/StartRunDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="101"/>
+        <location filename="Debugger/StartRunDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="104"/>
+        <location filename="Debugger/StartRunDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="108"/>
+        <location filename="Debugger/StartRunDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="78"/>
+        <location filename="Debugger/StartRunDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="81"/>
+        <location filename="Debugger/StartRunDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="115"/>
+        <location filename="Debugger/StartRunDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="131"/>
+        <location filename="Debugger/StartRunDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="134"/>
+        <location filename="Debugger/StartRunDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="155"/>
+        <location filename="Debugger/StartRunDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="158"/>
+        <location filename="Debugger/StartRunDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="162"/>
+        <location filename="Debugger/StartRunDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="165"/>
+        <location filename="Debugger/StartRunDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="175"/>
+        <location filename="Debugger/StartRunDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="178"/>
+        <location filename="Debugger/StartRunDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="181"/>
+        <location filename="Debugger/StartRunDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="191"/>
+        <location filename="Debugger/StartRunDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="194"/>
+        <location filename="Debugger/StartRunDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="198"/>
+        <location filename="Debugger/StartRunDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="205"/>
+        <location filename="Debugger/StartRunDialog.ui" line="214"/>
         <source>Forking</source>
         <translation>Větvení</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="211"/>
+        <location filename="Debugger/StartRunDialog.ui" line="220"/>
         <source>Select to go through the fork without asking</source>
         <translation>Neptat se když se prochází přes větvení</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="Debugger/StartRunDialog.ui" line="223"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Větvení bez zastavení&lt;/b&gt;
 &lt;p&gt;Procházet přes větvení bez ptaní a provést rozhodnutí pro fork založeném na výběru Rodič/Potomek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="218"/>
+        <location filename="Debugger/StartRunDialog.ui" line="227"/>
         <source>Fork without pausing</source>
         <translation>Fork bez zastavení</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="228"/>
+        <location filename="Debugger/StartRunDialog.ui" line="237"/>
         <source>Select to debug the child process after forking</source>
         <translation>Vybrat pro ladění potomka procesu po větvení</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="231"/>
+        <location filename="Debugger/StartRunDialog.ui" line="240"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ladit potomka procesu&lt;/b&gt;
 &lt;p&gt;Výběr debugování potomka procesu po forku. Není-li toto vybráno, je laděn rodičovský proces. Toto nastavení nemá efekt, není-li nastaveno větvení bez zastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="235"/>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
         <translation>Ladit proces potomka</translation>
     </message>
@@ -42611,561 +42621,561 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 &lt;p&gt;Hledat text v souborech v adresářích nebo projektu. Je zobrazeno dialogové okno, do kterého se zadá hledaný text a nastavení a ve kterém se zobrazuje výsledek hledání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Zoom in</source>
         <translation>Přiblížit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Zoom &amp;in</source>
         <translation>Př&amp;iblížit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2252"/>
+        <location filename="ViewManager/ViewManager.py" line="2254"/>
         <source>Zoom in on the text</source>
         <translation>Zvětšovací lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2254"/>
+        <location filename="ViewManager/ViewManager.py" line="2256"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přiblížit&lt;/b&gt;&lt;p&gt;Přiblížit text. Text bude větší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Zoom out</source>
         <translation>Oddálit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Zoom &amp;out</source>
         <translation>&amp;Oddálit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2268"/>
+        <location filename="ViewManager/ViewManager.py" line="2270"/>
         <source>Zoom out on the text</source>
         <translation>Zmenšovací lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2270"/>
+        <location filename="ViewManager/ViewManager.py" line="2272"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Oddálit&lt;/b&gt;&lt;p&gt;Lupa na oddálení textu. Text bude menší.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>Zoom</source>
         <translation>Lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Lupa</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2284"/>
+        <location filename="ViewManager/ViewManager.py" line="2286"/>
         <source>Zoom the text</source>
         <translation>Lupa na text</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2286"/>
+        <location filename="ViewManager/ViewManager.py" line="2288"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the text. This opens a dialog where the desired size can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lupa&lt;/b&gt;&lt;p&gt;Lupa na text. Otevře se dialogové okno kde se zadá požadovaná hodnota zvětšení/zmenšení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2298"/>
+        <location filename="ViewManager/ViewManager.py" line="2300"/>
         <source>Toggle all folds</source>
         <translation>Složit/rozložit všechna skládání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2294"/>
+        <location filename="ViewManager/ViewManager.py" line="2296"/>
         <source>Toggle &amp;all folds</source>
         <translation>Složit/rozložit všechn&amp;a skládání</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2300"/>
+        <location filename="ViewManager/ViewManager.py" line="2302"/>
         <source>&lt;b&gt;Toggle all folds&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit všechna skládání&lt;/b&gt;&lt;p&gt;Složí/rozloží všechna skládání v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2313"/>
+        <location filename="ViewManager/ViewManager.py" line="2315"/>
         <source>Toggle all folds (including children)</source>
         <translation>Složit/rozložit všechna skládání (i s podsložkami)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2308"/>
+        <location filename="ViewManager/ViewManager.py" line="2310"/>
         <source>Toggle all &amp;folds (including children)</source>
         <translation>Složit/rozložit všechna &amp;skládání (i s podsložkami)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2315"/>
+        <location filename="ViewManager/ViewManager.py" line="2317"/>
         <source>&lt;b&gt;Toggle all folds (including children)&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor including all children.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit všechna skládání (i s podsložkami)&lt;/b&gt;&lt;p&gt;Složí nebo rozloží všechna skládání i s podsložkami.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2327"/>
+        <location filename="ViewManager/ViewManager.py" line="2329"/>
         <source>Toggle current fold</source>
         <translation>Složit/rozložit aktuální složený blok</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2323"/>
+        <location filename="ViewManager/ViewManager.py" line="2325"/>
         <source>Toggle &amp;current fold</source>
         <translation>Složit/rozložit aktuální složený &amp;blok</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2329"/>
+        <location filename="ViewManager/ViewManager.py" line="2331"/>
         <source>&lt;b&gt;Toggle current fold&lt;/b&gt;&lt;p&gt;Toggle the folds of the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Složit/rozložit aktuální složený blok&lt;/b&gt;&lt;p&gt;Složí nebo rozloží aktuální složený blok v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2342"/>
+        <location filename="ViewManager/ViewManager.py" line="2344"/>
         <source>Remove all highlights</source>
         <translation>Odebrat všechna zvýraznění</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2344"/>
+        <location filename="ViewManager/ViewManager.py" line="2346"/>
         <source>&lt;b&gt;Remove all highlights&lt;/b&gt;&lt;p&gt;Remove the highlights of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odebrat všechna zvýraznění&lt;/b&gt;&lt;p&gt;Odebrat zvýraznění ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2351"/>
+        <location filename="ViewManager/ViewManager.py" line="2353"/>
         <source>Split view</source>
         <translation>Rozdělit pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2351"/>
+        <location filename="ViewManager/ViewManager.py" line="2353"/>
         <source>&amp;Split view</source>
         <translation>&amp;Rozdělit pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2355"/>
+        <location filename="ViewManager/ViewManager.py" line="2357"/>
         <source>Add a split to the view</source>
         <translation>Přidat další rozdělení pohledu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2357"/>
+        <location filename="ViewManager/ViewManager.py" line="2359"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rozdělit pohled&lt;/b&gt;&lt;p&gt;Přidá další okno na aktuální pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2364"/>
+        <location filename="ViewManager/ViewManager.py" line="2366"/>
         <source>Arrange horizontally</source>
         <translation>Uspořádat horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2364"/>
+        <location filename="ViewManager/ViewManager.py" line="2366"/>
         <source>Arrange &amp;horizontally</source>
         <translation>Uspořádat &amp;horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2369"/>
+        <location filename="ViewManager/ViewManager.py" line="2371"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>Uspořádat rozdělené pohledy horizontálně</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2371"/>
+        <location filename="ViewManager/ViewManager.py" line="2373"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uspořádat horizontálně&lt;/b&gt;&lt;p&gt;Uspořádat rozdělené pohledy horizontálně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2379"/>
+        <location filename="ViewManager/ViewManager.py" line="2381"/>
         <source>Remove split</source>
         <translation>Odebrat rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2379"/>
+        <location filename="ViewManager/ViewManager.py" line="2381"/>
         <source>&amp;Remove split</source>
         <translation>Odebra&amp;t rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2384"/>
+        <location filename="ViewManager/ViewManager.py" line="2386"/>
         <source>Remove the current split</source>
         <translation>Odebrat aktuální rozdělení pohledu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2386"/>
+        <location filename="ViewManager/ViewManager.py" line="2388"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Odebrat rozdělený pohled&lt;/b&gt;&lt;p&gt;Odebrat aktuální rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>Next split</source>
         <translation>Další rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>&amp;Next split</source>
         <translation>Další rozděle&amp;ný pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2399"/>
+        <location filename="ViewManager/ViewManager.py" line="2401"/>
         <source>Move to the next split</source>
         <translation>Posun na další rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2401"/>
+        <location filename="ViewManager/ViewManager.py" line="2403"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Další rozdělený pohled&lt;/b&gt;&lt;p&gt;Posun na další rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>Previous split</source>
         <translation>Předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>&amp;Previous split</source>
         <translation>&amp;Předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2414"/>
+        <location filename="ViewManager/ViewManager.py" line="2416"/>
         <source>Move to the previous split</source>
         <translation>Posun na předchozí rozdělený pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2416"/>
+        <location filename="ViewManager/ViewManager.py" line="2418"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí rozdělený pohled&lt;/b&gt;&lt;p&gt;Posun na předchozí rozdělený pohled.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2438"/>
+        <location filename="ViewManager/ViewManager.py" line="2440"/>
         <source>&amp;View</source>
         <translation>Poh&amp;led</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2465"/>
+        <location filename="ViewManager/ViewManager.py" line="2467"/>
         <source>View</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2491"/>
+        <location filename="ViewManager/ViewManager.py" line="2493"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2486"/>
+        <location filename="ViewManager/ViewManager.py" line="2488"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>Spus&amp;tit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2493"/>
+        <location filename="ViewManager/ViewManager.py" line="2495"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit záznam makra&lt;/b&gt;&lt;p&gt;Spustí se záznam příkazů do nového makra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2505"/>
+        <location filename="ViewManager/ViewManager.py" line="2507"/>
         <source>Stop Macro Recording</source>
         <translation>Zastavit záznam makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2500"/>
+        <location filename="ViewManager/ViewManager.py" line="2502"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>Sto&amp;p záznamu makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2507"/>
+        <location filename="ViewManager/ViewManager.py" line="2509"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stop záznamu makra&lt;/b&gt;&lt;p&gt;Zastaví se nahrávání příkazů do makra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2517"/>
+        <location filename="ViewManager/ViewManager.py" line="2519"/>
         <source>Run Macro</source>
         <translation>Spustit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2514"/>
+        <location filename="ViewManager/ViewManager.py" line="2516"/>
         <source>&amp;Run Macro</source>
         <translation>Spustit mak&amp;ro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2518"/>
+        <location filename="ViewManager/ViewManager.py" line="2520"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit makro&lt;/b&gt;&lt;p&gt;Spustit nahrané makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2529"/>
+        <location filename="ViewManager/ViewManager.py" line="2531"/>
         <source>Delete Macro</source>
         <translation>Smazat makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2525"/>
+        <location filename="ViewManager/ViewManager.py" line="2527"/>
         <source>&amp;Delete Macro</source>
         <translation>Smazat makr&amp;o</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2531"/>
+        <location filename="ViewManager/ViewManager.py" line="2533"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat makro&lt;/b&gt;&lt;p&gt;Smaže se nahrané makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2541"/>
+        <location filename="ViewManager/ViewManager.py" line="2543"/>
         <source>Load Macro</source>
         <translation>Načíst makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2538"/>
+        <location filename="ViewManager/ViewManager.py" line="2540"/>
         <source>&amp;Load Macro</source>
         <translation>&amp;Načíst makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2543"/>
+        <location filename="ViewManager/ViewManager.py" line="2545"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Načíst makro&lt;/b&gt;&lt;p&gt;Načte se makro ze souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2553"/>
+        <location filename="ViewManager/ViewManager.py" line="2555"/>
         <source>Save Macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2550"/>
+        <location filename="ViewManager/ViewManager.py" line="2552"/>
         <source>&amp;Save Macro</source>
         <translation>&amp;Uložit makro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2555"/>
+        <location filename="ViewManager/ViewManager.py" line="2557"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Uložit makro&lt;/b&gt;&lt;p&gt;Nahrané makro se uloží do souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2570"/>
+        <location filename="ViewManager/ViewManager.py" line="2572"/>
         <source>&amp;Macros</source>
         <translation>&amp;Makra</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2593"/>
+        <location filename="ViewManager/ViewManager.py" line="2595"/>
         <source>Toggle Bookmark</source>
         <translation>Přepnout záložku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2586"/>
+        <location filename="ViewManager/ViewManager.py" line="2588"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>Přepnou&amp;t záložku</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2586"/>
+        <location filename="ViewManager/ViewManager.py" line="2588"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2595"/>
+        <location filename="ViewManager/ViewManager.py" line="2597"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přepnout záložku&lt;/b&gt;&lt;p&gt;Vytvoří/zruší záložku na aktuálním řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2609"/>
+        <location filename="ViewManager/ViewManager.py" line="2611"/>
         <source>Next Bookmark</source>
         <translation>Následující záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2602"/>
+        <location filename="ViewManager/ViewManager.py" line="2604"/>
         <source>&amp;Next Bookmark</source>
         <translation>&amp;Následující záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2602"/>
+        <location filename="ViewManager/ViewManager.py" line="2604"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2611"/>
+        <location filename="ViewManager/ViewManager.py" line="2613"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující záložka&lt;/b&gt;&lt;p&gt;Přesun na následující záložku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2625"/>
+        <location filename="ViewManager/ViewManager.py" line="2627"/>
         <source>Previous Bookmark</source>
         <translation>Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2618"/>
+        <location filename="ViewManager/ViewManager.py" line="2620"/>
         <source>&amp;Previous Bookmark</source>
         <translation>&amp;Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2618"/>
+        <location filename="ViewManager/ViewManager.py" line="2620"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2627"/>
+        <location filename="ViewManager/ViewManager.py" line="2629"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí záložka&lt;/b&gt;&lt;p&gt;Přesun na předchozí záložku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2641"/>
+        <location filename="ViewManager/ViewManager.py" line="2643"/>
         <source>Clear Bookmarks</source>
         <translation>Vyčistit záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2634"/>
+        <location filename="ViewManager/ViewManager.py" line="2636"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>Vyčistit (zr&amp;ušit) záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2634"/>
+        <location filename="ViewManager/ViewManager.py" line="2636"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2643"/>
+        <location filename="ViewManager/ViewManager.py" line="2645"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit (zrušit) záložky&lt;/b&gt;&lt;p&gt;Zruší se všechny záložky ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2656"/>
+        <location filename="ViewManager/ViewManager.py" line="2658"/>
         <source>Goto Syntax Error</source>
         <translation>Jít na Syntaktickou chybu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2650"/>
+        <location filename="ViewManager/ViewManager.py" line="2652"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>&amp;Jít na Syntaktickou chybu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2658"/>
+        <location filename="ViewManager/ViewManager.py" line="2660"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jít na Syntax error&lt;/b&gt;&lt;p&gt;Přesun na syntaktickou chybu v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2670"/>
+        <location filename="ViewManager/ViewManager.py" line="2672"/>
         <source>Clear Syntax Errors</source>
         <translation>Vyčistit Syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2665"/>
+        <location filename="ViewManager/ViewManager.py" line="2667"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>V&amp;yčistit Syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2672"/>
+        <location filename="ViewManager/ViewManager.py" line="2674"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit syntaktické chyby&lt;/b&gt;&lt;p&gt;Smažou se záznamy o syntaktických chybách ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2734"/>
+        <location filename="ViewManager/ViewManager.py" line="2736"/>
         <source>Next uncovered line</source>
         <translation>Následují problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2728"/>
+        <location filename="ViewManager/ViewManager.py" line="2730"/>
         <source>&amp;Next uncovered line</source>
         <translation>Nás&amp;ledující problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2736"/>
+        <location filename="ViewManager/ViewManager.py" line="2738"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující problémová řádka&lt;/b&gt;&lt;p&gt;Jít na řádku v aktuálním editoru, která byla nalezena jako problémová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2750"/>
+        <location filename="ViewManager/ViewManager.py" line="2752"/>
         <source>Previous uncovered line</source>
         <translation>Předchozí problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2743"/>
+        <location filename="ViewManager/ViewManager.py" line="2745"/>
         <source>&amp;Previous uncovered line</source>
         <translation>Př&amp;edchozí problémová řádka</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2752"/>
+        <location filename="ViewManager/ViewManager.py" line="2754"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí problémová řádka&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která byla nalezena jako problémová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2766"/>
+        <location filename="ViewManager/ViewManager.py" line="2768"/>
         <source>Next Task</source>
         <translation>Následující úloha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2760"/>
+        <location filename="ViewManager/ViewManager.py" line="2762"/>
         <source>&amp;Next Task</source>
         <translation>Následující úlo&amp;ha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2768"/>
+        <location filename="ViewManager/ViewManager.py" line="2770"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Následující úloha&lt;/b&gt;&lt;p&gt;Jít na řádek v aktuálním editoru, na kterém je následující úloha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2782"/>
+        <location filename="ViewManager/ViewManager.py" line="2784"/>
         <source>Previous Task</source>
         <translation>Předchozí úloha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2775"/>
+        <location filename="ViewManager/ViewManager.py" line="2777"/>
         <source>&amp;Previous Task</source>
         <translation>Předchozí úl&amp;oha</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2784"/>
+        <location filename="ViewManager/ViewManager.py" line="2786"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí úloha&lt;/b&gt;&lt;p&gt;Jít na řádek, na kterém se nachází předchozí úloha.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2800"/>
+        <location filename="ViewManager/ViewManager.py" line="2802"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2840"/>
+        <location filename="ViewManager/ViewManager.py" line="2842"/>
         <source>Bookmarks</source>
         <translation>Záložky</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2963"/>
+        <location filename="ViewManager/ViewManager.py" line="2965"/>
         <source>Open files</source>
         <translation>Otevřené soubory</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3000"/>
+        <location filename="ViewManager/ViewManager.py" line="3002"/>
         <source>File Modified</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3647"/>
+        <location filename="ViewManager/ViewManager.py" line="3649"/>
         <source>&amp;Clear</source>
         <translation>&amp;Vyčistit</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3643"/>
+        <location filename="ViewManager/ViewManager.py" line="3645"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3645"/>
+        <location filename="ViewManager/ViewManager.py" line="3647"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Edit...</translation>
     </message>
@@ -43190,7 +43200,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Exportovat jako</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2205"/>
+        <location filename="ViewManager/ViewManager.py" line="2207"/>
         <source>Quicksearch Textedit</source>
         <translation>Rychlé hledání texteditoru</translation>
     </message>
@@ -43246,7 +43256,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Rychlé hledání zpět&lt;/b&gt;&lt;p&gt;Vyhledává se předchozí výskyt výrazu v rychlém hledání.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2183"/>
+        <location filename="ViewManager/ViewManager.py" line="2185"/>
         <source>&lt;p&gt;Enter the searchtext directly into this field. The search will be performed case insensitive. The quicksearch function is activated upon activation of the quicksearch next action (default key Ctrl+Shift+K), if this entry field does not have the input focus. Otherwise it searches for the next occurrence of the text entered. The quicksearch backwards action (default key Ctrl+Shift+J) searches backward. Activating the &apos;quicksearch extend&apos; action (default key Ctrl+Shift+H) extends the current searchtext to the end of the currently found word. The quicksearch can be ended by pressing the Return key while the quicksearch entry has the the input focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pište hledaný text přímo do okna Rychlého hledání. Při zadávání se neberou na zřetel velké/malé znaky. Pokud okno nemá fokus, aktivujte jej příkazem Rychlé hledání (defaultně Ctrl+Shift+K). Jinak se pokračuje v hledání dalšího výskytu zadaného textu. Rychlé hledání nazpět (defaultně Ctr+Shift+J) prohledává text směrem k začátku dokumentu. Rozšířené rychlé hledání (defaultně Ctrl+Shift+H) rozšíří hledaný text na celé slovo, na kterém je kurzor. Rychlé hledání je ukončeno stiskem klávesy Enter za předpokladu, že fokus se nachází v okně Rychlého hledání.&lt;/p&gt;</translation>
     </message>
@@ -43333,118 +43343,118 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Nahradit v souborech&lt;/b&gt;&lt;p&gt;Hledání zadaného textu v souborech v adresářovém stromu projektu a jeho nahrazení. Je zobrazeno dialogové okno pro zadání hledaného textu, textu nahrazujícího a volby pro hledání a zobrazní výsledku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>Spell check</source>
         <translation>Kontola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>&amp;Spell Check...</source>
         <translation>Kontrola pravopi&amp;su...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2879"/>
+        <location filename="ViewManager/ViewManager.py" line="2881"/>
         <source>Perform spell check of current editor</source>
         <translation>Spustit kontrolu pravopisu v aktuálním editoru</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2881"/>
+        <location filename="ViewManager/ViewManager.py" line="2883"/>
         <source>&lt;b&gt;Spell check&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kontrola pravopisu&lt;/b&gt;&lt;p&gt;Spustí se kontrola pravopisu v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2888"/>
+        <location filename="ViewManager/ViewManager.py" line="2890"/>
         <source>Automatic spell checking</source>
         <translation>Automatická kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2888"/>
+        <location filename="ViewManager/ViewManager.py" line="2890"/>
         <source>&amp;Automatic spell checking</source>
         <translation>&amp;Automatická kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2895"/>
+        <location filename="ViewManager/ViewManager.py" line="2897"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>(De-)aktivovat akutomatickou kontrolu</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2897"/>
+        <location filename="ViewManager/ViewManager.py" line="2899"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Automatická kontrola pravopisu&lt;/b&gt;&lt;p&gt;Zapnout neobo vypnout automatickou kontrolu pravopisu ve všech editorech.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2937"/>
+        <location filename="ViewManager/ViewManager.py" line="2939"/>
         <source>Spelling</source>
         <translation>Pravopis</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3000"/>
+        <location filename="ViewManager/ViewManager.py" line="3002"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; obsahuje neuložené změny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3278"/>
+        <location filename="ViewManager/ViewManager.py" line="3280"/>
         <source>File: {0}</source>
         <translation>Soubor: {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3282"/>
+        <location filename="ViewManager/ViewManager.py" line="3284"/>
         <source>Line: {0:5}</source>
         <translation>Řádek: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3287"/>
+        <location filename="ViewManager/ViewManager.py" line="3289"/>
         <source>Pos: {0:5}</source>
         <translation>Poz: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2686"/>
+        <location filename="ViewManager/ViewManager.py" line="2688"/>
         <source>Next warning message</source>
         <translation>Další varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2679"/>
+        <location filename="ViewManager/ViewManager.py" line="2681"/>
         <source>&amp;Next warning message</source>
         <translation>Další varová&amp;ní</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2688"/>
+        <location filename="ViewManager/ViewManager.py" line="2690"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Další varování&lt;/b&gt;&lt;p&gt;Jít na další řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2703"/>
+        <location filename="ViewManager/ViewManager.py" line="2705"/>
         <source>Previous warning message</source>
         <translation>Předchozí varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2696"/>
+        <location filename="ViewManager/ViewManager.py" line="2698"/>
         <source>&amp;Previous warning message</source>
         <translation>&amp;Předchozí varování</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2705"/>
+        <location filename="ViewManager/ViewManager.py" line="2707"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Předchozí varování&lt;/b&gt;&lt;p&gt;Jít na předchozí řádku v aktuálním editoru, která obsahuje py3flakes varovné hlášení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2719"/>
+        <location filename="ViewManager/ViewManager.py" line="2721"/>
         <source>Clear Warning Messages</source>
         <translation>Vyčistit varovná hlášení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2713"/>
+        <location filename="ViewManager/ViewManager.py" line="2715"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Vyčistit varovná hlášení</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2721"/>
+        <location filename="ViewManager/ViewManager.py" line="2723"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit varovná hlášení&lt;/b&gt;&lt;p&gt;Vyčistí všechna py3flakes varovná hlášení ze všech editorů.&lt;/p&gt;</translation>
     </message>

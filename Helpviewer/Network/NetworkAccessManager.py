@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
-    from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket, \
+    from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \
         QSslError
     SSL_AVAILABLE = True
 except ImportError:
@@ -257,20 +257,18 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         result = "<p>"
         
-        result += cert.subjectInfo(QSslCertificate.CommonName)
+        result += self.trUtf8("Name: {0}")\
+            .format(cert.subjectInfo(QSslCertificate.CommonName))
+        
+        result += self.trUtf8("<br/>Organization: {0}")\
+            .format(cert.subjectInfo(QSslCertificate.Organization))
         
         result += self.trUtf8("<br/>Issuer: {0}")\
             .format(cert.issuerInfo(QSslCertificate.CommonName))
         
         result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(cert.effectiveDate().toString(Qt.ISODate), 
-                    cert.expiryDate().toString(Qt.ISODate))
-        
-        names = cert.alternateSubjectNames()
-        tmpList = names.get(QSsl.DnsEntry, [])
-        if tmpList:
-            result += self.trUtf8("<br/>Alternate Names:<ul><li>{0}</li></ul>")\
-                .format("</li><li>".join(tmpList))
+            .format(cert.effectiveDate().toString("yyyy-MM-dd"), 
+                    cert.expiryDate().toString("yyyy-MM-dd"))
         
         result += "</p>"
         

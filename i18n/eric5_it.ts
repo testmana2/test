@@ -4614,37 +4614,37 @@ Not connected
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>Start Debugger</source>
         <translation>Avvia Debugger</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="332"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="335"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il debugger non può essere avviato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Parent Process</source>
         <translation>Processo padre</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="720"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="723"/>
         <source>Child process</source>
         <translation>Processo figlio</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Client forking</source>
         <translation>Lancio processo figlio in corso</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="724"/>
         <source>Select the fork branch to follow.</source>
         <translation>Seleziona il client da seguire.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="148"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="151"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nessun interprete Python2 configurato.&lt;/p&gt;</translation>
     </message>
@@ -6717,7 +6717,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Modifica Breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3882"/>
+        <location filename="QScintilla/Editor.py" line="3885"/>
         <source>Enable breakpoint</source>
         <translation>Abilita breakpoint</translation>
     </message>
@@ -6782,7 +6782,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Apri File</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2365"/>
+        <location filename="QScintilla/Editor.py" line="2368"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
@@ -6792,102 +6792,102 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3419"/>
+        <location filename="QScintilla/Editor.py" line="3422"/>
         <source>Autocompletion</source>
         <translation>Autocompletamento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3419"/>
+        <location filename="QScintilla/Editor.py" line="3422"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>L&apos;autocomplentamento non è disponibile perchè non ci sono fonti impostate.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3885"/>
+        <location filename="QScintilla/Editor.py" line="3888"/>
         <source>Disable breakpoint</source>
         <translation>Disabilita breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4156"/>
+        <location filename="QScintilla/Editor.py" line="4159"/>
         <source>Code Coverage</source>
         <translation>Analisi codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4156"/>
+        <location filename="QScintilla/Editor.py" line="4159"/>
         <source>Please select a coverage file</source>
         <translation>Per favore seleziona un file per l&apos;analisi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4294"/>
+        <location filename="QScintilla/Editor.py" line="4297"/>
         <source>Profile Data</source>
         <translation>Profilazione dati</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4294"/>
+        <location filename="QScintilla/Editor.py" line="4297"/>
         <source>Please select a profile file</source>
         <translation>Per favore seleziona un file per la profilazione</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4549"/>
+        <location filename="QScintilla/Editor.py" line="4552"/>
         <source>Macro Name</source>
         <translation>Nome Macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4549"/>
+        <location filename="QScintilla/Editor.py" line="4552"/>
         <source>Select a macro name:</source>
         <translation>Seleziona un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4617"/>
+        <location filename="QScintilla/Editor.py" line="4620"/>
         <source>Macro files (*.macro)</source>
         <translation>File Macro (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4577"/>
+        <location filename="QScintilla/Editor.py" line="4580"/>
         <source>Load macro file</source>
         <translation>Carica un file di macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4601"/>
         <source>Error loading macro</source>
         <translation>Errore nel caricamento della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4617"/>
+        <location filename="QScintilla/Editor.py" line="4620"/>
         <source>Save macro file</source>
         <translation>Salva un file di macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4634"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>Save macro</source>
         <translation>Salva macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4649"/>
+        <location filename="QScintilla/Editor.py" line="4652"/>
         <source>Error saving macro</source>
         <translation>Errore nel salvataggio della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4660"/>
+        <location filename="QScintilla/Editor.py" line="4663"/>
         <source>Start Macro Recording</source>
         <translation>Avvia registrazione della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4685"/>
+        <location filename="QScintilla/Editor.py" line="4688"/>
         <source>Macro Recording</source>
         <translation>Registrazione Macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4685"/>
+        <location filename="QScintilla/Editor.py" line="4688"/>
         <source>Enter name of the macro:</source>
         <translation>Inserisci un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4803"/>
+        <location filename="QScintilla/Editor.py" line="4806"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4807"/>
+        <location filename="QScintilla/Editor.py" line="4810"/>
         <source>File changed</source>
         <translation>File modificato</translation>
     </message>
@@ -6907,7 +6907,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Elimina errori di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="5006"/>
         <source>Drop Error</source>
         <translation>Errore Drop</translation>
     </message>
@@ -6917,12 +6917,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Mostra i messaggi degli errori di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4410"/>
+        <location filename="QScintilla/Editor.py" line="4413"/>
         <source>Syntax Error</source>
         <translation>Errore di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4410"/>
+        <location filename="QScintilla/Editor.py" line="4413"/>
         <source>No syntax error message available.</source>
         <translation>Nessun messaggio degli errori di sintassi disponibile.</translation>
     </message>
@@ -6952,17 +6952,17 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>File non analizzato precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4202"/>
+        <location filename="QScintilla/Editor.py" line="4205"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostra le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4198"/>
+        <location filename="QScintilla/Editor.py" line="4201"/>
         <source>All lines have been covered.</source>
         <translation>Tutte le linee sono state analizzate.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4202"/>
+        <location filename="QScintilla/Editor.py" line="4205"/>
         <source>There is no coverage file available.</source>
         <translation>Non ci sono file di analisi disponibili.</translation>
     </message>
@@ -7002,72 +7002,72 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Nessun linguaggio</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5024"/>
         <source>Resources</source>
         <translation>Risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Add file...</source>
         <translation>Aggiungi file...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5028"/>
         <source>Add files...</source>
         <translation>Aggiungi files...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5027"/>
+        <location filename="QScintilla/Editor.py" line="5030"/>
         <source>Add aliased file...</source>
         <translation>Aggiungi file sinonimo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5029"/>
+        <location filename="QScintilla/Editor.py" line="5032"/>
         <source>Add localized resource...</source>
         <translation>Aggiungi una risorsa localizzata...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5050"/>
+        <location filename="QScintilla/Editor.py" line="5053"/>
         <source>Add file resource</source>
         <translation>Aggiungi un file risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5066"/>
+        <location filename="QScintilla/Editor.py" line="5069"/>
         <source>Add file resources</source>
         <translation>Aggiundi dei file risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5096"/>
         <source>Add aliased file resource</source>
         <translation>Aggiungi file sinonimo delle risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Package Diagram</source>
         <translation>Diagrammi del package</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5154"/>
+        <location filename="QScintilla/Editor.py" line="5157"/>
         <source>Include class attributes?</source>
         <translation>Includi gli attributi della classe ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5183"/>
+        <location filename="QScintilla/Editor.py" line="5186"/>
         <source>Application Diagram</source>
         <translation>Diagrammi dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5183"/>
+        <location filename="QScintilla/Editor.py" line="5186"/>
         <source>Include module names?</source>
         <translation>Includi i nomi dei moduli ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5032"/>
+        <location filename="QScintilla/Editor.py" line="5035"/>
         <source>Add resource frame</source>
         <translation>Aggiungi riquadro delle risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4660"/>
+        <location filename="QScintilla/Editor.py" line="4663"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Registrazione macro già attiva. Avvia nuovamente ?</translation>
     </message>
@@ -7117,12 +7117,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Nessun formato di export impostato. Annullamento...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Imports Diagram</source>
         <translation>Importa diagrammi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Include imports from external modules?</source>
         <translation>Includi gli import dai moduli esterni ?</translation>
     </message>
@@ -7197,7 +7197,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Selezione l&apos;analizzatore lessicale di Pygments da applicare.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5415"/>
+        <location filename="QScintilla/Editor.py" line="5418"/>
         <source>Check spelling...</source>
         <translation>Controllo sillabazione...</translation>
     </message>
@@ -7207,12 +7207,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Controllo sillabazione della selezione...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5417"/>
+        <location filename="QScintilla/Editor.py" line="5420"/>
         <source>Add to dictionary</source>
         <translation>Aggiungi al dizionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5419"/>
+        <location filename="QScintilla/Editor.py" line="5422"/>
         <source>Ignore All</source>
         <translation>Ignora tutto</translation>
     </message>
@@ -7257,12 +7257,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4591"/>
+        <location filename="QScintilla/Editor.py" line="4594"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4598"/>
+        <location filename="QScintilla/Editor.py" line="4601"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; è danneggiato.&lt;/p&gt;</translation>
     </message>
@@ -7272,27 +7272,27 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Il file  macro &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4649"/>
+        <location filename="QScintilla/Editor.py" line="4652"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4798"/>
+        <location filename="QScintilla/Editor.py" line="4801"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; è stato modificato mentre era aperto in eric5. Rileggerlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4886"/>
+        <location filename="QScintilla/Editor.py" line="4889"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5003"/>
+        <location filename="QScintilla/Editor.py" line="5006"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; non è un file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5093"/>
+        <location filename="QScintilla/Editor.py" line="5096"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias per il file &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -7317,22 +7317,22 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Pulisci warning</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4533"/>
         <source>py3flakes Warning</source>
         <translation>Warning py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4530"/>
+        <location filename="QScintilla/Editor.py" line="4533"/>
         <source>No py3flakes warning message available.</source>
         <translation>Nessun warning py3flakes disponibile.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2365"/>
+        <location filename="QScintilla/Editor.py" line="2368"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4634"/>
+        <location filename="QScintilla/Editor.py" line="4637"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22190,19 +22190,29 @@ Vuoi salvare le modifiche ?</translation>
         <translation>&lt;p&gt;Certificati:&lt;br/&gt;{0}&lt;br/&gt;Vuoi accettare tutti questi certificati?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="262"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="266"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Emettitore: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="265"/>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="269"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="272"/>
         <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>&lt;br/&gt;Nomi Alternativi:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;&lt;/ul&gt;</translation>
+        <translation type="obsolete">&lt;br/&gt;Nomi Alternativi:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;&lt;/ul&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="260"/>
+        <source>Name: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="263"/>
+        <source>&lt;br/&gt;Organization: {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -30073,110 +30083,110 @@ Non connesso</translation>
 &lt;p&gt;Inserisci i parametri della linea di comando in questo campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="62"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directory di &amp;Lavoro:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="101"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleziona la directory con un dialogo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="104"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleziona directory&lt;/b&gt;
 &lt;p&gt;Seleziona la directory di lavoro con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="108"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="78"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Inserisci la directory di lavoro</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directory di lavoro&lt;/b&gt;
 &lt;p&gt;Inserisci la directory di lavoro dell&apos;applicazione da debuggare. Lascia vuoto per impostare la directory di lavoro a quella di esecuzione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="115"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Ambient&amp;e:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="131"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Inserisci la variabile d&apos;ambiente da impostare.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="155"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Deseleziona per disabilitare la notifica delle eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="158"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Notifica eccezioni&lt;/b&gt;
 &lt;p&gt;Deseleziona per disabilitare la notifica delle eccezioni.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="162"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Notifica &amp;eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="165"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="205"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="214"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>Seleziona per cancellare le informazioni di coverage collezionate</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="208"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella informazioni di coverage&lt;/b&gt;
 &lt;p&gt;Seleziona per cancellare le informazioni di coverage collezionate prima della prossima esecuzione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="212"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="221"/>
         <source>Erase &amp;coverage information</source>
         <translation>Cancella informazioni di &amp;coverage</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="215"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="175"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Selezione per pulire il display della finestra dell&apos;interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="178"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci finestra interprete&lt;/b&gt;&lt;p&gt;Pulisce il display della finestra dell&apos;interprete prima di avviare il client di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="181"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Pulisci finestra dell&apos;&amp;Interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="134"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -30185,19 +30195,19 @@ Non connesso</translation>
 &lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="191"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleziona per avviare il debugger in una console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="194"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Avvia in console&lt;/b&gt;
 &lt;p&gt;Seleziona per avviare il debugger in una console. Il comando della console deve essere configurato nella pagina Debugger-&amp;gt;General page&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="198"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Avvia in console</translation>
     </message>
@@ -30227,118 +30237,118 @@ Non connesso</translation>
 &lt;p&gt;Inserisci i parametri della linea di comando in questo campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="62"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directory di &amp;Lavoro:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="101"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleziona la directory con un dialogo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="104"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleziona directory&lt;/b&gt;
 &lt;p&gt;Seleziona la directory di lavoro con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="108"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="78"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Inserisci la directory di lavoro</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directory di lavoro&lt;/b&gt;
 &lt;p&gt;Inserisci la directory di lavoro dell&apos;applicazione da debuggare. Lascia vuoto per impostare la directory di lavoro a quella di esecuzione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="115"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Ambient&amp;e:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="131"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Inserisci la variabile d&apos;ambiente da impostare.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="155"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Deseleziona per disabilitare la notifica delle eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="158"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Notifica eccezioni&lt;/b&gt;
 &lt;p&gt;Deseleziona per disabilitare la notifica delle eccezioni.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="162"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Notifica &amp;eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="165"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="205"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="214"/>
         <source>Select to trace into the Python library</source>
         <translation>Seleziona per tracciare anche le librerie Python</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="208"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="217"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>&amp;Traccia nelle librerie dell&apos;interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="211"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="220"/>
         <source>Alt+T</source>
         <translation>Alt+T</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="218"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="227"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>Selezione per non fermare il debugger alla prima riga eseguibile.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="221"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="230"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Non fermare alla prima riga&lt;/b&gt;&lt;p&gt;Evitar che il debugger si fermi alla prima riga eseguibile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="224"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="233"/>
         <source>Don&apos;t stop at first line</source>
         <translation>Non fermare alla prima riga</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="175"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Selezione per pulire il display della finestra dell&apos;interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="178"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci finestra interprete&lt;/b&gt;&lt;p&gt;Pulisce il display della finestra dell&apos;interprete prima di avviare il client di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="181"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Pulisci finestra dell&apos;&amp;Interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="134"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -30347,58 +30357,58 @@ Non connesso</translation>
 &lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="191"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleziona per avviare il debugger in una console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="194"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Avvia in console&lt;/b&gt;
 &lt;p&gt;Seleziona per avviare il debugger in una console. Il comando della console deve essere configurato nella pagina Debugger-&amp;gt;General page&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="198"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Avvia in console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="234"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
         <source>Forking</source>
         <translation>Forking</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="240"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="249"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleziona per andare al fork senza chiedere</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="252"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork senza interruzione&lt;/b&gt;
 &lt;p&gt;Seleziona per andare al fork senza chiedere decidendo basandosi sulla selezione Parent/Child.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="247"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="256"/>
         <source>Fork without pausing</source>
         <translation>Fork senza interruzione</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="257"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="266"/>
         <source>Select to debug the child process after forking</source>
         <translation>Select per debuggare il processo figlio dopo il fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="260"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="269"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debug del processo figlio&lt;/b&gt;
 &lt;p&gt;Seleziona per debuggare il processo figlio dopo il fork. Se non è selezionato, verrà debuggato il processo padre. Non ha effetto se il fork senza interruzione non è selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="264"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
         <translation>Debug del processo figlio</translation>
     </message>
@@ -30419,132 +30429,132 @@ Non connesso</translation>
 <context>
     <name>StartProfileDialog</name>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="13"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="14"/>
         <source>Start profiling</source>
         <translation>Avvia analisi</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="204"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
         <source>Select this to erase the collected timing data</source>
         <translation>Seleziona per cancellare i dati di timing raccolti</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella dati di timing&lt;/b&gt;
 &lt;p&gt;Seleziona per cancellare i dati di timing raccolti prima del prossimo giro di analisi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="211"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="221"/>
         <source>Erase &amp;timing data</source>
         <translation>Cancella dati di &amp;timing</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="22"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="23"/>
         <source>Command&amp;line:</source>
         <translation>&amp;Linea di comando:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="38"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="39"/>
         <source>Enter the commandline parameters</source>
         <translation>Inserisci i parametri della linea di comando</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="41"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="42"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Linea di comando&lt;/b&gt;
 &lt;p&gt;Inserisci i parametri della linea di comando in questo campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="61"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directory di &amp;Lavoro:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="100"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleziona la directory con un dialogo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="103"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleziona directory&lt;/b&gt;
 &lt;p&gt;Seleziona la directory di lavoro con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="77"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Inserisci la directory di lavoro</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="80"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directory di lavoro&lt;/b&gt;
 &lt;p&gt;Inserisci la directory di lavoro dell&apos;applicazione da debuggare. Lascia vuoto per impostare la directory di lavoro a quella di esecuzione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Ambient&amp;e:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="130"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Inserisci la variabile d&apos;ambiente da impostare.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="154"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Deseleziona per disabilitare la notifica delle eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="157"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Notifica eccezioni&lt;/b&gt;
 &lt;p&gt;Deseleziona per disabilitare la notifica delle eccezioni.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="161"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Notifica &amp;eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Selezione per pulire il display della finestra dell&apos;interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="177"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci finestra interprete&lt;/b&gt;&lt;p&gt;Pulisce il display della finestra dell&apos;interprete prima di avviare il client di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="180"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Pulisci finestra dell&apos;&amp;Interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="133"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -30553,19 +30563,19 @@ Non connesso</translation>
 &lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleziona per avviare il debugger in una console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="193"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Avvia in console&lt;/b&gt;
 &lt;p&gt;Seleziona per avviare il debugger in una console. Il comando della console deve essere configurato nella pagina Debugger-&amp;gt;General page&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="197"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Avvia in console</translation>
     </message>
@@ -30578,68 +30588,68 @@ Non connesso</translation>
         <translation>Avvia esecuzione</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="155"/>
+        <location filename="Debugger/StartRunDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Deseleziona per disabilitare la notifica delle eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="158"/>
+        <location filename="Debugger/StartRunDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Notifica eccezioni&lt;/b&gt;
 &lt;p&gt;Deseleziona per disabilitare la notifica delle eccezioni.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="162"/>
+        <location filename="Debugger/StartRunDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Notifica &amp;eccezioni</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="165"/>
+        <location filename="Debugger/StartRunDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="131"/>
+        <location filename="Debugger/StartRunDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Inserisci la variabile d&apos;ambiente da impostare.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="115"/>
+        <location filename="Debugger/StartRunDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>Ambient&amp;e:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="78"/>
+        <location filename="Debugger/StartRunDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Inserisci la directory di lavoro</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="81"/>
+        <location filename="Debugger/StartRunDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directory di lavoro&lt;/b&gt;
 &lt;p&gt;Inserisci la directory di lavoro dell&apos;applicazione da debuggare. Lascia vuoto per impostare la directory di lavoro a quella di esecuzione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="101"/>
+        <location filename="Debugger/StartRunDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleziona la directory con un dialogo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="104"/>
+        <location filename="Debugger/StartRunDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleziona directory&lt;/b&gt;
 &lt;p&gt;Seleziona la directory di lavoro con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="108"/>
+        <location filename="Debugger/StartRunDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="62"/>
+        <location filename="Debugger/StartRunDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directory di &amp;Lavoro:</translation>
     </message>
@@ -30661,22 +30671,22 @@ Non connesso</translation>
         <translation>&amp;Linea di comando:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="175"/>
+        <location filename="Debugger/StartRunDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Selezione per pulire il display della finestra dell&apos;interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="178"/>
+        <location filename="Debugger/StartRunDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci finestra interprete&lt;/b&gt;&lt;p&gt;Pulisce il display della finestra dell&apos;interprete prima di avviare il client di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="181"/>
+        <location filename="Debugger/StartRunDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Pulisci finestra dell&apos;&amp;Interprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="134"/>
+        <location filename="Debugger/StartRunDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -30685,58 +30695,58 @@ Non connesso</translation>
 &lt;p&gt;Esempio: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="191"/>
+        <location filename="Debugger/StartRunDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleziona per avviare il debugger in una console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="194"/>
+        <location filename="Debugger/StartRunDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Avvia in console&lt;/b&gt;
 &lt;p&gt;Seleziona per avviare il debugger in una console. Il comando della console deve essere configurato nella pagina Debugger-&amp;gt;General page&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="198"/>
+        <location filename="Debugger/StartRunDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Avvia in console</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="205"/>
+        <location filename="Debugger/StartRunDialog.ui" line="214"/>
         <source>Forking</source>
         <translation>Forking</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="211"/>
+        <location filename="Debugger/StartRunDialog.ui" line="220"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleziona per andare al fork senza chiedere</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="Debugger/StartRunDialog.ui" line="223"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork senza interruzione&lt;/b&gt;
 &lt;p&gt;Seleziona per andare al fork senza chiedere decidendo basandosi sulla selezione Parent/Child.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="218"/>
+        <location filename="Debugger/StartRunDialog.ui" line="227"/>
         <source>Fork without pausing</source>
         <translation>Fork senza interruzione</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="228"/>
+        <location filename="Debugger/StartRunDialog.ui" line="237"/>
         <source>Select to debug the child process after forking</source>
         <translation>Select per debuggare il processo figlio dopo il fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="231"/>
+        <location filename="Debugger/StartRunDialog.ui" line="240"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Debug del processo figlio&lt;/b&gt;
 &lt;p&gt;Seleziona per debuggare il processo figlio dopo il fork. Se non è selezionato, verrà debuggato il processo padre. Non ha effetto se il fork senza interruzione non è selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="235"/>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
         <translation>Debug del processo figlio</translation>
     </message>
@@ -42294,337 +42304,337 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Cerca nei file&lt;/b&gt;&lt;p&gt;Cerca per del testo nei file di un albero di directory o del progetto. Un dialogo viene mostrato per inserire il testo cercato e le opzioni per la ricerca e la visualizzazione del risultato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Zoom in</source>
         <translation>Ingrandisci</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Zoom &amp;in</source>
         <translation>Ingrand&amp;isci</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2252"/>
+        <location filename="ViewManager/ViewManager.py" line="2254"/>
         <source>Zoom in on the text</source>
         <translation>Ingrandisci nel testo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2254"/>
+        <location filename="ViewManager/ViewManager.py" line="2256"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ingrandisci&lt;/b&gt;&lt;p&gt;Ingrandisci nel testo. Questo aumenta le dimensioni del testo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Zoom out</source>
         <translation>Riduci</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Zoom &amp;out</source>
         <translation>Rid&amp;uci</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2268"/>
+        <location filename="ViewManager/ViewManager.py" line="2270"/>
         <source>Zoom out on the text</source>
         <translation>Riduci il testo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2270"/>
+        <location filename="ViewManager/ViewManager.py" line="2272"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Riduci&lt;/b&gt;&lt;p&gt;Riduci nel testo. Questo diminuisce le dimensioni del testo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Zoom</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2284"/>
+        <location filename="ViewManager/ViewManager.py" line="2286"/>
         <source>Zoom the text</source>
         <translation>Ingrandisci il testo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2286"/>
+        <location filename="ViewManager/ViewManager.py" line="2288"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the text. This opens a dialog where the desired size can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zoom&lt;/b&gt;&lt;o&gt;Zoom del testo. Apre un dialogo dove inserire la dimensione voluta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2298"/>
+        <location filename="ViewManager/ViewManager.py" line="2300"/>
         <source>Toggle all folds</source>
         <translation>Abilita/Disabilita tutti i raggruppamenti</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2294"/>
+        <location filename="ViewManager/ViewManager.py" line="2296"/>
         <source>Toggle &amp;all folds</source>
         <translation>Abilita/Disabilita tutti i r&amp;aggruppamenti</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2300"/>
+        <location filename="ViewManager/ViewManager.py" line="2302"/>
         <source>&lt;b&gt;Toggle all folds&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abilita/Disabilita tutti i raggruppamenti&lt;/b&gt;&lt;p&gt;Abilita/Disabilita tutti i raggruppamenti dell&apos;editor corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2327"/>
+        <location filename="ViewManager/ViewManager.py" line="2329"/>
         <source>Toggle current fold</source>
         <translation>Abilita/Disabilita il raggruppamento corrente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2323"/>
+        <location filename="ViewManager/ViewManager.py" line="2325"/>
         <source>Toggle &amp;current fold</source>
         <translation>Abilita/Disabilita il raggruppamento &amp;corrente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2329"/>
+        <location filename="ViewManager/ViewManager.py" line="2331"/>
         <source>&lt;b&gt;Toggle current fold&lt;/b&gt;&lt;p&gt;Toggle the folds of the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abilita/Disabilita il raggruppamento corrente&lt;/b&gt;&lt;p&gt;Abilita/Disabilita il raggruppamento alla riga corrente dell&apos;editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2342"/>
+        <location filename="ViewManager/ViewManager.py" line="2344"/>
         <source>Remove all highlights</source>
         <translation>Rimuovi tutti gli highlight</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2344"/>
+        <location filename="ViewManager/ViewManager.py" line="2346"/>
         <source>&lt;b&gt;Remove all highlights&lt;/b&gt;&lt;p&gt;Remove the highlights of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rimuovi tutti gli highlight&lt;/b&gt;&lt;p&gt;Rimuovi tutti gli highlight da tutti gli editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2351"/>
+        <location filename="ViewManager/ViewManager.py" line="2353"/>
         <source>Split view</source>
         <translation>Dividi vista</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2351"/>
+        <location filename="ViewManager/ViewManager.py" line="2353"/>
         <source>&amp;Split view</source>
         <translation>Dividi vi&amp;sta</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2355"/>
+        <location filename="ViewManager/ViewManager.py" line="2357"/>
         <source>Add a split to the view</source>
         <translation>Aggiungi un divisione alla vista</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2357"/>
+        <location filename="ViewManager/ViewManager.py" line="2359"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dividi vista&lt;/b&gt;&lt;p&gt;Aggiungi un divisione alla vista.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2364"/>
+        <location filename="ViewManager/ViewManager.py" line="2366"/>
         <source>Arrange horizontally</source>
         <translation>Sistema orizzontalmente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2364"/>
+        <location filename="ViewManager/ViewManager.py" line="2366"/>
         <source>Arrange &amp;horizontally</source>
         <translation>Sistema o&amp;rizzontalmente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2369"/>
+        <location filename="ViewManager/ViewManager.py" line="2371"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>Sistema le finestre divise orizzontalmente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2371"/>
+        <location filename="ViewManager/ViewManager.py" line="2373"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sistema orizzontalmente&lt;/b&gt;&lt;p&gt;Sistema le finestre divise orizzontalmente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2379"/>
+        <location filename="ViewManager/ViewManager.py" line="2381"/>
         <source>Remove split</source>
         <translation>Rimuovi divisione</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2379"/>
+        <location filename="ViewManager/ViewManager.py" line="2381"/>
         <source>&amp;Remove split</source>
         <translation>&amp;Rimuovi divisione</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2384"/>
+        <location filename="ViewManager/ViewManager.py" line="2386"/>
         <source>Remove the current split</source>
         <translation>Rimuovi la divisione corrente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2386"/>
+        <location filename="ViewManager/ViewManager.py" line="2388"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rimuovi divisione&lt;/b&gt;&lt;p&gt;Rimuovi la divisione corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2491"/>
+        <location filename="ViewManager/ViewManager.py" line="2493"/>
         <source>Start Macro Recording</source>
         <translation>Avvia registrazione della macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2486"/>
+        <location filename="ViewManager/ViewManager.py" line="2488"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>Avvia regis&amp;trazione della macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2493"/>
+        <location filename="ViewManager/ViewManager.py" line="2495"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Avvia registrazione della macro&lt;/b&gt;&lt;p&gt;Avvia la registrazione dei comandi dell&apos;editor in una nuova macro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2505"/>
+        <location filename="ViewManager/ViewManager.py" line="2507"/>
         <source>Stop Macro Recording</source>
         <translation>Interrompi registrazione macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2500"/>
+        <location filename="ViewManager/ViewManager.py" line="2502"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>Interrom&amp;pi registrazione macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2507"/>
+        <location filename="ViewManager/ViewManager.py" line="2509"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Interrompi registrazione macro&lt;/b&gt;&lt;p&gt;Interrompi la registrazione dei comandi dell&apos;editor in una nuova macro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2517"/>
+        <location filename="ViewManager/ViewManager.py" line="2519"/>
         <source>Run Macro</source>
         <translation>Esegui Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2514"/>
+        <location filename="ViewManager/ViewManager.py" line="2516"/>
         <source>&amp;Run Macro</source>
         <translation>Esegui Mac&amp;ro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2518"/>
+        <location filename="ViewManager/ViewManager.py" line="2520"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Esegui Macro&lt;/b&gt;&lt;p&gt;Esegui una macro precedentemente registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2529"/>
+        <location filename="ViewManager/ViewManager.py" line="2531"/>
         <source>Delete Macro</source>
         <translation>Cancella Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2525"/>
+        <location filename="ViewManager/ViewManager.py" line="2527"/>
         <source>&amp;Delete Macro</source>
         <translation>Canc&amp;ella Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2531"/>
+        <location filename="ViewManager/ViewManager.py" line="2533"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella Macro&lt;/b&gt;&lt;p&gt;Cancella una macro precedentemente registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2541"/>
+        <location filename="ViewManager/ViewManager.py" line="2543"/>
         <source>Load Macro</source>
         <translation>Carica Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2538"/>
+        <location filename="ViewManager/ViewManager.py" line="2540"/>
         <source>&amp;Load Macro</source>
         <translation>C&amp;arica Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2543"/>
+        <location filename="ViewManager/ViewManager.py" line="2545"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Carica Macro&lt;/b&gt;&lt;p&gt;Carica una macro da un file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2553"/>
+        <location filename="ViewManager/ViewManager.py" line="2555"/>
         <source>Save Macro</source>
         <translation>Salva Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2550"/>
+        <location filename="ViewManager/ViewManager.py" line="2552"/>
         <source>&amp;Save Macro</source>
         <translation>&amp;Salva Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2555"/>
+        <location filename="ViewManager/ViewManager.py" line="2557"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva Macro&lt;/b&gt;&lt;p&gt;Salva una macro precedentemente registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2593"/>
+        <location filename="ViewManager/ViewManager.py" line="2595"/>
         <source>Toggle Bookmark</source>
         <translation>Inverti bookmark</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2586"/>
+        <location filename="ViewManager/ViewManager.py" line="2588"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>Inver&amp;ti bookmark</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2595"/>
+        <location filename="ViewManager/ViewManager.py" line="2597"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Toggle bookmark&lt;/b&gt;&lt;p&gt;Attiva un bookmark sulla linea corrente dell&apos;editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2609"/>
+        <location filename="ViewManager/ViewManager.py" line="2611"/>
         <source>Next Bookmark</source>
         <translation>Prossimo segnalibro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2602"/>
+        <location filename="ViewManager/ViewManager.py" line="2604"/>
         <source>&amp;Next Bookmark</source>
         <translation>Prossimo seg&amp;nalibro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2611"/>
+        <location filename="ViewManager/ViewManager.py" line="2613"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prossimo segnalibro&lt;/b&gt;&lt;p&gt;Vai al segnalibro seguente dell&apos;editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2625"/>
+        <location filename="ViewManager/ViewManager.py" line="2627"/>
         <source>Previous Bookmark</source>
         <translation>Segnalibro precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2618"/>
+        <location filename="ViewManager/ViewManager.py" line="2620"/>
         <source>&amp;Previous Bookmark</source>
         <translation>Segnalibro &amp;precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2627"/>
+        <location filename="ViewManager/ViewManager.py" line="2629"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Segnalibro precedente&lt;/b&gt;&lt;p&gt;Va al segnalibro precedente dell&apos;editor corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2641"/>
+        <location filename="ViewManager/ViewManager.py" line="2643"/>
         <source>Clear Bookmarks</source>
         <translation>Pulisci segnalibri</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2634"/>
+        <location filename="ViewManager/ViewManager.py" line="2636"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>Pulis&amp;ci segnalibri</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2643"/>
+        <location filename="ViewManager/ViewManager.py" line="2645"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci Segnalibri&lt;/b&gt;&lt;p&gt;Pulisci i segnalibri di tutti gli editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2800"/>
+        <location filename="ViewManager/ViewManager.py" line="2802"/>
         <source>&amp;Bookmarks</source>
         <translation>Segnali&amp;bri</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3000"/>
+        <location filename="ViewManager/ViewManager.py" line="3002"/>
         <source>File Modified</source>
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3647"/>
+        <location filename="ViewManager/ViewManager.py" line="3649"/>
         <source>&amp;Clear</source>
         <translation>Pulis&amp;ci</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3643"/>
+        <location filename="ViewManager/ViewManager.py" line="3645"/>
         <source>&amp;Add</source>
         <translation>&amp;Aggiungi</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3645"/>
+        <location filename="ViewManager/ViewManager.py" line="3647"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Modifica...</translation>
     </message>
@@ -42679,32 +42689,32 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Autocompletamento dalle API&lt;/b&gt;&lt;p&gt;Esegue il completamento automatico dalle API della parola che contiene il cursore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2656"/>
+        <location filename="ViewManager/ViewManager.py" line="2658"/>
         <source>Goto Syntax Error</source>
         <translation>Vai all&apos;errore di sintassi</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2650"/>
+        <location filename="ViewManager/ViewManager.py" line="2652"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>&amp;Vai all&apos;errore di sintassi</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2658"/>
+        <location filename="ViewManager/ViewManager.py" line="2660"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vai all&apos;errore di sintassi&lt;/b&gt;&lt;p&gt;Vai all&apos;errore di sintassi successivo dell&apos;editor corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2670"/>
+        <location filename="ViewManager/ViewManager.py" line="2672"/>
         <source>Clear Syntax Errors</source>
         <translation>Pulisci errori di sintassi</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2665"/>
+        <location filename="ViewManager/ViewManager.py" line="2667"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>Pulisci errori di &amp;sintassi</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2672"/>
+        <location filename="ViewManager/ViewManager.py" line="2674"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci errori di sintassi&lt;/b&gt;&lt;p&gt;Pulisci gli errori di sintassi da tutti gli editor.&lt;/p&gt;</translation>
     </message>
@@ -42732,32 +42742,32 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2734"/>
+        <location filename="ViewManager/ViewManager.py" line="2736"/>
         <source>Next uncovered line</source>
         <translation>Prossima linea non analizzata</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2728"/>
+        <location filename="ViewManager/ViewManager.py" line="2730"/>
         <source>&amp;Next uncovered line</source>
         <translation>Prossima linea &amp;non analizzata</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2736"/>
+        <location filename="ViewManager/ViewManager.py" line="2738"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prossima linea  non analizzata&lt;/b&gt;&lt;p&gt;Vai alla prossima riga dell&apos;editor corrente marcato come non analizzata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2750"/>
+        <location filename="ViewManager/ViewManager.py" line="2752"/>
         <source>Previous uncovered line</source>
         <translation>Linea non analizzata precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2743"/>
+        <location filename="ViewManager/ViewManager.py" line="2745"/>
         <source>&amp;Previous uncovered line</source>
         <translation>Linea non analizzata &amp;precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2752"/>
+        <location filename="ViewManager/ViewManager.py" line="2754"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Linea non analizzata precedente&lt;/b&gt;&lt;p&gt;Vai alla prossima riga dell&apos;editor corrente marcato come non analizzata.&lt;/p&gt;</translation>
     </message>
@@ -42855,42 +42865,42 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Smart indent&lt;/b&gt;&lt;p&gt;Indenta la riga attuale o le righe selezionate in maniera furba.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>Next split</source>
         <translation>Prossima divisione</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>&amp;Next split</source>
         <translation>Prossima divisio&amp;ne</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2399"/>
+        <location filename="ViewManager/ViewManager.py" line="2401"/>
         <source>Move to the next split</source>
         <translation>Vai alla prossima divisione</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2401"/>
+        <location filename="ViewManager/ViewManager.py" line="2403"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prossima divisione&lt;/b&gt;&lt;p&gt;Vai alla prossima divisione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>Previous split</source>
         <translation>Divisione precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>&amp;Previous split</source>
         <translation>Divisione &amp;precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2414"/>
+        <location filename="ViewManager/ViewManager.py" line="2416"/>
         <source>Move to the previous split</source>
         <translation>Vai alla divisione precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2416"/>
+        <location filename="ViewManager/ViewManager.py" line="2418"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Divisione precedente&lt;/b&gt;&lt;p&gt;Vai alla divisione precedente.&lt;/p&gt;</translation>
     </message>
@@ -42926,17 +42936,17 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Autocomapletamento da Documenti e API&lt;/b&gt;&lt;p&gt;Esegue l&apos;autocompletamento da documento e API della parola contenente il cursore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2313"/>
+        <location filename="ViewManager/ViewManager.py" line="2315"/>
         <source>Toggle all folds (including children)</source>
         <translation>Abilita/Disabilita tutti i raggruppamenti (inclusi i figli)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2308"/>
+        <location filename="ViewManager/ViewManager.py" line="2310"/>
         <source>Toggle all &amp;folds (including children)</source>
         <translation>Abilita/Disabilita tutti i raggruppamenti (inclusi i &amp;figli)</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2315"/>
+        <location filename="ViewManager/ViewManager.py" line="2317"/>
         <source>&lt;b&gt;Toggle all folds (including children)&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor including all children.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abilita/Disabilita tutti i raggruppamenti (inclusi i figli)&lt;/b&gt;&lt;p&gt;Abilita/Disabilita tutti i raggruppamenti dell&apos;edito inclusi i figli.&lt;/p&gt;</translation>
     </message>
@@ -43157,111 +43167,111 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Shift+Ctrl+F</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2245"/>
+        <location filename="ViewManager/ViewManager.py" line="2247"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2261"/>
+        <location filename="ViewManager/ViewManager.py" line="2263"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2277"/>
+        <location filename="ViewManager/ViewManager.py" line="2279"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation>Ctrl+#</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2393"/>
+        <location filename="ViewManager/ViewManager.py" line="2395"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation>Ctrl+Alt+N</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2408"/>
+        <location filename="ViewManager/ViewManager.py" line="2410"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation>Ctrl+Alt+P</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2438"/>
+        <location filename="ViewManager/ViewManager.py" line="2440"/>
         <source>&amp;View</source>
         <translation>&amp;Visualizza</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2465"/>
+        <location filename="ViewManager/ViewManager.py" line="2467"/>
         <source>View</source>
         <translation>Visualizza</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2570"/>
+        <location filename="ViewManager/ViewManager.py" line="2572"/>
         <source>&amp;Macros</source>
         <translation>&amp;Macro</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2586"/>
+        <location filename="ViewManager/ViewManager.py" line="2588"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation>Alt+Ctrl+T</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2602"/>
+        <location filename="ViewManager/ViewManager.py" line="2604"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation>Ctrl+PgDown</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2618"/>
+        <location filename="ViewManager/ViewManager.py" line="2620"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation></translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2634"/>
+        <location filename="ViewManager/ViewManager.py" line="2636"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation>Alt+Ctrl+C</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2840"/>
+        <location filename="ViewManager/ViewManager.py" line="2842"/>
         <source>Bookmarks</source>
         <translation>Segnalibri</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2963"/>
+        <location filename="ViewManager/ViewManager.py" line="2965"/>
         <source>Open files</source>
         <translation>Apri Files</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2766"/>
+        <location filename="ViewManager/ViewManager.py" line="2768"/>
         <source>Next Task</source>
         <translation>Task seguente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2760"/>
+        <location filename="ViewManager/ViewManager.py" line="2762"/>
         <source>&amp;Next Task</source>
         <translation>Task segue&amp;nte</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2768"/>
+        <location filename="ViewManager/ViewManager.py" line="2770"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Task seguente&lt;/b&gt;&lt;p&gt;Vai alla prossima riga dell&apos;editor che ha un task.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2782"/>
+        <location filename="ViewManager/ViewManager.py" line="2784"/>
         <source>Previous Task</source>
         <translation>Task Precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2775"/>
+        <location filename="ViewManager/ViewManager.py" line="2777"/>
         <source>&amp;Previous Task</source>
         <translation>Task &amp;Precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2784"/>
+        <location filename="ViewManager/ViewManager.py" line="2786"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Task Precedente&lt;/b&gt;&lt;p&gt;Vai alla precedente riga dell&apos;editor che ha un task.&lt;/p&gt;</translation>
     </message>
@@ -43323,7 +43333,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Esporta come</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2205"/>
+        <location filename="ViewManager/ViewManager.py" line="2207"/>
         <source>Quicksearch Textedit</source>
         <translation>Quicksearch Textedit</translation>
     </message>
@@ -43405,7 +43415,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Quicksearch all&apos;indietro&lt;/b&gt;&lt;p&gt;Cerca la precedente occorrenza del testo della ricerca veloce.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2183"/>
+        <location filename="ViewManager/ViewManager.py" line="2185"/>
         <source>&lt;p&gt;Enter the searchtext directly into this field. The search will be performed case insensitive. The quicksearch function is activated upon activation of the quicksearch next action (default key Ctrl+Shift+K), if this entry field does not have the input focus. Otherwise it searches for the next occurrence of the text entered. The quicksearch backwards action (default key Ctrl+Shift+J) searches backward. Activating the &apos;quicksearch extend&apos; action (default key Ctrl+Shift+H) extends the current searchtext to the end of the currently found word. The quicksearch can be ended by pressing the Return key while the quicksearch entry has the the input focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Inserisci il testo da cercare direttamente in questo campo. La ricerca verrà effettuata ignorando le maiuscole/minuscole. La funzione quicksearch è attivata dall&apos;azione di ricerca della successiva (tasto default Ctrl+Shift+K), se questo campo non ha il focus. Altrimenti cerca per la successiva occorrenza del testo inserito. La quicksearch all&apos;indietro (tasto default Ctrl+Shift+J) cerca la precedente occorrenza. Attivando la &apos;quicksearch estesa&apos; (tasto default Ctrl+Shift+H) estende la ricerca alla fine della parola trovata. La ricerca veloce può essere conclusa premento Return mentre il campo di input ha il focus.&lt;/p&gt;</translation>
     </message>
@@ -43466,118 +43476,118 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Sostituisci nei File&lt;/b&gt;&lt;p&gt;Cerca per del testo nei file di una direcotry o del progetto e lo sostituisce. Un dialogo viene mostrato per inserire il testo da cercare, il testo da inserire e le opzioni per la ricerca e la visualizzazione del risultato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>Spell check</source>
         <translation>Correzione automatica</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>&amp;Spell Check...</source>
         <translation>&amp;Correzione automatica...</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2870"/>
+        <location filename="ViewManager/ViewManager.py" line="2872"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation>Shift+F7</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2879"/>
+        <location filename="ViewManager/ViewManager.py" line="2881"/>
         <source>Perform spell check of current editor</source>
         <translation>Esegui la correzione automatica nella finestra corrente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2881"/>
+        <location filename="ViewManager/ViewManager.py" line="2883"/>
         <source>&lt;b&gt;Spell check&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Correzione automatica&lt;/b&gt;&lt;p&gt;Esegui la correzione automatica nella finestra corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2888"/>
+        <location filename="ViewManager/ViewManager.py" line="2890"/>
         <source>Automatic spell checking</source>
         <translation>Controllo sintassi automatico</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2888"/>
+        <location filename="ViewManager/ViewManager.py" line="2890"/>
         <source>&amp;Automatic spell checking</source>
         <translation>Controllo sintassi &amp;automatico</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2895"/>
+        <location filename="ViewManager/ViewManager.py" line="2897"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>(Dis-)Attiva il controllo sintassi automatico</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2897"/>
+        <location filename="ViewManager/ViewManager.py" line="2899"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Controllo sintassi automatico&lt;/b&gt;&lt;p&gt;Attiva o disattiva la funzione di controllo sintassi automatico per tutti gli editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2937"/>
+        <location filename="ViewManager/ViewManager.py" line="2939"/>
         <source>Spelling</source>
         <translation>Spelling</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3000"/>
+        <location filename="ViewManager/ViewManager.py" line="3002"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; contiene modifiche non salvate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3278"/>
+        <location filename="ViewManager/ViewManager.py" line="3280"/>
         <source>File: {0}</source>
         <translation>File: {0}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3282"/>
+        <location filename="ViewManager/ViewManager.py" line="3284"/>
         <source>Line: {0:5}</source>
         <translation>Linea: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3287"/>
+        <location filename="ViewManager/ViewManager.py" line="3289"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2686"/>
+        <location filename="ViewManager/ViewManager.py" line="2688"/>
         <source>Next warning message</source>
         <translation>Warning successivo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2679"/>
+        <location filename="ViewManager/ViewManager.py" line="2681"/>
         <source>&amp;Next warning message</source>
         <translation>Warni&amp;ng successivo</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2688"/>
+        <location filename="ViewManager/ViewManager.py" line="2690"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Messaggio di warning successivo&lt;/b&gt;&lt;p&gt;Vai alla linea seguente dell&apos;editor che ha un warning di py3flakes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2703"/>
+        <location filename="ViewManager/ViewManager.py" line="2705"/>
         <source>Previous warning message</source>
         <translation>Messaggio di warning precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2696"/>
+        <location filename="ViewManager/ViewManager.py" line="2698"/>
         <source>&amp;Previous warning message</source>
         <translation>Messaggio di warning &amp;precedente</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2705"/>
+        <location filename="ViewManager/ViewManager.py" line="2707"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a py3flakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Messaggio di warning precedente&lt;/b&gt;&lt;p&gt;Vai alla linea precedente dell&apos;editor che ha un warning di py3flakes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2719"/>
+        <location filename="ViewManager/ViewManager.py" line="2721"/>
         <source>Clear Warning Messages</source>
         <translation>Pulisci messaggi di warning</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2713"/>
+        <location filename="ViewManager/ViewManager.py" line="2715"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>Pulisci messaggi di &amp;warning</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="2721"/>
+        <location filename="ViewManager/ViewManager.py" line="2723"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci messaggi di warning&lt;/b&gt;&lt;p&gt;Elimina i warning di py3flakes di tutte le finestre.&lt;/p&gt;</translation>
     </message>
