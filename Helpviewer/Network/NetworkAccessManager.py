@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import QDialog, QMessageBox
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 try:
-    from PyQt4.QtNetwork import QSsl, QSslCertificate, QSslConfiguration, QSslSocket
+    from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -283,14 +283,8 @@ class NetworkAccessManager(QNetworkAccessManager):
             .format(cert.issuerInfo(QSslCertificate.CommonName))
         
         result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(cert.effectiveDate().toString(Qt.ISODate), 
-                    cert.expiryDate().toString(Qt.ISODate))
-        
-        names = cert.alternateSubjectNames()
-        tmpList = names.get(QSsl.DnsEntry, [])
-        if tmpList:
-            result += self.trUtf8("<br/>Alternate Names:<ul><li>{0}</li></ul>")\
-                .format("</li><li>".join(tmpList))
+            .format(cert.effectiveDate().toString("yyyy-MM-dd"), 
+                    cert.expiryDate().toString("yyyy-MM-dd"))
         
         result += "</p>"
         
