@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper</h1>
+<p>
+Module implementing the VCS project helper for Mercurial.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgProjectHelper">HgProjectHelper</a></td>
+<td>Class implementing the VCS project helper for Mercurial.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgProjectHelper" ID="HgProjectHelper"></a>
+<h2>HgProjectHelper</h2>
+<p>
+    Class implementing the VCS project helper for Mercurial.
+</p>
+<h3>Derived from</h3>
+VcsProjectHelper
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgProjectHelper.__init__">HgProjectHelper</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBackout">__hgBackout</a></td>
+<td>Protected slot used to back out changes of a changeset.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectBad">__hgBisectBad</a></td>
+<td>Protected slot used to execute the bisect --bad command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectGood">__hgBisectGood</a></td>
+<td>Protected slot used to execute the bisect --good command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectReset">__hgBisectReset</a></td>
+<td>Protected slot used to execute the bisect --reset command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBisectSkip">__hgBisectSkip</a></td>
+<td>Protected slot used to execute the bisect --skip command.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBranch">__hgBranch</a></td>
+<td>Private slot used to create a new branch for the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBranchList">__hgBranchList</a></td>
+<td>Private slot used to list the branches of the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgBundle">__hgBundle</a></td>
+<td>Protected slot used to create a changegroup file.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgCloseBranch">__hgCloseBranch</a></td>
+<td>Protected slot used to close the current branch of the local project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgConfigure">__hgConfigure</a></td>
+<td>Private method to open the configuration dialog.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgCreateIgnore">__hgCreateIgnore</a></td>
+<td>Protected slot used to create a .hgignore file for the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgEditRepoConfig">__hgEditRepoConfig</a></td>
+<td>Protected slot used to edit the repository config file.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgExtendedDiff">__hgExtendedDiff</a></td>
+<td>Private slot used to perform a hg diff with the selection of revisions.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgHeads">__hgHeads</a></td>
+<td>Private slot used to show the heads of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgIdentify">__hgIdentify</a></td>
+<td>Protected slot used to identify the project directory.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgIdentifyBundle">__hgIdentifyBundle</a></td>
+<td>Protected slot used to identify a changegroup file.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgIncoming">__hgIncoming</a></td>
+<td>Private slot used to show the log of changes coming into the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgLogBrowser">__hgLogBrowser</a></td>
+<td>Private slot used to browse the log of the current project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgLogLimited">__hgLogLimited</a></td>
+<td>Private slot used to perform a hg log --limit.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgOutgoing">__hgOutgoing</a></td>
+<td>Private slot used to show the log of changes going out of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgParents">__hgParents</a></td>
+<td>Private slot used to show the parents of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgPreviewBundle">__hgPreviewBundle</a></td>
+<td>Protected slot used to preview a changegroup file.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgPull">__hgPull</a></td>
+<td>Private slot used to pull changes from a remote repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgPush">__hgPush</a></td>
+<td>Private slot used to push changes to a remote repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgPushForced">__hgPushForced</a></td>
+<td>Private slot used to push changes to a remote repository using the force option.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgRecover">__hgRecover</a></td>
+<td>Protected slot used to recover from an interrupted transaction.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgResolve">__hgResolve</a></td>
+<td>Private slot used to resolve conflicts of the local project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgServe">__hgServe</a></td>
+<td>Protected slot used to serve the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgShowBranch">__hgShowBranch</a></td>
+<td>Private slot used to show the current branch for the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgShowConfig">__hgShowConfig</a></td>
+<td>Protected slot used to show the combined config.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgShowPaths">__hgShowPaths</a></td>
+<td>Protected slot used to show the aliases for remote repositories.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgTagList">__hgTagList</a></td>
+<td>Private slot used to list the tags of the project.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgTip">__hgTip</a></td>
+<td>Private slot used to show the tip of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgUnbundle">__hgUnbundle</a></td>
+<td>Protected slot used to apply changegroup files.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgVerify">__hgVerify</a></td>
+<td>Protected slot used to verify the integrity of the repository.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.getActions">getActions</a></td>
+<td>Public method to get a list of all actions.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.initActions">initActions</a></td>
+<td>Public method to generate the action objects.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.initMenu">initMenu</a></td>
+<td>Public method to generate the VCS menu.</td>
+</tr>
+</table>
+<a NAME="HgProjectHelper.__init__" ID="HgProjectHelper.__init__"></a>
+<h4>HgProjectHelper (Constructor)</h4>
+<b>HgProjectHelper</b>(<i>vcsObject, projectObject, parent = None, name = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vcsObject</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>projectObject</i></dt>
+<dd>
+reference to the project object
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd><dt><i>name</i></dt>
+<dd>
+name of this object (string)
+</dd>
+</dl><a NAME="HgProjectHelper.__hgBackout" ID="HgProjectHelper.__hgBackout"></a>
+<h4>HgProjectHelper.__hgBackout</h4>
+<b>__hgBackout</b>(<i></i>)
+<p>
+        Protected slot used to back out changes of a changeset.
+</p><a NAME="HgProjectHelper.__hgBisectBad" ID="HgProjectHelper.__hgBisectBad"></a>
+<h4>HgProjectHelper.__hgBisectBad</h4>
+<b>__hgBisectBad</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --bad command.
+</p><a NAME="HgProjectHelper.__hgBisectGood" ID="HgProjectHelper.__hgBisectGood"></a>
+<h4>HgProjectHelper.__hgBisectGood</h4>
+<b>__hgBisectGood</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --good command.
+</p><a NAME="HgProjectHelper.__hgBisectReset" ID="HgProjectHelper.__hgBisectReset"></a>
+<h4>HgProjectHelper.__hgBisectReset</h4>
+<b>__hgBisectReset</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --reset command.
+</p><a NAME="HgProjectHelper.__hgBisectSkip" ID="HgProjectHelper.__hgBisectSkip"></a>
+<h4>HgProjectHelper.__hgBisectSkip</h4>
+<b>__hgBisectSkip</b>(<i></i>)
+<p>
+        Protected slot used to execute the bisect --skip command.
+</p><a NAME="HgProjectHelper.__hgBranch" ID="HgProjectHelper.__hgBranch"></a>
+<h4>HgProjectHelper.__hgBranch</h4>
+<b>__hgBranch</b>(<i></i>)
+<p>
+        Private slot used to create a new branch for the project.
+</p><a NAME="HgProjectHelper.__hgBranchList" ID="HgProjectHelper.__hgBranchList"></a>
+<h4>HgProjectHelper.__hgBranchList</h4>
+<b>__hgBranchList</b>(<i></i>)
+<p>
+        Private slot used to list the branches of the project.
+</p><a NAME="HgProjectHelper.__hgBundle" ID="HgProjectHelper.__hgBundle"></a>
+<h4>HgProjectHelper.__hgBundle</h4>
+<b>__hgBundle</b>(<i></i>)
+<p>
+        Protected slot used to create a changegroup file.
+</p><a NAME="HgProjectHelper.__hgCloseBranch" ID="HgProjectHelper.__hgCloseBranch"></a>
+<h4>HgProjectHelper.__hgCloseBranch</h4>
+<b>__hgCloseBranch</b>(<i></i>)
+<p>
+        Protected slot used to close the current branch of the local project.
+</p><a NAME="HgProjectHelper.__hgConfigure" ID="HgProjectHelper.__hgConfigure"></a>
+<h4>HgProjectHelper.__hgConfigure</h4>
+<b>__hgConfigure</b>(<i></i>)
+<p>
+        Private method to open the configuration dialog.
+</p><a NAME="HgProjectHelper.__hgCreateIgnore" ID="HgProjectHelper.__hgCreateIgnore"></a>
+<h4>HgProjectHelper.__hgCreateIgnore</h4>
+<b>__hgCreateIgnore</b>(<i></i>)
+<p>
+        Protected slot used to create a .hgignore file for the project.
+</p><a NAME="HgProjectHelper.__hgEditRepoConfig" ID="HgProjectHelper.__hgEditRepoConfig"></a>
+<h4>HgProjectHelper.__hgEditRepoConfig</h4>
+<b>__hgEditRepoConfig</b>(<i></i>)
+<p>
+        Protected slot used to edit the repository config file.
+</p><a NAME="HgProjectHelper.__hgExtendedDiff" ID="HgProjectHelper.__hgExtendedDiff"></a>
+<h4>HgProjectHelper.__hgExtendedDiff</h4>
+<b>__hgExtendedDiff</b>(<i></i>)
+<p>
+        Private slot used to perform a hg diff with the selection of revisions.
+</p><a NAME="HgProjectHelper.__hgHeads" ID="HgProjectHelper.__hgHeads"></a>
+<h4>HgProjectHelper.__hgHeads</h4>
+<b>__hgHeads</b>(<i></i>)
+<p>
+        Private slot used to show the heads of the repository.
+</p><a NAME="HgProjectHelper.__hgIdentify" ID="HgProjectHelper.__hgIdentify"></a>
+<h4>HgProjectHelper.__hgIdentify</h4>
+<b>__hgIdentify</b>(<i></i>)
+<p>
+        Protected slot used to identify the project directory.
+</p><a NAME="HgProjectHelper.__hgIdentifyBundle" ID="HgProjectHelper.__hgIdentifyBundle"></a>
+<h4>HgProjectHelper.__hgIdentifyBundle</h4>
+<b>__hgIdentifyBundle</b>(<i></i>)
+<p>
+        Protected slot used to identify a changegroup file.
+</p><a NAME="HgProjectHelper.__hgIncoming" ID="HgProjectHelper.__hgIncoming"></a>
+<h4>HgProjectHelper.__hgIncoming</h4>
+<b>__hgIncoming</b>(<i></i>)
+<p>
+        Private slot used to show the log of changes coming into the repository.
+</p><a NAME="HgProjectHelper.__hgLogBrowser" ID="HgProjectHelper.__hgLogBrowser"></a>
+<h4>HgProjectHelper.__hgLogBrowser</h4>
+<b>__hgLogBrowser</b>(<i></i>)
+<p>
+        Private slot used to browse the log of the current project.
+</p><a NAME="HgProjectHelper.__hgLogLimited" ID="HgProjectHelper.__hgLogLimited"></a>
+<h4>HgProjectHelper.__hgLogLimited</h4>
+<b>__hgLogLimited</b>(<i></i>)
+<p>
+        Private slot used to perform a hg log --limit.
+</p><a NAME="HgProjectHelper.__hgOutgoing" ID="HgProjectHelper.__hgOutgoing"></a>
+<h4>HgProjectHelper.__hgOutgoing</h4>
+<b>__hgOutgoing</b>(<i></i>)
+<p>
+        Private slot used to show the log of changes going out of the repository.
+</p><a NAME="HgProjectHelper.__hgParents" ID="HgProjectHelper.__hgParents"></a>
+<h4>HgProjectHelper.__hgParents</h4>
+<b>__hgParents</b>(<i></i>)
+<p>
+        Private slot used to show the parents of the repository.
+</p><a NAME="HgProjectHelper.__hgPreviewBundle" ID="HgProjectHelper.__hgPreviewBundle"></a>
+<h4>HgProjectHelper.__hgPreviewBundle</h4>
+<b>__hgPreviewBundle</b>(<i></i>)
+<p>
+        Protected slot used to preview a changegroup file.
+</p><a NAME="HgProjectHelper.__hgPull" ID="HgProjectHelper.__hgPull"></a>
+<h4>HgProjectHelper.__hgPull</h4>
+<b>__hgPull</b>(<i></i>)
+<p>
+        Private slot used to pull changes from a remote repository.
+</p><a NAME="HgProjectHelper.__hgPush" ID="HgProjectHelper.__hgPush"></a>
+<h4>HgProjectHelper.__hgPush</h4>
+<b>__hgPush</b>(<i></i>)
+<p>
+        Private slot used to push changes to a remote repository.
+</p><a NAME="HgProjectHelper.__hgPushForced" ID="HgProjectHelper.__hgPushForced"></a>
+<h4>HgProjectHelper.__hgPushForced</h4>
+<b>__hgPushForced</b>(<i></i>)
+<p>
+        Private slot used to push changes to a remote repository using
+        the force option.
+</p><a NAME="HgProjectHelper.__hgRecover" ID="HgProjectHelper.__hgRecover"></a>
+<h4>HgProjectHelper.__hgRecover</h4>
+<b>__hgRecover</b>(<i></i>)
+<p>
+        Protected slot used to recover from an interrupted transaction.
+</p><a NAME="HgProjectHelper.__hgResolve" ID="HgProjectHelper.__hgResolve"></a>
+<h4>HgProjectHelper.__hgResolve</h4>
+<b>__hgResolve</b>(<i></i>)
+<p>
+        Private slot used to resolve conflicts of the local project.
+</p><a NAME="HgProjectHelper.__hgServe" ID="HgProjectHelper.__hgServe"></a>
+<h4>HgProjectHelper.__hgServe</h4>
+<b>__hgServe</b>(<i></i>)
+<p>
+        Protected slot used to serve the project.
+</p><a NAME="HgProjectHelper.__hgShowBranch" ID="HgProjectHelper.__hgShowBranch"></a>
+<h4>HgProjectHelper.__hgShowBranch</h4>
+<b>__hgShowBranch</b>(<i></i>)
+<p>
+        Private slot used to show the current branch for the project.
+</p><a NAME="HgProjectHelper.__hgShowConfig" ID="HgProjectHelper.__hgShowConfig"></a>
+<h4>HgProjectHelper.__hgShowConfig</h4>
+<b>__hgShowConfig</b>(<i></i>)
+<p>
+        Protected slot used to show the combined config.
+</p><a NAME="HgProjectHelper.__hgShowPaths" ID="HgProjectHelper.__hgShowPaths"></a>
+<h4>HgProjectHelper.__hgShowPaths</h4>
+<b>__hgShowPaths</b>(<i></i>)
+<p>
+        Protected slot used to show the aliases for remote repositories.
+</p><a NAME="HgProjectHelper.__hgTagList" ID="HgProjectHelper.__hgTagList"></a>
+<h4>HgProjectHelper.__hgTagList</h4>
+<b>__hgTagList</b>(<i></i>)
+<p>
+        Private slot used to list the tags of the project.
+</p><a NAME="HgProjectHelper.__hgTip" ID="HgProjectHelper.__hgTip"></a>
+<h4>HgProjectHelper.__hgTip</h4>
+<b>__hgTip</b>(<i></i>)
+<p>
+        Private slot used to show the tip of the repository.
+</p><a NAME="HgProjectHelper.__hgUnbundle" ID="HgProjectHelper.__hgUnbundle"></a>
+<h4>HgProjectHelper.__hgUnbundle</h4>
+<b>__hgUnbundle</b>(<i></i>)
+<p>
+        Protected slot used to apply changegroup files.
+</p><a NAME="HgProjectHelper.__hgVerify" ID="HgProjectHelper.__hgVerify"></a>
+<h4>HgProjectHelper.__hgVerify</h4>
+<b>__hgVerify</b>(<i></i>)
+<p>
+        Protected slot used to verify the integrity of the repository.
+</p><a NAME="HgProjectHelper.getActions" ID="HgProjectHelper.getActions"></a>
+<h4>HgProjectHelper.getActions</h4>
+<b>getActions</b>(<i></i>)
+<p>
+        Public method to get a list of all actions.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of all actions (list of E5Action)
+</dd>
+</dl><a NAME="HgProjectHelper.initActions" ID="HgProjectHelper.initActions"></a>
+<h4>HgProjectHelper.initActions</h4>
+<b>initActions</b>(<i></i>)
+<p>
+        Public method to generate the action objects.
+</p><a NAME="HgProjectHelper.initMenu" ID="HgProjectHelper.initMenu"></a>
+<h4>HgProjectHelper.initMenu</h4>
+<b>initMenu</b>(<i>menu</i>)
+<p>
+        Public method to generate the VCS menu.
+</p><dl>
+<dt><i>menu</i></dt>
+<dd>
+reference to the menu to be populated (QMenu)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

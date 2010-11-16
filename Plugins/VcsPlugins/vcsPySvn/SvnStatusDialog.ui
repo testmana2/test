@@ -1,0 +1,152 @@
+<ui version="4.0" >
+ <class>SvnStatusDialog</class>
+ <widget class="QWidget" name="SvnStatusDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>646</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Subversion Status</string>
+  </property>
+  <property name="whatsThis" >
+   <string>&lt;b>Subversion Status&lt;/b>
+&lt;p>This dialog shows the status of the selected file or project.&lt;/p></string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QTreeWidget" name="statusList" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+       <horstretch>0</horstretch>
+       <verstretch>4</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy" >
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="alternatingRowColors" >
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode" >
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="rootIsDecorated" >
+      <bool>false</bool>
+     </property>
+     <property name="itemsExpandable" >
+      <bool>false</bool>
+     </property>
+     <property name="sortingEnabled" >
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text" >
+       <string>Changelist</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Prop. Status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Locked</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>History</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Switched</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Lock Info</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Up to date</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Revision</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Last Change</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Author</string>
+      </property>
+     </column>
+     <column>
+      <property name="text" >
+       <string>Path</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="errorGroup" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Errors</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QTextEdit" name="errors" >
+        <property name="focusPolicy" >
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="readOnly" >
+         <bool>true</bool>
+        </property>
+        <property name="acceptRichText" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <resources/>
+ <connections/>
+</ui>
