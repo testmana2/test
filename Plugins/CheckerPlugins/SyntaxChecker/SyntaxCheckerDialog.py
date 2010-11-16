@@ -173,6 +173,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         try:
+                            sourceLines = source.splitlines()
                             warnings = Checker(source, file)
                             warnings.messages.sort(key = lambda a: a.lineno)
                             for warning in warnings.messages:
@@ -181,8 +182,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                     continue
                                 self.noResults = False
                                 fname, lineno, message = warning.getMessageData()
-                                self.__createResultItem(fname, lineno, message, "", 
-                                                        isWarning = True)
+                                if not sourceLines[lineno - 1].strip()\
+                                   .endswith("__IGNORE_WARNING__"):
+                                    self.__createResultItem(fname, lineno, message, "", 
+                                                            isWarning = True)
                         except SyntaxError as err:
                             if err.text.strip():
                                 msg = err.text.strip()

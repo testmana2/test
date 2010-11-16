@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E5Gui import E5MessageBox
 
-from .cursors import cursors_rc
+from .cursors import cursors_rc     # __IGNORE_WARNING__
 
 from .IconSizeDialog import IconSizeDialog
 

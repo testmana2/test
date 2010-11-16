@@ -581,7 +581,7 @@ def doDependancyChecks():
     print("Found PyQt")
     
     try:
-        from PyQt4 import Qsci
+        from PyQt4 import Qsci      # __IGNORE_WARNING__
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
         print("it's PyQt4 wrapper.")
@@ -673,7 +673,8 @@ def compileUiFiles():
     except ImportError:
         from PyQt4.uic import compileUi
         
-        def compileUiDir(dir, recurse = False, map = None, **compileUi_args):
+        def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
+            **compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
