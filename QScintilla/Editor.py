@@ -10,8 +10,12 @@ Module implementing the editor component of the eric5 IDE.
 import os
 import re
 import difflib
-    
+
 from PyQt4.Qsci import QsciScintilla, QsciMacro
+try:
+    from PyQt4.Qsci import QsciStyledText
+except ImportError:
+    QsciStyledText = None   # __IGNORE_WARNING__
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
@@ -275,6 +279,9 @@ class Editor(QsciScintillaCompat):
         # set the eol mode
         self.__setEolMode()
         
+        # set the text display
+        self.__setTextDisplay()
+        
         self.isResourcesFile = False
         if editor is None:
             if self.fileName is not None:
@@ -312,9 +319,6 @@ class Editor(QsciScintillaCompat):
             editor.addClone(self)
         
         self.gotoLine(0)
-        
-        # set the text display
-        self.__setTextDisplay()
         
         # set the autocompletion and calltips function
         self.__acHookFunction = None
@@ -1375,6 +1379,8 @@ class Editor(QsciScintillaCompat):
         else:
             self.acAPI = False
         self.autoCompletionAPIsAvailable.emit(self.acAPI)
+        
+        self.__setAnnotationStyles()
         
     def __styleNeeded(self, position):
         """
@@ -3135,6 +3141,9 @@ class Editor(QsciScintillaCompat):
         else:
             self.__markOccurrencesTimer.stop()
             self.clearSearchIndicators()
+        
+        # refresh the annotations display
+        self.__refreshAnnotations()
     
     def __setLineMarkerColours(self):
         """
@@ -3340,7 +3349,8 @@ class Editor(QsciScintillaCompat):
                 self.setAnnotationDisplay(QsciScintilla.AnnotationHidden)
         except AttributeError:
             pass
-        
+        self.__setAnnotationStyles()
+    
     def __setEolMode(self):
         """
         Private method to configure the eol mode of the editor.
@@ -4554,6 +4564,27 @@ class Editor(QsciScintillaCompat):
     ## Annotation handling methods below
     ############################################################################
     
+    def __setAnnotationStyles(self):
+        """
+        Private slot to define the style used by inline annotations.
+        """
+        if hasattr(QsciScintilla, "annotate"):
+            self.annotationWarningStyle = QsciScintilla.STYLE_LASTPREDEFINED + 1
+            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE, 
+                self.annotationWarningStyle,
+                Preferences.getEditorColour("AnnotationsWarningForeground"))
+            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK, 
+                self.annotationWarningStyle,
+                Preferences.getEditorColour("AnnotationsWarningBackground"))
+            
+            self.annotationErrorStyle = self.annotationWarningStyle + 1
+            self.SendScintilla(QsciScintilla.SCI_STYLESETFORE, 
+                self.annotationErrorStyle,
+                Preferences.getEditorColour("AnnotationsErrorForeground"))
+            self.SendScintilla(QsciScintilla.SCI_STYLESETBACK, 
+                self.annotationErrorStyle,
+                Preferences.getEditorColour("AnnotationsErrorBackground"))
+        
     def __setAnnotation(self, line):
         """
         Private method to set the annotations for the given line.
@@ -4561,23 +4592,49 @@ class Editor(QsciScintillaCompat):
         @param line number of the line that needs annotation (integer)
         """
         if hasattr(QsciScintilla, "annotate"):
-            annotations = []
+            warningAnnotations = []
+            errorAnnotations = []
             
             # step 1: do py3flakes warnings
             for handle in list(self.warnings.keys()):
                 if self.markerLine(handle) == line:
-                    annotations.extend(self.warnings[handle])
+                    for msg in self.warnings[handle]:
+                        warningAnnotations.append(
+                            self.trUtf8("Warning: {0}").format(msg))
             
             # step 2: do syntax errors
             for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line:
-                        annotations.append(self.syntaxerrors[handle])
+                    errorAnnotations.append(
+                        self.trUtf8("Error: {0}").format(self.syntaxerrors[handle]))
+            
+            annotations = []
+            if len(warningAnnotations):
+                annotationWarningTxt = "\n".join(warningAnnotations)
+                if len(errorAnnotations) > 0:
+                    annotationWarningTxt += "\n"
+                annotations.append(QsciStyledText(annotationWarningTxt, 
+                    self.annotationWarningStyle))
+            
+            if len(errorAnnotations) > 0:
+                annotationErrorTxt = "\n".join(errorAnnotations)
+                annotations.append(QsciStyledText(annotationErrorTxt, 
+                    self.annotationErrorStyle))
             
             if annotations:
-                # TODO: convert to list of styled text
-                self.annotate(line, "\n".join(annotations), 0)
+                self.annotate(line, annotations)
             else:
                 self.clearAnnotations(line)
+    
+    def __refreshAnnotations(self):
+        """
+        Private method to refresh the annotations.
+        """
+        if hasattr(QsciScintilla, "annotate"):
+            self.clearAnnotations()
+            for handle in list(self.warnings.keys()) + list(self.syntaxerrors.keys()):
+                line = self.markerLine(handle)
+                self.__setAnnotation(line)
     
     #################################################################
     ## Macro handling methods

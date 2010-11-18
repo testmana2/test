@@ -379,6 +379,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__projectPropertiesChanged">__projectPropertiesChanged</a></td>
 <td>Private slot to handle changes of the project properties.</td>
 </tr><tr>
+<td><a href="#Editor.__refreshAnnotations">__refreshAnnotations</a></td>
+<td>Private method to refresh the annotations.</td>
+</tr><tr>
 <td><a href="#Editor.__registerImages">__registerImages</a></td>
 <td>Private method to register images for autocompletion lists.</td>
 </tr><tr>
@@ -402,6 +405,12 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__send">__send</a></td>
 <td>Private method to send an editor command to remote editors.</td>
+</tr><tr>
+<td><a href="#Editor.__setAnnotation">__setAnnotation</a></td>
+<td>Private method to set the annotations for the given line.</td>
+</tr><tr>
+<td><a href="#Editor.__setAnnotationStyles">__setAnnotationStyles</a></td>
+<td>Private slot to define the style used by inline annotations.</td>
 </tr><tr>
 <td><a href="#Editor.__setAutoCompletion">__setAutoCompletion</a></td>
 <td>Private method to configure the autocompletion function.</td>
@@ -1657,6 +1666,11 @@ string containing the command parameters (string)
 <b>__projectPropertiesChanged</b>(<i></i>)
 <p>
         Private slot to handle changes of the project properties.
+</p><a NAME="Editor.__refreshAnnotations" ID="Editor.__refreshAnnotations"></a>
+<h4>Editor.__refreshAnnotations</h4>
+<b>__refreshAnnotations</b>(<i></i>)
+<p>
+        Private method to refresh the annotations.
 </p><a NAME="Editor.__registerImages" ID="Editor.__registerImages"></a>
 <h4>Editor.__registerImages</h4>
 <b>__registerImages</b>(<i></i>)
@@ -1715,7 +1729,22 @@ command token (string)
 <dd>
 arguments for the command (string)
 </dd>
-</dl><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
+</dl><a NAME="Editor.__setAnnotation" ID="Editor.__setAnnotation"></a>
+<h4>Editor.__setAnnotation</h4>
+<b>__setAnnotation</b>(<i>line</i>)
+<p>
+        Private method to set the annotations for the given line.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+number of the line that needs annotation (integer)
+</dd>
+</dl><a NAME="Editor.__setAnnotationStyles" ID="Editor.__setAnnotationStyles"></a>
+<h4>Editor.__setAnnotationStyles</h4>
+<b>__setAnnotationStyles</b>(<i></i>)
+<p>
+        Private slot to define the style used by inline annotations.
+</p><a NAME="Editor.__setAutoCompletion" ID="Editor.__setAutoCompletion"></a>
 <h4>Editor.__setAutoCompletion</h4>
 <b>__setAutoCompletion</b>(<i></i>)
 <p>

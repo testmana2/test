@@ -5682,6 +5682,7 @@
       <keyword name="Editor.__processStartEditCommand" id="Editor.__processStartEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processStartEditCommand" />
       <keyword name="Editor.__processSyncCommand" id="Editor.__processSyncCommand" ref="eric5.QScintilla.Editor.html#Editor.__processSyncCommand" />
       <keyword name="Editor.__projectPropertiesChanged" id="Editor.__projectPropertiesChanged" ref="eric5.QScintilla.Editor.html#Editor.__projectPropertiesChanged" />
+      <keyword name="Editor.__refreshAnnotations" id="Editor.__refreshAnnotations" ref="eric5.QScintilla.Editor.html#Editor.__refreshAnnotations" />
       <keyword name="Editor.__registerImages" id="Editor.__registerImages" ref="eric5.QScintilla.Editor.html#Editor.__registerImages" />
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
@@ -5690,6 +5691,8 @@
       <keyword name="Editor.__selectAll" id="Editor.__selectAll" ref="eric5.QScintilla.Editor.html#Editor.__selectAll" />
       <keyword name="Editor.__selectPygmentsLexer" id="Editor.__selectPygmentsLexer" ref="eric5.QScintilla.Editor.html#Editor.__selectPygmentsLexer" />
       <keyword name="Editor.__send" id="Editor.__send" ref="eric5.QScintilla.Editor.html#Editor.__send" />
+      <keyword name="Editor.__setAnnotation" id="Editor.__setAnnotation" ref="eric5.QScintilla.Editor.html#Editor.__setAnnotation" />
+      <keyword name="Editor.__setAnnotationStyles" id="Editor.__setAnnotationStyles" ref="eric5.QScintilla.Editor.html#Editor.__setAnnotationStyles" />
       <keyword name="Editor.__setAutoCompletion" id="Editor.__setAutoCompletion" ref="eric5.QScintilla.Editor.html#Editor.__setAutoCompletion" />
       <keyword name="Editor.__setCallTips" id="Editor.__setCallTips" ref="eric5.QScintilla.Editor.html#Editor.__setCallTips" />
       <keyword name="Editor.__setEolMode" id="Editor.__setEolMode" ref="eric5.QScintilla.Editor.html#Editor.__setEolMode" />
@@ -6105,6 +6108,7 @@
       <keyword name="fileno" id="fileno" ref="eric5.DebugClients.Ruby.AsyncFile.html#fileno" />
       <keyword name="flush" id="flush" ref="eric5.DebugClients.Ruby.AsyncFile.html#flush" />
       <keyword name="getSock" id="getSock" ref="eric5.DebugClients.Ruby.AsyncFile.html#getSock" />
+      <keyword name="gets" id="gets" ref="eric5.DebugClients.Ruby.AsyncFile.html#gets" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="pendingWrite" id="pendingWrite" ref="eric5.DebugClients.Ruby.AsyncFile.html#pendingWrite" />
       <keyword name="read" id="read" ref="eric5.DebugClients.Ruby.AsyncFile.html#read" />

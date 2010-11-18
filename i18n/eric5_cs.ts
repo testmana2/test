@@ -6528,712 +6528,712 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2233"/>
         <source>Open File</source>
         <translation>Otevřít soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="559"/>
+        <location filename="QScintilla/Editor.py" line="563"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="562"/>
+        <location filename="QScintilla/Editor.py" line="566"/>
         <source>Redo</source>
         <translation>Znovu použít</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="565"/>
+        <location filename="QScintilla/Editor.py" line="569"/>
         <source>Revert to last saved state</source>
         <translation>Vrátit k poslednímu uloženému stavu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="569"/>
+        <location filename="QScintilla/Editor.py" line="573"/>
         <source>Cut</source>
         <translation>Vyjmout</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="572"/>
+        <location filename="QScintilla/Editor.py" line="576"/>
         <source>Copy</source>
         <translation>Kopírovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="574"/>
+        <location filename="QScintilla/Editor.py" line="578"/>
         <source>Paste</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="578"/>
+        <location filename="QScintilla/Editor.py" line="582"/>
         <source>Indent</source>
         <translation>Odsadit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="580"/>
+        <location filename="QScintilla/Editor.py" line="584"/>
         <source>Unindent</source>
         <translation>Zrušit odsazení</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="583"/>
+        <location filename="QScintilla/Editor.py" line="587"/>
         <source>Comment</source>
         <translation>Vytvořit komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="586"/>
+        <location filename="QScintilla/Editor.py" line="590"/>
         <source>Uncomment</source>
         <translation>Zrušit komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="589"/>
+        <location filename="QScintilla/Editor.py" line="593"/>
         <source>Stream Comment</source>
         <translation>Proudový komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="592"/>
+        <location filename="QScintilla/Editor.py" line="596"/>
         <source>Box Comment</source>
         <translation>Obdélníkový komentář</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="599"/>
         <source>Select to brace</source>
         <translation>Vybrat až po závorku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="597"/>
+        <location filename="QScintilla/Editor.py" line="601"/>
         <source>Select all</source>
         <translation>Vybrat vše</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="602"/>
         <source>Deselect all</source>
         <translation>Zrušit celý výběr</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="615"/>
         <source>Shorten empty lines</source>
         <translation>Zkrátit prázdné řádky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="619"/>
+        <location filename="QScintilla/Editor.py" line="623"/>
         <source>Use Monospaced Font</source>
         <translation>Použít neporoporcionální font</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="624"/>
+        <location filename="QScintilla/Editor.py" line="628"/>
         <source>Autosave enabled</source>
         <translation>Zapnout autosave</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="636"/>
+        <location filename="QScintilla/Editor.py" line="640"/>
         <source>Autocompletion enabled</source>
         <translation>Zapnout autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="653"/>
+        <location filename="QScintilla/Editor.py" line="657"/>
         <source>New view</source>
         <translation>Nový pohled</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="654"/>
+        <location filename="QScintilla/Editor.py" line="658"/>
         <source>New view (with new split)</source>
         <translation>Nový pohled (s novým rozdělením)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="658"/>
+        <location filename="QScintilla/Editor.py" line="662"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="662"/>
+        <location filename="QScintilla/Editor.py" line="666"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="664"/>
+        <location filename="QScintilla/Editor.py" line="668"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="671"/>
+        <location filename="QScintilla/Editor.py" line="675"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="686"/>
+        <location filename="QScintilla/Editor.py" line="690"/>
         <source>Autocomplete</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="692"/>
+        <location filename="QScintilla/Editor.py" line="696"/>
         <source>from Document</source>
         <translation>z dokumentu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="695"/>
+        <location filename="QScintilla/Editor.py" line="699"/>
         <source>from APIs</source>
         <translation>z API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="698"/>
+        <location filename="QScintilla/Editor.py" line="702"/>
         <source>from Document and APIs</source>
         <translation>z dokumentu a API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="712"/>
+        <location filename="QScintilla/Editor.py" line="716"/>
         <source>Check</source>
         <translation>Zkontrolovat</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="720"/>
+        <location filename="QScintilla/Editor.py" line="724"/>
         <source>Show</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="722"/>
+        <location filename="QScintilla/Editor.py" line="726"/>
         <source>Code metrics...</source>
         <translation>Metrika kódu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="724"/>
+        <location filename="QScintilla/Editor.py" line="728"/>
         <source>Code coverage...</source>
         <translation>Pokrytí kódu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="726"/>
+        <location filename="QScintilla/Editor.py" line="730"/>
         <source>Show code coverage annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="729"/>
+        <location filename="QScintilla/Editor.py" line="733"/>
         <source>Hide code coverage annotations</source>
         <translation>Skrýt poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="732"/>
+        <location filename="QScintilla/Editor.py" line="736"/>
         <source>Profile data...</source>
         <translation>Profilovat data...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="742"/>
+        <location filename="QScintilla/Editor.py" line="746"/>
         <source>Diagrams</source>
         <translation>Diagramy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="744"/>
+        <location filename="QScintilla/Editor.py" line="748"/>
         <source>Class Diagram...</source>
         <translation>Diagram třídy...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="746"/>
+        <location filename="QScintilla/Editor.py" line="750"/>
         <source>Package Diagram...</source>
         <translation>Diagram balíčku...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="748"/>
+        <location filename="QScintilla/Editor.py" line="752"/>
         <source>Imports Diagram...</source>
         <translation>Diagram importů...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="755"/>
         <source>Application Diagram...</source>
         <translation>Diagram aplikace...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="762"/>
+        <location filename="QScintilla/Editor.py" line="766"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="765"/>
+        <location filename="QScintilla/Editor.py" line="769"/>
         <source>No Language</source>
         <translation>Žádný jazyk</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="974"/>
+        <location filename="QScintilla/Editor.py" line="978"/>
         <source>Toggle bookmark</source>
         <translation>Přepnout záložku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="977"/>
+        <location filename="QScintilla/Editor.py" line="981"/>
         <source>Next bookmark</source>
         <translation>Následující záložka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="980"/>
+        <location filename="QScintilla/Editor.py" line="984"/>
         <source>Previous bookmark</source>
         <translation>Předchozí záložka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="983"/>
+        <location filename="QScintilla/Editor.py" line="987"/>
         <source>Clear all bookmarks</source>
         <translation>Zrušit všechny záložky</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="987"/>
+        <location filename="QScintilla/Editor.py" line="991"/>
         <source>Goto syntax error</source>
         <translation>Jít na chybu syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="990"/>
+        <location filename="QScintilla/Editor.py" line="994"/>
         <source>Show syntax error message</source>
         <translation>Zobrazit hlášení syntaktické chyby</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="993"/>
+        <location filename="QScintilla/Editor.py" line="997"/>
         <source>Clear syntax error</source>
         <translation>Zrušit chybu syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1010"/>
+        <location filename="QScintilla/Editor.py" line="1014"/>
         <source>Toggle breakpoint</source>
         <translation>Přepnout breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1013"/>
+        <location filename="QScintilla/Editor.py" line="1017"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Přepnout dočasný breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1016"/>
+        <location filename="QScintilla/Editor.py" line="1020"/>
         <source>Edit breakpoint...</source>
         <translation>Editovat breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3885"/>
+        <location filename="QScintilla/Editor.py" line="3903"/>
         <source>Enable breakpoint</source>
         <translation>Aktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1022"/>
+        <location filename="QScintilla/Editor.py" line="1026"/>
         <source>Next breakpoint</source>
         <translation>Následující breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1025"/>
+        <location filename="QScintilla/Editor.py" line="1029"/>
         <source>Previous breakpoint</source>
         <translation>Předchozí breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1028"/>
+        <location filename="QScintilla/Editor.py" line="1032"/>
         <source>Clear all breakpoints</source>
         <translation>Zrušit všechny breakpointy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1032"/>
+        <location filename="QScintilla/Editor.py" line="1036"/>
         <source>Next uncovered line</source>
         <translation>Následující odkrytá řádka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1035"/>
+        <location filename="QScintilla/Editor.py" line="1039"/>
         <source>Previous uncovered line</source>
         <translation>Předchozí odkrytá řádka</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1039"/>
+        <location filename="QScintilla/Editor.py" line="1043"/>
         <source>Next task</source>
         <translation>Následující úloha</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1042"/>
+        <location filename="QScintilla/Editor.py" line="1046"/>
         <source>Previous task</source>
         <translation>Předchozí úloha</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1046"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMB přepínač záložek</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1051"/>
+        <location filename="QScintilla/Editor.py" line="1055"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMB přepínač breakpointů</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1481"/>
+        <location filename="QScintilla/Editor.py" line="1487"/>
         <source>Modification of Read Only file</source>
         <translation>Modifikace souboru otevřeného jen pro čtení</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1481"/>
+        <location filename="QScintilla/Editor.py" line="1487"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Pokoušíte se změnit soubor, který je otevřen jen pro čtení. Prosím, uložte jej nejdříve do jiného souboru.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2028"/>
+        <location filename="QScintilla/Editor.py" line="2034"/>
         <source>Printing...</source>
         <translation>Tisk...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2045"/>
+        <location filename="QScintilla/Editor.py" line="2051"/>
         <source>Printing completed</source>
         <translation>Tisk je hotov</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2047"/>
+        <location filename="QScintilla/Editor.py" line="2053"/>
         <source>Error while printing</source>
         <translation>Chyba během tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2050"/>
+        <location filename="QScintilla/Editor.py" line="2056"/>
         <source>Printing aborted</source>
         <translation>Tisk byl zrušen</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2368"/>
+        <location filename="QScintilla/Editor.py" line="2374"/>
         <source>Save File</source>
         <translation>Uložit soubor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2179"/>
+        <location filename="QScintilla/Editor.py" line="2185"/>
         <source>File Modified</source>
         <translation>Soubor je modifikován</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3422"/>
+        <location filename="QScintilla/Editor.py" line="3440"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3422"/>
+        <location filename="QScintilla/Editor.py" line="3440"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autodoplňování není dostupné protože zdrojová část autodoplňování nebyla nalezena.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3888"/>
+        <location filename="QScintilla/Editor.py" line="3906"/>
         <source>Disable breakpoint</source>
         <translation>Deaktivovat breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4159"/>
+        <location filename="QScintilla/Editor.py" line="4179"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4159"/>
+        <location filename="QScintilla/Editor.py" line="4179"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4205"/>
+        <location filename="QScintilla/Editor.py" line="4225"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zobrazit poznámky pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4201"/>
+        <location filename="QScintilla/Editor.py" line="4221"/>
         <source>All lines have been covered.</source>
         <translation>Všechny řádky byly pokryty.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4205"/>
+        <location filename="QScintilla/Editor.py" line="4225"/>
         <source>There is no coverage file available.</source>
         <translation>Soubor s pokrytím není dostupný.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4297"/>
+        <location filename="QScintilla/Editor.py" line="4317"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4297"/>
+        <location filename="QScintilla/Editor.py" line="4317"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4413"/>
+        <location filename="QScintilla/Editor.py" line="4435"/>
         <source>Syntax Error</source>
         <translation>Chyba syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4413"/>
+        <location filename="QScintilla/Editor.py" line="4435"/>
         <source>No syntax error message available.</source>
         <translation>Hlášení syntaktické chyby není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4552"/>
+        <location filename="QScintilla/Editor.py" line="4654"/>
         <source>Macro Name</source>
         <translation>Název makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4552"/>
+        <location filename="QScintilla/Editor.py" line="4654"/>
         <source>Select a macro name:</source>
         <translation>Vyberte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4580"/>
+        <location filename="QScintilla/Editor.py" line="4682"/>
         <source>Load macro file</source>
         <translation>Načíst soubor makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4620"/>
+        <location filename="QScintilla/Editor.py" line="4722"/>
         <source>Macro files (*.macro)</source>
         <translation>Macro soubory (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4703"/>
         <source>Error loading macro</source>
         <translation>Chyba při načítání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4620"/>
+        <location filename="QScintilla/Editor.py" line="4722"/>
         <source>Save macro file</source>
         <translation>Uložit soubor s makrem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>Save macro</source>
         <translation>Uložit makro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4652"/>
+        <location filename="QScintilla/Editor.py" line="4754"/>
         <source>Error saving macro</source>
         <translation>Chyba při ukládání makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4663"/>
+        <location filename="QScintilla/Editor.py" line="4765"/>
         <source>Start Macro Recording</source>
         <translation>Spustit záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4663"/>
+        <location filename="QScintilla/Editor.py" line="4765"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Nahrávání makra již probíhá. Spustit nové?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4688"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Macro Recording</source>
         <translation>Záznam makra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4688"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Enter name of the macro:</source>
         <translation>Vložte název makra:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4806"/>
+        <location filename="QScintilla/Editor.py" line="4908"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Pozor:&lt;/b&gt; Ztratíte všechny změny pokud jej znovu otevřete.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4810"/>
+        <location filename="QScintilla/Editor.py" line="4912"/>
         <source>File changed</source>
         <translation>Soubor změněn</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5006"/>
+        <location filename="QScintilla/Editor.py" line="5108"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5024"/>
+        <location filename="QScintilla/Editor.py" line="5126"/>
         <source>Resources</source>
         <translation>Zdroje</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5026"/>
+        <location filename="QScintilla/Editor.py" line="5128"/>
         <source>Add file...</source>
         <translation>Přidat soubor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5028"/>
+        <location filename="QScintilla/Editor.py" line="5130"/>
         <source>Add files...</source>
         <translation>Přidat soubory...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5030"/>
+        <location filename="QScintilla/Editor.py" line="5132"/>
         <source>Add aliased file...</source>
         <translation>Přidat zástupce souboru...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5032"/>
+        <location filename="QScintilla/Editor.py" line="5134"/>
         <source>Add localized resource...</source>
         <translation>Přidat lokalizované resource...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5035"/>
+        <location filename="QScintilla/Editor.py" line="5137"/>
         <source>Add resource frame</source>
         <translation>Přidat resource frame</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5053"/>
+        <location filename="QScintilla/Editor.py" line="5155"/>
         <source>Add file resource</source>
         <translation>Přidat soubor resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5069"/>
+        <location filename="QScintilla/Editor.py" line="5171"/>
         <source>Add file resources</source>
         <translation>Přidat soubory resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5096"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Add aliased file resource</source>
         <translation>Přidat zástupce souboru resource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5259"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5259"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5186"/>
+        <location filename="QScintilla/Editor.py" line="5288"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5186"/>
+        <location filename="QScintilla/Editor.py" line="5288"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="855"/>
+        <location filename="QScintilla/Editor.py" line="859"/>
         <source>Export as</source>
         <translation>Exportovat jako</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1088"/>
         <source>Export source</source>
         <translation>Export zdroj</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1088"/>
         <source>No export format given. Aborting...</source>
         <translation>Nebyl zadán forám exportu. Zrušeno....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5174"/>
+        <location filename="QScintilla/Editor.py" line="5276"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5174"/>
+        <location filename="QScintilla/Editor.py" line="5276"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="689"/>
+        <location filename="QScintilla/Editor.py" line="693"/>
         <source>dynamic</source>
         <translation>dynamický</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="702"/>
+        <location filename="QScintilla/Editor.py" line="706"/>
         <source>Calltip</source>
         <translation>Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="669"/>
+        <location filename="QScintilla/Editor.py" line="673"/>
         <source>Print Preview</source>
         <translation>Náhled tisku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="335"/>
+        <location filename="QScintilla/Editor.py" line="339"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Okno editoru zdrojového kódu&lt;/b&gt;&lt;p&gt;V tomto okně se zobrazuje a edituje soubor se zdrojovým kódem. Můžete otevřít oken podle libosti. Jméno souboru se zobrazuje v titlebaru okna.&lt;/p&gt;&lt;p&gt;Kliknutím do prostoru mezi čísly řádku a značkami skládání nastavíte breakpoint. Přes kontextové menu je pak lze editovat.&lt;/p&gt;&lt;p&gt;Záložka se vkládá kliknutím na stejné místo se stisknutou klávesou Shift.&lt;/p&gt;&lt;p&gt;Tyto akce mohou být navráceny zpět i opětovným kliknutím nebo přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="629"/>
+        <location filename="QScintilla/Editor.py" line="633"/>
         <source>Typing aids enabled</source>
         <translation>Pomůcky při psaní zapnuty</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="824"/>
+        <location filename="QScintilla/Editor.py" line="828"/>
         <source>End-of-Line Type</source>
         <translation>Typ Konec-řádku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="828"/>
+        <location filename="QScintilla/Editor.py" line="832"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="834"/>
+        <location filename="QScintilla/Editor.py" line="838"/>
         <source>Windows</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="840"/>
+        <location filename="QScintilla/Editor.py" line="844"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="802"/>
+        <location filename="QScintilla/Editor.py" line="806"/>
         <source>Encodings</source>
         <translation>Kódování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="784"/>
+        <location filename="QScintilla/Editor.py" line="788"/>
         <source>Guessed</source>
         <translation>Odhadem</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1100"/>
         <source>Alternatives</source>
         <translation>Alternativy</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>Pygments Lexer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Použít Pygments lexer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5520"/>
         <source>Check spelling...</source>
         <translation>Zatrhnout kontrolu...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="604"/>
+        <location filename="QScintilla/Editor.py" line="608"/>
         <source>Check spelling of selection...</source>
         <translation>Zatrhnout výběr kontroly...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5420"/>
+        <location filename="QScintilla/Editor.py" line="5522"/>
         <source>Add to dictionary</source>
         <translation>Přidat do slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5524"/>
         <source>Ignore All</source>
         <translation>Ignorovat vše</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="608"/>
+        <location filename="QScintilla/Editor.py" line="612"/>
         <source>Remove from dictionary</source>
         <translation>Odebrat ze slovníku</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="283"/>
+        <location filename="QScintilla/Editor.py" line="290"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Velikost souboru &lt;b&gt;{0}&lt;/b&gt; je &lt;b&gt;{1} KB&lt;/b&gt;. Opravdu jej chcete načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1078"/>
+        <location filename="QScintilla/Editor.py" line="1082"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pro formát exportu &lt;b&gt;{0}&lt;/b&gt; není exportér dostupný. Zrušeno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1093"/>
+        <location filename="QScintilla/Editor.py" line="1097"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativy ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2179"/>
+        <location filename="QScintilla/Editor.py" line="2185"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; obsahuje neuložené změny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2233"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2325"/>
+        <location filename="QScintilla/Editor.py" line="2331"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nemůže být přejmenován.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -7243,12 +7243,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4594"/>
+        <location filename="QScintilla/Editor.py" line="4696"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4703"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; je poškozen.&lt;/p&gt;</translation>
     </message>
@@ -7258,69 +7258,79 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Soubor s makrem &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4652"/>
+        <location filename="QScintilla/Editor.py" line="4754"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;So souboru s makrem &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4801"/>
+        <location filename="QScintilla/Editor.py" line="4903"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; byl změněn po té co již byl načten do eric5. Znovu načíst?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4889"/>
+        <location filename="QScintilla/Editor.py" line="4991"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5006"/>
+        <location filename="QScintilla/Editor.py" line="5108"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5096"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Zástupce pro soubor &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="997"/>
+        <location filename="QScintilla/Editor.py" line="1001"/>
         <source>Next warning</source>
         <translation>Následující varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1000"/>
+        <location filename="QScintilla/Editor.py" line="1004"/>
         <source>Previous warning</source>
         <translation>Předchozí varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1003"/>
+        <location filename="QScintilla/Editor.py" line="1007"/>
         <source>Show warning message</source>
         <translation>Zobrazit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1006"/>
+        <location filename="QScintilla/Editor.py" line="1010"/>
         <source>Clear warnings</source>
         <translation>Vyčistit varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4533"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes varování</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4533"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>No py3flakes warning message available.</source>
         <translation>Varování py3flakes není dostupné.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2368"/>
+        <location filename="QScintilla/Editor.py" line="2374"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;&lt;p&gt;Má se přepsat?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="4602"/>
+        <source>Warning: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="4608"/>
+        <source>Error: {0}</source>
+        <translation type="unfinished">Chyby: {0}</translation>
     </message>
 </context>
 <context>
@@ -23692,12 +23702,12 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="885"/>
+        <location filename="Preferences/__init__.py" line="891"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="904"/>
+        <location filename="Preferences/__init__.py" line="910"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
@@ -35054,7 +35064,7 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
         <translation>Stisknout pro zobrazení všech souborů, které obsahují problém</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="211"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="214"/>
         <source>No issues found.</source>
         <translation>Žádné problémy nenalezeny.</translation>
     </message>

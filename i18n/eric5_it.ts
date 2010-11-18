@@ -6542,712 +6542,712 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="559"/>
+        <location filename="QScintilla/Editor.py" line="563"/>
         <source>Undo</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="562"/>
+        <location filename="QScintilla/Editor.py" line="566"/>
         <source>Redo</source>
         <translation>Rifai</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="565"/>
+        <location filename="QScintilla/Editor.py" line="569"/>
         <source>Revert to last saved state</source>
         <translation>Ritorna all&apos;ultimo stato salvato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="569"/>
+        <location filename="QScintilla/Editor.py" line="573"/>
         <source>Cut</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="572"/>
+        <location filename="QScintilla/Editor.py" line="576"/>
         <source>Copy</source>
         <translation>Copia</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="574"/>
+        <location filename="QScintilla/Editor.py" line="578"/>
         <source>Paste</source>
         <translation>Incolla</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="578"/>
+        <location filename="QScintilla/Editor.py" line="582"/>
         <source>Indent</source>
         <translation>Identa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="580"/>
+        <location filename="QScintilla/Editor.py" line="584"/>
         <source>Unindent</source>
         <translation>Annulla identazione</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="583"/>
+        <location filename="QScintilla/Editor.py" line="587"/>
         <source>Comment</source>
         <translation>Commenta</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="586"/>
+        <location filename="QScintilla/Editor.py" line="590"/>
         <source>Uncomment</source>
         <translation>Annulla commenta</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="589"/>
+        <location filename="QScintilla/Editor.py" line="593"/>
         <source>Stream Comment</source>
         <translation>Flusso commento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="592"/>
+        <location filename="QScintilla/Editor.py" line="596"/>
         <source>Box Comment</source>
         <translation>Commenti nel riquadro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="599"/>
         <source>Select to brace</source>
         <translation>Seleziona per parentesizzare</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="597"/>
+        <location filename="QScintilla/Editor.py" line="601"/>
         <source>Select all</source>
         <translation>Seleziona tutti</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="602"/>
         <source>Deselect all</source>
         <translation>Deseleziona tutti</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="615"/>
         <source>Shorten empty lines</source>
         <translation>Abbrevia righe vuote</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="762"/>
+        <location filename="QScintilla/Editor.py" line="766"/>
         <source>Languages</source>
         <translation>Linguaggi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="619"/>
+        <location filename="QScintilla/Editor.py" line="623"/>
         <source>Use Monospaced Font</source>
         <translation>Usa un font Monospaced</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="636"/>
+        <location filename="QScintilla/Editor.py" line="640"/>
         <source>Autocompletion enabled</source>
         <translation>Autocompletamento abilitato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="712"/>
+        <location filename="QScintilla/Editor.py" line="716"/>
         <source>Check</source>
         <translation>Controlla</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="720"/>
+        <location filename="QScintilla/Editor.py" line="724"/>
         <source>Show</source>
         <translation>Mostra</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="653"/>
+        <location filename="QScintilla/Editor.py" line="657"/>
         <source>New view</source>
         <translation>Nuova vista</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="658"/>
+        <location filename="QScintilla/Editor.py" line="662"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="662"/>
+        <location filename="QScintilla/Editor.py" line="666"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="664"/>
+        <location filename="QScintilla/Editor.py" line="668"/>
         <source>Save As...</source>
         <translation>Salva come...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="671"/>
+        <location filename="QScintilla/Editor.py" line="675"/>
         <source>Print</source>
         <translation>Stampa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="722"/>
+        <location filename="QScintilla/Editor.py" line="726"/>
         <source>Code metrics...</source>
         <translation>Statistiche codice...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="724"/>
+        <location filename="QScintilla/Editor.py" line="728"/>
         <source>Code coverage...</source>
         <translation>Analisi codice...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="732"/>
+        <location filename="QScintilla/Editor.py" line="736"/>
         <source>Profile data...</source>
         <translation>Profilazione dati...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="974"/>
+        <location filename="QScintilla/Editor.py" line="978"/>
         <source>Toggle bookmark</source>
         <translation>Inverti bookmark</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="977"/>
+        <location filename="QScintilla/Editor.py" line="981"/>
         <source>Next bookmark</source>
         <translation>Prossimo segnalibro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="980"/>
+        <location filename="QScintilla/Editor.py" line="984"/>
         <source>Previous bookmark</source>
         <translation>Segnalibro precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="983"/>
+        <location filename="QScintilla/Editor.py" line="987"/>
         <source>Clear all bookmarks</source>
         <translation>Pulisci di tutti di segnalibri</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1010"/>
+        <location filename="QScintilla/Editor.py" line="1014"/>
         <source>Toggle breakpoint</source>
         <translation>Abilita/Disabilita breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1016"/>
+        <location filename="QScintilla/Editor.py" line="1020"/>
         <source>Edit breakpoint...</source>
         <translation>Modifica Breakpoint...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3885"/>
+        <location filename="QScintilla/Editor.py" line="3903"/>
         <source>Enable breakpoint</source>
         <translation>Abilita breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1022"/>
+        <location filename="QScintilla/Editor.py" line="1026"/>
         <source>Next breakpoint</source>
         <translation>Prossimo breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1025"/>
+        <location filename="QScintilla/Editor.py" line="1029"/>
         <source>Previous breakpoint</source>
         <translation>Breakpoint precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1028"/>
+        <location filename="QScintilla/Editor.py" line="1032"/>
         <source>Clear all breakpoints</source>
         <translation>Elimina tutti i breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1046"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>LMB toggles bookmarks</source>
         <translation>Inverti bookmark LMB</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1051"/>
+        <location filename="QScintilla/Editor.py" line="1055"/>
         <source>LMB toggles breakpoints</source>
         <translation>Toggle Breakpoint LMB</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1481"/>
+        <location filename="QScintilla/Editor.py" line="1487"/>
         <source>Modification of Read Only file</source>
         <translation>Modifica di un file di sola lettura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1481"/>
+        <location filename="QScintilla/Editor.py" line="1487"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Stai tentando di modificare un file in sola lettura. Per favore prima salva come un file diverso.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2028"/>
+        <location filename="QScintilla/Editor.py" line="2034"/>
         <source>Printing...</source>
         <translation>In stampa...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2045"/>
+        <location filename="QScintilla/Editor.py" line="2051"/>
         <source>Printing completed</source>
         <translation>Stampa completata</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2047"/>
+        <location filename="QScintilla/Editor.py" line="2053"/>
         <source>Error while printing</source>
         <translation>Errore durante la stampa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2050"/>
+        <location filename="QScintilla/Editor.py" line="2056"/>
         <source>Printing aborted</source>
         <translation>Stampa annullata</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2233"/>
         <source>Open File</source>
         <translation>Apri File</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2368"/>
+        <location filename="QScintilla/Editor.py" line="2374"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2179"/>
+        <location filename="QScintilla/Editor.py" line="2185"/>
         <source>File Modified</source>
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3422"/>
+        <location filename="QScintilla/Editor.py" line="3440"/>
         <source>Autocompletion</source>
         <translation>Autocompletamento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3422"/>
+        <location filename="QScintilla/Editor.py" line="3440"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>L&apos;autocomplentamento non è disponibile perchè non ci sono fonti impostate.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3888"/>
+        <location filename="QScintilla/Editor.py" line="3906"/>
         <source>Disable breakpoint</source>
         <translation>Disabilita breakpoint</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4159"/>
+        <location filename="QScintilla/Editor.py" line="4179"/>
         <source>Code Coverage</source>
         <translation>Analisi codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4159"/>
+        <location filename="QScintilla/Editor.py" line="4179"/>
         <source>Please select a coverage file</source>
         <translation>Per favore seleziona un file per l&apos;analisi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4297"/>
+        <location filename="QScintilla/Editor.py" line="4317"/>
         <source>Profile Data</source>
         <translation>Profilazione dati</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4297"/>
+        <location filename="QScintilla/Editor.py" line="4317"/>
         <source>Please select a profile file</source>
         <translation>Per favore seleziona un file per la profilazione</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4552"/>
+        <location filename="QScintilla/Editor.py" line="4654"/>
         <source>Macro Name</source>
         <translation>Nome Macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4552"/>
+        <location filename="QScintilla/Editor.py" line="4654"/>
         <source>Select a macro name:</source>
         <translation>Seleziona un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4620"/>
+        <location filename="QScintilla/Editor.py" line="4722"/>
         <source>Macro files (*.macro)</source>
         <translation>File Macro (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4580"/>
+        <location filename="QScintilla/Editor.py" line="4682"/>
         <source>Load macro file</source>
         <translation>Carica un file di macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4703"/>
         <source>Error loading macro</source>
         <translation>Errore nel caricamento della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4620"/>
+        <location filename="QScintilla/Editor.py" line="4722"/>
         <source>Save macro file</source>
         <translation>Salva un file di macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>Save macro</source>
         <translation>Salva macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4652"/>
+        <location filename="QScintilla/Editor.py" line="4754"/>
         <source>Error saving macro</source>
         <translation>Errore nel salvataggio della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4663"/>
+        <location filename="QScintilla/Editor.py" line="4765"/>
         <source>Start Macro Recording</source>
         <translation>Avvia registrazione della macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4688"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Macro Recording</source>
         <translation>Registrazione Macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4688"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Enter name of the macro:</source>
         <translation>Inserisci un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4806"/>
+        <location filename="QScintilla/Editor.py" line="4908"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4810"/>
+        <location filename="QScintilla/Editor.py" line="4912"/>
         <source>File changed</source>
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="624"/>
+        <location filename="QScintilla/Editor.py" line="628"/>
         <source>Autosave enabled</source>
         <translation>Salvataggio automatico abilitato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="987"/>
+        <location filename="QScintilla/Editor.py" line="991"/>
         <source>Goto syntax error</source>
         <translation>Vai all&apos;errore di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="993"/>
+        <location filename="QScintilla/Editor.py" line="997"/>
         <source>Clear syntax error</source>
         <translation>Elimina errori di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5006"/>
+        <location filename="QScintilla/Editor.py" line="5108"/>
         <source>Drop Error</source>
         <translation>Errore Drop</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="990"/>
+        <location filename="QScintilla/Editor.py" line="994"/>
         <source>Show syntax error message</source>
         <translation>Mostra i messaggi degli errori di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4413"/>
+        <location filename="QScintilla/Editor.py" line="4435"/>
         <source>Syntax Error</source>
         <translation>Errore di sintassi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4413"/>
+        <location filename="QScintilla/Editor.py" line="4435"/>
         <source>No syntax error message available.</source>
         <translation>Nessun messaggio degli errori di sintassi disponibile.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1013"/>
+        <location filename="QScintilla/Editor.py" line="1017"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Abilita/Disabilita breakpoint temporaneo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="726"/>
+        <location filename="QScintilla/Editor.py" line="730"/>
         <source>Show code coverage annotations</source>
         <translation>Mostra le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="729"/>
+        <location filename="QScintilla/Editor.py" line="733"/>
         <source>Hide code coverage annotations</source>
         <translation>Nascondi le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1032"/>
+        <location filename="QScintilla/Editor.py" line="1036"/>
         <source>Next uncovered line</source>
         <translation>Prossimo file non analizzato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1035"/>
+        <location filename="QScintilla/Editor.py" line="1039"/>
         <source>Previous uncovered line</source>
         <translation>File non analizzato precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4205"/>
+        <location filename="QScintilla/Editor.py" line="4225"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostra le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4201"/>
+        <location filename="QScintilla/Editor.py" line="4221"/>
         <source>All lines have been covered.</source>
         <translation>Tutte le linee sono state analizzate.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4205"/>
+        <location filename="QScintilla/Editor.py" line="4225"/>
         <source>There is no coverage file available.</source>
         <translation>Non ci sono file di analisi disponibili.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="654"/>
+        <location filename="QScintilla/Editor.py" line="658"/>
         <source>New view (with new split)</source>
         <translation>Nuova vista (con nuova divisione)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="742"/>
+        <location filename="QScintilla/Editor.py" line="746"/>
         <source>Diagrams</source>
         <translation>Diagrammi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="744"/>
+        <location filename="QScintilla/Editor.py" line="748"/>
         <source>Class Diagram...</source>
         <translation>Diagrammi di classe...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="746"/>
+        <location filename="QScintilla/Editor.py" line="750"/>
         <source>Package Diagram...</source>
         <translation>Diagrammi del package...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="748"/>
+        <location filename="QScintilla/Editor.py" line="752"/>
         <source>Imports Diagram...</source>
         <translation>Importa diagrammi...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="755"/>
         <source>Application Diagram...</source>
         <translation>Diagrammi dell&apos;applicazione...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="765"/>
+        <location filename="QScintilla/Editor.py" line="769"/>
         <source>No Language</source>
         <translation>Nessun linguaggio</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5024"/>
+        <location filename="QScintilla/Editor.py" line="5126"/>
         <source>Resources</source>
         <translation>Risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5026"/>
+        <location filename="QScintilla/Editor.py" line="5128"/>
         <source>Add file...</source>
         <translation>Aggiungi file...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5028"/>
+        <location filename="QScintilla/Editor.py" line="5130"/>
         <source>Add files...</source>
         <translation>Aggiungi files...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5030"/>
+        <location filename="QScintilla/Editor.py" line="5132"/>
         <source>Add aliased file...</source>
         <translation>Aggiungi file sinonimo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5032"/>
+        <location filename="QScintilla/Editor.py" line="5134"/>
         <source>Add localized resource...</source>
         <translation>Aggiungi una risorsa localizzata...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5053"/>
+        <location filename="QScintilla/Editor.py" line="5155"/>
         <source>Add file resource</source>
         <translation>Aggiungi un file risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5069"/>
+        <location filename="QScintilla/Editor.py" line="5171"/>
         <source>Add file resources</source>
         <translation>Aggiundi dei file risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5096"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Add aliased file resource</source>
         <translation>Aggiungi file sinonimo delle risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5259"/>
         <source>Package Diagram</source>
         <translation>Diagrammi del package</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5259"/>
         <source>Include class attributes?</source>
         <translation>Includi gli attributi della classe ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5186"/>
+        <location filename="QScintilla/Editor.py" line="5288"/>
         <source>Application Diagram</source>
         <translation>Diagrammi dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5186"/>
+        <location filename="QScintilla/Editor.py" line="5288"/>
         <source>Include module names?</source>
         <translation>Includi i nomi dei moduli ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5035"/>
+        <location filename="QScintilla/Editor.py" line="5137"/>
         <source>Add resource frame</source>
         <translation>Aggiungi riquadro delle risorse</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4663"/>
+        <location filename="QScintilla/Editor.py" line="4765"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Registrazione macro già attiva. Avvia nuovamente ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="686"/>
+        <location filename="QScintilla/Editor.py" line="690"/>
         <source>Autocomplete</source>
         <translation>Autocompletamento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="692"/>
+        <location filename="QScintilla/Editor.py" line="696"/>
         <source>from Document</source>
         <translation>dal Documento</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="695"/>
+        <location filename="QScintilla/Editor.py" line="699"/>
         <source>from APIs</source>
         <translation>dalle APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="698"/>
+        <location filename="QScintilla/Editor.py" line="702"/>
         <source>from Document and APIs</source>
         <translation>dal Documento e dalle APIs</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1039"/>
+        <location filename="QScintilla/Editor.py" line="1043"/>
         <source>Next task</source>
         <translation>Prossimo task</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1042"/>
+        <location filename="QScintilla/Editor.py" line="1046"/>
         <source>Previous task</source>
         <translation>Task precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="855"/>
+        <location filename="QScintilla/Editor.py" line="859"/>
         <source>Export as</source>
         <translation>Esporta come</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1088"/>
         <source>Export source</source>
         <translation>Esporta sorgenti</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1084"/>
+        <location filename="QScintilla/Editor.py" line="1088"/>
         <source>No export format given. Aborting...</source>
         <translation>Nessun formato di export impostato. Annullamento...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5174"/>
+        <location filename="QScintilla/Editor.py" line="5276"/>
         <source>Imports Diagram</source>
         <translation>Importa diagrammi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5174"/>
+        <location filename="QScintilla/Editor.py" line="5276"/>
         <source>Include imports from external modules?</source>
         <translation>Includi gli import dai moduli esterni ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="689"/>
+        <location filename="QScintilla/Editor.py" line="693"/>
         <source>dynamic</source>
         <translation>dinamico</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="702"/>
+        <location filename="QScintilla/Editor.py" line="706"/>
         <source>Calltip</source>
         <translation>Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="669"/>
+        <location filename="QScintilla/Editor.py" line="673"/>
         <source>Print Preview</source>
         <translation>Anteprima Stampa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="335"/>
+        <location filename="QScintilla/Editor.py" line="339"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Una finesta di edit&lt;/b&gt;&lt;p&gt;Questa finestra è usata per visualizzare e modificare un file sorgente. Si possono aprire quante finestre si vogliono. Il nome del file è mostrato nella barra dei titolo della finestra.&lt;/p&gt;&lt;p&gt;Per impostare dei breakpoint basta cliccare nello spazio tra i numeri di riga e i marcatori di compressione. Con il menù contestuale del margine possono essere modificati.&lt;/p&gt;&lt;p&gt;Per impostare un segnalibro basta cliccare con lo Shift premuto nello spazio tra il numero di linea e i marcatori di compressione.&lt;/p&gt;&lt;p&gt;Queste azioni possono essere invertite con il menù contestuale.&lt;/p&gt;&lt;p&gt; Cliccare con il tasto Ctrl premuto un  marcatore di errore della sintassi mostra delle informazioni sull&apos;errore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="629"/>
+        <location filename="QScintilla/Editor.py" line="633"/>
         <source>Typing aids enabled</source>
         <translation>Aiuti alla digitazione abilitati</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="824"/>
+        <location filename="QScintilla/Editor.py" line="828"/>
         <source>End-of-Line Type</source>
         <translation>Tipo di fine-linea</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="828"/>
+        <location filename="QScintilla/Editor.py" line="832"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="834"/>
+        <location filename="QScintilla/Editor.py" line="838"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="840"/>
+        <location filename="QScintilla/Editor.py" line="844"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="802"/>
+        <location filename="QScintilla/Editor.py" line="806"/>
         <source>Encodings</source>
         <translation>Codifica</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="784"/>
+        <location filename="QScintilla/Editor.py" line="788"/>
         <source>Guessed</source>
         <translation>Indovinato</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1100"/>
         <source>Alternatives</source>
         <translation>Alternative</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>Pygments Lexer</source>
         <translation>Analizzatore lessicale Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1111"/>
+        <location filename="QScintilla/Editor.py" line="1115"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Selezione l&apos;analizzatore lessicale di Pygments da applicare.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5520"/>
         <source>Check spelling...</source>
         <translation>Controllo sillabazione...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="604"/>
+        <location filename="QScintilla/Editor.py" line="608"/>
         <source>Check spelling of selection...</source>
         <translation>Controllo sillabazione della selezione...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5420"/>
+        <location filename="QScintilla/Editor.py" line="5522"/>
         <source>Add to dictionary</source>
         <translation>Aggiungi al dizionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5524"/>
         <source>Ignore All</source>
         <translation>Ignora tutto</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="608"/>
+        <location filename="QScintilla/Editor.py" line="612"/>
         <source>Remove from dictionary</source>
         <translation>Rimuovi dal dizionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="283"/>
+        <location filename="QScintilla/Editor.py" line="290"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La dimensione del file &lt;b&gt;{0}&lt;/b&gt; è &lt;b&gt;{1} KB&lt;/b&gt;. Sei sicuro di volerlo caricare ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1078"/>
+        <location filename="QScintilla/Editor.py" line="1082"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nessun esportatore disponibile per il formato di export&lt;b&gt;{0}&lt;/b&gt;. Termino...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1093"/>
+        <location filename="QScintilla/Editor.py" line="1097"/>
         <source>Alternatives ({0})</source>
         <translation>Alternative ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2179"/>
+        <location filename="QScintilla/Editor.py" line="2185"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; contiene modifiche non salvate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2227"/>
+        <location filename="QScintilla/Editor.py" line="2233"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere aperto.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2325"/>
+        <location filename="QScintilla/Editor.py" line="2331"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -7257,12 +7257,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4594"/>
+        <location filename="QScintilla/Editor.py" line="4696"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4703"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; è danneggiato.&lt;/p&gt;</translation>
     </message>
@@ -7272,69 +7272,79 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Il file  macro &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4652"/>
+        <location filename="QScintilla/Editor.py" line="4754"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4801"/>
+        <location filename="QScintilla/Editor.py" line="4903"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; è stato modificato mentre era aperto in eric5. Rileggerlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4889"/>
+        <location filename="QScintilla/Editor.py" line="4991"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5006"/>
+        <location filename="QScintilla/Editor.py" line="5108"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; non è un file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5096"/>
+        <location filename="QScintilla/Editor.py" line="5198"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias per il file &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="997"/>
+        <location filename="QScintilla/Editor.py" line="1001"/>
         <source>Next warning</source>
         <translation>Warning successivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1000"/>
+        <location filename="QScintilla/Editor.py" line="1004"/>
         <source>Previous warning</source>
         <translation>Warning precedente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1003"/>
+        <location filename="QScintilla/Editor.py" line="1007"/>
         <source>Show warning message</source>
         <translation>Mostra Warning</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1006"/>
+        <location filename="QScintilla/Editor.py" line="1010"/>
         <source>Clear warnings</source>
         <translation>Pulisci warning</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4533"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>py3flakes Warning</source>
         <translation>Warning py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4533"/>
+        <location filename="QScintilla/Editor.py" line="4559"/>
         <source>No py3flakes warning message available.</source>
         <translation>Nessun warning py3flakes disponibile.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2368"/>
+        <location filename="QScintilla/Editor.py" line="2374"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="4602"/>
+        <source>Warning: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="4608"/>
+        <source>Error: {0}</source>
+        <translation type="unfinished">Errori: {0}</translation>
     </message>
 </context>
 <context>
@@ -23752,12 +23762,12 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="885"/>
+        <location filename="Preferences/__init__.py" line="891"/>
         <source>Export Preferences</source>
         <translation>Esporta Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="904"/>
+        <location filename="Preferences/__init__.py" line="910"/>
         <source>Import Preferences</source>
         <translation>Importa Preferenze</translation>
     </message>
@@ -35201,7 +35211,7 @@ relativa riga.&lt;/p&gt;</translation>
         <translation>Premi per mostrare tutti i file che contengono errori di sintassi</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="211"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="214"/>
         <source>No issues found.</source>
         <translation>Nessun problema trovato.</translation>
     </message>
