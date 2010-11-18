@@ -269,6 +269,8 @@ class Prefs(object):
         "AutoCheckSyntax" : True,
         "AutoReopen" : False,
         
+        "AnnotationsEnabled" : True, 
+        
         "MiniContextMenu" : False,
         
         "SearchMarkersEnabled" : True, 

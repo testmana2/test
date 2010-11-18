@@ -3333,6 +3333,14 @@ class Editor(QsciScintillaCompat):
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
+        try:
+            if Preferences.getEditor("AnnotationsEnabled"):
+                self.setAnnotationDisplay(QsciScintilla.AnnotationBoxed)
+            else:
+                self.setAnnotationDisplay(QsciScintilla.AnnotationHidden)
+        except AttributeError:
+            pass
+        
     def __setEolMode(self):
         """
         Private method to configure the eol mode of the editor.
@@ -4357,6 +4365,8 @@ class Editor(QsciScintillaCompat):
                     self.markerDeleteHandle(handle)
                     self.syntaxerrorToggled.emit(self)
         
+        self.__setAnnotation(line - 1)
+        
     def getSyntaxErrors(self):
         """
         Public method to retrieve the syntax error markers.
@@ -4450,6 +4460,8 @@ class Editor(QsciScintillaCompat):
                     del self.warnings[handle]
                     self.markerDeleteHandle(handle)
                     self.syntaxerrorToggled.emit(self)
+        
+        self.__setAnnotation(line - 1)
     
     def getFlakesWarnings(self):
         """
@@ -4512,6 +4524,8 @@ class Editor(QsciScintillaCompat):
         Public slot to handle the 'Clear all warnings' context menu action.
         """
         for handle in self.warnings:
+            self.warnings[handle] = []
+            self.__setAnnotation(self.markerLine(handle))
             self.markerDeleteHandle(handle)
         self.warnings = {}
         self.syntaxerrorToggled.emit(self)
@@ -4535,6 +4549,35 @@ class Editor(QsciScintillaCompat):
             E5MessageBox.warning(self,
                 self.trUtf8("py3flakes Warning"),
                 self.trUtf8("No py3flakes warning message available."))
+    
+    ############################################################################
+    ## Annotation handling methods below
+    ############################################################################
+    
+    def __setAnnotation(self, line):
+        """
+        Private method to set the annotations for the given line.
+        
+        @param line number of the line that needs annotation (integer)
+        """
+        if hasattr(QsciScintilla, "annotate"):
+            annotations = []
+            
+            # step 1: do py3flakes warnings
+            for handle in list(self.warnings.keys()):
+                if self.markerLine(handle) == line:
+                    annotations.extend(self.warnings[handle])
+            
+            # step 2: do syntax errors
+            for handle in list(self.syntaxerrors.keys()):
+                if self.markerLine(handle) == line:
+                        annotations.append(self.syntaxerrors[handle])
+            
+            if annotations:
+                # TODO: convert to list of styled text
+                self.annotate(line, "\n".join(annotations), 0)
+            else:
+                self.clearAnnotations(line)
     
     #################################################################
     ## Macro handling methods
