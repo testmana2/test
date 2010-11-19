@@ -4608,15 +4608,18 @@ class Editor(QsciScintillaCompat):
                     errorAnnotations.append(
                         self.trUtf8("Error: {0}").format(self.syntaxerrors[handle]))
             
+            wLen = len(warningAnnotations)
+            eLen = len(errorAnnotations)
             annotations = []
-            if len(warningAnnotations):
+            
+            if wLen:
                 annotationWarningTxt = "\n".join(warningAnnotations)
-                if len(errorAnnotations) > 0:
+                if eLen:
                     annotationWarningTxt += "\n"
                 annotations.append(QsciStyledText(annotationWarningTxt, 
                     self.annotationWarningStyle))
             
-            if len(errorAnnotations) > 0:
+            if eLen:
                 annotationErrorTxt = "\n".join(errorAnnotations)
                 annotations.append(QsciStyledText(annotationErrorTxt, 
                     self.annotationErrorStyle))
