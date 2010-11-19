@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>576</width>
-    <height>1325</height>
+    <height>1304</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -1062,6 +1062,115 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="annotationsGroup">
+     <property name="title">
+      <string>Annotations</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="enableAnnotationsCheckBox">
+        <property name="statusTip">
+         <string>Select to enable the display of annotations</string>
+        </property>
+        <property name="text">
+         <string>Show annotations</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="annotationsWarningGroup">
+        <property name="title">
+         <string>Warnings</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="annotationsWarningFgButton">
+           <property name="toolTip">
+            <string>Press to select the foreground colour</string>
+           </property>
+           <property name="text">
+            <string>Foreground</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="annotationsWarningBgButton">
+           <property name="toolTip">
+            <string>Press to select the background colour</string>
+           </property>
+           <property name="text">
+            <string>Background</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLineEdit" name="annotationsWarningSample">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Warning: There might be an error.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignHCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QGroupBox" name="annotationsErrorGroup">
+        <property name="title">
+         <string>Errors</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="annotationsErrorFgButton">
+           <property name="toolTip">
+            <string>Press to select the foreground colour</string>
+           </property>
+           <property name="text">
+            <string>Foreground</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="annotationsErrorBgButton">
+           <property name="toolTip">
+            <string>Press to select the background colour</string>
+           </property>
+           <property name="text">
+            <string>Background</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLineEdit" name="annotationsErrorSample">
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string>Error: There  is an error.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignHCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_10">
      <property name="title">
       <string>Various</string>
@@ -1142,6 +1251,11 @@
   <tabstop>edgeLineColumnSlider</tabstop>
   <tabstop>edgeBackgroundColorButton</tabstop>
   <tabstop>zoomfactorSlider</tabstop>
+  <tabstop>enableAnnotationsCheckBox</tabstop>
+  <tabstop>annotationsWarningFgButton</tabstop>
+  <tabstop>annotationsWarningBgButton</tabstop>
+  <tabstop>annotationsErrorFgButton</tabstop>
+  <tabstop>annotationsErrorBgButton</tabstop>
   <tabstop>whitespaceCheckBox</tabstop>
   <tabstop>miniMenuCheckBox</tabstop>
  </tabstops>

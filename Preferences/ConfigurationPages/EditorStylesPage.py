@@ -8,6 +8,7 @@ Module implementing the Editor Styles configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QColor, QPalette, QColorDialog
 from PyQt4.Qsci import QsciScintilla
 
 from QScintilla.QsciScintillaCompat import QsciScintillaCompat
@@ -115,6 +116,15 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.initColour("FoldMarkersBackground", self.foldmarkersBackgroundButton, 
                 Preferences.getEditorColour)
         
+        self.editorColours["AnnotationsWarningForeground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsWarningForeground"))
+        self.editorColours["AnnotationsWarningBackground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsWarningBackground"))
+        self.editorColours["AnnotationsErrorForeground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsErrorForeground"))
+        self.editorColours["AnnotationsErrorBackground"] = \
+            QColor(Preferences.getEditorColour("AnnotationsErrorBackground"))
+        
         self.eolCheckBox.setChecked(Preferences.getEditor("ShowEOL"))
         self.wrapLongLinesCheckBox.setChecked(
             Preferences.getEditor("WrapLongLines"))
@@ -149,6 +159,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             Preferences.getEditor("ShowWhitespace"))
         self.miniMenuCheckBox.setChecked(
             Preferences.getEditor("MiniContextMenu"))
+        
+        self.enableAnnotationsCheckBox.setChecked(
+            Preferences.getEditor("AnnotationsEnabled"))
         
     def save(self):
         """
@@ -202,6 +215,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.whitespaceCheckBox.isChecked())
         Preferences.setEditor("MiniContextMenu",
             self.miniMenuCheckBox.isChecked())
+        
+        Preferences.setEditor("AnnotationsEnabled", 
+            self.enableAnnotationsCheckBox.isChecked())
         
         for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
@@ -378,6 +394,70 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.marginsFontSample.setFont(self.marginsFont)
         self.defaultFontSample.setFont(self.defaultFont)
         self.monospacedFontSample.setFont(self.monospacedFont)
+        
+        pl = self.annotationsWarningSample.palette()
+        pl.setColor(QPalette.Text, self.editorColours["AnnotationsWarningForeground"])
+        pl.setColor(QPalette.Base, self.editorColours["AnnotationsWarningBackground"])
+        self.annotationsWarningSample.setPalette(pl)
+        self.annotationsWarningSample.repaint()
+        
+        pl = self.annotationsErrorSample.palette()
+        pl.setColor(QPalette.Text, self.editorColours["AnnotationsErrorForeground"])
+        pl.setColor(QPalette.Base, self.editorColours["AnnotationsErrorBackground"])
+        self.annotationsErrorSample.setPalette(pl)
+        self.annotationsErrorSample.repaint()
+    
+    @pyqtSlot()
+    def on_annotationsWarningFgButton_clicked(self):
+        """
+        Private slot to set the foreground colour of the warning annotations.
+        """
+        colour = QColorDialog.getColor(self.editorColours["AnnotationsWarningForeground"])
+        if colour.isValid():
+            pl = self.annotationsWarningSample.palette()
+            pl.setColor(QPalette.Text, colour)
+            self.annotationsWarningSample.setPalette(pl)
+            self.annotationsWarningSample.repaint()
+            self.editorColours["AnnotationsWarningForeground"] = colour
+    
+    @pyqtSlot()
+    def on_annotationsWarningBgButton_clicked(self):
+        """
+        Private slot to set the background colour of the warning annotations.
+        """
+        colour = QColorDialog.getColor(self.editorColours["AnnotationsWarningBackground"])
+        if colour.isValid():
+            pl = self.annotationsWarningSample.palette()
+            pl.setColor(QPalette.Base, colour)
+            self.annotationsWarningSample.setPalette(pl)
+            self.annotationsWarningSample.repaint()
+            self.editorColours["AnnotationsWarningBackground"] = colour
+    
+    @pyqtSlot()
+    def on_annotationsErrorFgButton_clicked(self):
+        """
+        Private slot to set the foreground colour of the error annotations.
+        """
+        colour = QColorDialog.getColor(self.editorColours["AnnotationsErrorForeground"])
+        if colour.isValid():
+            pl = self.annotationsErrorSample.palette()
+            pl.setColor(QPalette.Text, colour)
+            self.annotationsErrorSample.setPalette(pl)
+            self.annotationsErrorSample.repaint()
+            self.editorColours["AnnotationsErrorForeground"] = colour
+    
+    @pyqtSlot()
+    def on_annotationsErrorBgButton_clicked(self):
+        """
+        Private slot to set the background colour of the error annotations.
+        """
+        colour = QColorDialog.getColor(self.editorColours["AnnotationsErrorBackground"])
+        if colour.isValid():
+            pl = self.annotationsErrorSample.palette()
+            pl.setColor(QPalette.Base, colour)
+            self.annotationsErrorSample.setPalette(pl)
+            self.annotationsErrorSample.repaint()
+            self.editorColours["AnnotationsErrorBackground"] = colour
 
 def create(dlg):
     """
