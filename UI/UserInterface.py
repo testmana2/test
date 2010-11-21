@@ -195,6 +195,7 @@ class UserInterface(QMainWindow):
             restart (list of strings)
         """
         QMainWindow.__init__(self)
+        self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__restartArgs = restartArguments[:]
         
