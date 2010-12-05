@@ -167,7 +167,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
     
     def __generateItem(self, revision, changeset, author, date, text):
         """
-        Private method to generate a tag item in the taglist.
+        Private method to generate an annotate item in the annotation list.
         
         @param revision revision string (string)
         @param changeset changeset string (string)
