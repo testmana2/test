@@ -100,12 +100,12 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         elif type_ == "tags/":
             labelCombo.clear()
             labelCombo.clearEditText()
-            labelCombo.addItems(self.tagsList)
+            labelCombo.addItems(sorted(self.tagsList))
             labelCombo.setEnabled(True)
         elif type_ == "branches/":
             labelCombo.clear()
             labelCombo.clearEditText()
-            labelCombo.addItems(self.branchesList)
+            labelCombo.addItems(sorted(self.branchesList))
             labelCombo.setEnabled(True)
         
     @pyqtSlot(str)
