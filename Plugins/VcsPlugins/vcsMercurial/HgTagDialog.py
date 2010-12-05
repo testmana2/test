@@ -35,7 +35,7 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         self.okButton.setEnabled(False)
         
         self.tagCombo.clear()
-        self.tagCombo.addItems(taglist)
+        self.tagCombo.addItems(sorted(taglist))
     
     @pyqtSlot(str)
     def on_tagCombo_editTextChanged(self, text):

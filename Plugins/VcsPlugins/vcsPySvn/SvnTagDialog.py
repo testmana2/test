@@ -33,7 +33,7 @@ class SvnTagDialog(QDialog, Ui_SvnTagDialog):
         self.okButton.setEnabled(False)
         
         self.tagCombo.clear()
-        self.tagCombo.addItems(taglist)
+        self.tagCombo.addItems(sorted(taglist))
         
         if reposURL is not None and reposURL != "":
             self.tagCombo.setEditText(reposURL)

@@ -30,7 +30,7 @@ class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
         self.setupUi(self)
        
         self.tagCombo.clear()
-        self.tagCombo.addItems(taglist)
+        self.tagCombo.addItems(sorted(taglist))
         
         if reposURL is not None and reposURL != "":
             self.tagCombo.setEditText(reposURL)

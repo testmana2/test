@@ -76,11 +76,11 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
                 reposURL = reposURL.replace(path, '')
             self.repoRootLabel1.hide()
             self.typeCombo1.hide()
-            self.labelCombo1.addItems([reposURL] + self.vcs.tagsList)
+            self.labelCombo1.addItems([reposURL] + sorted(self.vcs.tagsList))
             self.labelCombo1.setEnabled(True)
             self.repoRootLabel2.hide()
             self.typeCombo2.hide()
-            self.labelCombo2.addItems([reposURL] + self.vcs.tagsList)
+            self.labelCombo2.addItems([reposURL] + sorted(self.vcs.tagsList))
             self.labelCombo2.setEnabled(True)
         
     def __changeLabelCombo(self, labelCombo, type_):
@@ -103,7 +103,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         elif type_ == "branches/":
             labelCombo.clear()
             labelCombo.clearEditText()
-            labelCombo.addItems(self.branchesList)
+            labelCombo.addItems(sorted(self.branchesList))
             labelCombo.setEnabled(True)
         
     @pyqtSlot(str)

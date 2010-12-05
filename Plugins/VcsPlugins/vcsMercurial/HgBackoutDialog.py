@@ -27,8 +27,8 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.tagCombo.addItems(list(sorted(tagsList)))
-        self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
+        self.tagCombo.addItems(sorted(tagsList))
+        self.branchCombo.addItems(["default"] + sorted(branchesList))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)

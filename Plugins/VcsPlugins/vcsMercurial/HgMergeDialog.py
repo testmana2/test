@@ -28,8 +28,8 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
         self.setupUi(self)
        
         self.forceCheckBox.setChecked(force)
-        self.tagCombo.addItems(list(sorted(tagsList)))
-        self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
+        self.tagCombo.addItems(sorted(tagsList))
+        self.branchCombo.addItems(["default"] + sorted(branchesList))
     
     def getParameters(self):
         """
