@@ -46,8 +46,8 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         self.autoAcceptCheckBox.setChecked(
             Preferences.getCooperation("AutoAcceptConnections"))
         
-        self.bannedUsersList.addItems(list(sorted(
-            Preferences.getCooperation("BannedUsers"))))
+        self.bannedUsersList.addItems(sorted(
+            Preferences.getCooperation("BannedUsers")))
     
     def save(self):
         """

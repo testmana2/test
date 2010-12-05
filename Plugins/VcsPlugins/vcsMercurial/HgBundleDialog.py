@@ -27,8 +27,8 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         self.setupUi(self)
         
         self.compressionCombo.addItems(["", "bzip2", "gzip", "none"])
-        self.tagCombo.addItems(list(sorted(tagsList)))
-        self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
+        self.tagCombo.addItems(sorted(tagsList))
+        self.branchCombo.addItems(["default"] + sorted(branchesList))
     
     def getParameters(self):
         """

@@ -27,8 +27,8 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
        
-        self.tagCombo.addItems(list(sorted(tagsList)))
-        self.branchCombo.addItems(list(sorted(["default"] + branchesList)))
+        self.tagCombo.addItems(sorted(tagsList))
+        self.branchCombo.addItems(["default"] + sorted(branchesList))
         
         if showNone:
             self.tipButton.setText(self.trUtf8("No revision selected"))

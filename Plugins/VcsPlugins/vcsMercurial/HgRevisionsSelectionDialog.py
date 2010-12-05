@@ -26,10 +26,10 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.tag1Combo.addItems(list(sorted(tagsList)))
-        self.tag2Combo.addItems(list(sorted(tagsList)))
-        self.branch1Combo.addItems(list(sorted(["default"] + branchesList)))
-        self.branch2Combo.addItems(list(sorted(["default"] + branchesList)))
+        self.tag1Combo.addItems(sorted(tagsList))
+        self.tag2Combo.addItems(sorted(tagsList))
+        self.branch1Combo.addItems(["default"] + sorted(branchesList))
+        self.branch2Combo.addItems(["default"] + sorted(branchesList))
     
     def __getRevision(self, no):
         """
