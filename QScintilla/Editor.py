@@ -320,6 +320,9 @@ class Editor(QsciScintillaCompat):
         
         self.gotoLine(0)
         
+        # set the text display again
+        self.__setTextDisplay()
+        
         # set the autocompletion and calltips function
         self.__acHookFunction = None
         self.__setAutoCompletion()
