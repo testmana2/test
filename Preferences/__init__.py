@@ -291,6 +291,8 @@ class Prefs(object):
         "DefaultEncoding" : "utf-8",
         "DefaultOpenFilter" : "",
         "DefaultSaveFilter" : "",
+        "AdditionalOpenFilters" : [], 
+        "AdditionalSaveFilters" : [], 
         
         "ZoomFactor" : 0, 
         
@@ -1285,6 +1287,9 @@ def getEditor(key, prefClass = Prefs):
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize", 
                  "PostScriptLevel", "EOLMode", "ZoomFactor"]:
         return int(prefClass.settings.value("Editor/" + key, 
+            prefClass.editorDefaults[key]))
+    elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters"]:
+        return toList(prefClass.settings.value("Editor/" + key, 
             prefClass.editorDefaults[key]))
     else:
         return toBool(prefClass.settings.value("Editor/" + key, 

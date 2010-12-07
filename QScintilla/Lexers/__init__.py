@@ -231,7 +231,7 @@ def __getPygmentsLexer(parent, name = ""):
     else:
         return None
     
-def getOpenFileFiltersList(includeAll = False, asString = False):
+def getOpenFileFiltersList(includeAll = False, asString = False, withAdditional = True):
     """
     Module function to get the file filter list for an open file operation.
     
@@ -239,6 +239,8 @@ def getOpenFileFiltersList(includeAll = False, asString = False):
         All Files filter (boolean)
     @param asString flag indicating the list should be returned 
         as a string (boolean)
+    @keyparam withAdditional flag indicating to include additional filters
+        defined by the user (boolean)
     @return file filter list (list of strings or string)
     """
     openFileFiltersList = [
@@ -321,6 +323,9 @@ def getOpenFileFiltersList(includeAll = False, asString = False):
     for name in LexerRegistry:
         openFileFiltersList.append(LexerRegistry[name][3])
     
+    if withAdditional:
+        openFileFiltersList.extend(Preferences.getEditor("AdditionalOpenFilters"))
+    
     openFileFiltersList.sort()
     if includeAll:
         openFileFiltersList.append(QApplication.translate('Lexers', 'All Files (*)'))
@@ -330,7 +335,7 @@ def getOpenFileFiltersList(includeAll = False, asString = False):
     else:
         return openFileFiltersList
 
-def getSaveFileFiltersList(includeAll = False, asString = False):
+def getSaveFileFiltersList(includeAll = False, asString = False, withAdditional = True):
     """
     Module function to get the file filter list for a save file operation.
     
@@ -338,6 +343,8 @@ def getSaveFileFiltersList(includeAll = False, asString = False):
         All Files filter (boolean)
     @param asString flag indicating the list should be returned 
         as a string (boolean)
+    @keyparam withAdditional flag indicating to include additional filters
+        defined by the user (boolean)
     @return file filter list (list of strings or string)
     """
     saveFileFiltersList = [
@@ -443,6 +450,9 @@ def getSaveFileFiltersList(includeAll = False, asString = False):
     
     for name in LexerRegistry:
         saveFileFiltersList.append(LexerRegistry[name][4])
+    
+    if withAdditional:
+        saveFileFiltersList.extend(Preferences.getEditor("AdditionalSaveFilters"))
     
     saveFileFiltersList.sort()
     
