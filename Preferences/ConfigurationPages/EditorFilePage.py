@@ -7,7 +7,11 @@
 Module implementing the Editor General configuration page.
 """
 
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QListWidgetItem, QInputDialog, QLineEdit
 from PyQt4.Qsci import QsciScintilla
+
+from E5Gui import E5MessageBox
 
 import QScintilla.Lexers
 
@@ -29,10 +33,12 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.setupUi(self)
         self.setObjectName("EditorFilePage")
         
-        self.openFilesFilterComboBox.addItems(
-            QScintilla.Lexers.getOpenFileFiltersList(True))
-        self.saveFilesFilterComboBox.addItems(
-            QScintilla.Lexers.getSaveFileFiltersList(True))
+        self.__showsOpenFilters = True
+        self.openFileFilters = Preferences.getEditor("AdditionalOpenFilters")[:]
+        self.saveFileFilters = Preferences.getEditor("AdditionalSaveFilters")[:]
+        self.fileFiltersList.addItems(self.openFileFilters)
+        
+        self.__setDefaultFiltersLists()
         
         self.defaultEncodingComboBox.addItems(sorted(supportedCodecs))
         
@@ -110,6 +116,129 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             Preferences.setEditor("EOLMode", QsciScintilla.EolMac)
         elif self.lfRadioButton.isChecked():
             Preferences.setEditor("EOLMode", QsciScintilla.EolUnix)
+        
+        self.__extractFileFilters()
+        Preferences.setEditor("AdditionalOpenFilters", self.openFileFilters)
+        Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
+    
+    def __setDefaultFiltersLists(self, keepSelection = False):
+        """
+        Private slot to set the default file filter combo boxes.
+        """
+        if keepSelection:
+            selectedOpenFilter = self.openFilesFilterComboBox.currentText()
+            selectedSaveFilter = self.saveFilesFilterComboBox.currentText()
+        
+        openFileFiltersList = \
+            QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional = False) + \
+            self.openFileFilters
+        openFileFiltersList.sort()
+        self.openFilesFilterComboBox.addItems(openFileFiltersList)
+        saveFileFiltersList = \
+            QScintilla.Lexers.getSaveFileFiltersList(False, withAdditional = False) + \
+            self.saveFileFilters
+        saveFileFiltersList.sort()
+        self.saveFilesFilterComboBox.addItems(saveFileFiltersList)
+        
+        if keepSelection:
+            self.openFilesFilterComboBox.setCurrentIndex(
+                self.openFilesFilterComboBox.findText(selectedOpenFilter))
+            self.saveFilesFilterComboBox.setCurrentIndex(
+                self.saveFilesFilterComboBox.findText(selectedSaveFilter))
+    
+    def __extractFileFilters(self):
+        """
+        Private method to extract the file filters.
+        """
+        filters = []
+        for row in range(self.fileFiltersList.count()):
+            filters.append(self.fileFiltersList.item(row).text())
+        if self.__showsOpenFilters:
+            self.openFileFilters = filters
+        else:
+            self.saveFileFilters = filters
+    
+    def __checkFileFilter(self, filter):
+        """
+        Private method to check a file filter for validity.
+        
+        @param filter file filter pattern to check (string)
+        @return flag indicating validity (boolean)
+        """
+        if not self.__showsOpenFilters and \
+           filter.count("*") != 1:
+            E5MessageBox.critical(self,
+                self.trUtf8("Add File Filter"),
+                self.trUtf8("""A Save File Filter must contain exactly one"""
+                            """ wildcard pattern. Yours contains {0}.""")\
+                            .format(filter.count("*")))
+            return False
+        
+        if filter.count("*") == 0:
+            E5MessageBox.critical(self,
+                self.trUtf8("Add File Filter"),
+                self.trUtf8("""A File Filter must contain at least one"""
+                            """ wildcard pattern.""")\
+                            .format(filter.count("*")))
+            return False
+        
+        return True
+    
+    @pyqtSlot()
+    def on_addFileFilterButton_clicked(self):
+        """
+        Private slot to add a file filter to the list.
+        """
+        filter, ok = QInputDialog.getText(
+            self,
+            self.trUtf8("Add File Filter"),
+            self.trUtf8("Enter the file filter entry:"),
+            QLineEdit.Normal)
+        if ok and filter:
+            if self.__checkFileFilter(filter):
+                self.fileFiltersList.addItem(filter)
+                self.__extractFileFilters()
+                self.__setDefaultFiltersLists(keepSelection = True)
+    
+    @pyqtSlot()
+    def on_editFileFilterButton_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot()
+    def on_deleteFileFilterButton_clicked(self):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot(bool)
+    def on_openFiltersButton_toggled(self, checked):
+        """
+        Private slot to switch the list of file filters.
+        """
+        self.__extractFileFilters()
+        self.__showsOpenFilters = checked
+        self.fileFiltersList.clear()
+        if checked:
+            self.fileFiltersList.addItems(self.openFileFilters)
+        else:
+            self.fileFiltersList.addItems(self.saveFileFilters)
+    
+    @pyqtSlot(QListWidgetItem, QListWidgetItem)
+    def on_fileFiltersList_currentItemChanged(self, current, previous):
+        """
+        Private slot to set the state of the edit and delete buttons.
+        
+        @param current new current item (QListWidgetItem)
+        @param previous previous current item (QListWidgetItem)
+        """
+        self.editFileFilterButton.setEnabled(current is not None)
+        self.deleteFileFilterButton.setEnabled(current is not None)
     
 def create(dlg):
     """
