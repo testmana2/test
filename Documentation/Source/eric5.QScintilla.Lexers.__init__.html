@@ -114,7 +114,7 @@ reference to the instanciated lexer object (QsciLexer)
 <hr /><hr />
 <a NAME="getOpenFileFiltersList" ID="getOpenFileFiltersList"></a>
 <h2>getOpenFileFiltersList</h2>
-<b>getOpenFileFiltersList</b>(<i>includeAll = False, asString = False</i>)
+<b>getOpenFileFiltersList</b>(<i>includeAll = False, asString = False, withAdditional = True</i>)
 <p>
     Module function to get the file filter list for an open file operation.
 </p><dl>
@@ -126,6 +126,10 @@ flag indicating the inclusion of the
 <dd>
 flag indicating the list should be returned
         as a string (boolean)
+</dd><dt><i>withAdditional=</i></dt>
+<dd>
+flag indicating to include additional filters
+        defined by the user (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -137,7 +141,7 @@ file filter list (list of strings or string)
 <hr /><hr />
 <a NAME="getSaveFileFiltersList" ID="getSaveFileFiltersList"></a>
 <h2>getSaveFileFiltersList</h2>
-<b>getSaveFileFiltersList</b>(<i>includeAll = False, asString = False</i>)
+<b>getSaveFileFiltersList</b>(<i>includeAll = False, asString = False, withAdditional = True</i>)
 <p>
     Module function to get the file filter list for a save file operation.
 </p><dl>
@@ -149,6 +153,10 @@ flag indicating the inclusion of the
 <dd>
 flag indicating the list should be returned
         as a string (boolean)
+</dd><dt><i>withAdditional=</i></dt>
+<dd>
+flag indicating to include additional filters
+        defined by the user (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

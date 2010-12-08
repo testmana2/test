@@ -7623,6 +7623,14 @@
       <keyword name="EditorFilePage" id="EditorFilePage" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#create" />
       <keyword name="EditorFilePage (Constructor)" id="EditorFilePage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.__init__" />
+      <keyword name="EditorFilePage.__checkFileFilter" id="EditorFilePage.__checkFileFilter" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.__checkFileFilter" />
+      <keyword name="EditorFilePage.__extractFileFilters" id="EditorFilePage.__extractFileFilters" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.__extractFileFilters" />
+      <keyword name="EditorFilePage.__setDefaultFiltersLists" id="EditorFilePage.__setDefaultFiltersLists" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.__setDefaultFiltersLists" />
+      <keyword name="EditorFilePage.on_addFileFilterButton_clicked" id="EditorFilePage.on_addFileFilterButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.on_addFileFilterButton_clicked" />
+      <keyword name="EditorFilePage.on_deleteFileFilterButton_clicked" id="EditorFilePage.on_deleteFileFilterButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.on_deleteFileFilterButton_clicked" />
+      <keyword name="EditorFilePage.on_editFileFilterButton_clicked" id="EditorFilePage.on_editFileFilterButton_clicked" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.on_editFileFilterButton_clicked" />
+      <keyword name="EditorFilePage.on_fileFiltersList_currentItemChanged" id="EditorFilePage.on_fileFiltersList_currentItemChanged" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.on_fileFiltersList_currentItemChanged" />
+      <keyword name="EditorFilePage.on_openFiltersButton_toggled" id="EditorFilePage.on_openFiltersButton_toggled" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.on_openFiltersButton_toggled" />
       <keyword name="EditorFilePage.save" id="EditorFilePage.save" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage.save" />
       <keyword name="DebuggerPython3Page (Module)" id="DebuggerPython3Page (Module)" ref="eric5.Preferences.ConfigurationPages.DebuggerPython3Page.html" />
       <keyword name="DebuggerPython3Page" id="DebuggerPython3Page" ref="eric5.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page" />
