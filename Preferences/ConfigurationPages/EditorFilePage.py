@@ -133,11 +133,13 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional = False) + \
             self.openFileFilters
         openFileFiltersList.sort()
+        self.openFilesFilterComboBox.clear()
         self.openFilesFilterComboBox.addItems(openFileFiltersList)
         saveFileFiltersList = \
             QScintilla.Lexers.getSaveFileFiltersList(False, withAdditional = False) + \
             self.saveFileFilters
         saveFileFiltersList.sort()
+        self.saveFilesFilterComboBox.clear()
         self.saveFilesFilterComboBox.addItems(saveFileFiltersList)
         
         if keepSelection:
@@ -203,18 +205,29 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
     @pyqtSlot()
     def on_editFileFilterButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot called to edit a file filter entry.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        filter = self.fileFiltersList.currentItem().text()
+        filter, ok = QInputDialog.getText(
+            self,
+            self.trUtf8("Add File Filter"),
+            self.trUtf8("Enter the file filter entry:"),
+            QLineEdit.Normal, 
+            filter)
+        if ok and filter:
+            if self.__checkFileFilter(filter):
+                self.fileFiltersList.currentItem().setText(filter)
+                self.__extractFileFilters()
+                self.__setDefaultFiltersLists(keepSelection = True)
     
     @pyqtSlot()
     def on_deleteFileFilterButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot called to delete a file filter entry.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        self.fileFiltersList.takeItem(self.fileFiltersList.currentRow())
+        self.__extractFileFilters()
+        self.__setDefaultFiltersLists(keepSelection = True)
     
     @pyqtSlot(bool)
     def on_openFiltersButton_toggled(self, checked):
