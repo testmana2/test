@@ -124,6 +124,9 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
     def __setDefaultFiltersLists(self, keepSelection = False):
         """
         Private slot to set the default file filter combo boxes.
+        
+        @param keepSelection flag indicating to keep the current selection
+            if possible (boolean)
         """
         if keepSelection:
             selectedOpenFilter = self.openFilesFilterComboBox.currentText()
@@ -180,8 +183,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             E5MessageBox.critical(self,
                 self.trUtf8("Add File Filter"),
                 self.trUtf8("""A File Filter must contain at least one"""
-                            """ wildcard pattern.""")\
-                            .format(filter.count("*")))
+                            """ wildcard pattern."""))
             return False
         
         return True
@@ -233,6 +235,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
     def on_openFiltersButton_toggled(self, checked):
         """
         Private slot to switch the list of file filters.
+        
+        @param checked flag indicating the check state of the button (boolean)
         """
         self.__extractFileFilters()
         self.__showsOpenFilters = checked
