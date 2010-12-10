@@ -4551,37 +4551,37 @@ Not connected
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="331"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="334"/>
         <source>Start Debugger</source>
         <translation>Comenzar Depuración</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="331"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="334"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No ha sido posible lanzar el extremo del depurador.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
         <source>Parent Process</source>
         <translation>Proceso Padre</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="718"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="721"/>
         <source>Child process</source>
         <translation>Proceso hijo</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="722"/>
         <source>Client forking</source>
         <translation>Fork del cliente</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="719"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="722"/>
         <source>Select the fork branch to follow.</source>
         <translation>Seleccionar la rama de fork para continuar.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebuggerInterfacePython.py" line="147"/>
+        <location filename="Debugger/DebuggerInterfacePython.py" line="150"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha encontrado un intérprete de Python2 configurado.&lt;/p&gt;</translation>
     </message>
@@ -6154,7 +6154,7 @@ selección completa.&lt;/li&gt;
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3898"/>
+        <location filename="QScintilla/Editor.py" line="3901"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
@@ -6249,217 +6249,217 @@ selección completa.&lt;/li&gt;
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2376"/>
+        <location filename="QScintilla/Editor.py" line="2379"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3435"/>
+        <location filename="QScintilla/Editor.py" line="3438"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3435"/>
+        <location filename="QScintilla/Editor.py" line="3438"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3901"/>
+        <location filename="QScintilla/Editor.py" line="3904"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4141"/>
+        <location filename="QScintilla/Editor.py" line="4144"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4141"/>
+        <location filename="QScintilla/Editor.py" line="4144"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4187"/>
+        <location filename="QScintilla/Editor.py" line="4190"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4183"/>
+        <location filename="QScintilla/Editor.py" line="4186"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4187"/>
+        <location filename="QScintilla/Editor.py" line="4190"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4279"/>
+        <location filename="QScintilla/Editor.py" line="4282"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4279"/>
+        <location filename="QScintilla/Editor.py" line="4282"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4395"/>
+        <location filename="QScintilla/Editor.py" line="4398"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4395"/>
+        <location filename="QScintilla/Editor.py" line="4398"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4534"/>
+        <location filename="QScintilla/Editor.py" line="4537"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4534"/>
+        <location filename="QScintilla/Editor.py" line="4537"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4562"/>
+        <location filename="QScintilla/Editor.py" line="4565"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4602"/>
+        <location filename="QScintilla/Editor.py" line="4605"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4583"/>
+        <location filename="QScintilla/Editor.py" line="4586"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4602"/>
+        <location filename="QScintilla/Editor.py" line="4605"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4619"/>
+        <location filename="QScintilla/Editor.py" line="4622"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4640"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4648"/>
+        <location filename="QScintilla/Editor.py" line="4651"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4648"/>
+        <location filename="QScintilla/Editor.py" line="4651"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4675"/>
+        <location filename="QScintilla/Editor.py" line="4678"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4675"/>
+        <location filename="QScintilla/Editor.py" line="4678"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4797"/>
+        <location filename="QScintilla/Editor.py" line="4800"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4801"/>
+        <location filename="QScintilla/Editor.py" line="4804"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4999"/>
+        <location filename="QScintilla/Editor.py" line="5002"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5017"/>
+        <location filename="QScintilla/Editor.py" line="5020"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5019"/>
+        <location filename="QScintilla/Editor.py" line="5022"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5021"/>
+        <location filename="QScintilla/Editor.py" line="5024"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5023"/>
+        <location filename="QScintilla/Editor.py" line="5026"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5025"/>
+        <location filename="QScintilla/Editor.py" line="5028"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5028"/>
+        <location filename="QScintilla/Editor.py" line="5031"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5046"/>
+        <location filename="QScintilla/Editor.py" line="5049"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5062"/>
+        <location filename="QScintilla/Editor.py" line="5065"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5089"/>
+        <location filename="QScintilla/Editor.py" line="5092"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5150"/>
+        <location filename="QScintilla/Editor.py" line="5153"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5150"/>
+        <location filename="QScintilla/Editor.py" line="5153"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5171"/>
+        <location filename="QScintilla/Editor.py" line="5174"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5187"/>
+        <location filename="QScintilla/Editor.py" line="5190"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5187"/>
+        <location filename="QScintilla/Editor.py" line="5190"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
@@ -6534,7 +6534,7 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5420"/>
+        <location filename="QScintilla/Editor.py" line="5423"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
@@ -6544,12 +6544,12 @@ selección completa.&lt;/li&gt;
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5422"/>
+        <location filename="QScintilla/Editor.py" line="5425"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5424"/>
+        <location filename="QScintilla/Editor.py" line="5427"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
@@ -6589,47 +6589,47 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2376"/>
+        <location filename="QScintilla/Editor.py" line="2379"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4576"/>
+        <location filename="QScintilla/Editor.py" line="4579"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4583"/>
+        <location filename="QScintilla/Editor.py" line="4586"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4619"/>
+        <location filename="QScintilla/Editor.py" line="4622"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4637"/>
+        <location filename="QScintilla/Editor.py" line="4640"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4792"/>
+        <location filename="QScintilla/Editor.py" line="4795"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4882"/>
+        <location filename="QScintilla/Editor.py" line="4885"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4999"/>
+        <location filename="QScintilla/Editor.py" line="5002"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5089"/>
+        <location filename="QScintilla/Editor.py" line="5092"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -6654,12 +6654,12 @@ selección completa.&lt;/li&gt;
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4515"/>
+        <location filename="QScintilla/Editor.py" line="4518"/>
         <source>py3flakes Warning</source>
         <translation>Advertencia de py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4515"/>
+        <location filename="QScintilla/Editor.py" line="4518"/>
         <source>No py3flakes warning message available.</source>
         <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
@@ -8948,7 +8948,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="37"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Fonts and colors of the syntax highlighters have to be configured on the syntax highlighter styles page.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; Las fuentes y colores para los resaltados de sintaxis deben ser configurados en la página de estilos de resaltado de sintaxis.</translation>
     </message>
 </context>
 <context>
@@ -13332,192 +13332,192 @@ selección completa.&lt;/li&gt;
         <translation>Haciendo commit de cambios al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="424"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="426"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation>Sincronizando con el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="472"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="474"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation>Añadiendo archivos/directorios al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="532"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="534"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation>Eliminando archivos/directorios del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="590"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="592"/>
         <source>Renaming {0}</source>
         <translation>Renombrando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="769"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="771"/>
         <source>Merging</source>
         <translation>Haciendo un merge</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1144"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1146"/>
         <source>Copying {0}</source>
         <translation>Copiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1237"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1239"/>
         <source>Mercurial Log</source>
         <translation>Registro de Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1237"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1239"/>
         <source>Select number of entries to show.</source>
         <translation>Seleccionar número de entradas a mostrar.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1310"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1312"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Haciendo pull de un repositorio remoto Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1335"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1337"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Haciendo push a un repositorio remoto Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1444"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1446"/>
         <source>Resolving files/directories</source>
         <translation>Resolviendo archivos/directorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="698"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="700"/>
         <source>Taging in the Mercurial repository</source>
         <translation>Haciendo tag en el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="728"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="730"/>
         <source>Reverting changes</source>
         <translation>Revirtiendo cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="972"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="974"/>
         <source>Mercurial command</source>
         <translation>Comando de Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1466"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1468"/>
         <source>Create Branch</source>
         <translation>Crear Branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1466"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1468"/>
         <source>Enter branch name</source>
         <translation>Introducir nombre de branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1477"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1479"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Creando branch en el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1548"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1550"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Verificando la integridad del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1574"/>
         <source>Showing the combined configuration settings</source>
         <translation>Mostrando los ajustes de configuración combinados</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1595"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1597"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Mostrando alias para repositorios remotos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1618"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1620"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Recuperando de transacción interrumpida</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1843"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
         <source>Shall the working directory be updated?</source>
         <translation>¿Debe ser actualizado el directorio de trabajo?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1500"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1502"/>
         <source>Showing current branch</source>
         <translation>Mostrando la branch actual</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1755"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1757"/>
         <source>Create changegroup</source>
         <translation>Crear changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1857"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1859"/>
         <source>Apply changegroups</source>
         <translation>Aplicar changegroups</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1871"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1873"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Subcomando bisect ({0}) inválido.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1900"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1807"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1809"/>
         <source>Preview changegroup</source>
         <translation>Previsualizar changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1641"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1643"/>
         <source>Identifying project directory</source>
         <translation>Identificando directorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1666"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1668"/>
         <source>Create .hgignore file</source>
         <translation>Crear archivo .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1666"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1668"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1930"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1932"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Eliminando archivos unicamente del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1713"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1715"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1730"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1732"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo changegroup de Mercurial &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1837"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1839"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1817"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1819"/>
         <source>Identifying changegroup file</source>
         <translation>Identificando archivo de changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1979"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1981"/>
         <source>Backing out changeset</source>
         <translation>Haciendo respaldo de changeset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1959"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1961"/>
         <source>No revision given. Aborting...</source>
         <translation>No se ha proporcionado revisión. Abortando...</translation>
     </message>
@@ -14059,12 +14059,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="128"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="128"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
@@ -20700,11 +20700,6 @@ Do you want to save your changes?</source>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="285"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="292"/>
-        <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation>&lt;br/&gt;Nombres alternativos:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
 </context>
 <context>
@@ -28168,51 +28163,51 @@ Not connected</source>
 &lt;p&gt;Introduzca los parámetros en este campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="62"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="101"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="104"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="108"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="78"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Introduzca el directorio de trabajo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="81"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de trabajo&lt;/b&gt;
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="115"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="131"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="134"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -28221,78 +28216,78 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="205"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="214"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>Seleccionar para borrar la información recogida de cobertura</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="208"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar información de cobertura&lt;/b&gt;
 &lt;p&gt;Seleccionar para borrar la información recogida de cobertura antes de la siguiente ejecución de cobertura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="212"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="221"/>
         <source>Erase &amp;coverage information</source>
         <translation>Borrar información de &amp;cobertura</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="215"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="155"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="158"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="162"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="165"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="175"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="178"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="181"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="191"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="194"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartCoverageDialog.ui" line="198"/>
+        <location filename="Debugger/StartCoverageDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
@@ -28305,12 +28300,12 @@ Not connected</source>
         <translation>Comenzar depuración</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="131"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="134"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -28319,41 +28314,41 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="115"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="78"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Introduzca el directorio de trabajo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="81"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de trabajo&lt;/b&gt;
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="101"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="104"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="108"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="62"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
@@ -28375,123 +28370,123 @@ Not connected</source>
         <translation>Línea de coman&amp;dos:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="155"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="158"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="162"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="165"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="205"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="214"/>
         <source>Select to trace into the Python library</source>
         <translation>Seleccionar para trazar dentro de la biblioteca de Python</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="208"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="217"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>&amp;Trazar dentro de bibliotecas del intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="211"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="220"/>
         <source>Alt+T</source>
         <translation>Alt+T</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="175"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="178"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="181"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="218"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="227"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>Seleccionar para no parar el depurador en la primera línea ejecutable.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="221"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="230"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;No detener el la primera línea&lt;/b&gt;&lt;p&gt;Hace que el depurador no se detenga en la primera línea ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="224"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="233"/>
         <source>Don&apos;t stop at first line</source>
         <translation>No detener en la primera línea </translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="191"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="194"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="198"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="234"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
         <source>Forking</source>
         <translation>Haciendo un fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="240"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="249"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleccionar para ir a través del fork sin preguntar</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="252"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork sin pausa&lt;/b&gt;
 &lt;p&gt;Seleccionar para ir a traves del fork sin preguntar, basando la decisión sobre el fork en la selección Padre/Hijo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="247"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="256"/>
         <source>Fork without pausing</source>
         <translation>Fork sin pausa</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="257"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="266"/>
         <source>Select to debug the child process after forking</source>
         <translation>Seleccionar para depurar el proceso hijo despues del fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="264"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
         <translation>Depurar Proceso Hijo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartDebugDialog.ui" line="260"/>
+        <location filename="Debugger/StartDebugDialog.ui" line="269"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Depurar Proceso Hijo&lt;/b&gt;
@@ -28514,17 +28509,17 @@ Not connected</source>
 <context>
     <name>StartProfileDialog</name>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="13"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="14"/>
         <source>Start profiling</source>
         <translation>Comenzar profiling</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="130"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="133"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -28533,134 +28528,134 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="77"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Introduzca el directorio de trabajo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="80"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de trabajo&lt;/b&gt;
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="100"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="103"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="107"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="61"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="38"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="39"/>
         <source>Enter the commandline parameters</source>
         <translation>Introduzca los parámetros de la línea de comandos</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="41"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="42"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Línea de comandos&lt;/b&gt;
 &lt;p&gt;Introduzca los parámetros en este campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="22"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="23"/>
         <source>Command&amp;line:</source>
         <translation>&amp;Línea de comandos:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="204"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
         <source>Select this to erase the collected timing data</source>
         <translation>Seleccionar para borrar la información recogida  de tiempos</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="217"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar datos de timing&lt;/b&gt;
 &lt;p&gt;Seleccionar para borrar los datos recogidos de timing antes de la siguiente ejecución de cobertura.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="211"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="221"/>
         <source>Erase &amp;timing data</source>
         <translation>Borrar datos de &amp;timing</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="214"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="224"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="154"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="157"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="161"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="174"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="177"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="180"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="190"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="193"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartProfileDialog.ui" line="197"/>
+        <location filename="Debugger/StartProfileDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
@@ -28690,51 +28685,51 @@ Not connected</source>
 &lt;p&gt;Introduzca los parámetros en este campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="62"/>
+        <location filename="Debugger/StartRunDialog.ui" line="65"/>
         <source>&amp;Working directory:</source>
         <translation>Directorio de &amp;Trabajo:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="101"/>
+        <location filename="Debugger/StartRunDialog.ui" line="107"/>
         <source>Select directory using a directory selection dialog</source>
         <translation>Seleccionar directorio utilizando un diálogo de selección de directorio</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="104"/>
+        <location filename="Debugger/StartRunDialog.ui" line="110"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Seleccionar directorio&lt;/b&gt;
 &lt;p&gt;Seleccionar el directorio de trabajo a través de un diálogo de selección de directorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="108"/>
+        <location filename="Debugger/StartRunDialog.ui" line="114"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="78"/>
+        <location filename="Debugger/StartRunDialog.ui" line="81"/>
         <source>Enter the working directory</source>
         <translation>Introduzca el directorio de trabajo</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="81"/>
+        <location filename="Debugger/StartRunDialog.ui" line="84"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directorio de trabajo&lt;/b&gt;
 &lt;p&gt;Introduzca el directorio de trabajo de la aplicación a depurar. Déjelo en blanco para establecer el directorio de trabajo como el directorio del ejecutable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="115"/>
+        <location filename="Debugger/StartRunDialog.ui" line="121"/>
         <source>&amp;Environment:</source>
         <translation>&amp;Entorno:</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="131"/>
+        <location filename="Debugger/StartRunDialog.ui" line="137"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Introduzca las variables de entorno a establecer.</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="134"/>
+        <location filename="Debugger/StartRunDialog.ui" line="140"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -28743,95 +28738,95 @@ Not connected</source>
 &lt;p&gt;Ejemplo: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="155"/>
+        <location filename="Debugger/StartRunDialog.ui" line="164"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Desmarcar para deshabilitar informes de excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="158"/>
+        <location filename="Debugger/StartRunDialog.ui" line="167"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Informar de excepciones&lt;/b&gt;
 &lt;p&gt;Desmarcar para deshabilitar el informe de excepciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="162"/>
+        <location filename="Debugger/StartRunDialog.ui" line="171"/>
         <source>Report &amp;exceptions</source>
         <translation>Informar de &amp;excepciones</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="165"/>
+        <location filename="Debugger/StartRunDialog.ui" line="174"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="175"/>
+        <location filename="Debugger/StartRunDialog.ui" line="184"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Seleccionar para limpiar la pantalla de la ventana de intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="178"/>
+        <location filename="Debugger/StartRunDialog.ui" line="187"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar ventana del  intérprete&lt;/b&gt;&lt;p&gt;Limpia la ventana del intérprete antes de empezar el cliente de depuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="181"/>
+        <location filename="Debugger/StartRunDialog.ui" line="190"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Limpiar ventana de &amp;intérprete</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="191"/>
+        <location filename="Debugger/StartRunDialog.ui" line="200"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Seleccionar para iniciar el depurador en una ventana de consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="194"/>
+        <location filename="Debugger/StartRunDialog.ui" line="203"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Iniciar en consola&lt;/b&gt;
 &lt;p&gt;Seleccionar para iniciar el depurador en una ventana de consola. El comando de consola debe ser configurado en Depurador-&amp;gt;Página General&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="198"/>
+        <location filename="Debugger/StartRunDialog.ui" line="207"/>
         <source>Start in console</source>
         <translation>Iniciar en consola</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="205"/>
+        <location filename="Debugger/StartRunDialog.ui" line="214"/>
         <source>Forking</source>
         <translation>Haciendo un fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="211"/>
+        <location filename="Debugger/StartRunDialog.ui" line="220"/>
         <source>Select to go through the fork without asking</source>
         <translation>Seleccionar para ir a través del fork sin preguntar</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="Debugger/StartRunDialog.ui" line="223"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork sin pausa&lt;/b&gt;
 &lt;p&gt;Seleccionar para ir a traves del fork sin preguntar, basando la decisión sobre el fork en la selección Padre/Hijo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="218"/>
+        <location filename="Debugger/StartRunDialog.ui" line="227"/>
         <source>Fork without pausing</source>
         <translation>Fork sin pausa</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="228"/>
+        <location filename="Debugger/StartRunDialog.ui" line="237"/>
         <source>Select to debug the child process after forking</source>
         <translation>Seleccionar para depurar el proceso hijo despues del fork</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="231"/>
+        <location filename="Debugger/StartRunDialog.ui" line="240"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Depurar Proceso Hijo&lt;/b&gt;
 &lt;p&gt;Seleccionar para depurar el proceso hijo despues del fork. Si no se selecciona, se depurará el proceso padre. No tiene efecto si no se selecciona &apos;fork sin pausa&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/StartRunDialog.ui" line="235"/>
+        <location filename="Debugger/StartRunDialog.ui" line="244"/>
         <source>Debug Child Process</source>
         <translation>Depurar Proceso Hijo</translation>
     </message>
@@ -41338,12 +41333,12 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>eric5</name>
     <message>
-        <location filename="eric5.py" line="227"/>
+        <location filename="eric5.py" line="237"/>
         <source>Importing packages...</source>
         <translation>Importando paquetes...</translation>
     </message>
     <message>
-        <location filename="eric5.py" line="232"/>
+        <location filename="eric5.py" line="242"/>
         <source>Generating Main Window...</source>
         <translation>Generando Ventana Principal...</translation>
     </message>
@@ -41351,17 +41346,17 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1397"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1399"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Etiquetas&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1401"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1403"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1408"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1410"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -41372,31 +41367,31 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 &lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1391"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1393"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pista&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1393"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1395"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1405"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1407"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Padres&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1025"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1027"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Padre #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1037"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1039"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
@@ -41405,7 +41400,7 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de commit&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1061"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1063"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
