@@ -7,7 +7,7 @@
 Module implementing a network access manager proxy for web pages.
 """
 
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 
 class NetworkAccessManagerProxy(QNetworkAccessManager):
     """
@@ -52,7 +52,7 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
             self.__class__.primaryManager.proxyAuthenticationRequired)
         self.authenticationRequired.connect(
             self.__class__.primaryManager.authenticationRequired)
-        self.finished[QNetworkReply].connect(self.__class__.primaryManager.finished)
+        self.finished.connect(self.__class__.primaryManager.finished)
     
     def createRequest(self, op, request, outgoingData = None):
         """

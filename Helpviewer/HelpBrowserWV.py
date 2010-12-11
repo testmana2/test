@@ -161,7 +161,7 @@ class HelpWebPage(QWebPage):
         self.setNetworkAccessManager(self.__proxy)
         
         self.__sslInfo = None
-        self.__proxy.finished[QNetworkReply].connect(self.__managerFinished)
+        self.__proxy.finished.connect(self.__managerFinished)
     
     def acceptNavigationRequest(self, frame, request, type_):
         """
