@@ -36,7 +36,7 @@ from .Bookmarks.BookmarksDialog import BookmarksDialog
 from .History.HistoryManager import HistoryManager
 from .History.HistoryMenu import HistoryMenu
 from .Passwords.PasswordManager import PasswordManager
-from .Network.NetworkAccessManager import NetworkAccessManager
+from .Network.NetworkAccessManager import NetworkAccessManager, SSL_AVAILABLE
 from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
@@ -1064,6 +1064,20 @@ class HelpWindow(QMainWindow):
             self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
+        self.certificatesAct = E5Action(self.trUtf8('Manage Certificates'), 
+                      self.trUtf8('Manage Certificates...'), 
+                      0, 0,
+                      self, 'help_manage_certificates')
+        self.certificatesAct.setStatusTip(self.trUtf8(
+                'Manage the saved certificates'))
+        self.certificatesAct.setWhatsThis(self.trUtf8(
+                """<b>Manage Saved Certificates...</b>"""
+                """<p>Opens a dialog to manage the saved certificates.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
+        self.__actions.append(self.certificatesAct)
+        
         self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'), 
                       self.trUtf8('Show &Network Monitor'), 
                       0, 0,
@@ -1199,6 +1213,8 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.searchEnginesAct)
         menu.addSeparator()
         menu.addAction(self.passwordsAct)
+        if SSL_AVAILABLE:
+            menu.addAction(self.certificatesAct)
         menu.addSeparator()
         menu.addAction(self.adblockAct)
         menu.addSeparator()
@@ -2266,6 +2282,15 @@ class HelpWindow(QMainWindow):
         from .Passwords.PasswordsDialog import PasswordsDialog
         
         dlg = PasswordsDialog(self)
+        dlg.exec_()
+        
+    def __showCertificatesDialog(self):
+        """
+        Private slot to show the certificates management dialog.
+        """
+        from .SslCertificatesDialog import SslCertificatesDialog
+        
+        dlg = SslCertificatesDialog(self)
         dlg.exec_()
         
     def __showAdBlockDialog(self):
