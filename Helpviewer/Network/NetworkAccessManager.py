@@ -74,10 +74,12 @@ class NetworkAccessManager(QNetworkAccessManager):
         if SSL_AVAILABLE:
             sslCfg = QSslConfiguration.defaultConfiguration()
             caList = sslCfg.caCertificates()
-            caNew = QSslCertificate.fromData(Preferences.toByteArray(
-                Preferences.Prefs.settings.value("Help/CaCertificates")))
-            for cert in caNew:
-                caList.append(cert)
+            certificateDict = Preferences.toDict(
+                    Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+            for server in certificateDict:
+                for cert in QSslCertificate.fromData(certificateDict[server]):
+                    if cert not in caList:
+                        caList.append(cert)
             sslCfg.setCaCertificates(caList)
             QSslConfiguration.setDefaultConfiguration(sslCfg)
             
@@ -193,19 +195,28 @@ class NetworkAccessManager(QNetworkAccessManager):
         @param reply reference to the reply object (QNetworkReply)
         @param errors list of SSL errors (list of QSslError)
         """
-        caMerge = QSslCertificate.fromData(Preferences.toByteArray(
-            Preferences.Prefs.settings.value("Help/CaCertificates")))
+        caMerge = {}
+        certificateDict = Preferences.toDict(
+                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+        for server in certificateDict:
+            caMerge[server] = QSslCertificate.fromData(certificateDict[server])
         caNew = []
         
         errorStrings = []
+        url = reply.url()
+        server = url.host()
+        if url.port() != -1:
+            server += ":{0:d}".format(url.port())
         for err in errors:
             if err.error() == QSslError.NoError:
                 continue
-            if err.certificate() in caMerge:
+            if server in caMerge and err.certificate() in caMerge[server]:
                 continue
             errorStrings.append(err.errorString())
             if not err.certificate().isNull():
-                caNew.append(err.certificate())
+                cert = err.certificate()
+                if cert not in caNew:
+                    caNew.append(cert)
         if not errorStrings:
             reply.ignoreSslErrors()
             return
@@ -230,8 +241,10 @@ class NetworkAccessManager(QNetworkAccessManager):
                                 """Do you want to accept all these certificates?</p>""")\
                         .format("".join(certinfos)))
                 if ret:
+                    if server not in caMerge:
+                        caMerge[server] = []
                     for cert in caNew:
-                        caMerge.append(cert)
+                        caMerge[server].append(cert)
                     
                     sslCfg = QSslConfiguration.defaultConfiguration()
                     caList = sslCfg.caCertificates()
@@ -241,12 +254,22 @@ class NetworkAccessManager(QNetworkAccessManager):
                     QSslConfiguration.setDefaultConfiguration(sslCfg)
                     reply.setSslConfiguration(sslCfg)
                     
-                    pems = QByteArray()
-                    for cert in caMerge:
-                        pems.append(cert.toPem() + '\n')
-                    Preferences.Prefs.settings.setValue("Help/CaCertificates", pems)
+                    certificateDict = {}
+                    for server in caMerge:
+                        pems = QByteArray()
+                        for cert in caMerge[server]:
+                            pems.append(cert.toPem() + '\n')
+                        certificateDict[server] = pems
+                    Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+                        certificateDict)
+                else:
+                    reply.abort()
+                    return
             
             reply.ignoreSslErrors()
+        
+        else:
+            reply.abort()
     
     def __certToString(self, cert):
         """

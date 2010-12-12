@@ -1848,6 +1848,7 @@ def setHelp(key, value, prefClass = Prefs):
         prefClass.settings.setValue("Help/" + key, value.name())
     elif key == "WebSearchKeywords":
         # value is list of tuples of (keyword, engine name)
+        prefClass.settings.remove("Help/" + key)
         prefClass.settings.beginWriteArray("Help/" + key, len(value))
         index = 0
         for v in value:
@@ -1857,7 +1858,8 @@ def setHelp(key, value, prefClass = Prefs):
             index += 1
         prefClass.settings.endArray()
     elif key == "DownloadManagerDownloads":
-        # value is list of tuples of (URL, save location, done flag)
+        # value is list of tuples of (URL, save location, done flag, page url)
+        prefClass.settings.remove("Help/" + key)
         prefClass.settings.beginWriteArray("Help/" + key, len(value))
         index = 0
         for v in value:
@@ -2301,6 +2303,18 @@ def toByteArray(value):
     """
     if value is None:
         return QtCore.QByteArray()
+    else:
+        return value
+
+def toDict(value):
+    """
+    Module function to convert a value to a dictionary.
+    
+    @param value value to be converted
+    @return converted data
+    """
+    if value is None:
+        return {}
     else:
         return value
     

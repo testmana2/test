@@ -343,7 +343,7 @@ class HelpWebPage(QWebPage):
         """
         Public slot to show some SSL information for the loaded page.
         """
-        if self.__sslInfo is not None and self.__sslInfo.isValid():
+        if self.__sslInfo is not None:
             dlg = SslInfoDialog(self.__sslInfo, self.view())
             dlg.exec_()
         else:

@@ -293,7 +293,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
     
     def __load(self):
         """
-        Public method to load the download settings.
+        Private method to load the download settings.
         """
         if self.__loaded:
             return
