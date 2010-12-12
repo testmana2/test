@@ -265,8 +265,14 @@ class NetworkAccessManager(QNetworkAccessManager):
                     for cert in caMerge:
                         pems.append(cert.toPem() + '\n')
                     Preferences.Prefs.settings.setValue("Help/CaCertificates", pems)
+                else:
+                    reply.abort()
+                    return
             
             reply.ignoreSslErrors()
+        
+        else:
+            reply.abort()
     
     def __certToString(self, cert):
         """
