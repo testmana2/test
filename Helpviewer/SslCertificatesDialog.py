@@ -10,9 +10,11 @@ Module implementing a dialog to show and edit all certificates.
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
-    from PyQt4.QtNetwork import QSslCertificate
+    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration
 except ImportError:
     pass
+
+from E5Gui import E5MessageBox
 
 from .Ui_SslCertificatesDialog import Ui_SslCertificatesDialog
 
@@ -36,6 +38,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         self.setupUi(self)
         
         self.__populateServerCertificatesTree()
+        self.__populateCaCertificatesTree()
     
     def __populateServerCertificatesTree(self):
         """
@@ -45,17 +48,16 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                 Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
-                self.__createCertificateEntry(self.serversCertificatesTree, server, cert)
+                self.__createServerCertificateEntry(server, cert)
         
         self.serversCertificatesTree.expandAll()
         for i in range(self.serversCertificatesTree.columnCount()):
             self.serversCertificatesTree.resizeColumnToContents(i)
     
-    def __createCertificateEntry(self, tree, server, cert):
+    def __createServerCertificateEntry(self, server, cert):
         """
         Private method to create a certificate entry.
         
-        @param tree reference to the tree to insert the certificate (QTreeWidget)
         @param server server name of the certificate (string)
         @param cert certificate to insert (QSslCertificate)
         """
@@ -69,9 +71,10 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
-        items = tree.findItems(organisation, Qt.MatchFixedString | Qt.MatchCaseSensitive)
+        items = self.serversCertificatesTree.findItems(organisation, 
+            Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
-            parent = QTreeWidgetItem(tree, [organisation])
+            parent = QTreeWidgetItem(self.serversCertificatesTree, [organisation])
         else:
             parent = items[0]
         
@@ -93,7 +96,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     @pyqtSlot()
     def on_serversViewButton_clicked(self):
         """
-        Private slot to show data of the selected certificate
+        Private slot to show data of the selected certificate.
         """
         cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
         dlg = SslInfoDialog(cert, self)
@@ -101,6 +104,96 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     
     @pyqtSlot()
     def on_serversDeleteButton_clicked(self):
+        """
+        Private slot to delete the selected certificate.
+        """
+        itm = self.serversCertificatesTree.currentItem()
+        res = E5MessageBox.yesNo(self,
+            self.trUtf8("Delete Server Certificate"),
+            self.trUtf8("""<p>Shall the server certificate really be deleted?</p>"""
+                        """<p>{0}</p>"""
+                        """<p>If the server certificate is deleted, the normal security"""
+                        """ checks will be reinstantiated and the server has to"""
+                        """ present a valid certificate.</p>""")\
+                .format(itm.text(0)))
+        if res:
+            server = itm.text(1)
+            
+            # delete the selected entry and it's parent entry, if it was the only one
+            parent = itm.parent()
+            parent.takeChild(parent.indexOfChild(itm))
+            if parent.childCount() == 0:
+                self.serversCertificatesTree.takeTopLevelItem(
+                    self.serversCertificatesTree.indexOfTopLevelItem(parent))
+            
+            # delete the certificate from the user certificate store
+            certificateDict = Preferences.toDict(
+                    Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+            del certificateDict[server]
+            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+                certificateDict)
+            
+            # delete the certificate from the default certificates
+            caNew = []
+            for topLevelIndex in range(self.serversCertificatesTree.topLevelItemCount()):
+                parent = self.serversCertificatesTree.topLevelItem(topLevelIndex)
+                for childIndex in range(parent.childCount()):
+                    cert = parent.child(childIndex).data(0, self.CertRole)
+                    if cert not in caNew:
+                        caNew.append(cert)
+            caList = QSslSocket.systemCaCertificates()
+            caList.extend(caNew)
+            sslCfg = QSslConfiguration.defaultConfiguration()
+            sslCfg.setCaCertificates(caList)
+            QSslConfiguration.setDefaultConfiguration(sslCfg)
+    
+    def __populateCaCertificatesTree(self):
+        """
+        Private slot to populate the CA certificates tree.
+        """
+        for cert in QSslSocket.systemCaCertificates():
+            self.__createCaCertificateEntry(cert)
+        
+        self.caCertificatesTree.expandAll()
+        for i in range(self.caCertificatesTree.columnCount()):
+            self.caCertificatesTree.resizeColumnToContents(i)
+        self.caCertificatesTree.sortItems(0, Qt.AscendingOrder)
+    
+    def __createCaCertificateEntry(self, cert):
+        """
+        Private method to create a certificate entry.
+        
+        @param cert certificate to insert (QSslCertificate)
+        """
+        # step 1: extract the info to be shown
+        organisation = cert.subjectInfo(QSslCertificate.Organization)
+        if organisation is None or organisation == "":
+            organisation = self.trUtf8("(Unknown)")
+        commonName = cert.subjectInfo(QSslCertificate.CommonName)
+        if commonName is None or commonName == "":
+            commonName = self.trUtf8("(Unknown common name)")
+        expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
+        
+        # step 2: create the entry
+        items = self.caCertificatesTree.findItems(organisation, 
+            Qt.MatchFixedString | Qt.MatchCaseSensitive)
+        if len(items) == 0:
+            parent = QTreeWidgetItem(self.caCertificatesTree, [organisation])
+        else:
+            parent = items[0]
+        
+        QTreeWidgetItem(parent, [commonName, expiryDate])
+    
+    @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
+    def on_caCertificatesTree_currentItemChanged(self, current, previous):
+        """
+        Slot documentation goes here.
+        """
+        # TODO: not implemented yet
+        raise NotImplementedError
+    
+    @pyqtSlot()
+    def on_caViewButton_clicked(self):
         """
         Slot documentation goes here.
         """

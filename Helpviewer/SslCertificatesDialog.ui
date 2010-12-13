@@ -20,7 +20,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="serversTab">
       <attribute name="title">
@@ -102,6 +102,59 @@
       <attribute name="title">
        <string>Certificate &amp;Authorities</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>You have saved certificates identifying these certification authorities:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="caCertificatesTree">
+         <column>
+          <property name="text">
+           <string>Certificate name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Expiry Date</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="caViewButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to view the selected certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;View...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -122,6 +175,8 @@
   <tabstop>serversCertificatesTree</tabstop>
   <tabstop>serversViewButton</tabstop>
   <tabstop>serversDeleteButton</tabstop>
+  <tabstop>caCertificatesTree</tabstop>
+  <tabstop>caViewButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
