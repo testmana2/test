@@ -13,6 +13,8 @@ from PyQt4.QtNetwork import QSslCertificate
 
 from .Ui_SslInfoDialog import Ui_SslInfoDialog
 
+import Utilities
+
 class SslInfoDialog(QDialog, Ui_SslInfoDialog):
     """
     Class implementing a dialog to show SSL certificate infos.
@@ -57,7 +59,7 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         if txt is None or txt == "":
             return self.trUtf8("<not part of the certificate>")
         
-        return txt
+        return Utilities.decodeString(txt)
     
     def __serialNumber(self, cert):
         """

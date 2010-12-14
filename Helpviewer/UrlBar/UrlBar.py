@@ -23,6 +23,7 @@ from .BookmarkInfoDialog import BookmarkInfoDialog
 
 import UI.PixmapCache
 import Preferences
+import Utilities
 
 class UrlBar(E5LineEdit):
     """
@@ -139,9 +140,11 @@ class UrlBar(E5LineEdit):
         if ok and self.__browser.url().scheme() == "https":
             sslInfo = self.__browser.page().getSslInfo()
             if sslInfo is not None:
-                org = sslInfo.subjectInfo(QSslCertificate.Organization)
+                org = Utilities.decodeString(
+                    sslInfo.subjectInfo(QSslCertificate.Organization))
                 if org == "":
-                    cn = sslInfo.subjectInfo(QSslCertificate.CommonName)
+                    cn = Utilities.decodeString(
+                        sslInfo.subjectInfo(QSslCertificate.CommonName))
                     if cn != "":
                         org = cn.split(".", 1)[1]
                     if org == "":

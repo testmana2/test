@@ -299,7 +299,46 @@ def encode(text, orig_coding):
                         etext, encoding = text.encode('utf-8'), 'utf-8'
     
     return etext, encoding
+
+def decodeString(text):
+    """
+    Function to decode a string containing Unicode encoded characters.
     
+    @param text text containing encoded chars (string)
+    @return decoded text (string)
+    """
+    buf = b""
+    index = 0
+    while index < len(text):
+        if text[index] == "\\":
+            qb = QByteArray.fromHex(text[index:index + 4])
+            buf += bytes(qb)
+            index += 4
+        else:
+            buf += bytes(text[index], encoding="ascii")
+            index += 1
+    buf = buf.replace(b"\x00", b"")
+    
+    # try UTF-8
+    try:
+        return str(buf, encoding="utf-8")
+    except UnicodeError:
+        pass
+    
+    # try codec detection
+    try:
+        import ThirdParty.CharDet.chardet
+        guess = ThirdParty.CharDet.chardet.detect(buf)
+        if guess and guess['encoding'] is not None:
+            codec = guess['encoding'].lower()
+            return str(buf, codec)
+    except (UnicodeError, LookupError):
+        pass
+    except ImportError:
+        pass
+    
+    return str(text, "utf-8", "ignore")
+
 _escape = re.compile("[&<>\"\u0080-\uffff]")
 
 _escape_map = {

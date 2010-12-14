@@ -281,13 +281,16 @@ class NetworkAccessManager(QNetworkAccessManager):
         result = "<p>"
         
         result += self.trUtf8("Name: {0}")\
-            .format(cert.subjectInfo(QSslCertificate.CommonName))
+            .format(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName)))
         
         result += self.trUtf8("<br/>Organization: {0}")\
-            .format(cert.subjectInfo(QSslCertificate.Organization))
+            .format(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization)))
         
         result += self.trUtf8("<br/>Issuer: {0}")\
-            .format(cert.issuerInfo(QSslCertificate.CommonName))
+            .format(Utilities.decodeString(
+                cert.issuerInfo(QSslCertificate.CommonName)))
         
         result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
             .format(cert.effectiveDate().toString("yyyy-MM-dd"), 

@@ -7,7 +7,7 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
     from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration
@@ -21,6 +21,7 @@ from .Ui_SslCertificatesDialog import Ui_SslCertificatesDialog
 from .SslInfoDialog import SslInfoDialog
 
 import Preferences
+import Utilities
 
 class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     """
@@ -62,10 +63,12 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = cert.subjectInfo(QSslCertificate.Organization)
+        organisation = Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.Organization))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = cert.subjectInfo(QSslCertificate.CommonName)
+        commonName = Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.CommonName))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
@@ -167,12 +170,12 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = str(
-            QByteArray(cert.subjectInfo(QSslCertificate.Organization)), 
-            encoding = "utf-8")
+        organisation = Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.Organization))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = cert.subjectInfo(QSslCertificate.CommonName)
+        commonName = Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.CommonName))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
