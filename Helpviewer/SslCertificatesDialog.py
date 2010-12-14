@@ -7,7 +7,7 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtCore import pyqtSlot, Qt, QByteArray
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
     from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration
@@ -56,7 +56,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     
     def __createServerCertificateEntry(self, server, cert):
         """
-        Private method to create a certificate entry.
+        Private method to create a server certificate entry.
         
         @param server server name of the certificate (string)
         @param cert certificate to insert (QSslCertificate)
@@ -84,7 +84,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_serversCertificatesTree_currentItemChanged(self, current, previous):
         """
-        Private slot handling a change of the current item.
+        Private slot handling a change of the current item in the
+        server certificates list.
         
         @param current new current item (QTreeWidgetItem)
         @param previous previous current item (QTreeWidgetItem)
@@ -96,7 +97,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     @pyqtSlot()
     def on_serversViewButton_clicked(self):
         """
-        Private slot to show data of the selected certificate.
+        Private slot to show data of the selected server certificate.
         """
         cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
         dlg = SslInfoDialog(cert, self)
@@ -105,7 +106,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     @pyqtSlot()
     def on_serversDeleteButton_clicked(self):
         """
-        Private slot to delete the selected certificate.
+        Private slot to delete the selected server certificate.
         """
         itm = self.serversCertificatesTree.currentItem()
         res = E5MessageBox.yesNo(self,
@@ -161,12 +162,14 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     
     def __createCaCertificateEntry(self, cert):
         """
-        Private method to create a certificate entry.
+        Private method to create a CA certificate entry.
         
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = cert.subjectInfo(QSslCertificate.Organization)
+        organisation = str(
+            QByteArray(cert.subjectInfo(QSslCertificate.Organization)), 
+            encoding = "utf-8")
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
         commonName = cert.subjectInfo(QSslCertificate.CommonName)
@@ -182,20 +185,26 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         else:
             parent = items[0]
         
-        QTreeWidgetItem(parent, [commonName, expiryDate])
+        itm = QTreeWidgetItem(parent, [commonName, expiryDate])
+        itm.setData(0, self.CertRole, cert)
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_caCertificatesTree_currentItemChanged(self, current, previous):
         """
-        Slot documentation goes here.
+        Private slot handling a change of the current item 
+        in the CA certificates list.
+        
+        @param current new current item (QTreeWidgetItem)
+        @param previous previous current item (QTreeWidgetItem)
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        enable = current is not None and current.parent() is not None
+        self.caViewButton.setEnabled(enable)
     
     @pyqtSlot()
     def on_caViewButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to show data of the selected CA certificate.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
+        dlg = SslInfoDialog(cert, self)
+        dlg.exec_()
