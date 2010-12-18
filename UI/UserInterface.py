@@ -376,6 +376,7 @@ class UserInterface(QMainWindow):
             self.projectBrowser.pfBrowser.compileChangedForms)
         self.debuggerUI.compileResources.connect(
             self.projectBrowser.prBrowser.compileChangedResources)
+        self.debuggerUI.appendStdout.connect(self.appendToStdout)
         
         debugServer.passiveDebugStarted.connect(
             self.debugViewer.exceptionLogger.debuggingStarted)

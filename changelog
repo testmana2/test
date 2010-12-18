@@ -6,6 +6,7 @@ Version 5.1-snapshot-201012dd:
   syntax errors and warnings)
 - added support for additional configurable file filters
 - added a certificate manager to the eric web browser
+- added display of suppressed client termination messages
 
 Version 5.1-snapshot-20101029:
 - bug fixes

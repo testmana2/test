@@ -40,6 +40,8 @@ class DebugUI(QObject):
     @signal resetUI() emitted to reset the UI
     @signal exceptionInterrupt() emitted after the execution was interrupted by an
         exception and acknowledged by the user
+    @signal appendStdout(msg) emitted when the client program has terminated and the
+        display of the termination dialog is suppressed
     """
     clientStack = pyqtSignal(list)
     resetUI = pyqtSignal()
@@ -47,6 +49,7 @@ class DebugUI(QObject):
     compileForms = pyqtSignal()
     compileResources = pyqtSignal()
     debuggingStarted = pyqtSignal(str)
+    appendStdout = pyqtSignal(str)
     
     def __init__(self, ui, vm, debugServer, debugViewer, project):
         """
@@ -940,13 +943,23 @@ class DebugUI(QObject):
         
         if not Preferences.getDebugger("SuppressClientExit") or status != 0:
             if self.ui.currentProg is None:
-                E5MessageBox.information(self.ui,Program,
+                E5MessageBox.information(self.ui, Program,
                     self.trUtf8('<p>The program has terminated with an exit'
                                 ' status of {0}.</p>').format(status))
             else:
-                E5MessageBox.information(self.ui,Program,
+                E5MessageBox.information(self.ui, Program,
                     self.trUtf8('<p><b>{0}</b> has terminated with an exit'
                                 ' status of {1}.</p>')
+                        .format(Utilities.normabspath(self.ui.currentProg), status))
+        else:
+            if self.ui.currentProg is None:
+                self.appendStdout.emit(
+                    self.trUtf8('The program has terminated with an exit'
+                                ' status of {0}.').format(status))
+            else:
+                self.appendStdout.emit(
+                    self.trUtf8('"{0}" has terminated with an exit'
+                                ' status of {1}.')
                         .format(Utilities.normabspath(self.ui.currentProg), status))
 
     def __clientSyntaxError(self, message, filename, lineNo, characterNo):
