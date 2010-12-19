@@ -60,5 +60,8 @@ DefaultBookmarks = """<?xml version="1.0" encoding="UTF-8"?>
         <bookmark href="http://www.riverbankcomputing.com/">
             <title>PyQt4 Web Site</title>
         </bookmark>
+        <bookmark href="javascript:location.href='mailto:?SUBJECT=' + document.title + '&amp;BODY=' + escape(location.href);">
+            <title>Send Link</title>
+        </bookmark>
     </folder>
 </xbel>"""
