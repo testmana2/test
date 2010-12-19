@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1577,8 +1578,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1628,7 +1629,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -11883,7 +11884,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -26313,7 +26314,7 @@ eine Dialoges auswählen, indem Sie den Knopf rechts drücken.&lt;/p&gt;</transl
     <message>
         <location filename="Project/PropertiesDialog.ui" line="36"/>
         <source>Project &amp;Name:</source>
-        <translation>Projekt &amp;Name:</translation>
+        <translation>Projekt&amp;name:</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="114"/>
