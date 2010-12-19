@@ -24801,7 +24801,7 @@ eine Dialoges auswählen, indem Sie den Knopf rechts drücken.&lt;/p&gt;</transl
     <message>
         <location filename="Project/PropertiesDialog.ui" line="36"/>
         <source>Project &amp;Name:</source>
-        <translation>Projekt &amp;Name:</translation>
+        <translation>Projekt&amp;name:</translation>
     </message>
     <message>
         <location filename="Project/PropertiesDialog.ui" line="114"/>
