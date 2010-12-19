@@ -164,6 +164,11 @@ class HelpWebPage(QWebPage):
         self.__lastRequest = request
         self.__lastRequestType = type_
         
+        scheme = request.url().scheme()
+        if scheme in ["mailto", "ftp"]:
+            QDesktopServices.openUrl(request.url())
+            return False
+        
         return QWebPage.acceptNavigationRequest(self, frame, request, type_)
     
     def populateNetworkRequest(self, request):
@@ -441,10 +446,9 @@ class HelpBrowser(QWebView):
                     """ for URL <b>{0}</b>.</p>""").format(name.toString()))
             return
         elif name.scheme() == "javascript":
-            scriptSource = name.toString()[11:]
-            res = self.page().mainFrame().evaluateJavaScript(scriptSource)
-            if res:
-                self.setHtml(res)
+            scriptSource = QUrl.fromPercentEncoding(name.toString(
+                QUrl.FormattingOptions(QUrl.TolerantMode | QUrl.RemoveScheme)))
+            self.page().mainFrame().evaluateJavaScript(scriptSource)
             return
         else:
             if name.toString().endswith(".pdf") or \
