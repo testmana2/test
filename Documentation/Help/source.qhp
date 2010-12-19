@@ -297,6 +297,7 @@
             <section title="eric5.Helpviewer.QtHelpDocumentationDialog" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html" />
             <section title="eric5.Helpviewer.QtHelpFiltersDialog" ref="eric5.Helpviewer.QtHelpFiltersDialog.html" />
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
+            <section title="eric5.Helpviewer.SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
             <section title="eric5.Helpviewer.SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html" />
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
@@ -2331,6 +2332,7 @@
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />
       <keyword name="decode" id="decode" ref="eric5.Utilities.__init__.html#decode" />
+      <keyword name="decodeString" id="decodeString" ref="eric5.Utilities.__init__.html#decodeString" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="escape_entities" id="escape_entities" ref="eric5.Utilities.__init__.html#escape_entities" />
@@ -2550,6 +2552,18 @@
       <keyword name="SslInfoDialog.__certificateString" id="SslInfoDialog.__certificateString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__certificateString" />
       <keyword name="SslInfoDialog.__formatHexString" id="SslInfoDialog.__formatHexString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__formatHexString" />
       <keyword name="SslInfoDialog.__serialNumber" id="SslInfoDialog.__serialNumber" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__serialNumber" />
+      <keyword name="SslCertificatesDialog (Module)" id="SslCertificatesDialog (Module)" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
+      <keyword name="SslCertificatesDialog" id="SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog" />
+      <keyword name="SslCertificatesDialog (Constructor)" id="SslCertificatesDialog (Constructor)" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__init__" />
+      <keyword name="SslCertificatesDialog.__createCaCertificateEntry" id="SslCertificatesDialog.__createCaCertificateEntry" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__createCaCertificateEntry" />
+      <keyword name="SslCertificatesDialog.__createServerCertificateEntry" id="SslCertificatesDialog.__createServerCertificateEntry" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__createServerCertificateEntry" />
+      <keyword name="SslCertificatesDialog.__populateCaCertificatesTree" id="SslCertificatesDialog.__populateCaCertificatesTree" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__populateCaCertificatesTree" />
+      <keyword name="SslCertificatesDialog.__populateServerCertificatesTree" id="SslCertificatesDialog.__populateServerCertificatesTree" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.__populateServerCertificatesTree" />
+      <keyword name="SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" id="SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caCertificatesTree_currentItemChanged" />
+      <keyword name="SslCertificatesDialog.on_caViewButton_clicked" id="SslCertificatesDialog.on_caViewButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_caViewButton_clicked" />
+      <keyword name="SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" id="SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged" />
+      <keyword name="SslCertificatesDialog.on_serversDeleteButton_clicked" id="SslCertificatesDialog.on_serversDeleteButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversDeleteButton_clicked" />
+      <keyword name="SslCertificatesDialog.on_serversViewButton_clicked" id="SslCertificatesDialog.on_serversViewButton_clicked" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog.on_serversViewButton_clicked" />
       <keyword name="HelpTopicDialog (Module)" id="HelpTopicDialog (Module)" ref="eric5.Helpviewer.HelpTopicDialog.html" />
       <keyword name="HelpTopicDialog" id="HelpTopicDialog" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog" />
       <keyword name="HelpTopicDialog (Constructor)" id="HelpTopicDialog (Constructor)" ref="eric5.Helpviewer.HelpTopicDialog.html#HelpTopicDialog.__init__" />
@@ -2717,6 +2731,7 @@
       <keyword name="HelpWindow.__showAdBlockDialog" id="HelpWindow.__showAdBlockDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showAdBlockDialog" />
       <keyword name="HelpWindow.__showBackMenu" id="HelpWindow.__showBackMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBackMenu" />
       <keyword name="HelpWindow.__showBookmarksDialog" id="HelpWindow.__showBookmarksDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBookmarksDialog" />
+      <keyword name="HelpWindow.__showCertificatesDialog" id="HelpWindow.__showCertificatesDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCertificatesDialog" />
       <keyword name="HelpWindow.__showCookiesConfiguration" id="HelpWindow.__showCookiesConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCookiesConfiguration" />
       <keyword name="HelpWindow.__showDownloadsWindow" id="HelpWindow.__showDownloadsWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showDownloadsWindow" />
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
@@ -7392,7 +7407,9 @@
       <keyword name="DownloadManager.__contextMenuSelectAll" id="DownloadManager.__contextMenuSelectAll" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__contextMenuSelectAll" />
       <keyword name="DownloadManager.__currentItem" id="DownloadManager.__currentItem" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__currentItem" />
       <keyword name="DownloadManager.__customContextMenuRequested" id="DownloadManager.__customContextMenuRequested" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__customContextMenuRequested" />
+      <keyword name="DownloadManager.__finished" id="DownloadManager.__finished" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__finished" />
       <keyword name="DownloadManager.__load" id="DownloadManager.__load" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__load" />
+      <keyword name="DownloadManager.__updateActiveItemCount" id="DownloadManager.__updateActiveItemCount" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__updateActiveItemCount" />
       <keyword name="DownloadManager.__updateItemCount" id="DownloadManager.__updateItemCount" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__updateItemCount" />
       <keyword name="DownloadManager.__updateRow" id="DownloadManager.__updateRow" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__updateRow" />
       <keyword name="DownloadManager.activeDownloads" id="DownloadManager.activeDownloads" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.activeDownloads" />
@@ -10065,6 +10082,7 @@
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
+      <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.FavIconLabel.html</file>

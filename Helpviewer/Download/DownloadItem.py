@@ -26,8 +26,13 @@ import Preferences
 class DownloadItem(QWidget, Ui_DownloadItem):
     """
     Class implementing a widget controlling a download.
+    
+    @signal statusChanged() emitted upon a status change of a download
+    @signal downloadFinished() emitted when a download finished
+    @signal progress(int, int) emitted to signal the download progress
     """
     statusChanged = pyqtSignal()
+    downloadFinished = pyqtSignal()
     progress = pyqtSignal(int, int)
     
     def __init__(self, reply = None, requestFilename = False, webPage = None, 
@@ -296,6 +301,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.openButton.setVisible(False)
         self.setUpdatesEnabled(True)
         self.__reply.abort()
+        self.downloadFinished.emit()
     
     @pyqtSlot()
     def on_openButton_clicked(self):
@@ -357,6 +363,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             .format(self.__reply.errorString()))
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
+        self.downloadFinished.emit()
     
     def __metaDataChanged(self):
         """
@@ -519,6 +526,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__output.close()
         self.__updateInfoLabel()
         self.statusChanged.emit()
+        self.downloadFinished.emit()
         
         if self.__autoOpen:
             self.__open()

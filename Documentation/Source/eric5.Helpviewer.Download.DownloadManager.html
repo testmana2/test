@@ -90,8 +90,14 @@ QDialog, Ui_DownloadManager
 <td><a href="#DownloadManager.__customContextMenuRequested">__customContextMenuRequested</a></td>
 <td>Private slot to handle the context menu request for the bookmarks tree.</td>
 </tr><tr>
+<td><a href="#DownloadManager.__finished">__finished</a></td>
+<td>Private slot to handle a finished download.</td>
+</tr><tr>
 <td><a href="#DownloadManager.__load">__load</a></td>
 <td>Private method to load the download settings.</td>
+</tr><tr>
+<td><a href="#DownloadManager.__updateActiveItemCount">__updateActiveItemCount</a></td>
+<td>Private method to update the window title.</td>
 </tr><tr>
 <td><a href="#DownloadManager.__updateItemCount">__updateItemCount</a></td>
 <td>Private method to update the count label.</td>
@@ -225,11 +231,21 @@ reference to the current item (DownloadItem)
 <dd>
 position the context menu was requested (QPoint)
 </dd>
-</dl><a NAME="DownloadManager.__load" ID="DownloadManager.__load"></a>
+</dl><a NAME="DownloadManager.__finished" ID="DownloadManager.__finished"></a>
+<h4>DownloadManager.__finished</h4>
+<b>__finished</b>(<i></i>)
+<p>
+        Private slot to handle a finished download.
+</p><a NAME="DownloadManager.__load" ID="DownloadManager.__load"></a>
 <h4>DownloadManager.__load</h4>
 <b>__load</b>(<i></i>)
 <p>
         Private method to load the download settings.
+</p><a NAME="DownloadManager.__updateActiveItemCount" ID="DownloadManager.__updateActiveItemCount"></a>
+<h4>DownloadManager.__updateActiveItemCount</h4>
+<b>__updateActiveItemCount</b>(<i></i>)
+<p>
+        Private method to update the window title.
 </p><a NAME="DownloadManager.__updateItemCount" ID="DownloadManager.__updateItemCount"></a>
 <h4>DownloadManager.__updateItemCount</h4>
 <b>__updateItemCount</b>(<i></i>)

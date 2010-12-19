@@ -46,7 +46,11 @@ Module implementing the debugger UI.
     Class implementing the debugger part of the UI.
 </p><h4>Signals</h4>
 <dl>
-<dt>clientStack(stack)</dt>
+<dt>appendStdout(msg)</dt>
+<dd>
+emitted when the client program has terminated and the
+        display of the termination dialog is suppressed
+</dd><dt>clientStack(stack)</dt>
 <dd>
 emitted at breaking after a reported exception
 </dd><dt>compileForms()</dt>
@@ -71,7 +75,7 @@ emitted to reset the UI
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>clientStack</td></tr><tr><td>compileForms</td></tr><tr><td>compileResources</td></tr><tr><td>debuggingStarted</td></tr><tr><td>exceptionInterrupt</td></tr><tr><td>resetUI</td></tr>
+<tr><td>appendStdout</td></tr><tr><td>clientStack</td></tr><tr><td>compileForms</td></tr><tr><td>compileResources</td></tr><tr><td>debuggingStarted</td></tr><tr><td>exceptionInterrupt</td></tr><tr><td>resetUI</td></tr>
 </table>
 <h3>Methods</h3>
 <table>

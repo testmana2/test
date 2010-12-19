@@ -707,6 +707,7 @@ eric5.Debugger.DebugServer.DebugServer.utTestErrored?7
 eric5.Debugger.DebugServer.DebugServer.utTestFailed?7
 eric5.Debugger.DebugServer.DebugServer?1()
 eric5.Debugger.DebugServer.DebuggerInterfaces?7
+eric5.Debugger.DebugUI.DebugUI.appendStdout?7
 eric5.Debugger.DebugUI.DebugUI.clientStack?7
 eric5.Debugger.DebugUI.DebugUI.compileForms?7
 eric5.Debugger.DebugUI.DebugUI.compileResources?7
@@ -1864,6 +1865,7 @@ eric5.Helpviewer.Download.DownloadItem.DownloadItem.cancelDownload?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.canceledFileSelect?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.currentSpeed?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloadCanceled?4()
+eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloadFinished?7
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloadedSuccessfully?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.downloading?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.fileName?4()
@@ -2367,6 +2369,13 @@ eric5.Helpviewer.SearchWidget.SearchWidget.on_findtextCombo_editTextChanged?4(tx
 eric5.Helpviewer.SearchWidget.SearchWidget.on_highlightAllCheckBox_toggled?4(checked)
 eric5.Helpviewer.SearchWidget.SearchWidget.showFind?4()
 eric5.Helpviewer.SearchWidget.SearchWidget?1(mainWindow, parent = None)
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.CertRole?7
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caCertificatesTree_currentItemChanged?4(current, previous)
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caViewButton_clicked?4()
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_serversCertificatesTree_currentItemChanged?4(current, previous)
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_serversDeleteButton_clicked?4()
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_serversViewButton_clicked?4()
+eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog?1(parent = None)
 eric5.Helpviewer.SslInfoDialog.SslInfoDialog?1(certificate, parent = None)
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.accept?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.on_removeButton_clicked?4()
@@ -6081,6 +6090,7 @@ eric5.Utilities.compile?4(file, codestring = "")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
 eric5.Utilities.decode?4(text)
+eric5.Utilities.decodeString?4(text)
 eric5.Utilities.direntries?4(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None)
 eric5.Utilities.encode?4(text, orig_coding)
 eric5.Utilities.escape_entities?4(m, map=_escape_map)

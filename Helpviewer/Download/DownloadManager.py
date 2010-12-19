@@ -191,6 +191,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         @param itm reference to the download item (DownloadItem)
         """
         itm.statusChanged.connect(self.__updateRow)
+        itm.downloadFinished.connect(self.__finished)
         
         row = len(self.__downloads)
         self.__model.beginInsertRows(QModelIndex(), row, row)
@@ -204,6 +205,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         # just in case the download finished before the constructor returned
         self.__updateRow(itm)
         self.changeOccurred()
+        self.__updateActiveItemCount()
     
     def __updateRow(self, itm = None):
         """
@@ -315,6 +317,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             (len(self.__downloads) - self.activeDownloads()) > 0)
         
         self.__loaded = True
+        self.__updateActiveItemCount()
     
     def cleanup(self):
         """
@@ -336,6 +339,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
                self.__iconProvider = None
         
         self.changeOccurred()
+        self.__updateActiveItemCount()
     
     def __updateItemCount(self):
         """
@@ -343,6 +347,24 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         """
         count = len(self.__downloads)
         self.countLabel.setText(self.trUtf8("%n Download(s)", "", count))
+    
+    def __updateActiveItemCount(self):
+        """
+        Private method to update the window title.
+        """
+        count = self.activeDownloads()
+        if count > 0:
+            self.setWindowTitle(self.trUtf8("Downloading %n file(s)", "", count))
+        else:
+            self.setWindowTitle(self.trUtf8("Downloads"))
+    
+    def __finished(self):
+        """
+        Private slot to handle a finished download.
+        """
+        self.__updateActiveItemCount()
+        if self.isVisible():
+            QApplication.alert(self)
     
     def setDownloadDirectory(self, directory):
         """
