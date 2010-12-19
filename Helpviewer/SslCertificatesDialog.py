@@ -7,10 +7,10 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem
+from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, QIODevice
+from PyQt4.QtGui import QDialog, QTreeWidgetItem, QFileDialog
 try:
-    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration
+    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration, QSsl
 except ImportError:
     pass
 
@@ -96,6 +96,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         enable = current is not None and current.parent() is not None
         self.serversViewButton.setEnabled(enable)
         self.serversDeleteButton.setEnabled(enable)
+        self.serversExportButton.setEnabled(enable)
     
     @pyqtSlot()
     def on_serversViewButton_clicked(self):
@@ -122,6 +123,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                 .format(itm.text(0)))
         if res:
             server = itm.text(1)
+            cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
             
             # delete the selected entry and it's parent entry, if it was the only one
             parent = itm.parent()
@@ -133,29 +135,102 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             # delete the certificate from the user certificate store
             certificateDict = Preferences.toDict(
                     Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
-            del certificateDict[server]
+            if server in certificateDict:
+                certs = QSslCertificate.fromData(certificateDict[server])
+                if cert in certs:
+                    certs.remove(cert)
+                if certs:
+                    pems = QByteArray()
+                    for cert in certs:
+                        pems.append(cert.toPem() + '\n')
+                    certificateDict[server] = pems
+                else:
+                    del certificateDict[server]
             Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
                 certificateDict)
             
             # delete the certificate from the default certificates
-            caNew = []
-            for topLevelIndex in range(self.serversCertificatesTree.topLevelItemCount()):
-                parent = self.serversCertificatesTree.topLevelItem(topLevelIndex)
-                for childIndex in range(parent.childCount()):
-                    cert = parent.child(childIndex).data(0, self.CertRole)
-                    if cert not in caNew:
-                        caNew.append(cert)
+            self.__updateDefaultConfiguration()
+    
+    @pyqtSlot()
+    def on_serversImportButton_clicked(self):
+        """
+        Private slot to import server certificates.
+        """
+        certs = self.__importCertificate()
+        if certs:
+            server = "*"
+            certificateDict = Preferences.toDict(
+                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+            if server in certificateDict:
+                sCerts = QSslCertificate.fromData(certificateDict[server])
+            else:
+                sCerts = []
+            
+            pems = QByteArray()
+            for cert in certs:
+                if cert in sCerts:
+                    E5MessageBox.warning(self,
+                        self.trUtf8("Import Certificate"),
+                        self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
+                                    """ Skipping.</p>""")
+                            .format(Utilities.decodeString(
+                                cert.subjectInfo(QSslCertificate.CommonName))))
+                else:
+                    pems.append(cert.toPem() + '\n')
+            if server not in certificateDict:
+                certificateDict[server] = QByteArray()
+            certificateDict[server].append(pems)
+            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+                certificateDict)
+            
+            self.serversCertificatesTree.clear()
+            self.__populateServerCertificatesTree()
+            
+            self.__updateDefaultConfiguration()
+    
+    @pyqtSlot()
+    def on_serversExportButton_clicked(self):
+        """
+        Private slot to export the selected server certificate.
+        """
+        cert = self.serversCertificatesTree.currentItem().data(0, self.CertRole)
+        fname = self.serversCertificatesTree.currentItem().text(0)\
+            .replace(" ", "").replace("\t", "")
+        self.__exportCertificate(fname, cert)
+    
+    def __updateDefaultConfiguration(self):
+        """
+        Private method to update the default SSL configuration.
+        """
+        caList = self.__getSystemCaCertificates()
+        certificateDict = Preferences.toDict(
+                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+        for server in certificateDict:
+            for cert in QSslCertificate.fromData(certificateDict[server]):
+                if cert not in caList:
+                    caList.append(cert)
+        sslCfg = QSslConfiguration.defaultConfiguration()
+        sslCfg.setCaCertificates(caList)
+        QSslConfiguration.setDefaultConfiguration(sslCfg)
+    
+    def __getSystemCaCertificates(self):
+        """
+        Private method to get the list of system certificates.
+        
+        @return list of system certificates (list of QSslCertificate)
+        """
+        caList = QSslCertificate.fromData(Preferences.toByteArray(
+            Preferences.Prefs.settings.value("Help/SystemCertificates")))
+        if not caList:
             caList = QSslSocket.systemCaCertificates()
-            caList.extend(caNew)
-            sslCfg = QSslConfiguration.defaultConfiguration()
-            sslCfg.setCaCertificates(caList)
-            QSslConfiguration.setDefaultConfiguration(sslCfg)
+        return caList
     
     def __populateCaCertificatesTree(self):
         """
         Private slot to populate the CA certificates tree.
         """
-        for cert in QSslSocket.systemCaCertificates():
+        for cert in self.__getSystemCaCertificates():
             self.__createCaCertificateEntry(cert)
         
         self.caCertificatesTree.expandAll()
@@ -202,6 +277,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         """
         enable = current is not None and current.parent() is not None
         self.caViewButton.setEnabled(enable)
+        self.caDeleteButton.setEnabled(enable)
+        self.caExportButton.setEnabled(enable)
     
     @pyqtSlot()
     def on_caViewButton_clicked(self):
@@ -211,3 +288,163 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
         dlg = SslInfoDialog(cert, self)
         dlg.exec_()
+    
+    @pyqtSlot()
+    def on_caDeleteButton_clicked(self):
+        """
+        Private slot to delete the selected CA certificate.
+        """
+        itm = self.caCertificatesTree.currentItem()
+        res = E5MessageBox.yesNo(self,
+            self.trUtf8("Delete CA Certificate"),
+            self.trUtf8("""<p>Shall the CA certificate really be deleted?</p>"""
+                        """<p>{0}</p>"""
+                        """<p>If the CA certificate is deleted, the browser"""
+                        """ will not trust any certificate issued by this CA.</p>""")\
+                .format(itm.text(0)))
+        if res:
+            cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
+            
+            # delete the selected entry and it's parent entry, if it was the only one
+            parent = itm.parent()
+            parent.takeChild(parent.indexOfChild(itm))
+            if parent.childCount() == 0:
+                self.caCertificatesTree.takeTopLevelItem(
+                    self.caCertificatesTree.indexOfTopLevelItem(parent))
+            
+            # delete the certificate from the CA certificate store
+            caCerts = self.__getSystemCaCertificates()
+            if cert in caCerts:
+                caCerts.remove(cert)
+            pems = QByteArray()
+            for cert in caCerts:
+                pems.append(cert.toPem() + '\n')
+            Preferences.Prefs.settings.setValue("Help/SystemCertificates", pems)
+            
+            # delete the certificate from the default certificates
+            self.__updateDefaultConfiguration()
+    
+    @pyqtSlot()
+    def on_caImportButton_clicked(self):
+        """
+        Private slot to import server certificates.
+        """
+        certs = self.__importCertificate()
+        if certs:
+            caCerts = self.__getSystemCaCertificates()
+            for cert in certs:
+                if cert in caCerts:
+                    E5MessageBox.warning(self,
+                        self.trUtf8("Import Certificate"),
+                        self.trUtf8("""<p>The certificate <b>{0}</b> already exists."""
+                                    """ Skipping.</p>""")
+                            .format(Utilities.decodeString(
+                                cert.subjectInfo(QSslCertificate.CommonName))))
+                else:
+                    caCerts.append(cert)
+            
+            pems = QByteArray()
+            for cert in caCerts:
+                pems.append(cert.toPem() + '\n')
+            Preferences.Prefs.settings.setValue("Help/SystemCertificates", pems)
+            
+            self.caCertificatesTree.clear()
+            self.__populateCaCertificatesTree()
+            
+            self.__updateDefaultConfiguration()
+    
+    @pyqtSlot()
+    def on_caExportButton_clicked(self):
+        """
+        Private slot to export the selected CA certificate.
+        """
+        cert = self.caCertificatesTree.currentItem().data(0, self.CertRole)
+        fname = self.caCertificatesTree.currentItem().text(0)\
+            .replace(" ", "").replace("\t", "")
+        self.__exportCertificate(fname, cert)
+    
+    def __exportCertificate(self, name, cert):
+        """
+        Private slot to export a certificate.
+        
+        @param name default file name without extension (string)
+        @param cert certificate to be exported (QSslCertificate)
+        """
+        if cert is not None:
+            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+                self,
+                self.trUtf8("Export Certificate"),
+                name,
+                self.trUtf8("Certificate File (PEM) (*.pem);;"
+                            "Certificate File (DER) (*.der)"),
+                None,
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            
+            if fname:
+                ext = QFileInfo(fname).suffix()
+                if not ext or ext not in ["pem", "der"]:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        fname += ex
+                if QFileInfo(fname).exists():
+                    res = E5MessageBox.yesNo(self,
+                        self.trUtf8("Export Certificate"),
+                        self.trUtf8("<p>The file <b>{0}</b> already exists."
+                                    " Overwrite it?</p>").format(fname),
+                        icon = E5MessageBox.Warning)
+                    if not res:
+                        return
+                
+                f = QFile(fname)
+                if not f.open(QIODevice.WriteOnly):
+                    E5MessageBox.critical(self,
+                        self.trUtf8("Export Certificate"),
+                        self.trUtf8("""<p>The certificate could not be written to file"""
+                                    """ <b>{0}</b></p><p>Error: {1}</p>""")
+                            .format(fname, f.errorString()))
+                    return
+                
+                if fname.endswith(".pem"):
+                    crt = cert.toPem()
+                else:
+                    crt = cert.toDer()
+                f.write(crt)
+                f.close()
+    
+    def __importCertificate(self):
+        """
+        Private method to read a certificate.
+        
+        @return certificates read (list of QSslCertificate)
+        """
+        fname, selectedFilter = QFileDialog.getOpenFileNameAndFilter(
+            self,
+            self.trUtf8("Import Certificate"),
+            "",
+            self.trUtf8("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
+                        "All Files (*)"),
+            None)
+        
+        if fname:
+            f = QFile(fname)
+            if not f.open(QIODevice.ReadOnly):
+                E5MessageBox.critical(self,
+                    self.trUtf8("Export Certificate"),
+                    self.trUtf8("""<p>The certificate could not be read from file"""
+                                """ <b>{0}</b></p><p>Error: {1}</p>""")
+                        .format(fname, f.errorString()))
+                return []
+            
+            crt = f.readAll()
+            f.close()
+            cert = QSslCertificate.fromData(crt, QSsl.Pem)
+            if not cert:
+                cert = QSslCertificate.fromData(crt, QSsl.Der)
+##            if fname.endswith((".pem", ".crt")):
+##                cert = QSslCertificate.fromData(crt, QSsl.Pem)
+##            elif fname.endswith((".der", ".cer", ".ca")):
+##                cert = QSslCertificate.fromData(crt, QSsl.Der)
+            
+            return cert
+        
+        return []

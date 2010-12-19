@@ -72,14 +72,14 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.languagesChanged()
         
         if SSL_AVAILABLE:
-            sslCfg = QSslConfiguration.defaultConfiguration()
-            caList = sslCfg.caCertificates()
+            caList = self.__getSystemCaCertificates()
             certificateDict = Preferences.toDict(
                     Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
             for server in certificateDict:
                 for cert in QSslCertificate.fromData(certificateDict[server]):
                     if cert not in caList:
                         caList.append(cert)
+            sslCfg = QSslConfiguration.defaultConfiguration()
             sslCfg.setCaCertificates(caList)
             QSslConfiguration.setDefaultConfiguration(sslCfg)
             
@@ -299,6 +299,18 @@ class NetworkAccessManager(QNetworkAccessManager):
         result += "</p>"
         
         return result
+    
+    def __getSystemCaCertificates(self):
+        """
+        Private method to get the list of system certificates.
+        
+        @return list of system certificates (list of QSslCertificate)
+        """
+        caList = QSslCertificate.fromData(Preferences.toByteArray(
+            Preferences.Prefs.settings.value("Help/SystemCertificates")))
+        if not caList:
+            caList = QSslSocket.systemCaCertificates()
+        return caList
     
     def preferencesChanged(self):
         """

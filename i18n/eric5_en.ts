@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="en">
+<!DOCTYPE TS><TS version="1.1" language="en">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1550,7 +1549,7 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1586,7 +1585,7 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4139,12 +4138,14 @@ Not connected
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="956"/>
-        <source>The program has terminated with an exit status of {0}.</source>
+        <source>The program has terminated with an exit status of {0}.
+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Debugger/DebugUI.py" line="960"/>
-        <source>&quot;{0}&quot; has terminated with an exit status of {1}.</source>
+        <source>&quot;{0}&quot; has terminated with an exit status of {1}.
+</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -11822,7 +11823,7 @@ whole selection.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -29480,7 +29481,7 @@ Not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="117"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29490,58 +29491,128 @@ Not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="122"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="135"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="138"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="77"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="80"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="103"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.ui" line="109"/>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="176"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="251"/>
         <source>(Unknown)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="180"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="255"/>
         <source>(Unknown common name)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="115"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
         <source>Delete Server Certificate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="115"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="168"/>
+        <source>Press to import a certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="171"/>
+        <source>&amp;Import...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="181"/>
+        <source>Press to export the selected certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.ui" line="184"/>
+        <source>&amp;Export...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <source>Import Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="337"/>
+        <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <source>Delete CA Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="431"/>
+        <source>Export Certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="374"/>
+        <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="390"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="400"/>
+        <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="431"/>
+        <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -18,7 +18,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QTabWidget" name="tabWidget">
+    <widget class="QTabWidget" name="certificatesWidget">
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -65,6 +65,29 @@
            </property>
            <property name="text">
             <string>&amp;View...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="serversImportButton">
+           <property name="toolTip">
+            <string>Press to import a certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;Import...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="serversExportButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to export the selected certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;Export...</string>
            </property>
           </widget>
          </item>
@@ -140,6 +163,42 @@
           </widget>
          </item>
          <item>
+          <widget class="QPushButton" name="caImportButton">
+           <property name="toolTip">
+            <string>Press to import a certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;Import...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="caExportButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to export the selected certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;Export...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="caDeleteButton">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="toolTip">
+            <string>Press to delete the selected certificate</string>
+           </property>
+           <property name="text">
+            <string>&amp;Delete...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -171,12 +230,17 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
+  <tabstop>certificatesWidget</tabstop>
   <tabstop>serversCertificatesTree</tabstop>
   <tabstop>serversViewButton</tabstop>
+  <tabstop>serversImportButton</tabstop>
+  <tabstop>serversExportButton</tabstop>
   <tabstop>serversDeleteButton</tabstop>
   <tabstop>caCertificatesTree</tabstop>
   <tabstop>caViewButton</tabstop>
+  <tabstop>caImportButton</tabstop>
+  <tabstop>caExportButton</tabstop>
+  <tabstop>caDeleteButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
