@@ -955,11 +955,11 @@ class DebugUI(QObject):
             if self.ui.currentProg is None:
                 self.appendStdout.emit(
                     self.trUtf8('The program has terminated with an exit'
-                                ' status of {0}.').format(status))
+                                ' status of {0}.\n').format(status))
             else:
                 self.appendStdout.emit(
                     self.trUtf8('"{0}" has terminated with an exit'
-                                ' status of {1}.')
+                                ' status of {1}.\n')
                         .format(Utilities.normabspath(self.ui.currentProg), status))
 
     def __clientSyntaxError(self, message, filename, lineNo, characterNo):
