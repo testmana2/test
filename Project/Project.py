@@ -71,11 +71,20 @@ class Project(QObject):
     @signal dirty(int) emitted when the dirty state changes
     @signal projectLanguageAdded(str) emitted after a new language was added
     @signal projectLanguageAddedByCode(str) emitted after a new language was added.
-        The language code is sent by this signal.
+            The language code is sent by this signal.
+    @signal projectLanguageRemoved(str) emitted after a language was removed
     @signal projectFormAdded(str) emitted after a new form was added
+    @signal projectFormRemoved(str) emitted after a form was removed
     @signal projectSourceAdded(str) emitted after a new source file was added
+    @signal projectSourceRemoved(str) emitted after a source was removed
     @signal projectInterfaceAdded(str) emitted after a new IDL file was added
+    @signal projectInterfaceRemoved(str) emitted after a IDL file was removed
     @signal projectResourceAdded(str) emitted after a new resource file was added
+    @signal projectResourceRemoved(str) emitted after a resource was removed
+    @signal projectOthersAdded(str) emitted after a file or directory was added
+            to the OTHERS project data area
+    @signal projectOthersRemoved(str) emitted after a file was removed from the
+            OTHERS project data area
     @signal projectAboutToBeCreated() emitted just before the project will be created
     @signal newProjectHooks() emitted after a new project was generated but before
             the newProject() signal is sent
@@ -88,8 +97,6 @@ class Project(QObject):
     @signal projectClosedHooks() emitted after a project file was closed but before the
             projectClosed() signal is sent
     @signal projectClosed() emitted after a project was closed
-    @signal projectOthersAdded(str) emitted after a file or directory was added
-            to the OTHERS project data area
     @signal projectFileRenamed(str, str) emitted after a file of the project
             has been renamed
     @signal projectPropertiesChanged() emitted after the project properties were changed
@@ -110,11 +117,17 @@ class Project(QObject):
     dirty = pyqtSignal(int)
     projectLanguageAdded = pyqtSignal(str)
     projectLanguageAddedByCode = pyqtSignal(str)
+    projectLanguageRemoved = pyqtSignal(str)
     projectFormAdded = pyqtSignal(str)
+    projectFormRemoved = pyqtSignal(str)
     projectSourceAdded = pyqtSignal(str)
+    projectSourceRemoved = pyqtSignal(str)
     projectInterfaceAdded = pyqtSignal(str)
+    projectInterfaceRemoved = pyqtSignal(str)
     projectResourceAdded = pyqtSignal(str)
+    projectResourceRemoved = pyqtSignal(str)
     projectOthersAdded = pyqtSignal(str)
+    projectOthersRemoved = pyqtSignal(str)
     projectAboutToBeCreated = pyqtSignal()
     newProjectHooks = pyqtSignal()
     newProject = pyqtSignal()
@@ -1634,16 +1647,22 @@ class Project(QObject):
         dirty = True
         if fn in self.pdata["SOURCES"]:
             self.pdata["SOURCES"].remove(fn)
+            self.projectSourceRemoved.emit(fn)
         elif fn in self.pdata["FORMS"]:
             self.pdata["FORMS"].remove(fn)
+            self.projectFormRemoved.emit(fn)
         elif fn in self.pdata["INTERFACES"]:
             self.pdata["INTERFACES"].remove(fn)
+            self.projectInterfaceRemoved.emit(fn)
         elif fn in self.pdata["RESOURCES"]:
             self.pdata["RESOURCES"].remove(fn)
+            self.projectResourceRemoved.emit(fn)
         elif fn in self.pdata["OTHERS"]:
             self.pdata["OTHERS"].remove(fn)
+            self.projectOthersRemoved.emit(fn)
         elif fn in self.pdata["TRANSLATIONS"]:
             self.pdata["TRANSLATIONS"].remove(fn)
+            self.projectLanguageRemoved.emit(fn)
         else:
             dirty = False
         updateModel and self.__model.removeItem(fn)

@@ -89,16 +89,25 @@ emitted after a file of the project
 </dd><dt>projectFormAdded(str)</dt>
 <dd>
 emitted after a new form was added
+</dd><dt>projectFormRemoved(str)</dt>
+<dd>
+emitted after a form was removed
 </dd><dt>projectInterfaceAdded(str)</dt>
 <dd>
 emitted after a new IDL file was added
+</dd><dt>projectInterfaceRemoved(str)</dt>
+<dd>
+emitted after a IDL file was removed
 </dd><dt>projectLanguageAdded(str)</dt>
 <dd>
 emitted after a new language was added
 </dd><dt>projectLanguageAddedByCode(str)</dt>
 <dd>
 emitted after a new language was added.
-        The language code is sent by this signal.
+            The language code is sent by this signal.
+</dd><dt>projectLanguageRemoved(str)</dt>
+<dd>
+emitted after a language was removed
 </dd><dt>projectOpened()</dt>
 <dd>
 emitted after a project file was read
@@ -110,15 +119,25 @@ emitted after a project file was read but before the
 <dd>
 emitted after a file or directory was added
             to the OTHERS project data area
+</dd><dt>projectOthersRemoved(str)</dt>
+<dd>
+emitted after a file was removed from the
+            OTHERS project data area
 </dd><dt>projectPropertiesChanged()</dt>
 <dd>
 emitted after the project properties were changed
 </dd><dt>projectResourceAdded(str)</dt>
 <dd>
 emitted after a new resource file was added
+</dd><dt>projectResourceRemoved(str)</dt>
+<dd>
+emitted after a resource was removed
 </dd><dt>projectSourceAdded(str)</dt>
 <dd>
 emitted after a new source file was added
+</dd><dt>projectSourceRemoved(str)</dt>
+<dd>
+emitted after a source was removed
 </dd><dt>reinitVCS()</dt>
 <dd>
 emitted after the VCS has been reinitialized
@@ -140,7 +159,7 @@ emitted to signal the status of the
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>completeRepopulateItem</td></tr><tr><td>dbgKeynames</td></tr><tr><td>directoryRemoved</td></tr><tr><td>dirty</td></tr><tr><td>eols</td></tr><tr><td>keynames</td></tr><tr><td>lexerAssociationsChanged</td></tr><tr><td>newProject</td></tr><tr><td>newProjectHooks</td></tr><tr><td>prepareRepopulateItem</td></tr><tr><td>projectAboutToBeCreated</td></tr><tr><td>projectClosed</td></tr><tr><td>projectClosedHooks</td></tr><tr><td>projectFileRenamed</td></tr><tr><td>projectFormAdded</td></tr><tr><td>projectInterfaceAdded</td></tr><tr><td>projectLanguageAdded</td></tr><tr><td>projectLanguageAddedByCode</td></tr><tr><td>projectOpened</td></tr><tr><td>projectOpenedHooks</td></tr><tr><td>projectOthersAdded</td></tr><tr><td>projectPropertiesChanged</td></tr><tr><td>projectResourceAdded</td></tr><tr><td>projectSourceAdded</td></tr><tr><td>reinitVCS</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr><tr><td>userKeynames</td></tr><tr><td>vcsStatusMonitorStatus</td></tr>
+<tr><td>completeRepopulateItem</td></tr><tr><td>dbgKeynames</td></tr><tr><td>directoryRemoved</td></tr><tr><td>dirty</td></tr><tr><td>eols</td></tr><tr><td>keynames</td></tr><tr><td>lexerAssociationsChanged</td></tr><tr><td>newProject</td></tr><tr><td>newProjectHooks</td></tr><tr><td>prepareRepopulateItem</td></tr><tr><td>projectAboutToBeCreated</td></tr><tr><td>projectClosed</td></tr><tr><td>projectClosedHooks</td></tr><tr><td>projectFileRenamed</td></tr><tr><td>projectFormAdded</td></tr><tr><td>projectFormRemoved</td></tr><tr><td>projectInterfaceAdded</td></tr><tr><td>projectInterfaceRemoved</td></tr><tr><td>projectLanguageAdded</td></tr><tr><td>projectLanguageAddedByCode</td></tr><tr><td>projectLanguageRemoved</td></tr><tr><td>projectOpened</td></tr><tr><td>projectOpenedHooks</td></tr><tr><td>projectOthersAdded</td></tr><tr><td>projectOthersRemoved</td></tr><tr><td>projectPropertiesChanged</td></tr><tr><td>projectResourceAdded</td></tr><tr><td>projectResourceRemoved</td></tr><tr><td>projectSourceAdded</td></tr><tr><td>projectSourceRemoved</td></tr><tr><td>reinitVCS</td></tr><tr><td>showMenu</td></tr><tr><td>sourceFile</td></tr><tr><td>userKeynames</td></tr><tr><td>vcsStatusMonitorStatus</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
