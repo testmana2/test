@@ -291,10 +291,13 @@ class ModuleDocument(object):
         @param class_ reference to a class object (Class)
         @return The globals list section. (string)
         """
+        attrNames = []
         if class_ is not None:
-            attrNames = sorted(class_.globals.keys())
+            scope = class_
         else:
-            attrNames = sorted(self.module.globals.keys())
+            scope = self.module
+        attrNames = sorted([attr for attr in scope.globals.keys() 
+                                 if not scope.globals[attr].isSignal])
         if attrNames:
             s = ''.join(
                 [self.listEntrySimpleTemplate.format(**{'Name' : name}) \

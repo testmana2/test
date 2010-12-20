@@ -131,7 +131,7 @@ _py_getnext = re.compile(r"""
         ^
         (?P<VariableIndent> [ \t]* )
         (?P<VariableName> \w+ )
-        [ \t]* =
+        [ \t]* = [ \t]* (?P<VariableSignal> (?:pyqtSignal)? )
     )
 
 |   (?P<Import>
@@ -651,11 +651,13 @@ class Module(object):
             elif m.start("Variable") >= 0:
                 thisindent = _indent(m.group("VariableIndent"))
                 variable_name = m.group("VariableName")
+                isSignal = m.group("VariableSignal") != ""
                 lineno = lineno + src.count('\n', last_lineno_pos, start)
                 last_lineno_pos = start
                 if thisindent == 0:
                     # global variable
-                    attr = Attribute(self.name, variable_name, self.file, lineno)
+                    attr = Attribute(self.name, variable_name, self.file, lineno, 
+                                     isSignal = isSignal)
                     self.__py_setVisibility(attr)
                     self.addGlobal(variable_name, attr)
                 else:
@@ -666,7 +668,8 @@ class Module(object):
                         else:
                             if classstack[index][0] is not None and \
                                isinstance(classstack[index][0], Class):
-                                attr = Attribute(self.name, variable_name, self.file, lineno)
+                                attr = Attribute(self.name, variable_name, self.file, 
+                                                 lineno, isSignal = isSignal)
                                 self.__py_setVisibility(attr)
                                 classstack[index][0].addGlobal(variable_name, attr)
                             break
@@ -1236,7 +1239,7 @@ class Attribute(VisibilityBase):
     '''
     Class to represent a Python function or method.
     '''
-    def __init__(self, module, name, file, lineno):
+    def __init__(self, module, name, file, lineno, isSignal = False):
         """
         Constructor
         
@@ -1244,11 +1247,13 @@ class Attribute(VisibilityBase):
         @param name name of the function (string)
         @param file name of file containing this function (string)
         @param lineno linenumber of the function definition (integer)
+        @keyparam isSignal flag indicating a signal definition (boolean)
         """
         self.module = module
         self.name = name
         self.file = file
         self.lineno = lineno
+        self.isSignal = isSignal
         self.setPublic()
 
 def readModule(module, path = [], inpackage = False, basename = "", 
