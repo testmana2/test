@@ -99,7 +99,7 @@ VisibilityBase
 </table>
 <a NAME="Attribute.__init__" ID="Attribute.__init__"></a>
 <h4>Attribute (Constructor)</h4>
-<b>Attribute</b>(<i>module, name, file, lineno</i>)
+<b>Attribute</b>(<i>module, name, file, lineno, isSignal = False</i>)
 <p>
         Constructor
 </p><dl>
@@ -115,6 +115,9 @@ name of file containing this function (string)
 </dd><dt><i>lineno</i></dt>
 <dd>
 linenumber of the function definition (integer)
+</dd><dt><i>isSignal=</i></dt>
+<dd>
+flag indicating a signal definition (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

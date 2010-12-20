@@ -4544,15 +4544,21 @@ eric5.Project.Project.Project.projectClosed?7
 eric5.Project.Project.Project.projectClosedHooks?7
 eric5.Project.Project.Project.projectFileRenamed?7
 eric5.Project.Project.Project.projectFormAdded?7
+eric5.Project.Project.Project.projectFormRemoved?7
 eric5.Project.Project.Project.projectInterfaceAdded?7
+eric5.Project.Project.Project.projectInterfaceRemoved?7
 eric5.Project.Project.Project.projectLanguageAdded?7
 eric5.Project.Project.Project.projectLanguageAddedByCode?7
+eric5.Project.Project.Project.projectLanguageRemoved?7
 eric5.Project.Project.Project.projectOpened?7
 eric5.Project.Project.Project.projectOpenedHooks?7
 eric5.Project.Project.Project.projectOthersAdded?7
+eric5.Project.Project.Project.projectOthersRemoved?7
 eric5.Project.Project.Project.projectPropertiesChanged?7
 eric5.Project.Project.Project.projectResourceAdded?7
+eric5.Project.Project.Project.projectResourceRemoved?7
 eric5.Project.Project.Project.projectSourceAdded?7
+eric5.Project.Project.Project.projectSourceRemoved?7
 eric5.Project.Project.Project.registerProjectType?4(type_, description, fileTypeCallback = None, binaryTranslationsCallback = None, lexerAssociationCallback = None)
 eric5.Project.Project.Project.reinitVCS?7
 eric5.Project.Project.Project.removeDirectory?4(dn)
@@ -6018,7 +6024,7 @@ eric5.Utilities.ClassBrowsers.rbclbr._modules?8
 eric5.Utilities.ClassBrowsers.rbclbr.readmodule_ex?4(module, path=[])
 eric5.Utilities.ClassBrowsers.readmodule?4(module, path=[], isPyFile = False)
 eric5.Utilities.CodingError?1(coding)
-eric5.Utilities.ModuleParser.Attribute?1(module, name, file, lineno)
+eric5.Utilities.ModuleParser.Attribute?1(module, name, file, lineno, isSignal = False)
 eric5.Utilities.ModuleParser.Class.addAttribute?4(name, attr)
 eric5.Utilities.ModuleParser.Class.addDescription?4(description)
 eric5.Utilities.ModuleParser.Class.addGlobal?4(name, attr)
