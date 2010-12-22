@@ -5609,7 +5609,10 @@ class UserInterface(QMainWindow):
         """
         if Version.startswith("@@"):
             # development version, always newer
-            return True
+            if required.endswith(".99"):
+                return False
+            else:
+                return True
         
         if "-snapshot-" in Version:
             # check snapshot version
