@@ -771,7 +771,7 @@ def parseOptionString(s):
     @param s option string (string or string)
     @return list of options (list of strings)
     """
-    rx = QRegExp(r"""\s([^\s]+|"[^"]+"|'[^']+')""")
+    rx = QRegExp(r"""\s([\w=/-]*"[^"]+"|[\w=/-]*'[^']+'|[^\s]+)""")
     s = re.sub(r"%[A-Z%]", _percentReplacementFunc, s)
     return parseString(s, rx)
     

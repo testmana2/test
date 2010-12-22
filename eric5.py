@@ -211,7 +211,7 @@ def main():
     for arg in sys.argv:
         if arg.startswith("--plugin=") and sys.argv.index(arg) < ddindex:
             # extract the plugin development option
-            pluginFile = arg.replace("--plugin=", "")
+            pluginFile = arg.replace("--plugin=", "").replace('"', "")
             sys.argv.remove(arg)
             pluginFile = os.path.expanduser(pluginFile)
             pluginFile = Utilities.normabspath(pluginFile)
