@@ -440,10 +440,6 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             cert = QSslCertificate.fromData(crt, QSsl.Pem)
             if not cert:
                 cert = QSslCertificate.fromData(crt, QSsl.Der)
-##            if fname.endswith((".pem", ".crt")):
-##                cert = QSslCertificate.fromData(crt, QSsl.Pem)
-##            elif fname.endswith((".der", ".cer", ".ca")):
-##                cert = QSslCertificate.fromData(crt, QSsl.Der)
             
             return cert
         
