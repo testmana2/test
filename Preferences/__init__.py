@@ -890,13 +890,20 @@ def exportPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    filename = QtGui.QFileDialog.getSaveFileName(
+    filename, selectedFilter = QtGui.QFileDialog.getSaveFileNameAndFilter(
         None,
         QtCore.QCoreApplication.translate("Preferences", "Export Preferences"),
         "",
-        "",
+        QtCore.QCoreApplication.translate("Preferences", 
+            "Properties File (*.ini);;All Files (*)"),
+        None, 
         QtGui.QFileDialog.Options(QtGui.QFileDialog.DontConfirmOverwrite))
     if filename:
+        ext = QtCore.QFileInfo(filename).suffix()
+        if not ext:
+            ex = selectedFilter.split("(*")[1].split(")")[0]
+            if ex:
+                filename += ex
         settingsFile = prefClass.settings.fileName()
         prefClass.settings = None
         shutil.copy(settingsFile, filename)
@@ -913,7 +920,8 @@ def importPreferences(prefClass = Prefs):
         None,
         QtCore.QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
-        "")
+        QtCore.QCoreApplication.translate("Preferences", 
+            "Properties File (*.ini);;All Files (*)"))
     if filename:
         settingsFile = prefClass.settings.fileName()
         shutil.copy(filename, settingsFile)
