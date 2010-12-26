@@ -417,13 +417,12 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         
         @return certificates read (list of QSslCertificate)
         """
-        fname, selectedFilter = QFileDialog.getOpenFileNameAndFilter(
+        fname = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Certificate"),
             "",
             self.trUtf8("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
-                        "All Files (*)"),
-            None)
+                        "All Files (*)"))
         
         if fname:
             f = QFile(fname)
