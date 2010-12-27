@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.UI.LogView</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.UI.LogView</h1>
+<p>
+Module implementing the log viewer widget and the log widget.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#LogViewer">LogViewer</a></td>
+<td>Class providing a specialized text edit for displaying logging information.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="LogViewer" ID="LogViewer"></a>
+<h2>LogViewer</h2>
+<p>
+    Class providing a specialized text edit for displaying logging information.
+</p>
+<h3>Derived from</h3>
+QTextEdit
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#LogViewer.__init__">LogViewer</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#LogViewer.__appendText">__appendText</a></td>
+<td>Public method to append text to the end.</td>
+</tr><tr>
+<td><a href="#LogViewer.__configure">__configure</a></td>
+<td>Private method to open the configuration dialog.</td>
+</tr><tr>
+<td><a href="#LogViewer.__handleShowContextMenu">__handleShowContextMenu</a></td>
+<td>Private slot to show the context menu.</td>
+</tr><tr>
+<td><a href="#LogViewer.appendToStderr">appendToStderr</a></td>
+<td>Public slot to appand text to the "stderr" tab.</td>
+</tr><tr>
+<td><a href="#LogViewer.appendToStdout">appendToStdout</a></td>
+<td>Public slot to appand text to the "stdout" tab.</td>
+</tr><tr>
+<td><a href="#LogViewer.preferencesChanged">preferencesChanged</a></td>
+<td>Public slot to handle a change of the preferences.</td>
+</tr>
+</table>
+<a NAME="LogViewer.__init__" ID="LogViewer.__init__"></a>
+<h4>LogViewer (Constructor)</h4>
+<b>LogViewer</b>(<i>parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="LogViewer.__appendText" ID="LogViewer.__appendText"></a>
+<h4>LogViewer.__appendText</h4>
+<b>__appendText</b>(<i>txt, error = False</i>)
+<p>
+        Public method to append text to the end.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to insert (string)
+</dd><dt><i>error</i></dt>
+<dd>
+flag indicating to insert error text (boolean)
+</dd>
+</dl><a NAME="LogViewer.__configure" ID="LogViewer.__configure"></a>
+<h4>LogViewer.__configure</h4>
+<b>__configure</b>(<i></i>)
+<p>
+        Private method to open the configuration dialog.
+</p><a NAME="LogViewer.__handleShowContextMenu" ID="LogViewer.__handleShowContextMenu"></a>
+<h4>LogViewer.__handleShowContextMenu</h4>
+<b>__handleShowContextMenu</b>(<i>coord</i>)
+<p>
+        Private slot to show the context menu.
+</p><dl>
+<dt><i>coord</i></dt>
+<dd>
+the position of the mouse pointer (QPoint)
+</dd>
+</dl><a NAME="LogViewer.appendToStderr" ID="LogViewer.appendToStderr"></a>
+<h4>LogViewer.appendToStderr</h4>
+<b>appendToStderr</b>(<i>txt</i>)
+<p>
+        Public slot to appand text to the "stderr" tab.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be appended (string)
+</dd>
+</dl><a NAME="LogViewer.appendToStdout" ID="LogViewer.appendToStdout"></a>
+<h4>LogViewer.appendToStdout</h4>
+<b>appendToStdout</b>(<i>txt</i>)
+<p>
+        Public slot to appand text to the "stdout" tab.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text to be appended (string)
+</dd>
+</dl><a NAME="LogViewer.preferencesChanged" ID="LogViewer.preferencesChanged"></a>
+<h4>LogViewer.preferencesChanged</h4>
+<b>preferencesChanged</b>(<i></i>)
+<p>
+        Public slot to handle a change of the preferences.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
