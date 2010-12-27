@@ -53,6 +53,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
+        if mode == "log":
+            self.setWindowTitle(self.trUtf8("Mercurial Log"))
+        elif mode == "incoming":
+            self.setWindowTitle(self.trUtf8("Mercurial Log (Incoming)"))
+        elif mode == "outgoing":
+            self.setWindowTitle(self.trUtf8("Mercurial Log (Outgoing)"))
+        
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
