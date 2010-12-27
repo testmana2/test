@@ -864,7 +864,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Next button.
         """
-        if self.__lastRev > 1:
+        if self.__lastRev > 0:
             self.__getLogEntries(self.__lastRev - 1)
     
     @pyqtSlot()
