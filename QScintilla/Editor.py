@@ -147,10 +147,6 @@ class Editor(QsciScintillaCompat):
         self.setAttribute(Qt.WA_KeyCompression)
         self.setUtf8(True)
         
-        self.pyExtensions = dbs.getExtensions('Python')
-        self.py3Extensions = dbs.getExtensions('Python3')
-        self.rbExtensions = dbs.getExtensions('Ruby')
-        
         self.dbs = dbs
         self.taskViewer = tv
         self.fileName = fn
@@ -1555,7 +1551,7 @@ class Editor(QsciScintillaCompat):
         """
         return self.filetype == "Python" or \
             (self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.pyExtensions)
+             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python'))
 
     def isPy3File(self):
         """
@@ -1565,7 +1561,7 @@ class Editor(QsciScintillaCompat):
         """
         return self.filetype == "Python3" or \
             (self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.py3Extensions)
+             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python3'))
 
     def isRubyFile(self):
         """
@@ -1575,7 +1571,7 @@ class Editor(QsciScintillaCompat):
         """
         return self.filetype == "Ruby" or \
             (self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.rbExtensions)
+             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'))
         
     def highlightVisible(self):
         """
