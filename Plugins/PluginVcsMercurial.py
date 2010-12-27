@@ -140,6 +140,7 @@ class VcsMercurialPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
+        QObject.__init__(self, ui)
         self.__ui = ui
         
         self.__mercurialDefaults = {
