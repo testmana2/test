@@ -9,7 +9,7 @@ Module implementing a dialog to show the output of the hg diff command process.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QBrush, QColor, \
     QTextCursor, QFileDialog, QLineEdit
 
@@ -174,6 +174,9 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             return
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
         self.contents.setTextCursor(tc)
