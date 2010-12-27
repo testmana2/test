@@ -78,6 +78,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences("LogLimit"))
         self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
         
+        if mode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
         self.__edgesRole   = Qt.UserRole + 2
@@ -498,8 +502,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['log'])
         args.append('--verbose')
-        args.append('--limit')
-        args.append(str(self.limitSpinBox.value()))
+        if self.commandMode not in ("incoming", "outgoing"):
+            args.append('--limit')
+            args.append(str(self.limitSpinBox.value()))
         if self.commandMode in ("incoming", "outgoing"):
             args.append("--newest-first")
         if startRev is not None:
