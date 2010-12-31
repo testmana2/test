@@ -119,17 +119,39 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             # now go through all the files
             progress = 0
             for file in files:
+                self.checkProgress.setValue(progress)
+                QApplication.processEvents()
+                self.__resort()
+                
                 if self.cancelled:
                     return
                 
-                nok, fname, line, error = Tabnanny.check(file)
+                try:
+                    source = Utilities.readEncodedFile(file)[0]
+                    # convert eols
+                    source = Utilities.convertLineEnds(source, "\n")
+                except (UnicodeError, IOError) as msg:
+                    self.noResults = False
+                    self.__createResultItem(file, "1", 
+                        "Error: {0}".format(str(msg)).rstrip()[1:-1])
+                    progress += 1
+                    continue
+                
+                flags = Utilities.extractFlags(source)
+                if "FileType" in flags and flags["FileType"] != "Python3":
+                    # skip non Python 3 files
+                    progress += 1
+                    continue
+                
+                nok, fname, line, error = Tabnanny.check(file, source)
                 if nok:
                     self.noResults = False
                     self.__createResultItem(fname, line, error.rstrip()[1:-1])
                 progress += 1
-                self.checkProgress.setValue(progress)
-                QApplication.processEvents()
-                self.__resort()
+                
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+            self.__resort()
         else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
@@ -180,6 +202,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
         
         self.resultList.clear()
+        self.noResults = True
+        self.cancelled = False
         self.start(fileList)
         
     def on_resultList_itemActivated(self, itm, col):

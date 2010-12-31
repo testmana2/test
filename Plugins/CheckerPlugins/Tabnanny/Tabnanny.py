@@ -40,7 +40,6 @@ for being called from within the eric5 IDE.
 
 __version__ = "6_eric"
 
-import os
 import tokenize
 import io
 
@@ -90,11 +89,12 @@ class NannyNag(Exception):
         """
         return self.line
 
-def check(file):
+def check(file, text = ""):
     """
     Private function to check one Python source file for whitespace related problems.
     
     @param file source filename (string)
+    @param text source text (string)
     @return A tuple indicating status (True = an error was found), the
         filename, the linenumber and the error message
         (boolean, string, string, string). The values are only
@@ -103,14 +103,15 @@ def check(file):
     global indents, check_equal
     indents = [Whitespace("")]
     check_equal = 0
-
-    try:
-        text = Utilities.readEncodedFile(file)[0]
-    except (UnicodeError, IOError) as msg:
-        return (True, file, "1", "Error: {0}".format(str(msg)))
-        
-    # convert eols
-    text = Utilities.convertLineEnds(text, os.linesep)
+    
+    if not text:
+        try:
+            text = Utilities.readEncodedFile(file)[0]
+        except (UnicodeError, IOError) as msg:
+            return (True, file, "1", "Error: {0}".format(str(msg)))
+            
+        # convert eols
+        text = Utilities.convertLineEnds(text, "\n")
     
     source = io.StringIO(text)
     try:

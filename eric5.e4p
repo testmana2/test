@@ -1499,7 +1499,7 @@
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/DebugClients/Python/*, */coverage/*, */ThirdParty/*</string>
+              <string>*/coverage/*, */ThirdParty/*</string>
             </value>
           </dict>
         </value>
@@ -1512,7 +1512,7 @@
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/DebugClients/Python/*, */coverage/*, */ThirdParty/*</string>
+              <string>*/coverage/*, */ThirdParty/*</string>
             </value>
           </dict>
         </value>

@@ -151,6 +151,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             # now go through all the files
             progress = 0
             for file in files:
+                self.checkProgress.setValue(progress)
+                QApplication.processEvents()
+                self.__resort()
+                
                 if self.cancelled:
                     return
                 
@@ -163,8 +167,18 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         source = Utilities.readEncodedFile(file)[0]
                         # convert eols
                         source = Utilities.convertLineEnds(source, "\n")
-                    except (UnicodeDecodeError, IOError):
-                        continue    # just ignore it
+                    except (UnicodeError, IOError) as msg:
+                        self.noResults = False
+                        self.__createResultItem(file, "1", 
+                            "Error: {0}".format(str(msg)).rstrip()[1:-1])
+                        progress += 1
+                        continue
+                
+                flags = Utilities.extractFlags(source)
+                if "FileType" in flags and flags["FileType"] != "Python3":
+                    # skip non Python 3 files
+                    progress += 1
+                    continue
                 
                 nok, fname, line, code, error = Utilities.compile(file, source)
                 if nok:
@@ -180,10 +194,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                 if ignoreStarImportWarnings and \
                                    isinstance(warning, ImportStarUsed):
                                     continue
-                                self.noResults = False
                                 fname, lineno, message = warning.getMessageData()
                                 if not sourceLines[lineno - 1].strip()\
                                    .endswith("__IGNORE_WARNING__"):
+                                    self.noResults = False
                                     self.__createResultItem(fname, lineno, message, "", 
                                                             isWarning = True)
                         except SyntaxError as err:
@@ -193,9 +207,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                 msg = err.msg
                             self.__createResultItem(err.filename, err.lineno, msg, "")
                 progress += 1
-                self.checkProgress.setValue(progress)
-                QApplication.processEvents()
-                self.__resort()
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+            self.__resort()
         else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
@@ -252,6 +266,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
         
         self.resultList.clear()
+        self.noResults = True
+        self.cancelled = False
         self.start(fileList)
         
     def on_resultList_itemActivated(self, itm, col):

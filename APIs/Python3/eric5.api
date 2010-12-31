@@ -2642,7 +2642,7 @@ eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.longest_run_of_spaces?
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.not_equal_witness?4(other)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.not_less_witness?4(other)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace?1(ws)
-eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.check?4(file)
+eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.check?4(file, text = "")
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.format_witnesses?4(w)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.process_tokens?4(tokens)
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_buttonBox_clicked?4(button)
