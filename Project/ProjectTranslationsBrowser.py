@@ -887,7 +887,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     return
         
         # generate a minimal temporary projectfile suitable for pylupdate
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
             ok = False
@@ -1020,7 +1020,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                 return
         
         # generate a minimal temporary projectfile suitable for lrelease
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             ok = self.__writeTempProjectFile(langs, [".py"])
         else:
             ok = False

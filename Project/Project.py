@@ -192,16 +192,16 @@ class Project(QObject):
         self.ui = parent
         
         self.sourceExtensions = {
-            "Python"  : Preferences.getPython("PythonExtensions"),
+            "Python2"  : Preferences.getPython("PythonExtensions"),
             "Python3" : Preferences.getPython("Python3Extensions"),
             "Ruby"    : ['.rb'],
             "Mixed"   : ['.py', '.ptl', '.rb']
         }
         
         self.dbgFilters = {
-            "Python"  : self.trUtf8(
-                         "Python Files (*.py2);;"
-                         "Python GUI Files (*.pyw2);;"),
+            "Python2"  : self.trUtf8(
+                         "Python2 Files (*.py2);;"
+                         "Python2 GUI Files (*.pyw2);;"),
             "Python3" : self.trUtf8(
                          "Python3 Files (*.py *.py3);;"
                          "Python3 GUI Files (*.pyw *.pyw3);;"),
@@ -1823,7 +1823,7 @@ class Project(QObject):
                     return
                 # create an empty __init__.py file to make it a Python package
                 # (only for Python and Python3)
-                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
                     f = open(fn, "w", encoding = "utf-8")
                     f.close()
@@ -1877,7 +1877,7 @@ class Project(QObject):
                     self.newProjectAddFiles(ms)
                 # create an empty __init__.py file to make it a Python package
                 # if none exists (only for Python and Python3)
-                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
                     if not os.path.exists(fn):
                         f = open(fn, "w", encoding = "utf-8")
@@ -2060,7 +2060,7 @@ class Project(QObject):
                     self.projectLanguageAdded.emit(ts)
             if len(self.pdata["MAINSCRIPT"]) == 0 or \
                len(self.pdata["MAINSCRIPT"][0]) == 0:
-                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                     self.pdata["MAINSCRIPT"] = ['{0}.py'.format(mainscriptname)]
                 elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
                     self.pdata["MAINSCRIPT"] = ['{0}.rb'.format(mainscriptname)]

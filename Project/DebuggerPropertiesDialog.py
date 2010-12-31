@@ -48,14 +48,14 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         if self.project.debugProperties["INTERPRETER"]:
             self.interpreterEdit.setText(self.project.debugProperties["INTERPRETER"])
         else:
-            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                 self.interpreterEdit.setText(sys.executable)
             elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
                 self.interpreterEdit.setText("/usr/bin/ruby")
         if self.project.debugProperties["DEBUGCLIENT"]:
             self.debugClientEdit.setText(self.project.debugProperties["DEBUGCLIENT"])
         else:
-            if self.project.pdata["PROGLANGUAGE"][0] == "Python":
+            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                 debugClient = os.path.join(getConfig('ericDir'), 
                                            "DebugClients", "Python", "DebugClient.py")
             elif self.project.pdata["PROGLANGUAGE"][0] == "Python3":
@@ -129,7 +129,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         self.project.debugProperties["INTERPRETER"] = \
             self.interpreterEdit.text()
         if not self.project.debugProperties["INTERPRETER"]:
-            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                 self.project.debugProperties["INTERPRETER"] = sys.executable
             elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
                 self.project.debugProperties["INTERPRETER"] = "/usr/bin/ruby"
@@ -137,7 +137,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         self.project.debugProperties["DEBUGCLIENT"] = \
             self.debugClientEdit.text()
         if not self.project.debugProperties["DEBUGCLIENT"]:
-            if self.project.pdata["PROGLANGUAGE"][0] == "Python":
+            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                 debugClient = os.path.join(getConfig('ericDir'), 
                                            "DebugClients", "Python", "DebugClient.py")
             elif self.project.pdata["PROGLANGUAGE"][0] == "Python3":

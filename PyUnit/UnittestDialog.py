@@ -149,15 +149,15 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         Private slot to open a file dialog.
         """
         if self.dbs:
-            pyExtensions = \
+            py2Extensions = \
                 ' '.join(["*{0}".format(ext) 
-                          for ext in self.dbs.getExtensions('Python')])
+                          for ext in self.dbs.getExtensions('Python2')])
             py3Extensions = \
                 ' '.join(["*{0}".format(ext) 
                           for ext in self.dbs.getExtensions('Python3')])
             filter = self.trUtf8(
                 "Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
-                .format(pyExtensions, py3Extensions)
+                .format(py2Extensions, py3Extensions)
         else:
             filter = self.trUtf8("Python Files (*.py);;All Files (*)")
         prog = QFileDialog.getOpenFileName(
@@ -179,7 +179,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param txt name of the test file (string)
         """
         if self.dbs:
-            exts = self.dbs.getExtensions("Python")
+            exts = self.dbs.getExtensions("Python3")
             if txt.endswith(exts):
                 self.coverageCheckBox.setChecked(False)
                 self.coverageCheckBox.setEnabled(False)

@@ -73,7 +73,7 @@ def usage():
     print("        This option may be repeated multiple times.")
     for lang in sorted(DocumentationTools.supportedExtensionsDictForApis.keys()):
         print("            * {0}".format(lang))
-    print("        The default is 'Python'.")
+    print("        The default is 'Python3'.")
     print("        This option may be repeated multiple times.")
     sys.exit(1)
 
@@ -217,7 +217,7 @@ def main():
                             inpackage = True
                             files.remove(initFile)
                             files.insert(0, initFile)
-                        elif progLanguage != "Python":
+                        elif progLanguage != "Python3":
                             # assume package
                             inpackage = True
                 else:

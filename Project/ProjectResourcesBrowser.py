@@ -549,17 +549,17 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         args = []
         self.buf = ""
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             if self.project.getProjectType() in ["Qt4", "E4Plugin"]:
                 self.rccCompiler = 'pyrcc4'
                 if PYQT_VERSION >= 0x040500:
-                    if self.project.pdata["PROGLANGUAGE"][0] == "Python":
+                    if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                         args.append("-py2")
                     else:
                         args.append("-py3")
             elif self.project.getProjectType() == "PySide":
                 self.rccCompiler = 'pyside-rcc4'
-                if self.project.pdata["PROGLANGUAGE"][0] == "Python":
+                if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                     args.append("-py2")
                 else:
                     args.append("-py3")
@@ -581,7 +581,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         fn = os.path.join(self.project.ppath, fn)
         
         dirname, filename = os.path.split(ofn)
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             self.compiledFile = os.path.join(dirname, 
                                 self.RCFilenameFormatPython.format(filename))
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
@@ -743,7 +743,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 progress.setValue(i)
                 QApplication.processEvents()
                 ifn = os.path.join(self.project.ppath, fn)
-                if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                if self.project.pdata["PROGLANGUAGE"][0] in \
+                   ["Python", "Python2", "Python3"]:
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
                     ofn = os.path.join(dirname, 
                                        self.RCFilenameFormatPython.format(filename))

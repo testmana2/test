@@ -152,6 +152,7 @@ class Editor(QsciScintillaCompat):
         self.fileName = fn
         self.vm = vm
         self.filetype = filetype
+        self.filetypeByFlag = False
         self.noName = ""
         self.project = e5App().getObject("Project")
         
@@ -464,30 +465,33 @@ class Editor(QsciScintillaCompat):
         
         @param line0 first line of text to use in the generation process (string)
         """
-        bindName = self.fileName
+        bindName = ""
         
         if line0.startswith("<?xml"):
             # override extension for XML files
             bindName = "dummy.xml"
         
         # check filetype
-        if self.filetype == "Python":
-            bindName = "dummy.py"
-        elif self.filetype == "Ruby":
-            bindName = "dummy.rb"
-        elif self.filetype == "D":
-            bindName = "dummy.d"
-        elif self.filetype == "Properties":
-            bindName = "dummy.ini"
+        if not bindName and self.filetype:
+            if self.filetype in ["Python", "Python2"]:
+                bindName = "dummy.py"
+            elif self.filetype == "Python3":
+                bindName = "dummy.py"
+            elif self.filetype == "Ruby":
+                bindName = "dummy.rb"
+            elif self.filetype == "D":
+                bindName = "dummy.d"
+            elif self.filetype == "Properties":
+                bindName = "dummy.ini"
         
         # #! marker detection
-        if line0.startswith("#!"):
+        if not bindName and line0.startswith("#!"):
             if "python3" in line0:
                 bindName = "dummy.py"
                 self.filetype = "Python3"
             elif "python2" in line0:
                 bindName = "dummy.py"
-                self.filetype = "Python"
+                self.filetype = "Python2"
             elif "python" in line0:
                 bindName = "dummy.py"
                 self.filetype = "Python"
@@ -503,6 +507,10 @@ class Editor(QsciScintillaCompat):
             elif "dmd" in line0:
                 bindName = "dummy.d"
                 self.filetype = "D"
+        
+        if not bindName:
+            bindName = self.fileName
+        
         return bindName
         
     def getMenu(self, menuName):
@@ -1543,15 +1551,16 @@ class Editor(QsciScintillaCompat):
             line += 1
         return folds
         
-    def isPyFile(self):
+    def isPy2File(self):
         """
         Public method to return a flag indicating a Python file.
         
         @return flag indicating a Python file (boolean)
         """
-        return self.filetype == "Python" or \
-            (self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python'))
+        return self.filetype in ["Python", "Python2"] or \
+            (self.filetype == "" and \
+             self.fileName is not None and \
+             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python2'))
 
     def isPy3File(self):
         """
@@ -1560,7 +1569,8 @@ class Editor(QsciScintillaCompat):
         @return flag indicating a Python3 file (boolean)
         """
         return self.filetype == "Python3" or \
-            (self.fileName is not None and \
+            (self.filetype == "" and \
+             self.fileName is not None and \
              os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python3'))
 
     def isRubyFile(self):
@@ -1570,7 +1580,8 @@ class Editor(QsciScintillaCompat):
         @return flag indicating a Ruby file (boolean)
         """
         return self.filetype == "Ruby" or \
-            (self.fileName is not None and \
+            (self.filetype == "" and \
+             self.fileName is not None and \
              os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'))
         
     def highlightVisible(self):
@@ -1766,7 +1777,7 @@ class Editor(QsciScintillaCompat):
         @param temporary flag indicating a temporary breakpoint (boolean)
         """
         if self.fileName and \
-           (self.isPyFile() or self.isPy3File() or self.isRubyFile()):
+           (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
             self.breakpointModel.addBreakPoint(self.fileName, line,
                 ('', temporary, True, 0))
             self.breakpointToggled.emit(self)
@@ -2168,9 +2179,31 @@ class Editor(QsciScintillaCompat):
         self.taskMarkersUpdated.emit(self)
     
     ############################################################################
+    ## Flags handling methods below
+    ############################################################################
+    
+    def __processFlags(self):
+        """
+        Private method to extract flags and process them.
+        """
+        txt = self.text()
+        flags = Utilities.extractFlags(txt)
+        
+        # Flag 1: FileType
+        if "FileType" in flags:
+            if isinstance(flags["FileType"], str):
+                self.filetype = flags["FileType"]
+                self.filetypeByFlag = True
+        else:
+            if self.filetype != "" and self.filetypeByFlag:
+                self.filetype = ""
+                self.filetypeByFlag = False
+                self.__bindName(txt.splitlines()[0])
+    
+    ############################################################################
     ## File handling methods below
     ############################################################################
-
+    
     def checkDirty(self):
         """
         Public method to check dirty status and open a message window.
@@ -2249,6 +2282,9 @@ class Editor(QsciScintillaCompat):
             del txtExpanded
         
         self.setText(txt)
+        
+        # get eric specific flags
+        self.__processFlags()
         
         # perform automatic eol conversion
         if Preferences.getEditor("AutomaticEOLConversion"):
@@ -2405,6 +2441,8 @@ class Editor(QsciScintillaCompat):
             self.editorSaved.emit(self.fileName)
             self.__autoSyntaxCheck()
             self.extractTasks()
+            # get eric specific flags
+            self.__processFlags()
             return True
         else:
             self.lastModified = QFileInfo(fn).lastModified()
@@ -3780,12 +3818,12 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Copy"].setEnabled(self.hasSelectedText())
         if not self.isResourcesFile:
             if self.fileName and \
-               (self.isPyFile() or self.isPy3File()):
+               (self.isPy2File() or self.isPy3File()):
                 self.menuActs["Show"].setEnabled(True)
             else:
                 self.menuActs["Show"].setEnabled(False)
             if self.fileName and \
-               (self.isPyFile() or self.isPy3File() or self.isRubyFile()):
+               (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
                 self.menuActs["Diagrams"].setEnabled(True)
             else:
                 self.menuActs["Diagrams"].setEnabled(False)
@@ -3889,7 +3927,7 @@ class Editor(QsciScintillaCompat):
         Private slot handling the aboutToShow signal of the margins context menu.
         """
         if self.fileName and \
-           (self.isPyFile() or self.isPy3File() or self.isRubyFile()):
+           (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
             self.marginMenuActs["Breakpoint"].setEnabled(True)
             self.marginMenuActs["TempBreakpoint"].setEnabled(True)
             if self.markersAtLine(self.line) & self.breakpointMask:

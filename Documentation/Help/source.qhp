@@ -2337,6 +2337,7 @@
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="escape_entities" id="escape_entities" ref="eric5.Utilities.__init__.html#escape_entities" />
       <keyword name="escape_uentities" id="escape_uentities" ref="eric5.Utilities.__init__.html#escape_uentities" />
+      <keyword name="extractFlags" id="extractFlags" ref="eric5.Utilities.__init__.html#extractFlags" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
       <keyword name="generateDistroInfo" id="generateDistroInfo" ref="eric5.Utilities.__init__.html#generateDistroInfo" />
       <keyword name="generatePluginsVersionInfo" id="generatePluginsVersionInfo" ref="eric5.Utilities.__init__.html#generatePluginsVersionInfo" />
@@ -3824,8 +3825,8 @@
       <keyword name="BrowserFileItem.isMultiProjectFile" id="BrowserFileItem.isMultiProjectFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isMultiProjectFile" />
       <keyword name="BrowserFileItem.isPixmapFile" id="BrowserFileItem.isPixmapFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isPixmapFile" />
       <keyword name="BrowserFileItem.isProjectFile" id="BrowserFileItem.isProjectFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isProjectFile" />
+      <keyword name="BrowserFileItem.isPython2File" id="BrowserFileItem.isPython2File" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isPython2File" />
       <keyword name="BrowserFileItem.isPython3File" id="BrowserFileItem.isPython3File" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isPython3File" />
-      <keyword name="BrowserFileItem.isPythonFile" id="BrowserFileItem.isPythonFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isPythonFile" />
       <keyword name="BrowserFileItem.isResourcesFile" id="BrowserFileItem.isResourcesFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isResourcesFile" />
       <keyword name="BrowserFileItem.isRubyFile" id="BrowserFileItem.isRubyFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isRubyFile" />
       <keyword name="BrowserFileItem.isSvgFile" id="BrowserFileItem.isSvgFile" ref="eric5.UI.BrowserModel.html#BrowserFileItem.isSvgFile" />
@@ -5703,6 +5704,7 @@
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric5.QScintilla.Editor.html#Editor.__normalizedEncoding" />
       <keyword name="Editor.__printPreview" id="Editor.__printPreview" ref="eric5.QScintilla.Editor.html#Editor.__printPreview" />
       <keyword name="Editor.__processEndEditCommand" id="Editor.__processEndEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processEndEditCommand" />
+      <keyword name="Editor.__processFlags" id="Editor.__processFlags" ref="eric5.QScintilla.Editor.html#Editor.__processFlags" />
       <keyword name="Editor.__processRequestSyncCommand" id="Editor.__processRequestSyncCommand" ref="eric5.QScintilla.Editor.html#Editor.__processRequestSyncCommand" />
       <keyword name="Editor.__processStartEditCommand" id="Editor.__processStartEditCommand" ref="eric5.QScintilla.Editor.html#Editor.__processStartEditCommand" />
       <keyword name="Editor.__processSyncCommand" id="Editor.__processSyncCommand" ref="eric5.QScintilla.Editor.html#Editor.__processSyncCommand" />
@@ -5826,8 +5828,8 @@
       <keyword name="Editor.highlight" id="Editor.highlight" ref="eric5.QScintilla.Editor.html#Editor.highlight" />
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
+      <keyword name="Editor.isPy2File" id="Editor.isPy2File" ref="eric5.QScintilla.Editor.html#Editor.isPy2File" />
       <keyword name="Editor.isPy3File" id="Editor.isPy3File" ref="eric5.QScintilla.Editor.html#Editor.isPy3File" />
-      <keyword name="Editor.isPyFile" id="Editor.isPyFile" ref="eric5.QScintilla.Editor.html#Editor.isPyFile" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />
       <keyword name="Editor.isSpellCheckRegion" id="Editor.isSpellCheckRegion" ref="eric5.QScintilla.Editor.html#Editor.isSpellCheckRegion" />
       <keyword name="Editor.joinLines" id="Editor.joinLines" ref="eric5.QScintilla.Editor.html#Editor.joinLines" />

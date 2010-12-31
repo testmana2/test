@@ -69,8 +69,11 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.sourceExtEdit.setText(", ".join(self.parameters['sourceExtensions']))
         self.excludeFilesEdit.setText(", ".join(self.parameters['ignoreFilePatterns']))
         for language in self.parameters['languages']:
+            if language == "Python":
+                # convert Python to the more specific Python2
+                language = "Python2"
             items = self.languagesList.findItems(language, Qt.MatchFlags(Qt.MatchExactly))
-            items[0].setSelected(True)
+            items and items[0].setSelected(True)
     
     def __initializeDefaults(self):
         """
@@ -93,7 +96,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         if lang in DocumentationTools.supportedExtensionsDictForApis:
             self.defaults['languages'] = [lang]
         else:
-            self.defaults['languages'] = ["Python"]
+            self.defaults['languages'] = ["Python3"]
     
     def generateParameters(self):
         """

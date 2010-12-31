@@ -272,7 +272,7 @@ class ProjectBrowser(E5TabWidget):
         if not self.project.isOpen():
             icon = UI.PixmapCache.getIcon("projectSources.png")
         else:
-            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+            if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                 if self.project.pdata["MIXEDLANGUAGE"][0]:
                     icon = UI.PixmapCache.getIcon("projectSourcesPyMixed.png")
                 else:

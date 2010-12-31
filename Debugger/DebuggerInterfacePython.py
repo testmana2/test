@@ -43,7 +43,7 @@ def getRegistryData():
             exts.append(".{0}".format(ext))
     
     if exts and Preferences.getDebugger("PythonInterpreter"):
-        return ["Python", ClientDefaultCapabilities, exts]
+        return ["Python2", ClientDefaultCapabilities, exts]
     else:
         return ["", 0, []]
 

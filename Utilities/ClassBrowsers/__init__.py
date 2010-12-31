@@ -30,7 +30,7 @@ SUPPORTED_TYPES = [PY_SOURCE, PTL_SOURCE, RB_SOURCE, IDL_SOURCE]
 
 __extensions = {
     "IDL"       : [".idl"],
-    "Python"    : [".py", ".pyw", ".ptl"],
+    "Python"    : [".py", ".pyw", ".ptl"],  # currently not used
     "Ruby"      : [".rb"],
 }
 

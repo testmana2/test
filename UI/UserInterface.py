@@ -4984,7 +4984,7 @@ class UserInterface(QMainWindow):
                     self.utEditorOpen = cap & HasUnittest
                     return
             
-            if self.viewmanager.getOpenEditor(fn).isPyFile() or \
+            if self.viewmanager.getOpenEditor(fn).isPy2File() or \
                self.viewmanager.getOpenEditor(fn).isPy3File():
                 self.utScriptAct.setEnabled(True)
                 self.utEditorOpen = True
@@ -5010,7 +5010,7 @@ class UserInterface(QMainWindow):
                     self.utEditorOpen = cap & HasUnittest
                     return
             
-            if editor.isPyFile() or editor.isPy3File():
+            if editor.isPy2File() or editor.isPy3File():
                 self.utScriptAct.setEnabled(True)
                 self.utEditorOpen = True
                 return

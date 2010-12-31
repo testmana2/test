@@ -268,7 +268,7 @@ class DebugServer(QTcpServer):
         if self.lastClientType != self.clientType or clientType is not None:
             if clientType is None:
                 clientType = self.clientType
-            if clientType == "Python":
+            if clientType == "Python2":
                 from .DebuggerInterfacePython import DebuggerInterfacePython
                 self.debuggerInterface = DebuggerInterfacePython(self, self.passive)
             elif clientType == "Python3":
@@ -654,7 +654,7 @@ class DebugServer(QTcpServer):
         try:
             self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
-            self.__setClientType('Python')    # assume it is a Python file
+            self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
         
         self.remoteEnvironment(env)
@@ -689,7 +689,7 @@ class DebugServer(QTcpServer):
         try:
             self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
-            self.__setClientType('Python')    # assume it is a Python file
+            self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
         
         self.remoteEnvironment(env)
@@ -720,7 +720,7 @@ class DebugServer(QTcpServer):
         try:
             self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
-            self.__setClientType('Python')    # assume it is a Python file
+            self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
         
         self.remoteEnvironment(env)
@@ -751,7 +751,7 @@ class DebugServer(QTcpServer):
         try:
             self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
-            self.__setClientType('Python')    # assume it is a Python file
+            self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
         
         self.remoteEnvironment(env)
@@ -969,7 +969,7 @@ class DebugServer(QTcpServer):
         try:
             self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
-            self.__setClientType('Python')    # assume it is a Python file
+            self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False)
         
         self.debuggerInterface.remoteUTPrepare(fn, tn, tfn, cov, covname, coverase)

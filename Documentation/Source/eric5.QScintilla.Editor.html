@@ -367,6 +367,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__processEndEditCommand">__processEndEditCommand</a></td>
 <td>Private slot to process a remote EndEdit command</td>
 </tr><tr>
+<td><a href="#Editor.__processFlags">__processFlags</a></td>
+<td>Private method to extract flags and process them.</td>
+</tr><tr>
 <td><a href="#Editor.__processRequestSyncCommand">__processRequestSyncCommand</a></td>
 <td>Private slot to process a remote RequestSync command</td>
 </tr><tr>
@@ -736,11 +739,11 @@ QsciScintillaCompat
 <td><a href="#Editor.indentLineOrSelection">indentLineOrSelection</a></td>
 <td>Public slot to indent the current line or current selection</td>
 </tr><tr>
+<td><a href="#Editor.isPy2File">isPy2File</a></td>
+<td>Public method to return a flag indicating a Python file.</td>
+</tr><tr>
 <td><a href="#Editor.isPy3File">isPy3File</a></td>
 <td>Public method to return a flag indicating a Python3 file.</td>
-</tr><tr>
-<td><a href="#Editor.isPyFile">isPyFile</a></td>
-<td>Public method to return a flag indicating a Python file.</td>
 </tr><tr>
 <td><a href="#Editor.isRubyFile">isRubyFile</a></td>
 <td>Public method to return a flag indicating a Ruby file.</td>
@@ -1631,7 +1634,12 @@ reference to the printer object (QScintilla.Printer.Printer)
 <dd>
 string containing the command parameters (string)
 </dd>
-</dl><a NAME="Editor.__processRequestSyncCommand" ID="Editor.__processRequestSyncCommand"></a>
+</dl><a NAME="Editor.__processFlags" ID="Editor.__processFlags"></a>
+<h4>Editor.__processFlags</h4>
+<b>__processFlags</b>(<i></i>)
+<p>
+        Private method to extract flags and process them.
+</p><a NAME="Editor.__processRequestSyncCommand" ID="Editor.__processRequestSyncCommand"></a>
 <h4>Editor.__processRequestSyncCommand</h4>
 <b>__processRequestSyncCommand</b>(<i>argsString</i>)
 <p>
@@ -2693,7 +2701,17 @@ flag indicating a syntax error (boolean)
 <b>indentLineOrSelection</b>(<i></i>)
 <p>
         Public slot to indent the current line or current selection
-</p><a NAME="Editor.isPy3File" ID="Editor.isPy3File"></a>
+</p><a NAME="Editor.isPy2File" ID="Editor.isPy2File"></a>
+<h4>Editor.isPy2File</h4>
+<b>isPy2File</b>(<i></i>)
+<p>
+        Public method to return a flag indicating a Python file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Python file (boolean)
+</dd>
+</dl><a NAME="Editor.isPy3File" ID="Editor.isPy3File"></a>
 <h4>Editor.isPy3File</h4>
 <b>isPy3File</b>(<i></i>)
 <p>
@@ -2702,16 +2720,6 @@ flag indicating a syntax error (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a Python3 file (boolean)
-</dd>
-</dl><a NAME="Editor.isPyFile" ID="Editor.isPyFile"></a>
-<h4>Editor.isPyFile</h4>
-<b>isPyFile</b>(<i></i>)
-<p>
-        Public method to return a flag indicating a Python file.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating a Python file (boolean)
 </dd>
 </dl><a NAME="Editor.isRubyFile" ID="Editor.isRubyFile"></a>
 <h4>Editor.isRubyFile</h4>

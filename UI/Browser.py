@@ -323,7 +323,7 @@ class Browser(QTreeView):
         
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
-                if itm.isPythonFile():
+                if itm.isPython2File():
                     self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python")
                 elif itm.isPython3File():
                     self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python3")

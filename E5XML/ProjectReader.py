@@ -58,6 +58,9 @@ class ProjectReader(XMLStreamReaderBase):
                     self.project.pdata["MIXEDLANGUAGE"] = \
                         [int(self.attribute("mixed", "0"))]
                     self.project.pdata["PROGLANGUAGE"] = [self.readElementText()]
+                    if self.project.pdata["PROGLANGUAGE"][0] == "Python":
+                        # convert Python to the more specific Python2
+                        self.project.pdata["PROGLANGUAGE"][0] = "Python2"
                 elif self.name() == "ProjectType":
                     self.project.pdata["PROJECTTYPE"] = [self.readElementText()]
                 elif self.name() == "Description":

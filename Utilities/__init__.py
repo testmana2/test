@@ -435,6 +435,57 @@ def linesep():
     else:
         return "\r\n"
 
+def extractFlags(text):
+    """
+    Function to extract eric specific flags out of the given text.
+    
+    Flags are contained in comments and are introduced by 'eflag:'.
+    The rest of the line is interpreted as 'key = value'. value is
+    analyzed for being an integer or float value. If that fails, it
+    is assumed to be a string. If a key does not contain a '=' 
+    character, it is assumed to be a boolean flag. Flags are expected
+    at the very end of a file. The search is ended, if a line without
+    the 'eflag:' marker is found.
+    
+    @param text text to be scanned (string)
+    @return dictionary of string, boolean, complex, float and int
+    """
+    flags = {}
+    lines = text.splitlines()
+    for line in reversed(lines):
+        index = line.find("eflag:")
+        if index == -1:
+            # no flag found, don't look any further
+            break
+        
+        flag = line[index + 6:].strip()
+        if "=" in flag:
+            key, value = flag.split("=", 1)
+            key = key.strip()
+            value = value.strip()
+            
+            if value.lower() in ["true", "false", "yes", "no", "ok"]:
+                # it is a flag
+                flags[key] = value.lower() in ["true", "yes", "ok"]
+                continue
+            
+            try:
+                # interpret as int first
+                value = int(value)
+            except ValueError:
+                try:
+                    # interpret as float next
+                    value = float(value)
+                except ValueError:
+                    pass
+            
+            flags[key] = value
+        else:
+            # treat it as a boolean
+            flags[flag] = True
+    
+    return flags
+
 def toNativeSeparators(path):
     """
     Function returning a path, that is using native separator characters.

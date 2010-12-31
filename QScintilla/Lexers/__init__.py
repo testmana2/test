@@ -117,7 +117,7 @@ def getLexer(language, parent = None, pyname = ""):
     """
     if not pyname:
         try:
-            if language in ["Python", "Python3"]:
+            if language in ["Python", "Python2", "Python3"]:
                 from .LexerPython import LexerPython
                 return LexerPython(parent)
             elif language == "C++":
@@ -349,11 +349,11 @@ def getSaveFileFiltersList(includeAll = False, asString = False, withAdditional 
     """
     saveFileFiltersList = [
         QApplication.translate('Lexers', 
-            "Python Files (*.py2)"), 
+            "Python2 Files (*.py2)"), 
         QApplication.translate('Lexers', 
             "Python3 Files (*.py)"), 
         QApplication.translate('Lexers', 
-            "Python GUI Files (*.pyw2)"), 
+            "Python2 GUI Files (*.pyw2)"), 
         QApplication.translate('Lexers', 
             "Python3 GUI Files (*.pyw)"), 
         QApplication.translate('Lexers', 
@@ -531,6 +531,10 @@ def getDefaultLexerAssociations():
         "*.rc"              : "Properties",
         '*.py'              : "Python",
         '*.pyw'             : "Python",
+        '*.py2'             : "Python",
+        '*.pyw2'            : "Python",
+        '*.py3'             : "Python",
+        '*.pyw3'            : "Python",
         '*.pyx'             : "Python",
         '*.ptl'             : "Python",
         '*.rb'              : "Ruby",

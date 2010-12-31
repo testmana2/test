@@ -525,7 +525,7 @@ class BrowserModel(QAbstractItemModel):
         try:
             dict = Utilities.ClassBrowsers.readmodule(
                 moduleName, [parentItem.dirName()], 
-                parentItem.isPythonFile() or parentItem.isPython3File())
+                parentItem.isPython2File() or parentItem.isPython3File())
         except ImportError:
             return
         
@@ -950,7 +950,7 @@ class BrowserFileItem(BrowserItem):
         self._moduleName = ''
         
         pixName = ""
-        if self.isPythonFile():
+        if self.isPython2File():
             if self.fileext == '.py':
                 pixName = "filePython.png"
             else:
@@ -1010,7 +1010,7 @@ class BrowserFileItem(BrowserItem):
         """
         self._filename = os.path.abspath(finfo)
         self.itemData[0] = os.path.basename(finfo)
-        if self.isPythonFile() or self.isPython3File() or \
+        if self.isPython2File() or self.isPython3File() or \
            self.isRubyFile() or self.isIdlFile():
             self._dirName = os.path.dirname(finfo)
             self._moduleName = os.path.basename(finfo)
@@ -1055,14 +1055,14 @@ class BrowserFileItem(BrowserItem):
         """
         return self._moduleName
     
-    def isPythonFile(self):
+    def isPython2File(self):
         """
         Public method to check, if this file is a Python script.
         
         @return flag indicating a Python file (boolean)
         """
         return self.fileext in Preferences.getPython("PythonExtensions") or \
-               (self.fileext == "" and self.sourceLanguage == "Python")
+               (self.fileext == "" and self.sourceLanguage in ["Python", "Python2"])
     
     def isPython3File(self):
         """

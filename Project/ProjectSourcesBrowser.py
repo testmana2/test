@@ -43,6 +43,10 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             from the project
     @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
+    @signal sourceFile(str) emitted to open the given file.
+    @signal sourceFile(str, int) emitted to open the given file at the given line.
+    @signal sourceFile(str, int, str) emitted to open the given file as the given type
+            at the given line.
     """
     closeSourceWindow = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
@@ -105,7 +109,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         ProjectBaseBrowser._createPopupMenus(self)
         self.sourceMenuActions = {}
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             self.__createPythonPopupMenus()
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.__createRubyPopupMenus()
@@ -400,7 +404,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         if isinstance(itm, ProjectBrowserFileItem):
                             fn = itm.fileName()
                             if self.project.pdata["PROGLANGUAGE"][0] in \
-                               ["Python", "Python3"]:
+                               ["Python", "Python2", "Python3"]:
                                 if fn.endswith('.ptl'):
                                     for act in list(self.sourceMenuActions.values()):
                                         act.setEnabled(False)
@@ -524,8 +528,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
-                if itm.isPythonFile():
-                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python")
+                if itm.isPython2File():
+                    self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python2")
                 elif itm.isPython3File():
                     self.sourceFile[str, int, str].emit(itm.fileName(), 1, "Python3")
                 elif itm.isRubyFile():

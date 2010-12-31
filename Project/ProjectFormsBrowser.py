@@ -644,7 +644,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         args = []
         self.buf = ""
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             if self.project.getProjectType() in ["Qt4", "E4Plugin"]:
                 self.uicompiler = 'pyuic4'
                 if Utilities.isWindowsPlatform():
@@ -674,7 +674,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         ofn, ext = os.path.splitext(fn)
         fn = os.path.join(self.project.ppath, fn)
         
-        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+        if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             dirname, filename = os.path.split(ofn)
             self.compiledFile = os.path.join(dirname, "Ui_" + filename + ".py")
             args.append("-x")
@@ -834,7 +834,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 QApplication.processEvents()
                 
                 ifn = os.path.join(self.project.ppath, fn)
-                if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python3"]:
+                if self.project.pdata["PROGLANGUAGE"][0] in \
+                   ["Python", "Python2", "Python3"]:
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
                     ofn = os.path.join(dirname, "Ui_" + filename + ".py")
                 elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":

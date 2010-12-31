@@ -2083,7 +2083,7 @@ class MiniEditor(QMainWindow):
             bindName = "dummy.xml"
         
         # check filetype
-        if self.filetype == "Python":
+        if self.filetype in ["Python", "Python3"]:
             bindName = "dummy.py"
         elif self.filetype == "Ruby":
             bindName = "dummy.rb"

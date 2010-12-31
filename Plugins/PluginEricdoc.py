@@ -169,7 +169,7 @@ class EricdocPlugin(QObject):
             if self.__projectAct is not None:
                 self.__projectAct.setEnabled(
                     e5App().getObject("Project").getProjectLanguage() in \
-                        ["Python", "Python3", "Ruby"])
+                        ["Python", "Python2", "Python3", "Ruby"])
     
     def __doEricdoc(self):
         """

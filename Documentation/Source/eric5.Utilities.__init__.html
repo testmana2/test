@@ -74,6 +74,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#escape_uentities">escape_uentities</a></td>
 <td>Function to encode html entities.</td>
 </tr><tr>
+<td><a href="#extractFlags">extractFlags</a></td>
+<td>Function to extract eric specific flags out of the given text.</td>
+</tr><tr>
 <td><a href="#fromNativeSeparators">fromNativeSeparators</a></td>
 <td>Function returning a path, that is using "/" separator characters.</td>
 </tr><tr>
@@ -526,6 +529,32 @@ the match object
 <dt>Returns:</dt>
 <dd>
 the converted text (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="extractFlags" ID="extractFlags"></a>
+<h2>extractFlags</h2>
+<b>extractFlags</b>(<i>text</i>)
+<p>
+    Function to extract eric specific flags out of the given text.
+</p><p>
+    Flags are contained in comments and are introduced by 'eflag:'.
+    The rest of the line is interpreted as 'key = value'. value is
+    analyzed for being an integer or float value. If that fails, it
+    is assumed to be a string. If a key does not contain a '=' 
+    character, it is assumed to be a boolean flag. Flags are expected
+    at the very end of a file. The search is ended, if a line without
+    the 'eflag:' marker is found.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to be scanned (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary of string, boolean, complex, float and int
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
