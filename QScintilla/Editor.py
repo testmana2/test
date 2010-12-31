@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2002 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2002 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
@@ -457,6 +457,8 @@ class Editor(QsciScintillaCompat):
         
         # check filetype
         if self.filetype == "Python":
+            bindName = "dummy.py"
+        elif self.filetype == "Python3":
             bindName = "dummy.py"
         elif self.filetype == "Ruby":
             bindName = "dummy.rb"

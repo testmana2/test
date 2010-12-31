@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2003 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2003 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
@@ -32,7 +32,7 @@ def usage():
     """
     print("eric5-api")
     print()
-    print("Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>.")
+    print("Copyright (c) 2004 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
@@ -85,7 +85,7 @@ def version():
 
 Eric5 API generator.
 
-Copyright (c) 2004 - 2010 Detlev Offenbach <detlev@die-offenbachs.de>
+Copyright (c) 2004 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>
 This is free software; see the LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.""" % Version)
