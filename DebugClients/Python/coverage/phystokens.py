@@ -105,3 +105,6 @@ def source_token_lines(source):
 
     if line:
         yield line
+
+#
+# eflag: FileType = Python2

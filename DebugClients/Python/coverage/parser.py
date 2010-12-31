@@ -742,3 +742,6 @@ class AdHocMain(object):        # pragma: no cover
 
 if __name__ == '__main__':
     AdHocMain().main(sys.argv[1:])
+
+#
+# eflag: FileType = Python2

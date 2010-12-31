@@ -344,3 +344,6 @@ class coverage(object):
                 ]),
             ]
         return info
+
+#
+# eflag: FileType = Python2

@@ -70,3 +70,6 @@ def exec_function(source, filename, global_map):
 """,
     "<exec_function>", "exec"
     ))
+
+#
+# eflag: FileType = Python2

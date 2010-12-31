@@ -8,3 +8,6 @@ Package implementing the Python debugger
 
 It consists of different kinds of debug clients.
 """
+
+#
+# eflag: FileType = Python2

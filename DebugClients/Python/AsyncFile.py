@@ -290,3 +290,6 @@ class AsyncFile(object):
         @param list the list to be written (list of string)
         """
         map(self.write,list)
+
+#
+# eflag: FileType = Python2

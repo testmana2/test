@@ -1935,3 +1935,6 @@ class DebugClientBase(object):
         sysPath.insert(0, firstEntry)
         sysPath.insert(0, '')
         return sysPath
+
+#
+# eflag: FileType = Python2

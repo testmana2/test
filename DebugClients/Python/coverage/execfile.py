@@ -48,3 +48,6 @@ def run_python_file(filename, args):
         # Restore the old argv and path
         sys.argv = old_argv
         sys.path[0] = old_path0
+
+#
+# eflag: FileType = Python2

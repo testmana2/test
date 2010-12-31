@@ -271,3 +271,6 @@ class Collector(object):
             return self.data
         else:
             return {}
+
+#
+# eflag: FileType = Python2

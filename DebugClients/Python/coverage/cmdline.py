@@ -593,3 +593,6 @@ def main():
         print(err)
         status = ERR
     return status
+
+#
+# eflag: FileType = Python2

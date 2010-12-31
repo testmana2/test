@@ -173,3 +173,6 @@ class Numbers(object):
         if other == 0:
             return self
         raise NotImplemented
+
+#
+# eflag: FileType = Python2

@@ -126,3 +126,6 @@ class DebugThread(DebugBase):
             self._dbgClient.unlockClient()
         
         return retval
+
+#
+# eflag: FileType = Python2

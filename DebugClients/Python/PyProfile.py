@@ -159,3 +159,6 @@ class PyProfile(profile.Profile):
         "c_exception": profile.Profile.trace_dispatch_return,  # the C function returned
         "c_return": profile.Profile.trace_dispatch_return,
         }
+
+#
+# eflag: FileType = Python2

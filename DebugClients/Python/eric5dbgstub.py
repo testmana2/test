@@ -80,3 +80,6 @@ def startDebugger(enableTrace = True, exceptions = True,
     if debugger:
         debugger.startDebugger(enableTrace = enableTrace, exceptions = exceptions, 
             tracePython = tracePython, redirect = redirect)
+
+#
+# eflag: FileType = Python2

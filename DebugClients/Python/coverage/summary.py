@@ -74,3 +74,6 @@ class SummaryReporter(Reporter):
             if self.show_missing:
                 args += ("",)
             outfile.write(fmt_coverage % args)
+
+#
+# eflag: FileType = Python2

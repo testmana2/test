@@ -58,3 +58,6 @@ class Reporter(object):
             except NoSource:
                 if not self.ignore_errors:
                     raise
+
+#
+# eflag: FileType = Python2
