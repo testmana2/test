@@ -2428,6 +2428,8 @@ class Editor(QsciScintillaCompat):
             self.setModified(False)
             self.setReadOnly(False)
             self.setWindowTitle(self.fileName)
+            # get eric specific flags
+            self.__processFlags()
             if self.lexer_ is None and not self.__lexerReset:
                 self.setLanguage(self.fileName)
             
@@ -2441,8 +2443,6 @@ class Editor(QsciScintillaCompat):
             self.editorSaved.emit(self.fileName)
             self.__autoSyntaxCheck()
             self.extractTasks()
-            # get eric specific flags
-            self.__processFlags()
             return True
         else:
             self.lastModified = QFileInfo(fn).lastModified()
