@@ -16,6 +16,11 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
+try:
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from Debugger.DebugUI import DebugUI
 from Debugger.DebugServer import DebugServer
@@ -560,7 +565,8 @@ class UserInterface(QMainWindow):
         self.__networkManager = QNetworkAccessManager(self)
         self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
-        self.__networkManager.sslErrors.connect(self.__sslErrors)
+        if SSL_AVAILABLE:
+            self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
         # attribute for the help window

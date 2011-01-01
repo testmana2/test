@@ -9,7 +9,10 @@ Module implementing the URL bar widget.
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl
 from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon
-from PyQt4.QtNetwork import QSslCertificate
+try:
+    from PyQt4.QtNetwork import QSslCertificate
+except ImportError:
+    QSslCertificate = None      # __IGNORE_WARNING__
 from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui.E5LineEdit import E5LineEdit
@@ -137,7 +140,9 @@ class UrlBar(E5LineEdit):
                 self.__bookmarkButton.setIcon(self.__bmActiveIcon)
             self.__bookmarkButton.setVisible(True)
         
-        if ok and self.__browser.url().scheme() == "https":
+        if ok and \
+           self.__browser.url().scheme() == "https" and \
+           QSslCertificate is not None:
             sslInfo = self.__browser.page().getSslInfo()
             if sslInfo is not None:
                 org = Utilities.decodeString(

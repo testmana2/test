@@ -15,6 +15,11 @@ import zipfile
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+try:
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
@@ -76,7 +81,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__networkManager = QNetworkAccessManager(self)
         self.__networkManager.proxyAuthenticationRequired.connect(
             proxyAuthenticationRequired)
-        self.__networkManager.sslErrors.connect(self.__sslErrors)
+        if SSL_AVAILABLE:
+            self.__networkManager.sslErrors.connect(self.__sslErrors)
         self.__replies = []
         
         self.__doneMethod = None

@@ -8,6 +8,11 @@ Module implementing a network access manager proxy for web pages.
 """
 
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
+try:
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 class NetworkAccessManagerProxy(QNetworkAccessManager):
     """
@@ -47,7 +52,8 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
         # do not steal ownership
         self.cookieJar().setParent(self.__class__.primaryManager)
         
-        self.sslErrors.connect(self.__class__.primaryManager.sslErrors)
+        if SSL_AVAILABLE:
+            self.sslErrors.connect(self.__class__.primaryManager.sslErrors)
         self.proxyAuthenticationRequired.connect(
             self.__class__.primaryManager.proxyAuthenticationRequired)
         self.authenticationRequired.connect(
