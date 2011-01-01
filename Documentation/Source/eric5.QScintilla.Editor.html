@@ -655,6 +655,9 @@ QsciScintillaCompat
 <td><a href="#Editor.getFileType">getFileType</a></td>
 <td>Public method to return the type of the file being displayed.</td>
 </tr><tr>
+<td><a href="#Editor.getFileTypeByFlag">getFileTypeByFlag</a></td>
+<td>Public method to return the type of the file, if it was set by an eflag: marker.</td>
+</tr><tr>
 <td><a href="#Editor.getFlakesWarnings">getFlakesWarnings</a></td>
 <td>Public method to retrieve the flakes warning markers.</td>
 </tr><tr>
@@ -2378,6 +2381,17 @@ filename of the displayed file (string)
 <dt>Returns:</dt>
 <dd>
 type of the displayed file (string)
+</dd>
+</dl><a NAME="Editor.getFileTypeByFlag" ID="Editor.getFileTypeByFlag"></a>
+<h4>Editor.getFileTypeByFlag</h4>
+<b>getFileTypeByFlag</b>(<i></i>)
+<p>
+        Public method to return the type of the file, if it was set by an eflag: marker.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+type of the displayed file, if set by an eflag: marker or an empty
+            string (string) 
 </dd>
 </dl><a NAME="Editor.getFlakesWarnings" ID="Editor.getFlakesWarnings"></a>
 <h4>Editor.getFlakesWarnings</h4>

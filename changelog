@@ -12,6 +12,7 @@ Version 5.1-snapshot-201012dd:
 - added a feature where flags can be given at the end of a source file.
   The only flag supported is 'FileType' to overwrite the filetype detection
   mechanism.
+- added a syntax checker function for Python 2 files
 
 Version 5.1-snapshot-20101029:
 - bug fixes

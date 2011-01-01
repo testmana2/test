@@ -627,7 +627,8 @@ class DebugServer(QTcpServer):
         
     def remoteLoad(self, fn, argv, wd, env, autoClearShell = True,
                    tracePython = False, autoContinue = True, forProject = False, 
-                   runInConsole = False, autoFork = False, forkChild = False):
+                   runInConsole = False, autoFork = False, forkChild = False, 
+                   clientType = ""):
         """
         Public method to load a new program to debug.
         
@@ -646,13 +647,17 @@ class DebugServer(QTcpServer):
             console window (boolean)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam clientType client type to be used (string)
         """
         self.__autoClearShell = autoClearShell
         self.__autoContinue = autoContinue
         
         # Restart the client
         try:
-            self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
+            if clientType:
+                self.__setClientType(clientType)
+            else:
+                self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
@@ -667,7 +672,8 @@ class DebugServer(QTcpServer):
 
     def remoteRun(self, fn, argv, wd, env, autoClearShell = True,
                   forProject = False, runInConsole = False, 
-                  autoFork = False, forkChild = False):
+                  autoFork = False, forkChild = False, 
+                  clientType = ""):
         """
         Public method to load a new program to run.
         
@@ -682,12 +688,16 @@ class DebugServer(QTcpServer):
             console window (boolean)
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
+        @keyparam clientType client type to be used (string)
         """
         self.__autoClearShell = autoClearShell
         
         # Restart the client
         try:
-            self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
+            if clientType:
+                self.__setClientType(clientType)
+            else:
+                self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
@@ -698,7 +708,8 @@ class DebugServer(QTcpServer):
         self.debugging = False
 
     def remoteCoverage(self, fn, argv, wd, env, autoClearShell = True,
-                       erase = False, forProject = False, runInConsole = False):
+                       erase = False, forProject = False, runInConsole = False, 
+                       clientType = ""):
         """
         Public method to load a new program to collect coverage data.
         
@@ -713,12 +724,16 @@ class DebugServer(QTcpServer):
         @keyparam forProject flag indicating a project related action (boolean)
         @keyparam runInConsole flag indicating to start the debugger in a 
             console window (boolean)
+        @keyparam clientType client type to be used (string)
         """
         self.__autoClearShell = autoClearShell
         
         # Restart the client
         try:
-            self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
+            if clientType:
+                self.__setClientType(clientType)
+            else:
+                self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)
@@ -730,7 +745,8 @@ class DebugServer(QTcpServer):
 
     def remoteProfile(self, fn, argv, wd, env, autoClearShell = True,
                       erase = False, forProject = False, 
-                      runInConsole = False):
+                      runInConsole = False, 
+                      clientType = ""):
         """
         Public method to load a new program to collect profiling data.
         
@@ -744,12 +760,16 @@ class DebugServer(QTcpServer):
         @keyparam forProject flag indicating a project related action (boolean)
         @keyparam runInConsole flag indicating to start the debugger in a 
             console window (boolean)
+        @keyparam clientType client type to be used (string)
         """
         self.__autoClearShell = autoClearShell
         
         # Restart the client
         try:
-            self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
+            if clientType:
+                self.__setClientType(clientType)
+            else:
+                self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject = forProject, runInConsole = runInConsole)

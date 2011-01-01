@@ -104,6 +104,7 @@ class DebugUI(QObject):
         self.execHistory = []
         self.lastDebuggedFile = None
         self.lastStartAction = 0    # 0=None, 1=Script, 2=Project
+        self.clientType = ""
         self.lastAction = -1
         self.debugActions = [self.__continue, self.__step,\
                         self.__stepOver, self.__stepOut,\
@@ -746,6 +747,7 @@ class DebugUI(QObject):
             self.restartAct.setEnabled(False)
             self.lastDebuggedFile = None
             self.lastStartAction = 0
+            self.clientType = ""
         
     def __checkActions(self, editor):
         """
@@ -844,6 +846,7 @@ class DebugUI(QObject):
             self.restartAct.setEnabled(False)
             self.lastDebuggedFile = None
             self.lastStartAction = 0
+            self.clientType = ""
         
     def shutdown(self):
         """
@@ -1376,6 +1379,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 6
+                self.clientType = ""
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1388,6 +1392,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 5
+                self.clientType = editor.getFileTypeByFlag()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1422,7 +1427,8 @@ class DebugUI(QObject):
                 # Ask the client to open the new program.
                 self.debugServer.remoteCoverage(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, erase = eraseCoverage,
-                    forProject = runProject, runInConsole = console)
+                    forProject = runProject, runInConsole = console, 
+                    clientType = self.clientType)
                 
                 self.stopAct.setEnabled(True)
             
@@ -1480,6 +1486,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 8
+                self.clientType = ""
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1492,6 +1499,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 7
+                self.clientType = editor.getFileTypeByFlag()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1526,7 +1534,8 @@ class DebugUI(QObject):
                 # Ask the client to open the new program.
                 self.debugServer.remoteProfile(fn, argv, wd, env,
                     autoClearShell = self.autoClearShell, erase = eraseTimings,
-                    forProject = runProject, runInConsole = console)
+                    forProject = runProject, runInConsole = console, 
+                    clientType = self.clientType)
                 
                 self.stopAct.setEnabled(True)
             
@@ -1586,6 +1595,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 4
+                self.clientType = ""
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1598,6 +1608,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 3
+                self.clientType = editor.getFileTypeByFlag()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1634,7 +1645,7 @@ class DebugUI(QObject):
                 self.debugServer.remoteRun(fn, argv, wd, env,
                     autoClearShell = self.autoClearShell, forProject = runProject, 
                     runInConsole = console, autoFork = forkAutomatically, 
-                    forkChild = forkIntoChild)
+                    forkChild = forkIntoChild, clientType = self.clientType)
                 
                 self.stopAct.setEnabled(True)
         
@@ -1695,6 +1706,7 @@ class DebugUI(QObject):
                     autoContinue = self.autoContinue)
                 
                 self.lastStartAction = 2
+                self.clientType = ""
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1707,7 +1719,8 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 1
-                
+                self.clientType = editor.getFileTypeByFlag()
+            
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
             self.restartAct.setEnabled(True)
@@ -1751,7 +1764,7 @@ class DebugUI(QObject):
                     autoClearShell = self.autoClearShell, tracePython = tracePython,
                     autoContinue = autoContinue, forProject = debugProject, 
                     runInConsole = console, autoFork = forkAutomatically, 
-                    forkChild = forkIntoChild)
+                    forkChild = forkIntoChild, clientType = self.clientType)
                 
                 # Signal that we have started a debugging session
                 self.debuggingStarted.emit(fn)
@@ -1802,7 +1815,7 @@ class DebugUI(QObject):
                     autoClearShell = self.autoClearShell, tracePython = self.tracePython,
                     autoContinue = self.autoContinue, forProject = forProject, 
                     runInConsole = self.runInConsole, autoFork = self.forkAutomatically, 
-                    forkChild = self.forkIntoChild)
+                    forkChild = self.forkIntoChild, clientType = self.clientType)
                 
                 # Signal that we have started a debugging session
                 self.debuggingStarted.emit(fn)
@@ -1812,19 +1825,21 @@ class DebugUI(QObject):
                 self.debugServer.remoteRun(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, forProject = forProject, 
                     runInConsole = self.runInConsole, autoFork = self.forkAutomatically, 
-                    forkChild = self.forkIntoChild)
+                    forkChild = self.forkIntoChild, clientType = self.clientType)
             
             elif self.lastStartAction in [5, 6]:
                 # Ask the client to coverage run the new program.
                 self.debugServer.remoteCoverage(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, erase = self.eraseCoverage,
-                    forProject = forProject, runInConsole = self.runInConsole)
+                    forProject = forProject, runInConsole = self.runInConsole, 
+                    clientType = self.clientType)
             
             elif self.lastStartAction in [7, 8]:
                 # Ask the client to profile run the new program.
                 self.debugServer.remoteProfile(fn, argv, wd, env, 
                     autoClearShell = self.autoClearShell, erase = self.eraseTimings,
-                    forProject = forProject, runInConsole = self.runInConsole)
+                    forProject = forProject, runInConsole = self.runInConsole, 
+                    clientType = self.clientType)
             
             self.stopAct.setEnabled(True)
         

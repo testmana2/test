@@ -188,6 +188,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#pwEncode">pwEncode</a></td>
 <td>Module function to encode a password.</td>
 </tr><tr>
+<td><a href="#py2compile">py2compile</a></td>
+<td>Function to compile one Python 2 source file to Python 2 bytecode.</td>
+</tr><tr>
 <td><a href="#readEncodedFile">readEncodedFile</a></td>
 <td>Function to read a file and decode it's contents into proper text.</td>
 </tr><tr>
@@ -379,7 +382,7 @@ string containing the code to compile (string)
 A tuple indicating status (True = an error was found), the
         filename, the linenumber, the code string and the error message
         (boolean, string, string, string, string). The values are only
-        valid, if the status equals 1.
+        valid, if the status is True.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1223,6 +1226,27 @@ password to encode (string)
 <dt>Returns:</dt>
 <dd>
 encoded password (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="py2compile" ID="py2compile"></a>
+<h2>py2compile</h2>
+<b>py2compile</b>(<i>file</i>)
+<p>
+    Function to compile one Python 2 source file to Python 2 bytecode.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+source filename (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+A tuple indicating status (True = an error was found), the
+        filename, the linenumber, the code string and the error message
+        (boolean, string, string, string, string). The values are only
+        valid, if the status is True.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

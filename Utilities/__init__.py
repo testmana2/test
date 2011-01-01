@@ -51,6 +51,8 @@ from UI.Info import Program, Version
 
 import Preferences
 
+from eric5config import getConfig
+
 configDir = None
 
 codingBytes_regexps = [
@@ -1037,7 +1039,7 @@ def compile(file, codestring = ""):
     @return A tuple indicating status (True = an error was found), the
         filename, the linenumber, the code string and the error message
         (boolean, string, string, string, string). The values are only
-        valid, if the status equals 1.
+        valid, if the status is True.
     """
     import builtins
     if not codestring:
@@ -1106,6 +1108,48 @@ def compile(file, codestring = ""):
             pass
     
     return (False, None, None, None, None)
+
+def py2compile(file):
+    """
+    Function to compile one Python 2 source file to Python 2 bytecode.
+    
+    @param file source filename (string)
+    @return A tuple indicating status (True = an error was found), the
+        filename, the linenumber, the code string and the error message
+        (boolean, string, string, string, string). The values are only
+        valid, if the status is True.
+    """
+    interpreter = Preferences.getDebugger("PythonInterpreter")
+    if interpreter == "" or not isExecutable(interpreter):
+        return (True, file, "1", "", 
+            QCoreApplication.translate("Utilities", 
+                                       "Python2 interpreter not configured."))
+    
+    syntaxChecker = os.path.join(getConfig('ericDir'), 
+                                 "UtilitiesPython2", "Py2SyntaxChecker.py")
+    proc = QProcess()
+    proc.setProcessChannelMode(QProcess.MergedChannels)
+    proc.start(interpreter, [syntaxChecker, file])
+    finished = proc.waitForFinished(30000)
+    if finished:
+        output = \
+            str(proc.readAllStandardOutput(), 
+                    Preferences.getSystem("IOEncoding"), 
+                    'replace').splitlines()
+        
+        res = output[0] == "ERROR"
+        if res:
+            fn = output[1]
+            line = output[2]
+            code = output[3]
+            error = output[4]
+            return (True, fn, line, code, error)
+        else:
+            return (False, None, None, None, None)
+    
+    return (True, file, "1", "", 
+        QCoreApplication.translate("Utilities",
+                                   "Python2 interpreter did not finish within 30s."))
 
 def getConfigDir():
     """

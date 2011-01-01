@@ -1528,6 +1528,18 @@ class Editor(QsciScintillaCompat):
         """
         return self.filetype
         
+    def getFileTypeByFlag(self):
+        """
+        Public method to return the type of the file, if it was set by an eflag: marker.
+        
+        @return type of the displayed file, if set by an eflag: marker or an empty
+            string (string) 
+        """
+        if self.filetypeByFlag:
+            return self.filetype
+        else:
+            return ""
+        
     def getEncoding(self):
         """
         Public method to return the current encoding.
@@ -4161,6 +4173,11 @@ class Editor(QsciScintillaCompat):
                             else:
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
+            elif self.isPy2File():
+                syntaxError, _fn, errorline, _code, _error = \
+                    Utilities.py2compile(self.fileName)
+                if syntaxError:
+                    self.toggleSyntaxError(int(errorline), True, _error)
         
     def __showCodeMetrics(self):
         """

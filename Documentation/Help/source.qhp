@@ -731,6 +731,9 @@
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
+          <section title="eric5.UtilitiesPython2" ref="index-eric5.UtilitiesPython2.html">
+            <section title="eric5.UtilitiesPython2.Py2SyntaxChecker" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
+          </section>
           <section title="eric5.VCS" ref="index-eric5.VCS.html">
             <section title="eric5.VCS.CommandOptionsDialog" ref="eric5.VCS.CommandOptionsDialog.html" />
             <section title="eric5.VCS.ProjectBrowserHelper" ref="eric5.VCS.ProjectBrowserHelper.html" />
@@ -2375,6 +2378,7 @@
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric5.Utilities.__init__.html#prepareQtMacBundle" />
       <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.__init__.html#pwDecode" />
       <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.__init__.html#pwEncode" />
+      <keyword name="py2compile" id="py2compile" ref="eric5.Utilities.__init__.html#py2compile" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.__init__.html#readEncodedFile" />
       <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric5.Utilities.__init__.html#readEncodedFileWithHash" />
       <keyword name="relpath" id="relpath" ref="eric5.Utilities.__init__.html#relpath" />
@@ -3228,6 +3232,11 @@
       <keyword name="CooperationClient.sendEditorCommand" id="CooperationClient.sendEditorCommand" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendEditorCommand" />
       <keyword name="CooperationClient.sendMessage" id="CooperationClient.sendMessage" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendMessage" />
       <keyword name="CooperationClient.server" id="CooperationClient.server" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.server" />
+      <keyword name="UtilitiesPython2 (Package)" id="UtilitiesPython2 (Package)" ref="index-eric5.UtilitiesPython2.html" />
+      <keyword name="Py2SyntaxChecker (Module)" id="Py2SyntaxChecker (Module)" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
+      <keyword name="compile" id="compile" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#compile" />
+      <keyword name="decode" id="decode" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#decode" />
+      <keyword name="get_coding" id="get_coding" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#get_coding" />
       <keyword name="ViewManager (Package)" id="ViewManager (Package)" ref="index-eric5.ViewManager.html" />
       <keyword name="factory" id="factory" ref="eric5.ViewManager.__init__.html#factory" />
       <keyword name="ViewManager (Module)" id="ViewManager (Module)" ref="eric5.ViewManager.ViewManager.html" />
@@ -5800,6 +5809,7 @@
       <keyword name="Editor.getEncoding" id="Editor.getEncoding" ref="eric5.QScintilla.Editor.html#Editor.getEncoding" />
       <keyword name="Editor.getFileName" id="Editor.getFileName" ref="eric5.QScintilla.Editor.html#Editor.getFileName" />
       <keyword name="Editor.getFileType" id="Editor.getFileType" ref="eric5.QScintilla.Editor.html#Editor.getFileType" />
+      <keyword name="Editor.getFileTypeByFlag" id="Editor.getFileTypeByFlag" ref="eric5.QScintilla.Editor.html#Editor.getFileTypeByFlag" />
       <keyword name="Editor.getFlakesWarnings" id="Editor.getFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.getFlakesWarnings" />
       <keyword name="Editor.getFolds" id="Editor.getFolds" ref="eric5.QScintilla.Editor.html#Editor.getFolds" />
       <keyword name="Editor.getHighlightPosition" id="Editor.getHighlightPosition" ref="eric5.QScintilla.Editor.html#Editor.getHighlightPosition" />
@@ -10438,6 +10448,7 @@
       <file>eric5.Utilities.py3flakes.checker.html</file>
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
+      <file>eric5.UtilitiesPython2.Py2SyntaxChecker.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>
       <file>eric5.VCS.ProjectBrowserHelper.html</file>
       <file>eric5.VCS.ProjectHelper.html</file>
@@ -10548,6 +10559,7 @@
       <file>index-eric5.Utilities.ClassBrowsers.html</file>
       <file>index-eric5.Utilities.html</file>
       <file>index-eric5.Utilities.py3flakes.html</file>
+      <file>index-eric5.UtilitiesPython2.html</file>
       <file>index-eric5.VCS.html</file>
       <file>index-eric5.ViewManager.html</file>
       <file>index-eric5.html</file>

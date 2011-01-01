@@ -834,6 +834,8 @@
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
     <Source>Helpviewer/SslCertificatesDialog.py</Source>
+    <Source>UtilitiesPython2/__init__.py</Source>
+    <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

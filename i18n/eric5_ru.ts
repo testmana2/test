@@ -2252,7 +2252,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>CodingError</name>
     <message>
-        <location filename="Utilities/__init__.py" line="90"/>
+        <location filename="Utilities/__init__.py" line="92"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation>Кодировка &apos;{0}&apos; не подходит для выбранного текста.</translation>
     </message>
@@ -3515,12 +3515,12 @@ to display the configuration page.</source>
 <context>
     <name>DebugServer</name>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1225"/>
+        <location filename="Debugger/DebugServer.py" line="1245"/>
         <source>Passive debug connection received</source>
         <translation>Принято соединение пассивной отладки</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1238"/>
+        <location filename="Debugger/DebugServer.py" line="1258"/>
         <source>Passive debug connection closed</source>
         <translation>Соединение пассивной отладки закрыто</translation>
     </message>
@@ -3542,7 +3542,7 @@ to display the configuration page.</source>
         <translation>соединение с запрещённого хоста</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1094"/>
+        <location filename="Debugger/DebugServer.py" line="1114"/>
         <source>
 Not connected
 </source>
@@ -3557,669 +3557,669 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1561"/>
+        <location filename="Debugger/DebugUI.py" line="1570"/>
         <source>Run Script</source>
         <translation>Выполнить сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="164"/>
+        <location filename="Debugger/DebugUI.py" line="165"/>
         <source>&amp;Run Script...</source>
         <translation>&amp;Выполнить сценарий...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="167"/>
+        <location filename="Debugger/DebugUI.py" line="168"/>
         <source>Run the current Script</source>
         <translation>Выполнить текущий сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="168"/>
+        <location filename="Debugger/DebugUI.py" line="169"/>
         <source>&lt;b&gt;Run Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script outside the debugger. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить сценарий&lt;/b&gt;
 &lt;p&gt;Задайте аргументы и выполните сценарий без отладки. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1574"/>
+        <location filename="Debugger/DebugUI.py" line="1583"/>
         <source>Run Project</source>
         <translation>Выполнить проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="176"/>
+        <location filename="Debugger/DebugUI.py" line="177"/>
         <source>Run &amp;Project...</source>
         <translation>Выполнить &amp;проект...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="180"/>
+        <location filename="Debugger/DebugUI.py" line="181"/>
         <source>Run the current Project</source>
         <translation>Выполнить текущий проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="181"/>
+        <location filename="Debugger/DebugUI.py" line="182"/>
         <source>&lt;b&gt;Run Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project outside the debugger. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить проект&lt;/b&gt;
 &lt;p&gt;Задайте аргументы и выполните проект без отладки. Если файлы проекта не были сохранёны, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="191"/>
+        <location filename="Debugger/DebugUI.py" line="192"/>
         <source>Coverage run of Script</source>
         <translation>Охватывающее выполнение сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="191"/>
+        <location filename="Debugger/DebugUI.py" line="192"/>
         <source>Coverage run of Script...</source>
         <translation>Охватывающее выполнение сценария...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="194"/>
+        <location filename="Debugger/DebugUI.py" line="195"/>
         <source>Perform a coverage run of the current Script</source>
         <translation>Выполнить охватывающее выполнение текущего сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="196"/>
+        <location filename="Debugger/DebugUI.py" line="197"/>
         <source>&lt;b&gt;Coverage run of Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script under the control of a coverage analysis tool. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Охватывающее выполнение сценария&lt;/b&gt;
 &lt;p&gt;Задайте аргументы командной строки и запустите сценарий под управлением программы охватывающего анализа. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="205"/>
+        <location filename="Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Project</source>
         <translation>Охватывающее выполнение проекта</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="205"/>
+        <location filename="Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Project...</source>
         <translation>Охватывающее выполнение проекта...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="208"/>
+        <location filename="Debugger/DebugUI.py" line="209"/>
         <source>Perform a coverage run of the current Project</source>
         <translation>Выполнить охватывающее выполнение текущего проекта</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="210"/>
+        <location filename="Debugger/DebugUI.py" line="211"/>
         <source>&lt;b&gt;Coverage run of Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project under the control of a coverage analysis tool. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Охватывающее выполнение проекта&lt;/b&gt;
 &lt;p&gt;Задайте аргументы командной строки и запустите проект под управлением программы охватывающего анализа. Если файлы проекта не были сохранёны, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="220"/>
+        <location filename="Debugger/DebugUI.py" line="221"/>
         <source>Profile Script</source>
         <translation>Профилировать сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="220"/>
+        <location filename="Debugger/DebugUI.py" line="221"/>
         <source>Profile Script...</source>
         <translation>Профилировать сценарий...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="223"/>
+        <location filename="Debugger/DebugUI.py" line="224"/>
         <source>Profile the current Script</source>
         <translation>Профилировать текущий сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="224"/>
+        <location filename="Debugger/DebugUI.py" line="225"/>
         <source>&lt;b&gt;Profile Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the script. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профилировать сценарий&lt;/b&gt;
 &lt;p&gt;Задайте аргументы и запустите сценарий на профилирование. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="232"/>
+        <location filename="Debugger/DebugUI.py" line="233"/>
         <source>Profile Project</source>
         <translation>Профилировать проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="232"/>
+        <location filename="Debugger/DebugUI.py" line="233"/>
         <source>Profile Project...</source>
         <translation>Профилировать проект...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="235"/>
+        <location filename="Debugger/DebugUI.py" line="236"/>
         <source>Profile the current Project</source>
         <translation>Профилировать текущий проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="236"/>
+        <location filename="Debugger/DebugUI.py" line="237"/>
         <source>&lt;b&gt;Profile Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профилировать проект&lt;/b&gt;
 &lt;p&gt;Задайте аргументы и запустите проект на профилирование. Если файлы проекта не были сохранёны, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1669"/>
+        <location filename="Debugger/DebugUI.py" line="1680"/>
         <source>Debug Script</source>
         <translation>Отладить сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="245"/>
+        <location filename="Debugger/DebugUI.py" line="246"/>
         <source>&amp;Debug Script...</source>
         <translation>&amp;Отладить сценарий...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="248"/>
+        <location filename="Debugger/DebugUI.py" line="249"/>
         <source>Debug the current Script</source>
         <translation>Отладить текущий сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="249"/>
+        <location filename="Debugger/DebugUI.py" line="250"/>
         <source>&lt;b&gt;Debug Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the current editor window. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отладка сценария&lt;/b&gt;
 &lt;p&gt;Задайте аргументы командной строки и запустите сценарий на отладку. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1682"/>
+        <location filename="Debugger/DebugUI.py" line="1693"/>
         <source>Debug Project</source>
         <translation>Отладить проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="258"/>
+        <location filename="Debugger/DebugUI.py" line="259"/>
         <source>Debug &amp;Project...</source>
         <translation>&amp;Отладить проект...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="262"/>
+        <location filename="Debugger/DebugUI.py" line="263"/>
         <source>Debug the current Project</source>
         <translation>Отладить текущий проект</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="263"/>
+        <location filename="Debugger/DebugUI.py" line="264"/>
         <source>&lt;b&gt;Debug Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the main script of the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отладка проекта&lt;/b&gt;
 &lt;p&gt;Задайте аргументы командной строки и запустите проект на отладку. Текущей станет строка, содержащая первый исполняемый оператор Python. Если файлы проекта не были сохранёны, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="273"/>
+        <location filename="Debugger/DebugUI.py" line="274"/>
         <source>Restart Script</source>
         <translation>Перезапустить сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="276"/>
+        <location filename="Debugger/DebugUI.py" line="277"/>
         <source>Restart the last debugged script</source>
         <translation>Перезапустить сценарий, который отлаживался последним</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="277"/>
+        <location filename="Debugger/DebugUI.py" line="278"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Перезапустить сценарий&lt;/b&gt;
 &lt;p&gt;Запустится последний отлаживаемый сценарий с последними параметрами командной строки. Если файл не был сохранён, изменения можно предварительно сохранить.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="300"/>
+        <location filename="Debugger/DebugUI.py" line="301"/>
         <source>Continue</source>
         <translation>Продолжить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="300"/>
+        <location filename="Debugger/DebugUI.py" line="301"/>
         <source>&amp;Continue</source>
         <translation>П&amp;родолжить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="304"/>
+        <location filename="Debugger/DebugUI.py" line="305"/>
         <source>Continue running the program from the current line</source>
         <translation>Продолжить выполнение программы с текущей точки</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="306"/>
+        <location filename="Debugger/DebugUI.py" line="307"/>
         <source>&lt;b&gt;Continue&lt;/b&gt;&lt;p&gt;Continue running the program from the current line. The program will stop when it terminates or when a breakpoint is reached.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Продолжить&lt;/b&gt;
 &lt;p&gt;Продолжить выполнение программы с текущей точки. Программа остановится при завершении или по достижении точки останова.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="328"/>
+        <location filename="Debugger/DebugUI.py" line="329"/>
         <source>Single Step</source>
         <translation>Шаг</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="328"/>
+        <location filename="Debugger/DebugUI.py" line="329"/>
         <source>Sin&amp;gle Step</source>
         <translation>&amp;Шаг</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="332"/>
+        <location filename="Debugger/DebugUI.py" line="333"/>
         <source>Execute a single Python statement</source>
         <translation>Выполнить один оператор Python</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="333"/>
+        <location filename="Debugger/DebugUI.py" line="334"/>
         <source>&lt;b&gt;Single Step&lt;/b&gt;&lt;p&gt;Execute a single Python statement. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger at the next statement.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Шаг&lt;/b&gt;
 &lt;p&gt;Выполнить один оператор Python. Если этот оператор - &lt;tt&gt;import&lt;/tt&gt;, конструктор класса, метод или функция, отттладчик получит управление перед выполнением следующего оператора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="343"/>
+        <location filename="Debugger/DebugUI.py" line="344"/>
         <source>Step Over</source>
         <translation>Следующая строка</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="343"/>
+        <location filename="Debugger/DebugUI.py" line="344"/>
         <source>Step &amp;Over</source>
         <translation>С&amp;ледующая строка</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="347"/>
+        <location filename="Debugger/DebugUI.py" line="348"/>
         <source>Execute a single Python statement staying in the current frame</source>
         <translation>Выполнить один оператор Python на текущем кадре стека</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="349"/>
+        <location filename="Debugger/DebugUI.py" line="350"/>
         <source>&lt;b&gt;Step Over&lt;/b&gt;&lt;p&gt;Execute a single Python statement staying in the same frame. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the statement has completed.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая строка&lt;/b&gt;
 &lt;p&gt;Выполнить оператор на текущем кадре стека.  Если этот оператор - &lt;tt&gt;import&lt;/tt&gt;, конструктор класса, метод или функция, отладчик получит управление после его выполнения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="359"/>
+        <location filename="Debugger/DebugUI.py" line="360"/>
         <source>Step Out</source>
         <translation>Возврат</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="359"/>
+        <location filename="Debugger/DebugUI.py" line="360"/>
         <source>Step Ou&amp;t</source>
         <translation>&amp;Возврат</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="363"/>
+        <location filename="Debugger/DebugUI.py" line="364"/>
         <source>Execute Python statements until leaving the current frame</source>
         <translation>Выполнить код до выхода из кадра стека</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="365"/>
+        <location filename="Debugger/DebugUI.py" line="366"/>
         <source>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Execute Python statements until leaving the current frame. If the statements are inside an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the current frame has been left.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Возврат&lt;/b&gt;&lt;p&gt;Выполнить код до выхода из кадра стека. Если выполняемые операторы находятся внутри оператора &lt;tt&gt;import&lt;/tt&gt;, конструктора класса, функции или метода,  отладчик получит управление после выхода из текущего кадра стека.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="375"/>
+        <location filename="Debugger/DebugUI.py" line="376"/>
         <source>Stop</source>
         <translation>Стоп</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="375"/>
+        <location filename="Debugger/DebugUI.py" line="376"/>
         <source>&amp;Stop</source>
         <translation>Ст&amp;оп</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="379"/>
+        <location filename="Debugger/DebugUI.py" line="380"/>
         <source>Stop debugging</source>
         <translation>Остановить отладку</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="380"/>
+        <location filename="Debugger/DebugUI.py" line="381"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stop the running debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Стоп&lt;/b&gt;
 &lt;p&gt;Прервать текущую отладочную сессию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="389"/>
+        <location filename="Debugger/DebugUI.py" line="390"/>
         <source>E&amp;valuate...</source>
         <translation>В&amp;ычислить...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="392"/>
+        <location filename="Debugger/DebugUI.py" line="393"/>
         <source>Evaluate in current context</source>
         <translation>Вычислить выражение в текущем контексте</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="402"/>
+        <location filename="Debugger/DebugUI.py" line="403"/>
         <source>E&amp;xecute...</source>
         <translation>Вы&amp;полнить...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="405"/>
+        <location filename="Debugger/DebugUI.py" line="406"/>
         <source>Execute a one line statement in the current context</source>
         <translation>Выполнить однострочный оператор в текущем контексте</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="407"/>
+        <location filename="Debugger/DebugUI.py" line="408"/>
         <source>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Execute a one line statement in the current context of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить&lt;/b&gt;
 &lt;p&gt;Выполнить однострочный оператор в текущем контексте отлаживаемой программы.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="428"/>
+        <location filename="Debugger/DebugUI.py" line="429"/>
         <source>&amp;Exceptions Filter...</source>
         <translation>Фильтр &amp;исключений...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="430"/>
+        <location filename="Debugger/DebugUI.py" line="431"/>
         <source>Configure exceptions filter</source>
         <translation>Настроить фильтр исключений</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="431"/>
+        <location filename="Debugger/DebugUI.py" line="432"/>
         <source>&lt;b&gt;Exceptions Filter&lt;/b&gt;&lt;p&gt;Configure the exceptions filter. Only exception types that are listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that all unhandled exceptions are highlighted indepent from the filter list.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Фильтр исключений&lt;/b&gt;
 &lt;p&gt;Настроить фильтр исключений. В течение отладочной сессии перехватываются только исключения, помеченные в списке.&lt;/p&gt;
 &lt;p&gt;Стоит заметить, что все необработанные исключения перехватываются независимо от настроек фильтра.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="979"/>
+        <location filename="Debugger/DebugUI.py" line="982"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>Отлаживаемая программа содержит неуказанную синтаксическую ошибку.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1002"/>
+        <location filename="Debugger/DebugUI.py" line="1005"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Выброшено исключение, которое не было обработано программой.
 Более точная информация в окне консоли.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1072"/>
+        <location filename="Debugger/DebugUI.py" line="1075"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Отлаживаемая программа была неожиданно прервана.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1364"/>
+        <location filename="Debugger/DebugUI.py" line="1367"/>
         <source>Coverage of Project</source>
         <translation>Охват проекта</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1354"/>
+        <location filename="Debugger/DebugUI.py" line="1357"/>
         <source>Coverage of Script</source>
         <translation>Охват сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1574"/>
+        <location filename="Debugger/DebugUI.py" line="1583"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1468"/>
+        <location filename="Debugger/DebugUI.py" line="1474"/>
         <source>Profile of Project</source>
         <translation>Профиль проекта</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1457"/>
+        <location filename="Debugger/DebugUI.py" line="1463"/>
         <source>Profile of Script</source>
         <translation>Профиль сценария</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1682"/>
+        <location filename="Debugger/DebugUI.py" line="1693"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Для текущего проекта не определён главный сценарий. Отладка невозможна.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1927"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Evaluate</source>
         <translation>Вычислить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1927"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Enter the statement to evaluate</source>
         <translation>Задайте выражение для вычисления</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1956"/>
+        <location filename="Debugger/DebugUI.py" line="1971"/>
         <source>Execute</source>
         <translation>Выполнить</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1956"/>
+        <location filename="Debugger/DebugUI.py" line="1971"/>
         <source>Enter the statement to execute</source>
         <translation>Задайте выражение для выполнения</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="428"/>
+        <location filename="Debugger/DebugUI.py" line="429"/>
         <source>Exceptions Filter</source>
         <translation>Фильтр исключений</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="461"/>
+        <location filename="Debugger/DebugUI.py" line="462"/>
         <source>Toggle Breakpoint</source>
         <translation>Поставить/убрать точку останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="462"/>
+        <location filename="Debugger/DebugUI.py" line="463"/>
         <source>&lt;b&gt;Toggle Breakpoint&lt;/b&gt;&lt;p&gt;Toggles a breakpoint at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Поставить/убрать точку останова&lt;/b&gt;
 &lt;p&gt;Поставить/убрать точку останова на текущей строчке текущего редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="475"/>
+        <location filename="Debugger/DebugUI.py" line="476"/>
         <source>Edit Breakpoint</source>
         <translation>Редактировать точку останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="470"/>
+        <location filename="Debugger/DebugUI.py" line="471"/>
         <source>Edit Breakpoint...</source>
         <translation>Редактировать точку останова...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="476"/>
+        <location filename="Debugger/DebugUI.py" line="477"/>
         <source>&lt;b&gt;Edit Breakpoint&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the breakpoints properties. It works at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Редактировать точку останова&lt;/b&gt;
 &lt;p&gt;Открыть диалог со свойствами точки останова. Работает на текущей строчке текущего редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="489"/>
+        <location filename="Debugger/DebugUI.py" line="490"/>
         <source>Next Breakpoint</source>
         <translation>Следующая точка останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="490"/>
+        <location filename="Debugger/DebugUI.py" line="491"/>
         <source>&lt;b&gt;Next Breakpoint&lt;/b&gt;&lt;p&gt;Go to next breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Следующая точка останова&lt;/b&gt;
 &lt;p&gt;Перейти к следующей точке останова в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="502"/>
+        <location filename="Debugger/DebugUI.py" line="503"/>
         <source>Previous Breakpoint</source>
         <translation>Предыдущая точка останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="503"/>
+        <location filename="Debugger/DebugUI.py" line="504"/>
         <source>&lt;b&gt;Previous Breakpoint&lt;/b&gt;&lt;p&gt;Go to previous breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предыдущая точка останова&lt;/b&gt;
 &lt;p&gt;Перейти к предыдущей точка останова в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="514"/>
+        <location filename="Debugger/DebugUI.py" line="515"/>
         <source>Clear Breakpoints</source>
         <translation>Убрать точки останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="515"/>
+        <location filename="Debugger/DebugUI.py" line="516"/>
         <source>&lt;b&gt;Clear Breakpoints&lt;/b&gt;&lt;p&gt;Clear breakpoints of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Убрать точки останова&lt;/b&gt;&lt;p&gt;Убрать точки останова во всех редакторах.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="546"/>
+        <location filename="Debugger/DebugUI.py" line="547"/>
         <source>&amp;Breakpoints</source>
         <translation>&amp;Точки останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="314"/>
+        <location filename="Debugger/DebugUI.py" line="315"/>
         <source>Continue to Cursor</source>
         <translation>Продолжить до курсора</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="314"/>
+        <location filename="Debugger/DebugUI.py" line="315"/>
         <source>Continue &amp;To Cursor</source>
         <translation>Продолжить &amp;до курсора</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="318"/>
+        <location filename="Debugger/DebugUI.py" line="319"/>
         <source>Continue running the program from the current line to the current cursor position</source>
         <translation>Продолжить выполнение программы до строки, на которой находится курсор</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="320"/>
+        <location filename="Debugger/DebugUI.py" line="321"/>
         <source>&lt;b&gt;Continue To Cursor&lt;/b&gt;&lt;p&gt;Continue running the program from the current line to the current cursor position.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Продолжить до курсора&lt;/b&gt;&lt;p&gt;Продолжить выполнение программы до строки, на которой находится курсорContinue running the program from the current line to the current cursor position.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="415"/>
+        <location filename="Debugger/DebugUI.py" line="416"/>
         <source>Variables Type Filter</source>
         <translation>Фильтр переменных по типу</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="415"/>
+        <location filename="Debugger/DebugUI.py" line="416"/>
         <source>Varia&amp;bles Type Filter...</source>
         <translation>Фильтр переменных по &amp;типу...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="418"/>
+        <location filename="Debugger/DebugUI.py" line="419"/>
         <source>Configure variables type filter</source>
         <translation>Настроить фильтр переменных по типу</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="419"/>
+        <location filename="Debugger/DebugUI.py" line="420"/>
         <source>&lt;b&gt;Variables Type Filter&lt;/b&gt;&lt;p&gt;Configure the variables type filter. Only variable types that are not selected are displayed in the global or local variables window during a debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Фильтр переменных по типу&lt;/b&gt;&lt;p&gt;Настроить фильтр переменных по типу. Только те переменные, типы которых &lt;b&gt;не выделены&lt;/b&gt;, будут отображаться в окнах глобальных и локальных переменных в течение отладки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="950"/>
+        <location filename="Debugger/DebugUI.py" line="953"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has terminated with an exit status of {1}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; завершился с кодом выхода {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1038"/>
+        <location filename="Debugger/DebugUI.py" line="1041"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Отлаживаемая программа выбросила исключение &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="946"/>
+        <location filename="Debugger/DebugUI.py" line="949"/>
         <source>&lt;p&gt;The program has terminated with an exit status of {0}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Программа завершилась с кодом выхода {0}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1141"/>
+        <location filename="Debugger/DebugUI.py" line="1144"/>
         <source>Breakpoint Condition Error</source>
         <translation>Ошибка в условиях точки останова</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1141"/>
+        <location filename="Debugger/DebugUI.py" line="1144"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Условие точки останова &lt;b&gt;{0}, {1}&lt;/b&gt; содержит синтаксическую ошибку.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="484"/>
+        <location filename="Debugger/DebugUI.py" line="485"/>
         <source>Ctrl+Shift+PgDown</source>
         <comment>Debug|Next Breakpoint</comment>
         <translation>Ctrl+Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="497"/>
+        <location filename="Debugger/DebugUI.py" line="498"/>
         <source>Ctrl+Shift+PgUp</source>
         <comment>Debug|Previous Breakpoint</comment>
         <translation>Ctrl+Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="510"/>
+        <location filename="Debugger/DebugUI.py" line="511"/>
         <source>Ctrl+Shift+C</source>
         <comment>Debug|Clear Breakpoints</comment>
         <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="542"/>
+        <location filename="Debugger/DebugUI.py" line="543"/>
         <source>&amp;Debug</source>
         <translation>&amp;Отладка</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="544"/>
+        <location filename="Debugger/DebugUI.py" line="545"/>
         <source>&amp;Start</source>
         <translation>&amp;Старт</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="590"/>
+        <location filename="Debugger/DebugUI.py" line="591"/>
         <source>Start</source>
         <translation>Начало</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="604"/>
+        <location filename="Debugger/DebugUI.py" line="605"/>
         <source>Debug</source>
         <translation>Отладка</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1027"/>
+        <location filename="Debugger/DebugUI.py" line="1030"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Отлаживаемая программа выбросила исключение &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;Файл: &lt;b&gt;{2}&lt;/b&gt;, строка &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Прервать выполнение в этом месте?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="985"/>
+        <location filename="Debugger/DebugUI.py" line="988"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;В строке &lt;b&gt;{2}&lt;/b&gt;, символе &lt;b&gt;{3}&lt;/b&gt; файла &lt;b&gt;{0}&lt;/b&gt; обнаружена синтаксическая ошибка &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="286"/>
+        <location filename="Debugger/DebugUI.py" line="287"/>
         <source>Stop Script</source>
         <translation>Остановить сценарий</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="290"/>
+        <location filename="Debugger/DebugUI.py" line="291"/>
         <source>Stop the running script.</source>
         <translation>Остановить выполняющийся сценарий.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="291"/>
+        <location filename="Debugger/DebugUI.py" line="292"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Остановить сценарий&lt;/b&gt;&lt;p&gt;Остановить сценарий, выполняющийся в отладчике.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="393"/>
+        <location filename="Debugger/DebugUI.py" line="394"/>
         <source>&lt;b&gt;Evaluate&lt;/b&gt;&lt;p&gt;Evaluate an expression in the current context of the debugged program. The result is displayed in the shell window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Вычислить&lt;/b&gt;&lt;p&gt;Вычислить выражение в текущем контексте отлаживаемой программы. Результат будет отображен в окне интерпретатора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1175"/>
         <source>Watch Expression Error</source>
         <translation>Ошибка в выражении для отслеживания</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1175"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выражение для отслеживания &lt;b&gt;{0}&lt;/b&gt; содержит синтаксическую ошибку.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1199"/>
+        <location filename="Debugger/DebugUI.py" line="1202"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выражение для отслеживания &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1203"/>
+        <location filename="Debugger/DebugUI.py" line="1206"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Выражение отслеживания &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; для переменной &lt;b&gt;{1}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1207"/>
+        <location filename="Debugger/DebugUI.py" line="1210"/>
         <source>Watch expression already exists</source>
         <translation>Выражение для отслеживания уже существует</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="441"/>
+        <location filename="Debugger/DebugUI.py" line="442"/>
         <source>Ignored Exceptions</source>
         <translation>Игнорированные исключения</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="441"/>
+        <location filename="Debugger/DebugUI.py" line="442"/>
         <source>&amp;Ignored Exceptions...</source>
         <translation>&amp;Игнорированные исключения...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="444"/>
+        <location filename="Debugger/DebugUI.py" line="445"/>
         <source>Configure ignored exceptions</source>
         <translation>Настроить игнорированные исключения</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="445"/>
+        <location filename="Debugger/DebugUI.py" line="446"/>
         <source>&lt;b&gt;Ignored Exceptions&lt;/b&gt;&lt;p&gt;Configure the ignored exceptions. Only exception types that are not listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that unhandled exceptions cannot be ignored.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Игнорированные исключения&lt;/b&gt;&lt;p&gt;Настроить игнорированные исключения. Только исключения не попавшие в данный список будут перехватываться при отладке.&lt;/p&gt;&lt;p&gt;Обратите внимание, что исключения у которых нет соответствующего обработчика в тексте прогаммы невозможно игнорировать.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="456"/>
+        <location filename="Debugger/DebugUI.py" line="457"/>
         <source>Shift+F11</source>
         <comment>Debug|Toggle Breakpoint</comment>
         <translation>Shift+F11</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="470"/>
+        <location filename="Debugger/DebugUI.py" line="471"/>
         <source>Shift+F12</source>
         <comment>Debug|Edit Breakpoint</comment>
         <translation>Shift+F12</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="956"/>
+        <location filename="Debugger/DebugUI.py" line="959"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="960"/>
+        <location filename="Debugger/DebugUI.py" line="963"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.
 </source>
         <translation type="unfinished"></translation>
@@ -6584,427 +6584,427 @@ whole selection.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="725"/>
+        <location filename="QScintilla/Editor.py" line="733"/>
         <source>Code metrics...</source>
         <translation>Статистика кода...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="727"/>
+        <location filename="QScintilla/Editor.py" line="735"/>
         <source>Code coverage...</source>
         <translation>Охват кода...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="735"/>
+        <location filename="QScintilla/Editor.py" line="743"/>
         <source>Profile data...</source>
         <translation>Данные профайлера...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="562"/>
+        <location filename="QScintilla/Editor.py" line="570"/>
         <source>Undo</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="565"/>
+        <location filename="QScintilla/Editor.py" line="573"/>
         <source>Redo</source>
         <translation>Повтор</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="572"/>
+        <location filename="QScintilla/Editor.py" line="580"/>
         <source>Cut</source>
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="575"/>
+        <location filename="QScintilla/Editor.py" line="583"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="577"/>
+        <location filename="QScintilla/Editor.py" line="585"/>
         <source>Paste</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="581"/>
+        <location filename="QScintilla/Editor.py" line="589"/>
         <source>Indent</source>
         <translation>Увеличить отступ</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="583"/>
+        <location filename="QScintilla/Editor.py" line="591"/>
         <source>Unindent</source>
         <translation>Уменьшить отступ</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="586"/>
+        <location filename="QScintilla/Editor.py" line="594"/>
         <source>Comment</source>
         <translation>Закомментировать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="589"/>
+        <location filename="QScintilla/Editor.py" line="597"/>
         <source>Uncomment</source>
         <translation>Раскомментировать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="592"/>
+        <location filename="QScintilla/Editor.py" line="600"/>
         <source>Stream Comment</source>
         <translation>Поточный комментарий</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="603"/>
         <source>Box Comment</source>
         <translation>Прямоугольный комментарий</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="606"/>
         <source>Select to brace</source>
         <translation>Выбрать до скобки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="600"/>
+        <location filename="QScintilla/Editor.py" line="608"/>
         <source>Select all</source>
         <translation>Выбрать всё</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="601"/>
+        <location filename="QScintilla/Editor.py" line="609"/>
         <source>Deselect all</source>
         <translation>Снять выделение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="715"/>
+        <location filename="QScintilla/Editor.py" line="723"/>
         <source>Check</source>
         <translation>Проверки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="723"/>
+        <location filename="QScintilla/Editor.py" line="731"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="661"/>
+        <location filename="QScintilla/Editor.py" line="669"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="665"/>
+        <location filename="QScintilla/Editor.py" line="673"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="667"/>
+        <location filename="QScintilla/Editor.py" line="675"/>
         <source>Save As...</source>
         <translation>Сохранить как...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="674"/>
+        <location filename="QScintilla/Editor.py" line="682"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1486"/>
+        <location filename="QScintilla/Editor.py" line="1494"/>
         <source>Modification of Read Only file</source>
         <translation>Редактирование файла, открытого только на чтение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1486"/>
+        <location filename="QScintilla/Editor.py" line="1494"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Попытка редактирования файла, открытого только на чтение. Пожалуйста, сначала сохраните изменения в другой файл.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2033"/>
+        <location filename="QScintilla/Editor.py" line="2056"/>
         <source>Printing...</source>
         <translation>Печать...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2050"/>
+        <location filename="QScintilla/Editor.py" line="2073"/>
         <source>Printing completed</source>
         <translation>Печать завершена</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2052"/>
+        <location filename="QScintilla/Editor.py" line="2075"/>
         <source>Error while printing</source>
         <translation>Ошибка печати</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2055"/>
+        <location filename="QScintilla/Editor.py" line="2078"/>
         <source>Printing aborted</source>
         <translation>Печать отменена</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2232"/>
+        <location filename="QScintilla/Editor.py" line="2277"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2373"/>
+        <location filename="QScintilla/Editor.py" line="2421"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2184"/>
+        <location filename="QScintilla/Editor.py" line="2229"/>
         <source>File Modified</source>
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4910"/>
+        <location filename="QScintilla/Editor.py" line="4965"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4914"/>
+        <location filename="QScintilla/Editor.py" line="4969"/>
         <source>File changed</source>
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="568"/>
+        <location filename="QScintilla/Editor.py" line="576"/>
         <source>Revert to last saved state</source>
         <translation>Вернуть к последнему записанному состоянию</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="765"/>
+        <location filename="QScintilla/Editor.py" line="773"/>
         <source>Languages</source>
         <translation>Языки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="977"/>
+        <location filename="QScintilla/Editor.py" line="985"/>
         <source>Toggle bookmark</source>
         <translation>Поставить/убрать закладку</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="980"/>
+        <location filename="QScintilla/Editor.py" line="988"/>
         <source>Next bookmark</source>
         <translation>Следующая закладка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="983"/>
+        <location filename="QScintilla/Editor.py" line="991"/>
         <source>Previous bookmark</source>
         <translation>Предыдущая закладка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="986"/>
+        <location filename="QScintilla/Editor.py" line="994"/>
         <source>Clear all bookmarks</source>
         <translation>Стереть все закладки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1013"/>
+        <location filename="QScintilla/Editor.py" line="1021"/>
         <source>Toggle breakpoint</source>
         <translation>Поставить/убрать точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1019"/>
+        <location filename="QScintilla/Editor.py" line="1027"/>
         <source>Edit breakpoint...</source>
         <translation>Редактировать точку останова...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3902"/>
+        <location filename="QScintilla/Editor.py" line="3952"/>
         <source>Enable breakpoint</source>
         <translation>Разрешить точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1025"/>
+        <location filename="QScintilla/Editor.py" line="1033"/>
         <source>Next breakpoint</source>
         <translation>Следующая точка останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1028"/>
+        <location filename="QScintilla/Editor.py" line="1036"/>
         <source>Previous breakpoint</source>
         <translation>Предыдущая точка останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1031"/>
+        <location filename="QScintilla/Editor.py" line="1039"/>
         <source>Clear all breakpoints</source>
         <translation>Убрать все точки останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1049"/>
+        <location filename="QScintilla/Editor.py" line="1057"/>
         <source>LMB toggles bookmarks</source>
         <translation>Левая клавиша мыши ставит закладки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1054"/>
+        <location filename="QScintilla/Editor.py" line="1062"/>
         <source>LMB toggles breakpoints</source>
         <translation>Левая клавиша мыши ставит точки останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3905"/>
+        <location filename="QScintilla/Editor.py" line="3955"/>
         <source>Disable breakpoint</source>
         <translation>Запретить точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4178"/>
+        <location filename="QScintilla/Editor.py" line="4233"/>
         <source>Code Coverage</source>
         <translation>Охват кода</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4178"/>
+        <location filename="QScintilla/Editor.py" line="4233"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4711"/>
         <source>Macro Name</source>
         <translation>Имя макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4711"/>
         <source>Select a macro name:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4724"/>
+        <location filename="QScintilla/Editor.py" line="4779"/>
         <source>Macro files (*.macro)</source>
         <translation>Макросы (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4684"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>Load macro file</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4705"/>
+        <location filename="QScintilla/Editor.py" line="4760"/>
         <source>Error loading macro</source>
         <translation>Ошибка при загрузке макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4724"/>
+        <location filename="QScintilla/Editor.py" line="4779"/>
         <source>Save macro file</source>
         <translation>Сохранить файл с макросами</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4741"/>
+        <location filename="QScintilla/Editor.py" line="4796"/>
         <source>Save macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4756"/>
+        <location filename="QScintilla/Editor.py" line="4811"/>
         <source>Error saving macro</source>
         <translation>Ошибка при сохранении макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4767"/>
+        <location filename="QScintilla/Editor.py" line="4822"/>
         <source>Start Macro Recording</source>
         <translation>Начало записи макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4792"/>
+        <location filename="QScintilla/Editor.py" line="4847"/>
         <source>Macro Recording</source>
         <translation>Запись макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4792"/>
+        <location filename="QScintilla/Editor.py" line="4847"/>
         <source>Enter name of the macro:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4371"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4371"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="639"/>
+        <location filename="QScintilla/Editor.py" line="647"/>
         <source>Autocompletion enabled</source>
         <translation>Автозавершение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3439"/>
+        <location filename="QScintilla/Editor.py" line="3489"/>
         <source>Autocompletion</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3439"/>
+        <location filename="QScintilla/Editor.py" line="3489"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Автозавершение недоступно, так как не задан источник автозавершения.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="622"/>
+        <location filename="QScintilla/Editor.py" line="630"/>
         <source>Use Monospaced Font</source>
         <translation>Использовать моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="614"/>
+        <location filename="QScintilla/Editor.py" line="622"/>
         <source>Shorten empty lines</source>
         <translation>Укоротить пустые строки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="656"/>
+        <location filename="QScintilla/Editor.py" line="664"/>
         <source>New view</source>
         <translation>Новый вид</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="990"/>
+        <location filename="QScintilla/Editor.py" line="998"/>
         <source>Goto syntax error</source>
         <translation>Перейти к синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="996"/>
+        <location filename="QScintilla/Editor.py" line="1004"/>
         <source>Clear syntax error</source>
         <translation>Очистить синтаксическую ошибку</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="627"/>
+        <location filename="QScintilla/Editor.py" line="635"/>
         <source>Autosave enabled</source>
         <translation>Автосохранение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5110"/>
+        <location filename="QScintilla/Editor.py" line="5165"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="993"/>
+        <location filename="QScintilla/Editor.py" line="1001"/>
         <source>Show syntax error message</source>
         <translation>Показать сообщение о синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4434"/>
+        <location filename="QScintilla/Editor.py" line="4489"/>
         <source>Syntax Error</source>
         <translation>Синтаксическая ошибка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4434"/>
+        <location filename="QScintilla/Editor.py" line="4489"/>
         <source>No syntax error message available.</source>
         <translation>Нет сообщения о синтаксической ошибке.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1016"/>
+        <location filename="QScintilla/Editor.py" line="1024"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Установить/удалить временную точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="729"/>
+        <location filename="QScintilla/Editor.py" line="737"/>
         <source>Show code coverage annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="732"/>
+        <location filename="QScintilla/Editor.py" line="740"/>
         <source>Hide code coverage annotations</source>
         <translation>Не показывать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1035"/>
+        <location filename="QScintilla/Editor.py" line="1043"/>
         <source>Next uncovered line</source>
         <translation>Следующая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1038"/>
+        <location filename="QScintilla/Editor.py" line="1046"/>
         <source>Previous uncovered line</source>
         <translation>Предыдущая невыполняемая строка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4224"/>
+        <location filename="QScintilla/Editor.py" line="4279"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4220"/>
+        <location filename="QScintilla/Editor.py" line="4275"/>
         <source>All lines have been covered.</source>
         <translation>Все строки выполняются.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4224"/>
+        <location filename="QScintilla/Editor.py" line="4279"/>
         <source>There is no coverage file available.</source>
         <translation>Нет файла с информацией по охвату.</translation>
     </message>
@@ -7014,17 +7014,17 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2184"/>
+        <location filename="QScintilla/Editor.py" line="2229"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4698"/>
+        <location filename="QScintilla/Editor.py" line="4753"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4705"/>
+        <location filename="QScintilla/Editor.py" line="4760"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; повреждён&lt;/p&gt;</translation>
     </message>
@@ -7034,357 +7034,357 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4756"/>
+        <location filename="QScintilla/Editor.py" line="4811"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5110"/>
+        <location filename="QScintilla/Editor.py" line="5165"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="657"/>
+        <location filename="QScintilla/Editor.py" line="665"/>
         <source>New view (with new split)</source>
         <translation>Новый вид (с новым разделителем)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="286"/>
+        <location filename="QScintilla/Editor.py" line="287"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; занимает &lt;b&gt;{1} KB&lt;/b&gt;. Ввы действительно хотите его загрузить?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="745"/>
+        <location filename="QScintilla/Editor.py" line="753"/>
         <source>Diagrams</source>
         <translation>Диаграммы</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="747"/>
+        <location filename="QScintilla/Editor.py" line="755"/>
         <source>Class Diagram...</source>
         <translation>Диаграмма классов...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="749"/>
+        <location filename="QScintilla/Editor.py" line="757"/>
         <source>Package Diagram...</source>
         <translation>Диаграмма пакетов...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="759"/>
         <source>Imports Diagram...</source>
         <translation>Диаграмма импортирования...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="754"/>
+        <location filename="QScintilla/Editor.py" line="762"/>
         <source>Application Diagram...</source>
         <translation>Диаграмма приложения...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="768"/>
+        <location filename="QScintilla/Editor.py" line="776"/>
         <source>No Language</source>
         <translation>Нет языка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4993"/>
+        <location filename="QScintilla/Editor.py" line="5048"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5128"/>
+        <location filename="QScintilla/Editor.py" line="5183"/>
         <source>Resources</source>
         <translation>Ресурсы</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5130"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Add file...</source>
         <translation>Добавить файл...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5132"/>
+        <location filename="QScintilla/Editor.py" line="5187"/>
         <source>Add files...</source>
         <translation>Добавить файлы...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5134"/>
+        <location filename="QScintilla/Editor.py" line="5189"/>
         <source>Add aliased file...</source>
         <translation>Добавить файл под другим именем...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5136"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Add localized resource...</source>
         <translation>Добавить локализованный ресурс...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5212"/>
         <source>Add file resource</source>
         <translation>Добавить файл ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5228"/>
         <source>Add file resources</source>
         <translation>Добавить файлы ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5200"/>
+        <location filename="QScintilla/Editor.py" line="5255"/>
         <source>Add aliased file resource</source>
         <translation>Добавить файл ресурсов под другим именем</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5200"/>
+        <location filename="QScintilla/Editor.py" line="5255"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Другое имя для файла &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5261"/>
+        <location filename="QScintilla/Editor.py" line="5316"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5261"/>
+        <location filename="QScintilla/Editor.py" line="5316"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5290"/>
+        <location filename="QScintilla/Editor.py" line="5345"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5290"/>
+        <location filename="QScintilla/Editor.py" line="5345"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5139"/>
+        <location filename="QScintilla/Editor.py" line="5194"/>
         <source>Add resource frame</source>
         <translation>Добавить фрагмент ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4767"/>
+        <location filename="QScintilla/Editor.py" line="4822"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Запись макроса уже идёт. Начать новую запись?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1042"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>Next task</source>
         <translation>Следующая задача</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1045"/>
+        <location filename="QScintilla/Editor.py" line="1053"/>
         <source>Previous task</source>
         <translation>Предыдущая задача</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="689"/>
+        <location filename="QScintilla/Editor.py" line="697"/>
         <source>Autocomplete</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="695"/>
+        <location filename="QScintilla/Editor.py" line="703"/>
         <source>from Document</source>
         <translation>из документа</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="698"/>
+        <location filename="QScintilla/Editor.py" line="706"/>
         <source>from APIs</source>
         <translation>из файлов API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="701"/>
+        <location filename="QScintilla/Editor.py" line="709"/>
         <source>from Document and APIs</source>
         <translation>Из документа и файлов API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="858"/>
+        <location filename="QScintilla/Editor.py" line="866"/>
         <source>Export as</source>
         <translation>Экспортировать как</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1087"/>
+        <location filename="QScintilla/Editor.py" line="1095"/>
         <source>Export source</source>
         <translation>Экспортировать исходник</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1081"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не найден экспортёр для формата &lt;b&gt;{0}&lt;/b&gt;. Отмена...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1087"/>
+        <location filename="QScintilla/Editor.py" line="1095"/>
         <source>No export format given. Aborting...</source>
         <translation>Не задан формат экспорта. Отмена...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5278"/>
+        <location filename="QScintilla/Editor.py" line="5333"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5278"/>
+        <location filename="QScintilla/Editor.py" line="5333"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="692"/>
+        <location filename="QScintilla/Editor.py" line="700"/>
         <source>dynamic</source>
         <translation>динамический</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="705"/>
+        <location filename="QScintilla/Editor.py" line="713"/>
         <source>Calltip</source>
         <translation>Подсказка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="672"/>
+        <location filename="QScintilla/Editor.py" line="680"/>
         <source>Print Preview</source>
         <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="338"/>
+        <location filename="QScintilla/Editor.py" line="339"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно редактора&lt;/b&gt;&lt;p&gt;Это окно используется для просмотра и редактирования исходных текстов приложений. Вы можете открыть несколько окон одновременно. Имя редактируемого файла отображается в заголовке окна.&lt;/p&gt;&lt;p&gt;Чтобы установить точку останова кликните в пространство между номером строки и меткой свёртки на нужной строке. Появившийся маркер точки останова можно настроить через контекстное меню.&lt;/p&gt;&lt;p&gt;Чтобы установить закладку кликните в пространство между номером строки и меткой свёртки на нужной строке при нажатой клавише Shift.&lt;/p&gt;&lt;p&gt;Эти действия можно отменить через контекстное меню.&lt;/p&gt;&lt;p&gt;Если при нажатой клавише Ctrl кликнуть на маркер синтаксической ошибки, то будет показана дополнительная информация об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="632"/>
+        <location filename="QScintilla/Editor.py" line="640"/>
         <source>Typing aids enabled</source>
         <translation>Разрешить помощь при наборе</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="827"/>
+        <location filename="QScintilla/Editor.py" line="835"/>
         <source>End-of-Line Type</source>
         <translation>Тип конца строки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="831"/>
+        <location filename="QScintilla/Editor.py" line="839"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="837"/>
+        <location filename="QScintilla/Editor.py" line="845"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="843"/>
+        <location filename="QScintilla/Editor.py" line="851"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="805"/>
+        <location filename="QScintilla/Editor.py" line="813"/>
         <source>Encodings</source>
         <translation>Кодировки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="787"/>
+        <location filename="QScintilla/Editor.py" line="795"/>
         <source>Guessed</source>
         <translation>Догадки</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1099"/>
+        <location filename="QScintilla/Editor.py" line="1107"/>
         <source>Alternatives</source>
         <translation>Альтернативы</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1104"/>
         <source>Alternatives ({0})</source>
         <translation>Альтернативы ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1114"/>
+        <location filename="QScintilla/Editor.py" line="1122"/>
         <source>Pygments Lexer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1114"/>
+        <location filename="QScintilla/Editor.py" line="1122"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5522"/>
+        <location filename="QScintilla/Editor.py" line="5577"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="607"/>
+        <location filename="QScintilla/Editor.py" line="615"/>
         <source>Check spelling of selection...</source>
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5524"/>
+        <location filename="QScintilla/Editor.py" line="5579"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5526"/>
+        <location filename="QScintilla/Editor.py" line="5581"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="619"/>
         <source>Remove from dictionary</source>
         <translation>Удалить из словаря</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2232"/>
+        <location filename="QScintilla/Editor.py" line="2277"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2330"/>
+        <location filename="QScintilla/Editor.py" line="2378"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4905"/>
+        <location filename="QScintilla/Editor.py" line="4960"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1000"/>
+        <location filename="QScintilla/Editor.py" line="1008"/>
         <source>Next warning</source>
         <translation>Следующее предупреждение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1003"/>
+        <location filename="QScintilla/Editor.py" line="1011"/>
         <source>Previous warning</source>
         <translation>Предыдущее предупреждение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1006"/>
+        <location filename="QScintilla/Editor.py" line="1014"/>
         <source>Show warning message</source>
         <translation>Показать предупреждение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1009"/>
+        <location filename="QScintilla/Editor.py" line="1017"/>
         <source>Clear warnings</source>
         <translation>Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>No py3flakes warning message available.</source>
         <translation>Нет py3flakes предупреждений</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2373"/>
+        <location filename="QScintilla/Editor.py" line="2421"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4741"/>
+        <location filename="QScintilla/Editor.py" line="4796"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4656"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4607"/>
+        <location filename="QScintilla/Editor.py" line="4662"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Ошибка: {0}</translation>
     </message>
@@ -10220,12 +10220,12 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricapiConfigDialog</name>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="168"/>
         <source>Select output file</source>
         <translation>Выберите целевой файл</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="196"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="199"/>
         <source>Select directory to exclude</source>
         <translation>Выберите исключаемый каталог</translation>
     </message>
@@ -10320,7 +10320,7 @@ whole selection.&lt;/li&gt;
         <translation>Список игнорируемых базовых имён каталогов</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="168"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>Файлы API (*.api);;Все файлы (*)</translation>
     </message>
@@ -15561,12 +15561,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Различий нет.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
         <source>Save Diff</source>
         <translation>Сохранить изменения</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="263"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="266"/>
         <source>Patch Files (*.diff)</source>
         <translation>Файлы изменений (*.diff)</translation>
     </message>
@@ -15576,12 +15576,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;Файл с патчем &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить патч в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="280"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="283"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15619,12 +15619,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Задайте поле, по которому фильтровать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="971"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="976"/>
         <source>Revision</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="968"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="973"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
@@ -15745,27 +15745,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Alt+П</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="104"/>
         <source>Added</source>
         <translation>Добавлено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="101"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="105"/>
         <source>Deleted</source>
         <translation>Удалено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="106"/>
         <source>Modified</source>
         <translation>Изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -15780,17 +15780,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Метки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="394"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="398"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Процесс hg не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="396"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="400"/>
         <source>Could not start the hg executable.</source>
         <translation>Невозможно запустить исполняемый файл hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="399"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="403"/>
         <source>Mercurial Error</source>
         <translation>Ошибка Mercurial</translation>
     </message>
@@ -15830,7 +15830,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="124"/>
         <source>All</source>
         <translation type="unfinished">Все</translation>
     </message>
@@ -20776,7 +20776,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="351"/>
         <source>Python Files (*.py2)</source>
-        <translation>Исходники на Python (*.py2)</translation>
+        <translation type="obsolete">Исходники на Python (*.py2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="353"/>
@@ -20786,12 +20786,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="355"/>
         <source>Python GUI Files (*.pyw2)</source>
-        <translation>Python GUI файлы (*.pyw2)</translation>
+        <translation type="obsolete">Python GUI файлы (*.pyw2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="357"/>
         <source>Python3 GUI Files (*.pyw)</source>
         <translation>Python3 GUI файлы (*.pyw)</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="351"/>
+        <source>Python2 Files (*.py2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="355"/>
+        <source>Python2 GUI Files (*.pyw2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -25353,7 +25363,7 @@ Select Update.</source>
     <message>
         <location filename="Project/Project.py" line="202"/>
         <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
-        <translation>Python файлы (*.py2);;Python GUI файлы (*.pyw2);;</translation>
+        <translation type="obsolete">Python файлы (*.py2);;Python GUI файлы (*.pyw2);;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="205"/>
@@ -25419,6 +25429,11 @@ Select Update.</source>
         <location filename="Project/Project.py" line="1321"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать каталог &lt;b&gt;{0}&lt;/b&gt; &lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Project/Project.py" line="202"/>
+        <source>Python2 Files (*.py2);;Python2 GUI Files (*.pyw2);;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -25806,7 +25821,7 @@ Select Update.</source>
         <translation>Определяю изменённые формы...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="850"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="851"/>
         <source>Compiling changed forms...</source>
         <translation>Компилирую изменённые формы...</translation>
     </message>
@@ -26369,7 +26384,7 @@ Select Update.</source>
         <translation>Определяю изменённые ресурсы...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="766"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="767"/>
         <source>Compiling changed resources...</source>
         <translation>Компилирую изменённые ресурсы...</translation>
     </message>
@@ -26392,197 +26407,197 @@ Select Update.</source>
 <context>
     <name>ProjectSourcesBrowser</name>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="63"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="67"/>
         <source>Sources</source>
         <translation>Исходники</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="65"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="69"/>
         <source>&lt;b&gt;Project Sources Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all sources contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Обозреватель исходников&lt;/b&gt;&lt;p&gt;Позволяет легко обозревать исходники, содержащиеся в текущем проекте. Некоторые действия над ними доступны посредством контекстного меню.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="121"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="125"/>
         <source>Code metrics...</source>
         <translation>Статистика кода...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="122"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="126"/>
         <source>Code coverage...</source>
         <translation>Заключения охвата по коду...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="124"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="128"/>
         <source>Profile data...</source>
         <translation>Данные профайлера...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="333"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>Remove from project</source>
         <translation>Удалить из проекта</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="322"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="326"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="117"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="121"/>
         <source>Check</source>
         <translation>Проверить</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="120"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="124"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="350"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="354"/>
         <source>Expand all directories</source>
         <translation>Раскрыть все подкаталоги</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="352"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="356"/>
         <source>Collapse all directories</source>
         <translation>Скрыть все подкаталоги</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="262"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="266"/>
         <source>Class Diagram...</source>
         <translation>Диаграмма классов...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="261"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="265"/>
         <source>Diagrams</source>
         <translation>Диаграммы</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="133"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="137"/>
         <source>Imports Diagram...</source>
         <translation>Диаграмма импортирования...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="266"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="270"/>
         <source>Application Diagram...</source>
         <translation>Диаграмма приложения...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="264"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="268"/>
         <source>Package Diagram...</source>
         <translation>Диаграмма пакетов...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="717"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="721"/>
         <source>Code Coverage</source>
         <translation>Заключения охвата по коду</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="717"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="721"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="770"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="770"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="270"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="274"/>
         <source>Rename file</source>
         <translation>Переименовать файл</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="646"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="650"/>
         <source>Delete files</source>
         <translation>Удаление файлов</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="646"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="650"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Вы правда хотите удалить эти файлы из проекта?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="139"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="143"/>
         <source>Run unittest...</source>
         <translation>Запустить unittest...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="341"/>
         <source>Add source directory...</source>
         <translation>Добавить каталог с исходниками...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="806"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="810"/>
         <source>Class Diagram</source>
         <translation>Диаграмма классов</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="840"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="844"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="840"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="844"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="851"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="855"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="851"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="855"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="336"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="340"/>
         <source>Add source files...</source>
         <translation>Добавить исходники...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="223"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="227"/>
         <source>New package...</source>
         <translation>Новый пакет...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="589"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="593"/>
         <source>Add new Python package</source>
         <translation>Добавить новый пакет Python</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="576"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="580"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать каталог &lt;b&gt;{0}&lt;/b&gt; для пакета. Отмена...&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="589"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="593"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать файл &lt;b&gt;{0}&lt;/b&gt; для пакета. Отмена...&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="823"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="827"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="823"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="827"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="355"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="359"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="232"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="236"/>
         <source>Copy Path to Clipboard</source>
         <translation>Сопировать путь в буфер обмена</translation>
     </message>
@@ -35618,7 +35633,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="214"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="233"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
@@ -36015,7 +36030,7 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="148"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="170"/>
         <source>No indentation errors found.</source>
         <translation>Ошибки в отступах не найдены.</translation>
     </message>
@@ -40788,7 +40803,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="903"/>
+        <location filename="Utilities/__init__.py" line="956"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;В строках вы можете использовать следующие %-коды::
 &lt;table&gt;
@@ -40801,6 +40816,16 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;выбранный текст в текущем редакторе&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;имя текущего пользователя&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;знак процента&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Utilities/__init__.py" line="1124"/>
+        <source>Python2 interpreter not configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Utilities/__init__.py" line="1150"/>
+        <source>Python2 interpreter did not finish within 30s.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

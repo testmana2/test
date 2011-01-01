@@ -141,16 +141,20 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             files = [fn]
         files = [f for f in files \
                     if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
+        py2files = [f for f in files \
+                    if f.endswith(tuple(Preferences.getPython("PythonExtensions")))]
         
         if (codestring and len(files) == 1) or \
-           (not codestring and len(files) > 0):
-            self.checkProgress.setMaximum(len(files))
+           (codestring and len(py2files) == 1) or \
+           (not codestring and len(files) + len(py2files) > 0):
+            self.checkProgress.setMaximum(len(files) + len(py2files))
             QApplication.processEvents()
             
             ignoreStarImportWarnings = Preferences.getFlakes("IgnoreStarImportWarnings")
+            
             # now go through all the files
             progress = 0
-            for file in files:
+            for file in files + py2files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()
@@ -175,17 +179,18 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         continue
                 
                 flags = Utilities.extractFlags(source)
-                if "FileType" in flags and flags["FileType"] != "Python3":
-                    # skip non Python 3 files
-                    progress += 1
-                    continue
-                
-                nok, fname, line, code, error = Utilities.compile(file, source)
+                if ("FileType" in flags and flags["FileType"] != "Python3") or \
+                   file in py2files:
+                    isPy3 = False
+                    nok, fname, line, code, error = Utilities.py2compile(file)
+                else:
+                    isPy3 = True
+                    nok, fname, line, code, error = Utilities.compile(file, source)
                 if nok:
                     self.noResults = False
                     self.__createResultItem(fname, line, error, code)
                 else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                    if Preferences.getFlakes("IncludeInSyntaxCheck") and isPy3:
                         try:
                             sourceLines = source.splitlines()
                             warnings = Checker(source, file)

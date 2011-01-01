@@ -2427,7 +2427,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="obsolete">L&apos;encodage &apos;%1&apos; n&apos;est pas adapté pour le texte.</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="90"/>
+        <location filename="Utilities/__init__.py" line="92"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3763,12 +3763,12 @@ pour afficher la page de configuration.</translation>
 <context>
     <name>DebugServer</name>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1225"/>
+        <location filename="Debugger/DebugServer.py" line="1245"/>
         <source>Passive debug connection received</source>
         <translation>Connexion ouverte avec le débogueur passif</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1238"/>
+        <location filename="Debugger/DebugServer.py" line="1258"/>
         <source>Passive debug connection closed</source>
         <translation>Connexion au débogueur passif fermée</translation>
     </message>
@@ -3790,7 +3790,7 @@ pour afficher la page de configuration.</translation>
         <translation>Connexion en provenance d&apos;un hote illégal</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1094"/>
+        <location filename="Debugger/DebugServer.py" line="1114"/>
         <source>
 Not connected
 </source>
@@ -3810,122 +3810,122 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1561"/>
+        <location filename="Debugger/DebugUI.py" line="1570"/>
         <source>Run Script</source>
         <translation>Lancer le script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="164"/>
+        <location filename="Debugger/DebugUI.py" line="165"/>
         <source>&amp;Run Script...</source>
         <translation>&amp;Lancer le script...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="167"/>
+        <location filename="Debugger/DebugUI.py" line="168"/>
         <source>Run the current Script</source>
         <translation>Lance le script courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="168"/>
+        <location filename="Debugger/DebugUI.py" line="169"/>
         <source>&lt;b&gt;Run Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script outside the debugger. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lancer le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et lancer le script sans le débogueur. Si le script a des modifications, elles doivent d&apos;abord être enregistrées.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1574"/>
+        <location filename="Debugger/DebugUI.py" line="1583"/>
         <source>Run Project</source>
         <translation>Lancer le projet</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="176"/>
+        <location filename="Debugger/DebugUI.py" line="177"/>
         <source>Run &amp;Project...</source>
         <translation>Lancer &amp;projet...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="180"/>
+        <location filename="Debugger/DebugUI.py" line="181"/>
         <source>Run the current Project</source>
         <translation>Lance le projet courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="181"/>
+        <location filename="Debugger/DebugUI.py" line="182"/>
         <source>&lt;b&gt;Run Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project outside the debugger. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lancer le projet&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et lancer le projet sans le débogueur. Si des fichiers du projet on été modifiés ils doivent d&apos;abord être enregistrées.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="191"/>
+        <location filename="Debugger/DebugUI.py" line="192"/>
         <source>Coverage run of Script</source>
         <translation>Lancer le script en mode Coverage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="191"/>
+        <location filename="Debugger/DebugUI.py" line="192"/>
         <source>Coverage run of Script...</source>
         <translation>Lancer le script en mode Coverage...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="194"/>
+        <location filename="Debugger/DebugUI.py" line="195"/>
         <source>Perform a coverage run of the current Script</source>
         <translation>Lance le script courant en mode Coverage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="196"/>
+        <location filename="Debugger/DebugUI.py" line="197"/>
         <source>&lt;b&gt;Coverage run of Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the script under the control of a coverage analysis tool. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lancement du script en mode Coverage&lt;/b&gt;&lt;p&gt;Indiquer les paramètres de la ligne de commande et lancer le script en exploitant les outils d&apos;analyse &apos;Coverage&apos;. Si le fichier a été modifié, il doit être sauvé avant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="205"/>
+        <location filename="Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Project</source>
         <translation>Lancer le projet en mode Coverage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="205"/>
+        <location filename="Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Project...</source>
         <translation>Lancer le projet en mode Coverage...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="208"/>
+        <location filename="Debugger/DebugUI.py" line="209"/>
         <source>Perform a coverage run of the current Project</source>
         <translation>Lance le projet courant en mode coverage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="210"/>
+        <location filename="Debugger/DebugUI.py" line="211"/>
         <source>&lt;b&gt;Coverage run of Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and run the current project under the control of a coverage analysis tool. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lancement du projet en mode Coverage&lt;/b&gt;&lt;p&gt;Indiquer les paramètres de la ligne de commande et lancer le projet courant en exploitant les outils d&apos;analyse &apos;Coverage&apos;. Si des fichiers du projet ont été modifiés, ils doivent être sauvés avant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="220"/>
+        <location filename="Debugger/DebugUI.py" line="221"/>
         <source>Profile Script</source>
         <translation>Profiler le script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="220"/>
+        <location filename="Debugger/DebugUI.py" line="221"/>
         <source>Profile Script...</source>
         <translation>Profiler le script....</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="223"/>
+        <location filename="Debugger/DebugUI.py" line="224"/>
         <source>Profile the current Script</source>
         <translation>Profiler le script courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="224"/>
+        <location filename="Debugger/DebugUI.py" line="225"/>
         <source>&lt;b&gt;Profile Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the script. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profiler le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et profiler le script. Si le script a subi des modifications, celles-ci doivent d&apos;abord être enregistrées.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="232"/>
+        <location filename="Debugger/DebugUI.py" line="233"/>
         <source>Profile Project</source>
         <translation>Profiler le projet</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="232"/>
+        <location filename="Debugger/DebugUI.py" line="233"/>
         <source>Profile Project...</source>
         <translation>Profiler le projet...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="235"/>
+        <location filename="Debugger/DebugUI.py" line="236"/>
         <source>Profile the current Project</source>
         <translation>Profile le projet courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="236"/>
+        <location filename="Debugger/DebugUI.py" line="237"/>
         <source>&lt;b&gt;Profile Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and profile the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profiler le projet&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et profiler le projet. Si des fichiers du projet ont été modifiés, ils doivent d&apos;abord être enregistrés.&lt;/p&gt;</translation>
     </message>
@@ -3970,312 +3970,312 @@ Not connected
         <translation type="obsolete">&lt;b&gt;Lancement du projet avec Cyclops&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et lancer le projet avec Cyclops. Si des fichiers ont été modifiés, ils doivent d&apos;abord être sauvés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1669"/>
+        <location filename="Debugger/DebugUI.py" line="1680"/>
         <source>Debug Script</source>
         <translation>Déboguer le script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="245"/>
+        <location filename="Debugger/DebugUI.py" line="246"/>
         <source>&amp;Debug Script...</source>
         <translation>&amp;Déboguer le script...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="248"/>
+        <location filename="Debugger/DebugUI.py" line="249"/>
         <source>Debug the current Script</source>
         <translation>Débogue le script courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="249"/>
+        <location filename="Debugger/DebugUI.py" line="250"/>
         <source>&lt;b&gt;Debug Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the current editor window. If the file has unsaved changes it may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Deboguer le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et donner la ligne qui correspond à la première instruction Python. Si le fichier a été modifié, il doit d&apos;abord être sauvé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1682"/>
+        <location filename="Debugger/DebugUI.py" line="1693"/>
         <source>Debug Project</source>
         <translation>Déboguer le projet</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="258"/>
+        <location filename="Debugger/DebugUI.py" line="259"/>
         <source>Debug &amp;Project...</source>
         <translation>Déboguer le &amp;Projet...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="262"/>
+        <location filename="Debugger/DebugUI.py" line="263"/>
         <source>Debug the current Project</source>
         <translation>Déboguer le projet en cours</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="263"/>
+        <location filename="Debugger/DebugUI.py" line="264"/>
         <source>&lt;b&gt;Debug Project&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the main script of the current project. If files of the current project have unsaved changes they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Deboguer le projet&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et donner la ligne correspondant à la première instruction Python du script principal du projet en cours.Si des fichiers du projet ont été modifiés, ils doivent d&apos;abord être sauvés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="273"/>
+        <location filename="Debugger/DebugUI.py" line="274"/>
         <source>Restart Script</source>
         <translation>Relancer le script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="276"/>
+        <location filename="Debugger/DebugUI.py" line="277"/>
         <source>Restart the last debugged script</source>
         <translation>Relance le dernier script débogué</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="277"/>
+        <location filename="Debugger/DebugUI.py" line="278"/>
         <source>&lt;b&gt;Restart Script&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Relancer le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et donner la ligne qui correspond à la première instruction Python.Si le fichier a été modifié, il doit d&apos;abord être sauvé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="300"/>
+        <location filename="Debugger/DebugUI.py" line="301"/>
         <source>Continue</source>
         <translation>Continuer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="300"/>
+        <location filename="Debugger/DebugUI.py" line="301"/>
         <source>&amp;Continue</source>
         <translation>&amp;Continuer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="304"/>
+        <location filename="Debugger/DebugUI.py" line="305"/>
         <source>Continue running the program from the current line</source>
         <translation>Continuer le programme à partir de la ligne courante</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="306"/>
+        <location filename="Debugger/DebugUI.py" line="307"/>
         <source>&lt;b&gt;Continue&lt;/b&gt;&lt;p&gt;Continue running the program from the current line. The program will stop when it terminates or when a breakpoint is reached.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Continuer&lt;/b&gt;&lt;p&gt;Continue le programme à partir de la ligne courante. Le programme s&apos;arrêtera à la fin si aucun point d&apos;arrêt n&apos;est rencontré.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="328"/>
+        <location filename="Debugger/DebugUI.py" line="329"/>
         <source>Single Step</source>
         <translation>Instruction suivante (Single Step)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="328"/>
+        <location filename="Debugger/DebugUI.py" line="329"/>
         <source>Sin&amp;gle Step</source>
         <translation>Instruction &amp;suivante (Single Step)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="332"/>
+        <location filename="Debugger/DebugUI.py" line="333"/>
         <source>Execute a single Python statement</source>
         <translation>Execute une seule instruction Python</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="333"/>
+        <location filename="Debugger/DebugUI.py" line="334"/>
         <source>&lt;b&gt;Single Step&lt;/b&gt;&lt;p&gt;Execute a single Python statement. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger at the next statement.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Un seul Pas&lt;/b&gt;&lt;p&gt;Execute une seule instruction Python. Si l&apos;instruction est dans un &lt;tt&gt;import&lt;/tt&gt; , un constructeur de classe, ou un appel à une méthode ou à une fonction, alors le contrôle est rendu au débogueur à l&apos;instruction suivante.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="343"/>
+        <location filename="Debugger/DebugUI.py" line="344"/>
         <source>Step Over</source>
         <translation>Bloc d&apos;instructions suivant (Step Over)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="343"/>
+        <location filename="Debugger/DebugUI.py" line="344"/>
         <source>Step &amp;Over</source>
         <translation>&amp;Bloc d&apos;instructions suivant (Step Over)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="347"/>
+        <location filename="Debugger/DebugUI.py" line="348"/>
         <source>Execute a single Python statement staying in the current frame</source>
         <translation>Execute une seule instruction Python en restant dans le même niveau d&apos;instructions</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="349"/>
+        <location filename="Debugger/DebugUI.py" line="350"/>
         <source>&lt;b&gt;Step Over&lt;/b&gt;&lt;p&gt;Execute a single Python statement staying in the same frame. If the statement is an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the statement has completed.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Bloc suivant&lt;/b&gt;&lt;p&gt;Execute une seule instruction Python en restant au même niveau (profondeur) d&apos;instructions. Si l&apos;instruction est dans un &lt;tt&gt;import&lt;/tt&gt; , un constructeur de classe, ou un appel à une méthode ou à une fonction, alors le contrôle est rendu au débogueur quand l&apos;instruction est terminée.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="359"/>
+        <location filename="Debugger/DebugUI.py" line="360"/>
         <source>Step Out</source>
         <translation>Sortie du bloc (Step Out)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="359"/>
+        <location filename="Debugger/DebugUI.py" line="360"/>
         <source>Step Ou&amp;t</source>
         <translation>Sortie du bloc (Step &amp;Out)</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="363"/>
+        <location filename="Debugger/DebugUI.py" line="364"/>
         <source>Execute Python statements until leaving the current frame</source>
         <translation>Débogue les instructions Python à partir de la sortie du bloc courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="365"/>
+        <location filename="Debugger/DebugUI.py" line="366"/>
         <source>&lt;b&gt;Step Out&lt;/b&gt;&lt;p&gt;Execute Python statements until leaving the current frame. If the statements are inside an &lt;tt&gt;import&lt;/tt&gt; statement, a class constructor, or a method or function call then control is returned to the debugger after the current frame has been left.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sortie du Bloc (Step Out)&lt;/b&gt;&lt;p&gt;Débogue les instructions Python à partir de la sortie du bloc courant. Si les instructions sont dans un &lt;tt&gt;import&lt;/tt&gt; , un constructeur de classe, ou dans une méthode ou une fonction, alors le contrôle est rendu au débogueur au début du bloc suivant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="375"/>
+        <location filename="Debugger/DebugUI.py" line="376"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="375"/>
+        <location filename="Debugger/DebugUI.py" line="376"/>
         <source>&amp;Stop</source>
         <translation>&amp;Arrêt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="379"/>
+        <location filename="Debugger/DebugUI.py" line="380"/>
         <source>Stop debugging</source>
         <translation>Arrêter le débogage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="380"/>
+        <location filename="Debugger/DebugUI.py" line="381"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stop the running debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Arrêt&lt;/b&gt;&lt;p&gt;Arrête le débogage courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1927"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Evaluate</source>
         <translation>Evaluer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="389"/>
+        <location filename="Debugger/DebugUI.py" line="390"/>
         <source>E&amp;valuate...</source>
         <translation>E&amp;valuer...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="392"/>
+        <location filename="Debugger/DebugUI.py" line="393"/>
         <source>Evaluate in current context</source>
         <translation>Evalue l&apos;expression dans le contexte en cours</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1956"/>
+        <location filename="Debugger/DebugUI.py" line="1971"/>
         <source>Execute</source>
         <translation>Exécuter</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="402"/>
+        <location filename="Debugger/DebugUI.py" line="403"/>
         <source>E&amp;xecute...</source>
         <translation>E&amp;xecuter...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="405"/>
+        <location filename="Debugger/DebugUI.py" line="406"/>
         <source>Execute a one line statement in the current context</source>
         <translation>Execution d&apos;une instruction dans le contexte courant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="407"/>
+        <location filename="Debugger/DebugUI.py" line="408"/>
         <source>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Execute a one line statement in the current context of the debugged program.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Execution&lt;/b&gt;&lt;p&gt;Execution d&apos;une ligne d&apos;instruction dans le contexte courant du programme débogué.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="428"/>
+        <location filename="Debugger/DebugUI.py" line="429"/>
         <source>Exceptions Filter</source>
         <translation>Filtre d&apos;exceptions</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="428"/>
+        <location filename="Debugger/DebugUI.py" line="429"/>
         <source>&amp;Exceptions Filter...</source>
         <translation>Filtre d&apos;&amp;exceptions...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="430"/>
+        <location filename="Debugger/DebugUI.py" line="431"/>
         <source>Configure exceptions filter</source>
         <translation>Configuration du filtre d&apos;exceptions</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="431"/>
+        <location filename="Debugger/DebugUI.py" line="432"/>
         <source>&lt;b&gt;Exceptions Filter&lt;/b&gt;&lt;p&gt;Configure the exceptions filter. Only exception types that are listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that all unhandled exceptions are highlighted indepent from the filter list.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Filtre d&apos;exceptions&lt;/b&gt;&lt;p&gt;Configuration du filtre d&apos;exceptions. Seuls les types d&apos;exceptions listés sont signalés pendant le débogage.&lt;/p&gt;&lt;p&gt;Notez que toutes les exceptions non prises en charge sont signalés, indépendamment de la liste de filtres.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="461"/>
+        <location filename="Debugger/DebugUI.py" line="462"/>
         <source>Toggle Breakpoint</source>
         <translation>Placer/Supprimer un point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="462"/>
+        <location filename="Debugger/DebugUI.py" line="463"/>
         <source>&lt;b&gt;Toggle Breakpoint&lt;/b&gt;&lt;p&gt;Toggles a breakpoint at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Placer/supprimer un point d&apos;arrêt&lt;/b&gt;&lt;p&gt;Place ou enlève un point d&apos;arrêt sur la ligne courante de l&apos;éditeur en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="475"/>
+        <location filename="Debugger/DebugUI.py" line="476"/>
         <source>Edit Breakpoint</source>
         <translation>Edition Point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="470"/>
+        <location filename="Debugger/DebugUI.py" line="471"/>
         <source>Edit Breakpoint...</source>
         <translation type="unfinished">Éditer le point d&apos;arrêt...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="476"/>
+        <location filename="Debugger/DebugUI.py" line="477"/>
         <source>&lt;b&gt;Edit Breakpoint&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the breakpoints properties. It works at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Edition Point d&apos;arrêt&lt;/b&gt;&lt;p&gt;Edite les propriétés des points d&apos;arrêt au travers d&apos;une boite de dialogue. Ceci s&apos;applique à la ligne courante de l&apos;éditeur courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="489"/>
+        <location filename="Debugger/DebugUI.py" line="490"/>
         <source>Next Breakpoint</source>
         <translation>Point d&apos;arrêt suivant</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="490"/>
+        <location filename="Debugger/DebugUI.py" line="491"/>
         <source>&lt;b&gt;Next Breakpoint&lt;/b&gt;&lt;p&gt;Go to next breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Point d&apos;arrêt suivant&lt;/b&gt;&lt;p&gt;Avance au point d&apos;arrêt suivant dans l&apos;éditeur courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="502"/>
+        <location filename="Debugger/DebugUI.py" line="503"/>
         <source>Previous Breakpoint</source>
         <translation>Point d&apos;arrêt précédent</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="503"/>
+        <location filename="Debugger/DebugUI.py" line="504"/>
         <source>&lt;b&gt;Previous Breakpoint&lt;/b&gt;&lt;p&gt;Go to previous breakpoint of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Point d&apos;arrêt précédent&lt;/b&gt;&lt;p&gt;Remonte au point d&apos;arrêt précédent dans l&apos;éditeur courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="514"/>
+        <location filename="Debugger/DebugUI.py" line="515"/>
         <source>Clear Breakpoints</source>
         <translation>Suppression des point d&apos;arrêts</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="515"/>
+        <location filename="Debugger/DebugUI.py" line="516"/>
         <source>&lt;b&gt;Clear Breakpoints&lt;/b&gt;&lt;p&gt;Clear breakpoints of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suppression des points d&apos;arrêts&lt;/b&gt;&lt;p&gt;Supprime les points d&apos;arrêts de tous les éditeurs.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="546"/>
+        <location filename="Debugger/DebugUI.py" line="547"/>
         <source>&amp;Breakpoints</source>
         <translation>&amp;Point d&apos;arrêts</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="979"/>
+        <location filename="Debugger/DebugUI.py" line="982"/>
         <source>The program being debugged contains an unspecified syntax error.</source>
         <translation>Le programme débogué contient une erreur de syntaxe non identifiée.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1002"/>
+        <location filename="Debugger/DebugUI.py" line="1005"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Une erreur imprévue est apparue. Regardez les détails dans la fenêtre shell.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1072"/>
+        <location filename="Debugger/DebugUI.py" line="1075"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Le programme débogué s&apos;est terminé de façon prématurée.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1364"/>
+        <location filename="Debugger/DebugUI.py" line="1367"/>
         <source>Coverage of Project</source>
         <translation>Coverage du projet</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1354"/>
+        <location filename="Debugger/DebugUI.py" line="1357"/>
         <source>Coverage of Script</source>
         <translation>Coverage du Script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1574"/>
+        <location filename="Debugger/DebugUI.py" line="1583"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Il n&apos;y a pas de script principal défini dans le projet en cours. Abandon</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1468"/>
+        <location filename="Debugger/DebugUI.py" line="1474"/>
         <source>Profile of Project</source>
         <translation>Profil du projet</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1457"/>
+        <location filename="Debugger/DebugUI.py" line="1463"/>
         <source>Profile of Script</source>
         <translation>Profil du Script</translation>
     </message>
@@ -4295,57 +4295,57 @@ Not connected
         <translation type="obsolete">Erreur Cyclops</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1682"/>
+        <location filename="Debugger/DebugUI.py" line="1693"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Il n&apos;y a pas de script principal défini dans le projet en cours. Débogage impossible.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1927"/>
+        <location filename="Debugger/DebugUI.py" line="1942"/>
         <source>Enter the statement to evaluate</source>
         <translation>Entrer une instruction à évaluer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1956"/>
+        <location filename="Debugger/DebugUI.py" line="1971"/>
         <source>Enter the statement to execute</source>
         <translation>Entrer une instruction à exécuter</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="314"/>
+        <location filename="Debugger/DebugUI.py" line="315"/>
         <source>Continue to Cursor</source>
         <translation>Continuer jusqu&apos;au curseur</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="314"/>
+        <location filename="Debugger/DebugUI.py" line="315"/>
         <source>Continue &amp;To Cursor</source>
         <translation>Continuer &amp;jusqu&apos;au curseur</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="318"/>
+        <location filename="Debugger/DebugUI.py" line="319"/>
         <source>Continue running the program from the current line to the current cursor position</source>
         <translation>Continue le programme en cours de la ligne en cours jusqu&apos;à la position du curseur</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="320"/>
+        <location filename="Debugger/DebugUI.py" line="321"/>
         <source>&lt;b&gt;Continue To Cursor&lt;/b&gt;&lt;p&gt;Continue running the program from the current line to the current cursor position.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Continuer jusqu&apos;au curseur&lt;/b&gt;&lt;p&gt;Continue le programme depuis la ligne courante jusqu&apos;au curseur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="415"/>
+        <location filename="Debugger/DebugUI.py" line="416"/>
         <source>Variables Type Filter</source>
         <translation>Filtre sur les types de variables</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="415"/>
+        <location filename="Debugger/DebugUI.py" line="416"/>
         <source>Varia&amp;bles Type Filter...</source>
         <translation>Filtre sur les types de varia&amp;bles...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="418"/>
+        <location filename="Debugger/DebugUI.py" line="419"/>
         <source>Configure variables type filter</source>
         <translation>Configurer le filtre de variables</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="419"/>
+        <location filename="Debugger/DebugUI.py" line="420"/>
         <source>&lt;b&gt;Variables Type Filter&lt;/b&gt;&lt;p&gt;Configure the variables type filter. Only variable types that are not selected are displayed in the global or local variables window during a debugging session.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Filtre de Variables&lt;/b&gt;&lt;p&gt;Configure le filtre de variables. Seuls les types de variables non sélectionnés sont affichés dans la fenêtre des variables globales (resp. locales) pendant la session de débogage.&lt;/p&gt;</translation>
     </message>
@@ -4370,7 +4370,7 @@ Not connected
         <translation type="obsolete">&lt;p&gt;Le programme s&apos;est terminé avec le code de sortie %1.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1141"/>
+        <location filename="Debugger/DebugUI.py" line="1144"/>
         <source>Breakpoint Condition Error</source>
         <translation>Erreur de condition pour le point d&apos;arrêt</translation>
     </message>
@@ -4380,40 +4380,40 @@ Not connected
         <translation type="obsolete">&lt;p&gt;Erreur de syntaxe dans la condition du point d&apos;arrêt &lt;b&gt;%1&lt;/b&gt; :&lt;b&gt;%2&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="484"/>
+        <location filename="Debugger/DebugUI.py" line="485"/>
         <source>Ctrl+Shift+PgDown</source>
         <comment>Debug|Next Breakpoint</comment>
         <translation>Ctrl+Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="497"/>
+        <location filename="Debugger/DebugUI.py" line="498"/>
         <source>Ctrl+Shift+PgUp</source>
         <comment>Debug|Previous Breakpoint</comment>
         <translation>Ctrl+Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="510"/>
+        <location filename="Debugger/DebugUI.py" line="511"/>
         <source>Ctrl+Shift+C</source>
         <comment>Debug|Clear Breakpoints</comment>
         <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="542"/>
+        <location filename="Debugger/DebugUI.py" line="543"/>
         <source>&amp;Debug</source>
         <translation>&amp;Débogage</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="544"/>
+        <location filename="Debugger/DebugUI.py" line="545"/>
         <source>&amp;Start</source>
         <translation>&amp;Lancer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="590"/>
+        <location filename="Debugger/DebugUI.py" line="591"/>
         <source>Start</source>
         <translation>Lancer</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="604"/>
+        <location filename="Debugger/DebugUI.py" line="605"/>
         <source>Debug</source>
         <translation>Débogage</translation>
     </message>
@@ -4428,27 +4428,27 @@ Not connected
         <translation type="obsolete">&lt;p&gt;Le fichier &lt;b&gt;%1&lt;/b&gt; contient l&apos;erreur de syntaxe &lt;b&gt;%2&lt;/b&gt; à la ligne &lt;b&gt;%3&lt;/b&gt;, caractère &lt;b&gt;%4&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="286"/>
+        <location filename="Debugger/DebugUI.py" line="287"/>
         <source>Stop Script</source>
         <translation>Arrêter le script</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="290"/>
+        <location filename="Debugger/DebugUI.py" line="291"/>
         <source>Stop the running script.</source>
         <translation>Arrête le run en cours.</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="291"/>
+        <location filename="Debugger/DebugUI.py" line="292"/>
         <source>&lt;b&gt;Stop Script&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Arrêter le script&lt;/b&gt;&lt;p&gt;Arrête le débogage du script en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="393"/>
+        <location filename="Debugger/DebugUI.py" line="394"/>
         <source>&lt;b&gt;Evaluate&lt;/b&gt;&lt;p&gt;Evaluate an expression in the current context of the debugged program. The result is displayed in the shell window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Evaluer&lt;/b&gt;&lt;p&gt;Evalue une expression dans le contexte courant du programme débogué. Le résultat est affiché dans la fenêtre Shell&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1175"/>
         <source>Watch Expression Error</source>
         <translation>Erreur dans l&apos;expression</translation>
     </message>
@@ -4468,95 +4468,95 @@ Not connected
         <translation type="obsolete">&lt;p&gt;L&apos;expression &apos;&lt;b&gt;%1&lt;/b&gt;&apos; pour la variable &lt;b&gt;%2&lt;/b&gt; existe déjà.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1207"/>
+        <location filename="Debugger/DebugUI.py" line="1210"/>
         <source>Watch expression already exists</source>
         <translation>L&apos;expression existe déjà</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="441"/>
+        <location filename="Debugger/DebugUI.py" line="442"/>
         <source>Ignored Exceptions</source>
         <translation>Exceptions ignorées</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="441"/>
+        <location filename="Debugger/DebugUI.py" line="442"/>
         <source>&amp;Ignored Exceptions...</source>
         <translation>Exceptions &amp;ignorées...</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="444"/>
+        <location filename="Debugger/DebugUI.py" line="445"/>
         <source>Configure ignored exceptions</source>
         <translation>Configuration des exceptions ignorées</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="445"/>
+        <location filename="Debugger/DebugUI.py" line="446"/>
         <source>&lt;b&gt;Ignored Exceptions&lt;/b&gt;&lt;p&gt;Configure the ignored exceptions. Only exception types that are not listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that unhandled exceptions cannot be ignored.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exceptions ignorées&lt;/b&gt;&lt;p&gt;Configuration des exceptions ignorées. Seuls les types d&apos;exception non listés seront indiqués pendant le débogage.&lt;/p&gt;&lt;p&gt;Les exceptions non gérées ne pourront pas être ignorées.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="456"/>
+        <location filename="Debugger/DebugUI.py" line="457"/>
         <source>Shift+F11</source>
         <comment>Debug|Toggle Breakpoint</comment>
         <translation type="unfinished">Shift+F11</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="470"/>
+        <location filename="Debugger/DebugUI.py" line="471"/>
         <source>Shift+F12</source>
         <comment>Debug|Edit Breakpoint</comment>
         <translation type="unfinished">Shift+F12</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="946"/>
+        <location filename="Debugger/DebugUI.py" line="949"/>
         <source>&lt;p&gt;The program has terminated with an exit status of {0}.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="950"/>
+        <location filename="Debugger/DebugUI.py" line="953"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has terminated with an exit status of {1}.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="985"/>
+        <location filename="Debugger/DebugUI.py" line="988"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1027"/>
+        <location filename="Debugger/DebugUI.py" line="1030"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1038"/>
+        <location filename="Debugger/DebugUI.py" line="1041"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1141"/>
+        <location filename="Debugger/DebugUI.py" line="1144"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1172"/>
+        <location filename="Debugger/DebugUI.py" line="1175"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1199"/>
+        <location filename="Debugger/DebugUI.py" line="1202"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="1203"/>
+        <location filename="Debugger/DebugUI.py" line="1206"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="956"/>
+        <location filename="Debugger/DebugUI.py" line="959"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Debugger/DebugUI.py" line="960"/>
+        <location filename="Debugger/DebugUI.py" line="963"/>
         <source>&quot;{0}&quot; has terminated with an exit status of {1}.
 </source>
         <translation type="unfinished"></translation>
@@ -7192,147 +7192,147 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="562"/>
+        <location filename="QScintilla/Editor.py" line="570"/>
         <source>Undo</source>
         <translation>Défaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="565"/>
+        <location filename="QScintilla/Editor.py" line="573"/>
         <source>Redo</source>
         <translation>Refaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="568"/>
+        <location filename="QScintilla/Editor.py" line="576"/>
         <source>Revert to last saved state</source>
         <translation>Ecraser avec le dernier état enregistré</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="572"/>
+        <location filename="QScintilla/Editor.py" line="580"/>
         <source>Cut</source>
         <translation>Couper</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="575"/>
+        <location filename="QScintilla/Editor.py" line="583"/>
         <source>Copy</source>
         <translation>Copier</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="577"/>
+        <location filename="QScintilla/Editor.py" line="585"/>
         <source>Paste</source>
         <translation>Coller</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="581"/>
+        <location filename="QScintilla/Editor.py" line="589"/>
         <source>Indent</source>
         <translation>Indenter</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="583"/>
+        <location filename="QScintilla/Editor.py" line="591"/>
         <source>Unindent</source>
         <translation>Désindenter</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="586"/>
+        <location filename="QScintilla/Editor.py" line="594"/>
         <source>Comment</source>
         <translation>Commenter</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="589"/>
+        <location filename="QScintilla/Editor.py" line="597"/>
         <source>Uncomment</source>
         <translation>Décommenter</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="592"/>
+        <location filename="QScintilla/Editor.py" line="600"/>
         <source>Stream Comment</source>
         <translation>Commentaire type &quot;Stream&quot;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="595"/>
+        <location filename="QScintilla/Editor.py" line="603"/>
         <source>Box Comment</source>
         <translation>Commentaire type &quot;Bloc&quot;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="598"/>
+        <location filename="QScintilla/Editor.py" line="606"/>
         <source>Select to brace</source>
         <translation>Sélection parenthèses</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="600"/>
+        <location filename="QScintilla/Editor.py" line="608"/>
         <source>Select all</source>
         <translation>Tout sélectionner</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="601"/>
+        <location filename="QScintilla/Editor.py" line="609"/>
         <source>Deselect all</source>
         <translation>Tout déselectionner</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="614"/>
+        <location filename="QScintilla/Editor.py" line="622"/>
         <source>Shorten empty lines</source>
         <translation>Raccourcir les lignes vides</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="765"/>
+        <location filename="QScintilla/Editor.py" line="773"/>
         <source>Languages</source>
         <translation>Langages</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="622"/>
+        <location filename="QScintilla/Editor.py" line="630"/>
         <source>Use Monospaced Font</source>
         <translation>Utiliser une police monospacée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="639"/>
+        <location filename="QScintilla/Editor.py" line="647"/>
         <source>Autocompletion enabled</source>
         <translation>Autocomplétion activée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="715"/>
+        <location filename="QScintilla/Editor.py" line="723"/>
         <source>Check</source>
         <translation>Vérification</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="723"/>
+        <location filename="QScintilla/Editor.py" line="731"/>
         <source>Show</source>
         <translation>Afficher...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="656"/>
+        <location filename="QScintilla/Editor.py" line="664"/>
         <source>New view</source>
         <translation>Nouvelle vue</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="661"/>
+        <location filename="QScintilla/Editor.py" line="669"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="665"/>
+        <location filename="QScintilla/Editor.py" line="673"/>
         <source>Save</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="667"/>
+        <location filename="QScintilla/Editor.py" line="675"/>
         <source>Save As...</source>
         <translation>Enregistrer sous...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="674"/>
+        <location filename="QScintilla/Editor.py" line="682"/>
         <source>Print</source>
         <translation>Imprimer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="725"/>
+        <location filename="QScintilla/Editor.py" line="733"/>
         <source>Code metrics...</source>
         <translation>Statistiques du code...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="727"/>
+        <location filename="QScintilla/Editor.py" line="735"/>
         <source>Code coverage...</source>
         <translation>Code coverage...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="735"/>
+        <location filename="QScintilla/Editor.py" line="743"/>
         <source>Profile data...</source>
         <translation>Profiler les données...</translation>
     </message>
@@ -7347,222 +7347,222 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Supprimer le rapport Cyclops</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="977"/>
+        <location filename="QScintilla/Editor.py" line="985"/>
         <source>Toggle bookmark</source>
         <translation>Placer/supprimer un signet</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="980"/>
+        <location filename="QScintilla/Editor.py" line="988"/>
         <source>Next bookmark</source>
         <translation>Signet suivant</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="983"/>
+        <location filename="QScintilla/Editor.py" line="991"/>
         <source>Previous bookmark</source>
         <translation>Signet précédent</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="986"/>
+        <location filename="QScintilla/Editor.py" line="994"/>
         <source>Clear all bookmarks</source>
         <translation>Effacer tous les signets</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1013"/>
+        <location filename="QScintilla/Editor.py" line="1021"/>
         <source>Toggle breakpoint</source>
         <translation>Placer/supprimer un point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1019"/>
+        <location filename="QScintilla/Editor.py" line="1027"/>
         <source>Edit breakpoint...</source>
         <translation>Éditer le point d&apos;arrêt...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3902"/>
+        <location filename="QScintilla/Editor.py" line="3952"/>
         <source>Enable breakpoint</source>
         <translation>Activer le point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1025"/>
+        <location filename="QScintilla/Editor.py" line="1033"/>
         <source>Next breakpoint</source>
         <translation>Point d&apos;arrêt suivant</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1028"/>
+        <location filename="QScintilla/Editor.py" line="1036"/>
         <source>Previous breakpoint</source>
         <translation>Point d&apos;arrêt précédent</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1031"/>
+        <location filename="QScintilla/Editor.py" line="1039"/>
         <source>Clear all breakpoints</source>
         <translation>Effacer tous les points d&apos;arrêts</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1049"/>
+        <location filename="QScintilla/Editor.py" line="1057"/>
         <source>LMB toggles bookmarks</source>
         <translation>Le click principal place des signets</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1054"/>
+        <location filename="QScintilla/Editor.py" line="1062"/>
         <source>LMB toggles breakpoints</source>
         <translation>Le click principal place les points d&apos;arrêts</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1486"/>
+        <location filename="QScintilla/Editor.py" line="1494"/>
         <source>Modification of Read Only file</source>
         <translation>Modification de la lecture seule</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1486"/>
+        <location filename="QScintilla/Editor.py" line="1494"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Le fichier est en lecture seule. Sauvez d&apos;abord votre fichier sous un autre nom.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2033"/>
+        <location filename="QScintilla/Editor.py" line="2056"/>
         <source>Printing...</source>
         <translation>Impression....</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2050"/>
+        <location filename="QScintilla/Editor.py" line="2073"/>
         <source>Printing completed</source>
         <translation>Impression terminée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2052"/>
+        <location filename="QScintilla/Editor.py" line="2075"/>
         <source>Error while printing</source>
         <translation>Erreur durant l&apos;impression</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2055"/>
+        <location filename="QScintilla/Editor.py" line="2078"/>
         <source>Printing aborted</source>
         <translation>Impression abandonnée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2232"/>
+        <location filename="QScintilla/Editor.py" line="2277"/>
         <source>Open File</source>
         <translation>Ouvrir Fichier</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2373"/>
+        <location filename="QScintilla/Editor.py" line="2421"/>
         <source>Save File</source>
         <translation>Enregistrer Fichier</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2184"/>
+        <location filename="QScintilla/Editor.py" line="2229"/>
         <source>File Modified</source>
         <translation>Fichier Modifié</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3439"/>
+        <location filename="QScintilla/Editor.py" line="3489"/>
         <source>Autocompletion</source>
         <translation>Autocompletion</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3439"/>
+        <location filename="QScintilla/Editor.py" line="3489"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>L&apos;autocompletion n&apos;est pas disponible car aucune source d&apos;autocomplétion n&apos;est définie.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3905"/>
+        <location filename="QScintilla/Editor.py" line="3955"/>
         <source>Disable breakpoint</source>
         <translation>Désactiver le point d&apos;arrêt</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4178"/>
+        <location filename="QScintilla/Editor.py" line="4233"/>
         <source>Code Coverage</source>
         <translation>Code Coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4178"/>
+        <location filename="QScintilla/Editor.py" line="4233"/>
         <source>Please select a coverage file</source>
         <translation>Sélectionner un fichier coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4371"/>
         <source>Profile Data</source>
         <translation>Profiler de données</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4371"/>
         <source>Please select a profile file</source>
         <translation>Sélectionner un fichier profile</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4711"/>
         <source>Macro Name</source>
         <translation>Nom de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4656"/>
+        <location filename="QScintilla/Editor.py" line="4711"/>
         <source>Select a macro name:</source>
         <translation>Sélectionner un nom de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4724"/>
+        <location filename="QScintilla/Editor.py" line="4779"/>
         <source>Macro files (*.macro)</source>
         <translation>Fichier Macro (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4684"/>
+        <location filename="QScintilla/Editor.py" line="4739"/>
         <source>Load macro file</source>
         <translation>Charger un fichier macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4705"/>
+        <location filename="QScintilla/Editor.py" line="4760"/>
         <source>Error loading macro</source>
         <translation>Erreur lors du chargement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4724"/>
+        <location filename="QScintilla/Editor.py" line="4779"/>
         <source>Save macro file</source>
         <translation>Enregistrer le fichier macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4741"/>
+        <location filename="QScintilla/Editor.py" line="4796"/>
         <source>Save macro</source>
         <translation>Enregistrer la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4756"/>
+        <location filename="QScintilla/Editor.py" line="4811"/>
         <source>Error saving macro</source>
         <translation>Erreur lors de l&apos;enregistrement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4767"/>
+        <location filename="QScintilla/Editor.py" line="4822"/>
         <source>Start Macro Recording</source>
         <translation>Démarrer l&apos;enregistrement de la macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4792"/>
+        <location filename="QScintilla/Editor.py" line="4847"/>
         <source>Macro Recording</source>
         <translation>Enregistrement de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4792"/>
+        <location filename="QScintilla/Editor.py" line="4847"/>
         <source>Enter name of the macro:</source>
         <translation>Entrer le nom de la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4910"/>
+        <location filename="QScintilla/Editor.py" line="4965"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; Toutes les modifications seront écrasées en réouvrant le fichier.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4914"/>
+        <location filename="QScintilla/Editor.py" line="4969"/>
         <source>File changed</source>
         <translation>Fichier modifié</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="627"/>
+        <location filename="QScintilla/Editor.py" line="635"/>
         <source>Autosave enabled</source>
         <translation>Sauvegarde automatique activée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="990"/>
+        <location filename="QScintilla/Editor.py" line="998"/>
         <source>Goto syntax error</source>
         <translation>Aller à l&apos;erreur de syntaxe suivante</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="996"/>
+        <location filename="QScintilla/Editor.py" line="1004"/>
         <source>Clear syntax error</source>
         <translation>Supprimer les flags d&apos;erreurs de syntaxe</translation>
     </message>
@@ -7587,62 +7587,62 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Prière de sélectionner un rapport Cyclops à supprimer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5110"/>
+        <location filename="QScintilla/Editor.py" line="5165"/>
         <source>Drop Error</source>
         <translation>Erreur de suppression</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="993"/>
+        <location filename="QScintilla/Editor.py" line="1001"/>
         <source>Show syntax error message</source>
         <translation>Afficher le message d&apos;erreur de syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4434"/>
+        <location filename="QScintilla/Editor.py" line="4489"/>
         <source>Syntax Error</source>
         <translation>Erreur de syntaxe</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4434"/>
+        <location filename="QScintilla/Editor.py" line="4489"/>
         <source>No syntax error message available.</source>
         <translation>Aucun message d&apos;erreur de syntaxe..</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1016"/>
+        <location filename="QScintilla/Editor.py" line="1024"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Placer/Supprimer un point d&apos;arret temporaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="729"/>
+        <location filename="QScintilla/Editor.py" line="737"/>
         <source>Show code coverage annotations</source>
         <translation>Afficher les annotations de code coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="732"/>
+        <location filename="QScintilla/Editor.py" line="740"/>
         <source>Hide code coverage annotations</source>
         <translation>Masquer les annotations de code coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1035"/>
+        <location filename="QScintilla/Editor.py" line="1043"/>
         <source>Next uncovered line</source>
         <translation>Ligne non executée suivante</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1038"/>
+        <location filename="QScintilla/Editor.py" line="1046"/>
         <source>Previous uncovered line</source>
         <translation>Ligne non executée précédente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4224"/>
+        <location filename="QScintilla/Editor.py" line="4279"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Afficher les annotations de Code Coverage</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4220"/>
+        <location filename="QScintilla/Editor.py" line="4275"/>
         <source>All lines have been covered.</source>
         <translation>Toutes les lignes ont été executées.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4224"/>
+        <location filename="QScintilla/Editor.py" line="4279"/>
         <source>There is no coverage file available.</source>
         <translation>Impossible de trouver le fichier de coverage.</translation>
     </message>
@@ -7692,7 +7692,7 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; n&apos;st pas un fichier.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="657"/>
+        <location filename="QScintilla/Editor.py" line="665"/>
         <source>New view (with new split)</source>
         <translation>Nouvelle vue dans une nouvelle division</translation>
     </message>
@@ -7702,32 +7702,32 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">&lt;p&gt;La taille du fichier &lt;b&gt;%1&lt;/b&gt; est de &lt;b&gt;%2 KB&lt;/b&gt;. Voulez-vous réellement le charger ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="745"/>
+        <location filename="QScintilla/Editor.py" line="753"/>
         <source>Diagrams</source>
         <translation>Diagrammes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="747"/>
+        <location filename="QScintilla/Editor.py" line="755"/>
         <source>Class Diagram...</source>
         <translation>Diagramme des classes...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="749"/>
+        <location filename="QScintilla/Editor.py" line="757"/>
         <source>Package Diagram...</source>
         <translation>Diagramme des packages...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="751"/>
+        <location filename="QScintilla/Editor.py" line="759"/>
         <source>Imports Diagram...</source>
         <translation>Diagramme des modules...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="754"/>
+        <location filename="QScintilla/Editor.py" line="762"/>
         <source>Application Diagram...</source>
         <translation>Diagramme de l&apos;application...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="768"/>
+        <location filename="QScintilla/Editor.py" line="776"/>
         <source>No Language</source>
         <translation>Pas de langage</translation>
     </message>
@@ -7742,42 +7742,42 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">%1 (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5128"/>
+        <location filename="QScintilla/Editor.py" line="5183"/>
         <source>Resources</source>
         <translation>Ressources</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5130"/>
+        <location filename="QScintilla/Editor.py" line="5185"/>
         <source>Add file...</source>
         <translation>Ajouter un fichier...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5132"/>
+        <location filename="QScintilla/Editor.py" line="5187"/>
         <source>Add files...</source>
         <translation>Ajouter des fichiers...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5134"/>
+        <location filename="QScintilla/Editor.py" line="5189"/>
         <source>Add aliased file...</source>
         <translation>Ajouter un fichier alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5136"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>Add localized resource...</source>
         <translation>Ajouter une ressource localisée...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5157"/>
+        <location filename="QScintilla/Editor.py" line="5212"/>
         <source>Add file resource</source>
         <translation>Ajoute un fichier ressource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5173"/>
+        <location filename="QScintilla/Editor.py" line="5228"/>
         <source>Add file resources</source>
         <translation>Ajoute des fichiers ressources</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5200"/>
+        <location filename="QScintilla/Editor.py" line="5255"/>
         <source>Add aliased file resource</source>
         <translation>Ajoute un alias de fichier ressource</translation>
     </message>
@@ -7787,72 +7787,72 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Alias pour le fichier &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5261"/>
+        <location filename="QScintilla/Editor.py" line="5316"/>
         <source>Package Diagram</source>
         <translation>Diagramme de package</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5261"/>
+        <location filename="QScintilla/Editor.py" line="5316"/>
         <source>Include class attributes?</source>
         <translation>Inclure les attributs de classes ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5290"/>
+        <location filename="QScintilla/Editor.py" line="5345"/>
         <source>Application Diagram</source>
         <translation>Diagramme de l&apos;application</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5290"/>
+        <location filename="QScintilla/Editor.py" line="5345"/>
         <source>Include module names?</source>
         <translation>Inclure les noms de modules ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5139"/>
+        <location filename="QScintilla/Editor.py" line="5194"/>
         <source>Add resource frame</source>
         <translation>Ajouter un cadre ressource</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4767"/>
+        <location filename="QScintilla/Editor.py" line="4822"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>L&apos;enregistrement de macro est déjà actif. En démarrer une nouvelle ?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="689"/>
+        <location filename="QScintilla/Editor.py" line="697"/>
         <source>Autocomplete</source>
         <translation>Autocomplétion</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="695"/>
+        <location filename="QScintilla/Editor.py" line="703"/>
         <source>from Document</source>
         <translation>à partir du document</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="698"/>
+        <location filename="QScintilla/Editor.py" line="706"/>
         <source>from APIs</source>
         <translation>à partir des fichiers API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="701"/>
+        <location filename="QScintilla/Editor.py" line="709"/>
         <source>from Document and APIs</source>
         <translation>à partir du document et des fichiers API</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1042"/>
+        <location filename="QScintilla/Editor.py" line="1050"/>
         <source>Next task</source>
         <translation>Tâche suivante</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1045"/>
+        <location filename="QScintilla/Editor.py" line="1053"/>
         <source>Previous task</source>
         <translation>Tâche précédente</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="858"/>
+        <location filename="QScintilla/Editor.py" line="866"/>
         <source>Export as</source>
         <translation>Exporter en tant que</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1087"/>
+        <location filename="QScintilla/Editor.py" line="1095"/>
         <source>Export source</source>
         <translation>Exportation de source</translation>
     </message>
@@ -7862,77 +7862,77 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">&lt;p&gt;Pas d&apos;exporteur disponible pour le format &lt;b&gt;%1&lt;/b&gt;. Abandon...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1087"/>
+        <location filename="QScintilla/Editor.py" line="1095"/>
         <source>No export format given. Aborting...</source>
         <translation>Aucun format d&apos;exportation indiqué. Abandon...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5278"/>
+        <location filename="QScintilla/Editor.py" line="5333"/>
         <source>Imports Diagram</source>
         <translation>Diagramme des modules</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5278"/>
+        <location filename="QScintilla/Editor.py" line="5333"/>
         <source>Include imports from external modules?</source>
         <translation>Inclure l&apos;importation de modules externes?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="692"/>
+        <location filename="QScintilla/Editor.py" line="700"/>
         <source>dynamic</source>
         <translation>Dynamique</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="705"/>
+        <location filename="QScintilla/Editor.py" line="713"/>
         <source>Calltip</source>
         <translation>Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="672"/>
+        <location filename="QScintilla/Editor.py" line="680"/>
         <source>Print Preview</source>
         <translation>Aperçu avant impression</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="338"/>
+        <location filename="QScintilla/Editor.py" line="339"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fenêtre d&apos;édition&lt;/b&gt;&lt;p&gt;Cette fenêtre est utilisée pour afficher et éditer les codes sources. Vous pouvez en ouvrir autant que vous le souhaitez. Le nom du fichier ouvert est inscrit dans la barre principale.&lt;/p&gt;&lt;p&gt;Vous pouvez définir des points d&apos;arrêt en cliquant sur la marge de gauche, entre les numéros de lignes et les marques de pliage de code. Les points d&apos;arrêt peuvent être édités via le menu contextuel (en cliquant droit sur le point).&lt;/p&gt;&lt;p&gt;De manière similaire, vous pouvez définir des signets avec Shift+Click dans la marge.&lt;/p&gt;&lt;p&gt;Pour ces deux types de points, le menu contextuel (click droit) permet de défaire l&apos;action.&lt;/p&gt;&lt;p&gt;Le Ctrl+Click sur une marque d&apos;erreur de sytaxe permet de visualiser les informations sur l&apos;erreur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="632"/>
+        <location filename="QScintilla/Editor.py" line="640"/>
         <source>Typing aids enabled</source>
         <translation>Aide à la frappe activée</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="827"/>
+        <location filename="QScintilla/Editor.py" line="835"/>
         <source>End-of-Line Type</source>
         <translation>Type de fin de ligne</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="831"/>
+        <location filename="QScintilla/Editor.py" line="839"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="837"/>
+        <location filename="QScintilla/Editor.py" line="845"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="843"/>
+        <location filename="QScintilla/Editor.py" line="851"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="805"/>
+        <location filename="QScintilla/Editor.py" line="813"/>
         <source>Encodings</source>
         <translation>Encodings</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="787"/>
+        <location filename="QScintilla/Editor.py" line="795"/>
         <source>Guessed</source>
         <translation>Suggestion</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1099"/>
+        <location filename="QScintilla/Editor.py" line="1107"/>
         <source>Alternatives</source>
         <translation>Alternatives</translation>
     </message>
@@ -7942,152 +7942,152 @@ avec une sélection rectangulaire.&lt;/li&gt;&lt;/ul&gt;
         <translation type="obsolete">Alternatives (%1)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1114"/>
+        <location filename="QScintilla/Editor.py" line="1122"/>
         <source>Pygments Lexer</source>
         <translation>Analyseur Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1114"/>
+        <location filename="QScintilla/Editor.py" line="1122"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Sélectionne l&apos;analyseur Pygments à appliquer.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5522"/>
+        <location filename="QScintilla/Editor.py" line="5577"/>
         <source>Check spelling...</source>
         <translation>Correction orthographique...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="607"/>
+        <location filename="QScintilla/Editor.py" line="615"/>
         <source>Check spelling of selection...</source>
         <translation>Correction orthographique de la sélection...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5524"/>
+        <location filename="QScintilla/Editor.py" line="5579"/>
         <source>Add to dictionary</source>
         <translation>Ajouter au dictionnaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5526"/>
+        <location filename="QScintilla/Editor.py" line="5581"/>
         <source>Ignore All</source>
         <translation>Tout ignorer</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="611"/>
+        <location filename="QScintilla/Editor.py" line="619"/>
         <source>Remove from dictionary</source>
         <translation>Supprimer du dictionnaire</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="286"/>
+        <location filename="QScintilla/Editor.py" line="287"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1081"/>
+        <location filename="QScintilla/Editor.py" line="1089"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1096"/>
+        <location filename="QScintilla/Editor.py" line="1104"/>
         <source>Alternatives ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2184"/>
+        <location filename="QScintilla/Editor.py" line="2229"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2232"/>
+        <location filename="QScintilla/Editor.py" line="2277"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2330"/>
+        <location filename="QScintilla/Editor.py" line="2378"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4698"/>
+        <location filename="QScintilla/Editor.py" line="4753"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4705"/>
+        <location filename="QScintilla/Editor.py" line="4760"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4756"/>
+        <location filename="QScintilla/Editor.py" line="4811"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4905"/>
+        <location filename="QScintilla/Editor.py" line="4960"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4993"/>
+        <location filename="QScintilla/Editor.py" line="5048"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5110"/>
+        <location filename="QScintilla/Editor.py" line="5165"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5200"/>
+        <location filename="QScintilla/Editor.py" line="5255"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1000"/>
+        <location filename="QScintilla/Editor.py" line="1008"/>
         <source>Next warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1003"/>
+        <location filename="QScintilla/Editor.py" line="1011"/>
         <source>Previous warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1006"/>
+        <location filename="QScintilla/Editor.py" line="1014"/>
         <source>Show warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1009"/>
+        <location filename="QScintilla/Editor.py" line="1017"/>
         <source>Clear warnings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>py3flakes Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4558"/>
+        <location filename="QScintilla/Editor.py" line="4613"/>
         <source>No py3flakes warning message available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2373"/>
+        <location filename="QScintilla/Editor.py" line="2421"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4741"/>
+        <location filename="QScintilla/Editor.py" line="4796"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4601"/>
+        <location filename="QScintilla/Editor.py" line="4656"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4607"/>
+        <location filename="QScintilla/Editor.py" line="4662"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10970,12 +10970,12 @@ et le curseurest placé après la parenthèse fermante</translation>
 <context>
     <name>EricapiConfigDialog</name>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="168"/>
         <source>Select output file</source>
         <translation>Sélectionner un fichier de sortie</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="196"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="199"/>
         <source>Select directory to exclude</source>
         <translation>Sélection des répertoires à exclure</translation>
     </message>
@@ -11080,7 +11080,7 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation>Liste des répertoires à ignorer</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="165"/>
+        <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="168"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>Fichiers API (*.api);;All files (*)</translation>
     </message>
@@ -16716,22 +16716,22 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Aucune différence.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
         <source>Save Diff</source>
         <translation type="unfinished">Enregistrer Diff</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="263"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="266"/>
         <source>Patch Files (*.diff)</source>
         <translation type="unfinished">Fichiers Patch (*.diff)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="280"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="283"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16769,12 +16769,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Sélectionner le champ à filtrer</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="971"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="976"/>
         <source>Revision</source>
         <translation type="unfinished">Révision</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="968"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="973"/>
         <source>Author</source>
         <translation type="unfinished">Auteur</translation>
     </message>
@@ -16919,42 +16919,42 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="104"/>
         <source>Added</source>
         <translation type="unfinished">Ajouté</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="101"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="105"/>
         <source>Deleted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="106"/>
         <source>Modified</source>
         <translation type="unfinished">Modifié</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Erreur du processus</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="394"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="398"/>
         <source>The hg process did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="396"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="400"/>
         <source>Could not start the hg executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="399"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="403"/>
         <source>Mercurial Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16994,7 +16994,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="124"/>
         <source>All</source>
         <translation type="unfinished">Tous</translation>
     </message>
@@ -22105,23 +22105,23 @@ police de l&apos;éditeur.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="351"/>
-        <source>Python Files (*.py2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="353"/>
         <source>Python3 Files (*.py)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="355"/>
-        <source>Python GUI Files (*.pyw2)</source>
+        <location filename="QScintilla/Lexers/__init__.py" line="357"/>
+        <source>Python3 GUI Files (*.pyw)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="357"/>
-        <source>Python3 GUI Files (*.pyw)</source>
+        <location filename="QScintilla/Lexers/__init__.py" line="351"/>
+        <source>Python2 Files (*.py2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="355"/>
+        <source>Python2 GUI Files (*.pyw2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -27214,11 +27214,6 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="202"/>
-        <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="205"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation type="unfinished"></translation>
@@ -27411,6 +27406,11 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
     <message>
         <location filename="Project/Project.py" line="1321"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Project/Project.py" line="202"/>
+        <source>Python2 Files (*.py2);;Python2 GUI Files (*.pyw2);;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -27849,7 +27849,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Détermination des feuilles modifiées...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectFormsBrowser.py" line="850"/>
+        <location filename="Project/ProjectFormsBrowser.py" line="851"/>
         <source>Compiling changed forms...</source>
         <translation>Compilation des feuilles modifiées...</translation>
     </message>
@@ -28431,7 +28431,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Détermination des fichiers ressource modifiés...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectResourcesBrowser.py" line="766"/>
+        <location filename="Project/ProjectResourcesBrowser.py" line="767"/>
         <source>Compiling changed resources...</source>
         <translation>Compilation des fichiers ressource modifiés...</translation>
     </message>
@@ -28469,27 +28469,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>ProjectSourcesBrowser</name>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="63"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="67"/>
         <source>Sources</source>
         <translation>Sources</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="65"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="69"/>
         <source>&lt;b&gt;Project Sources Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all sources contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navigateur de fichiers sources&lt;/b&gt;&lt;p&gt;Permet de voir facilement toutes les sources présentes dans le projet. Plusieurs actions peuvent être effectuées via le menu contextuel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="121"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="125"/>
         <source>Code metrics...</source>
         <translation>Statistiques du code...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="122"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="126"/>
         <source>Code coverage...</source>
         <translation>Code coverage...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="124"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="128"/>
         <source>Profile data...</source>
         <translation>Profiler les données...</translation>
     </message>
@@ -28504,57 +28504,57 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Supprimer le rapport Cyclops</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="262"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="266"/>
         <source>Class Diagram...</source>
         <translation>Diagramme des classes...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="264"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="268"/>
         <source>Package Diagram...</source>
         <translation>Diagramme des packages...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="133"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="137"/>
         <source>Imports Diagram...</source>
         <translation>Diagramme des modules...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="266"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="270"/>
         <source>Application Diagram...</source>
         <translation>Diagramme de l&apos;application...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="333"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>Remove from project</source>
         <translation>Supprimer du projet</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="322"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="326"/>
         <source>Delete</source>
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="261"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="265"/>
         <source>Diagrams</source>
         <translation>Diagrammes</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="117"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="121"/>
         <source>Check</source>
         <translation>Vérification</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="120"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="124"/>
         <source>Show</source>
         <translation>Afficher</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="350"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="354"/>
         <source>Expand all directories</source>
         <translation>Déployer tous les répertoires</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="352"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="356"/>
         <source>Collapse all directories</source>
         <translation>Contracter tous les répertoires</translation>
     </message>
@@ -28564,27 +28564,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Rapport Cyclops</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="270"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="274"/>
         <source>Rename file</source>
         <translation>Renommer le fichier</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="717"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="721"/>
         <source>Code Coverage</source>
         <translation>Code Coverage</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="717"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="721"/>
         <source>Please select a coverage file</source>
         <translation>Sélectionner un fichier coverage</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="770"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Profile Data</source>
         <translation>Profiling des données</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="770"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="774"/>
         <source>Please select a profile file</source>
         <translation>Sélectionner un fichier profile</translation>
     </message>
@@ -28604,62 +28604,62 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Sélectionner un rapport Cyclops à supprimer</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="646"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="650"/>
         <source>Delete files</source>
         <translation>Supprimer les fichiers</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="646"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="650"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Voulez-vous réellement supprimer ces fichiers du projet?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="139"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="143"/>
         <source>Run unittest...</source>
         <translation>Lancer un run test...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="341"/>
         <source>Add source directory...</source>
         <translation>Ajouter un répertoire de sources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="806"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="810"/>
         <source>Class Diagram</source>
         <translation>Diagramme des classes</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="840"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="844"/>
         <source>Include class attributes?</source>
         <translation>Inclure les attributs de classes ?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="840"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="844"/>
         <source>Package Diagram</source>
         <translation>Diagramme des Packages</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="851"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="855"/>
         <source>Application Diagram</source>
         <translation>Diagramme de l&apos;application</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="851"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="855"/>
         <source>Include module names?</source>
         <translation>Inclure les noms de modules ?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="336"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="340"/>
         <source>Add source files...</source>
         <translation>Ajouter des fichiers sources...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="223"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="227"/>
         <source>New package...</source>
         <translation>Nouveau package...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="589"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="593"/>
         <source>Add new Python package</source>
         <translation>Ajoute un nouveau package Python</translation>
     </message>
@@ -28674,32 +28674,32 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de créer le fichier de package &lt;b&gt;%1&lt;/b&gt;. Abandon...&lt;/p&gt;&lt;p&gt;Raison: %2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="823"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="827"/>
         <source>Imports Diagram</source>
         <translation>Diagramme des modules</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="823"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="827"/>
         <source>Include imports from external modules?</source>
         <translation>Inclure l&apos;importation de modules externes?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="355"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="359"/>
         <source>Configure...</source>
         <translation>Configuration...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="232"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="236"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="576"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="580"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="589"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="593"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -38739,7 +38739,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="214"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="233"/>
         <source>No issues found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39138,7 +39138,7 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="148"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="170"/>
         <source>No indentation errors found.</source>
         <translation>Aucune erreur d&apos;indentation trouvée.</translation>
     </message>
@@ -44452,9 +44452,19 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="903"/>
+        <location filename="Utilities/__init__.py" line="956"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vous pouvez utiliser la syntaxe &quot;%-code&quot; dans la chaine de caractères. Les codes supportés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;colonne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;répertoire de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nom de fichier de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;répertoire &apos;home&apos; de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;ligne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;chemin du projet courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texte sélectionné dans l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nom d&apos;utilisateur de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;le signe pourcent&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Utilities/__init__.py" line="1124"/>
+        <source>Python2 interpreter not configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Utilities/__init__.py" line="1150"/>
+        <source>Python2 interpreter did not finish within 30s.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
