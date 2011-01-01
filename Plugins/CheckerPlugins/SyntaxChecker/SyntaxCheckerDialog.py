@@ -170,7 +170,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
                         self.__createResultItem(file, "1", 
-                            "Error: {0}".format(str(msg)).rstrip()[1:-1])
+                            "Error: {0}".format(str(msg)).rstrip()[1:-1], "")
                         progress += 1
                         continue
                 
