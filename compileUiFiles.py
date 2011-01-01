@@ -20,7 +20,8 @@ def compileUiFiles():
     except ImportError:
         from PyQt4.uic import compileUi
         
-        def compileUiDir(dir, recurse = False, map = None, **compileUi_args):
+        def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
+            **compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.

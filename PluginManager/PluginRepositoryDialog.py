@@ -16,6 +16,11 @@ import io
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
+try:
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    SSL_AVAILABLE = True
+except ImportError:
+    SSL_AVAILABLE = False
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog
 
@@ -77,9 +82,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.connect(self.__networkManager, 
             SIGNAL('proxyAuthenticationRequired(const QNetworkProxy&, QAuthenticator*)'),
             self.__proxyAuthenticationRequired)
-        self.connect(self.__networkManager, 
-            SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
-            self.__sslErrors)
+        if SSL_AVAILABLE:
+            self.connect(self.__networkManager, 
+                SIGNAL('sslErrors(QNetworkReply *, const QList<QSslError> &)'), 
+                self.__sslErrors)
         self.__replies = []
         
         self.__doneMethod = None

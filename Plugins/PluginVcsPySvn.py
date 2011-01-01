@@ -72,7 +72,7 @@ def getVcsSystemIndicator():
     global pluginTypename
     data = {}
     try:
-        import pysvn
+        import pysvn        # __IGNORE_WARNING__
         data[".svn"] = (pluginTypename, displayString())
         data["_svn"] = (pluginTypename, displayString())
     except ImportError:
@@ -86,7 +86,7 @@ def displayString():
     @return display string (string)
     """
     try:
-        import pysvn
+        import pysvn        # __IGNORE_WARNING__
         return QApplication.translate('VcsPySvnPlugin', 'Subversion (pysvn)')
     except ImportError:
         return ""
