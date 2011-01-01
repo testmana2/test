@@ -847,16 +847,16 @@ def main(argv):
         print("\nCompiling source files...")
         if distDir:
             compileall.compile_dir(sourceDir, 
-                                   ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
-                                   rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
-                                   quiet = True)
+                ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
+                rx = re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"), 
+                quiet = True)
             py_compile.compile(configName, 
                                dfile = os.path.join(distDir, modDir, "eric5config.py"))
         else:
             compileall.compile_dir(sourceDir, 
-                                   ddir = os.path.join(modDir, cfg['ericDir']), 
-                                   rx = re.compile(r"DebugClients[\\/]Python[\\/]"), 
-                                   quiet = True)
+                ddir = os.path.join(modDir, cfg['ericDir']), 
+                rx = re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"), 
+                quiet = True)
             py_compile.compile(configName, 
                                dfile = os.path.join(modDir, "eric5config.py"))
     print("\nInstalling eric5 ...")
