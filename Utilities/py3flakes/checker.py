@@ -302,7 +302,8 @@ class Checker(object):
     COMPREHENSION = KEYWORD = handleChildren
     
     def addBinding(self, lineno, value, reportRedef = True):
-        '''Called when a binding is altered.
+        '''
+        Called when a binding is altered.
 
         @param lineno line of the statement responsible for the change (integer)
         @param value the optional new value, a Binding instance, associated
