@@ -8,7 +8,6 @@ Module implementing the debug base class.
 """
 
 import sys
-import traceback
 import bdb
 import os
 import types
@@ -25,7 +24,6 @@ def printerr(s):
     
     @param s data to be printed
     """
-    import sys
     sys.__stderr__.write('%s\n' % unicode(s))
     sys.__stderr__.flush()
 

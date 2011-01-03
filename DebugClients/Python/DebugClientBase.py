@@ -16,12 +16,11 @@ import os
 import time
 import imp
 import re
-import distutils.sysconfig
 
 
 from DebugProtocol import *
 import DebugClientCapabilities
-from DebugBase import setRecursionLimit, printerr
+from DebugBase import setRecursionLimit, printerr   # __IGNORE_WARNING__
 from AsyncFile import *
 from DebugConfig import ConfigVarTypeStrings
 from FlexCompleter import Completer
@@ -933,7 +932,7 @@ class DebugClientBase(object):
         @return client capabilities (integer)
         """
         try:
-            import PyProfile
+            import PyProfile    # __IGNORE_WARNING__
             try:
                 del sys.modules['PyProfile']
             except KeyError:
