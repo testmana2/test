@@ -131,7 +131,7 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("Printer"), "preferences-printer.png",
                     "PrinterPage", None, None],
                 "py3flakesPage" : \
-                    [self.trUtf8("Py3Flakes"), "warning.png",
+                    [self.trUtf8("PyFlakes"), "warning.png",
                     "Py3FlakesPage", None, None],
                 "pythonPage" : \
                     [self.trUtf8("Python"), "preferences-python.png",
@@ -430,10 +430,13 @@ class ConfigurationWidget(QWidget):
         """
         self.lexers = {}
         for language in QScintilla.Lexers.getSupportedLanguages():
-            try:
-                self.lexers[language] = PreferencesLexer(language, self)
-            except PreferencesLexerLanguageError:
-                pass
+##            if language in ["Python2", "Python3"]:
+##                language = "Python"
+            if language not in self.lexers:
+                try:
+                    self.lexers[language] = PreferencesLexer(language, self)
+                except PreferencesLexerLanguageError:
+                    pass
         
     def __importConfigurationPage(self, name):
         """

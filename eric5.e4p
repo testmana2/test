@@ -836,6 +836,9 @@
     <Source>Helpviewer/SslCertificatesDialog.py</Source>
     <Source>UtilitiesPython2/__init__.py</Source>
     <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
+    <Source>UtilitiesPython2/py2flakes/__init__.py</Source>
+    <Source>UtilitiesPython2/py2flakes/checker.py</Source>
+    <Source>UtilitiesPython2/py2flakes/messages.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

@@ -1149,6 +1149,8 @@ class Editor(QsciScintillaCompat):
             language = act.data()
             if language:
                 self.setLanguage(self.supportedLanguages[language][1])
+                self.filetype = language
+                self.__autoSyntaxCheck()
         
     def __languageChanged(self, language, propagate = True):
         """
@@ -1166,6 +1168,8 @@ class Editor(QsciScintillaCompat):
             self.setLanguage("dummy.pygments", pyname = pyname)
         else:
             self.setLanguage(self.supportedLanguages[language][1], propagate = propagate)
+            self.filetype = language
+            self.__autoSyntaxCheck()
         
     def __resetLanguage(self, propagate = True):
         """
@@ -1343,8 +1347,23 @@ class Editor(QsciScintillaCompat):
         if self.project.isOpen() and self.project.isProjectFile(filename):
             language = self.project.getEditorLexerAssoc(os.path.basename(filename))
         if not language:
-            filename = os.path.basename(filename)
-            language = Preferences.getEditorLexerAssoc(filename)
+            ext = os.path.splitext(filename)[1]
+            if ext in [".py", ".pyw"]  and \
+               Preferences.getProject("DeterminePyFromProject")and \
+               self.project.isOpen() and \
+               self.project.isProjectFile(self.fileName):
+                if self.project.getProjectLanguage() in ["Python", "Python2"]:
+                    language = "Python2"
+                else:
+                    language = "Python3"
+            else:
+                filename = os.path.basename(filename)
+                language = Preferences.getEditorLexerAssoc(filename)
+                if language == "Python":
+                    if self.isPy2File():
+                        language = "Python2"
+                    else:
+                        language = "Python3"
         if language.startswith("Pygments|"):
             pyname = language.split("|", 1)[1]
             language = ""
@@ -1569,10 +1588,25 @@ class Editor(QsciScintillaCompat):
         
         @return flag indicating a Python file (boolean)
         """
-        return self.filetype in ["Python", "Python2"] or \
-            (self.filetype == "" and \
-             self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python2'))
+        if self.filetype in ["Python", "Python2"]:
+            return True
+        
+        if self.filetype == "" and self.fileName is not None:
+            ext = os.path.splitext(self.fileName)[1]
+            if ext in [".py", ".pyw"] and \
+               Preferences.getProject("DeterminePyFromProject") and \
+               self.project.isOpen() and \
+               self.project.isProjectFile(self.fileName):
+                return self.project.getProjectLanguage() in ["Python", "Python2"]
+            
+            if ext in self.dbs.getExtensions('Python2'):
+                return True
+        
+        return False
+##        return self.filetype in ["Python", "Python2"] or \
+##            (self.filetype == "" and \
+##             self.fileName is not None and \
+##             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python2'))
 
     def isPy3File(self):
         """
@@ -1580,10 +1614,25 @@ class Editor(QsciScintillaCompat):
         
         @return flag indicating a Python3 file (boolean)
         """
-        return self.filetype == "Python3" or \
-            (self.filetype == "" and \
-             self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python3'))
+        if self.filetype in ["Python3"]:
+            return True
+        
+        if self.filetype == "" and self.fileName is not None:
+            ext = os.path.splitext(self.fileName)[1]
+            if ext in [".py", ".pyw"] and \
+               Preferences.getProject("DeterminePyFromProject") and \
+               self.project.isOpen() and \
+               self.project.isProjectFile(self.fileName):
+                return self.project.getProjectLanguage() in ["Python3"]
+            
+            if ext in self.dbs.getExtensions('Python3'):
+                return True
+        
+        return False
+##        return self.filetype == "Python3" or \
+##            (self.filetype == "" and \
+##             self.fileName is not None and \
+##             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python3'))
 
     def isRubyFile(self):
         """
@@ -4174,10 +4223,15 @@ class Editor(QsciScintillaCompat):
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
             elif self.isPy2File():
-                syntaxError, _fn, errorline, _code, _error = \
-                    Utilities.py2compile(self.fileName)
+                syntaxError, _fn, errorline, _code, _error, warnings = \
+                    Utilities.py2compile(
+                        self.fileName, 
+                        checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck"))
                 if syntaxError:
                     self.toggleSyntaxError(int(errorline), True, _error)
+                else:
+                    for warning in warnings:
+                        self.toggleFlakesWarning(int(warning[1]), True, warning[2])
         
     def __showCodeMetrics(self):
         """

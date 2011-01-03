@@ -30,6 +30,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         
+        self.python2DocDirCompleter = E5FileCompleter(self.python2DocDirEdit)
         self.pythonDocDirCompleter = E5FileCompleter(self.pythonDocDirEdit)
         self.qt4DocDirCompleter = E5FileCompleter(self.qt4DocDirEdit)
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
@@ -43,6 +44,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self.pysideGroup.setEnabled(False)
         
         # set initial values
+        self.python2DocDirEdit.setText(
+            Preferences.getHelp("Python2DocDir"))
         self.pythonDocDirEdit.setText(
             Preferences.getHelp("PythonDocDir"))
         self.qt4DocDirEdit.setText(
@@ -56,6 +59,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Public slot to save the Help Documentation configuration.
         """
+        Preferences.setHelp("Python2DocDir",
+            self.python2DocDirEdit.text())
         Preferences.setHelp("PythonDocDir",
             self.pythonDocDirEdit.text())
         Preferences.setHelp("Qt4DocDir",
@@ -66,13 +71,29 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self.pysideDocDirEdit.text())
         
     @pyqtSlot()
-    def on_pythonDocDirButton_clicked(self):
+    def on_python2DocDirButton_clicked(self):
         """
-        Private slot to select the Python documentation directory.
+        Private slot to select the Python 2 documentation directory.
         """
         entry = QFileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python documentation entry"),
+            self.trUtf8("Select Python 2 documentation entry"),
+            QUrl(self.python2DocDirEdit.text()).path(),
+            self.trUtf8("HTML Files (*.html *.htm);;"
+                "Compressed Help Files (*.chm);;"
+                "All Files (*)"))
+        
+        if entry:
+            self.python2DocDirEdit.setText(Utilities.toNativeSeparators(entry))
+        
+    @pyqtSlot()
+    def on_pythonDocDirButton_clicked(self):
+        """
+        Private slot to select the Python 3 documentation directory.
+        """
+        entry = QFileDialog.getOpenFileName(
+            self,
+            self.trUtf8("Select Python 3 documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
             self.trUtf8("HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"

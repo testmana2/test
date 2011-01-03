@@ -76,15 +76,21 @@ QsciLexerPython, Lexer
 </tr><tr>
 <td><a href="#LexerPython.isStringStyle">isStringStyle</a></td>
 <td>Public method to check, if a style is a string style.</td>
+</tr><tr>
+<td><a href="#LexerPython.language">language</a></td>
+<td>Public method to get the lexer language.</td>
 </tr>
 </table>
 <a NAME="LexerPython.__init__" ID="LexerPython.__init__"></a>
 <h4>LexerPython (Constructor)</h4>
-<b>LexerPython</b>(<i>parent=None</i>)
+<b>LexerPython</b>(<i>variant = "", parent = None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>variant</i></dt>
+<dd>
+name of the language variant (string)
+</dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this lexer
 </dd>
@@ -156,7 +162,12 @@ flag indicating a comment style (boolean)
 <dd>
 flag indicating a string style (boolean)
 </dd>
-</dl>
+</dl><a NAME="LexerPython.language" ID="LexerPython.language"></a>
+<h4>LexerPython.language</h4>
+<b>language</b>(<i></i>)
+<p>
+        Public method to get the lexer language.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

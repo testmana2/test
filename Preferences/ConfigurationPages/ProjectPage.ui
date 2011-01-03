@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>602</width>
-    <height>624</height>
+    <height>623</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -187,6 +187,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Python Variant</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="pythonVariantCheckBox">
+        <property name="toolTip">
+         <string>Select to determine the Python variant from the project language</string>
+        </property>
+        <property name="text">
+         <string>Determine Python variant from project language</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_7">
      <property name="title">
       <string>Recent Projects</string>
@@ -258,6 +277,7 @@
   <tabstop>projectSessionAllBpCheckBox</tabstop>
   <tabstop>projectAutoCompileFormsCheckBox</tabstop>
   <tabstop>projectAutoCompileResourcesCheckBox</tabstop>
+  <tabstop>pythonVariantCheckBox</tabstop>
   <tabstop>projectRecentSpinBox</tabstop>
  </tabstops>
  <resources/>

@@ -1674,9 +1674,9 @@ class UserInterface(QMainWindow):
         self.actions.append(self.helpviewerAct)
         
         self.__initQtDocActions()
-        self.__initPythonDocAction()
+        self.__initPythonDocActions()
         self.__initEricDocAction()
-        self.__initPySideDocActions()
+        self.__initPySideDocAction()
       
         self.versionAct = E5Action(self.trUtf8('Show Versions'),
                 self.trUtf8('Show &Versions'), 0, 0, self, 'show_versions')
@@ -2127,7 +2127,7 @@ class UserInterface(QMainWindow):
     
     def __initQtDocActions(self):
         """
-        Private slot to initilize the action to show the Qt documentation.
+        Private slot to initialize the action to show the Qt documentation.
         """
         self.qt4DocAct = E5Action(self.trUtf8('Qt4 Documentation'),
                 self.trUtf8('Qt&4 Documentation'), 0, 0, self, 'qt4_documentation')
@@ -2153,24 +2153,41 @@ class UserInterface(QMainWindow):
         self.pyqt4DocAct.triggered[()].connect(self.__showPyQt4Doc)
         self.actions.append(self.pyqt4DocAct)
         
-    def __initPythonDocAction(self):
+    def __initPythonDocActions(self):
         """
-        Private slot to initilize the action to show the Python documentation.
+        Private slot to initialize the actions to show the Python documentation.
         """
-        self.pythonDocAct = E5Action(self.trUtf8('Python Documentation'),
-            self.trUtf8('&Python Documentation'), 0, 0, self, 'python_documentation')
-        self.pythonDocAct.setStatusTip(self.trUtf8('Open Python Documentation'))
+        self.pythonDocAct = E5Action(self.trUtf8('Python 3 Documentation'),
+            self.trUtf8('Python &3 Documentation'), 0, 0, self, 'python3_documentation')
+        self.pythonDocAct.setStatusTip(self.trUtf8('Open Python 3 Documentation'))
         self.pythonDocAct.setWhatsThis(self.trUtf8(
-                """<b>Python Documentation</b>"""
-                """<p>Display the python documentation."""
+                """<b>Python 3 Documentation</b>"""
+                """<p>Display the Python 3 documentation."""
                 """ If no documentation directory is configured,"""
-                """ the location of the python documentation is assumed to be the doc"""
-                """ directory underneath the location of the python executable on"""
+                """ the location of the Python 3 documentation is assumed to be the doc"""
+                """ directory underneath the location of the Python 3 executable on"""
                 """ Windows and <i>/usr/share/doc/packages/python/html</i> on Unix."""
-                """ Set PYTHONDOCDIR in your environment to override this. </p>"""
+                """ Set PYTHON3DOCDIR in your environment to override this. </p>"""
         ))
         self.pythonDocAct.triggered[()].connect(self.__showPythonDoc)
         self.actions.append(self.pythonDocAct)
+        
+        self.python2DocAct = E5Action(self.trUtf8('Python 2 Documentation'),
+            self.trUtf8('Python &2 Documentation'), 0, 0, self, 'python2_documentation')
+        self.python2DocAct.setStatusTip(self.trUtf8('Open Python 2 Documentation'))
+        self.python2DocAct.setWhatsThis(self.trUtf8(
+                """<b>Python 2 Documentation</b>"""
+                """<p>Display the Python 2 documentation."""
+                """ If no documentation directory is configured,"""
+                """ the location of the Python 2 documentation is assumed to be the doc"""
+                """ directory underneath the location of the configured Python 2"""
+                """ executable on Windows and"""
+                """ <i>/usr/share/doc/packages/python/html/python-docs-html</i>"""
+                """ on Unix. Set PYTHON2DOCDIR in your environment to override"""
+                """ this. </p>"""
+        ))
+        self.python2DocAct.triggered[()].connect(self.__showPython2Doc)
+        self.actions.append(self.python2DocAct)
         
     def __initEricDocAction(self):
         """
@@ -2188,9 +2205,9 @@ class UserInterface(QMainWindow):
         self.ericDocAct.triggered[()].connect(self.__showEricDoc)
         self.actions.append(self.ericDocAct)
         
-    def __initPySideDocActions(self):
+    def __initPySideDocAction(self):
         """
-        Private slot to initilize the action to show the PySide documentation.
+        Private slot to initialize the action to show the PySide documentation.
         """
         try:
             import PySide
@@ -2324,6 +2341,7 @@ class UserInterface(QMainWindow):
         self.__menus["help"].addSeparator()
         self.__menus["help"].addAction(self.ericDocAct)
         self.__menus["help"].addAction(self.pythonDocAct)
+        self.__menus["help"].addAction(self.python2DocAct)
         self.__menus["help"].addAction(self.qt4DocAct)
         self.__menus["help"].addAction(self.pyqt4DocAct)
         if self.pysideDocAct is not None:
@@ -4481,15 +4499,15 @@ class UserInterface(QMainWindow):
     
     def __showPythonDoc(self):
         """
-        Private slot to show the Python documentation.
+        Private slot to show the Python 3 documentation.
         """
         pythonDocDir = Preferences.getHelp("PythonDocDir")
         if not pythonDocDir:
             if Utilities.isWindowsPlatform():
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHONDOCDIR", 
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
                     os.path.join(os.path.dirname(sys.executable), "doc"))
             else:
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHONDOCDIR", 
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
                     '/usr/share/doc/packages/python/html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
@@ -4502,6 +4520,60 @@ class UserInterface(QMainWindow):
                     pyversion = sys.hexversion >> 16
                     vers = "{0:d}{1:d}".format((pyversion >> 8) & 0xff, pyversion & 0xff)
                     home = os.path.join(pythonDocDir, "python{0}.chm".format(vers))
+            else:
+                home = pythonDocDir
+            
+            if not os.path.exists(home):
+                E5MessageBox.warning(self,
+                    self.trUtf8("Documentation Missing"),
+                    self.trUtf8("""<p>The documentation starting point"""
+                                """ "<b>{0}</b>" could not be found.</p>""")\
+                        .format(home))
+                return
+            
+            if not home.endswith(".chm"):
+                if Utilities.isWindowsPlatform():
+                    home = "file:///" + Utilities.fromNativeSeparators(home)
+                else:
+                    home = "file://" + home
+        else:
+            home = pythonDocDir
+        
+        if home.endswith(".chm"):
+            self.__chmViewer(home)
+        else:
+            hvType = Preferences.getHelp("HelpViewerType")
+            if hvType == 1:
+                self.launchHelpViewer(home)
+            elif hvType == 2:
+                self.__assistant(home, version = 4)
+            elif hvType == 3:
+                self.__webBrowser(home)
+            else:
+                self.__customViewer(home)
+
+    def __showPython2Doc(self):
+        """
+        Private slot to show the Python 2 documentation.
+        """
+        pythonDocDir = Preferences.getHelp("Python2DocDir")
+        executable = Preferences.getDebugger("PythonInterpreter")
+        if not pythonDocDir:
+            if Utilities.isWindowsPlatform():
+                if executable:
+                    default = os.path.join(os.path.dirname(executable), "doc")
+                else:
+                    default = ""
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR", default)
+            else:
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
+                    '/usr/share/doc/packages/python/html/python-docs-html')
+        if not pythonDocDir.startswith("http://") and \
+           not pythonDocDir.startswith("https://"):
+            if pythonDocDir.startswith("file://"):
+                pythonDocDir = pythonDocDir[7:]
+            if not os.path.splitext(pythonDocDir)[1]:
+                home = Utilities.normjoinpath(pythonDocDir, 'index.html')
             else:
                 home = pythonDocDir
             

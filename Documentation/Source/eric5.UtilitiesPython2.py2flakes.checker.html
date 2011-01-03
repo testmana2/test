@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Utilities.py3flakes.checker</title>
+<title>eric5.UtilitiesPython2.py2flakes.checker</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,7 +20,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Utilities.py3flakes.checker</h1>
+<h1>eric5.UtilitiesPython2.py2flakes.checker</h1>
 
 <h3>Global Attributes</h3>
 <table>
@@ -117,7 +117,7 @@ Binding
     Represents the binding of a value to a name.
 </p><p>
     The checker uses this to keep track of which names have been bound and
-    which names have not. See Assignment for a special type of binding that
+    which names have not. See L{Assignment} for a special type of binding that
     is checked with stricter rules.
 </p>
 <h3>Derived from</h3>
@@ -160,7 +160,7 @@ object
 object
 <h3>Class Attributes</h3>
 <table>
-<tr><td>ATTRIBUTES</td></tr><tr><td>BOOLOP</td></tr><tr><td>CALL</td></tr><tr><td>COMPREHENSION</td></tr><tr><td>INVERT</td></tr><tr><td>ISNOT</td></tr><tr><td>LOAD</td></tr><tr><td>MOD</td></tr><tr><td>NONLOCAL</td></tr><tr><td>PASS</td></tr><tr><td>RETURN</td></tr><tr><td>SETCOMP</td></tr><tr><td>SLICE</td></tr><tr><td>nodeDepth</td></tr><tr><td>scope</td></tr><tr><td>traceTree</td></tr>
+<tr><td>ASSLIST</td></tr><tr><td>AUGASSIGN</td></tr><tr><td>CONST</td></tr><tr><td>FLOORDIV</td></tr><tr><td>GENEXPRINNER</td></tr><tr><td>IFEXP</td></tr><tr><td>RETURN</td></tr><tr><td>RIGHTSHIFT</td></tr><tr><td>STMT</td></tr><tr><td>SUBSCRIPT</td></tr><tr><td>nodeDepth</td></tr><tr><td>scope</td></tr><tr><td>traceTree</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -171,31 +171,25 @@ object
 <td><a href="#Checker.ASSIGN">ASSIGN</a></td>
 <td></td>
 </tr><tr>
-<td><a href="#Checker.AUGASSIGN">AUGASSIGN</a></td>
+<td><a href="#Checker.ASSNAME">ASSNAME</a></td>
 <td></td>
 </tr><tr>
-<td><a href="#Checker.CLASSDEF">CLASSDEF</a></td>
+<td><a href="#Checker.CLASS">CLASS</a></td>
 <td>Check names used in a class definition, including its decorators, base classes, and the body of its definition.</td>
-</tr><tr>
-<td><a href="#Checker.DICTCOMP">DICTCOMP</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Checker.EXCEPTHANDLER">EXCEPTHANDLER</a></td>
-<td></td>
 </tr><tr>
 <td><a href="#Checker.FOR">FOR</a></td>
 <td>Process bindings for loop variables.</td>
 </tr><tr>
-<td><a href="#Checker.FUNCTIONDEF">FUNCTIONDEF</a></td>
+<td><a href="#Checker.FROM">FROM</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.FUNCTION">FUNCTION</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.GLOBAL">GLOBAL</a></td>
 <td>Keep track of globals declarations.</td>
 </tr><tr>
 <td><a href="#Checker.IMPORT">IMPORT</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Checker.IMPORTFROM">IMPORTFROM</a></td>
 <td></td>
 </tr><tr>
 <td><a href="#Checker.LAMBDA">LAMBDA</a></td>
@@ -205,13 +199,13 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#Checker.NAME">NAME</a></td>
-<td>Handle occurrence of Name (which can be a load/store/delete access.)</td>
+<td>Locate the name in locals / function / globals scopes.</td>
 </tr><tr>
-<td><a href="#Checker.STARRED">STARRED</a></td>
-<td></td>
+<td><a href="#Checker.WITH">WITH</a></td>
+<td>Handle 'with' by checking the target of the statement (which can be an identifier, a list or tuple of targets, an attribute, etc) for undefined names and defining any it adds to the scope and by continuing to process the suite within the statement.</td>
 </tr><tr>
 <td><a href="#Checker._runDeferred">_runDeferred</a></td>
-<td>Run the callables in deferred using their associated scope stack.</td>
+<td>Run the callables in C{deferred} using their associated scope stack.</td>
 </tr><tr>
 <td><a href="#Checker.addArgs">addArgs</a></td>
 <td></td>
@@ -234,12 +228,6 @@ object
 <td><a href="#Checker.deferFunction">deferFunction</a></td>
 <td>Schedule a function handler to be called just before completion.</td>
 </tr><tr>
-<td><a href="#Checker.handleAssignName">handleAssignName</a></td>
-<td></td>
-</tr><tr>
-<td><a href="#Checker.handleBody">handleBody</a></td>
-<td></td>
-</tr><tr>
 <td><a href="#Checker.handleChildren">handleChildren</a></td>
 <td></td>
 </tr><tr>
@@ -248,9 +236,6 @@ object
 </tr><tr>
 <td><a href="#Checker.ignore">ignore</a></td>
 <td></td>
-</tr><tr>
-<td><a href="#Checker.isDocstring">isDocstring</a></td>
-<td>Determine if the given node is a docstring, as long as it is at the correct place in the node tree.</td>
 </tr><tr>
 <td><a href="#Checker.popScope">popScope</a></td>
 <td></td>
@@ -273,7 +258,7 @@ object
 </table>
 <a NAME="Checker.__init__" ID="Checker.__init__"></a>
 <h4>Checker (Constructor)</h4>
-<b>Checker</b>(<i>module, filename = '(none)'</i>)
+<b>Checker</b>(<i>module, filename='(none)'</i>)
 <p>
         Constructor
 </p><dl>
@@ -287,30 +272,27 @@ name of the module file (string)
 </dl><a NAME="Checker.ASSIGN" ID="Checker.ASSIGN"></a>
 <h4>Checker.ASSIGN</h4>
 <b>ASSIGN</b>(<i>node</i>)
-<a NAME="Checker.AUGASSIGN" ID="Checker.AUGASSIGN"></a>
-<h4>Checker.AUGASSIGN</h4>
-<b>AUGASSIGN</b>(<i>node</i>)
-<a NAME="Checker.CLASSDEF" ID="Checker.CLASSDEF"></a>
-<h4>Checker.CLASSDEF</h4>
-<b>CLASSDEF</b>(<i>node</i>)
+<a NAME="Checker.ASSNAME" ID="Checker.ASSNAME"></a>
+<h4>Checker.ASSNAME</h4>
+<b>ASSNAME</b>(<i>node</i>)
+<a NAME="Checker.CLASS" ID="Checker.CLASS"></a>
+<h4>Checker.CLASS</h4>
+<b>CLASS</b>(<i>node</i>)
 <p>
         Check names used in a class definition, including its decorators, base
         classes, and the body of its definition.  Additionally, add its name to
         the current scope.
-</p><a NAME="Checker.DICTCOMP" ID="Checker.DICTCOMP"></a>
-<h4>Checker.DICTCOMP</h4>
-<b>DICTCOMP</b>(<i>node</i>)
-<a NAME="Checker.EXCEPTHANDLER" ID="Checker.EXCEPTHANDLER"></a>
-<h4>Checker.EXCEPTHANDLER</h4>
-<b>EXCEPTHANDLER</b>(<i>node</i>)
-<a NAME="Checker.FOR" ID="Checker.FOR"></a>
+</p><a NAME="Checker.FOR" ID="Checker.FOR"></a>
 <h4>Checker.FOR</h4>
 <b>FOR</b>(<i>node</i>)
 <p>
         Process bindings for loop variables.
-</p><a NAME="Checker.FUNCTIONDEF" ID="Checker.FUNCTIONDEF"></a>
-<h4>Checker.FUNCTIONDEF</h4>
-<b>FUNCTIONDEF</b>(<i>node</i>)
+</p><a NAME="Checker.FROM" ID="Checker.FROM"></a>
+<h4>Checker.FROM</h4>
+<b>FROM</b>(<i>node</i>)
+<a NAME="Checker.FUNCTION" ID="Checker.FUNCTION"></a>
+<h4>Checker.FUNCTION</h4>
+<b>FUNCTION</b>(<i>node</i>)
 <a NAME="Checker.GLOBAL" ID="Checker.GLOBAL"></a>
 <h4>Checker.GLOBAL</h4>
 <b>GLOBAL</b>(<i>node</i>)
@@ -319,9 +301,6 @@ name of the module file (string)
 </p><a NAME="Checker.IMPORT" ID="Checker.IMPORT"></a>
 <h4>Checker.IMPORT</h4>
 <b>IMPORT</b>(<i>node</i>)
-<a NAME="Checker.IMPORTFROM" ID="Checker.IMPORTFROM"></a>
-<h4>Checker.IMPORTFROM</h4>
-<b>IMPORTFROM</b>(<i>node</i>)
 <a NAME="Checker.LAMBDA" ID="Checker.LAMBDA"></a>
 <h4>Checker.LAMBDA</h4>
 <b>LAMBDA</b>(<i>node</i>)
@@ -332,21 +311,26 @@ name of the module file (string)
 <h4>Checker.NAME</h4>
 <b>NAME</b>(<i>node</i>)
 <p>
-        Handle occurrence of Name (which can be a load/store/delete access.)
-</p><a NAME="Checker.STARRED" ID="Checker.STARRED"></a>
-<h4>Checker.STARRED</h4>
-<b>STARRED</b>(<i>node</i>)
-<a NAME="Checker._runDeferred" ID="Checker._runDeferred"></a>
+        Locate the name in locals / function / globals scopes.
+</p><a NAME="Checker.WITH" ID="Checker.WITH"></a>
+<h4>Checker.WITH</h4>
+<b>WITH</b>(<i>node</i>)
+<p>
+        Handle 'with' by checking the target of the statement (which can be an
+        identifier, a list or tuple of targets, an attribute, etc) for
+        undefined names and defining any it adds to the scope and by continuing
+        to process the suite within the statement.
+</p><a NAME="Checker._runDeferred" ID="Checker._runDeferred"></a>
 <h4>Checker._runDeferred</h4>
 <b>_runDeferred</b>(<i>deferred</i>)
 <p>
-        Run the callables in deferred using their associated scope stack.
+        Run the callables in C{deferred} using their associated scope stack.
 </p><a NAME="Checker.addArgs" ID="Checker.addArgs"></a>
 <h4>Checker.addArgs</h4>
 <b>addArgs</b>(<i></i>)
 <a NAME="Checker.addBinding" ID="Checker.addBinding"></a>
 <h4>Checker.addBinding</h4>
-<b>addBinding</b>(<i>lineno, value, reportRedef = True</i>)
+<b>addBinding</b>(<i>lineno, value, reportRedef=True</i>)
 <p>
         Called when a binding is altered.
 </p><dl>
@@ -392,13 +376,7 @@ flag indicating if rebinding while unused will be
         because code later in the file might modify the global scope. When
         `callable` is called, the scope at the time this is called will be
         restored, however it will contain any new bindings added to it.
-</p><a NAME="Checker.handleAssignName" ID="Checker.handleAssignName"></a>
-<h4>Checker.handleAssignName</h4>
-<b>handleAssignName</b>(<i>node</i>)
-<a NAME="Checker.handleBody" ID="Checker.handleBody"></a>
-<h4>Checker.handleBody</h4>
-<b>handleBody</b>(<i>tree</i>)
-<a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
+</p><a NAME="Checker.handleChildren" ID="Checker.handleChildren"></a>
 <h4>Checker.handleChildren</h4>
 <b>handleChildren</b>(<i>tree</i>)
 <a NAME="Checker.handleNode" ID="Checker.handleNode"></a>
@@ -407,13 +385,7 @@ flag indicating if rebinding while unused will be
 <a NAME="Checker.ignore" ID="Checker.ignore"></a>
 <h4>Checker.ignore</h4>
 <b>ignore</b>(<i>node</i>)
-<a NAME="Checker.isDocstring" ID="Checker.isDocstring"></a>
-<h4>Checker.isDocstring</h4>
-<b>isDocstring</b>(<i>node</i>)
-<p>
-        Determine if the given node is a docstring, as long as it is at the
-        correct place in the node tree.
-</p><a NAME="Checker.popScope" ID="Checker.popScope"></a>
+<a NAME="Checker.popScope" ID="Checker.popScope"></a>
 <h4>Checker.popScope</h4>
 <b>popScope</b>(<i></i>)
 <a NAME="Checker.pushClassScope" ID="Checker.pushClassScope"></a>

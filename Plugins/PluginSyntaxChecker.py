@@ -141,7 +141,8 @@ class SyntaxCheckerPlugin(QObject):
         """
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
-                e5App().getObject("Project").getProjectLanguage() == "Python3")
+                e5App().getObject("Project").getProjectLanguage() in \
+                    ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -152,7 +153,8 @@ class SyntaxCheckerPlugin(QObject):
         @param menu reference to the menu (QMenu)
         """
         if menuName == "Checks" and \
-           e5App().getObject("Project").getProjectLanguage() == "Python3":
+           e5App().getObject("Project").getProjectLanguage() in \
+                ["Python3", "Python2", "Python"]:
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(self.trUtf8('Check Syntax'),
@@ -176,7 +178,8 @@ class SyntaxCheckerPlugin(QObject):
         ppath = project.getProjectPath()
         files = [os.path.join(ppath, file) \
             for file in project.pdata["SOURCES"] \
-                if file.endswith(tuple(Preferences.getPython("Python3Extensions")))]
+                if file.endswith(tuple(Preferences.getPython("Python3Extensions")) +
+                                 tuple(Preferences.getPython("PythonExtensions")))]
         
         self.__projectSyntaxCheckerDialog = SyntaxCheckerDialog()
         self.__projectSyntaxCheckerDialog.show()
@@ -233,7 +236,7 @@ class SyntaxCheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.isPy3File())
+            self.__editorAct.setEnabled(editor.isPy3File() or editor.isPy2File())
     
     def __editorSyntaxCheck(self):
         """

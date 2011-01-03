@@ -220,7 +220,7 @@ class Shell(QsciScintillaCompat):
         for key in list(self.historyLists.keys()):
             self.saveHistory(key)
         
-    def __bindLexer(self, language = 'Python'):
+    def __bindLexer(self, language = 'Python3'):
         """
         Private slot to set the lexer.
         

@@ -1232,21 +1232,27 @@ encoded password (string)
 <hr /><hr />
 <a NAME="py2compile" ID="py2compile"></a>
 <h2>py2compile</h2>
-<b>py2compile</b>(<i>file</i>)
+<b>py2compile</b>(<i>file, checkFlakes = False</i>)
 <p>
     Function to compile one Python 2 source file to Python 2 bytecode.
 </p><dl>
 <dt><i>file</i></dt>
 <dd>
 source filename (string)
+</dd><dt><i>checkFlakes=</i></dt>
+<dd>
+flag indicating to do a pyflakes check (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 A tuple indicating status (True = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only
-        valid, if the status is True.
+        file name, the line number, the code string, the error message
+        and a list of tuples of pyflakes warnings indicating file name,
+        line number and message (boolean, string, string, string, string, 
+        list of (string, string, string)). The syntax error values are only
+        valid, if the status is True. The pyflakes list will be empty, if a
+        syntax error was detected by the syntax checker.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

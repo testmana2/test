@@ -49,6 +49,8 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
             Preferences.getProject("XMLTimestamp"))
         self.projectRecentSpinBox.setValue(
             Preferences.getProject("RecentNumber"))
+        self.pythonVariantCheckBox.setChecked(
+            Preferences.getProject("DeterminePyFromProject"))
         
     def save(self):
         """
@@ -78,6 +80,8 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
             self.projectTimestampCheckBox.isChecked())
         Preferences.setProject("RecentNumber", 
             self.projectRecentSpinBox.value())
+        Preferences.setProject("DeterminePyFromProject",
+            self.pythonVariantCheckBox.isChecked())
     
 def create(dlg):
     """

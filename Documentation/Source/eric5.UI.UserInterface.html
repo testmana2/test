@@ -319,14 +319,14 @@ QMainWindow
 <td><a href="#UserInterface.__initMenus">__initMenus</a></td>
 <td>Private slot to create the menus.</td>
 </tr><tr>
-<td><a href="#UserInterface.__initPySideDocActions">__initPySideDocActions</a></td>
-<td>Private slot to initilize the action to show the PySide documentation.</td>
+<td><a href="#UserInterface.__initPySideDocAction">__initPySideDocAction</a></td>
+<td>Private slot to initialize the action to show the PySide documentation.</td>
 </tr><tr>
-<td><a href="#UserInterface.__initPythonDocAction">__initPythonDocAction</a></td>
-<td>Private slot to initilize the action to show the Python documentation.</td>
+<td><a href="#UserInterface.__initPythonDocActions">__initPythonDocActions</a></td>
+<td>Private slot to initialize the actions to show the Python documentation.</td>
 </tr><tr>
 <td><a href="#UserInterface.__initQtDocActions">__initQtDocActions</a></td>
-<td>Private slot to initilize the action to show the Qt documentation.</td>
+<td>Private slot to initialize the action to show the Qt documentation.</td>
 </tr><tr>
 <td><a href="#UserInterface.__initStatusbar">__initStatusbar</a></td>
 <td>Private slot to set up the status bar.</td>
@@ -454,8 +454,11 @@ QMainWindow
 <td><a href="#UserInterface.__showPySideDoc">__showPySideDoc</a></td>
 <td>Private slot to show the PySide documentation.</td>
 </tr><tr>
+<td><a href="#UserInterface.__showPython2Doc">__showPython2Doc</a></td>
+<td>Private slot to show the Python 2 documentation.</td>
+</tr><tr>
 <td><a href="#UserInterface.__showPythonDoc">__showPythonDoc</a></td>
-<td>Private slot to show the Python documentation.</td>
+<td>Private slot to show the Python 3 documentation.</td>
 </tr><tr>
 <td><a href="#UserInterface.__showQt4Doc">__showQt4Doc</a></td>
 <td>Private slot to show the Qt4 documentation.</td>
@@ -1100,21 +1103,21 @@ list giving the widget's geometry and it's visibility
 <b>__initMenus</b>(<i></i>)
 <p>
         Private slot to create the menus.
-</p><a NAME="UserInterface.__initPySideDocActions" ID="UserInterface.__initPySideDocActions"></a>
-<h4>UserInterface.__initPySideDocActions</h4>
-<b>__initPySideDocActions</b>(<i></i>)
+</p><a NAME="UserInterface.__initPySideDocAction" ID="UserInterface.__initPySideDocAction"></a>
+<h4>UserInterface.__initPySideDocAction</h4>
+<b>__initPySideDocAction</b>(<i></i>)
 <p>
-        Private slot to initilize the action to show the PySide documentation.
-</p><a NAME="UserInterface.__initPythonDocAction" ID="UserInterface.__initPythonDocAction"></a>
-<h4>UserInterface.__initPythonDocAction</h4>
-<b>__initPythonDocAction</b>(<i></i>)
+        Private slot to initialize the action to show the PySide documentation.
+</p><a NAME="UserInterface.__initPythonDocActions" ID="UserInterface.__initPythonDocActions"></a>
+<h4>UserInterface.__initPythonDocActions</h4>
+<b>__initPythonDocActions</b>(<i></i>)
 <p>
-        Private slot to initilize the action to show the Python documentation.
+        Private slot to initialize the actions to show the Python documentation.
 </p><a NAME="UserInterface.__initQtDocActions" ID="UserInterface.__initQtDocActions"></a>
 <h4>UserInterface.__initQtDocActions</h4>
 <b>__initQtDocActions</b>(<i></i>)
 <p>
-        Private slot to initilize the action to show the Qt documentation.
+        Private slot to initialize the action to show the Qt documentation.
 </p><a NAME="UserInterface.__initStatusbar" ID="UserInterface.__initStatusbar"></a>
 <h4>UserInterface.__initStatusbar</h4>
 <b>__initStatusbar</b>(<i></i>)
@@ -1413,11 +1416,16 @@ filename of the file to show (string)
 <b>__showPySideDoc</b>(<i></i>)
 <p>
         Private slot to show the PySide documentation.
+</p><a NAME="UserInterface.__showPython2Doc" ID="UserInterface.__showPython2Doc"></a>
+<h4>UserInterface.__showPython2Doc</h4>
+<b>__showPython2Doc</b>(<i></i>)
+<p>
+        Private slot to show the Python 2 documentation.
 </p><a NAME="UserInterface.__showPythonDoc" ID="UserInterface.__showPythonDoc"></a>
 <h4>UserInterface.__showPythonDoc</h4>
 <b>__showPythonDoc</b>(<i></i>)
 <p>
-        Private slot to show the Python documentation.
+        Private slot to show the Python 3 documentation.
 </p><a NAME="UserInterface.__showQt4Doc" ID="UserInterface.__showQt4Doc"></a>
 <h4>UserInterface.__showQt4Doc</h4>
 <b>__showQt4Doc</b>(<i></i>)

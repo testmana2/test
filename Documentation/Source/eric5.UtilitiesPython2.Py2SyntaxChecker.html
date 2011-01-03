@@ -41,6 +41,9 @@ Module implementing the syntax check for Python 2.
 <td><a href="#decode">decode</a></td>
 <td>Function to decode a text.</td>
 </tr><tr>
+<td><a href="#flakesCheck">flakesCheck</a></td>
+<td>Function to perform a pyflakes check.</td>
+</tr><tr>
 <td><a href="#get_coding">get_coding</a></td>
 <td>Function to get the coding of a text.</td>
 </tr>
@@ -60,9 +63,10 @@ source filename (string)
 <dt>Returns:</dt>
 <dd>
 A tuple indicating status (1 = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only
-        valid, if the status equals 1.
+        filename, the linenumber, the code string, the error message
+        and the full source code (boolean, string, string, string, 
+        string, string). The values are only valid, if the status 
+        equals 1.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -81,6 +85,32 @@ text to decode (string)
 <dt>Returns:</dt>
 <dd>
 decoded text and encoding
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="flakesCheck" ID="flakesCheck"></a>
+<h2>flakesCheck</h2>
+<b>flakesCheck</b>(<i>fileName, codestring, ignoreStarImportWarnings</i>)
+<p>
+    Function to perform a pyflakes check.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+source code to be checked (string)
+</dd><dt><i>ignoreStarImportWarnings</i></dt>
+<dd>
+flag indicating to
+        ignore 'star import' warnings (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of strings containing the warnings
+        (marker, file name, line number, message)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

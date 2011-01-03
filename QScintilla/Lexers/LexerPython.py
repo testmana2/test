@@ -18,17 +18,28 @@ class LexerPython(QsciLexerPython, Lexer):
     """ 
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent=None):
+    def __init__(self, variant = "", parent = None):
         """
         Constructor
         
+        @param variant name of the language variant (string)
         @param parent parent widget of this lexer
         """
         QsciLexerPython.__init__(self, parent)
         Lexer.__init__(self)
         
+        self.variant = variant
         self.commentString = "#"
-
+    
+    def language(self):
+        """
+        Public method to get the lexer language.
+        """
+        if not self.variant:
+            return QsciLexerPython.language(self)
+        else:
+            return self.variant
+    
     def initProperties(self):
         """
         Public slot to initialize the properties.

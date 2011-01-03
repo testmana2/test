@@ -88,7 +88,8 @@ def getSupportedLanguages():
         "PostScript" : [QApplication.translate('Lexers', "PostScript"),   'dummy.ps'], 
         "Povray"     : [QApplication.translate('Lexers', "Povray"),       'dummy.pov'],
         "Properties" : [QApplication.translate('Lexers', "Properties"),   'dummy.ini'],
-        "Python"     : [QApplication.translate('Lexers', "Python"),       'dummy.py'], 
+        "Python2"    : [QApplication.translate('Lexers', "Python2"),      'dummy.py'], 
+        "Python3"    : [QApplication.translate('Lexers', "Python3"),      'dummy.py'], 
         "Ruby"       : [QApplication.translate('Lexers', "Ruby"),         'dummy.rb'],
         "SQL"        : [QApplication.translate('Lexers', "SQL"),          'dummy.sql'],
         "TCL"        : [QApplication.translate('Lexers', "TCL"),          'dummy.tcl'], 
@@ -119,7 +120,7 @@ def getLexer(language, parent = None, pyname = ""):
         try:
             if language in ["Python", "Python2", "Python3"]:
                 from .LexerPython import LexerPython
-                return LexerPython(parent)
+                return LexerPython(language, parent)
             elif language == "C++":
                 from .LexerCPP import LexerCPP
                 return LexerCPP(parent, 

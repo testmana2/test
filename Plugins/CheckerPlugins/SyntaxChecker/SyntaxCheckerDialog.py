@@ -125,6 +125,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param codestring string containing the code to be checked (string).
             If this is given, file must be a single file name.
         """
+        if self.__project is None:
+            self.__project = e5App().getObject("Project")
+        
         self.cancelled = False
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
@@ -179,10 +182,19 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         continue
                 
                 flags = Utilities.extractFlags(source)
-                if ("FileType" in flags and flags["FileType"] != "Python3") or \
-                   file in py2files:
+                ext = os.path.splitext(file)[1]
+                if ("FileType" in flags and 
+                    flags["FileType"] in ["Python", "Python2"]) or \
+                   file in py2files or \
+                   (ext in [".py", ".pyw"] and \
+                    Preferences.getProject("DeterminePyFromProject") and \
+                    self.__project.isOpen() and \
+                    self.__project.isProjectFile(file) and \
+                    self.__project.getProjectLanguage() in ["Python", "Python2"]):
                     isPy3 = False
-                    nok, fname, line, code, error = Utilities.py2compile(file)
+                    nok, fname, line, code, error, warnings = \
+                        Utilities.py2compile(file, 
+                            checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck"))
                 else:
                     isPy3 = True
                     nok, fname, line, code, error = Utilities.compile(file, source)
@@ -190,27 +202,33 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     self.noResults = False
                     self.__createResultItem(fname, line, error, code)
                 else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck") and isPy3:
-                        try:
-                            sourceLines = source.splitlines()
-                            warnings = Checker(source, file)
-                            warnings.messages.sort(key = lambda a: a.lineno)
-                            for warning in warnings.messages:
-                                if ignoreStarImportWarnings and \
-                                   isinstance(warning, ImportStarUsed):
-                                    continue
-                                fname, lineno, message = warning.getMessageData()
-                                if not sourceLines[lineno - 1].strip()\
-                                   .endswith("__IGNORE_WARNING__"):
-                                    self.noResults = False
-                                    self.__createResultItem(fname, lineno, message, "", 
-                                                            isWarning = True)
-                        except SyntaxError as err:
-                            if err.text.strip():
-                                msg = err.text.strip()
-                            else:
-                                msg = err.msg
-                            self.__createResultItem(err.filename, err.lineno, msg, "")
+                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                        if isPy3:
+                            try:
+                                sourceLines = source.splitlines()
+                                warnings = Checker(source, file)
+                                warnings.messages.sort(key = lambda a: a.lineno)
+                                for warning in warnings.messages:
+                                    if ignoreStarImportWarnings and \
+                                       isinstance(warning, ImportStarUsed):
+                                        continue
+                                    fname, lineno, message = warning.getMessageData()
+                                    if not sourceLines[lineno - 1].strip()\
+                                       .endswith("__IGNORE_WARNING__"):
+                                        self.noResults = False
+                                        self.__createResultItem(fname, lineno, message, 
+                                                                "", isWarning = True)
+                            except SyntaxError as err:
+                                if err.text.strip():
+                                    msg = err.text.strip()
+                                else:
+                                    msg = err.msg
+                                self.__createResultItem(err.filename, err.lineno, msg, "")
+                        else:
+                            for warning in warnings:
+                                self.noResults = False
+                                self.__createResultItem(warning[0], int(warning[1]), 
+                                                        warning[2], "", isWarning = True)
                 progress += 1
             self.checkProgress.setValue(progress)
             QApplication.processEvents()

@@ -17,7 +17,7 @@ def getCompleter(language, editor, parent = None):
     @return reference to the instanciated lexer object (QsciLexer)
     """
     try:
-        if language == "Python":
+        if language in ["Python", "Python2", "Python3"]:
             from .CompleterPython import CompleterPython
             return CompleterPython(editor, parent)
         elif language == "Ruby":

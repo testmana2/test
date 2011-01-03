@@ -1109,15 +1109,19 @@ def compile(file, codestring = ""):
     
     return (False, None, None, None, None)
 
-def py2compile(file):
+def py2compile(file, checkFlakes = False):
     """
     Function to compile one Python 2 source file to Python 2 bytecode.
     
     @param file source filename (string)
+    @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
     @return A tuple indicating status (True = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only
-        valid, if the status is True.
+        file name, the line number, the code string, the error message
+        and a list of tuples of pyflakes warnings indicating file name,
+        line number and message (boolean, string, string, string, string, 
+        list of (string, string, string)). The syntax error values are only
+        valid, if the status is True. The pyflakes list will be empty, if a
+        syntax error was detected by the syntax checker.
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isExecutable(interpreter):
@@ -1127,9 +1131,16 @@ def py2compile(file):
     
     syntaxChecker = os.path.join(getConfig('ericDir'), 
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
+    args = [syntaxChecker]
+    if checkFlakes:
+        if Preferences.getFlakes("IgnoreStarImportWarnings"):
+            args.append("-fi")
+        else:
+            args.append("-fs")
+    args.append(file)
     proc = QProcess()
     proc.setProcessChannelMode(QProcess.MergedChannels)
-    proc.start(interpreter, [syntaxChecker, file])
+    proc.start(interpreter, args)
     finished = proc.waitForFinished(30000)
     if finished:
         output = \
@@ -1137,15 +1148,26 @@ def py2compile(file):
                     Preferences.getSystem("IOEncoding"), 
                     'replace').splitlines()
         
-        res = output[0] == "ERROR"
-        if res:
+        syntaxerror = output[0] == "ERROR"
+        if syntaxerror:
             fn = output[1]
             line = output[2]
             code = output[3]
             error = output[4]
-            return (True, fn, line, code, error)
+            return (True, fn, line, code, error, [])
         else:
-            return (False, None, None, None, None)
+            index = 5
+            warnings = []
+            while index < len(output):
+                if output[index] == "FLAKES_ERROR":
+                    return (True, output[index + 1], output[index + 2], "", 
+                            output[index + 3], [])
+                else:
+                    warnings.append((output[index + 1], output[index + 2], 
+                                     output[index + 3]))
+                index += 4
+            
+            return (False, None, None, None, None, warnings)
     
     return (True, file, "1", "", 
         QCoreApplication.translate("Utilities",

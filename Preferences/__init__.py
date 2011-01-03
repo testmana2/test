@@ -494,6 +494,8 @@ class Prefs(object):
         "HideGeneratedForms" : False,
         "FollowEditor" : True, 
         "RecentNumber" : 9, 
+        "DeterminePyFromProject" : True,
+        # TODO: add this to config dialog
     }
     
     # defaults for the multi project settings
@@ -565,6 +567,7 @@ class Prefs(object):
         "HelpViewerType" : 1,      # this coresponds with the radio button id
         "CustomViewer" : "",
         "PythonDocDir" : "",
+        "Python2DocDir" : "", 
         "QtDocDir" : "",
         "Qt4DocDir" : "",
         "PyQt4DocDir" : "",
