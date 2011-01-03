@@ -140,6 +140,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             files = []
             for ext in Preferences.getPython("Python3Extensions"):
                 files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            for ext in Preferences.getPython("PythonExtensions"):
+                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         files = [f for f in files \
