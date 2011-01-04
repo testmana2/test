@@ -1,0 +1,12 @@
+<!-- This is the DTD for eric3's shortcuts file version 3.5 -->
+
+<!ELEMENT   Name        (#PCDATA)>
+<!ELEMENT   Accel       (#PCDATA)>
+
+<!ELEMENT   Shortcut    (Name, Accel)>
+<!ATTLIST   Shortcut
+    category    CDATA   #REQUIRED>
+
+<!ELEMENT   Shortcuts   (Shortcut+)>
+<!ATTLIST   Shortcuts
+    version     CDATA   #REQUIRED>

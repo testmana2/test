@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SyntaxCheckerDialog</class>
+ <widget class="QDialog" name="SyntaxCheckerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Syntax Check Result</string>
+  </property>
+  <property name="whatsThis">
+   <string>&lt;b&gt;Syntax Check Results&lt;/b&gt;
+&lt;p&gt;This dialog shows the results of the syntax check. Double clicking an
+entry will open an editor window and position the cursor at the respective line.&lt;/p&gt;</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QTreeWidget" name="resultList">
+     <property name="whatsThis">
+      <string>&lt;b&gt;Result List&lt;/b&gt;
+&lt;p&gt;This list shows the results of the syntax check. Double clicking
+an entry will open this entry in an editor window and position the cursor at
+the respective line.&lt;/p&gt;</string>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>File/Line</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Message</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Source</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="checkProgress">
+     <property name="toolTip">
+      <string>Shows the progress of the syntax check action</string>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="6"/>
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <tabstops>
+  <tabstop>resultList</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
