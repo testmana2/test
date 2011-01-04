@@ -15,3 +15,6 @@ ConfigVarTypeStrings = ['__', 'NoneType', 'type',\
         'instance method', 'property', 'generator',\
         'function', 'builtin_function_or_method', 'code', 'module',\
         'ellipsis', 'traceback', 'frame', 'other']
+
+#
+# eflag: FileType = Python2

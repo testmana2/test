@@ -71,3 +71,6 @@ class FileLocator(object):
                     data = data.decode('utf8') # TODO: How to do this properly?
                 return data
         return None
+
+#
+# eflag: FileType = Python2

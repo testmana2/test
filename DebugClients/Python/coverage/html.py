@@ -180,3 +180,6 @@ def spaceless(html):
     """
     html = re.sub(">\s+<p ", ">\n<p ", html)
     return html
+
+#
+# eflag: FileType = Python2

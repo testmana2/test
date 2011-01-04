@@ -245,3 +245,6 @@ def get_class_members(klass):
         for base in klass.__bases__:
             ret = ret + get_class_members(base)
     return ret
+
+#
+# eflag: FileType = Python2

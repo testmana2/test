@@ -75,3 +75,6 @@ ResponseForkTo =           RequestForkTo
 PassiveStartup =           '>PassiveStartup<'
 
 EOT = '>EOT<\n'
+
+#
+# eflag: FileType = Python2

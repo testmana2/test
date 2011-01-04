@@ -8,10 +8,8 @@ Module implementing an asynchronous file like socket interface for the debugger.
 """
 
 import socket
-import sys
 
-from DebugProtocol import EOT, RequestOK
-
+from DebugProtocol import EOT
 
 def AsyncPendingWrite(file):
     """
@@ -290,3 +288,6 @@ class AsyncFile(object):
         @param list the list to be written (list of string)
         """
         map(self.write,list)
+
+#
+# eflag: FileType = Python2

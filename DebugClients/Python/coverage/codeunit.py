@@ -142,3 +142,6 @@ class CodeUnit(object):
         raise CoverageException(
             "No source for code %r." % self.filename
             )
+
+#
+# eflag: FileType = Python2

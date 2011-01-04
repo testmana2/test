@@ -67,3 +67,6 @@ class CoverageException(Exception):
 class NoSource(CoverageException):
     """Used to indicate we couldn't find the source for a module."""
     pass
+
+#
+# eflag: FileType = Python2

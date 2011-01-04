@@ -79,3 +79,6 @@ class CodeObjects(object):
         raise StopIteration
 
     next = __next__
+
+#
+# eflag: FileType = Python2
