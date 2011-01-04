@@ -34831,7 +34831,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="251"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="253"/>
         <source>No issues found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35265,20 +35265,30 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="170"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="185"/>
         <source>No indentation errors found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="255"/>
+        <source>Python2 interpreter not configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="280"/>
+        <source>Python2 interpreter did not finish within 15s.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="160"/>
+        <location filename="Plugins/PluginTabnanny.py" line="162"/>
         <source>Check Indentations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="160"/>
+        <location filename="Plugins/PluginTabnanny.py" line="162"/>
         <source>&amp;Indentations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35288,7 +35298,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="163"/>
+        <location filename="Plugins/PluginTabnanny.py" line="165"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39902,7 +39912,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1172"/>
+        <location filename="Utilities/__init__.py" line="1173"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>

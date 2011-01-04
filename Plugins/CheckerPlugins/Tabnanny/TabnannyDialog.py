@@ -22,6 +22,8 @@ import Utilities
 import Preferences
 import UI.PixmapCache
 
+from eric5config import getConfig
+
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
     Class implementing a dialog to show the results of the tabnanny check run.
@@ -95,6 +97,9 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param fn File or list of files or directory to be checked
                 (string or list of strings)
         """
+        if self.__project is None:
+            self.__project = e5App().getObject("Project")
+        
         self.cancelled = False
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
@@ -107,18 +112,22 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             files = []
             for ext in Preferences.getPython("Python3Extensions"):
                 files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            for ext in Preferences.getPython("PythonExtensions"):
+                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         files = [f for f in files \
                     if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
+        py2files = [f for f in files \
+                    if f.endswith(tuple(Preferences.getPython("PythonExtensions")))]
         
-        if len(files) > 0:
-            self.checkProgress.setMaximum(len(files))
+        if len(files) + len(py2files) > 0:
+            self.checkProgress.setMaximum(len(files) + len(py2files))
             QApplication.processEvents()
             
             # now go through all the files
             progress = 0
-            for file in files:
+            for file in files + py2files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()
@@ -138,15 +147,21 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     continue
                 
                 flags = Utilities.extractFlags(source)
-                if "FileType" in flags and flags["FileType"] != "Python3":
-                    # skip non Python 3 files
-                    progress += 1
-                    continue
-                
-                nok, fname, line, error = Tabnanny.check(file, source)
+                ext = os.path.splitext(file)[1]
+                if ("FileType" in flags and 
+                    flags["FileType"] in ["Python", "Python2"]) or \
+                   file in py2files or \
+                   (ext in [".py", ".pyw"] and \
+                    Preferences.getProject("DeterminePyFromProject") and \
+                    self.__project.isOpen() and \
+                    self.__project.isProjectFile(file) and \
+                    self.__project.getProjectLanguage() in ["Python", "Python2"]):
+                    nok, fname, line, error = self.__py2check(file)
+                else:
+                    nok, fname, line, error = Tabnanny.check(file, source)
                 if nok:
                     self.noResults = False
-                    self.__createResultItem(fname, line, error.rstrip()[1:-1])
+                    self.__createResultItem(fname, line, error.rstrip())
                 progress += 1
                 
             self.checkProgress.setValue(progress)
@@ -220,3 +235,47 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         lineno = int(itm.text(1))
         
         e5App().getObject("ViewManager").openSourceFile(fn, lineno)
+    
+    ############################################################################
+    ## Python 2 interface below
+    ############################################################################
+    
+    def __py2check(self, filename):
+        """
+        Private method to perform the indentation check for Python 2 files.
+        
+        @param filename name of the file to be checked (string)
+        @return A tuple indicating status (True = an error was found), the
+            filename, the linenumber and the error message
+            (boolean, string, string, string). The values are only
+            valid, if the status is True.
+        """
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+        if interpreter == "" or not Utilities.isExecutable(interpreter):
+            return (True, filename, "1", 
+                self.trUtf8("Python2 interpreter not configured."))
+        
+        checker = os.path.join(getConfig('ericDir'), 
+                               "UtilitiesPython2", "TabnannyChecker.py")
+        
+        proc = QProcess()
+        proc.setProcessChannelMode(QProcess.MergedChannels)
+        proc.start(interpreter, [checker, filename])
+        finished = proc.waitForFinished(15000)
+        if finished:
+            output = \
+                str(proc.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace').splitlines()
+            
+            nok = output[0] == "ERROR"
+            if nok:
+                fn = output[1]
+                line = output[2]
+                error = output[3]
+                return (True, fn, line, error)
+            else:
+                return (False, None, None, None)
+        
+        return (True, filename, "1", 
+            self.trUtf8("Python2 interpreter did not finish within 15s."))

@@ -737,6 +737,9 @@
               <section title="eric5.UtilitiesPython2.py2flakes.messages" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
             </section>
             <section title="eric5.UtilitiesPython2.Py2SyntaxChecker" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
+            <section title="eric5.UtilitiesPython2.Tabnanny" ref="eric5.UtilitiesPython2.Tabnanny.html" />
+            <section title="eric5.UtilitiesPython2.TabnannyChecker" ref="eric5.UtilitiesPython2.TabnannyChecker.html" />
+            <section title="eric5.UtilitiesPython2.Tools" ref="eric5.UtilitiesPython2.Tools.html" />
           </section>
           <section title="eric5.VCS" ref="index-eric5.VCS.html">
             <section title="eric5.VCS.CommandOptionsDialog" ref="eric5.VCS.CommandOptionsDialog.html" />
@@ -3237,11 +3240,32 @@
       <keyword name="CooperationClient.sendMessage" id="CooperationClient.sendMessage" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendMessage" />
       <keyword name="CooperationClient.server" id="CooperationClient.server" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.server" />
       <keyword name="UtilitiesPython2 (Package)" id="UtilitiesPython2 (Package)" ref="index-eric5.UtilitiesPython2.html" />
+      <keyword name="Tools (Module)" id="Tools (Module)" ref="eric5.UtilitiesPython2.Tools.html" />
+      <keyword name="decode" id="decode" ref="eric5.UtilitiesPython2.Tools.html#decode" />
+      <keyword name="get_coding" id="get_coding" ref="eric5.UtilitiesPython2.Tools.html#get_coding" />
+      <keyword name="normalizeCode" id="normalizeCode" ref="eric5.UtilitiesPython2.Tools.html#normalizeCode" />
+      <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.UtilitiesPython2.Tools.html#readEncodedFile" />
+      <keyword name="TabnannyChecker (Module)" id="TabnannyChecker (Module)" ref="eric5.UtilitiesPython2.TabnannyChecker.html" />
       <keyword name="Py2SyntaxChecker (Module)" id="Py2SyntaxChecker (Module)" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
       <keyword name="compile" id="compile" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#compile" />
-      <keyword name="decode" id="decode" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#decode" />
       <keyword name="flakesCheck" id="flakesCheck" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#flakesCheck" />
-      <keyword name="get_coding" id="get_coding" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#get_coding" />
+      <keyword name="Tabnanny (Module)" id="Tabnanny (Module)" ref="eric5.UtilitiesPython2.Tabnanny.html" />
+      <keyword name="NannyNag" id="NannyNag" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag" />
+      <keyword name="Whitespace" id="Whitespace" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace" />
+      <keyword name="check" id="check" ref="eric5.UtilitiesPython2.Tabnanny.html#check" />
+      <keyword name="format_witnesses" id="format_witnesses" ref="eric5.UtilitiesPython2.Tabnanny.html#format_witnesses" />
+      <keyword name="process_tokens" id="process_tokens" ref="eric5.UtilitiesPython2.Tabnanny.html#process_tokens" />
+      <keyword name="NannyNag (Constructor)" id="NannyNag (Constructor)" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag.__init__" />
+      <keyword name="NannyNag.get_line" id="NannyNag.get_line" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag.get_line" />
+      <keyword name="NannyNag.get_lineno" id="NannyNag.get_lineno" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag.get_lineno" />
+      <keyword name="NannyNag.get_msg" id="NannyNag.get_msg" ref="eric5.UtilitiesPython2.Tabnanny.html#NannyNag.get_msg" />
+      <keyword name="Whitespace (Constructor)" id="Whitespace (Constructor)" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.__init__" />
+      <keyword name="Whitespace.equal" id="Whitespace.equal" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.equal" />
+      <keyword name="Whitespace.indent_level" id="Whitespace.indent_level" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.indent_level" />
+      <keyword name="Whitespace.less" id="Whitespace.less" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.less" />
+      <keyword name="Whitespace.longest_run_of_spaces" id="Whitespace.longest_run_of_spaces" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.longest_run_of_spaces" />
+      <keyword name="Whitespace.not_equal_witness" id="Whitespace.not_equal_witness" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.not_equal_witness" />
+      <keyword name="Whitespace.not_less_witness" id="Whitespace.not_less_witness" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace.not_less_witness" />
       <keyword name="ViewManager (Package)" id="ViewManager (Package)" ref="index-eric5.ViewManager.html" />
       <keyword name="factory" id="factory" ref="eric5.ViewManager.__init__.html#factory" />
       <keyword name="ViewManager (Module)" id="ViewManager (Module)" ref="eric5.ViewManager.ViewManager.html" />
@@ -9221,6 +9245,7 @@
       <keyword name="TabnannyDialog (Constructor)" id="TabnannyDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__init__" />
       <keyword name="TabnannyDialog.__createResultItem" id="TabnannyDialog.__createResultItem" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__createResultItem" />
       <keyword name="TabnannyDialog.__finish" id="TabnannyDialog.__finish" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__finish" />
+      <keyword name="TabnannyDialog.__py2check" id="TabnannyDialog.__py2check" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__py2check" />
       <keyword name="TabnannyDialog.__resort" id="TabnannyDialog.__resort" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__resort" />
       <keyword name="TabnannyDialog.on_buttonBox_clicked" id="TabnannyDialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.on_buttonBox_clicked" />
       <keyword name="TabnannyDialog.on_resultList_itemActivated" id="TabnannyDialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.on_resultList_itemActivated" />
@@ -10536,6 +10561,9 @@
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.UtilitiesPython2.Py2SyntaxChecker.html</file>
+      <file>eric5.UtilitiesPython2.Tabnanny.html</file>
+      <file>eric5.UtilitiesPython2.TabnannyChecker.html</file>
+      <file>eric5.UtilitiesPython2.Tools.html</file>
       <file>eric5.UtilitiesPython2.py2flakes.checker.html</file>
       <file>eric5.UtilitiesPython2.py2flakes.messages.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>

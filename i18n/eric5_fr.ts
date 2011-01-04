@@ -38819,7 +38819,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="251"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="253"/>
         <source>No issues found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39216,9 +39216,12 @@ the respective line.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>Tabnanny</name>
+</context>
+<context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="170"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="185"/>
         <source>No indentation errors found.</source>
         <translation>Aucune erreur d&apos;indentation trouvée.</translation>
     </message>
@@ -39293,16 +39296,26 @@ correspondante.&lt;/p&gt;</translation>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="255"/>
+        <source>Python2 interpreter not configured.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="280"/>
+        <source>Python2 interpreter did not finish within 15s.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="160"/>
+        <location filename="Plugins/PluginTabnanny.py" line="162"/>
         <source>Check Indentations</source>
         <translation>Vérification des indentations</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="160"/>
+        <location filename="Plugins/PluginTabnanny.py" line="162"/>
         <source>&amp;Indentations...</source>
         <translation>&amp;Indentations...</translation>
     </message>
@@ -39312,7 +39325,7 @@ correspondante.&lt;/p&gt;</translation>
         <translation>Vérifie les indentation en utilisant tabanny.</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginTabnanny.py" line="163"/>
+        <location filename="Plugins/PluginTabnanny.py" line="165"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vérification des indentations...&lt;/b&gt;&lt;p&gt;Vérifie les mauvaises indentations des fichiers Python en utilisant tabanny.&lt;/p&gt;</translation>
     </message>
@@ -44582,7 +44595,7 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1172"/>
+        <location filename="Utilities/__init__.py" line="1173"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>

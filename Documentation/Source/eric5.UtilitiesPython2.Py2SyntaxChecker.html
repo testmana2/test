@@ -26,7 +26,7 @@ Module implementing the syntax check for Python 2.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>coding_regexps</td></tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -38,53 +38,31 @@ Module implementing the syntax check for Python 2.
 <td><a href="#compile">compile</a></td>
 <td>Function to compile one Python source file to Python bytecode.</td>
 </tr><tr>
-<td><a href="#decode">decode</a></td>
-<td>Function to decode a text.</td>
-</tr><tr>
 <td><a href="#flakesCheck">flakesCheck</a></td>
 <td>Function to perform a pyflakes check.</td>
-</tr><tr>
-<td><a href="#get_coding">get_coding</a></td>
-<td>Function to get the coding of a text.</td>
 </tr>
 </table>
 <hr /><hr />
 <a NAME="compile" ID="compile"></a>
 <h2>compile</h2>
-<b>compile</b>(<i>file</i>)
+<b>compile</b>(<i>file, codestring</i>)
 <p>
     Function to compile one Python source file to Python bytecode.
 </p><dl>
 <dt><i>file</i></dt>
 <dd>
 source filename (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+source code (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 A tuple indicating status (1 = an error was found), the
-        filename, the linenumber, the code string, the error message
-        and the full source code (boolean, string, string, string, 
-        string, string). The values are only valid, if the status 
-        equals 1.
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="decode" ID="decode"></a>
-<h2>decode</h2>
-<b>decode</b>(<i>text</i>)
-<p>
-    Function to decode a text.
-</p><dl>
-<dt><i>text</i></dt>
-<dd>
-text to decode (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-decoded text and encoding
+        filename, the linenumber, the code string and the error message
+        (boolean, string, string, string, string). The values are only 
+        valid, if the status equals 1.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -111,24 +89,6 @@ flag indicating to
 <dd>
 list of strings containing the warnings
         (marker, file name, line number, message)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="get_coding" ID="get_coding"></a>
-<h2>get_coding</h2>
-<b>get_coding</b>(<i>text</i>)
-<p>
-    Function to get the coding of a text.
-</p><dl>
-<dt><i>text</i></dt>
-<dd>
-text to inspect (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-coding string
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

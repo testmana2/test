@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2011 Detlev Offenbach <detlev@die-offenbachs.de>
@@ -10,91 +11,24 @@ Module implementing the syntax check for Python 2.
 import sys
 import re
 import traceback
-from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
+
+from Tools import readEncodedFile, normalizeCode
 
 from py2flakes.checker import Checker
 from py2flakes.messages import ImportStarUsed
 
-coding_regexps = [
-    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
-]
-
-def get_coding(text):
-    """
-    Function to get the coding of a text.
-    
-    @param text text to inspect (string)
-    @return coding string
-    """
-    lines = text.splitlines()
-    for coding in coding_regexps:
-        coding_re = coding[1]
-        head = lines[:coding[0]]
-        for l in head:
-            m = coding_re.search(l)
-            if m:
-                return m.group(1).lower()
-    return None
-
-def decode(text):
-    """
-    Function to decode a text.
-    
-    @param text text to decode (string)
-    @return decoded text and encoding
-    """
-    try:
-        if text.startswith(BOM_UTF8):
-            # UTF-8 with BOM
-            return unicode(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
-        elif text.startswith(BOM_UTF16):
-            # UTF-16 with BOM
-            return unicode(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
-        elif text.startswith(BOM_UTF32):
-            # UTF-32 with BOM
-            return unicode(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
-        coding = get_coding(text)
-        if coding:
-            return unicode(text, coding), coding
-    except (UnicodeError, LookupError):
-        pass
-    
-    # Assume UTF-8
-    try:
-        return unicode(text, 'utf-8'), 'utf-8-guessed'
-    except (UnicodeError, LookupError):
-        pass
-    
-    # Assume Latin-1 (behaviour before 3.7.1)
-    return unicode(text, "latin-1"), 'latin-1-guessed'
-
-def compile(file):
+def compile(file, codestring):
     """
     Function to compile one Python source file to Python bytecode.
     
     @param file source filename (string)
+    @param codestring source code (string)
     @return A tuple indicating status (1 = an error was found), the
-        filename, the linenumber, the code string, the error message
-        and the full source code (boolean, string, string, string, 
-        string, string). The values are only valid, if the status 
-        equals 1.
+        filename, the linenumber, the code string and the error message
+        (boolean, string, string, string, string). The values are only 
+        valid, if the status equals 1.
     """
     import __builtin__
-    try:
-        f = open(file)
-        codestring, encoding = decode(f.read())
-        f.close()
-    except IOError, msg:
-        return (1, file, "1", "", "I/O Error: %s" % unicode(msg), "")
-
-    if type(codestring) == type(u""):
-        codestring = codestring.encode('utf-8')
-    codestring = codestring.replace("\r\n","\n")
-    codestring = codestring.replace("\r","\n")
-
-    if codestring and codestring[-1] != '\n':
-        codestring = codestring + '\n'
     
     try:
         if type(file) == type(u""):
@@ -129,7 +63,7 @@ def compile(file):
             line = detail.lineno and detail.lineno or 1
             code = ""
             error = detail.msg
-        return (1, fn, line, code, error, codestring)
+        return (1, fn, line, code, error)
     except ValueError, detail:
         try:
             fn = detail.filename
@@ -140,18 +74,18 @@ def compile(file):
             line = 1
             error = unicode(detail)
         code = ""
-        return (1, fn, line, code, error, codestring)
+        return (1, fn, line, code, error)
     except StandardError, detail:
         try:
             fn = detail.filename
             line = detail.lineno
             code = ""
             error = detail.msg
-            return (1, fn, line, code, error, codestring)
+            return (1, fn, line, code, error)
         except:         # this catchall is intentional
             pass
     
-    return (0, None, None, None, None, codestring)
+    return (0, None, None, None, None)
 
 def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     """
@@ -198,7 +132,15 @@ if __name__ == "__main__":
         print "No file name given."
     else:
         filename = sys.argv[-1]
-        syntaxerror, fname, line, code, error, codestring = compile(filename)
+        try:
+            codestring = readEncodedFile(filename)[0]
+            codestring = normalizeCode(codestring)
+            
+            syntaxerror, fname, line, code, error = compile(filename, codestring)
+        except IOError, msg:
+            # fake a syntax error
+            syntaxerror, fname, line, code, error = \
+                1, filename, "1", "", "I/O Error: %s" % unicode(msg)
         
         if syntaxerror:
             print "ERROR"

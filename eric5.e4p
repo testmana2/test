@@ -839,6 +839,9 @@
     <Source>UtilitiesPython2/py2flakes/__init__.py</Source>
     <Source>UtilitiesPython2/py2flakes/checker.py</Source>
     <Source>UtilitiesPython2/py2flakes/messages.py</Source>
+    <Source>UtilitiesPython2/Tools.py</Source>
+    <Source>UtilitiesPython2/Tabnanny.py</Source>
+    <Source>UtilitiesPython2/TabnannyChecker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

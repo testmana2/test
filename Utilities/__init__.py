@@ -1127,7 +1127,8 @@ def py2compile(file, checkFlakes = False):
     if interpreter == "" or not isExecutable(interpreter):
         return (True, file, "1", "", 
             QCoreApplication.translate("Utilities", 
-                                       "Python2 interpreter not configured."))
+                                       "Python2 interpreter not configured."), 
+            [])
     
     syntaxChecker = os.path.join(getConfig('ericDir'), 
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
@@ -1171,7 +1172,8 @@ def py2compile(file, checkFlakes = False):
     
     return (True, file, "1", "", 
         QCoreApplication.translate("Utilities",
-                                   "Python2 interpreter did not finish within 30s."))
+                                   "Python2 interpreter did not finish within 30s."), 
+        [])
 
 def getConfigDir():
     """
