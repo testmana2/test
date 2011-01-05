@@ -135,7 +135,7 @@ Public method to select the possible completions
         # Global variable
             candidates = global_variables.grep(Regexp.new(Regexp.quote($1)))
 
-#        when /^(\$?(\.?[^.]+)+)\.([^.]*)$/
+##        when /^(\$?(\.?[^.]+)+)\.([^.]*)$/
         when /^((\.?[^.]+)+)\.([^.]*)$/
         # variable
             receiver = $1
@@ -179,7 +179,7 @@ Public method to select the possible completions
 
         else
             candidates = eval("methods | private_methods | local_variables | self.class.constants", @binding)
-              
+            
             (candidates|ReservedWords).grep(/^#{Regexp.quote(input)}/)
         end
     end

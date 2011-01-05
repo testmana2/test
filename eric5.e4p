@@ -842,6 +842,7 @@
     <Source>UtilitiesPython2/Tools.py</Source>
     <Source>UtilitiesPython2/Tabnanny.py</Source>
     <Source>UtilitiesPython2/TabnannyChecker.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

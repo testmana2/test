@@ -9811,6 +9811,7 @@
       <keyword name="LexerPygments.__guessLexer" id="LexerPygments.__guessLexer" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.__guessLexer" />
       <keyword name="LexerPygments.canStyle" id="LexerPygments.canStyle" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.canStyle" />
       <keyword name="LexerPygments.defaultColor" id="LexerPygments.defaultColor" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.defaultColor" />
+      <keyword name="LexerPygments.defaultEolFill" id="LexerPygments.defaultEolFill" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.defaultEolFill" />
       <keyword name="LexerPygments.defaultFont" id="LexerPygments.defaultFont" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.defaultFont" />
       <keyword name="LexerPygments.defaultKeywords" id="LexerPygments.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.defaultKeywords" />
       <keyword name="LexerPygments.defaultPaper" id="LexerPygments.defaultPaper" ref="eric5.QScintilla.Lexers.LexerPygments.html#LexerPygments.defaultPaper" />

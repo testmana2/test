@@ -56,55 +56,80 @@ PYGMENTS_STRONG, \
 PYGMENTS_PROMPT, \
 PYGMENTS_OUTPUT, \
 PYGMENTS_TRACEBACK, \
-PYGMENTS_ERROR              = list(range(40, 47))
+PYGMENTS_ERROR, \
+PYGMENTS_MULTILINECOMMENT, \
+PYGMENTS_PROPERTY, \
+PYGMENTS_CHAR, \
+PYGMENTS_HEREDOC, \
+PYGMENTS_PUNCTUATION        = list(range(40, 52))
 
 #-----------------------------------------------------------------------------#
 
 TOKEN_MAP = {
-    Token.Comment:                   PYGMENTS_COMMENT,
-    Token.Comment.Preproc:           PYGMENTS_PREPROCESSOR,
+    Token.Comment:                  PYGMENTS_COMMENT,
+    Token.Comment.Preproc:          PYGMENTS_PREPROCESSOR,
+    Token.Comment.Multiline:        PYGMENTS_MULTILINECOMMENT,
+    Token.Comment.Single:           PYGMENTS_COMMENT,
+    Token.Comment.Special:          PYGMENTS_COMMENT,
 
-    Token.Keyword:                   PYGMENTS_KEYWORD,
-    Token.Keyword.Pseudo:            PYGMENTS_PSEUDOKEYWORD,
-    Token.Keyword.Type:              PYGMENTS_TYPEKEYWORD,
+    Token.Keyword:                  PYGMENTS_KEYWORD,
+    Token.Keyword.Pseudo:           PYGMENTS_PSEUDOKEYWORD,
+    Token.Keyword.Type:             PYGMENTS_TYPEKEYWORD,
+    Token.Keyword.Namespace:        PYGMENTS_KEYWORD,
 
-    Token.Operator:                  PYGMENTS_OPERATOR,
-    Token.Operator.Word:             PYGMENTS_WORD,
+    Token.Operator:                 PYGMENTS_OPERATOR,
+    Token.Operator.Word:            PYGMENTS_WORD,
 
-    Token.Name.Builtin:              PYGMENTS_BUILTIN,
-    Token.Name.Function:             PYGMENTS_FUNCTION,
-    Token.Name.Class:                PYGMENTS_CLASS,
-    Token.Name.Namespace:            PYGMENTS_NAMESPACE,
-    Token.Name.Exception:            PYGMENTS_EXCEPTION,
-    Token.Name.Variable:             PYGMENTS_VARIABLE,
-    Token.Name.Constant:             PYGMENTS_CONSTANT,
-    Token.Name.Label:                PYGMENTS_LABEL,
-    Token.Name.Entity:               PYGMENTS_ENTITY,
-    Token.Name.Attribute:            PYGMENTS_ATTRIBUTE,
-    Token.Name.Tag:                  PYGMENTS_TAG,
-    Token.Name.Decorator:            PYGMENTS_DECORATOR,
+    Token.Name:                     PYGMENTS_DEFAULT,
+    Token.Name.Builtin:             PYGMENTS_BUILTIN,
+    Token.Name.Builtin.Pseudo:      PYGMENTS_BUILTIN,
+    Token.Name.Function:            PYGMENTS_FUNCTION,
+    Token.Name.Class:               PYGMENTS_CLASS,
+    Token.Name.Namespace:           PYGMENTS_NAMESPACE,
+    Token.Name.Exception:           PYGMENTS_EXCEPTION,
+    Token.Name.Variable:            PYGMENTS_VARIABLE,
+    Token.Name.Variable.Class:      PYGMENTS_VARIABLE,
+    Token.Name.Variable.Global:     PYGMENTS_VARIABLE,
+    Token.Name.Variable.Instance:   PYGMENTS_VARIABLE,
+    Token.Name.Constant:            PYGMENTS_CONSTANT,
+    Token.Name.Label:               PYGMENTS_LABEL,
+    Token.Name.Entity:              PYGMENTS_ENTITY,
+    Token.Name.Attribute:           PYGMENTS_ATTRIBUTE,
+    Token.Name.Tag:                 PYGMENTS_TAG,
+    Token.Name.Decorator:           PYGMENTS_DECORATOR,
+    Token.Name.Property:            PYGMENTS_PROPERTY,
 
-    Token.String:                    PYGMENTS_STRING,
-    Token.String.Doc:                PYGMENTS_DOCSTRING,
-    Token.String.Interpol:           PYGMENTS_SCALAR,
-    Token.String.Escape:             PYGMENTS_ESCAPE,
-    Token.String.Regex:              PYGMENTS_REGEX,
-    Token.String.Symbol:             PYGMENTS_SYMBOL,
-    Token.String.Other:              PYGMENTS_OTHER,
-    Token.Number:                    PYGMENTS_NUMBER,
+    Token.String:                   PYGMENTS_STRING,
+    Token.String.Char:              PYGMENTS_CHAR,
+    Token.String.Doc:               PYGMENTS_DOCSTRING,
+    Token.String.Interpol:          PYGMENTS_SCALAR,
+    Token.String.Escape:            PYGMENTS_ESCAPE,
+    Token.String.Regex:             PYGMENTS_REGEX,
+    Token.String.Symbol:            PYGMENTS_SYMBOL,
+    Token.String.Other:             PYGMENTS_OTHER,
+    Token.String.Heredoc:           PYGMENTS_HEREDOC,
+    
+    Token.Number:                   PYGMENTS_NUMBER,
+    Token.Number.Float:             PYGMENTS_NUMBER,
+    Token.Number.Hex:               PYGMENTS_NUMBER,
+    Token.Number.Integer:           PYGMENTS_NUMBER,
+    Token.Number.Integer.Long:      PYGMENTS_NUMBER,
+    Token.Number.Oct:               PYGMENTS_NUMBER,
 
-    Token.Generic.Heading:           PYGMENTS_HEADING,
-    Token.Generic.Subheading:        PYGMENTS_SUBHEADING,
-    Token.Generic.Deleted:           PYGMENTS_DELETED,
-    Token.Generic.Inserted:          PYGMENTS_INSERTED,
-    Token.Generic.Error:             PYGMENTS_GENERIC_ERROR,
-    Token.Generic.Emph:              PYGMENTS_EMPHASIZE,
-    Token.Generic.Strong:            PYGMENTS_STRONG,
-    Token.Generic.Prompt:            PYGMENTS_PROMPT,
-    Token.Generic.Output:            PYGMENTS_OUTPUT,
-    Token.Generic.Traceback:         PYGMENTS_TRACEBACK,
+    Token.Punctuation:              PYGMENTS_PUNCTUATION,
 
-    Token.Error:                     PYGMENTS_ERROR, 
+    Token.Generic.Heading:          PYGMENTS_HEADING,
+    Token.Generic.Subheading:       PYGMENTS_SUBHEADING,
+    Token.Generic.Deleted:          PYGMENTS_DELETED,
+    Token.Generic.Inserted:         PYGMENTS_INSERTED,
+    Token.Generic.Error:            PYGMENTS_GENERIC_ERROR,
+    Token.Generic.Emph:             PYGMENTS_EMPHASIZE,
+    Token.Generic.Strong:           PYGMENTS_STRONG,
+    Token.Generic.Prompt:           PYGMENTS_PROMPT,
+    Token.Generic.Output:           PYGMENTS_OUTPUT,
+    Token.Generic.Traceback:        PYGMENTS_TRACEBACK,
+
+    Token.Error:                    PYGMENTS_ERROR, 
 }
 
 #-----------------------------------------------------------------------------#
@@ -125,88 +150,106 @@ class LexerPygments(LexerContainer):
         self.__pygmentsName = name
         
         self.descriptions = {
-            PYGMENTS_DEFAULT       : self.trUtf8("Default"), 
-            PYGMENTS_COMMENT       : self.trUtf8("Comment"), 
-            PYGMENTS_PREPROCESSOR  : self.trUtf8("Preprocessor"), 
-            PYGMENTS_KEYWORD       : self.trUtf8("Keyword"), 
-            PYGMENTS_PSEUDOKEYWORD : self.trUtf8("Pseudo Keyword"), 
-            PYGMENTS_TYPEKEYWORD   : self.trUtf8("Type Keyword"), 
-            PYGMENTS_OPERATOR      : self.trUtf8("Operator"), 
-            PYGMENTS_WORD          : self.trUtf8("Word"), 
-            PYGMENTS_BUILTIN       : self.trUtf8("Builtin"), 
-            PYGMENTS_FUNCTION      : self.trUtf8("Function or method name"), 
-            PYGMENTS_CLASS         : self.trUtf8("Class name"), 
-            PYGMENTS_NAMESPACE     : self.trUtf8("Namespace"), 
-            PYGMENTS_EXCEPTION     : self.trUtf8("Exception"), 
-            PYGMENTS_VARIABLE      : self.trUtf8("Identifier"), 
-            PYGMENTS_CONSTANT      : self.trUtf8("Constant"), 
-            PYGMENTS_LABEL         : self.trUtf8("Label"), 
-            PYGMENTS_ENTITY        : self.trUtf8("Entity"), 
-            PYGMENTS_ATTRIBUTE     : self.trUtf8("Attribute"), 
-            PYGMENTS_TAG           : self.trUtf8("Tag"), 
-            PYGMENTS_DECORATOR     : self.trUtf8("Decorator"), 
-            PYGMENTS_STRING        : self.trUtf8("String"), 
-            PYGMENTS_DOCSTRING     : self.trUtf8("Documentation string"), 
-            PYGMENTS_SCALAR        : self.trUtf8("Scalar"), 
-            PYGMENTS_ESCAPE        : self.trUtf8("Escape"), 
-            PYGMENTS_REGEX         : self.trUtf8("Regular expression"), 
-            PYGMENTS_SYMBOL        : self.trUtf8("Symbol"), 
-            PYGMENTS_OTHER         : self.trUtf8("Other string"), 
-            PYGMENTS_NUMBER        : self.trUtf8("Number"), 
-            PYGMENTS_HEADING       : self.trUtf8("Heading"), 
-            PYGMENTS_SUBHEADING    : self.trUtf8("Subheading"), 
-            PYGMENTS_DELETED       : self.trUtf8("Deleted"), 
-            PYGMENTS_INSERTED      : self.trUtf8("Inserted"), 
-            PYGMENTS_GENERIC_ERROR : self.trUtf8("Generic error"), 
-            PYGMENTS_EMPHASIZE     : self.trUtf8("Emphasized text"), 
-            PYGMENTS_STRONG        : self.trUtf8("Strong text"), 
-            PYGMENTS_PROMPT        : self.trUtf8("Prompt"), 
-            PYGMENTS_OUTPUT        : self.trUtf8("Output"), 
-            PYGMENTS_TRACEBACK     : self.trUtf8("Traceback"), 
-            PYGMENTS_ERROR         : self.trUtf8("Error"), 
+            PYGMENTS_DEFAULT            : self.trUtf8("Default"), 
+            PYGMENTS_COMMENT            : self.trUtf8("Comment"), 
+            PYGMENTS_PREPROCESSOR       : self.trUtf8("Preprocessor"), 
+            PYGMENTS_KEYWORD            : self.trUtf8("Keyword"), 
+            PYGMENTS_PSEUDOKEYWORD      : self.trUtf8("Pseudo Keyword"), 
+            PYGMENTS_TYPEKEYWORD        : self.trUtf8("Type Keyword"), 
+            PYGMENTS_OPERATOR           : self.trUtf8("Operator"), 
+            PYGMENTS_WORD               : self.trUtf8("Word"), 
+            PYGMENTS_BUILTIN            : self.trUtf8("Builtin"), 
+            PYGMENTS_FUNCTION           : self.trUtf8("Function or method name"), 
+            PYGMENTS_CLASS              : self.trUtf8("Class name"), 
+            PYGMENTS_NAMESPACE          : self.trUtf8("Namespace"), 
+            PYGMENTS_EXCEPTION          : self.trUtf8("Exception"), 
+            PYGMENTS_VARIABLE           : self.trUtf8("Identifier"), 
+            PYGMENTS_CONSTANT           : self.trUtf8("Constant"), 
+            PYGMENTS_LABEL              : self.trUtf8("Label"), 
+            PYGMENTS_ENTITY             : self.trUtf8("Entity"), 
+            PYGMENTS_ATTRIBUTE          : self.trUtf8("Attribute"), 
+            PYGMENTS_TAG                : self.trUtf8("Tag"), 
+            PYGMENTS_DECORATOR          : self.trUtf8("Decorator"), 
+            PYGMENTS_STRING             : self.trUtf8("String"), 
+            PYGMENTS_DOCSTRING          : self.trUtf8("Documentation string"), 
+            PYGMENTS_SCALAR             : self.trUtf8("Scalar"), 
+            PYGMENTS_ESCAPE             : self.trUtf8("Escape"), 
+            PYGMENTS_REGEX              : self.trUtf8("Regular expression"), 
+            PYGMENTS_SYMBOL             : self.trUtf8("Symbol"), 
+            PYGMENTS_OTHER              : self.trUtf8("Other string"), 
+            PYGMENTS_NUMBER             : self.trUtf8("Number"), 
+            PYGMENTS_HEADING            : self.trUtf8("Heading"), 
+            PYGMENTS_SUBHEADING         : self.trUtf8("Subheading"), 
+            PYGMENTS_DELETED            : self.trUtf8("Deleted"), 
+            PYGMENTS_INSERTED           : self.trUtf8("Inserted"), 
+            PYGMENTS_GENERIC_ERROR      : self.trUtf8("Generic error"), 
+            PYGMENTS_EMPHASIZE          : self.trUtf8("Emphasized text"), 
+            PYGMENTS_STRONG             : self.trUtf8("Strong text"), 
+            PYGMENTS_PROMPT             : self.trUtf8("Prompt"), 
+            PYGMENTS_OUTPUT             : self.trUtf8("Output"), 
+            PYGMENTS_TRACEBACK          : self.trUtf8("Traceback"), 
+            PYGMENTS_ERROR              : self.trUtf8("Error"), 
+            PYGMENTS_MULTILINECOMMENT   : self.trUtf8("Comment block"),
+            PYGMENTS_PROPERTY           : self.trUtf8("Property"),
+            PYGMENTS_CHAR               : self.trUtf8("Character"),
+            PYGMENTS_HEREDOC            : self.trUtf8("Here document"),
+            PYGMENTS_PUNCTUATION        : self.trUtf8("Punctuation"),
         }
         
         self.defaultColors = {
-            PYGMENTS_DEFAULT       : QColor("#000000"), 
-            PYGMENTS_COMMENT       : QColor("#408080"), 
-            PYGMENTS_PREPROCESSOR  : QColor("#BC7A00"), 
-            PYGMENTS_KEYWORD       : QColor("#008000"), 
-            PYGMENTS_PSEUDOKEYWORD : QColor("#008000"), 
-            PYGMENTS_TYPEKEYWORD   : QColor("#B00040"), 
-            PYGMENTS_OPERATOR      : QColor("#666666"), 
-            PYGMENTS_WORD          : QColor("#AA22FF"), 
-            PYGMENTS_BUILTIN       : QColor("#008000"), 
-            PYGMENTS_FUNCTION      : QColor("#0000FF"), 
-            PYGMENTS_CLASS         : QColor("#0000FF"), 
-            PYGMENTS_NAMESPACE     : QColor("#0000FF"), 
-            PYGMENTS_EXCEPTION     : QColor("#D2413A"), 
-            PYGMENTS_VARIABLE      : QColor("#19177C"), 
-            PYGMENTS_CONSTANT      : QColor("#880000"), 
-            PYGMENTS_LABEL         : QColor("#A0A000"), 
-            PYGMENTS_ENTITY        : QColor("#999999"), 
-            PYGMENTS_ATTRIBUTE     : QColor("#7D9029"), 
-            PYGMENTS_TAG           : QColor("#008000"), 
-            PYGMENTS_DECORATOR     : QColor("#AA22FF"), 
-            PYGMENTS_STRING        : QColor("#BA2121"), 
-            PYGMENTS_DOCSTRING     : QColor("#BA2121"), 
-            PYGMENTS_SCALAR        : QColor("#BB6688"), 
-            PYGMENTS_ESCAPE        : QColor("#BB6622"), 
-            PYGMENTS_REGEX         : QColor("#BB6688"), 
-            PYGMENTS_SYMBOL        : QColor("#19177C"), 
-            PYGMENTS_OTHER         : QColor("#008000"), 
-            PYGMENTS_NUMBER        : QColor("#666666"), 
-            PYGMENTS_HEADING       : QColor("#000080"), 
-            PYGMENTS_SUBHEADING    : QColor("#800080"), 
-            PYGMENTS_DELETED       : QColor("#A00000"), 
-            PYGMENTS_INSERTED      : QColor("#00A000"), 
-            PYGMENTS_GENERIC_ERROR : QColor("#FF0000"), 
-            PYGMENTS_PROMPT        : QColor("#000080"), 
-            PYGMENTS_OUTPUT        : QColor("#808080"), 
-            PYGMENTS_TRACEBACK     : QColor("#0040D0"), 
+            PYGMENTS_DEFAULT            : QColor("#000000"), 
+            PYGMENTS_COMMENT            : QColor("#408080"), 
+            PYGMENTS_PREPROCESSOR       : QColor("#BC7A00"), 
+            PYGMENTS_KEYWORD            : QColor("#008000"), 
+            PYGMENTS_PSEUDOKEYWORD      : QColor("#008000"), 
+            PYGMENTS_TYPEKEYWORD        : QColor("#B00040"), 
+            PYGMENTS_OPERATOR           : QColor("#666666"), 
+            PYGMENTS_WORD               : QColor("#AA22FF"), 
+            PYGMENTS_BUILTIN            : QColor("#008000"), 
+            PYGMENTS_FUNCTION           : QColor("#0000FF"), 
+            PYGMENTS_CLASS              : QColor("#0000FF"), 
+            PYGMENTS_NAMESPACE          : QColor("#0000FF"), 
+            PYGMENTS_EXCEPTION          : QColor("#D2413A"), 
+            PYGMENTS_VARIABLE           : QColor("#19177C"), 
+            PYGMENTS_CONSTANT           : QColor("#880000"), 
+            PYGMENTS_LABEL              : QColor("#A0A000"), 
+            PYGMENTS_ENTITY             : QColor("#999999"), 
+            PYGMENTS_ATTRIBUTE          : QColor("#7D9029"), 
+            PYGMENTS_TAG                : QColor("#008000"), 
+            PYGMENTS_DECORATOR          : QColor("#AA22FF"), 
+            PYGMENTS_STRING             : QColor("#BA2121"), 
+            PYGMENTS_DOCSTRING          : QColor("#BA2121"), 
+            PYGMENTS_SCALAR             : QColor("#BB6688"), 
+            PYGMENTS_ESCAPE             : QColor("#BB6622"), 
+            PYGMENTS_REGEX              : QColor("#BB6688"), 
+            PYGMENTS_SYMBOL             : QColor("#19177C"), 
+            PYGMENTS_OTHER              : QColor("#008000"), 
+            PYGMENTS_NUMBER             : QColor("#666666"), 
+            PYGMENTS_HEADING            : QColor("#000080"), 
+            PYGMENTS_SUBHEADING         : QColor("#800080"), 
+            PYGMENTS_DELETED            : QColor("#A00000"), 
+            PYGMENTS_INSERTED           : QColor("#00A000"), 
+            PYGMENTS_GENERIC_ERROR      : QColor("#FF0000"), 
+            PYGMENTS_PROMPT             : QColor("#000080"), 
+            PYGMENTS_OUTPUT             : QColor("#808080"), 
+            PYGMENTS_TRACEBACK          : QColor("#0040D0"), 
+            PYGMENTS_MULTILINECOMMENT   : QColor("#007F00"),
+            PYGMENTS_PROPERTY           : QColor("#00A0E0"),
+            PYGMENTS_CHAR               : QColor("#7F007F"),
+            PYGMENTS_HEREDOC            : QColor("#7F007F"),
+            PYGMENTS_PUNCTUATION        : QColor("#000000"),
         }
         
         self.defaultPapers = {
-            PYGMENTS_ERROR         : QColor("#FF0000"), 
+            PYGMENTS_ERROR              : QColor("#FF0000"), 
+            PYGMENTS_MULTILINECOMMENT   : QColor("#A8FFA8"),
+            PYGMENTS_HEREDOC            : QColor("#DDD0DD"),
+        }
+        
+        self.defaultEolFill = {
+            PYGMENTS_ERROR              : True, 
+            PYGMENTS_MULTILINECOMMENT   : True,
+            PYGMENTS_HEREDOC            : True, 
         }
     
     def language(self):
@@ -261,7 +304,7 @@ class LexerPygments(LexerContainer):
         @param style style number (integer)
         @return font (QFont)
         """
-        if style in [PYGMENTS_COMMENT, PYGMENTS_PREPROCESSOR]:
+        if style in [PYGMENTS_COMMENT, PYGMENTS_PREPROCESSOR, PYGMENTS_MULTILINECOMMENT]:
             if Utilities.isWindowsPlatform():
                 f = QFont("Comic Sans MS", 9)
             else:
@@ -270,7 +313,7 @@ class LexerPygments(LexerContainer):
                 f.setItalic(True)
             return f
         
-        if style in [PYGMENTS_STRING]:
+        if style in [PYGMENTS_STRING, PYGMENTS_CHAR]:
             if Utilities.isWindowsPlatform():
                 return QFont("Comic Sans MS", 10)
             else:
@@ -292,6 +335,18 @@ class LexerPygments(LexerContainer):
         
         return LexerContainer.defaultFont(self, style)
     
+    def defaultEolFill(self, style):
+        """
+        Public method to get the default fill to eol flag.
+        
+        @param style style number (integer)
+        @return fill to eol flag (boolean)
+        """
+        try:
+            return self.defaultEolFill[style]
+        except KeyError:
+            return LexerContainer.defaultEolFill(self, style)
+        
     def styleBitsNeeded(self):
         """
         Public method to get the number of style bits needed by the lexer.

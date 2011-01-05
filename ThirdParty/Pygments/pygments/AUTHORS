@@ -5,6 +5,7 @@ Major developers are Tim Hatch <tim@timhatch.com> and Armin Ronacher
 
 Other contributors, listed alphabetically, are:
 
+* Sam Aaron -- Ioke lexer
 * Kumar Appaiah -- Debian control lexer
 * Ali Afshar -- image formatter
 * Andreas Amann -- AppleScript lexer
@@ -14,15 +15,19 @@ Other contributors, listed alphabetically, are:
 * Max Battcher -- Darcs patch lexer
 * Paul Baumgart, 280 North, Inc. -- Objective-J lexer
 * Michael Bayer -- Myghty lexers
+* John Benediktsson -- Factor lexer
 * Jarrett Billingsley -- MiniD lexer
 * Adam Blinkinsop -- Haskell, Redcode lexers
 * Frits van Bommel -- assembler lexers
 * Pierre Bourdon -- bugfixes
+* Hiram Chirino -- Scaml and Jade lexers
 * Christopher Creutzig -- MuPAD lexer
 * Pete Curry -- bugfixes
 * Owen Durni -- haXe lexer
 * Nick Efford -- Python 3 lexer
 * Artem Egorkine -- terminal256 formatter
+* James H. Fisher -- PostScript lexer
+* Naveen Garg - Autohotkey lexer
 * Laurent Gautier -- R/S lexer
 * Krzysiek Goj -- Scala lexer
 * Matt Good -- Genshi, Cheetah lexers
@@ -33,6 +38,8 @@ Other contributors, listed alphabetically, are:
 * Aslak Hellesøy -- Gherkin lexer
 * David Hess, Fish Software, Inc. -- Objective-J lexer
 * Varun Hiremath -- Debian control lexer
+* Ben Hollis -- Mason lexer
+* Tim Howard -- BlitzMax lexer
 * Dennis Kaarsemaker -- sources.list lexer
 * Benjamin Kowarsch -- Modula-2 lexer
 * Marek Kubica -- Scheme lexer
@@ -40,7 +47,9 @@ Other contributors, listed alphabetically, are:
 * Gerd Kurzbach -- Modelica lexer
 * Mark Lee -- Vala lexer
 * Ben Mabey -- Gherkin lexer
+* Simone Margaritelli -- Hybris lexer
 * Kirk McDonald -- D lexer
+* Stephen McKamey -- Duel/JBST lexer
 * Lukas Meuser -- BBCode formatter, Lua lexer
 * Paulo Moura -- Logtalk lexer
 * Ana Nelson -- Ragel, ANTLR, R console lexers
@@ -48,9 +57,11 @@ Other contributors, listed alphabetically, are:
 * Jesper Noehr -- HTML formatter "anchorlinenos"
 * Jonas Obrist -- BBCode lexer
 * David Oliva -- Rebol lexer
+* Jon Parise -- Protocol buffers lexer
 * Ronny Pfannschmidt -- BBCode lexer
 * Benjamin Peterson -- Test suite refactoring
 * Justin Reidy -- MXML lexer
+* Lubomir Rintel -- GoodData MAQL and CL lexers
 * Andre Roberge -- Tango style
 * Konrad Rudolph -- LaTeX formatter enhancements
 * Mario Ruggier -- Evoque lexers
@@ -61,6 +72,7 @@ Other contributors, listed alphabetically, are:
 * Tassilo Schweyer -- Io, MOOCode lexers
 * Joerg Sieker -- ABAP lexer
 * Kirill Simonov -- YAML lexer
+* Steve Spigarelli -- XQuery lexer
 * Tiberius Teng -- default style overhaul
 * Jeremy Thurgood -- Erlang, Squid config lexers
 * Erick Tryzelaar -- Felix lexer

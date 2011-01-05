@@ -5205,6 +5205,7 @@ eric5.QScintilla.Lexers.LexerProperties.LexerProperties.isStringStyle?4(style)
 eric5.QScintilla.Lexers.LexerProperties.LexerProperties?1(parent=None)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.canStyle?4()
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.defaultColor?4(style)
+eric5.QScintilla.Lexers.LexerPygments.LexerPygments.defaultEolFill?4(style)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.defaultFont?4(style)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.defaultKeywords?4(kwSet)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.defaultPaper?4(style)
@@ -5216,8 +5217,8 @@ eric5.QScintilla.Lexers.LexerPygments.LexerPygments.name?4()
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.styleBitsNeeded?4()
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments.styleText?4(start, end)
 eric5.QScintilla.Lexers.LexerPygments.LexerPygments?1(parent = None, name = "")
-eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_ERROR?7
 eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_INSERTED?7
+eric5.QScintilla.Lexers.LexerPygments.PYGMENTS_PUNCTUATION?7
 eric5.QScintilla.Lexers.LexerPygments.TOKEN_MAP?7
 eric5.QScintilla.Lexers.LexerPython.LexerPython.autoCompletionWordSeparators?4()
 eric5.QScintilla.Lexers.LexerPython.LexerPython.defaultKeywords?4(kwSet)

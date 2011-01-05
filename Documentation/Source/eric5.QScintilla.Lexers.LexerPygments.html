@@ -26,7 +26,7 @@ Module implementing a custom lexer using pygments.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>PYGMENTS_ERROR</td></tr><tr><td>PYGMENTS_INSERTED</td></tr><tr><td>TOKEN_MAP</td></tr>
+<tr><td>PYGMENTS_INSERTED</td></tr><tr><td>PYGMENTS_PUNCTUATION</td></tr><tr><td>TOKEN_MAP</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -67,6 +67,9 @@ LexerContainer
 </tr><tr>
 <td><a href="#LexerPygments.defaultColor">defaultColor</a></td>
 <td>Public method to get the default foreground color for a style.</td>
+</tr><tr>
+<td><a href="#LexerPygments.defaultEolFill">defaultEolFill</a></td>
+<td>Public method to get the default fill to eol flag.</td>
 </tr><tr>
 <td><a href="#LexerPygments.defaultFont">defaultFont</a></td>
 <td>Public method to get the default font for a style.</td>
@@ -151,6 +154,21 @@ style number (integer)
 <dt>Returns:</dt>
 <dd>
 foreground color (QColor)
+</dd>
+</dl><a NAME="LexerPygments.defaultEolFill" ID="LexerPygments.defaultEolFill"></a>
+<h4>LexerPygments.defaultEolFill</h4>
+<b>defaultEolFill</b>(<i>style</i>)
+<p>
+        Public method to get the default fill to eol flag.
+</p><dl>
+<dt><i>style</i></dt>
+<dd>
+style number (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+fill to eol flag (boolean)
 </dd>
 </dl><a NAME="LexerPygments.defaultFont" ID="LexerPygments.defaultFont"></a>
 <h4>LexerPygments.defaultFont</h4>
