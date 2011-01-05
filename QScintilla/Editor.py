@@ -1448,6 +1448,13 @@ class Editor(QsciScintillaCompat):
         
         filename = os.path.basename(filename)
         apiLanguage = Preferences.getEditorLexerAssoc(filename)
+        if apiLanguage == "":
+            if self.isPy2File():
+                apiLanguage = "Python2"
+            elif self.isPy3File():
+                apiLanguage = "Python3"
+            elif self.isRubyFile():
+                apiLanguage = "Ruby"
         
         self.completer = TypingCompleters.getCompleter(apiLanguage, self)
         
