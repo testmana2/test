@@ -117,7 +117,7 @@ def getLexer(language, parent = None, pyname = ""):
     """
     if not pyname:
         try:
-            if language in ["Python", "Python3"]:
+            if language in ["Python", "Python2", "Python3"]:
                 from .LexerPython import LexerPython
                 return LexerPython(parent)
             elif language == "C++":
