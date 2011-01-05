@@ -2426,10 +2426,16 @@ line number of the highlight bar (integer)
 </dd>
 </dl><a NAME="Editor.getLanguage" ID="Editor.getLanguage"></a>
 <h4>Editor.getLanguage</h4>
-<b>getLanguage</b>(<i></i>)
+<b>getLanguage</b>(<i>normalized = True</i>)
 <p>
         Public method to retrieve the language of the editor.
 </p><dl>
+<dt><i>normalized=</i></dt>
+<dd>
+flag indicating to normalize some Pygments
+            lexer names (boolean)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 language of the editor (string)

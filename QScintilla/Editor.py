@@ -1102,7 +1102,8 @@ class Editor(QsciScintillaCompat):
         """
         if self.apiLanguage.startswith("Pygments|"):
             self.pygmentsSelAct.setText(
-                self.trUtf8("Alternatives ({0})").format(self.getLanguage()))
+                self.trUtf8("Alternatives ({0})").format(
+                    self.getLanguage(normalized = False)))
         else:
             self.pygmentsSelAct.setText(self.trUtf8("Alternatives"))
         self.showMenu.emit("Languages", self.languagesMenu,  self)
@@ -1116,7 +1117,7 @@ class Editor(QsciScintillaCompat):
         from pygments.lexers import get_all_lexers
         lexerList = sorted([l[0] for l in get_all_lexers()])
         try:
-            lexerSel = lexerList.index(self.getLanguage())
+            lexerSel = lexerList.index(self.getLanguage(normalized = False))
         except ValueError:
             lexerSel = 0
         lexerName, ok = QInputDialog.getItem(
@@ -1424,14 +1425,23 @@ class Editor(QsciScintillaCompat):
         """
         return self.lexer_
         
-    def getLanguage(self):
+    def getLanguage(self, normalized = True):
         """
         Public method to retrieve the language of the editor.
         
+        @keyparam normalized flag indicating to normalize some Pygments 
+            lexer names (boolean)
         @return language of the editor (string)
         """
         if self.apiLanguage == "Guessed" or self.apiLanguage.startswith("Pygments|"):
-            return self.lexer_.name()
+            lang = self.lexer_.name()
+            if normalized:
+                # adjust some Pygments lexer names
+                if lang == "Python":
+                    lang = "Python2"
+                elif lang == "Python 3":
+                    lang = "Python3"
+            return lang
         else:
             return self.apiLanguage
         
