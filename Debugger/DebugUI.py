@@ -585,7 +585,7 @@ class DebugUI(QObject):
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the generated toolbars (list of QToolBar)
         """
-        starttb = QToolBar(self.trUtf8("Start"), self.parent())
+        starttb = QToolBar(self.trUtf8("Start"), self.ui)
         starttb.setIconSize(UI.Config.ToolBarIconSize)
         starttb.setObjectName("StartToolbar")
         starttb.setToolTip(self.trUtf8('Start'))
@@ -599,7 +599,7 @@ class DebugUI(QObject):
         starttb.addAction(self.debugAct)
         starttb.addAction(self.debugProjectAct)
         
-        debugtb = QToolBar(self.trUtf8("Debug"), self.parent())
+        debugtb = QToolBar(self.trUtf8("Debug"), self.ui)
         debugtb.setIconSize(UI.Config.ToolBarIconSize)
         debugtb.setObjectName("DebugToolbar")
         debugtb.setToolTip(self.trUtf8('Debug'))

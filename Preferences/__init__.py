@@ -91,7 +91,7 @@ class Prefs(object):
         "Style" : "System",
         "StyleSheet" : "",
         "ViewManager" : "tabview",
-        "LayoutType" : "Toolboxes",
+        "LayoutType" : "Sidebars",
         # allowed values are "DockWindows", "FloatingWindows", "Toolboxes" and "Sidebars"
         "LayoutShellEmbedded" : 0,          # 0 = separate
                                             # 1 = embedded in debug browser
@@ -139,7 +139,7 @@ class Prefs(object):
             "debug" : [
                     # visibility (0)
                     [ False, False, True,  True, True, True, False, False, 
-                      True,  True,  False, False], 
+                      True,  False,  False, False], 
                     # saved state main window with dock windows (1)
                     b"",
                     # saved states floating windows (2)

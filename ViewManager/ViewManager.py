@@ -707,11 +707,10 @@ class ViewManager(QObject):
         tb.addAction(self.saveAsAct)
         tb.addAction(self.saveAllAct)
         tb.addAction(self.saveToProjectAct)
-        tb.addSeparator()
-        tb.addAction(self.printPreviewAct)
-        tb.addAction(self.printAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
+        toolbarManager.addAction(self.printPreviewAct, tb.windowTitle())
+        toolbarManager.addAction(self.printAct, tb.windowTitle())
         
         return tb
         

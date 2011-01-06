@@ -218,7 +218,7 @@ class UserInterface(QMainWindow):
         
         g = Preferences.getGeometry("MainGeometry")
         if g.isEmpty():
-            s = QSize(800, 600)
+            s = QSize(1280, 1024)
             self.resize(s)
         else:
             self.restoreGeometry(g)
@@ -2465,6 +2465,7 @@ class UserInterface(QMainWindow):
         pluginstb.addAction(self.pluginRepoAct)
         self.toolbarManager.addToolBar(pluginstb, pluginstb.windowTitle())
         
+        # add the various toolbars
         self.addToolBar(filetb)
         self.addToolBar(edittb)
         self.addToolBar(searchtb)
@@ -2474,14 +2475,25 @@ class UserInterface(QMainWindow):
         self.addToolBar(debugtb)
         self.addToolBar(multiprojecttb)
         self.addToolBar(projecttb)
-        self.addToolBar(toolstb)
+        self.addToolBar(Qt.RightToolBarArea, settingstb)
+        self.addToolBar(Qt.RightToolBarArea, toolstb)
         self.addToolBar(helptb)
-        self.addToolBar(settingstb)
         self.addToolBar(bookmarktb)
         self.addToolBar(spellingtb)
         self.addToolBar(unittesttb)
         self.addToolBar(profilestb)
         self.addToolBar(pluginstb)
+        
+        # hide toolbars not wanted in the initial layout
+        searchtb.hide()
+        quicksearchtb.hide()
+        viewtb.hide()
+        debugtb.hide()
+        multiprojecttb.hide()
+        helptb.hide()
+        spellingtb.hide()
+        unittesttb.hide()
+        pluginstb.hide()
 
         # just add new toolbars to the end of the list
         self.__toolbars = {}
@@ -2502,6 +2514,23 @@ class UserInterface(QMainWindow):
         self.__toolbars["quicksearch"] = [quicksearchtb.windowTitle(), quicksearchtb]
         self.__toolbars["multiproject"] = [multiprojecttb.windowTitle(), multiprojecttb]
         self.__toolbars["spelling"] = [spellingtb.windowTitle(), spellingtb]
+        
+    def __initDebugToolbarsLayout(self):
+        """
+        Private slot to initialize the toolbars layout for the debug profile.
+        """
+        # Step 1: set the edit profile to be sure
+        self.__setEditProfile()
+        
+        # Step 2: switch to debug profile and do the layout
+        initSize = self.size()
+        self.setDebugProfile()
+        self.__toolbars["project"][1].hide()
+        self.__toolbars["debug"][1].show()
+        self.resize(initSize)
+        
+        # Step 3: switch back to edit profile
+        self.__setEditProfile()
         
     def __initStatusbar(self):
         """
@@ -5616,6 +5645,8 @@ class UserInterface(QMainWindow):
         the configuration dialog is shown.
         """
         if not Preferences.isConfigured():
+            self.__initDebugToolbarsLayout()
+            
             E5MessageBox.information(self,
                 self.trUtf8("First time usage"),
                 self.trUtf8("""eric5 has not been configured yet. """

@@ -3329,7 +3329,7 @@ class Project(QObject):
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
-        tb = QToolBar(self.trUtf8("Project"), self.parent())
+        tb = QToolBar(self.trUtf8("Project"), self.ui)
         tb.setIconSize(UI.Config.ToolBarIconSize)
         tb.setObjectName("ProjectToolbar")
         tb.setToolTip(self.trUtf8('Project'))

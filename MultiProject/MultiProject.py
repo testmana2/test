@@ -682,7 +682,7 @@ class MultiProject(QObject):
         @param toolbarManager reference to a toolbar manager object (E5ToolBarManager)
         @return the toolbar generated (QToolBar)
         """
-        tb = QToolBar(self.trUtf8("Multiproject"), self.parent())
+        tb = QToolBar(self.trUtf8("Multiproject"), self.ui)
         tb.setIconSize(UI.Config.ToolBarIconSize)
         tb.setObjectName("MultiProjectToolbar")
         tb.setToolTip(self.trUtf8('Multiproject'))

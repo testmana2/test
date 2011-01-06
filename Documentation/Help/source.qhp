@@ -4001,6 +4001,7 @@
       <keyword name="UserInterface.__importPreferences" id="UserInterface.__importPreferences" ref="eric5.UI.UserInterface.html#UserInterface.__importPreferences" />
       <keyword name="UserInterface.__importShortcuts" id="UserInterface.__importShortcuts" ref="eric5.UI.UserInterface.html#UserInterface.__importShortcuts" />
       <keyword name="UserInterface.__initActions" id="UserInterface.__initActions" ref="eric5.UI.UserInterface.html#UserInterface.__initActions" />
+      <keyword name="UserInterface.__initDebugToolbarsLayout" id="UserInterface.__initDebugToolbarsLayout" ref="eric5.UI.UserInterface.html#UserInterface.__initDebugToolbarsLayout" />
       <keyword name="UserInterface.__initEricDocAction" id="UserInterface.__initEricDocAction" ref="eric5.UI.UserInterface.html#UserInterface.__initEricDocAction" />
       <keyword name="UserInterface.__initExternalToolsActions" id="UserInterface.__initExternalToolsActions" ref="eric5.UI.UserInterface.html#UserInterface.__initExternalToolsActions" />
       <keyword name="UserInterface.__initMenus" id="UserInterface.__initMenus" ref="eric5.UI.UserInterface.html#UserInterface.__initMenus" />
