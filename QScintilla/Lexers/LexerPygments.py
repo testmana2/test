@@ -246,7 +246,7 @@ class LexerPygments(LexerContainer):
             PYGMENTS_HEREDOC            : QColor("#DDD0DD"),
         }
         
-        self.defaultEolFill = {
+        self.defaultEolFills = {
             PYGMENTS_ERROR              : True, 
             PYGMENTS_MULTILINECOMMENT   : True,
             PYGMENTS_HEREDOC            : True, 
@@ -343,7 +343,7 @@ class LexerPygments(LexerContainer):
         @return fill to eol flag (boolean)
         """
         try:
-            return self.defaultEolFill[style]
+            return self.defaultEolFills[style]
         except KeyError:
             return LexerContainer.defaultEolFill(self, style)
         
