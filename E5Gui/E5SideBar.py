@@ -86,6 +86,17 @@ class E5SideBar(QWidget):
         @param splitter reference to the splitter (QSplitter)
         """
         self.splitter = splitter
+        self.splitter.splitterMoved.connect(self.__splitterMoved)
+    
+    def __splitterMoved(self, pos, index):
+        """
+        Private slot to react on splitter moves.
+        
+        @param pos new position of the splitter handle (integer)
+        @param index index of the splitter handle (integer)
+        """
+        if self.splitter:
+            self.splitterSizes = self.splitter.sizes()
     
     def shrink(self):
         """
