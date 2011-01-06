@@ -157,7 +157,7 @@ class Prefs(object):
         },
         "ToolbarManagerState" : QtCore.QByteArray(), 
         "ShowSplash" : True,
-        "SingleCloseButton" : True, 
+        "SingleCloseButton" : False, 
         
         "PerformVersionCheck" : 4,      # 0 = off
                                         # 1 = at startup
