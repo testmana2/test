@@ -4245,6 +4245,7 @@
       <keyword name="E5SideBar (Constructor)" id="E5SideBar (Constructor)" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__init__" />
       <keyword name="E5SideBar.__appFocusChanged" id="E5SideBar.__appFocusChanged" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__appFocusChanged" />
       <keyword name="E5SideBar.__autoHideToggled" id="E5SideBar.__autoHideToggled" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__autoHideToggled" />
+      <keyword name="E5SideBar.__splitterMoved" id="E5SideBar.__splitterMoved" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__splitterMoved" />
       <keyword name="E5SideBar.addTab" id="E5SideBar.addTab" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.addTab" />
       <keyword name="E5SideBar.clear" id="E5SideBar.clear" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.clear" />
       <keyword name="E5SideBar.count" id="E5SideBar.count" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.count" />

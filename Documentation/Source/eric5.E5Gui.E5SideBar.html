@@ -64,6 +64,9 @@ QWidget
 <td><a href="#E5SideBar.__autoHideToggled">__autoHideToggled</a></td>
 <td>Private slot to handle the toggling of the autohide button.</td>
 </tr><tr>
+<td><a href="#E5SideBar.__splitterMoved">__splitterMoved</a></td>
+<td>Private slot to react on splitter moves.</td>
+</tr><tr>
 <td><a href="#E5SideBar.addTab">addTab</a></td>
 <td>Public method to add a tab to the sidebar.</td>
 </tr><tr>
@@ -205,6 +208,19 @@ reference to the widget having the focus (QWidget or None)
 <dt><i>checked</i></dt>
 <dd>
 flag indicating the checked state of the button (boolean)
+</dd>
+</dl><a NAME="E5SideBar.__splitterMoved" ID="E5SideBar.__splitterMoved"></a>
+<h4>E5SideBar.__splitterMoved</h4>
+<b>__splitterMoved</b>(<i>pos, index</i>)
+<p>
+        Private slot to react on splitter moves.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+new position of the splitter handle (integer)
+</dd><dt><i>index</i></dt>
+<dd>
+index of the splitter handle (integer)
 </dd>
 </dl><a NAME="E5SideBar.addTab" ID="E5SideBar.addTab"></a>
 <h4>E5SideBar.addTab</h4>
