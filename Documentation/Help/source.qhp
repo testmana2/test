@@ -2209,6 +2209,7 @@
       <keyword name="DebugViewer.handleResetUI" id="DebugViewer.handleResetUI" ref="eric5.Debugger.DebugViewer.html#DebugViewer.handleResetUI" />
       <keyword name="DebugViewer.restoreCurrentPage" id="DebugViewer.restoreCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.restoreCurrentPage" />
       <keyword name="DebugViewer.saveCurrentPage" id="DebugViewer.saveCurrentPage" ref="eric5.Debugger.DebugViewer.html#DebugViewer.saveCurrentPage" />
+      <keyword name="DebugViewer.setCurrentWidget" id="DebugViewer.setCurrentWidget" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setCurrentWidget" />
       <keyword name="DebugViewer.setDebugger" id="DebugViewer.setDebugger" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setDebugger" />
       <keyword name="DebugViewer.setVariablesFilter" id="DebugViewer.setVariablesFilter" ref="eric5.Debugger.DebugViewer.html#DebugViewer.setVariablesFilter" />
       <keyword name="DebugViewer.showThreadList" id="DebugViewer.showThreadList" ref="eric5.Debugger.DebugViewer.html#DebugViewer.showThreadList" />

@@ -388,6 +388,14 @@ class DebugViewer(QWidget):
         """
         return self.__tabWidget.currentWidget()
         
+    def setCurrentWidget(self, widget):
+        """
+        Public slot to set the current page based on the given widget.
+        
+        @param widget reference to the widget (QWidget)
+        """
+        self.__tabWidget.setCurrentWidget(widget)
+        
     def showThreadList(self, currentID, threadList):
         """
         Public method to show the thread list.
