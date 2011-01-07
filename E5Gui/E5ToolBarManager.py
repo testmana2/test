@@ -136,14 +136,16 @@ class E5ToolBarManager(QObject):
         newActionsWithSeparators = []
         actions = toolBar.actions()
         for action in actions:
+            actID = id(action)
             self.addAction(action, category)
-            if id(action) in self.__widgetActions:
-                self.__widgetActions[id(action)] = toolBar
+            if actID in self.__widgetActions:
+                self.__widgetActions[actID] = toolBar
             newActionsWithSeparators.append(action)
             if action.isSeparator():
                 action = None
             else:
-                self.__actionToToolBars[id(action)].append(toolBar)
+                if toolBar not in self.__actionToToolBars[actID]:
+                    self.__actionToToolBars[actID].append(toolBar)
             newActions.append(action)
         tbID = id(toolBar)
         self.__defaultToolBars[tbID] = newActions
@@ -383,7 +385,7 @@ class E5ToolBarManager(QObject):
             return
         if action.isSeparator():
             return
-        if action in self.__allActions:
+        if id(action) in self.__allActions:
             return
         
         if action.metaObject().className() == "QWidgetAction":
