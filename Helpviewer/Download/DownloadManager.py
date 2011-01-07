@@ -336,7 +336,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.__model.removeRows(0, len(self.__downloads))
         if len(self.__downloads) == 0 and \
            self.__iconProvider is not None:
-               self.__iconProvider = None
+            self.__iconProvider = None
         
         self.changeOccurred()
         self.__updateActiveItemCount()

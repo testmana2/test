@@ -231,8 +231,8 @@ class UrlBar(E5LineEdit):
             if progress == 0:
                 if self.__browser.url().scheme() == "https":
                     backgroundColor = Preferences.getHelp("SaveUrlColor")
-                p.setBrush(QPalette.Base, backgroundColor);
-                p.setBrush(QPalette.Text, foregroundColor);
+                p.setBrush(QPalette.Base, backgroundColor)
+                p.setBrush(QPalette.Text, foregroundColor)
             else:
                 if self.__browser.url().scheme() == "https":
                     backgroundColor = Preferences.getHelp("SaveUrlColor")

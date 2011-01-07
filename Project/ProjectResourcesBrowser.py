@@ -718,7 +718,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     rfile = os.path.join(self.project.ppath, rfile)
                 if os.path.exists(rfile) and \
                    os.stat(rfile).st_mtime > mtime:
-                       return True
+                    return True
                 
                 lbuf = ""
         

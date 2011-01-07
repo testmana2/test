@@ -523,8 +523,8 @@ class MiniEditor(QMainWindow):
         self.deleteAct.triggered[()].connect(self.__textEdit.clear)
         self.editActions.append(self.deleteAct)
         
-        self.cutAct.setEnabled(False);
-        self.copyAct.setEnabled(False);
+        self.cutAct.setEnabled(False)
+        self.copyAct.setEnabled(False)
         self.__textEdit.copyAvailable.connect(self.cutAct.setEnabled)
         self.__textEdit.copyAvailable.connect(self.copyAct.setEnabled)
         
@@ -1359,7 +1359,7 @@ class MiniEditor(QMainWindow):
         self.fileMenu.addSeparator()
         self.fileMenu.addAction(self.closeAct)
         
-        self.editMenu = self.menuBar().addMenu(self.trUtf8("&Edit"));
+        self.editMenu = self.menuBar().addMenu(self.trUtf8("&Edit"))
         self.editMenu.addAction(self.undoAct)
         self.editMenu.addAction(self.redoAct)
         self.editMenu.addSeparator()

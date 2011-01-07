@@ -267,7 +267,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
         else:
-           if self.hooks["compileAllForms"] is not None:
+            if self.hooks["compileAllForms"] is not None:
                 self.dirMultiMenu.addAction(
                     self.hooksMenuEntries.get("compileAllForms", 
                         self.trUtf8('Compile all forms')), 

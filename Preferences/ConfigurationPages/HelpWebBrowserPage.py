@@ -97,9 +97,9 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         historyLimit = Preferences.getHelp("HistoryLimit")
         idx = 0
         if historyLimit == 1:
-           idx = 0
+            idx = 0
         elif historyLimit == 7:
-           idx = 1 
+            idx = 1 
         elif historyLimit == 14:
             idx = 2
         elif historyLimit == 30:

@@ -5963,7 +5963,7 @@ class Editor(QsciScintillaCompat):
             self.setCursorPosition(*cur)
             
             while self.__receivedWhileSyncing:
-               command = self.__receivedWhileSyncing.pop(0) 
-               self.__dispatchCommand(command)
+                command = self.__receivedWhileSyncing.pop(0) 
+                self.__dispatchCommand(command)
             
             self.__isSyncing = False

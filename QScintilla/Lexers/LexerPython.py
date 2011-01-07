@@ -51,7 +51,7 @@ class LexerPython(QsciLexerPython, Lexer):
         self.setFoldComments(Preferences.getEditor("PythonFoldComment"))
         self.setFoldQuotes(Preferences.getEditor("PythonFoldString"))
         if not Preferences.getEditor("PythonAutoIndent"):
-           self.setAutoIndentStyle(QsciScintilla.AiMaintain)
+            self.setAutoIndentStyle(QsciScintilla.AiMaintain)
         try:
             self.setV2UnicodeAllowed(Preferences.getEditor("PythonAllowV2Unicode"))
             self.setV3BinaryOctalAllowed(Preferences.getEditor("PythonAllowV3Binary"))

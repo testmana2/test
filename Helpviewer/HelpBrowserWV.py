@@ -58,7 +58,7 @@ class JavaScriptExternalObject(QObject):
         
         @param url url of the XML file defining the search provider (string)
         """
-        self.__mw.openSearchManager().addEngine(QUrl(url));
+        self.__mw.openSearchManager().addEngine(QUrl(url))
 
 class LinkedResource(object):
     """

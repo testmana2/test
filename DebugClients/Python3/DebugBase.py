@@ -199,7 +199,8 @@ class DebugBase(bdb.Bdb):
         """
         if self.stop_here(frame) or self.break_here(frame):
             self.user_line(frame)
-            if self.quitting: raise bdb.BdbQuit
+            if self.quitting:
+                raise bdb.BdbQuit
         return self.trace_dispatch
 
     def dispatch_return(self, frame, arg):
@@ -226,7 +227,8 @@ class DebugBase(bdb.Bdb):
         """
         if not self.__skip_it(frame):
             self.user_exception(frame, arg)
-            if self.quitting: raise bdb.BdbQuit
+            if self.quitting:
+                raise bdb.BdbQuit
         return self.trace_dispatch
 
     def set_trace(self, frame = None):
