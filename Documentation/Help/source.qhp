@@ -3448,7 +3448,6 @@
       <keyword name="ViewManager.isConnected" id="ViewManager.isConnected" ref="eric5.ViewManager.ViewManager.html#ViewManager.isConnected" />
       <keyword name="ViewManager.newEditor" id="ViewManager.newEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.newEditor" />
       <keyword name="ViewManager.newEditorView" id="ViewManager.newEditorView" ref="eric5.ViewManager.ViewManager.html#ViewManager.newEditorView" />
-      <keyword name="ViewManager.newProject" id="ViewManager.newProject" ref="eric5.ViewManager.ViewManager.html#ViewManager.newProject" />
       <keyword name="ViewManager.nextSplit" id="ViewManager.nextSplit" ref="eric5.ViewManager.ViewManager.html#ViewManager.nextSplit" />
       <keyword name="ViewManager.openFiles" id="ViewManager.openFiles" ref="eric5.ViewManager.ViewManager.html#ViewManager.openFiles" />
       <keyword name="ViewManager.openSourceFile" id="ViewManager.openSourceFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.openSourceFile" />
@@ -3457,7 +3456,6 @@
       <keyword name="ViewManager.printCurrentEditor" id="ViewManager.printCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printCurrentEditor" />
       <keyword name="ViewManager.printEditor" id="ViewManager.printEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printEditor" />
       <keyword name="ViewManager.printPreviewCurrentEditor" id="ViewManager.printPreviewCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printPreviewCurrentEditor" />
-      <keyword name="ViewManager.projectClosed" id="ViewManager.projectClosed" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectClosed" />
       <keyword name="ViewManager.projectFileRenamed" id="ViewManager.projectFileRenamed" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectFileRenamed" />
       <keyword name="ViewManager.projectLexerAssociationsChanged" id="ViewManager.projectLexerAssociationsChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectLexerAssociationsChanged" />
       <keyword name="ViewManager.projectOpened" id="ViewManager.projectOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectOpened" />
@@ -3467,10 +3465,8 @@
       <keyword name="ViewManager.saveAsCurrentEditor" id="ViewManager.saveAsCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAsCurrentEditor" />
       <keyword name="ViewManager.saveAsEditorEd" id="ViewManager.saveAsEditorEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveAsEditorEd" />
       <keyword name="ViewManager.saveCurrentEditor" id="ViewManager.saveCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveCurrentEditor" />
-      <keyword name="ViewManager.saveCurrentEditorToProject" id="ViewManager.saveCurrentEditorToProject" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveCurrentEditorToProject" />
       <keyword name="ViewManager.saveEditor" id="ViewManager.saveEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditor" />
       <keyword name="ViewManager.saveEditorEd" id="ViewManager.saveEditorEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorEd" />
-      <keyword name="ViewManager.saveEditorToProjectEd" id="ViewManager.saveEditorToProjectEd" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorToProjectEd" />
       <keyword name="ViewManager.saveEditorsList" id="ViewManager.saveEditorsList" ref="eric5.ViewManager.ViewManager.html#ViewManager.saveEditorsList" />
       <keyword name="ViewManager.send" id="ViewManager.send" ref="eric5.ViewManager.ViewManager.html#ViewManager.send" />
       <keyword name="ViewManager.sendSharedEdit" id="ViewManager.sendSharedEdit" ref="eric5.ViewManager.ViewManager.html#ViewManager.sendSharedEdit" />
@@ -9284,7 +9280,6 @@
       <keyword name="Listspace.__contextMenuSave" id="Listspace.__contextMenuSave" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSave" />
       <keyword name="Listspace.__contextMenuSaveAll" id="Listspace.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveAll" />
       <keyword name="Listspace.__contextMenuSaveAs" id="Listspace.__contextMenuSaveAs" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveAs" />
-      <keyword name="Listspace.__contextMenuSaveToProject" id="Listspace.__contextMenuSaveToProject" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveToProject" />
       <keyword name="Listspace.__currentChanged" id="Listspace.__currentChanged" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__currentChanged" />
       <keyword name="Listspace.__initMenu" id="Listspace.__initMenu" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__initMenu" />
       <keyword name="Listspace.__showMenu" id="Listspace.__showMenu" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__showMenu" />
@@ -9345,7 +9340,6 @@
       <keyword name="TabWidget.__contextMenuSave" id="TabWidget.__contextMenuSave" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSave" />
       <keyword name="TabWidget.__contextMenuSaveAll" id="TabWidget.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAll" />
       <keyword name="TabWidget.__contextMenuSaveAs" id="TabWidget.__contextMenuSaveAs" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAs" />
-      <keyword name="TabWidget.__contextMenuSaveToProject" id="TabWidget.__contextMenuSaveToProject" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveToProject" />
       <keyword name="TabWidget.__initMenu" id="TabWidget.__initMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__initMenu" />
       <keyword name="TabWidget.__navigationMenuTriggered" id="TabWidget.__navigationMenuTriggered" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__navigationMenuTriggered" />
       <keyword name="TabWidget.__showContextMenu" id="TabWidget.__showContextMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__showContextMenu" />

@@ -683,9 +683,6 @@ QObject
 <td><a href="#ViewManager.newEditorView">newEditorView</a></td>
 <td>Public method to create a new editor displaying the given document.</td>
 </tr><tr>
-<td><a href="#ViewManager.newProject">newProject</a></td>
-<td>Public slot to handle the NewProject signal.</td>
-</tr><tr>
 <td><a href="#ViewManager.nextSplit">nextSplit</a></td>
 <td>Public slot used to move to the next split.</td>
 </tr><tr>
@@ -709,9 +706,6 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.printPreviewCurrentEditor">printPreviewCurrentEditor</a></td>
 <td>Public slot to show a print preview of the current editor.</td>
-</tr><tr>
-<td><a href="#ViewManager.projectClosed">projectClosed</a></td>
-<td>Public slot to handle the projectClosed signal.</td>
 </tr><tr>
 <td><a href="#ViewManager.projectFileRenamed">projectFileRenamed</a></td>
 <td>Public slot to handle the projectFileRenamed signal.</td>
@@ -740,17 +734,11 @@ QObject
 <td><a href="#ViewManager.saveCurrentEditor">saveCurrentEditor</a></td>
 <td>Public slot to save the contents of the current editor.</td>
 </tr><tr>
-<td><a href="#ViewManager.saveCurrentEditorToProject">saveCurrentEditorToProject</a></td>
-<td>Public slot to save the contents of the current editor to the current project.</td>
-</tr><tr>
 <td><a href="#ViewManager.saveEditor">saveEditor</a></td>
 <td>Public method to save a named editor file.</td>
 </tr><tr>
 <td><a href="#ViewManager.saveEditorEd">saveEditorEd</a></td>
 <td>Public slot to save the contents of an editor.</td>
-</tr><tr>
-<td><a href="#ViewManager.saveEditorToProjectEd">saveEditorToProjectEd</a></td>
-<td>Public slot to save the contents of an editor to the current project.</td>
 </tr><tr>
 <td><a href="#ViewManager.saveEditorsList">saveEditorsList</a></td>
 <td>Public slot to save a list of editors.</td>
@@ -2237,12 +2225,7 @@ reference to the editor calling this method
 <dd>
 type of the source file (string)
 </dd>
-</dl><a NAME="ViewManager.newProject" ID="ViewManager.newProject"></a>
-<h4>ViewManager.newProject</h4>
-<b>newProject</b>(<i></i>)
-<p>
-        Public slot to handle the NewProject signal.
-</p><a NAME="ViewManager.nextSplit" ID="ViewManager.nextSplit"></a>
+</dl><a NAME="ViewManager.nextSplit" ID="ViewManager.nextSplit"></a>
 <h4>ViewManager.nextSplit</h4>
 <b>nextSplit</b>(<i></i>)
 <p>
@@ -2318,11 +2301,6 @@ editor to be printed
 <b>printPreviewCurrentEditor</b>(<i></i>)
 <p>
         Public slot to show a print preview of the current editor.
-</p><a NAME="ViewManager.projectClosed" ID="ViewManager.projectClosed"></a>
-<h4>ViewManager.projectClosed</h4>
-<b>projectClosed</b>(<i></i>)
-<p>
-        Public slot to handle the projectClosed signal.
 </p><a NAME="ViewManager.projectFileRenamed" ID="ViewManager.projectFileRenamed"></a>
 <h4>ViewManager.projectFileRenamed</h4>
 <b>projectFileRenamed</b>(<i>oldfn, newfn</i>)
@@ -2397,11 +2375,6 @@ editor to be saved
 <b>saveCurrentEditor</b>(<i></i>)
 <p>
         Public slot to save the contents of the current editor.
-</p><a NAME="ViewManager.saveCurrentEditorToProject" ID="ViewManager.saveCurrentEditorToProject"></a>
-<h4>ViewManager.saveCurrentEditorToProject</h4>
-<b>saveCurrentEditorToProject</b>(<i></i>)
-<p>
-        Public slot to save the contents of the current editor to the current project.
 </p><a NAME="ViewManager.saveEditor" ID="ViewManager.saveEditor"></a>
 <h4>ViewManager.saveEditor</h4>
 <b>saveEditor</b>(<i>fn</i>)
@@ -2431,16 +2404,6 @@ editor to be saved
 <dt>Returns:</dt>
 <dd>
 flag indicating success (boolean)
-</dd>
-</dl><a NAME="ViewManager.saveEditorToProjectEd" ID="ViewManager.saveEditorToProjectEd"></a>
-<h4>ViewManager.saveEditorToProjectEd</h4>
-<b>saveEditorToProjectEd</b>(<i>ed</i>)
-<p>
-        Public slot to save the contents of an editor to the current project.
-</p><dl>
-<dt><i>ed</i></dt>
-<dd>
-editor to be saved
 </dd>
 </dl><a NAME="ViewManager.saveEditorsList" ID="ViewManager.saveEditorsList"></a>
 <h4>ViewManager.saveEditorsList</h4>

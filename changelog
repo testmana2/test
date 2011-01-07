@@ -3,6 +3,7 @@ Change Log
 Version 5.1-snapshot-2011mmdd:
 - bug fixes
 - made the toolbars of the initial layout more minimalistic
+- merged "Save to Project" into "Save" and "Save As...".
 
 Version 5.1-snapshot-20110106:
 - bug fixes

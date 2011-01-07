@@ -12,8 +12,6 @@ import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui.E5Application import e5App
-
 from ViewManager.ViewManager import ViewManager
 
 import QScintilla.Editor
@@ -205,9 +203,6 @@ class Listspace(QSplitter, ViewManager):
             self.trUtf8('Save As...'), self.__contextMenuSaveAs)
         self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAll.png"),
             self.trUtf8('Save All'), self.__contextMenuSaveAll)
-        self.projectMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveProject.png"),
-                self.trUtf8('Save to Project'), self.__contextMenuSaveToProject)
         self.__menu.addSeparator()
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
@@ -223,7 +218,6 @@ class Listspace(QSplitter, ViewManager):
                 self.contextMenuEditor = self.editors[row]
                 if self.contextMenuEditor:
                     self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
-                    self.projectMenuAct.setEnabled(e5App().getObject("Project").isOpen())
                     self.__menu.popup(self.viewlist.mapToGlobal(point))
         
     def canCascade(self):
@@ -598,13 +592,6 @@ class Listspace(QSplitter, ViewManager):
         Private method to save all tabs.
         """
         self.saveEditorsList(self.editors)
-        
-    def __contextMenuSaveToProject(self):
-        """
-        Private method to save the selected tab to the current project.
-        """
-        if self.contextMenuEditor:
-            self.saveEditorToProjectEd(self.contextMenuEditor)
         
     def __contextMenuPrintFile(self):
         """

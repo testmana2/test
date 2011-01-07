@@ -1620,10 +1620,6 @@ class Editor(QsciScintillaCompat):
                 return True
         
         return False
-##        return self.filetype in ["Python", "Python2"] or \
-##            (self.filetype == "" and \
-##             self.fileName is not None and \
-##             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python2'))
 
     def isPy3File(self):
         """
@@ -1646,10 +1642,6 @@ class Editor(QsciScintillaCompat):
                 return True
         
         return False
-##        return self.filetype == "Python3" or \
-##            (self.filetype == "" and \
-##             self.fileName is not None and \
-##             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Python3'))
 
     def isRubyFile(self):
         """
@@ -2461,6 +2453,11 @@ class Editor(QsciScintillaCompat):
         newName = None
         if saveas or self.fileName is None:
             saveas = True
+            
+            # save to project, if a project is loaded
+            if self.project.isOpen():
+                path = self.project.getProjectPath()
+            
             if not path and self.fileName is not None:
                 path = os.path.dirname(self.fileName)
             if path is None:
@@ -2495,6 +2492,11 @@ class Editor(QsciScintillaCompat):
                 newName = fn
             else:
                 return False
+            
+            # save to project, if a project is loaded
+            if self.project.isOpen() and self.project.startswithProjectPath(fn):
+                self.setEolModeByEolString(self.project.getEolString())
+                self.convertEols(self.eolMode())
         else:
             fn = self.fileName
         
@@ -2515,6 +2517,12 @@ class Editor(QsciScintillaCompat):
                 self.isResourcesFile = self.fileName.endswith(".qrc")
                 self.__initContextMenu()
                 self.editorRenamed.emit(self.fileName)
+                
+                # save to project, if a project is loaded
+                if self.project.isOpen() and self.project.startswithProjectPath(fn):
+                    self.project.appendFile(self.fileName)
+                    self.addedToProject()
+            
             self.lastModified = QFileInfo(self.fileName).lastModified()
             if newName is not None:
                 self.vm.addToRecentList(newName)
@@ -2535,9 +2543,6 @@ class Editor(QsciScintillaCompat):
         @return tuple of two values (boolean, string) giving a success indicator and
             the name of the saved file
         """
-        if toProject:
-            self.setEolModeByEolString(self.project.getEolString())
-            self.convertEols(self.eolMode())
         return self.saveFile(True, path)
         
     def handleRenamed(self, fn):

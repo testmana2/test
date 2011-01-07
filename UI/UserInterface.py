@@ -355,9 +355,7 @@ class UserInterface(QMainWindow):
         self.projectBrowser.poBrowser.svgFile.connect(self.__showSvg)
         
         self.project.sourceFile.connect(self.viewmanager.openSourceFile)
-        self.project.newProject.connect(self.viewmanager.newProject)
         self.project.projectOpened.connect(self.viewmanager.projectOpened)
-        self.project.projectClosed.connect(self.viewmanager.projectClosed)
         self.project.projectFileRenamed.connect(self.viewmanager.projectFileRenamed)
         self.project.lexerAssociationsChanged.connect(
             self.viewmanager.projectLexerAssociationsChanged)

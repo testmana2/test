@@ -581,23 +581,6 @@ class ViewManager(QObject):
         
         self.saveActGrp.setEnabled(False)
 
-        self.saveToProjectAct = E5Action(QApplication.translate('ViewManager', 
-                    'Save to Project'),
-                UI.PixmapCache.getIcon("fileSaveProject.png"),
-                QApplication.translate('ViewManager', 'Save to Pro&ject'),
-                0, 0,self, 'vm_file_save_to_project')
-        self.saveToProjectAct.setStatusTip(QApplication.translate('ViewManager', 
-            'Save the current file to the current project'))
-        self.saveToProjectAct.setWhatsThis(QApplication.translate('ViewManager', 
-            """<b>Save to Project</b>"""
-            """<p>Save the contents of the current editor window to the"""
-            """ current project. After the file has been saved, it is"""
-            """ automatically added to the current project.</p>"""
-        ))
-        self.saveToProjectAct.triggered[()].connect(self.saveCurrentEditorToProject)
-        self.saveToProjectAct.setEnabled(False)
-        self.fileActions.append(self.saveToProjectAct)
-        
         self.printAct = E5Action(QApplication.translate('ViewManager', 'Print'),
                 UI.PixmapCache.getIcon("print.png"),
                 QApplication.translate('ViewManager', '&Print'),
@@ -671,7 +654,6 @@ class ViewManager(QObject):
         menu.addAction(self.saveAct)
         menu.addAction(self.saveAsAct)
         menu.addAction(self.saveAllAct)
-        menu.addAction(self.saveToProjectAct)
         self.exportersMenuAct = menu.addMenu(self.exportersMenu)
         menu.addSeparator()
         menu.addAction(self.printPreviewAct)
@@ -706,7 +688,6 @@ class ViewManager(QObject):
         tb.addAction(self.saveAct)
         tb.addAction(self.saveAsAct)
         tb.addAction(self.saveAllAct)
-        tb.addAction(self.saveToProjectAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.printPreviewAct, tb.windowTitle())
@@ -3506,30 +3487,6 @@ class ViewManager(QObject):
         if self.autosaveInterval > 0:
             self.autosaveTimer.start(self.autosaveInterval * 60000)
         
-    def saveEditorToProjectEd(self, ed):
-        """
-        Public slot to save the contents of an editor to the current project.
-        
-        @param ed editor to be saved
-        """
-        pro = e5App().getObject("Project")
-        path = pro.ppath
-        if ed:
-            ok = ed.saveFileAs(path, toProject = True)
-            if ok:
-                self.setEditorName(ed, ed.getFileName())
-                pro.appendFile(ed.getFileName())
-                ed.addedToProject()
-        else:
-            return
-        
-    def saveCurrentEditorToProject(self):
-        """
-        Public slot to save the contents of the current editor to the current project.
-        """
-        aw = self.activeWindow()
-        self.saveEditorToProjectEd(aw)
-        
     def __exportMenuTriggered(self, act):
         """
         Private method to handle the selection of an export format.
@@ -3670,25 +3627,12 @@ class ViewManager(QObject):
         """
         self.bookmarked = []
         
-    def newProject(self):
-        """
-        Public slot to handle the NewProject signal.
-        """
-        self.saveToProjectAct.setEnabled(True)
-        
     def projectOpened(self):
         """
         Public slot to handle the projectOpened signal.
         """
-        self.saveToProjectAct.setEnabled(True)
         for editor in self.editors:
             editor.setSpellingForProject()
-        
-    def projectClosed(self):
-        """
-        Public slot to handle the projectClosed signal.
-        """
-        self.saveToProjectAct.setEnabled(False)
         
     def projectFileRenamed(self, oldfn, newfn):
         """

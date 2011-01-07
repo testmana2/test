@@ -241,9 +241,6 @@ class TabWidget(E5TabWidget):
             self.trUtf8('Save As...'), self.__contextMenuSaveAs)
         self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAll.png"),
             self.trUtf8('Save All'), self.__contextMenuSaveAll)
-        self.projectMenuAct = \
-            self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveProject.png"),
-                self.trUtf8('Save to Project'), self.__contextMenuSaveToProject)
         self.__menu.addSeparator()
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
@@ -263,7 +260,6 @@ class TabWidget(E5TabWidget):
             if self.contextMenuEditor:
                 self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
                 self.copyPathAct.setEnabled(bool(self.contextMenuEditor.getFileName()))
-            self.projectMenuAct.setEnabled(e5App().getObject("Project").isOpen())
             
             self.contextMenuIndex = index
             self.leftMenuAct.setEnabled(index > 0)
@@ -538,13 +534,6 @@ class TabWidget(E5TabWidget):
         Private method to save all tabs.
         """
         self.vm.saveEditorsList(self.editors)
-        
-    def __contextMenuSaveToProject(self):
-        """
-        Private method to save the selected tab to the current project.
-        """
-        if self.contextMenuEditor:
-            self.vm.saveEditorToProjectEd(self.contextMenuEditor)
         
     def __contextMenuPrintFile(self):
         """

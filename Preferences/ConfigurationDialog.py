@@ -430,8 +430,6 @@ class ConfigurationWidget(QWidget):
         """
         self.lexers = {}
         for language in QScintilla.Lexers.getSupportedLanguages():
-##            if language in ["Python2", "Python3"]:
-##                language = "Python"
             if language not in self.lexers:
                 try:
                     self.lexers[language] = PreferencesLexer(language, self)
