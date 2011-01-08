@@ -495,7 +495,6 @@ class Prefs(object):
         "FollowEditor" : True, 
         "RecentNumber" : 9, 
         "DeterminePyFromProject" : True,
-        # TODO: add this to config dialog
     }
     
     # defaults for the multi project settings
