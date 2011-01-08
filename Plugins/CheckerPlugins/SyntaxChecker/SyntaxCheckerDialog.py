@@ -65,9 +65,11 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         Private method to resort the tree.
         """
         self.resultList.sortItems(self.resultList.sortColumn(), 
-                                  self.resultList.header().sortIndicatorOrder())
+                                  self.resultList.header().sortIndicatorOrder()
+                                 )
         
-    def __createResultItem(self, file, line, error, sourcecode, isWarning = False):
+    def __createResultItem(self, file, line, error, sourcecode, 
+                           isWarning = False):
         """
         Private method to create an entry in the result list.
         
@@ -139,27 +141,32 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         elif os.path.isdir(fn):
             files = []
             for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                files.extend(
+                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
             for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+                files.extend(
+                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        files = [f for f in files \
-                    if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
+        py3files = [f for f in files \
+                    if f.endswith(
+                        tuple(Preferences.getPython("Python3Extensions")))]
         py2files = [f for f in files \
-                    if f.endswith(tuple(Preferences.getPython("PythonExtensions")))]
+                    if f.endswith(
+                        tuple(Preferences.getPython("PythonExtensions")))]
         
-        if (codestring and len(files) == 1) or \
+        if (codestring and len(py3files) == 1) or \
            (codestring and len(py2files) == 1) or \
-           (not codestring and len(files) + len(py2files) > 0):
-            self.checkProgress.setMaximum(len(files) + len(py2files))
+           (not codestring and len(py3files) + len(py2files) > 0):
+            self.checkProgress.setMaximum(len(py3files) + len(py2files))
             QApplication.processEvents()
             
-            ignoreStarImportWarnings = Preferences.getFlakes("IgnoreStarImportWarnings")
+            ignoreStarImportWarnings = \
+                Preferences.getFlakes("IgnoreStarImportWarnings")
             
             # now go through all the files
             progress = 0
-            for file in files + py2files:
+            for file in py3files + py2files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()
@@ -179,7 +186,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
                         self.__createResultItem(file, "1", 
-                            "Error: {0}".format(str(msg)).rstrip()[1:-1], "")
+                            self.trUtf8("Error: {0}").format(str(msg))\
+                                .rstrip()[1:-1], "")
                         progress += 1
                         continue
                 
@@ -192,14 +200,17 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     Preferences.getProject("DeterminePyFromProject") and \
                     self.__project.isOpen() and \
                     self.__project.isProjectFile(file) and \
-                    self.__project.getProjectLanguage() in ["Python", "Python2"]):
+                    self.__project.getProjectLanguage() in ["Python", 
+                                                            "Python2"]):
                     isPy3 = False
                     nok, fname, line, code, error, warnings = \
                         Utilities.py2compile(file, 
-                            checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck"))
+                            checkFlakes = \
+                                Preferences.getFlakes("IncludeInSyntaxCheck"))
                 else:
                     isPy3 = True
-                    nok, fname, line, code, error = Utilities.compile(file, source)
+                    nok, fname, line, code, error = \
+                        Utilities.compile(file, source)
                 if nok:
                     self.noResults = False
                     self.__createResultItem(fname, line, error, code)
@@ -214,23 +225,27 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                     if ignoreStarImportWarnings and \
                                        isinstance(warning, ImportStarUsed):
                                         continue
-                                    fname, lineno, message = warning.getMessageData()
+                                    fname, lineno, message = \
+                                        warning.getMessageData()
                                     if not sourceLines[lineno - 1].strip()\
                                        .endswith("__IGNORE_WARNING__"):
                                         self.noResults = False
-                                        self.__createResultItem(fname, lineno, message, 
-                                                                "", isWarning = True)
+                                        self.__createResultItem(
+                                            fname, lineno, message, "", 
+                                            isWarning = True)
                             except SyntaxError as err:
                                 if err.text.strip():
                                     msg = err.text.strip()
                                 else:
                                     msg = err.msg
-                                self.__createResultItem(err.filename, err.lineno, msg, "")
+                                self.__createResultItem(
+                                    err.filename, err.lineno, msg, "")
                         else:
                             for warning in warnings:
                                 self.noResults = False
-                                self.__createResultItem(warning[0], int(warning[1]), 
-                                                        warning[2], "", isWarning = True)
+                                self.__createResultItem(
+                                    warning[0], int(warning[1]), 
+                                    warning[2], "", isWarning = True)
                 progress += 1
             self.checkProgress.setValue(progress)
             QApplication.processEvents()
@@ -242,7 +257,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
     def __finish(self):
         """
-        Private slot called when the syntax check finished or the user pressed the button.
+        Private slot called when the syntax check finished or the user
+        pressed the button.
         """
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
@@ -275,7 +291,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     @pyqtSlot()
     def on_startButton_clicked(self):
         """
-        Private slot to start a code metrics run.
+        Private slot to start a syntax check run.
         """
         fileList = self.__fileList[:]
         
@@ -283,12 +299,14 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if "ExcludeFiles" not in self.__data or \
            filterString != self.__data["ExcludeFiles"]:
             self.__data["ExcludeFiles"] = filterString
-            self.__project.setData("CHECKERSPARMS", "SyntaxChecker", self.__data)
+            self.__project.setData("CHECKERSPARMS", "SyntaxChecker", 
+                                   self.__data)
         filterList = filterString.split(",")
         if filterList:
             for filter in filterList:
                 fileList = \
-                    [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
+                    [f for f in fileList 
+                     if not fnmatch.fnmatch(f, filter.strip())]
         
         self.resultList.clear()
         self.noResults = True
@@ -337,7 +355,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         errorFiles = []
         for index in range(self.resultList.topLevelItemCount()):
             itm = self.resultList.topLevelItem(index)
-            errorFiles.append(Utilities.normabspath(itm.data(0, self.filenameRole)))
+            errorFiles.append(
+                Utilities.normabspath(itm.data(0, self.filenameRole)))
         for file in openFiles:
             if not file in errorFiles:
                 editor = vm.getOpenEditor(file)

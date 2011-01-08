@@ -35,7 +35,7 @@ for being called from within the eric5 IDE.
 #   linenumber and the error message (boolean, string, string, string). The
 #   values are only valid, if the status equals 1.
 #
-# Mofifications copyright (c) 2003 Detlev Offenbach <detlev@die-offenbachs.de>
+# Mofifications Copyright (c) 2003-2011 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 __version__ = "6_eric"

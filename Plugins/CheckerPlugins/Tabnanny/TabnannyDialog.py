@@ -116,18 +116,18 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                 files.extend(Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
-        files = [f for f in files \
+        py3files = [f for f in files \
                     if f.endswith(tuple(Preferences.getPython("Python3Extensions")))]
         py2files = [f for f in files \
                     if f.endswith(tuple(Preferences.getPython("PythonExtensions")))]
         
-        if len(files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(files) + len(py2files))
+        if len(py3files) + len(py2files) > 0:
+            self.checkProgress.setMaximum(len(py3files) + len(py2files))
             QApplication.processEvents()
             
             # now go through all the files
             progress = 0
-            for file in files + py2files:
+            for file in py3files + py2files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
                 self.__resort()

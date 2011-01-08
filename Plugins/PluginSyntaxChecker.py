@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the Tabnanny plugin.
+Module implementing the Syntax Checker plugin.
 """
 
 import os
@@ -171,7 +171,7 @@ class SyntaxCheckerPlugin(QObject):
     
     def __projectSyntaxCheck(self):
         """
-        Public slot used to check the project files for bad indentations.
+        Public slot used to check the project files for syntax errors.
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()
