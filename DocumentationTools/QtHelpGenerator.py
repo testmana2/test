@@ -10,7 +10,6 @@ Module implementing the QtHelp generator for the builtin documentation generator
 import sys
 import os
 import shutil
-import codecs
 import subprocess
 
 from Utilities import joinext, relpath, html_encode
@@ -233,7 +232,8 @@ class QtHelpGenerator(object):
         }
         
         txt = self.__convertEol(HelpProject.format(**helpAttribs), newline)
-        f = codecs.open(os.path.join(self.outputDir, HelpProjectFile), 'w', 'utf-8')
+        f = open(os.path.join(self.outputDir, HelpProjectFile), "w", 
+                 encoding = "utf-8", newline = newline)
         f.write(txt)
         f.close()
         
@@ -244,8 +244,8 @@ class QtHelpGenerator(object):
             }
             
             txt = self.__convertEol(HelpCollection.format(**collectionAttribs), newline)
-            f = codecs.open(os.path.join(self.outputDir, HelpCollectionProjectFile), 
-                            'w', 'utf-8')
+            f = open(os.path.join(self.outputDir, HelpCollectionProjectFile), 
+                     "w", encoding = "utf-8", newline = newline)
             f.write(txt)
             f.close()
         
