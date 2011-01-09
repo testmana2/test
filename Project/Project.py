@@ -541,6 +541,19 @@ class Project(QObject):
                 self.pdata[index].remove(file)
             self.setDirty(True)
         
+    def __makePpathRe(self):
+        """
+        Private method to generate a regular expression for the project path.
+        """
+        ppathRe = (self.ppath + os.sep)\
+            .replace("\\","@@")\
+            .replace("/","@@")\
+            .replace("@@",r"[\\/]")
+        if Utilities.isWindowsPlatform():
+            self.ppathRe = re.compile(ppathRe, re.IGNORECASE)
+        else:
+            self.ppathRe = re.compile(ppathRe)
+        
     def __readProject(self, fn):
         """
         Private method to read in a project (.e4p, .e4pz) file.
@@ -577,10 +590,7 @@ class Project(QObject):
             
         self.pfile = os.path.abspath(fn)
         self.ppath = os.path.abspath(os.path.dirname(fn))
-        if Utilities.isWindowsPlatform():
-            self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
-        else:
-            self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
+        self.__makePpathRe()
         
         # insert filename into list of recently opened projects
         self.__syncRecent()
@@ -736,10 +746,7 @@ class Project(QObject):
         if res:
             self.pfile = os.path.abspath(fn)
             self.ppath = os.path.abspath(os.path.dirname(fn))
-            if Utilities.isWindowsPlatform():
-                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
-            else:
-                self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
+            self.__makePpathRe()
             self.name = os.path.splitext(os.path.basename(fn))[0]
             self.setDirty(False)
             
@@ -2257,10 +2264,7 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             self.closeProject()
             dlg.storeData()
-            if Utilities.isWindowsPlatform():
-                self.ppathRe = re.compile(re.escape(self.ppath + os.sep), re.IGNORECASE)
-            else:
-                self.ppathRe = re.compile(re.escape(self.ppath + os.sep))
+            self.__makePpathRe()
             self.pdata["VCS"] = ['None']
             self.opened = True
             if not self.pdata["FILETYPES"]:
