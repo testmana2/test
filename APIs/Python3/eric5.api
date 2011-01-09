@@ -2621,6 +2621,101 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Checker.report_error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Checker?1(filename, lines, repeat=False, select="", ignore="")
+eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, parent = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.filenameRole?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.lineRole?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.messageRole?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_buttonBox_clicked?4(button)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_excludeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_includeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_showButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_startButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_storeDefaultButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.positionRole?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.prepare?4(fileList, project)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.settingsKey?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, codestring = "", save = False, repeat = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent = None)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.BINARY_OPERATORS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.build_tokens_line?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_all?4(expected=None, line_offset=0)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_logical?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.check_physical?4(line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.readline?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.readline_check_physical?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.report_error?4(line_number, offset, text, check)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.run_check?4(check, argument_names)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker?1(filename, lines=None)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.DEFAULT_EXCLUDE?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.DEFAULT_IGNORE?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.DOCSTRING_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.E225NOT_KEYWORDS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.ERRORCODE_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.EXTRANEOUS_WHITESPACE_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.INDENT_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.MAX_LINE_LENGTH?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.OPERATORS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.RAISE_COMMA_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.SELFTEST_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.SKIP_TOKENS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.UNARY_OPERATORS?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.WHITESPACE?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.WHITESPACE_AROUND_NAMED_PARAMETER_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.WHITESPACE_AROUND_OPERATOR_REGEX?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8._main?5()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.args?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level, blank_lines_before_comment)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.compound_statements?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.excluded?4(filename)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.expand_indent?4(line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.extraneous_whitespace?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.filename_match?4(filename)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.find_checks?4(argument_name)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.getMessage?4(code, *args)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.get_count?4(prefix='')
+eric5.Plugins.CheckerPlugins.Pep8.pep8.get_error_statistics?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.get_statistics?4(prefix='')
+eric5.Plugins.CheckerPlugins.Pep8.pep8.get_warning_statistics?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.ignore_code?4(code)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.imports_on_separate_lines?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.input_dir?4(dirname, runner=None)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.input_file?4(filename)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.maximum_line_length?4(physical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.message?4(text)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_newline?4(physical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_whitespace?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.mute_string?4(text)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.options?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.pep8_messages?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.pep8_messages_sample_args?7
+eric5.Plugins.CheckerPlugins.Pep8.pep8.print_benchmark?4(elapsed)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.print_statistics?4(prefix='')
+eric5.Plugins.CheckerPlugins.Pep8.pep8.process_options?4(arglist=None)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_backticks?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_has_key?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_not_equal?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.python_3000_raise_comma?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.readlines?4(filename)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.reset_counters?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.run_tests?4(filename)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.selftest?4()
+eric5.Plugins.CheckerPlugins.Pep8.pep8.tabs_obsolete?4(physical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.tabs_or_spaces?4(physical_line, indent_char)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.trailing_whitespace?4(physical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_comma?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_named_parameter_equals?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_around_operator?4(logical_line)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.lineRole?7
@@ -2732,6 +2827,20 @@ eric5.Plugins.PluginEricdoc.packageName?7
 eric5.Plugins.PluginEricdoc.pyqtApi?7
 eric5.Plugins.PluginEricdoc.shortDescription?7
 eric5.Plugins.PluginEricdoc.version?7
+eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin.activate?4()
+eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin.deactivate?4()
+eric5.Plugins.PluginPep8Checker.Pep8CheckerPlugin?1(ui)
+eric5.Plugins.PluginPep8Checker.author?7
+eric5.Plugins.PluginPep8Checker.autoactivate?7
+eric5.Plugins.PluginPep8Checker.className?7
+eric5.Plugins.PluginPep8Checker.deactivateable?7
+eric5.Plugins.PluginPep8Checker.error?7
+eric5.Plugins.PluginPep8Checker.longDescription?7
+eric5.Plugins.PluginPep8Checker.name?7
+eric5.Plugins.PluginPep8Checker.packageName?7
+eric5.Plugins.PluginPep8Checker.pyqtApi?7
+eric5.Plugins.PluginPep8Checker.shortDescription?7
+eric5.Plugins.PluginPep8Checker.version?7
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.deactivate?4()
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin?1(ui)
@@ -4908,7 +5017,7 @@ eric5.QScintilla.Editor.Editor.getWord?4(line, index, direction = 0, useWordChar
 eric5.QScintilla.Editor.Editor.getWordBoundaries?4(line, index, useWordChars = True)
 eric5.QScintilla.Editor.Editor.getWordLeft?4(line, index)
 eric5.QScintilla.Editor.Editor.getWordRight?4(line, index)
-eric5.QScintilla.Editor.Editor.gotoLine?4(line)
+eric5.QScintilla.Editor.Editor.gotoLine?4(line, pos = 1)
 eric5.QScintilla.Editor.Editor.gotoSyntaxError?4()
 eric5.QScintilla.Editor.Editor.handleMonospacedEnable?4()
 eric5.QScintilla.Editor.Editor.handleRenamed?4(fn)
@@ -6554,7 +6663,7 @@ eric5.ViewManager.ViewManager.ViewManager.newEditor?4()
 eric5.ViewManager.ViewManager.ViewManager.newEditorView?4(fn, caller, filetype = "")
 eric5.ViewManager.ViewManager.ViewManager.nextSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.openFiles?4(prog = None)
-eric5.ViewManager.ViewManager.ViewManager.openSourceFile?4(fn, lineno = None, filetype = "", selStart = 0, selEnd = 0)
+eric5.ViewManager.ViewManager.ViewManager.openSourceFile?4(fn, lineno = None, filetype = "", selStart = 0, selEnd = 0, pos = 0)
 eric5.ViewManager.ViewManager.ViewManager.preferencesChanged?4()
 eric5.ViewManager.ViewManager.ViewManager.prevSplit?4()
 eric5.ViewManager.ViewManager.ViewManager.printCurrentEditor?4()

@@ -330,6 +330,12 @@
               <section title="eric5.Plugins.AboutPlugin.AboutDialog" ref="eric5.Plugins.AboutPlugin.AboutDialog.html" />
             </section>
             <section title="eric5.Plugins.CheckerPlugins" ref="index-eric5.Plugins.CheckerPlugins.html">
+              <section title="eric5.Plugins.CheckerPlugins.Pep8" ref="index-eric5.Plugins.CheckerPlugins.Pep8.html">
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.pep8" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
+              </section>
               <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker" ref="index-eric5.Plugins.CheckerPlugins.SyntaxChecker.html">
                 <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html" />
               </section>
@@ -493,6 +499,7 @@
             <section title="eric5.Plugins.PluginAbout" ref="eric5.Plugins.PluginAbout.html" />
             <section title="eric5.Plugins.PluginEricapi" ref="eric5.Plugins.PluginEricapi.html" />
             <section title="eric5.Plugins.PluginEricdoc" ref="eric5.Plugins.PluginEricdoc.html" />
+            <section title="eric5.Plugins.PluginPep8Checker" ref="eric5.Plugins.PluginPep8Checker.html" />
             <section title="eric5.Plugins.PluginSyntaxChecker" ref="eric5.Plugins.PluginSyntaxChecker.html" />
             <section title="eric5.Plugins.PluginTabnanny" ref="eric5.Plugins.PluginTabnanny.html" />
             <section title="eric5.Plugins.PluginVcsMercurial" ref="eric5.Plugins.PluginVcsMercurial.html" />
@@ -5096,6 +5103,20 @@
       <keyword name="ColorDialogWizard.__initMenu" id="ColorDialogWizard.__initMenu" ref="eric5.Plugins.PluginWizardQColorDialog.html#ColorDialogWizard.__initMenu" />
       <keyword name="ColorDialogWizard.activate" id="ColorDialogWizard.activate" ref="eric5.Plugins.PluginWizardQColorDialog.html#ColorDialogWizard.activate" />
       <keyword name="ColorDialogWizard.deactivate" id="ColorDialogWizard.deactivate" ref="eric5.Plugins.PluginWizardQColorDialog.html#ColorDialogWizard.deactivate" />
+      <keyword name="PluginPep8Checker (Module)" id="PluginPep8Checker (Module)" ref="eric5.Plugins.PluginPep8Checker.html" />
+      <keyword name="Pep8CheckerPlugin" id="Pep8CheckerPlugin" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin" />
+      <keyword name="Pep8CheckerPlugin (Constructor)" id="Pep8CheckerPlugin (Constructor)" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__init__" />
+      <keyword name="Pep8CheckerPlugin.__editorClosed" id="Pep8CheckerPlugin.__editorClosed" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__editorClosed" />
+      <keyword name="Pep8CheckerPlugin.__editorOpened" id="Pep8CheckerPlugin.__editorOpened" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__editorOpened" />
+      <keyword name="Pep8CheckerPlugin.__editorPep8Check" id="Pep8CheckerPlugin.__editorPep8Check" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__editorPep8Check" />
+      <keyword name="Pep8CheckerPlugin.__editorShowMenu" id="Pep8CheckerPlugin.__editorShowMenu" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__editorShowMenu" />
+      <keyword name="Pep8CheckerPlugin.__initialize" id="Pep8CheckerPlugin.__initialize" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__initialize" />
+      <keyword name="Pep8CheckerPlugin.__projectBrowserPep8Check" id="Pep8CheckerPlugin.__projectBrowserPep8Check" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__projectBrowserPep8Check" />
+      <keyword name="Pep8CheckerPlugin.__projectBrowserShowMenu" id="Pep8CheckerPlugin.__projectBrowserShowMenu" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__projectBrowserShowMenu" />
+      <keyword name="Pep8CheckerPlugin.__projectPep8Check" id="Pep8CheckerPlugin.__projectPep8Check" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__projectPep8Check" />
+      <keyword name="Pep8CheckerPlugin.__projectShowMenu" id="Pep8CheckerPlugin.__projectShowMenu" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.__projectShowMenu" />
+      <keyword name="Pep8CheckerPlugin.activate" id="Pep8CheckerPlugin.activate" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.activate" />
+      <keyword name="Pep8CheckerPlugin.deactivate" id="Pep8CheckerPlugin.deactivate" ref="eric5.Plugins.PluginPep8Checker.html#Pep8CheckerPlugin.deactivate" />
       <keyword name="PluginWizardQFontDialog (Module)" id="PluginWizardQFontDialog (Module)" ref="eric5.Plugins.PluginWizardQFontDialog.html" />
       <keyword name="FontDialogWizard" id="FontDialogWizard" ref="eric5.Plugins.PluginWizardQFontDialog.html#FontDialogWizard" />
       <keyword name="FontDialogWizard (Constructor)" id="FontDialogWizard (Constructor)" ref="eric5.Plugins.PluginWizardQFontDialog.html#FontDialogWizard.__init__" />
@@ -9238,6 +9259,89 @@
       <keyword name="SyntaxCheckerDialog.on_startButton_clicked" id="SyntaxCheckerDialog.on_startButton_clicked" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_startButton_clicked" />
       <keyword name="SyntaxCheckerDialog.prepare" id="SyntaxCheckerDialog.prepare" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.prepare" />
       <keyword name="SyntaxCheckerDialog.start" id="SyntaxCheckerDialog.start" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.start" />
+      <keyword name="Pep8 (Package)" id="Pep8 (Package)" ref="index-eric5.Plugins.CheckerPlugins.Pep8.html" />
+      <keyword name="Pep8Checker (Module)" id="Pep8Checker (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
+      <keyword name="Pep8Checker" id="Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker" />
+      <keyword name="Pep8Checker (Constructor)" id="Pep8Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.__init__" />
+      <keyword name="Pep8Checker.__ignore_code" id="Pep8Checker.__ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.__ignore_code" />
+      <keyword name="Pep8Checker.report_error_args" id="Pep8Checker.report_error_args" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.report_error_args" />
+      <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
+      <keyword name="Checker" id="Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker" />
+      <keyword name="_main" id="_main" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#_main" />
+      <keyword name="blank_lines" id="blank_lines" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#blank_lines" />
+      <keyword name="compound_statements" id="compound_statements" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#compound_statements" />
+      <keyword name="excluded" id="excluded" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#excluded" />
+      <keyword name="expand_indent" id="expand_indent" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#expand_indent" />
+      <keyword name="extraneous_whitespace" id="extraneous_whitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#extraneous_whitespace" />
+      <keyword name="filename_match" id="filename_match" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#filename_match" />
+      <keyword name="find_checks" id="find_checks" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#find_checks" />
+      <keyword name="getMessage" id="getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#getMessage" />
+      <keyword name="get_count" id="get_count" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#get_count" />
+      <keyword name="get_error_statistics" id="get_error_statistics" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#get_error_statistics" />
+      <keyword name="get_statistics" id="get_statistics" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#get_statistics" />
+      <keyword name="get_warning_statistics" id="get_warning_statistics" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#get_warning_statistics" />
+      <keyword name="ignore_code" id="ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#ignore_code" />
+      <keyword name="imports_on_separate_lines" id="imports_on_separate_lines" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#imports_on_separate_lines" />
+      <keyword name="indentation" id="indentation" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#indentation" />
+      <keyword name="input_dir" id="input_dir" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#input_dir" />
+      <keyword name="input_file" id="input_file" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#input_file" />
+      <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#maximum_line_length" />
+      <keyword name="message" id="message" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#message" />
+      <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#missing_newline" />
+      <keyword name="missing_whitespace" id="missing_whitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#missing_whitespace" />
+      <keyword name="missing_whitespace_around_operator" id="missing_whitespace_around_operator" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#missing_whitespace_around_operator" />
+      <keyword name="mute_string" id="mute_string" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#mute_string" />
+      <keyword name="print_benchmark" id="print_benchmark" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#print_benchmark" />
+      <keyword name="print_statistics" id="print_statistics" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#print_statistics" />
+      <keyword name="process_options" id="process_options" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#process_options" />
+      <keyword name="python_3000_backticks" id="python_3000_backticks" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_backticks" />
+      <keyword name="python_3000_has_key" id="python_3000_has_key" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_has_key" />
+      <keyword name="python_3000_not_equal" id="python_3000_not_equal" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_not_equal" />
+      <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_raise_comma" />
+      <keyword name="readlines" id="readlines" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#readlines" />
+      <keyword name="readlines_1" id="readlines_1" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#readlines_1" />
+      <keyword name="reset_counters" id="reset_counters" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#reset_counters" />
+      <keyword name="run_tests" id="run_tests" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#run_tests" />
+      <keyword name="selftest" id="selftest" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#selftest" />
+      <keyword name="tabs_obsolete" id="tabs_obsolete" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#tabs_obsolete" />
+      <keyword name="tabs_or_spaces" id="tabs_or_spaces" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#tabs_or_spaces" />
+      <keyword name="trailing_blank_lines" id="trailing_blank_lines" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#trailing_blank_lines" />
+      <keyword name="trailing_whitespace" id="trailing_whitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#trailing_whitespace" />
+      <keyword name="whitespace_around_comma" id="whitespace_around_comma" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_around_comma" />
+      <keyword name="whitespace_around_named_parameter_equals" id="whitespace_around_named_parameter_equals" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_around_named_parameter_equals" />
+      <keyword name="whitespace_around_operator" id="whitespace_around_operator" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_around_operator" />
+      <keyword name="whitespace_before_inline_comment" id="whitespace_before_inline_comment" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_before_inline_comment" />
+      <keyword name="whitespace_before_parameters" id="whitespace_before_parameters" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#whitespace_before_parameters" />
+      <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.__init__" />
+      <keyword name="Checker.build_tokens_line" id="Checker.build_tokens_line" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.build_tokens_line" />
+      <keyword name="Checker.check_all" id="Checker.check_all" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.check_all" />
+      <keyword name="Checker.check_logical" id="Checker.check_logical" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.check_logical" />
+      <keyword name="Checker.check_physical" id="Checker.check_physical" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.check_physical" />
+      <keyword name="Checker.readline" id="Checker.readline" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.readline" />
+      <keyword name="Checker.readline_check_physical" id="Checker.readline_check_physical" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.readline_check_physical" />
+      <keyword name="Checker.report_error" id="Checker.report_error" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.report_error" />
+      <keyword name="Checker.run_check" id="Checker.run_check" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker.run_check" />
+      <keyword name="Pep8CodeSelectionDialog (Module)" id="Pep8CodeSelectionDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
+      <keyword name="Pep8CodeSelectionDialog" id="Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html#Pep8CodeSelectionDialog" />
+      <keyword name="Pep8CodeSelectionDialog (Constructor)" id="Pep8CodeSelectionDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html#Pep8CodeSelectionDialog.__init__" />
+      <keyword name="Pep8CodeSelectionDialog.getSelectedCodes" id="Pep8CodeSelectionDialog.getSelectedCodes" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html#Pep8CodeSelectionDialog.getSelectedCodes" />
+      <keyword name="Pep8Dialog (Module)" id="Pep8Dialog (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
+      <keyword name="Pep8Dialog" id="Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog" />
+      <keyword name="Pep8Dialog (Constructor)" id="Pep8Dialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__init__" />
+      <keyword name="Pep8Dialog.__clearErrors" id="Pep8Dialog.__clearErrors" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__clearErrors" />
+      <keyword name="Pep8Dialog.__createResultItem" id="Pep8Dialog.__createResultItem" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__createResultItem" />
+      <keyword name="Pep8Dialog.__finish" id="Pep8Dialog.__finish" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__finish" />
+      <keyword name="Pep8Dialog.__resort" id="Pep8Dialog.__resort" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__resort" />
+      <keyword name="Pep8Dialog.on_buttonBox_clicked" id="Pep8Dialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_buttonBox_clicked" />
+      <keyword name="Pep8Dialog.on_excludeMessagesSelectButton_clicked" id="Pep8Dialog.on_excludeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_excludeMessagesSelectButton_clicked" />
+      <keyword name="Pep8Dialog.on_includeMessagesSelectButton_clicked" id="Pep8Dialog.on_includeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_includeMessagesSelectButton_clicked" />
+      <keyword name="Pep8Dialog.on_loadDefaultButton_clicked" id="Pep8Dialog.on_loadDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_loadDefaultButton_clicked" />
+      <keyword name="Pep8Dialog.on_resultList_itemActivated" id="Pep8Dialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resultList_itemActivated" />
+      <keyword name="Pep8Dialog.on_showButton_clicked" id="Pep8Dialog.on_showButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_showButton_clicked" />
+      <keyword name="Pep8Dialog.on_startButton_clicked" id="Pep8Dialog.on_startButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_startButton_clicked" />
+      <keyword name="Pep8Dialog.on_storeDefaultButton_clicked" id="Pep8Dialog.on_storeDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_storeDefaultButton_clicked" />
+      <keyword name="Pep8Dialog.prepare" id="Pep8Dialog.prepare" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.prepare" />
+      <keyword name="Pep8Dialog.start" id="Pep8Dialog.start" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.start" />
       <keyword name="Tabnanny (Package)" id="Tabnanny (Package)" ref="index-eric5.Plugins.CheckerPlugins.Tabnanny.html" />
       <keyword name="TabnannyDialog (Module)" id="TabnannyDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html" />
       <keyword name="TabnannyDialog" id="TabnannyDialog" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog" />
@@ -10241,6 +10345,10 @@
       <file>eric5.PluginManager.PluginRepositoryDialog.html</file>
       <file>eric5.PluginManager.PluginUninstallDialog.html</file>
       <file>eric5.Plugins.AboutPlugin.AboutDialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.pep8.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html</file>
       <file>eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html</file>
@@ -10251,6 +10359,7 @@
       <file>eric5.Plugins.PluginAbout.html</file>
       <file>eric5.Plugins.PluginEricapi.html</file>
       <file>eric5.Plugins.PluginEricdoc.html</file>
+      <file>eric5.Plugins.PluginPep8Checker.html</file>
       <file>eric5.Plugins.PluginSyntaxChecker.html</file>
       <file>eric5.Plugins.PluginTabnanny.html</file>
       <file>eric5.Plugins.PluginVcsMercurial.html</file>
@@ -10631,6 +10740,7 @@
       <file>index-eric5.MultiProject.html</file>
       <file>index-eric5.PluginManager.html</file>
       <file>index-eric5.Plugins.AboutPlugin.html</file>
+      <file>index-eric5.Plugins.CheckerPlugins.Pep8.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.SyntaxChecker.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.Tabnanny.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.html</file>

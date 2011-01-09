@@ -453,7 +453,10 @@ def extractFlags(text):
     @return dictionary of string, boolean, complex, float and int
     """
     flags = {}
-    lines = text.splitlines()
+    if isinstance(text, str):
+        lines = text.splitlines()
+    else:
+        lines = text
     for line in reversed(lines):
         index = line.find("eflag:")
         if index == -1:

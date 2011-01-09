@@ -843,6 +843,12 @@
     <Source>UtilitiesPython2/Tabnanny.py</Source>
     <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/__init__.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/pep8.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8Dialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8Checker.py</Source>
+    <Source>Plugins/PluginPep8Checker.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1077,6 +1083,8 @@
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
     <Form>Helpviewer/SslCertificatesDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -2602,13 +2602,16 @@ the word to the right of that position (string)
 </dd>
 </dl><a NAME="Editor.gotoLine" ID="Editor.gotoLine"></a>
 <h4>Editor.gotoLine</h4>
-<b>gotoLine</b>(<i>line</i>)
+<b>gotoLine</b>(<i>line, pos = 1</i>)
 <p>
         Public slot to jump to the beginning of a line.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
 line number to go to (integer)
+</dd><dt><i>pos=</i></dt>
+<dd>
+position in line to go to (integer)
 </dd>
 </dl><a NAME="Editor.gotoSyntaxError" ID="Editor.gotoSyntaxError"></a>
 <h4>Editor.gotoSyntaxError</h4>
@@ -3211,11 +3214,13 @@ line number of the bookmark (integer)
 <b>toggleFlakesWarning</b>(<i>line, warning, msg = ""</i>)
 <p>
         Public method to toggle a flakes warning indicator.
+</p><p>
+        Note: This method is used to set PEP 8 warnings as well.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
 line number of the flakes warning
-</dd><dt><i>erwarningror</i></dt>
+</dd><dt><i>warning</i></dt>
 <dd>
 flag indicating if the warning marker should be
             set or deleted (boolean)

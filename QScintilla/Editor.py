@@ -315,7 +315,7 @@ class Editor(QsciScintillaCompat):
             self.addClone(editor)
             editor.addClone(self)
         
-        self.gotoLine(0)
+        self.gotoLine(1)
         
         # set the text display again
         self.__setTextDisplay()
@@ -3194,13 +3194,14 @@ class Editor(QsciScintillaCompat):
             else:
                 self.__indentLine(True)
         
-    def gotoLine(self, line):
+    def gotoLine(self, line, pos = 1):
         """
         Public slot to jump to the beginning of a line.
         
         @param line line number to go to (integer)
+        @keyparam pos position in line to go to (integer)
         """
-        self.setCursorPosition(line - 1, 0)
+        self.setCursorPosition(line - 1, pos - 1)
         self.ensureVisible(line)
     
     ############################################################################
@@ -4574,8 +4575,10 @@ class Editor(QsciScintillaCompat):
         """
         Public method to toggle a flakes warning indicator.
         
+        Note: This method is used to set PEP 8 warnings as well.
+        
         @param line line number of the flakes warning
-        @param erwarningror flag indicating if the warning marker should be
+        @param warning flag indicating if the warning marker should be
             set or deleted (boolean)
         @param msg warning message (string)
         """

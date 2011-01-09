@@ -6749,12 +6749,12 @@ whole selection.&lt;/li&gt;
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5041"/>
+        <location filename="QScintilla/Editor.py" line="5044"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5045"/>
+        <location filename="QScintilla/Editor.py" line="5048"/>
         <source>File changed</source>
         <translation>Файл изменён</translation>
     </message>
@@ -6799,7 +6799,7 @@ whole selection.&lt;/li&gt;
         <translation>Редактировать точку останова...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4023"/>
+        <location filename="QScintilla/Editor.py" line="4024"/>
         <source>Enable breakpoint</source>
         <translation>Разрешить точку останова</translation>
     </message>
@@ -6829,82 +6829,82 @@ whole selection.&lt;/li&gt;
         <translation>Левая клавиша мыши ставит точки останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4026"/>
+        <location filename="QScintilla/Editor.py" line="4027"/>
         <source>Disable breakpoint</source>
         <translation>Запретить точку останова</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4309"/>
+        <location filename="QScintilla/Editor.py" line="4310"/>
         <source>Code Coverage</source>
         <translation>Охват кода</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4309"/>
+        <location filename="QScintilla/Editor.py" line="4310"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4787"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Macro Name</source>
         <translation>Имя макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4787"/>
+        <location filename="QScintilla/Editor.py" line="4790"/>
         <source>Select a macro name:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4855"/>
+        <location filename="QScintilla/Editor.py" line="4858"/>
         <source>Macro files (*.macro)</source>
         <translation>Макросы (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4815"/>
+        <location filename="QScintilla/Editor.py" line="4818"/>
         <source>Load macro file</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4836"/>
+        <location filename="QScintilla/Editor.py" line="4839"/>
         <source>Error loading macro</source>
         <translation>Ошибка при загрузке макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4855"/>
+        <location filename="QScintilla/Editor.py" line="4858"/>
         <source>Save macro file</source>
         <translation>Сохранить файл с макросами</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4872"/>
+        <location filename="QScintilla/Editor.py" line="4875"/>
         <source>Save macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4887"/>
+        <location filename="QScintilla/Editor.py" line="4890"/>
         <source>Error saving macro</source>
         <translation>Ошибка при сохранении макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4898"/>
+        <location filename="QScintilla/Editor.py" line="4901"/>
         <source>Start Macro Recording</source>
         <translation>Начало записи макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4923"/>
+        <location filename="QScintilla/Editor.py" line="4926"/>
         <source>Macro Recording</source>
         <translation>Запись макроса</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4923"/>
+        <location filename="QScintilla/Editor.py" line="4926"/>
         <source>Enter name of the macro:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4447"/>
+        <location filename="QScintilla/Editor.py" line="4448"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4447"/>
+        <location filename="QScintilla/Editor.py" line="4448"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
@@ -6914,12 +6914,12 @@ whole selection.&lt;/li&gt;
         <translation>Автозавершение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3560"/>
+        <location filename="QScintilla/Editor.py" line="3561"/>
         <source>Autocompletion</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3560"/>
+        <location filename="QScintilla/Editor.py" line="3561"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Автозавершение недоступно, так как не задан источник автозавершения.</translation>
     </message>
@@ -6954,7 +6954,7 @@ whole selection.&lt;/li&gt;
         <translation>Автосохранение разрешено</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5241"/>
+        <location filename="QScintilla/Editor.py" line="5244"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -6964,12 +6964,12 @@ whole selection.&lt;/li&gt;
         <translation>Показать сообщение о синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4565"/>
+        <location filename="QScintilla/Editor.py" line="4566"/>
         <source>Syntax Error</source>
         <translation>Синтаксическая ошибка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4565"/>
+        <location filename="QScintilla/Editor.py" line="4566"/>
         <source>No syntax error message available.</source>
         <translation>Нет сообщения о синтаксической ошибке.</translation>
     </message>
@@ -6999,17 +6999,17 @@ whole selection.&lt;/li&gt;
         <translation>Предыдущая невыполняемая строка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4355"/>
+        <location filename="QScintilla/Editor.py" line="4356"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4351"/>
+        <location filename="QScintilla/Editor.py" line="4352"/>
         <source>All lines have been covered.</source>
         <translation>Все строки выполняются.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4355"/>
+        <location filename="QScintilla/Editor.py" line="4356"/>
         <source>There is no coverage file available.</source>
         <translation>Нет файла с информацией по охвату.</translation>
     </message>
@@ -7024,12 +7024,12 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4829"/>
+        <location filename="QScintilla/Editor.py" line="4832"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4836"/>
+        <location filename="QScintilla/Editor.py" line="4839"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; повреждён&lt;/p&gt;</translation>
     </message>
@@ -7039,12 +7039,12 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4887"/>
+        <location filename="QScintilla/Editor.py" line="4890"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5241"/>
+        <location filename="QScintilla/Editor.py" line="5244"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -7089,82 +7089,82 @@ whole selection.&lt;/li&gt;
         <translation>Нет языка</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5124"/>
+        <location filename="QScintilla/Editor.py" line="5127"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5259"/>
+        <location filename="QScintilla/Editor.py" line="5262"/>
         <source>Resources</source>
         <translation>Ресурсы</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5261"/>
+        <location filename="QScintilla/Editor.py" line="5264"/>
         <source>Add file...</source>
         <translation>Добавить файл...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5263"/>
+        <location filename="QScintilla/Editor.py" line="5266"/>
         <source>Add files...</source>
         <translation>Добавить файлы...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5265"/>
+        <location filename="QScintilla/Editor.py" line="5268"/>
         <source>Add aliased file...</source>
         <translation>Добавить файл под другим именем...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5267"/>
+        <location filename="QScintilla/Editor.py" line="5270"/>
         <source>Add localized resource...</source>
         <translation>Добавить локализованный ресурс...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5288"/>
+        <location filename="QScintilla/Editor.py" line="5291"/>
         <source>Add file resource</source>
         <translation>Добавить файл ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5304"/>
+        <location filename="QScintilla/Editor.py" line="5307"/>
         <source>Add file resources</source>
         <translation>Добавить файлы ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5331"/>
+        <location filename="QScintilla/Editor.py" line="5334"/>
         <source>Add aliased file resource</source>
         <translation>Добавить файл ресурсов под другим именем</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5331"/>
+        <location filename="QScintilla/Editor.py" line="5334"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Другое имя для файла &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5392"/>
+        <location filename="QScintilla/Editor.py" line="5395"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5392"/>
+        <location filename="QScintilla/Editor.py" line="5395"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5421"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5421"/>
+        <location filename="QScintilla/Editor.py" line="5424"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5270"/>
+        <location filename="QScintilla/Editor.py" line="5273"/>
         <source>Add resource frame</source>
         <translation>Добавить фрагмент ресурсов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4898"/>
+        <location filename="QScintilla/Editor.py" line="4901"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Запись макроса уже идёт. Начать новую запись?</translation>
     </message>
@@ -7219,12 +7219,12 @@ whole selection.&lt;/li&gt;
         <translation>Не задан формат экспорта. Отмена...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5409"/>
+        <location filename="QScintilla/Editor.py" line="5412"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5409"/>
+        <location filename="QScintilla/Editor.py" line="5412"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
@@ -7304,7 +7304,7 @@ whole selection.&lt;/li&gt;
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5653"/>
+        <location filename="QScintilla/Editor.py" line="5656"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
@@ -7314,12 +7314,12 @@ whole selection.&lt;/li&gt;
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5655"/>
+        <location filename="QScintilla/Editor.py" line="5658"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5657"/>
+        <location filename="QScintilla/Editor.py" line="5660"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
@@ -7339,7 +7339,7 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5036"/>
+        <location filename="QScintilla/Editor.py" line="5039"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt;</translation>
     </message>
@@ -7364,12 +7364,12 @@ whole selection.&lt;/li&gt;
         <translation>Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4689"/>
+        <location filename="QScintilla/Editor.py" line="4692"/>
         <source>py3flakes Warning</source>
         <translation>py3flakes предупреждения</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4689"/>
+        <location filename="QScintilla/Editor.py" line="4692"/>
         <source>No py3flakes warning message available.</source>
         <translation>Нет py3flakes предупреждений</translation>
     </message>
@@ -7379,17 +7379,17 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4872"/>
+        <location filename="QScintilla/Editor.py" line="4875"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4732"/>
+        <location filename="QScintilla/Editor.py" line="4735"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4738"/>
+        <location filename="QScintilla/Editor.py" line="4741"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Ошибка: {0}</translation>
     </message>
@@ -23375,6 +23375,215 @@ Do you want to save your changes?</source>
     </message>
 </context>
 <context>
+    <name>Pep8CheckerPlugin</name>
+    <message>
+        <location filename="Plugins/PluginPep8Checker.py" line="171"/>
+        <source>Check PEP 8 Compliance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginPep8Checker.py" line="171"/>
+        <source>PEP &amp;8 Compliance...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginPep8Checker.py" line="79"/>
+        <source>Check PEP 8 compliance.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginPep8Checker.py" line="175"/>
+        <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Pep8CodeSelectionDialog</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
+        <source>PEP 8 Message Codes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="23"/>
+        <source>Select the message codes from the list:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="30"/>
+        <source>Select the message codes from this table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="55"/>
+        <source>Code</source>
+        <translation type="unfinished">Код</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="60"/>
+        <source>Message</source>
+        <translation type="unfinished">Сообщение</translation>
+    </message>
+</context>
+<context>
+    <name>Pep8Dialog</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
+        <source>PEP 8 Check Result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
+        <source>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
+&lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
+entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="34"/>
+        <source>Exclude Files:</source>
+        <translation type="unfinished">Не включать файлы:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="41"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma</source>
+        <translation type="unfinished">Задайте маски файлов для исключения, разделённые запятой</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="48"/>
+        <source>Press to clear the filter edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="68"/>
+        <source>Press to start the PEP 8 check run</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="71"/>
+        <source>Start</source>
+        <translation type="unfinished">Начало</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="78"/>
+        <source>Exclude Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="92"/>
+        <source>Press to clear the exclude messages edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
+        <source>Press to select the messages from a list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="152"/>
+        <source>...</source>
+        <translation type="unfinished">...</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="139"/>
+        <source>Press to clear the include messages edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="161"/>
+        <source>Select to repeat each message type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="164"/>
+        <source>Repeat messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="209"/>
+        <source>&lt;b&gt;Result List&lt;/b&gt;
+&lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
+an entry will open this entry in an editor window and position the cursor at
+the respective line and position.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="225"/>
+        <source>File/Line</source>
+        <translation type="unfinished">Файл/Строка</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="230"/>
+        <source>Code</source>
+        <translation type="unfinished">Код</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
+        <source>Message</source>
+        <translation type="unfinished">Сообщение</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="243"/>
+        <source>Shows the progress of the PEP 8 check action</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="50"/>
+        <source>Show</source>
+        <translation type="unfinished">Показать</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
+        <source>Press to show all files containing an issue</source>
+        <translation type="unfinished">Показать все файлы, содержащие синтаксические ошибки</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="233"/>
+        <source>Error: {0}</source>
+        <translation type="unfinished">Ошибка: {0}</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="286"/>
+        <source>No issues found.</source>
+        <translation type="unfinished">Синтаксисические ошибки не найдены.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="85"/>
+        <source>Enter message codes or categories to be excluded separated by a comma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="132"/>
+        <source>Enter message codes or categories to be included separated by a comma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="184"/>
+        <source>Press to load the default values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="187"/>
+        <source>Load Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="194"/>
+        <source>Press to store the current values as defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
+        <source>Store Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="125"/>
+        <source>Included Messages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PixmapDiagram</name>
     <message>
         <location filename="Graphics/PixmapDiagram.py" line="159"/>
@@ -24097,17 +24306,17 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="896"/>
+        <location filename="Preferences/__init__.py" line="895"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="922"/>
+        <location filename="Preferences/__init__.py" line="921"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="922"/>
+        <location filename="Preferences/__init__.py" line="921"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29362,7 +29571,7 @@ means that the content of the match (called the backreference) is not stored for
         <translation>Переинициализировать и очистить</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1360"/>
+        <location filename="QScintilla/Shell.py" line="1361"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -29372,7 +29581,7 @@ means that the content of the match (called the backreference) is not stored for
         <translation>Нет.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1360"/>
+        <location filename="QScintilla/Shell.py" line="1361"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -35758,7 +35967,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="253"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="269"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
@@ -35786,6 +35995,11 @@ the respective line.&lt;/p&gt;</source>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="77"/>
         <source>Start</source>
         <translation type="unfinished">Начало</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="188"/>
+        <source>Error: {0}</source>
+        <translation type="unfinished">Ошибка: {0}</translation>
     </message>
 </context>
 <context>
@@ -36229,12 +36443,12 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished">Начало</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="255"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="256"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="280"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="281"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40978,7 +41192,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="956"/>
+        <location filename="Utilities/__init__.py" line="959"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;В строках вы можете использовать следующие %-коды::
 &lt;table&gt;
@@ -40993,12 +41207,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;знак процента&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1128"/>
+        <location filename="Utilities/__init__.py" line="1131"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1173"/>
+        <location filename="Utilities/__init__.py" line="1176"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42387,7 +42601,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3260"/>
+        <location filename="ViewManager/ViewManager.py" line="3261"/>
         <source>File: {0}</source>
         <translation>Файл: {0}</translation>
     </message>
@@ -43196,17 +43410,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Открыть &amp;закладки на файлы</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3605"/>
+        <location filename="ViewManager/ViewManager.py" line="3606"/>
         <source>&amp;Clear</source>
         <translation>&amp;Очистить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3601"/>
+        <location filename="ViewManager/ViewManager.py" line="3602"/>
         <source>&amp;Add</source>
         <translation>&amp;Добавить</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3603"/>
+        <location filename="ViewManager/ViewManager.py" line="3604"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Правка...</translation>
     </message>
@@ -44234,12 +44448,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Проверка орфографии</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3264"/>
+        <location filename="ViewManager/ViewManager.py" line="3265"/>
         <source>Line: {0:5}</source>
         <translation>Строка: {0:5}</translation>
     </message>
     <message>
-        <location filename="ViewManager/ViewManager.py" line="3269"/>
+        <location filename="ViewManager/ViewManager.py" line="3270"/>
         <source>Pos: {0:5}</source>
         <translation>Позиция: {0:5}</translation>
     </message>
@@ -44989,6 +45203,184 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
 {2}</translation>
+    </message>
+</context>
+<context>
+    <name>pep8</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
+        <source>indentation contains mixed spaces and tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="166"/>
+        <source>indentation is not a multiple of four</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="168"/>
+        <source>expected an indented block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
+        <source>unexpected indentation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
+        <source>indentation contains tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
+        <source>whitespace after &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
+        <source>whitespace before &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
+        <source>multiple spaces before operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
+        <source>multiple spaces after operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
+        <source>tab before operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
+        <source>tab after operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
+        <source>missing whitespace around operator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
+        <source>missing whitespace after &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
+        <source>multiple spaces after &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
+        <source>tab after &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
+        <source>no spaces around keyword / parameter equals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
+        <source>at least two spaces before inline comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
+        <source>inline comment should start with &apos;# &apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
+        <source>trailing whitespace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
+        <source>no newline at end of file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
+        <source>blank line contains whitespace</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
+        <source>expected 1 blank line, found 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
+        <source>expected 2 blank lines, found {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
+        <source>too many blank lines ({0})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
+        <source>blank lines found after function decorator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
+        <source>blank line at end of file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
+        <source>multiple imports on one line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
+        <source>line too long ({0} characters)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
+        <source>.has_key() is deprecated, use &apos;in&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
+        <source>deprecated form of raising exception</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
+        <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
+        <source>backticks are deprecated, use &apos;repr()&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
+        <source>multiple statements on one line (colon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
+        <source>multiple statements on one line (semicolon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
+        <source>no message for this code defined</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

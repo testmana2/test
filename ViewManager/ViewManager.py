@@ -3099,7 +3099,8 @@ class ViewManager(QObject):
             
         self.__setSbFile()
         
-    def openSourceFile(self, fn, lineno = None, filetype = "", selStart = 0, selEnd = 0):
+    def openSourceFile(self, fn, lineno = None, filetype = "", 
+                       selStart = 0, selEnd = 0, pos = 0):
         """
         Public slot to display a file in an editor.
         
@@ -3120,7 +3121,7 @@ class ViewManager(QObject):
         
         if lineno is not None and lineno >= 0:
             editor.ensureVisibleTop(lineno)
-            editor.gotoLine(lineno)
+            editor.gotoLine(lineno, pos)
         
         if selStart != selEnd:
             editor.setSelection(lineno - 1, selStart, lineno - 1, selEnd)
