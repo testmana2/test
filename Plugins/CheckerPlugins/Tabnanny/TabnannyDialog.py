@@ -210,11 +210,12 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
            filterString != self.__data["ExcludeFiles"]:
             self.__data["ExcludeFiles"] = filterString
             self.__project.setData("CHECKERSPARMS", "Tabnanny", self.__data)
-        filterList = filterString.split(",")
+        filterList = [f.strip() for f in filterString.split(",") 
+                      if f.strip()]
         if filterList:
             for filter in filterList:
                 fileList = \
-                    [f for f in fileList if not fnmatch.fnmatch(f, filter.strip())]
+                    [f for f in fileList if not fnmatch.fnmatch(f, filter)]
         
         self.resultList.clear()
         self.noResults = True
