@@ -4585,6 +4585,7 @@
       <keyword name="Project.__initDebugProperties" id="Project.__initDebugProperties" ref="eric5.Project.Project.html#Project.__initDebugProperties" />
       <keyword name="Project.__initProjectTypes" id="Project.__initProjectTypes" ref="eric5.Project.Project.html#Project.__initProjectTypes" />
       <keyword name="Project.__loadRecent" id="Project.__loadRecent" ref="eric5.Project.Project.html#Project.__loadRecent" />
+      <keyword name="Project.__makePpathRe" id="Project.__makePpathRe" ref="eric5.Project.Project.html#Project.__makePpathRe" />
       <keyword name="Project.__openRecent" id="Project.__openRecent" ref="eric5.Project.Project.html#Project.__openRecent" />
       <keyword name="Project.__pluginCreateArchive" id="Project.__pluginCreateArchive" ref="eric5.Project.Project.html#Project.__pluginCreateArchive" />
       <keyword name="Project.__pluginCreatePkgList" id="Project.__pluginCreatePkgList" ref="eric5.Project.Project.html#Project.__pluginCreatePkgList" />
