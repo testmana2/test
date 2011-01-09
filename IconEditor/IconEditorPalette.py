@@ -146,9 +146,9 @@ class IconEditorPalette(QWidget):
         @param val value of the alpha channel
         """
         if val != self.__currentAlpha:
-           col = QColor(self.__currentColor) 
-           col.setAlpha(val)
-           self.colorSelected.emit(col)
+            col = QColor(self.__currentColor) 
+            col.setAlpha(val)
+            self.colorSelected.emit(col)
     
     def setCompositingMode(self, mode):
         """

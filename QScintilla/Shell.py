@@ -1114,7 +1114,8 @@ class Shell(QsciScintillaCompat):
                     cmd = ''
             
             self.dbs.remoteStatement(cmd)
-            while self.inCommandExecution: QApplication.processEvents()
+            while self.inCommandExecution:
+                QApplication.processEvents()
         else:
             if not self.echoInput:
                 cmd = self.buff

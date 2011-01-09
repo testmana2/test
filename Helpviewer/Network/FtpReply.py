@@ -322,7 +322,7 @@ class FtpReply(QNetworkReply):
         basePath = u.path()
         
         linkClasses = {}
-        iconSize = QWebSettings.globalSettings().fontSize(QWebSettings.DefaultFontSize);
+        iconSize = QWebSettings.globalSettings().fontSize(QWebSettings.DefaultFontSize)
         
         parent = u.resolved(QUrl(".."))
         if parent.isParentOf(u):

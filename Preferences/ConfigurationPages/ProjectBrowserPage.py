@@ -132,7 +132,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         @param index index of the selected project type (integer)
         """
         if self.__currentProjectTypeIndex == index:
-           return
+            return
         
         self.__storeProjectBrowserFlags(
             self.projectTypeCombo.itemData(self.__currentProjectTypeIndex))

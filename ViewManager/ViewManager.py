@@ -4533,7 +4533,8 @@ class ViewManager(QObject):
         
         # remove all split views, if this is supported
         if self.canSplit():
-            while self.removeSplit(): pass
+            while self.removeSplit():
+                pass
         
         # stop the autosave timer
         if self.autosaveTimer.isActive():

@@ -132,7 +132,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         req = QNetworkRequest(request)
         if hasattr(QNetworkRequest, 'HttpPipeliningAllowedAttribute'):
-            req.setAttribute(QNetworkRequest.HttpPipeliningAllowedAttribute, True);
+            req.setAttribute(QNetworkRequest.HttpPipeliningAllowedAttribute, True)
         if not self.__acceptLanguage.isEmpty():
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         

@@ -237,7 +237,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         name = directory + baseName
         if endName:
-           name += '.' + endName
+            name += '.' + endName
         i = 1
         while QFile.exists(name):
             # file exists already, don't overwrite

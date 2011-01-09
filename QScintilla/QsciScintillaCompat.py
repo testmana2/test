@@ -903,29 +903,29 @@ class QsciScintillaCompat(QsciScintilla):
             
             if style == self.ArrowFoldStyle:
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
-                                     QsciScintilla.SC_MARK_ARROW);
+                                     QsciScintilla.SC_MARK_ARROW)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
-                                     QsciScintilla.SC_MARK_ARROWDOWN);
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB);
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL);
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND);
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID);
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL);
+                                     QsciScintilla.SC_MARK_ARROWDOWN)
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB)
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL)
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND)
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID)
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL)
             elif style == self.ArrowTreeFoldStyle:
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
-                                     QsciScintilla.SC_MARK_ARROW);
+                                     QsciScintilla.SC_MARK_ARROW)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
-                                     QsciScintilla.SC_MARK_ARROWDOWN);
+                                     QsciScintilla.SC_MARK_ARROWDOWN)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB, 
-                                     QsciScintilla.SC_MARK_VLINE);
+                                     QsciScintilla.SC_MARK_VLINE)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL, 
-                                     QsciScintilla.SC_MARK_LCORNER);
+                                     QsciScintilla.SC_MARK_LCORNER)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND, 
-                                     QsciScintilla.SC_MARK_ARROW);
+                                     QsciScintilla.SC_MARK_ARROW)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID, 
-                                     QsciScintilla.SC_MARK_ARROWDOWN);
+                                     QsciScintilla.SC_MARK_ARROWDOWN)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, 
-                                     QsciScintilla.SC_MARK_TCORNER);
+                                     QsciScintilla.SC_MARK_TCORNER)
     
     def setFoldMarkersColors(self, foreColor, backColor):
         """
