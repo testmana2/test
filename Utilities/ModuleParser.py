@@ -23,6 +23,7 @@ import re
 
 import Utilities
 from functools import reduce
+import Preferences
 
 __all__ = ["Module", "Class", "Function", "RbModule", "readModule"]
 
@@ -1072,7 +1073,11 @@ class Module(object):
         @return type of the modules's source (string)
         """
         if self.type in [imp.PY_SOURCE, PTL_SOURCE]:
-            type = "Python"
+            py3ExtList = Preferences.getDebugger("Python3Extensions").split()
+            if self.file.endswith(tuple(py3ExtList)):
+                type = "Python3"
+            else:
+                type = "Python2"
         elif self.type == RB_SOURCE:
             type = "Ruby"
         else:
