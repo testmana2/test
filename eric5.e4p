@@ -849,6 +849,8 @@
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Checker.py</Source>
     <Source>Plugins/PluginPep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
+    <Source>UtilitiesPython2/pep8.py</Source>
+    <Source>UtilitiesPython2/Pep8Checker.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
