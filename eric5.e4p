@@ -1510,6 +1510,37 @@
     <CheckersParams>
       <dict>
         <key>
+          <string>Pep8Checker</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>ExcludeFiles</string>
+            </key>
+            <value>
+              <string>*/coverage/*, */ThirdParty/*</string>
+            </value>
+            <key>
+              <string>ExcludeMessages</string>
+            </key>
+            <value>
+              <string>E24, W293</string>
+            </value>
+            <key>
+              <string>IncludeMessages</string>
+            </key>
+            <value>
+              <string></string>
+            </value>
+            <key>
+              <string>RepeatMessages</string>
+            </key>
+            <value>
+              <bool>False</bool>
+            </value>
+          </dict>
+        </value>
+        <key>
           <string>SyntaxChecker</string>
         </key>
         <value>
