@@ -7,9 +7,17 @@
 Module implementing the PEP 8 checker.
 """
 
+import os
 import optparse
 
+from PyQt4.QtCore import QProcess
+
 from . import pep8
+
+import Preferences
+import Utilities
+
+from eric5config import getConfig
 
 
 class Pep8Checker(pep8.Checker):
@@ -106,3 +114,79 @@ class Pep8Checker(pep8.Checker):
                 (self.filename, self.line_offset + line_number,
                  offset + 1, text)
             )
+
+class Pep8Py2Checker(object):
+    """
+    Class implementing the PEP 8 checker interface for Python 2.
+    """
+    def __init__(self, filename, lines, repeat=False,
+                 select="", ignore=""):
+        """
+        Constructor
+        
+        @param filename name of the file to check (string)
+        @param lines source of the file (list of strings) (ignored)
+        @keyparam repeat flag indicating to repeat message categories (boolean)
+        @keyparam select list of message IDs to check for
+            (comma separated string)
+        @keyparam ignore list of message IDs to ignore
+            (comma separated string)
+        """
+        self.messages = []
+        
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+        if interpreter == "" or not Utilities.isExecutable(interpreter):
+            self.messages.append(filename, "1", "1",
+                self.trUtf8("Python2 interpreter not configured."))
+            return
+        
+        checker = os.path.join(getConfig('ericDir'), 
+                               "UtilitiesPython2", "Pep8Checker.py")
+        
+        args = [checker]
+        if repeat:
+            args.append("-r")
+        if select:
+            args.append("-s")
+            args.append(select)
+        if ignore:
+            args.append("-i")
+            args.append(ignore)
+        args.append("-f")
+        args.append(filename)
+        
+        proc = QProcess()
+        proc.setProcessChannelMode(QProcess.MergedChannels)
+        proc.start(interpreter, args)
+        finished = proc.waitForFinished(15000)
+        if finished:
+            output = \
+                str(proc.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace').splitlines()
+            if output[0] == "ERROR":
+                self.messages.append(filename, "1", "1", output[2])
+                return
+            
+            if output[0] == "NO_PEP8":
+                return
+            
+            index = 0
+            while index < len(output):
+                fname = output[index + 1]
+                lineno = int(output[index + 2])
+                position = int(output[index + 3])
+                code = output[index + 4]
+                arglen = int(output[index + 5])
+                args = []
+                argindex = 0
+                while argindex < arglen:
+                    args.append(output[index + 6 + argindex])
+                    argindex += 1
+                index += 6 + arglen
+                
+                text = pep8.getMessage(code, *args)
+                self.messages.append((fname, lineno, position, text))
+        else:
+            self.messages.append(filename, "1", "1",
+                self.trUtf8("Python2 interpreter did not finish within 15s."))

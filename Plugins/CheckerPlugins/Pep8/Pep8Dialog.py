@@ -18,7 +18,7 @@ from . import pep8
 
 from E5Gui.E5Application import e5App
 
-from .Pep8Checker import Pep8Checker
+from .Pep8Checker import Pep8Checker, Pep8Py2Checker
 from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
 
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
@@ -173,9 +173,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             for ext in Preferences.getPython("Python3Extensions"):
                 files.extend(
                     Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-##            for ext in Preferences.getPython("PythonExtensions"):
-##                files.extend(
-##                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            for ext in Preferences.getPython("PythonExtensions"):
+                files.extend(
+                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
         else:
             files = [fn]
         
@@ -192,10 +192,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         py3files = [f for f in files \
                     if f.endswith(
                         tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = []
-##        py2files = [f for f in files \
-##                    if f.endswith(
-##                        tuple(Preferences.getPython("PythonExtensions")))]
+        py2files = [f for f in files \
+                    if f.endswith(
+                        tuple(Preferences.getPython("PythonExtensions")))]
         
         if (codestring and len(py3files) == 1) or \
            (codestring and len(py2files) == 1) or \
@@ -247,8 +246,18 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     self.__project.isProjectFile(file) and \
                     self.__project.getProjectLanguage() in ["Python", 
                                                             "Python2"]):
-                    # TODO: include PEP 8 check for python 2
-                    pass
+                    checker = Pep8Py2Checker(file, [], 
+                        repeat = repeatMessages, 
+                        select = includeMessages,
+                        ignore = excludeMessages)
+                    checker.messages.sort(key = lambda a: a[1])
+                    for message in checker.messages:
+                        fname, lineno, position, text = message
+                        if not source[lineno - 1].strip()\
+                           .endswith("__IGNORE_WARNING__"):
+                            self.noResults = False
+                            self.__createResultItem(
+                                fname, lineno, position, text)
                 else:
                     checker = Pep8Checker(file, source, 
                         repeat = repeatMessages, 

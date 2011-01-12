@@ -15,6 +15,7 @@ from Tools import readEncodedFile, normalizeCode
 
 import pep8
 
+
 class Pep8Checker(pep8.Checker):
     """
     Class implementing the PEP 8 checker for Python2.
@@ -110,9 +111,9 @@ class Pep8Checker(pep8.Checker):
             )
 
 if __name__ == "__main__":
-    repeat=False
-    select=""
-    ignore=""
+    repeat = False
+    select = ""
+    ignore = ""
     filename = ""
     
     if "-f" not in sys.argv:
@@ -121,7 +122,7 @@ if __name__ == "__main__":
         print "No file name given."
     else:
         try:
-            optlist, args = getopt.getopt(sys.argv[1:],"rf:i:s:")
+            optlist, args = getopt.getopt(sys.argv[1:], "rf:i:s:")
         except getopt.GetoptError:
             print "ERROR"
             print ""
@@ -148,11 +149,11 @@ if __name__ == "__main__":
             print "I/O Error: %s" % unicode(msg)
             sys.exit(1)
         
-        checker = Pep8Checker(filename, codestring, repeat=repeat, 
+        checker = Pep8Checker(filename, codestring, repeat=repeat,
                               select=select, ignore=ignore)
         checker.check_all()
         if len(checker.messages) > 0:
-            checker.messages.sort(key = lambda a: a[1])
+            checker.messages.sort(key=lambda a: a[1])
             for message in checker.messages:
                 fname, lineno, position, code, args = message
                 print "PEP8"

@@ -151,8 +151,7 @@ class Pep8CheckerPlugin(QObject):
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() in \
-                    ["Python3"])
-##                    ["Python3", "Python2", "Python"])
+                    ["Python3", "Python2", "Python"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -164,8 +163,7 @@ class Pep8CheckerPlugin(QObject):
         """
         if menuName == "Checks" and \
            e5App().getObject("Project").getProjectLanguage() in \
-                ["Python3"]:
-##                ["Python3", "Python2", "Python"]:
+                ["Python3", "Python2", "Python"]:
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
@@ -192,9 +190,8 @@ class Pep8CheckerPlugin(QObject):
         files = [os.path.join(ppath, file) \
             for file in project.pdata["SOURCES"] \
                 if file.endswith(
-                    tuple(Preferences.getPython("Python3Extensions")))]
-##                    tuple(Preferences.getPython("Python3Extensions")) +
-##                    tuple(Preferences.getPython("PythonExtensions")))]
+                    tuple(Preferences.getPython("Python3Extensions")) +
+                    tuple(Preferences.getPython("PythonExtensions")))]
         
         self.__projectPep8CheckerDialog = Pep8Dialog()
         self.__projectPep8CheckerDialog.show()
@@ -259,8 +256,7 @@ class Pep8CheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.isPy3File())
-##            self.__editorAct.setEnabled(editor.isPy3File() or editor.isPy2File())
+            self.__editorAct.setEnabled(editor.isPy3File() or editor.isPy2File())
     
     def __editorPep8Check(self):
         """
