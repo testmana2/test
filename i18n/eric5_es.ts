@@ -22967,12 +22967,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
 <context>
     <name>Pep8CheckerPlugin</name>
     <message>
-        <location filename="Plugins/PluginPep8Checker.py" line="171"/>
+        <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>Check PEP 8 Compliance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginPep8Checker.py" line="171"/>
+        <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>PEP &amp;8 Compliance...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22982,7 +22982,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/PluginPep8Checker.py" line="175"/>
+        <location filename="Plugins/PluginPep8Checker.py" line="173"/>
         <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23163,14 +23163,27 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished">Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="233"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="232"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Error: {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="286"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="295"/>
         <source>No issues found.</source>
         <translation type="unfinished">No se han encontrado problemas.</translation>
+    </message>
+</context>
+<context>
+    <name>Pep8Py2Checker</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="139"/>
+        <source>Python2 interpreter not configured.</source>
+        <translation type="unfinished">Intérprete de Python2 no configurado.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="191"/>
+        <source>Python2 interpreter did not finish within 15s.</source>
+        <translation type="unfinished">El intérprete de Python2 no terminó en un plazo de 15s.</translation>
     </message>
 </context>
 <context>

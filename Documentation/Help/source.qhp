@@ -743,10 +743,12 @@
               <section title="eric5.UtilitiesPython2.py2flakes.checker" ref="eric5.UtilitiesPython2.py2flakes.checker.html" />
               <section title="eric5.UtilitiesPython2.py2flakes.messages" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
             </section>
+            <section title="eric5.UtilitiesPython2.Pep8Checker" ref="eric5.UtilitiesPython2.Pep8Checker.html" />
             <section title="eric5.UtilitiesPython2.Py2SyntaxChecker" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
             <section title="eric5.UtilitiesPython2.Tabnanny" ref="eric5.UtilitiesPython2.Tabnanny.html" />
             <section title="eric5.UtilitiesPython2.TabnannyChecker" ref="eric5.UtilitiesPython2.TabnannyChecker.html" />
             <section title="eric5.UtilitiesPython2.Tools" ref="eric5.UtilitiesPython2.Tools.html" />
+            <section title="eric5.UtilitiesPython2.pep8" ref="eric5.UtilitiesPython2.pep8.html" />
           </section>
           <section title="eric5.VCS" ref="index-eric5.VCS.html">
             <section title="eric5.VCS.CommandOptionsDialog" ref="eric5.VCS.CommandOptionsDialog.html" />
@@ -3254,6 +3256,66 @@
       <keyword name="normalizeCode" id="normalizeCode" ref="eric5.UtilitiesPython2.Tools.html#normalizeCode" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.UtilitiesPython2.Tools.html#readEncodedFile" />
       <keyword name="TabnannyChecker (Module)" id="TabnannyChecker (Module)" ref="eric5.UtilitiesPython2.TabnannyChecker.html" />
+      <keyword name="Pep8Checker (Module)" id="Pep8Checker (Module)" ref="eric5.UtilitiesPython2.Pep8Checker.html" />
+      <keyword name="Pep8Checker" id="Pep8Checker" ref="eric5.UtilitiesPython2.Pep8Checker.html#Pep8Checker" />
+      <keyword name="Pep8Checker (Constructor)" id="Pep8Checker (Constructor)" ref="eric5.UtilitiesPython2.Pep8Checker.html#Pep8Checker.__init__" />
+      <keyword name="Pep8Checker.__ignore_code" id="Pep8Checker.__ignore_code" ref="eric5.UtilitiesPython2.Pep8Checker.html#Pep8Checker.__ignore_code" />
+      <keyword name="Pep8Checker.report_error_args" id="Pep8Checker.report_error_args" ref="eric5.UtilitiesPython2.Pep8Checker.html#Pep8Checker.report_error_args" />
+      <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric5.UtilitiesPython2.pep8.html" />
+      <keyword name="Checker" id="Checker" ref="eric5.UtilitiesPython2.pep8.html#Checker" />
+      <keyword name="_main" id="_main" ref="eric5.UtilitiesPython2.pep8.html#_main" />
+      <keyword name="blank_lines" id="blank_lines" ref="eric5.UtilitiesPython2.pep8.html#blank_lines" />
+      <keyword name="compound_statements" id="compound_statements" ref="eric5.UtilitiesPython2.pep8.html#compound_statements" />
+      <keyword name="excluded" id="excluded" ref="eric5.UtilitiesPython2.pep8.html#excluded" />
+      <keyword name="expand_indent" id="expand_indent" ref="eric5.UtilitiesPython2.pep8.html#expand_indent" />
+      <keyword name="extraneous_whitespace" id="extraneous_whitespace" ref="eric5.UtilitiesPython2.pep8.html#extraneous_whitespace" />
+      <keyword name="filename_match" id="filename_match" ref="eric5.UtilitiesPython2.pep8.html#filename_match" />
+      <keyword name="find_checks" id="find_checks" ref="eric5.UtilitiesPython2.pep8.html#find_checks" />
+      <keyword name="get_count" id="get_count" ref="eric5.UtilitiesPython2.pep8.html#get_count" />
+      <keyword name="get_error_statistics" id="get_error_statistics" ref="eric5.UtilitiesPython2.pep8.html#get_error_statistics" />
+      <keyword name="get_statistics" id="get_statistics" ref="eric5.UtilitiesPython2.pep8.html#get_statistics" />
+      <keyword name="get_warning_statistics" id="get_warning_statistics" ref="eric5.UtilitiesPython2.pep8.html#get_warning_statistics" />
+      <keyword name="ignore_code" id="ignore_code" ref="eric5.UtilitiesPython2.pep8.html#ignore_code" />
+      <keyword name="imports_on_separate_lines" id="imports_on_separate_lines" ref="eric5.UtilitiesPython2.pep8.html#imports_on_separate_lines" />
+      <keyword name="indentation" id="indentation" ref="eric5.UtilitiesPython2.pep8.html#indentation" />
+      <keyword name="input_dir" id="input_dir" ref="eric5.UtilitiesPython2.pep8.html#input_dir" />
+      <keyword name="input_file" id="input_file" ref="eric5.UtilitiesPython2.pep8.html#input_file" />
+      <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.UtilitiesPython2.pep8.html#maximum_line_length" />
+      <keyword name="message" id="message" ref="eric5.UtilitiesPython2.pep8.html#message" />
+      <keyword name="missing_newline" id="missing_newline" ref="eric5.UtilitiesPython2.pep8.html#missing_newline" />
+      <keyword name="missing_whitespace" id="missing_whitespace" ref="eric5.UtilitiesPython2.pep8.html#missing_whitespace" />
+      <keyword name="missing_whitespace_around_operator" id="missing_whitespace_around_operator" ref="eric5.UtilitiesPython2.pep8.html#missing_whitespace_around_operator" />
+      <keyword name="mute_string" id="mute_string" ref="eric5.UtilitiesPython2.pep8.html#mute_string" />
+      <keyword name="print_benchmark" id="print_benchmark" ref="eric5.UtilitiesPython2.pep8.html#print_benchmark" />
+      <keyword name="print_statistics" id="print_statistics" ref="eric5.UtilitiesPython2.pep8.html#print_statistics" />
+      <keyword name="process_options" id="process_options" ref="eric5.UtilitiesPython2.pep8.html#process_options" />
+      <keyword name="python_3000_backticks" id="python_3000_backticks" ref="eric5.UtilitiesPython2.pep8.html#python_3000_backticks" />
+      <keyword name="python_3000_has_key" id="python_3000_has_key" ref="eric5.UtilitiesPython2.pep8.html#python_3000_has_key" />
+      <keyword name="python_3000_not_equal" id="python_3000_not_equal" ref="eric5.UtilitiesPython2.pep8.html#python_3000_not_equal" />
+      <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.UtilitiesPython2.pep8.html#python_3000_raise_comma" />
+      <keyword name="readlines" id="readlines" ref="eric5.UtilitiesPython2.pep8.html#readlines" />
+      <keyword name="readlines_1" id="readlines_1" ref="eric5.UtilitiesPython2.pep8.html#readlines_1" />
+      <keyword name="reset_counters" id="reset_counters" ref="eric5.UtilitiesPython2.pep8.html#reset_counters" />
+      <keyword name="run_tests" id="run_tests" ref="eric5.UtilitiesPython2.pep8.html#run_tests" />
+      <keyword name="selftest" id="selftest" ref="eric5.UtilitiesPython2.pep8.html#selftest" />
+      <keyword name="tabs_obsolete" id="tabs_obsolete" ref="eric5.UtilitiesPython2.pep8.html#tabs_obsolete" />
+      <keyword name="tabs_or_spaces" id="tabs_or_spaces" ref="eric5.UtilitiesPython2.pep8.html#tabs_or_spaces" />
+      <keyword name="trailing_blank_lines" id="trailing_blank_lines" ref="eric5.UtilitiesPython2.pep8.html#trailing_blank_lines" />
+      <keyword name="trailing_whitespace" id="trailing_whitespace" ref="eric5.UtilitiesPython2.pep8.html#trailing_whitespace" />
+      <keyword name="whitespace_around_comma" id="whitespace_around_comma" ref="eric5.UtilitiesPython2.pep8.html#whitespace_around_comma" />
+      <keyword name="whitespace_around_named_parameter_equals" id="whitespace_around_named_parameter_equals" ref="eric5.UtilitiesPython2.pep8.html#whitespace_around_named_parameter_equals" />
+      <keyword name="whitespace_around_operator" id="whitespace_around_operator" ref="eric5.UtilitiesPython2.pep8.html#whitespace_around_operator" />
+      <keyword name="whitespace_before_inline_comment" id="whitespace_before_inline_comment" ref="eric5.UtilitiesPython2.pep8.html#whitespace_before_inline_comment" />
+      <keyword name="whitespace_before_parameters" id="whitespace_before_parameters" ref="eric5.UtilitiesPython2.pep8.html#whitespace_before_parameters" />
+      <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.UtilitiesPython2.pep8.html#Checker.__init__" />
+      <keyword name="Checker.build_tokens_line" id="Checker.build_tokens_line" ref="eric5.UtilitiesPython2.pep8.html#Checker.build_tokens_line" />
+      <keyword name="Checker.check_all" id="Checker.check_all" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_all" />
+      <keyword name="Checker.check_logical" id="Checker.check_logical" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_logical" />
+      <keyword name="Checker.check_physical" id="Checker.check_physical" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_physical" />
+      <keyword name="Checker.readline" id="Checker.readline" ref="eric5.UtilitiesPython2.pep8.html#Checker.readline" />
+      <keyword name="Checker.readline_check_physical" id="Checker.readline_check_physical" ref="eric5.UtilitiesPython2.pep8.html#Checker.readline_check_physical" />
+      <keyword name="Checker.report_error" id="Checker.report_error" ref="eric5.UtilitiesPython2.pep8.html#Checker.report_error" />
+      <keyword name="Checker.run_check" id="Checker.run_check" ref="eric5.UtilitiesPython2.pep8.html#Checker.run_check" />
       <keyword name="Py2SyntaxChecker (Module)" id="Py2SyntaxChecker (Module)" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html" />
       <keyword name="compile" id="compile" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#compile" />
       <keyword name="flakesCheck" id="flakesCheck" ref="eric5.UtilitiesPython2.Py2SyntaxChecker.html#flakesCheck" />
@@ -9263,9 +9325,11 @@
       <keyword name="Pep8 (Package)" id="Pep8 (Package)" ref="index-eric5.Plugins.CheckerPlugins.Pep8.html" />
       <keyword name="Pep8Checker (Module)" id="Pep8Checker (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
       <keyword name="Pep8Checker" id="Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker" />
+      <keyword name="Pep8Py2Checker" id="Pep8Py2Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker" />
       <keyword name="Pep8Checker (Constructor)" id="Pep8Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.__init__" />
       <keyword name="Pep8Checker.__ignore_code" id="Pep8Checker.__ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.__ignore_code" />
       <keyword name="Pep8Checker.report_error_args" id="Pep8Checker.report_error_args" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Checker.report_error_args" />
+      <keyword name="Pep8Py2Checker (Constructor)" id="Pep8Py2Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html#Pep8Py2Checker.__init__" />
       <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
       <keyword name="Checker" id="Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#Checker" />
       <keyword name="_main" id="_main" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#_main" />
@@ -10668,10 +10732,12 @@
       <file>eric5.Utilities.py3flakes.checker.html</file>
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
+      <file>eric5.UtilitiesPython2.Pep8Checker.html</file>
       <file>eric5.UtilitiesPython2.Py2SyntaxChecker.html</file>
       <file>eric5.UtilitiesPython2.Tabnanny.html</file>
       <file>eric5.UtilitiesPython2.TabnannyChecker.html</file>
       <file>eric5.UtilitiesPython2.Tools.html</file>
+      <file>eric5.UtilitiesPython2.pep8.html</file>
       <file>eric5.UtilitiesPython2.py2flakes.checker.html</file>
       <file>eric5.UtilitiesPython2.py2flakes.messages.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>

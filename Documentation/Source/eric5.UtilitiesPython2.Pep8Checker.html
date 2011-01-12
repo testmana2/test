@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker</title>
+<title>eric5.UtilitiesPython2.Pep8Checker</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,9 +20,9 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker</h1>
+<h1>eric5.UtilitiesPython2.Pep8Checker</h1>
 <p>
-Module implementing the PEP 8 checker.
+Class implementing the PEP 8 checker for Python2.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,10 +32,7 @@ Module implementing the PEP 8 checker.
 <table>
 <tr>
 <td><a href="#Pep8Checker">Pep8Checker</a></td>
-<td>Class implementing the PEP 8 checker.</td>
-</tr><tr>
-<td><a href="#Pep8Py2Checker">Pep8Py2Checker</a></td>
-<td>Class implementing the PEP 8 checker interface for Python 2.</td>
+<td>Class implementing the PEP 8 checker for Python2.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -46,13 +43,13 @@ Module implementing the PEP 8 checker.
 <a NAME="Pep8Checker" ID="Pep8Checker"></a>
 <h2>Pep8Checker</h2>
 <p>
-    Class implementing the PEP 8 checker.
+    Class implementing the PEP 8 checker for Python2.
 </p>
 <h3>Derived from</h3>
 pep8.Checker
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>filename</td></tr><tr><td>ignore</td></tr><tr><td>repeat</td></tr><tr><td>select</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -134,51 +131,6 @@ reference to the checker function (function)
 </dd><dt><i>args</i></dt>
 <dd>
 arguments for the message (list)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="Pep8Py2Checker" ID="Pep8Py2Checker"></a>
-<h2>Pep8Py2Checker</h2>
-<p>
-    Class implementing the PEP 8 checker interface for Python 2.
-</p>
-<h3>Derived from</h3>
-object
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr>
-<td><a href="#Pep8Py2Checker.__init__">Pep8Py2Checker</a></td>
-<td>Constructor</td>
-</tr>
-</table>
-<a NAME="Pep8Py2Checker.__init__" ID="Pep8Py2Checker.__init__"></a>
-<h4>Pep8Py2Checker (Constructor)</h4>
-<b>Pep8Py2Checker</b>(<i>filename, lines, repeat=False, select="", ignore=""</i>)
-<p>
-        Constructor
-</p><dl>
-<dt><i>filename</i></dt>
-<dd>
-name of the file to check (string)
-</dd><dt><i>lines</i></dt>
-<dd>
-source of the file (list of strings) (ignored)
-</dd><dt><i>repeat=</i></dt>
-<dd>
-flag indicating to repeat message categories (boolean)
-</dd><dt><i>select=</i></dt>
-<dd>
-list of message IDs to check for
-            (comma separated string)
-</dd><dt><i>ignore=</i></dt>
-<dd>
-list of message IDs to ignore
-            (comma separated string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
