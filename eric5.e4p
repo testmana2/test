@@ -851,6 +851,7 @@
     <Source>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.py</Source>
     <Source>UtilitiesPython2/pep8.py</Source>
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1087,6 +1088,7 @@
     <Form>Helpviewer/SslCertificatesDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui</Form>
+    <Form>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

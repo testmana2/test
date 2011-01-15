@@ -2636,12 +2636,14 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_cli
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_showButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_startButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_statisticsButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_storeDefaultButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.positionRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.prepare?4(fileList, project)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.settingsKey?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, codestring = "", save = False, repeat = None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent = None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BINARY_OPERATORS?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.Checker.build_tokens_line?4()

@@ -60,6 +60,7 @@ class Pep8Checker(pep8.Checker):
         pep8.Checker.__init__(self, filename, lines)
         
         self.messages = []
+        self.statistics = {}
     
     def __ignore_code(self, code):
         """
@@ -103,13 +104,12 @@ class Pep8Checker(pep8.Checker):
             return
         
         text = pep8.getMessage(code, *args)
-        if code in pep8.options.counters:
-            pep8.options.counters[code] += 1
+        if code in self.statistics:
+            self.statistics[code] += 1
         else:
-            pep8.options.counters[code] = 1
-            pep8.options.messages[code] = text[5:]
+            self.statistics[code] = 1
         self.file_errors += 1
-        if pep8.options.counters[code] == 1 or pep8.options.repeat:
+        if self.statistics[code] == 1 or pep8.options.repeat:
             self.messages.append(
                 (self.filename, self.line_offset + line_number,
                  offset + 1, text)
@@ -133,6 +133,7 @@ class Pep8Py2Checker(object):
             (comma separated string)
         """
         self.messages = []
+        self.statistics = {}
         
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
@@ -173,6 +174,10 @@ class Pep8Py2Checker(object):
             
             index = 0
             while index < len(output):
+                if output[index] == "PEP8_STATISTICS":
+                    index += 1
+                    break
+                
                 fname = output[index + 1]
                 lineno = int(output[index + 2])
                 position = int(output[index + 3])
@@ -187,6 +192,10 @@ class Pep8Py2Checker(object):
                 
                 text = pep8.getMessage(code, *args)
                 self.messages.append((fname, lineno, position, text))
+            while index < len(output):
+                code, countStr = output[index].split(None, 1)
+                self.statistics[code] = int(countStr)
+                index += 1
         else:
             self.messages.append(filename, "1", "1",
                 self.trUtf8("Python2 interpreter did not finish within 15s."))

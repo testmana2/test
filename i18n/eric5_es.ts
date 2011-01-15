@@ -11403,17 +11403,17 @@ selección completa.&lt;/li&gt;
         <translation>Texto</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="62"/>
+        <location filename="UI/FindFileDialog.py" line="64"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="500"/>
+        <location filename="UI/FindFileDialog.py" line="522"/>
         <source>Select directory</source>
         <translation>Seleccionar un directorio</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="58"/>
+        <location filename="UI/FindFileDialog.py" line="59"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
@@ -11478,7 +11478,7 @@ selección completa.&lt;/li&gt;
         <translation>Reemplazar</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="599"/>
+        <location filename="UI/FindFileDialog.py" line="629"/>
         <source>Replace in Files</source>
         <translation>Reemplazar en Archivos</translation>
     </message>
@@ -11493,37 +11493,37 @@ selección completa.&lt;/li&gt;
         <translation>Abrir primera ocurrencia</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="624"/>
+        <location filename="UI/FindFileDialog.py" line="655"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="625"/>
+        <location filename="UI/FindFileDialog.py" line="656"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="339"/>
+        <location filename="UI/FindFileDialog.py" line="357"/>
         <source>Invalid search expression</source>
         <translation>Expresión de búsqueda no válida</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="339"/>
+        <location filename="UI/FindFileDialog.py" line="357"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión de búsqueda no es válida.&lt;/p&gt;&lt;p&gt;Error:{0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="562"/>
+        <location filename="UI/FindFileDialog.py" line="586"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo leer el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="599"/>
+        <location filename="UI/FindFileDialog.py" line="629"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="575"/>
+        <location filename="UI/FindFileDialog.py" line="600"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los hash actual y original del archivos &lt;b&gt;{0}&lt;/b&gt; son distintos. Abandonando.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</translation>
     </message>
@@ -23045,87 +23045,87 @@ entry will open an editor window and position the cursor at the respective line 
         <translation type="unfinished">Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="68"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="70"/>
         <source>Press to start the PEP 8 check run</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="71"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="73"/>
         <source>Start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="78"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="115"/>
         <source>Exclude Messages:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="85"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="122"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="92"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
         <source>Press to clear the exclude messages edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="173"/>
         <source>Press to select the messages from a list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="152"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="176"/>
         <source>...</source>
         <translation type="unfinished">...</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="125"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
         <source>Included Messages:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="132"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="156"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="139"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
         <source>Press to clear the include messages edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="161"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
         <source>Select to repeat each message type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="164"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="186"/>
         <source>Repeat messages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="184"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to load the default values</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="187"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Load Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="194"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="103"/>
         <source>Press to store the current values as defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="106"/>
         <source>Store Defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="209"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="196"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -23133,57 +23133,114 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="225"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="212"/>
         <source>File/Line</source>
         <translation type="unfinished">Archivo/Línea</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="230"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="217"/>
         <source>Code</source>
         <translation type="unfinished">Código</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Message</source>
         <translation type="unfinished">Mensaje</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="243"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="230"/>
         <source>Shows the progress of the PEP 8 check action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="50"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="56"/>
         <source>Show</source>
         <translation type="unfinished">Mostrar</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="58"/>
         <source>Press to show all files containing an issue</source>
         <translation type="unfinished">Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="232"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="270"/>
         <source>Error: {0}</source>
         <translation type="unfinished">Error: {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="295"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="326"/>
         <source>No issues found.</source>
         <translation type="unfinished">No se han encontrado problemas.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="51"/>
+        <source>Statistics...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="53"/>
+        <source>Press to show some statistics for the last run</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Pep8Py2Checker</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="139"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="140"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished">Intérprete de Python2 no configurado.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="191"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="200"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation type="unfinished">El intérprete de Python2 no terminó en un plazo de 15s.</translation>
+    </message>
+</context>
+<context>
+    <name>Pep8StatisticsDialog</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
+        <source>PEP 8 Statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="30"/>
+        <source>Count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="35"/>
+        <source>Code</source>
+        <translation type="unfinished">Código</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="40"/>
+        <source>Message</source>
+        <translation type="unfinished">Mensaje</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="53"/>
+        <source>%n issue(s) found</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
+        <source>%n file(s) checked</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
+        <source>%n file(s) with issues found</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>

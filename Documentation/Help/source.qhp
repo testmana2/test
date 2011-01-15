@@ -334,6 +334,7 @@
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.pep8" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
               </section>
               <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker" ref="index-eric5.Plugins.CheckerPlugins.SyntaxChecker.html">
@@ -9396,7 +9397,9 @@
       <keyword name="Pep8Dialog.__clearErrors" id="Pep8Dialog.__clearErrors" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__clearErrors" />
       <keyword name="Pep8Dialog.__createResultItem" id="Pep8Dialog.__createResultItem" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__createResultItem" />
       <keyword name="Pep8Dialog.__finish" id="Pep8Dialog.__finish" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__finish" />
+      <keyword name="Pep8Dialog.__resetStatistics" id="Pep8Dialog.__resetStatistics" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__resetStatistics" />
       <keyword name="Pep8Dialog.__resort" id="Pep8Dialog.__resort" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__resort" />
+      <keyword name="Pep8Dialog.__updateStatistics" id="Pep8Dialog.__updateStatistics" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__updateStatistics" />
       <keyword name="Pep8Dialog.on_buttonBox_clicked" id="Pep8Dialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_buttonBox_clicked" />
       <keyword name="Pep8Dialog.on_excludeMessagesSelectButton_clicked" id="Pep8Dialog.on_excludeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_excludeMessagesSelectButton_clicked" />
       <keyword name="Pep8Dialog.on_includeMessagesSelectButton_clicked" id="Pep8Dialog.on_includeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_includeMessagesSelectButton_clicked" />
@@ -9404,9 +9407,14 @@
       <keyword name="Pep8Dialog.on_resultList_itemActivated" id="Pep8Dialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resultList_itemActivated" />
       <keyword name="Pep8Dialog.on_showButton_clicked" id="Pep8Dialog.on_showButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_showButton_clicked" />
       <keyword name="Pep8Dialog.on_startButton_clicked" id="Pep8Dialog.on_startButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_startButton_clicked" />
+      <keyword name="Pep8Dialog.on_statisticsButton_clicked" id="Pep8Dialog.on_statisticsButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_statisticsButton_clicked" />
       <keyword name="Pep8Dialog.on_storeDefaultButton_clicked" id="Pep8Dialog.on_storeDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_storeDefaultButton_clicked" />
       <keyword name="Pep8Dialog.prepare" id="Pep8Dialog.prepare" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.prepare" />
       <keyword name="Pep8Dialog.start" id="Pep8Dialog.start" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.start" />
+      <keyword name="Pep8StatisticsDialog (Module)" id="Pep8StatisticsDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html" />
+      <keyword name="Pep8StatisticsDialog" id="Pep8StatisticsDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog" />
+      <keyword name="Pep8StatisticsDialog (Constructor)" id="Pep8StatisticsDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__init__" />
+      <keyword name="Pep8StatisticsDialog.__createItem" id="Pep8StatisticsDialog.__createItem" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__createItem" />
       <keyword name="Tabnanny (Package)" id="Tabnanny (Package)" ref="index-eric5.Plugins.CheckerPlugins.Tabnanny.html" />
       <keyword name="TabnannyDialog (Module)" id="TabnannyDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html" />
       <keyword name="TabnannyDialog" id="TabnannyDialog" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog" />
@@ -10413,6 +10421,7 @@
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.pep8.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html</file>

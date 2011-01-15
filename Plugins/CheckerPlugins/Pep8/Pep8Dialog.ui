@@ -62,15 +62,52 @@ entry will open an editor window and position the cursor at the respective line 
         </property>
        </widget>
       </item>
-      <item row="0" column="5" colspan="2">
-       <widget class="QPushButton" name="startButton">
-        <property name="toolTip">
-         <string>Press to start the PEP 8 check run</string>
-        </property>
-        <property name="text">
-         <string>Start</string>
-        </property>
-       </widget>
+      <item row="0" column="5" rowspan="4">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="startButton">
+          <property name="toolTip">
+           <string>Press to start the PEP 8 check run</string>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>18</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loadDefaultButton">
+          <property name="toolTip">
+           <string>Press to load the default values</string>
+          </property>
+          <property name="text">
+           <string>Load Defaults</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="storeDefaultButton">
+          <property name="toolTip">
+           <string>Press to store the current values as defaults</string>
+          </property>
+          <property name="text">
+           <string>Store Defaults</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label">
@@ -105,19 +142,6 @@ entry will open an editor window and position the cursor at the respective line 
          <string>...</string>
         </property>
        </widget>
-      </item>
-      <item row="1" column="6" rowspan="3">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>80</height>
-         </size>
-        </property>
-       </spacer>
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_3">
@@ -154,51 +178,14 @@ entry will open an editor window and position the cursor at the respective line 
        </widget>
       </item>
       <item row="3" column="0" colspan="4">
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QCheckBox" name="repeatCheckBox">
-          <property name="toolTip">
-           <string>Select to repeat each message type</string>
-          </property>
-          <property name="text">
-           <string>Repeat messages</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="loadDefaultButton">
-          <property name="toolTip">
-           <string>Press to load the default values</string>
-          </property>
-          <property name="text">
-           <string>Load Defaults</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="storeDefaultButton">
-          <property name="toolTip">
-           <string>Press to store the current values as defaults</string>
-          </property>
-          <property name="text">
-           <string>Store Defaults</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QCheckBox" name="repeatCheckBox">
+        <property name="toolTip">
+         <string>Select to repeat each message type</string>
+        </property>
+        <property name="text">
+         <string>Repeat messages</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -266,6 +253,7 @@ the respective line and position.&lt;/p&gt;</string>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
   <tabstop>startButton</tabstop>
+  <tabstop>loadDefaultButton</tabstop>
   <tabstop>excludeFilesEdit</tabstop>
   <tabstop>clearButton</tabstop>
   <tabstop>excludeMessagesEdit</tabstop>
@@ -275,7 +263,6 @@ the respective line and position.&lt;/p&gt;</string>
   <tabstop>clearButtonIncludeMessages</tabstop>
   <tabstop>includeMessagesSelectButton</tabstop>
   <tabstop>repeatCheckBox</tabstop>
-  <tabstop>loadDefaultButton</tabstop>
   <tabstop>storeDefaultButton</tabstop>
   <tabstop>resultList</tabstop>
   <tabstop>buttonBox</tabstop>

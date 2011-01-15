@@ -56,6 +56,7 @@ class Pep8Checker(pep8.Checker):
         pep8.Checker.__init__(self, filename, lines)
         
         self.messages = []
+        self.statistics = {}
     
     def __ignore_code(self, code):
         """
@@ -98,13 +99,12 @@ class Pep8Checker(pep8.Checker):
         if self.__ignore_code(code):
             return
         
-        if code in pep8.options.counters:
-            pep8.options.counters[code] += 1
+        if code in self.statistics:
+            self.statistics[code] += 1
         else:
-            pep8.options.counters[code] = 1
-            pep8.options.messages[code] = code
+            self.statistics[code] = 1
         self.file_errors += 1
-        if pep8.options.counters[code] == 1 or pep8.options.repeat:
+        if self.statistics[code] == 1 or pep8.options.repeat:
             self.messages.append(
                 (self.filename, self.line_offset + line_number,
                  offset + 1, code, args)
@@ -164,6 +164,9 @@ if __name__ == "__main__":
                 print len(args)
                 for a in args:
                     print a
+            print "PEP8_STATISTICS"
+            for key in checker.statistics:
+                print key, checker.statistics[key]
         else:
             print "NO_PEP8"
             print filename

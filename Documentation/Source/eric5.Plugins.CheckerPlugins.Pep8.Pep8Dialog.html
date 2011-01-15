@@ -66,8 +66,14 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.__finish">__finish</a></td>
 <td>Private slot called when the PEP 8 check finished or the user pressed the cancel button.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.__resetStatistics">__resetStatistics</a></td>
+<td>Private slot to reset the statistics data.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.__updateStatistics">__updateStatistics</a></td>
+<td>Private method to update the collected statistics.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -89,6 +95,9 @@ QDialog, Ui_Pep8Dialog
 </tr><tr>
 <td><a href="#Pep8Dialog.on_startButton_clicked">on_startButton_clicked</a></td>
 <td>Private slot to start a PEP 8 check run.</td>
+</tr><tr>
+<td><a href="#Pep8Dialog.on_statisticsButton_clicked">on_statisticsButton_clicked</a></td>
+<td>Private slot to show the statistics dialog.</td>
 </tr><tr>
 <td><a href="#Pep8Dialog.on_storeDefaultButton_clicked">on_storeDefaultButton_clicked</a></td>
 <td>Private slot to store the current configuration values as default values.</td>
@@ -140,12 +149,28 @@ message text (string)
 <p>
         Private slot called when the PEP 8 check finished or the user
         pressed the cancel button.
+</p><a NAME="Pep8Dialog.__resetStatistics" ID="Pep8Dialog.__resetStatistics"></a>
+<h4>Pep8Dialog.__resetStatistics</h4>
+<b>__resetStatistics</b>(<i></i>)
+<p>
+        Private slot to reset the statistics data.
 </p><a NAME="Pep8Dialog.__resort" ID="Pep8Dialog.__resort"></a>
 <h4>Pep8Dialog.__resort</h4>
 <b>__resort</b>(<i></i>)
 <p>
         Private method to resort the tree.
-</p><a NAME="Pep8Dialog.on_buttonBox_clicked" ID="Pep8Dialog.on_buttonBox_clicked"></a>
+</p><a NAME="Pep8Dialog.__updateStatistics" ID="Pep8Dialog.__updateStatistics"></a>
+<h4>Pep8Dialog.__updateStatistics</h4>
+<b>__updateStatistics</b>(<i>statistics</i>)
+<p>
+        Private method to update the collected statistics.
+</p><dl>
+<dt><i>statistics</i></dt>
+<dd>
+dictionary of statistical data with
+            message code as key and message count as value
+</dd>
+</dl><a NAME="Pep8Dialog.on_buttonBox_clicked" ID="Pep8Dialog.on_buttonBox_clicked"></a>
 <h4>Pep8Dialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>
@@ -195,6 +220,11 @@ column the item was activated in (integer)
 <b>on_startButton_clicked</b>(<i></i>)
 <p>
         Private slot to start a PEP 8 check run.
+</p><a NAME="Pep8Dialog.on_statisticsButton_clicked" ID="Pep8Dialog.on_statisticsButton_clicked"></a>
+<h4>Pep8Dialog.on_statisticsButton_clicked</h4>
+<b>on_statisticsButton_clicked</b>(<i></i>)
+<p>
+        Private slot to show the statistics dialog.
 </p><a NAME="Pep8Dialog.on_storeDefaultButton_clicked" ID="Pep8Dialog.on_storeDefaultButton_clicked"></a>
 <h4>Pep8Dialog.on_storeDefaultButton_clicked</h4>
 <b>on_storeDefaultButton_clicked</b>(<i></i>)

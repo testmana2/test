@@ -45,9 +45,9 @@ Module implementing a dialog to search for text in files.
 <p>
     Class implementing a dialog to search for text in files.
 </p><p>
-    The occurrences found are displayed in a QTreeWidget showing the filename, the 
-    linenumber and the found text. The file will be opened upon a double click onto 
-    the respective entry of the list.
+    The occurrences found are displayed in a QTreeWidget showing the filename,
+    the linenumber and the found text. The file will be opened upon a double
+    click onto the respective entry of the list.
 </p><h4>Signals</h4>
 <dl>
 <dt>designerFile(str)</dt>
@@ -55,7 +55,8 @@ Module implementing a dialog to search for text in files.
 emitted to open a Qt-Designer file
 </dd><dt>sourceFile(str, int, str, int, int)</dt>
 <dd>
-emitted to open a source file at a line
+emitted to open a source file
+        at a line
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -164,7 +165,7 @@ position the context menu shall be shown (QPoint)
         Private method to copy the path of an entry to the clipboard.
 </p><a NAME="FindFileDialog.__createItem" ID="FindFileDialog.__createItem"></a>
 <h4>FindFileDialog.__createItem</h4>
-<b>__createItem</b>(<i>file, line, text, start, end, replTxt = "", md5 = ""</i>)
+<b>__createItem</b>(<i>file, line, text, start, end, replTxt="", md5=""</i>)
 <p>
         Private method to create an entry in the file list.
 </p><dl>
@@ -211,7 +212,8 @@ MD5 hash of the file (string)
 the root directory to search in (string)
 </dd><dt><i>filterRe</i></dt>
 <dd>
-regular expression defining the filter criteria (regexp object)
+regular expression defining the filter
+            criteria (regexp object)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -247,7 +249,8 @@ button that was clicked (QAbstractButton)
 <h4>FindFileDialog.on_dirCombo_editTextChanged</h4>
 <b>on_dirCombo_editTextChanged</b>(<i>text</i>)
 <p>
-        Private slot to handle the textChanged signal of the directory combo box.
+        Private slot to handle the textChanged signal of the directory
+        combo box.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
@@ -293,7 +296,8 @@ column that was double clicked (integer) (ignored)
 <h4>FindFileDialog.on_findtextCombo_editTextChanged</h4>
 <b>on_findtextCombo_editTextChanged</b>(<i>text</i>)
 <p>
-        Private slot to handle the editTextChanged signal of the find text combo.
+        Private slot to handle the editTextChanged signal of the find
+        text combo.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
@@ -313,7 +317,8 @@ column that was double clicked (integer) (ignored)
 <h4>FindFileDialog.on_replacetextCombo_editTextChanged</h4>
 <b>on_replacetextCombo_editTextChanged</b>(<i>text</i>)
 <p>
-        Private slot to handle the editTextChanged signal of the replace text combo.
+        Private slot to handle the editTextChanged signal of the replace
+        text combo.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>

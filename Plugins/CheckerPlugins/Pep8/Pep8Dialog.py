@@ -20,6 +20,7 @@ from E5Gui.E5Application import e5App
 
 from .Pep8Checker import Pep8Checker, Pep8Py2Checker
 from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
+from .Pep8StatisticsDialog import Pep8StatisticsDialog
 
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
 
@@ -47,10 +48,16 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
+        self.statisticsButton = self.buttonBox.addButton(
+            self.trUtf8("Statistics..."), QDialogButtonBox.ActionRole)
+        self.statisticsButton.setToolTip(
+            self.trUtf8("Press to show some statistics for the last run"))
+        self.statisticsButton.setEnabled(False)
         self.showButton = self.buttonBox.addButton(
             self.trUtf8("Show"), QDialogButtonBox.ActionRole)
         self.showButton.setToolTip(
             self.trUtf8("Press to show all files containing an issue"))
+        self.showButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
@@ -65,6 +72,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.__project = None
         self.__forProject = False
         self.__data = {}
+        self.__statistics = {}
         
         self.clearButton.setIcon(
             UI.PixmapCache.getIcon("clearLeft.png"))
@@ -102,13 +110,41 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         itm = QTreeWidgetItem(self.__lastFileItem, 
             ["{0:6}".format(line), code, message])
         if code.startswith("W"):
-            itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
+            itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         else:
-            itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
+            itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
+        
+        itm.setTextAlignment(0, Qt.AlignRight)
+        itm.setTextAlignment(1, Qt.AlignHCenter)
+        
         itm.setData(0, self.filenameRole, file)
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.positionRole, int(pos))
         itm.setData(0, self.messageRole, message)
+    
+    def __updateStatistics(self, statistics):
+        """
+        Private method to update the collected statistics.
+        
+        @param statistics dictionary of statistical data with
+            message code as key and message count as value
+        """
+        self.__statistics["_FilesCount"] += 1
+        if statistics:
+            self.__statistics["_FilesIssues"] += 1
+            for key in statistics:
+                if key in self.__statistics:
+                    self.__statistics[key] += statistics[key]
+                else:
+                    self.__statistics[key] = statistics[key]
+    
+    def __resetStatistics(self):
+        """
+        Private slot to reset the statistics data.
+        """
+        self.__statistics = {}
+        self.__statistics["_FilesCount"] = 0
+        self.__statistics["_FilesIssues"] = 0
     
     def prepare(self, fileList, project):
         """
@@ -163,6 +199,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.repeatCheckBox.setChecked(repeat)
         QApplication.processEvents()
         
+        self.__resetStatistics()
+        
         if save:
             self.__fileOrFileList = fn
         
@@ -212,9 +250,9 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             for file in py3files + py2files:
                 self.checkProgress.setValue(progress)
                 QApplication.processEvents()
-                self.__resort()
                 
                 if self.cancelled:
+                    self.__resort()
                     return
                 
                 self.__lastFileItem = None
@@ -250,28 +288,21 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         repeat = repeatMessages, 
                         select = includeMessages,
                         ignore = excludeMessages)
-                    checker.messages.sort(key = lambda a: a[1])
-                    for message in checker.messages:
-                        fname, lineno, position, text = message
-                        if not source[lineno - 1].strip()\
-                           .endswith("__IGNORE_WARNING__"):
-                            self.noResults = False
-                            self.__createResultItem(
-                                fname, lineno, position, text)
                 else:
                     checker = Pep8Checker(file, source, 
                         repeat = repeatMessages, 
                         select = includeMessages,
                         ignore = excludeMessages)
                     checker.check_all()
-                    checker.messages.sort(key = lambda a: a[1])
-                    for message in checker.messages:
-                        fname, lineno, position, text = message
-                        if not source[lineno - 1].strip()\
-                           .endswith("__IGNORE_WARNING__"):
-                            self.noResults = False
-                            self.__createResultItem(
-                                fname, lineno, position, text)
+                checker.messages.sort(key = lambda a: a[1])
+                for message in checker.messages:
+                    fname, lineno, position, text = message
+                    if not source[lineno - 1].strip()\
+                       .endswith("__IGNORE_WARNING__"):
+                        self.noResults = False
+                        self.__createResultItem(
+                            fname, lineno, position, text)
+                self.__updateStatistics(checker.statistics)
                 progress += 1
             self.checkProgress.setValue(progress)
             QApplication.processEvents()
@@ -294,9 +325,11 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
             QApplication.processEvents()
+            self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)
             self.__clearErrors()
         else:
+            self.statisticsButton.setEnabled(True)
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
@@ -405,6 +438,14 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 editor.clearFlakesWarnings()
     
     @pyqtSlot()
+    def on_statisticsButton_clicked(self):
+        """
+        Private slot to show the statistics dialog.
+        """
+        dlg = Pep8StatisticsDialog(self.__statistics, self)
+        dlg.exec_()
+    
+    @pyqtSlot()
     def on_loadDefaultButton_clicked(self):
         """
         Private slot to load the default configuration values.
@@ -446,6 +487,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__finish()
         elif button == self.showButton:
             self.on_showButton_clicked()
+        elif button == self.statisticsButton:
+            self.on_statisticsButton_clicked()
     
     def __clearErrors(self):
         """
