@@ -25,11 +25,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
     """
     Class implementing a dialog to search for text in files.
     
-    The occurrences found are displayed in a QTreeWidget showing the filename, the 
-    linenumber and the found text. The file will be opened upon a double click onto 
-    the respective entry of the list.
+    The occurrences found are displayed in a QTreeWidget showing the filename,
+    the linenumber and the found text. The file will be opened upon a double
+    click onto the respective entry of the list.
     
-    @signal sourceFile(str, int, str, int, int) emitted to open a source file at a line
+    @signal sourceFile(str, int, str, int, int) emitted to open a source file
+        at a line
     @signal designerFile(str) emitted to open a Qt-Designer file
     """
     sourceFile = pyqtSignal(str, int, str, int, int)
@@ -55,11 +56,13 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__replaceMode = replaceMode
         
         self.stopButton = \
-            self.buttonBox.addButton(self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
+            self.buttonBox.addButton(self.trUtf8("Stop"), 
+                                     QDialogButtonBox.ActionRole)
         self.stopButton.setEnabled(False)
         
         self.findButton = \
-            self.buttonBox.addButton(self.trUtf8("Find"), QDialogButtonBox.ActionRole)
+            self.buttonBox.addButton(self.trUtf8("Find"), 
+                                     QDialogButtonBox.ActionRole)
         self.findButton.setEnabled(False)
         self.findButton.setDefault(True)
         
@@ -74,11 +77,14 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findProgressLabel.setMaximumWidth(550)
         
         self.searchHistory = Preferences.toList(
-            Preferences.Prefs.settings.value("FindFileDialog/SearchHistory"))
+            Preferences.Prefs.settings.value(
+                "FindFileDialog/SearchHistory"))
         self.replaceHistory = Preferences.toList(
-            Preferences.Prefs.settings.value("FindFileDialog/ReplaceHistory"))
+            Preferences.Prefs.settings.value(
+                "FindFileDialog/ReplaceHistory"))
         self.dirHistory = Preferences.toList(
-            Preferences.Prefs.settings.value("FindFileDialog/DirectoryHistory"))
+            Preferences.Prefs.settings.value(
+                "FindFileDialog/DirectoryHistory"))
         self.findtextCombo.addItems(self.searchHistory)
         self.replacetextCombo.addItems(self.replaceHistory)
         self.dirCombo.addItems(self.dirHistory)
@@ -116,7 +122,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__contextMenuRequested)
         
-    def __createItem(self, file, line, text, start, end, replTxt = "", md5 = ""):
+    def __createItem(self, file, line, text, start, end, replTxt="", md5=""):
         """
         Private method to create an entry in the file list.
         
@@ -137,10 +143,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 self.__lastFileItem.setFlags(self.__lastFileItem.flags() | \
                     Qt.ItemFlags(Qt.ItemIsUserCheckable | Qt.ItemIsTristate))
                 # Qt bug: 
-                # item is not user checkable if setFirstColumnSpanned is True (< 4.5.0)
+                # item is not user checkable if setFirstColumnSpanned 
+                # is True (< 4.5.0)
             self.__lastFileItem.setData(0, self.md5Role, md5)
         
-        itm = QTreeWidgetItem(self.__lastFileItem, [' {0:5d} '.format(line), text])
+        itm = QTreeWidgetItem(self.__lastFileItem, 
+            [' {0:5d} '.format(line), text])
         itm.setTextAlignment(0,  Qt.AlignRight)
         itm.setData(0, self.lineRole, line)
         itm.setData(0, self.startRole, start)
@@ -177,7 +185,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
     def on_findtextCombo_editTextChanged(self, text):
         """
-        Private slot to handle the editTextChanged signal of the find text combo.
+        Private slot to handle the editTextChanged signal of the find
+        text combo.
         
         @param text (ignored)
         """
@@ -185,7 +194,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
     def on_replacetextCombo_editTextChanged(self, text):
         """
-        Private slot to handle the editTextChanged signal of the replace text combo.
+        Private slot to handle the editTextChanged signal of the replace
+        text combo.
         
         @param text (ignored)
         """
@@ -193,7 +203,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
     def on_dirCombo_editTextChanged(self, text):
         """
-        Private slot to handle the textChanged signal of the directory combo box.
+        Private slot to handle the textChanged signal of the directory
+        combo box.
         
         @param text (ignored)
         """
@@ -234,10 +245,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         Private slot called to enable the find button.
         """
         if self.findtextCombo.currentText() == "" or \
-           (self.__replaceMode and self.replacetextCombo.currentText() == "") or \
+           (self.__replaceMode and \
+            self.replacetextCombo.currentText() == "") or \
            (self.dirButton.isChecked() and \
             (self.dirCombo.currentText() == "" or \
-             not os.path.exists(os.path.abspath(self.dirCombo.currentText())))) or \
+             not os.path.exists(os.path.abspath(
+                self.dirCombo.currentText())))) or \
            (self.filterCheckBox.isChecked() and self.filterEdit.text() == ""):
             self.findButton.setEnabled(False)
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -266,7 +279,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         Private slot to handle the find button being pressed.
         """
-        if self.__replaceMode and not e5App().getObject("ViewManager").checkAllDirty():
+        if self.__replaceMode and \
+           not e5App().getObject("ViewManager").checkAllDirty():
             return
         
         self.__cancelSearch = False
@@ -282,7 +296,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             if self.filterCheckBox.isChecked():
                 files = [self.project.getRelativePath(file) \
                          for file in \
-                         self.__getFileList(self.project.getProjectPath(), filterRe)]
+                         self.__getFileList(
+                            self.project.getProjectPath(), filterRe)]
             else:
                 files = []
                 if self.sourcesCheckBox.isChecked():
@@ -298,8 +313,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 filters = []
                 if self.sourcesCheckBox.isChecked():
                     filters.extend(
-                        ["^{0}$".format(assoc.replace(".", "\.").replace("*", ".*")) \
-                         for assoc in list(Preferences.getEditorLexerAssocs().keys()) \
+                        ["^{0}$".format(
+                            assoc.replace(".", "\.").replace("*", ".*"))
+                         for assoc in list(
+                            Preferences.getEditorLexerAssocs().keys())
                          if assoc not in self.formsExt + self.interfacesExt])
                 if self.formsCheckBox.isChecked():
                     filters.append(self.filterForms)
@@ -309,8 +326,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     filters.append(self.filterResources)
                 filterString = "|".join(filters)
                 filterRe = re.compile(filterString)
-            files = self.__getFileList(os.path.abspath(self.dirCombo.currentText()), 
-                                       filterRe)
+            files = self.__getFileList(
+                os.path.abspath(self.dirCombo.currentText()), 
+                filterRe)
         elif self.openFilesButton.isChecked():
             files = e5App().getObject("ViewManager").getOpenFilenames()
         
@@ -352,8 +370,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.searchHistory.insert(0, ct)
         self.findtextCombo.clear()
         self.findtextCombo.addItems(self.searchHistory)
-        Preferences.Prefs.settings.setValue("FindFileDialog/SearchHistory", 
-                                            self.searchHistory[:30])
+        Preferences.Prefs.settings.setValue(
+            "FindFileDialog/SearchHistory", 
+            self.searchHistory[:30])
         
         if self.__replaceMode:
             replTxt = self.replacetextCombo.currentText()
@@ -362,8 +381,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.replaceHistory.insert(0, replTxt)
             self.replacetextCombo.clear()
             self.replacetextCombo.addItems(self.replaceHistory)
-            Preferences.Prefs.settings.setValue("FindFileDialog/ReplaceHistory", 
-                                                self.replaceHistory[:30])
+            Preferences.Prefs.settings.setValue(
+                "FindFileDialog/ReplaceHistory", 
+                self.replaceHistory[:30])
         
         if self.dirButton.isChecked():
             searchDir = self.dirCombo.currentText()
@@ -372,8 +392,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.dirHistory.insert(0, searchDir)
             self.dirCombo.clear()
             self.dirCombo.addItems(self.dirHistory)
-            Preferences.Prefs.settings.setValue("FindFileDialog/DirectoryHistory", 
-                                                self.dirHistory[:30])
+            Preferences.Prefs.settings.setValue(
+                "FindFileDialog/DirectoryHistory", 
+                self.dirHistory[:30])
         
         # set the button states
         self.stopButton.setEnabled(True)
@@ -426,7 +447,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         if len(rline) > 1024:
                             rline = "{0} ...".format(line[:1024])
                         line = "- {0}\n+ {1}".format(line, rline)
-                    self.__createItem(file, count, line, start, end, rline, hash)
+                    self.__createItem(file, count, line, start, end, 
+                                      rline, hash)
                     
                     if self.feelLikeCheckBox.isChecked():
                         fn = os.path.join(self.project.ppath, file)
@@ -511,7 +533,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         Private method to get a list of files to search.
         
         @param path the root directory to search in (string)
-        @param filterRe regular expression defining the filter criteria (regexp object)
+        @param filterRe regular expression defining the filter
+            criteria (regexp object)
         @return list of files to be processed (list of strings)
         """
         path = os.path.abspath(path)
@@ -556,13 +579,15 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 # read the file and split it into textlines
                 try:
-                    text, encoding, hash = Utilities.readEncodedFileWithHash(fn)
+                    text, encoding, hash = \
+                        Utilities.readEncodedFileWithHash(fn)
                     lines = text.splitlines()
                 except (UnicodeError, IOError):
                     E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
-                        self.trUtf8("""<p>Could not read the file <b>{0}</b>."""
-                                    """ Skipping it.</p><p>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>Could not read the file <b>{0}</b>."""
+                            """ Skipping it.</p><p>Reason: {1}</p>""")\
                             .format(fn, str(err))
                     )
                     progress += 1
@@ -574,9 +599,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 if origHash != hash:
                     E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
-                        self.trUtf8("""<p>The current and the original hash of the"""
-                                    """ file <b>{0}</b> are different. Skipping it."""
-                                    """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")\
+                        self.trUtf8(
+                            """<p>The current and the original hash of the"""
+                            """ file <b>{0}</b> are different. Skipping it."""
+                            """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")\
                             .format(fn, origHash, hash)
                     )
                     progress += 1
@@ -592,14 +618,19 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         lines[line - 1] = rline
                 
                 # write the file
-                txt = Utilities.linesep().join(lines) + Utilities.linesep()
+                if self.project.isProjectFile(fn):
+                    eol = self.project.getEolString()
+                else:
+                    eol = Utilities.linesep()
+                txt = eol.join(lines) + Utilities.linesep()
                 try:
                     Utilities.writeEncodedFile(fn, txt, encoding)
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
-                        self.trUtf8("""<p>Could not save the file <b>{0}</b>."""
-                                    """ Skipping it.</p><p>Reason: {1}</p>""")\
+                        self.trUtf8(
+                            """<p>Could not save the file <b>{0}</b>."""
+                            """ Skipping it.</p><p>Reason: {1}</p>""")\
                             .format(fn, str(err))
                     )
             
@@ -622,7 +653,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         menu = QMenu(self)
         
         menu.addAction(self.trUtf8("Open"), self.__openFile)
-        menu.addAction(self.trUtf8("Copy Path to Clipboard"), self.__copyToClipboard)
+        menu.addAction(self.trUtf8("Copy Path to Clipboard"), 
+                       self.__copyToClipboard)
         
         menu.exec_(QCursor.pos())
         
