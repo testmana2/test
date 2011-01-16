@@ -852,6 +852,7 @@
     <Source>UtilitiesPython2/pep8.py</Source>
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

@@ -21,6 +21,7 @@ from E5Gui.E5Application import e5App
 from .Pep8Checker import Pep8Checker, Pep8Py2Checker
 from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
 from .Pep8StatisticsDialog import Pep8StatisticsDialog
+from .Pep8Fixer import Pep8Fixer
 
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
 
@@ -79,6 +80,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.clearButtonExcludeMessages.setIcon(
             UI.PixmapCache.getIcon("clearLeft.png"))
         self.clearButtonIncludeMessages.setIcon(
+            UI.PixmapCache.getIcon("clearLeft.png"))
+        self.clearButtonFixIssues.setIcon(
             UI.PixmapCache.getIcon("clearLeft.png"))
         self.on_loadDefaultButton_clicked()
     
@@ -162,27 +165,31 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         self.__data = self.__project.getData("CHECKERSPARMS", "Pep8Checker")
-        if self.__data is None or "ExcludeFiles" not in self.__data:
+        if self.__data is None or \
+           "ExcludeFiles" not in self.__data or \
+           len(self.__data) != 6:
             # initialize the data structure
             self.__data = {
                 "ExcludeFiles" : "", 
                 "ExcludeMessages" : pep8.DEFAULT_IGNORE, 
                 "IncludeMessages" : "", 
                 "RepeatMessages" : False, 
+                "FixCodes" : "", 
+                "FixIssues" : False, 
             }
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
         self.includeMessagesEdit.setText(self.__data["IncludeMessages"])
         self.repeatCheckBox.setChecked(self.__data["RepeatMessages"])
+        self.fixIssuesEdit.setText(self.__data["FixCodes"])
+        self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
     
-    def start(self, fn, codestring = "", save = False, repeat = None):
+    def start(self, fn, save = False, repeat = None):
         """
         Public slot to start the PEP 8 check.
         
         @param fn file or list of files or directory to be checked
                 (string or list of strings)
-        @keyparam codestring string containing the code to be checked (string).
-            If this is given, file must be a single file name.
         @keyparam save flag indicating to save the given 
             file/file list/directory (boolean)
         @keyparam repeat state of the repeat check box if it is not None
@@ -234,9 +241,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     if f.endswith(
                         tuple(Preferences.getPython("PythonExtensions")))]
         
-        if (codestring and len(py3files) == 1) or \
-           (codestring and len(py2files) == 1) or \
-           (not codestring and len(py3files) + len(py2files) > 0):
+        if len(py3files) + len(py2files) > 0:
             self.checkProgress.setMaximum(len(py3files) + len(py2files))
             QApplication.processEvents()
             
@@ -244,6 +249,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             excludeMessages = self.excludeMessagesEdit.text()
             includeMessages = self.includeMessagesEdit.text()
             repeatMessages = self.repeatCheckBox.isChecked()
+            fixCodes = self.fixIssuesEdit.text()
+            fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             
             # now go through all the files
             progress = 0
@@ -257,24 +264,24 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 
                 self.__lastFileItem = None
                 
-                if codestring:
-                    source = codestring.splitlines(True)
-                else:
-                    try:
-                        source = Utilities.readEncodedFile(file)[0]
-                        # convert eols
-                        source = Utilities.convertLineEnds(source, "\n")
-                        source = source.splitlines(True)
-                    except (UnicodeError, IOError) as msg:
-                        self.noResults = False
-                        self.__createResultItem(file, "1", "1", 
-                            self.trUtf8("Error: {0}").format(str(msg))\
-                                .rstrip()[1:-1])
-                        progress += 1
-                        continue
+                try:
+                    source, encoding = Utilities.readEncodedFile(file)
+                    source = source.splitlines(True)
+                except (UnicodeError, IOError) as msg:
+                    self.noResults = False
+                    self.__createResultItem(file, "1", "1", 
+                        self.trUtf8("Error: {0}").format(str(msg))\
+                            .rstrip()[1:-1])
+                    progress += 1
+                    continue
                 
                 flags = Utilities.extractFlags(source)
                 ext = os.path.splitext(file)[1]
+                if fixIssues:
+                    fixer = Pep8Fixer(self.__project, file, source, 
+                                      fixCodes, True)  # always fix in place
+                else:
+                    fixer = None
                 if ("FileType" in flags and 
                     flags["FileType"] in ["Python", "Python2"]) or \
                    file in py2files or \
@@ -300,8 +307,14 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     if not source[lineno - 1].strip()\
                        .endswith("__IGNORE_WARNING__"):
                         self.noResults = False
+                        if fixer:
+                            fixed, msg = fixer.fixIssue(lineno, position, text)
+                            if fixed:
+                                text += "\n" + \
+                                        self.trUtf8("Fix: {0}").format(msg)
                         self.__createResultItem(
                             fname, lineno, position, text)
+                fixer and fixer.saveFile(encoding)
                 self.__updateStatistics(checker.statistics)
                 progress += 1
             self.checkProgress.setValue(progress)
@@ -345,6 +358,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                 "ExcludeMessages" : self.excludeMessagesEdit.text(), 
                 "IncludeMessages" : self.includeMessagesEdit.text(), 
                 "RepeatMessages" : self.repeatCheckBox.isChecked(),
+                "FixCodes" : self.fixIssuesEdit.text(), 
+                "FixIssues" : self.fixIssuesCheckBox.isChecked(),
             }
             if data != self.__data:
                 self.__data = data
@@ -362,7 +377,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the message codes to be excluded via a
         selection dialog.
         """
-        dlg = Pep8CodeSelectionDialog(self.excludeMessagesEdit.text(), self)
+        dlg = Pep8CodeSelectionDialog(
+            self.excludeMessagesEdit.text(), False, self)
         if dlg.exec_() == QDialog.Accepted:
             self.excludeMessagesEdit.setText(dlg.getSelectedCodes())
     
@@ -372,9 +388,21 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         Private slot to select the message codes to be included via a
         selection dialog.
         """
-        dlg = Pep8CodeSelectionDialog(self.includeMessagesEdit.text(), self)
+        dlg = Pep8CodeSelectionDialog(
+            self.includeMessagesEdit.text(), False, self)
         if dlg.exec_() == QDialog.Accepted:
             self.includeMessagesEdit.setText(dlg.getSelectedCodes())
+    
+    @pyqtSlot()
+    def on_fixIssuesSelectButton_clicked(self):
+        """
+        Private slot to select the issue codes to be fixed via a
+        selection dialog.
+        """
+        dlg = Pep8CodeSelectionDialog(
+            self.fixIssuesEdit.text(), True, self)
+        if dlg.exec_() == QDialog.Accepted:
+            self.fixIssuesEdit.setText(dlg.getSelectedCodes())
     
     @pyqtSlot(QTreeWidgetItem, int)
     def on_resultList_itemActivated(self, item, column):
@@ -458,6 +486,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             "PEP8/IncludeMessages"))
 ##        self.repeatCheckBox.setChecked(Preferences.toBool(
 ##            Preferences.Prefs.settings.value("PEP8/RepeatMessages")))
+        self.fixIssuesEdit.setText(Preferences.Prefs.settings.value(
+            "PEP8/FixCodes"))
+        self.fixIssuesCheckBox.setChecked(Preferences.toBool(
+            Preferences.Prefs.settings.value("PEP8/FixIssues")))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -473,6 +505,10 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.includeMessagesEdit.text())
 ##        Preferences.Prefs.settings.setValue("PEP8/RepeatMessages",
 ##            self.repeatCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue("PEP8/FixCodes",
+            self.fixIssuesEdit.text())
+        Preferences.Prefs.settings.setValue("PEP8/FixIssues",
+            self.fixIssuesCheckBox.isChecked())
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):

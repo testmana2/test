@@ -265,10 +265,10 @@ class Pep8CheckerPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
-            self.__editorPep8CheckerDialog = Pep8Dialog()
-            self.__editorPep8CheckerDialog.show()
-            self.__editorPep8CheckerDialog.start(
-                editor.getFileName(), 
-                codestring = editor.text(), 
-                save = True, 
-                repeat = True)
+            if editor.checkDirty():
+                self.__editorPep8CheckerDialog = Pep8Dialog()
+                self.__editorPep8CheckerDialog.show()
+                self.__editorPep8CheckerDialog.start(
+                    editor.getFileName(), 
+                    save = True, 
+                    repeat = True)

@@ -11,6 +11,7 @@ from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from . import pep8
+from .Pep8Fixer import Pep8FixableIssues
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
 
@@ -18,11 +19,13 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
     """
     Class implementing a dialog to select PEP 8 message codes.
     """
-    def __init__(self, codes, parent = None):
+    def __init__(self, codes, showFixCodes, parent = None):
         """
         Constructor
         
         @param codes comma separated list of selected codes (string)
+        @param showFixCodes flag indicating to show a list of fixable
+            issues (boolean)
         @param parent reference to the parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
@@ -30,7 +33,11 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
         
         codeList = [code.strip() for code in codes.split(",") if code.strip()]
         
-        for code in sorted(pep8.pep8_messages.keys(), key=lambda a: a[1:]):
+        if showFixCodes:
+            selectableCodes = Pep8FixableIssues
+        else:
+            selectableCodes = pep8.pep8_messages.keys()
+        for code in sorted(selectableCodes, key=lambda a: a[1:]):
             if code in pep8.pep8_messages_sample_args:
                 message = QCoreApplication.translate("pep8", 
                     pep8.pep8_messages[code]).format(
