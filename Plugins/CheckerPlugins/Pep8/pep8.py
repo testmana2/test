@@ -410,8 +410,6 @@ def blank_lines(logical_line, blank_lines, indent_level, line_number,
     if previous_logical.startswith('@'):
         if max_blank_lines:
             return 0, "E304"
-    elif max_blank_lines > 2 or (indent_level and max_blank_lines == 2):
-        return 0, "E303", max_blank_lines
     elif (logical_line.startswith('def ') or
           logical_line.startswith('class ') or
           logical_line.startswith('@')):
@@ -421,6 +419,8 @@ def blank_lines(logical_line, blank_lines, indent_level, line_number,
                 return 0, "E301"
         elif max_blank_lines != 2:
             return 0, "E302", max_blank_lines
+    elif max_blank_lines > 2 or (indent_level and max_blank_lines == 2):
+        return 0, "E303", max_blank_lines
 
 
 def extraneous_whitespace(logical_line):
