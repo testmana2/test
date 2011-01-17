@@ -81,6 +81,9 @@ QDialog, Ui_Pep8Dialog
 <td><a href="#Pep8Dialog.on_excludeMessagesSelectButton_clicked">on_excludeMessagesSelectButton_clicked</a></td>
 <td>Private slot to select the message codes to be excluded via a selection dialog.</td>
 </tr><tr>
+<td><a href="#Pep8Dialog.on_fixIssuesSelectButton_clicked">on_fixIssuesSelectButton_clicked</a></td>
+<td>Private slot to select the issue codes to be fixed via a selection dialog.</td>
+</tr><tr>
 <td><a href="#Pep8Dialog.on_includeMessagesSelectButton_clicked">on_includeMessagesSelectButton_clicked</a></td>
 <td>Private slot to select the message codes to be included via a selection dialog.</td>
 </tr><tr>
@@ -126,7 +129,7 @@ reference to the parent widget (QWidget)
         Private method to clear all warning markers of open editors.
 </p><a NAME="Pep8Dialog.__createResultItem" ID="Pep8Dialog.__createResultItem"></a>
 <h4>Pep8Dialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, pos, message</i>)
+<b>__createResultItem</b>(<i>file, line, pos, message, fixed</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
@@ -142,6 +145,9 @@ character position of issue (integer or string)
 </dd><dt><i>message</i></dt>
 <dd>
 message text (string)
+</dd><dt><i>fixed</i></dt>
+<dd>
+flag indicating a fixed issue (boolean)
 </dd>
 </dl><a NAME="Pep8Dialog.__finish" ID="Pep8Dialog.__finish"></a>
 <h4>Pep8Dialog.__finish</h4>
@@ -185,6 +191,12 @@ button that was clicked (QAbstractButton)
 <b>on_excludeMessagesSelectButton_clicked</b>(<i></i>)
 <p>
         Private slot to select the message codes to be excluded via a
+        selection dialog.
+</p><a NAME="Pep8Dialog.on_fixIssuesSelectButton_clicked" ID="Pep8Dialog.on_fixIssuesSelectButton_clicked"></a>
+<h4>Pep8Dialog.on_fixIssuesSelectButton_clicked</h4>
+<b>on_fixIssuesSelectButton_clicked</b>(<i></i>)
+<p>
+        Private slot to select the issue codes to be fixed via a
         selection dialog.
 </p><a NAME="Pep8Dialog.on_includeMessagesSelectButton_clicked" ID="Pep8Dialog.on_includeMessagesSelectButton_clicked"></a>
 <h4>Pep8Dialog.on_includeMessagesSelectButton_clicked</h4>
@@ -246,7 +258,7 @@ reference to the project object (Project)
 </dd>
 </dl><a NAME="Pep8Dialog.start" ID="Pep8Dialog.start"></a>
 <h4>Pep8Dialog.start</h4>
-<b>start</b>(<i>fn, codestring = "", save = False, repeat = None</i>)
+<b>start</b>(<i>fn, save = False, repeat = None</i>)
 <p>
         Public slot to start the PEP 8 check.
 </p><dl>
@@ -254,10 +266,6 @@ reference to the project object (Project)
 <dd>
 file or list of files or directory to be checked
                 (string or list of strings)
-</dd><dt><i>codestring=</i></dt>
-<dd>
-string containing the code to be checked (string).
-            If this is given, file must be a single file name.
 </dd><dt><i>save=</i></dt>
 <dd>
 flag indicating to save the given

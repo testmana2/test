@@ -334,6 +334,7 @@
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html" />
+                <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html" />
                 <section title="eric5.Plugins.CheckerPlugins.Pep8.pep8" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html" />
               </section>
@@ -9402,6 +9403,7 @@
       <keyword name="Pep8Dialog.__updateStatistics" id="Pep8Dialog.__updateStatistics" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.__updateStatistics" />
       <keyword name="Pep8Dialog.on_buttonBox_clicked" id="Pep8Dialog.on_buttonBox_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_buttonBox_clicked" />
       <keyword name="Pep8Dialog.on_excludeMessagesSelectButton_clicked" id="Pep8Dialog.on_excludeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_excludeMessagesSelectButton_clicked" />
+      <keyword name="Pep8Dialog.on_fixIssuesSelectButton_clicked" id="Pep8Dialog.on_fixIssuesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_fixIssuesSelectButton_clicked" />
       <keyword name="Pep8Dialog.on_includeMessagesSelectButton_clicked" id="Pep8Dialog.on_includeMessagesSelectButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_includeMessagesSelectButton_clicked" />
       <keyword name="Pep8Dialog.on_loadDefaultButton_clicked" id="Pep8Dialog.on_loadDefaultButton_clicked" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_loadDefaultButton_clicked" />
       <keyword name="Pep8Dialog.on_resultList_itemActivated" id="Pep8Dialog.on_resultList_itemActivated" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html#Pep8Dialog.on_resultList_itemActivated" />
@@ -9415,6 +9417,30 @@
       <keyword name="Pep8StatisticsDialog" id="Pep8StatisticsDialog" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog" />
       <keyword name="Pep8StatisticsDialog (Constructor)" id="Pep8StatisticsDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__init__" />
       <keyword name="Pep8StatisticsDialog.__createItem" id="Pep8StatisticsDialog.__createItem" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html#Pep8StatisticsDialog.__createItem" />
+      <keyword name="Pep8Fixer (Module)" id="Pep8Fixer (Module)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html" />
+      <keyword name="Pep8Fixer" id="Pep8Fixer" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer" />
+      <keyword name="Pep8Fixer (Constructor)" id="Pep8Fixer (Constructor)" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__init__" />
+      <keyword name="Pep8Fixer.__finalize" id="Pep8Fixer.__finalize" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__finalize" />
+      <keyword name="Pep8Fixer.__fixBlankLinesAfterDecorator" id="Pep8Fixer.__fixBlankLinesAfterDecorator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixBlankLinesAfterDecorator" />
+      <keyword name="Pep8Fixer.__fixMissingWhitespaceAfter" id="Pep8Fixer.__fixMissingWhitespaceAfter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixMissingWhitespaceAfter" />
+      <keyword name="Pep8Fixer.__fixMissingWhitespaceAroundOperator" id="Pep8Fixer.__fixMissingWhitespaceAroundOperator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixMissingWhitespaceAroundOperator" />
+      <keyword name="Pep8Fixer.__fixNewline" id="Pep8Fixer.__fixNewline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixNewline" />
+      <keyword name="Pep8Fixer.__fixNotEqual" id="Pep8Fixer.__fixNotEqual" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixNotEqual" />
+      <keyword name="Pep8Fixer.__fixOneBlankLine" id="Pep8Fixer.__fixOneBlankLine" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixOneBlankLine" />
+      <keyword name="Pep8Fixer.__fixTabs" id="Pep8Fixer.__fixTabs" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTabs" />
+      <keyword name="Pep8Fixer.__fixTooManyBlankLines" id="Pep8Fixer.__fixTooManyBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTooManyBlankLines" />
+      <keyword name="Pep8Fixer.__fixTrailingBlankLines" id="Pep8Fixer.__fixTrailingBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTrailingBlankLines" />
+      <keyword name="Pep8Fixer.__fixTwoBlankLines" id="Pep8Fixer.__fixTwoBlankLines" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixTwoBlankLines" />
+      <keyword name="Pep8Fixer.__fixWhitespace" id="Pep8Fixer.__fixWhitespace" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespace" />
+      <keyword name="Pep8Fixer.__fixWhitespaceAfter" id="Pep8Fixer.__fixWhitespaceAfter" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAfter" />
+      <keyword name="Pep8Fixer.__fixWhitespaceAfterInline" id="Pep8Fixer.__fixWhitespaceAfterInline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAfterInline" />
+      <keyword name="Pep8Fixer.__fixWhitespaceAroundEquals" id="Pep8Fixer.__fixWhitespaceAroundEquals" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAroundEquals" />
+      <keyword name="Pep8Fixer.__fixWhitespaceAroundOperator" id="Pep8Fixer.__fixWhitespaceAroundOperator" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceAroundOperator" />
+      <keyword name="Pep8Fixer.__fixWhitespaceBefore" id="Pep8Fixer.__fixWhitespaceBefore" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceBefore" />
+      <keyword name="Pep8Fixer.__fixWhitespaceBeforeInline" id="Pep8Fixer.__fixWhitespaceBeforeInline" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__fixWhitespaceBeforeInline" />
+      <keyword name="Pep8Fixer.__getEol" id="Pep8Fixer.__getEol" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.__getEol" />
+      <keyword name="Pep8Fixer.fixIssue" id="Pep8Fixer.fixIssue" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.fixIssue" />
+      <keyword name="Pep8Fixer.saveFile" id="Pep8Fixer.saveFile" ref="eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html#Pep8Fixer.saveFile" />
       <keyword name="Tabnanny (Package)" id="Tabnanny (Package)" ref="index-eric5.Plugins.CheckerPlugins.Tabnanny.html" />
       <keyword name="TabnannyDialog (Module)" id="TabnannyDialog (Module)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html" />
       <keyword name="TabnannyDialog" id="TabnannyDialog" ref="eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog" />
@@ -10421,6 +10447,7 @@
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.html</file>
+      <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.html</file>
       <file>eric5.Plugins.CheckerPlugins.Pep8.pep8.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html</file>

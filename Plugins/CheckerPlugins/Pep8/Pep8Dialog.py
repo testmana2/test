@@ -21,7 +21,7 @@ from E5Gui.E5Application import e5App
 from .Pep8Checker import Pep8Checker, Pep8Py2Checker
 from .Pep8CodeSelectionDialog import Pep8CodeSelectionDialog
 from .Pep8StatisticsDialog import Pep8StatisticsDialog
-from .Pep8Fixer import Pep8Fixer
+from .Pep8Fixer import Pep8Fixer, Pep8FixableIssues
 
 from .Ui_Pep8Dialog import Ui_Pep8Dialog
 
@@ -93,7 +93,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                                   self.resultList.header().sortIndicatorOrder()
                                  )
     
-    def __createResultItem(self, file, line, pos, message):
+    def __createResultItem(self, file, line, pos, message, fixed):
         """
         Private method to create an entry in the result list.
         
@@ -101,6 +101,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         @param line line number of issue (integer or string)
         @param pos character position of issue (integer or string)
         @param message message text (string)
+        @param fixed flag indicating a fixed issue (boolean)
         """
         if self.__lastFileItem is None:
             # It's a new file
@@ -116,21 +117,30 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         else:
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
+        if fixed:
+            itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
+        elif code in Pep8FixableIssues:
+            itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
         
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignHCenter)
+        
+        itm.setTextAlignment(0, Qt.AlignVCenter)
+        itm.setTextAlignment(1, Qt.AlignVCenter)
+        itm.setTextAlignment(2, Qt.AlignVCenter)
         
         itm.setData(0, self.filenameRole, file)
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.positionRole, int(pos))
         itm.setData(0, self.messageRole, message)
     
-    def __updateStatistics(self, statistics):
+    def __updateStatistics(self, statistics, fixer):
         """
         Private method to update the collected statistics.
         
         @param statistics dictionary of statistical data with
             message code as key and message count as value
+        @param fixer reference to the PEP 8 fixer (Pep8Fixer)
         """
         self.__statistics["_FilesCount"] += 1
         if statistics:
@@ -140,6 +150,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     self.__statistics[key] += statistics[key]
                 else:
                     self.__statistics[key] = statistics[key]
+        if fixer:
+            self.__statistics["_IssuesFixed"] += fixer.fixed
     
     def __resetStatistics(self):
         """
@@ -148,6 +160,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.__statistics = {}
         self.__statistics["_FilesCount"] = 0
         self.__statistics["_FilesIssues"] = 0
+        self.__statistics["_IssuesFixed"] = 0
     
     def prepare(self, fileList, project):
         """
@@ -271,7 +284,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     self.noResults = False
                     self.__createResultItem(file, "1", "1", 
                         self.trUtf8("Error: {0}").format(str(msg))\
-                            .rstrip()[1:-1])
+                            .rstrip()[1:-1], False)
                     progress += 1
                     continue
                 
@@ -307,15 +320,16 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     if not source[lineno - 1].strip()\
                        .endswith("__IGNORE_WARNING__"):
                         self.noResults = False
+                        fixed = False
                         if fixer:
                             fixed, msg = fixer.fixIssue(lineno, position, text)
                             if fixed:
                                 text += "\n" + \
                                         self.trUtf8("Fix: {0}").format(msg)
                         self.__createResultItem(
-                            fname, lineno, position, text)
+                            fname, lineno, position, text, fixed)
                 fixer and fixer.saveFile(encoding)
-                self.__updateStatistics(checker.statistics)
+                self.__updateStatistics(checker.statistics, fixer)
                 progress += 1
             self.checkProgress.setValue(progress)
             QApplication.processEvents()

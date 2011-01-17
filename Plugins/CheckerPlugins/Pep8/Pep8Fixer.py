@@ -16,7 +16,10 @@ from E5Gui import E5MessageBox
 
 import Utilities
 
-Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "E211", "E221", "E222", "E225", "E231", "E241", "E251", "E261", "E262", "W291", "W292", "W293", "E301", "E303", "E304", "W391", "W603"]
+Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "E211", "E221",
+                     "E222", "E225", "E231", "E241", "E251", "E261", "E262",
+                     "W291", "W292", "W293", "E301", "E302", "E303", "E304", 
+                     "W391", "W603"]
 
 class Pep8Fixer(QObject):
     """
@@ -41,6 +44,7 @@ class Pep8Fixer(QObject):
         self.__origName = ""
         self.__source = sourceLines[:]  # save a copy
         self.__fixCodes = [c.strip() for c in fixCodes.split(",") if c.strip()]
+        self.fixed = 0
         
         if not inPlace:
             self.__origName = self.__filename
@@ -66,6 +70,7 @@ class Pep8Fixer(QObject):
             "W292" : self.__fixNewline, 
             "W293" : self.__fixWhitespace,
             "E301" : self.__fixOneBlankLine, 
+            "E302" : self.__fixTwoBlankLines, 
             "E303" : self.__fixTooManyBlankLines, 
             "E304" : self.__fixBlankLinesAfterDecorator, 
             "W391" : self.__fixTrailingBlankLines, 
@@ -121,6 +126,7 @@ class Pep8Fixer(QObject):
             res = self.__fixes[code](code, line, pos)
             if res[0]:
                 self.__modified = True
+                self.fixed += 1
         else:
             res = (False, "")
         
@@ -291,6 +297,45 @@ class Pep8Fixer(QObject):
             self.__stack.append((code, line, pos))
         return (True, self.trUtf8("One blank line inserted."))
     
+    def __fixTwoBlankLines(self, code, line, pos, apply=False):
+        """
+        Private method to fix the need for two blank lines.
+        """
+        # count blank lines
+        index = line - 1
+        blanks = 0
+        while index:
+            if self.__source[index - 1].strip() == "":
+                blanks += 1
+                index -= 1
+            else:
+                break
+        delta = blanks - 2
+        
+        if apply:
+            line -= 1
+            if delta < 0:
+                # insert blank lines (one or two)
+                while delta < 0:
+                    self.__source.insert(line, self.__getEol())
+                    delta += 1
+            elif delta > 0:
+                # delete superfluous blank lines
+                while delta > 0:
+                    del self.__source[line - 1]
+                    line -= 1
+                    delta -= 1
+        else:
+            self.__stack.append((code, line, pos))
+        
+        if delta < 0:
+            msg = self.trUtf8("%n blank line(s) inserted.", "", -delta)
+        elif delta > 0:
+            msg = self.trUtf8("%n superfluous lines removed", "", delta)
+        else:
+            msg = ""
+        return (True, msg)
+    
     def __fixWhitespaceAfter(self, code, line, pos, apply=False):
         """
         Private method to fix superfluous whitespace after '([{'.
@@ -362,9 +407,10 @@ class Pep8Fixer(QObject):
             the fix (string)
         """
         line = line - 1
-        while self.__source[line][pos] in [" ", "\t"]:
-            self.__source[line] = self.__source[line][:pos] + \
-                                  self.__source[line][pos + 1:]
+        while self.__source[line][pos - 1] in [" ", "\t"]:
+            self.__source[line] = self.__source[line][:pos - 1] + \
+                                  self.__source[line][pos:]
+            pos -= 1
         return (True, self.trUtf8("Extraneous whitespace removed."))
     
     def __fixMissingWhitespaceAroundOperator(self, code, line, pos, 

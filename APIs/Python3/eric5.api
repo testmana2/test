@@ -2625,12 +2625,13 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Checker.report_error_args?4(li
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Checker?1(filename, lines, repeat=False, select="", ignore="")
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Checker.Pep8Py2Checker?1(filename, lines, repeat=False, select="", ignore="")
 eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog.getSelectedCodes?4()
-eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, parent = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8CodeSelectionDialog.Pep8CodeSelectionDialog?1(codes, showFixCodes, parent = None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.lineRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.messageRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_excludeMessagesSelectButton_clicked?4()
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_fixIssuesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_includeMessagesSelectButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_loadDefaultButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_resultList_itemActivated?4(item, column)
@@ -2641,8 +2642,12 @@ eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.on_storeDefaultButton_cl
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.positionRole?7
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.prepare?4(fileList, project)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.settingsKey?7
-eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, codestring = "", save = False, repeat = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog.start?4(fn, save = False, repeat = None)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8Dialog.Pep8Dialog?1(parent = None)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8FixableIssues?7
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.fixIssue?4(line, pos, message)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer.saveFile?4(encoding)
+eric5.Plugins.CheckerPlugins.Pep8.Pep8Fixer.Pep8Fixer?1(project, filename, sourceLines, fixCodes, inPlace)
 eric5.Plugins.CheckerPlugins.Pep8.Pep8StatisticsDialog.Pep8StatisticsDialog?1(statistics, parent = None)
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BENCHMARK_KEYS?7
 eric5.Plugins.CheckerPlugins.Pep8.pep8.BINARY_OPERATORS?7

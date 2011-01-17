@@ -34,8 +34,10 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         stats = statistics.copy()
         filesCount = stats["_FilesCount"]
         filesIssues = stats["_FilesIssues"]
+        fixesCount = stats["_IssuesFixed"]
         del stats["_FilesCount"]
         del stats["_FilesIssues"]
+        del stats["_IssuesFixed"]
         
         totalIssues = 0
         
@@ -52,6 +54,8 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         
         self.total.setText(
             self.trUtf8("%n issue(s) found", "", totalIssues))
+        self.total.setText(
+            self.trUtf8("%n issue(s) fixed", "", fixesCount))
         self.filesChecked.setText(
             self.trUtf8("%n file(s) checked", "", filesCount))
         self.filesIssues.setText(
