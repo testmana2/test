@@ -16,7 +16,7 @@ from E5Gui import E5MessageBox
 
 import Utilities
 
-Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "W291", "W292", "W293", "E301", "E303", "E304", "W391", "W603"]
+Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "E211", "E221", "E222", "E225", "E231", "E241", "E251", "E261", "E262", "W291", "W292", "W293", "E301", "E303", "E304", "W391", "W603"]
 
 class Pep8Fixer(QObject):
     """
@@ -52,7 +52,16 @@ class Pep8Fixer(QObject):
             "W191" : self.__fixTabs,
             "E201" : self.__fixWhitespaceAfter, 
             "E202" : self.__fixWhitespaceBefore, 
-            "E203" : self.__fixWhitespaceBefore, 
+            "E203" : self.__fixWhitespaceBefore,
+            "E211" : self.__fixWhitespaceBefore,
+            "E221" : self.__fixWhitespaceAroundOperator, 
+            "E222" : self.__fixWhitespaceAroundOperator,
+            "E225" : self.__fixMissingWhitespaceAroundOperator, 
+            "E231" : self.__fixMissingWhitespaceAfter,
+            "E241" : self.__fixWhitespaceAroundOperator,
+            "E251" : self.__fixWhitespaceAroundEquals,
+            "E261" : self.__fixWhitespaceBeforeInline, 
+            "E262" : self.__fixWhitespaceAfterInline, 
             "W291" : self.__fixWhitespace, 
             "W292" : self.__fixNewline, 
             "W293" : self.__fixWhitespace,
@@ -303,8 +312,8 @@ class Pep8Fixer(QObject):
     
     def __fixWhitespaceBefore(self, code, line, pos, apply=False):
         """
-        Private method to fix superfluous whitespace before '}])'
-        and ',;:'.
+        Private method to fix superfluous whitespace before '}])',
+        ',;:' and '(['.
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -321,3 +330,129 @@ class Pep8Fixer(QObject):
                                   self.__source[line][pos + 1:]
             pos -= 1
         return (True, self.trUtf8("Superfluous whitespace removed."))
+    
+    def __fixMissingWhitespaceAfter(self, code, line, pos, apply=False):
+        """
+        Private method to fix missing whitespace after ',;:'.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        self.__source[line] = self.__source[line][:pos] + \
+                               " " + \
+                               self.__source[line][pos:]
+        return (True, self.trUtf8("Missing whitespace added."))
+    
+    def __fixWhitespaceAroundOperator(self, code, line, pos, apply=False):
+        """
+        Private method to fix extraneous whitespace around operator.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        while self.__source[line][pos] in [" ", "\t"]:
+            self.__source[line] = self.__source[line][:pos] + \
+                                  self.__source[line][pos + 1:]
+        return (True, self.trUtf8("Extraneous whitespace removed."))
+    
+    def __fixMissingWhitespaceAroundOperator(self, code, line, pos, 
+                                                   apply=False):
+        """
+        Private method to fix missing whitespace after ',;:'.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        pos = pos - 1
+        self.__source[line] = self.__source[line][:pos] + \
+                               " " + \
+                               self.__source[line][pos:]
+        return (True, self.trUtf8("Missing whitespace added."))
+    
+    def __fixWhitespaceAroundEquals(self, code, line, pos, apply=False):
+        """
+        Private method to fix extraneous whitespace around keyword and
+        default parameter equals.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        if self.__source[line][pos + 1] == " ":
+            self.__source[line] = self.__source[line][:pos + 1] + \
+                                   self.__source[line][pos + 2:]
+        if self.__source[line][pos - 1] == " ":
+            self.__source[line] = self.__source[line][:pos - 1] + \
+                                   self.__source[line][pos:]
+        return (True, self.trUtf8("Extraneous whitespace removed."))
+    
+    def __fixWhitespaceBeforeInline(self, code, line, pos, apply=False):
+        """
+        Private method to fix missing whitespace before inline comment.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        pos = pos - 1
+        if self.__source[line][pos] == " ":
+            count = 1
+        else:
+            count = 2
+        self.__source[line] = self.__source[line][:pos] + \
+                               count * " " + \
+                               self.__source[line][pos:]
+        return (True, self.trUtf8("Missing whitespace added."))
+    
+    def __fixWhitespaceAfterInline(self, code, line, pos, apply=False):
+        """
+        Private method to fix whitespace after inline comment.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        if self.__source[line][pos] == " ":
+            pos += 1
+            while self.__source[line][pos] == " ":
+                self.__source[line] = self.__source[line][:pos] + \
+                                      self.__source[line][pos + 1:]
+        else:
+            self.__source[line] = self.__source[line][:pos] + \
+                                   " " + \
+                                   self.__source[line][pos:]
+        return (True, self.trUtf8(
+            "Whitespace after inline comment sign corrected."))
