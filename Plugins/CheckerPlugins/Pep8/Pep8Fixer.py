@@ -16,7 +16,7 @@ from E5Gui import E5MessageBox
 
 import Utilities
 
-Pep8FixableIssues = ["W191", "W291", "W292", "W293", "E301", "E303", "E304", "W391", "W603"]
+Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "W291", "W292", "W293", "E301", "E303", "E304", "W391", "W603"]
 
 class Pep8Fixer(QObject):
     """
@@ -48,7 +48,11 @@ class Pep8Fixer(QObject):
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
-            "W191" : self.__fixTabs, 
+            "E101" : self.__fixTabs, 
+            "W191" : self.__fixTabs,
+            "E201" : self.__fixWhitespaceAfter, 
+            "E202" : self.__fixWhitespaceBefore, 
+            "E203" : self.__fixWhitespaceBefore, 
             "W291" : self.__fixWhitespace, 
             "W292" : self.__fixNewline, 
             "W293" : self.__fixWhitespace,
@@ -277,3 +281,43 @@ class Pep8Fixer(QObject):
         else:
             self.__stack.append((code, line, pos))
         return (True, self.trUtf8("One blank line inserted."))
+    
+    def __fixWhitespaceAfter(self, code, line, pos, apply=False):
+        """
+        Private method to fix superfluous whitespace after '([{'.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        pos = pos - 1
+        while self.__source[line][pos] in [" ", "\t"]:
+            self.__source[line] = self.__source[line][:pos] + \
+                                  self.__source[line][pos + 1:]
+        return (True, self.trUtf8("Superfluous whitespace removed."))
+    
+    def __fixWhitespaceBefore(self, code, line, pos, apply=False):
+        """
+        Private method to fix superfluous whitespace before '}])'
+        and ',;:'.
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @keyparam apply flag indicating, that the fix should be applied
+            (boolean)
+        @return flag indicating an applied fix (boolean) and a message for
+            the fix (string)
+        """
+        line = line - 1
+        pos = pos - 1
+        while self.__source[line][pos] in [" ", "\t"]:
+            self.__source[line] = self.__source[line][:pos] + \
+                                  self.__source[line][pos + 1:]
+            pos -= 1
+        return (True, self.trUtf8("Superfluous whitespace removed."))
