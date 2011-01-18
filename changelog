@@ -4,7 +4,8 @@ Version 5.1-snapshot-2011mmdd:
 - bug fixes
 - made the toolbars of the initial layout more minimalistic
 - merged "Save to Project" into "Save" and "Save As...".
-- added a checker for PEP 8 compliance
+- added a checker for PEP 8 compliance (including a fixer for
+  most issues)
 
 Version 5.1-snapshot-20110106:
 - bug fixes

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1578,8 +1577,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1629,7 +1628,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -11884,7 +11883,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -23013,12 +23012,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Drücken, um die Liste ignorierter Nachrichten zu löschen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="173"/>
-        <source>Press to select the messages from a list</source>
-        <translation>Drücken, um die Nachrichten aus einer Liste zu wählen</translation>
-    </message>
-    <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="176"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -23028,17 +23022,17 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Drücken, um die Liste ausgewählter Nachrichten zu löschen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="219"/>
         <source>Select to repeat each message type</source>
         <translation>Auswählen, um Wiederholungen eines Nachrichtentyps zuzulassen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="186"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Repeat messages</source>
         <translation>Nachrichten wiederholen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="196"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="260"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -23049,42 +23043,42 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile und Position.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="212"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="276"/>
         <source>File/Line</source>
         <translation>Datei/Zeile</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="217"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="281"/>
         <source>Code</source>
         <translation>Schlüssel</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="286"/>
         <source>Message</source>
         <translation>Nachricht</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="230"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="294"/>
         <source>Shows the progress of the PEP 8 check action</source>
         <translation>Zeigt den Fortschritt der PEP 8 Prüfung an</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="56"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="57"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="58"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="59"/>
         <source>Press to show all files containing an issue</source>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="270"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="285"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="326"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="353"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -23124,14 +23118,138 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Ausgewählte Nachrichten:</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="51"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
         <source>Statistics...</source>
         <translation>Statistik...</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="53"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="54"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Drücken, um eine Statistik für den letzten Lauf zu zeigen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="207"/>
+        <source>Press to select the message codes from a list</source>
+        <translation>Drücken, um die Nachrichtenschlüssel aus einer Liste zu wählen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
+        <source>Fix Issues:</source>
+        <translation>Zu behebende Probleme:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="190"/>
+        <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
+        <translation>Geben sie die Nachrichtenschlüssel für automatisch zu behebende Probleme ein (leer lassen, um alle zu beheben)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
+        <source>Press to clear the fix issues edit</source>
+        <translation>Drücken, um die Liste zu behebender Probleme zu löschen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="232"/>
+        <source>Select to fix some issues</source>
+        <translation>Auswählen, um ausgewählte Probleme zu beheben</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
+        <source>Fix issues automatically</source>
+        <translation>Probleme automatisch beheben</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="328"/>
+        <source>Fix: {0}</source>
+        <translation>Lösung: {0}</translation>
+    </message>
+</context>
+<context>
+    <name>Pep8Fixer</name>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
+        <source>Fix PEP 8 issues</source>
+        <translation>PEP 8 Probleme beheben</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
+        <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gespeichert werden. Überspringe sie.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="170"/>
+        <source>Tab converted to 4 spaces.</source>
+        <translation>Tabulator in 4 Leerzeichen gewandelt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="184"/>
+        <source>Whitespace stripped from end of line.</source>
+        <translation>Leerzeichen am Zeilenende entfernt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="197"/>
+        <source>newline added to end of file.</source>
+        <translation>Zeilenvorschub am Dateiende angefügt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="216"/>
+        <source>Superfluous trailing blank lines removed from end of file.</source>
+        <translation>Überflüssige Leerzeilen am Dateiende gelöscht.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="230"/>
+        <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
+        <translation>&apos;&lt;&gt;&apos; durch &apos;!=&apos; ersetzt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
+        <source>Superfluous blank lines after function decorator removed.</source>
+        <translation>Überflüssige Leerzeilen nach Funktionsdekorator gelöscht.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="280"/>
+        <source>Superfluous blank lines removed.</source>
+        <translation>Überflüssige Leerzeilen gelöscht.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="298"/>
+        <source>One blank line inserted.</source>
+        <translation>Eine Leerzeile eingefügt.</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="332"/>
+        <source>%n blank line(s) inserted.</source>
+        <translation>
+            <numerusform>%n Leerzeile eingefügt.</numerusform>
+            <numerusform>%n Leerzeilen eingefügt.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
+        <source>%n superfluous lines removed</source>
+        <translation>
+            <numerusform>%n überflüssige Zeile gelöscht</numerusform>
+            <numerusform>%n überflüssige Zeilen gelöscht</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
+        <source>Superfluous whitespace removed.</source>
+        <translation>Überflüssige Leerzeichen entfernt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="479"/>
+        <source>Missing whitespace added.</source>
+        <translation>Fehlende Leerzeichen eingefügt.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="456"/>
+        <source>Extraneous whitespace removed.</source>
+        <translation>Überzählige Leerzeichen gelöscht.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="503"/>
+        <source>Whitespace after inline comment sign corrected.</source>
+        <translation>Leerzeichen nach Inline Kommentarzeichen korrigiert.</translation>
     </message>
 </context>
 <context>
@@ -23170,7 +23288,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Nachricht</translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="53"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
         <source>%n issue(s) found</source>
         <translation>
             <numerusform>%n Problem gefunden</numerusform>
@@ -23178,7 +23296,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="59"/>
         <source>%n file(s) checked</source>
         <translation>
             <numerusform>%n Datei überprüft</numerusform>
@@ -23186,11 +23304,19 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="61"/>
         <source>%n file(s) with issues found</source>
         <translation>
             <numerusform>%n Datei mit Problemen gefunden</numerusform>
             <numerusform>%n Dateien mit Problemen gefunden</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
+        <source>%n issue(s) fixed</source>
+        <translation>
+            <numerusform>%n Problem behoben</numerusform>
+            <numerusform>%n Probleme behoben</numerusform>
         </translation>
     </message>
 </context>
