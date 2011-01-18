@@ -52,9 +52,9 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
             self.__createItem(stats[code], code, message)
             totalIssues += stats[code]
         
-        self.total.setText(
+        self.totalIssues.setText(
             self.trUtf8("%n issue(s) found", "", totalIssues))
-        self.total.setText(
+        self.fixedIssues.setText(
             self.trUtf8("%n issue(s) fixed", "", fixesCount))
         self.filesChecked.setText(
             self.trUtf8("%n file(s) checked", "", filesCount))
