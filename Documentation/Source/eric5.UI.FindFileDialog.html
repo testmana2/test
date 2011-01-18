@@ -95,6 +95,9 @@ QDialog, Ui_FindFileDialog
 <td><a href="#FindFileDialog.__stopSearch">__stopSearch</a></td>
 <td>Private slot to handle the stop button being pressed.</td>
 </tr><tr>
+<td><a href="#FindFileDialog.__stripEol">__stripEol</a></td>
+<td>Private method to strip the eol part.</td>
+</tr><tr>
 <td><a href="#FindFileDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
@@ -226,7 +229,22 @@ list of files to be processed (list of strings)
 <b>__stopSearch</b>(<i></i>)
 <p>
         Private slot to handle the stop button being pressed.
-</p><a NAME="FindFileDialog.on_buttonBox_clicked" ID="FindFileDialog.on_buttonBox_clicked"></a>
+</p><a NAME="FindFileDialog.__stripEol" ID="FindFileDialog.__stripEol"></a>
+<h4>FindFileDialog.__stripEol</h4>
+<b>__stripEol</b>(<i>txt</i>)
+<p>
+        Private method to strip the eol part.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+line of text that should be treated (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+text with eol stripped (string)
+</dd>
+</dl><a NAME="FindFileDialog.on_buttonBox_clicked" ID="FindFileDialog.on_buttonBox_clicked"></a>
 <h4>FindFileDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>

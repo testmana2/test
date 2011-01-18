@@ -251,6 +251,15 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         elif button == self.stopButton:
             self.__stopSearch()
         
+    def __stripEol(self, txt):
+        """
+        Private method to strip the eol part.
+        
+        @param txt line of text that should be treated (string)
+        @return text with eol stripped (string)
+        """
+        return txt.replace("\r", "").replace("\n", "")
+        
     def __stopSearch(self):
         """
         Private slot to handle the stop button being pressed.
@@ -393,7 +402,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             # read the file and split it into textlines
             try:
                 text, encoding = Utilities.readEncodedFile(fn)
-                lines = text.splitlines()
+                lines = text.splitlines(True)
             except (UnicodeError, IOError):
                 progress += 1
                 self.findProgress.setValue(progress)
@@ -414,12 +423,14 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         rline = search.sub(replTxt, line)
                     else:
                         rline = ""
+                    line = self.__stripEol(line)
                     if len(line) > 1024:
                         line = "%s ..." % line[:1024]
                     if self.__replaceMode:
                         if len(rline) > 1024:
                             rline = "%s ..." % line[:1024]
-                        line = "- %s\n+ %s" % (line, rline)
+                        line = "- %s\n+ %s" % (
+                            line, self.__stripEol(rline))
                     self.__createItem(file, count, line, start, end, rline)
                     
                     if self.feelLikeCheckBox.isChecked():
@@ -550,7 +561,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 # read the file and split it into textlines
                 try:
                     text, encoding = Utilities.readEncodedFile(fn)
-                    lines = text.splitlines()
+                    lines = text.splitlines(True)
                 except (UnicodeError, IOError):
                     QMessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
@@ -571,7 +582,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                         lines[line - 1] = rline
                 
                 # write the file
-                txt = Utilities.linesep().join(lines) + Utilities.linesep()
+                txt = "".join(lines)
                 try:
                     Utilities.writeEncodedFile(fn, txt, encoding)
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
