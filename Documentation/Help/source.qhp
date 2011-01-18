@@ -3714,6 +3714,7 @@
       <keyword name="FindFileDialog.__getFileList" id="FindFileDialog.__getFileList" ref="eric5.UI.FindFileDialog.html#FindFileDialog.__getFileList" />
       <keyword name="FindFileDialog.__openFile" id="FindFileDialog.__openFile" ref="eric5.UI.FindFileDialog.html#FindFileDialog.__openFile" />
       <keyword name="FindFileDialog.__stopSearch" id="FindFileDialog.__stopSearch" ref="eric5.UI.FindFileDialog.html#FindFileDialog.__stopSearch" />
+      <keyword name="FindFileDialog.__stripEol" id="FindFileDialog.__stripEol" ref="eric5.UI.FindFileDialog.html#FindFileDialog.__stripEol" />
       <keyword name="FindFileDialog.on_buttonBox_clicked" id="FindFileDialog.on_buttonBox_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_buttonBox_clicked" />
       <keyword name="FindFileDialog.on_dirButton_clicked" id="FindFileDialog.on_dirButton_clicked" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirButton_clicked" />
       <keyword name="FindFileDialog.on_dirCombo_editTextChanged" id="FindFileDialog.on_dirCombo_editTextChanged" ref="eric5.UI.FindFileDialog.html#FindFileDialog.on_dirCombo_editTextChanged" />
