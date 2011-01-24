@@ -2499,8 +2499,16 @@ class Project(QObject):
         # stop the VCS monitor thread
         if self.vcs is not None:
             self.vcs.stopStatusMonitor()
-            self.vcs.vcsStatusMonitorData.disconnect(self.__model.changeVCSStates)
-            self.vcs.vcsStatusMonitorStatus.disconnect(self.__statusMonitorStatus)
+            try:
+                self.vcs.vcsStatusMonitorData.disconnect(
+                    self.__model.changeVCSStates)
+            except TypeError:
+                pass
+            try:
+                self.vcs.vcsStatusMonitorStatus.disconnect(
+                    self.__statusMonitorStatus)
+            except TypeError:
+                pass
         
         # now save the tasks
         if not noSave:
