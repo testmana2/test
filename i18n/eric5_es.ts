@@ -2869,11 +2869,6 @@ para visualizar la página de configuración.</translation>
         <translation>&lt;p&gt;La página de configuración  &lt;b&gt;{0}&lt;/b&gt; no puede ser cargada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="134"/>
-        <source>Py3Flakes</source>
-        <translation type="obsolete">Py3Flakes</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationDialog.py" line="230"/>
         <source>Keywords</source>
         <translation>Palabras clave</translation>
@@ -4512,7 +4507,7 @@ Not connected
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="500"/>
         <source>Select, whether a reset of the debug client should be performed after a client exit</source>
-        <translation>Seleccionar si se debe reiniciar el cliente de depuración despues de salir</translation>
+        <translation>Seleccionar si se debe reiniciar el cliente de depuración después de salir</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="503"/>
@@ -11408,7 +11403,7 @@ selección completa.&lt;/li&gt;
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="522"/>
+        <location filename="UI/FindFileDialog.py" line="533"/>
         <source>Select directory</source>
         <translation>Seleccionar un directorio</translation>
     </message>
@@ -11478,7 +11473,7 @@ selección completa.&lt;/li&gt;
         <translation>Reemplazar</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="629"/>
+        <location filename="UI/FindFileDialog.py" line="636"/>
         <source>Replace in Files</source>
         <translation>Reemplazar en Archivos</translation>
     </message>
@@ -11493,37 +11488,37 @@ selección completa.&lt;/li&gt;
         <translation>Abrir primera ocurrencia</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="655"/>
+        <location filename="UI/FindFileDialog.py" line="662"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="656"/>
+        <location filename="UI/FindFileDialog.py" line="663"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="357"/>
+        <location filename="UI/FindFileDialog.py" line="366"/>
         <source>Invalid search expression</source>
         <translation>Expresión de búsqueda no válida</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="357"/>
+        <location filename="UI/FindFileDialog.py" line="366"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La expresión de búsqueda no es válida.&lt;/p&gt;&lt;p&gt;Error:{0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="586"/>
+        <location filename="UI/FindFileDialog.py" line="597"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo leer el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="629"/>
+        <location filename="UI/FindFileDialog.py" line="636"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="600"/>
+        <location filename="UI/FindFileDialog.py" line="611"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los hash actual y original del archivos &lt;b&gt;{0}&lt;/b&gt; son distintos. Abandonando.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</translation>
     </message>
@@ -12171,29 +12166,9 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Configurar la documentación de ayuda&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="37"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Documentación de Python</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
-        <source>Press to select the Python documentation directory via a dialog</source>
-        <translation type="obsolete">Pulse para seleccionar el directorio con la documentación de Python a través de un diálogo</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="190"/>
         <source>...</source>
         <translation>...</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
-        <source>Enter the Python documentation directory</source>
-        <translation type="obsolete">Introduzca el directorio con la documentación de Python</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
-        <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHONDOCDIR environment variable, if set.</source>
-        <translation type="obsolete">&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYTHONDOCDIR, si ha sido establecida.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
@@ -12254,11 +12229,6 @@ selección completa.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="204"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Dejar en blanco para utilizar la variable de entorno PYSIDEDOCDIR, si ha sido establecida.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
-        <source>Select Python documentation entry</source>
-        <translation type="obsolete">Seleccionar la entrada de la documentación de Python</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="138"/>
@@ -20189,11 +20159,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Propiedades</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="91"/>
-        <source>Python</source>
-        <translation type="obsolete">Python</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="93"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
@@ -20589,19 +20554,9 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Archivos de GUI Python (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="351"/>
-        <source>Python Files (*.py2)</source>
-        <translation type="obsolete">Archivos Python (*.py2)</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="354"/>
         <source>Python3 Files (*.py)</source>
         <translation>Archivos Python (*.py3)</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="355"/>
-        <source>Python GUI Files (*.pyw2)</source>
-        <translation type="obsolete">Archivos de GUI Python (*.pyw2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="358"/>
@@ -20655,11 +20610,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="204"/>
         <source>Save All</source>
         <translation>Guardar todo</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="209"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Guardar en el Proyecto</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="207"/>
@@ -22134,11 +22084,6 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>&lt;br/&gt;No válido antes de: {0}&lt;br/&gt;Válido Hasta: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="272"/>
-        <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="obsolete">&lt;br/&gt;Nombres alternativos:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="283"/>
         <source>Name: {0}</source>
         <translation>Nombre: {0}</translation>
@@ -22969,22 +22914,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>Check PEP 8 Compliance</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprobar cumplimiento de PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>PEP &amp;8 Compliance...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cumplimiento de PEP &amp;8...</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="79"/>
         <source>Check PEP 8 compliance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprobar cumplimiento de PEP 8.</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="173"/>
         <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Comprobar Cumplimiento de PEP 8...&lt;/b&gt;&lt;p&gt;Comprueba los archivos Python en cuanto a cumplimiento de las convenciones establecidas en PEP 8.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22992,27 +22937,27 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
         <source>PEP 8 Message Codes</source>
-        <translation type="unfinished"></translation>
+        <translation>Códigos de Mensaje PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione los códigos de mensaje de la lista:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="30"/>
         <source>Select the message codes from this table</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione los códigos de mensaje de esta tabla</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="55"/>
         <source>Code</source>
-        <translation type="unfinished">Código</translation>
+        <translation>Código</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="60"/>
         <source>Message</source>
-        <translation type="unfinished">Mensaje</translation>
+        <translation>Mensaje</translation>
     </message>
 </context>
 <context>
@@ -23020,104 +22965,106 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
         <source>PEP 8 Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado de la comprobación PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
         <source>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Resultados de la comprobación de PEP 8&lt;/b&gt;
+￼&lt;p&gt;Este diálogo muestra los resultados de la revisión PEP 8.  Haciendo doble click en una 
+entrada se abre una ventana de editor y se posiciona el cursor en la línea y posición adecuadas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="34"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluir Archivos:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="41"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
+        <translation>Introduzca patrones de nombre de archivo de los archivos a ser excluidos, separados por comas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="48"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished">Pulse para limpiar la caja de filtro</translation>
+        <translation>Pulse para limpiar la caja de filtro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="70"/>
         <source>Press to start the PEP 8 check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para comenzar la ejecución de la revisión de PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="73"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="115"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Excluir Mensajes:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="122"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca códigos de mensaje o categorías a excluir separados por comas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
         <source>Press to clear the exclude messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de mensajes a excluir</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
         <source>Included Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensajes Incluidos:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="156"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca códigos de mensaje o categorías a incluir separados por comas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
         <source>Press to clear the include messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de mensajes a incluir</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="219"/>
         <source>Select to repeat each message type</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccione para repetir cada tipo de mensaje</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Repeat messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Repetir mensajes</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para cargar los valores por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Load Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar Valores por Defecto</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="103"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para almacenar los valores actuales como valores por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="106"/>
         <source>Store Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Almacenar valores por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="260"/>
@@ -23125,92 +23072,94 @@ entry will open an editor window and position the cursor at the respective line 
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista de Resuiltados&lt;/b&gt;
+&lt;p&gt;Esta lista muestra los resultados de la validación PEP 8. Haciendo doble click sobre una entrada se abrirá dicha entrada en una ventana de edición
+y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="276"/>
         <source>File/Line</source>
-        <translation type="unfinished">Archivo/Línea</translation>
+        <translation>Archivo/Línea</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="281"/>
         <source>Code</source>
-        <translation type="unfinished">Código</translation>
+        <translation>Código</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="286"/>
         <source>Message</source>
-        <translation type="unfinished">Mensaje</translation>
+        <translation>Mensaje</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="294"/>
         <source>Shows the progress of the PEP 8 check action</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el progreso de la acción de validacion de PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="57"/>
         <source>Show</source>
-        <translation type="unfinished">Mostrar</translation>
+        <translation>Mostrar</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="59"/>
         <source>Press to show all files containing an issue</source>
-        <translation type="unfinished">Pulsar para mostrar todos los archivos con algún problema</translation>
+        <translation>Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="285"/>
         <source>Error: {0}</source>
-        <translation type="unfinished">Error: {0}</translation>
+        <translation>Error: {0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="353"/>
         <source>No issues found.</source>
-        <translation type="unfinished">No se han encontrado problemas.</translation>
+        <translation>No se han encontrado problemas.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
         <source>Statistics...</source>
-        <translation type="unfinished"></translation>
+        <translation>Estadísticas...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="54"/>
         <source>Press to show some statistics for the last run</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para mostrar algunas estadísticas de la última ejecución</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="207"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para seleccionar los códigos de mensaje de una lista</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglar Problemas:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="190"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca los códigos de mensaje de los problemas que se desea arreglar automáticamente (dejar en blanco para arreglar todos)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
         <source>Press to clear the fix issues edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de problemas a arreglar</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="232"/>
         <source>Select to fix some issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para arreglar algunos problemas</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
         <source>Fix issues automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="328"/>
         <source>Fix: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglar: {0}</translation>
     </message>
 </context>
 <context>
@@ -23218,88 +23167,88 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>Fix PEP 8 issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglar problemas de PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;No se pudo guardar el archivo &lt;b&gt;{0}&lt;/b&gt;. Omitiéndolo.&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="170"/>
         <source>Tab converted to 4 spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabulador convertido a 4 espacios.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="184"/>
         <source>Whitespace stripped from end of line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacio eliminado del final de la línea.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="197"/>
         <source>newline added to end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Carácter de nueva línea añadido al final del archivo.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="216"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminadas líneas en blanco sobrantes despues de final de archivo.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="230"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;&lt;&gt;&apos; reemplazado por &apos;!=&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
         <source>Superfluous blank lines after function decorator removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminadas líneas en blanco sobrantes después de decorador de función.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="280"/>
         <source>Superfluous blank lines removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminadas líneas en blanco sobrantes.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="298"/>
         <source>One blank line inserted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Insertada una línea en blanco.</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="332"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Insertada %n línea en blanco.</numerusform>
+            <numerusform>Insertadas %n líneas en blanco.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Eliminada %n línea en blanco sobrante</numerusform>
+            <numerusform>Eliminadas %n líneas en blanco sobrantes</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
         <source>Superfluous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminadas espacio en blanco sobrante.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="479"/>
         <source>Missing whitespace added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadido espacio en blanco que faltaba.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="456"/>
         <source>Extraneous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminado espacio en blanco extraño.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="503"/>
         <source>Whitespace after inline comment sign corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregido espacio en blanco despues de signo de comentario inline.</translation>
     </message>
 </context>
 <context>
@@ -23307,12 +23256,12 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="140"/>
         <source>Python2 interpreter not configured.</source>
-        <translation type="unfinished">Intérprete de Python2 no configurado.</translation>
+        <translation>Intérprete de Python2 no configurado.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="200"/>
         <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="unfinished">El intérprete de Python2 no terminó en un plazo de 15s.</translation>
+        <translation>El intérprete de Python2 no terminó en un plazo de 15s.</translation>
     </message>
 </context>
 <context>
@@ -23320,53 +23269,53 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
         <source>PEP 8 Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Estadísticas de PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="30"/>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Número</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Código</translation>
+        <translation>Código</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="40"/>
         <source>Message</source>
-        <translation type="unfinished">Mensaje</translation>
+        <translation>Mensaje</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
         <source>%n issue(s) found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n problema encontrado</numerusform>
+            <numerusform>%n problemas encontrados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="59"/>
         <source>%n file(s) checked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n archivo revisado</numerusform>
+            <numerusform>%n archivos revisados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="61"/>
         <source>%n file(s) with issues found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Encontrado %n archivo con problemas</numerusform>
+            <numerusform>Encontrados %n archivos con problemas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
         <source>%n issue(s) fixed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n problema solucionado</numerusform>
+            <numerusform>%n problemas solucionados</numerusform>
         </translation>
     </message>
 </context>
@@ -24516,7 +24465,7 @@ Seleccione Actualizar.</translation>
         <translation>¿Le gustaría editar las opciones de comando para VCS?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2837"/>
+        <location filename="Project/Project.py" line="2845"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
@@ -24536,7 +24485,7 @@ Seleccione Actualizar.</translation>
         <translation>Seleccione el sistema de control de versiones para el proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2850"/>
+        <location filename="Project/Project.py" line="2858"/>
         <source>Open project</source>
         <translation>Abrir proyecto</translation>
     </message>
@@ -24546,7 +24495,7 @@ Seleccione Actualizar.</translation>
         <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2884"/>
+        <location filename="Project/Project.py" line="2892"/>
         <source>Save project as</source>
         <translation>Guardar proyecto como</translation>
     </message>
@@ -24566,12 +24515,12 @@ Seleccione Actualizar.</translation>
         <translation>El proyecto actual tiene cambios sin guardar.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2566"/>
+        <location filename="Project/Project.py" line="2574"/>
         <source>Syntax errors detected</source>
         <translation>Se detectaron errores de sintaxis</translation>
     </message>
     <message numerus="yes">
-        <location filename="Project/Project.py" line="2566"/>
+        <location filename="Project/Project.py" line="2574"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>El archivo contiene %n archivo(s) con errores de sintaxis.</numerusform>
@@ -24579,587 +24528,587 @@ Seleccione Actualizar.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2837"/>
+        <location filename="Project/Project.py" line="2845"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuevo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2841"/>
+        <location filename="Project/Project.py" line="2849"/>
         <source>Generate a new project</source>
         <translation>Generar un nuevo proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2842"/>
+        <location filename="Project/Project.py" line="2850"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo...&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir la información para un nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2850"/>
+        <location filename="Project/Project.py" line="2858"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2854"/>
+        <location filename="Project/Project.py" line="2862"/>
         <source>Open an existing project</source>
         <translation>Abrir un proyecto existente</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2855"/>
+        <location filename="Project/Project.py" line="2863"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir...&lt;/b&gt;&lt;p&gt;Abre un proyecto existente..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2862"/>
+        <location filename="Project/Project.py" line="2870"/>
         <source>Close project</source>
         <translation>Cerrar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2862"/>
+        <location filename="Project/Project.py" line="2870"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2865"/>
+        <location filename="Project/Project.py" line="2873"/>
         <source>Close the current project</source>
         <translation>Cierra el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2866"/>
+        <location filename="Project/Project.py" line="2874"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra el proyecto actualt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2873"/>
+        <location filename="Project/Project.py" line="2881"/>
         <source>Save project</source>
         <translation>Guardar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3027"/>
+        <location filename="Project/Project.py" line="3035"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2876"/>
+        <location filename="Project/Project.py" line="2884"/>
         <source>Save the current project</source>
         <translation>Guarda el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2877"/>
+        <location filename="Project/Project.py" line="2885"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar&lt;/b&gt;&lt;p&gt;Guarda el proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2884"/>
+        <location filename="Project/Project.py" line="2892"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2887"/>
+        <location filename="Project/Project.py" line="2895"/>
         <source>Save the current project to a new file</source>
         <translation>Guardar el proyecto actual en un nuevo archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2888"/>
+        <location filename="Project/Project.py" line="2896"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar como&lt;/b&gt;&lt;p&gt;Guarda el proyecto en otro archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2897"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>Add files to project</source>
         <translation>Agregar archivos al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2897"/>
+        <location filename="Project/Project.py" line="2905"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Agregar archivos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2901"/>
+        <location filename="Project/Project.py" line="2909"/>
         <source>Add files to the current project</source>
         <translation>Añadir archivos al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2902"/>
+        <location filename="Project/Project.py" line="2910"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir archivos...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir archivos al proyecto actual. El lugar donde se van a añadir es determinado por la extensión del nombre de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2911"/>
+        <location filename="Project/Project.py" line="2919"/>
         <source>Add directory to project</source>
         <translation>Agregar directorio al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2911"/>
+        <location filename="Project/Project.py" line="2919"/>
         <source>Add directory...</source>
         <translation>Agregar directorio...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2915"/>
+        <location filename="Project/Project.py" line="2923"/>
         <source>Add a directory to the current project</source>
         <translation>Agregar directorio al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2917"/>
+        <location filename="Project/Project.py" line="2925"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir directorio...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir un directorio al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2925"/>
+        <location filename="Project/Project.py" line="2933"/>
         <source>Add translation to project</source>
         <translation>Añadir traducción al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2925"/>
+        <location filename="Project/Project.py" line="2933"/>
         <source>Add &amp;translation...</source>
         <translation>Añadir &amp;Traducción...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2929"/>
+        <location filename="Project/Project.py" line="2937"/>
         <source>Add a translation to the current project</source>
         <translation>Añadir una traducción al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2931"/>
+        <location filename="Project/Project.py" line="2939"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir traducción...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir una traducción al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2939"/>
+        <location filename="Project/Project.py" line="2947"/>
         <source>Search new files</source>
         <translation>Buscar archivos nuevos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2939"/>
+        <location filename="Project/Project.py" line="2947"/>
         <source>Searc&amp;h new files...</source>
         <translation>Bus&amp;car archivos nuevos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2942"/>
+        <location filename="Project/Project.py" line="2950"/>
         <source>Search new files in the project directory.</source>
         <translation>Bucar nuevos archivos en el directorio de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2943"/>
+        <location filename="Project/Project.py" line="2951"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar nuevos archivos...&lt;/b&gt;&lt;p&gt;Busca nuevos archivos (fuentes, *.ui, *.idl) en el directorio del proyecto y en los subdirectorios registrados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2951"/>
+        <location filename="Project/Project.py" line="2959"/>
         <source>Project properties</source>
         <translation>Propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2951"/>
+        <location filename="Project/Project.py" line="2959"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propiedades...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2954"/>
+        <location filename="Project/Project.py" line="2962"/>
         <source>Show the project properties</source>
         <translation>Ver las propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2955"/>
+        <location filename="Project/Project.py" line="2963"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las propiedades del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2962"/>
+        <location filename="Project/Project.py" line="2970"/>
         <source>User project properties</source>
         <translation>Propiedades del usuario del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2962"/>
+        <location filename="Project/Project.py" line="2970"/>
         <source>&amp;User Properties...</source>
         <translation>Propiedades del &amp;Usuario...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2965"/>
+        <location filename="Project/Project.py" line="2973"/>
         <source>Show the user specific project properties</source>
         <translation>Muestra propiedades del proyecto específicas del usuario</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2967"/>
+        <location filename="Project/Project.py" line="2975"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Usuario...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del proyecto específicas del usuario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2974"/>
+        <location filename="Project/Project.py" line="2982"/>
         <source>Filetype Associations</source>
         <translation>Asociación de tipos de archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2974"/>
+        <location filename="Project/Project.py" line="2982"/>
         <source>Filetype Associations...</source>
         <translation>Asociación de tipos de archivo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2977"/>
+        <location filename="Project/Project.py" line="2985"/>
         <source>Show the project filetype associations</source>
         <translation>Ver las asociaciones del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2979"/>
+        <location filename="Project/Project.py" line="2987"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Tipo de Archivo...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de los tipos de archivos del proyecto. Estas asociaciones determinan el tipo (fuente, formulario, interfaz u otras) con un patrón de nombres de archivo. Se usan cuando se añade un archivo al proyecto y cuando se realiza una búsqueda de nuevos archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3005"/>
+        <location filename="Project/Project.py" line="3013"/>
         <source>Debugger Properties</source>
         <translation>Propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3005"/>
+        <location filename="Project/Project.py" line="3013"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Propiedades del depurador...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3008"/>
+        <location filename="Project/Project.py" line="3016"/>
         <source>Show the debugger properties</source>
         <translation>Muestra las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3009"/>
+        <location filename="Project/Project.py" line="3017"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Depurador...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3016"/>
+        <location filename="Project/Project.py" line="3024"/>
         <source>Load</source>
         <translation>Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3016"/>
+        <location filename="Project/Project.py" line="3024"/>
         <source>&amp;Load</source>
         <translation>&amp;Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3019"/>
+        <location filename="Project/Project.py" line="3027"/>
         <source>Load the debugger properties</source>
         <translation>Cargar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3020"/>
+        <location filename="Project/Project.py" line="3028"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Carga las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3027"/>
+        <location filename="Project/Project.py" line="3035"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3030"/>
+        <location filename="Project/Project.py" line="3038"/>
         <source>Save the debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3031"/>
+        <location filename="Project/Project.py" line="3039"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Guarda las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3038"/>
+        <location filename="Project/Project.py" line="3046"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3038"/>
+        <location filename="Project/Project.py" line="3046"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3041"/>
+        <location filename="Project/Project.py" line="3049"/>
         <source>Delete the debugger properties</source>
         <translation>Borrar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3042"/>
+        <location filename="Project/Project.py" line="3050"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Borra el archivo que contiene las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3050"/>
+        <location filename="Project/Project.py" line="3058"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3050"/>
+        <location filename="Project/Project.py" line="3058"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3053"/>
+        <location filename="Project/Project.py" line="3061"/>
         <source>Reset the debugger properties</source>
         <translation>Restablecer las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3054"/>
+        <location filename="Project/Project.py" line="3062"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restablecer Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Restablece las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3063"/>
+        <location filename="Project/Project.py" line="3071"/>
         <source>Load session</source>
         <translation>Cargar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3066"/>
+        <location filename="Project/Project.py" line="3074"/>
         <source>Load the projects session file.</source>
         <translation>Cargar archivo de sesión de proyectos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3067"/>
+        <location filename="Project/Project.py" line="3075"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar sesión&lt;/b&gt;&lt;p&gt;Carga el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3080"/>
+        <location filename="Project/Project.py" line="3088"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3083"/>
+        <location filename="Project/Project.py" line="3091"/>
         <source>Save the projects session file.</source>
         <translation>Guardar archivos de sessión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3084"/>
+        <location filename="Project/Project.py" line="3092"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar sesión&lt;/b&gt;&lt;p&gt;Guarda el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3097"/>
+        <location filename="Project/Project.py" line="3105"/>
         <source>Delete session</source>
         <translation>Borrar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3100"/>
+        <location filename="Project/Project.py" line="3108"/>
         <source>Delete the projects session file.</source>
         <translation>Borrar el archivo de sesión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3101"/>
+        <location filename="Project/Project.py" line="3109"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar sesión&lt;/b&gt;&lt;p&gt;Borra el archivo de sesión del proyecto&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3110"/>
+        <location filename="Project/Project.py" line="3118"/>
         <source>Code Metrics</source>
         <translation>Métricas de código</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3110"/>
+        <location filename="Project/Project.py" line="3118"/>
         <source>&amp;Code Metrics...</source>
         <translation>Métricas de &amp;código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3113"/>
+        <location filename="Project/Project.py" line="3121"/>
         <source>Show some code metrics for the project.</source>
         <translation>Muestra algunas métricas del código para este proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3115"/>
+        <location filename="Project/Project.py" line="3123"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas de Código...&lt;/b&gt;&lt;p&gt;Muestra algunas métricas de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3122"/>
+        <location filename="Project/Project.py" line="3130"/>
         <source>Python Code Coverage</source>
         <translation>Cobertura de Código Python</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3122"/>
+        <location filename="Project/Project.py" line="3130"/>
         <source>Code Co&amp;verage...</source>
         <translation>Co&amp;bertura de código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3125"/>
+        <location filename="Project/Project.py" line="3133"/>
         <source>Show code coverage information for the project.</source>
         <translation>Muestra información de cobertura de código para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3127"/>
+        <location filename="Project/Project.py" line="3135"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código...&lt;/b&gt;&lt;p&gt;Muestra la información de cobertura de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3807"/>
+        <location filename="Project/Project.py" line="3815"/>
         <source>Profile Data</source>
         <translation>Datos de perfil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3135"/>
+        <location filename="Project/Project.py" line="3143"/>
         <source>&amp;Profile Data...</source>
         <translation>Datos de &amp;pefil...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3138"/>
+        <location filename="Project/Project.py" line="3146"/>
         <source>Show profiling data for the project.</source>
         <translation>Mostrar datos de profiling para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3140"/>
+        <location filename="Project/Project.py" line="3148"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datos de Profiling...&lt;/b&gt;&lt;p&gt;Muestra datos de profiling para el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3860"/>
+        <location filename="Project/Project.py" line="3868"/>
         <source>Application Diagram</source>
         <translation>Diagrama de Aplicación</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3147"/>
+        <location filename="Project/Project.py" line="3155"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagrama de &amp;Aplicación...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3150"/>
+        <location filename="Project/Project.py" line="3158"/>
         <source>Show a diagram of the project.</source>
         <translation>Mostrar diagrama del proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3152"/>
+        <location filename="Project/Project.py" line="3160"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3991"/>
+        <location filename="Project/Project.py" line="3999"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3161"/>
+        <location filename="Project/Project.py" line="3169"/>
         <source>Create &amp;Package List</source>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4154"/>
+        <location filename="Project/Project.py" line="4162"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3175"/>
+        <location filename="Project/Project.py" line="3183"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Crear &amp;Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3224"/>
+        <location filename="Project/Project.py" line="3232"/>
         <source>&amp;Project</source>
         <translation>&amp;Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3225"/>
+        <location filename="Project/Project.py" line="3233"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Abrir Proyectos &amp;Recientes</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3226"/>
+        <location filename="Project/Project.py" line="3234"/>
         <source>&amp;Version Control</source>
         <translation>Control de &amp;Versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3229"/>
+        <location filename="Project/Project.py" line="3237"/>
         <source>Chec&amp;k</source>
         <translation>Veri&amp;ficar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3231"/>
+        <location filename="Project/Project.py" line="3239"/>
         <source>Sho&amp;w</source>
         <translation>V&amp;er</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3232"/>
+        <location filename="Project/Project.py" line="3240"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3233"/>
+        <location filename="Project/Project.py" line="3241"/>
         <source>Session</source>
         <translation>Sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3234"/>
+        <location filename="Project/Project.py" line="3242"/>
         <source>Source &amp;Documentation</source>
         <translation>Origen de &amp;Documentación </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3236"/>
+        <location filename="Project/Project.py" line="3244"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3237"/>
+        <location filename="Project/Project.py" line="3245"/>
         <source>Pac&amp;kagers</source>
         <translation>Empa&amp;quetadores</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3339"/>
+        <location filename="Project/Project.py" line="3347"/>
         <source>Project</source>
         <translation>Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3400"/>
+        <location filename="Project/Project.py" line="3408"/>
         <source>&amp;Clear</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3510"/>
+        <location filename="Project/Project.py" line="3518"/>
         <source>Search New Files</source>
         <translation>Buscar nuevos archivos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3510"/>
+        <location filename="Project/Project.py" line="3518"/>
         <source>There were no new files found to be added.</source>
         <translation>No se han encontrado nuevos archivos para ser añadidos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3648"/>
+        <location filename="Project/Project.py" line="3656"/>
         <source>Version Control System</source>
         <translation>Sistema de control de versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3740"/>
+        <location filename="Project/Project.py" line="3748"/>
         <source>Coverage Data</source>
         <translation>Datos de Cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3786"/>
+        <location filename="Project/Project.py" line="3794"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3761"/>
+        <location filename="Project/Project.py" line="3769"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3761"/>
+        <location filename="Project/Project.py" line="3769"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3807"/>
+        <location filename="Project/Project.py" line="3815"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3860"/>
+        <location filename="Project/Project.py" line="3868"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3964"/>
+        <location filename="Project/Project.py" line="3972"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4008"/>
+        <location filename="Project/Project.py" line="4016"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4016"/>
+        <location filename="Project/Project.py" line="4024"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
@@ -25169,12 +25118,12 @@ Seleccione Actualizar.</translation>
         <translation>Registrando Tipo de Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3190"/>
+        <location filename="Project/Project.py" line="3198"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Crear un Archivo de Plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3190"/>
+        <location filename="Project/Project.py" line="3198"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Crear un Archivo de Plugin (&amp;Snapshot)</translation>
     </message>
@@ -25194,22 +25143,22 @@ Seleccione Actualizar.</translation>
         <translation>Introduzca el patrón de ruta para los archivos de traducción (use &apos;%language%&apos; in lugar del código de idioma):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2989"/>
+        <location filename="Project/Project.py" line="2997"/>
         <source>Lexer Associations</source>
         <translation>Asociaciones de Analizador Léxico</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2989"/>
+        <location filename="Project/Project.py" line="2997"/>
         <source>Lexer Associations...</source>
         <translation>Asociaciones de Analizador Léxico...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2992"/>
+        <location filename="Project/Project.py" line="3000"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Ver las asociaciones de analizador léxico del proyecto (sobreescribiendo valores por defecto)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2994"/>
+        <location filename="Project/Project.py" line="3002"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Analizador Léxico ...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de analizador léxico del proyecto. Estas asociaciones sobreescriben las asociaciones de analizador léxico globales. Los analizadores léxicos se utilizan para resaltar el texto en el editor.&lt;/p&gt;</translation>
     </message>
@@ -25222,11 +25171,6 @@ Seleccione Actualizar.</translation>
         <location filename="Project/Project.py" line="248"/>
         <source>PySide Console</source>
         <translation>Consola PySide</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="202"/>
-        <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
-        <translation type="obsolete">Archivos Python(*.py2);;Archivos de GUI Python (*.pyw2);;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="205"/>
@@ -25339,72 +25283,72 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3165"/>
+        <location filename="Project/Project.py" line="3173"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Crear un archivo inicial PKGLIST para un plugin  para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3167"/>
+        <location filename="Project/Project.py" line="3175"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Lista del Paquete&lt;/b&gt;&lt;p&gt;Crea una lista inicial de archivos a incluir en un archivo para plugin de eric5. Esta lista se crea a partir del archivo de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3179"/>
+        <location filename="Project/Project.py" line="3187"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Crear un archivo de plugin para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3181"/>
+        <location filename="Project/Project.py" line="3189"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Archivo de Plugin&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin para eric5 utilizando la lista de archivos dada en el archivo PKGLIST. El nombre de archivo se determina a partir del nombr del script principal.&lt;/p&gt; </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3194"/>
+        <location filename="Project/Project.py" line="3202"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Crear un archivo de plugin de eric5 (snapshot release).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3196"/>
+        <location filename="Project/Project.py" line="3204"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un archivo de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin utilizando la lista de archivos proporcionada en el archivo PKGLIST. El nombre del archivo se determina por el nombre del script principal. La entrada para la versión del script proncipal se modifica para reflejar una versión snapshot.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3639"/>
+        <location filename="Project/Project.py" line="3647"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Revirtiendo sobreescritura.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3648"/>
+        <location filename="Project/Project.py" line="3656"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3991"/>
+        <location filename="Project/Project.py" line="3999"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4028"/>
+        <location filename="Project/Project.py" line="4036"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4042"/>
+        <location filename="Project/Project.py" line="4050"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4062"/>
+        <location filename="Project/Project.py" line="4070"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4074"/>
+        <location filename="Project/Project.py" line="4082"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4154"/>
+        <location filename="Project/Project.py" line="4162"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
@@ -27083,19 +27027,9 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Py3FlakesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="17"/>
-        <source>&lt;b&gt;Configure Py3Flakes Behavior&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Configurar Funcionamiento de  Py3Flakes &lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="37"/>
         <source>Select to include a py3flakes check after the syntax check</source>
         <translation>Seleccionar para incluir una validación de py3flakes despues de la validación sintáctica</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="40"/>
-        <source>Include Py3Flakes Checks</source>
-        <translation type="obsolete">Incluir validaciones de Py3Flakes</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="47"/>
@@ -35619,7 +35553,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="188"/>
         <source>Error: {0}</source>
-        <translation type="unfinished">Error: {0}</translation>
+        <translation>Error: {0}</translation>
     </message>
 </context>
 <context>
@@ -35941,11 +35875,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
         <source>Save All</source>
         <translation>Guardar todo</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Guardar en el Proyecto</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
@@ -39631,26 +39560,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Documentación de PyQt4&lt;/b&gt;&lt;p&gt;Muestra la Documentación de PyQt4. Dependiendo de la configuración, esta documentación será mostrará en el visor de ayuda interno de Eric,en un navegador web, o se ejecutará Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2154"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Documentación de Python</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2154"/>
-        <source>&amp;Python Documentation</source>
-        <translation type="obsolete">Documentación de &amp;Python</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2156"/>
-        <source>Open Python Documentation</source>
-        <translation type="obsolete">Abrir Documentación de Python</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2157"/>
-        <source>&lt;b&gt;Python Documentation&lt;/b&gt;&lt;p&gt;Display the python documentation. If no documentation directory is configured, the location of the python documentation is assumed to be the doc directory underneath the location of the python executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHONDOCDIR in your environment to override this. &lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Documentación de Python&lt;/b&gt;&lt;p&gt;Muestra la documentación de Python. Si no se ha configurado un directorio con la documentación, se supondrá ubicada en el directorio de documentación bajo la ubicación del ejecutable de Python (Windows) o en &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; (Unix). Establezca el valor de la variable de entorno PYTHONDOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="2194"/>
         <source>Eric API Documentation</source>
         <translation>Documentación de API de Eric</translation>
@@ -41631,26 +41540,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="575"/>
         <source>&lt;b&gt;Save All Files&lt;/b&gt;&lt;p&gt;Save the contents of all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar todos los archivos&lt;/b&gt;&lt;p&gt;Guarda el contenido de todas las ventanas del editor.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="584"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Guardar en el Proyecto</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="584"/>
-        <source>Save to Pro&amp;ject</source>
-        <translation type="obsolete">Guardar en el Pro&amp;yecto</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="589"/>
-        <source>Save the current file to the current project</source>
-        <translation type="obsolete">Guardar el archivo actual en el proyecto actual</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="591"/>
-        <source>&lt;b&gt;Save to Project&lt;/b&gt;&lt;p&gt;Save the contents of the current editor window to the current project. After the file has been saved, it is automatically added to the current project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Guardar en el Proyecto&lt;/b&gt;&lt;p&gt;Guardar el contenido del archivo actual del editor en el proyecto actual. El archivo también será guardado, y será añadido automáticamente al proyecto&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="584"/>
@@ -44662,177 +44551,177 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
         <source>indentation contains mixed spaces and tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>la indentación contiene espacios y tabuladores mezclados</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="166"/>
         <source>indentation is not a multiple of four</source>
-        <translation type="unfinished"></translation>
+        <translation>la indentación no es un múltiplo de cuatro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="168"/>
         <source>expected an indented block</source>
-        <translation type="unfinished"></translation>
+        <translation>se esperaba un bloque indentado</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
         <source>unexpected indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>indentación inesperada</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
         <source>indentation contains tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>la indentación contiene tabuladores</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
         <source>whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>espacio en blanco después de&apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
         <source>whitespace before &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>espacio en blanco antes de&apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
         <source>multiple spaces before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples espacios antes de operador</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
         <source>multiple spaces after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples espacios después de operador</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
         <source>tab before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>tabulador antes de operador</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
         <source>tab after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>tabulador después de operador</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
         <source>missing whitespace around operator</source>
-        <translation type="unfinished"></translation>
+        <translation>falta espacio en blanco alrededor de un operador</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
         <source>missing whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>falta espacio en blanco después de {0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
         <source>multiple spaces after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples espacios en blanco después de &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
         <source>tab after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>tabulador después de &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
         <source>no spaces around keyword / parameter equals</source>
-        <translation type="unfinished"></translation>
+        <translation>no hay espacios alrededor de palabra clave / parámetro </translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
         <source>at least two spaces before inline comment</source>
-        <translation type="unfinished"></translation>
+        <translation>al menos dos espacios antes de comentario inline</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
         <source>inline comment should start with &apos;# &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>un comentario inline debe comenzar con &apos;#&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
         <source>trailing whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>espacio en blanco por detrás</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
         <source>no newline at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>no hay carácter de nueva línea al final del archivo</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
         <source>blank line contains whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation> línea en blanco contiene espacio en blanco</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
         <source>expected 1 blank line, found 0</source>
-        <translation type="unfinished"></translation>
+        <translation>se esperaba una línea en blanco, se han encontrado 0</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
         <source>expected 2 blank lines, found {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>se esperaban dos líneas en blanco, se han encontrado {0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
         <source>too many blank lines ({0})</source>
-        <translation type="unfinished"></translation>
+        <translation>demasiadas líneas en blanco ({0})</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
         <source>blank lines found after function decorator</source>
-        <translation type="unfinished"></translation>
+        <translation>encontradas líneas en blanco después de decorador de función</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
         <source>blank line at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>línea en blanco al final del archivo</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
         <source>multiple imports on one line</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples import en una línea</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
         <source>line too long ({0} characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>línea demasiado larga ({0} caracteres)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
         <source>.has_key() is deprecated, use &apos;in&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>.has_key()está obsoleto, use &apos;in&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
         <source>deprecated form of raising exception</source>
-        <translation type="unfinished"></translation>
+        <translation>forma obsoleta de lanzar una excepción</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
         <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;&lt;&gt;&apos; está obsoleto, use &apos;!=&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
         <source>backticks are deprecated, use &apos;repr()&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>las comillas hacia atrás están obsoletas, use &apos;repr()&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
         <source>multiple statements on one line (colon)</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples sentencias en una línea (dos puntos)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
         <source>multiple statements on one line (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>múltiples sentencias en una línea (punto y coma)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
         <source>no message for this code defined</source>
-        <translation type="unfinished"></translation>
+        <translation>no hay definido un mensaje para este código</translation>
     </message>
 </context>
 <context>
