@@ -7577,6 +7577,7 @@
       <keyword name="DownloadItem.__initialize" id="DownloadItem.__initialize" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__initialize" />
       <keyword name="DownloadItem.__metaDataChanged" id="DownloadItem.__metaDataChanged" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__metaDataChanged" />
       <keyword name="DownloadItem.__networkError" id="DownloadItem.__networkError" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__networkError" />
+      <keyword name="DownloadItem.__open" id="DownloadItem.__open" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__open" />
       <keyword name="DownloadItem.__readyRead" id="DownloadItem.__readyRead" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__readyRead" />
       <keyword name="DownloadItem.__saveFileName" id="DownloadItem.__saveFileName" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__saveFileName" />
       <keyword name="DownloadItem.__updateInfoLabel" id="DownloadItem.__updateInfoLabel" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.__updateInfoLabel" />
