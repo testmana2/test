@@ -247,6 +247,14 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             i += 1
         return name
     
+    def __open(self):
+        """
+        Private slot to open the downloaded file.
+        """
+        info = QFileInfo(self.__output)
+        url = QUrl.fromLocalFile(info.absoluteFilePath())
+        QDesktopServices.openUrl(url)
+    
     @pyqtSlot()
     def on_tryAgainButton_clicked(self):
         """

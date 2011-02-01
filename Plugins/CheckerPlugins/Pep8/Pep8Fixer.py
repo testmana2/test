@@ -151,7 +151,7 @@ class Pep8Fixer(QObject):
             fn = self.__filename
         
         if self.__project.isOpen() and self.__project.isProjectFile(fn):
-            eol = self.__project.getLineSeparator()
+            eol = self.__project.getEolString()
         else:
             eol = Utilities.linesep()
         return eol

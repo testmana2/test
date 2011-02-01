@@ -167,7 +167,7 @@ flag indicating a fixed issue (boolean)
         Private method to resort the tree.
 </p><a NAME="Pep8Dialog.__updateStatistics" ID="Pep8Dialog.__updateStatistics"></a>
 <h4>Pep8Dialog.__updateStatistics</h4>
-<b>__updateStatistics</b>(<i>statistics</i>)
+<b>__updateStatistics</b>(<i>statistics, fixer</i>)
 <p>
         Private method to update the collected statistics.
 </p><dl>
@@ -175,6 +175,9 @@ flag indicating a fixed issue (boolean)
 <dd>
 dictionary of statistical data with
             message code as key and message count as value
+</dd><dt><i>fixer</i></dt>
+<dd>
+reference to the PEP 8 fixer (Pep8Fixer)
 </dd>
 </dl><a NAME="Pep8Dialog.on_buttonBox_clicked" ID="Pep8Dialog.on_buttonBox_clicked"></a>
 <h4>Pep8Dialog.on_buttonBox_clicked</h4>
