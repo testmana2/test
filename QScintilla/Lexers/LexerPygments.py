@@ -373,10 +373,11 @@ class LexerPygments(LexerContainer):
             # step 1: guess based on filename and text
             if self.editor is not None:
                 fn = self.editor.getFileName()
-                try:
-                    lexer = guess_lexer_for_filename(fn, text)
-                except ClassNotFound:
-                    pass
+                if fn:
+                    try:
+                        lexer = guess_lexer_for_filename(fn, text)
+                    except ClassNotFound:
+                        pass
             
             # step 2: guess on text only
             if lexer is None:
