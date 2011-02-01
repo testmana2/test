@@ -969,11 +969,6 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="60"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">File Progetto (*.e4p *e4p)</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/AddProjectDialog.py" line="60"/>
         <source>Project Files (*.e4p)</source>
         <translation>File progetto (*.e4p)</translation>
     </message>
@@ -1998,11 +1993,6 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>File Testo(*.txt);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="546"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Cooperation/ChatWidget.py" line="560"/>
         <source>Error saving Chat</source>
         <translation>Errore nel salvataggio della Chat</translation>
@@ -2877,11 +2867,6 @@ da mostrare nella pagina di configurazione.</translation>
         <location filename="Preferences/ConfigurationDialog.py" line="454"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La pagina di configurazione &lt;b&gt;{0}&lt;/b&gt; non può essere caricata.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="134"/>
-        <source>Py3Flakes</source>
-        <translation type="obsolete">Py3Flakes</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="230"/>
@@ -5143,11 +5128,6 @@ Not connected
         <translation>Seleziona il client di Debug</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
-        <source>Python Files (*.py)</source>
-        <translation type="obsolete">File Python (*.py)</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Python Debugger&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configura il Debugger Python &lt;/b&gt;</translation>
@@ -5337,11 +5317,6 @@ Not connected
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="288"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file  patch &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/DiffDialog.py" line="307"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
@@ -5385,104 +5360,9 @@ Not connected
         <translation>Tieni aperto quando termina</translation>
     </message>
     <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="50"/>
-        <source>Try Again</source>
-        <translation type="obsolete">Ritenta</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="53"/>
-        <source>Stop</source>
-        <translation type="obsolete">Ferma</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="148"/>
-        <source>Save File</source>
-        <translation type="obsolete">Salva file</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
-        <source>?</source>
-        <translation type="obsolete">?</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="387"/>
-        <source>bytes</source>
-        <translation type="obsolete">bytes</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="390"/>
-        <source>kB</source>
-        <translation type="obsolete">kB</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="393"/>
-        <source>MB</source>
-        <translation type="obsolete">MB</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="130"/>
-        <source>Downloading</source>
-        <translation type="obsolete">Scaricamento</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/DownloadDialog.ui" line="14"/>
         <source>Eric5 Download</source>
         <translation>Download Eric5</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="130"/>
-        <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Stai per scaricare il file  &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Cosa vuoi fare ?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="159"/>
-        <source>Download canceled: {0}</source>
-        <translation type="obsolete">Download cancellato: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="272"/>
-        <source>Error opening save file: {0}</source>
-        <translation type="obsolete">Errore nell&apos;apertura del file: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="279"/>
-        <source>Error saving: {0}</source>
-        <translation type="obsolete">Errore nel salvataggio di: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="296"/>
-        <source>Network Error: {0}</source>
-        <translation type="obsolete">Errore di rete: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="352"/>
-        <source>- {0}:{1:02} minutes remaining</source>
-        <translation type="obsolete">- {0}:{1:02} minuti al termine</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="359"/>
-        <source>- {0} seconds remaining</source>
-        <translation type="obsolete">- {0} secondi al termine</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="361"/>
-        <source>{0} of {1} ({2}/sec) {3}</source>
-        <translation type="obsolete">{0} di {1} ({2}/sec) {3}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="370"/>
-        <source>{0} downloaded</source>
-        <translation type="obsolete">{0} scaricato</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="373"/>
-        <source>{0} of {1} - Stopped</source>
-        <translation type="obsolete">{0} di {1} - Fermati</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="46"/>
-        <source>Eric5 Download {0}</source>
-        <translation type="obsolete">Download Eric5 {0}</translation>
     </message>
 </context>
 <context>
@@ -5548,37 +5428,37 @@ Not connected
         <translation>La directory ({0}) per il download non può essere creata.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="341"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="349"/>
         <source>Error opening save file: {0}</source>
         <translation>Errore nell&apos;apertura del file: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="350"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="358"/>
         <source>Error saving: {0}</source>
         <translation>Errore nel salvataggio di: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="362"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="370"/>
         <source>Network Error: {0}</source>
         <translation>Errore di rete: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="470"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="478"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
         <translation>{0} di {1} ({2}/sec) - {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="471"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="479"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="479"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="487"/>
         <source>{0} downloaded</source>
         <translation>{0} scaricato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="482"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="490"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} di {1} - Fermati</translation>
     </message>
@@ -7279,11 +7159,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2381"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Editor.py" line="4832"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
@@ -7292,11 +7167,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="QScintilla/Editor.py" line="4839"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; è danneggiato.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Editor.py" line="4653"/>
-        <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file  macro &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="4890"/>
@@ -8560,11 +8430,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="416"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Gli stili di evidenziazione non possono essere letti dal file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="461"/>
-        <source>&lt;p&gt;The highlighting styles file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file di stile di evidenziazione &lt;b&gt;{0}&lt;/b&gt; ha dei contenuti invalidi.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="61"/>
@@ -10676,11 +10541,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Mostra un esempio dei colori selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="44"/>
-        <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;%%(Title)s&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 style=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:%(LinkColor)s&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;xml&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="153"/>
         <source>Exclude Files:</source>
         <translation>Escludi file:</translation>
@@ -10984,11 +10844,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
         <source>Export source</source>
         <translation>Esporta sorgenti</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Exporters/ExporterBase.py" line="54"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
@@ -12309,29 +12164,9 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>HelpDocumentationPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="37"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Documentazione Python</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
-        <source>Press to select the Python documentation directory via a dialog</source>
-        <translation type="obsolete">Premi per selezionare la directory di documentazione del Python con un dialogo</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="190"/>
         <source>...</source>
         <translation>...</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
-        <source>Enter the Python documentation directory</source>
-        <translation type="obsolete">Inserisci la directory di documentazione di Python</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
-        <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHONDOCDIR environment variable, if set.</source>
-        <translation type="obsolete">&lt;b&gt;Nota&lt;/b&gt;: Lascia vuoto per usare la variabile d&apos;ambiente PYTHONDOCDIR, se impostata.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
@@ -12397,11 +12232,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="204"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Nota&lt;/b&gt;: Lascia vuoto per usare la variabile d&apos;ambiente PYSIDEDOCDIR, se impostata.</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="73"/>
-        <source>Select Python documentation entry</source>
-        <translation type="obsolete">Seleziona l&apos;elemento della documentazione del Python</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="138"/>
@@ -13518,11 +13348,6 @@ Hai %n schede aperta.</numerusform>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1311"/>
-        <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Inserisci il fil di aiuto da visualizzare direttamente in questo campo modificabile. Seleziona un file di aiuto mostrato in precedenza dalla lista.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="322"/>
         <source>Ctrl+N</source>
         <comment>File|New Window</comment>
@@ -13663,21 +13488,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="470"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all help windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Chiudi tutti&lt;/b&gt;&lt;p&gt;Chiude tutte le finestre di help.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1220"/>
-        <source>Move Left</source>
-        <translation type="obsolete">Muovi a sinistra</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1223"/>
-        <source>Move Right</source>
-        <translation type="obsolete">Muovi a destra</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2108"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="351"/>
@@ -13836,11 +13646,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="444"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stampa Preview&lt;/b&gt;&lt;p&gt;Stampa la preview del testo di help mostrato.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1735"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="826"/>
@@ -14063,11 +13868,6 @@ Hai %n schede aperta.</numerusform>
         <translation>Motore di help</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="181"/>
-        <source>Show a navigation menu</source>
-        <translation type="obsolete">Mostra un menù di navigazione</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="482"/>
         <source>Private Browsing</source>
         <translation>Navigazione anonima</translation>
@@ -14081,16 +13881,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="483"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navigazione anonima&lt;/b&gt;&lt;p&gt;Attiva la navigazione anonima. In questa modalità la cronologia non è più registrata.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2310"/>
-        <source>Loading...</source>
-        <translation type="obsolete">Caricamento...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2325"/>
-        <source>Finished loading</source>
-        <translation type="obsolete">Caricamento terminato</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="816"/>
@@ -14421,11 +14211,6 @@ Hai %n schede aperta.</numerusform>
         <translation>Salva Linguette</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1234"/>
-        <source>Close Others</source>
-        <translation type="obsolete">Chiudi altri</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="556"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
@@ -14462,11 +14247,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="578"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Ferma il caricamento della linguetta corrente.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1227"/>
-        <source>Duplicate Page</source>
-        <translation type="obsolete">Duplica pagina</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="367"/>
@@ -14573,11 +14353,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="2131"/>
         <source>eric5 Web Browser</source>
         <translation>Web Browser di eric5</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2327"/>
-        <source>Failed to load</source>
-        <translation type="obsolete">Caricamento fallito</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="425"/>
@@ -14916,11 +14691,6 @@ Hai %n schede aperta.</numerusform>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1724"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Mercurial Changegroup Files (*.hg)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1738"/>
-        <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file per i changegroup Mercurial &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1845"/>
@@ -15580,11 +15350,6 @@ dell&apos;eseguibile client di Mercurial (es. hg).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="266"/>
         <source>Patch Files (*.diff)</source>
         <translation>File Patch (*.diff)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="278"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file  patch &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
@@ -19249,13 +19014,6 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Editor di icone</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1122"/>
-        <source>The icon image has been modified.
-Do you want to save your changes?</source>
-        <translation type="obsolete">L&apos;immagine dell&apos;icona è stata modificata.
-Vuoi salvare le modifiche ?</translation>
-    </message>
-    <message>
         <location filename="IconEditor/IconEditorWindow.py" line="111"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics File (*.mng)</translation>
@@ -19284,11 +19042,6 @@ Vuoi salvare le modifiche ?</translation>
         <location filename="IconEditor/IconEditorWindow.py" line="119"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Graphic File (*.tga)</translation>
-    </message>
-    <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1004"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
@@ -20408,11 +20161,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Proprietà</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="91"/>
-        <source>Python</source>
-        <translation type="obsolete">Python</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="93"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
@@ -20808,19 +20556,9 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Python GUI Files (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="351"/>
-        <source>Python Files (*.py2)</source>
-        <translation type="obsolete">Python Files (*.py2)</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="354"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python3 Files (*.py)</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="355"/>
-        <source>Python GUI Files (*.pyw2)</source>
-        <translation type="obsolete">Python GUI Files (*.pyw2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="358"/>
@@ -20874,11 +20612,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="204"/>
         <source>Save All</source>
         <translation>Salva tutto</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="209"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Salva nel progetto</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="207"/>
@@ -21236,11 +20969,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>About Qt</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
-        <source>Caption</source>
-        <translation type="obsolete">Intestazione</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the caption for the QMessageBox</source>
         <translation>Inserici l&apos;intestazione per il QMessageBox</translation>
@@ -21256,94 +20984,9 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Inserisci il messggio da mostrare nel QMessageBox</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="144"/>
-        <source>Buttons</source>
-        <translation type="obsolete">Pulsanti</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="155"/>
-        <source>Enter the text of button 1</source>
-        <translation type="obsolete">Inserici il testo per il bottone 1</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="277"/>
-        <source>&amp;OK</source>
-        <translation type="obsolete">&amp;OK</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="282"/>
-        <source>&amp;Cancel</source>
-        <translation type="obsolete">&amp;Cancella</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="287"/>
-        <source>&amp;Yes</source>
-        <translation type="obsolete">&amp;Si</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="292"/>
-        <source>&amp;No</source>
-        <translation type="obsolete">&amp;No</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="297"/>
-        <source>&amp;Abort</source>
-        <translation type="obsolete">&amp;Abortisci</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="302"/>
-        <source>&amp;Retry</source>
-        <translation type="obsolete">&amp;Ritenta</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="307"/>
-        <source>&amp;Ignore</source>
-        <translation type="obsolete">&amp;Ignora</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="205"/>
-        <source>Enter the text of button 0</source>
-        <translation type="obsolete">Inserisci il testoper il pulsante 0</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="255"/>
-        <source>Button 2</source>
-        <translation type="obsolete">pulsante 2</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="265"/>
-        <source>Enter the text of button 2</source>
-        <translation type="obsolete">Inserici il testo per il pulsante 2</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="315"/>
-        <source>Button 1</source>
-        <translation type="obsolete">Pulsante 1</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="322"/>
-        <source>Button 0</source>
-        <translation type="obsolete">Pulsante 0</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="335"/>
         <source>Default Button:</source>
         <translation>Pulsante di default:</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="340"/>
-        <source>Enter the index of the default button</source>
-        <translation type="obsolete">Inserisci l&apos;indice del pulsante di default</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="350"/>
-        <source>Escape Button:</source>
-        <translation type="obsolete">Pulsate di escape:</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="357"/>
-        <source>Enter the index of the button to be activated upon pressing Esc or -1 to ignore</source>
-        <translation type="obsolete">Inserisci l&apos;indice del pulsate da attivare alla pressione di Esc o -1 per ignorare</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="197"/>
@@ -21884,13 +21527,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Pronto</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1478"/>
-        <source>The document has been modified.
-Do you want to save your changes?</source>
-        <translation type="obsolete">Il documento è stato modificato.
-Vuoi salvare le modifiche ?</translation>
-    </message>
-    <message>
         <location filename="QScintilla/MiniEditor.py" line="1518"/>
         <source>File loaded</source>
         <translation>File caricato</translation>
@@ -22131,11 +21767,6 @@ Vuoi salvare le modifiche ?</translation>
         <translation>Leggi file multiprogetto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="363"/>
-        <source>Compressed multiproject files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File multiprogetto compressi non supportati. La libreria di compressione manca.</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="248"/>
         <source>Save multiproject file</source>
         <translation>Salva file multiprogetto</translation>
@@ -22146,16 +21777,6 @@ Vuoi salvare le modifiche ?</translation>
         <translation>Apri multiprogetto</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="406"/>
-        <source>Multiproject Files (*.e4m *.e4mz)</source>
-        <translation type="obsolete">File multiprogetto (*.e4m *.e4mz)</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="460"/>
-        <source>Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">File multiprogetto compressi  (*.e4mz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="460"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>File multiprogetto (*.e4m)</translation>
@@ -22164,11 +21785,6 @@ Vuoi salvare le modifiche ?</translation>
         <location filename="MultiProject/MultiProject.py" line="599"/>
         <source>Save multiproject as</source>
         <translation>Salva multiprogetto come</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="463"/>
-        <source>Multiproject Files (*.e4m);;Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">File Multiprogetto (*.e4m);;File Multiprogetto compressi (*.e4mz)</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="475"/>
@@ -22341,24 +21957,9 @@ Vuoi salvare le modifiche ?</translation>
         <translation>&lt;p&gt;Il file multiprogetto &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="238"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file multiprogetto &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="312"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file multiprogetto &lt;b&gt;{0}&lt;/b&gt; ha dei contenuti non validi.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="248"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file multiprogetto &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="602"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="475"/>
@@ -22483,11 +22084,6 @@ Vuoi salvare le modifiche ?</translation>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="295"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="272"/>
-        <source>&lt;br/&gt;Alternate Names:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="obsolete">&lt;br/&gt;Nomi Alternativi:&lt;ul&gt;&lt;li&gt;{0}&lt;/li&gt;&lt;&lt;/ul&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="283"/>
@@ -23320,22 +22916,22 @@ Vuoi salvare le modifiche ?</translation>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>Check PEP 8 Compliance</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla l&apos;aderenza a PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>PEP &amp;8 Compliance...</source>
-        <translation type="unfinished"></translation>
+        <translation>Aderenza a PEP &amp;8...</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="79"/>
         <source>Check PEP 8 compliance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlla l&apos;aderenza a PEP 8.</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="173"/>
         <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Controlla l&apos;aderenza a PEP 8...&lt;/b&gt;&lt;p&gt;Controlla che i file Python siano aderenti alle convenzioni di PEP 8.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -23343,27 +22939,27 @@ Vuoi salvare le modifiche ?</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
         <source>PEP 8 Message Codes</source>
-        <translation type="unfinished"></translation>
+        <translation>Codici messaggi PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il codice del messaggio dalla lista:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="30"/>
         <source>Select the message codes from this table</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona il codice del messaggio dalla tabella</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="55"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="60"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
 </context>
 <context>
@@ -23371,134 +22967,136 @@ Vuoi salvare le modifiche ?</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
         <source>PEP 8 Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Risultati controllo PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
         <source>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Risultati controllo PEP 8&lt;/b&gt;
+&lt;p&gt;Questo dialogo mostri i risultati del check PEP 8. Facendo un doppio click su un elemento
+aprirà una finestra di edit posizionando il cursore alla riga e posizione corrette.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="34"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Escludi file:</translation>
+        <translation>Escludi file:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="41"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Inserisci un pattern per il nome file di file da escludere separati da una virgola</translation>
+        <translation>Inserisci un pattern per il nome file di file da escludere separati da una virgola</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="48"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished">Premi per pulire il filtro</translation>
+        <translation>Premi per pulire il filtro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="70"/>
         <source>Press to start the PEP 8 check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per avviare il controllo PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="73"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Inizia</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per caricare i valori di default</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Load Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Carica default</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="103"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per salvare i valori corrente come default</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="106"/>
         <source>Store Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Salva default</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="115"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Escludi messaggi:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="122"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserici il codice del messaggio o le categorie da escludere separate da una virgola</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
         <source>Press to clear the exclude messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Prmei per pulire la lista dei messaggi da escludere</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="207"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per selezionare il codice messaggi da una lista</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
         <source>Included Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi Messaggi:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="156"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci i codici messaggio o le categorie da includere separati da una virgola</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
         <source>Press to clear the include messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Prmei per pulire la lista dei messaggi da includere</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Problemi risolti:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="190"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci i codici messaggio dei problemi da correggere automaticamente (lascia vuote per correggerli tutti)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
         <source>Press to clear the fix issues edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per pulire i problemi corretti</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="219"/>
         <source>Select to repeat each message type</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per ripetere ogni tipo di messaggio</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Repeat messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Ripetti messaggio</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="232"/>
         <source>Select to fix some issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona per correggere alcuni problemi</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
         <source>Fix issues automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Correggi automanticamente i problemi</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="260"/>
@@ -23506,62 +23104,65 @@ entry will open an editor window and position the cursor at the respective line 
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista risultati&lt;/b&gt;
+&lt;p&gt;Questa lista mostra i risultati del controllo PEP 8. Facendo doppio click
+su un elemento lo aprirà in una finestra di edit e posizionerà il cursore
+alla riga e colonna corretta.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="276"/>
         <source>File/Line</source>
-        <translation type="unfinished">File/Linea</translation>
+        <translation>File/Linea</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="281"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="286"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="294"/>
         <source>Shows the progress of the PEP 8 check action</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra l&apos;avanzamenteo del controllo PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
         <source>Statistics...</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiche...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="54"/>
         <source>Press to show some statistics for the last run</source>
-        <translation type="unfinished"></translation>
+        <translation>Premi per mostrare delle statistiche dell&apos;ultima esecuzione</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="57"/>
         <source>Show</source>
-        <translation type="unfinished">Mostra</translation>
+        <translation>Mostra</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="59"/>
         <source>Press to show all files containing an issue</source>
-        <translation type="unfinished">Premi per mostrare tutti i file che contengono errori di sintassi</translation>
+        <translation>Premi per mostrare tutti i file che contengono errori di sintassi</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="285"/>
         <source>Error: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore: {0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="328"/>
         <source>Fix: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregge:{0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="353"/>
         <source>No issues found.</source>
-        <translation type="unfinished">Nessun problema trovato.</translation>
+        <translation>Nessun problema trovato.</translation>
     </message>
 </context>
 <context>
@@ -23569,88 +23170,88 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>Fix PEP 8 issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Correggi problemi PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="170"/>
         <source>Tab converted to 4 spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Converti Tab a 4 spazi.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="184"/>
         <source>Whitespace stripped from end of line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina gli spazi alla fine della linea.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="197"/>
         <source>newline added to end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>aggiungi a capo alla fine del file.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="216"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linee bianche superflue eliminate dalla fine del file.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="230"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;&lt;&gt;&apos; sostituito da &apos;!=&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
         <source>Superfluous blank lines after function decorator removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linee bianche superflue eliminate dopo a dichiarazione della funzione.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="280"/>
         <source>Superfluous blank lines removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Linee bianche superflue eliminate.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="298"/>
         <source>One blank line inserted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Una linea vuota inserita.</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="332"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n linea vuota inserita.</numerusform>
+            <numerusform>%n linee vuote inserita.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n linea superflua eliminata</numerusform>
+            <numerusform>%n linee superflue eliminate</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
         <source>Superfluous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazi superflui eliminati.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="479"/>
         <source>Missing whitespace added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazi mancanti aggiunti.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="456"/>
         <source>Extraneous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazio non pertinente eliminato.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="503"/>
         <source>Whitespace after inline comment sign corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spazi dopo il carattere di commento inline corretti.</translation>
     </message>
 </context>
 <context>
@@ -23658,12 +23259,12 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="140"/>
         <source>Python2 interpreter not configured.</source>
-        <translation type="unfinished">Interprete Python2 non configurato.</translation>
+        <translation>Interprete Python2 non configurato.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="200"/>
         <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="unfinished">L&apos;interprete Python2 non ha finito entro i 15s.</translation>
+        <translation>L&apos;interprete Python2 non ha finito entro i 15s.</translation>
     </message>
 </context>
 <context>
@@ -23671,53 +23272,53 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
         <source>PEP 8 Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiche PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="30"/>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Conta</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Codice</translation>
+        <translation>Codice</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="40"/>
         <source>Message</source>
-        <translation type="unfinished">Messaggio</translation>
+        <translation>Messaggio</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
         <source>%n issue(s) found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n problema trovato</numerusform>
+            <numerusform>%n problemi trovati</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
         <source>%n issue(s) fixed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n problema corretto</numerusform>
+            <numerusform>%n problemi corretti</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="59"/>
         <source>%n file(s) checked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file controllato</numerusform>
+            <numerusform>%n file controllati</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="61"/>
         <source>%n file(s) with issues found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n file con problemi trovato</numerusform>
+            <numerusform>%n file con problemi trovati</numerusform>
         </translation>
     </message>
 </context>
@@ -24341,11 +23942,6 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;I file repository del plugin&lt;b&gt;{0}&lt;/b&gt; non può essere letto. Seleziona aggiorna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="314"/>
-        <source>&lt;p&gt;The plugins repository file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;I file repository del plugin&lt;b&gt;{0}&lt;/b&gt; ha un formato non supportato.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="327"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso scaricare il file richiesto da {0}&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
@@ -24708,11 +24304,6 @@ Selezionare Aggiorna.</translation>
         <translation>Leggi file progetto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="792"/>
-        <source>Compressed project files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File progetto compressi non supportati. La libreria di compressione manca.</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="690"/>
         <source>Save project file</source>
         <translation>Salva file progetto</translation>
@@ -24726,11 +24317,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Project/Project.py" line="945"/>
         <source>Please save the project first.</source>
         <translation>Prima salvare il progetto.</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1039"/>
-        <source>Compressed project session files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File sessione di progetto compressi non supportati. La libreria di compressione manca.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="805"/>
@@ -25238,11 +24824,6 @@ Selezionare Aggiorna.</translation>
         <translation>Leggi tesk</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1227"/>
-        <source>Compressed tasks files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File task compressi non supportati. La libreria di compressione manca.</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="871"/>
         <source>Save tasks</source>
         <translation>Salva task</translation>
@@ -25256,11 +24837,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Project/Project.py" line="933"/>
         <source>Save debugger properties</source>
         <translation>Salva le proprietà del debugger</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1162"/>
-        <source>Compressed project debugger properties files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File proprietò del debugger di progetto compressi non supportati. La libreria di compressione manca.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="957"/>
@@ -25428,19 +25004,9 @@ Selezionare Aggiorna.</translation>
         <translation>Console Qt4</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2623"/>
-        <source>Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">File progetto compressi (*.e4pz)</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="2385"/>
         <source>Project Files (*.e4p)</source>
         <translation>File progetto (*.e4p)</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2626"/>
-        <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">File Progetto (*.e4p);;File Progetto Compressi (*.e4pz)</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3232"/>
@@ -25611,11 +25177,6 @@ Selezionare Aggiorna.</translation>
         <translation>Console PySide</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="202"/>
-        <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
-        <translation type="obsolete">Python Files (*.py2);;Python GUI Files (*.pyw2);;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="205"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</translation>
@@ -25636,16 +25197,6 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;Il file progetto &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="616"/>
-        <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file progetto &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="728"/>
-        <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file progetto &lt;b&gt;{0}&lt;/b&gt; ha dei contenuti non validi.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="690"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file progetto &lt;b{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
@@ -25659,16 +25210,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Project/Project.py" line="744"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà specifiche dell&apos;utente del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="984"/>
-        <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;La sessione del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere letta.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="938"/>
-        <source>&lt;p&gt;The project session &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;La sessione del progetto &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="775"/>
@@ -25691,11 +25232,6 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="1150"/>
-        <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="871"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
@@ -25704,11 +25240,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Project/Project.py" line="904"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà del debugger del progetto&lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1067"/>
-        <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file delle proprietà del debugger del progetto&lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="933"/>
@@ -25754,16 +25285,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Project/Project.py" line="1821"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere creata.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2462"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">File Progetto (*.e4p *e4p)</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2910"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="3173"/>
@@ -26489,21 +26010,6 @@ Selezionare Aggiorna.</translation>
 </context>
 <context>
     <name>ProjectPage</name>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="36"/>
-        <source>Compression</source>
-        <translation type="obsolete">Compressione</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="42"/>
-        <source>Select, if the project file of a new project should be compressed</source>
-        <translation type="obsolete">Selezione, se il file di un nuovo progetto deve essere compresso</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="45"/>
-        <source>Compress project file upon creation</source>
-        <translation type="obsolete">Comprimi progetto alla creazione</translation>
-    </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="69"/>
         <source>Select whether a search for new files on a project open should be performed.</source>
@@ -27527,19 +27033,9 @@ premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 <context>
     <name>Py3FlakesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="17"/>
-        <source>&lt;b&gt;Configure Py3Flakes Behavior&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Configura comportamento di Py3Flakes&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="37"/>
         <source>Select to include a py3flakes check after the syntax check</source>
         <translation>Seleziona per includere un controllo con py3flaker dopo il controllo di sintassi</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="40"/>
-        <source>Include Py3Flakes Checks</source>
-        <translation type="obsolete">Include Controllo Py3Flakes</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="47"/>
@@ -28014,11 +27510,6 @@ premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="484"/>
         <source>Match Linebreaks</source>
         <translation>Trova interruzioni di linea</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="488"/>
-        <source>Unicode</source>
-        <translation type="obsolete">Unicode</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="498"/>
@@ -28564,11 +28055,6 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="564"/>
         <source>ASCII</source>
         <translation>ASCII</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="312"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="349"/>
@@ -29242,11 +28728,6 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>Un&apos;espressione regolare e una regexp devono essere fornite.</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="226"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="263"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione regolare non può essere salvata.&lt;/p&gt;&lt;p&gt;Motivo: {0}&lt;/p&gt;</translation>
@@ -29331,11 +28812,6 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="93"/>
         <source>Do you really want to remove the selected documentation sets from the database?</source>
         <translation>Vuoi veramente rimuovere la documentazione selezionata dal database ?</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="108"/>
-        <source>Some documents currently opened reference the documentation you are attempting to remove. Removing the documentation will close those documents.</source>
-        <translation type="obsolete">Alcuni documenti aperti fanno riferimento a documentazione che vuoi rimuovere. Rimuovendo la documentazione verranno chiusi questi documenti.</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="67"/>
@@ -30042,11 +29518,6 @@ Non connesso</translation>
         <translation>Scorciatoie da tastiera per l&apos;esportazione</translation>
     </message>
     <message>
-        <location filename="Preferences/Shortcuts.py" line="275"/>
-        <source>Compressed keyboard shortcut files not supported. The compression library is missing.</source>
-        <translation type="obsolete">File per le scorciatoie da tastiera compressi non supportati. La libreria di compressione manca.</translation>
-    </message>
-    <message>
         <location filename="Preferences/Shortcuts.py" line="224"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Scorciatoie da tastiera per l&apos;importazione</translation>
@@ -30055,11 +29526,6 @@ Non connesso</translation>
         <location filename="Preferences/Shortcuts.py" line="224"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La scorciatoia da tastiera non può essere letta dal file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/Shortcuts.py" line="304"/>
-        <source>&lt;p&gt;The keyboard shortcuts file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file per le scorciatoie da tastiera &lt;b&gt;{0}&lt;/b&gt; ha contenuti non validi.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/Shortcuts.py" line="197"/>
@@ -30510,11 +29976,6 @@ Non connesso</translation>
         <location filename="SqlBrowser/SqlBrowser.py" line="55"/>
         <source>Invalid URL: {0}</source>
         <translation>URL: {0} non valido</translation>
-    </message>
-    <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
-        <source>Unable to open connection: %s</source>
-        <translation type="obsolete">Non posso aprire la connessione: %s</translation>
     </message>
     <message>
         <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
@@ -32749,11 +32210,6 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="165"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="332"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file  patch &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="347"/>
@@ -36012,11 +35468,6 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
         <translation>Simboli</translation>
     </message>
     <message>
-        <location filename="UI/SymbolsWidget.ui" line="51"/>
-        <source>Unicode</source>
-        <translation type="obsolete">Unicode</translation>
-    </message>
-    <message>
         <location filename="UI/SymbolsWidget.ui" line="85"/>
         <source>Symbol code:</source>
         <translation>Symbol code:</translation>
@@ -36122,7 +35573,7 @@ relativa riga.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="188"/>
         <source>Error: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore: {0}</translation>
     </message>
 </context>
 <context>
@@ -36429,11 +35880,6 @@ relativa riga.&lt;/p&gt;</translation>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
         <source>Save All</source>
         <translation>Salva Tutti</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Salva nel progetto</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
@@ -37324,11 +36770,6 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <location filename="Templates/TemplateViewer.py" line="888"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file template &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Templates/TemplateViewer.py" line="930"/>
-        <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file template &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -38953,11 +38394,6 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Diminuisci altezza di {0} punti</translation>
     </message>
     <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="338"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Graphics/UMLGraphicsView.py" line="350"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;/p&gt;</translation>
@@ -39550,21 +38986,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Importa scorciatoie da tastiera&lt;/b&gt;&lt;p&gt;Importa le scorciatoie da tastiera dell&apos;applicazione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2154"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Documentazione Python</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2154"/>
-        <source>&amp;Python Documentation</source>
-        <translation type="obsolete">Documentazione &amp;Python</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2156"/>
-        <source>Open Python Documentation</source>
-        <translation type="obsolete">Apri documentazione Python</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="2265"/>
         <source>E&amp;xtras</source>
         <translation>E&amp;xtra</translation>
@@ -39913,11 +39334,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <location filename="UI/UserInterface.py" line="5155"/>
         <source>Read tasks</source>
         <translation>Leggi task</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2157"/>
-        <source>&lt;b&gt;Python Documentation&lt;/b&gt;&lt;p&gt;Display the python documentation. If no documentation directory is configured, the location of the python documentation is assumed to be the doc directory underneath the location of the python executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHONDOCDIR in your environment to override this. &lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Documentazione Python&lt;/b&gt;&lt;p&gt;Mostra la documentazione python. Se non è configurata una directory per la documentazione, viene assunto che la posizione della documentazione sia nella directory doc nella locazione dell&apos;eseguibile python su Windows e &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; su Unix. Imposta PYTHONDOCDIR nel tuo ambiente per sovrascrivere questi valori.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4206"/>
@@ -41019,21 +40435,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;p&gt;L&apos;inizio della documentazione &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; non viene trovato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4884"/>
-        <source>Keyboard shortcut file (*.e4k);;Compressed keyboard shortcut file (*.e4kz)</source>
-        <translation type="obsolete">Keyboard shortcut file (*.e4k);;Compressed eric4 keyboard shortcut file (*.e4kz)</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="4908"/>
-        <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Le scorciatoie da tastiera non possono essere scritte nel file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="4908"/>
-        <source>Keyboard shortcut file (*.e4k *.e4kz)</source>
-        <translation type="obsolete">Keyboard shortcut file (*.e4k *.e4kz)</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="5133"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
@@ -41044,11 +40445,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5098"/>
-        <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="5170"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file sessione &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
@@ -41057,11 +40453,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <location filename="UI/UserInterface.py" line="5193"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file sessione &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="5177"/>
-        <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file sessione &lt;b&gt;{0}&lt;/b&gt; è di un formato non supportato.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5311"/>
@@ -41911,11 +41302,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
     </message>
     <message>
         <location filename="VCS/ProjectHelper.py" line="211"/>
-        <source>The project retrieved from the repository does not contain an eric project file (*.e4p *.e4pz). Create it?</source>
-        <translation type="obsolete">Il progetto scaricato dal repository non contiene un file progetto di eric ((*.e4p *.e4pz). Crearlo ?</translation>
-    </message>
-    <message>
-        <location filename="VCS/ProjectHelper.py" line="211"/>
         <source>The project retrieved from the repository does not contain an eric project file (*.e4p). Create it?</source>
         <translation>Il progetto scaricato dal repository non contiene un file progetto di eric ((*.e4p). Crearlo ?</translation>
     </message>
@@ -42136,26 +41522,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <location filename="ViewManager/ViewManager.py" line="575"/>
         <source>&lt;b&gt;Save All Files&lt;/b&gt;&lt;p&gt;Save the contents of all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva tutti i file&lt;/b&gt;&lt;p&gt;Salva il contenuto di tutte le finestre dell&apos;editor.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="584"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Salva nel progetto</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="584"/>
-        <source>Save to Pro&amp;ject</source>
-        <translation type="obsolete">Salva il &amp;progetto</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="589"/>
-        <source>Save the current file to the current project</source>
-        <translation type="obsolete">Salva il file attuale nel progetto attuale</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="591"/>
-        <source>&lt;b&gt;Save to Project&lt;/b&gt;&lt;p&gt;Save the contents of the current editor window to the current project. After the file has been saved, it is automatically added to the current project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Salva Progetto&lt;/b&gt;&lt;p&gt;Salva il contenuto della finestra corrente dell&apos;editor nel progetto corrente. Dopo il salvataggio del file, questo viene automaticamente aggiunto al progetto corrente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="584"/>
@@ -44952,11 +44318,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Web SQL Databases</translation>
     </message>
     <message>
-        <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="43"/>
-        <source>Enter search term for cookies</source>
-        <translation type="obsolete">Inserisci termine di ricerca per i cookies</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="50"/>
         <source>Press to clear the search edit</source>
         <translation>Premi per pulire la ricerca</translation>
@@ -45049,47 +44410,6 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <location filename="Tools/TRPreviewer.py" line="685"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere caricato.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>WidgetWorkspace</name>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="733"/>
-        <source>Load UI File</source>
-        <translation type="obsolete">Carica file UI</translation>
-    </message>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="733"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere caricato.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>XMLMessageDialog</name>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="34"/>
-        <source>Fatal Error</source>
-        <translation type="obsolete">Errore fatale</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="37"/>
-        <source>Error</source>
-        <translation type="obsolete">Errore</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="40"/>
-        <source>Warning</source>
-        <translation type="obsolete">Attenzione</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.ui" line="13"/>
-        <source>XML Parse Messages</source>
-        <translation type="obsolete">Messaggio Parser XML</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="43"/>
-        <source>Line: {0}, Column: {1}</source>
-        <translation type="obsolete">Linea: {0}, Colonna: {1}</translation>
     </message>
 </context>
 <context>
@@ -45253,177 +44573,177 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
         <source>indentation contains mixed spaces and tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>indentazione contiene spazi e tab mischiati</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="166"/>
         <source>indentation is not a multiple of four</source>
-        <translation type="unfinished"></translation>
+        <translation>identazione non è un multiplo di quattro</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="168"/>
         <source>expected an indented block</source>
-        <translation type="unfinished"></translation>
+        <translation>atteso un blocco identato</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
         <source>unexpected indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>identazione non attesa</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
         <source>indentation contains tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>identazione contiene tab</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
         <source>whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>spazio dopo &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
         <source>whitespace before &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>spazio prima &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
         <source>multiple spaces before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi multipli prima dell&apos;operatore</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
         <source>multiple spaces after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi multipli dopo l&apos;operatore</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
         <source>tab before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>tab prima dell&apos;operatore</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
         <source>tab after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>tab dopo l&apos;operatore</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
         <source>missing whitespace around operator</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi intorno all&apos;operatore mancanti</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
         <source>missing whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi dopo &apos;{0}&apos; mancanti</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
         <source>multiple spaces after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi multipli dopo &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
         <source>tab after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>tab dopo &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
         <source>no spaces around keyword / parameter equals</source>
-        <translation type="unfinished"></translation>
+        <translation>nessuno spazio trovato intorno ad una parola chiave /parametro uguale</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
         <source>at least two spaces before inline comment</source>
-        <translation type="unfinished"></translation>
+        <translation>al massimo due spazi prima di un commento inline</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
         <source>inline comment should start with &apos;# &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>commento inline deve iniziare con &apos;#&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
         <source>trailing whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>spazi all&apos;inizio</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
         <source>no newline at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>nessun ritorno a capo alla fine del file</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
         <source>blank line contains whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>linea vuota contenente spazi</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
         <source>expected 1 blank line, found 0</source>
-        <translation type="unfinished"></translation>
+        <translation>attesa 1 line vuota, 0 trovate</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
         <source>expected 2 blank lines, found {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>attere 2 linee vuote, {0} trovate</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
         <source>too many blank lines ({0})</source>
-        <translation type="unfinished"></translation>
+        <translation>troppe linee vuote ({0})</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
         <source>blank lines found after function decorator</source>
-        <translation type="unfinished"></translation>
+        <translation>linea vuota trovata dopo la dichiarazione della funzione</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
         <source>blank line at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>linea vuota alla fine del file</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
         <source>multiple imports on one line</source>
-        <translation type="unfinished"></translation>
+        <translation>import multipli su una linea</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
         <source>line too long ({0} characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>linea troppo lunga ({0} caratteri)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
         <source>.has_key() is deprecated, use &apos;in&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>.has_key è deprecato, usa &apos;in&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
         <source>deprecated form of raising exception</source>
-        <translation type="unfinished"></translation>
+        <translation>forma di sollevamento eccezioni deprecata</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
         <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;&lt;&gt;&apos; è deprecato, usa &apos;!=&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
         <source>backticks are deprecated, use &apos;repr()&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>virgolette rovesciare sono deprecate, usa &apos;repr()&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
         <source>multiple statements on one line (colon)</source>
-        <translation type="unfinished"></translation>
+        <translation>istruzioni multiple su una linea (due punti)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
         <source>multiple statements on one line (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>istruzioni multiple su una linea (punto e virgola)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
         <source>no message for this code defined</source>
-        <translation type="unfinished"></translation>
+        <translation>nessun messaggio definito per questo codice </translation>
     </message>
 </context>
 <context>
