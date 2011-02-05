@@ -2469,7 +2469,8 @@ class Editor(QsciScintillaCompat):
                 path,
                 Lexers.getSaveFileFiltersList(True, True), 
                 defaultFilter,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             
             if fn:
                 if fn.endswith("."):
@@ -4819,7 +4820,8 @@ class Editor(QsciScintillaCompat):
             self,
             self.trUtf8("Load macro file"),
             configDir,
-            self.trUtf8("Macro files (*.macro)"))
+            self.trUtf8("Macro files (*.macro)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if not fname:
             return  # user aborted
@@ -4861,7 +4863,8 @@ class Editor(QsciScintillaCompat):
             configDir,
             self.trUtf8("Macro files (*.macro)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if not fname:
             return  # user aborted
@@ -5292,7 +5295,8 @@ class Editor(QsciScintillaCompat):
             self,
             self.trUtf8("Add file resource"),
             dirStr,
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
             line, index = self.getCursorPosition()
@@ -5308,7 +5312,8 @@ class Editor(QsciScintillaCompat):
             self,
             self.trUtf8("Add file resources"),
             dirStr,
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         if files:
             myDir = QDir(dirStr)
             filesText = ""
@@ -5328,7 +5333,8 @@ class Editor(QsciScintillaCompat):
             self,
             self.trUtf8("Add aliased file resource"),
             dirStr,
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
             alias, ok = QInputDialog.getText(

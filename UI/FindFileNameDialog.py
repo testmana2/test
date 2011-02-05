@@ -184,7 +184,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             None,
             self.trUtf8("Select search directory"),
             self.searchDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         
         if searchDir:
             self.searchDirEdit.setText(Utilities.toNativeSeparators(searchDir))

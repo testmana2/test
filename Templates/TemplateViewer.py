@@ -524,7 +524,8 @@ class TemplateViewer(QTreeWidget):
             self,
             self.trUtf8("Import Templates"),
             "",
-            self.trUtf8("Templates Files (*.e4c);; All Files (*)"))
+            self.trUtf8("Templates Files (*.e4c);; All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if fn:
             self.readTemplates(fn)
@@ -539,7 +540,8 @@ class TemplateViewer(QTreeWidget):
             "",
             self.trUtf8("Templates Files (*.e4c);; All Files (*)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if fn:
             ext = QFileInfo(fn).suffix()

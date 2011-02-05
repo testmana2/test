@@ -125,7 +125,8 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             None,
             self.trUtf8("Select icon directory"),
             "",
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if dir:
             self.iconDirectoryEdit.setText(Utilities.toNativeSeparators(dir))

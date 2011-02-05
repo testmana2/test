@@ -1462,7 +1462,8 @@ class HelpWindow(QMainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ))
+            ), 
+            QFileDialog.DontUseNativeDialog)
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)
@@ -1482,7 +1483,8 @@ class HelpWindow(QMainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ))
+            ), 
+            QFileDialog.DontUseNativeDialog)
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)

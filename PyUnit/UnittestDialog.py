@@ -164,7 +164,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self,
             "",
             self.testsuiteComboBox.currentText(),
-            filter)
+            filter, 
+            QFileDialog.DontUseNativeDialog)
         
         if not prog:
             return

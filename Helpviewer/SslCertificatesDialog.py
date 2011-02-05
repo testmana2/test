@@ -378,7 +378,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                 self.trUtf8("Certificate File (PEM) (*.pem);;"
                             "Certificate File (DER) (*.der)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             
             if fname:
                 ext = QFileInfo(fname).suffix()
@@ -422,7 +423,8 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             self.trUtf8("Import Certificate"),
             "",
             self.trUtf8("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
-                        "All Files (*)"))
+                        "All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if fname:
             f = QFile(fname)

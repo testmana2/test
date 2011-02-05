@@ -95,7 +95,8 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
             self,
             self.trUtf8("Select directory"),
             startdir,
-            QFileDialog.Options(QFileDialog.Option(0)))
+            QFileDialog.Options(QFileDialog.Option(
+                                QFileDialog.DontUseNativeDialog)))
         
         if directory:
             textEdit.setText(Utilities.toNativeSeparators(directory))

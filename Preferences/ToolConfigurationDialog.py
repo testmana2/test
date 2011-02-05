@@ -251,7 +251,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             self,
             self.trUtf8("Select executable"),
             self.executableEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         if execfile:
             execfile = Utilities.toNativeSeparators(execfile)
             if not Utilities.isinpath(execfile):
@@ -272,7 +273,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             self,
             self.trUtf8("Select icon file"),
             self.iconEdit.text(),
-            self.trUtf8("Icon files (*.png)"))
+            self.trUtf8("Icon files (*.png)"), 
+            QFileDialog.DontUseNativeDialog)
         if icon:
             self.iconEdit.setText(icon)
     

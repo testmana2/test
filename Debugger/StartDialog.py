@@ -119,7 +119,8 @@ class StartDialog(QDialog):
             self,
             self.trUtf8("Working directory"),
             cwd,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if d:
             self.ui.workdirCombo.setEditText(Utilities.toNativeSeparators(d))

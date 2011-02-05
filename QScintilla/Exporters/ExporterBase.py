@@ -44,7 +44,8 @@ class ExporterBase(QObject):
             "",
             filter_,
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if fn:
             ext = QFileInfo(fn).suffix()

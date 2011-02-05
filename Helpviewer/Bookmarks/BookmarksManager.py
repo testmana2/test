@@ -338,7 +338,8 @@ class BookmarksManager(QObject):
             None,
             self.trUtf8("Import Bookmarks"),
             "",
-            ";;".join(supportedFormats))
+            ";;".join(supportedFormats), 
+            QFileDialog.DontUseNativeDialog)
         if not fileName:
             return
         
@@ -386,7 +387,8 @@ class BookmarksManager(QObject):
             None,
             self.trUtf8("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"))
+            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"), 
+            QFileDialog.DontUseNativeDialog)
         if not fileName:
             return
         

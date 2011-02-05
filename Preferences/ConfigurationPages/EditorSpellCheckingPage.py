@@ -114,7 +114,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
             self,
             self.trUtf8("Select personal word list"),
             self.pwlEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -128,7 +129,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
             self,
             self.trUtf8("Select personal exclude list"),
             self.pelEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

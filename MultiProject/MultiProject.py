@@ -407,7 +407,8 @@ class MultiProject(QObject):
                 self.parent(),
                 self.trUtf8("Open multiproject"),
                 "",
-                self.trUtf8("Multiproject Files (*.e4m)"))
+                self.trUtf8("Multiproject Files (*.e4m)"), 
+                QFileDialog.DontUseNativeDialog)
             
             if fn == "":
                 fn = None
@@ -463,7 +464,8 @@ class MultiProject(QObject):
             self.ppath,
             self.trUtf8("Multiproject Files (*.e4m)"),
             defaultFilter,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if fn:
             ext = QFileInfo(fn).suffix()

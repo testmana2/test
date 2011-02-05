@@ -303,7 +303,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             "",
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"),
             None,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         if fname:
             ext = QFileInfo(fname).suffix()
             if not ext:
@@ -338,7 +339,8 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self,
             self.trUtf8("Load regular expression"),
             "",
-            self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
+            self.trUtf8("RegExp Files (*.rx);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         if fname:
             try:
                 f=open(Utilities.toNativeSeparators(fname), "r", encoding = "utf-8")

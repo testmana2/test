@@ -146,7 +146,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self,
             self.trUtf8("Select plugin ZIP-archives"),
             dn,
-            self.trUtf8("Plugin archive (*.zip)"))
+            self.trUtf8("Plugin archive (*.zip)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if archives:
             matchflags = Qt.MatchFixedString

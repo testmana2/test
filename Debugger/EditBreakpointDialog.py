@@ -114,7 +114,8 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             self,
             self.trUtf8("Select filename of the breakpoint"),
             self.filenameCombo.currentText(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.filenameCombo.setEditText(Utilities.toNativeSeparators(file))

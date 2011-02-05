@@ -163,7 +163,8 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         """
         Private slot to handle the file selection via a file selection dialog.
         """
-        bookmark = QFileDialog.getOpenFileName()
+        bookmark = QFileDialog.getOpenFileName(
+            options = QFileDialog.DontUseNativeDialog)
         if bookmark:
             bookmark = Utilities.toNativeSeparators(bookmark)
             self.fileEdit.setText(bookmark)

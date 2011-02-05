@@ -498,7 +498,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             path,
             self.trUtf8("Qt User-Interface Files (*.ui);;All Files (*)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if not fname:
             # user aborted or didn't enter a filename

@@ -61,7 +61,8 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
                 self,
                 self.trUtf8("Add Project"),
                 startdir,
-                self.trUtf8("Project Files (*.e4p)"))
+                self.trUtf8("Project Files (*.e4p)"), 
+                QFileDialog.DontUseNativeDialog)
         
         if projectFile:
             self.filenameEdit.setText(Utilities.toNativeSeparators(projectFile))

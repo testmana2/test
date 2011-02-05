@@ -135,7 +135,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self,
             self.trUtf8("Select project directory"),
             self.dirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         
         if directory:
             self.dirEdit.setText(Utilities.toNativeSeparators(directory))
@@ -184,7 +185,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self,
             self.trUtf8("Select main script file"),
             dir,
-            filters)
+            filters, 
+            QFileDialog.DontUseNativeDialog)
         
         if fn:
             ppath = self.dirEdit.text()

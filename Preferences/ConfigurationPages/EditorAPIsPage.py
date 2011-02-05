@@ -129,7 +129,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             self,
             self.trUtf8("Select API file"),
             self.apiFileEdit.text(),
-            self.trUtf8("API File (*.api);;All Files (*)"))
+            self.trUtf8("API File (*.api);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.apiFileEdit.setText(Utilities.toNativeSeparators(file))

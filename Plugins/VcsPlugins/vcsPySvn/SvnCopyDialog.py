@@ -66,14 +66,16 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly))
+                QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                    QFileDialog.DontUseNativeDialog))
         else:
             target = QFileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
                 "",
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
         
         if target:
             self.targetEdit.setText(target)

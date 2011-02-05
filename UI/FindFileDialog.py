@@ -534,7 +534,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self,
             self.trUtf8("Select directory"),
             self.dirCombo.currentText(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             self.dirCombo.setEditText(Utilities.toNativeSeparators(directory))

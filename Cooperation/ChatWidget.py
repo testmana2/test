@@ -535,7 +535,8 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                 "",
                 self.trUtf8("Text Files (*.txt);;All Files (*)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             if fname:
                 ext = QFileInfo(fname).suffix()
                 if not ext:

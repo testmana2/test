@@ -175,7 +175,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 None,
                 self.trUtf8("Save File"),
                 defaultFileName,
-                "")
+                "", 
+                QFileDialog.DontUseNativeDialog)
             self.__gettingFileName = False
             if not fileName:
                 self.progressBar.setVisible(False)

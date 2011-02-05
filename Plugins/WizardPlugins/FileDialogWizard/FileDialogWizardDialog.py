@@ -64,6 +64,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
+            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
             QFileDialog.getOpenFileName(
                 None,
                 self.eCaption.text(),
@@ -75,6 +76,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
+            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
             QFileDialog.getOpenFileNames(
                 None,
                 self.eCaption.text(),
@@ -86,6 +88,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
+            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
             QFileDialog.getSaveFileName(
                 None,
                 self.eCaption.text(),
@@ -100,6 +103,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options |= QFileDialog.Options(QFileDialog.ShowDirsOnly)
             else:
                 options |= QFileDialog.Options(QFileDialog.Option(0))
+            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
             QFileDialog.getExistingDirectory(
                 None,
                 self.eCaption.text(),

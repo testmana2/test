@@ -40,7 +40,8 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
             self,
             self.trUtf8("Select file for property"),
             self.propFileEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         
         if fn:
             self.propFileEdit.setText(Utilities.toNativeSeparators(fn))

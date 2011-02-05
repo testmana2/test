@@ -4994,7 +4994,8 @@ class UserInterface(QMainWindow):
             "",
             self.trUtf8("Keyboard shortcut file (*.e4k)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if not fn:
             return
@@ -5015,7 +5016,8 @@ class UserInterface(QMainWindow):
             None,
             self.trUtf8("Import Keyboard Shortcuts"),
             "",
-            self.trUtf8("Keyboard shortcut file (*.e4k)"))
+            self.trUtf8("Keyboard shortcut file (*.e4k)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if fn:
             Shortcuts.importShortcuts(fn)

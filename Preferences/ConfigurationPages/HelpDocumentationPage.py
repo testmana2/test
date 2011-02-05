@@ -81,7 +81,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             QUrl(self.python2DocDirEdit.text()).path(),
             self.trUtf8("HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
-                "All Files (*)"))
+                "All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if entry:
             self.python2DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -97,7 +98,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             QUrl(self.pythonDocDirEdit.text()).path(),
             self.trUtf8("HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
-                "All Files (*)"))
+                "All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if entry:
             self.pythonDocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -111,7 +113,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select Qt4 documentation entry"),
             QUrl(self.qt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if entry:
             self.qt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -125,7 +128,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select PyQt4 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if entry:
             self.pyqt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -139,7 +143,8 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             self,
             self.trUtf8("Select PySide documentation entry"),
             QUrl(self.pysideDocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if entry:
             self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(entry))

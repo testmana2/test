@@ -899,7 +899,8 @@ def exportPreferences(prefClass = Prefs):
         QtCore.QCoreApplication.translate("Preferences", 
             "Properties File (*.ini);;All Files (*)"),
         None, 
-        QtGui.QFileDialog.Options(QtGui.QFileDialog.DontConfirmOverwrite))
+        QtGui.QFileDialog.Options(QtGui.QFileDialog.DontConfirmOverwrite |
+                                  QtGui.QFileDialog.DontUseNativeDialog))
     if filename:
         ext = QtCore.QFileInfo(filename).suffix()
         if not ext:
@@ -923,7 +924,8 @@ def importPreferences(prefClass = Prefs):
         QtCore.QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
         QtCore.QCoreApplication.translate("Preferences", 
-            "Properties File (*.ini);;All Files (*)"))
+            "Properties File (*.ini);;All Files (*)"), 
+        QtGui.QFileDialog.DontUseNativeDialog)
     if filename:
         settingsFile = prefClass.settings.fileName()
         shutil.copy(filename, settingsFile)

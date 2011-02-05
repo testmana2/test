@@ -2947,7 +2947,8 @@ class ViewManager(QObject):
                 QApplication.translate('ViewManager', "Open files"),
                 self._getOpenStartDir(),
                 QScintilla.Lexers.getOpenFileFiltersList(True, True), 
-                filter
+                filter,
+                QFileDialog.DontUseNativeDialog
                 )[0]
         else:
             progs = [prog]

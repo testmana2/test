@@ -50,7 +50,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
             self,
             self.trUtf8("Select source directory"),
             QDir.fromNativeSeparators(self.pathnameEdit.text()),
-            QFileDialog.Options(QFileDialog.Option(0)))
+            QFileDialog.Options(QFileDialog.Option(
+                                QFileDialog.DontUseNativeDialog)))
         if path:
             self.pathnameEdit.setText(QDir.toNativeSeparators(path))
         

@@ -1525,7 +1525,8 @@ class Project(QObject):
                 self.trUtf8("Rename file"),
                 os.path.dirname(oldfn),
                 "",
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             if not newfn:
                 return False
             newfn = Utilities.toNativeSeparators(newfn)
@@ -2225,7 +2226,8 @@ class Project(QObject):
                 self.parent(),
                 self.trUtf8("Open project"),
                 "",
-                self.trUtf8("Project Files (*.e4p)"))
+                self.trUtf8("Project Files (*.e4p)"), 
+                QFileDialog.DontUseNativeDialog)
         
         QApplication.processEvents()
         
@@ -2388,7 +2390,8 @@ class Project(QObject):
             self.ppath,
             self.trUtf8("Project Files (*.e4p)"),
             defaultFilter,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if fn:
             ext = QFileInfo(fn).suffix()

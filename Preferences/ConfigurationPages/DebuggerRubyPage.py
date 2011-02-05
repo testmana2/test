@@ -55,7 +55,8 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         file = QFileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Ruby interpreter for Debug Client"),
-            self.rubyInterpreterEdit.text())
+            self.rubyInterpreterEdit.text(), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.rubyInterpreterEdit.setText(

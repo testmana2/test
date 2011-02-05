@@ -1727,7 +1727,8 @@ class Hg(VersionControl):
                 repodir,
                 self.trUtf8("Mercurial Changegroup Files (*.hg)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             
             if not fname:
                 return  # user aborted
@@ -1785,7 +1786,8 @@ class Hg(VersionControl):
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         if file:
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 self.logBrowser = \
@@ -1816,7 +1818,8 @@ class Hg(VersionControl):
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         if file:
             args = []
             args.append('identify')
@@ -1846,7 +1849,8 @@ class Hg(VersionControl):
             None,
             self.trUtf8("Apply changegroups"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         if files:
             update = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Apply changegroups"),

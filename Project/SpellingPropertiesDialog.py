@@ -75,7 +75,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self,
             self.trUtf8("Select project word list"),
             pwl,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -92,7 +93,8 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self,
             self.trUtf8("Select project exclude list"),
             pel,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

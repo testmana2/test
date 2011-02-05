@@ -269,7 +269,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             fname,
             self.trUtf8("Patch Files (*.diff)"),
             None,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if not fname:
             return  # user aborted

@@ -101,7 +101,8 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
             self,
             self.trUtf8("Select interpreter for Debug Client"),
             self.interpreterEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.interpreterEdit.setText(Utilities.toNativeSeparators(file))
@@ -117,7 +118,8 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
             self,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),
-            filters)
+            filters, 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.debugClientEdit.setText(Utilities.toNativeSeparators(file))

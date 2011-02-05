@@ -63,7 +63,8 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
             self,
             self.trUtf8("Select Qt4 Directory"),
             self.qt4Edit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if dir:
             self.qt4Edit.setText(Utilities.toNativeSeparators(dir))
@@ -77,7 +78,8 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
             self,
             self.trUtf8("Select Qt4 Translations Directory"),
             self.qt4TransEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if dir:
             self.qt4TransEdit.setText(Utilities.toNativeSeparators(dir))

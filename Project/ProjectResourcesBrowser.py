@@ -392,7 +392,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 path,
                 self.trUtf8("Qt Resource Files (*.qrc)"),
                 "",
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                    QFileDialog.DontUseNativeDialog))
             
             if not fname:
                 # user aborted or didn't enter a filename

@@ -54,7 +54,8 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
             self,
             self.trUtf8("Add search engine"),
             "",
-            self.trUtf8("OpenSearch (*.xml);;All Files (*)"))
+            self.trUtf8("OpenSearch (*.xml);;All Files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         osm = self.__mw.openSearchManager()
         for fileName in fileNames:

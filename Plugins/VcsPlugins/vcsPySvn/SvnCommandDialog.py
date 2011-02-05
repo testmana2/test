@@ -69,7 +69,8 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
             self,
             self.trUtf8("Working directory"),
             cwd,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         
         if d:
             self.workdirCombo.setEditText(Utilities.toNativeSeparators(d))

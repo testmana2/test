@@ -293,7 +293,8 @@ class UIPreviewer(QMainWindow):
             self, 
             self.trUtf8("Select UI file"),
             self.currentFile,
-            self.trUtf8("Qt User-Interface Files (*.ui)"))
+            self.trUtf8("Qt User-Interface Files (*.ui)"), 
+            QFileDialog.DontUseNativeDialog)
         if fn:
             self.__loadFile(fn)
         
@@ -429,7 +430,8 @@ class UIPreviewer(QMainWindow):
             self,
             self.trUtf8("Save Image"),
             "",
-            filter)
+            filter,
+            QFileDialog.DontUseNativeDialog)
         if not fname:
             return
             

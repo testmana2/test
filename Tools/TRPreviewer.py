@@ -342,7 +342,8 @@ class TRPreviewer(QMainWindow):
             None,
             self.trUtf8("Select UI files"),
             "",
-            self.trUtf8("Qt User-Interface Files (*.ui)"))
+            self.trUtf8("Qt User-Interface Files (*.ui)"), 
+            QFileDialog.DontUseNativeDialog)
         
         for fileName in fileNameList:
             self.preview.loadWidget(fileName)
@@ -357,7 +358,8 @@ class TRPreviewer(QMainWindow):
             None,
             self.trUtf8("Select translation files"),
             "",
-            self.trUtf8("Qt Translation Files (*.qm)"))
+            self.trUtf8("Qt Translation Files (*.qm)"), 
+            QFileDialog.DontUseNativeDialog)
         
         first = True
         for fileName in fileNameList:

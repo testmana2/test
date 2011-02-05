@@ -62,7 +62,8 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly))
+                QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                    QFileDialog.DontUseNativeDialog))
             
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))

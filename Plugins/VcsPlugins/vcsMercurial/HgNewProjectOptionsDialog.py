@@ -58,7 +58,8 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly))
+                QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                    QFileDialog.DontUseNativeDialog))
             
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
@@ -72,7 +73,8 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             self,
             self.trUtf8("Select Project Directory"),
             self.vcsProjectDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         
         if directory:
             self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(directory))

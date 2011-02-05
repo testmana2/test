@@ -275,7 +275,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             fname,
             self.trUtf8("Patch Files (*.diff)"),
             None, 
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         
         if not fname:
             return
@@ -461,7 +462,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             self,
             self.trUtf8("Select file to compare"),
             lineEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
             
         if filename:
             lineEdit.setText(Utilities.toNativeSeparators(filename))

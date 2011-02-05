@@ -104,7 +104,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
             self,
             self.trUtf8("Select Style Sheet"),
             self.styleSheetEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))

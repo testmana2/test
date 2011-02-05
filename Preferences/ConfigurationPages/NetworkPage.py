@@ -113,7 +113,8 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self,
             self.trUtf8("Select download directory"),
             self.downloadDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             dn = Utilities.toNativeSeparators(directory)

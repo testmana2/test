@@ -94,7 +94,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             self,
             self.trUtf8("Select translation file"),
             tp,
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         
         if tsfile:
             self.transPatternEdit.setText(Utilities.toNativeSeparators(tsfile))
@@ -118,7 +119,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             self,
             self.trUtf8("Select directory for binary translations"),
             self.transBinPathEdit.text(),
-            QFileDialog.Options(QFileDialog.Option(0)))
+            QFileDialog.Options(QFileDialog.Option(
+                                QFileDialog.DontUseNativeDialog)))
         
         if directory:
             self.transBinPathEdit.setText(Utilities.toNativeSeparators(directory))
@@ -161,7 +163,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             self,
             self.trUtf8("Exempt file from translation"),
             self.project.ppath,
-            self.filters)
+            self.filters, 
+            QFileDialog.DontUseNativeDialog)
         if texcept:
             self.exceptionEdit.setText(Utilities.toNativeSeparators(texcept))
         
@@ -174,7 +177,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             self,
             self.trUtf8("Exempt directory from translation"),
             self.project.ppath,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         if texcept:
             self.exceptionEdit.setText(Utilities.toNativeSeparators(texcept))
         

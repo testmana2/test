@@ -61,7 +61,8 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             self,
             self.trUtf8("Select target directory"),
             startdir,
-            QFileDialog.Options(QFileDialog.Option(0)))
+            QFileDialog.Options(QFileDialog.Option(
+                                QFileDialog.DontUseNativeDialog)))
             
         if directory:
             self.targetDirEdit.setText(Utilities.toNativeSeparators(directory))
@@ -147,7 +148,8 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         else:
             return
         
-        fnames = QFileDialog.getOpenFileNames(self, caption, dir, dfilter)
+        fnames = QFileDialog.getOpenFileNames(self, caption, dir, dfilter, 
+            QFileDialog.DontUseNativeDialog)
         
         if len(fnames):
             self.sourceFileEdit.setText(Utilities.toNativeSeparators(

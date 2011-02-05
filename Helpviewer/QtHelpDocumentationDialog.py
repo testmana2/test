@@ -57,7 +57,8 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
             self,
             self.trUtf8("Add Documentation"),
             "",
-            self.trUtf8("Qt Compressed Help Files (*.qch)"))
+            self.trUtf8("Qt Compressed Help Files (*.qch)"), 
+            QFileDialog.DontUseNativeDialog)
         if not fileNames:
             return
         

@@ -261,7 +261,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self,
             self.trUtf8("Select output directory"),
             self.outputDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 
@@ -286,7 +287,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 
@@ -324,7 +326,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self,
             self.trUtf8("Select CSS style sheet"),
             getConfig('ericCSSDir'),
-            self.trUtf8("Style sheet (*.css);;All files (*)"))
+            self.trUtf8("Style sheet (*.css);;All files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if cssFile:
             # make it relative, if it is in a subdirectory of the project path 
@@ -472,7 +475,8 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self,
             self.trUtf8("Select output directory for QtHelp files"),
             self.qtHelpDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 

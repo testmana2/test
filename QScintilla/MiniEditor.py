@@ -202,7 +202,8 @@ class MiniEditor(QMainWindow):
         Private slot to open a file.
         """
         if self.__maybeSave():
-            fileName = QFileDialog.getOpenFileName(self)
+            fileName = QFileDialog.getOpenFileName(self,
+                options = QFileDialog.DontUseNativeDialog)
             if fileName:
                 self.__loadFile(fileName)
         self.__checkActions()
@@ -220,7 +221,8 @@ class MiniEditor(QMainWindow):
         """
         Private slot to save a file with a new name.
         """
-        fileName = QFileDialog.getSaveFileName(self)
+        fileName = QFileDialog.getSaveFileName(self, 
+            options =  QFileDialog.DontUseNativeDialog)
         if not fileName:
             return False
         

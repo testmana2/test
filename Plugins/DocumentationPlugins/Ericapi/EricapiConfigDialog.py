@@ -169,7 +169,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             self,
             self.trUtf8("Select output file"),
             self.outputFileEdit.text(),
-            self.trUtf8("API files (*.api);;All files (*)"))
+            self.trUtf8("API files (*.api);;All files (*)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if filename:
             # make it relative, if it is in a subdirectory of the project path 
@@ -200,7 +201,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 

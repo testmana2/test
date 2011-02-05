@@ -317,7 +317,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         fname = QFileDialog.getOpenFileName(
             self,
-            self.trUtf8("Attach file"))
+            self.trUtf8("Attach file"),
+            options = QFileDialog.DontUseNativeDialog)
         if fname:
             self.attachFile(fname, False)
         

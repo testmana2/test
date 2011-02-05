@@ -329,7 +329,8 @@ class UMLGraphicsView(E5GraphicsView):
             self.trUtf8("Portable Network Graphics (*.png);;"
                         "Scalable Vector Graphics (*.svg)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
+                                QFileDialog.DontUseNativeDialog))
         if fname:
             ext = QFileInfo(fname).suffix()
             if not ext:

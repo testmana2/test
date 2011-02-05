@@ -87,7 +87,8 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
             self,
             self.trUtf8("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.interpreterEdit.setText(
@@ -102,7 +103,8 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
             None,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),
-            self.trUtf8("Python Files (*.py *.py3)"))
+            self.trUtf8("Python Files (*.py *.py3)"), 
+            QFileDialog.DontUseNativeDialog)
             
         if file:
             self.debugClientEdit.setText(

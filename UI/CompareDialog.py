@@ -385,7 +385,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             self,
             self.trUtf8("Select file to compare"),
             lineEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
             
         if filename:
             lineEdit.setText(Utilities.toNativeSeparators(filename))

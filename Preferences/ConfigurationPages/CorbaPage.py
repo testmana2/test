@@ -50,7 +50,8 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
             self,
             self.trUtf8("Select IDL compiler"),
             self.idlEdit.text(),
-            "")
+            "", 
+            QFileDialog.DontUseNativeDialog)
         
         if file:
             self.idlEdit.setText(Utilities.toNativeSeparators(file))

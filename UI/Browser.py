@@ -416,7 +416,8 @@ class Browser(QTreeView):
             None,
             QApplication.translate('Browser', "New toplevel directory"),
             "",
-            QFileDialog.Options(QFileDialog.ShowDirsOnly))
+            QFileDialog.Options(QFileDialog.ShowDirsOnly |
+                                QFileDialog.DontUseNativeDialog))
         if dname:
             dname = os.path.abspath(Utilities.toNativeSeparators(dname))
             self.__model.addTopLevelDir(dname)

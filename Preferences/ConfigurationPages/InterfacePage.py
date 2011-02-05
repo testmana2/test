@@ -252,7 +252,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.trUtf8("Select style sheet file"),
             self.styleSheetEdit.text(),
             self.trUtf8("Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                        "All files (*)"))
+                        "All files (*)"), 
+            QFileDialog.DontUseNativeDialog)
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
