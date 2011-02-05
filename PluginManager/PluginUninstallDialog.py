@@ -174,7 +174,7 @@ class PluginUninstallDialog(QDialog):
         self.__layout.addWidget(self.cw)
         self.resize(size)
         
-        self.cw.accepted[()].connect(self.accept)
+        self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
 
 class PluginUninstallWindow(QMainWindow):
@@ -193,5 +193,5 @@ class PluginUninstallWindow(QMainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.cw.accepted[()].connect(self.close)
+        self.cw.buttonBox.accepted[()].connect(self.close)
         self.cw.buttonBox.rejected[()].connect(self.close)
