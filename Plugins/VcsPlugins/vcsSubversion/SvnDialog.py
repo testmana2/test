@@ -163,7 +163,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
             if not self.__hasAddOrDelete and len(s) > 0:
                 # check the output
                 for l in s.split(os.linesep):
-                    if l[0].strip() in ['A', 'D']:
+                    if l and l[0].strip() in ['A', 'D']:
                         self.__hasAddOrDelete = True
                         break
         
