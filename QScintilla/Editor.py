@@ -1302,7 +1302,7 @@ class Editor(QsciScintillaCompat):
         """
         try:
             self.supportedEols[self.getLineSeparator()].setChecked(True)
-        except AttributeError:
+        except (AttributeError, TypeError):
             pass
         
     def __eolChanged(self):
