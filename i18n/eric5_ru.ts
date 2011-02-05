@@ -5460,37 +5460,37 @@ Not connected
         <translation>Невозможно создать каталог ({0}) для загрузки.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="341"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="349"/>
         <source>Error opening save file: {0}</source>
         <translation>Ошибка сохранения файла: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="350"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="358"/>
         <source>Error saving: {0}</source>
         <translation>Ошибка при сохранении: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="362"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="370"/>
         <source>Network Error: {0}</source>
         <translation>Сетевая ошибка: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="470"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="478"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
         <translation>{0} of {1} ({2}/sec) - {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="471"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="479"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="479"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="487"/>
         <source>{0} downloaded</source>
         <translation>{0} скачано</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="482"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="490"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} из {1} - остановлено</translation>
     </message>
@@ -5580,9 +5580,9 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadManager.py" line="357"/>
         <source>Downloading %n file(s)</source>
         <translation>
+            <numerusform>Загрузка %n файла</numerusform>
             <numerusform>Загрузка %n файлов</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Загрузка %n файлов</numerusform>
         </translation>
     </message>
 </context>
@@ -5621,9 +5621,9 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="18"/>
         <source>%n:{0:02} minutes remaining</source>
         <translation>
+            <numerusform>Осталось %n:{0:02} минута</numerusform>
             <numerusform>Осталось %n:{0:02} минут</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Осталось %n:{0:02} минут</numerusform>
         </translation>
     </message>
 </context>
@@ -5676,7 +5676,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="72"/>
         <source>&amp;E5MessageBox Wizard...</source>
-        <translation>Мастер &amp;MessageBox</translation>
+        <translation>Мастер &amp;MessageBox...</translation>
     </message>
     <message>
         <location filename="Plugins/PluginWizardE5MessageBox.py" line="76"/>
@@ -8507,7 +8507,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorKeywordsPage.ui" line="84"/>
         <source>Enter the keywords separated by a blank</source>
-        <translation>Задайте ключевые слова разделённые пробелами.</translation>
+        <translation>Задайте ключевые слова разделённые пробелами</translation>
     </message>
 </context>
 <context>
@@ -9685,7 +9685,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1137"/>
         <source>Foreground</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1144"/>
@@ -9710,7 +9710,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1157"/>
         <source>Error: There  is an error.</source>
-        <translation>Ошибка</translation>
+        <translation>Ошибка.</translation>
     </message>
 </context>
 <context>
@@ -12294,57 +12294,57 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="94"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>HTML файлы (*.html *.htm);;Компрессированные файлы помощи (*.chm);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="37"/>
         <source>Python 2 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton 2</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
         <source>Press to select the Python 2 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте каталог документации Pyton 2</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
         <source>Enter the Python 2 documentation directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте каталог документации Pyton2</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения PYTHON2DOCDIR.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="73"/>
         <source>Python 3 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton 3</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="79"/>
         <source>Press to select the Python 3 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте каталог документации Pyton 3</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="89"/>
         <source>Enter the Python 3 documentation directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте каталог документации Pyton 3</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="96"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения PYTHON3DOCDIR.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="78"/>
         <source>Select Python 2 documentation entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тему в документации по Python 2</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.py" line="94"/>
         <source>Select Python 3 documentation entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тему в документации по Python 3</translation>
     </message>
 </context>
 <context>
@@ -12416,132 +12416,135 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="75"/>
         <source>Show a navigation menu</source>
-        <translation type="unfinished">Показать меню</translation>
+        <translation>Показать меню</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="85"/>
         <source>Close the current help window</source>
-        <translation type="unfinished">Закрыть это окно помощи</translation>
+        <translation>Закрыть это окно помощи</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="98"/>
         <source>Open a new help window tab</source>
-        <translation type="unfinished">Открыть новую закладку</translation>
+        <translation>Открыть новую закладку</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>New Tab</source>
-        <translation type="unfinished">Новая закладка</translation>
+        <translation>Новая закладка</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="116"/>
         <source>Move Left</source>
-        <translation type="unfinished">Сдвинуть влево</translation>
+        <translation>Сдвинуть влево</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="119"/>
         <source>Move Right</source>
-        <translation type="unfinished">Сдвинуть вправо</translation>
+        <translation>Сдвинуть вправо</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="123"/>
         <source>Duplicate Page</source>
-        <translation type="unfinished">Дуплисат</translation>
+        <translation>Продублировать страницу</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="127"/>
         <source>Close</source>
-        <translation type="unfinished">Закрыть</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
         <source>Close Others</source>
-        <translation type="unfinished">Закрыть остальные</translation>
+        <translation>Закрыть остальные</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="132"/>
         <source>Close All</source>
-        <translation type="unfinished">Закрыть всё</translation>
+        <translation>Закрыть всё</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="135"/>
         <source>Print Preview</source>
-        <translation type="unfinished">Предварительный просмотр печати</translation>
+        <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
         <source>Print</source>
-        <translation type="unfinished">Печать</translation>
+        <translation>Печать</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="139"/>
         <source>Print as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Печать как PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="142"/>
         <source>Bookmark All Tabs</source>
-        <translation type="unfinished">Создать закладки для всех открытых страниц</translation>
+        <translation>Создать закладки для всех открытых страниц</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="261"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="493"/>
         <source>Eric Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Встроенный просмотрщик Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="493"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="565"/>
         <source>Loading...</source>
-        <translation type="unfinished">Загружаю...</translation>
+        <translation>Загружаю...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="582"/>
         <source>Finished loading</source>
-        <translation type="unfinished">Загрузка завершена</translation>
+        <translation>Загрузка завершена</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="584"/>
         <source>Failed to load</source>
-        <translation type="unfinished">Загрука не удалась</translation>
+        <translation>Загрука не удалась</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="620"/>
         <source>Are you sure you want to close the window?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы действительно хотите закрыть это окно?</translation>
     </message>
     <message numerus="yes">
         <location filename="Helpviewer/HelpTabWidget.py" line="620"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Вы действительно хотите закрыть это окно?
+У Вас открыта %n закладка.</numerusform>
+            <numerusform>Вы действительно хотите закрыть это окно?
+У Вас открыто %n закладки.</numerusform>
+            <numerusform>Вы действительно хотите закрыть это окно?
+У Вас открыто %n закладjк.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="627"/>
         <source>&amp;Close</source>
-        <translation type="unfinished">&amp;Закрыть</translation>
+        <translation>&amp;Закрыть</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="630"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished">&amp;Выход</translation>
+        <translation>&amp;Выход</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="632"/>
         <source>C&amp;lose Current Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Закрыть текущую закладку</translation>
     </message>
 </context>
 <context>
@@ -12938,57 +12941,57 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="271"/>
         <source>Select to enable DNS prefetch</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить предзагрузку DNS</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="274"/>
         <source>Use DNS prefetching to improve page loading</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать прелзагрузку DNS для улучшения загрузки страниц</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Правила</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="367"/>
         <source>Select to prefer the network</source>
-        <translation type="unfinished"></translation>
+        <translation>Предпочитать сеть</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="370"/>
         <source>Keep cache in sync</source>
-        <translation type="unfinished"></translation>
+        <translation>Держать кэш синхронизированным</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="377"/>
         <source>Select to prefer cached data</source>
-        <translation type="unfinished"></translation>
+        <translation>Предпочитать данные из кэша</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="380"/>
         <source>Use cache whenever possible</source>
-        <translation type="unfinished"></translation>
+        <translation>По возможности использовать данные из кэша</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="387"/>
         <source>Select to use cached data only</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать данные только из кэша</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="390"/>
         <source>Offline browsing mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Offline режим</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="69"/>
         <source>Select to show a page preview when the mouse hovers over the tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать содержимое страницы когда мышь находиться на закладке</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="72"/>
         <source>Show preview when hovering tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать содержимое страницы когда мышь находиться на закладке</translation>
     </message>
 </context>
 <context>
@@ -13021,27 +13024,27 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
-        <translation type="unfinished">Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
+        <translation>Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
         <source>SSL Certificate Info</source>
-        <translation type="unfinished"></translation>
+        <translation>SLL сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
         <source>There is no SSL Certificate Info available.</source>
-        <translation type="unfinished"></translation>
+        <translation>SLL сертификат отсутствует.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
         <source>Resending POST request</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторяю POST запрос</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Для того чтобы показать страницу, необходимо повторить запрос, что может вызвать неожиданное поведение сервера, например, он может дважды сделать одно и то же действие. Продолжить не смотря на это?</translation>
     </message>
 </context>
 <context>
@@ -14401,127 +14404,127 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="425"/>
         <source>Print as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Печать как PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="429"/>
         <source>Print the displayed help as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Печатать текущий раздел помощи как PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="430"/>
         <source>&lt;b&gt;Print as PDF&lt;/b&gt;&lt;p&gt;Print the displayed help text as a PDF file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Печать как PDF&lt;/b&gt;&lt;p&gt;Печатать текущий раздел помощи как PDF&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="892"/>
         <source>Offline Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Автономное хранилище</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="892"/>
         <source>Offline &amp;Storage...</source>
-        <translation type="unfinished"></translation>
+        <translation>Автономное &amp;хранилище...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="895"/>
         <source>Configure offline storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка автономного хранилища</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="897"/>
         <source>&lt;b&gt;Offline Storage&lt;/b&gt;&lt;p&gt;Opens a dialog to configure offline storage.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Offline Storage&lt;b&gt;&lt;/b&gt;&lt;p&gt;Настройка автономного хранилища.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1025"/>
         <source>Configure Search &amp;Engines...</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка &amp;поисковиков...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1760"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Подтвердите включение закрытого режима.&lt;/b&gt;&lt;p&gt;В закрытом режиме посещённые WEB страницы не сохраняются в истории, поиски не сохраняються в списке последних поисков, иконки сайтов и cookies так же не сохраняются. HTML5 автономное хранилище будет выключено. Пока текущее окно не закрыто, переход вперёд и назад на просмотренные уже страницы всё же будет работать.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1169"/>
         <source>Text Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Кодировка текста</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1221"/>
         <source>User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2486"/>
         <source>ISO</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2487"/>
         <source>Windows</source>
-        <translation type="unfinished">Windows</translation>
+        <translation>Windows</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2488"/>
         <source>ISCII</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2489"/>
         <source>Unicode</source>
-        <translation type="unfinished">Юникод</translation>
+        <translation>Юникод</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2490"/>
         <source>Other</source>
-        <translation type="unfinished">Другое</translation>
+        <translation>Другое</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2491"/>
         <source>IBM</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2513"/>
         <source>Default Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Кодировка по умолчанию</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1094"/>
         <source>Downloads</source>
-        <translation type="unfinished">Скачивание</translation>
+        <translation>Загрузки</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1097"/>
         <source>Shows the downloads window</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать окно загрузки</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1099"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Загрузки&lt;/b&gt;&lt;p&gt;Показать окно загрузки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1067"/>
         <source>Manage Certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Управлять сертификатами</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1067"/>
         <source>Manage Certificates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Управлять сертификатами...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1071"/>
         <source>Manage the saved certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Управлять сохранёнными сертификатами</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1073"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Управлять сохранёнными сертификатами&lt;/b&gt;&lt;p&gt;Показывает диалог управления сохранёнными сертификатами.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14759,7 +14762,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1741"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Файл группы изменений&lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15403,7 +15406,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="283"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл изменений &lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл изменений &lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15642,27 +15645,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="72"/>
         <source>Branch:</source>
-        <translation type="unfinished">Ветвь:</translation>
+        <translation>Ветвь:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="79"/>
         <source>Select the branch to filter on</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте ветвь, по которой фильтровать</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="124"/>
         <source>All</source>
-        <translation type="unfinished">Все</translation>
+        <translation>Все</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="59"/>
         <source>Mercurial Log (Incoming)</source>
-        <translation type="unfinished"></translation>
+        <translation>лог (входящий)</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="61"/>
         <source>Mercurial Log (Outgoing)</source>
-        <translation type="unfinished"></translation>
+        <translation>лог (исходящий)</translation>
     </message>
 </context>
 <context>
@@ -17111,32 +17114,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Serve project repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить сервер для репозитория проекта</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Serve project repository...</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить сервер для репозитория проекта...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="736"/>
         <source>Serve the project repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить сервер для репозитория проекта</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="739"/>
         <source>&lt;b&gt;Serve project repository&lt;/b&gt;&lt;p&gt;This serves the project repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Запустить сервер для репозитория проекта&lt;/b&gt;&lt;p&gt;Запустить сервер для репозитория проекта.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
         <source>Pull</source>
-        <translation type="unfinished">Загрузить</translation>
+        <translation>Загрузить</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="886"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">Необходимо перезагрузить проект. Сделать это?</translation>
+        <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
 </context>
 <context>
@@ -17335,52 +17338,52 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="44"/>
         <source>Start Server</source>
-        <translation type="unfinished">Запустить сервер</translation>
+        <translation>Запустить сервер</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="49"/>
         <source>Stop Server</source>
-        <translation type="unfinished">Остановить сервер</translation>
+        <translation>Остановить сервер</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="54"/>
         <source>Start Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить просмотрщик</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="62"/>
         <source>Enter the server port</source>
-        <translation type="unfinished">Введите номер порта сервера</translation>
+        <translation>Введите номер порта сервера</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="67"/>
         <source>Select the style to use</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите стиль</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="71"/>
         <source>Server</source>
-        <translation type="unfinished">Сервер</translation>
+        <translation>Сервер</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="78"/>
         <source>Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Просмотрщик</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="132"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Ошибка процесса генерации</translation>
+        <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="132"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgServeDialog.py" line="42"/>
         <source>Mercurial Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercurial сервер</translation>
     </message>
 </context>
 <context>
@@ -17907,9 +17910,9 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="Helpviewer/History/HistoryTreeModel.py" line="67"/>
         <source>%n item(s)</source>
         <translation>
-            <numerusform>%n элемент(ов)</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n элемент</numerusform>
+            <numerusform>%n элементф</numerusform>
+            <numerusform>%n элементов</numerusform>
         </translation>
     </message>
 </context>
@@ -18051,27 +18054,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="84"/>
         <source>Compositing</source>
-        <translation type="unfinished"></translation>
+        <translation>Композиция</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="87"/>
         <source>Replace</source>
-        <translation type="unfinished">Заменить</translation>
+        <translation>Заменить</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="89"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Replace the existing pixel with a new color.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Заменить&lt;/b&gt;&lt;p&gt;Заменить цвет пиксела.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="95"/>
         <source>Blend</source>
-        <translation type="unfinished"></translation>
+        <translation>Смесь</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorPalette.py" line="97"/>
         <source>&lt;b&gt;Blend&lt;/b&gt;&lt;p&gt;Blend the new color over the existing pixel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Смесь&lt;/b&gt;&lt;p&gt;Смешать новый цвет для пикселя.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19131,12 +19134,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1006"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
         <source>The icon image has unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменения в иконке не сохранены.</translation>
     </message>
 </context>
 <context>
@@ -19707,7 +19710,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="102"/>
         <source>Stderr Colour:</source>
-        <translation>Цвет для Stderr</translation>
+        <translation>Цвет для Stderr:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="115"/>
@@ -19787,12 +19790,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="73"/>
         <source>Select to show hidden files in the various browsers</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать скрытые файлы в различных просмотрщиках</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="76"/>
         <source>Show hidden files</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать скрытые файлы</translation>
     </message>
 </context>
 <context>
@@ -20096,27 +20099,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/Lexers/LexerPygments.py" line="192"/>
         <source>Comment block</source>
-        <translation type="unfinished"></translation>
+        <translation>Закомментировать блок</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/LexerPygments.py" line="193"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Проперти</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/LexerPygments.py" line="194"/>
         <source>Character</source>
-        <translation type="unfinished"></translation>
+        <translation>Символ</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/LexerPygments.py" line="195"/>
         <source>Here document</source>
-        <translation type="unfinished"></translation>
+        <translation>Документ</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/LexerPygments.py" line="196"/>
         <source>Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation>Пунктуация</translation>
     </message>
 </context>
 <context>
@@ -20614,22 +20617,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="352"/>
         <source>Python2 Files (*.py2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Python2 файлы (*.py2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="356"/>
         <source>Python2 GUI Files (*.pyw2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Python2 GUI файлы (*.pyw2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="91"/>
         <source>Python2</source>
-        <translation type="unfinished">Python2</translation>
+        <translation>Python2</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="92"/>
         <source>Python3</source>
-        <translation type="unfinished">Python3</translation>
+        <translation>Python3</translation>
     </message>
 </context>
 <context>
@@ -21148,47 +21151,47 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Title</source>
-        <translation type="unfinished">Заголовок</translation>
+        <translation>Заголовок</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="141"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="147"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;self&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;self&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="150"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="160"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;None&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;None&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="163"/>
         <source>None</source>
-        <translation type="unfinished">Нет</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="172"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="175"/>
         <source>Expression:</source>
-        <translation type="unfinished">Выражение:</translation>
+        <translation>Выражение:</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="185"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
 </context>
 <context>
@@ -21815,7 +21818,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1479"/>
         <source>The document has unsaved changes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменения в текущем документе не сохранены.</translation>
     </message>
 </context>
 <context>
@@ -22023,7 +22026,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="MultiProject/MultiProject.py" line="475"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22147,12 +22150,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="283"/>
         <source>Name: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="287"/>
         <source>&lt;br/&gt;Organization: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br/&gt;Организация: {0}</translation>
     </message>
 </context>
 <context>
@@ -22225,7 +22228,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="154"/>
         <source>Manual proxy configuration:</source>
-        <translation>Ручная конфигурация прокси</translation>
+        <translation>Ручная конфигурация прокси:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="167"/>
@@ -22235,102 +22238,102 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
         <source>Http-Proxy:</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
         <source>Enter the name of the HTTP proxy host</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя HTTP прокси сервера</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="280"/>
         <source>Port:</source>
-        <translation type="unfinished">Порт:</translation>
+        <translation>Порт:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="197"/>
         <source>Enter the HTTP proxy port</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите HTTP прокси порт</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="216"/>
         <source>Select to use the HTTP proxy for all</source>
-        <translation type="unfinished"></translation>
+        <translation>Всегда испоьзовать HTTP прокси</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="219"/>
         <source>Use this proxy for all protocols</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать этот прокси сервер для всех протоколов</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="226"/>
         <source>Https-Proxy:</source>
-        <translation type="unfinished"></translation>
+        <translation>Прокси для Https:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="233"/>
         <source>Enter the name of the HTTPS proxy host</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя HTTPS прокси сервера</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="247"/>
         <source>Enter the HTTPS proxy port</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите HTTPS прокси порт</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="266"/>
         <source>Ftp-Proxy:</source>
-        <translation type="unfinished"></translation>
+        <translation>Прокси для Ftp:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="273"/>
         <source>Enter the name of the FTP proxy host</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя FTP прокси сервера</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="287"/>
         <source>Enter the FTP proxy port</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите FTP прокси порт</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="37"/>
         <source>Downloads</source>
-        <translation type="unfinished">Скачивание</translation>
+        <translation>Скачивание</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="81"/>
         <source>Download Manager Cleanup Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Правила для менеджера закачек</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
         <source>Select to never cleanup automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Никогда не удалять автоматически</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="90"/>
         <source>Never</source>
-        <translation type="unfinished">Никогда</translation>
+        <translation>Никогда</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
         <source>Select to cleanup upon exiting</source>
-        <translation type="unfinished"></translation>
+        <translation>Очищать при выходе</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="100"/>
         <source>When exiting the application</source>
-        <translation type="unfinished"></translation>
+        <translation>При выходе из программы</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
         <source>Select to cleanup after a successful download</source>
-        <translation type="unfinished"></translation>
+        <translation>Очищать после успешной закачки</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="110"/>
         <source>When download finished successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>После успешной закачки</translation>
     </message>
 </context>
 <context>
@@ -22417,147 +22420,147 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="UI/NumbersWidget.ui" line="14"/>
         <source>Numbers Formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Фориат чисел</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="25"/>
         <source>Binary</source>
-        <translation type="unfinished"></translation>
+        <translation>Двоичный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="34"/>
         <source>Press to import the selected binary number</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать выбранное двоичное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="183"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="44"/>
         <source>Enter the binary number</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите двоичное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="54"/>
         <source>Press to send the binary number to the current editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Переслать двоичное число в текущий редактор</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="67"/>
         <source>Octal</source>
-        <translation type="unfinished"></translation>
+        <translation>Восьмеричный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="76"/>
         <source>Press to import the selected octal number</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать выбранное восьмеричное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="86"/>
         <source>Enter the octal number</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите восьмеричное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="96"/>
         <source>Press to send the octal number to the current editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Переслать восьмеричное число в текущий редактор</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="109"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="118"/>
         <source>Press to import the selected decimal number</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать выбранное десятичное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="128"/>
         <source>Enter the decimal number</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите десятичное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="138"/>
         <source>Press to send the decimal number to the current editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Переслать десятичное число в текущий редактор</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="151"/>
         <source>Hexadecimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Шестнадцатиричный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="160"/>
         <source>Press to import the selected hex number</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать выбранное шестнадцатиричное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="170"/>
         <source>Enter the hex number</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите шестнадцатиричное число</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="180"/>
         <source>Press to send the hex number to the current editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Переслать шестнадцатиричное число в текущий редактор</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="231"/>
         <source>Input Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат ввода:</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="238"/>
         <source>Select the input format</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите формат ввода</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="251"/>
         <source>Bitsize:</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрядность:</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="258"/>
         <source>Select the bit size</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте разрядность</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="271"/>
         <source>Press to swap the current byte order</source>
-        <translation type="unfinished"></translation>
+        <translation>Поменять порядок байт</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.ui" line="274"/>
         <source>Swap byte order</source>
-        <translation type="unfinished"></translation>
+        <translation>Поменять порядок байт</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.py" line="179"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматически</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.py" line="180"/>
         <source>Dec</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.py" line="181"/>
         <source>Hex</source>
-        <translation type="unfinished"></translation>
+        <translation>Шестнадцатиричный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.py" line="182"/>
         <source>Oct</source>
-        <translation type="unfinished"></translation>
+        <translation>Восьмеричный</translation>
     </message>
     <message>
         <location filename="UI/NumbersWidget.py" line="183"/>
         <source>Bin</source>
-        <translation type="unfinished"></translation>
+        <translation>Двоичный</translation>
     </message>
 </context>
 <context>
@@ -22565,87 +22568,87 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="14"/>
         <source>Offline Storage Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка автономного хранилища</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="23"/>
         <source>&lt;b&gt;Configure offline storage&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Настроить автономное хранилище&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="43"/>
         <source>Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="49"/>
         <source>Select to enable Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="52"/>
         <source>Enable Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="127"/>
         <source>Default Quota:</source>
-        <translation type="unfinished"></translation>
+        <translation>Квота по умолчанию:</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="66"/>
         <source>Enter the default quota for Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Квота по умолчанию для SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="140"/>
         <source> MB</source>
-        <translation type="unfinished">MB</translation>
+        <translation>MB</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="98"/>
         <source>Press to show the Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="101"/>
         <source>Show databases...</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать базы данных...</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="111"/>
         <source>Offline Web Application Cache</source>
-        <translation type="unfinished"></translation>
+        <translation>Offline кэш для Web приложений</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="117"/>
         <source>Select to enable Offline Web Application Caches</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить offline кэш для Web приложений</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="120"/>
         <source>Enable Offline Web Application Caches</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить offline кэш для Web приложений</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="134"/>
         <source>Enter the default quota for Offline Web Application Caches</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите квоту по умолчанию для offline кэша Web приложений</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="169"/>
         <source>Local Web Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Автономное хранилище Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="175"/>
         <source>Select to enable Local Web Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить автономное хранилище Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="178"/>
         <source>Enable Local Web Storage</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить автономное хранилище Web</translation>
     </message>
 </context>
 <context>
@@ -22891,7 +22894,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="376"/>
         <source>Save password</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить пароль</translation>
     </message>
 </context>
 <context>
@@ -22975,22 +22978,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>Check PEP 8 Compliance</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить на соответствие PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="169"/>
         <source>PEP &amp;8 Compliance...</source>
-        <translation type="unfinished"></translation>
+        <translation>Соответствие PEP &amp;8...</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="79"/>
         <source>Check PEP 8 compliance.</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить на соответствие PEP 8.</translation>
     </message>
     <message>
         <location filename="Plugins/PluginPep8Checker.py" line="173"/>
         <source>&lt;b&gt;Check PEP 8 Compliance...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the conventions given in PEP 8.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Проверить на соответствие PEP 8...&lt;/b&gt;&lt;p&gt;Проверить исходники на соответствие PEP 8.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22998,27 +23001,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="14"/>
         <source>PEP 8 Message Codes</source>
-        <translation type="unfinished"></translation>
+        <translation>Коды сообщений PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите коды сообщений из списка:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="30"/>
         <source>Select the message codes from this table</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите коды сообщений из данной таблицы</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="55"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui" line="60"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
 </context>
 <context>
@@ -23026,69 +23029,72 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="14"/>
         <source>PEP 8 Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Результаты проверки на соответствие PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="17"/>
         <source>&lt;b&gt;PEP 8 Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the PEP 8 check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Результаты проверки синтаксиса на соответствие PEP 8&lt;/b&gt;
+&lt;p&gt;Диалог отображает результаты проверки синтаксиса на соответствие PEP 8.
+Двойной щелчок по записи откроет окно редактора и поместит курсор
+на сообветствующую строчку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="34"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Не включать файлы:</translation>
+        <translation>Не включать файлы:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="41"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Задайте маски файлов для исключения, разделённые запятой</translation>
+        <translation>Задайте маски файлов для исключения, разделённые запятой</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="48"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="70"/>
         <source>Press to start the PEP 8 check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить проверку на соответствие PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="73"/>
         <source>Start</source>
-        <translation type="unfinished">Начало</translation>
+        <translation>Начать</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="115"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Не включать сообщения:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="129"/>
         <source>Press to clear the exclude messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="210"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="163"/>
         <source>Press to clear the include messages edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="219"/>
         <source>Select to repeat each message type</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторять однотипные сообщения</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="222"/>
         <source>Repeat messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторять сообщения</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="260"/>
@@ -23096,127 +23102,130 @@ entry will open an editor window and position the cursor at the respective line 
 &lt;p&gt;This list shows the results of the PEP 8 check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Результаты проверки синтаксиса на соответствие PEP 8&lt;/b&gt;
+&lt;p&gt;Диалог отображает результаты проверки синтаксиса на соответствие PEP 8.
+Двойной щелчок по записи откроет окно редактора и поместит курсор
+на сообветствующую строчку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="276"/>
         <source>File/Line</source>
-        <translation type="unfinished">Файл/Строка</translation>
+        <translation>Файл/Строка</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="281"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="286"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="294"/>
         <source>Shows the progress of the PEP 8 check action</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображает прогресс проверки синтаксиса на соответствие PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="57"/>
         <source>Show</source>
-        <translation type="unfinished">Показать</translation>
+        <translation>Показать</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="59"/>
         <source>Press to show all files containing an issue</source>
-        <translation type="unfinished">Показать все файлы, содержащие синтаксические ошибки</translation>
+        <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="285"/>
         <source>Error: {0}</source>
-        <translation type="unfinished">Ошибка: {0}</translation>
+        <translation>Ошибка: {0}</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="353"/>
         <source>No issues found.</source>
-        <translation type="unfinished">Синтаксисические ошибки не найдены.</translation>
+        <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="122"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые не включать в проверку</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="156"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые включать в проверку</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="93"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="96"/>
         <source>Load Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="103"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить текущие значения как значения по умолчанию</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="106"/>
         <source>Store Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="149"/>
         <source>Included Messages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить сообщения:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="52"/>
         <source>Statistics...</source>
-        <translation type="unfinished"></translation>
+        <translation>Статистика...</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="54"/>
         <source>Press to show some statistics for the last run</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать результаты последней проверки</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="207"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите коды сообщений из списка</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="183"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлять автоматически:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="190"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте коды сообщений через запятую которые исправлять автоматически (если пусто, то исправлять всё)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="197"/>
         <source>Press to clear the fix issues edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="232"/>
         <source>Select to fix some issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлять автоматически</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui" line="235"/>
         <source>Fix issues automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлять автоматически</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Dialog.py" line="328"/>
         <source>Fix: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлено: {0}</translation>
     </message>
 </context>
 <context>
@@ -23224,90 +23233,90 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>Fix PEP 8 issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="101"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Не могу сохранить файл &lt;b&gt;{0}&lt;/b&gt;. Пропускаю.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Не могу сохранить файл &lt;b&gt;{0}&lt;/b&gt;. Пропускаю.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="170"/>
         <source>Tab converted to 4 spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Символы табуляции заменены на 4 пробела.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="184"/>
         <source>Whitespace stripped from end of line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Завершающие пробелы обрезаны.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="197"/>
         <source>newline added to end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевод строки добавлен в конец файла.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="216"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены пустые строчки в конце файла.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="230"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;&lt;&gt;&apos; заменен на &apos;!=&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="255"/>
         <source>Superfluous blank lines after function decorator removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены пустые строчки после декоратора функции.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="280"/>
         <source>Superfluous blank lines removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены излишние пустые строчки.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="298"/>
         <source>One blank line inserted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена одна пустая строка.</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="332"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Добавлена %n пустая строка.</numerusform>
+            <numerusform>Добавлено %n пустые строки.</numerusform>
+            <numerusform>Добавлено %n пустых строк.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Удалена %n излишняя пустая строчка</numerusform>
+            <numerusform>Удалены %n излишние пустые строчки</numerusform>
+            <numerusform>Удалены %n излишних пустых строчек</numerusform>
         </translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="377"/>
         <source>Superfluous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены излишние пробелы.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="479"/>
         <source>Missing whitespace added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлены недостающие пробелы.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="456"/>
         <source>Extraneous whitespace removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены излишние пробелы.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="503"/>
         <source>Whitespace after inline comment sign corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлено количество пробелов после символа комментариев.</translation>
     </message>
 </context>
 <context>
@@ -23315,12 +23324,12 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="140"/>
         <source>Python2 interpreter not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не настроен.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Checker.py" line="200"/>
         <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не завершился в течение 15 секунд.</translation>
     </message>
 </context>
 <context>
@@ -23328,57 +23337,57 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="14"/>
         <source>PEP 8 Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Результаты проверки PEP 8</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="30"/>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui" line="40"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="55"/>
         <source>%n issue(s) found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Найдена %n проблемма</numerusform>
+            <numerusform>Найдено %n проблеммы</numerusform>
+            <numerusform>Найдено %n проблемм</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="59"/>
         <source>%n file(s) checked</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Проверен %n файл</numerusform>
+            <numerusform>Проверено %n файла</numerusform>
+            <numerusform>Проверено %n файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="61"/>
         <source>%n file(s) with issues found</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n файл содержит ошибки</numerusform>
+            <numerusform>%n файла содержат ошибки</numerusform>
+            <numerusform>%n файлов содержат ошибки</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="57"/>
         <source>%n issue(s) fixed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ошибка исправлена</numerusform>
+            <numerusform>%n ошибки исправлено</numerusform>
+            <numerusform>%n ошибок исправлено</numerusform>
         </translation>
     </message>
 </context>
@@ -24112,7 +24121,7 @@ Select Update.</source>
     <message>
         <location filename="Preferences/__init__.py" line="921"/>
         <source>Properties File (*.ini);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы свойств (*.ini);;Все файлы (*)</translation>
     </message>
 </context>
 <context>
@@ -24354,7 +24363,7 @@ Select Update.</source>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="191"/>
         <source>Source Highlighter - Pygments</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветка синтаксиса - Pygments</translation>
     </message>
 </context>
 <context>
@@ -25451,7 +25460,7 @@ Select Update.</source>
     <message>
         <location filename="Project/Project.py" line="202"/>
         <source>Python2 Files (*.py2);;Python2 GUI Files (*.pyw2);;</source>
-        <translation type="unfinished"></translation>
+        <translation>Python2 файлы (*.py2);;Python2 GUI файлы (*.pyw2);;</translation>
     </message>
 </context>
 <context>
@@ -26246,17 +26255,17 @@ Select Update.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="192"/>
         <source>Python Variant</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия Python</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="198"/>
         <source>Select to determine the Python variant from the project language</source>
-        <translation type="unfinished"></translation>
+        <translation>Определять версию интерпретатора Python изходя из языка проекта</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="201"/>
         <source>Determine Python variant from project language</source>
-        <translation type="unfinished"></translation>
+        <translation>Определить версию интерпретатора Python изходя из языка проекта</translation>
     </message>
 </context>
 <context>
@@ -27134,12 +27143,12 @@ Select Update.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure PyFlakes Behavior&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Настроить PyFlakes&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="40"/>
         <source>Include PyFlakes Checks</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить PyFlakes проверку</translation>
     </message>
 </context>
 <context>
@@ -27924,7 +27933,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="491"/>
         <source>ASCII</source>
-        <translation type="unfinished">ASCII</translation>
+        <translation>ASCII</translation>
     </message>
 </context>
 <context>
@@ -28160,12 +28169,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="314"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="392"/>
         <source>Validation</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка</translation>
     </message>
 </context>
 <context>
@@ -28223,12 +28232,12 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="Preferences/ConfigurationPages/PythonPage.ui" line="125"/>
         <source>Python 2 Interpreter</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python 2</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/PythonPage.ui" line="131"/>
         <source>Please configure the Python 2 interpreter on the &apos;Python 2 Debugger&apos; page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите интерпретатор Python 2 на странице &apos;Python 2 Отладчик&apos;.</translation>
     </message>
 </context>
 <context>
@@ -28803,12 +28812,12 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="228"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="301"/>
         <source>Validation</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка</translation>
     </message>
 </context>
 <context>
@@ -28816,7 +28825,7 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="Helpviewer/Network/QtHelpAccessHandler.py" line="115"/>
         <source>&lt;title&gt;Error 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;The page could not be found&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;{0}&apos;&lt;/h3&gt;&lt;/div&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;title&gt;Ошибка 404...&lt;/title&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;h1&gt;Страница не найдена&lt;/h1&gt;&lt;br&gt;&lt;h3&gt;&apos;{0}&apos;&lt;/h3&gt;&lt;/div&gt;</translation>
     </message>
 </context>
 <context>
@@ -28884,7 +28893,7 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="Helpviewer/QtHelpDocumentationDialog.py" line="106"/>
         <source>Some documents currently opened reference the documentation you are attempting to remove. Removing the documentation will close those documents. Remove anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Удаление данной документации приведёт к закрытию всех открытых в данный момент документов которые ссылаются на эту документацию. Удалить?</translation>
     </message>
 </context>
 <context>
@@ -29199,7 +29208,7 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="Helpviewer/SearchWidget.ui" line="90"/>
         <source>Highlight all</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсвечивать всё</translation>
     </message>
 </context>
 <context>
@@ -29591,7 +29600,7 @@ Not connected</source>
     <message>
         <location filename="Preferences/Shortcuts.py" line="197"/>
         <source>&lt;p&gt;The keyboard shortcuts could not be written to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно записать горячие клавиши в файл &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно записать горячие клавиши в файл &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -30041,7 +30050,7 @@ Not connected</source>
     <message>
         <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
         <source>Unable to open connection: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу соединениться: {0}</translation>
     </message>
 </context>
 <context>
@@ -30248,152 +30257,153 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="14"/>
         <source>SSL Certificate Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Менеджер SLL сертификатов</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="27"/>
         <source>&amp;Servers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Серверы</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификаты следующих серверов уже сохранены:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="140"/>
         <source>Certificate name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя сертификата</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="46"/>
         <source>Server</source>
-        <translation type="unfinished">Сервер</translation>
+        <translation>Сервер</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="145"/>
         <source>Expiry Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата окончания</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="158"/>
         <source>Press to view the selected certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать выбранный сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="161"/>
         <source>&amp;View...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Показать...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="194"/>
         <source>Press to delete the selected certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить выбранный сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="197"/>
         <source>&amp;Delete...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Удалить...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="126"/>
         <source>Certificate &amp;Authorities</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Авторитеты</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сертификаты для следующих авторитетов уже сохранены:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="251"/>
         <source>(Unknown)</source>
-        <translation type="unfinished"></translation>
+        <translation>(неизвестный)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="255"/>
         <source>(Unknown common name)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Неизвестное имя)
+</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
         <source>Delete Server Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить сертификат сервера</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="168"/>
         <source>Press to import a certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="171"/>
         <source>&amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Импорт...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="181"/>
         <source>Press to export the selected certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.ui" line="184"/>
         <source>&amp;Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Экспорт...</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
         <source>Import Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="337"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
         <source>Delete CA Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить CA сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
         <source>Export Certificate</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортировать сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="374"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="390"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="400"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -30401,72 +30411,72 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="14"/>
         <source>SSL Certificate Info</source>
-        <translation type="unfinished"></translation>
+        <translation>SLL сертификат</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="28"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Выдан для&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="122"/>
         <source>Common Name (CN)</source>
-        <translation type="unfinished"></translation>
+        <translation>Общее имя (CN)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="142"/>
         <source>Organization (O)</source>
-        <translation type="unfinished"></translation>
+        <translation>Организация (O)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="162"/>
         <source>Organizational Unit (OU)</source>
-        <translation type="unfinished"></translation>
+        <translation>Организационное подразделение (OU)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="95"/>
         <source>Serialnumber</source>
-        <translation type="unfinished"></translation>
+        <translation>Серийный номер</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="115"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Выдан&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="182"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Верен&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="189"/>
         <source>Issued on</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата выдачи</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="209"/>
         <source>Expires on</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата окончания</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="229"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Отпечатки&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="236"/>
         <source>SHA1-Fingerprint</source>
-        <translation type="unfinished"></translation>
+        <translation>SHA1</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="256"/>
         <source>MD5-Fingerprint</source>
-        <translation type="unfinished"></translation>
+        <translation>MD5</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.py" line="73"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Не является частью сертификата&gt;</translation>
     </message>
 </context>
 <context>
@@ -32282,7 +32292,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="333"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл изменений &lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл изменений &lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -35007,532 +35017,532 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="UI/SymbolsWidget.py" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="36"/>
         <source>Char</source>
-        <translation type="unfinished"></translation>
+        <translation>Символ</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="37"/>
         <source>Hex</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="38"/>
         <source>HTML</source>
-        <translation type="unfinished">HTML</translation>
+        <translation>HTML</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="39"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Control Characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Контрольный символ</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Basic Latin</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Latin-1 Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Latin Extendet A</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Latin Extendet B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>IPA Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Spacing Modifier Letters</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Combining Diacritical Marks</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Greek and Coptic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Cyrillic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Cyrillic Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Armenian</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hebrew</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Syriac</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Thaana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Devanagari</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Bengali</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Gurmukhi</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Gujarati</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Oriya</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Tamil</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Telugu</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Kannada</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Malayalam</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Sinhala</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Thai</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Lao</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Tibetan</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Myanmar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Georgian</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hangul Jamo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Ethiopic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Cherokee</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Canadian Aboriginal Syllabics</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Ogham</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Runic</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Tagalog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hanunoo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Buhid</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Tagbanwa</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Khmer</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Mongolian</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Limbu</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Tai Le</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Khmer Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Phonetic Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Latin Extended Additional</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Greek Extended</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>General Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Superscripts and Subscripts</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Currency Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Letterlike Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Number Forms</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Arcolumns</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Mathematical Operators</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Miscelaneous Technical</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Control Pictures</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Optical Character Recognition</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Enclosed Alphanumerics</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Box Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Block Elements</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Miscelaneous Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Dingbats</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Miscelaneous Mathematical Symbols-A</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Supplement Arcolumns-A</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Braille Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Supplement Arcolumns-B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Miscelaneous Mathematical Symbols-B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Supplemental Mathematical Operators</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Miscelaneous Symbols and Arcolumns</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Radicals Supplement</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>KangXi Radicals</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Ideographic Description Chars</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Symbols and Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hiragana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Katakana</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Bopomofo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hangul Compatibility Jamo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Kanbun</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Bopomofo Extended</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Katakana Phonetic Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Enclosed CJK Letters and Months</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Compatibility</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Unified Ideogr. Ext. A</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Yijing Hexagram Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Unified Ideographs</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Yi Syllables</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Yi Radicals</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Hangul Syllables</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Private Use Area</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Compatibility Ideographs</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Alphabetic Presentation Forms</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Arabic Presentation Forms-A</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Variation Selectors</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Combining Half Marks</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>CJK Compatibility Forms</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Small Form Variants</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Arabic Presentation Forms-B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Half- and Fullwidth Forms</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.py" line="42"/>
         <source>Specials</source>
-        <translation type="unfinished">Специфический</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -35540,22 +35550,22 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="UI/SymbolsWidget.ui" line="14"/>
         <source>Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Символы</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.ui" line="85"/>
         <source>Symbol code:</source>
-        <translation type="unfinished"></translation>
+        <translation>Код символа:</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.ui" line="92"/>
         <source>Enter the symbol code</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите код символа</translation>
     </message>
     <message>
         <location filename="UI/SymbolsWidget.ui" line="38"/>
         <source>Select the table to be shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите таблицу для просмотра</translation>
     </message>
 </context>
 <context>
@@ -35623,32 +35633,32 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="40"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Не включать файлы:</translation>
+        <translation>Не включать файлы:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="47"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Задайте маски файлов для исключения, разделённые запятой</translation>
+        <translation>Задайте разделённые запятой маски файлов для исключения</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="54"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="74"/>
         <source>Press to start the syntax check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить проверку синтаксиса</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="77"/>
         <source>Start</source>
-        <translation type="unfinished">Начало</translation>
+        <translation>Начать</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="188"/>
         <source>Error: {0}</source>
-        <translation type="unfinished">Ошибка: {0}</translation>
+        <translation>Ошибка: {0}</translation>
     </message>
 </context>
 <context>
@@ -36007,7 +36017,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="248"/>
         <source>Copy Path to Clipboard</source>
-        <translation type="unfinished">Сопировать путь в буфер обмена</translation>
+        <translation>Сопировать путь в буфер обмена</translation>
     </message>
 </context>
 <context>
@@ -36064,37 +36074,37 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="40"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Не включать файлы:</translation>
+        <translation>Не включать файлы:</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="47"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished">Задайте маски файлов для исключения, разделённые запятой</translation>
+        <translation>Задайте разделённые запятой маски файлов для исключения</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="54"/>
         <source>Press to clear the filter edit</source>
-        <translation type="unfinished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="74"/>
         <source>Press to start the tabnanny run</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить проверку символов табуляции</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="77"/>
         <source>Start</source>
-        <translation type="unfinished">Начало</translation>
+        <translation>Начать</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="256"/>
         <source>Python2 interpreter not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не настроен.</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="281"/>
         <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не завершился в течение 15 секунд.</translation>
     </message>
 </context>
 <context>
@@ -37390,7 +37400,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Menu text&lt;/b&gt;
-&lt;p&gt;Задайте текст меню. Для указания быстрой клавиши поставьте перед буквой &apos;&amp;&apos;&lt;/p&gt;</translation>
+&lt;p&gt;Задайте текст меню. Для указания быстрой клавиши поставьте перед символом &amp;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ToolConfigurationDialog.ui" line="210"/>
@@ -37659,7 +37669,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Menu text&lt;/b&gt;
-&lt;p&gt;Задайте текст меню. Для указания быстрой клавиши поставьте перед буквой &apos;&amp;&apos;&lt;/p&gt;</translation>
+&lt;p&gt;Задайте текст меню. Для указания быстрой клавиши поставьте перед Символом &apos;&amp;&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ToolGroupConfigurationDialog.py" line="91"/>
@@ -37993,7 +38003,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Tools/TrayStarter.py" line="116"/>
         <source>Preferences (tray starter)</source>
-        <translation type="unfinished"></translation>
+        <translation>Предпочтения (системный лоток)</translation>
     </message>
 </context>
 <context>
@@ -38001,52 +38011,52 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Tray Starter&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Настроить запуск в системном лотке&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="37"/>
         <source>Icon</source>
-        <translation type="unfinished">Иконка</translation>
+        <translation>Иконка</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="43"/>
         <source>Select to use the standard icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать стандартную иконку</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="46"/>
         <source>Standard Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Стандартная иконка</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="53"/>
         <source>Select to use the high contrast icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать иконку высокой контрастности</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="56"/>
         <source>High Contrast Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Иконка высокой контрастности</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="63"/>
         <source>Select to use a black and white icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать чёрно-белую иконку</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="66"/>
         <source>Black and White Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Чёрно-белая иконка</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="73"/>
         <source>Select to use an inverse black and white icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать инвертированную чёрно-белую иконку</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TrayStarterPage.ui" line="76"/>
         <source>Inverse Black and White Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Инвертированная чёрно-белая иконка</translation>
     </message>
 </context>
 <context>
@@ -38479,7 +38489,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Graphics/UMLGraphicsView.py" line="340"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -38777,12 +38787,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="43"/>
         <source>Enter the location here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте адрес.</translation>
     </message>
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="156"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестный</translation>
     </message>
 </context>
 <context>
@@ -38790,32 +38800,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="42"/>
         <source>Default</source>
-        <translation type="unfinished">По умолчанию</translation>
+        <translation>По умолчанию</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="54"/>
         <source>Other...</source>
-        <translation type="unfinished"></translation>
+        <translation>Другой...</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="77"/>
         <source>Custom user agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Специальный агент пользователя</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="77"/>
         <source>User agent:</source>
-        <translation type="unfinished"></translation>
+        <translation>Агент пользователя:</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="122"/>
         <source>Parsing default user agents</source>
-        <translation type="unfinished"></translation>
+        <translation>Анализирую агентов пользователя</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="122"/>
         <source>&lt;p&gt;Error parsing default user agents.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Ошибка при анализе агентов пользователя.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -40435,12 +40445,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1871"/>
         <source>Browse a SQL database</source>
-        <translation>Просмотреть SQL вазу данных</translation>
+        <translation>Просмотреть SQL базу данных</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1872"/>
         <source>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Browse a SQL database.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Просмотрщик SQL&lt;/b&gt;&lt;p&gt;Просмотреть SQL вазу данных.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Просмотрщик SQL&lt;/b&gt;&lt;p&gt;Просмотреть SQL базу данных.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4341"/>
@@ -40625,107 +40635,109 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1595"/>
         <source>Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Символы</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1595"/>
         <source>&amp;Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Символы</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1597"/>
         <source>Toggle the Symbols window</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать/скрыть окно символов</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1599"/>
         <source>&lt;b&gt;Toggle the Symbols window&lt;/b&gt;&lt;p&gt;If the Symbols window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Показать/скрыть окно символов&lt;/b&gt;
+&lt;p&gt;Если окно символов скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1607"/>
         <source>Activate Symbols-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Активизировать просмотрщик символов</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1607"/>
         <source>Alt+Shift+Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Y</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1617"/>
         <source>Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Числа</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1617"/>
         <source>&amp;Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Числа</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1619"/>
         <source>Toggle the Numbers window</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать/скрыть окно чисел</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1621"/>
         <source>&lt;b&gt;Toggle the Numbers window&lt;/b&gt;&lt;p&gt;If the Numbers window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Показать/скрыть окно чисел&lt;/b&gt;
+&lt;p&gt;Если окно чисел скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1629"/>
         <source>Activate Numbers-Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Активизировать просмотрщик чисел</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1629"/>
         <source>Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5014"/>
         <source>Keyboard shortcut file (*.e4k)</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл горячих клавиш (*.e4k)</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2158"/>
         <source>Python 3 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton 3</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2158"/>
         <source>Python &amp;3 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton &amp;3</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2160"/>
         <source>Open Python 3 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть документацию Python 3</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2161"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Документация Pyton 3&lt;/b&gt;&lt;p&gt;Показать Pyton 3 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 3 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON3DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2173"/>
         <source>Python 2 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton 2</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2173"/>
         <source>Python &amp;2 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Документация Pyton &amp;2</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2175"/>
         <source>Open Python 2 Documentation</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть документацию Python 2</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2176"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Документация Pyton 2&lt;/b&gt;&lt;p&gt;Показать Pyton 2 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 2 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON2DOCDIR.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -40797,12 +40809,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Utilities/__init__.py" line="1131"/>
         <source>Python2 interpreter not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не настроен.</translation>
     </message>
     <message>
         <location filename="Utilities/__init__.py" line="1176"/>
         <source>Python2 interpreter did not finish within 30s.</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерпретатор Python2 не завершился в течение 30 секунд.</translation>
     </message>
 </context>
 <context>
@@ -41417,7 +41429,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="VCS/ProjectHelper.py" line="211"/>
         <source>The project retrieved from the repository does not contain an eric project file (*.e4p). Create it?</source>
-        <translation type="unfinished"></translation>
+        <translation>В проекте отсутствует файл описания проекта (*.e4p). Создать?</translation>
     </message>
 </context>
 <context>
@@ -44067,18 +44079,18 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="ViewManager/ViewManager.py" line="848"/>
         <source>Join Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединить строки</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="842"/>
         <source>Ctrl+J</source>
         <comment>Edit|Join Lines</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="850"/>
         <source>&lt;b&gt;Join Lines&lt;/b&gt;&lt;p&gt;Join the current and the next lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Соединить строки&lt;/b&gt;&lt;p&gt;Соединить текущую и следующую строки.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -44156,12 +44168,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Preferences/ViewProfileDialog.ui" line="230"/>
         <source>Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Символы</translation>
     </message>
     <message>
         <location filename="Preferences/ViewProfileDialog.ui" line="203"/>
         <source>Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Числа</translation>
     </message>
 </context>
 <context>
@@ -44468,37 +44480,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="14"/>
         <source>Web SQL Databases</source>
-        <translation type="unfinished"></translation>
+        <translation>SQL базы данных для Web</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="50"/>
         <source>Press to clear the search edit</source>
-        <translation type="unfinished">Очистить редактор поиска</translation>
+        <translation>Очистить редактор поиска</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="74"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Удалить выбранные элементы</translation>
+        <translation>Удалить выбранные элементы</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="77"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished">&amp;Удалить</translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="84"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Удалить все элементы</translation>
+        <translation>Удалить все элементы</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="87"/>
         <source>Remove &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить &amp;все</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesDialog.ui" line="43"/>
         <source>Enter search term for databases</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите образец поиска в базах данных</translation>
     </message>
 </context>
 <context>
@@ -44506,37 +44518,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="27"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="28"/>
         <source>Size</source>
-        <translation type="unfinished">Размер</translation>
+        <translation>Размер</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="99"/>
         <source>Local</source>
-        <translation type="unfinished">Локальный</translation>
+        <translation>Локальный</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="117"/>
         <source>{0} ({1})</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="205"/>
         <source>bytes</source>
-        <translation type="unfinished">байты</translation>
+        <translation>байты</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="208"/>
         <source>kB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/WebDatabasesModel.py" line="211"/>
         <source>MB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -44544,12 +44556,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Tools/TRPreviewer.py" line="738"/>
         <source>Load UI File</source>
-        <translation type="unfinished">Загрузить файл UI</translation>
+        <translation>Загрузить файл UI</translation>
     </message>
     <message>
         <location filename="Tools/TRPreviewer.py" line="738"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно загрузить файл: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно загрузить файл: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -44570,27 +44582,27 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="54"/>
         <source>XML parse error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка анализа XML</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="175"/>
         <source>Pickle data encoding &apos;{0}&apos; is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Кодировка &apos;{0}&apos; данных pickle не поддерживается.</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="50"/>
         <source>&lt;p&gt;XML parse error in file &lt;b&gt;{0}&lt;/b&gt;, line {1}, column {2}&lt;/p&gt;&lt;p&gt;Error: {3}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Ошибка анализа XML файла&lt;b&gt;{0}&lt;/b&gt;, строка {1}, позиция {2}&lt;br&gt;Ошибка: {3}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="73"/>
         <source>File format version &apos;{0}&apos; is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат версии &apos;{0}&apos; не поддерживается.</translation>
     </message>
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="82"/>
         <source>Bad value: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Неправильное значение: {0}</translation>
     </message>
 </context>
 <context>
@@ -44726,177 +44738,177 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="164"/>
         <source>indentation contains mixed spaces and tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>отступ содержит смесь пробелов и символов табуляции</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="166"/>
         <source>indentation is not a multiple of four</source>
-        <translation type="unfinished"></translation>
+        <translation>величина отступа не кратна четырём</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="168"/>
         <source>expected an indented block</source>
-        <translation type="unfinished"></translation>
+        <translation>ожидался блок с отступом</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="170"/>
         <source>unexpected indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>неожиданный отступ</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="172"/>
         <source>indentation contains tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>отступ содержит символы табуляции</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="174"/>
         <source>whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>пробел после &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="180"/>
         <source>whitespace before &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>пробел перед &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="182"/>
         <source>multiple spaces before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>множественные пробелы перед оператором</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="184"/>
         <source>multiple spaces after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>множественные пробелы после оператора</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="186"/>
         <source>tab before operator</source>
-        <translation type="unfinished"></translation>
+        <translation>символ табуляции перед оператором</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="188"/>
         <source>tab after operator</source>
-        <translation type="unfinished"></translation>
+        <translation>символ табуляции после оператора</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="190"/>
         <source>missing whitespace around operator</source>
-        <translation type="unfinished"></translation>
+        <translation>пропущены пробелы вокруг оператора</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="192"/>
         <source>missing whitespace after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>пропущены пробелы после &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="194"/>
         <source>multiple spaces after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>множественные пробелы после &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="196"/>
         <source>tab after &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>символ табуляции после &apos;{0}&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="198"/>
         <source>no spaces around keyword / parameter equals</source>
-        <translation type="unfinished"></translation>
+        <translation>пропущены пробелы вокруг ключевого слова или параметра</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="200"/>
         <source>at least two spaces before inline comment</source>
-        <translation type="unfinished"></translation>
+        <translation>по крайней мере два пробела перед встроенным комментарием</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="202"/>
         <source>inline comment should start with &apos;# &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>встроенный комментарий должен начинаться с &apos;# &apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="204"/>
         <source>trailing whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>пробелы в конце строки</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="206"/>
         <source>no newline at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует перевод строки в конце файла</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="208"/>
         <source>blank line contains whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка содержит пробелы</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="210"/>
         <source>expected 1 blank line, found 0</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует одна пустая строка</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="212"/>
         <source>expected 2 blank lines, found {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствуют две пустые строки</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="214"/>
         <source>too many blank lines ({0})</source>
-        <translation type="unfinished"></translation>
+        <translation>слишком много пустых строк ({0})</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="216"/>
         <source>blank lines found after function decorator</source>
-        <translation type="unfinished"></translation>
+        <translation>пустые строки после декоратора функции</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="218"/>
         <source>blank line at end of file</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка в конце файла</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="220"/>
         <source>multiple imports on one line</source>
-        <translation type="unfinished"></translation>
+        <translation>множественный импорт в одной строке</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="222"/>
         <source>line too long ({0} characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>строка слишком длинная ({0} символов)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="224"/>
         <source>.has_key() is deprecated, use &apos;in&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>метод .has_key() устарел, используйте &apos;in&apos; оператор</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="226"/>
         <source>deprecated form of raising exception</source>
-        <translation type="unfinished"></translation>
+        <translation>устаревший метод возбуждения исключений</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="228"/>
         <source>&apos;&lt;&gt;&apos; is deprecated, use &apos;!=&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>оператор &apos;&lt;&gt;&apos; устарел, используйте &apos;!=&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="230"/>
         <source>backticks are deprecated, use &apos;repr()&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>оператор обратных кавычек устарел, используйте функцию &apos;repr()&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="232"/>
         <source>multiple statements on one line (colon)</source>
-        <translation type="unfinished"></translation>
+        <translation>множественные предложения на одной строке (двоеточие)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="234"/>
         <source>multiple statements on one line (semicolon)</source>
-        <translation type="unfinished"></translation>
+        <translation>множественные предложения на одной строке (точка с запятой)</translation>
     </message>
     <message>
         <location filename="Plugins/CheckerPlugins/Pep8/pep8.py" line="264"/>
         <source>no message for this code defined</source>
-        <translation type="unfinished"></translation>
+        <translation>сообщение об ошибке не определено</translation>
     </message>
 </context>
 <context>
