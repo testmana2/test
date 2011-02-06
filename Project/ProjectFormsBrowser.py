@@ -15,7 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -492,14 +492,13 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         templateFile = os.path.join(getConfig('ericTemplatesDir'),
             self.templates4[templateIndex])
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("New Form"),
             path,
             self.trUtf8("Qt User-Interface Files (*.ui);;All Files (*)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
             # user aborted or didn't enter a filename

@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import QWebPage
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .BookmarkNode import BookmarkNode
 from .BookmarksModel import BookmarksModel
@@ -334,12 +334,11 @@ class BookmarksManager(QObject):
             self.trUtf8("HTML Netscape bookmarks") + " (*.html)"
         ]
         
-        fileName = QFileDialog.getOpenFileName(
+        fileName = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Import Bookmarks"),
             "",
-            ";;".join(supportedFormats), 
-            QFileDialog.DontUseNativeDialog)
+            ";;".join(supportedFormats))
         if not fileName:
             return
         
@@ -383,12 +382,11 @@ class BookmarksManager(QObject):
         """
         Public method to export the bookmarks.
         """
-        fileName, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             None,
             self.trUtf8("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"))
         if not fileName:
             return
         

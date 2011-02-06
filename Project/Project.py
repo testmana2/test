@@ -1520,13 +1520,12 @@ class Project(QObject):
         isSourceFile = fn in self.pdata["SOURCES"]
         
         if newfn is None:
-            newfn = QFileDialog.getSaveFileName(
+            newfn = E5FileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Rename file"),
                 os.path.dirname(oldfn),
                 "",
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if not newfn:
                 return False
             newfn = Utilities.toNativeSeparators(newfn)
@@ -2222,12 +2221,11 @@ class Project(QObject):
             return
         
         if fn is None:
-            fn = QFileDialog.getOpenFileName(
+            fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open project"),
                 "",
-                self.trUtf8("Project Files (*.e4p)"), 
-                QFileDialog.DontUseNativeDialog)
+                self.trUtf8("Project Files (*.e4p)"))
         
         QApplication.processEvents()
         
@@ -2390,8 +2388,7 @@ class Project(QObject):
             self.ppath,
             self.trUtf8("Project Files (*.e4p)"),
             defaultFilter,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if fn:
             ext = QFileInfo(fn).suffix()

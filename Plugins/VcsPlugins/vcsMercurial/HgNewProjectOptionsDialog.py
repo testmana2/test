@@ -10,9 +10,10 @@ Module implementing the Mercurial Options Dialog for a new project from the repo
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir
-from PyQt4.QtGui import QDialog, QFileDialog
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_HgNewProjectOptionsDialog import Ui_HgNewProjectOptionsDialog
 from .Config import ConfigHgProtocols
@@ -54,12 +55,11 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         Private slot to display a selection dialog.
         """
         if self.protocolCombo.currentText() == "file://":
-            directory = QFileDialog.getExistingDirectory(
+            directory = E5FileDialog.getExistingDirectory(
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
@@ -69,12 +69,11 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Project Directory"),
             self.vcsProjectDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
         if directory:
             self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(directory))

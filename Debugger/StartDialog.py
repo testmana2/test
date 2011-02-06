@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 import Utilities
 import Preferences
@@ -115,12 +116,11 @@ class StartDialog(QDialog):
         Private method used to open a directory selection dialog.
         """
         cwd = self.ui.workdirCombo.currentText()
-        d = QFileDialog.getExistingDirectory(
+        d = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Working directory"),
             cwd,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if d:
             self.ui.workdirCombo.setEditText(Utilities.toNativeSeparators(d))

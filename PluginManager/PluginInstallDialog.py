@@ -17,6 +17,8 @@ import urllib.parse
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
+from E5Gui import E5FileDialog
+
 from .PluginManager import PluginManager
 from .Ui_PluginInstallDialog import Ui_PluginInstallDialog
 
@@ -142,12 +144,11 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         Private slot to select plugin ZIP-archives via a file selection dialog.
         """
         dn = Preferences.getPluginManager("DownloadPath")
-        archives = QFileDialog.getOpenFileNames(
+        archives = E5FileDialog.getOpenFileNames(
             self,
             self.trUtf8("Select plugin ZIP-archives"),
             dn,
-            self.trUtf8("Plugin archive (*.zip)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Plugin archive (*.zip)"))
         
         if archives:
             matchflags = Qt.MatchFixedString

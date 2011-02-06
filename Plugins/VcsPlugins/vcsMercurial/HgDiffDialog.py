@@ -11,9 +11,9 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QBrush, QColor, \
-    QTextCursor, QFileDialog, QLineEdit
+    QTextCursor, QLineEdit
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_HgDiffDialog import Ui_HgDiffDialog
 
@@ -263,14 +263,13 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             fname = self.vcs.splitPath(self.filename)[0]
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diff"),
             fname,
             self.trUtf8("Patch Files (*.diff)"),
             None,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
             return  # user aborted

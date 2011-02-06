@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
@@ -91,12 +92,10 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         if not startdir and self.startdir is not None:
             startdir = self.startdir
         
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory"),
-            startdir,
-            QFileDialog.Options(QFileDialog.Option(
-                                QFileDialog.DontUseNativeDialog)))
+            startdir)
         
         if directory:
             textEdit.setText(Utilities.toNativeSeparators(directory))

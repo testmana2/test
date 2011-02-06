@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from QScintilla.SpellChecker import SpellChecker
 
@@ -71,12 +72,11 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         pwl = self.pwlEdit.text()
         if not pwl:
             pwl = self.project.ppath
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project word list"),
             pwl,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
         
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -89,12 +89,11 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         pel = self.pelEdit.text()
         if not pel:
             pel = self.project.ppath
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select project exclude list"),
             pel,
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
@@ -97,12 +98,11 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         Private slot to handle the interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select interpreter for Debug Client"),
             self.interpreterEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
             
         if file:
             self.interpreterEdit.setText(Utilities.toNativeSeparators(file))
@@ -114,12 +114,11 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         filters = self.project.dbgFilters[self.project.pdata["PROGLANGUAGE"][0]]
         filters += self.trUtf8("All Files (*)")
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),
-            filters, 
-            QFileDialog.DontUseNativeDialog)
+            filters)
             
         if file:
             self.debugClientEdit.setText(Utilities.toNativeSeparators(file))

@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
@@ -90,12 +91,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         tp = self.transPatternEdit.text()
         if "%language%" in tp:
             tp = tp.split("%language%")[0]
-        tsfile = QFileDialog.getOpenFileName(
+        tsfile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select translation file"),
             tp,
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if tsfile:
             self.transPatternEdit.setText(Utilities.toNativeSeparators(tsfile))
@@ -115,12 +115,10 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory for binary translations"),
-            self.transBinPathEdit.text(),
-            QFileDialog.Options(QFileDialog.Option(
-                                QFileDialog.DontUseNativeDialog)))
+            self.transBinPathEdit.text())
         
         if directory:
             self.transBinPathEdit.setText(Utilities.toNativeSeparators(directory))
@@ -159,12 +157,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to select a file to exempt from translation.
         """
-        texcept = QFileDialog.getOpenFileName(
+        texcept = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Exempt file from translation"),
             self.project.ppath,
-            self.filters, 
-            QFileDialog.DontUseNativeDialog)
+            self.filters)
         if texcept:
             self.exceptionEdit.setText(Utilities.toNativeSeparators(texcept))
         
@@ -173,12 +170,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Private slot to select a file to exempt from translation.
         """
-        texcept = QFileDialog.getExistingDirectory(
+        texcept = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Exempt directory from translation"),
             self.project.ppath,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         if texcept:
             self.exceptionEdit.setText(Utilities.toNativeSeparators(texcept))
         

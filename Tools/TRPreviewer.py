@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .TRSingleApplication import TRSingleApplicationServer
 
@@ -338,12 +338,11 @@ class TRPreviewer(QMainWindow):
         """
         Private slot to handle the Open Dialog action.
         """
-        fileNameList = QFileDialog.getOpenFileNames(
+        fileNameList = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Select UI files"),
             "",
-            self.trUtf8("Qt User-Interface Files (*.ui)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Qt User-Interface Files (*.ui)"))
         
         for fileName in fileNameList:
             self.preview.loadWidget(fileName)
@@ -354,12 +353,11 @@ class TRPreviewer(QMainWindow):
         """
         Private slot to handle the Open Translation action.
         """
-        fileNameList = QFileDialog.getOpenFileNames(
+        fileNameList = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Select translation files"),
             "",
-            self.trUtf8("Qt Translation Files (*.qm)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Qt Translation Files (*.qm)"))
         
         first = True
         for fileName in fileNameList:

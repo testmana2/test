@@ -8,9 +8,9 @@ Module implementing the Help Viewers configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
@@ -100,12 +100,11 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         Private slot to handle the user style sheet selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Style Sheet"),
             self.styleSheetEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))

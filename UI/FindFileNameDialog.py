@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_FindFileNameDialog import Ui_FindFileNameDialog
 from Utilities import direntries
@@ -180,12 +181,11 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         Private slot to handle the clicked signal of the search directory selection 
         button.
         """
-        searchDir = QFileDialog.getExistingDirectory(
+        searchDir = E5FileDialog.getExistingDirectory(
             None,
             self.trUtf8("Select search directory"),
             self.searchDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
         if searchDir:
             self.searchDirEdit.setText(Utilities.toNativeSeparators(searchDir))

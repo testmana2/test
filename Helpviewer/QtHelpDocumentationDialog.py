@@ -11,7 +11,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from PyQt4.QtHelp import QHelpEngineCore
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_QtHelpDocumentationDialog import Ui_QtHelpDocumentationDialog
 
@@ -53,12 +53,11 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
         """
         Private slot to add documents to the help database.
         """
-        fileNames = QFileDialog.getOpenFileNames(
+        fileNames = E5FileDialog.getOpenFileNames(
             self,
             self.trUtf8("Add Documentation"),
             "",
-            self.trUtf8("Qt Compressed Help Files (*.qch)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Qt Compressed Help Files (*.qch)"))
         if not fileNames:
             return
         

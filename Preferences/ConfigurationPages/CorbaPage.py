@@ -8,9 +8,9 @@ Module implementing the Corba configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_CorbaPage import Ui_CorbaPage
@@ -46,12 +46,11 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         """
         Private slot to handle the IDL compiler selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select IDL compiler"),
             self.idlEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.idlEdit.setText(Utilities.toNativeSeparators(file))

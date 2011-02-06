@@ -15,6 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric5docDefaultColors, eric5docColorParameterNames
@@ -257,12 +258,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the documentations is written to.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select output directory"),
             self.outputDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 
@@ -283,12 +283,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         startDir = self.ignoreDirEdit.text()
         if not startDir:
             startDir = self.ppath
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 
@@ -322,12 +321,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         Private slot to select a css style sheet.
         """
-        cssFile = QFileDialog.getOpenFileName(
+        cssFile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select CSS style sheet"),
             getConfig('ericCSSDir'),
-            self.trUtf8("Style sheet (*.css);;All files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Style sheet (*.css);;All files (*)"))
             
         if cssFile:
             # make it relative, if it is in a subdirectory of the project path 
@@ -471,12 +469,11 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the QtHelp files are written to.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select output directory for QtHelp files"),
             self.qtHelpDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 

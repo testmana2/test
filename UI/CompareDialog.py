@@ -14,7 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 import UI.PixmapCache
 
@@ -381,12 +381,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         @param lineEdit field for the display of the selected filename
                 (QLineEdit)
         """
-        filename = QFileDialog.getOpenFileName(
+        filename = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select file to compare"),
             lineEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
             
         if filename:
             lineEdit.setText(Utilities.toNativeSeparators(filename))

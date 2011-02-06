@@ -43,7 +43,8 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
     qVersion, PYQT_VERSION_STR, QCoreApplication, QCryptographicHash
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
-from Globals import isWindowsPlatform   # import this method into the Utilities namespace
+from Globals import isWindowsPlatform, isLinuxPlatform, isMacPlatform  # __IGNORE_WARNING__
+# import these methods into the Utilities namespace
 
 from E5Gui.E5Application import e5App
 
@@ -1355,7 +1356,7 @@ def generateDistroInfo(linesep = '\n'):
     @return string with plugins version infos (string)
     """
     infoStr = ""
-    if sys.platform.startswith("linux"):
+    if isLinuxPlatform():
         releaseList = glob.glob("/etc/*-release")
         if releaseList:
             infoStr = "Distribution Info:{0}".format(linesep)

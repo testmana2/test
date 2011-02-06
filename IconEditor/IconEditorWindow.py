@@ -969,8 +969,7 @@ class IconEditorWindow(QMainWindow):
                 self.trUtf8("Open icon file"),
                 "",
                 self.__inputFilter,
-                self.__defaultFilter,
-                QFileDialog.DontUseNativeDialog)[0]
+                self.__defaultFilter)[0]
             if fileName:
                 self.__loadIconFile(fileName)
         self.__checkActions()
@@ -994,8 +993,7 @@ class IconEditorWindow(QMainWindow):
             "",
             self.__outputFilter,
             self.__defaultFilter,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if not fileName:
             return False
         

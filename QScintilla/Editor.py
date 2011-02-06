@@ -2469,8 +2469,7 @@ class Editor(QsciScintillaCompat):
                 path,
                 Lexers.getSaveFileFiltersList(True, True), 
                 defaultFilter,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
             if fn:
                 if fn.endswith("."):
@@ -4816,12 +4815,11 @@ class Editor(QsciScintillaCompat):
         Public method to load a macro from a file.
         """
         configDir = Utilities.getConfigDir()
-        fname = QFileDialog.getOpenFileName(
+        fname = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Load macro file"),
             configDir,
-            self.trUtf8("Macro files (*.macro)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Macro files (*.macro)"))
         
         if not fname:
             return  # user aborted
@@ -4857,14 +4855,13 @@ class Editor(QsciScintillaCompat):
         if not ok or not name:
             return  # user abort
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save macro file"),
             configDir,
             self.trUtf8("Macro files (*.macro)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
             return  # user aborted
@@ -5291,12 +5288,11 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add file context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Add file resource"),
             dirStr,
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
             line, index = self.getCursorPosition()
@@ -5308,12 +5304,11 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add files context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        files = QFileDialog.getOpenFileNames(
+        files = E5FileDialog.getOpenFileNames(
             self,
             self.trUtf8("Add file resources"),
             dirStr,
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         if files:
             myDir = QDir(dirStr)
             filesText = ""
@@ -5329,12 +5324,11 @@ class Editor(QsciScintillaCompat):
         Private method to handle the Add aliased file context menu action.
         """
         dirStr = os.path.dirname(self.fileName)
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Add aliased file resource"),
             dirStr,
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         if file:
             relFile = QDir(dirStr).relativeFilePath(file)
             alias, ok = QInputDialog.getText(

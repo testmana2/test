@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_AddFileDialog import Ui_AddFileDialog
 
@@ -57,12 +58,10 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         startdir = self.targetDirEdit.text()
         if not startdir and self.startdir is not None:
             startdir = self.startdir
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select target directory"),
-            startdir,
-            QFileDialog.Options(QFileDialog.Option(
-                                QFileDialog.DontUseNativeDialog)))
+            startdir)
             
         if directory:
             self.targetDirEdit.setText(Utilities.toNativeSeparators(directory))
@@ -148,8 +147,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         else:
             return
         
-        fnames = QFileDialog.getOpenFileNames(self, caption, dir, dfilter, 
-            QFileDialog.DontUseNativeDialog)
+        fnames = E5FileDialog.getOpenFileNames(self, caption, dir, dfilter)
         
         if len(fnames):
             self.sourceFileEdit.setText(Utilities.toNativeSeparators(

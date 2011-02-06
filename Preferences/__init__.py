@@ -16,7 +16,6 @@ with the statement 'import Preferences'. Do not use 'from Preferences import *'
 to import it.
 """
 
-import sys
 import os
 import fnmatch
 import shutil
@@ -25,10 +24,12 @@ from PyQt4 import QtCore, QtGui, QtNetwork
 from PyQt4 import Qsci
 from PyQt4.QtWebKit import QWebSettings
 
+from E5Gui import E5FileDialog
+
 import QScintilla.Lexers
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform
+    isWindowsPlatform, isLinuxPlatform
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -674,7 +675,7 @@ class Prefs(object):
         "MonospacedFont" : "Courier,10,-1,5,50,0,0,0,0,0", 
         "MarginsFont" : "Sans Serif,10,-1,5,50,0,0,0,0,0",
     }
-    if sys.platform.lower().startswith("linux"):
+    if isLinuxPlatform():
         terminalDefaults["Shell"] = "bash"
 
     # defaults for Qt related stuff
@@ -892,15 +893,14 @@ def exportPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    filename, selectedFilter = QtGui.QFileDialog.getSaveFileNameAndFilter(
+    filename, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
         None,
         QtCore.QCoreApplication.translate("Preferences", "Export Preferences"),
         "",
         QtCore.QCoreApplication.translate("Preferences", 
             "Properties File (*.ini);;All Files (*)"),
         None, 
-        QtGui.QFileDialog.Options(QtGui.QFileDialog.DontConfirmOverwrite |
-                                  QtGui.QFileDialog.DontUseNativeDialog))
+        E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
     if filename:
         ext = QtCore.QFileInfo(filename).suffix()
         if not ext:
@@ -919,13 +919,12 @@ def importPreferences(prefClass = Prefs):
     
     @param prefClass preferences class used as the storage area
     """
-    filename = QtGui.QFileDialog.getOpenFileName(
+    filename = E5FileDialog.getOpenFileName(
         None,
         QtCore.QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
         QtCore.QCoreApplication.translate("Preferences", 
-            "Properties File (*.ini);;All Files (*)"), 
-        QtGui.QFileDialog.DontUseNativeDialog)
+            "Properties File (*.ini);;All Files (*)"))
     if filename:
         settingsFile = prefClass.settings.fileName()
         shutil.copy(filename, settingsFile)

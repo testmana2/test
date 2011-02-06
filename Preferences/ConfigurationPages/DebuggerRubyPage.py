@@ -8,9 +8,9 @@ Module implementing the Debugger Ruby configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerRubyPage import Ui_DebuggerRubyPage
@@ -52,11 +52,10 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         Private slot to handle the Ruby interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Ruby interpreter for Debug Client"),
-            self.rubyInterpreterEdit.text(), 
-            QFileDialog.DontUseNativeDialog)
+            self.rubyInterpreterEdit.text())
             
         if file:
             self.rubyInterpreterEdit.setText(

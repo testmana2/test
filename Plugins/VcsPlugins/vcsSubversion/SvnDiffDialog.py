@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 
@@ -273,14 +273,13 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         else:
             fname = self.vcs.splitPath(self.filename)[0]
         
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diff"),
             fname,
             self.trUtf8("Patch Files (*.diff)"),
             None,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
             return  # user aborted

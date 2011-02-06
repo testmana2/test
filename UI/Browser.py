@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
+from E5Gui import E5FileDialog
 
 from .BrowserModel import BrowserModel, \
     BrowserDirectoryItem, BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
@@ -412,12 +413,11 @@ class Browser(QTreeView):
         """
         Private slot to handle the New toplevel directory popup menu entry.
         """
-        dname = QFileDialog.getExistingDirectory(
+        dname = E5FileDialog.getExistingDirectory(
             None,
             QApplication.translate('Browser', "New toplevel directory"),
             "",
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         if dname:
             dname = os.path.abspath(Utilities.toNativeSeparators(dname))
             self.__model.addTopLevelDir(dname)

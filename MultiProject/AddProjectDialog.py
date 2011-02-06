@@ -11,6 +11,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
@@ -57,12 +58,11 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         startdir = self.filenameEdit.text()
         if not startdir and self.startdir is not None:
             startdir = self.startdir
-            projectFile = QFileDialog.getOpenFileName(
+            projectFile = E5FileDialog.getOpenFileName(
                 self,
                 self.trUtf8("Add Project"),
                 startdir,
-                self.trUtf8("Project Files (*.e4p)"), 
-                QFileDialog.DontUseNativeDialog)
+                self.trUtf8("Project Files (*.e4p)"))
         
         if projectFile:
             self.filenameEdit.setText(Utilities.toNativeSeparators(projectFile))

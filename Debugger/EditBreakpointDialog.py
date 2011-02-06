@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
@@ -110,12 +111,11 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         """
         Private slot to select a file via a file selection dialog.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select filename of the breakpoint"),
             self.filenameCombo.currentText(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
             
         if file:
             self.filenameCombo.setEditText(Utilities.toNativeSeparators(file))

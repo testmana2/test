@@ -12,7 +12,7 @@ from PyQt4.QtGui import *
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .UMLItem import UMLItem
 from .UMLSceneSizeDialog import UMLSceneSizeDialog
@@ -322,15 +322,14 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private method to handle the save context menu entry.
         """
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diagram"),
             "",
             self.trUtf8("Portable Network Graphics (*.png);;"
                         "Scalable Vector Graphics (*.svg)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if fname:
             ext = QFileInfo(fname).suffix()
             if not ext:

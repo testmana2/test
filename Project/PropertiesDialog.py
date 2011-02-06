@@ -13,8 +13,8 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
 from .TranslationPropertiesDialog import TranslationPropertiesDialog
@@ -131,12 +131,11 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select project directory"),
             self.dirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
         if directory:
             self.dirEdit.setText(Utilities.toNativeSeparators(directory))
@@ -181,12 +180,11 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 patterns.append(pattern)
         filters = self.trUtf8("Source Files ({0});;All Files (*)")\
             .format(" ".join(patterns))
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select main script file"),
             dir,
-            filters, 
-            QFileDialog.DontUseNativeDialog)
+            filters)
         
         if fn:
             ppath = self.dirEdit.text()

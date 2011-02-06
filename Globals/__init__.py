@@ -27,3 +27,19 @@ def isWindowsPlatform():
     @return flag indicating Windows platform (boolean)
     """
     return sys.platform.startswith("win")
+
+def isMacPlatform():
+    """
+    Function to check, if this is a Mac platform.
+    
+    @return flag indicating Mac platform (boolean)
+    """
+    return sys.platform == "darwin"
+
+def isLinuxPlatform():
+    """
+    Function to check, if this is a Linux platform.
+    
+    @return flag indicating Linux platform (boolean)
+    """
+    return sys.platform.startswith("linux")

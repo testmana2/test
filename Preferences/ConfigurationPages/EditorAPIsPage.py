@@ -8,10 +8,11 @@ Module implementing the Editor APIs configuration page.
 """
 
 from PyQt4.QtCore import QDir, pyqtSlot, QFileInfo
-from PyQt4.QtGui import QFileDialog, QInputDialog
+from PyQt4.QtGui import QInputDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
@@ -125,12 +126,11 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         Private method to select an api file.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select API file"),
             self.apiFileEdit.text(),
-            self.trUtf8("API File (*.api);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("API File (*.api);;All Files (*)"))
             
         if file:
             self.apiFileEdit.setText(Utilities.toNativeSeparators(file))

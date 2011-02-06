@@ -12,10 +12,10 @@ import shutil
 import urllib.request, urllib.parse, urllib.error
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo
-from PyQt4.QtGui import QApplication, QDialog, QInputDialog, QFileDialog
+from PyQt4.QtGui import QApplication, QDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from QScintilla.MiniEditor import MiniEditor
 
@@ -1721,14 +1721,13 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             rev, compression, all = dlg.getParameters()
             
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
                 self.trUtf8("Create changegroup"),
                 repodir,
                 self.trUtf8("Mercurial Changegroup Files (*.hg)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
             if not fname:
                 return  # user aborted
@@ -1782,12 +1781,11 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             if self.getPlugin().getPreferences("UseLogBrowser"):
                 self.logBrowser = \
@@ -1814,12 +1812,11 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Preview changegroup"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             args = []
             args.append('identify')
@@ -1845,12 +1842,11 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        files = QFileDialog.getOpenFileNames(
+        files = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Apply changegroups"),
             repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
             update = E5MessageBox.yesNo(self.__ui,
                 self.trUtf8("Apply changegroups"),

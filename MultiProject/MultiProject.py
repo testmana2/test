@@ -18,8 +18,7 @@ from .PropertiesDialog import PropertiesDialog
 from .AddProjectDialog import AddProjectDialog
 
 from E5Gui.E5Action import E5Action, createActionGroup
-from E5Gui import E5FileDialog
-from E5Gui import E5MessageBox
+from E5Gui import E5FileDialog, E5MessageBox
 
 from E5XML.MultiProjectReader import MultiProjectReader
 from E5XML.MultiProjectWriter import MultiProjectWriter
@@ -403,12 +402,11 @@ class MultiProject(QObject):
             return
         
         if fn is None:
-            fn = QFileDialog.getOpenFileName(
+            fn = E5FileDialog.getOpenFileName(
                 self.parent(),
                 self.trUtf8("Open multiproject"),
                 "",
-                self.trUtf8("Multiproject Files (*.e4m)"), 
-                QFileDialog.DontUseNativeDialog)
+                self.trUtf8("Multiproject Files (*.e4m)"))
             
             if fn == "":
                 fn = None
@@ -464,8 +462,7 @@ class MultiProject(QObject):
             self.ppath,
             self.trUtf8("Multiproject Files (*.e4m)"),
             defaultFilter,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if fn:
             ext = QFileInfo(fn).suffix()

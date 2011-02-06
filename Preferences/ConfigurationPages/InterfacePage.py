@@ -11,9 +11,10 @@ import glob
 import os
 
 from PyQt4.QtCore import pyqtSlot, QTranslator, qVersion
-from PyQt4.QtGui import QStyleFactory, QFileDialog
+from PyQt4.QtGui import QStyleFactory
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_InterfacePage import Ui_InterfacePage
@@ -247,13 +248,12 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         Private method to select the style sheet file via a dialog.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select style sheet file"),
             self.styleSheetEdit.text(),
             self.trUtf8("Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                        "All files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+                        "All files (*)"))
         
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))

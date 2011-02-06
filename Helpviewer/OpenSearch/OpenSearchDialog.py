@@ -7,10 +7,10 @@
 Module implementing a dialog for the configuration of search engines.
 """
 
-from PyQt4.QtGui import QDialog, QFileDialog
+from PyQt4.QtGui import QDialog
 from PyQt4.QtCore import pyqtSlot
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .OpenSearchEngineModel import OpenSearchEngineModel
 from .OpenSearchEditDialog import OpenSearchEditDialog
@@ -50,12 +50,11 @@ class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
         """
         Private slot to add a new search engine.
         """
-        fileNames = QFileDialog.getOpenFileNames(
+        fileNames = E5FileDialog.getOpenFileNames(
             self,
             self.trUtf8("Add search engine"),
             "",
-            self.trUtf8("OpenSearch (*.xml);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("OpenSearch (*.xml);;All Files (*)"))
         
         osm = self.__mw.openSearchManager()
         for fileName in fileNames:

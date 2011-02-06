@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
@@ -36,12 +37,11 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         """
         Private slot called by pressing the file selection button.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select file for property"),
             self.propFileEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if fn:
             self.propFileEdit.setText(Utilities.toNativeSeparators(fn))

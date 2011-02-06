@@ -8,13 +8,13 @@ Module implementing a dialog to show and edit all certificates.
 """
 
 from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, QIODevice
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QFileDialog
+from PyQt4.QtGui import QDialog, QTreeWidgetItem
 try:
     from PyQt4.QtNetwork import QSslCertificate, QSslSocket, QSslConfiguration, QSsl
 except ImportError:
     pass
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_SslCertificatesDialog import Ui_SslCertificatesDialog
 
@@ -371,15 +371,14 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to be exported (QSslCertificate)
         """
         if cert is not None:
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("Export Certificate"),
                 name,
                 self.trUtf8("Certificate File (PEM) (*.pem);;"
                             "Certificate File (DER) (*.der)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
             if fname:
                 ext = QFileInfo(fname).suffix()
@@ -418,13 +417,12 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         
         @return certificates read (list of QSslCertificate)
         """
-        fname = QFileDialog.getOpenFileName(
+        fname = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Certificate"),
             "",
             self.trUtf8("Certificate Files (*.pem *.crt *.der *.cer *.ca);;"
-                        "All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+                        "All Files (*)"))
         
         if fname:
             f = QFile(fname)

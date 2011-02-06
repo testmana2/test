@@ -19,7 +19,7 @@ from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
 from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
@@ -160,12 +160,11 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 .format(py2Extensions, py3Extensions)
         else:
             filter = self.trUtf8("Python Files (*.py);;All Files (*)")
-        prog = QFileDialog.getOpenFileName(
+        prog = E5FileDialog.getOpenFileName(
             self,
             "",
             self.testsuiteComboBox.currentText(),
-            filter, 
-            QFileDialog.DontUseNativeDialog)
+            filter)
         
         if not prog:
             return

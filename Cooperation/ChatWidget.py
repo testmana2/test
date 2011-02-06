@@ -8,10 +8,10 @@ Module implementing the chat dialog.
 """
 
 from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
-from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QFileDialog, QApplication
+from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QApplication
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from Globals import recentNameHosts
 
@@ -529,14 +529,13 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         txt = self.chatEdit.toPlainText()
         if txt:
-            fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+            fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
                 self.trUtf8("Save Chat"),
                 "",
                 self.trUtf8("Text Files (*.txt);;All Files (*)"),
                 None,
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
                 ext = QFileInfo(fname).suffix()
                 if not ext:

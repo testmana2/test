@@ -7,12 +7,10 @@
 Module implementing the Qt configuration page.
 """
 
-import sys
-
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_QtPage import Ui_QtPage
@@ -35,7 +33,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.qt4Completer = E5DirCompleter(self.qt4Edit)
         self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
         
-        if sys.platform != "darwin":
+        if not Utilities.isMacPlatform():
             self.qt4Group.hide()
         
         # set initial values
@@ -59,12 +57,11 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Private slot to handle the Qt4 directory selection.
         """
-        dir = QFileDialog.getExistingDirectory(
+        dir = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Qt4 Directory"),
             self.qt4Edit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if dir:
             self.qt4Edit.setText(Utilities.toNativeSeparators(dir))
@@ -74,12 +71,11 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Private slot to handle the Qt4 translations directory selection.
         """
-        dir = QFileDialog.getExistingDirectory(
+        dir = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select Qt4 Translations Directory"),
             self.qt4TransEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if dir:
             self.qt4TransEdit.setText(Utilities.toNativeSeparators(dir))

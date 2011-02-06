@@ -8,13 +8,13 @@ Module implementing the Editor Highlighting Styles configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot, QFileInfo, QFile, QIODevice
-from PyQt4.QtGui import QPalette, QFileDialog, QColorDialog, QFontDialog, \
+from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \
                         QInputDialog, QFont, QMenu
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from E5XML.HighlightingStylesWriter import HighlightingStylesWriter
 from E5XML.HighlightingStylesReader import HighlightingStylesReader
@@ -363,14 +363,13 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param lexers list of lexer objects for which to export the styles
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Export Highlighting Styles"),
             "",
             self.trUtf8("Highlighting styles file (*.e4h)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fn:
             return
@@ -399,12 +398,11 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param lexers dictionary of lexer objects for which to import the styles
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Highlighting Styles"),
             "",
-            self.trUtf8("Highlighting styles file (*.e4h)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Highlighting styles file (*.e4h)"))
         
         if not fn:
             return

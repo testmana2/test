@@ -44,7 +44,7 @@ from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
 
 from E5Gui.E5Action import E5Action
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from E5Network.E5NetworkMonitor import E5NetworkMonitor
 
@@ -1454,7 +1454,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot called to open a file.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self, 
             self.trUtf8("Open File"),
             "",
@@ -1462,8 +1462,7 @@ class HelpWindow(QMainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ), 
-            QFileDialog.DontUseNativeDialog)
+            ))
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)
@@ -1475,7 +1474,7 @@ class HelpWindow(QMainWindow):
         """
         Private slot called to open a file in a new tab.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self, 
             self.trUtf8("Open File"),
             "",
@@ -1483,8 +1482,7 @@ class HelpWindow(QMainWindow):
                         "PDF Files (*.pdf);;"
                         "CHM Files (*.chm);;"
                         "All Files (*)"
-            ), 
-            QFileDialog.DontUseNativeDialog)
+            ))
         if fn:
             if Utilities.isWindowsPlatform():
                 url = "file:///" + Utilities.fromNativeSeparators(fn)

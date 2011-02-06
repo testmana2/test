@@ -8,9 +8,10 @@ Module implementing the Help Viewers configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QButtonGroup, QFileDialog
+from PyQt4.QtGui import QButtonGroup
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpViewersPage import Ui_HelpViewersPage
@@ -72,12 +73,11 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the custom viewer selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Custom Viewer"),
             self.customViewerEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.customViewerEdit.setText(Utilities.toNativeSeparators(file))
@@ -87,12 +87,11 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the Web browser selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Web-Browser"),
             self.webbrowserEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.webbrowserEdit.setText(Utilities.toNativeSeparators(file))
@@ -102,12 +101,11 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the PDF viewer selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PDF-Viewer"),
             self.pdfviewerEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.pdfviewerEdit.setText(Utilities.toNativeSeparators(file))
@@ -117,12 +115,11 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Private slot to handle the CHM viewer selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select CHM-Viewer"),
             self.chmviewerEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         
         if file:
             self.chmviewerEdit.setText(Utilities.toNativeSeparators(file))

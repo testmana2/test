@@ -3160,6 +3160,8 @@
       <keyword name="ToolGroupConfigurationDialog.on_newButton_clicked" id="ToolGroupConfigurationDialog.on_newButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_newButton_clicked" />
       <keyword name="ToolGroupConfigurationDialog.on_upButton_clicked" id="ToolGroupConfigurationDialog.on_upButton_clicked" ref="eric5.Preferences.ToolGroupConfigurationDialog.html#ToolGroupConfigurationDialog.on_upButton_clicked" />
       <keyword name="Globals (Package)" id="Globals (Package)" ref="index-eric5.Globals.html" />
+      <keyword name="isLinuxPlatform" id="isLinuxPlatform" ref="eric5.Globals.__init__.html#isLinuxPlatform" />
+      <keyword name="isMacPlatform" id="isMacPlatform" ref="eric5.Globals.__init__.html#isMacPlatform" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="Cooperation (Package)" id="Cooperation (Package)" ref="index-eric5.Cooperation.html" />
       <keyword name="ChatWidget (Module)" id="ChatWidget (Module)" ref="eric5.Cooperation.ChatWidget.html" />
@@ -4357,8 +4359,12 @@
       <keyword name="E5TreeView.removeSelected" id="E5TreeView.removeSelected" ref="eric5.E5Gui.E5TreeView.html#E5TreeView.removeSelected" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric5.E5Gui.E5FileDialog.html" />
       <keyword name="__reorderFilter" id="__reorderFilter" ref="eric5.E5Gui.E5FileDialog.html#__reorderFilter" />
+      <keyword name="getExistingDirectory" id="getExistingDirectory" ref="eric5.E5Gui.E5FileDialog.html#getExistingDirectory" />
+      <keyword name="getOpenFileName" id="getOpenFileName" ref="eric5.E5Gui.E5FileDialog.html#getOpenFileName" />
       <keyword name="getOpenFileNameAndFilter" id="getOpenFileNameAndFilter" ref="eric5.E5Gui.E5FileDialog.html#getOpenFileNameAndFilter" />
+      <keyword name="getOpenFileNames" id="getOpenFileNames" ref="eric5.E5Gui.E5FileDialog.html#getOpenFileNames" />
       <keyword name="getOpenFileNamesAndFilter" id="getOpenFileNamesAndFilter" ref="eric5.E5Gui.E5FileDialog.html#getOpenFileNamesAndFilter" />
+      <keyword name="getSaveFileName" id="getSaveFileName" ref="eric5.E5Gui.E5FileDialog.html#getSaveFileName" />
       <keyword name="getSaveFileNameAndFilter" id="getSaveFileNameAndFilter" ref="eric5.E5Gui.E5FileDialog.html#getSaveFileNameAndFilter" />
       <keyword name="E5TextSpinBox (Module)" id="E5TextSpinBox (Module)" ref="eric5.E5Gui.E5TextSpinBox.html" />
       <keyword name="E5TextSpinBox" id="E5TextSpinBox" ref="eric5.E5Gui.E5TextSpinBox.html#E5TextSpinBox" />
@@ -9692,6 +9698,7 @@
       <keyword name="FileDialogWizardDialog (Module)" id="FileDialogWizardDialog (Module)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html" />
       <keyword name="FileDialogWizardDialog" id="FileDialogWizardDialog" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog" />
       <keyword name="FileDialogWizardDialog (Constructor)" id="FileDialogWizardDialog (Constructor)" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__init__" />
+      <keyword name="FileDialogWizardDialog.__adjustOptions" id="FileDialogWizardDialog.__adjustOptions" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__adjustOptions" />
       <keyword name="FileDialogWizardDialog.__getCode4" id="FileDialogWizardDialog.__getCode4" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__getCode4" />
       <keyword name="FileDialogWizardDialog.__toggleConfirmCheckBox" id="FileDialogWizardDialog.__toggleConfirmCheckBox" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleConfirmCheckBox" />
       <keyword name="FileDialogWizardDialog.__toggleGroupsAndTest" id="FileDialogWizardDialog.__toggleGroupsAndTest" ref="eric5.Plugins.WizardPlugins.FileDialogWizard.FileDialogWizardDialog.html#FileDialogWizardDialog.__toggleGroupsAndTest" />

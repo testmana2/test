@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
 
@@ -46,12 +47,10 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         Private slot called to open a directory selection dialog.
         """
-        path = QFileDialog.getExistingDirectory(
+        path = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select source directory"),
-            QDir.fromNativeSeparators(self.pathnameEdit.text()),
-            QFileDialog.Options(QFileDialog.Option(
-                                QFileDialog.DontUseNativeDialog)))
+            QDir.fromNativeSeparators(self.pathnameEdit.text()))
         if path:
             self.pathnameEdit.setText(QDir.toNativeSeparators(path))
         

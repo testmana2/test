@@ -15,6 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
@@ -165,12 +166,11 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a file selection dialog to
         select the file the api is written to.
         """
-        filename = QFileDialog.getSaveFileName(
+        filename = E5FileDialog.getSaveFileName(
             self,
             self.trUtf8("Select output file"),
             self.outputFileEdit.text(),
-            self.trUtf8("API files (*.api);;All files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("API files (*.api);;All files (*)"))
             
         if filename:
             # make it relative, if it is in a subdirectory of the project path 
@@ -197,12 +197,11 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         startDir = self.ignoreDirEdit.text()
         if not startDir:
             startDir = self.ppath
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory to exclude"),
             startDir,
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             # make it relative, if it is a subdirectory of the project path 

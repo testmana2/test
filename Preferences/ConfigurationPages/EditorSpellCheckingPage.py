@@ -8,9 +8,9 @@ Module implementing the Editor Spellchecking configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
@@ -110,12 +110,11 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         Private method to select the personal word list file.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select personal word list"),
             self.pwlEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -125,12 +124,11 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         Private method to select the personal exclude list file.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select personal exclude list"),
             self.pelEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

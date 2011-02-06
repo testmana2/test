@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlDatabase
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
@@ -87,12 +88,11 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         Private slot to open a database file via a file selection dialog.
         """
         startdir = self.databaseEdit.text()
-        dbFile = QFileDialog.getOpenFileName(
+        dbFile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Database File"),
             startdir,
-            self.trUtf8("All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("All Files (*)"))
         
         if dbFile:
             self.databaseEdit.setText(Utilities.toNativeSeparators(dbFile))

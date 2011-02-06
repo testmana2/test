@@ -14,7 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_DiffDialog import Ui_DiffDialog
 import Utilities
@@ -269,14 +269,13 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         else:
             fname = dname
             
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save Diff"),
             fname,
             self.trUtf8("Patch Files (*.diff)"),
             None, 
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
             return
@@ -458,12 +457,11 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         @param lineEdit field for the display of the selected filename
                 (QLineEdit)
         """
-        filename = QFileDialog.getOpenFileName(
+        filename = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select file to compare"),
             lineEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
             
         if filename:
             lineEdit.setText(Utilities.toNativeSeparators(filename))

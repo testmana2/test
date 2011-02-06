@@ -13,7 +13,7 @@ import re
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_PyRegExpWizardDialog import Ui_PyRegExpWizardDialog
 
@@ -297,14 +297,13 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to save the regexp to a file.
         """
-        fname, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Save regular expression"),
             "",
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"),
             None,
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if fname:
             ext = QFileInfo(fname).suffix()
             if not ext:
@@ -335,12 +334,11 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         """
         Private slot to load a regexp from a file.
         """
-        fname = QFileDialog.getOpenFileName(
+        fname = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Load regular expression"),
             "",
-            self.trUtf8("RegExp Files (*.rx);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
                 f=open(Utilities.toNativeSeparators(fname), "r", encoding = "utf-8")

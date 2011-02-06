@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
 from .Ui_SvnOptionsDialog import Ui_SvnOptionsDialog
@@ -58,12 +59,11 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         Private slot to display a selection dialog.
         """
         if self.protocolCombo.currentText() == "file://":
-            directory = QFileDialog.getExistingDirectory(
+            directory = E5FileDialog.getExistingDirectory(
                 self,
                 self.trUtf8("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))

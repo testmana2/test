@@ -10,9 +10,9 @@ Module implementing the Plugin Manager configuration page.
 import os
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_PluginManagerPage import Ui_PluginManagerPage
@@ -54,12 +54,11 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         Private slot to handle the directory selection via dialog.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select plugins download directory"),
             self.downloadDirEdit.text(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             dn = Utilities.toNativeSeparators(directory)

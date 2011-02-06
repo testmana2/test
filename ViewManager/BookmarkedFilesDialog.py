@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
 
@@ -163,8 +164,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         """
         Private slot to handle the file selection via a file selection dialog.
         """
-        bookmark = QFileDialog.getOpenFileName(
-            options = QFileDialog.DontUseNativeDialog)
+        bookmark = E5FileDialog.getOpenFileName()
         if bookmark:
             bookmark = Utilities.toNativeSeparators(bookmark)
             self.fileEdit.setText(bookmark)

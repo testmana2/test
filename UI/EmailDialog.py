@@ -15,7 +15,7 @@ import socket
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_EmailDialog import Ui_EmailDialog
 
@@ -315,10 +315,9 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         Private slot to handle the Add... button.
         """
-        fname = QFileDialog.getOpenFileName(
+        fname = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Attach file"),
-            options = QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Attach file"))
         if fname:
             self.attachFile(fname, False)
         

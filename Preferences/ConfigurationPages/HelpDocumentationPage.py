@@ -8,9 +8,9 @@ Module implementing the Help Documentation configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot, QUrl
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
@@ -75,14 +75,13 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Python 2 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(
+        entry = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Python 2 documentation entry"),
             QUrl(self.python2DocDirEdit.text()).path(),
             self.trUtf8("HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
-                "All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+                "All Files (*)"))
         
         if entry:
             self.python2DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -92,14 +91,13 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Python 3 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(
+        entry = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Python 3 documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
             self.trUtf8("HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
-                "All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+                "All Files (*)"))
         
         if entry:
             self.pythonDocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -109,12 +107,11 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the Qt4 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(
+        entry = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Qt4 documentation entry"),
             QUrl(self.qt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.qt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -124,12 +121,11 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the PyQt4 documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(
+        entry = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PyQt4 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.pyqt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -139,12 +135,11 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Private slot to select the PySide documentation directory.
         """
-        entry = QFileDialog.getOpenFileName(
+        entry = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select PySide documentation entry"),
             QUrl(self.pysideDocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(entry))

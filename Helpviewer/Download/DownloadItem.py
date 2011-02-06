@@ -9,10 +9,10 @@ Module implementing a widget controlling a download.
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, QUrl, \
     QIODevice
-from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QFileDialog
+from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_DownloadItem import Ui_DownloadItem
 
@@ -171,12 +171,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         if ask and not self.__autoOpen and self.__requestFilename:
             self.__gettingFileName = True
-            fileName = QFileDialog.getSaveFileName(
+            fileName = E5FileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Save File"),
                 defaultFileName,
-                "", 
-                QFileDialog.DontUseNativeDialog)
+                "")
             self.__gettingFileName = False
             if not fileName:
                 self.progressBar.setVisible(False)

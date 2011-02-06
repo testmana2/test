@@ -10,7 +10,7 @@ Module implementing the exporter base class.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 import Utilities
 
@@ -38,14 +38,13 @@ class ExporterBase(QObject):
         filter_ = filter
         filter_ += ";;"
         filter_ += QApplication.translate('Exporter', "All Files (*)")
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.editor,
             self.trUtf8("Export source"),
             "",
             filter_,
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if fn:
             ext = QFileInfo(fn).suffix()

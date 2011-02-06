@@ -13,7 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
@@ -247,12 +247,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         Private slot to handle the executable selection via a file selection dialog.
         """
-        execfile = QFileDialog.getOpenFileName(
+        execfile = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select executable"),
             self.executableEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
         if execfile:
             execfile = Utilities.toNativeSeparators(execfile)
             if not Utilities.isinpath(execfile):
@@ -269,12 +268,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         Private slot to handle the icon selection via a file selection dialog.
         """
-        icon = QFileDialog.getOpenFileName(
+        icon = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select icon file"),
             self.iconEdit.text(),
-            self.trUtf8("Icon files (*.png)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Icon files (*.png)"))
         if icon:
             self.iconEdit.setText(icon)
     

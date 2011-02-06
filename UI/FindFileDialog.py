@@ -14,7 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_FindFileDialog import Ui_FindFileDialog
 
@@ -530,12 +530,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         Private slot to display a directory selection dialog.
         """
-        directory = QFileDialog.getExistingDirectory(
+        directory = E5FileDialog.getExistingDirectory(
             self,
             self.trUtf8("Select directory"),
             self.dirCombo.currentText(),
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
             self.dirCombo.setEditText(Utilities.toNativeSeparators(directory))

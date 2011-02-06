@@ -8,9 +8,10 @@ Module implementing the Icons configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QListWidgetItem, QFileDialog
+from PyQt4.QtGui import QListWidgetItem
 
 from E5Gui.E5Completers import E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .IconsPreviewDialog import IconsPreviewDialog
@@ -121,12 +122,11 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         Private slot to select an icon directory.
         """
-        dir = QFileDialog.getExistingDirectory(
+        dir = E5FileDialog.getExistingDirectory(
             None,
             self.trUtf8("Select icon directory"),
             "",
-            QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if dir:
             self.iconDirectoryEdit.setText(Utilities.toNativeSeparators(dir))

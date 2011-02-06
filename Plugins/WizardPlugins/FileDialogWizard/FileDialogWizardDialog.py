@@ -16,6 +16,8 @@ from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
 from .Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog
 
+import Globals
+
 class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
     """
     Class implementing the color dialog wizard dialog.
@@ -45,6 +47,17 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.bTest = \
             self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
         
+    def __adjustOptions(self, options):
+        """
+        Private method to adjust the file dialog options.
+        
+        @param options file dialog options (QFileDialog.Options)
+        @return modified options (QFileDialog.Options)
+        """
+        if Globals.isLinuxPlatform():
+            options |= QFileDialog.DontUseNativeDialog
+        return options
+        
     def on_buttonBox_clicked(self, button):
         """
         Private slot called by a button of the button box clicked.
@@ -64,7 +77,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
+            options = self.__adjustOptions(options)
             QFileDialog.getOpenFileName(
                 None,
                 self.eCaption.text(),
@@ -76,7 +89,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
+            options = self.__adjustOptions(options)
             QFileDialog.getOpenFileNames(
                 None,
                 self.eCaption.text(),
@@ -88,7 +101,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
             else:
                 options = QFileDialog.Options()
-            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
+            options = self.__adjustOptions(options)
             QFileDialog.getSaveFileName(
                 None,
                 self.eCaption.text(),
@@ -103,7 +116,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options |= QFileDialog.Options(QFileDialog.ShowDirsOnly)
             else:
                 options |= QFileDialog.Options(QFileDialog.Option(0))
-            options |= QFileDialog.Options(QFileDialog.DontUseNativeDialog)
+            options = self.__adjustOptions(options)
             QFileDialog.getExistingDirectory(
                 None,
                 self.eCaption.text(),

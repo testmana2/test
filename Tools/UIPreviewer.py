@@ -11,7 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4 import uic
 
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 import Preferences
 import UI.PixmapCache
@@ -289,12 +289,11 @@ class UIPreviewer(QMainWindow):
         """
         Private slot to load a new file.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self, 
             self.trUtf8("Select UI file"),
             self.currentFile,
-            self.trUtf8("Qt User-Interface Files (*.ui)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Qt User-Interface Files (*.ui)"))
         if fn:
             self.__loadFile(fn)
         
@@ -426,12 +425,11 @@ class UIPreviewer(QMainWindow):
             filters = "{0}*.{1} ".format(filters, bytes(format).decode().lower())
         filter = self.trUtf8("Images ({0})").format(filters[:-1])
         
-        fname = QFileDialog.getSaveFileName(
+        fname = E5FileDialog.getSaveFileName(
             self,
             self.trUtf8("Save Image"),
             "",
-            filter,
-            QFileDialog.DontUseNativeDialog)
+            filter)
         if not fname:
             return
             

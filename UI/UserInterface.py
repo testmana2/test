@@ -81,7 +81,7 @@ from E5Gui.E5ToolBarDialog import E5ToolBarDialog
 from E5Gui.E5SqueezeLabels import E5SqueezeLabelPath
 from E5Gui.E5ToolBox import E5VerticalToolBox, E5HorizontalToolBox
 from E5Gui.E5SideBar import E5SideBar
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
 
 from VCS.StatusMonitorLed import StatusMonitorLed
@@ -4063,7 +4063,7 @@ class UserInterface(QMainWindow):
                         .format(fn))
                 return
         
-        if sys.platform == "darwin":
+        if Utilities.isMacPlatform():
             designer, args = Utilities.prepareQtMacBundle("designer", version, args)
         else:
             if version == 4:
@@ -4120,7 +4120,7 @@ class UserInterface(QMainWindow):
                         .format(fn))
                 return
         
-        if sys.platform == "darwin":
+        if Utilities.isMacPlatform():
             linguist, args = Utilities.prepareQtMacBundle("linguist", version, args)
         else:
             if version == 4:
@@ -4164,7 +4164,7 @@ class UserInterface(QMainWindow):
                 args.append('-showUrl')
             args.append(home)
         
-        if sys.platform == "darwin":
+        if Utilities.isMacPlatform():
             assistant, args = Utilities.prepareQtMacBundle("assistant", version, args)
         else:
             if version == 4:
@@ -4988,14 +4988,13 @@ class UserInterface(QMainWindow):
         """
         Private slot to export the keyboard shortcuts.
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             None,
             self.trUtf8("Export Keyboard Shortcuts"),
             "",
             self.trUtf8("Keyboard shortcut file (*.e4k)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fn:
             return
@@ -5012,12 +5011,11 @@ class UserInterface(QMainWindow):
         """
         Private slot to import the keyboard shortcuts.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Import Keyboard Shortcuts"),
             "",
-            self.trUtf8("Keyboard shortcut file (*.e4k)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Keyboard shortcut file (*.e4k)"))
         
         if fn:
             Shortcuts.importShortcuts(fn)

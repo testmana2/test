@@ -7,7 +7,6 @@
 Module implementing a network proxy factory.
 """
 
-import sys
 import os
 
 from PyQt4.QtCore import QUrl, Qt, QCoreApplication
@@ -19,6 +18,7 @@ from E5Gui import E5MessageBox
 from UI.AuthenticationDialog import AuthenticationDialog
 
 import Preferences
+import Globals
 
 def schemeFromProxyType(proxyType):
     """
@@ -84,7 +84,8 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
            Preferences.getUI("UseProxy"):
             if Preferences.getUI("UseSystemProxy"):
                 proxyList = QNetworkProxyFactory.systemProxyForQuery(query)
-                if sys.platform not in ["darwin", "nt"] and \
+                if (not Globals.isWindowsPlatform() and \
+                    not Globals.isMacPlatform()) and \
                    len(proxyList) == 1 and \
                    proxyList[0].type() == QNetworkProxy.NoProxy:
                     # try it the Python way

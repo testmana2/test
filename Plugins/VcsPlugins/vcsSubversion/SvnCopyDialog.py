@@ -13,6 +13,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui import E5FileDialog
 
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
@@ -62,20 +63,18 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         selection dialog.
         """
         if os.path.isdir(self.source):
-            target = QFileDialog.getExistingDirectory(
+            target = E5FileDialog.getExistingDirectory(
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
-                QFileDialog.Options(QFileDialog.ShowDirsOnly |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
-            target = QFileDialog.getSaveFileName(
+            target = E5FileDialog.getSaveFileName(
                 None,
                 self.trUtf8("Select target"),
                 self.targetEdit.text(),
                 "",
-                QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                    QFileDialog.DontUseNativeDialog))
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if target:
             self.targetEdit.setText(target)

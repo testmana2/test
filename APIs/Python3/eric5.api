@@ -1124,8 +1124,19 @@ eric5.E5Gui.E5Application.e5App?7
 eric5.E5Gui.E5Completers.E5DirCompleter?1(parent = None, completionMode = QCompleter.PopupCompletion, showHidden = False)
 eric5.E5Gui.E5Completers.E5FileCompleter?1(parent = None, completionMode = QCompleter.PopupCompletion, showHidden = False)
 eric5.E5Gui.E5Completers.E5StringListCompleter?1(parent = None, strings = [], completionMode = QCompleter.PopupCompletion)
+eric5.E5Gui.E5FileDialog.DontConfirmOverwrite?7
+eric5.E5Gui.E5FileDialog.DontResolveSymlinks?7
+eric5.E5Gui.E5FileDialog.DontUseNativeDialog?7
+eric5.E5Gui.E5FileDialog.DontUseSheet?7
+eric5.E5Gui.E5FileDialog.HideNameFilterDetails?7
+eric5.E5Gui.E5FileDialog.ReadOnly?7
+eric5.E5Gui.E5FileDialog.ShowDirsOnly?7
+eric5.E5Gui.E5FileDialog.getExistingDirectory?4(parent = None, caption = "", directory = "", options = QFileDialog.ShowDirsOnly)
+eric5.E5Gui.E5FileDialog.getOpenFileName?4(parent = None, caption = "", directory = "", filter = "", options = QFileDialog.Options())
 eric5.E5Gui.E5FileDialog.getOpenFileNameAndFilter?4(parent = None, caption = "", directory = "", filter = "", initialFilter = "", options = QFileDialog.Options())
+eric5.E5Gui.E5FileDialog.getOpenFileNames?4(parent = None, caption = "", directory = "", filter = "", options = QFileDialog.Options())
 eric5.E5Gui.E5FileDialog.getOpenFileNamesAndFilter?4(parent = None, caption = "", directory = "", filter = "", initialFilter = "", options = QFileDialog.Options())
+eric5.E5Gui.E5FileDialog.getSaveFileName?4(parent = None, caption = "", directory = "", filter = "", options = QFileDialog.Options())
 eric5.E5Gui.E5FileDialog.getSaveFileNameAndFilter?4(parent = None, caption = "", directory = "", filter = "", initialFilter = "", options = QFileDialog.Options())
 eric5.E5Gui.E5Led.E5Led.color?4()
 eric5.E5Gui.E5Led.E5Led.darkFactor?4()
@@ -1526,6 +1537,8 @@ eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase._write_unimplemented?5(value
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase.writeBasics?4(tag, pyobject)
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase.writeXML?4()
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase?1(device)
+eric5.Globals.isLinuxPlatform?4()
+eric5.Globals.isMacPlatform?4()
 eric5.Globals.isWindowsPlatform?4()
 eric5.Globals.recentNameFiles?7
 eric5.Globals.recentNameHosts?7

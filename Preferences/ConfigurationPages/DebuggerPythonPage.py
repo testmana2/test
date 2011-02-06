@@ -8,9 +8,9 @@ Module implementing the Debugger Python configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFileDialog
 
 from E5Gui.E5Completers import E5FileCompleter
+from E5Gui import E5FileDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerPythonPage import Ui_DebuggerPythonPage
@@ -79,12 +79,11 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Private slot to handle the Python interpreter selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
-            "", 
-            QFileDialog.DontUseNativeDialog)
+            "")
             
         if file:
             self.interpreterEdit.setText(
@@ -95,12 +94,11 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Private slot to handle the Debug Client selection.
         """
-        file = QFileDialog.getOpenFileName(
+        file = E5FileDialog.getOpenFileName(
             None,
             self.trUtf8("Select Debug Client"),
             self.debugClientEdit.text(),
-            self.trUtf8("Python Files (*.py *.py2)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Python Files (*.py *.py2)"))
             
         if file:
             self.debugClientEdit.setText(

@@ -15,7 +15,7 @@ from PyQt4.QtGui import *
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from . import Lexers
 from .QsciScintillaCompat import QsciScintillaCompat
@@ -202,8 +202,7 @@ class MiniEditor(QMainWindow):
         Private slot to open a file.
         """
         if self.__maybeSave():
-            fileName = QFileDialog.getOpenFileName(self,
-                options = QFileDialog.DontUseNativeDialog)
+            fileName = E5FileDialog.getOpenFileName(self)
             if fileName:
                 self.__loadFile(fileName)
         self.__checkActions()
@@ -221,8 +220,7 @@ class MiniEditor(QMainWindow):
         """
         Private slot to save a file with a new name.
         """
-        fileName = QFileDialog.getSaveFileName(self, 
-            options =  QFileDialog.DontUseNativeDialog)
+        fileName = E5FileDialog.getSaveFileName(self)
         if not fileName:
             return False
         

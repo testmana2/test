@@ -15,7 +15,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox
+from E5Gui import E5MessageBox, E5FileDialog
 
 from .TemplatePropertiesDialog import TemplatePropertiesDialog
 from .TemplateMultipleVariablesDialog import TemplateMultipleVariablesDialog
@@ -520,12 +520,11 @@ class TemplateViewer(QTreeWidget):
         """
         Private slot to handle the Import context menu action.
         """
-        fn = QFileDialog.getOpenFileName(
+        fn = E5FileDialog.getOpenFileName(
             self,
             self.trUtf8("Import Templates"),
             "",
-            self.trUtf8("Templates Files (*.e4c);; All Files (*)"), 
-            QFileDialog.DontUseNativeDialog)
+            self.trUtf8("Templates Files (*.e4c);; All Files (*)"))
         
         if fn:
             self.readTemplates(fn)
@@ -534,14 +533,13 @@ class TemplateViewer(QTreeWidget):
         """
         Private slot to handle the Export context menu action.
         """
-        fn, selectedFilter = QFileDialog.getSaveFileNameAndFilter(
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
             self.trUtf8("Export Templates"),
             "",
             self.trUtf8("Templates Files (*.e4c);; All Files (*)"),
             "",
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite |
-                                QFileDialog.DontUseNativeDialog))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if fn:
             ext = QFileInfo(fn).suffix()
