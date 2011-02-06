@@ -118,9 +118,7 @@ def make_analysator(f):
             return 0.0
         try:
             return min(1.0, max(0.0, float(rv)))
-        except ValueError:
-            return 0.0
-        except TypeError:
+        except (ValueError, TypeError):
             return 0.0
     text_analyse.__doc__ = f.__doc__
     return staticmethod(text_analyse)
