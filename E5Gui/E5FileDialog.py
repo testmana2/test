@@ -12,6 +12,8 @@ from PyQt4.QtGui import QFileDialog
 
 import Globals
 
+Options = QFileDialog.Options
+
 ShowDirsOnly = QFileDialog.ShowDirsOnly
 DontResolveSymlinks = QFileDialog.DontResolveSymlinks
 DontConfirmOverwrite = QFileDialog.DontConfirmOverwrite
