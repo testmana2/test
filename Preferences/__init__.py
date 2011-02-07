@@ -758,7 +758,8 @@ class Prefs(object):
     # defaults for tray starter
     trayStarterDefaults = {
         "TrayStarterIcon" : "erict.png",
-        # valid values are: erict.png, erict-hc.png, erict-bw.png, erict-bwi.png
+        # valid values are: erict.png, erict-hc.png,
+        #                   erict-bw.png, erict-bwi.png
     }
     
     # defaults for geometry
@@ -1077,9 +1078,9 @@ def getUILayout(prefClass = Prefs):
     layout = (
         prefClass.settings.value("UI/LayoutType", 
             prefClass.uiDefaults["LayoutType"]), 
-        toBool(prefClass.settings.value("UI/LayoutShellEmbedded", 
+        int(prefClass.settings.value("UI/LayoutShellEmbedded", 
             prefClass.uiDefaults["LayoutShellEmbedded"])), 
-        toBool(prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
+        int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
             prefClass.uiDefaults["LayoutFileBrowserEmbedded"])), 
     )
     return layout
