@@ -1005,9 +1005,9 @@ def getUILayout(prefClass = Prefs):
     layout = (\
         prefClass.settings.value("UI/LayoutType", 
             prefClass.uiDefaults["LayoutType"]), 
-        toBool(prefClass.settings.value("UI/LayoutShellEmbedded", 
+        int(prefClass.settings.value("UI/LayoutShellEmbedded", 
             prefClass.uiDefaults["LayoutShellEmbedded"])), 
-        toBool(prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
+        int(prefClass.settings.value("UI/LayoutFileBrowserEmbedded", 
             prefClass.uiDefaults["LayoutFileBrowserEmbedded"])), 
     )
     return layout
