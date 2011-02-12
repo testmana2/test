@@ -4,7 +4,8 @@
 #
 
 """
-Module implementing a dialog to show the output of the svn status command process.
+Module implementing a dialog to show the output of the svn status command
+process.
 """
 
 import os
@@ -21,7 +22,8 @@ import Preferences
 
 class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
     """
-    Class implementing a dialog to show the output of the svn status command process.
+    Class implementing a dialog to show the output of the svn status command
+    process.
     """
     def __init__(self, vcs, parent = None):
         """
@@ -36,13 +38,19 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.__changelistColumn = 0
         self.__statusColumn = 1
         self.__propStatusColumn = 2
+        self.__lockedColumn = 3
+        self.__historyColumn = 4
+        self.__switchedColumn = 5
         self.__lockinfoColumn = 6
+        self.__upToDateColumn = 7
         self.__pathColumn = 11
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
-        self.refreshButton.setToolTip(self.trUtf8("Press to refresh the status display"))
+            self.buttonBox.addButton(self.trUtf8("Refresh"),
+                                     QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.trUtf8("Press to refresh the status display"))
         self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -52,7 +60,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.vcs.committed.connect(self.__committed)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
-        self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)
+        self.statusList.header().setSortIndicator(self.__pathColumn, 
+                                                  Qt.AscendingOrder)
         if self.vcs.versionStr < '1.5.0':
             self.statusList.header().hideSection(self.__changelistColumn)
         
@@ -70,25 +79,30 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Add to Changelist"), self.__addToChangelist))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Remove from Changelist"), self.__removeFromChangelist))
+                self.trUtf8("Remove from Changelist"),
+                self.__removeFromChangelist))
         if self.vcs.versionStr >= '1.2.0':
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(self.trUtf8("Lock"),
                 self.__lock))
             self.menuactions.append(self.menu.addAction(self.trUtf8("Unlock"),
                 self.__unlock))
-            self.menuactions.append(self.menu.addAction(self.trUtf8("Break lock"),
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Break lock"),
                 self.__breakLock))
-            self.menuactions.append(self.menu.addAction(self.trUtf8("Steal lock"),
+            self.menuactions.append(self.menu.addAction(
+                self.trUtf8("Steal lock"),
                 self.__stealLock))
         self.menu.addSeparator()
-        self.menuactions.append(self.menu.addAction(self.trUtf8("Adjust column sizes"),
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Adjust column sizes"),
             self.__resizeColumns))
         for act in self.menuactions:
             act.setEnabled(False)
         
         self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
+        self.statusList.customContextMenuRequested.connect(
+            self.__showContextMenu)
         
         self.modifiedIndicators = [
             self.trUtf8('added'), 
@@ -164,7 +178,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             # flags (8 anything), path
         self.rx_changelist = \
             QRegExp('--- \\S+ .([\\w\\s]+).:\\s+')
-            # three dashes, Changelist (translated), quote, changelist name, quote, :
+            # three dashes, Changelist (translated), quote,
+            # changelist name, quote, :
         
         self.__nonverbose = True
         
@@ -182,8 +197,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.statusList.header().resizeSections(QHeaderView.ResizeToContents)
         self.statusList.header().setStretchLastSection(True)
         
-    def __generateItem(self, status, propStatus, locked, history, switched, lockinfo,
-                       uptodate, revision, change, author, path):
+    def __generateItem(self, status, propStatus, locked, history, switched,
+                       lockinfo, uptodate, revision, change, author, path):
         """
         Private method to generate a status item in the status list.
         
@@ -238,6 +253,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         itm.setTextAlignment(10, Qt.AlignLeft)
         itm.setTextAlignment(11, Qt.AlignLeft)
         
+        self.hidePropertyStatusColumn = self.hidePropertyStatusColumn and \
+            propStatus == " "
+        self.hideLockColumns = self.hideLockColumns and \
+            locked == " " and lockinfo == " "
+        self.hideUpToDateColumn = self.hideUpToDateColumn and uptodate == " "
+        self.hideHistoryColumn = self.hideHistoryColumn and history == " "
+        self.hideSwitchedColumn = self.hideSwitchedColumn and switched == " "
+        
     def closeEvent(self, e):
         """
         Private slot implementing a close event handler.
@@ -264,6 +287,12 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.args = fn
         self.currentChangelist = ""
         self.changelistFound = False
+        
+        self.hidePropertyStatusColumn = True
+        self.hideLockColumns = True
+        self.hideUpToDateColumn = True
+        self.hideHistoryColumn = True
+        self.hideSwitchedColumn = True
         
         if self.process:
             self.process.kill()
@@ -313,7 +342,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -336,7 +366,21 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.statusList.doItemsLayout()
         self.__resort()
         self.__resizeColumns()
-        self.statusList.setColumnHidden(self.__changelistColumn, not self.changelistFound)
+        
+        self.statusList.setColumnHidden(self.__changelistColumn, 
+                                        not self.changelistFound)
+        self.statusList.setColumnHidden(self.__propStatusColumn, 
+                                        self.hidePropertyStatusColumn)
+        self.statusList.setColumnHidden(self.__lockedColumn, 
+                                        self.hideLockColumns)
+        self.statusList.setColumnHidden(self.__lockinfoColumn, 
+                                        self.hideLockColumns)
+        self.statusList.setColumnHidden(self.__upToDateColumn, 
+                                        self.hideUpToDateColumn)
+        self.statusList.setColumnHidden(self.__historyColumn, 
+                                        self.hideHistoryColumn)
+        self.statusList.setColumnHidden(self.__switchedColumn, 
+                                        self.hideSwitchedColumn)
         
     def on_buttonBox_clicked(self, button):
         """
@@ -381,14 +425,16 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                     author = self.rx_status.cap(4)
                     path = self.rx_status.cap(5).strip()
                     
-                    self.__generateItem(flags[0], flags[1], flags[2], flags[3], flags[4], 
-                                        flags[5], flags[7], rev, change, author, path)
+                    self.__generateItem(flags[0], flags[1], flags[2], flags[3],
+                                        flags[4], flags[5], flags[7], rev,
+                                        change, author, path)
                 elif self.rx_status2.exactMatch(s):
                     flags = self.rx_status2.cap(1)
                     path = self.rx_status2.cap(2).trimmed()
                     
-                    self.__generateItem(flags[0], flags[1], flags[2], flags[3], flags[4], 
-                                        flags[5], flags[7], "", "", "", path)
+                    self.__generateItem(flags[0], flags[1], flags[2], flags[3],
+                                        flags[4], flags[5], flags[7], "", "",
+                                        "", path)
                 elif self.rx_changelist.exactMatch(s):
                     self.currentChangelist = self.rx_changelist.cap(1)
                     self.changelistFound = True
@@ -477,9 +523,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.start(self.args)
     
-    ############################################################################
+    ###########################################################################
     ## Context menu handling methods
-    ############################################################################
+    ###########################################################################
     
     def __showContextMenu(self, coord):
         """
@@ -493,12 +539,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Commit context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Commit"),
-                self.trUtf8("""There are no uncommitted changes available/selected."""))
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
             return
         
         if Preferences.getVCS("AutoSaveFiles"):
@@ -519,12 +566,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Add context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getUnversionedItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Add"),
-                self.trUtf8("""There are no unversioned entries available/selected."""))
+                self.trUtf8("""There are no unversioned entries"""
+                            """ available/selected."""))
             return
         
         self.vcs.vcsAdd(names)
@@ -539,12 +587,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Revert context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getModifiedItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Revert"),
-                self.trUtf8("""There are no uncommitted changes available/selected."""))
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
             return
         
         self.vcs.vcsRevert(names)
@@ -559,12 +608,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Lock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(self.unlockedIndicators)]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Lock"),
-                self.trUtf8("""There are no unlocked files available/selected."""))
+                self.trUtf8("""There are no unlocked files"""
+                            """ available/selected."""))
             return
         
         self.vcs.svnLock(names, parent = self)
@@ -574,12 +624,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Unlock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getLockActionItems(self.lockedIndicators)]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Unlock"),
-                self.trUtf8("""There are no locked files available/selected."""))
+                self.trUtf8("""There are no locked files"""
+                            """ available/selected."""))
             return
         
         self.vcs.svnUnlock(names, parent = self)
@@ -589,12 +640,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Break Lock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
-                 for itm in self.__getLockActionItems(self.stealBreakLockIndicators)]
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getLockActionItems(
+                    self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Break Lock"),
-                self.trUtf8("""There are no locked files available/selected."""))
+                self.trUtf8("""There are no locked files"""
+                            """ available/selected."""))
             return
         
         self.vcs.svnUnlock(names, parent = self, breakIt = True)
@@ -604,12 +657,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to handle the Break Lock context menu entry.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
-                 for itm in self.__getLockActionItems(self.stealBreakLockIndicators)]
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getLockActionItems(
+                    self.stealBreakLockIndicators)]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Steal Lock"),
-                self.trUtf8("""There are no locked files available/selected."""))
+                self.trUtf8("""There are no locked files"""
+                            """ available/selected."""))
             return
         
         self.vcs.svnLock(names, parent=self, stealIt=True)
@@ -619,7 +674,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to add entries to a changelist.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getNonChangelistItems()]
         if not names:
             E5MessageBox.information(self,
@@ -637,13 +692,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to remove entries from their changelists.
         """
-        names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
                  for itm in self.__getChangelistItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Remove from Changelist"),
                 self.trUtf8(
-                    """There are no files available/selected belonging to a changelist."""
+                    """There are no files available/selected belonging"""
+                    """ to a changelist."""
                 )
             )
             return
@@ -665,7 +721,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
     def __getUnversionedItems(self):
         """
-        Private method to retrieve all entries, that have an unversioned status.
+        Private method to retrieve all entries, that have an unversioned
+        status.
         
         @return list of all items with an unversioned status
         """
@@ -689,7 +746,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
     def __getChangelistItems(self):
         """
-        Private method to retrieve all entries, that are members of a changelist.
+        Private method to retrieve all entries, that are members of
+        a changelist.
         
         @return list of all items belonging to a changelist
         """
@@ -701,7 +759,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
     def __getNonChangelistItems(self):
         """
-        Private method to retrieve all entries, that are not members of a changelist.
+        Private method to retrieve all entries, that are not members of
+        a changelist.
         
         @return list of all items not belonging to a changelist
         """
