@@ -152,6 +152,7 @@ class DebugServer(QTcpServer):
         
         self.debuggerInterface = None
         self.debugging = False
+        self.running = False
         self.clientProcess = None
         self.clientType = \
             Preferences.Prefs.settings.value('DebugClient/Type', 'Python3')
@@ -667,6 +668,7 @@ class DebugServer(QTcpServer):
         self.debuggerInterface.remoteLoad(fn, argv, wd, tracePython, autoContinue, 
                                           autoFork, forkChild)
         self.debugging = True
+        self.running = True
         self.__restoreBreakpoints()
         self.__restoreWatchpoints()
 
@@ -706,6 +708,7 @@ class DebugServer(QTcpServer):
         
         self.debuggerInterface.remoteRun(fn, argv, wd, autoFork, forkChild)
         self.debugging = False
+        self.running = True
 
     def remoteCoverage(self, fn, argv, wd, env, autoClearShell = True,
                        erase = False, forProject = False, runInConsole = False, 
@@ -742,6 +745,7 @@ class DebugServer(QTcpServer):
         
         self.debuggerInterface.remoteCoverage(fn, argv, wd, erase)
         self.debugging = False
+        self.running = True
 
     def remoteProfile(self, fn, argv, wd, env, autoClearShell = True,
                       erase = False, forProject = False, 
@@ -778,6 +782,7 @@ class DebugServer(QTcpServer):
         
         self.debuggerInterface.remoteProfile(fn, argv, wd, erase)
         self.debugging = False
+        self.running = True
 
     def remoteStatement(self, stmt):
         """
@@ -994,6 +999,7 @@ class DebugServer(QTcpServer):
         
         self.debuggerInterface.remoteUTPrepare(fn, tn, tfn, cov, covname, coverase)
         self.debugging = False
+        self.running = True
         
     def remoteUTRun(self):
         """
@@ -1085,7 +1091,8 @@ class DebugServer(QTcpServer):
         @param stackTrace list of stack entries with the exception position
             first. Each stack entry is a list giving the filename and the linenumber.
         """
-        self.clientException.emit(exceptionType, exceptionMessage, stackTrace)
+        if self.running:
+            self.clientException.emit(exceptionType, exceptionMessage, stackTrace)
         
     def signalClientSyntaxError(self, message, filename, lineNo, characterNo):
         """
@@ -1096,7 +1103,8 @@ class DebugServer(QTcpServer):
         @param lineNo line number of the syntax error position (integer)
         @param characterNo character number of the syntax error position (integer)
         """
-        self.clientSyntaxError.emit(message, filename, lineNo, characterNo)
+        if self.running:
+            self.clientSyntaxError.emit(message, filename, lineNo, characterNo)
         
     def signalClientExit(self, status):
         """
@@ -1113,6 +1121,7 @@ class DebugServer(QTcpServer):
             self.__createDebuggerInterface("None")
             self.signalClientOutput(self.trUtf8('\nNot connected\n'))
             self.signalClientStatement(False)
+        self.running = False
         
     def signalClientClearBreak(self, filename, lineno):
         """
@@ -1245,6 +1254,7 @@ class DebugServer(QTcpServer):
         print(self.trUtf8("Passive debug connection received"))
         self.passiveClientExited = False
         self.debugging = True
+        self.running = True
         self.__restoreBreakpoints()
         self.__restoreWatchpoints()
         self.passiveDebugStarted.emit(fn, exc)
