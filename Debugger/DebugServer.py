@@ -308,6 +308,8 @@ class DebugServer(QTcpServer):
         @keyparam runInConsole flag indicating to start the debugger in a 
             console window (boolean)
         """
+        self.running = False
+        
         if not self.passive or not self.passiveClientExited: 
             if self.debuggerInterface and self.debuggerInterface.isConnected():
                 self.shutdownServer()
