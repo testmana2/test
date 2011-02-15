@@ -285,14 +285,22 @@ class SpellChecker(QObject):
             pos = self.editor.positionBefore(pos)
         
         if pos >= 0 and self.__checkRegion(pos):
+            pos0 = pos
+            pos1 = -1
             if not self.editor.charAt(pos).isalnum():
-                pos = self.editor.positionBefore(pos)
-            
-            if self.editor.charAt(pos).isalnum():
                 line, index = self.editor.lineIndexFromPosition(pos)
-                word = self.editor.getWord(line, index, useWordChars = False)
-                if len(word) >= self.minimumWordSize:
-                    ok = spell.check(word)
+                self.editor.clearIndicator(self.indicator, line, index, line, index + 1)
+                pos1 = self.editor.positionAfter(pos)
+                pos0 = self.editor.positionBefore(pos)
+            
+            for pos in [pos0, pos1]:
+                if self.editor.charAt(pos).isalnum():
+                    line, index = self.editor.lineIndexFromPosition(pos)
+                    word = self.editor.getWord(line, index, useWordChars = False)
+                    if len(word) >= self.minimumWordSize:
+                        ok = spell.check(word)
+                    else:
+                        ok = True
                     start, end = \
                         self.editor.getWordBoundaries(line, index, useWordChars = False)
                     if ok:
