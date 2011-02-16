@@ -166,8 +166,6 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findList.clear()
             self.replacetextCombo.setEditText("")
         
-        self.dirCombo.setEditText("")
-        
         QDialog.show(self)
         
     def on_findtextCombo_editTextChanged(self, text):
