@@ -66,8 +66,9 @@ class UIPreviewer(QMainWindow):
         self.styleCombo.setToolTip(self.trUtf8("Select the GUI Theme"))
         self.styleLayout.addWidget(self.styleCombo)
         self.styleCombo.addItems(list(QStyleFactory().keys()))
-        self.styleCombo.setCurrentIndex(\
-            int(Preferences.Prefs.settings.value('UIPreviewer/style')))
+        currentStyle = Preferences.Prefs.settings.value('UIPreviewer/style')
+        if currentStyle is not None:
+            self.styleCombo.setCurrentIndex(int(currentStyle))
         
         styleSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.styleLayout.addItem(styleSpacer)
