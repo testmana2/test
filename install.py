@@ -151,24 +151,28 @@ def wrapperName(dname, wfile):
     return wname
 
 
-def createPyWrapper(pydir, wfile):
+def createPyWrapper(pydir, wfile, isGuiScript = True):
     """
     Create an executable wrapper for a Python script.
 
-    @param pydir the name of the directory where the Python script will eventually
-        be installed
+    @param pydir the name of the directory where the Python script will
+        eventually be installed
     @param wfile the basename of the wrapper
     @return the platform specific name of the wrapper
     """
     # all kinds of Windows systems
     if sys.platform.startswith("win"):
         wname = wfile + ".bat"
+        if isGuiScript:
+            ext = "pyw"
+        else:
+            ext = "py"
         wrapper = \
             '''@echo off\r\n''' \
             '''set PYDIR=%~dp0\r\n''' \
             '''start "%PYDIR%\\pythonw.exe"''' \
-            ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{0}.pyw"''' \
-            ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(wfile)
+            ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{0}.{1}"''' \
+            ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(wfile, ext)
 
     # Mac OS X
     elif sys.platform == "darwin":
@@ -331,11 +335,11 @@ def installEric():
     
     # Create the platform specific wrappers.
     wnames = []
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-api"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-api", False))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_compare"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_configure"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_diff"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-doc"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-doc", False))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_editor"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_iconeditor"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_plugininstall"))
