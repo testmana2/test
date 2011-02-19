@@ -17,7 +17,7 @@ from Utilities.SingleApplication import SingleApplicationClient, SingleApplicati
 # define some module global stuff
 ###########################################################################
 
-SAFile = "eric5-trpreviewer"
+SAFile = "eric5_trpreviewer"
 
 # define the protocol tokens
 SALoadForm =        '>LoadForm<'

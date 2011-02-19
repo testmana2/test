@@ -544,7 +544,7 @@ class PluginRepositoryWindow(QMainWindow):
         Private slot to start the eric5 plugin installation dialog.
         """
         proc = QProcess()
-        applPath = os.path.join(getConfig("ericDir"), "eric5-plugininstall.py")
+        applPath = os.path.join(getConfig("ericDir"), "eric5_plugininstall.py")
         
         args = []
         args.append(applPath)

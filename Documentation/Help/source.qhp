@@ -770,23 +770,23 @@
           <section title="eric5.compileUiFiles" ref="eric5.compileUiFiles.html" />
           <section title="eric5.eric5" ref="eric5.eric5.html" />
           <section title="eric5.eric5-api" ref="eric5.eric5-api.html" />
-          <section title="eric5.eric5-compare" ref="eric5.eric5-compare.html" />
-          <section title="eric5.eric5-configure" ref="eric5.eric5-configure.html" />
-          <section title="eric5.eric5-diff" ref="eric5.eric5-diff.html" />
           <section title="eric5.eric5-doc" ref="eric5.eric5-doc.html" />
-          <section title="eric5.eric5-editor" ref="eric5.eric5-editor.html" />
-          <section title="eric5.eric5-iconeditor" ref="eric5.eric5-iconeditor.html" />
-          <section title="eric5.eric5-plugininstall" ref="eric5.eric5-plugininstall.html" />
-          <section title="eric5.eric5-pluginrepository" ref="eric5.eric5-pluginrepository.html" />
-          <section title="eric5.eric5-pluginuninstall" ref="eric5.eric5-pluginuninstall.html" />
-          <section title="eric5.eric5-qregexp" ref="eric5.eric5-qregexp.html" />
-          <section title="eric5.eric5-re" ref="eric5.eric5-re.html" />
-          <section title="eric5.eric5-sqlbrowser" ref="eric5.eric5-sqlbrowser.html" />
-          <section title="eric5.eric5-tray" ref="eric5.eric5-tray.html" />
-          <section title="eric5.eric5-trpreviewer" ref="eric5.eric5-trpreviewer.html" />
-          <section title="eric5.eric5-uipreviewer" ref="eric5.eric5-uipreviewer.html" />
-          <section title="eric5.eric5-unittest" ref="eric5.eric5-unittest.html" />
-          <section title="eric5.eric5-webbrowser" ref="eric5.eric5-webbrowser.html" />
+          <section title="eric5.eric5_compare" ref="eric5.eric5_compare.html" />
+          <section title="eric5.eric5_configure" ref="eric5.eric5_configure.html" />
+          <section title="eric5.eric5_diff" ref="eric5.eric5_diff.html" />
+          <section title="eric5.eric5_editor" ref="eric5.eric5_editor.html" />
+          <section title="eric5.eric5_iconeditor" ref="eric5.eric5_iconeditor.html" />
+          <section title="eric5.eric5_plugininstall" ref="eric5.eric5_plugininstall.html" />
+          <section title="eric5.eric5_pluginrepository" ref="eric5.eric5_pluginrepository.html" />
+          <section title="eric5.eric5_pluginuninstall" ref="eric5.eric5_pluginuninstall.html" />
+          <section title="eric5.eric5_qregexp" ref="eric5.eric5_qregexp.html" />
+          <section title="eric5.eric5_re" ref="eric5.eric5_re.html" />
+          <section title="eric5.eric5_sqlbrowser" ref="eric5.eric5_sqlbrowser.html" />
+          <section title="eric5.eric5_tray" ref="eric5.eric5_tray.html" />
+          <section title="eric5.eric5_trpreviewer" ref="eric5.eric5_trpreviewer.html" />
+          <section title="eric5.eric5_uipreviewer" ref="eric5.eric5_uipreviewer.html" />
+          <section title="eric5.eric5_unittest" ref="eric5.eric5_unittest.html" />
+          <section title="eric5.eric5_webbrowser" ref="eric5.eric5_webbrowser.html" />
           <section title="eric5.eric5config" ref="eric5.eric5config.html" />
           <section title="eric5.install" ref="eric5.install.html" />
           <section title="eric5.install-i18n" ref="eric5.install-i18n.html" />
@@ -797,18 +797,9 @@
     </toc>
     <keywords>
       <keyword name="eric5 (Package)" id="eric5 (Package)" ref="index-eric5.html" />
-      <keyword name="eric5-tray (Module)" id="eric5-tray (Module)" ref="eric5.eric5-tray.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-tray.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-tray.html#main" />
-      <keyword name="eric5-unittest (Module)" id="eric5-unittest (Module)" ref="eric5.eric5-unittest.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-unittest.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-unittest.html#main" />
-      <keyword name="eric5-sqlbrowser (Module)" id="eric5-sqlbrowser (Module)" ref="eric5.eric5-sqlbrowser.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-sqlbrowser.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-sqlbrowser.html#main" />
-      <keyword name="eric5-configure (Module)" id="eric5-configure (Module)" ref="eric5.eric5-configure.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-configure.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-configure.html#main" />
+      <keyword name="eric5_unittest (Module)" id="eric5_unittest (Module)" ref="eric5.eric5_unittest.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_unittest.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_unittest.html#main" />
       <keyword name="eric5-api (Module)" id="eric5-api (Module)" ref="eric5.eric5-api.html" />
       <keyword name="main" id="main" ref="eric5.eric5-api.html#main" />
       <keyword name="usage" id="usage" ref="eric5.eric5-api.html#usage" />
@@ -823,28 +814,28 @@
       <keyword name="uninstallEric" id="uninstallEric" ref="eric5.uninstall.html#uninstallEric" />
       <keyword name="usage" id="usage" ref="eric5.uninstall.html#usage" />
       <keyword name="wrapperName" id="wrapperName" ref="eric5.uninstall.html#wrapperName" />
+      <keyword name="eric5_plugininstall (Module)" id="eric5_plugininstall (Module)" ref="eric5.eric5_plugininstall.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_plugininstall.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_plugininstall.html#main" />
       <keyword name="eric5 (Module)" id="eric5 (Module)" ref="eric5.eric5.html" />
       <keyword name="excepthook" id="excepthook" ref="eric5.eric5.html#excepthook" />
       <keyword name="handleSingleApplication" id="handleSingleApplication" ref="eric5.eric5.html#handleSingleApplication" />
       <keyword name="main" id="main" ref="eric5.eric5.html#main" />
       <keyword name="uiStartUp" id="uiStartUp" ref="eric5.eric5.html#uiStartUp" />
-      <keyword name="eric5-re (Module)" id="eric5-re (Module)" ref="eric5.eric5-re.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-re.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-re.html#main" />
-      <keyword name="eric5-webbrowser (Module)" id="eric5-webbrowser (Module)" ref="eric5.eric5-webbrowser.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-webbrowser.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-webbrowser.html#main" />
-      <keyword name="eric5-editor (Module)" id="eric5-editor (Module)" ref="eric5.eric5-editor.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-editor.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-editor.html#main" />
+      <keyword name="eric5_pluginuninstall (Module)" id="eric5_pluginuninstall (Module)" ref="eric5.eric5_pluginuninstall.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_pluginuninstall.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_pluginuninstall.html#main" />
+      <keyword name="eric5_pluginrepository (Module)" id="eric5_pluginrepository (Module)" ref="eric5.eric5_pluginrepository.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_pluginrepository.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_pluginrepository.html#main" />
+      <keyword name="eric5_qregexp (Module)" id="eric5_qregexp (Module)" ref="eric5.eric5_qregexp.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_qregexp.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_qregexp.html#main" />
       <keyword name="eric5config (Module)" id="eric5config (Module)" ref="eric5.eric5config.html" />
       <keyword name="getConfig" id="getConfig" ref="eric5.eric5config.html#getConfig" />
-      <keyword name="eric5-uipreviewer (Module)" id="eric5-uipreviewer (Module)" ref="eric5.eric5-uipreviewer.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-uipreviewer.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-uipreviewer.html#main" />
-      <keyword name="eric5-iconeditor (Module)" id="eric5-iconeditor (Module)" ref="eric5.eric5-iconeditor.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-iconeditor.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-iconeditor.html#main" />
+      <keyword name="eric5_sqlbrowser (Module)" id="eric5_sqlbrowser (Module)" ref="eric5.eric5_sqlbrowser.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_sqlbrowser.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_sqlbrowser.html#main" />
       <keyword name="install-i18n (Module)" id="install-i18n (Module)" ref="eric5.install-i18n.html" />
       <keyword name="getConfigDir" id="getConfigDir" ref="eric5.install-i18n.html#getConfigDir" />
       <keyword name="installTranslations" id="installTranslations" ref="eric5.install-i18n.html#installTranslations" />
@@ -854,27 +845,36 @@
       <keyword name="initGlobals" id="initGlobals" ref="eric5.patch_modpython.html#initGlobals" />
       <keyword name="main" id="main" ref="eric5.patch_modpython.html#main" />
       <keyword name="usage" id="usage" ref="eric5.patch_modpython.html#usage" />
-      <keyword name="eric5-trpreviewer (Module)" id="eric5-trpreviewer (Module)" ref="eric5.eric5-trpreviewer.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-trpreviewer.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-trpreviewer.html#main" />
       <keyword name="compileUiFiles (Module)" id="compileUiFiles (Module)" ref="eric5.compileUiFiles.html" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric5.compileUiFiles.html#compileUiDir" />
       <keyword name="compileUiFiles" id="compileUiFiles" ref="eric5.compileUiFiles.html#compileUiFiles" />
       <keyword name="compile_ui" id="compile_ui" ref="eric5.compileUiFiles.html#compile_ui" />
       <keyword name="main" id="main" ref="eric5.compileUiFiles.html#main" />
       <keyword name="pyName" id="pyName" ref="eric5.compileUiFiles.html#pyName" />
-      <keyword name="eric5-pluginuninstall (Module)" id="eric5-pluginuninstall (Module)" ref="eric5.eric5-pluginuninstall.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-pluginuninstall.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-pluginuninstall.html#main" />
-      <keyword name="eric5-plugininstall (Module)" id="eric5-plugininstall (Module)" ref="eric5.eric5-plugininstall.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-plugininstall.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-plugininstall.html#main" />
-      <keyword name="eric5-qregexp (Module)" id="eric5-qregexp (Module)" ref="eric5.eric5-qregexp.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-qregexp.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-qregexp.html#main" />
-      <keyword name="eric5-compare (Module)" id="eric5-compare (Module)" ref="eric5.eric5-compare.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-compare.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-compare.html#main" />
+      <keyword name="eric5_diff (Module)" id="eric5_diff (Module)" ref="eric5.eric5_diff.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_diff.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_diff.html#main" />
+      <keyword name="eric5_compare (Module)" id="eric5_compare (Module)" ref="eric5.eric5_compare.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_compare.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_compare.html#main" />
+      <keyword name="eric5_webbrowser (Module)" id="eric5_webbrowser (Module)" ref="eric5.eric5_webbrowser.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_webbrowser.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_webbrowser.html#main" />
+      <keyword name="eric5_tray (Module)" id="eric5_tray (Module)" ref="eric5.eric5_tray.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_tray.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_tray.html#main" />
+      <keyword name="eric5_re (Module)" id="eric5_re (Module)" ref="eric5.eric5_re.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_re.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_re.html#main" />
+      <keyword name="eric5_configure (Module)" id="eric5_configure (Module)" ref="eric5.eric5_configure.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_configure.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_configure.html#main" />
+      <keyword name="eric5_trpreviewer (Module)" id="eric5_trpreviewer (Module)" ref="eric5.eric5_trpreviewer.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_trpreviewer.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_trpreviewer.html#main" />
+      <keyword name="eric5_iconeditor (Module)" id="eric5_iconeditor (Module)" ref="eric5.eric5_iconeditor.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_iconeditor.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_iconeditor.html#main" />
       <keyword name="install (Module)" id="install (Module)" ref="eric5.install.html" />
       <keyword name="cleanUp" id="cleanUp" ref="eric5.install.html#cleanUp" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric5.install.html#compileUiDir" />
@@ -894,12 +894,12 @@
       <keyword name="pyName" id="pyName" ref="eric5.install.html#pyName" />
       <keyword name="usage" id="usage" ref="eric5.install.html#usage" />
       <keyword name="wrapperName" id="wrapperName" ref="eric5.install.html#wrapperName" />
-      <keyword name="eric5-pluginrepository (Module)" id="eric5-pluginrepository (Module)" ref="eric5.eric5-pluginrepository.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-pluginrepository.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-pluginrepository.html#main" />
-      <keyword name="eric5-diff (Module)" id="eric5-diff (Module)" ref="eric5.eric5-diff.html" />
-      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5-diff.html#createMainWidget" />
-      <keyword name="main" id="main" ref="eric5.eric5-diff.html#main" />
+      <keyword name="eric5_editor (Module)" id="eric5_editor (Module)" ref="eric5.eric5_editor.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_editor.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_editor.html#main" />
+      <keyword name="eric5_uipreviewer (Module)" id="eric5_uipreviewer (Module)" ref="eric5.eric5_uipreviewer.html" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_uipreviewer.html#createMainWidget" />
+      <keyword name="main" id="main" ref="eric5.eric5_uipreviewer.html#main" />
       <keyword name="IconEditor (Package)" id="IconEditor (Package)" ref="index-eric5.IconEditor.html" />
       <keyword name="IconEditorPalette (Module)" id="IconEditorPalette (Module)" ref="eric5.IconEditor.IconEditorPalette.html" />
       <keyword name="IconEditorPalette" id="IconEditorPalette" ref="eric5.IconEditor.IconEditorPalette.html#IconEditorPalette" />
@@ -10816,6 +10816,22 @@
       <file>eric5.eric5-unittest.html</file>
       <file>eric5.eric5-webbrowser.html</file>
       <file>eric5.eric5.html</file>
+      <file>eric5.eric5_compare.html</file>
+      <file>eric5.eric5_configure.html</file>
+      <file>eric5.eric5_diff.html</file>
+      <file>eric5.eric5_editor.html</file>
+      <file>eric5.eric5_iconeditor.html</file>
+      <file>eric5.eric5_plugininstall.html</file>
+      <file>eric5.eric5_pluginrepository.html</file>
+      <file>eric5.eric5_pluginuninstall.html</file>
+      <file>eric5.eric5_qregexp.html</file>
+      <file>eric5.eric5_re.html</file>
+      <file>eric5.eric5_sqlbrowser.html</file>
+      <file>eric5.eric5_tray.html</file>
+      <file>eric5.eric5_trpreviewer.html</file>
+      <file>eric5.eric5_uipreviewer.html</file>
+      <file>eric5.eric5_unittest.html</file>
+      <file>eric5.eric5_webbrowser.html</file>
       <file>eric5.eric5config.html</file>
       <file>eric5.install-i18n.html</file>
       <file>eric5.install.html</file>

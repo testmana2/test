@@ -8,6 +8,6 @@ Package implementing a little web browser.
 
 The web browser is a little HTML browser for the display of HTML
 help files like the Qt Online Documentation and for browsing the internet.
-It may be used as a standalone version as well by using the eric5-helpviewer.py
+It may be used as a standalone version as well by using the eric5_helpviewer.py
 script found in the main eric5 installation directory.
 """

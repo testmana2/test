@@ -81,6 +81,16 @@ def uninstallEric():
         "eric5-plugininstall", "eric5-pluginuninstall", 
         "eric5-pluginrepository", "eric5-sqlbrowser", 
         "eric5-webbrowser", 
+        "eric5_api", "eric5_compare",
+        "eric5_configure", "eric5_diff",
+        "eric5_doc", "eric5_helpviewer",
+        "eric5_qregexp", "eric5_re", 
+        "eric5_trpreviewer", "eric5_uipreviewer",
+        "eric5_unittest", "eric5",
+        "eric5_tray", "eric5_editor", 
+        "eric5_plugininstall", "eric5_pluginuninstall", 
+        "eric5_pluginrepository", "eric5_sqlbrowser", 
+        "eric5_webbrowser", 
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'),rem_wname)

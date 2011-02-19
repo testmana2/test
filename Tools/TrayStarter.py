@@ -214,7 +214,7 @@ class TrayStarter(QSystemTrayIcon):
         """
         Private slot to start the eric5 Mini Editor.
         """
-        self.__startProc("eric5-editor.py", "--config={0}".format(
+        self.__startProc("eric5_editor.py", "--config={0}".format(
             Utilities.getConfigDir()))
     
     def __startEric(self):
@@ -228,91 +228,91 @@ class TrayStarter(QSystemTrayIcon):
         """
         Private slot to start the eric5 configuration dialog.
         """
-        self.__startProc("eric5-configure.py", "--config={0}".format(
+        self.__startProc("eric5_configure.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginInstall(self):
         """
         Private slot to start the eric5 plugin installation dialog.
         """
-        self.__startProc("eric5-plugininstall.py", "--config={0}".format(
+        self.__startProc("eric5_plugininstall.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginUninstall(self):
         """
         Private slot to start the eric5 plugin uninstallation dialog.
         """
-        self.__startProc("eric5-pluginuninstall.py", "--config={0}".format(
+        self.__startProc("eric5_pluginuninstall.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginRepository(self):
         """
         Private slot to start the eric5 plugin repository dialog.
         """
-        self.__startProc("eric5-pluginrepository.py", "--config={0}".format(
+        self.__startProc("eric5_pluginrepository.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startHelpViewer(self):
         """
         Private slot to start the eric5 web browser.
         """
-        self.__startProc("eric5-webbrowser.py", "--config={0}".format(
+        self.__startProc("eric5_webbrowser.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startUIPreviewer(self):
         """
         Private slot to start the eric5 UI previewer.
         """
-        self.__startProc("eric5-uipreviewer.py", "--config={0}".format(
+        self.__startProc("eric5_uipreviewer.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startTRPreviewer(self):
         """
         Private slot to start the eric5 translations previewer.
         """
-        self.__startProc("eric5-trpreviewer.py", "--config={0}".format(
+        self.__startProc("eric5_trpreviewer.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startUnittest(self):
         """
         Private slot to start the eric5 unittest dialog.
         """
-        self.__startProc("eric5-unittest.py", "--config={0}".format(
+        self.__startProc("eric5_unittest.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startDiff(self):
         """
         Private slot to start the eric5 diff dialog.
         """
-        self.__startProc("eric5-diff.py", "--config={0}".format(
+        self.__startProc("eric5_diff.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startCompare(self):
         """
         Private slot to start the eric5 compare dialog.
         """
-        self.__startProc("eric5-compare.py", "--config={0}".format(
+        self.__startProc("eric5_compare.py", "--config={0}".format(
             Utilities.getConfigDir()))
     
     def __startSqlBrowser(self):
         """
         Private slot to start the eric5 sql browser dialog.
         """
-        self.__startProc("eric5-sqlbrowser.py", "--config={0}".format(
+        self.__startProc("eric5_sqlbrowser.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startQRegExp(self):
         """
         Private slot to start the eric5 QRegExp editor dialog.
         """
-        self.__startProc("eric5-qregexp.py", "--config={0}".format(
+        self.__startProc("eric5_qregexp.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPyRe(self):
         """
         Private slot to start the eric5 Python re editor dialog.
         """
-        self.__startProc("eric5-re.py", "--config={0}".format(
+        self.__startProc("eric5_re.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __showRecentProjectsMenu(self):

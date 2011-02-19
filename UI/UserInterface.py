@@ -4249,7 +4249,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric5-uipreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric5_uipreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4291,7 +4291,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric5-trpreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric5_trpreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4332,7 +4332,7 @@ class UserInterface(QMainWindow):
         """
         proc = QProcess()
         
-        browser = os.path.join(getConfig("ericDir"), "eric5-sqlbrowser.py")
+        browser = os.path.join(getConfig("ericDir"), "eric5_sqlbrowser.py")
         
         args = []
         args.append(browser)

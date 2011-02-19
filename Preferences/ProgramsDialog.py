@@ -140,14 +140,14 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 5a. Translation Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Translation Previewer"), 
             Utilities.isWindowsPlatform() and \
-                os.path.join(getConfig("bindir"), "eric5-trpreviewer.bat") or \
-                "eric5-trpreviewer", 
+                os.path.join(getConfig("bindir"), "eric5_trpreviewer.bat") or \
+                "eric5_trpreviewer", 
             '--version', 'Eric5', -3)
         # 5b. Forms Previewer
         self.__createProgramEntry(self.trUtf8("Eric5 Forms Previewer"), 
             Utilities.isWindowsPlatform() and \
-                os.path.join(getConfig("bindir"), "eric5-uipreviewer.bat") or \
-                "eric5-uipreviewer", 
+                os.path.join(getConfig("bindir"), "eric5_uipreviewer.bat") or \
+                "eric5_uipreviewer", 
             '--version', 'Eric5', -3)
         
         # 6. do the CORBA programs

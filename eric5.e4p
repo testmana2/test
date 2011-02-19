@@ -678,23 +678,7 @@
     <Source>eric5config.py</Source>
     <Source>eric5.py</Source>
     <Source>eric5.pyw</Source>
-    <Source>eric5-webbrowser.py</Source>
-    <Source>eric5-unittest.py</Source>
-    <Source>eric5-uipreviewer.py</Source>
-    <Source>eric5-trpreviewer.py</Source>
-    <Source>eric5-tray.py</Source>
-    <Source>eric5-sqlbrowser.py</Source>
-    <Source>eric5-re.py</Source>
-    <Source>eric5-qregexp.py</Source>
-    <Source>eric5-pluginuninstall.py</Source>
-    <Source>eric5-pluginrepository.py</Source>
-    <Source>eric5-plugininstall.py</Source>
-    <Source>eric5-iconeditor.py</Source>
-    <Source>eric5-editor.py</Source>
     <Source>eric5-doc.py</Source>
-    <Source>eric5-diff.py</Source>
-    <Source>eric5-configure.py</Source>
-    <Source>eric5-compare.py</Source>
     <Source>eric5-api.py</Source>
     <Source>DebugClients/Python/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/eric5dbgstub.py</Source>
@@ -853,6 +837,38 @@
     <Source>UtilitiesPython2/Pep8Checker.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/Pep8/Pep8Fixer.py</Source>
+    <Source>eric5_compare.py</Source>
+    <Source>eric5_compare.pyw</Source>
+    <Source>eric5_configure.py</Source>
+    <Source>eric5_diff.py</Source>
+    <Source>eric5_editor.py</Source>
+    <Source>eric5_iconeditor.py</Source>
+    <Source>eric5_plugininstall.py</Source>
+    <Source>eric5_pluginrepository.py</Source>
+    <Source>eric5_pluginuninstall.py</Source>
+    <Source>eric5_qregexp.py</Source>
+    <Source>eric5_re.py</Source>
+    <Source>eric5_sqlbrowser.py</Source>
+    <Source>eric5_tray.py</Source>
+    <Source>eric5_trpreviewer.py</Source>
+    <Source>eric5_uipreviewer.py</Source>
+    <Source>eric5_unittest.py</Source>
+    <Source>eric5_webbrowser.py</Source>
+    <Source>eric5_configure.pyw</Source>
+    <Source>eric5_diff.pyw</Source>
+    <Source>eric5_editor.pyw</Source>
+    <Source>eric5_iconeditor.pyw</Source>
+    <Source>eric5_plugininstall.pyw</Source>
+    <Source>eric5_pluginrepository.pyw</Source>
+    <Source>eric5_pluginuninstall.pyw</Source>
+    <Source>eric5_qregexp.pyw</Source>
+    <Source>eric5_re.pyw</Source>
+    <Source>eric5_sqlbrowser.pyw</Source>
+    <Source>eric5_tray.pyw</Source>
+    <Source>eric5_trpreviewer.pyw</Source>
+    <Source>eric5_uipreviewer.pyw</Source>
+    <Source>eric5_unittest.pyw</Source>
+    <Source>eric5_webbrowser.pyw</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
