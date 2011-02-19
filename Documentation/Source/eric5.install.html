@@ -220,17 +220,21 @@ list of (sub)directories to exclude from copying
 <hr /><hr />
 <a NAME="createPyWrapper" ID="createPyWrapper"></a>
 <h2>createPyWrapper</h2>
-<b>createPyWrapper</b>(<i>pydir, wfile</i>)
+<b>createPyWrapper</b>(<i>pydir, wfile, isGuiScript = True</i>)
 <p>
     Create an executable wrapper for a Python script.
 </p><dl>
 <dt><i>pydir</i></dt>
 <dd>
-the name of the directory where the Python script will eventually
-        be installed
+the name of the directory where the Python script will
+        eventually be installed
 </dd><dt><i>wfile</i></dt>
 <dd>
 the basename of the wrapper
+</dd><dt><i>isGuiScript</i></dt>
+<dd>
+flag indicating a wrapper script for a GUI
+        application (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

@@ -158,6 +158,8 @@ def createPyWrapper(pydir, wfile, isGuiScript = True):
     @param pydir the name of the directory where the Python script will
         eventually be installed
     @param wfile the basename of the wrapper
+    @param isGuiScript flag indicating a wrapper script for a GUI
+        application (boolean)
     @return the platform specific name of the wrapper
     """
     # all kinds of Windows systems

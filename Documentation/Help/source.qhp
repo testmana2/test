@@ -10798,23 +10798,7 @@
       <file>eric5.ViewManager.__init__.html</file>
       <file>eric5.compileUiFiles.html</file>
       <file>eric5.eric5-api.html</file>
-      <file>eric5.eric5-compare.html</file>
-      <file>eric5.eric5-configure.html</file>
-      <file>eric5.eric5-diff.html</file>
       <file>eric5.eric5-doc.html</file>
-      <file>eric5.eric5-editor.html</file>
-      <file>eric5.eric5-iconeditor.html</file>
-      <file>eric5.eric5-plugininstall.html</file>
-      <file>eric5.eric5-pluginrepository.html</file>
-      <file>eric5.eric5-pluginuninstall.html</file>
-      <file>eric5.eric5-qregexp.html</file>
-      <file>eric5.eric5-re.html</file>
-      <file>eric5.eric5-sqlbrowser.html</file>
-      <file>eric5.eric5-tray.html</file>
-      <file>eric5.eric5-trpreviewer.html</file>
-      <file>eric5.eric5-uipreviewer.html</file>
-      <file>eric5.eric5-unittest.html</file>
-      <file>eric5.eric5-webbrowser.html</file>
       <file>eric5.eric5.html</file>
       <file>eric5.eric5_compare.html</file>
       <file>eric5.eric5_configure.html</file>
