@@ -164,15 +164,17 @@ def createPyWrapper(pydir, wfile, isGuiScript = True):
     if sys.platform.startswith("win"):
         wname = wfile + ".bat"
         if isGuiScript:
-            ext = "pyw"
+            wrapper = \
+                '''@echo off\r\n''' \
+                '''set PYDIR=%~dp0\r\n''' \
+                '''start "%PYDIR%\\pythonw.exe"''' \
+                ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{0}.pyw"''' \
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(wfile)
         else:
-            ext = "py"
-        wrapper = \
-            '''@echo off\r\n''' \
-            '''set PYDIR=%~dp0\r\n''' \
-            '''start "%PYDIR%\\pythonw.exe"''' \
-            ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{0}.{1}"''' \
-            ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(wfile, ext)
+            wrapper = \
+                '''@"{0}\\python" "{1}\\{2}.py"''' \
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(
+                platBinDir, pydir, wfile)
 
     # Mac OS X
     elif sys.platform == "darwin":
