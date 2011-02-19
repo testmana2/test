@@ -21,7 +21,6 @@ from .Ui_ProgramsDialog import Ui_ProgramsDialog
 import Preferences
 import Utilities
 
-from eric5config import getConfig
 
 class ProgramsDialog(QDialog, Ui_ProgramsDialog):
     """
@@ -136,29 +135,15 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             Utilities.isWindowsPlatform() and "rbrcc.exe" or "rbrcc", 
             '-version', 'Ruby Resource Compiler', -1)
         
-        # 5. do the Eric5 programs
-        # 5a. Translation Previewer
-        self.__createProgramEntry(self.trUtf8("Eric5 Translation Previewer"), 
-            Utilities.isWindowsPlatform() and \
-                os.path.join(getConfig("bindir"), "eric5_trpreviewer.bat") or \
-                "eric5_trpreviewer", 
-            '--version', 'Eric5', -3)
-        # 5b. Forms Previewer
-        self.__createProgramEntry(self.trUtf8("Eric5 Forms Previewer"), 
-            Utilities.isWindowsPlatform() and \
-                os.path.join(getConfig("bindir"), "eric5_uipreviewer.bat") or \
-                "eric5_uipreviewer", 
-            '--version', 'Eric5', -3)
-        
-        # 6. do the CORBA programs
-        # 6a. omniORB
+        # 5. do the CORBA programs
+        # 5a. omniORB
         exe = Preferences.getCorba("omniidl")
         if Utilities.isWindowsPlatform():
             exe += ".exe"
         self.__createProgramEntry(self.trUtf8("CORBA IDL Compiler"), exe,
             '-V', 'omniidl', -1)
         
-        # 7. do the spell checking entry
+        # 6. do the spell checking entry
         try:
             import enchant
             try:
@@ -174,7 +159,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             version = ""
         self.__createEntry(self.trUtf8("Spell Checker - PyEnchant"), text, version)
         
-        # 8. do the pygments entry
+        # 7. do the pygments entry
         try:
             import pygments
             try:
