@@ -6876,7 +6876,7 @@ eric5.install.copyTree?4(src, dst, filters, excludeDirs=[])
 eric5.install.createConfig?4()
 eric5.install.createGlobalPluginsDir?4()
 eric5.install.createInstallConfig?4()
-eric5.install.createPyWrapper?4(pydir, wfile)
+eric5.install.createPyWrapper?4(pydir, wfile, isGuiScript = True)
 eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7

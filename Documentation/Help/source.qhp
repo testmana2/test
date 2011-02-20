@@ -5426,6 +5426,7 @@
       <keyword name="TrayStarter.__startDiff" id="TrayStarter.__startDiff" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startDiff" />
       <keyword name="TrayStarter.__startEric" id="TrayStarter.__startEric" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startEric" />
       <keyword name="TrayStarter.__startHelpViewer" id="TrayStarter.__startHelpViewer" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startHelpViewer" />
+      <keyword name="TrayStarter.__startIconEditor" id="TrayStarter.__startIconEditor" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startIconEditor" />
       <keyword name="TrayStarter.__startMiniEditor" id="TrayStarter.__startMiniEditor" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startMiniEditor" />
       <keyword name="TrayStarter.__startPluginInstall" id="TrayStarter.__startPluginInstall" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startPluginInstall" />
       <keyword name="TrayStarter.__startPluginRepository" id="TrayStarter.__startPluginRepository" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startPluginRepository" />

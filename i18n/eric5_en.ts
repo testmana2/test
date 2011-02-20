@@ -37512,58 +37512,63 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="100"/>
+        <location filename="Tools/TrayStarter.py" line="104"/>
         <source>Install Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="102"/>
+        <location filename="Tools/TrayStarter.py" line="106"/>
         <source>Uninstall Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="104"/>
+        <location filename="Tools/TrayStarter.py" line="108"/>
         <source>Plugin Repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="108"/>
+        <location filename="Tools/TrayStarter.py" line="112"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="110"/>
+        <location filename="Tools/TrayStarter.py" line="114"/>
         <source>eric5 IDE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="112"/>
+        <location filename="Tools/TrayStarter.py" line="116"/>
         <source>eric5 Mini Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="129"/>
+        <location filename="Tools/TrayStarter.py" line="133"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>Process Generation Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="116"/>
+        <location filename="Tools/TrayStarter.py" line="120"/>
         <source>Preferences (tray starter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="100"/>
+        <source>Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

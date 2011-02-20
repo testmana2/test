@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="de">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1577,8 +1578,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1628,7 +1629,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -11883,7 +11884,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -37860,42 +37861,42 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Dateien Seite an Seite vergleichen</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="108"/>
+        <location filename="Tools/TrayStarter.py" line="112"/>
         <source>Preferences</source>
         <translation>Optionen</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="129"/>
+        <location filename="Tools/TrayStarter.py" line="133"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Prozess konnte nicht gestartet werden.&lt;br&gt;StellenSie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="100"/>
+        <location filename="Tools/TrayStarter.py" line="104"/>
         <source>Install Plugin</source>
         <translation>Plugin installieren</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="102"/>
+        <location filename="Tools/TrayStarter.py" line="106"/>
         <source>Uninstall Plugin</source>
         <translation>Plugin deinstallieren</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="104"/>
+        <location filename="Tools/TrayStarter.py" line="108"/>
         <source>Plugin Repository</source>
         <translation>Plugin Repository</translation>
     </message>
@@ -37920,19 +37921,24 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Eric5 Systemstarter</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="110"/>
+        <location filename="Tools/TrayStarter.py" line="114"/>
         <source>eric5 IDE</source>
         <translation>eric5 Entwicklungsumgebung</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="112"/>
+        <location filename="Tools/TrayStarter.py" line="116"/>
         <source>eric5 Mini Editor</source>
         <translation>eric5 Mini Editor</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="116"/>
+        <location filename="Tools/TrayStarter.py" line="120"/>
         <source>Preferences (tray starter)</source>
         <translation>Optionen (Systemstarter)</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="100"/>
+        <source>Icon Editor</source>
+        <translation>Icon Editor</translation>
     </message>
 </context>
 <context>

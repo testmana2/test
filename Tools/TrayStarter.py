@@ -97,6 +97,10 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8("SQL Browser"), self.__startSqlBrowser)
         self.__menu.addSeparator()
         
+        self.__menu.addAction(UI.PixmapCache.getIcon("iconEditor.png"), 
+            self.trUtf8("Icon Editor"), self.__startIconEditor)
+        self.__menu.addSeparator()
+        
         self.__menu.addAction(UI.PixmapCache.getIcon("pluginInstall.png"),
             self.trUtf8("Install Plugin"), self.__startPluginInstall)
         self.__menu.addAction(UI.PixmapCache.getIcon("pluginUninstall.png"),
@@ -299,6 +303,13 @@ class TrayStarter(QSystemTrayIcon):
         Private slot to start the eric5 sql browser dialog.
         """
         self.__startProc("eric5_sqlbrowser.py", "--config={0}".format(
+            Utilities.getConfigDir()))
+
+    def __startIconEditor(self):
+        """
+        Private slot to start the eric5 icon editor dialog.
+        """
+        self.__startProc("eric5_iconeditor.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startQRegExp(self):

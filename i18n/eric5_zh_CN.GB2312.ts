@@ -41679,22 +41679,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>并排比较文件</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="100"/>
+        <location filename="Tools/TrayStarter.py" line="104"/>
         <source>Install Plugin</source>
         <translation>安装插件</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="102"/>
+        <location filename="Tools/TrayStarter.py" line="106"/>
         <source>Uninstall Plugin</source>
         <translation>卸载插件</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="104"/>
+        <location filename="Tools/TrayStarter.py" line="108"/>
         <source>Plugin Repository</source>
         <translation>插件储存库</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="108"/>
+        <location filename="Tools/TrayStarter.py" line="112"/>
         <source>Preferences</source>
         <translation>参数选择</translation>
     </message>
@@ -41709,12 +41709,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Eric4 小型编辑器</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="129"/>
+        <location filename="Tools/TrayStarter.py" line="133"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
@@ -41724,7 +41724,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;无法开始进程。&lt;br&gt;确定进程有有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -41744,23 +41744,28 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished">Eric4 系统托盘图标 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="110"/>
+        <location filename="Tools/TrayStarter.py" line="114"/>
         <source>eric5 IDE</source>
         <translation type="unfinished">Eric4 IDE {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="112"/>
+        <location filename="Tools/TrayStarter.py" line="116"/>
         <source>eric5 Mini Editor</source>
         <translation type="unfinished">Eric4 小型编辑器 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="205"/>
+        <location filename="Tools/TrayStarter.py" line="209"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="116"/>
+        <location filename="Tools/TrayStarter.py" line="120"/>
         <source>Preferences (tray starter)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="100"/>
+        <source>Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
