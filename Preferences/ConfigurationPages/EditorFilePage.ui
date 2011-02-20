@@ -55,7 +55,7 @@
            <string>Select to reread the file automatically, if it was changed externally</string>
           </property>
           <property name="text">
-           <string>Reopen automatically</string>
+           <string>Reread automatically when changed externally</string>
           </property>
          </widget>
         </item>
