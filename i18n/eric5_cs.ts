@@ -10392,22 +10392,42 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate API file (eric5-api)</source>
-        <translation>Generovat API soubor (eric5-api)</translation>
+        <translation type="obsolete">Generovat API soubor (eric5-api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate &amp;API file (eric5-api)</source>
-        <translation>Generovat &amp;API soubor (eric5-api)</translation>
+        <translation type="obsolete">Generovat &amp;API soubor (eric5-api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="98"/>
         <source>Generate an API file using eric5-api</source>
-        <translation>Generovat API soubor za použití eric5-api</translation>
+        <translation type="obsolete">Generovat API soubor za použití eric5-api</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="100"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5-api.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Generovat API soubor&lt;/b&gt;&lt;p&gt;Generovat API soubor za použití eric5-api.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Generovat API soubor&lt;/b&gt;&lt;p&gt;Generovat API soubor za použití eric5-api.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate &amp;API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="98"/>
+        <source>Generate an API file using eric5_api</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="100"/>
+        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10815,26 +10835,46 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
-        <translation>Generovat dokumentaci (eric5-doc)</translation>
+        <translation type="obsolete">Generovat dokumentaci (eric5-doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
-        <translation>Generovat &amp;dokumentaci (eric5-doc)</translation>
+        <translation type="obsolete">Generovat &amp;dokumentaci (eric5-doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
-        <translation>Generovat API dokumentaci za použití eric5-doc</translation>
+        <translation type="obsolete">Generovat API dokumentaci za použití eric5-doc</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Generovat dokumentaci&lt;/b&gt;&lt;p&gt;Generovat API dokumentaci za použití eric5-doc.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Generovat dokumentaci&lt;/b&gt;&lt;p&gt;Generovat API dokumentaci za použití eric5-doc.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="88"/>
         <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate &amp;documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate API documentation using eric5_doc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
+        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

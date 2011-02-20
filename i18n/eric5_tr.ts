@@ -10401,22 +10401,42 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate API file (eric5-api)</source>
-        <translation>API dosyasını üret (eric5-api)</translation>
+        <translation type="obsolete">API dosyasını üret (eric5-api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate &amp;API file (eric5-api)</source>
-        <translation>&amp;API dosyası üret (eric5-api)</translation>
+        <translation type="obsolete">&amp;API dosyası üret (eric5-api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="98"/>
         <source>Generate an API file using eric5-api</source>
-        <translation>Eric5-apide kullanılmak üzere API dosyası üret</translation>
+        <translation type="obsolete">Eric5-apide kullanılmak üzere API dosyası üret</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="100"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5-api.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;API dosyasını üret&lt;/b&gt;&lt;p&gt;Eric5-apide kullanılmak üzere API dosyası üret.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;API dosyasını üret&lt;/b&gt;&lt;p&gt;Eric5-apide kullanılmak üzere API dosyası üret.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate &amp;API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="98"/>
+        <source>Generate an API file using eric5_api</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="100"/>
+        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10825,26 +10845,46 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
-        <translation>Döküman Üret (eric5 doc)</translation>
+        <translation type="obsolete">Döküman Üret (eric5 doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
-        <translation>&amp;Döküman Üret (eric5 doc)</translation>
+        <translation type="obsolete">&amp;Döküman Üret (eric5 doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
-        <translation>Eric5-doc kullanarak APı belgelerini üret</translation>
+        <translation type="obsolete">Eric5-doc kullanarak APı belgelerini üret</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Belge Üretimi&lt;/b&gt;&lt;p&gt;Eric-5doc kullanılarak API belgelerini üret.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Belge Üretimi&lt;/b&gt;&lt;p&gt;Eric-5doc kullanılarak API belgelerini üret.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="88"/>
         <source>Qt4 Help Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate &amp;documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate API documentation using eric5_doc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
+        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

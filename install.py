@@ -339,11 +339,11 @@ def installEric():
     
     # Create the platform specific wrappers.
     wnames = []
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-api", False))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_api", False))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_compare"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_configure"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_diff"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5-doc", False))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_doc", False))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_editor"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_iconeditor"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_plugininstall"))

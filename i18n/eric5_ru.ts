@@ -10320,22 +10320,42 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate API file (eric5-api)</source>
-        <translation>Создать файл API</translation>
+        <translation type="obsolete">Создать файл API</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
         <source>Generate &amp;API file (eric5-api)</source>
-        <translation>Создать файл &amp;API</translation>
+        <translation type="obsolete">Создать файл &amp;API</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="98"/>
         <source>Generate an API file using eric5-api</source>
-        <translation>Создать API с помощью eric5-api</translation>
+        <translation type="obsolete">Создать API с помощью eric5-api</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="100"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5-api.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5-api.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5-api.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="95"/>
+        <source>Generate &amp;API file (eric5_api)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="98"/>
+        <source>Generate an API file using eric5_api</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricapi.py" line="100"/>
+        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10741,27 +10761,47 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate documentation (eric5-doc)</source>
-        <translation>Создать документацию (eric5-doc)</translation>
+        <translation type="obsolete">Создать документацию (eric5-doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="131"/>
         <source>Generate &amp;documentation (eric5-doc)</source>
-        <translation>Создать &amp;документацию (eric5-doc)</translation>
+        <translation type="obsolete">Создать &amp;документацию (eric5-doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate API documentation using eric5-doc</source>
-        <translation>Создать документацию на API с помощью eric5-doc</translation>
+        <translation type="obsolete">Создать документацию на API с помощью eric5-doc</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5-doc&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5-doc&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="88"/>
         <source>Qt4 Help Tools</source>
         <translation>Утилиты помощи Qt4</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate &amp;documentation (eric5_doc)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate API documentation using eric5_doc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
+        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

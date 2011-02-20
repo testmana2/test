@@ -8,8 +8,10 @@
   <Hash>df7daa8781250f7664e6ecaeaf1361fa2efd39ee</Hash>
   <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>Qt4</ProjectType>
-  <Description>eric5 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
-  <Version>5.1.0</Version>
+  <Description>eric5 is an integrated development environment for
+the Python and Ruby language. It uses the PyQt4
+bindings and the QScintilla2 editor widget.</Description>
+  <Version>5.2.0</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
@@ -678,8 +680,6 @@
     <Source>eric5config.py</Source>
     <Source>eric5.py</Source>
     <Source>eric5.pyw</Source>
-    <Source>eric5-doc.py</Source>
-    <Source>eric5-api.py</Source>
     <Source>DebugClients/Python/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/coverage/bytecode.py</Source>
@@ -869,6 +869,8 @@
     <Source>eric5_uipreviewer.pyw</Source>
     <Source>eric5_unittest.pyw</Source>
     <Source>eric5_webbrowser.pyw</Source>
+    <Source>eric5_api.py</Source>
+    <Source>eric5_doc.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

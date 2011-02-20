@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="1.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1578,8 +1577,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1629,7 +1628,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -10277,23 +10276,23 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
-        <source>Generate API file (eric5-api)</source>
-        <translation>Erzeuge API Datei (eric5-api)</translation>
+        <source>Generate API file (eric5_api)</source>
+        <translation>Erzeuge API Datei (eric5_api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="95"/>
-        <source>Generate &amp;API file (eric5-api)</source>
-        <translation>Erzeuge &amp;API Datei (eric5-api)</translation>
+        <source>Generate &amp;API file (eric5_api)</source>
+        <translation>Erzeuge &amp;API Datei (eric5_api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="98"/>
-        <source>Generate an API file using eric5-api</source>
-        <translation>Erzeuge eine API Datei unter Verwendung von eric5-api</translation>
+        <source>Generate an API file using eric5_api</source>
+        <translation>Erzeuge eine API Datei unter Verwendung von eric5_api</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="100"/>
-        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5-api.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Erzeuge API Datei&lt;/b&gt;&lt;p&gt;Erzeuge eine API Datei unter Verwendung von eric5-api.&lt;/p&gt;</translation>
+        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Erzeuge API Datei&lt;/b&gt;&lt;p&gt;Erzeuge eine API Datei unter Verwendung von eric5_api.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10698,29 +10697,29 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Eric5 Dokumentationsgenerator</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricdoc.py" line="131"/>
-        <source>Generate documentation (eric5-doc)</source>
-        <translation>Erzeuge Dokumentation (eric5-doc)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="131"/>
-        <source>Generate &amp;documentation (eric5-doc)</source>
-        <translation>Erzeuge &amp;Dokumentation (eric5-doc)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="134"/>
-        <source>Generate API documentation using eric5-doc</source>
-        <translation>Erzeuge die API Dokumentation unter Verwendung von eric-doc</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="136"/>
-        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Erzeuge Dokumentation&lt;/b&gt;&lt;p&gt;Erzeuge die API Dokumentation unter Verwendung von eric5-doc.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/PluginEricdoc.py" line="88"/>
         <source>Qt4 Help Tools</source>
         <translation>Qt4 Help Werkzeuge</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate documentation (eric5_doc)</source>
+        <translation>Erzeuge Dokumentation (eric5_doc)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="131"/>
+        <source>Generate &amp;documentation (eric5_doc)</source>
+        <translation>Erzeuge &amp;Dokumentation (eric5_doc)</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate API documentation using eric5_doc</source>
+        <translation>Erzeuge die API Dokumentation unter Verwendung von eric_doc</translation>
+    </message>
+    <message>
+        <location filename="Plugins/PluginEricdoc.py" line="136"/>
+        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Erzeuge Dokumentation&lt;/b&gt;&lt;p&gt;Erzeuge die API Dokumentation unter Verwendung von eric5_doc.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -11884,7 +11883,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>

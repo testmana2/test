@@ -46,7 +46,7 @@ def exeDisplayData():
     @return dictionary containing the data to query the presence of
         the executable
     """
-    exe = 'eric5-api'
+    exe = 'eric5_api'
     if Utilities.isWindowsPlatform():
         exe = os.path.join(getConfig("bindir"), exe +'.bat')
     
@@ -56,7 +56,7 @@ def exeDisplayData():
                                 "Eric5 API File Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric5-', 
+        "versionStartsWith" : 'eric5_', 
         "versionPosition"   : -3, 
         "version"           : "", 
         "versionCleanup"    : None, 
@@ -92,14 +92,14 @@ class EricapiPlugin(QObject):
         """
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
-            self.__projectAct = E5Action(self.trUtf8('Generate API file (eric5-api)'),
-                    self.trUtf8('Generate &API file (eric5-api)'), 0, 0,
+            self.__projectAct = E5Action(self.trUtf8('Generate API file (eric5_api)'),
+                    self.trUtf8('Generate &API file (eric5_api)'), 0, 0,
                     self, 'doc_eric5_api')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Generate an API file using eric5-api'))
+                self.trUtf8('Generate an API file using eric5_api'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate API file</b>"""
-                """<p>Generate an API file using eric5-api.</p>"""
+                """<p>Generate an API file using eric5_api.</p>"""
             ))
             self.__projectAct.triggered[()].connect(self.__doEricapi)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
@@ -137,7 +137,7 @@ class EricapiPlugin(QObject):
     
     def __doEricapi(self):
         """
-        Private slot to perform the eric5-api api generation.
+        Private slot to perform the eric5_api api generation.
         """
         eolTranslation = {
             '\r' : 'cr', 

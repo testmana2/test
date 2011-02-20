@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to enter the parameters for eric5-doc.
+Module implementing a dialog to enter the parameters for eric5_doc.
 """
 
 import sys
@@ -25,7 +25,7 @@ from eric5config import getConfig
 
 class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     """
-    Class implementing a dialog to enter the parameters for eric5-doc.
+    Class implementing a dialog to enter the parameters for eric5_doc.
     """
     def __init__(self, project, parms = None, parent = None):
         """
@@ -156,7 +156,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # 1. the program name
         args.append(sys.executable)
-        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric5-doc.py"))
+        args.append(Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_doc.py"))
         
         # 2. the commandline options
         # 2a. general commandline options

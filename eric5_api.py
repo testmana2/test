@@ -30,13 +30,13 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print("eric5-api")
+    print("eric5_api")
     print()
     print("Copyright (c) 2004 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
-    print("  eric5-api [options] files...")
+    print("  eric5_api [options] files...")
     print()
     print("where files can be either python modules, package")
     print("directories or ordinary directories.")
@@ -81,7 +81,7 @@ def version():
     """
     Function to show the version information.
     """
-    print("""eric5-api  {0}
+    print("""eric5_api  {0}
 
 Eric5 API generator.
 

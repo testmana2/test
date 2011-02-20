@@ -49,8 +49,8 @@ def exeDisplayDataList():
     """
     dataList = []
     
-    # 1. eric5-doc
-    exe = 'eric5-doc'
+    # 1. eric5_doc
+    exe = 'eric5_doc'
     if Utilities.isWindowsPlatform():
         exe = os.path.join(getConfig("bindir"), exe +'.bat')
     dataList.append({
@@ -59,7 +59,7 @@ def exeDisplayDataList():
                                 "Eric5 Documentation Generator"), 
         "exe"               : exe, 
         "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric5-', 
+        "versionStartsWith" : 'eric5_', 
         "versionPosition"   : -3, 
         "version"           : "", 
         "versionCleanup"    : None, 
@@ -128,14 +128,14 @@ class EricdocPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = \
-                E5Action(self.trUtf8('Generate documentation (eric5-doc)'),
-                    self.trUtf8('Generate &documentation (eric5-doc)'), 0, 0,
+                E5Action(self.trUtf8('Generate documentation (eric5_doc)'),
+                    self.trUtf8('Generate &documentation (eric5_doc)'), 0, 0,
                     self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Generate API documentation using eric5-doc'))
+                self.trUtf8('Generate API documentation using eric5_doc'))
             self.__projectAct.setWhatsThis(self.trUtf8(
                 """<b>Generate documentation</b>"""
-                """<p>Generate API documentation using eric5-doc.</p>"""
+                """<p>Generate API documentation using eric5_doc.</p>"""
             ))
             self.__projectAct.triggered[()].connect(self.__doEricdoc)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
@@ -173,7 +173,7 @@ class EricdocPlugin(QObject):
     
     def __doEricdoc(self):
         """
-        Private slot to perform the eric5-doc api documentation generation.
+        Private slot to perform the eric5_doc api documentation generation.
         """
         eolTranslation = {
             '\r' : 'cr', 
@@ -199,7 +199,7 @@ class EricdocPlugin(QObject):
             
             outdir = Utilities.toNativeSeparators(parms['outputDirectory'])
             if outdir == '':
-                outdir = 'doc'      # that is eric5-docs default output dir
+                outdir = 'doc'      # that is eric5_docs default output dir
                 
             # add it to the project data, if it isn't in already
             outdir = project.getRelativePath(outdir)
@@ -211,7 +211,7 @@ class EricdocPlugin(QObject):
             if parms['qtHelpEnabled']:
                 outdir = Utilities.toNativeSeparators(parms['qtHelpOutputDirectory'])
                 if outdir == '':
-                    outdir = 'help'      # that is eric5-docs default QtHelp output dir
+                    outdir = 'help'      # that is eric5_docs default QtHelp output dir
                     
                 # add it to the project data, if it isn't in already
                 outdir = project.getRelativePath(outdir)
