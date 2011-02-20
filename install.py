@@ -32,7 +32,6 @@ cfg = {}
 progLanguages = ["Python", "Ruby"]
 sourceDir = "eric"
 configName = 'eric5config.py'
-useStart = True
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
@@ -80,7 +79,6 @@ def usage(rcode = 2):
     print("    -x        don't perform dependency checks (use on your own risk)")
     print("    -c        don't cleanup old installation first")
     print("    -z        don't compile the installed python files")
-    print("    -s        don't use the 'start' variant of the Windows batch script")
     print()
     print("The file given to the -f option must be valid Python code defining a")
     print("dictionary called 'cfg' with the keys 'ericDir', 'ericPixDir', 'ericIconDir',")
@@ -164,23 +162,16 @@ def createPyWrapper(pydir, wfile, isGuiScript = True):
         application (boolean)
     @return the platform specific name of the wrapper
     """
-    global useStart
-    
     # all kinds of Windows systems
     if sys.platform.startswith("win"):
         wname = wfile + ".bat"
         if isGuiScript:
-            if useStart:
-                start = "start "
-            else:
-                start = ""
             wrapper = \
                 '''@echo off\r\n''' \
                 '''set PYDIR=%~dp0\r\n''' \
-                '''{0}"%PYDIR%\\pythonw.exe"''' \
-                ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{1}.pyw"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(
-                    start, wfile)
+                '''start "" "%PYDIR%\\pythonw.exe"''' \
+                ''' "%PYDIR%\\Lib\\site-packages\\eric5\\{0}.pyw"''' \
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(wfile)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
@@ -797,7 +788,7 @@ def main(argv):
 
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
-    global sourceDir, configName, useStart
+    global sourceDir, configName
     
     progName = os.path.basename(argv[0])
 
@@ -841,8 +832,6 @@ def main(argv):
                     exit(6)
             except:
                 cfg = {}
-        elif opt == "-s":
-            useStart = False
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
