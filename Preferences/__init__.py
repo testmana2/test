@@ -103,6 +103,7 @@ class Prefs(object):
         "BrowsersHideNonPublic" : False,
         "BrowsersListContentsByOccurrence" : False,
         "BrowsersListHiddenFiles" : False, 
+        "BrowsersFileFilters" : "*.py[co];*.so;*.dll",
         "LogViewerAutoRaise" : True, 
         "SingleApplicationMode" : False,
         "CaptionShowsFilename" : True,

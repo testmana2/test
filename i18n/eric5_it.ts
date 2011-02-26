@@ -1813,27 +1813,27 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="UI/BrowserModel.py" line="45"/>
+        <location filename="UI/BrowserModel.py" line="46"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="595"/>
+        <location filename="UI/BrowserModel.py" line="602"/>
         <source>Attributes</source>
         <translation>Attributi</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="554"/>
+        <location filename="UI/BrowserModel.py" line="561"/>
         <source>Globals</source>
         <translation>Globali</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="605"/>
+        <location filename="UI/BrowserModel.py" line="612"/>
         <source>Attributes (global)</source>
         <translation>Attributi (globali)</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="549"/>
+        <location filename="UI/BrowserModel.py" line="556"/>
         <source>Coding: {0}</source>
         <translation>Codifica: {0}</translation>
     </message>
@@ -19448,7 +19448,7 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>InterfacePage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="224"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="229"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>Italiano</translation>
@@ -19479,242 +19479,242 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Nascondi membri non pubblici nel Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="144"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="162"/>
         <source>Select, if the caption of the main window should show the filename of the current editor</source>
         <translation>Seleziona, se il titolo della finestra principale deve mostrare il nome file dell&apos;editor corrente</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="147"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="165"/>
         <source>Caption shows filename</source>
         <translation>Il titolo mostra il nome file</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="156"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="174"/>
         <source>Filename Length</source>
         <translation>Lunghezza nome file</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="163"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="181"/>
         <source>Enter the number of characters to be shown in the main window title.</source>
         <translation>Inserisci il numero dei caratteri da mostrare nel titolo della finestra principale.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="200"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="218"/>
         <source>Style:</source>
         <translation>Stile:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="207"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="225"/>
         <source>Select the interface style</source>
         <translation>Seleziona lo stile dell&apos;interfaccia</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="214"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="232"/>
         <source>Style Sheet:</source>
         <translation>Fogli di stile:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="239"/>
         <source>Enter the name of the style sheet file</source>
         <translation>Inserisci il nome del foglio di stile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
         <source>Select the style sheet file via a file selection dialog</source>
         <translation>Seleziona il file di stile con un dialogo di selezione</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="249"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="240"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="258"/>
         <source>Dockarea Corner Usage</source>
         <translation>Utilizzo Dockare dell&apos;angolo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
         <source>Top Left Corner</source>
         <translation>Angolo in alto a sinistra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a sinista alla dockarea in alto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="284"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
         <source>Top dockarea</source>
         <translation>dockarea alta</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="262"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a sinista alla dockarea di sinistra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
         <source>Left dockarea</source>
         <translation>Dockarea sinistra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="275"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
         <source>Top Right Corner</source>
         <translation>Angolo in alto a destra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="281"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a destra alla dockarea in alto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="291"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a destra alla dockarea di destra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="352"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="370"/>
         <source>Right dockarea</source>
         <translation>Dockarea destra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="304"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="322"/>
         <source>Bottom Left Corner</source>
         <translation>Angolo basso a sinistra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="328"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a sinista alla dockarea in basso</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="342"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="360"/>
         <source>Bottom dockarea</source>
         <translation>Dockarea bassa</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="320"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in alto a sinista alla dockarea di sinistra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="333"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="351"/>
         <source>Bottom Right Corner</source>
         <translation>Angolo in basso a destra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in basso a destra alla dockarea in basso</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="349"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>Seleziona per assegnare l&apos;angolo in basso a destra alla dockarea di destra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="378"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Nota:&lt;/b&gt; Tutte queste impostazioni saranno attivate al prossimo avvio dell&apos;applicazione.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="393"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="411"/>
         <source>Language:</source>
         <translation>Linguaggio:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="409"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="427"/>
         <source>Select the interface language.</source>
         <translation>Seleziona la lingua dell&apos;interfaccia.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="412"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="430"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>La lingua dell&apos;interfaccia può essere selezionata da questa lista. Se &quot;system&quot; viene selezionato, la lingua dell&apos;interfaccia è determinata dal sistema. La selezione di &quot;none&quot; significa che viene usata la lingua di default.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="419"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="437"/>
         <source>Layout:</source>
         <translation>Layout:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="450"/>
         <source>Select the layout type.</source>
         <translation>Seleziona il tipo di layout.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="436"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="454"/>
         <source>Dock Windows</source>
         <translation>Finestre Fisse</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="441"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="459"/>
         <source>Floating Windows </source>
         <translation>Finestre flottanti</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="463"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="481"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="487"/>
         <source>Select to get a separate shell window</source>
         <translation>Seleziona per avere una finestra di shell separata</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
         <source>separate window</source>
         <translation>separa finestra</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="510"/>
         <source>File-Browser</source>
         <translation>File-Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
         <source>Select to get a separate file browser window</source>
         <translation>Seleziona per avere una finestra di file browser separata</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="562"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="580"/>
         <source>Reset layout to factory defaults</source>
         <translation>Reimposta il layout al default di fabbrica</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="241"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="246"/>
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="256"/>
         <source>Select style sheet file</source>
         <translation>Seleziona il foglio di stile</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="256"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="86"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="104"/>
         <source>Log-Viewer</source>
         <translation>Log-Viewer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="102"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="120"/>
         <source>Stderr Colour:</source>
         <translation>Colore Stderr:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="115"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="133"/>
         <source>Select the colour for text sent to stderr</source>
         <translation>Seleziona il colore per il testo inviato a stderr</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="446"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="464"/>
         <source>Toolboxes</source>
         <translation>Toolboxes</translation>
     </message>
@@ -19724,32 +19724,32 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>&lt;b&gt;Configura l&apos;interfaccia utente&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="451"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
         <source>Sidebars</source>
         <translation>Barre laterali</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="479"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="497"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation>Selezione per rendere embedded la shell nel Debug-Viewer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="511"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="529"/>
         <source>embed in Debug-Viewer</source>
         <translation>inserisci in Debug-Viewer</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="526"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation>Seleziona per inserire il file browser nel Debug-Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="518"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="536"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation>Seleziona per inserire il file browser nel Project-Browser</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="521"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
         <source>embed in Project-Viewer</source>
         <translation>insetisci nel Project Viewer</translation>
     </message>
@@ -19764,22 +19764,22 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Ordina contenuto per occorrenza</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="110"/>
         <source>Select to show the log-viewer upon new output</source>
         <translation>Seleziona per mostrare il log per un nuovo output</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="95"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="113"/>
         <source>Show upon new output</source>
         <translation>Mostra per un nuovo output</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="533"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="551"/>
         <source>Tabs</source>
         <translation>Schede</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="557"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Mostra solo un pulsante di chiusura invece di uno per ogni linguetta</translation>
     </message>
@@ -19792,6 +19792,16 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="76"/>
         <source>Show hidden files</source>
         <translation>Mostra file nascosti</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="85"/>
+        <source>Filter out files:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
+        <source>Enter wildcard file patterns separated by semicolon. Files matching these patterns will not be shown by the file browsers.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -24084,17 +24094,17 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="897"/>
+        <location filename="Preferences/__init__.py" line="898"/>
         <source>Export Preferences</source>
         <translation>Esporta Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="923"/>
+        <location filename="Preferences/__init__.py" line="924"/>
         <source>Import Preferences</source>
         <translation>Importa Preferenze</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="923"/>
+        <location filename="Preferences/__init__.py" line="924"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>File proprietà (*.ini);;Tutti i file(*)</translation>
     </message>

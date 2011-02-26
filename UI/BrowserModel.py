@@ -9,6 +9,7 @@ Module implementing the browser model.
 
 import sys
 import os
+import fnmatch
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -487,6 +488,12 @@ class BrowserModel(QAbstractItemModel):
                         Utilities.toNativeSeparators(f.absoluteFilePath()), 
                         False)
                 else:
+                    fileFilters = Preferences.getUI("BrowsersFileFilters").split(";")
+                    if fileFilters:
+                        fn = f.fileName()
+                        if any([fnmatch.fnmatch(fn, ff.strip())
+                                for ff in fileFilters]):
+                            continue
                     node = BrowserFileItem(parentItem,
                         Utilities.toNativeSeparators(f.absoluteFilePath()))
                 self._addItem(node, parentItem)

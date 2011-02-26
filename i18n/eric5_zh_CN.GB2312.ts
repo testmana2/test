@@ -1993,7 +1993,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="UI/BrowserModel.py" line="45"/>
+        <location filename="UI/BrowserModel.py" line="46"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
@@ -2003,22 +2003,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">代码：%1</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="554"/>
+        <location filename="UI/BrowserModel.py" line="561"/>
         <source>Globals</source>
         <translation>全局</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="595"/>
+        <location filename="UI/BrowserModel.py" line="602"/>
         <source>Attributes</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="605"/>
+        <location filename="UI/BrowserModel.py" line="612"/>
         <source>Attributes (global)</source>
         <translation>属性（全局）</translation>
     </message>
     <message>
-        <location filename="UI/BrowserModel.py" line="549"/>
+        <location filename="UI/BrowserModel.py" line="556"/>
         <source>Coding: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20947,212 +20947,212 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>在浏览器中隐藏非公有成员</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="86"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="104"/>
         <source>Log-Viewer</source>
         <translation>日志浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="102"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="120"/>
         <source>Stderr Colour:</source>
         <translation>Stderr 颜色：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="115"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="133"/>
         <source>Select the colour for text sent to stderr</source>
         <translation>选择发送到 stderr 中的文本颜色</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="144"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="162"/>
         <source>Select, if the caption of the main window should show the filename of the current editor</source>
         <translation>选择是否在主窗口标题中显示当前编辑器中的文件名</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="147"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="165"/>
         <source>Caption shows filename</source>
         <translation>标题显示文件名</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="156"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="174"/>
         <source>Filename Length</source>
         <translation>文件名长度</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="163"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="181"/>
         <source>Enter the number of characters to be shown in the main window title.</source>
         <translation>输入要在主窗口标题中显示的字符数。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="200"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="218"/>
         <source>Style:</source>
         <translation>风格：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="207"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="225"/>
         <source>Select the interface style</source>
         <translation>选择界面风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="214"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="232"/>
         <source>Style Sheet:</source>
         <translation>样式表：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="239"/>
         <source>Enter the name of the style sheet file</source>
         <translation>输入样式表文件的名称</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
         <source>Select the style sheet file via a file selection dialog</source>
         <translation>通过文件选择对话框选择样式表文件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="249"/>
         <source>...</source>
         <translation>……</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="240"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="258"/>
         <source>Dockarea Corner Usage</source>
         <translation>停靠区转角使用</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
         <source>Top Left Corner</source>
         <translation>左上角</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>选择指定左上角为顶部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="284"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
         <source>Top dockarea</source>
         <translation>顶部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="262"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>选择指定左上角为左停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
         <source>Left dockarea</source>
         <translation>左停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="275"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
         <source>Top Right Corner</source>
         <translation>右上角</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="281"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>选择指定右上角为顶部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="291"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>选择指定右上角为右停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="352"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="370"/>
         <source>Right dockarea</source>
         <translation>右停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="304"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="322"/>
         <source>Bottom Left Corner</source>
         <translation>左下角</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="328"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>选择指定左下角为底部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="342"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="360"/>
         <source>Bottom dockarea</source>
         <translation>底部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="320"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>选择指定左下角为左停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="333"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="351"/>
         <source>Bottom Right Corner</source>
         <translation>右下角</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>选择指定右下角为底部停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="349"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>选择指定右下角为右停靠区</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="378"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 以上所有设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="393"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="411"/>
         <source>Language:</source>
         <translation>语言：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="409"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="427"/>
         <source>Select the interface language.</source>
         <translation>选择界面语言。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="412"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="430"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>可以从列表中选择界面语言。如果选择“系统”，则界面语言由系统确定。“无”选项表示将使用默认语言。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="419"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="437"/>
         <source>Layout:</source>
         <translation>布局：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="432"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="450"/>
         <source>Select the layout type.</source>
         <translation>选择布局类型。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="436"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="454"/>
         <source>Dock Windows</source>
         <translation>停靠窗口</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="441"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="459"/>
         <source>Floating Windows </source>
         <translation>浮动窗口</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="446"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="464"/>
         <source>Toolboxes</source>
         <translation>工具箱</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="463"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="481"/>
         <source>Shell</source>
         <translation>命令行</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="487"/>
         <source>Select to get a separate shell window</source>
         <translation>选择获得单独的命令行窗口</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="501"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
         <source>separate window</source>
         <translation>独立窗口</translation>
     </message>
@@ -21167,12 +21167,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">嵌入到调试浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="492"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="510"/>
         <source>File-Browser</source>
         <translation>文件浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
         <source>Select to get a separate file browser window</source>
         <translation>选择获得单独的文件浏览器窗口</translation>
     </message>
@@ -21217,58 +21217,58 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">使用 KDE 4 对话框</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="562"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="580"/>
         <source>Reset layout to factory defaults</source>
         <translation>将布局重设为出厂设置</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="241"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="246"/>
         <source>System</source>
         <translation>系统</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="224"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="229"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>中文</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="256"/>
         <source>Select style sheet file</source>
         <translation>选择样式表文件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="251"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.py" line="256"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt 样式表 (*.qss);;Cascading 样式表 (*.css);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="451"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
         <source>Sidebars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="479"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="497"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="511"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="529"/>
         <source>embed in Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="508"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="526"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="518"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="536"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="521"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
         <source>embed in Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21283,22 +21283,22 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="110"/>
         <source>Select to show the log-viewer upon new output</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="95"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="113"/>
         <source>Show upon new output</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="533"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="551"/>
         <source>Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="557"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21310,6 +21310,16 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="76"/>
         <source>Show hidden files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="85"/>
+        <source>Filter out files:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
+        <source>Enter wildcard file patterns separated by semicolon. Files matching these patterns will not be shown by the file browsers.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26183,17 +26193,17 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="897"/>
+        <location filename="Preferences/__init__.py" line="898"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="923"/>
+        <location filename="Preferences/__init__.py" line="924"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="923"/>
+        <location filename="Preferences/__init__.py" line="924"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>

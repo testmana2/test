@@ -10,7 +10,7 @@
     <height>1121</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -76,6 +76,24 @@
          <string>Show hidden files</string>
         </property>
        </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Filter out files:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fileFiltersEdit">
+          <property name="toolTip">
+           <string>Enter wildcard file patterns separated by semicolon. Files matching these patterns will not be shown by the file browsers.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -570,6 +588,7 @@
   <tabstop>uiBrowsersHideNonPublicCheckBox</tabstop>
   <tabstop>uiBrowsersSortByOccurrenceCheckBox</tabstop>
   <tabstop>uiBrowsersShowHiddenCheckBox</tabstop>
+  <tabstop>fileFiltersEdit</tabstop>
   <tabstop>lvAutoRaiseCheckBox</tabstop>
   <tabstop>stderrTextColourButton</tabstop>
   <tabstop>uiCaptionShowsFilenameGroupBox</tabstop>

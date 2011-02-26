@@ -52,6 +52,8 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             Preferences.getUI("BrowsersListContentsByOccurrence"))
         self.uiBrowsersShowHiddenCheckBox.setChecked(
             Preferences.getUI("BrowsersListHiddenFiles"))
+        self.fileFiltersEdit.setText(
+            Preferences.getUI("BrowsersFileFilters"))
         
         self.lvAutoRaiseCheckBox.setChecked(
             Preferences.getUI("LogViewerAutoRaise"))
@@ -132,6 +134,9 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.uiBrowsersSortByOccurrenceCheckBox.isChecked())
         Preferences.setUI("BrowsersListHiddenFiles", 
             self.uiBrowsersShowHiddenCheckBox.isChecked())
+        Preferences.setUI("BrowsersFileFilters",
+            self.fileFiltersEdit.text())
+        
         Preferences.setUI("LogViewerAutoRaise", 
             self.lvAutoRaiseCheckBox.isChecked())
         Preferences.setUI("CaptionShowsFilename",
