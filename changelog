@@ -6,6 +6,8 @@ Version 5.2-snapshot-2011mmdd:
 - added capability to filter out unwanted items in the file browsers
   (s. config dialog, interface page)
 - changed syntax check to report error position within the line
+- added functionality to the VCS status dialogs to make them more
+  general commit dialogs
 
 Version 5.1-snapshot-20110123:
 - bug fixes

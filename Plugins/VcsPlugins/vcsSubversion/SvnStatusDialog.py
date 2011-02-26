@@ -16,6 +16,8 @@ from PyQt4.QtGui import *
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
+from .SvnDiffDialog import SvnDiffDialog
+
 from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
@@ -35,15 +37,16 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         QWidget.__init__(self, parent)
         self.setupUi(self)
         
-        self.__changelistColumn = 0
-        self.__statusColumn = 1
-        self.__propStatusColumn = 2
-        self.__lockedColumn = 3
-        self.__historyColumn = 4
-        self.__switchedColumn = 5
-        self.__lockinfoColumn = 6
-        self.__upToDateColumn = 7
-        self.__pathColumn = 11
+        self.__toBeCommittedColumn = 0
+        self.__changelistColumn = 1
+        self.__statusColumn = 2
+        self.__propStatusColumn = 3
+        self.__lockedColumn = 4
+        self.__historyColumn = 5
+        self.__switchedColumn = 6
+        self.__lockinfoColumn = 7
+        self.__upToDateColumn = 8
+        self.__pathColumn = 12
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = \
@@ -55,6 +58,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
+        self.diff = None
         self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
@@ -73,7 +77,11 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
         self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Show differences"), self.__diff))
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Restore missing"), self.__restoreMissing))
         if self.vcs.versionStr >= '1.5.0':
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
@@ -108,6 +116,10 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.trUtf8('added'), 
             self.trUtf8('deleted'), 
             self.trUtf8('modified'), 
+        ]
+        
+        self.missingIndicators = [
+            self.trUtf8('missing'), 
         ]
         
         self.unversionedIndicators = [
@@ -225,9 +237,10 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
            self.currentChangelist == "":
             return
         
+        statusText = self.status[status]
         itm = QTreeWidgetItem(self.statusList, [
             self.currentChangelist, 
-            self.status[status], 
+            statusText, 
             self.propStatus[propStatus], 
             self.locked[locked], 
             self.history[history], 
@@ -240,18 +253,21 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             path, 
         ])
         
-        itm.setTextAlignment(0, Qt.AlignLeft)
-        itm.setTextAlignment(1, Qt.AlignHCenter)
+        itm.setTextAlignment(1, Qt.AlignLeft)
         itm.setTextAlignment(2, Qt.AlignHCenter)
         itm.setTextAlignment(3, Qt.AlignHCenter)
         itm.setTextAlignment(4, Qt.AlignHCenter)
         itm.setTextAlignment(5, Qt.AlignHCenter)
         itm.setTextAlignment(6, Qt.AlignHCenter)
         itm.setTextAlignment(7, Qt.AlignHCenter)
-        itm.setTextAlignment(8, Qt.AlignRight)
+        itm.setTextAlignment(8, Qt.AlignHCenter)
         itm.setTextAlignment(9, Qt.AlignRight)
-        itm.setTextAlignment(10, Qt.AlignLeft)
+        itm.setTextAlignment(10, Qt.AlignRight)
         itm.setTextAlignment(11, Qt.AlignLeft)
+        itm.setTextAlignment(12, Qt.AlignLeft)
+        
+        if status in "ADM" or propStatus in "M":
+            itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
         
         self.hidePropertyStatusColumn = self.hidePropertyStatusColumn and \
             propStatus == " "
@@ -260,6 +276,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.hideUpToDateColumn = self.hideUpToDateColumn and uptodate == " "
         self.hideHistoryColumn = self.hideHistoryColumn and history == " "
         self.hideSwitchedColumn = self.hideSwitchedColumn and switched == " "
+        
+        if statusText not in self.__statusFilters:
+            self.__statusFilters.append(statusText)
         
     def closeEvent(self, e):
         """
@@ -285,6 +304,19 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.errorGroup.hide()
         self.intercept = False
         self.args = fn
+        
+        for act in self.menuactions:
+            act.setEnabled(False)
+        
+        self.addButton.setEnabled(False)
+        self.commitButton.setEnabled(False)
+        self.diffButton.setEnabled(False)
+        self.revertButton.setEnabled(False)
+        self.restoreButton.setEnabled(False)
+        
+        self.statusFilterCombo.clear()
+        self.__statusFilters = []
+        
         self.currentChangelist = ""
         self.changelistFound = False
         
@@ -358,6 +390,10 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.inputGroup.setEnabled(False)
         self.refreshButton.setEnabled(True)
         
+        self.__statusFilters.sort()
+        self.__statusFilters.insert(0, "<{0}>".format(self.trUtf8("all")))
+        self.statusFilterCombo.addItems(self.__statusFilters)
+        
         for act in self.menuactions:
             act.setEnabled(True)
         
@@ -381,6 +417,9 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                                         self.hideHistoryColumn)
         self.statusList.setColumnHidden(self.__switchedColumn, 
                                         self.hideSwitchedColumn)
+        
+        self.__updateButtons()
+        self.__updateCommitButton()
         
     def on_buttonBox_clicked(self, button):
         """
@@ -516,12 +555,98 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.inputGroup.setEnabled(True)
         self.refreshButton.setEnabled(False)
         
-        for act in self.menuactions:
-            act.setEnabled(False)
-        
         self.statusList.clear()
         
         self.start(self.args)
+        
+    def __updateButtons(self):
+        """
+        Private method to update the VCS buttons status.
+        """
+        modified = len(self.__getModifiedItems())
+        unversioned = len(self.__getUnversionedItems())
+        missing = len(self.__getMissingItems())
+
+        self.addButton.setEnabled(unversioned)
+        self.diffButton.setEnabled(modified)
+        self.revertButton.setEnabled(modified)
+        self.restoreButton.setEnabled(missing)
+    
+    def __updateCommitButton(self):
+        """
+        Private method to update the Commit button status.
+        """
+        commitable = len(self.__getCommitableItems())
+        self.commitButton.setEnabled(commitable)
+    
+    @pyqtSlot(str)
+    def on_statusFilterCombo_activated(self, txt):
+        """
+        Private slot to react to the selection of a status filter.
+        
+        @param txt selected status filter (string)
+        """
+        if txt == "<{0}>".format(self.trUtf8("all")):
+            for topIndex in range(self.statusList.topLevelItemCount()):
+                topItem = self.statusList.topLevelItem(topIndex)
+                topItem.setHidden(False)
+        else:
+            for topIndex in range(self.statusList.topLevelItemCount()):
+                topItem = self.statusList.topLevelItem(topIndex)
+                topItem.setHidden(topItem.text(self.__statusColumn) != txt)
+    
+    @pyqtSlot(QTreeWidgetItem, int)
+    def on_statusList_itemChanged(self, item, column):
+        """
+        Private slot to act upon item changes.
+        
+        @param item reference to the changed item (QTreeWidgetItem)
+        @param column index of column that changed (integer)
+        """
+        if column == self.__toBeCommittedColumn:
+            self.__updateCommitButton()
+    
+    @pyqtSlot()
+    def on_statusList_itemSelectionChanged(self):
+        """
+        Private slot to act upon changes of selected items.
+        """
+        self.__updateButtons()
+    
+    @pyqtSlot()
+    def on_commitButton_clicked(self):
+        """
+        Private slot to handle the press of the Commit button.
+        """
+        self.__commit()
+    
+    @pyqtSlot()
+    def on_addButton_clicked(self):
+        """
+        Private slot to handle the press of the Add button.
+        """
+        self.__add()
+    
+    @pyqtSlot()
+    def on_diffButton_clicked(self):
+        """
+        Private slot to handle the press of the Differences button.
+        """
+        self.__diff()
+    
+    @pyqtSlot()
+    def on_revertButton_clicked(self):
+        """
+        Private slot to handle the press of the Revert button.
+        """
+        self.__revert()
+    
+    @pyqtSlot()
+    def on_restoreButton_clicked(self):
+        """
+        Private slot to handle the press of the Restore button.
+        """
+        self.__restoreMissing()
     
     ###########################################################################
     ## Context menu handling methods
@@ -540,12 +665,12 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         Private slot to handle the Commit context menu entry.
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn))
-                 for itm in self.__getModifiedItems()]
+                 for itm in self.__getCommitableItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Commit"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.trUtf8("""There are no entries selected to be"""
+                            """ committed."""))
             return
         
         if Preferences.getVCS("AutoSaveFiles"):
@@ -603,6 +728,42 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         for name in names:
             project.getModel().updateVCSStatus(name)
         self.vcs.checkVCSStatus()
+        
+    def __restoreMissing(self):
+        """
+        Private slot to handle the Restore Missing context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getMissingItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Revert"),
+                self.trUtf8("""There are no missing entries"""
+                            """ available/selected."""))
+            return
+        
+        self.vcs.vcsRevert(names)
+        self.on_refreshButton_clicked()
+        self.vcs.checkVCSStatus()
+        
+    def __diff(self):
+        """
+        Private slot to handle the Diff context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getModifiedItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Differences"),
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
+            return
+        
+        if self.diff is None:
+            self.diff = SvnDiffDialog(self.vcs)
+        self.diff.show()
+        QApplication.processEvents()
+        self.diff.start(names)
         
     def __lock(self):
         """
@@ -706,6 +867,19 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.vcs.svnRemoveFromChangelist(names)
         self.on_refreshButton_clicked()
 
+    def __getCommitableItems(self):
+        """
+        Private method to retrieve all entries the user wants to commit.
+        
+        @return list of all items, the user has checked
+        """
+        commitableItems = []
+        for index in range(self.statusList.topLevelItemCount()):
+            itm = self.statusList.topLevelItem(index)
+            if itm.checkState(self.__toBeCommittedColumn) == Qt.Checked:
+                commitableItems.append(itm)
+        return commitableItems
+    
     def __getModifiedItems(self):
         """
         Private method to retrieve all entries, that have a modified status.
@@ -731,6 +905,18 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             if itm.text(self.__statusColumn) in self.unversionedIndicators:
                 unversionedItems.append(itm)
         return unversionedItems
+        
+    def __getMissingItems(self):
+        """
+        Private method to retrieve all entries, that have a missing status.
+        
+        @return list of all items with a missing status
+        """
+        missingItems = []
+        for itm in self.statusList.selectedItems():
+            if itm.text(self.__statusColumn) in self.missingIndicators:
+                missingItems.append(itm)
+        return missingItems
         
     def __getLockActionItems(self, indicators):
         """

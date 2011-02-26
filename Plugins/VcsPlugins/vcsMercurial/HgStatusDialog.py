@@ -16,6 +16,8 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QMenu, QHeaderView, QTreeWidg
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
+from .HgDiffDialog import HgDiffDialog
+
 from .Ui_HgStatusDialog import Ui_HgStatusDialog
 
 import Preferences
@@ -34,8 +36,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         QWidget.__init__(self, parent)
         self.setupUi(self)
         
-        self.__statusColumn = 0
-        self.__pathColumn = 1
+        self.__toBeCommittedColumn = 0
+        self.__statusColumn = 1
+        self.__pathColumn = 2
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = \
@@ -45,6 +48,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
+        self.diff = None
         self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
@@ -60,9 +64,13 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
         self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Show differences"), self.__diff))
+        self.menuactions.append(self.menu.addAction(
             self.trUtf8("Remove from repository"), self.__forget))
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Revert changes"), self.__revert))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Restore missing"), self.__restoreMissing))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(self.trUtf8("Adjust column sizes"),
             self.__resizeColumns))
@@ -117,14 +125,22 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         @param status status indicator (string)
         @param path path of the file or directory (string)
         """
+        statusText = self.status[status]
         itm = QTreeWidgetItem(self.statusList, [
-            self.status[status], 
+            "", 
+            statusText, 
             path, 
         ])
         
-        itm.setTextAlignment(0, Qt.AlignHCenter)
-        itm.setTextAlignment(1, Qt.AlignLeft)
+        itm.setTextAlignment(1, Qt.AlignHCenter)
+        itm.setTextAlignment(2, Qt.AlignLeft)
     
+        if status in "AMR":
+            itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
+        
+        if statusText not in self.__statusFilters:
+            self.__statusFilters.append(statusText)
+        
     def closeEvent(self, e):
         """
         Private slot implementing a close event handler.
@@ -149,6 +165,19 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.errorGroup.hide()
         self.intercept = False
         self.args = fn
+        
+        for act in self.menuactions:
+            act.setEnabled(False)
+        
+        self.addButton.setEnabled(False)
+        self.commitButton.setEnabled(False)
+        self.diffButton.setEnabled(False)
+        self.revertButton.setEnabled(False)
+        self.forgetButton.setEnabled(False)
+        self.restoreButton.setEnabled(False)
+        
+        self.statusFilterCombo.clear()
+        self.__statusFilters = []
         
         if self.process:
             self.process.kill()
@@ -215,6 +244,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
+        self.__statusFilters.sort()
+        self.__statusFilters.insert(0, "<{0}>".format(self.trUtf8("all")))
+        self.statusFilterCombo.addItems(self.__statusFilters)
+        
         for act in self.menuactions:
             act.setEnabled(True)
         
@@ -223,6 +256,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.statusList.doItemsLayout()
         self.__resort()
         self.__resizeColumns()
+        
+        self.__updateButtons()
+        self.__updateCommitButton()
     
     def on_buttonBox_clicked(self, button):
         """
@@ -342,12 +378,106 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.inputGroup.show()
         self.refreshButton.setEnabled(False)
         
-        for act in self.menuactions:
-            act.setEnabled(False)
-        
         self.statusList.clear()
         
         self.start(self.args)
+    
+    def __updateButtons(self):
+        """
+        Private method to update the VCS buttons status.
+        """
+        modified = len(self.__getModifiedItems())
+        unversioned = len(self.__getUnversionedItems())
+        missing = len(self.__getMissingItems())
+
+        self.addButton.setEnabled(unversioned)
+        self.diffButton.setEnabled(modified)
+        self.revertButton.setEnabled(modified)
+        self.forgetButton.setEnabled(missing)
+        self.restoreButton.setEnabled(missing)
+    
+    def __updateCommitButton(self):
+        """
+        Private method to update the Commit button status.
+        """
+        commitable = len(self.__getCommitableItems())
+        self.commitButton.setEnabled(commitable)
+    
+    @pyqtSlot(str)
+    def on_statusFilterCombo_activated(self, txt):
+        """
+        Private slot to react to the selection of a status filter.
+        
+        @param txt selected status filter (string)
+        """
+        if txt == "<{0}>".format(self.trUtf8("all")):
+            for topIndex in range(self.statusList.topLevelItemCount()):
+                topItem = self.statusList.topLevelItem(topIndex)
+                topItem.setHidden(False)
+        else:
+            for topIndex in range(self.statusList.topLevelItemCount()):
+                topItem = self.statusList.topLevelItem(topIndex)
+                topItem.setHidden(topItem.text(self.__statusColumn) != txt)
+    
+    @pyqtSlot(QTreeWidgetItem, int)
+    def on_statusList_itemChanged(self, item, column):
+        """
+        Private slot to act upon item changes.
+        
+        @param item reference to the changed item (QTreeWidgetItem)
+        @param column index of column that changed (integer)
+        """
+        if column == self.__toBeCommittedColumn:
+            self.__updateCommitButton()
+    
+    @pyqtSlot()
+    def on_statusList_itemSelectionChanged(self):
+        """
+        Private slot to act upon changes of selected items.
+        """
+        self.__updateButtons()
+    
+    @pyqtSlot()
+    def on_commitButton_clicked(self):
+        """
+        Private slot to handle the press of the Commit button.
+        """
+        self.__commit()
+    
+    @pyqtSlot()
+    def on_addButton_clicked(self):
+        """
+        Private slot to handle the press of the Add button.
+        """
+        self.__add()
+    
+    @pyqtSlot()
+    def on_diffButton_clicked(self):
+        """
+        Private slot to handle the press of the Differences button.
+        """
+        self.__diff()
+    
+    @pyqtSlot()
+    def on_revertButton_clicked(self):
+        """
+        Private slot to handle the press of the Revert button.
+        """
+        self.__revert()
+    
+    @pyqtSlot()
+    def on_forgetButton_clicked(self):
+        """
+        Private slot to handle the press of the Forget button.
+        """
+        self.__forget()
+    
+    @pyqtSlot()
+    def on_restoreButton_clicked(self):
+        """
+        Private slot to handle the press of the Restore button.
+        """
+        self.__restoreMissing()
     
     ############################################################################
     ## Context menu handling methods
@@ -366,11 +496,12 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         Private slot to handle the Commit context menu entry.
         """
         names = [os.path.join(self.dname, itm.text(self.__pathColumn)) \
-                 for itm in self.__getModifiedItems()]
+                 for itm in self.__getCommitableItems()]
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Commit"),
-                self.trUtf8("""There are no uncommitted changes available/selected."""))
+                self.trUtf8("""There are no entries selected to be"""
+                            """ committed."""))
             return
         
         if Preferences.getVCS("AutoSaveFiles"):
@@ -396,7 +527,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Add"),
-                self.trUtf8("""There are no unversioned entries available/selected."""))
+                self.trUtf8("""There are no unversioned entries"""
+                            """ available/selected."""))
             return
         
         self.vcs.vcsAdd(names)
@@ -416,7 +548,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Remove"),
-                self.trUtf8("""There are no missing entries available/selected."""))
+                self.trUtf8("""There are no missing entries"""
+                            """ available/selected."""))
             return
         
         self.vcs.hgForget(names)
@@ -431,7 +564,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(self,
                 self.trUtf8("Revert"),
-                self.trUtf8("""There are no uncommitted changes available/selected."""))
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
             return
         
         self.vcs.vcsRevert(names)
@@ -441,6 +575,54 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         for name in names:
             project.getModel().updateVCSStatus(name)
         self.vcs.checkVCSStatus()
+    
+    def __restoreMissing(self):
+        """
+        Private slot to handle the Restore Missing context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getMissingItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Revert"),
+                self.trUtf8("""There are no missing entries"""
+                            """ available/selected."""))
+            return
+        
+        self.vcs.vcsRevert(names)
+        self.on_refreshButton_clicked()
+        self.vcs.checkVCSStatus()
+        
+    def __diff(self):
+        """
+        Private slot to handle the Diff context menu entry.
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getModifiedItems()]
+        if not names:
+            E5MessageBox.information(self,
+                self.trUtf8("Differences"),
+                self.trUtf8("""There are no uncommitted changes"""
+                            """ available/selected."""))
+            return
+        
+        if self.diff is None:
+            self.diff = HgDiffDialog(self.vcs)
+        self.diff.show()
+        self.diff.start(names)
+        
+    def __getCommitableItems(self):
+        """
+        Private method to retrieve all entries the user wants to commit.
+        
+        @return list of all items, the user has checked
+        """
+        commitableItems = []
+        for index in range(self.statusList.topLevelItemCount()):
+            itm = self.statusList.topLevelItem(index)
+            if itm.checkState(self.__toBeCommittedColumn) == Qt.Checked:
+                commitableItems.append(itm)
+        return commitableItems
     
     def __getModifiedItems(self):
         """

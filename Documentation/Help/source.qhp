@@ -8235,9 +8235,11 @@
       <keyword name="HgStatusDialog.__add" id="HgStatusDialog.__add" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__add" />
       <keyword name="HgStatusDialog.__commit" id="HgStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commit" />
       <keyword name="HgStatusDialog.__committed" id="HgStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__committed" />
+      <keyword name="HgStatusDialog.__diff" id="HgStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__diff" />
       <keyword name="HgStatusDialog.__finish" id="HgStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__finish" />
       <keyword name="HgStatusDialog.__forget" id="HgStatusDialog.__forget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__forget" />
       <keyword name="HgStatusDialog.__generateItem" id="HgStatusDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__generateItem" />
+      <keyword name="HgStatusDialog.__getCommitableItems" id="HgStatusDialog.__getCommitableItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getCommitableItems" />
       <keyword name="HgStatusDialog.__getMissingItems" id="HgStatusDialog.__getMissingItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getMissingItems" />
       <keyword name="HgStatusDialog.__getModifiedItems" id="HgStatusDialog.__getModifiedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getModifiedItems" />
       <keyword name="HgStatusDialog.__getUnversionedItems" id="HgStatusDialog.__getUnversionedItems" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getUnversionedItems" />
@@ -8246,15 +8248,27 @@
       <keyword name="HgStatusDialog.__readStdout" id="HgStatusDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__readStdout" />
       <keyword name="HgStatusDialog.__resizeColumns" id="HgStatusDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__resizeColumns" />
       <keyword name="HgStatusDialog.__resort" id="HgStatusDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__resort" />
+      <keyword name="HgStatusDialog.__restoreMissing" id="HgStatusDialog.__restoreMissing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__restoreMissing" />
       <keyword name="HgStatusDialog.__revert" id="HgStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__revert" />
       <keyword name="HgStatusDialog.__showContextMenu" id="HgStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__showContextMenu" />
+      <keyword name="HgStatusDialog.__updateButtons" id="HgStatusDialog.__updateButtons" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__updateButtons" />
+      <keyword name="HgStatusDialog.__updateCommitButton" id="HgStatusDialog.__updateCommitButton" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__updateCommitButton" />
       <keyword name="HgStatusDialog.closeEvent" id="HgStatusDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.closeEvent" />
       <keyword name="HgStatusDialog.keyPressEvent" id="HgStatusDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.keyPressEvent" />
+      <keyword name="HgStatusDialog.on_addButton_clicked" id="HgStatusDialog.on_addButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_addButton_clicked" />
       <keyword name="HgStatusDialog.on_buttonBox_clicked" id="HgStatusDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_buttonBox_clicked" />
+      <keyword name="HgStatusDialog.on_commitButton_clicked" id="HgStatusDialog.on_commitButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_commitButton_clicked" />
+      <keyword name="HgStatusDialog.on_diffButton_clicked" id="HgStatusDialog.on_diffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_diffButton_clicked" />
+      <keyword name="HgStatusDialog.on_forgetButton_clicked" id="HgStatusDialog.on_forgetButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_forgetButton_clicked" />
       <keyword name="HgStatusDialog.on_input_returnPressed" id="HgStatusDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_input_returnPressed" />
       <keyword name="HgStatusDialog.on_passwordCheckBox_toggled" id="HgStatusDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgStatusDialog.on_refreshButton_clicked" id="HgStatusDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_refreshButton_clicked" />
+      <keyword name="HgStatusDialog.on_restoreButton_clicked" id="HgStatusDialog.on_restoreButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_restoreButton_clicked" />
+      <keyword name="HgStatusDialog.on_revertButton_clicked" id="HgStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_revertButton_clicked" />
       <keyword name="HgStatusDialog.on_sendButton_clicked" id="HgStatusDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_sendButton_clicked" />
+      <keyword name="HgStatusDialog.on_statusFilterCombo_activated" id="HgStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusFilterCombo_activated" />
+      <keyword name="HgStatusDialog.on_statusList_itemChanged" id="HgStatusDialog.on_statusList_itemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemChanged" />
+      <keyword name="HgStatusDialog.on_statusList_itemSelectionChanged" id="HgStatusDialog.on_statusList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemSelectionChanged" />
       <keyword name="HgStatusDialog.start" id="HgStatusDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.start" />
       <keyword name="hg (Module)" id="hg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
@@ -8633,10 +8647,13 @@
       <keyword name="SvnStatusDialog.__breakLock" id="SvnStatusDialog.__breakLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__breakLock" />
       <keyword name="SvnStatusDialog.__commit" id="SvnStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__commit" />
       <keyword name="SvnStatusDialog.__committed" id="SvnStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__committed" />
+      <keyword name="SvnStatusDialog.__diff" id="SvnStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__diff" />
       <keyword name="SvnStatusDialog.__finish" id="SvnStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__finish" />
       <keyword name="SvnStatusDialog.__generateItem" id="SvnStatusDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__generateItem" />
       <keyword name="SvnStatusDialog.__getChangelistItems" id="SvnStatusDialog.__getChangelistItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getChangelistItems" />
+      <keyword name="SvnStatusDialog.__getCommitableItems" id="SvnStatusDialog.__getCommitableItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getCommitableItems" />
       <keyword name="SvnStatusDialog.__getLockActionItems" id="SvnStatusDialog.__getLockActionItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getLockActionItems" />
+      <keyword name="SvnStatusDialog.__getMissingItems" id="SvnStatusDialog.__getMissingItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getMissingItems" />
       <keyword name="SvnStatusDialog.__getModifiedItems" id="SvnStatusDialog.__getModifiedItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getModifiedItems" />
       <keyword name="SvnStatusDialog.__getNonChangelistItems" id="SvnStatusDialog.__getNonChangelistItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getNonChangelistItems" />
       <keyword name="SvnStatusDialog.__getUnversionedItems" id="SvnStatusDialog.__getUnversionedItems" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__getUnversionedItems" />
@@ -8647,17 +8664,28 @@
       <keyword name="SvnStatusDialog.__removeFromChangelist" id="SvnStatusDialog.__removeFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__removeFromChangelist" />
       <keyword name="SvnStatusDialog.__resizeColumns" id="SvnStatusDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__resizeColumns" />
       <keyword name="SvnStatusDialog.__resort" id="SvnStatusDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__resort" />
+      <keyword name="SvnStatusDialog.__restoreMissing" id="SvnStatusDialog.__restoreMissing" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__restoreMissing" />
       <keyword name="SvnStatusDialog.__revert" id="SvnStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__revert" />
       <keyword name="SvnStatusDialog.__showContextMenu" id="SvnStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__showContextMenu" />
       <keyword name="SvnStatusDialog.__stealLock" id="SvnStatusDialog.__stealLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__stealLock" />
       <keyword name="SvnStatusDialog.__unlock" id="SvnStatusDialog.__unlock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__unlock" />
+      <keyword name="SvnStatusDialog.__updateButtons" id="SvnStatusDialog.__updateButtons" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__updateButtons" />
+      <keyword name="SvnStatusDialog.__updateCommitButton" id="SvnStatusDialog.__updateCommitButton" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__updateCommitButton" />
       <keyword name="SvnStatusDialog.closeEvent" id="SvnStatusDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.closeEvent" />
       <keyword name="SvnStatusDialog.keyPressEvent" id="SvnStatusDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.keyPressEvent" />
+      <keyword name="SvnStatusDialog.on_addButton_clicked" id="SvnStatusDialog.on_addButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_addButton_clicked" />
       <keyword name="SvnStatusDialog.on_buttonBox_clicked" id="SvnStatusDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_buttonBox_clicked" />
+      <keyword name="SvnStatusDialog.on_commitButton_clicked" id="SvnStatusDialog.on_commitButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_commitButton_clicked" />
+      <keyword name="SvnStatusDialog.on_diffButton_clicked" id="SvnStatusDialog.on_diffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_diffButton_clicked" />
       <keyword name="SvnStatusDialog.on_input_returnPressed" id="SvnStatusDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_input_returnPressed" />
       <keyword name="SvnStatusDialog.on_passwordCheckBox_toggled" id="SvnStatusDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_passwordCheckBox_toggled" />
       <keyword name="SvnStatusDialog.on_refreshButton_clicked" id="SvnStatusDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_refreshButton_clicked" />
+      <keyword name="SvnStatusDialog.on_restoreButton_clicked" id="SvnStatusDialog.on_restoreButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_restoreButton_clicked" />
+      <keyword name="SvnStatusDialog.on_revertButton_clicked" id="SvnStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_revertButton_clicked" />
       <keyword name="SvnStatusDialog.on_sendButton_clicked" id="SvnStatusDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_sendButton_clicked" />
+      <keyword name="SvnStatusDialog.on_statusFilterCombo_activated" id="SvnStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_statusFilterCombo_activated" />
+      <keyword name="SvnStatusDialog.on_statusList_itemChanged" id="SvnStatusDialog.on_statusList_itemChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_statusList_itemChanged" />
+      <keyword name="SvnStatusDialog.on_statusList_itemSelectionChanged" id="SvnStatusDialog.on_statusList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.on_statusList_itemSelectionChanged" />
       <keyword name="SvnStatusDialog.start" id="SvnStatusDialog.start" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.start" />
       <keyword name="subversion (Module)" id="subversion (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html" />
       <keyword name="Subversion" id="Subversion" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion" />
@@ -8999,10 +9027,13 @@
       <keyword name="SvnStatusDialog.__breakLock" id="SvnStatusDialog.__breakLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__breakLock" />
       <keyword name="SvnStatusDialog.__commit" id="SvnStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__commit" />
       <keyword name="SvnStatusDialog.__committed" id="SvnStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__committed" />
+      <keyword name="SvnStatusDialog.__diff" id="SvnStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__diff" />
       <keyword name="SvnStatusDialog.__finish" id="SvnStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__finish" />
       <keyword name="SvnStatusDialog.__generateItem" id="SvnStatusDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__generateItem" />
       <keyword name="SvnStatusDialog.__getChangelistItems" id="SvnStatusDialog.__getChangelistItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getChangelistItems" />
+      <keyword name="SvnStatusDialog.__getCommitableItems" id="SvnStatusDialog.__getCommitableItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getCommitableItems" />
       <keyword name="SvnStatusDialog.__getLockActionItems" id="SvnStatusDialog.__getLockActionItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getLockActionItems" />
+      <keyword name="SvnStatusDialog.__getMissingItems" id="SvnStatusDialog.__getMissingItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getMissingItems" />
       <keyword name="SvnStatusDialog.__getModifiedItems" id="SvnStatusDialog.__getModifiedItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getModifiedItems" />
       <keyword name="SvnStatusDialog.__getNonChangelistItems" id="SvnStatusDialog.__getNonChangelistItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getNonChangelistItems" />
       <keyword name="SvnStatusDialog.__getUnversionedItems" id="SvnStatusDialog.__getUnversionedItems" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__getUnversionedItems" />
@@ -9010,13 +9041,24 @@
       <keyword name="SvnStatusDialog.__removeFromChangelist" id="SvnStatusDialog.__removeFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__removeFromChangelist" />
       <keyword name="SvnStatusDialog.__resizeColumns" id="SvnStatusDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__resizeColumns" />
       <keyword name="SvnStatusDialog.__resort" id="SvnStatusDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__resort" />
+      <keyword name="SvnStatusDialog.__restoreMissing" id="SvnStatusDialog.__restoreMissing" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__restoreMissing" />
       <keyword name="SvnStatusDialog.__revert" id="SvnStatusDialog.__revert" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__revert" />
       <keyword name="SvnStatusDialog.__showContextMenu" id="SvnStatusDialog.__showContextMenu" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__showContextMenu" />
       <keyword name="SvnStatusDialog.__showError" id="SvnStatusDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__showError" />
       <keyword name="SvnStatusDialog.__stealLock" id="SvnStatusDialog.__stealLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__stealLock" />
       <keyword name="SvnStatusDialog.__unlock" id="SvnStatusDialog.__unlock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__unlock" />
+      <keyword name="SvnStatusDialog.__updateButtons" id="SvnStatusDialog.__updateButtons" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__updateButtons" />
+      <keyword name="SvnStatusDialog.__updateCommitButton" id="SvnStatusDialog.__updateCommitButton" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__updateCommitButton" />
+      <keyword name="SvnStatusDialog.on_addButton_clicked" id="SvnStatusDialog.on_addButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_addButton_clicked" />
       <keyword name="SvnStatusDialog.on_buttonBox_clicked" id="SvnStatusDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_buttonBox_clicked" />
+      <keyword name="SvnStatusDialog.on_commitButton_clicked" id="SvnStatusDialog.on_commitButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_commitButton_clicked" />
+      <keyword name="SvnStatusDialog.on_diffButton_clicked" id="SvnStatusDialog.on_diffButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_diffButton_clicked" />
       <keyword name="SvnStatusDialog.on_refreshButton_clicked" id="SvnStatusDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_refreshButton_clicked" />
+      <keyword name="SvnStatusDialog.on_restoreButton_clicked" id="SvnStatusDialog.on_restoreButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_restoreButton_clicked" />
+      <keyword name="SvnStatusDialog.on_revertButton_clicked" id="SvnStatusDialog.on_revertButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_revertButton_clicked" />
+      <keyword name="SvnStatusDialog.on_statusFilterCombo_activated" id="SvnStatusDialog.on_statusFilterCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_statusFilterCombo_activated" />
+      <keyword name="SvnStatusDialog.on_statusList_itemChanged" id="SvnStatusDialog.on_statusList_itemChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_statusList_itemChanged" />
+      <keyword name="SvnStatusDialog.on_statusList_itemSelectionChanged" id="SvnStatusDialog.on_statusList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.on_statusList_itemSelectionChanged" />
       <keyword name="SvnStatusDialog.start" id="SvnStatusDialog.start" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.start" />
       <keyword name="SvnDialogMixin (Module)" id="SvnDialogMixin (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialogMixin.html" />
       <keyword name="SvnDialogMixin" id="SvnDialogMixin" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnDialogMixin.html#SvnDialogMixin" />
