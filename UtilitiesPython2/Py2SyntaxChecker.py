@@ -23,10 +23,10 @@ def compile(file, codestring):
     
     @param file source filename (string)
     @param codestring source code (string)
-    @return A tuple indicating status (1 = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only 
-        valid, if the status equals 1.
+    @return A tuple indicating status (True = an error was found), the
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). The values are only valid, if the status equals 1.
     """
     import __builtin__
     
@@ -52,19 +52,24 @@ def compile(file, codestring):
             if lines[1].startswith('SyntaxError:'):
                 code = ""
                 error = re.match('SyntaxError: (.+)', lines[1]).group(1)
+                index = "0"
             else:
                 code = re.match('(.+)', lines[1]).group(1)
                 error = ""
+                index = "0"
                 for seLine in lines[2:]:
                     if seLine.startswith('SyntaxError:'):
                         error = re.match('SyntaxError: (.+)', seLine).group(1)
+                    elif seLine.rstrip().endswith('^'):
+                        index = len(seLine.rstrip()) - 4
         else:
             fn = detail.filename
             line = detail.lineno and detail.lineno or 1
             code = ""
             error = detail.msg
-        return (1, fn, line, code, error)
+        return (1, fn, line, index, code, error)
     except ValueError, detail:
+        index = "0"
         try:
             fn = detail.filename
             line = detail.lineno
@@ -74,18 +79,19 @@ def compile(file, codestring):
             line = 1
             error = unicode(detail)
         code = ""
-        return (1, fn, line, code, error)
+        return (1, fn, line, index, code, error)
     except StandardError, detail:
         try:
             fn = detail.filename
             line = detail.lineno
             code = ""
             error = detail.msg
-            return (1, fn, line, code, error)
+            index = "0"
+            return (1, fn, line, index, code, error)
         except:         # this catchall is intentional
             pass
     
-    return (0, None, None, None, None)
+    return (0, None, None, None, None, None)
 
 def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     """
@@ -129,6 +135,7 @@ if __name__ == "__main__":
         print ""
         print ""
         print ""
+        print ""
         print "No file name given."
     else:
         filename = sys.argv[-1]
@@ -136,11 +143,12 @@ if __name__ == "__main__":
             codestring = readEncodedFile(filename)[0]
             codestring = normalizeCode(codestring)
             
-            syntaxerror, fname, line, code, error = compile(filename, codestring)
+            syntaxerror, fname, line, index, code, error = \
+                compile(filename, codestring)
         except IOError, msg:
             # fake a syntax error
-            syntaxerror, fname, line, code, error = \
-                1, filename, "1", "", "I/O Error: %s" % unicode(msg)
+            syntaxerror, fname, line, index, code, error = \
+                1, filename, "1", "0", "", "I/O Error: %s" % unicode(msg)
         
         if syntaxerror:
             print "ERROR"
@@ -148,6 +156,7 @@ if __name__ == "__main__":
             print "NO_ERROR"
         print fname
         print line
+        print index
         print code
         print error
         

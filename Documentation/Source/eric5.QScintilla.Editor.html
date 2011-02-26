@@ -1910,7 +1910,8 @@ line number to show the flakes warning for (integer)
 <h4>Editor.__showSyntaxError</h4>
 <b>__showSyntaxError</b>(<i>line = -1</i>)
 <p>
-        Private slot to handle the 'Show syntax error message' context menu action.
+        Private slot to handle the 'Show syntax error message'
+        context menu action.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
@@ -3230,13 +3231,16 @@ warning message (string)
 </dd>
 </dl><a NAME="Editor.toggleSyntaxError" ID="Editor.toggleSyntaxError"></a>
 <h4>Editor.toggleSyntaxError</h4>
-<b>toggleSyntaxError</b>(<i>line, error, msg = ""</i>)
+<b>toggleSyntaxError</b>(<i>line, index, error, msg = "", show = False</i>)
 <p>
         Public method to toggle a syntax error indicator.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
-line number of the syntax error
+line number of the syntax error (integer)
+</dd><dt><i>index</i></dt>
+<dd>
+index number of the syntax error (integer)
 </dd><dt><i>error</i></dt>
 <dd>
 flag indicating if the error marker should be
@@ -3244,6 +3248,10 @@ flag indicating if the error marker should be
 </dd><dt><i>msg</i></dt>
 <dd>
 error message (string)
+</dd><dt><i>show=</i></dt>
+<dd>
+flag indicating to set the cursor to the error position
+            (boolean)
 </dd>
 </dl><a NAME="Editor.uncommentLine" ID="Editor.uncommentLine"></a>
 <h4>Editor.uncommentLine</h4>

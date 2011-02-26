@@ -769,11 +769,11 @@
           </section>
           <section title="eric5.compileUiFiles" ref="eric5.compileUiFiles.html" />
           <section title="eric5.eric5" ref="eric5.eric5.html" />
-          <section title="eric5.eric5-api" ref="eric5.eric5-api.html" />
-          <section title="eric5.eric5-doc" ref="eric5.eric5-doc.html" />
+          <section title="eric5.eric5_api" ref="eric5.eric5_api.html" />
           <section title="eric5.eric5_compare" ref="eric5.eric5_compare.html" />
           <section title="eric5.eric5_configure" ref="eric5.eric5_configure.html" />
           <section title="eric5.eric5_diff" ref="eric5.eric5_diff.html" />
+          <section title="eric5.eric5_doc" ref="eric5.eric5_doc.html" />
           <section title="eric5.eric5_editor" ref="eric5.eric5_editor.html" />
           <section title="eric5.eric5_iconeditor" ref="eric5.eric5_iconeditor.html" />
           <section title="eric5.eric5_plugininstall" ref="eric5.eric5_plugininstall.html" />
@@ -800,14 +800,6 @@
       <keyword name="eric5_unittest (Module)" id="eric5_unittest (Module)" ref="eric5.eric5_unittest.html" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_unittest.html#createMainWidget" />
       <keyword name="main" id="main" ref="eric5.eric5_unittest.html#main" />
-      <keyword name="eric5-api (Module)" id="eric5-api (Module)" ref="eric5.eric5-api.html" />
-      <keyword name="main" id="main" ref="eric5.eric5-api.html#main" />
-      <keyword name="usage" id="usage" ref="eric5.eric5-api.html#usage" />
-      <keyword name="version" id="version" ref="eric5.eric5-api.html#version" />
-      <keyword name="eric5-doc (Module)" id="eric5-doc (Module)" ref="eric5.eric5-doc.html" />
-      <keyword name="main" id="main" ref="eric5.eric5-doc.html#main" />
-      <keyword name="usage" id="usage" ref="eric5.eric5-doc.html#usage" />
-      <keyword name="version" id="version" ref="eric5.eric5-doc.html#version" />
       <keyword name="uninstall (Module)" id="uninstall (Module)" ref="eric5.uninstall.html" />
       <keyword name="initGlobals" id="initGlobals" ref="eric5.uninstall.html#initGlobals" />
       <keyword name="main" id="main" ref="eric5.uninstall.html#main" />
@@ -833,6 +825,14 @@
       <keyword name="main" id="main" ref="eric5.eric5_qregexp.html#main" />
       <keyword name="eric5config (Module)" id="eric5config (Module)" ref="eric5.eric5config.html" />
       <keyword name="getConfig" id="getConfig" ref="eric5.eric5config.html#getConfig" />
+      <keyword name="eric5_api (Module)" id="eric5_api (Module)" ref="eric5.eric5_api.html" />
+      <keyword name="main" id="main" ref="eric5.eric5_api.html#main" />
+      <keyword name="usage" id="usage" ref="eric5.eric5_api.html#usage" />
+      <keyword name="version" id="version" ref="eric5.eric5_api.html#version" />
+      <keyword name="eric5_doc (Module)" id="eric5_doc (Module)" ref="eric5.eric5_doc.html" />
+      <keyword name="main" id="main" ref="eric5.eric5_doc.html#main" />
+      <keyword name="usage" id="usage" ref="eric5.eric5_doc.html#usage" />
+      <keyword name="version" id="version" ref="eric5.eric5_doc.html#version" />
       <keyword name="eric5_sqlbrowser (Module)" id="eric5_sqlbrowser (Module)" ref="eric5.eric5_sqlbrowser.html" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_sqlbrowser.html#createMainWidget" />
       <keyword name="main" id="main" ref="eric5.eric5_sqlbrowser.html#main" />
@@ -10798,12 +10798,12 @@
       <file>eric5.ViewManager.ViewManager.html</file>
       <file>eric5.ViewManager.__init__.html</file>
       <file>eric5.compileUiFiles.html</file>
-      <file>eric5.eric5-api.html</file>
-      <file>eric5.eric5-doc.html</file>
       <file>eric5.eric5.html</file>
+      <file>eric5.eric5_api.html</file>
       <file>eric5.eric5_compare.html</file>
       <file>eric5.eric5_configure.html</file>
       <file>eric5.eric5_diff.html</file>
+      <file>eric5.eric5_doc.html</file>
       <file>eric5.eric5_editor.html</file>
       <file>eric5.eric5_iconeditor.html</file>
       <file>eric5.eric5_plugininstall.html</file>

@@ -167,7 +167,7 @@ class Editor(QsciScintillaCompat):
         self.bookmarks = []         # bookmarks are just a list of handles to the
                                     # bookmark markers
         self.syntaxerrors = {}      # key:   marker handle
-                                    # value: error message
+                                    # value: error message, error index
         self.warnings = {}          # key:   marker handle
                                     # value: list of warning messages
         self.notcoveredMarkers = [] # just a list of marker handles
@@ -4074,7 +4074,7 @@ class Editor(QsciScintillaCompat):
                 self.marginMenuActs["ShowWarning"].setEnabled(False)
         else:
             self.marginMenuActs["NextWarningMarker"].setEnabled(False)
-            self.marginMenuActs["PreviousWarningMarker"].setEnabled(True)
+            self.marginMenuActs["PreviousWarningMarker"].setEnabled(False)
             self.marginMenuActs["ClearWarnings"].setEnabled(False)
             self.marginMenuActs["ShowWarning"].setEnabled(False)
         
@@ -4218,16 +4218,19 @@ class Editor(QsciScintillaCompat):
             self.clearSyntaxError()
             self.clearFlakesWarnings()
             if self.isPy3File():
-                syntaxError, _fn, errorline, _code, _error = \
+                syntaxError, _fn, errorline, errorindex, _code, _error = \
                     Utilities.compile(self.fileName, self.text())
                 if syntaxError:
-                    self.toggleSyntaxError(int(errorline), True, _error)
+                    self.toggleSyntaxError(
+                        int(errorline), int(errorindex), True, _error)
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         ignoreStarImportWarnings = \
                             Preferences.getFlakes("IgnoreStarImportWarnings")
                         try:
-                            txt = self.text().replace("\r\n", "\n").replace("\r", "\n")
+                            txt = self.text()\
+                                .replace("\r\n", "\n")\
+                                .replace("\r", "\n")
                             warnings = Checker(txt, self.fileName)
                             warnings.messages.sort(key = lambda a: a.lineno)
                             for warning in warnings.messages:
@@ -4238,7 +4241,8 @@ class Editor(QsciScintillaCompat):
                                 _fn, lineno, message = warning.getMessageData()
                                 if not self.text(lineno - 1).strip()\
                                    .endswith("__IGNORE_WARNING__"):
-                                    self.toggleFlakesWarning(lineno, True, message)
+                                    self.toggleFlakesWarning(
+                                        lineno, True, message)
                         except SyntaxError as err:
                             if err.text.strip():
                                 msg = err.text.strip()
@@ -4246,15 +4250,17 @@ class Editor(QsciScintillaCompat):
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
             elif self.isPy2File():
-                syntaxError, _fn, errorline, _code, _error, warnings = \
-                    Utilities.py2compile(
-                        self.fileName, 
-                        checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck"))
+                syntaxError, _fn, errorline, errorindex, _code, _error, \
+                warnings = Utilities.py2compile(
+                    self.fileName, 
+                    checkFlakes=Preferences.getFlakes("IncludeInSyntaxCheck"))
                 if syntaxError:
-                    self.toggleSyntaxError(int(errorline), True, _error)
+                    self.toggleSyntaxError(
+                        int(errorline), int(errorindex), True, _error)
                 else:
                     for warning in warnings:
-                        self.toggleFlakesWarning(int(warning[1]), True, warning[2])
+                        self.toggleFlakesWarning(
+                            int(warning[1]), True, warning[2])
         
     def __showCodeMetrics(self):
         """
@@ -4480,14 +4486,17 @@ class Editor(QsciScintillaCompat):
     ## Syntax error handling methods below
     ############################################################################
 
-    def toggleSyntaxError(self, line, error, msg = ""):
+    def toggleSyntaxError(self, line, index, error, msg = "", show = False):
         """
         Public method to toggle a syntax error indicator.
         
-        @param line line number of the syntax error
+        @param line line number of the syntax error (integer)
+        @param index index number of the syntax error (integer)
         @param error flag indicating if the error marker should be
             set or deleted (boolean)
         @param msg error message (string)
+        @keyparam show flag indicating to set the cursor to the error position
+            (boolean)
         """
         if line == 0:
             line = 1
@@ -4497,8 +4506,12 @@ class Editor(QsciScintillaCompat):
             markers = self.markersAtLine(line - 1)
             if not (markers & (1 << self.syntaxerror)):
                 handle = self.markerAdd(line - 1, self.syntaxerror)
-                self.syntaxerrors[handle] = msg
+                index += self.indentation(line - 1)
+                self.syntaxerrors[handle] = (msg, index)
                 self.syntaxerrorToggled.emit(self)
+                if show:
+                    self.setCursorPosition(line - 1, index)
+                    self.ensureLineVisible(line - 1)
         else:
             for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line - 1:
@@ -4536,8 +4549,12 @@ class Editor(QsciScintillaCompat):
         """
         seline = self.markerFindNext(0, 1 << self.syntaxerror)
         if seline >= 0:
-            self.setCursorPosition(seline, 0)
-            self.ensureLineVisible(seline)
+            index = 0
+            for handle in self.syntaxerrors.keys():
+                if self.markerLine(handle) == seline:
+                    index = self.syntaxerrors[handle][1]
+            self.setCursorPosition(seline, index)
+        self.ensureLineVisible(seline)
         
     def clearSyntaxError(self):
         """
@@ -4545,11 +4562,12 @@ class Editor(QsciScintillaCompat):
         """
         for handle in list(self.syntaxerrors.keys()):
             line = self.markerLine(handle) + 1
-            self.toggleSyntaxError(line, False)
+            self.toggleSyntaxError(line, 0, False)
         
     def __showSyntaxError(self, line = -1):
         """
-        Private slot to handle the 'Show syntax error message' context menu action.
+        Private slot to handle the 'Show syntax error message'
+        context menu action.
         
         @param line line number to show the syntax error for (integer)
         """
@@ -4560,7 +4578,7 @@ class Editor(QsciScintillaCompat):
             if self.markerLine(handle) == line:
                 E5MessageBox.critical(self,
                     self.trUtf8("Syntax Error"),
-                    self.syntaxerrors[handle])
+                    self.syntaxerrors[handle][0])
                 break
         else:
             E5MessageBox.critical(self,
@@ -4739,7 +4757,8 @@ class Editor(QsciScintillaCompat):
             for handle in list(self.syntaxerrors.keys()):
                 if self.markerLine(handle) == line:
                     errorAnnotations.append(
-                        self.trUtf8("Error: {0}").format(self.syntaxerrors[handle]))
+                        self.trUtf8("Error: {0}").format(
+                            self.syntaxerrors[handle][0]))
             
             wLen = len(warningAnnotations)
             eLen = len(errorAnnotations)

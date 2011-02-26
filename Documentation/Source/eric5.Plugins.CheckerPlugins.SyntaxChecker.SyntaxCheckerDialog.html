@@ -49,7 +49,7 @@ Module implementing a simple Python syntax checker.
 QDialog, Ui_SyntaxCheckerDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>errorRole</td></tr><tr><td>filenameRole</td></tr><tr><td>lineRole</td></tr><tr><td>warningRole</td></tr>
+<tr><td>errorRole</td></tr><tr><td>filenameRole</td></tr><tr><td>indexRole</td></tr><tr><td>lineRole</td></tr><tr><td>warningRole</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -105,16 +105,19 @@ The parent widget. (QWidget)
         Private method to clear all error markers of open editors.
 </p><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
 <h4>SyntaxCheckerDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, error, sourcecode, isWarning = False</i>)
+<b>__createResultItem</b>(<i>file, line, index, error, sourcecode, isWarning = False</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
 <dt><i>file</i></dt>
 <dd>
-filename of file (string)
+file name of file (string)
 </dd><dt><i>line</i></dt>
 <dd>
-linenumber of faulty source (integer or string)
+line number of faulty source (integer or string)
+</dd><dt><i>index</i></dt>
+<dd>
+index number of fault (integer)
 </dd><dt><i>error</i></dt>
 <dd>
 error text (string)

@@ -29,8 +29,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     """
     filenameRole = Qt.UserRole + 1
     lineRole     = Qt.UserRole + 2
-    errorRole    = Qt.UserRole + 3
-    warningRole  = Qt.UserRole + 4
+    indexRole    = Qt.UserRole + 3
+    errorRole    = Qt.UserRole + 4
+    warningRole  = Qt.UserRole + 5
     
     def __init__(self, parent = None):
         """
@@ -68,13 +69,14 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                   self.resultList.header().sortIndicatorOrder()
                                  )
         
-    def __createResultItem(self, file, line, error, sourcecode, 
+    def __createResultItem(self, file, line, index, error, sourcecode, 
                            isWarning = False):
         """
         Private method to create an entry in the result list.
         
-        @param file filename of file (string)
-        @param line linenumber of faulty source (integer or string)
+        @param file file name of file (string)
+        @param line line number of faulty source (integer or string)
+        @param index index number of fault (integer)
         @param error error text (string)
         @param sourcecode faulty line of code (string)
         @param isWarning flag indicating a warning message (boolean)
@@ -94,6 +96,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
         itm.setData(0, self.filenameRole, file)
         itm.setData(0, self.lineRole, int(line))
+        itm.setData(0, self.indexRole, index)
         itm.setData(0, self.errorRole, error)
         itm.setData(0, self.warningRole, isWarning)
         
@@ -185,7 +188,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                         source = Utilities.convertLineEnds(source, "\n")
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", 
+                        self.__createResultItem(file, "1", 0, 
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], "")
                         progress += 1
@@ -203,17 +206,17 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     self.__project.getProjectLanguage() in ["Python", 
                                                             "Python2"]):
                     isPy3 = False
-                    nok, fname, line, code, error, warnings = \
+                    nok, fname, line, index, code, error, warnings = \
                         Utilities.py2compile(file, 
                             checkFlakes = \
                                 Preferences.getFlakes("IncludeInSyntaxCheck"))
                 else:
                     isPy3 = True
-                    nok, fname, line, code, error = \
+                    nok, fname, line, index, code, error = \
                         Utilities.compile(file, source)
                 if nok:
                     self.noResults = False
-                    self.__createResultItem(fname, line, error, code)
+                    self.__createResultItem(fname, line, index, error, code)
                 else:
                     if Preferences.getFlakes("IncludeInSyntaxCheck"):
                         if isPy3:
@@ -231,7 +234,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                        .endswith("__IGNORE_WARNING__"):
                                         self.noResults = False
                                         self.__createResultItem(
-                                            fname, lineno, message, "", 
+                                            fname, lineno, 0, message, "", 
                                             isWarning = True)
                             except SyntaxError as err:
                                 if err.text.strip():
@@ -239,12 +242,12 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                 else:
                                     msg = err.msg
                                 self.__createResultItem(
-                                    err.filename, err.lineno, msg, "")
+                                    err.filename, err.lineno, 0, msg, "")
                         else:
                             for warning in warnings:
                                 self.noResults = False
                                 self.__createResultItem(
-                                    warning[0], int(warning[1]), 
+                                    warning[0], int(warning[1]), 0, 
                                     warning[2], "", isWarning = True)
                 progress += 1
             self.checkProgress.setValue(progress)
@@ -326,6 +329,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if itm.parent():
             fn = Utilities.normabspath(itm.data(0, self.filenameRole))
             lineno = itm.data(0, self.lineRole)
+            index = itm.data(0, self.indexRole)
             error = itm.data(0, self.errorRole)
             
             vm = e5App().getObject("ViewManager")
@@ -335,7 +339,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             if itm.data(0, self.warningRole):
                 editor.toggleFlakesWarning(lineno, True, error)
             else:
-                editor.toggleSyntaxError(lineno, True, error)
+                editor.toggleSyntaxError(lineno, index, True, error, show=True)
         
     @pyqtSlot()
     def on_showButton_clicked(self):

@@ -380,9 +380,9 @@ string containing the code to compile (string)
 <dt>Returns:</dt>
 <dd>
 A tuple indicating status (True = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only
-        valid, if the status is True.
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). The values are only valid, if the status is True.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1247,12 +1247,12 @@ flag indicating to do a pyflakes check (boolean)
 <dt>Returns:</dt>
 <dd>
 A tuple indicating status (True = an error was found), the
-        file name, the line number, the code string, the error message
-        and a list of tuples of pyflakes warnings indicating file name,
-        line number and message (boolean, string, string, string, string, 
-        list of (string, string, string)). The syntax error values are only
-        valid, if the status is True. The pyflakes list will be empty, if a
-        syntax error was detected by the syntax checker.
+        file name, the line number, the index number, the code string,
+        the error message and a list of tuples of pyflakes warnings indicating
+        file name, line number and message (boolean, string, string, string,
+        string, string, list of (string, string, string)). The syntax error
+        values are only valid, if the status is True. The pyflakes list will
+        be empty, if a syntax error was detected by the syntax checker.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -1041,9 +1041,9 @@ def compile(file, codestring = ""):
     @param file source filename (string)
     @param codestring string containing the code to compile (string)
     @return A tuple indicating status (True = an error was found), the
-        filename, the linenumber, the code string and the error message
-        (boolean, string, string, string, string). The values are only
-        valid, if the status is True.
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). The values are only valid, if the status is True.
     """
     import builtins
     if not codestring:
@@ -1078,19 +1078,24 @@ def compile(file, codestring = ""):
             if lines[1].startswith('SyntaxError:'):
                 code = ""
                 error = re.match('SyntaxError: (.+)', lines[1]).group(1)
+                index = "0"
             else:
                 code = re.match('(.+)', lines[1]).group(1)
                 error = ""
+                index = "0"
                 for seLine in lines[2:]:
                     if seLine.startswith('SyntaxError:'):
                         error = re.match('SyntaxError: (.+)', seLine).group(1)
+                    elif seLine.rstrip().endswith('^'):
+                        index = len(seLine.rstrip()) - 4
         else:
             fn = detail.filename
             line = detail.lineno and detail.lineno or 1
             code = ""
             error = detail.msg
-        return (True, fn, line, code, error)
+        return (True, fn, line, index, code, error)
     except ValueError as detail:
+        index = "0"
         try:
             fn = detail.filename
             line = detail.lineno
@@ -1100,18 +1105,19 @@ def compile(file, codestring = ""):
             line = 1
             error = str(detail)
         code = ""
-        return (True, fn, line, code, error)
+        return (True, fn, line, index, code, error)
     except Exception as detail:
         try:
             fn = detail.filename
             line = detail.lineno
             code = ""
             error = detail.msg
-            return (True, fn, line, code, error)
+            index = "0"
+            return (True, fn, line, index, code, error)
         except:         # this catchall is intentional
             pass
     
-    return (False, None, None, None, None)
+    return (False, None, None, None, None, None)
 
 def py2compile(file, checkFlakes = False):
     """
@@ -1120,12 +1126,12 @@ def py2compile(file, checkFlakes = False):
     @param file source filename (string)
     @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
     @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the code string, the error message
-        and a list of tuples of pyflakes warnings indicating file name,
-        line number and message (boolean, string, string, string, string, 
-        list of (string, string, string)). The syntax error values are only
-        valid, if the status is True. The pyflakes list will be empty, if a
-        syntax error was detected by the syntax checker.
+        file name, the line number, the index number, the code string,
+        the error message and a list of tuples of pyflakes warnings indicating
+        file name, line number and message (boolean, string, string, string,
+        string, string, list of (string, string, string)). The syntax error
+        values are only valid, if the status is True. The pyflakes list will
+        be empty, if a syntax error was detected by the syntax checker.
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isExecutable(interpreter):
@@ -1157,11 +1163,12 @@ def py2compile(file, checkFlakes = False):
         if syntaxerror:
             fn = output[1]
             line = output[2]
-            code = output[3]
-            error = output[4]
-            return (True, fn, line, code, error, [])
+            index = output[3]
+            code = output[4]
+            error = output[5]
+            return (True, fn, line, index, code, error, [])
         else:
-            index = 5
+            index = 6
             warnings = []
             while index < len(output):
                 if output[index] == "FLAKES_ERROR":
@@ -1172,9 +1179,9 @@ def py2compile(file, checkFlakes = False):
                                      output[index + 3]))
                 index += 4
             
-            return (False, None, None, None, None, warnings)
+            return (False, None, None, None, None, None, warnings)
     
-    return (True, file, "1", "", 
+    return (True, file, "1", "0", "", 
         QCoreApplication.translate("Utilities",
                                    "Python2 interpreter did not finish within 30s."), 
         [])

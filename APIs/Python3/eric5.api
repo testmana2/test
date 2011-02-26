@@ -2740,6 +2740,7 @@ eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_inline_comment?4(logica
 eric5.Plugins.CheckerPlugins.Pep8.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.indexRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.lineRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.on_resultList_itemActivated?4(itm, col)
@@ -5121,7 +5122,7 @@ eric5.QScintilla.Editor.Editor.syntaxerrorToggled?7
 eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
 eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg = "")
-eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, error, msg = "")
+eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, index, error, msg = "", show = False)
 eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.uncommentSelection?4()
@@ -6805,13 +6806,6 @@ eric5.compileUiFiles.compileUiFiles?4()
 eric5.compileUiFiles.compile_ui?4(ui_dir, ui_file)
 eric5.compileUiFiles.main?4(argv)
 eric5.compileUiFiles.pyName?4(py_dir, py_file)
-eric5.eric5-api.main?4()
-eric5.eric5-api.usage?4()
-eric5.eric5-api.version?4()
-eric5.eric5-doc.main?4()
-eric5.eric5-doc.supportedExtensions?7
-eric5.eric5-doc.usage?4()
-eric5.eric5-doc.version?4()
 eric5.eric5.args?7
 eric5.eric5.excepthook?4(excType, excValue, tracebackobj)
 eric5.eric5.handleSingleApplication?4(ddindex)
@@ -6821,12 +6815,19 @@ eric5.eric5.restartArgs?7
 eric5.eric5.restartArgsList?7
 eric5.eric5.splash?7
 eric5.eric5.uiStartUp?4()
+eric5.eric5_api.main?4()
+eric5.eric5_api.usage?4()
+eric5.eric5_api.version?4()
 eric5.eric5_compare.createMainWidget?4(argv)
 eric5.eric5_compare.main?4()
 eric5.eric5_configure.createMainWidget?4(argv)
 eric5.eric5_configure.main?4()
 eric5.eric5_diff.createMainWidget?4(argv)
 eric5.eric5_diff.main?4()
+eric5.eric5_doc.main?4()
+eric5.eric5_doc.supportedExtensions?7
+eric5.eric5_doc.usage?4()
+eric5.eric5_doc.version?4()
 eric5.eric5_editor.createMainWidget?4(argv)
 eric5.eric5_editor.main?4()
 eric5.eric5_iconeditor.createMainWidget?4(argv)

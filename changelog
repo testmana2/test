@@ -5,6 +5,7 @@ Version 5.2-snapshot-2011mmdd:
 - added menu entry for the icon editor to the tray starter
 - added capability to filter out unwanted items in the file browsers
   (s. config dialog, interface page)
+- changed syntax check to report error position within the line
 
 Version 5.1-snapshot-20110123:
 - bug fixes
