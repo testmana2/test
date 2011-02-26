@@ -4074,7 +4074,7 @@ class Editor(QsciScintillaCompat):
                 self.marginMenuActs["ShowWarning"].setEnabled(False)
         else:
             self.marginMenuActs["NextWarningMarker"].setEnabled(False)
-            self.marginMenuActs["PreviousWarningMarker"].setEnabled(True)
+            self.marginMenuActs["PreviousWarningMarker"].setEnabled(False)
             self.marginMenuActs["ClearWarnings"].setEnabled(False)
             self.marginMenuActs["ShowWarning"].setEnabled(False)
         
