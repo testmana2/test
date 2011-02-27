@@ -964,11 +964,6 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Proje Özellikleri</translation>
     </message>
     <message>
-        <location filename="MultiProject/AddProjectDialog.py" line="60"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">Proje Dosyaları (*.e4p *.e4pz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/AddProjectDialog.py" line="61"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
@@ -2037,11 +2032,6 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Metin Dosyaları (*.txt);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Cooperation/ChatWidget.py" line="546"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Cooperation/ChatWidget.py" line="560"/>
         <source>Error saving Chat</source>
         <translation>Sohbeti kaydederken hata</translation>
@@ -2674,11 +2664,6 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="Preferences/ConfigurationDialog.py" line="131"/>
         <source>Printer</source>
         <translation>Yazıcı</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="121"/>
-        <source>Py3Flakes</source>
-        <translation type="obsolete">Py3Parçaları</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="291"/>
@@ -3517,17 +3502,17 @@ göstermek için gelen listeyi seçiniz.</translation>
         <translation>değişti</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="569"/>
+        <location filename="Debugger/DebugServer.py" line="572"/>
         <source>Connection from illegal host</source>
         <translation>Yasal olmayan bir host tan balğlantı</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="569"/>
+        <location filename="Debugger/DebugServer.py" line="572"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;kaçak bir barındırıcıdan (host) bağlantı denemesi. Bu bağlantıyı kabul ediyor musunuz?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1114"/>
+        <location filename="Debugger/DebugServer.py" line="1124"/>
         <source>
 Not connected
 </source>
@@ -3536,12 +3521,12 @@ Bağlantı yok
 </translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1245"/>
+        <location filename="Debugger/DebugServer.py" line="1256"/>
         <source>Passive debug connection received</source>
         <translation>Pasif Hata Ayıklama bağlantısı alındı</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1258"/>
+        <location filename="Debugger/DebugServer.py" line="1270"/>
         <source>Passive debug connection closed</source>
         <translation>Pasif Hata Ayıklama bağlantısı kapatıldı</translation>
     </message>
@@ -5155,11 +5140,6 @@ Bağlantı yok
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
-        <source>Python Files (*.py)</source>
-        <translation type="obsolete">Python Dosyaları (*.py)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="97"/>
         <source>Python Files (*.py *.py2)</source>
         <translation>Python Dosyaları (*.py *.py2)</translation>
     </message>
@@ -5313,11 +5293,6 @@ Bağlantı yok
         <translation>Patch Dosyaları (*.diff)</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.py" line="289"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="UI/DiffDialog.py" line="307"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; kayıt edilemedi.&lt;br /&gt;Sebep: {1}&lt;/p&gt;</translation>
@@ -5379,101 +5354,6 @@ Bağlantı yok
         <location filename="Helpviewer/DownloadDialog.ui" line="55"/>
         <source>Keep open when finished</source>
         <translation>bitince korumayı aç</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="44"/>
-        <source>Eric5 Download {0}</source>
-        <translation type="obsolete">Eric5 İndirme {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="48"/>
-        <source>Try Again</source>
-        <translation type="obsolete">Tekrar Dene</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="51"/>
-        <source>Stop</source>
-        <translation type="obsolete">Dur</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
-        <source>Downloading</source>
-        <translation type="obsolete">İndiriliyor</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="131"/>
-        <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;İndirdiğiniz &lt;b&gt;{0}&lt;/b&gt; doyası hakkında bilgin var.&lt;/p&gt;&lt;p&gt;Bununla ne yapmak istiyorsunuz?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="149"/>
-        <source>Save File</source>
-        <translation type="obsolete">Dosyayı Kaydet</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="160"/>
-        <source>Download canceled: {0}</source>
-        <translation type="obsolete">İndirme iptal edildi: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="273"/>
-        <source>Error opening save file: {0}</source>
-        <translation type="obsolete">kaydedilen dosyanın açılışında hata:{0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="280"/>
-        <source>Error saving: {0}</source>
-        <translation type="obsolete">Kaydederken hata: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="297"/>
-        <source>Network Error: {0}</source>
-        <translation type="obsolete">Ağ hatası: {0}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="353"/>
-        <source>- {0}:{1:02} minutes remaining</source>
-        <translation type="obsolete">- {0}:{1:02} dakika gerekiyor</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="360"/>
-        <source>- {0} seconds remaining</source>
-        <translation type="obsolete">- {0} saniye gerekiyor</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="362"/>
-        <source>{0} of {1} ({2}/sec) {3}</source>
-        <translation type="obsolete">{0} of {1} ({2}/sn) {3}</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="363"/>
-        <source>?</source>
-        <translation type="obsolete">?</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="371"/>
-        <source>{0} downloaded</source>
-        <translation type="obsolete">{0} indirildi</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="374"/>
-        <source>{0} of {1} - Stopped</source>
-        <translation type="obsolete">{0} nın{1} - Durdu</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="388"/>
-        <source>bytes</source>
-        <translation type="obsolete">bitler</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="391"/>
-        <source>kB</source>
-        <translation type="obsolete">kB</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/DownloadDialog.py" line="394"/>
-        <source>MB</source>
-        <translation type="obsolete">MB</translation>
     </message>
 </context>
 <context>
@@ -6197,11 +6077,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="E5Network/E5NetworkProxyFactory.py" line="130"/>
         <source>Proxy Configuration Error</source>
         <translation>Vekil Sunucu Ayarlama Hatası</translation>
-    </message>
-    <message>
-        <location filename="E5Network/E5NetworkProxyFactory.py" line="69"/>
-        <source>Proxy usage was activated but no proxy host configured.</source>
-        <translation type="obsolete">Proxy kullanımı aktif edildi ancak ana bilgisayar proxy ayarlanmadı.</translation>
     </message>
     <message>
         <location filename="E5Network/E5NetworkProxyFactory.py" line="48"/>
@@ -7072,11 +6947,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; kaydedilemiyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2377"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Editor.py" line="3561"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
@@ -7190,11 +7060,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="QScintilla/Editor.py" line="4875"/>
         <source>Save macro</source>
         <translation>Makro Kaydet</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Editor.py" line="4620"/>
-        <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten açık.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="4890"/>
@@ -8567,11 +8432,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="416"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Metin vurgulayacı stili &lt;b&gt;{0}&lt;/b&gt; dosyasından okunamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="459"/>
-        <source>&lt;p&gt;The highlighting styles file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Metin vurgulama stil dosyası &lt;b&gt;{0}&lt;/b&gt; gçersiz içeriğe sahip.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10722,11 +10582,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>QtHelp koleksiyonu dosyalarını üret</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="44"/>
-        <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;%%(Title)s&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 style=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:%(LinkColor)s&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;?xml sürüm=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;%%(Başlık)lar&lt;/title&gt;&lt;/head&gt;&lt;body stil=&quot;background-color:%(BodyBgColor)s;color:%(BodyColor)s&quot;&gt;&lt;h1 stil=&quot;background-color:%(Level1HeaderBgColor)s;color:%(Level1HeaderColor)s&quot;&gt;Seviye 1 Başlık&lt;/h1&gt;&lt;h3 stil=&quot;background-color:%(Level2HeaderBgColor)s;color:%(Level2HeaderColor)s&quot;&gt;Seviye 2 Başlık &lt;/h3&gt;&lt;h2 stil=&quot;background-color:%(CFBgColor)s;color:%(CFColor)s&quot;&gt;Sınıf ve Fonksiyon Başlığı&lt;/h2&gt;Standart gövde metni &lt;a stil=&quot;color:%(LinkColor)s&quot;&gt;Bazı bağlantılar&lt;/a&gt; gömülüdür.&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="261"/>
         <source>Select output directory</source>
         <translation>Çıktı dizinini seç</translation>
@@ -10962,11 +10817,6 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
         <source>Export source</source>
         <translation>Kaynağı dışaktar</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Exporters/ExporterBase.py" line="54"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="QScintilla/Exporters/ExporterBase.py" line="56"/>
@@ -11604,47 +11454,47 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="636"/>
+        <location filename="UI/FindFileDialog.py" line="634"/>
         <source>Replace in Files</source>
         <translation>Dosyalarda yer değiştir</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="364"/>
         <source>Invalid search expression</source>
         <translation>Geçersiz arama ifadesi</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="364"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="533"/>
+        <location filename="UI/FindFileDialog.py" line="531"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="597"/>
+        <location filename="UI/FindFileDialog.py" line="595"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="636"/>
+        <location filename="UI/FindFileDialog.py" line="634"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="662"/>
+        <location filename="UI/FindFileDialog.py" line="660"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="663"/>
+        <location filename="UI/FindFileDialog.py" line="661"/>
         <source>Copy Path to Clipboard</source>
         <translation>Yolu Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="611"/>
+        <location filename="UI/FindFileDialog.py" line="609"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12291,29 +12141,9 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>&lt;b&gt;Yardım belgelerini ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="37"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Python Belgeleri</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
-        <source>Press to select the Python documentation directory via a dialog</source>
-        <translation type="obsolete">Bir diyalog ile Python belgelerini seçmek için basınız</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="190"/>
         <source>...</source>
         <translation>...</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="53"/>
-        <source>Enter the Python documentation directory</source>
-        <translation type="obsolete">Python belgelirinin dizini gir</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
-        <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHONDOCDIR environment variable, if set.</source>
-        <translation type="obsolete">&lt;b&gt;Not&lt;/b&gt;: Ayarlandığında Boş bıraktıysanız PYTHONDOCDIR ortam değişkeni kullanılır.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
@@ -13196,11 +13026,6 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="945"/>
         <source>Search</source>
         <translation>Ara</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="182"/>
-        <source>Show a navigation menu</source>
-        <translation type="obsolete">Yönlendirme Menüsünü Göster</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="457"/>
@@ -14290,11 +14115,6 @@ You have %n tab(s) open.</source>
         <translation>Arama Motoru Ayarları</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="982"/>
-        <source>Configure &amp;Search Engines...</source>
-        <translation type="obsolete">Arama Motoru Ayarlanı&amp;yor...</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1029"/>
         <source>Configure the available search engines</source>
         <translation>Ulaşılabilen Arama motorunu ayarla</translation>
@@ -14415,26 +14235,6 @@ You have %n tab(s) open.</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1181"/>
-        <source>Move Left</source>
-        <translation type="obsolete">Sola Götür</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1184"/>
-        <source>Move Right</source>
-        <translation type="obsolete">Sağa Götür</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1188"/>
-        <source>Duplicate Page</source>
-        <translation type="obsolete">Sayfayı Çoğalt</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1195"/>
-        <source>Close Others</source>
-        <translation type="obsolete">Diğerlerini Kapat</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1256"/>
         <source>File</source>
         <translation>Dosya</translation>
@@ -14480,11 +14280,6 @@ You have %n tab(s) open.</source>
         <translation>Git</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1294"/>
-        <source>&lt;p&gt;Enter the help file to be displayed directly into this edit field. Select a previously shown help file from the drop down list.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Görüntülenen bu düzenleme alanından direkt yardım dosyasını gir. Aşağı kayan listededen öncelikle görünmesini istediğiniz yardım dosyasını seçiniz.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1477"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Yardım Dosyaları (*.html *.htm);;PDF Dosyaları (*.pdf);;CHM Dosyaları (*.chm);;Tüm Dosyalar (*)</translation>
@@ -14495,11 +14290,6 @@ You have %n tab(s) open.</source>
         <translation>Eric Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1661"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;PyQt4 te hatyı yazdırmak tam olarak mümkün değil. Lütfen güncelleyiniz.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1505"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Eric Web Gözatıcısı Hakkındar&lt;/h3&gt;&lt;p&gt;Eric Web Gözatıcısı Yardım dosyası ve HTML gözatıcısının birleştirilmiş halidir.&lt;/p&gt;</translation>
@@ -14508,21 +14298,6 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="1584"/>
         <source>Saved Tabs</source>
         <translation>Sekmeleri Kaydet</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2033"/>
-        <source>...</source>
-        <translation type="obsolete">...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2225"/>
-        <source>Loading...</source>
-        <translation type="obsolete">Yükleniyor...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2240"/>
-        <source>Finished loading</source>
-        <translation type="obsolete">Yükleme bitirildi</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1961"/>
@@ -15542,11 +15317,6 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="266"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch Dosyaları (*.diff)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="284"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="297"/>
@@ -19210,11 +18980,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>İkon dosyasını kaydet</translation>
     </message>
     <message>
-        <location filename="IconEditor/IconEditorWindow.py" line="1026"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="IconEditor/IconEditorWindow.py" line="1121"/>
         <source>eric5 Icon Editor</source>
         <translation>eric5 İkon Düzenleyici</translation>
@@ -20364,11 +20129,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Özellikler</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="91"/>
-        <source>Python</source>
-        <translation type="obsolete">Python</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="93"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
@@ -20599,19 +20359,9 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="344"/>
-        <source>Python Files (*.py2)</source>
-        <translation type="obsolete">Python Dosyaları (*.py2)</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="354"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python Dosyaları (*.py3)</translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="348"/>
-        <source>Python GUI Files (*.pyw2)</source>
-        <translation type="obsolete">Python GUI Dosyaları (*.pyw2)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="358"/>
@@ -20810,11 +20560,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="204"/>
         <source>Save All</source>
         <translation>Hepsini kaydet</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="185"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Projeye Kaydet</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="207"/>
@@ -21170,11 +20915,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="100"/>
         <source>About Qt</source>
         <translation>Qt Hakkında</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
-        <source>Caption</source>
-        <translation type="obsolete">Başlık</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
@@ -21852,13 +21592,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>eric5 Mini Düzenleyici</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="1489"/>
-        <source>The document has been modified.
-Do you want to save your changes?</source>
-        <translation type="obsolete">Belge değiştirildi.
-Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
-    </message>
-    <message>
         <location filename="QScintilla/MiniEditor.py" line="1499"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
@@ -21982,24 +21715,9 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>Çokluproje dosyasını oku</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="351"/>
-        <source>Compressed multiproject files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Sıkıştırılmış çokluproje dosyaları desteklenmiyor. Sıkıştırma kütüphanesi kayıp.</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="208"/>
         <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Çoklu Proje dosyası &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="226"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has an unsupported format.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Çokluproje dosyası &lt;b&gt;{0}&lt;/b&gt; desteklenmeyen formata sahip.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="300"/>
-        <source>&lt;p&gt;The multiproject file &lt;b&gt;{0}&lt;/b&gt; has invalid contents.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Çokluproje dosyası &lt;b&gt;{0}&lt;/b&gt; uygunsuz içirğe sahip.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="247"/>
@@ -22017,16 +21735,6 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>Çokluproje Aç</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="518"/>
-        <source>Multiproject Files (*.e4m *.e4mz)</source>
-        <translation type="obsolete">Çokluproje Dosyaları (*.e4m *.e4mz)</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="572"/>
-        <source>Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">Sıkıştırılmış Çokluproje Dosyaları (*.e4mz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="459"/>
         <source>Multiproject Files (*.e4m)</source>
         <translation>Çokluproje Dosyaları (*.e4m)</translation>
@@ -22037,19 +21745,9 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>Çokluprojeleri olarak kaydet</translation>
     </message>
     <message>
-        <location filename="MultiProject/MultiProject.py" line="575"/>
-        <source>Multiproject Files (*.e4m);;Compressed Multiproject Files (*.e4mz)</source>
-        <translation type="obsolete">Çokluproje Dosyaları (*.e4m);;Sıkıştırılmış Çokluproje Dosyaları (*.e4mz)</translation>
-    </message>
-    <message>
         <location filename="MultiProject/MultiProject.py" line="474"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
-    </message>
-    <message>
-        <location filename="MultiProject/MultiProject.py" line="591"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="MultiProject/MultiProject.py" line="498"/>
@@ -22306,11 +22004,6 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <translation>&lt;b&gt; &apos;{1}&apos; alanı, &apos;{0}&apos; için kullanıcı adı ve parola giriniz&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Network/NetworkAccessManager.py" line="190"/>
-        <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;&apos;{0}&apos; proxy&apos;sini kullanarak bağlan:&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="225"/>
         <source>SSL Errors</source>
         <translation>SSL Hataları</translation>
@@ -22422,71 +22115,6 @@ Yaptığınız değişiklikleri kaydetmek ister misiniz?</translation>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="167"/>
         <source>Manual proxy settings</source>
         <translation>Elle yapılan proxy ayarları</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="119"/>
-        <source>Proxy-Type:</source>
-        <translation type="obsolete">Proxy-Tipi:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="126"/>
-        <source>Select the type of the proxy</source>
-        <translation type="obsolete">Proxynin tipini seçiniz</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="133"/>
-        <source>Proxy-Host:</source>
-        <translation type="obsolete">Proxy-Host:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="140"/>
-        <source>Enter the name of the proxy host</source>
-        <translation type="obsolete">Prxy hostunun adını gir</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="147"/>
-        <source>Proxy-Port:</source>
-        <translation type="obsolete">Proxy-Port:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="154"/>
-        <source>Enter the proxy port</source>
-        <translation type="obsolete">Proxy portu giriniz</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="186"/>
-        <source>Username:</source>
-        <translation type="obsolete">Kullanıcı Adı:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="193"/>
-        <source>Enter the username for the proxy</source>
-        <translation type="obsolete">Proxy için kullanıcı adı gir</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="200"/>
-        <source>Password:</source>
-        <translation type="obsolete">Parola:</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="207"/>
-        <source>Enter the password for the proxy</source>
-        <translation type="obsolete">Proxy için parola gir</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.py" line="37"/>
-        <source>Transparent HTTP</source>
-        <translation type="obsolete">Saydam HTTP</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.py" line="38"/>
-        <source>Caching HTTP</source>
-        <translation type="obsolete">HTTP önbeleğe alınıyor</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/NetworkPage.py" line="39"/>
-        <source>Socks5</source>
-        <translation type="obsolete">Socks5</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.py" line="112"/>
@@ -24252,11 +23880,6 @@ Select Update.</source>
         <translation>Bilinmeyen</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="504"/>
-        <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;&apos;{0}&apos; proxy&apos;sini kullanarak bağlan:&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="461"/>
         <source>SSL Errors</source>
         <translation>SSL Hataları</translation>
@@ -24496,128 +24119,113 @@ Select Update.</source>
         <translation>Sürüm</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="45"/>
+        <location filename="Preferences/ProgramsDialog.py" line="44"/>
         <source>Search</source>
         <translation>Ara</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="46"/>
+        <location filename="Preferences/ProgramsDialog.py" line="45"/>
         <source>Press to search for programs</source>
         <translation>Programlarda arama için basınız</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="83"/>
+        <location filename="Preferences/ProgramsDialog.py" line="82"/>
         <source>Translation Converter (Qt4)</source>
         <translation>Tercüme Dönüştürücü (Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="89"/>
+        <location filename="Preferences/ProgramsDialog.py" line="88"/>
         <source>Qt4 Designer</source>
         <translation>Qt4 Designer</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="94"/>
+        <location filename="Preferences/ProgramsDialog.py" line="93"/>
         <source>Qt4 Linguist</source>
         <translation>Qt4 Linguist</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="99"/>
+        <location filename="Preferences/ProgramsDialog.py" line="98"/>
         <source>Qt4 Assistant</source>
         <translation>Qt4 Assistant</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="103"/>
+        <location filename="Preferences/ProgramsDialog.py" line="102"/>
         <source>Translation Extractor (Python, Qt4)</source>
         <translation>Çeviri Çıkarıcı (Python, Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="107"/>
+        <location filename="Preferences/ProgramsDialog.py" line="106"/>
         <source>Forms Compiler (Python, Qt4)</source>
         <translation>Form Derleyici (Python, Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="111"/>
+        <location filename="Preferences/ProgramsDialog.py" line="110"/>
         <source>Resource Compiler (Python, Qt4)</source>
         <translation>Kaynak Derleyici (Python, Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="117"/>
+        <location filename="Preferences/ProgramsDialog.py" line="116"/>
         <source>Translation Extractor (Python, PySide)</source>
         <translation>Çeviri Çıkarıcı (Python, PySide)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="121"/>
+        <location filename="Preferences/ProgramsDialog.py" line="120"/>
         <source>Forms Compiler (Python, PySide)</source>
         <translation>Form Derleyici (Python, PySide)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="125"/>
+        <location filename="Preferences/ProgramsDialog.py" line="124"/>
         <source>Resource Compiler (Python, PySide)</source>
         <translation>Kaynak Derleyici (Python, Pyside)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="131"/>
+        <location filename="Preferences/ProgramsDialog.py" line="130"/>
         <source>Forms Compiler (Ruby, Qt4)</source>
         <translation>Form Derleyici (Ruby, Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="135"/>
+        <location filename="Preferences/ProgramsDialog.py" line="134"/>
         <source>Resource Compiler (Ruby, Qt4)</source>
         <translation>Kaynak Derleyici (Ruby, Qt4)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="141"/>
-        <source>Eric5 Translation Previewer</source>
-        <translation>Eric5 Çiviri Öngörünümcüsü</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="147"/>
-        <source>Eric5 Forms Previewer</source>
-        <translation>Eric5 Form Öngörünümcüsü</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="158"/>
+        <location filename="Preferences/ProgramsDialog.py" line="143"/>
         <source>CORBA IDL Compiler</source>
         <translation>CORBA IDL Derleyicisi</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="280"/>
+        <location filename="Preferences/ProgramsDialog.py" line="265"/>
         <source>(unknown)</source>
         <translation>(bilinmeyen)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="175"/>
+        <location filename="Preferences/ProgramsDialog.py" line="160"/>
         <source>Spell Checker - PyEnchant</source>
         <translation>Heceleme Kontrolü - PyEnchant</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="247"/>
+        <location filename="Preferences/ProgramsDialog.py" line="232"/>
         <source>(not configured)</source>
         <translation>(ayarlanmadı)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="282"/>
+        <location filename="Preferences/ProgramsDialog.py" line="267"/>
         <source>(not executable)</source>
         <translation>(yürütülemez)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="309"/>
+        <location filename="Preferences/ProgramsDialog.py" line="294"/>
         <source>(not found)</source>
         <translation>(bulunamadı)</translation>
     </message>
     <message>
-        <location filename="Preferences/ProgramsDialog.py" line="191"/>
+        <location filename="Preferences/ProgramsDialog.py" line="176"/>
         <source>Source Highlighter - Pygments</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Project</name>
-    <message>
-        <location filename="Project/Project.py" line="169"/>
-        <source>Python Files (*.py2);;Python GUI Files (*.pyw2);;</source>
-        <translation type="obsolete">Python Dosyaları (*.py2);;Python GUI Dosyaları (*.pyw2);;</translation>
-    </message>
     <message>
         <location filename="Project/Project.py" line="205"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
@@ -24677,11 +24285,6 @@ Select Update.</source>
         <location filename="Project/Project.py" line="605"/>
         <source>Read project file</source>
         <translation>Proje dosyasını oku</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="767"/>
-        <source>Compressed project files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Sıkıştırılmış proje dosyaları desteklenmiyor. Sıkıştırma kütüphanesi kayıp.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="605"/>
@@ -24757,11 +24360,6 @@ Select Update.</source>
         <location filename="Project/Project.py" line="853"/>
         <source>Read tasks</source>
         <translation>Görevler Okunuyor</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="1202"/>
-        <source>Compressed tasks files not supported. The compression library is missing.</source>
-        <translation type="obsolete">Sıkıştırılmış görev dosyaları desteklenmiyor. Sıkıştırma kütüphanesi eksik.</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="853"/>
@@ -24974,16 +24572,6 @@ Select Update.</source>
         <translation>Projeyi aç</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2723"/>
-        <source>Project Files (*.e4p *.e4pz)</source>
-        <translation type="obsolete">Proje Dosyaları (*.e4p *.e4pz)</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2886"/>
-        <source>Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">Sıkıştırılmış Proje Dosyaları (*.e4pz)</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="2385"/>
         <source>Project Files (*.e4p)</source>
         <translation>Proje Dosyaları (*.e4p)</translation>
@@ -24994,19 +24582,9 @@ Select Update.</source>
         <translation>projeyi farklı adda kaydet</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2889"/>
-        <source>Project Files (*.e4p);;Compressed Project Files (*.e4pz)</source>
-        <translation type="obsolete">Project Dosyaları (*.e4p);;Sıkıştırılmış Proje Dosyaları (*.e4pz)</translation>
-    </message>
-    <message>
         <location filename="Project/Project.py" line="2400"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
-    </message>
-    <message>
-        <location filename="Project/Project.py" line="2905"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Project/Project.py" line="2437"/>
@@ -26366,16 +25944,6 @@ Select Update.</source>
         <translation>&lt;b&gt;Proje özelliklerini ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="36"/>
-        <source>Compression</source>
-        <translation type="obsolete">Sıkıştırma</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="45"/>
-        <source>Compress project file upon creation</source>
-        <translation type="obsolete">Dosyaları oluştururken sıkıştır</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="37"/>
         <source>XML</source>
         <translation>XML</translation>
@@ -27392,19 +26960,9 @@ Select Update.</source>
 <context>
     <name>Py3FlakesPage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="17"/>
-        <source>&lt;b&gt;Configure Py3Flakes Behavior&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Py3parça Davaranışını Ayarla&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="37"/>
         <source>Select to include a py3flakes check after the syntax check</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="40"/>
-        <source>Include Py3Flakes Checks</source>
-        <translation type="obsolete">Py3parça kontrollerin içer</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/Py3FlakesPage.ui" line="47"/>
@@ -28300,11 +27858,6 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation>RegExp Dosyaları (*.rx);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="312"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="349"/>
         <source>&lt;p&gt;The regular expression could not be saved.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Düzenli ifade kaydedilemedi.&lt;/p&gt;&lt;p&gt;Sebep: {0}&lt;/p&gt;</translation>
@@ -28960,11 +28513,6 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="251"/>
         <source>RegExp Files (*.rx);;All Files (*)</source>
         <translation>RegExp Dosyaları (*.rx);;Tüm Dosyalar (*)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="226"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.py" line="263"/>
@@ -30169,11 +29717,6 @@ Bağlantı yok</translation>
         <location filename="SqlBrowser/SqlBrowser.py" line="55"/>
         <source>Invalid URL: {0}</source>
         <translation>Geçersiz URL: {0}</translation>
-    </message>
-    <message>
-        <location filename="SqlBrowser/SqlBrowser.py" line="62"/>
-        <source>Unable to open connection: %s</source>
-        <translation type="obsolete">Açılmaya uygun olmayan bağlantı: %s</translation>
     </message>
     <message>
         <location filename="SqlBrowser/SqlBrowser.py" line="72"/>
@@ -32481,11 +32024,6 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation>Patch Dosyaları (*.diff)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="332"/>
-        <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Yama dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="347"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;yama kaydedilemedi.&lt;br&gt;Sebep: {1}&lt;/p&gt;</translation>
@@ -34485,7 +34023,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>SvnStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="218"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="233"/>
         <source>Subversion Status</source>
         <translation>Altsürüm Durumu</translation>
     </message>
@@ -34602,217 +34140,217 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="49"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="55"/>
         <source>Refresh</source>
         <translation>Tazele</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="50"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="57"/>
         <source>Press to refresh the status display</source>
         <translation>Durum göstergesini yenilemek için bas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="65"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="74"/>
         <source>Commit changes to repository...</source>
         <translation>Yapılan değişiklekleri kaynak havuzuna teslim et...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="77"/>
         <source>Add to repository</source>
         <translation>Kaynak havuzuna ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="70"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="79"/>
         <source>Revert changes</source>
         <translation>Değişiklikleri başa döndür</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="74"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="83"/>
         <source>Add to Changelist</source>
         <translation>Değişiklik Listesine Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="535"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="597"/>
         <source>Remove from Changelist</source>
         <translation>DEğişiklik listesinden çıkar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="513"/>
         <source>Lock</source>
         <translation>Kilitli</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="472"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="529"/>
         <source>Unlock</source>
         <translation>Kilitsiz</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="94"/>
         <source>Break lock</source>
         <translation>Kırma Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="86"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="97"/>
         <source>Steal lock</source>
         <translation>Hırsızlık kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="101"/>
         <source>Adjust column sizes</source>
         <translation>Sütün boyutunu ayarla</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="133"/>
         <source>added</source>
         <translation>eklendi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="134"/>
         <source>deleted</source>
         <translation>silinmiş</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="146"/>
         <source>modified</source>
         <translation>değiştirildi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="140"/>
         <source>unversioned</source>
         <translation>sürüm numarası verilmemiş</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="123"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="137"/>
         <source>locked</source>
         <translation>kilitlendi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="124"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="138"/>
         <source>other lock</source>
         <translation>diğer kilitler</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="125"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="139"/>
         <source>stolen lock</source>
         <translation>hırsız kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="140"/>
         <source>broken lock</source>
         <translation>kırma kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="122"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="136"/>
         <source>not locked</source>
         <translation>kilitlenmedi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="131"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="145"/>
         <source>normal</source>
         <translation>normal</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="122"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="136"/>
         <source>replaced</source>
         <translation>değiştirildi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="147"/>
         <source>conflict</source>
         <translation>çelişki</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="124"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="138"/>
         <source>external</source>
         <translation>harici</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="125"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="139"/>
         <source>ignored</source>
         <translation>yoksayıldı</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="127"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="141"/>
         <source>missing</source>
         <translation>kayıp</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="128"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="142"/>
         <source>type error</source>
         <translation>tip hatası</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="143"/>
         <source>no</source>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="130"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="144"/>
         <source>yes</source>
         <translation>evet</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="305"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="334"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="305"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="334"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="391"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="444"/>
         <source>Commit</source>
         <translation>Teslimat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="437"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="492"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="471"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="471"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="437"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="492"/>
         <source>Revert</source>
         <translation>Başa Dönme</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="513"/>
         <source>There are no unlocked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="563"/>
         <source>There are no locked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="487"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="546"/>
         <source>Break Lock</source>
         <translation>Kırma Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="563"/>
         <source>Steal Lock</source>
         <translation>Hırsızlık Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="517"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="579"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="535"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="597"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36172,11 +35710,6 @@ the respective line.&lt;/p&gt;</source>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
         <source>Save All</source>
         <translation>Hepsini kaydet</translation>
-    </message>
-    <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="249"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Projeye Kaydet</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
@@ -38219,7 +37752,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UIPreviewer</name>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="286"/>
+        <location filename="Tools/UIPreviewer.py" line="287"/>
         <source>UI Previewer</source>
         <translation>UI Öngörünümü</translation>
     </message>
@@ -38234,262 +37767,262 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>GUI Temasını Seç</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="114"/>
+        <location filename="Tools/UIPreviewer.py" line="115"/>
         <source>&amp;Open File</source>
         <translation>D&amp;osya Aç</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="116"/>
+        <location filename="Tools/UIPreviewer.py" line="117"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="117"/>
+        <location filename="Tools/UIPreviewer.py" line="118"/>
         <source>Open a UI file for display</source>
         <translation>Göstermek için bir UI dosyası aç</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="118"/>
+        <location filename="Tools/UIPreviewer.py" line="119"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new UI file for display.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dosya Aç&lt;/b&gt;&lt;p&gt;Bu yeni bir UI dosyasını göstermek için açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="124"/>
+        <location filename="Tools/UIPreviewer.py" line="125"/>
         <source>&amp;Print</source>
         <translation>&amp;Yazdır</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="126"/>
+        <location filename="Tools/UIPreviewer.py" line="127"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="127"/>
+        <location filename="Tools/UIPreviewer.py" line="128"/>
         <source>Print a screen capture</source>
         <translation>Yakalanan ekran görüntüsünü yazdır</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="128"/>
+        <location filename="Tools/UIPreviewer.py" line="129"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print a screen capture.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazdır&lt;/b&gt;&lt;p&gt;Yakalanan ekran görüntüsünü yazdır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="507"/>
+        <location filename="Tools/UIPreviewer.py" line="508"/>
         <source>Print Preview</source>
         <translation>Baskı Öngörünümü</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="136"/>
+        <location filename="Tools/UIPreviewer.py" line="137"/>
         <source>Print preview a screen capture</source>
         <translation>Yakalanan ekran görüntüsünün baskı öngörünümü</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="138"/>
+        <location filename="Tools/UIPreviewer.py" line="139"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview a screen capture.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazıcı Öngörünümü&lt;/b&gt;&lt;p&gt;Yaklanan ekran görüntüsünün yazıcı öngörünümü.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="144"/>
+        <location filename="Tools/UIPreviewer.py" line="145"/>
         <source>&amp;Screen Capture</source>
         <translation>Ekran Yakalama &amp;S</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="146"/>
+        <location filename="Tools/UIPreviewer.py" line="147"/>
         <source>Ctrl+S</source>
         <comment>File|Screen Capture</comment>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="148"/>
+        <location filename="Tools/UIPreviewer.py" line="149"/>
         <source>Save a screen capture to an image file</source>
         <translation>Yakalanan ekran görüntüsünü bir resim dosyasına kaydet</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="149"/>
+        <location filename="Tools/UIPreviewer.py" line="150"/>
         <source>&lt;b&gt;Screen Capture&lt;/b&gt;&lt;p&gt;Save a screen capture to an image file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ekran Yakalama&lt;/b&gt;&lt;p&gt;Yakalanan ekranı resim dosyası olarak kaydet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="155"/>
+        <location filename="Tools/UIPreviewer.py" line="156"/>
         <source>&amp;Quit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="157"/>
+        <location filename="Tools/UIPreviewer.py" line="158"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="158"/>
+        <location filename="Tools/UIPreviewer.py" line="159"/>
         <source>Quit the application</source>
         <translation>Uygulamadan çık</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="159"/>
+        <location filename="Tools/UIPreviewer.py" line="160"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Çıkış&lt;/b&gt;&lt;p&gt;Programı sonlandır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="165"/>
+        <location filename="Tools/UIPreviewer.py" line="166"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="167"/>
+        <location filename="Tools/UIPreviewer.py" line="168"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="168"/>
+        <location filename="Tools/UIPreviewer.py" line="169"/>
         <source>Copy screen capture to clipboard</source>
         <translation>Yakalanan ekran görüntüsünü Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="169"/>
+        <location filename="Tools/UIPreviewer.py" line="170"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy screen capture to clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kapya&lt;/b&gt;&lt;p&gt;Yakalanan ekran görüntüsünü panoya kopyala.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="175"/>
+        <location filename="Tools/UIPreviewer.py" line="176"/>
         <source>&amp;What&apos;s This?</source>
         <translation>Bu &amp;Nedir?</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="177"/>
+        <location filename="Tools/UIPreviewer.py" line="178"/>
         <source>Shift+F1</source>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="178"/>
+        <location filename="Tools/UIPreviewer.py" line="179"/>
         <source>Context sensitive help</source>
         <translation>Duyarlı yardım</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="179"/>
+        <location filename="Tools/UIPreviewer.py" line="180"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Duyarlı yardım içeriğini görüntüle&lt;/b&gt;&lt;p&gt;Bu Nedir? modunda, Fare imleci soru işeretiyle beraber bir ok şeklindedir ve bir arayüz elemanı üzerinde tıklarsanız bu elemanın nasıl kullanılacağı ve hakkında kısa bilgi verir. bu özellik diyaloglarda başlık çubuğu üzerindeyken çıkarılan açılır menülerde de bulunmaktadır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="189"/>
+        <location filename="Tools/UIPreviewer.py" line="190"/>
         <source>&amp;About</source>
         <translation>H&amp;akkında</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="190"/>
+        <location filename="Tools/UIPreviewer.py" line="191"/>
         <source>Display information about this software</source>
         <translation>Bu yazılım hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="191"/>
+        <location filename="Tools/UIPreviewer.py" line="192"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hakkında&lt;/b&gt;&lt;p&gt;Bu yazılım hakkındaki çeşitli bilgileri gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="197"/>
+        <location filename="Tools/UIPreviewer.py" line="198"/>
         <source>About &amp;Qt</source>
         <translation>&amp;Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="198"/>
+        <location filename="Tools/UIPreviewer.py" line="199"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Qt araçkiti hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="200"/>
+        <location filename="Tools/UIPreviewer.py" line="201"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt Hakkında&lt;/b&gt;&lt;p&gt;Qt Araçkiti hakkında bazı bilgiler gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="212"/>
+        <location filename="Tools/UIPreviewer.py" line="213"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="222"/>
+        <location filename="Tools/UIPreviewer.py" line="223"/>
         <source>&amp;Edit</source>
         <translation>Düz&amp;en</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="228"/>
+        <location filename="Tools/UIPreviewer.py" line="229"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="239"/>
+        <location filename="Tools/UIPreviewer.py" line="240"/>
         <source>File</source>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="249"/>
+        <location filename="Tools/UIPreviewer.py" line="250"/>
         <source>Edit</source>
         <translation>Düzen</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="253"/>
+        <location filename="Tools/UIPreviewer.py" line="254"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="276"/>
+        <location filename="Tools/UIPreviewer.py" line="277"/>
         <source>&lt;h3&gt; About UI Previewer &lt;/h3&gt;&lt;p&gt;The UI Previewer loads and displays Qt User-Interface files with various styles, which are selectable via a selection list.&lt;/p&gt;</source>
         <translation>&lt;h3&gt; UI Öngöstericisi Hakkında&lt;/h3&gt;&lt;p&gt;UI Öngöstericisi QT Kullanıcı-Arayüz dosyalarını bir seçim listesindeki seçilen değişik sitillerde yükler ve gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="292"/>
+        <location filename="Tools/UIPreviewer.py" line="293"/>
         <source>Select UI file</source>
         <translation>UI dosyasını seç</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="292"/>
+        <location filename="Tools/UIPreviewer.py" line="293"/>
         <source>Qt User-Interface Files (*.ui)</source>
         <translation>Qt Kullanıcı-Arayüz Dosyaları (*.ui)</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="329"/>
+        <location filename="Tools/UIPreviewer.py" line="330"/>
         <source>Load UI File</source>
         <translation>UI dosyasını yükle</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="329"/>
+        <location filename="Tools/UIPreviewer.py" line="330"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyası yüklenemiyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="454"/>
+        <location filename="Tools/UIPreviewer.py" line="455"/>
         <source>Save Image</source>
         <translation>Görüntüyü Kaydet</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="507"/>
+        <location filename="Tools/UIPreviewer.py" line="508"/>
         <source>There is no UI file loaded.</source>
         <translation>Yüklenen dosya UI dosyası değil.</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="426"/>
+        <location filename="Tools/UIPreviewer.py" line="427"/>
         <source>Images ({0})</source>
         <translation>Görüntüler ({0})</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="444"/>
+        <location filename="Tools/UIPreviewer.py" line="445"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyası kaydedilemedi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="468"/>
+        <location filename="Tools/UIPreviewer.py" line="469"/>
         <source>Print Image</source>
         <translation>Görüntüyü Yazdır</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="489"/>
+        <location filename="Tools/UIPreviewer.py" line="490"/>
         <source>Printing the image...</source>
         <translation>Görüntü yazdırılıyor...</translation>
     </message>
     <message>
-        <location filename="Tools/UIPreviewer.py" line="498"/>
+        <location filename="Tools/UIPreviewer.py" line="499"/>
         <source>Image sent to printer...</source>
         <translation>Görüntüyü yazıcıya gönder...</translation>
     </message>
@@ -38636,11 +38169,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Graphics/UMLGraphicsView.py" line="325"/>
         <source>Portable Network Graphics (*.png);;Scalable Vector Graphics (*.svg)</source>
         <translation>Taşınabilir Şebeke Grafikleri (*.png);;Ölçeklenebilir vektör Grafikleri (*.svg)</translation>
-    </message>
-    <message>
-        <location filename="Graphics/UMLGraphicsView.py" line="334"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Graphics/UMLGraphicsView.py" line="350"/>
@@ -40265,21 +39793,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2152"/>
-        <source>Python Documentation</source>
-        <translation type="obsolete">Python Belgeleri</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2152"/>
-        <source>&amp;Python Documentation</source>
-        <translation type="obsolete">&amp;Python Belgeleri</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="2154"/>
-        <source>Open Python Documentation</source>
-        <translation type="obsolete">Python belgelerini açın</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="2194"/>
         <source>Eric API Documentation</source>
         <translation>Eric API Belgeleri</translation>
@@ -40755,11 +40268,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="UI/UserInterface.py" line="5595"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Mümkün sürümler&lt;/h3&gt;&lt;table&gt;</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="5549"/>
-        <source>&lt;b&gt;Connect to proxy &apos;{0}&apos; using:&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;&apos;{0}&apos; proxy&apos;sini kullanarak bağlan:&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5623"/>
@@ -41525,11 +41033,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Açmak için bir proje seçiniz.</translation>
     </message>
     <message>
-        <location filename="VCS/ProjectHelper.py" line="215"/>
-        <source>The project retrieved from the repository does not contain an eric project file (*.e4p *.e4pz). Create it?</source>
-        <translation type="obsolete">Kaynak havuzundan geri alınan proje eric projesi değil (*.e4p *.e4pz). Oluşturulsun mu?</translation>
-    </message>
-    <message>
         <location filename="VCS/ProjectHelper.py" line="238"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Proje dosyaları kaynak havuzuna aktarılacak mı?</translation>
@@ -41826,21 +41329,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="ViewManager/ViewManager.py" line="575"/>
         <source>&lt;b&gt;Save All Files&lt;/b&gt;&lt;p&gt;Save the contents of all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tüm Dosyaları Kaydet&lt;/b&gt;&lt;p&gt;Tüm düzenleyici pencerelerindeki içerikleri kaydet.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="568"/>
-        <source>Save to Project</source>
-        <translation type="obsolete">Projeye Kaydet</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="568"/>
-        <source>Save to Pro&amp;ject</source>
-        <translation type="obsolete">Pro&amp;jeye Kaydet</translation>
-    </message>
-    <message>
-        <location filename="ViewManager/ViewManager.py" line="573"/>
-        <source>Save the current file to the current project</source>
-        <translation type="obsolete">Geçerli dosyayı geçerli projeye kaydet</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="584"/>
@@ -44689,47 +44177,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="Tools/TRPreviewer.py" line="685"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyası yüklenemiyor.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>WidgetWorkspace</name>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="735"/>
-        <source>Load UI File</source>
-        <translation type="obsolete">UI dosyasını yükle</translation>
-    </message>
-    <message>
-        <location filename="Tools/TRPreviewer.py" line="735"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyası yüklenemiyor.&lt;/p&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>XMLMessageDialog</name>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.ui" line="13"/>
-        <source>XML Parse Messages</source>
-        <translation type="obsolete">XML Mesajlarını İncele</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="34"/>
-        <source>Fatal Error</source>
-        <translation type="obsolete">Ölümcül Hata</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="37"/>
-        <source>Error</source>
-        <translation type="obsolete">Hata</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="40"/>
-        <source>Warning</source>
-        <translation type="obsolete">Dikkat</translation>
-    </message>
-    <message>
-        <location filename="E5XML/XMLMessageDialog.py" line="43"/>
-        <source>Line: {0}, Column: {1}</source>
-        <translation type="obsolete">Satır: {0}, Sütun: {1}</translation>
     </message>
 </context>
 <context>
