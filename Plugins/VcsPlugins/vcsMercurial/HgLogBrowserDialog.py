@@ -404,6 +404,44 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.trUtf8("Mercurial Error"),
                 errMsg)
     
+    def __getClosedBranches(self):
+        """
+        Private method to get the list of closed branches.
+        """
+        self.__closedBranchesRevs = []
+        errMsg = ""
+        
+        process = QProcess()
+        args = []
+        args.append("branches")
+        args.append("--closed")
+        
+        process.setWorkingDirectory(self.repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), 
+                        Preferences.getSystem("IOEncoding"), 
+                        'replace')
+                for line in output.splitlines():
+                    if line.strip().endswith("(closed)"):
+                        parts = line.split()
+                        self.__closedBranchesRevs.append(
+                            parts[-2].split(":", 1)[0])
+            else:
+                if not finished:
+                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+        else:
+            errMsg = self.trUtf8("Could not start the hg executable.")
+        
+        if errMsg:
+            E5MessageBox.critical(self,
+                self.trUtf8("Mercurial Error"),
+                errMsg)
+    
     def __generateLogItem(self, author, date, message, revision, changedPaths, parents, 
                           branches, tags):
         """
@@ -425,12 +463,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             msg.append(line.strip())
         
         rev, node = revision.split(":")
+        if rev in self.__closedBranchesRevs:
+            closedStr = "--"
+        else:
+            closedStr = ""
         msgtxt = msg[0]
         if len(msgtxt) > 30:
             msgtxt = "{0}...".format(msgtxt[:30])
         itm = QTreeWidgetItem(self.logTree, [
             "", 
-            branches[0], 
+            branches[0] + closedStr, 
             "{0:>7}:{1}".format(rev, node), 
             author, 
             date, 
@@ -585,6 +627,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.logTree.clear()
         self.__started = True
         self.__identifyProject()
+        self.__getClosedBranches()
         self.__getLogEntries()
     
     def __procFinished(self, exitCode, exitStatus):
