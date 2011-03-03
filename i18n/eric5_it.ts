@@ -6789,11 +6789,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Inserisci un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5044"/>
-        <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
-        <translation>&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Editor.py" line="5048"/>
         <source>File changed</source>
         <translation>File modificato</translation>
@@ -7242,6 +7237,11 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="QScintilla/Editor.py" line="4741"/>
         <source>Error: {0}</source>
         <translation>Errore: {0}</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="5044"/>
+        <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
+        <translation type="unfinished">&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
     </message>
 </context>
 <context>
@@ -11880,187 +11880,187 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Apri link in una Nuova Scheda<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="390"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="394"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Finestra di help&lt;/b&gt;&lt;p&gt;Questa finestra mostra le informazioni di aiuto selezionate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="847"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="851"/>
         <source>Web Inspector...</source>
         <translation>Web Inspector...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="811"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="815"/>
         <source>Bookmark this Page</source>
         <translation>Inserisci nei segnalibri questa pagina</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="786"/>
         <source>Save Lin&amp;k</source>
         <translation>Salva lin&amp;k</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="783"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="787"/>
         <source>Bookmark this Link</source>
         <translation>Insersci nei bookmark questo link</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="786"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="790"/>
         <source>Copy Link to Clipboard</source>
         <translation>Copia il link nella Clipboard</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="791"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="795"/>
         <source>Open Image in New Tab</source>
         <translation>Apri immagine in una nuova linguetta</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="795"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
         <source>Save Image</source>
         <translation>Salva immagine</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="796"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="800"/>
         <source>Copy Image to Clipboard</source>
         <translation>Copia immagine nella Clipboard</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="797"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="801"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copia la posizione dell&apos;immagine nella Clipboard</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="594"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="598"/>
         <source>Web Browser</source>
         <translation>Browser Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="801"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="805"/>
         <source>Block Image</source>
         <translation>Blocca immagine</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="825"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="829"/>
         <source>Search with...</source>
         <translation>Cerca con...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="557"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="561"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non esiste.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="594"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="598"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare un visualizzatore per il file &lt;b&gt;{0}&lt;/b&gt;.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="577"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="581"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso lanciare un&apos;applicazione per l&apos;URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1203"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1207"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1252"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>Web Database Quota</source>
         <translation>Quota Web Database</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1252"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La quota per il database &lt;strong&gt;{0}&lt;/strong&gt; è stata superata durante l&apos;accesso al database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Deve essere cambiata?&lt;/P&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1260"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1264"/>
         <source>New Web Database Quota</source>
         <translation>Nuova quota Web Database</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1260"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1264"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Inserisci la nuova quota in MB (corrente = {0}, usata = {1}; incremento = 5MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1280"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1284"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1283"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1287"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1286"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1290"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="842"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="846"/>
         <source>Add to web search toolbar</source>
         <translation>Aggiungi alla toolbar delle ricerche web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>Method not supported</source>
         <translation>Metodo non supportato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>{0} method is not supported.</source>
         <translation>il metodo {0} non è supportato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="996"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1000"/>
         <source>Search engine</source>
         <translation>Motore di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="996"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1000"/>
         <source>Choose the desired search engine</source>
         <translation>Scegli il motore di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Engine name</source>
         <translation>Nome motore</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Enter a name for the engine</source>
         <translation>Inserisci un nome per il motore</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
@@ -12957,52 +12957,52 @@ Hai %n schede aperta.</numerusform>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="248"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="359"/>
         <source>SSL Certificate Info</source>
         <translation>Informazioni certificato SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="359"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation>Non ci sono informazioni sul Certificato SSL disponibili.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="188"/>
         <source>Resending POST request</source>
         <translation>Reinvio richiesta POST</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="188"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
         <translation>Per poter visualizzare questo stio, la richiesta con tutti i dati deve essere spedita un&apos;altra volta, cosa che può portare a qualche comportamento non previsto del sito es. la stessa azione può essere eseguita nuovamente. Vuoi continuare comunque ?</translation>
     </message>
@@ -13043,7 +13043,7 @@ Hai %n schede aperta.</numerusform>
         <translation>Nuova finestra</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1477"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1478"/>
         <source>Open File</source>
         <translation>Apri File</translation>
     </message>
@@ -13313,37 +13313,37 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Copia&lt;/b&gt;&lt;p&gt;Copia il testo selezionato nella clipboard.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1127"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1128"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1150"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edita</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1158"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1159"/>
         <source>&amp;View</source>
         <translation>&amp;Visualizza</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1174"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1175"/>
         <source>&amp;Go</source>
         <translation>&amp;Vai</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1187"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1188"/>
         <source>H&amp;istory</source>
         <translation>Cronolog&amp;ia</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1194"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1195"/>
         <source>&amp;Bookmarks</source>
         <translation>Segnali&amp;bri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1245"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1246"/>
         <source>&amp;Help</source>
         <translation>&amp;Help</translation>
     </message>
@@ -13409,37 +13409,37 @@ Hai %n schede aperta.</numerusform>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1256"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1257"/>
         <source>File</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1273"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1274"/>
         <source>Edit</source>
         <translation>Modifica</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1278"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1279"/>
         <source>View</source>
         <translation>Visualizza</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1287"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1288"/>
         <source>Find</source>
         <translation>Trova</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1313"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1314"/>
         <source>Help</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1320"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1321"/>
         <source>Go</source>
         <translation>Vai</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1477"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1478"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>File di help  (*.html *.htm);;File PDF (*.pdf);;File CHM (*.chm);;Tutti i file (*)</translation>
     </message>
@@ -13828,42 +13828,42 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Reindicizza la documentazione&lt;/b&gt;&lt;p&gt;Reindicizza l&apos;insieme della documentazione&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1235"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>&amp;Window</source>
         <translation>&amp;Finestra</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1294"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1295"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1299"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1300"/>
         <source>Filtered by: </source>
         <translation>Filtrato per:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1961"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1962"/>
         <source>Could not find an associated content.</source>
         <translation>Non posso trovare un contenuto associato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2070"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2071"/>
         <source>Updating search index</source>
         <translation>Aggiornamento indice di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2122"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2123"/>
         <source>Looking for Documentation...</source>
         <translation>Ricerca documentazione...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2152"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2153"/>
         <source>Unfiltered</source>
         <translation>Non filtrato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2171"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2172"/>
         <source>Help Engine</source>
         <translation>Motore di help</translation>
     </message>
@@ -13933,32 +13933,32 @@ Hai %n schede aperta.</numerusform>
         <translation>Pulisci database delle &amp;icone</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1081"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1082"/>
         <source>Show Network Monitor</source>
         <translation>Mostra il Network Monitor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1081"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1082"/>
         <source>Show &amp;Network Monitor</source>
         <translation>Mostra il &amp;Network Monitor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1085"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1086"/>
         <source>Show the network monitor dialog</source>
         <translation>Mostra il dialogo del network monitor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1086"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1087"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostra il Network Monitor&lt;/b&gt;&lt;p&gt;Mostra il dialogo del network monitor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1206"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1207"/>
         <source>&amp;Settings</source>
         <translation>Impo&amp;stazioni</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1231"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1232"/>
         <source>&amp;Tools</source>
         <translation>&amp;Tools</translation>
     </message>
@@ -14023,7 +14023,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configura la gestione dei cookie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1305"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
         <source>Settings</source>
         <translation>Impostazioni</translation>
     </message>
@@ -14206,7 +14206,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Aggiungi ai segnalibri tutte le linguette...&lt;/b&gt;&lt;p&gt;Apri un dialogo per aggiungere ai segnalibri tutte le linguette aperte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1584"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1585"/>
         <source>Saved Tabs</source>
         <translation>Salva Linguette</translation>
     </message>
@@ -14275,12 +14275,12 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Salva come...&lt;/b&gt;&lt;p&gt;Salva la pagina corrente su disco.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1514"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1515"/>
         <source>Eric Web Browser</source>
         <translation>Eric Web Browser</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1505"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1506"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Informazioni sul Browser Web di Eric&lt;/h3&gt;&lt;p&gt;Il Browser Web di Eric è un misto di pagine di help e un browser HTML.&lt;/p&gt;</translation>
     </message>
@@ -14350,7 +14350,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Apre un dialogo per configurare le regole di sottoscrizione di AdBlock.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2131"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2132"/>
         <source>eric5 Web Browser</source>
         <translation>Web Browser di eric5</translation>
     </message>
@@ -14395,87 +14395,87 @@ Hai %n schede aperta.</numerusform>
         <translation>Configura motori di &amp;ricerca...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1760"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1761"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sei sicuro di voler attivare la navigazione riservata?&lt;/b&gt;&lt;p&gt;Quando la navigazione riservata è attivata, le pagine web non sono aggiunte alla cronologia, le ricerche non sono aggiunte alla lista delle ultime ricerche e le icone dei siti e i cookie non sono salvati, l&apos;offline storage di HTML5 viene disattivato. Fino alla chiusura della finestra, puoi premere sui pulsanti Precedente e Successivo per tornare alle pagine web che hai visitato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1169"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1170"/>
         <source>Text Encoding</source>
         <translation>Codifica testo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1221"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1222"/>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2486"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2488"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2488"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2489"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2489"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2490"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2490"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2491"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2491"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2492"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2513"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2514"/>
         <source>Default Encoding</source>
         <translation>Encoding di default</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1094"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1095"/>
         <source>Downloads</source>
         <translation>Downloads</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1097"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1098"/>
         <source>Shows the downloads window</source>
         <translation>Mostra la finestra dei download</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1099"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1100"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Download&lt;/b&gt;&lt;p&gt;Mostra la finestra dei download.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1067"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>Manage Certificates</source>
         <translation>Gestisci certificati</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1067"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>Manage Certificates...</source>
         <translation>Gestisci certificati...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1072"/>
         <source>Manage the saved certificates</source>
         <translation>Gestisci i certificati salvati</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1073"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1074"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestisci i certificati salvati...&lt;/b&gt;&lt;p&gt;Apre un dialogo per gestire i certificati salvati.&lt;/p&gt;</translation>
     </message>
@@ -19752,27 +19752,27 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>JavaScriptEricObject</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="84"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="88"/>
         <source>Welcome to Eric Web Browser!</source>
         <translation>Benvenuto nel Browser Web di Eric!</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="85"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="89"/>
         <source>Eric Web Browser</source>
         <translation>Web Browser di Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="86"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="90"/>
         <source>Search!</source>
         <translation>Cerca!</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="87"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="91"/>
         <source>About Eric</source>
         <translation>About Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="125"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="129"/>
         <source>Search results provided by {0}</source>
         <translation>Risultati della ricerca forniti da {0}</translation>
     </message>
@@ -30235,22 +30235,22 @@ Non connesso</translation>
         <translation>Hai salvato certificati che identificano queste autorità di certificazione:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="251"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="254"/>
         <source>(Unknown)</source>
         <translation>(Sconosciuto)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="255"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="258"/>
         <source>(Unknown common name)</source>
         <translation>(Nome comune sconosciuto)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="119"/>
         <source>Delete Server Certificate</source>
         <translation>Cancella certificato del server</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="119"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Deve essere cancellato il certificato del server?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato del server viene cancellato, i controlli di sicurezza normali verranno reimpostati e il server dovrà presenteare un certificato valido.&lt;p&gt;</translation>
     </message>
@@ -30275,52 +30275,52 @@ Non connesso</translation>
         <translation>&amp;Esporta...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="423"/>
         <source>Import Certificate</source>
         <translation>Importa certificato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="337"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="340"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato &lt;b&gt;{0}&lt;/b&gt; esiste già.Lo salto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="301"/>
         <source>Delete CA Certificate</source>
         <translation>Cancella certificato CA</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="301"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Deve essere cancellato il certificato CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato CA viene cancellato,il browser non validerò nessun certificato emesso da questa CA.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="433"/>
         <source>Export Certificate</source>
         <translation>Esporta certificato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="374"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="377"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
         <translation>File Certificato (PEM) (*.pem);;File Certificato (DER) (*.der)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="390"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="393"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="400"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="403"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato non può essere scritto sul file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="423"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
         <translation>Files Certificato (*.pem *.crt *.der *.cer *.ca);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="433"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato non può essere letto dal file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
