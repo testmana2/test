@@ -5582,9 +5582,9 @@ class UserInterface(QMainWindow):
         """
         Private method called to cancel the version check.
         """
-        if self.http is not None:
+        if self.__replies:
             self.__versionCheckCanceled = True
-            self.http.abort()
+            self.__replies[-1].abort()
         
     def __showAvailableVersionInfos(self, versions):
         """
