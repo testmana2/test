@@ -5061,7 +5061,7 @@ class Editor(QsciScintillaCompat):
                 yesDefault = True
                 if self.isModified():
                     msg += self.trUtf8(
-                        """<br><b>Warning:</b> You will loose"""
+                        """<br><b>Warning:</b> You will lose"""
                         """ your changes upon reopening it.""")
                     yesDefault = False
                 res = E5MessageBox.yesNo(self,

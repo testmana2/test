@@ -6646,7 +6646,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="5063"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
-        <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
+        <translation type="obsolete">&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
         <location filename="QScintilla/Editor.py" line="5067"/>
@@ -7277,6 +7277,11 @@ whole selection.&lt;/li&gt;
         <location filename="QScintilla/Editor.py" line="4759"/>
         <source>Error: {0}</source>
         <translation>Ошибка: {0}</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Editor.py" line="5063"/>
+        <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11963,187 +11968,187 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="594"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="598"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик для файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="778"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="557"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="561"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; не существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="390"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="394"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно помощи&lt;/b&gt;&lt;p&gt;В этом окне отображается имеющаяся помощь.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="847"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="851"/>
         <source>Web Inspector...</source>
         <translation>WEB проводник...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1203"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1207"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="577"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="581"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить приложение для URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="811"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="815"/>
         <source>Bookmark this Page</source>
         <translation>Создать закладку для этой страницы</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="786"/>
         <source>Save Lin&amp;k</source>
         <translation>Сохранить &amp;ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="783"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="787"/>
         <source>Bookmark this Link</source>
         <translation>Сохранить ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="786"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="790"/>
         <source>Copy Link to Clipboard</source>
         <translation>Скопировать ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="791"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="795"/>
         <source>Open Image in New Tab</source>
         <translation>Открыть изображение в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="795"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="796"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="800"/>
         <source>Copy Image to Clipboard</source>
         <translation>Скопировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="797"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="801"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Скопировать адрес изображения</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="594"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="598"/>
         <source>Web Browser</source>
         <translation>Просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="801"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="805"/>
         <source>Block Image</source>
         <translation>Заблокировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="825"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="829"/>
         <source>Search with...</source>
         <translation>Искать с...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1252"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>Web Database Quota</source>
         <translation>Квота Web базы данных</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1252"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Квота Web базы данных &lt;strong&gt;{0}&lt;/strong&gt; была превышена при доступе к базе &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Изменить квоту?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1260"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1264"/>
         <source>New Web Database Quota</source>
         <translation>Новая квота Web базы данных</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1280"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1284"/>
         <source>bytes</source>
         <translation>байт</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1283"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1287"/>
         <source>kB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1286"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1290"/>
         <source>MB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1260"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1264"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Введите новую квоту в MB (текущая = {0}, использовано = {1}; шаг изменения = 5 MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="842"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="846"/>
         <source>Add to web search toolbar</source>
         <translation>Добавить к панели инструментов Web поиска</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>Method not supported</source>
         <translation>Метод не поддерживается</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>{0} method is not supported.</source>
         <translation>{0} метод не поддерживается.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="996"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1000"/>
         <source>Search engine</source>
         <translation>Поисковик</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="996"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1000"/>
         <source>Choose the desired search engine</source>
         <translation>Выберите поисковик</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Engine name</source>
         <translation>Имя поисковика</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1013"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Enter a name for the engine</source>
         <translation>Введите имя поисковика</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1212"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1216"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
     </message>
@@ -13042,52 +13047,52 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="248"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="252"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="257"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="261"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="359"/>
         <source>SSL Certificate Info</source>
         <translation>SLL сертификат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="355"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="359"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation>SLL сертификат отсутствует.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="188"/>
         <source>Resending POST request</source>
         <translation>Повторяю POST запрос</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="184"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="188"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
         <translation>Для того чтобы показать страницу, необходимо повторить запрос, что может вызвать неожиданное поведение сервера, например, он может дважды сделать одно и то же действие. Продолжить не смотря на это?</translation>
     </message>
@@ -13128,7 +13133,7 @@ You have %n tab(s) open.</source>
         <translation>Новое окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1477"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1478"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
@@ -13379,37 +13384,37 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Копировать&lt;/b&gt;&lt;p&gt;Копировать выбранный текст в буфер обмена.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1127"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1128"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1150"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1158"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1159"/>
         <source>&amp;View</source>
         <translation>&amp;Вид</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1174"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1175"/>
         <source>&amp;Go</source>
         <translation>&amp;Перейти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1187"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1188"/>
         <source>H&amp;istory</source>
         <translation>И&amp;стория</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1194"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1195"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1245"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1246"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
@@ -13495,37 +13500,37 @@ You have %n tab(s) open.</source>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1256"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1257"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1273"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1274"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1278"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1279"/>
         <source>View</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1287"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1288"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1313"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1314"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1320"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1321"/>
         <source>Go</source>
         <translation>Перейти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1477"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1478"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Файлы помощи (*.html *.htm);;Файлы PDF (*.pdf);;Файлы CHM (*.chm);;Все файлы (*)</translation>
     </message>
@@ -13860,22 +13865,22 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Управлять документацией Qt4&lt;/b&gt;&lt;p&gt;Показывает диалог управления документацией Qt4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1235"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1294"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1295"/>
         <source>Filter</source>
         <translation>Фильтр</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1299"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1300"/>
         <source>Filtered by: </source>
         <translation>Фильтровать по:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1961"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1962"/>
         <source>Could not find an associated content.</source>
         <translation>Невозможно найти соответствующее содержание.</translation>
     </message>
@@ -13940,22 +13945,22 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Переиндексировать документацию&lt;/b&gt;&lt;p&gt;Переиндексировать документацию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2070"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2071"/>
         <source>Updating search index</source>
         <translation>Обновление поискового индекса</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2122"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2123"/>
         <source>Looking for Documentation...</source>
         <translation>Идёт поиск помощи...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2152"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2153"/>
         <source>Unfiltered</source>
         <translation>Нефильтрованное</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2171"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2172"/>
         <source>Help Engine</source>
         <translation>Просмотрщик помощи</translation>
     </message>
@@ -14025,32 +14030,32 @@ You have %n tab(s) open.</source>
         <translation>Очистить базу данных &amp;иконок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1081"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1082"/>
         <source>Show Network Monitor</source>
         <translation>Показать монитор сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1081"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1082"/>
         <source>Show &amp;Network Monitor</source>
         <translation>Показать монитор &amp;сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1085"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1086"/>
         <source>Show the network monitor dialog</source>
         <translation>Показать диалог монитора сети</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1086"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1087"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать монитор сети&lt;/b&gt;&lt;p&gt;Показать диалог монитора сети.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1206"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1207"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1231"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1232"/>
         <source>&amp;Tools</source>
         <translation>&amp;Инструменты</translation>
     </message>
@@ -14115,7 +14120,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Настройка cookies.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1305"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
@@ -14298,7 +14303,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Создать закладки для всех открытых страниц...&lt;/b&gt;&lt;p&gt;Показать диалог добавления папки для закладок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1584"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1585"/>
         <source>Saved Tabs</source>
         <translation>Сохраненные закладки</translation>
     </message>
@@ -14367,12 +14372,12 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Сохранить как...&lt;/b&gt;&lt;p&gt;Сохранить текущую страницу в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1514"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1515"/>
         <source>Eric Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1505"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1506"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;О WEB просмотрщике встроенном в Eric&lt;/h3&gt;&lt;p&gt;WEB просмотрщик встроенный в Eric это комбинированный просмотрщик файлов помощи и HTML файлов.&lt;/p&gt;</translation>
     </message>
@@ -14442,7 +14447,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Показать диалог для настройки AdBlock подписок и правил.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2131"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2132"/>
         <source>eric5 Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
@@ -14487,87 +14492,87 @@ You have %n tab(s) open.</source>
         <translation>Настройка &amp;поисковиков...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1760"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1761"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Подтвердите включение закрытого режима.&lt;/b&gt;&lt;p&gt;В закрытом режиме посещённые WEB страницы не сохраняются в истории, поиски не сохраняються в списке последних поисков, иконки сайтов и cookies так же не сохраняются. HTML5 автономное хранилище будет выключено. Пока текущее окно не закрыто, переход вперёд и назад на просмотренные уже страницы всё же будет работать.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1169"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1170"/>
         <source>Text Encoding</source>
         <translation>Кодировка текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1221"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1222"/>
         <source>User Agent</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2486"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
         <source>ISO</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2488"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2488"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2489"/>
         <source>ISCII</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2489"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2490"/>
         <source>Unicode</source>
         <translation>Юникод</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2490"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2491"/>
         <source>Other</source>
         <translation>Другое</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2491"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2492"/>
         <source>IBM</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2513"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2514"/>
         <source>Default Encoding</source>
         <translation>Кодировка по умолчанию</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1094"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1095"/>
         <source>Downloads</source>
         <translation>Загрузки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1097"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1098"/>
         <source>Shows the downloads window</source>
         <translation>Показать окно загрузки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1099"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1100"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Загрузки&lt;/b&gt;&lt;p&gt;Показать окно загрузки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1067"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>Manage Certificates</source>
         <translation>Управлять сертификатами</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1067"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>Manage Certificates...</source>
         <translation>Управлять сертификатами...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1072"/>
         <source>Manage the saved certificates</source>
         <translation>Управлять сохранёнными сертификатами</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1073"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1074"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Управлять сохранёнными сертификатами&lt;/b&gt;&lt;p&gt;Показывает диалог управления сохранёнными сертификатами.&lt;/p&gt;</translation>
     </message>
@@ -15487,12 +15492,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Задайте поле, по которому фильтровать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="976"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1019"/>
         <source>Revision</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="973"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1016"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
@@ -15628,12 +15633,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="596"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="554"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="596"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -15648,17 +15653,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Метки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="398"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="436"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Процесс hg не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="438"/>
         <source>Could not start the hg executable.</source>
         <translation>Невозможно запустить исполняемый файл hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="403"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="441"/>
         <source>Mercurial Error</source>
         <translation>Ошибка Mercurial</translation>
     </message>
@@ -19956,27 +19961,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>JavaScriptEricObject</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="125"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="129"/>
         <source>Search results provided by {0}</source>
         <translation>Результаты поиска ({0})</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="84"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="88"/>
         <source>Welcome to Eric Web Browser!</source>
         <translation>Добро пожаловать в просмотрщик Web!</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="85"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="89"/>
         <source>Eric Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="86"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="90"/>
         <source>Search!</source>
         <translation>Искать!</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="87"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="91"/>
         <source>About Eric</source>
         <translation>Об Eric</translation>
     </message>
@@ -30470,23 +30475,23 @@ Not connected</source>
         <translation>Сертификаты для следующих авторитетов уже сохранены:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="251"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="254"/>
         <source>(Unknown)</source>
         <translation>(неизвестный)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="255"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="258"/>
         <source>(Unknown common name)</source>
         <translation>(Неизвестное имя)
 </translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="119"/>
         <source>Delete Server Certificate</source>
         <translation>Удалить сертификат сервера</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="116"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="119"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Удалить сертификат сервера?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если сертификат сервера будет удалён, то обычные проверки безопасности будут восстановлены и сервер будет должен вновь представить действительный сертификат.&lt;/p&gt;</translation>
     </message>
@@ -30511,52 +30516,52 @@ Not connected</source>
         <translation>&amp;Экспорт...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="423"/>
         <source>Import Certificate</source>
         <translation>Импортировать сертификат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="337"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="340"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Сертификат &lt;b&gt;{0}&lt;/b&gt; уже существует. Пропускаем.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="301"/>
         <source>Delete CA Certificate</source>
         <translation>Удалить CA сертификат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="298"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="301"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Удалить CA сертификат?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Если CA сертификат будет удалён, то просмотрщик не будет доверять ни одному сертификату выданному этим CA.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="433"/>
         <source>Export Certificate</source>
         <translation>Экспортировать сертификат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="374"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="377"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
         <translation>Файлы сертификатов (PEM) (*.pem);;Файлы сертификатов (DER) (*.der)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="390"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="393"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="400"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="403"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно записать сертификат в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="420"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="423"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
         <translation>Файлы сертификатов (*.pem *.crt *.der *.cer *.ca);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslCertificatesDialog.py" line="430"/>
+        <location filename="Helpviewer/SslCertificatesDialog.py" line="433"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать сертификат из файла &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Ошибка: {1}.&lt;/p&gt;</translation>
     </message>
