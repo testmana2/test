@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to ente the data for a new dialog class file.
+Module implementing a dialog to enter the data for a new dialog class file.
 """
 
 import os

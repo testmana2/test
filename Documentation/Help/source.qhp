@@ -8519,6 +8519,7 @@
       <keyword name="HgLogBrowserDialog.__generateFileItem" id="HgLogBrowserDialog.__generateFileItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateFileItem" />
       <keyword name="HgLogBrowserDialog.__generateIcon" id="HgLogBrowserDialog.__generateIcon" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateIcon" />
       <keyword name="HgLogBrowserDialog.__generateLogItem" id="HgLogBrowserDialog.__generateLogItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__generateLogItem" />
+      <keyword name="HgLogBrowserDialog.__getClosedBranches" id="HgLogBrowserDialog.__getClosedBranches" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getClosedBranches" />
       <keyword name="HgLogBrowserDialog.__getColor" id="HgLogBrowserDialog.__getColor" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getColor" />
       <keyword name="HgLogBrowserDialog.__getLogEntries" id="HgLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getLogEntries" />
       <keyword name="HgLogBrowserDialog.__getParents" id="HgLogBrowserDialog.__getParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getParents" />
