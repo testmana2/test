@@ -18,7 +18,10 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_SslCertificatesDialog import Ui_SslCertificatesDialog
 
-from .SslInfoDialog import SslInfoDialog
+try:
+    from .SslInfoDialog import SslInfoDialog
+except ImportError:
+    pass
 
 import Preferences
 import Utilities

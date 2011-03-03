@@ -1064,19 +1064,20 @@ class HelpWindow(QMainWindow):
             self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
-        self.certificatesAct = E5Action(self.trUtf8('Manage Certificates'), 
-                      self.trUtf8('Manage Certificates...'), 
-                      0, 0,
-                      self, 'help_manage_certificates')
-        self.certificatesAct.setStatusTip(self.trUtf8(
-                'Manage the saved certificates'))
-        self.certificatesAct.setWhatsThis(self.trUtf8(
-                """<b>Manage Saved Certificates...</b>"""
-                """<p>Opens a dialog to manage the saved certificates.</p>"""
-        ))
-        if not self.initShortcutsOnly:
-            self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
-        self.__actions.append(self.certificatesAct)
+        if SSL_AVAILABLE:
+            self.certificatesAct = E5Action(self.trUtf8('Manage Certificates'), 
+                          self.trUtf8('Manage Certificates...'), 
+                          0, 0,
+                          self, 'help_manage_certificates')
+            self.certificatesAct.setStatusTip(self.trUtf8(
+                    'Manage the saved certificates'))
+            self.certificatesAct.setWhatsThis(self.trUtf8(
+                    """<b>Manage Saved Certificates...</b>"""
+                    """<p>Opens a dialog to manage the saved certificates.</p>"""
+            ))
+            if not self.initShortcutsOnly:
+                self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
+            self.__actions.append(self.certificatesAct)
         
         self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'), 
                       self.trUtf8('Show &Network Monitor'), 
