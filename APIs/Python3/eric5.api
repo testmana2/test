@@ -1395,7 +1395,7 @@ eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.addAction?4(action, category)
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.addToolBar?4(toolBar, category)
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.categories?4()
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.categoryActions?4(category)
-eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.createToolBar?4(title)
+eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.createToolBar?4(title, name="")
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.defaultToolBarActions?4(tbID)
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.defaultToolBars?4()
 eric5.E5Gui.E5ToolBarManager.E5ToolBarManager.deleteToolBar?4(toolBar)
@@ -6876,7 +6876,7 @@ eric5.install.copyTree?4(src, dst, filters, excludeDirs=[])
 eric5.install.createConfig?4()
 eric5.install.createGlobalPluginsDir?4()
 eric5.install.createInstallConfig?4()
-eric5.install.createPyWrapper?4(pydir, wfile)
+eric5.install.createPyWrapper?4(pydir, wfile, isGuiScript = True)
 eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7
