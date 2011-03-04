@@ -240,7 +240,8 @@ second revision number (integer)
 <h4>HgLogBrowserDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
 <p>
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
 </p><a NAME="HgLogBrowserDialog.__generateEdges" ID="HgLogBrowserDialog.__generateEdges"></a>
 <h4>HgLogBrowserDialog.__generateEdges</h4>
 <b>__generateEdges</b>(<i>rev, parents</i>)
@@ -285,7 +286,7 @@ reference to the generated item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__generateIcon" ID="HgLogBrowserDialog.__generateIcon"></a>
 <h4>HgLogBrowserDialog.__generateIcon</h4>
-<b>__generateIcon</b>(<i>column, color, bottomedges, topedges, dotColor, currentRev</i>)
+<b>__generateIcon</b>(<i>column, color, bottomedges, topedges, dotColor, currentRev, closed</i>)
 <p>
         Private method to generate an icon containing the revision tree for the
         given data.
@@ -311,6 +312,10 @@ color to be used for the dot (QColor)
 <dd>
 flag indicating to draw the icon for the
             current revision (boolean)
+</dd><dt><i>closed</i></dt>
+<dd>
+flag indicating to draw an icon for a closed
+            branch (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -388,7 +393,8 @@ revision number to start from (integer, string)
 <h4>HgLogBrowserDialog.__getParents</h4>
 <b>__getParents</b>(<i>rev</i>)
 <p>
-        Private method to get the parents of the currently viewed file/directory.
+        Private method to get the parents of the currently viewed
+        file/directory.
 </p><dl>
 <dt><i>rev</i></dt>
 <dd>

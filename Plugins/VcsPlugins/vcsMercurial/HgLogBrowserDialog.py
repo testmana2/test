@@ -9,10 +9,11 @@ Module implementing a dialog to browse the log history.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, QSize, QPoint
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
-    QApplication, QCursor, QWidget, QLineEdit, QColor, QPixmap, \
-    QPainter, QPen, QBrush, QIcon
+from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
+     QSize, QPoint
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QApplication, QCursor, QWidget, QLineEdit, QColor, \
+    QPixmap, QPainter, QPen, QBrush, QIcon
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -81,10 +82,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.toDate.setDisplayFormat("yyyy-MM-dd")
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(self.trUtf8("Message")))
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
+            self.trUtf8("Message")))
         self.clearRxEditButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
-        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences("LogLimit"))
-        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
+        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
+            "LogLimit"))
+        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
+            "StopLogOnCopy"))
         
         if mode in ("incoming", "outgoing"):
             self.nextButton.setEnabled(False)
@@ -123,7 +127,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__branchColors = {}
         self.__allBranchesFilter = self.trUtf8("All")
         
-        self.logTree.setIconSize(QSize(100 * self.__rowHeight, self.__rowHeight))
+        self.logTree.setIconSize(
+            QSize(100 * self.__rowHeight, self.__rowHeight))
         
         self.__projectRevision = -1
     
@@ -182,7 +187,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @return name of the color to use (string)
         """
         if branchName not in self.__branchColors:
-            self.__branchColors[branchName] = self.__getColor(len(self.__branchColors))
+            self.__branchColors[branchName] = self.__getColor(
+                len(self.__branchColors))
         return self.__branchColors[branchName]
     
     def __generateEdges(self, rev, parents):
@@ -223,15 +229,18 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if parents[0] != -1:
             for ecol, erev in enumerate(self.__revs):
                 if erev in next:
-                    edges.append((ecol, next.index(erev), self.__revColors[erev]))
+                    edges.append(
+                        (ecol, next.index(erev), self.__revColors[erev]))
                 elif erev == rev:
                     for p in parents:
-                        edges.append((ecol, next.index(p), self.__revColors[p]))
+                        edges.append(
+                            (ecol, next.index(p), self.__revColors[p]))
         
         self.__revs = next
         return col, color, edges
     
-    def __generateIcon(self, column, color, bottomedges, topedges, dotColor, currentRev):
+    def __generateIcon(self, column, color, bottomedges, topedges, dotColor,
+                       currentRev, closed):
         """
         Private method to generate an icon containing the revision tree for the
         given data.
@@ -245,6 +254,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param dotColor color to be used for the dot (QColor)
         @param currentRev flag indicating to draw the icon for the
             current revision (boolean)
+        @param closed flag indicating to draw an icon for a closed
+            branch (boolean)
         @return icon for the node (QIcon)
         """
         def col2x(col, radius):
@@ -305,7 +316,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         pen = QPen(pencolor)
         pen.setWidth(penradius)
         painter.setPen(pen)
-        if self.commandMode in ("incoming", "outgoing"):
+        if closed:
+            painter.drawRect(dot_x - 2, dot_y + 1,
+                             radius + 4, radius - 2)
+        elif self.commandMode in ("incoming", "outgoing"):
             offset = radius // 2
             painter.drawConvexPolygon(
                 QPoint(dot_x + offset, dot_y), 
@@ -320,7 +334,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __getParents(self, rev):
         """
-        Private method to get the parents of the currently viewed file/directory.
+        Private method to get the parents of the currently viewed
+        file/directory.
         
         @param rev revision number to get parents for (string)
         @return list of parent revisions (list of integers)
@@ -358,7 +373,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 parents = [int(p) for p in output.strip().splitlines()]
             else:
                 if not finished:
-                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+                    errMsg = self.trUtf8(
+                        "The hg process did not finish within 30s.")
         else:
             errMsg = self.trUtf8("Could not start the hg executable.")
         
@@ -395,7 +411,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     self.__projectRevision = self.__projectRevision[:-1]
             else:
                 if not finished:
-                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+                    errMsg = self.trUtf8(
+                        "The hg process did not finish within 30s.")
         else:
             errMsg = self.trUtf8("Could not start the hg executable.")
         
@@ -433,7 +450,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                             parts[-2].split(":", 1)[0])
             else:
                 if not finished:
-                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+                    errMsg = self.trUtf8(
+                        "The hg process did not finish within 30s.")
         else:
             errMsg = self.trUtf8("Could not start the hg executable.")
         
@@ -442,8 +460,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.trUtf8("Mercurial Error"),
                 errMsg)
     
-    def __generateLogItem(self, author, date, message, revision, changedPaths, parents, 
-                          branches, tags):
+    def __generateLogItem(self, author, date, message, revision, changedPaths,
+                          parents, branches, tags):
         """
         Private method to generate a log tree entry.
         
@@ -496,14 +514,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         if self.logTree.topLevelItemCount() > 1:
             topedges = \
-                self.logTree.topLevelItem(self.logTree.indexOfTopLevelItem(itm) - 1)\
+                self.logTree.topLevelItem(
+                    self.logTree.indexOfTopLevelItem(itm) - 1)\
                 .data(0, self.__edgesRole)
         else:
             topedges = None
         
         icon = self.__generateIcon(column, color, edges, topedges, 
                                    QColor(self.__branchColor(branches[0])), 
-                                   rev == self.__projectRevision)
+                                   rev == self.__projectRevision, 
+                                   rev in self.__closedBranchesRevs)
         itm.setIcon(0, icon)
         
         try:
@@ -574,7 +594,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.commandMode == "log":
             args.append('--copies')
         args.append('--style')
-        args.append(os.path.join(os.path.dirname(__file__), "styles", "logBrowser.style"))
+        args.append(os.path.join(os.path.dirname(__file__), 
+                                 "styles", "logBrowser.style"))
         if self.commandMode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
@@ -642,7 +663,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __finish(self):
         """
-        Private slot called when the process finished or the user pressed the button.
+        Private slot called when the process finished or the user pressed
+        the button.
         """
         if self.process is not None and \
            self.process.state() != QProcess.NotRunning:
@@ -682,7 +704,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     log["author"] = value.strip()
                 elif key == "parents":
                     log["parents"] = \
-                        [int(x.split(":", 1)[0]) for x in value.strip().split()]
+                        [int(x.split(":", 1)[0]) 
+                         for x in value.strip().split()]
                 elif key == "date":
                     log["date"] = " ".join(value.strip().split()[:2])
                 elif key == "description":
@@ -741,7 +764,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         log["message"], log["revision"], changedPaths,
                         log["parents"], log["branches"], log["tags"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
-                    if not self.__maxDate.isValid() and not self.__minDate.isValid():
+                    if not self.__maxDate.isValid() and \
+                       not self.__minDate.isValid():
                         self.__maxDate = dt
                         self.__minDate = dt
                     else:
@@ -786,7 +810,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.branchCombo.clear()
         self.branchCombo.addItems(
             [self.__allBranchesFilter] + sorted(self.__branchColors.keys()))
-        self.branchCombo.setCurrentIndex(self.branchCombo.findText(branchFilter))
+        self.branchCombo.setCurrentIndex(
+            self.branchCombo.findText(branchFilter))
         
         self.__filterLogsEnabled = True
         self.__filterLogs()
@@ -1011,6 +1036,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             from_ = self.fromDate.date().toString("yyyy-MM-dd")
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             branch = self.branchCombo.currentText()
+            closedBranch = branch + '--'
             
             txt = self.fieldCombo.currentText()
             if txt == self.trUtf8("Author"):
@@ -1020,7 +1046,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 fieldIndex = self.RevisionColumn
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*{0}".format(txt[1:]), Qt.CaseInsensitive)
+                    searchRx = QRegExp("^\s*{0}".format(txt[1:]),
+                                       Qt.CaseInsensitive)
                 else:
                     searchRx = QRegExp(txt, Qt.CaseInsensitive)
             else:
@@ -1033,7 +1060,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if topItem.text(self.DateColumn) <= to_ and \
                    topItem.text(self.DateColumn) >= from_ and \
                    (branch == self.__allBranchesFilter or \
-                    topItem.text(self.BranchColumn) == branch) and \
+                    topItem.text(self.BranchColumn) in \
+                        [branch, closedBranch]) and \
                    searchRx.indexIn(topItem.text(fieldIndex)) > -1:
                     topItem.setHidden(False)
                     if topItem is currentItem:

@@ -8,6 +8,7 @@ Version 5.2-snapshot-2011mmdd:
 - changed syntax check to report error position within the line
 - added functionality to the VCS status dialogs to make them more
   general commit dialogs
+- extended the Mercurial log browser to indicate closed branches
 
 Version 5.1-snapshot-20110123:
 - bug fixes
