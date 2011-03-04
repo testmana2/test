@@ -579,6 +579,9 @@ class UserInterface(QMainWindow):
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
+        # attribute for the last shown configuration page
+        self.__lastConfigurationPageName = ""
+        
     def __setStyle(self):
         """
         Private slot to set the style of the interface.
@@ -4885,6 +4888,8 @@ class UserInterface(QMainWindow):
         dlg.show()
         if pageName is not None:
             dlg.showConfigurationPageByName(pageName)
+        elif self.__lastConfigurationPageName:
+            dlg.showConfigurationPageByName(self.__lastConfigurationPageName)
         else:
             dlg.showConfigurationPageByName("empty")
         dlg.exec_()
@@ -4893,6 +4898,7 @@ class UserInterface(QMainWindow):
             dlg.setPreferences()
             Preferences.syncPreferences()
             self.__preferencesChanged()
+        self.__lastConfigurationPageName = dlg.getConfigurationPageName()
         
     def __exportPreferences(self):
         """

@@ -3076,6 +3076,7 @@
       <keyword name="ConfigurationWindow" id="ConfigurationWindow" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWindow" />
       <keyword name="ConfigurationDialog (Constructor)" id="ConfigurationDialog (Constructor)" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.__init__" />
       <keyword name="ConfigurationDialog.__preferencesChanged" id="ConfigurationDialog.__preferencesChanged" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.__preferencesChanged" />
+      <keyword name="ConfigurationDialog.getConfigurationPageName" id="ConfigurationDialog.getConfigurationPageName" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.getConfigurationPageName" />
       <keyword name="ConfigurationDialog.setPreferences" id="ConfigurationDialog.setPreferences" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.setPreferences" />
       <keyword name="ConfigurationDialog.showConfigurationPageByName" id="ConfigurationDialog.showConfigurationPageByName" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.showConfigurationPageByName" />
       <keyword name="ConfigurationPageItem (Constructor)" id="ConfigurationPageItem (Constructor)" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationPageItem.__init__" />
@@ -3087,6 +3088,7 @@
       <keyword name="ConfigurationWidget.__setupUi" id="ConfigurationWidget.__setupUi" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__setupUi" />
       <keyword name="ConfigurationWidget.__showConfigurationPage" id="ConfigurationWidget.__showConfigurationPage" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.__showConfigurationPage" />
       <keyword name="ConfigurationWidget.calledFromEric" id="ConfigurationWidget.calledFromEric" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.calledFromEric" />
+      <keyword name="ConfigurationWidget.getConfigurationPageName" id="ConfigurationWidget.getConfigurationPageName" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.getConfigurationPageName" />
       <keyword name="ConfigurationWidget.getLexers" id="ConfigurationWidget.getLexers" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.getLexers" />
       <keyword name="ConfigurationWidget.getPage" id="ConfigurationWidget.getPage" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.getPage" />
       <keyword name="ConfigurationWidget.on_applyButton_clicked" id="ConfigurationWidget.on_applyButton_clicked" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_applyButton_clicked" />

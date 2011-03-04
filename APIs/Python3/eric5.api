@@ -4039,6 +4039,7 @@ eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardRepeatDialog.QRegExpWizar
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.getConfigurationPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.showConfigurationPageByName?4(pageName)
@@ -4049,6 +4050,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.TrayStarterMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.calledFromEric?4()
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getConfigurationPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getLexers?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getPage?4(pageName)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_applyButton_clicked?4()

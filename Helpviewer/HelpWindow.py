@@ -106,6 +106,7 @@ class HelpWindow(QMainWindow):
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
 
         self.mHistory = []
+        self.__lastConfigurationPageName = ""
         
         if self.initShortcutsOnly:
             self.__initActions()
@@ -1835,13 +1836,17 @@ class HelpWindow(QMainWindow):
                                   displayMode = ConfigurationDialog.HelpBrowserMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.show()
-        dlg.showConfigurationPageByName("empty")
+        if self.__lastConfigurationPageName:
+            dlg.showConfigurationPageByName(self.__lastConfigurationPageName)
+        else:
+            dlg.showConfigurationPageByName("empty")
         dlg.exec_()
         QApplication.processEvents()
         if dlg.result() == QDialog.Accepted:
             dlg.setPreferences()
             Preferences.syncPreferences()
             self.preferencesChanged()
+        self.__lastConfigurationPageName = dlg.getConfigurationPageName()
     
     def preferencesChanged(self):
         """

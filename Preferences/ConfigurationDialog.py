@@ -503,6 +503,11 @@ class ConfigurationWidget(QWidget):
                 page = pageData[-1]
             if page is None:
                 page = self.emptyPage
+            else:
+                items = self.configList.findItems(pageData[0], 
+                    Qt.MatchFixedString | Qt.MatchRecursive)
+                if items:
+                    self.configList.setCurrentItem(items[0])
         self.configStack.setCurrentWidget(page)
         ssize = self.scrollArea.size()
         if self.scrollArea.horizontalScrollBar():
@@ -528,6 +533,16 @@ class ConfigurationWidget(QWidget):
                    self.scrollArea.verticalScrollBar()]:
             if sb:
                 sb.setValue(0)
+        
+        self.__currentConfigurationPageName = pageName
+        
+    def getConfigurationPageName(self):
+        """
+        Public method to get the page name of the current page.
+        
+        @param page name of the current page (string)
+        """
+        return self.__currentConfigurationPageName
         
     def calledFromEric(self):
         """
@@ -663,6 +678,14 @@ class ConfigurationDialog(QDialog):
         @param pageName name of the configuration page to show (string)
         """
         self.cw.showConfigurationPageByName(pageName)
+        
+    def getConfigurationPageName(self):
+        """
+        Public method to get the page name of the current page.
+        
+        @param page name of the current page (string)
+        """
+        return self.cw.getConfigurationPageName()
         
     def setPreferences(self):
         """
