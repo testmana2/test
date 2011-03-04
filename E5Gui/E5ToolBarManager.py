@@ -289,11 +289,12 @@ class E5ToolBarManager(QObject):
         return toolBar is not None and \
                id(toolBar) in self.__defaultToolBars
     
-    def createToolBar(self, title):
+    def createToolBar(self, title, name=""):
         """
         Public method to create a custom toolbar.
         
         @param title title to be used for the toolbar (string)
+        @param name optional name for the new toolbar (string)
         @return reference to the created toolbar (QToolBar)
         """
         if self.__mainWindow is None:
@@ -301,12 +302,13 @@ class E5ToolBarManager(QObject):
         
         toolBar = QToolBar(title, self.__mainWindow)
         toolBar.setToolTip(title)
-        index = 1
-        customPrefix = "__CustomPrefix__"
-        name = "{0}{1:d}".format(customPrefix, index)
-        while self.__toolBarByName(name) is not None:
-            index += 1
+        if not name:
+            index = 1
+            customPrefix = "__CustomPrefix__"
             name = "{0}{1:d}".format(customPrefix, index)
+            while self.__toolBarByName(name) is not None:
+                index += 1
+                name = "{0}{1:d}".format(customPrefix, index)
         toolBar.setObjectName(name)
         self.__mainWindow.addToolBar(toolBar)
         
@@ -547,7 +549,7 @@ class E5ToolBarManager(QObject):
                 toolBar.setWindowTitle(toolBarTitle)
                 oldCustomToolBars.remove(toolBar)
             else:
-                toolBar = self.createToolBar(toolBarTitle)
+                toolBar = self.createToolBar(toolBarTitle, objectName)
             if toolBar is not None:
                 toolBar.setObjectName(objectName)
                 self.setToolBar(toolBar, actions)
