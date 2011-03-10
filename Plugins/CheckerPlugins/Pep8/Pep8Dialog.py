@@ -215,6 +215,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.statisticsButton.setEnabled(False)
+        self.showButton.setEnabled(False)
         if repeat is not None:
             self.repeatCheckBox.setChecked(repeat)
         QApplication.processEvents()
@@ -265,72 +267,81 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             fixCodes = self.fixIssuesEdit.text()
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             
-            # now go through all the files
-            progress = 0
-            for file in py3files + py2files:
-                self.checkProgress.setValue(progress)
-                QApplication.processEvents()
+            try:
+                # disable updates of the list for speed
+                self.resultList.setUpdatesEnabled(False)
+                self.resultList.setSortingEnabled(False)
                 
-                if self.cancelled:
-                    self.__resort()
-                    return
-                
-                self.__lastFileItem = None
-                
-                try:
-                    source, encoding = Utilities.readEncodedFile(file)
-                    source = source.splitlines(True)
-                except (UnicodeError, IOError) as msg:
-                    self.noResults = False
-                    self.__createResultItem(file, "1", "1", 
-                        self.trUtf8("Error: {0}").format(str(msg))\
-                            .rstrip()[1:-1], False)
-                    progress += 1
-                    continue
-                
-                flags = Utilities.extractFlags(source)
-                ext = os.path.splitext(file)[1]
-                if fixIssues:
-                    fixer = Pep8Fixer(self.__project, file, source, 
-                                      fixCodes, True)  # always fix in place
-                else:
-                    fixer = None
-                if ("FileType" in flags and 
-                    flags["FileType"] in ["Python", "Python2"]) or \
-                   file in py2files or \
-                   (ext in [".py", ".pyw"] and \
-                    Preferences.getProject("DeterminePyFromProject") and \
-                    self.__project.isOpen() and \
-                    self.__project.isProjectFile(file) and \
-                    self.__project.getProjectLanguage() in ["Python", 
-                                                            "Python2"]):
-                    checker = Pep8Py2Checker(file, [], 
-                        repeat = repeatMessages, 
-                        select = includeMessages,
-                        ignore = excludeMessages)
-                else:
-                    checker = Pep8Checker(file, source, 
-                        repeat = repeatMessages, 
-                        select = includeMessages,
-                        ignore = excludeMessages)
-                    checker.check_all()
-                checker.messages.sort(key = lambda a: a[1])
-                for message in checker.messages:
-                    fname, lineno, position, text = message
-                    if not source[lineno - 1].strip()\
-                       .endswith("__IGNORE_WARNING__"):
+                # now go through all the files
+                progress = 0
+                for file in py3files + py2files:
+                    self.checkProgress.setValue(progress)
+                    QApplication.processEvents()
+                    
+                    if self.cancelled:
+                        self.__resort()
+                        return
+                    
+                    self.__lastFileItem = None
+                    
+                    try:
+                        source, encoding = Utilities.readEncodedFile(file)
+                        source = source.splitlines(True)
+                    except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        fixed = False
-                        if fixer:
-                            fixed, msg = fixer.fixIssue(lineno, position, text)
-                            if fixed:
-                                text += "\n" + \
-                                        self.trUtf8("Fix: {0}").format(msg)
-                        self.__createResultItem(
-                            fname, lineno, position, text, fixed)
-                fixer and fixer.saveFile(encoding)
-                self.__updateStatistics(checker.statistics, fixer)
-                progress += 1
+                        self.__createResultItem(file, "1", "1", 
+                            self.trUtf8("Error: {0}").format(str(msg))\
+                                .rstrip()[1:-1], False)
+                        progress += 1
+                        continue
+                    
+                    flags = Utilities.extractFlags(source)
+                    ext = os.path.splitext(file)[1]
+                    if fixIssues:
+                        fixer = Pep8Fixer(self.__project, file, source, 
+                                          fixCodes, True)  # always fix in place
+                    else:
+                        fixer = None
+                    if ("FileType" in flags and 
+                        flags["FileType"] in ["Python", "Python2"]) or \
+                       file in py2files or \
+                       (ext in [".py", ".pyw"] and \
+                        Preferences.getProject("DeterminePyFromProject") and \
+                        self.__project.isOpen() and \
+                        self.__project.isProjectFile(file) and \
+                        self.__project.getProjectLanguage() in ["Python", 
+                                                                "Python2"]):
+                        checker = Pep8Py2Checker(file, [], 
+                            repeat = repeatMessages, 
+                            select = includeMessages,
+                            ignore = excludeMessages)
+                    else:
+                        checker = Pep8Checker(file, source, 
+                            repeat = repeatMessages, 
+                            select = includeMessages,
+                            ignore = excludeMessages)
+                        checker.check_all()
+                    checker.messages.sort(key = lambda a: a[1])
+                    for message in checker.messages:
+                        fname, lineno, position, text = message
+                        if not source[lineno - 1].strip()\
+                           .endswith("__IGNORE_WARNING__"):
+                            self.noResults = False
+                            fixed = False
+                            if fixer:
+                                fixed, msg = fixer.fixIssue(lineno, position, text)
+                                if fixed:
+                                    text += "\n" + \
+                                            self.trUtf8("Fix: {0}").format(msg)
+                            self.__createResultItem(
+                                fname, lineno, position, text, fixed)
+                    fixer and fixer.saveFile(encoding)
+                    self.__updateStatistics(checker.statistics, fixer)
+                    progress += 1
+            finally:
+                # reenable updates of the list
+                self.resultList.setSortingEnabled(True)
+                self.resultList.setUpdatesEnabled(True)
             self.checkProgress.setValue(progress)
             QApplication.processEvents()
             self.__resort()
@@ -348,6 +359,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.statisticsButton.setEnabled(True)
+        self.showButton.setEnabled(True)
         
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])

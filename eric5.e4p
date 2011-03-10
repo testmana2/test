@@ -1538,13 +1538,25 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/coverage/*, */ThirdParty/*</string>
+              <string>*/ThirdParty/*, */coverage/*</string>
             </value>
             <key>
               <string>ExcludeMessages</string>
             </key>
             <value>
               <string>E24, W293</string>
+            </value>
+            <key>
+              <string>FixCodes</string>
+            </key>
+            <value>
+              <string></string>
+            </value>
+            <key>
+              <string>FixIssues</string>
+            </key>
+            <value>
+              <bool>False</bool>
             </value>
             <key>
               <string>IncludeMessages</string>
