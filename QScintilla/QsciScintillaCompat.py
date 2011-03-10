@@ -13,7 +13,7 @@ from PyQt4.Qsci import QsciScintilla, \
     QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR
 
 
-#####################################################################################
+###############################################################################
 
 def QSCINTILLA_VERSION():
     """
@@ -29,7 +29,7 @@ def QSCINTILLA_VERSION():
     else:
         return QsciQSCINTILLA_VERSION
     
-#####################################################################################
+###############################################################################
 
 class QsciScintillaCompat(QsciScintilla):
     """
@@ -129,7 +129,8 @@ class QsciScintillaCompat(QsciScintilla):
             scipos = pos
         else:
             scipos = \
-                self.SendScintilla(QsciScintilla.SCI_POSITIONFROMPOINT, pos.x(), pos.y())
+                self.SendScintilla(QsciScintilla.SCI_POSITIONFROMPOINT,
+                                   pos.x(), pos.y())
         line = self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, scipos)
         if line >= self.lines():
             line = -1
@@ -199,8 +200,8 @@ class QsciScintillaCompat(QsciScintilla):
         multibyte characters.
         
         @param pos position in the text (integer)
-        @return character at the requested position or empty string, if the position
-            is negative or past the end of the document (string)
+        @return character at the requested position or empty string, if the
+            position is negative or past the end of the document (string)
         """
         ch = self.byteAt(pos)
         if ch and ord(ch) > 127 and self.isUtf8():
@@ -219,11 +220,12 @@ class QsciScintillaCompat(QsciScintilla):
     
     def byteAt(self, pos):
         """
-        Public method to get the raw character (bytes) at a position in the text.
+        Public method to get the raw character (bytes) at a position in the
+        text.
         
         @param pos position in the text (integer)
-        @return raw character at the requested position or empty bytes, if the position
-            is negative or past the end of the document (bytes)
+        @return raw character at the requested position or empty bytes, if the
+            position is negative or past the end of the document (bytes)
         """
         char = self.SendScintilla(QsciScintilla.SCI_GETCHARAT, pos)
         if char == 0:
@@ -241,7 +243,8 @@ class QsciScintillaCompat(QsciScintilla):
         """
         lvl = self.SendScintilla(QsciScintilla.SCI_GETFOLDLEVEL, line)
         return \
-            (lvl & QsciScintilla.SC_FOLDLEVELNUMBERMASK) - QsciScintilla.SC_FOLDLEVELBASE
+            (lvl & QsciScintilla.SC_FOLDLEVELNUMBERMASK) - \
+            QsciScintilla.SC_FOLDLEVELBASE
     
     def foldFlagsAt(self, line):
         """
@@ -255,7 +258,8 @@ class QsciScintillaCompat(QsciScintilla):
     
     def foldHeaderAt(self, line):
         """
-        Public method to determine, if a line of the document is a fold header line.
+        Public method to determine, if a line of the document is a fold header
+        line.
         
         @param line line number (integer)
         @return flag indicating a fold header line (boolean)
@@ -290,9 +294,9 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return self.SendScintilla(QsciScintilla.SCI_GETINDENTATIONGUIDES)
     
-    #####################################################################################
+    ###########################################################################
     # methods below are missing from QScintilla
-    #####################################################################################
+    ###########################################################################
 
     def zoomIn(self, zoom = 1):
         """
@@ -520,10 +524,11 @@ class QsciScintillaCompat(QsciScintilla):
     
     def getCursorFlashTime(self):
         """
-        Public method to get the flash (blink) time of the cursor in milliseconds.
+        Public method to get the flash (blink) time of the cursor in
+        milliseconds.
         
         The flash time is the time required to display, invert and restore the 
-        caret display. Usually the text cursor is displayed for half the cursor 
+        caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
         
         @return flash time of the cursor in milliseconds (integer)
@@ -532,35 +537,37 @@ class QsciScintillaCompat(QsciScintilla):
     
     def setCursorFlashTime(self, time):
         """
-        Public method to get the flash (blink) time of the cursor in milliseconds.
+        Public method to get the flash (blink) time of the cursor in
+        milliseconds.
         
         The flash time is the time required to display, invert and restore the 
-        caret display. Usually the text cursor is displayed for half the cursor 
+        caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
         
         @param time flash time of the cursor in milliseconds (integer)
         """
         self.SendScintilla(QsciScintilla.SCI_SETCARETPERIOD, time // 2)
     
-    #####################################################################################
+    ###########################################################################
     # methods to perform searches in target range
-    #####################################################################################
+    ###########################################################################
     
     def positionFromPoint(self, point):
         """
-        Public method to calculate the scintilla position from a point in the window.
+        Public method to calculate the scintilla position from a point in the
+        window.
         
         @param point point in the window (QPoint)
-        @return scintilla position (integer) or -1 to indicate, that the point is not
-            near any character
+        @return scintilla position (integer) or -1 to indicate, that the point
+            is not near any character
         """
         return self.SendScintilla(QsciScintilla.SCI_POSITIONFROMPOINTCLOSE, 
                                   point.x(), point.y())
     
     def positionBefore(self, pos):
         """
-        Public method to get the position before the given position taking into account
-        multibyte characters.
+        Public method to get the position before the given position taking into
+        account multibyte characters.
         
         @param pos position (integer)
         @return position before the given one (integer)
@@ -569,62 +576,21 @@ class QsciScintillaCompat(QsciScintilla):
     
     def positionAfter(self, pos):
         """
-        Public method to get the position after the given position taking into account
-        multibyte characters.
+        Public method to get the position after the given position taking into
+        account multibyte characters.
         
         @param pos position (integer)
         @return position after the given one (integer)
         """
         return self.SendScintilla(QsciScintilla.SCI_POSITIONAFTER, pos)
     
-    def positionFromLineIndex(self, line, index):
-        """
-        Public method to convert line and index to an absolute position.
-        
-        @param line line number (integer)
-        @param index index number (integer)
-        @return absolute position in the editor (integer)
-        """
-        pos = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE, line)
-        
-        # Allow for multi-byte characters
-        for i in range(index):
-            pos = self.positionAfter(pos)
-        
-        return pos
-    
-    def lineIndexFromPosition(self, pos):
-        """
-        Public method to convert an absolute position to line and index.
-        
-        @param pos absolute position in the editor (integer)
-        @return tuple of line number (integer) and index number (integer)
-        """
-        lin = self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, pos)
-        linpos = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE, lin)
-        indx = 0
-        
-        # Allow for multi-byte characters.
-        while linpos < pos:
-            new_linpos = self.positionAfter(linpos)
-            
-            # If the position hasn't moved then we must be at the end of the text
-            # (which implies that the position passed was beyond the end of the
-            # text).
-            if new_linpos == linpos:
-                break
-            
-            linpos = new_linpos
-            indx += 1
-        
-        return lin, indx
-    
     def lineEndPosition(self, line):
         """
         Public method to determine the line end position of the given line.
         
         @param line line number (integer)
-        @return position of the line end disregarding line end characters (integer)
+        @return position of the line end disregarding line end characters
+            (integer)
         """
         return self.SendScintilla(QsciScintilla.SCI_GETLINEENDPOSITION, line)
     
@@ -638,9 +604,12 @@ class QsciScintillaCompat(QsciScintilla):
             self.__targetSearchActive = False
             return False
         
-        self.SendScintilla(QsciScintilla.SCI_SETTARGETSTART, self.__targetSearchStart)
-        self.SendScintilla(QsciScintilla.SCI_SETTARGETEND, self.__targetSearchEnd)
-        self.SendScintilla(QsciScintilla.SCI_SETSEARCHFLAGS, self.__targetSearchFlags)
+        self.SendScintilla(QsciScintilla.SCI_SETTARGETSTART,
+                           self.__targetSearchStart)
+        self.SendScintilla(QsciScintilla.SCI_SETTARGETEND,
+                           self.__targetSearchEnd)
+        self.SendScintilla(QsciScintilla.SCI_SETSEARCHFLAGS,
+                           self.__targetSearchFlags)
         targetSearchExpr = self._encodeString(self.__targetSearchExpr)
         pos = self.SendScintilla(QsciScintilla.SCI_SEARCHINTARGET,
                                  len(targetSearchExpr), 
@@ -702,14 +671,18 @@ class QsciScintillaCompat(QsciScintilla):
             self.__targetSearchFlags |= QsciScintilla.SCFIND_WORDSTART
         
         if begline < 0 or begindex < 0:
-            self.__targetSearchStart = self.SendScintilla(QsciScintilla.SCI_GETCURRENTPOS)
+            self.__targetSearchStart = self.SendScintilla(
+                QsciScintilla.SCI_GETCURRENTPOS)
         else:
-            self.__targetSearchStart = self.positionFromLineIndex(begline, begindex)
+            self.__targetSearchStart = self.positionFromLineIndex(
+                begline, begindex)
         
         if endline < 0 or endindex < 0:
-            self.__targetSearchEnd = self.SendScintilla(QsciScintilla.SCI_GETTEXTLENGTH)
+            self.__targetSearchEnd = self.SendScintilla(
+                QsciScintilla.SCI_GETTEXTLENGTH)
         else:
-            self.__targetSearchEnd = self.positionFromLineIndex(endline, endindex)
+            self.__targetSearchEnd = self.positionFromLineIndex(
+                endline, endindex)
         
         self.__targetSearchExpr = expr_
         
@@ -751,9 +724,9 @@ class QsciScintillaCompat(QsciScintilla):
         
         self.__targetSearchStart = start + len(r)
     
-    #####################################################################################
+    ###########################################################################
     # indicator handling methods
-    #####################################################################################
+    ###########################################################################
     
     def indicatorDefine(self, indicator, style, color):
         """
@@ -761,11 +734,11 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param indicator number of the indicator (integer, 
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
-        @param style style to be used for the indicator (QsciScintilla.INDIC_PLAIN,
-            QsciScintilla.INDIC_SQUIGGLE, QsciScintilla.INDIC_TT,
-            QsciScintilla.INDIC_DIAGONAL, QsciScintilla.INDIC_STRIKE,
-            QsciScintilla.INDIC_HIDDEN, QsciScintilla.INDIC_BOX,
-            QsciScintilla.INDIC_ROUNDBOX)
+        @param style style to be used for the indicator
+            (QsciScintilla.INDIC_PLAIN, QsciScintilla.INDIC_SQUIGGLE,
+            QsciScintilla.INDIC_TT, QsciScintilla.INDIC_DIAGONAL,
+            QsciScintilla.INDIC_STRIKE, QsciScintilla.INDIC_HIDDEN,
+            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX)
         @param color color to be used by the indicator (QColor)
         @exception ValueError the indicator or style are not valid
         """
@@ -773,7 +746,8 @@ class QsciScintillaCompat(QsciScintilla):
            indicator > QsciScintilla.INDIC_MAX:
             raise ValueError("indicator number out of range")
         
-        if style < QsciScintilla.INDIC_PLAIN or style > QsciScintilla.INDIC_ROUNDBOX:
+        if style < QsciScintilla.INDIC_PLAIN or \
+           style > QsciScintilla.INDIC_ROUNDBOX:
             raise ValueError("style out of range")
         
         self.SendScintilla(QsciScintilla.SCI_INDICSETSTYLE, indicator, style)
@@ -867,12 +841,13 @@ class QsciScintillaCompat(QsciScintilla):
         @param pos position to test (integer)
         @return flag indicating the existence of the indicator (boolean)
         """
-        res = self.SendScintilla(QsciScintilla.SCI_INDICATORVALUEAT, indicator, pos)
+        res = self.SendScintilla(QsciScintilla.SCI_INDICATORVALUEAT,
+                                 indicator, pos)
         return res
     
-    #####################################################################################
+    ###########################################################################
     # methods to perform folding related stuff
-    #####################################################################################
+    ###########################################################################
     
     def __setFoldMarker(self, marknr, mark = QsciScintilla.SC_MARK_EMPTY):
         """
@@ -899,7 +874,8 @@ class QsciScintillaCompat(QsciScintilla):
         if style < self.ArrowFoldStyle:
             QsciScintilla.setFolding(self, style, margin)
         else:
-            QsciScintilla.setFolding(self, QsciScintilla.PlainFoldStyle, margin)
+            QsciScintilla.setFolding(
+                self, QsciScintilla.PlainFoldStyle, margin)
             
             if style == self.ArrowFoldStyle:
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
@@ -971,9 +947,9 @@ class QsciScintillaCompat(QsciScintilla):
             QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
         
     
-    #####################################################################################
+    ###########################################################################
     # interface methods to the standard keyboard command set
-    #####################################################################################
+    ###########################################################################
     
     def clearKeys(self):
         """
@@ -989,9 +965,9 @@ class QsciScintillaCompat(QsciScintilla):
         # call into the QsciCommandSet
         self.standardCommands().clearAlternateKeys()
 
-    #####################################################################################
+    ###########################################################################
     # specialized event handlers
-    #####################################################################################
+    ###########################################################################
     
     def focusOutEvent(self, event):
         """
@@ -1004,9 +980,9 @@ class QsciScintillaCompat(QsciScintilla):
         
         QsciScintilla.focusOutEvent(self, event)
 
-    #####################################################################################
+    ###########################################################################
     # interface methods to the mini editor
-    #####################################################################################
+    ###########################################################################
 
     def getFileName(self):
         """
@@ -1023,9 +999,9 @@ class QsciScintillaCompat(QsciScintilla):
             except AttributeError:
                 return ""
     
-    #####################################################################################
+    ###########################################################################
     # replacements for buggy methods
-    #####################################################################################
+    ###########################################################################
     
     def showUserList(self, id, lst):
         """
@@ -1042,9 +1018,9 @@ class QsciScintillaCompat(QsciScintilla):
         self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id, 
             self._encodeString(self.UserSeparator.join(lst)))
     
-    #####################################################################################
+    ###########################################################################
     # utility methods
-    #####################################################################################
+    ###########################################################################
     
     def _encodeString(self, string):
         """
@@ -1061,9 +1037,58 @@ class QsciScintillaCompat(QsciScintilla):
             else:
                 return string.encode("latin-1")
     
-##    #####################################################################################
-##    # methods below have been added to QScintilla starting with version after 2.x
-##    #####################################################################################
+    ###########################################################################
+    # methods below have been added to QScintilla starting with version 2.5
+    ###########################################################################
+    
+    if "positionFromLineIndex" not in QsciScintilla.__dict__:
+        def positionFromLineIndex(self, line, index):
+            """
+            Public method to convert line and index to an absolute position.
+            
+            @param line line number (integer)
+            @param index index number (integer)
+            @return absolute position in the editor (integer)
+            """
+            pos = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE, line)
+            
+            # Allow for multi-byte characters
+            for i in range(index):
+                pos = self.positionAfter(pos)
+            
+            return pos
+    
+    if "lineIndexFromPosition" not in QsciScintilla.__dict__:
+        def lineIndexFromPosition(self, pos):
+            """
+            Public method to convert an absolute position to line and index.
+            
+            @param pos absolute position in the editor (integer)
+            @return tuple of line number (integer) and index number (integer)
+            """
+            lin = self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, pos)
+            linpos = self.SendScintilla(
+                QsciScintilla.SCI_POSITIONFROMLINE, lin)
+            indx = 0
+            
+            # Allow for multi-byte characters.
+            while linpos < pos:
+                new_linpos = self.positionAfter(linpos)
+                
+                # If the position hasn't moved then we must be at the end of
+                # the text (which implies that the position passed was beyond
+                # the end of the text).
+                if new_linpos == linpos:
+                    break
+                
+                linpos = new_linpos
+                indx += 1
+            
+            return lin, indx
+    
+##    #########################################################################
+##    # methods below have been added to QScintilla starting with version 2.x
+##    #########################################################################
 ##    
 ##    if "newMethod" not in QsciScintilla.__dict__:
 ##        def newMethod(self, param):
