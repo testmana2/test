@@ -61,6 +61,7 @@ class DebugBase(bdb.Bdb):
         
         # current frame we are at
         self.currentFrame = None
+        self.currentFrameLocals = None
         
         # frame that we are stepping in, can be different than currentFrame
         self.stepFrame = None
@@ -83,6 +84,14 @@ class DebugBase(bdb.Bdb):
         @return the current frame
         """
         return self.currentFrame        
+    
+    def getCurrentFrameLocals(self):
+        """
+        Public method to return the locals dictionary of the current frame.
+        
+        @return locals dictionary of the current frame
+        """
+        return self.currentFrameLocals        
     
     def step(self, traceMode):
         """
@@ -536,6 +545,8 @@ class DebugBase(bdb.Bdb):
             self._dbgClient.mainFrame = frame
 
         self.currentFrame = frame
+        self.currentFrameLocals = frame.f_locals
+        # remember the locals because it is reinitialized when accessed
         
         fr = frame
         stack = []

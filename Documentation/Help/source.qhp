@@ -6492,6 +6492,7 @@
       <keyword name="DebugBase.dispatch_return" id="DebugBase.dispatch_return" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.dispatch_return" />
       <keyword name="DebugBase.fix_frame_filename" id="DebugBase.fix_frame_filename" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.fix_frame_filename" />
       <keyword name="DebugBase.getCurrentFrame" id="DebugBase.getCurrentFrame" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.getCurrentFrame" />
+      <keyword name="DebugBase.getCurrentFrameLocals" id="DebugBase.getCurrentFrameLocals" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.getCurrentFrameLocals" />
       <keyword name="DebugBase.getEvent" id="DebugBase.getEvent" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.getEvent" />
       <keyword name="DebugBase.getStack" id="DebugBase.getStack" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.getStack" />
       <keyword name="DebugBase.get_break" id="DebugBase.get_break" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase.get_break" />
@@ -6660,6 +6661,7 @@
       <keyword name="DebugBase.dispatch_return" id="DebugBase.dispatch_return" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.dispatch_return" />
       <keyword name="DebugBase.fix_frame_filename" id="DebugBase.fix_frame_filename" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.fix_frame_filename" />
       <keyword name="DebugBase.getCurrentFrame" id="DebugBase.getCurrentFrame" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.getCurrentFrame" />
+      <keyword name="DebugBase.getCurrentFrameLocals" id="DebugBase.getCurrentFrameLocals" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.getCurrentFrameLocals" />
       <keyword name="DebugBase.getEvent" id="DebugBase.getEvent" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.getEvent" />
       <keyword name="DebugBase.getStack" id="DebugBase.getStack" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.getStack" />
       <keyword name="DebugBase.get_break" id="DebugBase.get_break" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase.get_break" />
