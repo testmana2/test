@@ -105,7 +105,7 @@ class SessionReader(XMLStreamReaderBase):
                     cindex = int(self.attribute("cindex", "0"))
                     folds = self.attribute("folds")
                     if folds:
-                        folds = [int(f) for f in folds.split(',')]
+                        folds = [int(f) - 1 for f in folds.split(',')]
                     else:
                         folds = []
                     zoom = int(self.attribute("zoom", "-9999"))
@@ -118,8 +118,7 @@ class SessionReader(XMLStreamReaderBase):
                             ed.zoomTo(zoom)
                         if folds:
                             ed.recolor()
-                            for line in folds:
-                                ed.foldLine(line - 1)
+                            ed.setContractedFolds(folds)
                         ed.setCursorPosition(cline, cindex)
                         ed.ensureCursorVisible()
                 else:

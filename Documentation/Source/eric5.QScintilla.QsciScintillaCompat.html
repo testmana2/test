@@ -97,6 +97,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.clearStyles">clearStyles</a></td>
 <td>Public method to set the styles according the selected Qt style.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.contractedFolds">contractedFolds</a></td>
+<td>Public method to get a list of line numbers of collapsed folds.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.currentPosition">currentPosition</a></td>
 <td>Public method to get the current position.</td>
 </tr><tr>
@@ -247,6 +250,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.scrollVertical">scrollVertical</a></td>
 <td>Public method to scroll the text area.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.setContractedFolds">setContractedFolds</a></td>
+<td>Public method to set a list of line numbers of collapsed folds.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.setCurrentIndicator">setCurrentIndicator</a></td>
 <td>Public method to set the current indicator.</td>
 </tr><tr>
@@ -357,7 +363,8 @@ encoded string (bytes)
 <h4>QsciScintillaCompat.byteAt</h4>
 <b>byteAt</b>(<i>pos</i>)
 <p>
-        Public method to get the raw character (bytes) at a position in the text.
+        Public method to get the raw character (bytes) at a position in the
+        text.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
@@ -366,8 +373,8 @@ position in the text (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-raw character at the requested position or empty bytes, if the position
-            is negative or past the end of the document (bytes)
+raw character at the requested position or empty bytes, if the
+            position is negative or past the end of the document (bytes)
 </dd>
 </dl><a NAME="QsciScintillaCompat.charAt" ID="QsciScintillaCompat.charAt"></a>
 <h4>QsciScintillaCompat.charAt</h4>
@@ -383,8 +390,8 @@ position in the text (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-character at the requested position or empty string, if the position
-            is negative or past the end of the document (string)
+character at the requested position or empty string, if the
+            position is negative or past the end of the document (string)
 </dd>
 </dl><a NAME="QsciScintillaCompat.clearAllIndicators" ID="QsciScintillaCompat.clearAllIndicators"></a>
 <h4>QsciScintillaCompat.clearAllIndicators</h4>
@@ -452,7 +459,17 @@ length of the indicator (integer)
 <b>clearStyles</b>(<i></i>)
 <p>
         Public method to set the styles according the selected Qt style.
-</p><a NAME="QsciScintillaCompat.currentPosition" ID="QsciScintillaCompat.currentPosition"></a>
+</p><a NAME="QsciScintillaCompat.contractedFolds" ID="QsciScintillaCompat.contractedFolds"></a>
+<h4>QsciScintillaCompat.contractedFolds</h4>
+<b>contractedFolds</b>(<i></i>)
+<p>
+            Public method to get a list of line numbers of collapsed folds.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of line numbers of folded lines (list of integer)
+</dd>
+</dl><a NAME="QsciScintillaCompat.currentPosition" ID="QsciScintillaCompat.currentPosition"></a>
 <h4>QsciScintillaCompat.currentPosition</h4>
 <b>currentPosition</b>(<i></i>)
 <p>
@@ -655,7 +672,8 @@ fold flags of the given line (integer)
 <h4>QsciScintillaCompat.foldHeaderAt</h4>
 <b>foldHeaderAt</b>(<i>line</i>)
 <p>
-        Public method to determine, if a line of the document is a fold header line.
+        Public method to determine, if a line of the document is a fold header
+        line.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
@@ -685,10 +703,11 @@ fold level of the given line (integer)
 <h4>QsciScintillaCompat.getCursorFlashTime</h4>
 <b>getCursorFlashTime</b>(<i></i>)
 <p>
-        Public method to get the flash (blink) time of the cursor in milliseconds.
+        Public method to get the flash (blink) time of the cursor in
+        milliseconds.
 </p><p>
         The flash time is the time required to display, invert and restore the 
-        caret display. Usually the text cursor is displayed for half the cursor 
+        caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
 </p><dl>
 <dt>Returns:</dt>
@@ -793,11 +812,11 @@ number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
 </dd><dt><i>style</i></dt>
 <dd>
-style to be used for the indicator (QsciScintilla.INDIC_PLAIN,
-            QsciScintilla.INDIC_SQUIGGLE, QsciScintilla.INDIC_TT,
-            QsciScintilla.INDIC_DIAGONAL, QsciScintilla.INDIC_STRIKE,
-            QsciScintilla.INDIC_HIDDEN, QsciScintilla.INDIC_BOX,
-            QsciScintilla.INDIC_ROUNDBOX)
+style to be used for the indicator
+            (QsciScintilla.INDIC_PLAIN, QsciScintilla.INDIC_SQUIGGLE,
+            QsciScintilla.INDIC_TT, QsciScintilla.INDIC_DIAGONAL,
+            QsciScintilla.INDIC_STRIKE, QsciScintilla.INDIC_HIDDEN,
+            QsciScintilla.INDIC_BOX, QsciScintilla.INDIC_ROUNDBOX)
 </dd><dt><i>color</i></dt>
 <dd>
 color to be used by the indicator (QColor)
@@ -839,13 +858,14 @@ line number (integer)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-position of the line end disregarding line end characters (integer)
+position of the line end disregarding line end characters
+            (integer)
 </dd>
 </dl><a NAME="QsciScintillaCompat.lineIndexFromPosition" ID="QsciScintillaCompat.lineIndexFromPosition"></a>
 <h4>QsciScintillaCompat.lineIndexFromPosition</h4>
 <b>lineIndexFromPosition</b>(<i>pos</i>)
 <p>
-        Public method to convert an absolute position to line and index.
+            Public method to convert an absolute position to line and index.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
@@ -910,8 +930,8 @@ font to be used (QFont)
 <h4>QsciScintillaCompat.positionAfter</h4>
 <b>positionAfter</b>(<i>pos</i>)
 <p>
-        Public method to get the position after the given position taking into account
-        multibyte characters.
+        Public method to get the position after the given position taking into
+        account multibyte characters.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
@@ -926,8 +946,8 @@ position after the given one (integer)
 <h4>QsciScintillaCompat.positionBefore</h4>
 <b>positionBefore</b>(<i>pos</i>)
 <p>
-        Public method to get the position before the given position taking into account
-        multibyte characters.
+        Public method to get the position before the given position taking into
+        account multibyte characters.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>
@@ -942,7 +962,7 @@ position before the given one (integer)
 <h4>QsciScintillaCompat.positionFromLineIndex</h4>
 <b>positionFromLineIndex</b>(<i>line, index</i>)
 <p>
-        Public method to convert line and index to an absolute position.
+            Public method to convert line and index to an absolute position.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>
@@ -960,7 +980,8 @@ absolute position in the editor (integer)
 <h4>QsciScintillaCompat.positionFromPoint</h4>
 <b>positionFromPoint</b>(<i>point</i>)
 <p>
-        Public method to calculate the scintilla position from a point in the window.
+        Public method to calculate the scintilla position from a point in the
+        window.
 </p><dl>
 <dt><i>point</i></dt>
 <dd>
@@ -969,8 +990,8 @@ point in the window (QPoint)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-scintilla position (integer) or -1 to indicate, that the point is not
-            near any character
+scintilla position (integer) or -1 to indicate, that the point
+            is not near any character
 </dd>
 </dl><a NAME="QsciScintillaCompat.replaceTarget" ID="QsciScintillaCompat.replaceTarget"></a>
 <h4>QsciScintillaCompat.replaceTarget</h4>
@@ -993,6 +1014,16 @@ replacement string or regexp (string)
 number of lines to scroll (negative scrolls up,
             positive scrolls down) (integer)
 </dd>
+</dl><a NAME="QsciScintillaCompat.setContractedFolds" ID="QsciScintillaCompat.setContractedFolds"></a>
+<h4>QsciScintillaCompat.setContractedFolds</h4>
+<b>setContractedFolds</b>(<i>folds</i>)
+<p>
+        Public method to set a list of line numbers of collapsed folds.
+</p><dl>
+<dt><i>folds</i></dt>
+<dd>
+list of line numbers of folded lines (list of integer)
+</dd>
 </dl><a NAME="QsciScintillaCompat.setCurrentIndicator" ID="QsciScintillaCompat.setCurrentIndicator"></a>
 <h4>QsciScintillaCompat.setCurrentIndicator</h4>
 <b>setCurrentIndicator</b>(<i>indicator</i>)
@@ -1013,10 +1044,11 @@ the indicator or style are not valid
 <h4>QsciScintillaCompat.setCursorFlashTime</h4>
 <b>setCursorFlashTime</b>(<i>time</i>)
 <p>
-        Public method to get the flash (blink) time of the cursor in milliseconds.
+        Public method to get the flash (blink) time of the cursor in
+        milliseconds.
 </p><p>
         The flash time is the time required to display, invert and restore the 
-        caret display. Usually the text cursor is displayed for half the cursor 
+        caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
 </p><dl>
 <dt><i>time</i></dt>

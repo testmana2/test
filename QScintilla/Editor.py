@@ -1584,21 +1584,6 @@ class Editor(QsciScintillaCompat):
         """
         return self.encoding
         
-    def getFolds(self):
-        """
-        Public method to get a list line numbers of collapsed folds.
-        
-        @return list of line numbers of folded lines (list of integer)
-        """
-        line = 0
-        folds = []
-        maxline = self.lines()
-        while line < maxline:
-            if self.foldHeaderAt(line) and not self.foldExpandedAt(line):
-                folds.append(line)
-            line += 1
-        return folds
-        
     def isPy2File(self):
         """
         Public method to return a flag indicating a Python file.

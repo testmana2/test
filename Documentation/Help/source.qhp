@@ -5532,6 +5532,7 @@
       <keyword name="QsciScintillaCompat.clearIndicatorRange" id="QsciScintillaCompat.clearIndicatorRange" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearIndicatorRange" />
       <keyword name="QsciScintillaCompat.clearKeys" id="QsciScintillaCompat.clearKeys" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearKeys" />
       <keyword name="QsciScintillaCompat.clearStyles" id="QsciScintillaCompat.clearStyles" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.clearStyles" />
+      <keyword name="QsciScintillaCompat.contractedFolds" id="QsciScintillaCompat.contractedFolds" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.contractedFolds" />
       <keyword name="QsciScintillaCompat.currentPosition" id="QsciScintillaCompat.currentPosition" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.currentPosition" />
       <keyword name="QsciScintillaCompat.currentStyle" id="QsciScintillaCompat.currentStyle" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.currentStyle" />
       <keyword name="QsciScintillaCompat.delete" id="QsciScintillaCompat.delete" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.delete" />
@@ -5582,6 +5583,7 @@
       <keyword name="QsciScintillaCompat.positionFromPoint" id="QsciScintillaCompat.positionFromPoint" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.positionFromPoint" />
       <keyword name="QsciScintillaCompat.replaceTarget" id="QsciScintillaCompat.replaceTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.replaceTarget" />
       <keyword name="QsciScintillaCompat.scrollVertical" id="QsciScintillaCompat.scrollVertical" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.scrollVertical" />
+      <keyword name="QsciScintillaCompat.setContractedFolds" id="QsciScintillaCompat.setContractedFolds" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setContractedFolds" />
       <keyword name="QsciScintillaCompat.setCurrentIndicator" id="QsciScintillaCompat.setCurrentIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCurrentIndicator" />
       <keyword name="QsciScintillaCompat.setCursorFlashTime" id="QsciScintillaCompat.setCursorFlashTime" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setCursorFlashTime" />
       <keyword name="QsciScintillaCompat.setEolModeByEolString" id="QsciScintillaCompat.setEolModeByEolString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setEolModeByEolString" />
@@ -5936,7 +5938,6 @@
       <keyword name="Editor.getFileType" id="Editor.getFileType" ref="eric5.QScintilla.Editor.html#Editor.getFileType" />
       <keyword name="Editor.getFileTypeByFlag" id="Editor.getFileTypeByFlag" ref="eric5.QScintilla.Editor.html#Editor.getFileTypeByFlag" />
       <keyword name="Editor.getFlakesWarnings" id="Editor.getFlakesWarnings" ref="eric5.QScintilla.Editor.html#Editor.getFlakesWarnings" />
-      <keyword name="Editor.getFolds" id="Editor.getFolds" ref="eric5.QScintilla.Editor.html#Editor.getFolds" />
       <keyword name="Editor.getHighlightPosition" id="Editor.getHighlightPosition" ref="eric5.QScintilla.Editor.html#Editor.getHighlightPosition" />
       <keyword name="Editor.getLanguage" id="Editor.getLanguage" ref="eric5.QScintilla.Editor.html#Editor.getLanguage" />
       <keyword name="Editor.getLexer" id="Editor.getLexer" ref="eric5.QScintilla.Editor.html#Editor.getLexer" />

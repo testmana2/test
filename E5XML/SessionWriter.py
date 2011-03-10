@@ -75,7 +75,8 @@ class SessionWriter(XMLStreamWriterBase):
                 ed = self.vm.getOpenEditor(of)
                 if ed is not None:
                     line, index = ed.getCursorPosition()
-                    folds = ','.join([str(i + 1) for i in ed.getFolds()])
+                    folds = ','.join(
+                        [str(i + 1) for i in ed.contractedFolds()])
                     zoom = ed.getZoom()
                 else:
                     line, index = 0, 0

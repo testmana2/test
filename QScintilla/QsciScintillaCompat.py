@@ -1086,6 +1086,32 @@ class QsciScintillaCompat(QsciScintilla):
             
             return lin, indx
     
+    if "contractedFolds" not in QsciScintilla.__dict__:
+        def contractedFolds(self):
+            """
+            Public method to get a list of line numbers of collapsed folds.
+            
+            @return list of line numbers of folded lines (list of integer)
+            """
+            line = 0
+            folds = []
+            maxline = self.lines()
+            while line < maxline:
+                if self.foldHeaderAt(line) and not self.foldExpandedAt(line):
+                    folds.append(line)
+                line += 1
+            return folds
+    
+##    if "setContractedFolds" not in QsciScintilla.__dict__:
+    def setContractedFolds(self, folds):
+        """
+        Public method to set a list of line numbers of collapsed folds.
+        
+        @param folds list of line numbers of folded lines (list of integer)
+        """
+        for line in folds:
+            self.foldLine(line)
+    
 ##    #########################################################################
 ##    # methods below have been added to QScintilla starting with version 2.x
 ##    #########################################################################
