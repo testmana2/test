@@ -143,7 +143,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.initColour("MatchingBrace", self.matchingBracesButton, 
                 Preferences.getEditorColour)
         self.editorColours["MatchingBraceBack"] = \
-            self.initColour("MatchingBraceBack", self.matchingBracesBackButton, 
+            self.initColour("MatchingBraceBack", self.matchingBracesBackButton,
                 Preferences.getEditorColour)
         self.editorColours["NonmatchingBrace"] = \
             self.initColour("NonmatchingBrace", self.nonmatchingBracesButton, 
@@ -157,6 +157,19 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         self.whitespaceCheckBox.setChecked(
             Preferences.getEditor("ShowWhitespace"))
+        self.whitespaceSizeSpinBox.setValue(
+            Preferences.getEditor("WhitespaceSize"))
+        self.editorColours["WhitespaceForeground"] = \
+            self.initColour("WhitespaceForeground", self.whitespaceForegroundButton, 
+                Preferences.getEditorColour)
+        self.editorColours["WhitespaceBackground"] = \
+            self.initColour("WhitespaceBackground", self.whitespaceBackgroundButton,
+                Preferences.getEditorColour)
+        if not hasattr(QsciScintilla, "setWhitespaceForegroundColor"):
+            self.whitespaceSizeSpinBox.setEnabled(False)
+            self.whitespaceForegroundButton.setEnabled(False)
+            self.whitespaceBackgroundButton.setEnabled(False)
+        
         self.miniMenuCheckBox.setChecked(
             Preferences.getEditor("MiniContextMenu"))
         
@@ -213,6 +226,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor("ShowWhitespace", 
             self.whitespaceCheckBox.isChecked())
+        Preferences.setEditor("WhitespaceSize", 
+            self.whitespaceSizeSpinBox.value())
+        
         Preferences.setEditor("MiniContextMenu",
             self.miniMenuCheckBox.isChecked())
         
@@ -458,6 +474,24 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
             self.annotationsErrorSample.setPalette(pl)
             self.annotationsErrorSample.repaint()
             self.editorColours["AnnotationsErrorBackground"] = colour
+    
+    @pyqtSlot()
+    def on_whitespaceForegroundButton_clicked(self):
+        """
+        Private slot to set the foreground colour of visible whitespace.
+        """
+        self.editorColours["WhitespaceForeground"] = \
+            self.selectColour(self.whitespaceForegroundButton, 
+                self.editorColours["WhitespaceForeground"])
+    
+    @pyqtSlot()
+    def on_whitespaceBackgroundButton_clicked(self):
+        """
+        Private slot to set the background colour of visible whitespace.
+        """
+        self.editorColours["WhitespaceBackground"] = \
+            self.selectColour(self.whitespaceBackgroundButton, 
+                self.editorColours["WhitespaceBackground"])
 
 def create(dlg):
     """

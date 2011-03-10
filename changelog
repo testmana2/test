@@ -10,6 +10,7 @@ Version 5.2-snapshot-2011mmdd:
   general commit dialogs
 - extended the Mercurial log browser to indicate closed branches
 - changed the configuration dialog to remember the last show page name
+- added configuration options for visible whitespace (as of QScintilla 2.5)
 
 Version 5.1-snapshot-20110123:
 - bug fixes

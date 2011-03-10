@@ -1692,6 +1692,16 @@ class MiniEditor(QMainWindow):
         self.__textEdit.setIndentationGuides(Preferences.getEditor("IndentationGuides"))
         if Preferences.getEditor("ShowWhitespace"):
             self.__textEdit.setWhitespaceVisibility(QsciScintilla.WsVisible)
+            try:
+                self.setWhitespaceForegroundColor(
+                    Preferences.getEditorColour("WhitespaceForeground"))
+                self.setWhitespaceBackgroundColor(
+                    Preferences.getEditorColour("WhitespaceBackground"))
+                self.setWhitespaceSize(
+                    Preferences.getEditor("WhitespaceSize"))
+            except AttributeError:
+                # QScintilla before 2.5 doesn't support this
+                pass
         else:
             self.__textEdit.setWhitespaceVisibility(QsciScintilla.WsInvisible)
         self.__textEdit.setEolVisibility(Preferences.getEditor("ShowEOL"))

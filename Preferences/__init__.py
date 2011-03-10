@@ -233,6 +233,7 @@ class Prefs(object):
         "ConvertTabsOnLoad" : False,
         "AutomaticEOLConversion" : True,
         "ShowWhitespace" : False,
+        "WhitespaceSize" : 1, 
         "ShowEOL" : False,
         "UseMonospacedFont" : False,
         "WrapLongLines" : False,
@@ -266,7 +267,8 @@ class Prefs(object):
         "CallTipsEnabled" : False,
         "CallTipsVisible" : 0,
         "CallTipsStyle"   : Qsci.QsciScintilla.CallTipsNoContext,
-        "CallTipsScintillaOnFail" : False,  # show QScintilla calltips, if plugin fails
+        "CallTipsScintillaOnFail" : False,
+        # show QScintilla calltips, if plugin fails
         
         "AutoCheckSyntax" : True,
         "AutoReopen" : False,
@@ -404,7 +406,9 @@ class Prefs(object):
         "AnnotationsWarningForeground" : QtGui.QColor("#606000"),
         "AnnotationsWarningBackground" : QtGui.QColor("#ffffd0"), 
         "AnnotationsErrorForeground"   : QtGui.QColor("#600000"),
-        "AnnotationsErrorBackground"   : QtGui.QColor("#ffd0d0"), 
+        "AnnotationsErrorBackground"   : QtGui.QColor("#ffd0d0"),
+        "WhitespaceForeground"         : QtGui.QColor(QtCore.Qt.darkGray),
+        "WhitespaceBackground"         : QtGui.QColor(QtCore.Qt.white),
     }
     
     editorOtherFontsDefaults = {
@@ -1298,7 +1302,7 @@ def getEditor(key, prefClass = Prefs):
                  "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold", 
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout", 
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize", 
-                 "PostScriptLevel", "EOLMode", "ZoomFactor"]:
+                 "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize"]:
         return int(prefClass.settings.value("Editor/" + key, 
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters"]:

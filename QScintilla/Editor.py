@@ -3375,6 +3375,16 @@ class Editor(QsciScintillaCompat):
         self.setIndentationGuides(Preferences.getEditor("IndentationGuides"))
         if Preferences.getEditor("ShowWhitespace"):
             self.setWhitespaceVisibility(QsciScintilla.WsVisible)
+            try:
+                self.setWhitespaceForegroundColor(
+                    Preferences.getEditorColour("WhitespaceForeground"))
+                self.setWhitespaceBackgroundColor(
+                    Preferences.getEditorColour("WhitespaceBackground"))
+                self.setWhitespaceSize(
+                    Preferences.getEditor("WhitespaceSize"))
+            except AttributeError:
+                # QScintilla before 2.5 doesn't support this
+                pass
         else:
             self.setWhitespaceVisibility(QsciScintilla.WsInvisible)
         self.setEolVisibility(Preferences.getEditor("ShowEOL"))

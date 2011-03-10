@@ -4222,6 +4222,8 @@ eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_nonmat
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_nonmatchingBracesButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_selectionBackgroundButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_selectionForegroundButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_whitespaceBackgroundButton_clicked?4()
+eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.on_whitespaceForegroundButton_clicked?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.polishPage?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.save?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage?1()

@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>576</width>
-    <height>1304</height>
+    <height>1645</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -1171,12 +1171,12 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_10">
+    <widget class="QGroupBox" name="groupBox_11">
      <property name="title">
-      <string>Various</string>
+      <string>Whitespace</string>
      </property>
-     <layout class="QGridLayout" name="_14">
-      <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
        <widget class="QCheckBox" name="whitespaceCheckBox">
         <property name="toolTip">
          <string>Select whether whitspace characters shall be shown</string>
@@ -1186,7 +1186,106 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
+      <item>
+       <layout class="QHBoxLayout" name="_12">
+        <item>
+         <widget class="QLabel" name="textLabel1_8">
+          <property name="text">
+           <string>Whitespace size:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="whitespaceSizeSpinBox">
+          <property name="toolTip">
+           <string>Select the size of the dots used to represent visible whitespace</string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_15">
+        <item>
+         <widget class="QLabel" name="TextLabel2_2_2_2_2_9">
+          <property name="text">
+           <string>Whitespace foreground:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="whitespaceForegroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the foreground colour for visible whitespace</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="TextLabel2_2_2_2_2_10">
+          <property name="text">
+           <string>Whitespace background:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="whitespaceBackgroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the background colour for visible whitespace</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_10">
+     <property name="title">
+      <string>Various</string>
+     </property>
+     <layout class="QGridLayout" name="_14">
+      <item row="0" column="0">
        <widget class="QCheckBox" name="miniMenuCheckBox">
         <property name="toolTip">
          <string>Select to show a minimalistic context menu</string>
@@ -1257,6 +1356,9 @@
   <tabstop>annotationsErrorFgButton</tabstop>
   <tabstop>annotationsErrorBgButton</tabstop>
   <tabstop>whitespaceCheckBox</tabstop>
+  <tabstop>whitespaceSizeSpinBox</tabstop>
+  <tabstop>whitespaceForegroundButton</tabstop>
+  <tabstop>whitespaceBackgroundButton</tabstop>
   <tabstop>miniMenuCheckBox</tabstop>
  </tabstops>
  <resources/>
@@ -1269,11 +1371,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>510</x>
-     <y>244</y>
+     <y>279</y>
     </hint>
     <hint type="destinationlabel">
-     <x>551</x>
-     <y>247</y>
+     <x>554</x>
+     <y>283</y>
     </hint>
    </hints>
   </connection>
@@ -1285,11 +1387,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>492</x>
-     <y>977</y>
+     <y>1031</y>
     </hint>
     <hint type="destinationlabel">
      <x>544</x>
-     <y>981</y>
+     <y>1035</y>
     </hint>
    </hints>
   </connection>
@@ -1300,12 +1402,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>390</x>
-     <y>1090</y>
+     <x>502</x>
+     <y>1152</y>
     </hint>
     <hint type="destinationlabel">
-     <x>541</x>
-     <y>1092</y>
+     <x>555</x>
+     <y>1156</y>
     </hint>
    </hints>
   </connection>
