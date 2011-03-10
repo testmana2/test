@@ -276,7 +276,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         self.editorColours["CaretLineBackground"] = \
             self.selectColour(self.caretlineBackgroundButton, 
-                self.editorColours["CaretLineBackground"])
+                self.editorColours["CaretLineBackground"], True)
         
     @pyqtSlot()
     def on_selectionForegroundButton_clicked(self):
@@ -294,7 +294,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         self.editorColours["SelectionBackground"] = \
             self.selectColour(self.selectionBackgroundButton, 
-                self.editorColours["SelectionBackground"])
+                self.editorColours["SelectionBackground"], True)
         
     @pyqtSlot()
     def on_currentLineMarkerButton_clicked(self):
@@ -303,7 +303,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         self.editorColours["CurrentMarker"] = \
             self.selectColour(self.currentLineMarkerButton, 
-                self.editorColours["CurrentMarker"])
+                self.editorColours["CurrentMarker"], True)
         
     @pyqtSlot()
     def on_errorMarkerButton_clicked(self):
@@ -312,7 +312,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         self.editorColours["ErrorMarker"] = \
             self.selectColour(self.errorMarkerButton, 
-                self.editorColours["ErrorMarker"])
+                self.editorColours["ErrorMarker"], True)
         
     @pyqtSlot()
     def on_marginsForegroundButton_clicked(self):

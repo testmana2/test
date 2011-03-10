@@ -67,7 +67,7 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         """
         self.editorColours["SearchMarkers"] = \
             self.selectColour(self.searchMarkerButton, 
-                self.editorColours["SearchMarkers"])
+                self.editorColours["SearchMarkers"], True)
 
 def create(dlg):
     """

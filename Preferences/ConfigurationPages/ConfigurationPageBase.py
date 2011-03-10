@@ -56,15 +56,21 @@ class ConfigurationPageBase(QWidget):
         button.setIcon(QIcon(pm))
         return colour
         
-    def selectColour(self, button, colourVar):
+    def selectColour(self, button, colourVar, showAlpha = False):
         """
         Public method used by the colour selection buttons.
         
         @param button reference to a button to show the colour on (QPushButton)
         @param colourVar reference to the variable containing the colour (QColor)
+        @param showAlpha flag indicating to show a selection for the alpha
+            channel (boolean)
         @return selected colour (QColor)
         """
-        colour = QColorDialog.getColor(colourVar)
+        if showAlpha:
+            colour = QColorDialog.getColor(colourVar, None, "", 
+                QColorDialog.ShowAlphaChannel)
+        else:
+            colour = QColorDialog.getColor(colourVar)
         if colour.isValid():
             size = button.iconSize()
             pm = QPixmap(size.width(), size.height())

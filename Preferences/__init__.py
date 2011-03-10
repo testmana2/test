@@ -1332,7 +1332,11 @@ def getEditorColour(key, prefClass = Prefs):
     """
     col = prefClass.settings.value("Editor/Colour/" + key)
     if col is not None:
-        return QtGui.QColor(col)
+        if len(col) == 9:
+            # color string with alpha
+            return QtGui.QColor.fromRgba(int(col[1:],16))
+        else:
+            return QtGui.QColor(col)
     else:
         return prefClass.editorColourDefaults[key]
     
@@ -1344,7 +1348,11 @@ def setEditorColour(key, value, prefClass = Prefs):
     @param value the colour to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Editor/Colour/" + key, value.name())
+    if value.alpha() < 255:
+        val = "#{0:8x}".format(value.rgba())
+    else:
+        val = value.name()
+    prefClass.settings.setValue("Editor/Colour/" + key, val)
     
 def getEditorOtherFonts(key, prefClass = Prefs):
     """

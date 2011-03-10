@@ -752,6 +752,11 @@ class QsciScintillaCompat(QsciScintilla):
         
         self.SendScintilla(QsciScintilla.SCI_INDICSETSTYLE, indicator, style)
         self.SendScintilla(QsciScintilla.SCI_INDICSETFORE, indicator, color)
+        try:
+            self.SendScintilla(QsciScintilla.SCI_INDICSETALPHA, indicator,
+                               color.alpha())
+        except AttributeError:
+            pass
     
     def setCurrentIndicator(self, indicator):
         """

@@ -103,7 +103,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         self.editorColours["SpellingMarkers"] = \
             self.selectColour(self.spellingMarkerButton, 
-                self.editorColours["SpellingMarkers"])
+                self.editorColours["SpellingMarkers"], True)
     
     @pyqtSlot()
     def on_pwlButton_clicked(self):
