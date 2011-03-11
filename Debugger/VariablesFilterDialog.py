@@ -23,7 +23,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
     It opens a dialog window for the configuration of the variables type
     filter to be applied during a debugging session.
     """
-    def __init__(self, parent = None, name = None, modal = False):
+    def __init__(self, parent=None, name=None, modal=False):
         """
         Constructor
         
@@ -31,7 +31,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         @param name name of this dialog (string)
         @param modal flag to indicate a modal dialog (boolean)
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)
@@ -75,7 +75,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         
     def setSelection(self, lList, gList):
         """
-        Public slot to set the current selection. 
+        Public slot to set the current selection.
         
         @param lList local variables filter (list of int)
         @param gList global variables filter (list of int)

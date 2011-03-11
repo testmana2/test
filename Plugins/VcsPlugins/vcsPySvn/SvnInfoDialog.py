@@ -18,12 +18,13 @@ from .SvnUtilities import formatTime
 from .SvnDialogMixin import SvnDialogMixin
 from VCS.Ui_RepositoryInfoDialog import Ui_VcsRepositoryInfoDialog
 
+
 class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
     """
-    Class implementing a dialog to show repository related information 
+    Class implementing a dialog to show repository related information
     for a file/directory.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -58,7 +59,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
         cwd = os.getcwd()
         os.chdir(projectPath)
         try:
-            entries = self.client.info2(fn, recurse = False)
+            entries = self.client.info2(fn, recurse=False)
             infoStr = "<table>"
             for path, info in entries:
                 infoStr += self.trUtf8(

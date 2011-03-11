@@ -21,17 +21,18 @@ import Utilities
 
 import Utilities.ModuleParser
 
-ProjectBrowserItemSimpleDirectory  = 100
-ProjectBrowserItemDirectory        = 101
-ProjectBrowserItemFile             = 102
+ProjectBrowserItemSimpleDirectory = 100
+ProjectBrowserItemDirectory = 101
+ProjectBrowserItemFile = 102
 
-ProjectBrowserNoType          = 0
-ProjectBrowserSourceType      = 1
-ProjectBrowserFormType        = 2
-ProjectBrowserInterfaceType   = 3
+ProjectBrowserNoType = 0
+ProjectBrowserSourceType = 1
+ProjectBrowserFormType = 2
+ProjectBrowserInterfaceType = 3
 ProjectBrowserTranslationType = 4
-ProjectBrowserOthersType      = 5
-ProjectBrowserResourceType    = 6
+ProjectBrowserOthersType = 5
+ProjectBrowserResourceType = 6
+
 
 class ProjectBrowserItemMixin(object):
     """
@@ -39,7 +40,7 @@ class ProjectBrowserItemMixin(object):
     
     It is meant to be used as a mixin class.
     """
-    def __init__(self, type_, bold = False):
+    def __init__(self, type_, bold=False):
         """
         Constructor
         
@@ -101,11 +102,12 @@ class ProjectBrowserItemMixin(object):
         """
         self._projectTypes.append(type_)
 
+
 class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
     """
     Class implementing the data structure for project browser simple directory items.
     """
-    def __init__(self, parent, projectType, text, path = ""):
+    def __init__(self, parent, projectType, text, path=""):
         """
         Constructor
         
@@ -128,7 +130,7 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
         else:
             self.icon = UI.PixmapCache.getIcon("dirClosed.png")
     
-    def setName(self, dinfo, full = True):
+    def setName(self, dinfo, full=True):
         """
         Public method to set the directory name.
         
@@ -161,11 +163,12 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
         
         return BrowserItem.lessThan(self, other, column, order)
 
+
 class ProjectBrowserDirectoryItem(BrowserDirectoryItem, ProjectBrowserItemMixin):
     """
     Class implementing the data structure for project browser directory items.
     """
-    def __init__(self, parent, dinfo, projectType, full = True, bold = False):
+    def __init__(self, parent, dinfo, projectType, full=True, bold=False):
         """
         Constructor
         
@@ -180,12 +183,13 @@ class ProjectBrowserDirectoryItem(BrowserDirectoryItem, ProjectBrowserItemMixin)
         
         self.type_ = ProjectBrowserItemDirectory
 
+
 class ProjectBrowserFileItem(BrowserFileItem, ProjectBrowserItemMixin):
     """
     Class implementing the data structure for project browser file items.
     """
-    def __init__(self, parent, finfo, projectType, full = True, bold = False,
-                 sourceLanguage = ""):
+    def __init__(self, parent, finfo, projectType, full=True, bold=False,
+                 sourceLanguage=""):
         """
         Constructor
         
@@ -200,6 +204,7 @@ class ProjectBrowserFileItem(BrowserFileItem, ProjectBrowserItemMixin):
         ProjectBrowserItemMixin.__init__(self, projectType, bold)
         
         self.type_ = ProjectBrowserItemFile
+
 
 class ProjectBrowserModel(BrowserModel):
     """
@@ -231,30 +236,30 @@ class ProjectBrowserModel(BrowserModel):
         self.inRefresh = False
         
         self.projectBrowserTypes = {
-            "SOURCES"      : ProjectBrowserSourceType,
-            "FORMS"        : ProjectBrowserFormType,
-            "RESOURCES"    : ProjectBrowserResourceType,
-            "INTERFACES"   : ProjectBrowserInterfaceType,
-            "TRANSLATIONS" : ProjectBrowserTranslationType,
-            "OTHERS"       : ProjectBrowserOthersType,
+            "SOURCES": ProjectBrowserSourceType,
+            "FORMS": ProjectBrowserFormType,
+            "RESOURCES": ProjectBrowserResourceType,
+            "INTERFACES": ProjectBrowserInterfaceType,
+            "TRANSLATIONS": ProjectBrowserTranslationType,
+            "OTHERS": ProjectBrowserOthersType,
         }
         
         self.colorNames = {
-            "A" : "VcsAdded",
-            "M" : "VcsModified",
-            "O" : "VcsRemoved", 
-            "R" : "VcsReplaced", 
-            "U" : "VcsUpdate",
-            "Z" : "VcsConflict",
+            "A": "VcsAdded",
+            "M": "VcsModified",
+            "O": "VcsRemoved",
+            "R": "VcsReplaced",
+            "U": "VcsUpdate",
+            "Z": "VcsConflict",
         }
         self.itemBackgroundColors = {
-            " " : QColor(),
-            "A" : Preferences.getProjectBrowserColour(self.colorNames["A"]),
-            "M" : Preferences.getProjectBrowserColour(self.colorNames["M"]),
-            "O" : Preferences.getProjectBrowserColour(self.colorNames["O"]),
-            "R" : Preferences.getProjectBrowserColour(self.colorNames["R"]),
-            "U" : Preferences.getProjectBrowserColour(self.colorNames["U"]),
-            "Z" : Preferences.getProjectBrowserColour(self.colorNames["Z"]),
+            " ": QColor(),
+            "A": Preferences.getProjectBrowserColour(self.colorNames["A"]),
+            "M": Preferences.getProjectBrowserColour(self.colorNames["M"]),
+            "O": Preferences.getProjectBrowserColour(self.colorNames["O"]),
+            "R": Preferences.getProjectBrowserColour(self.colorNames["R"]),
+            "U": Preferences.getProjectBrowserColour(self.colorNames["U"]),
+            "Z": Preferences.getProjectBrowserColour(self.colorNames["Z"]),
         }
         
         self.highLightColor = Preferences.getProjectBrowserColour("Highlighted")
@@ -293,7 +298,7 @@ class ProjectBrowserModel(BrowserModel):
         
         return BrowserModel.data(self, index, role)
     
-    def populateItem(self, parentItem, repopulate = False):
+    def populateItem(self, parentItem, repopulate=False):
         """
         Public method to populate an item's subtree.
         
@@ -309,7 +314,7 @@ class ProjectBrowserModel(BrowserModel):
         else:
             BrowserModel.populateItem(self, parentItem, repopulate)
 
-    def populateProjectDirectoryItem(self, parentItem, repopulate = False):
+    def populateProjectDirectoryItem(self, parentItem, repopulate=False):
         """
         Public method to populate a directory item's subtree.
         
@@ -342,7 +347,7 @@ class ProjectBrowserModel(BrowserModel):
             for f in entryInfoList:
                 if f.isDir():
                     node = ProjectBrowserDirectoryItem(parentItem,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        Utilities.toNativeSeparators(f.absoluteFilePath()),
                         parentItem.getProjectTypes()[0], False)
                 else:
                     node = ProjectBrowserFileItem(parentItem,
@@ -415,7 +420,7 @@ class ProjectBrowserModel(BrowserModel):
                 else:
                     itm = ProjectBrowserFileItem(parentItem, fname,
                         self.projectBrowserTypes[key], False, bold,
-                        sourceLanguage = sourceLanguage)
+                        sourceLanguage=sourceLanguage)
                 self._addItem(itm, parentItem)
                 if self.project.vcs is not None:
                     if states[os.path.normcase(fname)] == self.project.vcs.canBeCommitted:
@@ -427,7 +432,7 @@ class ProjectBrowserModel(BrowserModel):
         self.inRefresh = False
         self.reset()
 
-    def findParentItemByName(self, type_, name, dontSplit = False):
+    def findParentItemByName(self, type_, name, dontSplit=False):
         """
         Public method to find an item given it's name.
         
@@ -473,7 +478,7 @@ class ProjectBrowserModel(BrowserModel):
         else:
             return (self.rootItem, name)
     
-    def findChildItem(self, text, column, parentItem = None):
+    def findChildItem(self, text, column, parentItem=None):
         """
         Public method to find a child item given some text.
         
@@ -491,7 +496,7 @@ class ProjectBrowserModel(BrowserModel):
         
         return None
         
-    def addNewItem(self, typeString, name, additionalTypeStrings = []):
+    def addNewItem(self, typeString, name, additionalTypeStrings=[]):
         """
         Public method to add a new item to the model.
         
@@ -522,7 +527,7 @@ class ProjectBrowserModel(BrowserModel):
                 sourceLanguage = ""
             itm = ProjectBrowserFileItem(parentItem, fname,
                 self.projectBrowserTypes[typeString], False, bold,
-                sourceLanguage = sourceLanguage)
+                sourceLanguage=sourceLanguage)
         self.__addVCSStatus(itm, fname)
         if additionalTypeStrings:
             for additionalTypeString in additionalTypeStrings:
@@ -576,9 +581,9 @@ class ProjectBrowserModel(BrowserModel):
         """
         itm = self.findItem(name)
         if itm is None:
-            index =  QModelIndex()
+            index = QModelIndex()
         else:
-            index =  self.createIndex(itm.row(), 0, itm)
+            index = self.createIndex(itm.row(), 0, itm)
         return index
     
     def directoryChanged(self, path):
@@ -621,12 +626,12 @@ class ProjectBrowserModel(BrowserModel):
                     cnt, cnt)
                 if f.isDir():
                     node = ProjectBrowserDirectoryItem(itm,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
-                        itm.getProjectTypes()[0], 
+                        Utilities.toNativeSeparators(f.absoluteFilePath()),
+                        itm.getProjectTypes()[0],
                         False)
                 else:
                     node = ProjectBrowserFileItem(itm,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        Utilities.toNativeSeparators(f.absoluteFilePath()),
                         itm.getProjectTypes()[0])
                 self._addItem(node, itm)
                 if self.project.vcs is not None:
@@ -673,7 +678,7 @@ class ProjectBrowserModel(BrowserModel):
         else:
             item.addVcsStatus("")
     
-    def __updateVCSStatus(self, item, name, recursive = True):
+    def __updateVCSStatus(self, item, name, recursive=True):
         """
         Private method used to update the vcs status of a node.
         
@@ -699,7 +704,7 @@ class ProjectBrowserModel(BrowserModel):
         index = self.createIndex(item.row(), 0, item)
         self.dataChanged.emit(index, index)
     
-    def updateVCSStatus(self, name, recursive = True):
+    def updateVCSStatus(self, name, recursive=True):
         """
         Public method used to update the vcs status of a node.
         
@@ -764,9 +769,9 @@ class ProjectBrowserModel(BrowserModel):
         """
         Public slot to record the (non normal) VCS states.
         
-        @param statesList list of VCS state entries (list of strings) giving the 
-            states in the first column and the path relative to the project 
-            directory starting with the third column. The allowed status flags 
+        @param statesList list of VCS state entries (list of strings) giving the
+            states in the first column and the path relative to the project
+            directory starting with the third column. The allowed status flags
             are:
             <ul>
                 <li>"A" path was added but not yet comitted</li>
@@ -804,7 +809,7 @@ class ProjectBrowserModel(BrowserModel):
             if itm:
                 itm.setVcsState(state)
                 index1 = self.createIndex(itm.row(), 0, itm)
-                index2 = self.createIndex(itm.row(), 
+                index2 = self.createIndex(itm.row(),
                     self.rootItem.columnCount(), itm)
                 self.dataChanged.emit(index1, index2)
             
@@ -844,7 +849,7 @@ class ProjectBrowserModel(BrowserModel):
                 if state != itm.vcsState:
                     itm.setVcsState(state)
                     index1 = self.createIndex(itm.row(), 0, itm)
-                    index2 = self.createIndex(itm.row(), 
+                    index2 = self.createIndex(itm.row(),
                         self.rootItem.columnCount(), itm)
                     self.dataChanged.emit(index1, index2)
             path, tail = os.path.split(path)

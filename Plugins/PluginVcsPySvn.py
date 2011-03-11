@@ -36,6 +36,7 @@ pyqtApi = 2
 
 error = ""
 
+
 def exeDisplayData():
     """
     Public method to support the display of some executable info.
@@ -48,20 +49,21 @@ def exeDisplayData():
             text = os.path.dirname(pysvn.__file__)
         except AttributeError:
             text = "PySvn"
-        version =  ".".join([str(v) for v in pysvn.version])
+        version = ".".join([str(v) for v in pysvn.version])
     except ImportError:
         text = "PySvn"
         version = ""
     
     data = {
-        "programEntry" : False, 
-        "header"       : QApplication.translate("VcsPySvnPlugin",
-                            "Version Control - Subversion (pysvn)"), 
-        "text"         : text, 
-        "version"      : version, 
+        "programEntry": False,
+        "header": QApplication.translate("VcsPySvnPlugin",
+                            "Version Control - Subversion (pysvn)"),
+        "text": text,
+        "version": version,
     }
     
     return data
+
 
 def getVcsSystemIndicator():
     """
@@ -80,6 +82,7 @@ def getVcsSystemIndicator():
         pass
     return data
 
+
 def displayString():
     """
     Public function to get the display string.
@@ -94,6 +97,7 @@ def displayString():
 
 subversionCfgPluginObject = None
 
+
 def createConfigurationPage(configDlg):
     """
     Module function to create the configuration page.
@@ -107,6 +111,7 @@ def createConfigurationPage(configDlg):
     page = SubversionPage(subversionCfgPluginObject)
     return page
     
+
 def getConfigData():
     """
     Module function returning data as required by the configuration dialog.
@@ -114,12 +119,13 @@ def getConfigData():
     @return dictionary with key "zzz_subversionPage" containing the relevant data
     """
     return {
-        "zzz_subversionPage" : \
-            [QApplication.translate("VcsPySvnPlugin", "Subversion"), 
-             os.path.join("VcsPlugins", "vcsPySvn", "icons", 
+        "zzz_subversionPage": \
+            [QApplication.translate("VcsPySvnPlugin", "Subversion"),
+             os.path.join("VcsPlugins", "vcsPySvn", "icons",
                           "preferences-subversion.png"),
              createConfigurationPage, "vcsPage", None],
     }
+
 
 def prepareUninstall():
     """
@@ -128,6 +134,7 @@ def prepareUninstall():
     if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
         Preferences.Prefs.settings.remove("Subversion")
     
+
 class VcsPySvnPlugin(QObject):
     """
     Class implementing the PySvn version control plugin.
@@ -142,19 +149,19 @@ class VcsPySvnPlugin(QObject):
         self.__ui = ui
         
         self.__subversionDefaults = {
-            "StopLogOnCopy"  : 1, 
-            "LogLimit"       : 100, 
-            "CommitMessages" : 20, 
+            "StopLogOnCopy": 1,
+            "LogLimit": 100,
+            "CommitMessages": 20,
         }
         
         from VcsPlugins.vcsPySvn.ProjectHelper import SvnProjectHelper
         self.__projectHelperObject = SvnProjectHelper(None, None)
         try:
-            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject, 
+            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject,
                                          pluginType)
         except KeyError:
             pass    # ignore duplicate registration
-        readShortcuts(pluginName = pluginTypename)
+        readShortcuts(pluginName=pluginTypename)
     
     def getProjectHelper(self):
         """
@@ -168,7 +175,7 @@ class VcsPySvnPlugin(QObject):
         """
         Public method to activate this plugin.
         
-        @return tuple of reference to instantiated viewmanager and 
+        @return tuple of reference to instantiated viewmanager and
             activation status (boolean)
         """
         from VcsPlugins.vcsPySvn.subversion import Subversion
@@ -198,7 +205,7 @@ class VcsPySvnPlugin(QObject):
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(
                 "Subversion/" + key))
-        else: 
+        else:
             return Preferences.Prefs.settings.value("Subversion/" + key)
     
     def setPreferences(self, key, value):

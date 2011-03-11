@@ -14,7 +14,8 @@ from .Ui_EditorCalltipsQScintillaPage import Ui_EditorCalltipsQScintillaPage
 
 import Preferences
 
-class EditorCalltipsQScintillaPage(ConfigurationPageBase, 
+
+class EditorCalltipsQScintillaPage(ConfigurationPageBase,
                                    Ui_EditorCalltipsQScintillaPage):
     """
     Class implementing the QScintilla Calltips configuration page.
@@ -41,14 +42,15 @@ class EditorCalltipsQScintillaPage(ConfigurationPageBase,
         Public slot to save the EditorCalltips configuration.
         """
         if self.ctNoContextButton.isChecked():
-            Preferences.setEditor("CallTipsStyle", 
+            Preferences.setEditor("CallTipsStyle",
                                   QsciScintilla.CallTipsNoContext)
         elif self.ctNoAutoCompletionButton.isChecked():
-            Preferences.setEditor("CallTipsStyle", 
+            Preferences.setEditor("CallTipsStyle",
                                   QsciScintilla.CallTipsNoAutoCompletionContext)
         elif self.ctContextButton.isChecked():
-            Preferences.setEditor("CallTipsStyle", 
+            Preferences.setEditor("CallTipsStyle",
                                   QsciScintilla.CallTipsContext)
+
 
 def create(dlg):
     """

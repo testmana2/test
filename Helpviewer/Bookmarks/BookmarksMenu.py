@@ -17,6 +17,7 @@ import Helpviewer.HelpWindow
 from .BookmarksModel import BookmarksModel
 from .BookmarkNode import BookmarkNode
 
+
 class BookmarksMenu(E5ModelMenu):
     """
     Class implementing the bookmarks menu base class.
@@ -27,7 +28,7 @@ class BookmarksMenu(E5ModelMenu):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -61,11 +62,11 @@ class BookmarksMenu(E5ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
         else:
             self.openUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
         self.resetFlags()
     
@@ -114,11 +115,11 @@ class BookmarksMenu(E5ModelMenu):
             
             if i == 0:
                 self.openUrl.emit(
-                    child.data(BookmarksModel.UrlRole), 
+                    child.data(BookmarksModel.UrlRole),
                     child.data(Qt.DisplayRole))
             else:
                 self.newUrl.emit(
-                    child.data(BookmarksModel.UrlRole), 
+                    child.data(BookmarksModel.UrlRole),
                     child.data(Qt.DisplayRole))
     
     def __contextMenuRequested(self, pos):
@@ -136,7 +137,7 @@ class BookmarksMenu(E5ModelMenu):
             menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
             menuAction.setData(v)
             
-            menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"), 
+            menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                 self.__openBookmarkInNewTab)
             menuAction.setData(v)
         
@@ -160,7 +161,7 @@ class BookmarksMenu(E5ModelMenu):
         idx = self.index(self.sender())
         
         self.openUrl.emit(
-            idx.data(BookmarksModel.UrlRole), 
+            idx.data(BookmarksModel.UrlRole),
             idx.data(Qt.DisplayRole))
     
     def __openBookmarkInNewTab(self):
@@ -170,7 +171,7 @@ class BookmarksMenu(E5ModelMenu):
         idx = self.index(self.sender())
         
         self.newUrl.emit(
-            idx.data(BookmarksModel.UrlRole), 
+            idx.data(BookmarksModel.UrlRole),
             idx.data(Qt.DisplayRole))
     
     def __removeBookmark(self):
@@ -182,11 +183,12 @@ class BookmarksMenu(E5ModelMenu):
 
 ##########################################################################################
 
+
 class BookmarksMenuBarMenu(BookmarksMenu):
     """
     Class implementing a dynamically populated menu for bookmarks.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

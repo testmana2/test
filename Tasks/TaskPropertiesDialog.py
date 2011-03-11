@@ -21,7 +21,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
     """
     Class implementing the task properties dialog.
     """
-    def __init__(self, task = None, parent = None, projectOpen = False):
+    def __init__(self, task=None, parent=None, projectOpen=False):
         """
         Constructor
         
@@ -39,7 +39,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         if task is not None:
             self.descriptionEdit.setText(task.description)
             self.longtextEdit.setText(task.longtext)
-            self.creationLabel.setText(time.strftime("%Y-%m-%d, %H:%M:%S", 
+            self.creationLabel.setText(time.strftime("%Y-%m-%d, %H:%M:%S",
                                                      time.localtime(task.created)))
             self.priorityCombo.setCurrentIndex(task.priority)
             self.projectCheckBox.setChecked(task._isProjectTask)
@@ -66,5 +66,5 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
                 project flag and long text (string, string, boolean, boolean, string)
         """
         return (self.descriptionEdit.text(), self.priorityCombo.currentIndex(),
-                self.completedCheckBox.isChecked(), self.projectCheckBox.isChecked(), 
+                self.completedCheckBox.isChecked(), self.projectCheckBox.isChecked(),
                 self.longtextEdit.toPlainText())

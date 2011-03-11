@@ -14,6 +14,7 @@ from E5Gui.E5Application import e5App
 
 from .EditBreakpointDialog import EditBreakpointDialog
 
+
 class BreakPointViewer(QTreeView):
     """
     Class implementing the Breakpoint viewer widget.
@@ -25,7 +26,7 @@ class BreakPointViewer(QTreeView):
     """
     sourceFile = pyqtSignal(str, int)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -94,7 +95,7 @@ class BreakPointViewer(QTreeView):
         """
         Private slot to resort the tree.
         """
-        self.model().sort(self.header().sortIndicatorSection(), 
+        self.model().sort(self.header().sortIndicatorSection(),
                           self.header().sortIndicatorOrder())
         
     def __toSourceIndex(self, index):
@@ -113,7 +114,7 @@ class BreakPointViewer(QTreeView):
         """
         return self.sortingModel.mapFromSource(sindex)
         
-    def __setRowSelected(self, index, selected = True):
+    def __setRowSelected(self, index, selected=True):
         """
         Private slot to select a complete row.
         
@@ -168,15 +169,15 @@ class BreakPointViewer(QTreeView):
         self.multiMenu = QMenu()
         self.multiMenu.addAction(self.trUtf8("Add"), self.__addBreak)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Enable selected"), 
+        self.multiMenu.addAction(self.trUtf8("Enable selected"),
             self.__enableSelectedBreaks)
         self.multiMenu.addAction(self.trUtf8("Enable all"), self.__enableAllBreaks)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Disable selected"), 
+        self.multiMenu.addAction(self.trUtf8("Disable selected"),
             self.__disableSelectedBreaks)
         self.multiMenu.addAction(self.trUtf8("Disable all"), self.__disableAllBreaks)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Delete selected"), 
+        self.multiMenu.addAction(self.trUtf8("Delete selected"),
             self.__deleteSelectedBreaks)
         self.multiMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllBreaks)
         self.multiMenu.addSeparator()
@@ -214,8 +215,8 @@ class BreakPointViewer(QTreeView):
         Private slot to handle the add breakpoint context menu entry.
         """
         dlg = EditBreakpointDialog((self.fnHistory[0], None), None,
-            self.condHistory, self, modal = 1, addMode = 1,
-            filenameHistory = self.fnHistory)
+            self.condHistory, self, modal=1, addMode=1,
+            filenameHistory=self.fnHistory)
         if dlg.exec_() == QDialog.Accepted:
             fn, line, cond, temp, enabled, count = dlg.getAddData()
             if fn is not None:
@@ -264,7 +265,7 @@ class BreakPointViewer(QTreeView):
             fn, line, cond, temp, enabled, count = bp[:6]
             
             dlg = EditBreakpointDialog((fn, line), (cond, temp, enabled, count),
-                self.condHistory, self, modal = True)
+                self.condHistory, self, modal=True)
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, count = dlg.getData()
                 if cond:
@@ -272,7 +273,7 @@ class BreakPointViewer(QTreeView):
                         self.condHistory.remove(cond)
                     self.condHistory.insert(0, cond)
                 
-                self.__model.setBreakPointByIndex(sindex, 
+                self.__model.setBreakPointByIndex(sindex,
                     fn, line, (cond, temp, enabled, count))
                 self.__resizeColumns()
                 self.__resort()

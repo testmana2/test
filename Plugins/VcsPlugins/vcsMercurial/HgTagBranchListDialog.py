@@ -19,11 +19,12 @@ from .Ui_HgTagBranchListDialog import Ui_HgTagBranchListDialog
 
 import Preferences
 
+
 class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
     """
     Class implementing a dialog to show a list of tags or branches.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -166,7 +167,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         """
         Private method to resort the tree.
         """
-        self.tagList.sortItems(self.tagList.sortColumn(), 
+        self.tagList.sortItems(self.tagList.sortColumn(),
             self.tagList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -186,9 +187,9 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         @param name name of the tag/branch (string)
         """
         itm = QTreeWidgetItem(self.tagList, [
-            "{0:>7}".format(revision), 
-            changeset, 
-            status, 
+            "{0:>7}".format(revision),
+            changeset,
+            status,
             name])
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignRight)
@@ -204,8 +205,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace').strip()
             l = s.split()
             if l[-1][0] in "1234567890":
@@ -240,8 +241,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

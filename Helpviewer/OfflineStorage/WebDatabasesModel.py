@@ -12,11 +12,12 @@ import sys
 from PyQt4.QtCore import QAbstractItemModel, QModelIndex, Qt
 from PyQt4.QtWebKit import QWebSecurityOrigin, QWebDatabase
 
+
 class WebDatabasesModel(QAbstractItemModel):
     """
     Class implementing the web databases model.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -24,7 +25,7 @@ class WebDatabasesModel(QAbstractItemModel):
         """
         QAbstractItemModel.__init__(self, parent)
         self.__headers = [
-            self.trUtf8("Name"), 
+            self.trUtf8("Name"),
             self.trUtf8("Size")
         ]
         
@@ -32,7 +33,7 @@ class WebDatabasesModel(QAbstractItemModel):
         for origin in QWebSecurityOrigin.allOrigins():
             self.__data.append([origin, origin.databases()])
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove databases from the model.
         
@@ -53,7 +54,7 @@ class WebDatabasesModel(QAbstractItemModel):
             self.endRemoveRows()
         else:
             for parentRow in range(row, row + count):
-                self.beginRemoveRows(self.index(parentRow, 0, parent), 
+                self.beginRemoveRows(self.index(parentRow, 0, parent),
                                      0, len(self.__data[parentRow][1]) - 1)
                 for db in self.__data[parentRow][1]:
                     QWebDatabase.removeDatabase(db)
@@ -62,7 +63,7 @@ class WebDatabasesModel(QAbstractItemModel):
         
         return True
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -78,7 +79,7 @@ class WebDatabasesModel(QAbstractItemModel):
                 pass
         return QAbstractItemModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -99,14 +100,14 @@ class WebDatabasesModel(QAbstractItemModel):
                         return self.trUtf8("Local")
                     elif origin.port() == 0:
                         return "{0}://{1}".format(
-                            origin.scheme(), 
-                            origin.host(), 
+                            origin.scheme(),
+                            origin.host(),
                         )
                     else:
                         return "{0}://{1}:{2}".format(
-                            origin.scheme(), 
-                            origin.host(), 
-                            origin.port(), 
+                            origin.scheme(),
+                            origin.host(),
+                            origin.port(),
                         )
                 elif index.column() == 1:
                     return self.__dataString(origin.databaseUsage())
@@ -118,7 +119,7 @@ class WebDatabasesModel(QAbstractItemModel):
                 elif index.column() == 1:
                     return self.__dataString(db.size())
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -130,7 +131,7 @@ class WebDatabasesModel(QAbstractItemModel):
         else:
             return len(self.__headers)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -145,7 +146,7 @@ class WebDatabasesModel(QAbstractItemModel):
         else:
             return len(self.__data[parent.row()][1])
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to get a model index for an entry.
         
@@ -163,7 +164,7 @@ class WebDatabasesModel(QAbstractItemModel):
         else:
             return self.createIndex(row, column, sys.maxsize)
     
-    def parent(self, index = QModelIndex()):
+    def parent(self, index=QModelIndex()):
         """
         Public method to get the index of the parent entry.
         
@@ -178,7 +179,7 @@ class WebDatabasesModel(QAbstractItemModel):
         
         return self.createIndex(index.internalId(), 0)
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if a parent node has some children.
         

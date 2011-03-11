@@ -67,12 +67,12 @@ Module implementing a debug client base class.
 </p><p>
     The protocol is as follows.  First the client opens a connection to the
     debugger and then sends a series of one line commands.  A command is either
-    &gt;Load&lt;, &gt;Step&lt;, &gt;StepInto&lt;, ... or a Python statement. 
+    &gt;Load&lt;, &gt;Step&lt;, &gt;StepInto&lt;, ... or a Python statement.
     See DebugProtocol.py for a listing of valid protocol tokens.
 </p><p>
     A Python statement consists of the statement to execute, followed (in a
     separate line) by &gt;OK?&lt;.  If the statement was incomplete then the response
-    is &gt;Continue&lt;.  If there was an exception then the response is 
+    is &gt;Continue&lt;.  If there was an exception then the response is
     &gt;Exception&lt;.
     Otherwise the response is &gt;OK&lt;.  The reason for the &gt;OK?&lt; part is to
     provide a sentinal (ie. the responding &gt;OK&lt;) after any possible output as a
@@ -220,7 +220,7 @@ client capabilities (integer)
 </dd>
 </dl><a NAME="DebugClientBase.__compileFileSource" ID="DebugClientBase.__compileFileSource"></a>
 <h4>DebugClientBase.__compileFileSource</h4>
-<b>__compileFileSource</b>(<i>filename, mode = 'exec'</i>)
+<b>__compileFileSource</b>(<i>filename, mode='exec'</i>)
 <p>
         Private method to compile source code read from a file.
 </p><dl>
@@ -310,17 +310,17 @@ type of the variable to be formatted (string)
 <dt>Returns:</dt>
 <dd>
 A tuple consisting of a list of formatted variables. Each
-            variable entry is a tuple of three elements, the variable name, 
+            variable entry is a tuple of three elements, the variable name,
             its type and value.
 </dd>
 </dl><a NAME="DebugClientBase.__formatVariablesList" ID="DebugClientBase.__formatVariablesList"></a>
 <h4>DebugClientBase.__formatVariablesList</h4>
-<b>__formatVariablesList</b>(<i>keylist, dict, scope, filter = [], formatSequences = False</i>)
+<b>__formatVariablesList</b>(<i>keylist, dict, scope, filter=[], formatSequences=False</i>)
 <p>
         Private method to produce a formated variables list.
 </p><p>
         The dictionary passed in to it is scanned. Variables are
-        only added to the list, if their type is not contained 
+        only added to the list, if their type is not contained
         in the filter list and their name doesn't match any of the filter expressions.
         The formated variables list (a list of tuples of 3 values) is returned.
 </p><dl>
@@ -339,7 +339,7 @@ the dictionary to be scanned
 </dd><dt><i>filter</i></dt>
 <dd>
 the indices of variable types to be filtered. Variables are
-            only added to the list, if their type is not contained in the filter 
+            only added to the list, if their type is not contained in the filter
             list.
 </dd><dt><i>formatSequences</i></dt>
 <dd>
@@ -351,7 +351,7 @@ flag indicating, that sequence or dictionary variables
 <dt>Returns:</dt>
 <dd>
 A tuple consisting of a list of formatted variables. Each variable
-            entry is a tuple of three elements, the variable name, its type and 
+            entry is a tuple of three elements, the variable name, its type and
             value.
 </dd>
 </dl><a NAME="DebugClientBase.__generateFilterObjects" ID="DebugClientBase.__generateFilterObjects"></a>
@@ -372,7 +372,7 @@ string of filter patterns separated by ';'
 <h4>DebugClientBase.__getSysPath</h4>
 <b>__getSysPath</b>(<i>firstEntry</i>)
 <p>
-        Private slot to calculate a path list including the PYTHONPATH 
+        Private slot to calculate a path list including the PYTHONPATH
         environment variable.
 </p><dl>
 <dt><i>firstEntry</i></dt>
@@ -436,7 +436,7 @@ traceback for the exception
 <p>
         Public method to convert a filename to an absolute name.
 </p><p>
-        sys.path is used as a set of possible prefixes. The name stays 
+        sys.path is used as a set of possible prefixes. The name stays
         relative if a file could not be found.
 </p><dl>
 <dt><i>fn</i></dt>
@@ -450,11 +450,11 @@ the converted filename (string)
 </dd>
 </dl><a NAME="DebugClientBase.attachThread" ID="DebugClientBase.attachThread"></a>
 <h4>DebugClientBase.attachThread</h4>
-<b>attachThread</b>(<i>target = None, args = None, kwargs = None, mainThread = False</i>)
+<b>attachThread</b>(<i>target=None, args=None, kwargs=None, mainThread=False</i>)
 <p>
         Public method to setup a thread for DebugClient to debug.
 </p><p>
-        If mainThread is non-zero, then we are attaching to the already 
+        If mainThread is non-zero, then we are attaching to the already
         started mainthread of the app and the rest of the args are ignored.
 </p><dl>
 <dt><i>target</i></dt>
@@ -490,11 +490,11 @@ file descriptor to be closed (integer)
 </dd>
 </dl><a NAME="DebugClientBase.connectDebugger" ID="DebugClientBase.connectDebugger"></a>
 <h4>DebugClientBase.connectDebugger</h4>
-<b>connectDebugger</b>(<i>port, remoteAddress = None, redirect = True</i>)
+<b>connectDebugger</b>(<i>port, remoteAddress=None, redirect=True</i>)
 <p>
-        Public method to establish a session with the debugger. 
+        Public method to establish a session with the debugger.
 </p><p>
-        It opens a network connection to the debugger, connects it to stdin, 
+        It opens a network connection to the debugger, connects it to stdin,
         stdout and stderr and saves these file objects in case the application
         being debugged redirects them itself.
 </p><dl>
@@ -510,7 +510,7 @@ flag indicating redirection of stdin, stdout and stderr (boolean)
 </dd>
 </dl><a NAME="DebugClientBase.eventLoop" ID="DebugClientBase.eventLoop"></a>
 <h4>DebugClientBase.eventLoop</h4>
-<b>eventLoop</b>(<i>disablePolling = False</i>)
+<b>eventLoop</b>(<i>disablePolling=False</i>)
 <p>
         Public method implementing our event loop.
 </p><dl>
@@ -559,7 +559,7 @@ the received line
 </dd>
 </dl><a NAME="DebugClientBase.input" ID="DebugClientBase.input"></a>
 <h4>DebugClientBase.input</h4>
-<b>input</b>(<i>prompt, echo = True</i>)
+<b>input</b>(<i>prompt, echo=True</i>)
 <p>
         Public method to implement input() using the event loop.
 </p><dl>
@@ -613,7 +613,7 @@ result of the function call
 </dd>
 </dl><a NAME="DebugClientBase.sessionClose" ID="DebugClientBase.sessionClose"></a>
 <h4>DebugClientBase.sessionClose</h4>
-<b>sessionClose</b>(<i>exit = True</i>)
+<b>sessionClose</b>(<i>exit=True</i>)
 <p>
         Public method to close the session with the debugger and optionally terminate.
 </p><dl>
@@ -638,7 +638,7 @@ non-zero if fn represents a file we are 'skipping', zero otherwise.
 </dd>
 </dl><a NAME="DebugClientBase.startDebugger" ID="DebugClientBase.startDebugger"></a>
 <h4>DebugClientBase.startDebugger</h4>
-<b>startDebugger</b>(<i>filename = None, host = None, port = None, enableTrace = True, exceptions = True, tracePython = False, redirect = True</i>)
+<b>startDebugger</b>(<i>filename=None, host=None, port=None, enableTrace=True, exceptions=True, tracePython=False, redirect=True</i>)
 <p>
         Public method used to start the remote debugger.
 </p><dl>
@@ -666,7 +666,7 @@ flag indicating redirection of stdin, stdout and stderr (boolean)
 </dd>
 </dl><a NAME="DebugClientBase.startProgInDebugger" ID="DebugClientBase.startProgInDebugger"></a>
 <h4>DebugClientBase.startProgInDebugger</h4>
-<b>startProgInDebugger</b>(<i>progargs, wd = '', host = None, port = None, exceptions = True, tracePython = False, redirect = True</i>)
+<b>startProgInDebugger</b>(<i>progargs, wd='', host=None, port=None, exceptions=True, tracePython=False, redirect=True</i>)
 <p>
         Public method used to start the remote debugger.
 </p><dl>
@@ -729,7 +729,7 @@ open file descriptor to be closed (integer)
 <hr /><hr />
 <a NAME="DebugClientInput" ID="DebugClientInput"></a>
 <h2>DebugClientInput</h2>
-<b>DebugClientInput</b>(<i>prompt = "", echo = True</i>)
+<b>DebugClientInput</b>(<i>prompt="", echo=True</i>)
 <p>
     Replacement for the standard input builtin.
 </p><p>

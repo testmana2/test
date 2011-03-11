@@ -14,6 +14,7 @@ from .Config import highlightingStylesFileFormatVersion
 
 import Preferences
 
+
 class HighlightingStylesWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing a highlighting styles XML file.

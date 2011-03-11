@@ -21,6 +21,7 @@ from .Ui_EditorFilePage import Ui_EditorFilePage
 from Utilities import supportedCodecs
 import Preferences
 
+
 class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
     """
     Class implementing the Editor File configuration page.
@@ -83,7 +84,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         """
         Public slot to save the Editor General configuration.
         """
-        Preferences.setEditor("AutosaveInterval", 
+        Preferences.setEditor("AutosaveInterval",
             self.autosaveSlider.value())
         Preferences.setEditor("CreateBackupFile",
             self.createBackupFileCheckBox.isChecked())
@@ -93,7 +94,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         if not enc:
             enc = "utf-8"
         Preferences.setEditor("DefaultEncoding", enc)
-        Preferences.setEditor("AdvancedEncodingDetection", 
+        Preferences.setEditor("AdvancedEncodingDetection",
             self.advEncodingCheckBox.isChecked())
         Preferences.setEditor("WarnFilesize",
             self.warnFilesizeSpinBox.value())
@@ -101,7 +102,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             self.clearBreakpointsCheckBox.isChecked())
         Preferences.setEditor("AutoReopen",
             self.automaticReopenCheckBox.isChecked())
-        Preferences.setEditor("StripTrailingWhitespace", 
+        Preferences.setEditor("StripTrailingWhitespace",
             self.stripWhitespaceCheckBox.isChecked())
         Preferences.setEditor("DefaultOpenFilter",
             self.openFilesFilterComboBox.currentText())
@@ -121,7 +122,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         Preferences.setEditor("AdditionalOpenFilters", self.openFileFilters)
         Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
     
-    def __setDefaultFiltersLists(self, keepSelection = False):
+    def __setDefaultFiltersLists(self, keepSelection=False):
         """
         Private slot to set the default file filter combo boxes.
         
@@ -133,13 +134,13 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             selectedSaveFilter = self.saveFilesFilterComboBox.currentText()
         
         openFileFiltersList = \
-            QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional = False) + \
+            QScintilla.Lexers.getOpenFileFiltersList(False, withAdditional=False) + \
             self.openFileFilters
         openFileFiltersList.sort()
         self.openFilesFilterComboBox.clear()
         self.openFilesFilterComboBox.addItems(openFileFiltersList)
         saveFileFiltersList = \
-            QScintilla.Lexers.getSaveFileFiltersList(False, withAdditional = False) + \
+            QScintilla.Lexers.getSaveFileFiltersList(False, withAdditional=False) + \
             self.saveFileFilters
         saveFileFiltersList.sort()
         self.saveFilesFilterComboBox.clear()
@@ -202,7 +203,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             if self.__checkFileFilter(filter):
                 self.fileFiltersList.addItem(filter)
                 self.__extractFileFilters()
-                self.__setDefaultFiltersLists(keepSelection = True)
+                self.__setDefaultFiltersLists(keepSelection=True)
     
     @pyqtSlot()
     def on_editFileFilterButton_clicked(self):
@@ -214,13 +215,13 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             self,
             self.trUtf8("Add File Filter"),
             self.trUtf8("Enter the file filter entry:"),
-            QLineEdit.Normal, 
+            QLineEdit.Normal,
             filter)
         if ok and filter:
             if self.__checkFileFilter(filter):
                 self.fileFiltersList.currentItem().setText(filter)
                 self.__extractFileFilters()
-                self.__setDefaultFiltersLists(keepSelection = True)
+                self.__setDefaultFiltersLists(keepSelection=True)
     
     @pyqtSlot()
     def on_deleteFileFilterButton_clicked(self):
@@ -229,7 +230,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         """
         self.fileFiltersList.takeItem(self.fileFiltersList.currentRow())
         self.__extractFileFilters()
-        self.__setDefaultFiltersLists(keepSelection = True)
+        self.__setDefaultFiltersLists(keepSelection=True)
     
     @pyqtSlot(bool)
     def on_openFiltersButton_toggled(self, checked):
@@ -257,6 +258,7 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.editFileFilterButton.setEnabled(current is not None)
         self.deleteFileFilterButton.setEnabled(current is not None)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -16,11 +16,12 @@ import Helpviewer.HelpWindow
 
 import UI.PixmapCache
 
+
 class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
     """
     Class implementing a dialog to show some bookmark info.
     """
-    def __init__(self, bookmark, parent = None):
+    def __init__(self, bookmark, parent=None):
         """
         Constructor
         

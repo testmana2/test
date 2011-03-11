@@ -12,6 +12,7 @@ shortcuts.
 
 from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence, qApp
 
+
 class ArgumentsError(RuntimeError):
     """
     Class implementing an exception, which is raised, if the wrong number of arguments
@@ -39,6 +40,7 @@ class ArgumentsError(RuntimeError):
         """
         return str(self.errorMessage)
 
+
 class E5Action(QAction):
     """
     Class implementing an Action class extending QAction.
@@ -49,17 +51,17 @@ class E5Action(QAction):
         
         @param args argument list of the constructor. This list is one of
             <ul>
-            <li>text (string), icon (QIcon), menu text (string), 
-                accelarator (QKeySequence), alternative accelerator (QKeySequence), 
+            <li>text (string), icon (QIcon), menu text (string),
+                accelarator (QKeySequence), alternative accelerator (QKeySequence),
                 parent (QObject), name (string), toggle (boolean)</li>
-            <li>text (string), icon (QIcon), menu text (string), 
-                accelarator (QKeySequence), alternative accelerator (QKeySequence), 
+            <li>text (string), icon (QIcon), menu text (string),
+                accelarator (QKeySequence), alternative accelerator (QKeySequence),
                 parent (QObject), name (string)</li>
-            <li>text (string), menu text (string), 
-                accelarator (QKeySequence), alternative accelerator (QKeySequence), 
+            <li>text (string), menu text (string),
+                accelarator (QKeySequence), alternative accelerator (QKeySequence),
                 parent (QObject), name (string), toggle (boolean)</li>
-            <li>text (string), menu text (string), 
-                accelarator (QKeySequence), alternative accelerator (QKeySequence), 
+            <li>text (string), menu text (string),
+                accelarator (QKeySequence), alternative accelerator (QKeySequence),
                 parent (QObject), name (string)</li>
             </ul>
         """
@@ -69,37 +71,37 @@ class E5Action(QAction):
         else:
             icon = None
             incr = 0
-        if len(args) < 6+incr:
+        if len(args) < 6 + incr:
             raise ArgumentsError(
                 "Not enough arguments, {0:d} expected, got {1:d}".format(
                 6 + incr, len(args)))
-        elif len(args) > 7+incr:
+        elif len(args) > 7 + incr:
             raise ArgumentsError(
                 "Too many arguments, max. {0:d} expected, got {1:d}".format(
                 7 + incr, len(args)))
             
-        parent = args[4+incr]
+        parent = args[4 + incr]
         QAction.__init__(self, parent)
-        name = args[5+incr]
+        name = args[5 + incr]
         if name:
             self.setObjectName(name)
         
-        if args[1+incr]:
-            self.setText(args[1+incr])
+        if args[1 + incr]:
+            self.setText(args[1 + incr])
         
         if args[0]:
             self.setIconText(args[0])
-        if args[2+incr]:
-            self.setShortcut(QKeySequence(args[2+incr]))
+        if args[2 + incr]:
+            self.setShortcut(QKeySequence(args[2 + incr]))
         
-        if args[3+incr]:
-            self.setAlternateShortcut(QKeySequence(args[3+incr]))
+        if args[3 + incr]:
+            self.setAlternateShortcut(QKeySequence(args[3 + incr]))
         
         if icon:
             self.setIcon(icon)
         
-        if len(args) == 7+incr:
-            self.setCheckable(args[6+incr])
+        if len(args) == 7 + incr:
+            self.setCheckable(args[6 + incr])
         
         self.__ammendToolTip()
         
@@ -144,7 +146,7 @@ class E5Action(QAction):
         Public slot to set the list of keyboard shortcuts.
         
         @param shortcuts list of keyboard accelerators (list of QKeySequence)
-            or key for a platform dependent list of accelerators 
+            or key for a platform dependent list of accelerators
             (QKeySequence.StandardKey)
         """
         QAction.setShortcuts(self, shortcuts)
@@ -161,6 +163,7 @@ class E5Action(QAction):
             else:
                 fmt = "({1}) {0}"
             self.setToolTip(fmt.format(self.iconText(), shortcut))
+
 
 def addActions(target, actions):
     """
@@ -179,7 +182,8 @@ def addActions(target, actions):
         else:
             target.addAction(action)
 
-def createActionGroup(parent, name = None, exclusive = False):
+
+def createActionGroup(parent, name=None, exclusive=False):
     """
     Module function to create an action group.
     

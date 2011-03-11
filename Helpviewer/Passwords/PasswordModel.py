@@ -9,11 +9,12 @@ Module implementing a model for password management.
 
 from PyQt4.QtCore import *
 
+
 class PasswordModel(QAbstractTableModel):
     """
     Class implementing a model for password management.
     """
-    def __init__(self, manager, parent = None):
+    def __init__(self, manager, parent=None):
         """
         Constructor
         
@@ -26,8 +27,8 @@ class PasswordModel(QAbstractTableModel):
         manager.changed.connect(self.__passwordsChanged)
         
         self.__headers = [
-            self.trUtf8("Website"), 
-            self.trUtf8("Username"), 
+            self.trUtf8("Website"),
+            self.trUtf8("Username"),
             self.trUtf8("Password")
         ]
         
@@ -56,7 +57,7 @@ class PasswordModel(QAbstractTableModel):
         """
         self.reset()
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         
@@ -84,7 +85,7 @@ class PasswordModel(QAbstractTableModel):
         
         return True
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows of the model.
         
@@ -96,7 +97,7 @@ class PasswordModel(QAbstractTableModel):
         else:
             return self.__manager.sitesCount()
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns of the model.
         
@@ -133,7 +134,7 @@ class PasswordModel(QAbstractTableModel):
         
         return None
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         

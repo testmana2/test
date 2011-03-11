@@ -19,42 +19,43 @@ from .NetworkReply import NetworkReply
 QtDocPath = "qthelp://com.trolltech."
 
 ExtensionMap = {
-    ".bmp"   : "image/bmp",
-    ".css"   : "text/css",
-    ".gif"   : "image/gif",
-    ".html"  : "text/html",
-    ".htm"   : "text/html",
-    ".ico"   : "image/x-icon",
-    ".jpeg"  : "image/jpeg",
-    ".jpg"   : "image/jpeg",
-    ".js"    : "application/x-javascript",
-    ".mng"   : "video/x-mng",
-    ".pbm"   : "image/x-portable-bitmap",
-    ".pgm"   : "image/x-portable-graymap",
-    ".pdf"   : "application/pdf",
-    ".png"   : "image/png",
-    ".ppm"   : "image/x-portable-pixmap",
-    ".rss"   : "application/rss+xml",
-    ".svg"   : "image/svg+xml",
-    ".svgz"  : "image/svg+xml",
-    ".text"  : "text/plain",
-    ".tif"   : "image/tiff",
-    ".tiff"  : "image/tiff",
-    ".txt"   : "text/plain",
-    ".xbm"   : "image/x-xbitmap",
-    ".xml"   : "text/xml",
-    ".xpm"   : "image/x-xpm",
-    ".xsl"   : "text/xsl",
-    ".xhtml" : "application/xhtml+xml",
-    ".wml"   : "text/vnd.wap.wml",
-    ".wmlc"  : "application/vnd.wap.wmlc",
+    ".bmp": "image/bmp",
+    ".css": "text/css",
+    ".gif": "image/gif",
+    ".html": "text/html",
+    ".htm": "text/html",
+    ".ico": "image/x-icon",
+    ".jpeg": "image/jpeg",
+    ".jpg": "image/jpeg",
+    ".js": "application/x-javascript",
+    ".mng": "video/x-mng",
+    ".pbm": "image/x-portable-bitmap",
+    ".pgm": "image/x-portable-graymap",
+    ".pdf": "application/pdf",
+    ".png": "image/png",
+    ".ppm": "image/x-portable-pixmap",
+    ".rss": "application/rss+xml",
+    ".svg": "image/svg+xml",
+    ".svgz": "image/svg+xml",
+    ".text": "text/plain",
+    ".tif": "image/tiff",
+    ".tiff": "image/tiff",
+    ".txt": "text/plain",
+    ".xbm": "image/x-xbitmap",
+    ".xml": "text/xml",
+    ".xpm": "image/x-xpm",
+    ".xsl": "text/xsl",
+    ".xhtml": "application/xhtml+xml",
+    ".wml": "text/vnd.wap.wml",
+    ".wmlc": "application/vnd.wap.wmlc",
 }
+
 
 class QtHelpAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for QtHelp.
     """
-    def __init__(self, engine, parent = None):
+    def __init__(self, engine, parent=None):
         """
         Constructor
         
@@ -78,7 +79,7 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         else:
             return "application/octet-stream"
     
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         
@@ -92,7 +93,7 @@ class QtHelpAccessHandler(SchemeAccessHandler):
         strUrl = url.toString()
         
         # For some reason the url to load is already wrong (passed from webkit)
-        # though the css file and the references inside should work that way. One 
+        # though the css file and the references inside should work that way. One
         # possible problem might be that the css is loaded at the same level as the
         # html, thus a path inside the css like (../images/foo.png) might cd out of
         # the virtual folder
@@ -117,4 +118,3 @@ class QtHelpAccessHandler(SchemeAccessHandler):
                 """<h1>The page could not be found</h1><br>"""
                 """<h3>'{0}'</h3></div>""").format(strUrl).encode("utf-8"))
         return NetworkReply(request, data, mimeType, self.parent())
-

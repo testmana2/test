@@ -17,11 +17,12 @@ import pysvn
 
 from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
+
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
     """
     Class implementing a dialog to enter the URLs for the svn diff command.
     """
-    def __init__(self, vcs, tagsList, branchesList, path, parent = None):
+    def __init__(self, vcs, tagsList, branchesList, path, parent=None):
         """
         Constructor
         
@@ -87,7 +88,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         
     def __changeLabelCombo(self, labelCombo, type_):
         """
-        Private method used to change the label combo depending on the 
+        Private method used to change the label combo depending on the
         selected type.
         
         @param labelCombo reference to the labelCombo object (QComboBox)

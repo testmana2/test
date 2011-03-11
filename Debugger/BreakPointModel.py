@@ -9,13 +9,14 @@ Module implementing the Breakpoint model.
 
 from PyQt4.QtCore import *
 
+
 class BreakPointModel(QAbstractItemModel):
     """
     Class implementing a custom model for breakpoints.
     """
     dataAboutToBeChanged = pyqtSignal(QModelIndex, QModelIndex)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -41,7 +42,7 @@ class BreakPointModel(QAbstractItemModel):
                            Qt.Alignment(Qt.AlignHCenter),
         ]
 
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the current column count.
         
@@ -49,7 +50,7 @@ class BreakPointModel(QAbstractItemModel):
         """
         return len(self.header)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the current row count.
         
@@ -102,7 +103,7 @@ class BreakPointModel(QAbstractItemModel):
         
         return Qt.ItemIsEnabled | Qt.ItemIsSelectable
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get header data.
         
@@ -119,7 +120,7 @@ class BreakPointModel(QAbstractItemModel):
         
         return None
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -144,7 +145,7 @@ class BreakPointModel(QAbstractItemModel):
         """
         return QModelIndex()
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check for the presence of child items.
         
@@ -165,7 +166,7 @@ class BreakPointModel(QAbstractItemModel):
         @param fn filename of the breakpoint (string)
         @param line line number of the breakpoint (integer)
         @param properties properties of the breakpoint
-            (tuple of condition (string), temporary flag (bool), 
+            (tuple of condition (string), temporary flag (bool),
              enabled flag (bool), ignore count (integer))
         """
         bp = [fn, line] + list(properties)
@@ -182,13 +183,13 @@ class BreakPointModel(QAbstractItemModel):
         @param fn filename of the breakpoint (string)
         @param line line number of the breakpoint (integer)
         @param properties properties of the breakpoint
-            (tuple of condition (string), temporary flag (bool), 
+            (tuple of condition (string), temporary flag (bool),
              enabled flag (bool), ignore count (integer))
         """
         if index.isValid():
             row = index.row()
             index1 = self.createIndex(row, 0, self.breakpoints[row])
-            index2 = self.createIndex(row, len(self.breakpoints[row]), 
+            index2 = self.createIndex(row, len(self.breakpoints[row]),
                      self.breakpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
             i = 0
@@ -234,7 +235,7 @@ class BreakPointModel(QAbstractItemModel):
         for index in idxList:
             if index.isValid():
                 rows.append(index.row())
-        rows.sort(reverse = True)
+        rows.sort(reverse=True)
         for row in rows:
             self.beginRemoveRows(QModelIndex(), row, row)
             del self.breakpoints[row]
@@ -258,7 +259,7 @@ class BreakPointModel(QAbstractItemModel):
             condition, temporary flag, enabled flag, ignore count))
         """
         if index.isValid():
-            return self.breakpoints[index.row()][:] # return a copy
+            return self.breakpoints[index.row()][:]  # return a copy
         else:
             return []
 
@@ -284,7 +285,7 @@ class BreakPointModel(QAbstractItemModel):
         @param index index of the breakpoint to test (QModelIndex)
         @return flag indicating a temporary breakpoint (boolean)
         """
-        if index.isValid(): 
+        if index.isValid():
             return self.breakpoints[index.row()][3]
         else:
             return False

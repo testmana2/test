@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing various functions/classes needed everywhere within eric5. 
+Package implementing various functions/classes needed everywhere within eric5.
 """
 
 import os
@@ -16,7 +16,8 @@ import random
 import base64
 import getpass
 
-def __showwarning(message, category, filename, lineno, file = None, line = ""):
+
+def __showwarning(message, category, filename, lineno, file=None, line=""):
     """
     Module function to raise a SyntaxError for a SyntaxWarning.
     
@@ -57,30 +58,31 @@ from eric5config import getConfig
 configDir = None
 
 codingBytes_regexps = [
-    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
+    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')),
+    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
 ]
 coding_regexps = [
-    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
+    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')),
+    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
 ]
 
-supportedCodecs = ['utf-8', 
-          'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3', 
-          'iso8859-4', 'iso8859-5', 'iso8859-6', 'iso8859-7', 
-          'iso8859-8', 'iso8859-9', 'iso8859-10', 'iso8859-11', 
-          'iso8859-13', 'iso8859-14', 'iso8859-16', 'latin-1', 
-          'koi8-r', 'koi8-u', 
-          'utf-16', 'utf-32', 
-          'cp037', 'cp424', 'cp437', 'cp500', 'cp737', 'cp775', 
-          'cp850', 'cp852', 'cp855', 'cp856', 'cp857', 'cp860', 
-          'cp861', 'cp862', 'cp863', 'cp864', 'cp865', 'cp866', 
-          'cp869', 'cp874', 'cp875', 'cp932', 'cp949', 'cp950', 
-          'cp1006', 'cp1026', 'cp1140', 'cp1250', 'cp1251', 
-          'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256', 
-          'cp1257', 'cp1258', 
-          'gb2312', 'gb18030', 
+supportedCodecs = ['utf-8',
+          'iso8859-1', 'iso8859-15', 'iso8859-2', 'iso8859-3',
+          'iso8859-4', 'iso8859-5', 'iso8859-6', 'iso8859-7',
+          'iso8859-8', 'iso8859-9', 'iso8859-10', 'iso8859-11',
+          'iso8859-13', 'iso8859-14', 'iso8859-16', 'latin-1',
+          'koi8-r', 'koi8-u',
+          'utf-16', 'utf-32',
+          'cp037', 'cp424', 'cp437', 'cp500', 'cp737', 'cp775',
+          'cp850', 'cp852', 'cp855', 'cp856', 'cp857', 'cp860',
+          'cp861', 'cp862', 'cp863', 'cp864', 'cp865', 'cp866',
+          'cp869', 'cp874', 'cp875', 'cp932', 'cp949', 'cp950',
+          'cp1006', 'cp1026', 'cp1140', 'cp1250', 'cp1251',
+          'cp1252', 'cp1253', 'cp1254', 'cp1255', 'cp1256',
+          'cp1257', 'cp1258',
+          'gb2312', 'gb18030',
           'ascii']
+
 
 class CodingError(Exception):
     """
@@ -90,7 +92,7 @@ class CodingError(Exception):
         """
         Constructor
         """
-        self.errorMessage = QCoreApplication.translate("CodingError", 
+        self.errorMessage = QCoreApplication.translate("CodingError",
             "The coding '{0}' is wrong for the given text.").format(coding)
         
     def __repr__(self):
@@ -109,6 +111,7 @@ class CodingError(Exception):
         """
         return str(self.errorMessage)
     
+
 def get_codingBytes(text):
     """
     Function to get the coding of a bytes text.
@@ -125,6 +128,7 @@ def get_codingBytes(text):
             if m:
                 return str(m.group(1), "ascii").lower()
     return None
+
 
 def get_coding(text):
     """
@@ -143,6 +147,7 @@ def get_coding(text):
                 return m.group(1).lower()
     return None
 
+
 def readEncodedFile(filename):
     """
     Function to read a file and decode it's contents into proper text.
@@ -155,6 +160,7 @@ def readEncodedFile(filename):
     f.close()
     return decode(text)
 
+
 def readEncodedFileWithHash(filename):
     """
     Function to read a file, calculate a hash value and decode it's contents
@@ -166,9 +172,10 @@ def readEncodedFileWithHash(filename):
     f = open(filename, "rb")
     text = f.read()
     f.close()
-    hash = str(QCryptographicHash.hash(QByteArray(text), QCryptographicHash.Md5).toHex(), 
-               encoding = "ASCII")
+    hash = str(QCryptographicHash.hash(QByteArray(text), QCryptographicHash.Md5).toHex(),
+               encoding="ASCII")
     return decode(text) + (hash, )
+
 
 def decode(text):
     """
@@ -232,6 +239,7 @@ def decode(text):
     # Assume UTF-8 loosing information
     return str(text, "utf-8", "ignore"), 'utf-8-ignore'
 
+
 def writeEncodedFile(filename, text, orig_coding):
     """
     Function to write a file with properly encoded text.
@@ -248,6 +256,7 @@ def writeEncodedFile(filename, text, orig_coding):
     f.close()
     
     return encoding
+
 
 def encode(text, orig_coding):
     """
@@ -303,6 +312,7 @@ def encode(text, orig_coding):
     
     return etext, encoding
 
+
 def decodeString(text):
     """
     Function to decode a string containing Unicode encoded characters.
@@ -351,6 +361,7 @@ _escape_map = {
     '"': "&quot;",
 }
 
+
 def escape_entities(m, map=_escape_map):
     """
     Function to encode html entities.
@@ -365,6 +376,7 @@ def escape_entities(m, map=_escape_map):
         text = "&#{0:d};".format(ord(char))
     return text
     
+
 def html_encode(text, pattern=_escape):
     """
     Function to correctly encode a text for html.
@@ -380,6 +392,7 @@ def html_encode(text, pattern=_escape):
 
 _uescape = re.compile('[\u0080-\uffff]')
 
+
 def escape_uentities(m):
     """
     Function to encode html entities.
@@ -391,6 +404,7 @@ def escape_uentities(m):
     text = "&#{0:d};".format(ord(char))
     return text
     
+
 def html_uencode(text, pattern=_uescape):
     """
     Function to correctly encode a unicode text for html.
@@ -404,6 +418,7 @@ def html_uencode(text, pattern=_uescape):
     text = pattern.sub(escape_uentities, text)
     return text
 
+
 def convertLineEnds(text, eol):
     """
     Function to convert the end of line characters.
@@ -414,15 +429,16 @@ def convertLineEnds(text, eol):
     """
     if eol == '\r\n':
         regexp = re.compile(r"""(\r(?!\n)|(?<!\r)\n)""")
-        return regexp.sub(lambda m, eol = '\r\n': eol, text)
+        return regexp.sub(lambda m, eol='\r\n': eol, text)
     elif eol == '\n':
         regexp = re.compile(r"""(\r\n|\r)""")
-        return regexp.sub(lambda m, eol = '\n': eol, text)
+        return regexp.sub(lambda m, eol='\n': eol, text)
     elif eol == '\r':
         regexp = re.compile(r"""(\r\n|\n)""")
-        return regexp.sub(lambda m, eol = '\r': eol, text)
+        return regexp.sub(lambda m, eol='\r': eol, text)
     else:
         return text
+
 
 def linesep():
     """
@@ -438,6 +454,7 @@ def linesep():
     else:
         return "\r\n"
 
+
 def extractFlags(text):
     """
     Function to extract eric specific flags out of the given text.
@@ -445,7 +462,7 @@ def extractFlags(text):
     Flags are contained in comments and are introduced by 'eflag:'.
     The rest of the line is interpreted as 'key = value'. value is
     analyzed for being an integer or float value. If that fails, it
-    is assumed to be a string. If a key does not contain a '=' 
+    is assumed to be a string. If a key does not contain a '='
     character, it is assumed to be a boolean flag. Flags are expected
     at the very end of a file. The search is ended, if a line without
     the 'eflag:' marker is found.
@@ -492,6 +509,7 @@ def extractFlags(text):
     
     return flags
 
+
 def toNativeSeparators(path):
     """
     Function returning a path, that is using native separator characters.
@@ -501,6 +519,7 @@ def toNativeSeparators(path):
     """
     return QDir.toNativeSeparators(path)
     
+
 def fromNativeSeparators(path):
     """
     Function returning a path, that is using "/" separator characters.
@@ -510,6 +529,7 @@ def fromNativeSeparators(path):
     """
     return QDir.fromNativeSeparators(path)
     
+
 def normcasepath(path):
     """
     Function returning a path, that is normalized with respect to its case and references.
@@ -519,6 +539,7 @@ def normcasepath(path):
     """
     return os.path.normcase(os.path.normpath(path))
     
+
 def normabspath(path):
     """
     Function returning a normalized, absolute path.
@@ -528,9 +549,10 @@ def normabspath(path):
     """
     return os.path.abspath(path)
     
+
 def normcaseabspath(path):
     """
-    Function returning an absolute path, that is normalized with respect to its case 
+    Function returning an absolute path, that is normalized with respect to its case
     and references.
     
     @param path file path (string)
@@ -538,6 +560,7 @@ def normcaseabspath(path):
     """
     return os.path.normcase(os.path.abspath(path))
     
+
 def normjoinpath(a, *p):
     """
     Function returning a normalized path of the joined parts passed into it.
@@ -548,6 +571,7 @@ def normjoinpath(a, *p):
     """
     return os.path.normpath(os.path.join(a, *p))
     
+
 def normabsjoinpath(a, *p):
     """
     Function returning a normalized, absolute path of the joined parts passed into it.
@@ -558,7 +582,8 @@ def normabsjoinpath(a, *p):
     """
     return os.path.abspath(os.path.join(a, *p))
     
-def relpath(path, start = os.path.curdir):
+
+def relpath(path, start=os.path.curdir):
     """
     Return a relative version of a path.
     
@@ -578,6 +603,7 @@ def relpath(path, start = os.path.curdir):
     if not rel_list:
         return os.path.curdir
     return os.path.join(*rel_list)
+
 
 def isinpath(file):
     """
@@ -603,6 +629,7 @@ def isinpath(file):
     
     return False
     
+
 def getExecutablePath(file):
     """
     Function to build the full path of an executable file from the environment.
@@ -632,6 +659,7 @@ def getExecutablePath(file):
             
     return ""
     
+
 def isExecutable(exe):
     """
     Function to check, if a file is executable.
@@ -641,6 +669,7 @@ def isExecutable(exe):
     """
     return os.access(exe, os.X_OK)
     
+
 def samepath(f1, f2):
     """
     Function to compare two paths.
@@ -663,6 +692,7 @@ try:
 except AttributeError:
     EXTSEP = "."
 
+
 def splitPath(name):
     """
     Function to split a pathname into a directory part and a file part.
@@ -677,6 +707,7 @@ def splitPath(name):
         dn, fn = os.path.split(name)
     return (dn, fn)
 
+
 def joinext(prefix, ext):
     """
     Function to join a file extension to a path.
@@ -689,10 +720,11 @@ def joinext(prefix, ext):
     @return the complete filename (string)
     """
     if ext[0] != ".":
-        ext = ".{0}".format(ext) # require leading separator, to match os.path.splitext
+        ext = ".{0}".format(ext)  # require leading separator, to match os.path.splitext
     return prefix + EXTSEP + ext[1:]
 
-def compactPath(path, width, measure = len):
+
+def compactPath(path, width, measure=len):
     """
     Function to return a compacted path fitting inside the given width.
     
@@ -727,6 +759,7 @@ def compactPath(path, width, measure = len):
         tail = tail[1:]
     return ""
     
+
 def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None):
     """
     Function returning a list of all files and directories.
@@ -738,7 +771,7 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkSt
             should be followed
     @param checkStop function to be called to check for a stop
     @return list of all files and directories in the tree rooted
-        at path. The names are expanded to start with path. 
+        at path. The names are expanded to start with path.
     """
     if filesonly:
         files = []
@@ -750,11 +783,11 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkSt
             if checkStop and checkStop():
                 break
             
-            if entry in ['CVS', 'cvs', 
-                         '.svn', '_svn', 
-                         '.hg', '_hg', 
+            if entry in ['CVS', 'cvs',
+                         '.svn', '_svn',
+                         '.hg', '_hg',
                          '.ropeproject', '_ropeproject',
-                         '.eric5project', '_eric5project', 
+                         '.eric5project', '_eric5project',
                          '.issues', '_issues']:
                 continue
             
@@ -777,6 +810,7 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True, checkSt
         pass
     return files
 
+
 def getDirs(path, excludeDirs):
     """
     Function returning a list of all directories below path.
@@ -796,7 +830,7 @@ def getDirs(path, excludeDirs):
           not os.path.islink(os.path.join(path, name)):
             exclude = 0
             for e in excludeDirs:
-                if name.split(os.sep,1)[0] == e:
+                if name.split(os.sep, 1)[0] == e:
                     exclude = 1
                     break
             if not exclude:
@@ -807,6 +841,7 @@ def getDirs(path, excludeDirs):
             dirs = dirs + getDirs(name, excludeDirs)
 
     return dirs
+
 
 def getTestFileName(fn):
     """
@@ -821,6 +856,7 @@ def getTestFileName(fn):
     dn, fn = os.path.split(fn)
     return os.path.join(dn, "test{0}".format(fn))
 
+
 def parseOptionString(s):
     """
     Function used to convert an option string into a list of options.
@@ -832,6 +868,7 @@ def parseOptionString(s):
     s = re.sub(r"%[A-Z%]", _percentReplacementFunc, s)
     return parseString(s, rx)
     
+
 def parseEnvironmentString(s):
     """
     Function used to convert an environment string into a list of environment settings.
@@ -841,6 +878,7 @@ def parseEnvironmentString(s):
     """
     rx = QRegExp(r"""\s(\w+\+?=[^\s]+|\w+="[^"]+"|\w+='[^']+')""")
     return parseString(s, rx)
+
 
 def parseString(s, rx):
     """
@@ -866,6 +904,7 @@ def parseString(s, rx):
         
     return olist
 
+
 def _percentReplacementFunc(matchobj):
     """
     Protected function called for replacing % codes.
@@ -875,6 +914,7 @@ def _percentReplacementFunc(matchobj):
     """
     return getPercentReplacement(matchobj.group(0))
     
+
 def getPercentReplacement(code):
     """
     Function to get the replacement for code.
@@ -951,13 +991,14 @@ def getPercentReplacement(code):
         # unknown code, just return it
         return code
     
+
 def getPercentReplacementHelp():
     """
     Function to get the help text for the supported %-codes.
     
     @returns help text (string)
     """
-    return QCoreApplication.translate("Utilities", 
+    return QCoreApplication.translate("Utilities",
         """<p>You may use %-codes as placeholders in the string."""
         """ Supported codes are:"""
         """<table>"""
@@ -973,6 +1014,7 @@ def getPercentReplacementHelp():
         """</table>"""
         """</p>""")
 
+
 def getUserName():
     """
     Function to get the user name.
@@ -984,6 +1026,7 @@ def getUserName():
     if not user and isWindowsPlatform():
         return win32_GetUserName()
 
+
 def getHomeDir():
     """
     Function to get a users home directory
@@ -992,6 +1035,7 @@ def getHomeDir():
     """
     return QDir.homePath()
     
+
 def getPythonModulesDirectory():
     """
     Function to determine the path to Python's modules directory.
@@ -1001,6 +1045,7 @@ def getPythonModulesDirectory():
     import distutils.sysconfig
     return distutils.sysconfig.get_python_lib(True)
     
+
 def getPythonLibPath():
     """
     Function to determine the path to Python's library.
@@ -1026,6 +1071,7 @@ def getPythonLibPath():
         
     return libDir
     
+
 def getPythonVersion():
     """
     Function to get the Python version (major, minor) as an integer value.
@@ -1034,7 +1080,8 @@ def getPythonVersion():
     """
     return sys.hexversion >> 16
     
-def compile(file, codestring = ""):
+
+def compile(file, codestring=""):
     """
     Function to compile one Python source file to Python bytecode.
     
@@ -1052,8 +1099,8 @@ def compile(file, codestring = ""):
         except (UnicodeDecodeError, IOError):
             return (False, None, None, None, None)
 
-    codestring = codestring.replace("\r\n","\n")
-    codestring = codestring.replace("\r","\n")
+    codestring = codestring.replace("\r\n", "\n")
+    codestring = codestring.replace("\r", "\n")
 
     if codestring and codestring[-1] != '\n':
         codestring = codestring + '\n'
@@ -1069,9 +1116,10 @@ def compile(file, codestring = ""):
         else:
             builtins.compile(codestring, file, 'exec')
     except SyntaxError as detail:
-        import traceback, re
+        import traceback
+        import re
         lines = traceback.format_exception_only(SyntaxError, detail)
-        match = re.match('\s*File "(.+)", line (\d+)', 
+        match = re.match('\s*File "(.+)", line (\d+)',
             lines[0].replace('<string>', '{0}'.format(file)))
         if match is not None:
             fn, line = match.group(1, 2)
@@ -1119,7 +1167,8 @@ def compile(file, codestring = ""):
     
     return (False, None, None, None, None, None)
 
-def py2compile(file, checkFlakes = False):
+
+def py2compile(file, checkFlakes=False):
     """
     Function to compile one Python 2 source file to Python 2 bytecode.
     
@@ -1135,12 +1184,12 @@ def py2compile(file, checkFlakes = False):
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isExecutable(interpreter):
-        return (True, file, "1", "", 
-            QCoreApplication.translate("Utilities", 
-                                       "Python2 interpreter not configured."), 
+        return (True, file, "1", "",
+            QCoreApplication.translate("Utilities",
+                                       "Python2 interpreter not configured."),
             [])
     
-    syntaxChecker = os.path.join(getConfig('ericDir'), 
+    syntaxChecker = os.path.join(getConfig('ericDir'),
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
     args = [syntaxChecker]
     if checkFlakes:
@@ -1155,8 +1204,8 @@ def py2compile(file, checkFlakes = False):
     finished = proc.waitForFinished(30000)
     if finished:
         output = \
-            str(proc.readAllStandardOutput(), 
-                    Preferences.getSystem("IOEncoding"), 
+            str(proc.readAllStandardOutput(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace').splitlines()
         
         syntaxerror = output[0] == "ERROR"
@@ -1172,19 +1221,20 @@ def py2compile(file, checkFlakes = False):
             warnings = []
             while index < len(output):
                 if output[index] == "FLAKES_ERROR":
-                    return (True, output[index + 1], output[index + 2], "", 
+                    return (True, output[index + 1], output[index + 2], "",
                             output[index + 3], [])
                 else:
-                    warnings.append((output[index + 1], output[index + 2], 
+                    warnings.append((output[index + 1], output[index + 2],
                                      output[index + 3]))
                 index += 4
             
             return (False, None, None, None, None, None, warnings)
     
-    return (True, file, "1", "0", "", 
+    return (True, file, "1", "0", "",
         QCoreApplication.translate("Utilities",
-                                   "Python2 interpreter did not finish within 30s."), 
+                                   "Python2 interpreter did not finish within 30s."),
         [])
+
 
 def getConfigDir():
     """
@@ -1206,6 +1256,7 @@ def getConfigDir():
         hp += "/" + cdn
     return toNativeSeparators(hp)
 
+
 def setConfigDir(d):
     """
     Module function to set the name of the directory storing the config data.
@@ -1219,14 +1270,15 @@ def setConfigDir(d):
 # functions for environment handling
 ################################################################################
 
-def getEnvironmentEntry(key, default = None):
+
+def getEnvironmentEntry(key, default=None):
     """
     Module function to get an environment entry.
     
     @param key key of the requested environment entry (string)
     @param default value to be returned, if the environment doesn't contain
         the requested entry (string)
-    @return the requested entry or the default value, if the entry wasn't 
+    @return the requested entry or the default value, if the entry wasn't
         found (string or None)
     """
     filter = QRegExp("^{0}[ \t]*=".format(key))
@@ -1240,6 +1292,7 @@ def getEnvironmentEntry(key, default = None):
     # if there are multiple entries, just consider the first one
     ename, val = entries[0].split("=", 1)
     return val.strip()
+
 
 def hasEnvironmentEntry(key):
     """
@@ -1259,6 +1312,7 @@ def hasEnvironmentEntry(key):
 # Qt utility functions below
 ################################################################################
 
+
 def generateQtToolName(toolname):
     """
     Module function to generate the executable name for a Qt tool like designer.
@@ -1266,10 +1320,11 @@ def generateQtToolName(toolname):
     @param toolname base name of the tool (string)
     @return the Qt tool name without extension (string)
     """
-    return "{0}{1}{2}".format(Preferences.getQt("QtToolsPrefix4"), 
-                              toolname, 
+    return "{0}{1}{2}".format(Preferences.getQt("QtToolsPrefix4"),
+                              toolname,
                               Preferences.getQt("QtToolsPostfix4")
                              )
+
 
 def prepareQtMacBundle(toolname, version, args):
     """
@@ -1299,7 +1354,8 @@ def prepareQtMacBundle(toolname, version, args):
 # Other utility functions below
 ################################################################################
 
-def generateVersionInfo(linesep = '\n'):
+
+def generateVersionInfo(linesep='\n'):
     """
     Module function to generate a string with various version infos.
     
@@ -1312,7 +1368,7 @@ def generateVersionInfo(linesep = '\n'):
     except ImportError:
         sip_version_str = "sip version not available"
     
-    info =  "Version Numbers:{0}  Python {1}{2}".format(
+    info = "Version Numbers:{0}  Python {1}{2}".format(
         linesep, sys.version.split()[0], linesep)
     info += "  Qt {0}{1}  PyQt4 {2}{3}".format(
         qVersion(), linesep, PYQT_VERSION_STR, linesep)
@@ -1330,7 +1386,8 @@ def generateVersionInfo(linesep = '\n'):
     
     return info
 
-def generatePluginsVersionInfo(linesep = '\n'):
+
+def generatePluginsVersionInfo(linesep='\n'):
     """
     Module function to generate a string with plugins version infos.
     
@@ -1355,7 +1412,8 @@ def generatePluginsVersionInfo(linesep = '\n'):
     
     return infoStr
 
-def generateDistroInfo(linesep = '\n'):
+
+def generateDistroInfo(linesep='\n'):
     """
     Module function to generate a string with distribution infos.
     
@@ -1381,6 +1439,7 @@ def generateDistroInfo(linesep = '\n'):
             infoStr += (linesep + linesep).join(infoParas)
     
     return infoStr
+
 
 def checkBlacklistedVersions():
     """
@@ -1438,6 +1497,7 @@ def checkBlacklistedVersions():
 # password handling functions below
 ################################################################################
 
+
 def pwEncode(pw):
     """
     Module function to encode a password.
@@ -1449,6 +1509,7 @@ def pwEncode(pw):
     marker = "CE4"
     rpw = "".join(random.sample(pop, 32)) + pw + "".join(random.sample(pop, 32))
     return marker + base64.b64encode(rpw.encode()).decode()
+
 
 def pwDecode(epw):
     """
@@ -1472,6 +1533,7 @@ def pwDecode(epw):
 # win32 compatibility functions below
 ################################################################################
 
+
 def win32_Kill(pid):
     """
     Function to provide an os.kill equivalent for Win32.
@@ -1481,6 +1543,7 @@ def win32_Kill(pid):
     import win32api
     handle = win32api.OpenProcess(1, 0, pid)
     return (0 != win32api.TerminateProcess(handle, 0))
+
 
 def win32_GetUserName():
     """

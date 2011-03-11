@@ -24,18 +24,19 @@ import UI.PixmapCache
 
 import Utilities
 
+
 class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
     """
     Class implementing the Python re wizard dialog.
     """
-    def __init__(self, parent = None, fromEric = True):
+    def __init__(self, parent=None, fromEric=True):
         """
         Constructor
         
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        QWidget.__init__(self,parent)
+        QWidget.__init__(self, parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -74,7 +75,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self.buttonBox.addButton(self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
         self.executeButton.setToolTip(self.trUtf8("Execute the regular expression"))
         self.nextButton = \
-            self.buttonBox.addButton(self.trUtf8("Next match"), 
+            self.buttonBox.addButton(self.trUtf8("Next match"),
                                      QDialogButtonBox.ActionRole)
         self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
@@ -96,7 +97,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self.importCheckBox.hide()
             self.regexpTextEdit.setFocus()
 
-    def __insertString(self, s, steps = 0):
+    def __insertString(self, s, steps=0):
         """
         Private method to insert a string into line edit and move cursor.
         
@@ -315,12 +316,12 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return
             
             try:
-                f=open(Utilities.toNativeSeparators(fname), "w", encoding = "utf-8")
+                f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
                 f.write(self.regexpTextEdit.toPlainText())
                 f.close()
             except IOError as err:
@@ -341,7 +342,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f=open(Utilities.toNativeSeparators(fname), "r", encoding = "utf-8")
+                f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
                 self.regexpTextEdit.setPlainText(regexp)
@@ -409,7 +410,7 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                 self.trUtf8("""A regular expression must be given."""))
 
     @pyqtSlot()
-    def on_executeButton_clicked(self, startpos = 0):
+    def on_executeButton_clicked(self, startpos=0):
         """
         Private slot to execute the entered regexp on the test text.
         
@@ -459,39 +460,39 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.lastMatchEnd = matchobj.end()
                     self.nextButton.setEnabled(True)
                     row += 1
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("Offset")))
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem("{0:d}".format(matchobj.start(0))))
                     
                     row += 1
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("Captures")))
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem(self.trUtf8("Text")))
-                    self.resultTable.setItem(row, 2, 
+                    self.resultTable.setItem(row, 2,
                         QTableWidgetItem(self.trUtf8("Characters")))
                     
                     row += 1
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("Match")))
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem(matchobj.group(0)))
-                    self.resultTable.setItem(row, 2, 
+                    self.resultTable.setItem(row, 2,
                         QTableWidgetItem("{0:d}".format(len(matchobj.group(0)))))
                     
                     for i in range(1, captures + 1):
                         if matchobj.group(i) is not None:
                             row += 1
                             self.resultTable.insertRow(row)
-                            self.resultTable.setItem(row, 0, 
+                            self.resultTable.setItem(row, 0,
                                 QTableWidgetItem(self.trUtf8("Capture #{0}").format(i)))
-                            self.resultTable.setItem(row, 1, 
+                            self.resultTable.setItem(row, 1,
                                 QTableWidgetItem(matchobj.group(i)))
-                            self.resultTable.setItem(row, 2, 
+                            self.resultTable.setItem(row, 2,
                                 QTableWidgetItem("{0:d}".format(len(matchobj.group(i)))))
                     
                     # highlight the matched text
@@ -504,10 +505,10 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
                     self.resultTable.setRowCount(2)
                     row += 1
                     if startpos > 0:
-                        self.resultTable.setItem(row, 0, 
+                        self.resultTable.setItem(row, 0,
                             QTableWidgetItem(self.trUtf8("No more matches")))
                     else:
-                        self.resultTable.setItem(row, 0, 
+                        self.resultTable.setItem(row, 0,
                             QTableWidgetItem(self.trUtf8("No matches")))
                     
                     # remove the highlight
@@ -623,11 +624,12 @@ class PyRegExpWizardWidget(QWidget, Ui_PyRegExpWizardDialog):
         code += '){0}'.format(estring)
         return code
 
+
 class PyRegExpWizardDialog(QDialog):
     """
     Class for the dialog variant.
     """
-    def __init__(self, parent = None, fromEric = True):
+    def __init__(self, parent=None, fromEric=True):
         """
         Constructor
         
@@ -660,18 +662,19 @@ class PyRegExpWizardDialog(QDialog):
         """
         return self.cw.getCode(indLevel, indString)
 
+
 class PyRegExpWizardWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
         """
         QMainWindow.__init__(self, parent)
-        self.cw = PyRegExpWizardWidget(self, fromEric = False)
+        self.cw = PyRegExpWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)

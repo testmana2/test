@@ -16,11 +16,12 @@ from .cursors import cursors_rc     # __IGNORE_WARNING__
 
 from .IconSizeDialog import IconSizeDialog
 
+
 class IconEditCommand(QUndoCommand):
     """
     Class implementing an undo command for the icon editor.
     """
-    def __init__(self, grid, text, oldImage, parent = None):
+    def __init__(self, grid, text, oldImage, parent=None):
         """
         Constructor
         
@@ -47,22 +48,23 @@ class IconEditCommand(QUndoCommand):
         """
         Public method to perform the undo.
         """
-        self.__grid.setIconImage(self.__imageBefore, undoRedo = True)
+        self.__grid.setIconImage(self.__imageBefore, undoRedo=True)
     
     def redo(self):
         """
         Public method to perform the redo.
         """
         if self.__imageAfter:
-            self.__grid.setIconImage(self.__imageAfter, undoRedo = True)
+            self.__grid.setIconImage(self.__imageAfter, undoRedo=True)
     
+
 class IconEditorGrid(QWidget):
     """
     Class implementing the icon editor grid.
     
     @signal canRedoChanged(bool) emitted after the redo status has changed
     @signal canUndoChanged(bool) emitted after the undo status has changed
-    @signal clipboardImageAvailable(bool) emitted to signal the availability of an 
+    @signal clipboardImageAvailable(bool) emitted to signal the availability of an
         image to be pasted
     @signal colorChanged(QColor) emitted after the drawing color was changed
     @signal imageChanged(bool) emitted after the image was modified
@@ -99,7 +101,7 @@ class IconEditorGrid(QWidget):
     MarkColor = QColor(255, 255, 255, 255)
     NoMarkColor = QColor(0, 0, 0, 0)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -187,16 +189,16 @@ class IconEditorGrid(QWidget):
         the various drawing tools.
         """
         self.__undoTexts = {
-            self.Pencil          : self.trUtf8("Set Pixel"), 
-            self.Rubber          : self.trUtf8("Erase Pixel"), 
-            self.Line            : self.trUtf8("Draw Line"), 
-            self.Rectangle       : self.trUtf8("Draw Rectangle"), 
-            self.FilledRectangle : self.trUtf8("Draw Filled Rectangle"), 
-            self.Circle          : self.trUtf8("Draw Circle"), 
-            self.FilledCircle    : self.trUtf8("Draw Filled Circle"), 
-            self.Ellipse         : self.trUtf8("Draw Ellipse"), 
-            self.FilledEllipse   : self.trUtf8("Draw Filled Ellipse"), 
-            self.Fill            : self.trUtf8("Fill Region"), 
+            self.Pencil: self.trUtf8("Set Pixel"),
+            self.Rubber: self.trUtf8("Erase Pixel"),
+            self.Line: self.trUtf8("Draw Line"),
+            self.Rectangle: self.trUtf8("Draw Rectangle"),
+            self.FilledRectangle: self.trUtf8("Draw Filled Rectangle"),
+            self.Circle: self.trUtf8("Draw Circle"),
+            self.FilledCircle: self.trUtf8("Draw Filled Circle"),
+            self.Ellipse: self.trUtf8("Draw Ellipse"),
+            self.FilledEllipse: self.trUtf8("Draw Filled Ellipse"),
+            self.Fill: self.trUtf8("Fill Region"),
         }
     
     def isDirty(self):
@@ -207,7 +209,7 @@ class IconEditorGrid(QWidget):
         """
         return self.__dirty
     
-    def setDirty(self, dirty, setCleanState = False):
+    def setDirty(self, dirty, setCleanState=False):
         """
         Public slot to set the dirty flag.
         
@@ -279,9 +281,9 @@ class IconEditorGrid(QWidget):
         else:
             self.__selecting = False
         
-        if self.__curTool in [self.RectangleSelection, self.CircleSelection, self.Line, 
-                              self.Rectangle, self.FilledRectangle, 
-                              self.Circle, self.FilledCircle, 
+        if self.__curTool in [self.RectangleSelection, self.CircleSelection, self.Line,
+                              self.Rectangle, self.FilledRectangle,
+                              self.Circle, self.FilledCircle,
                               self.Ellipse, self.FilledEllipse]:
             self.setCursor(self.__aimCursor)
         elif self.__curTool == self.Fill:
@@ -292,7 +294,7 @@ class IconEditorGrid(QWidget):
             self.setCursor(self.__paintCursor)
         elif self.__curTool == self.Rubber:
             self.setCursor(self.__rubberCursor)
-        else:    
+        else:
             self.setCursor(self.__normalCursor)
     
     def tool(self):
@@ -304,7 +306,7 @@ class IconEditorGrid(QWidget):
         """
         return self.__curTool
     
-    def setIconImage(self, newImage, undoRedo = False, clearUndo = False):
+    def setIconImage(self, newImage, undoRedo=False, clearUndo=False):
         """
         Public method to set a new icon image.
         
@@ -398,12 +400,12 @@ class IconEditorGrid(QWidget):
             painter.setPen(self.palette().windowText().color())
             i = 0
             while i <= self.__image.width():
-                painter.drawLine(self.__zoom * i, 0, 
+                painter.drawLine(self.__zoom * i, 0,
                                  self.__zoom * i, self.__zoom * self.__image.height())
                 i += 1
             j = 0
             while j <= self.__image.height():
-                painter.drawLine(0,  self.__zoom * j, 
+                painter.drawLine(0,  self.__zoom * j,
                                  self.__zoom * self.__image.width(), self.__zoom * j)
                 j += 1
         
@@ -433,7 +435,7 @@ class IconEditorGrid(QWidget):
         return rectangle for the given pixel coordinates (QRect)
         """
         if self.__zoom >= 3 and self.__gridEnabled:
-            return QRect(self.__zoom * i + 1, self.__zoom * j + 1, 
+            return QRect(self.__zoom * i + 1, self.__zoom * j + 1,
                          self.__zoom - 1, self.__zoom - 1)
         else:
             return QRect(self.__zoom * i, self.__zoom * j, self.__zoom, self.__zoom)
@@ -454,14 +456,14 @@ class IconEditorGrid(QWidget):
                 return
             
             if self.__curTool == self.Pencil:
-                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool], 
+                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool],
                                       self.__image)
                 self.__setImagePixel(evt.pos(), True)
                 self.setDirty(True)
                 self.__undoStack.push(cmd)
                 self.__currentUndoCmd = cmd
             elif self.__curTool == self.Rubber:
-                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool], 
+                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool],
                                       self.__image)
                 self.__setImagePixel(evt.pos(), False)
                 self.setDirty(True)
@@ -471,7 +473,7 @@ class IconEditorGrid(QWidget):
                 i, j = self.__imageCoordinates(evt.pos())
                 col = QColor()
                 col.setRgba(self.__image.pixel(i, j))
-                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool], 
+                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool],
                                       self.__image)
                 self.__drawFlood(i, j, col)
                 self.setDirty(True)
@@ -523,10 +525,10 @@ class IconEditorGrid(QWidget):
                     self.__currentUndoCmd.setAfterImage(self.__image)
                     self.__currentUndoCmd = None
             
-            if self.__curTool not in [self.Pencil, self.Rubber, 
-                                      self.Fill, self.ColorPicker, 
+            if self.__curTool not in [self.Pencil, self.Rubber,
+                                      self.Fill, self.ColorPicker,
                                       self.RectangleSelection, self.CircleSelection]:
-                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool], 
+                cmd = IconEditCommand(self, self.__undoTexts[self.__curTool],
                                       self.__image)
                 if self.__drawTool(evt.pos(), False):
                     self.__undoStack.push(cmd)
@@ -573,7 +575,7 @@ class IconEditorGrid(QWidget):
         """
         self.__markImage.fill(self.NoMarkColor.rgba())
         if self.__pasteRect.isValid():
-            self.__updateImageRect(self.__pasteRect.topLeft(), 
+            self.__updateImageRect(self.__pasteRect.topLeft(),
                                    self.__pasteRect.bottomRight() + QPoint(1, 1))
         
         x, y = self.__imageCoordinates(pos)
@@ -594,7 +596,7 @@ class IconEditorGrid(QWidget):
         painter.drawRect(self.__pasteRect)
         painter.end()
         
-        self.__updateImageRect(self.__pasteRect.topLeft(), 
+        self.__updateImageRect(self.__pasteRect.topLeft(),
                                self.__pasteRect.bottomRight() + QPoint(1, 1))
     
     def __drawTool(self, pos, mark):
@@ -625,7 +627,7 @@ class IconEditorGrid(QWidget):
         if self.__curTool == self.Line:
             painter.drawLine(start, end)
         
-        elif self.__curTool in [self.Rectangle, self.FilledRectangle, 
+        elif self.__curTool in [self.Rectangle, self.FilledRectangle,
                                 self.RectangleSelection]:
             l = min(start.x(), end.x())
             t = min(start.y(), end.y())
@@ -643,7 +645,7 @@ class IconEditorGrid(QWidget):
                 self.__selectionAvailable = True
                 self.selectionAvailable.emit(True)
         
-        elif self.__curTool in [self.Circle, self.FilledCircle, 
+        elif self.__curTool in [self.Circle, self.FilledCircle,
                                 self.CircleSelection]:
             r = max(abs(start.x() - end.x()), abs(start.y() - end.y()))
             if self.__curTool in [self.FilledCircle, self.CircleSelection]:
@@ -665,7 +667,7 @@ class IconEditorGrid(QWidget):
         
         painter.end()
         
-        if self.__curTool in [self.Circle, self.FilledCircle, 
+        if self.__curTool in [self.Circle, self.FilledCircle,
                               self.Ellipse, self.FilledEllipse]:
             self.update()
         else:
@@ -673,7 +675,7 @@ class IconEditorGrid(QWidget):
         
         return True
     
-    def __drawFlood(self, i, j, oldColor, doUpdate = True):
+    def __drawFlood(self, i, j, oldColor, doUpdate=True):
         """
         Private method to perform a flood fill operation.
         
@@ -705,7 +707,7 @@ class IconEditorGrid(QWidget):
         @param pos1 top, left position for the update in widget coordinates (QPoint)
         @param pos2 bottom, right position for the update in widget coordinates (QPoint)
         """
-        self.__updateImageRect(QPoint(*self.__imageCoordinates(pos1)), 
+        self.__updateImageRect(QPoint(*self.__imageCoordinates(pos1)),
                                QPoint(*self.__imageCoordinates(pos2)))
     
     def __updateImageRect(self, ipos1, ipos2):
@@ -729,8 +731,8 @@ class IconEditorGrid(QWidget):
         Private slot to remove the mark indicator.
         """
         self.__markImage.fill(self.NoMarkColor.rgba())
-        if self.__curTool in [self.Circle, self.FilledCircle, 
-                              self.Ellipse, self.FilledEllipse, 
+        if self.__curTool in [self.Circle, self.FilledCircle,
+                              self.Ellipse, self.FilledEllipse,
                               self.CircleSelection]:
             self.update()
         else:
@@ -788,7 +790,7 @@ class IconEditorGrid(QWidget):
         """
         Private method to get an image from the clipboard.
         
-        @return tuple with the image (QImage) and a flag indicating a 
+        @return tuple with the image (QImage) and a flag indicating a
             valid image (boolean)
         """
         img = QApplication.clipboard().image()
@@ -812,14 +814,14 @@ class IconEditorGrid(QWidget):
         img.fill(qRgba(0, 0, 0, 0))
         for i in range(0, self.__selRect.width()):
             for j in range(0, self.__selRect.height()):
-                if self.__image.rect().contains(self.__selRect.x() + i, 
+                if self.__image.rect().contains(self.__selRect.x() + i,
                                                 self.__selRect.y() + j):
                     if self.__isMarked(self.__selRect.x() + i, self.__selRect.y() + j):
-                        img.setPixel(i, j, self.__image.pixel(self.__selRect.x() + i, 
+                        img.setPixel(i, j, self.__image.pixel(self.__selRect.x() + i,
                                                               self.__selRect.y() + j))
                         if cut:
-                            self.__image.setPixel(self.__selRect.x() + i, 
-                                                  self.__selRect.y() + j, 
+                            self.__image.setPixel(self.__selRect.x() + i,
+                                                  self.__selRect.y() + j,
                                                   qRgba(0, 0, 0, 0))
         
         if cut:
@@ -849,13 +851,13 @@ class IconEditorGrid(QWidget):
             img = self.__getSelectionImage(True)
             QApplication.clipboard().setImage(img)
     
-    def editPaste(self, pasting = False):
+    def editPaste(self, pasting=False):
         """
         Public slot to paste an image from the clipboard.
         
         @param pasting flag indicating part two of the paste operation (boolean)
         """
-        img, ok  = self.__clipboardImage()
+        img, ok = self.__clipboardImage()
         if ok:
             if img.width() > self.__image.width() or img.height() > self.__image.height():
                 res = E5MessageBox.yesNo(self,
@@ -874,13 +876,13 @@ class IconEditorGrid(QWidget):
                 painter = QPainter(self.__image)
                 painter.setPen(self.penColor())
                 painter.setCompositionMode(self.__compositingMode)
-                painter.drawImage(self.__pasteRect.x(), self.__pasteRect.y(), img, 0, 0, 
+                painter.drawImage(self.__pasteRect.x(), self.__pasteRect.y(), img, 0, 0,
                     self.__pasteRect.width() + 1, self.__pasteRect.height() + 1)
                 
                 self.__undoStack.push(cmd)
                 cmd.setAfterImage(self.__image)
                 
-                self.__updateImageRect(self.__pasteRect.topLeft(), 
+                self.__updateImageRect(self.__pasteRect.topLeft(),
                                        self.__pasteRect.bottomRight() + QPoint(1, 1))
         else:
             E5MessageBox.warning(self,
@@ -891,9 +893,9 @@ class IconEditorGrid(QWidget):
         """
         Public slot to paste the clipboard as a new image.
         """
-        img, ok  = self.__clipboardImage()
+        img, ok = self.__clipboardImage()
         if ok:
-            cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard as New Image"), 
+            cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard as New Image"),
                                   self.__image)
             self.setIconImage(img)
             self.setDirty(True)
@@ -938,7 +940,7 @@ class IconEditorGrid(QWidget):
             newWidth, newHeight = dlg.getData()
             if newWidth != self.__image.width() or newHeight != self.__image.height():
                 cmd = IconEditCommand(self, self.trUtf8("Resize Image"), self.__image)
-                img = self.__image.scaled(newWidth, newHeight, Qt.IgnoreAspectRatio, 
+                img = self.__image.scaled(newWidth, newHeight, Qt.IgnoreAspectRatio,
                                           Qt.SmoothTransformation)
                 self.setIconImage(img)
                 self.setDirty(True)

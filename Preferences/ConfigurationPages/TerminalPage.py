@@ -15,6 +15,7 @@ from .Ui_TerminalPage import Ui_TerminalPage
 import Preferences
 import Utilities
 
+
 class TerminalPage(ConfigurationPageBase, Ui_TerminalPage):
     """
     Class implementing the Terminal configuration page.
@@ -72,9 +73,9 @@ class TerminalPage(ConfigurationPageBase, Ui_TerminalPage):
             self.monospacedCheckBox.isChecked())
         Preferences.setTerminal("MarginsFont", self.marginsFont)
         
-        Preferences.setTerminal("Shell", 
+        Preferences.setTerminal("Shell",
             self.shellCombo.currentText())
-        Preferences.setTerminal("ShellInteractive", 
+        Preferences.setTerminal("ShellInteractive",
             self.interactiveCheckBox.isChecked())
         
     @pyqtSlot()
@@ -99,6 +100,7 @@ class TerminalPage(ConfigurationPageBase, Ui_TerminalPage):
         self.monospacedFontSample.setFont(self.monospacedFont)
         self.marginsFontSample.setFont(self.marginsFont)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

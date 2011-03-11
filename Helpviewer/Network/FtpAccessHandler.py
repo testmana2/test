@@ -12,11 +12,12 @@ from PyQt4.QtNetwork import QNetworkAccessManager
 from .SchemeAccessHandler import SchemeAccessHandler
 from .FtpReply import FtpReply
 
+
 class FtpAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for FTP.
     """
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         

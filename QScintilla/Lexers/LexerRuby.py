@@ -11,8 +11,9 @@ from PyQt4.Qsci import QsciLexerRuby
 
 from .Lexer import Lexer
 
+
 class LexerRuby(QsciLexerRuby, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -48,20 +49,20 @@ class LexerRuby(QsciLexerRuby, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerRuby.DoubleQuotedString, 
-                         QsciLexerRuby.HereDocument, 
-                         QsciLexerRuby.PercentStringQ, 
-                         QsciLexerRuby.PercentStringq, 
-                         QsciLexerRuby.PercentStringr, 
-                         QsciLexerRuby.PercentStringw, 
-                         QsciLexerRuby.PercentStringx, 
+        return style in [QsciLexerRuby.DoubleQuotedString,
+                         QsciLexerRuby.HereDocument,
+                         QsciLexerRuby.PercentStringQ,
+                         QsciLexerRuby.PercentStringq,
+                         QsciLexerRuby.PercentStringr,
+                         QsciLexerRuby.PercentStringw,
+                         QsciLexerRuby.PercentStringx,
                          QsciLexerRuby.SingleQuotedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerRuby.keywords(self, kwSet)

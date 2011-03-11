@@ -14,6 +14,7 @@ from .Ui_TasksPage import Ui_TasksPage
 
 import Preferences
 
+
 class TasksPage(ConfigurationPageBase, Ui_TasksPage):
     """
     Class implementing the Tasks configuration page.
@@ -36,13 +37,13 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         self.tasksColours["TasksColour"] = \
             self.initColour("TasksColour", self.tasksColourButton, Preferences.getTasks)
         self.tasksColours["TasksBugfixColour"] = \
-            self.initColour("TasksBugfixColour", self.tasksBugfixColourButton, 
+            self.initColour("TasksBugfixColour", self.tasksBugfixColourButton,
                 Preferences.getTasks)
         self.tasksColours["TasksBgColour"] = \
-            self.initColour("TasksBgColour", self.tasksBgColourButton, 
+            self.initColour("TasksBgColour", self.tasksBgColourButton,
                 Preferences.getTasks)
         self.tasksColours["TasksProjectBgColour"] = \
-            self.initColour("TasksProjectBgColour", self.tasksProjectBgColourButton, 
+            self.initColour("TasksProjectBgColour", self.tasksProjectBgColourButton,
                 Preferences.getTasks)
         
     def save(self):
@@ -69,7 +70,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         Private slot to set the colour for bugfix tasks.
         """
         self.tasksColours["TasksBugfixColour"] = \
-            self.selectColour(self.tasksBugfixColourButton, 
+            self.selectColour(self.tasksBugfixColourButton,
                 self.tasksColours["TasksBugfixColour"])
         
     @pyqtSlot()
@@ -78,7 +79,7 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         Private slot to set the background colour for global tasks.
         """
         self.tasksColours["TasksBgColour"] = \
-            self.selectColour(self.tasksBgColourButton, 
+            self.selectColour(self.tasksBgColourButton,
                 self.tasksColours["TasksBgColour"])
         
     @pyqtSlot()
@@ -87,9 +88,10 @@ class TasksPage(ConfigurationPageBase, Ui_TasksPage):
         Private slot to set the backgroundcolour for project tasks.
         """
         self.tasksColours["TasksProjectBgColour"] = \
-            self.selectColour(self.tasksProjectBgColourButton, 
+            self.selectColour(self.tasksProjectBgColourButton,
                 self.tasksColours["TasksProjectBgColour"])
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -12,6 +12,7 @@ import sys
 
 from DebugBase import *
 
+
 class DebugThread(DebugBase):
     """
     Class implementing a debug thread.
@@ -21,8 +22,8 @@ class DebugThread(DebugBase):
     Provides simple wrapper methods around bdb for the 'owning' client to
     call to step etc.
     """
-    def __init__(self, dbgClient, targ = None, args = None, kwargs = None, 
-                 mainThread = False):
+    def __init__(self, dbgClient, targ=None, args=None, kwargs=None,
+                 mainThread=False):
         """
         Constructor
         
@@ -34,7 +35,7 @@ class DebugThread(DebugBase):
         """
         DebugBase.__init__(self, dbgClient)
         
-        self._target = targ 
+        self._target = targ
         self._args = args
         self._kwargs = kwargs
         self._mainThread = mainThread
@@ -43,7 +44,7 @@ class DebugThread(DebugBase):
         # by DebugClientThreads and Bdb...
         self._threadRunning = False
         
-        self.__ident = None # id of this thread.
+        self.__ident = None  # id of this thread.
         self.__name = ""
     
     def set_ident(self, id):
@@ -82,7 +83,7 @@ class DebugThread(DebugBase):
         """
         Private method to bootstrap the thread.
         
-        It wraps the call to the user function to enable tracing 
+        It wraps the call to the user function to enable tracing
         before hand.
         """
         try:
@@ -113,8 +114,8 @@ class DebugThread(DebugBase):
         """
         try:
             self._dbgClient.lockClient()
-            # if this thread came out of a lock, and we are quitting 
-            # and we are still running, then get rid of tracing for this thread 
+            # if this thread came out of a lock, and we are quitting
+            # and we are still running, then get rid of tracing for this thread
             if self.quitting and self._threadRunning:
                 sys.settrace(None)
                 sys.setprofile(None)

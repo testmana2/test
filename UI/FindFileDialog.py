@@ -21,6 +21,7 @@ from .Ui_FindFileDialog import Ui_FindFileDialog
 import Utilities
 import Preferences
 
+
 class FindFileDialog(QDialog, Ui_FindFileDialog):
     """
     Class implementing a dialog to search for text in files.
@@ -36,13 +37,13 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
     sourceFile = pyqtSignal(str, int, str, int, int)
     designerFile = pyqtSignal(str)
     
-    lineRole    = Qt.UserRole + 1
-    startRole   = Qt.UserRole + 2
-    endRole     = Qt.UserRole + 3
+    lineRole = Qt.UserRole + 1
+    startRole = Qt.UserRole + 2
+    endRole = Qt.UserRole + 3
     replaceRole = Qt.UserRole + 4
-    md5Role     = Qt.UserRole + 5
+    md5Role = Qt.UserRole + 5
     
-    def __init__(self, project, replaceMode = False, parent=None):
+    def __init__(self, project, replaceMode=False, parent=None):
         """
         Constructor
         
@@ -56,12 +57,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__replaceMode = replaceMode
         
         self.stopButton = \
-            self.buttonBox.addButton(self.trUtf8("Stop"), 
+            self.buttonBox.addButton(self.trUtf8("Stop"),
                                      QDialogButtonBox.ActionRole)
         self.stopButton.setEnabled(False)
         
         self.findButton = \
-            self.buttonBox.addButton(self.trUtf8("Find"), 
+            self.buttonBox.addButton(self.trUtf8("Find"),
                                      QDialogButtonBox.ActionRole)
         self.findButton.setEnabled(False)
         self.findButton.setDefault(True)
@@ -142,12 +143,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             if self.__replaceMode:
                 self.__lastFileItem.setFlags(self.__lastFileItem.flags() | \
                     Qt.ItemFlags(Qt.ItemIsUserCheckable | Qt.ItemIsTristate))
-                # Qt bug: 
-                # item is not user checkable if setFirstColumnSpanned 
+                # Qt bug:
+                # item is not user checkable if setFirstColumnSpanned
                 # is True (< 4.5.0)
             self.__lastFileItem.setData(0, self.md5Role, md5)
         
-        itm = QTreeWidgetItem(self.__lastFileItem, 
+        itm = QTreeWidgetItem(self.__lastFileItem,
             [' {0:5d} '.format(line), text])
         itm.setTextAlignment(0,  Qt.AlignRight)
         itm.setData(0, self.lineRole, line)
@@ -159,7 +160,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             itm.setCheckState(0, Qt.Checked)
             self.replaceButton.setEnabled(True)
         
-    def show(self, txt = ""):
+    def show(self, txt=""):
         """
         Overwritten method to enable/disable the project button.
         
@@ -334,7 +335,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 filterString = "|".join(filters)
                 filterRe = re.compile(filterString)
             files = self.__getFileList(
-                os.path.abspath(self.dirCombo.currentText()), 
+                os.path.abspath(self.dirCombo.currentText()),
                 filterRe)
         elif self.openFilesButton.isChecked():
             files = e5App().getObject("ViewManager").getOpenFilenames()
@@ -345,7 +346,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findProgress.setMaximum(len(files))
         
         # retrieve the values
-        reg = self.regexpCheckBox.isChecked() 
+        reg = self.regexpCheckBox.isChecked()
         wo = self.wordCheckBox.isChecked()
         cs = self.caseCheckBox.isChecked()
         ct = self.findtextCombo.currentText()
@@ -369,8 +370,6 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findButton.setEnabled(True)
             self.findButton.setDefault(True)
             return
-
-        
         # reset the findtextCombo
         if ct in self.searchHistory:
             self.searchHistory.remove(ct)
@@ -378,7 +377,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findtextCombo.clear()
         self.findtextCombo.addItems(self.searchHistory)
         Preferences.Prefs.settings.setValue(
-            "FindFileDialog/SearchHistory", 
+            "FindFileDialog/SearchHistory",
             self.searchHistory[:30])
         
         if self.__replaceMode:
@@ -389,7 +388,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.replacetextCombo.clear()
             self.replacetextCombo.addItems(self.replaceHistory)
             Preferences.Prefs.settings.setValue(
-                "FindFileDialog/ReplaceHistory", 
+                "FindFileDialog/ReplaceHistory",
                 self.replaceHistory[:30])
         
         if self.dirButton.isChecked():
@@ -400,7 +399,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.dirCombo.clear()
             self.dirCombo.addItems(self.dirHistory)
             Preferences.Prefs.settings.setValue(
-                "FindFileDialog/DirectoryHistory", 
+                "FindFileDialog/DirectoryHistory",
                 self.dirHistory[:30])
         
         # set the button states
@@ -456,7 +455,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                             rline = "{0} ...".format(line[:1024])
                         line = "- {0}\n+ {1}".format(
                             line, self.__stripEol(rline))
-                    self.__createItem(file, count, line, start, end, 
+                    self.__createItem(file, count, line, start, end,
                                       rline, hash)
                     
                     if self.feelLikeCheckBox.isChecked():
@@ -478,7 +477,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findProgressLabel.setPath("")
         
         self.findList.setUpdatesEnabled(True)
-        self.findList.sortItems(self.findList.sortColumn(), 
+        self.findList.sortItems(self.findList.sortColumn(),
                                 self.findList.header().sortIndicatorOrder())
         self.findList.resizeColumnToContents(1)
         if self.__replaceMode:
@@ -495,7 +494,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
     def on_findList_itemDoubleClicked(self, itm, column):
         """
-        Private slot to handle the double click on a file item. 
+        Private slot to handle the double click on a file item.
         
         It emits the signal
         sourceFile or designerFile depending on the file extension.
@@ -658,7 +657,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         menu = QMenu(self)
         
         menu.addAction(self.trUtf8("Open"), self.__openFile)
-        menu.addAction(self.trUtf8("Copy Path to Clipboard"), 
+        menu.addAction(self.trUtf8("Copy Path to Clipboard"),
                        self.__copyToClipboard)
         
         menu.exec_(QCursor.pos())

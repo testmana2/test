@@ -18,23 +18,23 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
     Class implementing a dialog for entering character classes.
     """
     specialChars = {
-        4 : "\\a",
-        5 : "\\f",
-        6 : "\\n",
-        7 : "\\r",
-        8 : "\\t",
-        9 : "\\v"
+        4: "\\a",
+        5: "\\f",
+        6: "\\n",
+        7: "\\r",
+        8: "\\t",
+        9: "\\v"
     }
     
     predefinedClasses = ["\\s", "\\S", "\\w", "\\W", "\\d", "\\D"]
     
-    def __init__(self,parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         
         self.comboItems = []
@@ -81,7 +81,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
             self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
-        hspacer0 = QSpacerItem(30,20,QSizePolicy.Expanding,QSizePolicy.Minimum)
+        hspacer0 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
         self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
@@ -114,7 +114,7 @@ class PyRegExpWizardCharactersDialog(QDialog, Ui_PyRegExpWizardCharactersDialog)
             self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
-        hspacer1 = QSpacerItem(30,20,QSizePolicy.Expanding,QSizePolicy.Minimum)
+        hspacer1 = QSpacerItem(30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
         self.moreRangesButton.clicked[()].connect(self.__addRangesLine)

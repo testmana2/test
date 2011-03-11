@@ -16,11 +16,12 @@ from .Ui_OfflineStorageConfigDialog import Ui_OfflineStorageConfigDialog
 
 import Preferences
 
+
 class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
     """
     Class implementing a dialog to configure the offline storage.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -52,19 +53,19 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         """
         Public slot to store the configuration data.
         """
-        Preferences.setHelp("OfflineStorageDatabaseEnabled", 
+        Preferences.setHelp("OfflineStorageDatabaseEnabled",
             self.databaseEnabledCheckBox.isChecked())
-        Preferences.setHelp("OfflineStorageDatabaseQuota", 
+        Preferences.setHelp("OfflineStorageDatabaseQuota",
             self.databaseQuotaSpinBox.value())
         
         if self.applicationCacheGroup.isEnabled():
-            Preferences.setHelp("OfflineWebApplicationCacheEnabled", 
+            Preferences.setHelp("OfflineWebApplicationCacheEnabled",
                 self.applicationCacheEnabledCheckBox.isChecked())
-            Preferences.setHelp("OfflineWebApplicationCacheQuota", 
+            Preferences.setHelp("OfflineWebApplicationCacheQuota",
                 self.applicationCacheQuotaSpinBox.value())
         
         if self.localStorageGroup.isEnabled():
-            Preferences.setHelp("LocalStorageEnabled", 
+            Preferences.setHelp("LocalStorageEnabled",
                 self.localStorageEnabledCheckBox.isChecked())
     
     @pyqtSlot()

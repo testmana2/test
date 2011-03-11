@@ -21,6 +21,7 @@ from E5Gui.E5LineEditButton import E5LineEditButton
 from .OpenSearch.OpenSearchManager import OpenSearchManager
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
 
+
 class HelpWebSearchWidget(QWidget):
     """
     Class implementing a web search widget for the web browser.
@@ -29,7 +30,7 @@ class HelpWebSearchWidget(QWidget):
     """
     search = pyqtSignal(QUrl)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -51,7 +52,7 @@ class HelpWebSearchWidget(QWidget):
         
         self.__enginesMenu = QMenu(self)
         
-        self.__searchEdit = E5LineEdit(parent = self)
+        self.__searchEdit = E5LineEdit(parent=self)
         self.__layout.addWidget(self.__searchEdit)
         
         self.__engineButton = E5LineEditButton(self)
@@ -278,7 +279,7 @@ class HelpWebSearchWidget(QWidget):
                 else:
                     title = ct.title()
             
-            action = self.__enginesMenu.addAction(self.trUtf8("Add '{0}'").format(title), 
+            action = self.__enginesMenu.addAction(self.trUtf8("Add '{0}'").format(title),
                                                   self.__addEngineFromUrl)
             action.setData(url)
             action.setIcon(ct.icon())
@@ -287,7 +288,7 @@ class HelpWebSearchWidget(QWidget):
         self.__enginesMenu.addAction(self.mw.searchEnginesAction())
         
         if self.__recentSearches:
-            self.__enginesMenu.addAction(self.trUtf8("Clear Recent Searches"), 
+            self.__enginesMenu.addAction(self.trUtf8("Clear Recent Searches"),
                                          self.clear)
     
     def __changeCurrentEngine(self):
@@ -307,7 +308,7 @@ class HelpWebSearchWidget(QWidget):
         if action is not None:
             url = action.data()
             if not isinstance(url, QUrl):
-                return 
+                return
             
             self.__openSearchManager.addEngine(url)
     

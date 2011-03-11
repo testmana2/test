@@ -25,6 +25,7 @@ import Preferences
 import Utilities
 import UI.PixmapCache
 
+
 class ChatWidget(QWidget, Ui_ChatWidget):
     """
     Class implementing the chat dialog.
@@ -46,7 +47,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
     sendEdit = pyqtSignal()
     cancelEdit = pyqtSignal()
     
-    def __init__(self, port = -1, parent = None):
+    def __init__(self, port=-1, parent=None):
         """
         Constructor
         
@@ -176,7 +177,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         
         QListWidgetItem(
             UI.PixmapCache.getIcon(
-                "chatUser{0}.png".format(1 + self.usersList.count() % 6)), 
+                "chatUser{0}.png".format(1 + self.usersList.count() % 6)),
             nick, self.usersList)
         
         if not self.__connected:
@@ -468,30 +469,30 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.__chatMenu = QMenu(self)
         self.__cutChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"), 
+                UI.PixmapCache.getIcon("editCut.png"),
                 self.trUtf8("Cut"), self.__cutChat)
         self.__copyChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCopy.png"), 
+                UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy"), self.__copyChat)
         self.__chatMenu.addSeparator()
         self.__cutAllChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCut.png"), 
+                UI.PixmapCache.getIcon("editCut.png"),
                 self.trUtf8("Cut all"), self.__cutAllChat)
         self.__copyAllChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editCopy.png"), 
+                UI.PixmapCache.getIcon("editCopy.png"),
                 self.trUtf8("Copy all"), self.__copyAllChat)
         self.__chatMenu.addSeparator()
         self.__clearChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("editDelete.png"), 
+                UI.PixmapCache.getIcon("editDelete.png"),
                 self.trUtf8("Clear"), self.__clearChat)
         self.__chatMenu.addSeparator()
         self.__saveChatAct = \
             self.__chatMenu.addAction(
-                UI.PixmapCache.getIcon("fileSave.png"), 
+                UI.PixmapCache.getIcon("fileSave.png"),
                 self.trUtf8("Save"), self.__saveChat)
     
     @pyqtSlot(bool)
@@ -547,13 +548,13 @@ class ChatWidget(QWidget, Ui_ChatWidget):
                         self.trUtf8("Save Chat"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
-                        icon = E5MessageBox.Warning)
+                        icon=E5MessageBox.Warning)
                     if not res:
                         return
                     fname = Utilities.toNativeSeparators(fname)
                 
                 try:
-                    f = open(fname, "w", encoding = "utf-8")
+                    f = open(fname, "w", encoding="utf-8")
                     f.write(txt)
                     f.close()
                 except IOError as err:
@@ -601,15 +602,15 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         self.__usersMenu = QMenu(self)
         self.__kickUserAct = \
             self.__usersMenu.addAction(
-                UI.PixmapCache.getIcon("chatKickUser.png"), 
+                UI.PixmapCache.getIcon("chatKickUser.png"),
                 self.trUtf8("Kick User"), self.__kickUser)
         self.__banUserAct = \
             self.__usersMenu.addAction(
-                UI.PixmapCache.getIcon("chatBanUser.png"), 
+                UI.PixmapCache.getIcon("chatBanUser.png"),
                 self.trUtf8("Ban User"), self.__banUser)
         self.__banKickUserAct = \
             self.__usersMenu.addAction(
-                UI.PixmapCache.getIcon("chatBanKickUser.png"), 
+                UI.PixmapCache.getIcon("chatBanKickUser.png"),
                 self.trUtf8("Ban and Kick User"), self.__banKickUser)
     
     @pyqtSlot(QPoint)

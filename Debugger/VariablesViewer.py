@@ -35,7 +35,7 @@ class VariableItem(QTreeWidgetItem):
         """
         self.value = dvalue
         if len(dvalue) > 2048:     # 1024 * 2
-            dvalue = QApplication.translate("VariableItem", 
+            dvalue = QApplication.translate("VariableItem",
                                             "<double click to show value>")
         
         QTreeWidgetItem.__init__(self, parent, [dvar, dvalue, dtype])
@@ -113,11 +113,12 @@ class VariableItem(QTreeWidgetItem):
         """
         return
 
+
 class SpecialVarItem(VariableItem):
     """
     Class implementing a VariableItem that represents a special variable node.
     
-    These special variable nodes are generated for classes, lists, 
+    These special variable nodes are generated for classes, lists,
     tuples and dictionaries.
     """
     def __init__(self, parent, dvar, dvalue, dtype, frmnr, scope):
@@ -158,6 +159,7 @@ class SpecialVarItem(VariableItem):
         e5App().getObject("DebugServer").remoteClientVariable(
             self.scope, filter, pathlist, self.framenr)
 
+
 class ArrayElementVarItem(VariableItem):
     """
     Class implementing a VariableItem that represents an array element.
@@ -175,8 +177,8 @@ class ArrayElementVarItem(VariableItem):
         
         """
         Array elements have numbers as names, but the key must be
-        right justified and zero filled to 6 decimal places. Then 
-        element 2 will have a key of '000002' and appear before 
+        right justified and zero filled to 6 decimal places. Then
+        element 2 will have a key of '000002' and appear before
         element 10 with a key of '000010'
         """
         keyStr = self.text(0)
@@ -192,6 +194,7 @@ class ArrayElementVarItem(VariableItem):
             return self.arrayElementKey
         else:
             return VariableItem.key(self, column)
+
 
 class SpecialArrayElementVarItem(SpecialVarItem):
     """
@@ -212,11 +215,11 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         
         """
         Array elements have numbers as names, but the key must be
-        right justified and zero filled to 6 decimal places. Then 
-        element 2 will have a key of '000002' and appear before 
+        right justified and zero filled to 6 decimal places. Then
+        element 2 will have a key of '000002' and appear before
         element 10 with a key of '000010'
         """
-        keyStr = self.text(0)[:-2] # strip off [], () or {}
+        keyStr = self.text(0)[:-2]  # strip off [], () or {}
         self.arrayElementKey = "{0:6d}".format(int(keyStr))
 
     def key(self, column):
@@ -230,13 +233,14 @@ class SpecialArrayElementVarItem(SpecialVarItem):
         else:
             return SpecialVarItem.key(self, column)
 
+
 class VariablesViewer(QTreeWidget):
     """
     Class implementing the variables viewer widget.
     
     This widget is used to display the variables of the program being
     debugged in a tree. Compound types will be shown with
-    their main entry first. Once the subtree has been expanded, the 
+    their main entry first. Once the subtree has been expanded, the
     individual entries will be shown. Double clicking an entry will
     popup a dialog showing the variables parameters in a more readable
     form. This is especially useful for lengthy strings.
@@ -253,8 +257,8 @@ class VariablesViewer(QTreeWidget):
         """
         QTreeWidget.__init__(self, parent)
         
-        self.indicators = {'list' : '[]', 'tuple' : '()', 'dict' : '{}', # Python types
-                           'Array' : '[]', 'Hash' : '{}'}                # Ruby types
+        self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',   # Python types
+                           'Array': '[]', 'Hash': '{}'}                # Ruby types
         
         self.rx_class = QRegExp('<.*(instance|object) at 0x.*>')
         self.rx_class2 = QRegExp('class .*')
@@ -279,8 +283,8 @@ class VariablesViewer(QTreeWidget):
         if scope:
             self.setWindowTitle(self.trUtf8("Global Variables"))
             self.setHeaderLabels([
-                self.trUtf8("Globals"), 
-                self.trUtf8("Value"), 
+                self.trUtf8("Globals"),
+                self.trUtf8("Value"),
                 self.trUtf8("Type")])
             self.setWhatsThis(self.trUtf8(
                 """<b>The Global Variables Viewer Window</b>"""
@@ -290,8 +294,8 @@ class VariablesViewer(QTreeWidget):
         else:
             self.setWindowTitle(self.trUtf8("Local Variables"))
             self.setHeaderLabels([
-                self.trUtf8("Locals"), 
-                self.trUtf8("Value"), 
+                self.trUtf8("Locals"),
+                self.trUtf8("Value"),
                 self.trUtf8("Type")])
             self.setWhatsThis(self.trUtf8(
                 """<b>The Local Variables Viewer Window</b>"""
@@ -419,9 +423,9 @@ class VariablesViewer(QTreeWidget):
         """
         Public method to show variables in a list.
         
-        @param vlist the list of subitems to be displayed. 
+        @param vlist the list of subitems to be displayed.
                 The first element gives the path of the
-                parent variable. Each other listentry is 
+                parent variable. Each other listentry is
                 a tuple of three values.
                 <ul>
                 <li>the variable name (string)</li>
@@ -461,7 +465,7 @@ class VariablesViewer(QTreeWidget):
                 self.setCurrentItem(citm)
                 self.setItemSelected(citm, True)
                 if self.__scrollToItem:
-                    self.scrollToItem(self.__scrollToItem, 
+                    self.scrollToItem(self.__scrollToItem,
                                       QAbstractItemView.PositionAtTop)
                 else:
                     self.scrollToItem(citm, QAbstractItemView.PositionAtTop)
@@ -472,7 +476,7 @@ class VariablesViewer(QTreeWidget):
         self.resortEnabled = resortEnabled
         self.__resort()
 
-    def __generateItem(self, parent, dvar, dvalue, dtype, isSpecial = False):
+    def __generateItem(self, parent, dvar, dvalue, dtype, isSpecial=False):
         """
         Private method used to generate a VariableItem.
         
@@ -489,17 +493,17 @@ class VariablesViewer(QTreeWidget):
             isSpecial = False
         
         if self.rx_class2.exactMatch(dtype):
-            return SpecialVarItem(parent, dvar, dvalue, dtype[7:-1], 
+            return SpecialVarItem(parent, dvar, dvalue, dtype[7:-1],
                                   self.framenr, self.scope)
         elif dtype != "void *" and \
              (self.rx_class.exactMatch(dvalue) or \
               self.rx_class3.exactMatch(dvalue) or \
               isSpecial):
             if self.dvar_rx_special_array_element.exactMatch(dvar):
-                return SpecialArrayElementVarItem(parent, dvar, dvalue, dtype, 
+                return SpecialArrayElementVarItem(parent, dvar, dvalue, dtype,
                                                   self.framenr, self.scope)
             else:
-                return SpecialVarItem(parent, dvar, dvalue, dtype, 
+                return SpecialVarItem(parent, dvar, dvalue, dtype,
                                       self.framenr, self.scope)
         else:
             if self.dvar_rx_array_element.exactMatch(dvar):
@@ -511,7 +515,7 @@ class VariablesViewer(QTreeWidget):
         """
         Private method used to add an item to the list.
         
-        If the item is of a type with subelements (i.e. list, dictionary, 
+        If the item is of a type with subelements (i.e. list, dictionary,
         tuple), these subelements are added by calling this method recursively.
         
         @param parent the parent of the item to be added
@@ -531,8 +535,8 @@ class VariablesViewer(QTreeWidget):
         dvtype = self.__getDispType(vtype)
         
         if vtype in ['list', 'Array', 'tuple', 'dict', 'Hash']:
-            itm = self.__generateItem(parent, dvar, 
-                                      self.trUtf8("{0} items").format(value), 
+            itm = self.__generateItem(parent, dvar,
+                                      self.trUtf8("{0} items").format(value),
                                       dvtype, True)
         elif vtype in ['unicode', 'str']:
             if self.rx_nonprintable.indexIn(value) != -1:
@@ -571,7 +575,7 @@ class VariablesViewer(QTreeWidget):
 
     def mouseDoubleClickEvent(self, mouseEvent):
         """
-        Protected method of QAbstractItemView. 
+        Protected method of QAbstractItemView.
         
         Reimplemented to disable expanding/collapsing
         of items when double-clicking. Instead the double-clicked entry is opened.

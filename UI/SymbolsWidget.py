@@ -19,11 +19,12 @@ from .Ui_SymbolsWidget import Ui_SymbolsWidget
 import UI.PixmapCache
 import Preferences
 
+
 class SymbolsModel(QAbstractTableModel):
     """
     Class implementing the model for the symbols widget.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -32,11 +33,11 @@ class SymbolsModel(QAbstractTableModel):
         QAbstractTableModel.__init__(self, parent)
         
         self.__headerData = [
-            self.trUtf8("Code"), 
-            self.trUtf8("Char"), 
-            self.trUtf8("Hex"), 
-            self.trUtf8("HTML"), 
-            self.trUtf8("Name"), 
+            self.trUtf8("Code"),
+            self.trUtf8("Char"),
+            self.trUtf8("Hex"),
+            self.trUtf8("HTML"),
+            self.trUtf8("Name"),
         ]
         
         self.__tables = (
@@ -181,7 +182,7 @@ class SymbolsModel(QAbstractTableModel):
         self.__currentTableIndex = index
         self.reset()
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get header data from the model.
         
@@ -195,7 +196,7 @@ class SymbolsModel(QAbstractTableModel):
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -314,6 +315,7 @@ class SymbolsModel(QAbstractTableModel):
         """
         return unicodedata.category(char) in ["Pc", "Pd", "Ps", "Pe", "Pi", "Pf", "Po"]
 
+
 class SymbolsWidget(QWidget, Ui_SymbolsWidget):
     """
     Class implementing a widget to select a symbol in various formats.
@@ -322,7 +324,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
     """
     insertSymbol = pyqtSignal(str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -353,10 +355,10 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         self.tableCombo.setCurrentIndex(tableIndex)
         
         index = self.__model.index(
-            int(Preferences.Prefs.settings.value("Symbols/Top", 0)), 
+            int(Preferences.Prefs.settings.value("Symbols/Top", 0)),
             0)
         self.symbolsTable.scrollTo(index, QAbstractItemView.PositionAtTop)
-        self.symbolsTable.selectionModel().setCurrentIndex(index, 
+        self.symbolsTable.selectionModel().setCurrentIndex(index,
             QItemSelectionModel.SelectCurrent | QItemSelectionModel.Rows)
     
     @pyqtSlot(QModelIndex)

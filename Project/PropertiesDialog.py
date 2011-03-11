@@ -24,11 +24,12 @@ from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 import Utilities
 
+
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
     """
     Class implementing the project properties dialog.
     """
-    def __init__(self, project, new = True, parent = None, name = None):
+    def __init__(self, project, new=True, parent=None, name=None):
         """
         Constructor
         
@@ -150,7 +151,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 SpellingPropertiesDialog(self.project, self.newProject, self)
         res = self.spellPropertiesDlg.exec_()
         if res == QDialog.Rejected:
-            self.spellPropertiesDlg.initDialog() # reset the dialogs contents
+            self.spellPropertiesDlg.initDialog()  # reset the dialogs contents
         
     @pyqtSlot()
     def on_transPropertiesButton_clicked(self):
@@ -164,7 +165,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.transPropertiesDlg.initFilters()
         res = self.transPropertiesDlg.exec_()
         if res == QDialog.Rejected:
-            self.transPropertiesDlg.initDialog() # reset the dialogs contents
+            self.transPropertiesDlg.initDialog()  # reset the dialogs contents
         
     @pyqtSlot()
     def on_mainscriptButton_clicked(self):

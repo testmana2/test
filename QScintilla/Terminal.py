@@ -27,13 +27,14 @@ import UI.PixmapCache
 
 from .ShellHistoryDialog import ShellHistoryDialog
 
+
 class Terminal(QsciScintillaCompat):
     """
     Class implementing a simple terminal based on QScintilla.
     
-    A user can enter commands that are executed by a shell process.  
+    A user can enter commands that are executed by a shell process.
     """
-    def __init__(self, vm, parent = None):
+    def __init__(self, vm, parent=None):
         """
         Constructor
         
@@ -128,31 +129,31 @@ class Terminal(QsciScintillaCompat):
         self.incrementalSearchActive = False
         
         self.supportedEditorCommands = {
-            QsciScintilla.SCI_LINEDELETE   : self.__clearCurrentLine,
-            QsciScintilla.SCI_NEWLINE      : self.__QScintillaNewline,
+            QsciScintilla.SCI_LINEDELETE: self.__clearCurrentLine,
+            QsciScintilla.SCI_NEWLINE: self.__QScintillaNewline,
             
-            QsciScintilla.SCI_DELETEBACK   : self.__QScintillaDeleteBack,
-            QsciScintilla.SCI_CLEAR        : self.__QScintillaDelete,
-            QsciScintilla.SCI_DELWORDLEFT  : self.__QScintillaDeleteWordLeft,
-            QsciScintilla.SCI_DELWORDRIGHT : self.__QScintillaDeleteWordRight,
-            QsciScintilla.SCI_DELLINELEFT  : self.__QScintillaDeleteLineLeft,
-            QsciScintilla.SCI_DELLINERIGHT : self.__QScintillaDeleteLineRight,
+            QsciScintilla.SCI_DELETEBACK: self.__QScintillaDeleteBack,
+            QsciScintilla.SCI_CLEAR: self.__QScintillaDelete,
+            QsciScintilla.SCI_DELWORDLEFT: self.__QScintillaDeleteWordLeft,
+            QsciScintilla.SCI_DELWORDRIGHT: self.__QScintillaDeleteWordRight,
+            QsciScintilla.SCI_DELLINELEFT: self.__QScintillaDeleteLineLeft,
+            QsciScintilla.SCI_DELLINERIGHT: self.__QScintillaDeleteLineRight,
             
-            QsciScintilla.SCI_CHARLEFT     : self.__QScintillaCharLeft,
-            QsciScintilla.SCI_CHARRIGHT    : self.__QScintillaCharRight,
-            QsciScintilla.SCI_WORDLEFT     : self.__QScintillaWordLeft,
-            QsciScintilla.SCI_WORDRIGHT    : self.__QScintillaWordRight,
-            QsciScintilla.SCI_VCHOME       : self.__QScintillaVCHome,
-            QsciScintilla.SCI_LINEEND      : self.__QScintillaLineEnd,
-            QsciScintilla.SCI_LINEUP       : self.__QScintillaLineUp,
-            QsciScintilla.SCI_LINEDOWN     : self.__QScintillaLineDown,
+            QsciScintilla.SCI_CHARLEFT: self.__QScintillaCharLeft,
+            QsciScintilla.SCI_CHARRIGHT: self.__QScintillaCharRight,
+            QsciScintilla.SCI_WORDLEFT: self.__QScintillaWordLeft,
+            QsciScintilla.SCI_WORDRIGHT: self.__QScintillaWordRight,
+            QsciScintilla.SCI_VCHOME: self.__QScintillaVCHome,
+            QsciScintilla.SCI_LINEEND: self.__QScintillaLineEnd,
+            QsciScintilla.SCI_LINEUP: self.__QScintillaLineUp,
+            QsciScintilla.SCI_LINEDOWN: self.__QScintillaLineDown,
             
-            QsciScintilla.SCI_CHARLEFTEXTEND  : self.__QScintillaCharLeftExtend,
-            QsciScintilla.SCI_CHARRIGHTEXTEND : self.extendSelectionRight,
-            QsciScintilla.SCI_WORDLEFTEXTEND  : self.__QScintillaWordLeftExtend,
-            QsciScintilla.SCI_WORDRIGHTEXTEND : self.extendSelectionWordRight,
-            QsciScintilla.SCI_VCHOMEEXTEND    : self.__QScintillaVCHomeExtend,
-            QsciScintilla.SCI_LINEENDEXTEND   : self.extendSelectionToEOL,
+            QsciScintilla.SCI_CHARLEFTEXTEND: self.__QScintillaCharLeftExtend,
+            QsciScintilla.SCI_CHARRIGHTEXTEND: self.extendSelectionRight,
+            QsciScintilla.SCI_WORDLEFTEXTEND: self.__QScintillaWordLeftExtend,
+            QsciScintilla.SCI_WORDRIGHTEXTEND: self.extendSelectionWordRight,
+            QsciScintilla.SCI_VCHOMEEXTEND: self.__QScintillaVCHomeExtend,
+            QsciScintilla.SCI_LINEENDEXTEND: self.extendSelectionToEOL,
         }
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
@@ -177,7 +178,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private method to process the output of the shell.
         """
-        output = str(self.__process.readAllStandardOutput(), 
+        output = str(self.__process.readAllStandardOutput(),
                          self.__ioEncoding, 'replace')
         self.__write(self.ansi_re.sub("", output))
         self.__lastPos = self.__getEndPos()
@@ -225,7 +226,7 @@ class Terminal(QsciScintillaCompat):
         
     def closeTerminal(self):
         """
-        Public method to shutdown the terminal. 
+        Public method to shutdown the terminal.
         """
         self.__stopShell()
         self.saveHistory()
@@ -588,7 +589,7 @@ class Terminal(QsciScintillaCompat):
             self.insert('\n')
             self.__executeCommand(buf)
         
-    def __QScintillaLeftCommand(self, method, allLinesAllowed = False):
+    def __QScintillaLeftCommand(self, method, allLinesAllowed=False):
         """
         Private method to handle a QScintilla command working to the left.
         
@@ -670,7 +671,7 @@ class Terminal(QsciScintillaCompat):
         buf = self.text(line)[self.__lastPos[1]:]
         if buf and self.incrementalSearchActive:
             if self.incrementalSearchString:
-                idx = self.__rsearchHistory(self.incrementalSearchString, 
+                idx = self.__rsearchHistory(self.incrementalSearchString,
                                             self.histidx)
                 if idx >= 0:
                     self.histidx = idx
@@ -782,7 +783,7 @@ class Terminal(QsciScintillaCompat):
         self.removeSelectedText()
         self.__insertText(cmd)
         
-    def __searchHistory(self, txt, startIdx = -1):
+    def __searchHistory(self, txt, startIdx=-1):
         """
         Private method used to search the history.
         
@@ -799,7 +800,7 @@ class Terminal(QsciScintillaCompat):
             idx += 1
         return idx
         
-    def __rsearchHistory(self, txt, startIdx = -1):
+    def __rsearchHistory(self, txt, startIdx=-1):
         """
         Private method used to reverse search the history.
         
@@ -816,7 +817,7 @@ class Terminal(QsciScintillaCompat):
             idx -= 1
         return idx
         
-    def contextMenuEvent(self,ev):
+    def contextMenuEvent(self, ev):
         """
         Reimplemented to show our own context menu.
         
@@ -934,7 +935,7 @@ class Terminal(QsciScintillaCompat):
         self.insertAt(txt, line, col)
         if re.search(self.linesepRegExp, txt) is not None:
             line += 1
-        self.setCursorPosition(line, col  + l)
+        self.setCursorPosition(line, col + l)
         
     def __configure(self):
         """

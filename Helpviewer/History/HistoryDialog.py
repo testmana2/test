@@ -19,6 +19,7 @@ from .Ui_HistoryDialog import Ui_HistoryDialog
 
 import UI.PixmapCache
 
+
 class HistoryDialog(QDialog, Ui_HistoryDialog):
     """
     Class implementing a dialog to manage history.
@@ -29,7 +30,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, parent = None, manager = None):
+    def __init__(self, parent=None, manager=None):
         """
         Constructor
         
@@ -120,11 +121,11 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         idx = self.historyTree.currentIndex()
         if newTab:
             self.newUrl.emit(
-                idx.data(HistoryModel.UrlRole), 
+                idx.data(HistoryModel.UrlRole),
                 idx.data(HistoryModel.TitleRole))
         else:
             self.openUrl.emit(
-                idx.data(HistoryModel.UrlRole), 
+                idx.data(HistoryModel.UrlRole),
                 idx.data(HistoryModel.TitleRole))
     
     def __copyHistory(self):

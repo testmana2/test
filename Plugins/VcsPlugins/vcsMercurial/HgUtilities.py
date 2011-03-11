@@ -11,6 +11,7 @@ import os
 
 import Utilities
 
+
 def getConfigPath():
     """
     Public method to get the filename of the config file.

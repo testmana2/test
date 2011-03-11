@@ -10,11 +10,12 @@ Module implementing a button class to be used with E5LineEdit.
 from PyQt4.QtCore import Qt, QPoint, QPointF
 from PyQt4.QtGui import QAbstractButton, QPainter, QPainterPath
 
+
 class E5LineEditButton(QAbstractButton):
     """
     Class implementing a button to be used with E5LineEdit.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

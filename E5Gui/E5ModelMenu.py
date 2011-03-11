@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 import UI.PixmapCache
 
+
 class E5ModelMenu(QMenu):
     """
     Class implementing a menu populated from a QAbstractItemModel.
@@ -20,7 +21,7 @@ class E5ModelMenu(QMenu):
     """
     activated = pyqtSignal(QModelIndex)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -179,7 +180,7 @@ class E5ModelMenu(QMenu):
         """
         return E5ModelMenu(self)
     
-    def createMenu(self, parent, max_, parentMenu = None, menu = None):
+    def createMenu(self, parent, max_, parentMenu=None, menu=None):
         """
         Public method to put all the children of a parent into a menu of a given length.
         
@@ -329,7 +330,7 @@ class E5ModelMenu(QMenu):
             self.__dropRow = row
             self.__dropIndex = parentIndex
             evt.acceptProposedAction()
-            self.__model.dropMimeData(evt.mimeData(), evt.dropAction(), 
+            self.__model.dropMimeData(evt.mimeData(), evt.dropAction(),
                                       row, 0, parentIndex)
             self.close()
         

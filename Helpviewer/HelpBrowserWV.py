@@ -40,11 +40,12 @@ from .OpenSearch.OpenSearchEngine import OpenSearchEngine
 
 ##########################################################################################
 
+
 class JavaScriptExternalObject(QObject):
     """
     Class implementing an external javascript object to add search providers.
     """
-    def __init__(self, mw, parent = None):
+    def __init__(self, mw, parent=None):
         """
         Constructor
         
@@ -64,6 +65,7 @@ class JavaScriptExternalObject(QObject):
         """
         self.__mw.openSearchManager().addEngine(QUrl(url))
 
+
 class LinkedResource(object):
     """
     Class defining a data structure for linked resources.
@@ -79,19 +81,20 @@ class LinkedResource(object):
 
 ##########################################################################################
 
+
 class JavaScriptEricObject(QObject):
     """
     Class implementing an external javascript object to search via the startpage.
     """
     # these must be in line with the strings used by the javascript part of the start page
     translations = [
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Welcome to Eric Web Browser!"), 
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Eric Web Browser"), 
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Search!"), 
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "About Eric"), 
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Welcome to Eric Web Browser!"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Eric Web Browser"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Search!"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "About Eric"),
     ]
     
-    def __init__(self, mw, parent = None):
+    def __init__(self, mw, parent=None):
         """
         Constructor
         
@@ -102,7 +105,7 @@ class JavaScriptEricObject(QObject):
         
         self.__mw = mw
     
-    @pyqtSlot(str, result = str)
+    @pyqtSlot(str, result=str)
     def translate(self, trans):
         """
         Public method to translate the given string.
@@ -119,7 +122,7 @@ class JavaScriptEricObject(QObject):
         
         return self.trUtf8(trans)
     
-    @pyqtSlot(result = str)
+    @pyqtSlot(result=str)
     def providerString(self):
         """
         Public method to get a string for the search provider.
@@ -129,7 +132,7 @@ class JavaScriptEricObject(QObject):
         return self.trUtf8("Search results provided by {0}")\
             .format(self.__mw.openSearchManager().currentEngineName())
     
-    @pyqtSlot(str, result = str)
+    @pyqtSlot(str, result=str)
     def searchUrl(self, searchStr):
         """
         Public method to get the search URL for the given search term.
@@ -143,11 +146,12 @@ class JavaScriptEricObject(QObject):
 
 ##########################################################################################
 
+
 class HelpWebPage(QWebPage):
     """
     Class implementing an enhanced web page.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -192,7 +196,7 @@ class HelpWebPage(QWebPage):
                             """ to some unexpected behaviour of the site e.g. the"""
                             """ same action might be performed once again. Do you want"""
                             """ to continue anyway?"""),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return False
         
@@ -256,20 +260,20 @@ class HelpWebPage(QWebPage):
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("IMAGE_BINARY_DATA_HERE", 
+                    html = html.replace("IMAGE_BINARY_DATA_HERE",
                                  str(imageBuffer.buffer().toBase64(), encoding="ascii"))
                 errorPage.content = QByteArray(html.format(
-                    title, 
-                    info.errorString, 
-                    self.trUtf8("When connecting to: {0}.").format(urlString), 
+                    title,
+                    info.errorString,
+                    self.trUtf8("When connecting to: {0}.").format(urlString),
                     self.trUtf8("Check the address for errors such as "
                                 "<b>ww</b>.example.org instead of "
-                                "<b>www</b>.example.org"), 
+                                "<b>www</b>.example.org"),
                     self.trUtf8("If the address is correct, try checking the network "
-                                "connection."), 
+                                "connection."),
                     self.trUtf8("If your computer or network is protected by a firewall "
                                 "or proxy, make sure that the browser is permitted to "
-                                "access the network."), 
+                                "access the network."),
                     self.trUtf8("If your cache policy is set to offline browsing,"
                                 "only pages in the local cache are available.")
                 ).encode("utf8"))
@@ -279,11 +283,11 @@ class HelpWebPage(QWebPage):
         
         return QWebPage.extension(self, extension, option, output)
     
-    def userAgent(self, resolveEmpty = False):
+    def userAgent(self, resolveEmpty=False):
         """
         Public method to get the current user agent setting.
         
-        @param resolveEmpty flag indicating to resolve an empty 
+        @param resolveEmpty flag indicating to resolve an empty
             user agent (boolean)
         @return user agent string (string)
         """
@@ -356,11 +360,12 @@ class HelpWebPage(QWebPage):
             dlg = SslInfoDialog(self.__sslInfo, self.view())
             dlg.exec_()
         else:
-            E5MessageBox.warning(self.view(), 
-                self.trUtf8("SSL Certificate Info"), 
+            E5MessageBox.warning(self.view(),
+                self.trUtf8("SSL Certificate Info"),
                 self.trUtf8("""There is no SSL Certificate Info available."""))
 
 ##########################################################################################
+
 
 class HelpBrowser(QWebView):
     """
@@ -381,7 +386,7 @@ class HelpBrowser(QWebView):
     highlighted = pyqtSignal(str)
     search = pyqtSignal(QUrl)
     
-    def __init__(self, mainWindow, parent = None, name = ""):
+    def __init__(self, mainWindow, parent=None, name=""):
         """
         Constructor
         
@@ -406,9 +411,9 @@ class HelpBrowser(QWebView):
         
         self.__currentZoom = 100
         self.__zoomLevels = [
-            30, 50, 67, 80, 90, 
-            100, 
-            110, 120, 133, 150, 170, 200, 240, 300, 
+            30, 50, 67, 80, 90,
+            100,
+            110, 120, 133, 150, 170, 200, 240, 300,
         ]
         
         self.__javaScriptBinding = None
@@ -439,7 +444,7 @@ class HelpBrowser(QWebView):
         self.mw.openSearchManager().currentEngineChanged.connect(
             self.__currentEngineChanged)
     
-    def __addExternalBinding(self, frame = None):
+    def __addExternalBinding(self, frame=None):
         """
         Private slot to add javascript bindings for adding search providers.
         
@@ -467,7 +472,7 @@ class HelpBrowser(QWebView):
             frame.javaScriptWindowObjectCleared.connect(self.__addExternalBinding)
         frame.addToJavaScriptWindowObject("external", self.__javaScriptBinding)
     
-    def linkedResources(self, relation = ""):
+    def linkedResources(self, relation=""):
         """
         Public method to extract linked resources.
         
@@ -508,7 +513,7 @@ class HelpBrowser(QWebView):
                 rel = m["rel"]
                 type_ = m["type"]
                 href = m["href"]
-                title =  m["title"]
+                title = m["title"]
                 
                 if href == "" or type_ == "":
                     continue
@@ -711,7 +716,7 @@ class HelpBrowser(QWebView):
             self.__currentZoom = self.__zoomLevels[index - 1]
         self.__applyZoom()
     
-    def zoomReset(self): 
+    def zoomReset(self):
         """
         Public method to reset the zoom factor.
         """
@@ -792,13 +797,13 @@ class HelpBrowser(QWebView):
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
                 menu.addSeparator()
-            act = menu.addAction(self.trUtf8("Open Image in New Tab"), 
+            act = menu.addAction(self.trUtf8("Open Image in New Tab"),
                 self.__openLinkInNewTab)
             act.setData(hit.imageUrl())
             menu.addSeparator()
             menu.addAction(self.trUtf8("Save Image"), self.__downloadImage)
             menu.addAction(self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
-            act = menu.addAction(self.trUtf8("Copy Image Location to Clipboard"), 
+            act = menu.addAction(self.trUtf8("Copy Image Location to Clipboard"),
                 self.__copyImageLocation)
             act.setData(hit.imageUrl().toString())
             menu.addSeparator()
@@ -843,7 +848,7 @@ class HelpBrowser(QWebView):
             if not element.isNull() and \
                element.tagName().lower() == "input" and \
                element.attribute("type", "text") == "text":
-                act = menu.addAction(self.trUtf8("Add to web search toolbar"), 
+                act = menu.addAction(self.trUtf8("Add to web search toolbar"),
                                      self.__addSearchEngine)
                 act.setData(element)
                 menu.addSeparator()
@@ -998,9 +1003,9 @@ class HelpBrowser(QWebView):
         ok = True
         if len(searchEngines) > 1:
             searchEngine, ok = QInputDialog.getItem(
-                self, 
-                self.trUtf8("Search engine"), 
-                self.trUtf8("Choose the desired search engine"), 
+                self,
+                self.trUtf8("Search engine"),
+                self.trUtf8("Choose the desired search engine"),
                 sorted(searchEngines.keys()), 0, False)
             
             if not ok:
@@ -1164,12 +1169,12 @@ class HelpBrowser(QWebView):
         
         self.mw.downloadManager().download(url, True)
     
-    def __unsupportedContent(self, reply, requestFilename = None, download = False):
+    def __unsupportedContent(self, reply, requestFilename=None, download=False):
         """
         Private slot to handle the unsupportedContent signal.
         
         @param reply reference to the reply object (QNetworkReply)
-        @keyparam requestFilename indicating to ask for a filename 
+        @keyparam requestFilename indicating to ask for a filename
             (boolean or None). If it is None, the behavior is determined
             by a configuration option.
         @keyparam download flag indicating a download operation (boolean)
@@ -1185,7 +1190,7 @@ class HelpBrowser(QWebView):
         if reply.error() == QNetworkReply.NoError:
             if reply.header(QNetworkRequest.ContentTypeHeader):
                 self.mw.downloadManager().handleUnsupportedContent(
-                    reply, webPage = self.page())
+                    reply, webPage=self.page())
                 return
         
         replyUrl = reply.url()
@@ -1199,7 +1204,7 @@ class HelpBrowser(QWebView):
         if reply.header(QNetworkRequest.ContentTypeHeader):
             data = reply.readAll()
             if contentSniff(data):
-                notFoundFrame.setHtml(str(data, encoding = "utf-8"), replyUrl)
+                notFoundFrame.setHtml(str(data, encoding="utf-8"), replyUrl)
                 return
         
         html = notFoundPage_html
@@ -1211,19 +1216,19 @@ class HelpBrowser(QWebView):
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):
-            html = html.replace("IMAGE_BINARY_DATA_HERE", 
+            html = html.replace("IMAGE_BINARY_DATA_HERE",
                          str(imageBuffer.buffer().toBase64(), encoding="ascii"))
         html = html.format(
-            title, 
-            reply.errorString(), 
-            self.trUtf8("When connecting to: {0}.").format(urlString), 
+            title,
+            reply.errorString(),
+            self.trUtf8("When connecting to: {0}.").format(urlString),
             self.trUtf8("Check the address for errors such as <b>ww</b>.example.org "
-                        "instead of <b>www</b>.example.org"), 
+                        "instead of <b>www</b>.example.org"),
             self.trUtf8("If the address is correct, try checking the network "
-                        "connection."), 
+                        "connection."),
             self.trUtf8("If your computer or network is protected by a firewall or "
                         "proxy, make sure that the browser is permitted to access "
-                        "the network."), 
+                        "the network."),
             self.trUtf8("If your cache policy is set to offline browsing,"
                         "only pages in the local cache are available.")
         )
@@ -1259,14 +1264,14 @@ class HelpBrowser(QWebView):
                         """ been exceeded while accessing database <strong>{1}"""
                         """</strong>.</p><p>Shall it be changed?</p>""")\
                 .format(self.__dataString(securityOrigin.databaseQuota()), databaseName),
-            yesDefault = True)
+            yesDefault=True)
         if res:
             newQuota, ok = QInputDialog.getInteger(
                 self,
                 self.trUtf8("New Web Database Quota"),
                 self.trUtf8("Enter the new quota in MB (current = {0}, used = {1}; "
                             "step size = 5 MB):"\
-                    .format(self.__dataString(securityOrigin.databaseQuota()), 
+                    .format(self.__dataString(securityOrigin.databaseQuota()),
                             self.__dataString(securityOrigin.databaseUsage()))),
                 securityOrigin.databaseQuota() // (1024 * 1024), 0, 2147483647, 5)
             if ok:
@@ -1308,6 +1313,7 @@ class HelpBrowser(QWebView):
         Public method to indicate a change of the settings.
         """
         self.reload()
+
 
 def contentSniff(data):
     """

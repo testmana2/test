@@ -16,6 +16,7 @@ from .Config import sessionFileFormatVersion
 
 import Preferences
 
+
 class SessionWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML session file.
@@ -62,7 +63,7 @@ class SessionWriter(XMLStreamWriterBase):
         # step 0: save open multi project and project for the global session
         if isGlobal:
             if self.multiProject.isOpen():
-                self.writeTextElement("MultiProject", 
+                self.writeTextElement("MultiProject",
                     self.multiProject.getMultiProjectFile())
             if self.project.isOpen():
                 self.writeTextElement("Project", self.project.getProjectFile())

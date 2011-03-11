@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_E5NetworkHeaderDetailsDialog import Ui_E5NetworkHeaderDetailsDialog
 
+
 class E5NetworkHeaderDetailsDialog(QDialog, Ui_E5NetworkHeaderDetailsDialog):
     """
     Class implementing a dialog to show the data of a response or reply header.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

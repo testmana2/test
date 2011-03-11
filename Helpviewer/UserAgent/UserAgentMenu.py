@@ -16,11 +16,12 @@ from .UserAgentDefaults import UserAgentDefaults
 
 from Helpviewer.HelpBrowserWV import HelpWebPage
 
+
 class UserAgentMenu(QMenu):
     """
     Class implementing a menu to select the user agent string.
     """
-    def __init__(self, title, parent = None):
+    def __init__(self, title, parent=None):
         """
         Constructor
         
@@ -79,7 +80,7 @@ class UserAgentMenu(QMenu):
             self.trUtf8("Custom user agent"),
             self.trUtf8("User agent:"),
             QLineEdit.Normal,
-            HelpWebPage().userAgent(resolveEmpty = True))
+            HelpWebPage().userAgent(resolveEmpty=True))
         if ok:
             HelpWebPage().setUserAgent(userAgent)
     

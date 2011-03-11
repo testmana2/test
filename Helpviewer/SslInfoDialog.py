@@ -15,11 +15,12 @@ from .Ui_SslInfoDialog import Ui_SslInfoDialog
 
 import Utilities
 
+
 class SslInfoDialog(QDialog, Ui_SslInfoDialog):
     """
     Class implementing a dialog to show SSL certificate infos.
     """
-    def __init__(self, certificate, parent = None):
+    def __init__(self, certificate, parent=None):
         """
         Constructor
         
@@ -45,9 +46,9 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         self.effectiveLabel.setText(certificate.effectiveDate().toString("yyyy-MM-dd"))
         self.expiresLabel.setText(certificate.expiryDate().toString("yyyy-MM-dd"))
         self.sha1Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding = "ascii")))
+            str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
         self.md5Label.setText(self.__formatHexString(
-            str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding = "ascii")))
+            str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding="ascii")))
     
     def __certificateString(self, txt):
         """
@@ -73,7 +74,7 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
             return self.trUtf8("<not part of the certificate>")
         
         if ':' in serial:
-            return str(serial, encoding = "ascii").upper()
+            return str(serial, encoding="ascii").upper()
         else:
             hexString = hex(int(serial))[2:]
             return self.__formatHexString(hexString)

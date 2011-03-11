@@ -18,11 +18,12 @@ from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
 import Utilities
 
+
 class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
     """
     Class implementing a dialog to enter the connection parameters.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         """
@@ -106,10 +107,10 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
             and the port (integer)
         """
         return (
-            self.driverCombo.currentText(), 
-            self.databaseEdit.text(), 
-            self.usernameEdit.text(), 
-            self.passwordEdit.text(), 
-            self.hostnameEdit.text(), 
-            self.portSpinBox.value(), 
+            self.driverCombo.currentText(),
+            self.databaseEdit.text(),
+            self.usernameEdit.text(),
+            self.passwordEdit.text(),
+            self.hostnameEdit.text(),
+            self.portSpinBox.value(),
         )

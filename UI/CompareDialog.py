@@ -22,7 +22,8 @@ from .Ui_CompareDialog import Ui_CompareDialog
 
 import Utilities
 
-def sbsdiff(a, b, linenumberwidth = 4):
+
+def sbsdiff(a, b, linenumberwidth=4):
     """
     Compare two sequences of lines; generate the delta for display side by side.
     
@@ -71,19 +72,20 @@ def sbsdiff(a, b, linenumberwidth = 4):
         yield ('r', linenumberformat.format(ln1), l1,
                     linenumberformat.format(ln2), l2)
 
+
 class CompareDialog(QWidget, Ui_CompareDialog):
     """
     Class implementing a dialog to compare two files and show the result side by side.
     """
-    def __init__(self, files = [], parent = None):
+    def __init__(self, files=[], parent=None):
         """
         Constructor
         
-        @param files list of files to compare and their label 
+        @param files list of files to compare and their label
             (list of two tuples of two strings)
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self,parent)
+        QWidget.__init__(self, parent)
         self.setupUi(self)
         
         self.file1Completer = E5FileCompleter(self.file1Edit)
@@ -157,7 +159,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             self.file1Label.hide()
             self.file2Label.hide()
 
-    def show(self, filename = None):
+    def show(self, filename=None):
         """
         Public slot to show the dialog.
         
@@ -167,7 +169,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             self.file1Edit.setText(filename)
         QWidget.show(self)
         
-    def __appendText(self, pane, linenumber, line, format, interLine = False):
+    def __appendText(self, pane, linenumber, line, format, interLine=False):
         """
         Private method to append text to the end of the contents pane.
         
@@ -216,7 +218,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         filename1 = Utilities.toNativeSeparators(self.file1Edit.text())
         try:
-            f1 = open(filename1, "r", encoding = "utf-8")
+            f1 = open(filename1, "r", encoding="utf-8")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -228,7 +230,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
 
         filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
         try:
-            f2 = open(filename2, "r", encoding = "utf-8")
+            f2 = open(filename2, "r", encoding="utf-8")
             lines2 = f2.readlines()
             f2.close()
         except IOError:
@@ -419,15 +421,16 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             self.hsb1.valueChanged.disconnect(self.hsb2.setValue)
             self.hsb2.valueChanged.disconnect(self.hsb1.setValue)
 
+
 class CompareWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, files = [], parent = None):
+    def __init__(self, files=[], parent=None):
         """
         Constructor
         
-        @param files list of files to compare and their label 
+        @param files list of files to compare and their label
             (list of two tuples of two strings)
         @param parent reference to the parent widget (QWidget)
         """

@@ -17,11 +17,12 @@ from .Config import tasksFileFormatVersion
 import Preferences
 import Utilities
 
+
 class TasksWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML tasks file.
     """
-    def __init__(self, device, forProject = False, projectName = ""):
+    def __init__(self, device, forProject=False, projectName=""):
         """
         Constructor
         
@@ -69,11 +70,11 @@ class TasksWriter(XMLStreamWriterBase):
             self.writeAttribute("bugfix", str(task.isBugfixTask))
             self.writeTextElement("Summary", task.description.strip())
             self.writeTextElement("Description", task.longtext.strip())
-            self.writeTextElement("Created", 
+            self.writeTextElement("Created",
                 time.strftime("%Y-%m-%d, %H:%M:%S", time.localtime(task.created)))
             if task.filename:
                 self.writeStartElement("Resource")
-                self.writeTextElement("Filename", 
+                self.writeTextElement("Filename",
                     Utilities.fromNativeSeparators(task.filename))
                 self.writeTextElement("Linenumber", str(task.lineno))
                 self.writeEndElement()

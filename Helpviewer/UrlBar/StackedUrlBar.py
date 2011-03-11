@@ -9,11 +9,12 @@ Module implementing a widget to stack url bars.
 
 from PyQt4.QtGui import QStackedWidget, QSizePolicy
 
+
 class StackedUrlBar(QStackedWidget):
     """
     Class implementing a widget to stack url bars.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

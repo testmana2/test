@@ -26,12 +26,13 @@ from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
 
+
 class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
     """
     Class implementing a dialog to show the output of the svn status command
     process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -55,7 +56,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = \
-            self.buttonBox.addButton(self.trUtf8("Refresh"), 
+            self.buttonBox.addButton(self.trUtf8("Refresh"),
                                      QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
             self.trUtf8("Press to refresh the status display"))
@@ -117,43 +118,43 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             self.__showContextMenu)
         
         self.modifiedIndicators = [
-            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.added]), 
-            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.deleted]), 
+            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.added]),
+            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.deleted]),
             self.trUtf8(svnStatusMap[pysvn.wc_status_kind.modified])
         ]
         
         self.missingIndicators = [
-            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.missing]), 
+            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.missing]),
         ]
         
         self.unversionedIndicators = [
-            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.unversioned]), 
+            self.trUtf8(svnStatusMap[pysvn.wc_status_kind.unversioned]),
         ]
         
         self.lockedIndicators = [
-            self.trUtf8('locked'), 
+            self.trUtf8('locked'),
         ]
         
         self.stealBreakLockIndicators = [
-            self.trUtf8('other lock'), 
-            self.trUtf8('stolen lock'), 
-            self.trUtf8('broken lock'), 
+            self.trUtf8('other lock'),
+            self.trUtf8('stolen lock'),
+            self.trUtf8('broken lock'),
         ]
         
         self.unlockedIndicators = [
-            self.trUtf8('not locked'), 
+            self.trUtf8('not locked'),
         ]
         
         self.lockinfo = {
-            ' ' : self.trUtf8('not locked'),
-            'L' : self.trUtf8('locked'),
-            'O' : self.trUtf8('other lock'),
-            'S' : self.trUtf8('stolen lock'),
-            'B' : self.trUtf8('broken lock'),
+            ' ': self.trUtf8('not locked'),
+            'L': self.trUtf8('locked'),
+            'O': self.trUtf8('other lock'),
+            'S': self.trUtf8('stolen lock'),
+            'B': self.trUtf8('broken lock'),
         }
         self.yesno = [
-            self.trUtf8('no'), 
-            self.trUtf8('yes'), 
+            self.trUtf8('no'),
+            self.trUtf8('yes'),
         ]
         
         self.client = self.vcs.getClient()
@@ -171,7 +172,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private method to resort the tree.
         """
-        self.statusList.sortItems(self.statusList.sortColumn(), 
+        self.statusList.sortItems(self.statusList.sortColumn(),
             self.statusList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -202,19 +203,19 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         statusText = self.trUtf8(svnStatusMap[status])
         itm = QTreeWidgetItem(self.statusList, [
-            "", 
-            changelist, 
-            statusText, 
-            self.trUtf8(svnStatusMap[propStatus]), 
-            self.yesno[locked], 
-            self.yesno[history], 
-            self.yesno[switched], 
-            self.lockinfo[lockinfo], 
-            self.yesno[uptodate], 
-            "{0:7}".format(str(revision)), 
-            "{0:7}".format(str(change)), 
-            author, 
-            path, 
+            "",
+            changelist,
+            statusText,
+            self.trUtf8(svnStatusMap[propStatus]),
+            self.yesno[locked],
+            self.yesno[history],
+            self.yesno[switched],
+            self.lockinfo[lockinfo],
+            self.yesno[uptodate],
+            "{0:7}".format(str(revision)),
+            "{0:7}".format(str(change)),
+            author,
+            path,
         ])
         
         itm.setTextAlignment(1, Qt.AlignLeft)
@@ -308,9 +309,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     len(changelistsDict) == 0
                 
                 # step 2: determine status of files
-                allFiles = self.client.status(name, recurse = recurse, 
+                allFiles = self.client.status(name, recurse=recurse,
                                               get_all=verbose, ignore=True,
-                                              update = update)
+                                              update=update)
                 counter = 0
                 for file in allFiles:
                     uptodate = True
@@ -343,7 +344,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     
                     hidePropertyStatusColumn = hidePropertyStatusColumn and \
                         file.prop_status in [
-                            pysvn.wc_status_kind.none, 
+                            pysvn.wc_status_kind.none,
                             pysvn.wc_status_kind.normal
                         ]
                     hideLockColumns = hideLockColumns and \
@@ -355,8 +356,8 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                         not file.is_switched
                     
                     self.__generateItem(
-                        changelist, 
-                        file.text_status, 
+                        changelist,
+                        file.text_status,
                         file.prop_status,
                         file.is_locked,
                         file.is_copied,
@@ -377,7 +378,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                 if self._clientCancelCallback():
                     break
         except pysvn.ClientError as e:
-            self.__showError(e.args[0]+'\n')
+            self.__showError(e.args[0] + '\n')
         
         self.statusList.setColumnHidden(self.__propStatusColumn,
                                         hidePropertyStatusColumn)
@@ -684,7 +685,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnLock(names, parent = self)
+        self.vcs.svnLock(names, parent=self)
         self.on_refreshButton_clicked()
         
     def __unlock(self):
@@ -700,7 +701,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnUnlock(names, parent = self)
+        self.vcs.svnUnlock(names, parent=self)
         self.on_refreshButton_clicked()
         
     def __breakLock(self):
@@ -717,7 +718,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnUnlock(names, parent = self, breakIt = True)
+        self.vcs.svnUnlock(names, parent=self, breakIt=True)
         self.on_refreshButton_clicked()
 
     def __stealLock(self):

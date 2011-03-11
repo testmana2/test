@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_ZoomDialog import Ui_ZoomDialog
 
+
 class ZoomDialog(QDialog, Ui_ZoomDialog):
     """
     Class implementing a dialog to select the zoom scale.
     """
-    def __init__(self, zoom, parent, name = None, modal = False):
+    def __init__(self, zoom, parent, name=None, modal=False):
         """
         Constructor
         

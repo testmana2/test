@@ -21,6 +21,7 @@ from PyQt4.QtCore import *
 import Preferences
 import Utilities
 
+
 class SpellChecker(QObject):
     """
     Class implementing a pyenchant based spell checker.
@@ -29,7 +30,7 @@ class SpellChecker(QObject):
     _spelling_lang = None
     _spelling_dict = None
     
-    def __init__(self, editor, indicator, defaultLanguage = None, checkRegion = None):
+    def __init__(self, editor, indicator, defaultLanguage=None, checkRegion=None):
         """
         Constructor
         
@@ -83,7 +84,7 @@ class SpellChecker(QObject):
         return False
     
     @classmethod
-    def _getDict(cls, lang, pwl = "", pel = ""):
+    def _getDict(cls, lang, pwl="", pel=""):
         """
         Protected classmethod to get a new dictionary.
         
@@ -128,7 +129,7 @@ class SpellChecker(QObject):
         cls._spelling_lang = language
         cls._spelling_dict = cls._getDict(language)
     
-    def setLanguage(self, language, pwl = "", pel = ""):
+    def setLanguage(self, language, pwl="", pel=""):
         """
         Public method to set the current language.
         
@@ -138,8 +139,8 @@ class SpellChecker(QObject):
         @keyparam pel name of the personal/project exclude list (string)
         """
         self._spelling_lang = language
-        self._spelling_dict = self._getDict(language, pwl = pwl, 
-                                            pel = pel)
+        self._spelling_dict = self._getDict(language, pwl=pwl,
+                                            pel=pel)
     
     def getLanguage(self):
         """
@@ -163,7 +164,7 @@ class SpellChecker(QObject):
         
         @param pos position to start word extraction (integer)
         @param endPosition position to stop word extraction (integer)
-        @return tuple of three values (the extracted word (string), 
+        @return tuple of three values (the extracted word (string),
             start position (integer), end position (integer))
         """
         if pos < 0 or pos >= endPosition:
@@ -175,7 +176,7 @@ class SpellChecker(QObject):
             pos = self.editor.positionAfter(pos)
             ch = self.editor.charAt(pos)
         if pos == endPosition:
-            return "",  -1, -1
+            return "", -1, -1
         startPos = pos
         
         # 2. extract the word
@@ -249,7 +250,7 @@ class SpellChecker(QObject):
         while True:
             try:
                 next(self)
-                self.editor.setIndicatorRange(self.indicator, self.wordStart, 
+                self.editor.setIndicatorRange(self.indicator, self.wordStart,
                                               self.wordEnd - self.wordStart)
             except StopIteration:
                 break
@@ -269,7 +270,7 @@ class SpellChecker(QObject):
         else:
             QTimer.singleShot(0, self.__incrementalCheck)
     
-    def checkWord(self, pos, atEnd = False):
+    def checkWord(self, pos, atEnd=False):
         """
         Public method to check the word at position pos.
         
@@ -296,13 +297,13 @@ class SpellChecker(QObject):
             for pos in [pos0, pos1]:
                 if self.editor.charAt(pos).isalnum():
                     line, index = self.editor.lineIndexFromPosition(pos)
-                    word = self.editor.getWord(line, index, useWordChars = False)
+                    word = self.editor.getWord(line, index, useWordChars=False)
                     if len(word) >= self.minimumWordSize:
                         ok = spell.check(word)
                     else:
                         ok = True
                     start, end = \
-                        self.editor.getWordBoundaries(line, index, useWordChars = False)
+                        self.editor.getWordBoundaries(line, index, useWordChars=False)
                     if ok:
                         self.editor.clearIndicator(self.indicator, line, start, line, end)
                     else:
@@ -355,7 +356,7 @@ class SpellChecker(QObject):
         selStartLine, selStartIndex, selEndLine, selEndIndex = \
             self.editor.getSelection()
         self.__checkDocumentPart(
-            self.editor.positionFromLineIndex(selStartLine, selStartIndex), 
+            self.editor.positionFromLineIndex(selStartLine, selStartIndex),
             self.editor.positionFromLineIndex(selEndLine, selEndIndex)
         )
     
@@ -387,7 +388,7 @@ class SpellChecker(QObject):
         
         return []
     
-    def add(self, word = None):
+    def add(self, word=None):
         """
         Public method to add a word to the personal word list.
         
@@ -409,7 +410,7 @@ class SpellChecker(QObject):
         if spell:
             spell.remove(word)
     
-    def ignoreAlways(self, word = None):
+    def ignoreAlways(self, word=None):
         """
         Public method to tell the checker, to always ignore the given word
         or the current word.
@@ -423,7 +424,7 @@ class SpellChecker(QObject):
     
     def replace(self, replacement):
         """
-        Public method to tell the checker to replace the current word with 
+        Public method to tell the checker to replace the current word with
         the replacement string.
         
         @param replacement replacement string (string)

@@ -22,6 +22,7 @@ import Preferences
 ## viewmanager depending on the configuration settings
 ######################################################################
 
+
 def factory(parent, ui, dbs, pluginManager):
     """
     Modul factory function to generate the right viewmanager type.

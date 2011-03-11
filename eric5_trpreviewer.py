@@ -27,6 +27,7 @@ from E5Gui.E5Application import E5Application
 from Tools.TRSingleApplication import TRSingleApplicationClient
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -44,13 +45,14 @@ def createMainWidget(argv):
     previewer = TRPreviewer(files, None, 'TRPreviewer')
     return previewer
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 TR Previewer",
@@ -71,8 +73,8 @@ def main():
     else:
         res = Startup.simpleAppStartup(sys.argv,
                                        appinfo,
-                                       createMainWidget, 
-                                       app = app)
+                                       createMainWidget,
+                                       app=app)
         sys.exit(res)
 
 if __name__ == '__main__':

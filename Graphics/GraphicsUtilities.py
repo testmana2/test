@@ -7,12 +7,14 @@
 Module implementing some graphical utility functions.
 """
 
+
 class RecursionError(OverflowError, ValueError):
     """
     Unable to calculate result because of recursive structure.
     """
     
-def sort(nodes, routes, noRecursion = False):
+
+def sort(nodes, routes, noRecursion=False):
     """
     Function to sort widgets topographically.
     
@@ -42,7 +44,7 @@ def sort(nodes, routes, noRecursion = False):
         stage.append(nodes[0])
     
     taken.extend(stage)
-    nodes = list(filter(lambda x, l = stage: x not in l, nodes))
+    nodes = list(filter(lambda x, l=stage: x not in l, nodes))
     while nodes:
         previousStageChildren = []
         nodelen = len(nodes)
@@ -73,7 +75,7 @@ def sort(nodes, routes, noRecursion = False):
         
         stages.append(stage)
         taken.extend(stage)
-        nodes = list(filter(lambda x, l = stage: x not in l, nodes))
+        nodes = list(filter(lambda x, l=stage: x not in l, nodes))
         if nodelen == len(nodes):
             if noRecursion:
                 raise RecursionError(nodes)
@@ -83,6 +85,7 @@ def sort(nodes, routes, noRecursion = False):
     
     return stages
     
+
 def _buildChildrenLists(routes):
     """
     Function to build up parent - child relationships.

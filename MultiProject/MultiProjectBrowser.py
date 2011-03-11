@@ -16,11 +16,12 @@ from .AddProjectDialog import AddProjectDialog
 
 import UI.PixmapCache
 
+
 class MultiProjectBrowser(QListWidget):
     """
     Class implementing the multi project browser.
     """
-    def __init__(self, multiProject, parent = None):
+    def __init__(self, multiProject, parent=None):
         """
         Constructor
         
@@ -108,10 +109,10 @@ class MultiProjectBrowser(QListWidget):
         Private slot to handle the opening of a project.
         """
         project = {
-            'name' : "", 
-            'file' : projectfile, 
-            'master' : False, 
-            'description' : "", 
+            'name': "",
+            'file': projectfile,
+            'master': False,
+            'description': "",
         }
         row = self.__findProjectItem(project)
         if row > -1:
@@ -129,7 +130,7 @@ class MultiProjectBrowser(QListWidget):
         else:
             self.__menu.popup(self.mapToGlobal(coord))
     
-    def __openItem(self, itm = None):
+    def __openItem(self, itm=None):
         """
         Private slot to open a project.
         
@@ -209,14 +210,14 @@ class MultiProjectBrowser(QListWidget):
             if filename:
                 project = self.multiProject.getProject(filename)
                 if project is not None:
-                    dlg = AddProjectDialog(self, project = project)
+                    dlg = AddProjectDialog(self, project=project)
                     if dlg.exec_() == QDialog.Accepted:
                         name, filename, isMaster, description = dlg.getData()
                         project = {
-                            'name' : name, 
-                            'file' : filename, 
-                            'master' : isMaster, 
-                            'description' : description, 
+                            'name': name,
+                            'file': filename,
+                            'master': isMaster,
+                            'description': description,
                         }
                         self.multiProject.changeProjectProperties(project)
     

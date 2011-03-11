@@ -14,6 +14,7 @@ from .Ui_CommandOptionsDialog import Ui_vcsCommandOptionsDialog
 
 import Utilities
 
+
 class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
     """
     Class implementing the VCS command options dialog.

@@ -23,11 +23,12 @@ import Preferences
 
 HISTORY_VERSION = 42
 
+
 class HistoryEntry(object):
     """
     Class implementing a history entry.
     """
-    def __init__(self, url = None, dateTime = None, title = None):
+    def __init__(self, url=None, dateTime=None, title=None):
         """
         Constructor
         
@@ -74,6 +75,7 @@ class HistoryEntry(object):
             return self.url
         return self.title
 
+
 class HistoryManager(QWebHistoryInterface):
     """
     Class implementing the history manager.
@@ -90,7 +92,7 @@ class HistoryManager(QWebHistoryInterface):
     entryRemoved = pyqtSignal(HistoryEntry)
     entryUpdated = pyqtSignal(int)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -140,7 +142,7 @@ class HistoryManager(QWebHistoryInterface):
         """
         return self.__history[:]
     
-    def setHistory(self, history, loadedAndSorted = False):
+    def setHistory(self, history, loadedAndSorted=False):
         """
         Public method to set a new history.
         
@@ -227,7 +229,7 @@ class HistoryManager(QWebHistoryInterface):
                 self.entryUpdated.emit(index)
                 break
     
-    def removeHistoryEntry(self, url, title = ""):
+    def removeHistoryEntry(self, url, title=""):
         """
         Public method to remove a history entry.
         

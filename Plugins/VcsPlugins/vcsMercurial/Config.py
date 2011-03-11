@@ -9,8 +9,8 @@ Module defining configuration variables for the Mercurial package
 
 # Available protocols fpr the repository URL
 ConfigHgProtocols = [
-    'file://', 
-    'http://', 
-    'https://', 
-    'ssh://', 
+    'file://',
+    'http://',
+    'https://',
+    'ssh://',
 ]

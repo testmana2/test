@@ -12,6 +12,7 @@ from .Ui_EditorGeneralPage import Ui_EditorGeneralPage
 
 import Preferences
 
+
 class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
     """
     Class implementing the Editor General configuration page.
@@ -46,21 +47,21 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         """
         Public slot to save the Editor General configuration.
         """
-        Preferences.setEditor("TabWidth", 
+        Preferences.setEditor("TabWidth",
             self.tabwidthSlider.value())
-        Preferences.setEditor("IndentWidth", 
+        Preferences.setEditor("IndentWidth",
             self.indentwidthSlider.value())
         Preferences.setEditor("IndentationGuides",
             self.indentguidesCheckBox.isChecked())
-        Preferences.setEditor("TabForIndentation", 
+        Preferences.setEditor("TabForIndentation",
             self.tabforindentationCheckBox.isChecked())
-        Preferences.setEditor("TabIndents", 
+        Preferences.setEditor("TabIndents",
             self.tabindentsCheckBox.isChecked())
         Preferences.setEditor("ConvertTabsOnLoad",
             self.converttabsCheckBox.isChecked())
-        Preferences.setEditor("AutoIndentation", 
+        Preferences.setEditor("AutoIndentation",
             self.autoindentCheckBox.isChecked())
-        Preferences.setEditor("CommentColumn0", 
+        Preferences.setEditor("CommentColumn0",
             self.comment0CheckBox.isChecked())
         
     def on_tabforindentationCheckBox_toggled(self, checked):
@@ -73,6 +74,7 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
             self.converttabsCheckBox.setChecked(not checked)
         self.converttabsCheckBox.setEnabled(not checked)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

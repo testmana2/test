@@ -15,11 +15,12 @@ from .Ui_SearchWidget import Ui_SearchWidget
 
 import UI.PixmapCache
 
+
 class SearchWidget(QWidget, Ui_SearchWidget):
     """
     Class implementing the search bar for the web browser.
     """
-    def __init__(self, mainWindow, parent = None):
+    def __init__(self, mainWindow, parent=None):
         """
         Constructor
         
@@ -82,10 +83,10 @@ class SearchWidget(QWidget, Ui_SearchWidget):
             return
         
         if not self.__mainWindow.currentBrowser().findNextPrev(
-                self.findtextCombo.currentText(), 
-                self.caseCheckBox.isChecked(), 
-                self.__findBackwards, 
-                self.wrapCheckBox.isChecked(), 
+                self.findtextCombo.currentText(),
+                self.caseCheckBox.isChecked(),
+                self.__findBackwards,
+                self.wrapCheckBox.isChecked(),
                 False):
             self.infoLabel.setText(self.trUtf8("Expression was not found."))
             self.__setFindtextComboBackground(True)
@@ -102,7 +103,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
             "", False, False, False, True)
         if self.highlightAllCheckBox.isChecked():
             cbr.findNextPrev(
-                self.findtextCombo.currentText(), 
+                self.findtextCombo.currentText(),
                 self.caseCheckBox.isChecked(),
                 False, False, True)
     

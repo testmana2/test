@@ -34,11 +34,12 @@ import UI.PixmapCache
 
 from E5Gui.E5TabWidget import E5TabWidget
 
+
 class DebugViewer(QWidget):
     """
     Class implementing a widget conatining various debug related views.
     
-    The individual tabs contain the interpreter shell (optional), 
+    The individual tabs contain the interpreter shell (optional),
     the filesystem browser (optional), the two variables viewers (global and local),
     a breakpoint viewer, a watch expression viewer and the exception logger. Additionally
     a list of all threads is shown.
@@ -47,8 +48,8 @@ class DebugViewer(QWidget):
     """
     sourceFile = pyqtSignal(str, int)
     
-    def __init__(self, debugServer, docked, vm, parent = None, 
-                 embeddedShell = True, embeddedBrowser = True):
+    def __init__(self, debugServer, docked, vm, parent=None,
+                 embeddedShell=True, embeddedBrowser=True):
         """
         Constructor
         
@@ -82,7 +83,7 @@ class DebugViewer(QWidget):
         if embeddedShell:
             # add the interpreter shell
             self.shell = Shell(debugServer, vm)
-            index = self.__tabWidget.addTab(self.shell, 
+            index = self.__tabWidget.addTab(self.shell,
                 UI.PixmapCache.getIcon("shell.png"), '')
             self.__tabWidget.setTabToolTip(index, self.shell.windowTitle())
         
@@ -91,7 +92,7 @@ class DebugViewer(QWidget):
             from UI.Browser import Browser
             # add the browser
             self.browser = Browser()
-            index = self.__tabWidget.addTab(self.browser, 
+            index = self.__tabWidget.addTab(self.browser,
                 UI.PixmapCache.getIcon("browser.png"), '')
             self.__tabWidget.setTabToolTip(index, self.browser.windowTitle())
         
@@ -196,7 +197,7 @@ class DebugViewer(QWidget):
         
         # add the exception logger
         self.exceptionLogger = ExceptionLogger()
-        index = self.__tabWidget.addTab(self.exceptionLogger, 
+        index = self.__tabWidget.addTab(self.exceptionLogger,
             UI.PixmapCache.getIcon("exceptions.png"), '')
         self.__tabWidget.setTabToolTip(index, self.exceptionLogger.windowTitle())
         
@@ -211,7 +212,7 @@ class DebugViewer(QWidget):
         # add the threads viewer
         self.__mainLayout.addWidget(QLabel(self.trUtf8("Threads:")))
         self.__threadList = QTreeWidget()
-        self.__threadList.setHeaderLabels([self.trUtf8("ID"), self.trUtf8("Name"), 
+        self.__threadList.setHeaderLabels([self.trUtf8("ID"), self.trUtf8("Name"),
                                            self.trUtf8("State"), ""])
         self.__threadList.setSortingEnabled(True)
         self.__mainLayout.addWidget(self.__threadList)
@@ -411,7 +412,7 @@ class DebugViewer(QWidget):
                 state = self.trUtf8("waiting at breakpoint")
             else:
                 state = self.trUtf8("running")
-            itm = QTreeWidgetItem(self.__threadList, 
+            itm = QTreeWidgetItem(self.__threadList,
                                   ["{0:d}".format(thread['id']), thread['name'], state])
             if thread['id'] == currentID:
                 citm = itm

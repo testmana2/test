@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_HgMergeDialog import Ui_HgMergeDialog
 
+
 class HgMergeDialog(QDialog, Ui_HgMergeDialog):
     """
     Class implementing a dialog to enter the data for a merge operation.
     """
-    def __init__(self, force, tagsList, branchesList, parent = None):
+    def __init__(self, force, tagsList, branchesList, parent=None):
         """
         Constructor
         
@@ -35,7 +36,7 @@ class HgMergeDialog(QDialog, Ui_HgMergeDialog):
         """
         Public method to retrieve the merge data.
         
-        @return tuple naming the revision and a flag indicating a 
+        @return tuple naming the revision and a flag indicating a
             forced merge (string, boolean)
         """
         if self.numberButton.isChecked():

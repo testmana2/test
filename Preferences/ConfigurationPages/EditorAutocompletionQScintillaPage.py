@@ -14,7 +14,8 @@ from .Ui_EditorAutocompletionQScintillaPage import Ui_EditorAutocompletionQScint
 
 import Preferences
 
-class EditorAutocompletionQScintillaPage(ConfigurationPageBase, 
+
+class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
                                          Ui_EditorAutocompletionQScintillaPage):
     """
     Class implementing the QScintilla Autocompletion configuration page.
@@ -56,6 +57,7 @@ class EditorAutocompletionQScintillaPage(ConfigurationPageBase,
         elif self.acSourceAllRadioButton.isChecked():
             Preferences.setEditor("AutoCompletionSource", QsciScintilla.AcsAll)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -17,7 +17,7 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
     """
     Class implementing the task filter configuration dialog.
     """
-    def __init__(self, taskFilter, parent = None):
+    def __init__(self, taskFilter, parent=None):
         """
         Constructor
         

@@ -115,6 +115,7 @@ class Pep8Checker(pep8.Checker):
                  offset + 1, text)
             )
 
+
 class Pep8Py2Checker(object):
     """
     Class implementing the PEP 8 checker interface for Python 2.
@@ -141,7 +142,7 @@ class Pep8Py2Checker(object):
                 self.trUtf8("Python2 interpreter not configured."))
             return
         
-        checker = os.path.join(getConfig('ericDir'), 
+        checker = os.path.join(getConfig('ericDir'),
                                "UtilitiesPython2", "Pep8Checker.py")
         
         args = [checker]
@@ -162,8 +163,8 @@ class Pep8Py2Checker(object):
         finished = proc.waitForFinished(15000)
         if finished:
             output = \
-                str(proc.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                str(proc.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace').splitlines()
             if output[0] == "ERROR":
                 self.messages.append(filename, "1", "1", output[2])

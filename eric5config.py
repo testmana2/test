@@ -13,21 +13,22 @@ import os
 __ericDir = os.path.dirname(sys.argv[0])
 
 _pkg_config = {
-    'ericDir'              : __ericDir,
-    'ericPixDir'           : os.path.join(__ericDir, 'pixmaps'),
-    'ericIconDir'          : os.path.join(__ericDir, 'icons'),
-    'ericDTDDir'           : os.path.join(__ericDir, 'DTDs'),
-    'ericCSSDir'           : os.path.join(__ericDir, 'CSSs'),
-    'ericStylesDir'        : os.path.join(__ericDir, "Styles"),
-    'ericDocDir'           : os.path.join(__ericDir, 'Documentation'),
-    'ericExamplesDir'      : os.path.join(__ericDir, 'Examples'),
-    'ericTranslationsDir'  : os.path.join(__ericDir, 'i18n'),
-    'ericTemplatesDir'     : os.path.join(__ericDir, 'DesignerTemplates'),
-    'ericCodeTemplatesDir' : os.path.join(__ericDir, 'CodeTemplates'),
-    'ericOthersDir'        : __ericDir,
-    'bindir'               : __ericDir,
-    'mdir'                 : __ericDir,
+    'ericDir': __ericDir,
+    'ericPixDir': os.path.join(__ericDir, 'pixmaps'),
+    'ericIconDir': os.path.join(__ericDir, 'icons'),
+    'ericDTDDir': os.path.join(__ericDir, 'DTDs'),
+    'ericCSSDir': os.path.join(__ericDir, 'CSSs'),
+    'ericStylesDir': os.path.join(__ericDir, "Styles"),
+    'ericDocDir': os.path.join(__ericDir, 'Documentation'),
+    'ericExamplesDir': os.path.join(__ericDir, 'Examples'),
+    'ericTranslationsDir': os.path.join(__ericDir, 'i18n'),
+    'ericTemplatesDir': os.path.join(__ericDir, 'DesignerTemplates'),
+    'ericCodeTemplatesDir': os.path.join(__ericDir, 'CodeTemplates'),
+    'ericOthersDir': __ericDir,
+    'bindir': __ericDir,
+    'mdir': __ericDir,
 }
+
 
 def getConfig(name):
     '''

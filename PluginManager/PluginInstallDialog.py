@@ -27,16 +27,17 @@ import Preferences
 
 from Utilities.uic import compileUiFiles
 
+
 class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
     """
     Class implementing the Plugin installation dialog.
     """
-    def __init__(self, pluginManager, pluginFileNames, parent = None):
+    def __init__(self, pluginManager, pluginFileNames, parent=None):
         """
         Constructor
         
         @param pluginManager reference to the plugin manager object
-        @param pluginFileNames list of plugin files suggested for 
+        @param pluginFileNames list of plugin files suggested for
             installation (list of strings)
         @param parent parent of this dialog (QWidget)
         """
@@ -45,7 +46,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         if pluginManager is None:
             # started as external plugin installer
-            self.__pluginManager = PluginManager(doLoadPlugins = False)
+            self.__pluginManager = PluginManager(doLoadPlugins=False)
             self.__external = True
         else:
             self.__pluginManager = pluginManager
@@ -63,12 +64,12 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         userDir = self.__pluginManager.getPluginDir("user")
         if userDir is not None:
-            self.destinationCombo.addItem(self.trUtf8("User plugins directory"), 
+            self.destinationCombo.addItem(self.trUtf8("User plugins directory"),
                 userDir)
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
-            self.destinationCombo.addItem(self.trUtf8("Global plugins directory"), 
+            self.destinationCombo.addItem(self.trUtf8("Global plugins directory"),
                 globalDir)
         
         self.__installedDirs = []
@@ -131,8 +132,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__cancelButton.show()
             
             msg = self.trUtf8("Plugin ZIP-Archives:\n{0}\n\nDestination:\n{1} ({2})")\
-                .format("\n".join(self.__createArchivesList()), 
-                        self.destinationCombo.currentText(), 
+                .format("\n".join(self.__createArchivesList()),
+                        self.destinationCombo.currentText(),
                         self.destinationCombo.itemData(
                             self.destinationCombo.currentIndex())
                 )
@@ -229,7 +230,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         """
         Private slot to install the selected plugin.
         
-        @param archiveFilename name of the plugin archive 
+        @param archiveFilename name of the plugin archive
             file (string)
         @return flag indicating success (boolean), error message
             upon failure (string) and flag indicating a restart
@@ -404,7 +405,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 compileUiFiles(os.path.join(destination, packageName), True)
             else:
                 outname = os.path.join(destination, pluginFileName)
-                f = open(outname, "w", encoding = "utf-8")
+                f = open(outname, "w", encoding="utf-8")
                 f.write(pluginSource)
                 f.close()
                 self.__installedFiles.append(outname)
@@ -431,7 +432,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 False
         
         # now compile the plugins
-        compileall.compile_dir(destination, quiet = True)
+        compileall.compile_dir(destination, quiet=True)
         
         if not self.__external:
             # now load and activate the plugin
@@ -452,7 +453,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             if os.path.exists(dname):
                 shutil.rmtree(dname)
     
-    def __makedirs(self, name, mode = 0o777):
+    def __makedirs(self, name, mode=0o777):
         """
         Private method to create a directory and all intermediate ones.
         
@@ -504,16 +505,17 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             # ignore some exceptions
             pass
 
+
 class PluginInstallDialog(QDialog):
     """
     Class for the dialog variant.
     """
-    def __init__(self, pluginManager, pluginFileNames, parent = None):
+    def __init__(self, pluginManager, pluginFileNames, parent=None):
         """
         Constructor
         
         @param pluginManager reference to the plugin manager object
-        @param pluginFileNames list of plugin files suggested for 
+        @param pluginFileNames list of plugin files suggested for
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
@@ -540,15 +542,16 @@ class PluginInstallDialog(QDialog):
         """
         return self.cw.restartNeeded()
 
+
 class PluginInstallWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, pluginFileNames, parent = None):
+    def __init__(self, pluginFileNames, parent=None):
         """
         Constructor
         
-        @param pluginFileNames list of plugin files suggested for 
+        @param pluginFileNames list of plugin files suggested for
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """

@@ -16,6 +16,7 @@ from .Config import debuggerPropertiesFileFormatVersion
 
 import Preferences
 
+
 class DebuggerPropertiesWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML project debugger properties
@@ -58,41 +59,41 @@ class DebuggerPropertiesWriter(XMLStreamWriterBase):
         self.writeTextElement("DebugClient", self.project.debugProperties["DEBUGCLIENT"])
         
         self.writeStartElement("Environment")
-        self.writeAttribute("override", 
+        self.writeAttribute("override",
             str(int(self.project.debugProperties["ENVIRONMENTOVERRIDE"])))
         self.writeCharacters(self.project.debugProperties["ENVIRONMENTSTRING"])
         self.writeEndElement()
         
         self.writeStartElement("RemoteDebugger")
-        self.writeAttribute("on", 
+        self.writeAttribute("on",
             str(int(self.project.debugProperties["REMOTEDEBUGGER"])))
-        self.writeTextElement("RemoteHost", 
+        self.writeTextElement("RemoteHost",
             self.project.debugProperties["REMOTEHOST"])
-        self.writeTextElement("RemoteCommand", 
+        self.writeTextElement("RemoteCommand",
             self.project.debugProperties["REMOTECOMMAND"])
         self.writeEndElement()
         
         self.writeStartElement("PathTranslation")
-        self.writeAttribute("on", 
+        self.writeAttribute("on",
             str(int(self.project.debugProperties["PATHTRANSLATION"])))
-        self.writeTextElement("RemotePath", 
+        self.writeTextElement("RemotePath",
             self.project.debugProperties["REMOTEPATH"])
-        self.writeTextElement("LocalPath", 
+        self.writeTextElement("LocalPath",
             self.project.debugProperties["LOCALPATH"])
         self.writeEndElement()
         
         self.writeStartElement("ConsoleDebugger")
-        self.writeAttribute("on", 
+        self.writeAttribute("on",
             str(int(self.project.debugProperties["CONSOLEDEBUGGER"])))
         self.writeCharacters(self.project.debugProperties["CONSOLECOMMAND"])
         self.writeEndElement()
         
         self.writeEmptyElement("Redirect")
-        self.writeAttribute("on", 
+        self.writeAttribute("on",
             str(int(self.project.debugProperties["REDIRECT"])))
         
         self.writeEmptyElement("Noencoding")
-        self.writeAttribute("on", 
+        self.writeAttribute("on",
             str(int(self.project.debugProperties["NOENCODING"])))
         
         self.writeEndElement()

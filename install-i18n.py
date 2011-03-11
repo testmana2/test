@@ -22,6 +22,7 @@ except ImportError:
     print("The eric5 IDE doesn't seem to be installed. Aborting.")
     sys.exit(1)
     
+
 def getConfigDir():
     """
     Global function to get the name of the directory storing the config data.
@@ -47,7 +48,8 @@ progName = None
 configDir = getConfigDir()
 privateInstall = False
 
-def usage(rcode = 2):
+
+def usage(rcode=2):
     """
     Display a usage message and exit.
 
@@ -63,6 +65,7 @@ def usage(rcode = 2):
     print("    -p        install into the private area ({0})".format(configDir))
 
     sys.exit(rcode)
+
 
 def installTranslations():
     """
@@ -85,6 +88,7 @@ def installTranslations():
         sys.stderr.write(
             'OSError: {0}\nTry install-i18n with admin rights.\n'.format(msg))
     
+
 def main(argv):
     """
     The main function of the script.
@@ -98,7 +102,7 @@ def main(argv):
     progName = os.path.basename(argv[0])
 
     try:
-        optlist, args = getopt.getopt(argv[1:],"hp")
+        optlist, args = getopt.getopt(argv[1:], "hp")
     except getopt.GetoptError:
         usage()
 

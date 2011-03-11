@@ -18,11 +18,12 @@ from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 
 import UI.PixmapCache
 
+
 class PyrcAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for Python resources.
     """
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         
@@ -38,7 +39,7 @@ class PyrcAccessHandler(SchemeAccessHandler):
             imageBuffer = QBuffer()
             imageBuffer.open(QIODevice.ReadWrite)
             if pixmap.save(imageBuffer, "PNG"):
-                html = html.replace("IMAGE_BINARY_DATA_HERE", 
+                html = html.replace("IMAGE_BINARY_DATA_HERE",
                              bytes(imageBuffer.buffer().toBase64()).decode())
             return NetworkReply(request, QByteArray(html), "text/html", self.parent())
         

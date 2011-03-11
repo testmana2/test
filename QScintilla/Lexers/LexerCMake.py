@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerCMake
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerCMake(QsciLexerCMake, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -53,7 +54,7 @@ class LexerCMake(QsciLexerCMake, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerCMake.keywords(self, kwSet)

@@ -9,6 +9,7 @@ Module implementing the base class for all configuration pages.
 
 from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, QFontDialog
 
+
 class ConfigurationPageBase(QWidget):
     """
     Class implementing the base class for all configuration pages.
@@ -50,13 +51,13 @@ class ConfigurationPageBase(QWidget):
         """
         colour = QColor(prefMethod(colourstr))
         size = button.size()
-        pm = QPixmap(size.width()/2, size.height()/2)
+        pm = QPixmap(size.width() / 2, size.height() / 2)
         pm.fill(colour)
         button.setIconSize(pm.size())
         button.setIcon(QIcon(pm))
         return colour
         
-    def selectColour(self, button, colourVar, showAlpha = False):
+    def selectColour(self, button, colourVar, showAlpha=False):
         """
         Public method used by the colour selection buttons.
         
@@ -67,7 +68,7 @@ class ConfigurationPageBase(QWidget):
         @return selected colour (QColor)
         """
         if showAlpha:
-            colour = QColorDialog.getColor(colourVar, None, "", 
+            colour = QColorDialog.getColor(colourVar, None, "",
                 QColorDialog.ShowAlphaChannel)
         else:
             colour = QColorDialog.getColor(colourVar)
@@ -80,7 +81,7 @@ class ConfigurationPageBase(QWidget):
             colour = colourVar
         return colour
         
-    def selectFont(self, fontSample, fontVar, showFontInfo = False):
+    def selectFont(self, fontSample, fontVar, showFontInfo=False):
         """
         Public method used by the font selection buttons.
         

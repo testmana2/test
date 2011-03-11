@@ -8,7 +8,7 @@
 Eric5 Editor
 
 This is the main Python script that performs the necessary initialization
-of the MiniEditor module and starts the Qt event loop. This is a standalone 
+of the MiniEditor module and starts the Qt event loop. This is a standalone
 version of the integrated MiniEditor module.
 """
 
@@ -45,13 +45,14 @@ def createMainWidget(argv):
     else:
         return MiniEditor()
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
         ("", "name of file to edit")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,

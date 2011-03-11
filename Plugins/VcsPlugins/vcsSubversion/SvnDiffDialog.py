@@ -20,11 +20,12 @@ from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 import Utilities
 import Preferences
 
+
 class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
     """
     Class implementing a dialog to show the output of the svn diff command process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -83,14 +84,14 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         else:
             return str(version)
         
-    def start(self, fn, versions = None, urls = None, summary = False):
+    def start(self, fn, versions=None, urls=None, summary=False):
         """
         Public slot to start the svn diff command.
         
         @param fn filename to be diffed (string)
         @param versions list of versions to be diffed (list of up to 2 strings or None)
         @keyparam urls list of repository URLs (list of 2 strings)
-        @keyparam summary flag indicating a summarizing diff 
+        @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
         """
         self.errorGroup.hide()
@@ -204,7 +205,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process, formats it and inserts it into
         the contents pane.
@@ -212,8 +213,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             if self.summaryPath:
                 line = line.replace(self.summaryPath + '/', '')
@@ -238,8 +239,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
@@ -294,13 +295,13 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w", encoding = "utf-8")
+            f = open(fname, "w", encoding="utf-8")
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:

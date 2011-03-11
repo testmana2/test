@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerLua
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerLua(QsciLexerLua, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,8 +28,8 @@ class LexerLua(QsciLexerLua, Lexer):
         
         self.commentString = "--"
         self.streamCommentString = {
-            'start' : '--[[ ',
-            'end'   : ' ]]--'
+            'start': '--[[ ',
+            'end': ' ]]--'
         }
     
     def initProperties(self):
@@ -51,7 +52,7 @@ class LexerLua(QsciLexerLua, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerLua.Comment, 
+        return style in [QsciLexerLua.Comment,
                          QsciLexerLua.LineComment]
     
     def isStringStyle(self, style):
@@ -60,15 +61,15 @@ class LexerLua(QsciLexerLua, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerLua.String, 
-                         QsciLexerLua.LiteralString, 
+        return style in [QsciLexerLua.String,
+                         QsciLexerLua.LiteralString,
                          QsciLexerLua.UnclosedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerLua.keywords(self, kwSet)

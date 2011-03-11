@@ -16,6 +16,7 @@ from E5Gui import E5FileDialog
 import Utilities
 import Preferences
 
+
 class StartDialog(QDialog):
     """
     Class implementing the Start Program dialog.
@@ -25,9 +26,9 @@ class StartDialog(QDialog):
     the commandline parameters, the working directory and
     whether exception reporting should be disabled.
     """
-    def __init__(self, caption, argvList, wdList, envList, exceptions, parent = None,
-        type = 0, modfuncList = None, tracePython = False, autoClearShell = True, 
-        autoContinue = True, autoFork = False, forkChild = False):
+    def __init__(self, caption, argvList, wdList, envList, exceptions, parent=None,
+        type=0, modfuncList=None, tracePython=False, autoClearShell=True,
+        autoContinue=True, autoFork=False, forkChild=False):
         """
         Constructor
         
@@ -45,7 +46,7 @@ class StartDialog(QDialog):
                 <li>3 = start profile dialog</li>
                 </ul>
         @keyparam modfuncList history list of module functions (list of strings)
-        @keyparam tracePython flag indicating if the Python library should 
+        @keyparam tracePython flag indicating if the Python library should
             be traced as well (boolean)
         @keyparam autoClearShell flag indicating, that the interpreter window should
             be cleared automatically (boolean)
@@ -144,12 +145,12 @@ class StartDialog(QDialog):
         workdir = self.ui.workdirCombo.currentText()
         environment = self.ui.environmentCombo.currentText()
         
-        return (cmdLine, 
+        return (cmdLine,
                 workdir,
                 environment,
                 self.ui.exceptionCheckBox.isChecked(),
-                self.ui.clearShellCheckBox.isChecked(), 
-                self.__clearHistoryLists, 
+                self.ui.clearShellCheckBox.isChecked(),
+                self.__clearHistoryLists,
                 self.ui.consoleCheckBox.isChecked())
         
     def getDebugData(self):
@@ -159,13 +160,13 @@ class StartDialog(QDialog):
         @return a tuple of a flag indicating, if the Python library should be traced
             as well, a flag indicating, that the debugger should not stop at the
             first executable line (boolean), a flag indicating, that the debugger
-            should fork automatically (boolean) and a flag indicating, that the 
+            should fork automatically (boolean) and a flag indicating, that the
             debugger should debug the child process after forking automatically (boolean)
         """
         if self.type == 0:
             return (self.ui.tracePythonCheckBox.isChecked(),
                     self.ui.autoContinueCheckBox.isChecked(),
-                    self.ui.forkModeCheckBox.isChecked(), 
+                    self.ui.forkModeCheckBox.isChecked(),
                     self.ui.forkChildCheckBox.isChecked())
         
     def getRunData(self):
@@ -173,11 +174,11 @@ class StartDialog(QDialog):
         Public method to retrieve the debug related data entered into this dialog.
         
         @return a tuple of a flag indicating, that the debugger should fork automatically
-            (boolean) and a flag indicating, that the debugger should debug the child 
+            (boolean) and a flag indicating, that the debugger should debug the child
             process after forking automatically (boolean)
         """
         if self.type == 1:
-            return (self.ui.forkModeCheckBox.isChecked(), 
+            return (self.ui.forkModeCheckBox.isChecked(),
                     self.ui.forkChildCheckBox.isChecked())
         
     def getCoverageData(self):

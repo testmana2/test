@@ -18,6 +18,7 @@ from E5Gui import E5MessageBox, E5FileDialog
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 import Utilities
 
+
 class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
     """
     Class implementing a configuration dialog for the tools menu.
@@ -125,11 +126,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         
         self.toolsList.addItem(menutext)
         tool = {
-            'menutext' : menutext,
-            'icon' : icon,
-            'executable' : executable,
-            'arguments' : arguments,
-            'redirect' : redirect,
+            'menutext': menutext,
+            'icon': icon,
+            'executable': executable,
+            'arguments': arguments,
+            'redirect': redirect,
         }
         self.toollist.append(tool)
         
@@ -171,11 +172,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             return
             
         self.toollist[row] = {
-            'menutext' : menutext,
-            'icon' : icon,
-            'executable' : executable,
-            'arguments' : arguments,
-            'redirect' : redirect,
+            'menutext': menutext,
+            'icon': icon,
+            'executable': executable,
+            'arguments': arguments,
+            'redirect': redirect,
         }
         self.toolsList.currentItem().setText(menutext)
         self.changeButton.setEnabled(False)
@@ -234,11 +235,11 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         self.toolsList.addItem('--')
         tool = {
-            'menutext' : '--',
-            'icon' : '',
-            'executable' : '',
-            'arguments' : '',
-            'redirect' : 'no',
+            'menutext': '--',
+            'icon': '',
+            'executable': '',
+            'arguments': '',
+            'redirect': 'no',
         }
         self.toollist.append(tool)
         
@@ -305,7 +306,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             else:
                 self.upButton.setEnabled(False)
             
-            if row+1 != len(self.toollist):
+            if row + 1 != len(self.toollist):
                 self.downButton.setEnabled(True)
             else:
                 self.downButton.setEnabled(False)
@@ -372,9 +373,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         
     def getToollist(self):
         """
-        Public method to retrieve the tools list. 
+        Public method to retrieve the tools list.
         
-        @return a list of tuples containing the menu text, the executable, 
+        @return a list of tuples containing the menu text, the executable,
             the executables arguments and a redirection flag
         """
         return self.toollist[:]

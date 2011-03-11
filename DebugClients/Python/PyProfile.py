@@ -12,13 +12,14 @@ import profile
 import atexit
 import pickle
 
+
 class PyProfile(profile.Profile):
     """
     Class extending the standard Python profiler with additional methods.
     
     This class extends the standard Python profiler by the functionality to
     save the collected timing data in a timing cache, to restore these data
-    on subsequent calls, to store a profile dump to a standard filename and 
+    on subsequent calls, to store a profile dump to a standard filename and
     to erase these caches.
     """
     def __init__(self, basename, timer=None, bias=None):
@@ -113,7 +114,7 @@ class PyProfile(profile.Profile):
         """
         # get module name from __file__
         if not isinstance(frame, profile.Profile.fake_frame) and \
-            frame.f_globals.has_key('__file__'):
+            '__file__' in frame.f_globals:
             root, ext = os.path.splitext(frame.f_globals['__file__'])
             if ext == '.pyc' or ext == '.py':
                 fixedName = root + '.py'
@@ -144,7 +145,7 @@ class PyProfile(profile.Profile):
             fcode.co_firstlineno, fcode.co_name)
         self.cur = (t, 0, 0, fn, frame, self.cur)
         timings = self.timings
-        if timings.has_key(fn):
+        if fn in timings:
             cc, ns, tt, ct, callers = timings[fn]
             timings[fn] = cc, ns + 1, tt, ct, callers
         else:

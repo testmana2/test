@@ -15,11 +15,12 @@ from .ProjectBrowserModel import ProjectBrowserSourceType
 
 import Preferences
 
+
 class ProjectBrowserSortFilterProxyModel(BrowserSortFilterProxyModel):
     """
     Class implementing the browser sort filter proxy model.
     """
-    def __init__(self, filterType, parent = None):
+    def __init__(self, filterType, parent=None):
         """
         Constructor
         

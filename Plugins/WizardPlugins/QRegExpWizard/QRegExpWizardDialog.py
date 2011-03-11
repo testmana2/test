@@ -23,18 +23,19 @@ import UI.PixmapCache
 
 import Utilities
 
+
 class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
     """
     Class implementing the QRegExp wizard dialog.
     """
-    def __init__(self, parent = None, fromEric = True):
+    def __init__(self, parent=None, fromEric=True):
         """
         Constructor
         
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        QWidget.__init__(self,parent)
+        QWidget.__init__(self, parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -66,7 +67,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.buttonBox.addButton(self.trUtf8("Execute"), QDialogButtonBox.ActionRole)
         self.executeButton.setToolTip(self.trUtf8("Execute the regular expression"))
         self.nextButton = \
-            self.buttonBox.addButton(self.trUtf8("Next match"), 
+            self.buttonBox.addButton(self.trUtf8("Next match"),
                                      QDialogButtonBox.ActionRole)
         self.nextButton.setToolTip(
             self.trUtf8("Show the next match of the regular expression"))
@@ -229,12 +230,12 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     self.trUtf8("Save regular expression"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return
             
             try:
-                f=open(Utilities.toNativeSeparators(fname), "w", encoding = "utf-8")
+                f = open(Utilities.toNativeSeparators(fname), "w", encoding="utf-8")
                 f.write(self.regexpLineEdit.text())
                 f.close()
             except IOError as err:
@@ -255,7 +256,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
             self.trUtf8("RegExp Files (*.rx);;All Files (*)"))
         if fname:
             try:
-                f=open(Utilities.toNativeSeparators(fname), "r", encoding = "utf-8")
+                f = open(Utilities.toNativeSeparators(fname), "r", encoding="utf-8")
                 regexp = f.read()
                 f.close()
                 self.regexpLineEdit.setText(regexp)
@@ -313,7 +314,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 self.trUtf8("""A regular expression must be given."""))
 
     @pyqtSlot()
-    def on_executeButton_clicked(self, startpos = 0):
+    def on_executeButton_clicked(self, startpos=0):
         """
         Private slot to execute the entered regexp on the test text.
         
@@ -363,22 +364,22 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 
                 if not wildcard:
                     row += 1
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("Captures")))
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem("{0:d}".format(captures)))
                     row += 1
-                    self.resultTable.setItem(row, 1, 
+                    self.resultTable.setItem(row, 1,
                         QTableWidgetItem(self.trUtf8("Text")))
-                    self.resultTable.setItem(row, 2, 
+                    self.resultTable.setItem(row, 2,
                         QTableWidgetItem(self.trUtf8("Characters")))
                     
                 row += 1
-                self.resultTable.setItem(row, 0, 
+                self.resultTable.setItem(row, 0,
                     QTableWidgetItem(self.trUtf8("Match")))
-                self.resultTable.setItem(row, 1, 
+                self.resultTable.setItem(row, 1,
                     QTableWidgetItem(re.cap(0)))
-                self.resultTable.setItem(row, 2, 
+                self.resultTable.setItem(row, 2,
                     QTableWidgetItem("{0:d}".format(re.matchedLength())))
                 
                 if not wildcard:
@@ -386,11 +387,11 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                         if len(re.cap(i)) > 0:
                             row += 1
                             self.resultTable.insertRow(row)
-                            self.resultTable.setItem(row, 0, 
+                            self.resultTable.setItem(row, 0,
                                 QTableWidgetItem(self.trUtf8("Capture #{0}").format(i)))
-                            self.resultTable.setItem(row, 1, 
+                            self.resultTable.setItem(row, 1,
                                 QTableWidgetItem(re.cap(i)))
-                            self.resultTable.setItem(row, 2, 
+                            self.resultTable.setItem(row, 2,
                                 QTableWidgetItem("{0:d}".format(len(re.cap(i)))))
                 else:
                     self.resultTable.setRowCount(3)
@@ -405,10 +406,10 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                 self.resultTable.setRowCount(2)
                 row += 1
                 if startpos > 0:
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("No more matches")))
                 else:
-                    self.resultTable.setItem(row, 0, 
+                    self.resultTable.setItem(row, 0,
                         QTableWidgetItem(self.trUtf8("No matches")))
                 
                 # remove the highlight
@@ -471,11 +472,12 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
                     istring, reVar, estring)
         return code
 
+
 class QRegExpWizardDialog(QDialog):
     """
     Class for the dialog variant.
     """
-    def __init__(self, parent = None, fromEric = True):
+    def __init__(self, parent=None, fromEric=True):
         """
         Constructor
         
@@ -508,18 +510,19 @@ class QRegExpWizardDialog(QDialog):
         """
         return self.cw.getCode(indLevel, indString)
 
+
 class QRegExpWizardWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
         """
         QMainWindow.__init__(self, parent)
-        self.cw = QRegExpWizardWidget(self, fromEric = False)
+        self.cw = QRegExpWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)

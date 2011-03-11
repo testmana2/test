@@ -12,17 +12,18 @@ from PyQt4.QtGui import *
 
 from .Ui_SvnTagDialog import Ui_SvnTagDialog
 
+
 class SvnTagDialog(QDialog, Ui_SvnTagDialog):
     """
     Class implementing a dialog to enter the data for a tagging operation.
     """
-    def __init__(self, taglist, reposURL, standardLayout, parent = None):
+    def __init__(self, taglist, reposURL, standardLayout, parent=None):
         """
         Constructor
         
         @param taglist list of previously entered tags (list of strings)
         @param reposURL repository path (string) or None
-        @param standardLayout flag indicating the layout of the 
+        @param standardLayout flag indicating the layout of the
             repository (boolean)
         @param parent parent widget (QWidget)
         """

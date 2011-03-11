@@ -8,11 +8,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_IconSizeDialog import Ui_IconSizeDialog
 
+
 class IconSizeDialog(QDialog, Ui_IconSizeDialog):
     """
     Class implementing a dialog to enter the icon size.
     """
-    def __init__(self, width, height, parent = None):
+    def __init__(self, width, height, parent=None):
         """
         Constructor
         

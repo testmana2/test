@@ -24,6 +24,7 @@ for arg in sys.argv:
 
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -41,13 +42,14 @@ def createMainWidget(argv):
     editor = IconEditorWindow(fileName, None)
     return editor
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
         ("", "name of file to edit")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,

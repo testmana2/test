@@ -9,7 +9,9 @@ Module implementing the version control systems interface to Subversion.
 
 import os
 import shutil
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -47,6 +49,7 @@ from .ProjectBrowserHelper import SvnProjectBrowserHelper
 import Preferences
 import Utilities
 
+
 class Subversion(VersionControl):
     """
     Class implementing the version control systems interface to Subversion.
@@ -65,18 +68,18 @@ class Subversion(VersionControl):
         """
         VersionControl.__init__(self, parent, name)
         self.defaultOptions = {
-            'global' :   [''],
-            'commit' :   [''],
-            'checkout' : [''],
-            'update' :   [''],
-            'add' :      [''],
-            'remove' :   [''],
-            'diff' :     [''],
-            'log' :      [''],
-            'history' :  [''],
-            'status' :   [''],
-            'tag' :      [''],
-            'export' :   ['']
+            'global':   [''],
+            'commit':   [''],
+            'checkout': [''],
+            'update':   [''],
+            'add':      [''],
+            'remove':   [''],
+            'diff':     [''],
+            'log':      [''],
+            'history':  [''],
+            'status':   [''],
+            'tag':      [''],
+            'export':   ['']
         }
         self.interestingDataKeys = [
             "standardLayout",
@@ -95,8 +98,8 @@ class Subversion(VersionControl):
         self.showedBranches = False
         
         self.tagTypeList = [
-            'tags', 
-            'branches', 
+            'tags',
+            'branches',
         ]
         
         self.commandHistory = []
@@ -182,7 +185,7 @@ class Subversion(VersionControl):
         
         return False, errMsg
         
-    def vcsInit(self, vcsDir, noDialog = False):
+    def vcsInit(self, vcsDir, noDialog=False):
         """
         Public method used to initialize the subversion repository.
         
@@ -246,10 +249,10 @@ class Subversion(VersionControl):
                 project.closeProject()
                 return
             shutil.rmtree(tmpProjectDir, True)
-            project.closeProject(noSave = True)
+            project.closeProject(noSave=True)
             project.openProject(pfn)
         
-    def vcsImport(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsImport(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to import the project into the Subversion repository.
         
@@ -270,7 +273,7 @@ class Subversion(VersionControl):
         elif vcsDir[1] in ['|', ':']:
             vcsDir = 'file:///{0}'.format(vcsDir)
         
-        project = vcsDir[vcsDir.rfind('/')+1:]
+        project = vcsDir[vcsDir.rfind('/') + 1:]
         
         # create the dir structure to be imported into the repository
         tmpDir = '{0}_tmp'.format(projectDir)
@@ -285,7 +288,7 @@ class Subversion(VersionControl):
                 shutil.copytree(projectDir, os.path.join(tmpDir, project))
         except OSError:
             if os.path.isdir(tmpDir):
-                shutil.rmtree(tmpDir, True)            
+                shutil.rmtree(tmpDir, True)
             return False, False
         
         args = []
@@ -308,7 +311,7 @@ class Subversion(VersionControl):
         shutil.rmtree(tmpDir, True)
         return status, False
         
-    def vcsCheckout(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsCheckout(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to check the project out of the Subversion repository.
         
@@ -413,7 +416,7 @@ class Subversion(VersionControl):
             dia.exec_()
         return dia.normalExit()
         
-    def vcsCommit(self, name, message, noDialog = False):
+    def vcsCommit(self, name, message, noDialog=False):
         """
         Public method used to make the change of a file/directory permanent in the
         Subversion repository.
@@ -494,7 +497,7 @@ class Subversion(VersionControl):
         self.committed.emit()
         self.checkVCSStatus()
         
-    def vcsUpdate(self, name, noDialog = False):
+    def vcsUpdate(self, name, noDialog=False):
         """
         Public method used to update a file/directory with the Subversion repository.
         
@@ -529,7 +532,7 @@ class Subversion(VersionControl):
         self.checkVCSStatus()
         return res
         
-    def vcsAdd(self, name, isDir = False, noDialog = False):
+    def vcsAdd(self, name, isDir=False, noDialog=False):
         """
         Public method used to add a file/directory to the Subversion repository.
         
@@ -588,7 +591,7 @@ class Subversion(VersionControl):
             if res:
                 dia.exec_()
         
-    def vcsAddBinary(self, name, isDir = False):
+    def vcsAddBinary(self, name, isDir=False):
         """
         Public method used to add a file/directory in binary mode to the
         Subversion repository.
@@ -615,7 +618,7 @@ class Subversion(VersionControl):
             for n in path:
                 d = os.path.split(n)[0]
                 while not os.path.exists(os.path.join(d, self.adminDir)):
-                    # add directories recursively, 
+                    # add directories recursively,
                     # if they aren't in the repository already
                     if d in tree:
                         break
@@ -643,7 +646,7 @@ class Subversion(VersionControl):
         if res:
             dia.exec_()
         
-    def vcsRemove(self, name, project = False, noDialog = False):
+    def vcsRemove(self, name, project=False, noDialog=False):
         """
         Public method used to remove a file/directory from the Subversion repository.
         
@@ -678,7 +681,7 @@ class Subversion(VersionControl):
         
         return res
         
-    def vcsMove(self, name, project, target = None, noDialog = False):
+    def vcsMove(self, name, project, target=None, noDialog=False):
         """
         Public method used to move a file/directory.
         
@@ -748,7 +751,7 @@ class Subversion(VersionControl):
         
     def vcsLog(self, name):
         """
-        Public method used to view the log of a file/directory from the 
+        Public method used to view the log of a file/directory from the
         Subversion repository.
         
         @param name file/directory name to show the log of (string)
@@ -759,11 +762,11 @@ class Subversion(VersionControl):
         
     def vcsDiff(self, name):
         """
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         @param name file/directory name to be diffed (string)
@@ -775,7 +778,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -788,7 +791,7 @@ class Subversion(VersionControl):
         
     def vcsStatus(self, name):
         """
-        Public method used to view the status of files/directories in the 
+        Public method used to view the status of files/directories in the
         Subversion repository.
         
         @param name file/directory name(s) to show the status of
@@ -800,7 +803,7 @@ class Subversion(VersionControl):
         
     def vcsTag(self, name):
         """
-        Public method used to set the tag of a file/directory in the 
+        Public method used to set the tag of a file/directory in the
         Subversion repository.
         
         @param name file/directory name to be tagged (string)
@@ -820,7 +823,7 @@ class Subversion(VersionControl):
             url = None
         else:
             url = self.svnNormalizeURL(reposURL)
-        dlg = SvnTagDialog(self.allTagsBranchesList, url, 
+        dlg = SvnTagDialog(self.allTagsBranchesList, url,
                            self.otherData["standardLayout"])
         if dlg.exec_() == QDialog.Accepted:
             tag, tagOp = dlg.getParameters()
@@ -914,7 +917,7 @@ class Subversion(VersionControl):
             url = None
         else:
             url = self.svnNormalizeURL(reposURL)
-        dlg = SvnSwitchDialog(self.allTagsBranchesList, url, 
+        dlg = SvnSwitchDialog(self.allTagsBranchesList, url,
                               self.otherData["standardLayout"])
         if dlg.exec_() == QDialog.Accepted:
             tag, tagType = dlg.getParameters()
@@ -974,7 +977,7 @@ class Subversion(VersionControl):
         if force:
             del opts[opts.index('--force')]
         
-        dlg = SvnMergeDialog(self.mergeList[0], self.mergeList[1], self.mergeList[2], 
+        dlg = SvnMergeDialog(self.mergeList[0], self.mergeList[1], self.mergeList[2],
                              force)
         if dlg.exec_() == QDialog.Accepted:
             urlrev1, urlrev2, target, force = dlg.getParameters()
@@ -1037,14 +1040,14 @@ class Subversion(VersionControl):
                 return self.canBeAdded
         
         name = os.path.normcase(name)
-        states = { name : 0 }
+        states = {name: 0}
         states = self.vcsAllRegisteredStates(states, dname, False)
         if states[name] == self.canBeCommitted:
             return self.canBeCommitted
         else:
             return self.canBeAdded
         
-    def vcsAllRegisteredStates(self, names, dname, shortcut = True):
+    def vcsAllRegisteredStates(self, names, dname, shortcut=True):
         """
         Public method used to get the registered states of a number of files in the vcs.
         
@@ -1055,7 +1058,7 @@ class Subversion(VersionControl):
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
         @param shortcut flag indicating a shortcut should be taken (boolean)
-        @return the received dictionary completed with a combination of 
+        @return the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
         """
         if not os.path.isdir(os.path.join(dname, self.adminDir)):
@@ -1165,7 +1168,7 @@ class Subversion(VersionControl):
             if res:
                 dia.exec_()
         
-    def vcsOptionsDialog(self, project, archive, editable = False, parent = None):
+    def vcsOptionsDialog(self, project, archive, editable=False, parent=None):
         """
         Public method to get a dialog to enter repository info.
         
@@ -1176,7 +1179,7 @@ class Subversion(VersionControl):
         """
         return SvnOptionsDialog(self, project, parent)
         
-    def vcsNewProjectOptionsDialog(self, parent = None):
+    def vcsNewProjectOptionsDialog(self, parent=None):
         """
         Public method to get a dialog to enter repository info for getting a new project.
         
@@ -1192,12 +1195,12 @@ class Subversion(VersionControl):
         @return string with ready formated info for display (string)
         """
         info = {\
-            'committed-rev' : '',
-            'committed-date' : '',
-            'committed-time' : '',
-            'url' : '',
-            'last-author' : '',
-            'revision' : ''
+            'committed-rev': '',
+            'committed-date': '',
+            'committed-time': '',
+            'url': '',
+            'last-author': '',
+            'revision': ''
         }
         
         ioEncoding = Preferences.getSystem("IOEncoding")
@@ -1225,7 +1228,7 @@ class Subversion(VersionControl):
                     elif line.startswith('</commit>'):
                         commitFound = False
                     elif line.startswith("revision="):
-                        rev = line[line.find('"')+1:line.rfind('"')]
+                        rev = line[line.find('"') + 1:line.rfind('"')]
                         if entryFound:
                             info['revision'] = rev
                             entryFound = False
@@ -1256,12 +1259,12 @@ class Subversion(VersionControl):
             """<tr><td><b>Last author</b></td><td>{6}</td></tr>"""
             """</table>"""
             )\
-            .format(self.versionStr, 
-                    info['url'], 
-                    info['revision'], 
-                    info['committed-rev'], 
-                    info['committed-date'], 
-                    info['committed-time'], 
+            .format(self.versionStr,
+                    info['url'],
+                    info['revision'],
+                    info['committed-rev'],
+                    info['committed-date'],
+                    info['committed-time'],
                     info['last-author'])
     
     ############################################################################
@@ -1363,7 +1366,7 @@ class Subversion(VersionControl):
                         project.appendFile(target)
         return res
     
-    def svnListProps(self, name, recursive = False):
+    def svnListProps(self, name, recursive=False):
         """
         Public method used to list the properties of a file/directory.
         
@@ -1374,7 +1377,7 @@ class Subversion(VersionControl):
         self.propList.show()
         self.propList.start(name, recursive)
         
-    def svnSetProp(self, name, recursive = False):
+    def svnSetProp(self, name, recursive=False):
         """
         Public method used to add a property to a file/directory.
         
@@ -1411,7 +1414,7 @@ class Subversion(VersionControl):
             if res:
                 dia.exec_()
         
-    def svnDelProp(self, name, recursive = False):
+    def svnDelProp(self, name, recursive=False):
         """
         Public method used to delete a property of a file/directory.
         
@@ -1451,7 +1454,7 @@ class Subversion(VersionControl):
         if res:
             dia.exec_()
         
-    def svnListTagBranch(self, path, tags = True):
+    def svnListTagBranch(self, path, tags=True):
         """
         Public method used to list the available tags or branches.
         
@@ -1468,7 +1471,7 @@ class Subversion(VersionControl):
             else:
                 self.tagsList = []
                 allTagsBranchesList = None
-            self.tagbranchList.start(path, tags, 
+            self.tagbranchList.start(path, tags,
                                      self.tagsList, allTagsBranchesList)
         elif not tags:
             if not self.showedBranches:
@@ -1477,7 +1480,7 @@ class Subversion(VersionControl):
             else:
                 self.branchesList = []
                 allTagsBranchesList = None
-            self.tagbranchList.start(path, tags, 
+            self.tagbranchList.start(path, tags,
                                      self.branchesList, self.allTagsBranchesList)
         
     def svnBlame(self, name):
@@ -1492,11 +1495,11 @@ class Subversion(VersionControl):
         
     def svnExtendedDiff(self, name):
         """
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         This method gives the chance to enter the revisions to be compared.
@@ -1510,7 +1513,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -1529,7 +1532,7 @@ class Subversion(VersionControl):
         repository URLs.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         This method gives the chance to enter the revisions to be compared.
@@ -1543,7 +1546,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -1558,11 +1561,11 @@ class Subversion(VersionControl):
             self.diff = SvnDiffDialog(self)
             self.diff.show()
             QApplication.processEvents()
-            self.diff.start(name, urls = urls, summary = summary)
+            self.diff.start(name, urls=urls, summary=summary)
         
     def svnLogLimited(self, name):
         """
-        Public method used to view the (limited) log of a file/directory from the 
+        Public method used to view the (limited) log of a file/directory from the
         Subversion repository.
         
         @param name file/directory name to show the log of (string)
@@ -1579,7 +1582,7 @@ class Subversion(VersionControl):
         
     def svnLogBrowser(self, path):
         """
-        Public method used to browse the log of a file/directory from the 
+        Public method used to browse the log of a file/directory from the
         Subversion repository.
         
         @param path file/directory name to show the log of (string)
@@ -1661,7 +1664,7 @@ class Subversion(VersionControl):
             if res:
                 dia.exec_()
         
-    def svnRepoBrowser(self, projectPath = None):
+    def svnRepoBrowser(self, projectPath=None):
         """
         Public method to open the repository browser.
         
@@ -1761,7 +1764,7 @@ class Subversion(VersionControl):
         if len(url) == 3:
             scheme = url[0]
             host = url[1]
-            port, path = url[2].split("/",1)
+            port, path = url[2].split("/", 1)
             return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
@@ -1792,7 +1795,7 @@ class Subversion(VersionControl):
     ## Methods to get the helper objects are below.
     ############################################################################
     
-    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser = False):
+    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
         """
         Public method to instanciate a helper object for the different project browsers.
         

@@ -14,6 +14,7 @@ from PyQt4.QtGui import *
 
 from .Ui_ShellHistoryDialog import Ui_ShellHistoryDialog
 
+
 class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
     """
     Class implementing the shell history dialog.
@@ -30,7 +31,7 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         self.setupUi(self)
         
         self.historyList.addItems(history)
-        self.historyList.setCurrentRow(self.historyList.count() - 1, 
+        self.historyList.setCurrentRow(self.historyList.count() - 1,
             QItemSelectionModel.Clear)
         self.historyList.scrollToItem(self.historyList.currentItem())
         
@@ -111,7 +112,7 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         history = self.shell.getHistory(None)
         self.historyList.clear()
         self.historyList.addItems(history)
-        self.historyList.setCurrentRow(self.historyList.count() - 1, 
+        self.historyList.setCurrentRow(self.historyList.count() - 1,
             QItemSelectionModel.Clear)
         self.historyList.scrollToItem(self.historyList.currentItem())
         

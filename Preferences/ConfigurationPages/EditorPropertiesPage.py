@@ -14,6 +14,7 @@ from .Ui_EditorPropertiesPage import Ui_EditorPropertiesPage
 
 import Preferences
 
+
 class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
     """
     Class implementing the Editor Properties configuration page.
@@ -247,7 +248,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 self.psFoldAtElseCheckBox.isChecked())
             Preferences.setEditor("PostScriptTokenize",
                 self.psMarkTokensCheckBox.isChecked())
-            Preferences.setEditor("PostScriptLevel", 
+            Preferences.setEditor("PostScriptLevel",
                 self.psLevelSpinBox.value())
         
         # Povray
@@ -294,8 +295,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         
         # YAML
         if "YAML" in self.languages:
-            Preferences.setEditor("YAMLFoldComment", 
+            Preferences.setEditor("YAMLFoldComment",
                 self.foldYamlCommentCheckBox.isChecked())
+
 
 def create(dlg):
     """

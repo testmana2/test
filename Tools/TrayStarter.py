@@ -23,6 +23,7 @@ import Preferences
 
 from eric5config import getConfig
 
+
 class TrayStarter(QSystemTrayIcon):
     """
     Class implementing a starter for the system tray.
@@ -31,14 +32,14 @@ class TrayStarter(QSystemTrayIcon):
         """
         Constructor
         """
-        QSystemTrayIcon.__init__(self, 
+        QSystemTrayIcon.__init__(self,
             UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
         
         self.maxMenuFilePathLen = 75
         
-        self.rsettings = QSettings(QSettings.IniFormat, 
-            QSettings.UserScope, 
-            Globals.settingsNameOrganization, 
+        self.rsettings = QSettings(QSettings.IniFormat,
+            QSettings.UserScope,
+            Globals.settingsNameOrganization,
             Globals.settingsNameRecent)
         
         self.recentProjects = []
@@ -93,11 +94,11 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8("Compare Files side by side"), self.__startCompare)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("sqlBrowser.png"), 
+        self.__menu.addAction(UI.PixmapCache.getIcon("sqlBrowser.png"),
             self.trUtf8("SQL Browser"), self.__startSqlBrowser)
         self.__menu.addSeparator()
         
-        self.__menu.addAction(UI.PixmapCache.getIcon("iconEditor.png"), 
+        self.__menu.addAction(UI.PixmapCache.getIcon("iconEditor.png"),
             self.trUtf8("Icon Editor"), self.__startIconEditor)
         self.__menu.addSeparator()
         
@@ -113,7 +114,7 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8('Preferences'), self.__startPreferences)
         self.__menu.addAction(UI.PixmapCache.getIcon("erict.png"),
             self.trUtf8("eric5 IDE"), self.__startEric)
-        self.__menu.addAction(UI.PixmapCache.getIcon("editor.png"), 
+        self.__menu.addAction(UI.PixmapCache.getIcon("editor.png"),
             self.trUtf8("eric5 Mini Editor"), self.__startMiniEditor)
         self.__menu.addSeparator()
         
@@ -343,7 +344,7 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentProjectsMenu.addAction(
-                formatStr.format(idx, 
+                formatStr.format(idx,
                     Utilities.compactPath(rp, self.maxMenuFilePathLen)))
             act.setData(rp)
             idx += 1
@@ -365,7 +366,7 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMultiProjectsMenu.addAction(
-                formatStr.format(idx, 
+                formatStr.format(idx,
                     Utilities.compactPath(rmp, self.maxMenuFilePathLen)))
             act.setData(rmp)
             idx += 1
@@ -387,14 +388,14 @@ class TrayStarter(QSystemTrayIcon):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentFilesMenu.addAction(
-                formatStr.format(idx, 
+                formatStr.format(idx,
                     Utilities.compactPath(rf, self.maxMenuFilePathLen)))
             act.setData(rf)
             idx += 1
     
     def __openRecent(self, act):
         """
-        Private method to open a project or file from the list of rencently opened 
+        Private method to open a project or file from the list of rencently opened
         projects or files.
         
         @param act reference to the action that triggered (QAction)
@@ -408,9 +409,9 @@ class TrayStarter(QSystemTrayIcon):
         Private slot to set the preferences.
         """
         from Preferences.ConfigurationDialog import ConfigurationDialog
-        dlg = ConfigurationDialog(None, 'Configuration', True, 
-                                  fromEric = True, 
-                                  displayMode = ConfigurationDialog.TrayStarterMode)
+        dlg = ConfigurationDialog(None, 'Configuration', True,
+                                  fromEric=True,
+                                  displayMode=ConfigurationDialog.TrayStarterMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
         dlg.show()
         dlg.showConfigurationPageByName("trayStarterPage")

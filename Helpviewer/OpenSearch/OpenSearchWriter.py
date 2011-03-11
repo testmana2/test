@@ -9,6 +9,7 @@ Module implementing a writer for open search engine descriptions.
 
 from PyQt4.QtCore import *
 
+
 class OpenSearchWriter(QXmlStreamWriter):
     """
     Class implementing a writer for open search engine descriptions.

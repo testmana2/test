@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .HelpTopicDialog import HelpTopicDialog
 
+
 class HelpIndexWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp index.
@@ -25,7 +26,7 @@ class HelpIndexWidget(QWidget):
     linksActivated = pyqtSignal(dict, str)
     escapePressed = pyqtSignal()
     
-    def __init__(self, engine, mainWindow, parent = None):
+    def __init__(self, engine, mainWindow, parent=None):
         """
         Constructor
         

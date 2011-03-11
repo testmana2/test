@@ -11,6 +11,7 @@ import os
 
 import Utilities
 
+
 def getServersPath():
     """
     Public method to get the filename of the servers file.
@@ -23,6 +24,7 @@ def getServersPath():
     else:
         homedir = Utilities.getHomeDir()
         return os.path.join(homedir, ".subversion", "servers")
+
 
 def getConfigPath():
     """

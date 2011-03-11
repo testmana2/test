@@ -17,12 +17,13 @@ from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
 import Utilities
 
+
 class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
     """
     Class implementing a dialog to add files of a directory to the project.
     """
-    def __init__(self, pro, filter = 'source', parent = None, name = None, 
-                 startdir = None):
+    def __init__(self, pro, filter='source', parent=None, name=None,
+                 startdir=None):
         """
         Constructor
         
@@ -32,7 +33,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         @param name name of this dialog (string)
         @param startdir start directory for the selection dialog
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)
@@ -43,7 +44,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         self.ppath = pro.ppath
         self.targetDirEdit.setText(self.ppath)
         self.startdir = startdir
-        self.on_filterComboBox_highlighted('(*.py)') # enable all dialog elements
+        self.on_filterComboBox_highlighted('(*.py)')  # enable all dialog elements
         if filter == 'source':  # it is a source file
             self.filterComboBox.addItem(self.trUtf8("Source Files"), "SOURCES")
         elif filter == 'form':
@@ -139,6 +140,6 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         """
         filetype = \
             self.filterComboBox.itemData(self.filterComboBox.currentIndex())
-        return (filetype, self.sourceDirEdit.text(), 
+        return (filetype, self.sourceDirEdit.text(),
             self.targetDirEdit.text(),
             self.recursiveCheckBox.isChecked())

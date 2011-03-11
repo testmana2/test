@@ -14,6 +14,7 @@ from PyQt4.QtGui import *
 
 from .Ui_MessageBoxWizardDialog import Ui_MessageBoxWizardDialog
 
+
 class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
     """
     Class implementing the message box wizard dialog.
@@ -32,25 +33,25 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         # keep the following three lists in sync
         self.buttonsList = [
-            self.trUtf8("No button"), 
-            self.trUtf8("Abort"), 
-            self.trUtf8("Apply"), 
-            self.trUtf8("Cancel"), 
-            self.trUtf8("Close"), 
-            self.trUtf8("Discard"), 
-            self.trUtf8("Help"), 
-            self.trUtf8("Ignore"), 
-            self.trUtf8("No"), 
-            self.trUtf8("No to all"), 
-            self.trUtf8("Ok"), 
-            self.trUtf8("Open"), 
-            self.trUtf8("Reset"), 
-            self.trUtf8("Restore defaults"), 
-            self.trUtf8("Retry"), 
-            self.trUtf8("Save"), 
-            self.trUtf8("Save all"), 
-            self.trUtf8("Yes"), 
-            self.trUtf8("Yes to all"), 
+            self.trUtf8("No button"),
+            self.trUtf8("Abort"),
+            self.trUtf8("Apply"),
+            self.trUtf8("Cancel"),
+            self.trUtf8("Close"),
+            self.trUtf8("Discard"),
+            self.trUtf8("Help"),
+            self.trUtf8("Ignore"),
+            self.trUtf8("No"),
+            self.trUtf8("No to all"),
+            self.trUtf8("Ok"),
+            self.trUtf8("Open"),
+            self.trUtf8("Reset"),
+            self.trUtf8("Restore defaults"),
+            self.trUtf8("Retry"),
+            self.trUtf8("Save"),
+            self.trUtf8("Save all"),
+            self.trUtf8("Yes"),
+            self.trUtf8("Yes to all"),
         ]
         self.buttonsCodeListBinary = [
             QMessageBox.NoButton,
@@ -160,7 +161,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
                 QMessageBox.StandardButtons(buttons),
                 defaultButton
             )
-        elif self.rWarning.isChecked(): 
+        elif self.rWarning.isChecked():
             QMessageBox.warning(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
@@ -281,7 +282,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         btnCode += '{0}{1}{2})'.format(os.linesep, istring2, joinstring.join(buttons))
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
-            btnCode += ',{0}{1}{2}'.format(os.linesep, istring, 
+            btnCode += ',{0}{1}{2}'.format(os.linesep, istring,
                 self.buttonsCodeListText[defaultIndex])
         return btnCode
     
@@ -319,7 +320,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         elif self.rWarning.isChecked():
             msgdlg = "res = QMessageBox.warning({0},{1}".format(parent, os.linesep)
         else:
-            msgdlg ="res = QMessageBox.critical({0},{1}".format(parent, os.linesep)
+            msgdlg = "res = QMessageBox.critical({0},{1}".format(parent, os.linesep)
         
         msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
         if not self.rAboutQt.isChecked():
@@ -327,5 +328,5 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
                 os.linesep, istring, self.eMessage.toPlainText())
         if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
             msgdlg += self.__getButtonCode(istring, indString)
-        msgdlg +='){0}'.format(estring)
+        msgdlg += '){0}'.format(estring)
         return msgdlg

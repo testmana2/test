@@ -31,6 +31,7 @@ def QSCINTILLA_VERSION():
     
 ###############################################################################
 
+
 class QsciScintillaCompat(QsciScintilla):
     """
     Class implementing a compatability interface to QsciScintilla.
@@ -39,12 +40,12 @@ class QsciScintillaCompat(QsciScintilla):
     QsciScintilla incrementally. This class ensures compatibility
     to older versions of QsciScintilla.
     """
-    ArrowFoldStyle      = QsciScintilla.BoxedTreeFoldStyle + 1
-    ArrowTreeFoldStyle  = ArrowFoldStyle + 1
+    ArrowFoldStyle = QsciScintilla.BoxedTreeFoldStyle + 1
+    ArrowTreeFoldStyle = ArrowFoldStyle + 1
     
     UserSeparator = '\x04'
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -62,7 +63,7 @@ class QsciScintillaCompat(QsciScintilla):
         self.__targetSearchEnd = -1
         self.__targetSearchActive = False
     
-    def setLexer(self, lex = None):
+    def setLexer(self, lex=None):
         """
         Public method to set the lexer.
         
@@ -196,7 +197,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def charAt(self, pos):
         """
-        Public method to get the character at a position in the text observing 
+        Public method to get the character at a position in the text observing
         multibyte characters.
         
         @param pos position in the text (integer)
@@ -298,7 +299,7 @@ class QsciScintillaCompat(QsciScintilla):
     # methods below are missing from QScintilla
     ###########################################################################
 
-    def zoomIn(self, zoom = 1):
+    def zoomIn(self, zoom=1):
         """
         Public method used to increase the zoom factor.
         
@@ -307,7 +308,7 @@ class QsciScintillaCompat(QsciScintilla):
         self.zoom += zoom
         QsciScintilla.zoomIn(self, zoom)
     
-    def zoomOut(self, zoom = 1):
+    def zoomOut(self, zoom=1):
         """
         Public method used to decrease the zoom factor.
         
@@ -527,7 +528,7 @@ class QsciScintillaCompat(QsciScintilla):
         Public method to get the flash (blink) time of the cursor in
         milliseconds.
         
-        The flash time is the time required to display, invert and restore the 
+        The flash time is the time required to display, invert and restore the
         caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
         
@@ -540,7 +541,7 @@ class QsciScintillaCompat(QsciScintilla):
         Public method to get the flash (blink) time of the cursor in
         milliseconds.
         
-        The flash time is the time required to display, invert and restore the 
+        The flash time is the time required to display, invert and restore the
         caret display. Usually the text cursor is displayed for half the cursor
         flash time, then hidden for the same amount of time.
         
@@ -561,7 +562,7 @@ class QsciScintillaCompat(QsciScintilla):
         @return scintilla position (integer) or -1 to indicate, that the point
             is not near any character
         """
-        return self.SendScintilla(QsciScintilla.SCI_POSITIONFROMPOINTCLOSE, 
+        return self.SendScintilla(QsciScintilla.SCI_POSITIONFROMPOINTCLOSE,
                                   point.x(), point.y())
     
     def positionBefore(self, pos):
@@ -612,7 +613,7 @@ class QsciScintillaCompat(QsciScintilla):
                            self.__targetSearchFlags)
         targetSearchExpr = self._encodeString(self.__targetSearchExpr)
         pos = self.SendScintilla(QsciScintilla.SCI_SEARCHINTARGET,
-                                 len(targetSearchExpr), 
+                                 len(targetSearchExpr),
                                  targetSearchExpr)
         
         if pos == -1:
@@ -638,9 +639,9 @@ class QsciScintillaCompat(QsciScintilla):
         else:
             return (0, 0)
     
-    def findFirstTarget(self, expr_, re_, cs_, wo_, 
-            begline = -1, begindex = -1, endline = -1, endindex = -1, 
-            ws_ = False):
+    def findFirstTarget(self, expr_, re_, cs_, wo_,
+            begline=-1, begindex=-1, endline=-1, endindex=-1,
+            ws_=False):
         """
         Public method to search in a specified range of text without
         setting the selection.
@@ -657,7 +658,7 @@ class QsciScintillaCompat(QsciScintilla):
             document) (integer)
         @keyparam endindex index number to stop at (-1 to indicate end of
             document) (integer)
-        @keyparam ws_ flag indicating a word start search (boolean) 
+        @keyparam ws_ flag indicating a word start search (boolean)
         @return flag indicating a successful search (boolean)
         """
         self.__targetSearchFlags = 0
@@ -732,7 +733,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to define the appearance of an indicator.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param style style to be used for the indicator
             (QsciScintilla.INDIC_PLAIN, QsciScintilla.INDIC_SQUIGGLE,
@@ -762,7 +763,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to set the current indicator.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @exception ValueError the indicator or style are not valid
         """
@@ -776,7 +777,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to set an indicator for the given range.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param spos position of the indicator start (integer)
         @param length length of the indicator (integer)
@@ -789,7 +790,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to set an indicator for the given range.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param sline line number of the indicator start (integer)
         @param sindex index of the indicator start (integer)
@@ -805,7 +806,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to clear an indicator for the given range.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param spos position of the indicator start (integer)
         @param length length of the indicator (integer)
@@ -817,7 +818,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to clear an indicator for the given range.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param sline line number of the indicator start (integer)
         @param sindex index of the indicator start (integer)
@@ -832,7 +833,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to clear all occurrences of an indicator.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         """
         self.clearIndicatorRange(indicator, 0, self.length())
@@ -841,7 +842,7 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method to test for the existence of an indicator.
         
-        @param indicator number of the indicator (integer, 
+        @param indicator number of the indicator (integer,
             QsciScintilla.INDIC_CONTAINER .. QsciScintilla.INDIC_MAX)
         @param pos position to test (integer)
         @return flag indicating the existence of the indicator (boolean)
@@ -854,7 +855,7 @@ class QsciScintillaCompat(QsciScintilla):
     # methods to perform folding related stuff
     ###########################################################################
     
-    def __setFoldMarker(self, marknr, mark = QsciScintilla.SC_MARK_EMPTY):
+    def __setFoldMarker(self, marknr, mark=QsciScintilla.SC_MARK_EMPTY):
         """
         Private method to define a fold marker.
         
@@ -864,12 +865,12 @@ class QsciScintillaCompat(QsciScintilla):
         self.SendScintilla(QsciScintilla.SCI_MARKERDEFINE, marknr, mark)
         
         if mark != QsciScintilla.SC_MARK_EMPTY:
-            self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+            self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
                 marknr, QColor(Qt.white))
-            self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+            self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
                 marknr, QColor(Qt.black))
     
-    def setFolding(self, style, margin = 2):
+    def setFolding(self, style, margin=2):
         """
         Public method to set the folding style and margin.
         
@@ -883,9 +884,9 @@ class QsciScintillaCompat(QsciScintilla):
                 self, QsciScintilla.PlainFoldStyle, margin)
             
             if style == self.ArrowFoldStyle:
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER,
                                      QsciScintilla.SC_MARK_ARROW)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN,
                                      QsciScintilla.SC_MARK_ARROWDOWN)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL)
@@ -893,19 +894,19 @@ class QsciScintillaCompat(QsciScintilla):
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID)
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL)
             elif style == self.ArrowTreeFoldStyle:
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER,
                                      QsciScintilla.SC_MARK_ARROW)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPEN,
                                      QsciScintilla.SC_MARK_ARROWDOWN)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERSUB,
                                      QsciScintilla.SC_MARK_VLINE)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERTAIL,
                                      QsciScintilla.SC_MARK_LCORNER)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEREND,
                                      QsciScintilla.SC_MARK_ARROW)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDEROPENMID,
                                      QsciScintilla.SC_MARK_ARROWDOWN)
-                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, 
+                self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL,
                                      QsciScintilla.SC_MARK_TCORNER)
     
     def setFoldMarkersColors(self, foreColor, backColor):
@@ -916,39 +917,39 @@ class QsciScintillaCompat(QsciScintilla):
         @param foreColor foreground color (QColor)
         @param backColor background color (QColor)
         """
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDER, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDER, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDEROPEN, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDEROPEN, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDEROPENMID, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDEROPENMID, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDERSUB, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDERSUB, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDERTAIL, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDERTAIL, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDERMIDTAIL, backColor)
         
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETFORE,
             QsciScintilla.SC_MARKNUM_FOLDEREND, foreColor)
-        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK, 
+        self.SendScintilla(QsciScintilla.SCI_MARKERSETBACK,
             QsciScintilla.SC_MARKNUM_FOLDEREND, backColor)
         
     
@@ -1018,9 +1019,9 @@ class QsciScintillaCompat(QsciScintilla):
         if id <= 0:
             return
         
-        self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR, 
+        self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR,
                            ord(self.UserSeparator))
-        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id, 
+        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id,
             self._encodeString(self.UserSeparator.join(lst)))
     
     ###########################################################################
@@ -1120,12 +1121,12 @@ class QsciScintillaCompat(QsciScintilla):
 ##    #########################################################################
 ##    # methods below have been added to QScintilla starting with version 2.x
 ##    #########################################################################
-##    
+##
 ##    if "newMethod" not in QsciScintilla.__dict__:
 ##        def newMethod(self, param):
 ##            """
 ##            Public method to do something.
-##            
+##
 ##            @param param parameter for method
 ##            """
 ##            pass

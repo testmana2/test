@@ -12,16 +12,17 @@ import profile
 import atexit
 import pickle
 
+
 class PyProfile(profile.Profile):
     """
     Class extending the standard Python profiler with additional methods.
     
     This class extends the standard Python profiler by the functionality to
     save the collected timing data in a timing cache, to restore these data
-    on subsequent calls, to store a profile dump to a standard filename and 
+    on subsequent calls, to store a profile dump to a standard filename and
     to erase these caches.
     """
-    def __init__(self, basename, timer = None, bias = None):
+    def __init__(self, basename, timer=None, bias=None):
         """
         Constructor
         

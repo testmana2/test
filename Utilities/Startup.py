@@ -24,7 +24,7 @@ import UI.PixmapCache
 from eric5config import getConfig
 
 
-def makeAppInfo(argv, name, arg, description, options = []):
+def makeAppInfo(argv, name, arg, description, options=[]):
     """
     Module function to generate a dictionary describing the application.
     
@@ -44,10 +44,11 @@ def makeAppInfo(argv, name, arg, description, options = []):
         "name": name,
         "description": description,
         "version": Version,
-        "options" : options
+        "options": options
         }
 
-def usage(appinfo, optlen = 12):
+
+def usage(appinfo, optlen=12):
     """
     Module function to show the usage information.
     
@@ -70,6 +71,7 @@ Options:""".format(**appinfo))
         print("  {0}  {1}".format(opt[0].ljust(optlen), opt[1]))
     sys.exit(0)
 
+
 def version(appinfo):
     """
     Module function to show the version information.
@@ -86,6 +88,7 @@ This is free software; see LICENSE.GPL3 for copying conditions.
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.""".format(**appinfo))
     sys.exit(0)
+
 
 def handleArgs(argv, appinfo):
     """
@@ -110,6 +113,7 @@ def handleArgs(argv, appinfo):
             args[a](appinfo)
     return ddindex
 
+
 def loadTranslatorForLocale(dirs, tn):
     """
     Module function to find and load a specific translation.
@@ -128,6 +132,7 @@ def loadTranslatorForLocale(dirs, tn):
     print("Using default.")
     return (None, False)
 
+
 def initializeResourceSearchPath():
     """
     Module function to initialize the default mime source factory.
@@ -139,6 +144,7 @@ def initializeResourceSearchPath():
             UI.PixmapCache.addSearchPath(iconPath)
     if not defaultIconPath in iconPaths:
         UI.PixmapCache.addSearchPath(defaultIconPath)
+
 
 def setLibraryPaths():
     """
@@ -157,7 +163,8 @@ def setLibraryPaths():
 # the translator must not be deleted, therefore we save them here
 loaded_translators = {}
 
-def loadTranslators(qtTransDir, app, translationFiles = ()):
+
+def loadTranslators(qtTransDir, app, translationFiles=()):
     """
     Module function to load all required translations.
     
@@ -194,8 +201,9 @@ def loadTranslators(qtTransDir, app, translationFiles = ()):
         loc = None
     return loc
 
-def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed = True, 
-    app = None):
+
+def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
+    app=None):
     """
     Module function to start up an application that doesn't need a specialized start up.
     

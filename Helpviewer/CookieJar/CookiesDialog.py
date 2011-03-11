@@ -18,11 +18,12 @@ from .Ui_CookiesDialog import Ui_CookiesDialog
 
 import UI.PixmapCache
 
+
 class CookiesDialog(QDialog, Ui_CookiesDialog):
     """
     Class implementing a dialog to show all cookies.
     """
-    def __init__(self, cookieJar, parent = None):
+    def __init__(self, cookieJar, parent=None):
         """
         Constructor
         
@@ -68,7 +69,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
             self.cookiesTable.horizontalHeader().resizeSection(section, header)
         self.cookiesTable.horizontalHeader().setStretchLastSection(True)
         self.cookiesTable.model().sort(
-            self.cookiesTable.horizontalHeader().sortIndicatorSection(), 
+            self.cookiesTable.horizontalHeader().sortIndicatorSection(),
             Qt.AscendingOrder)
         
         self.__detailsDialog = None

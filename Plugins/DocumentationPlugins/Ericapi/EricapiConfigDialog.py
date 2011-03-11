@@ -23,11 +23,12 @@ import DocumentationTools
 
 from eric5config import getConfig
 
+
 class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
     """
     Class implementing a dialog to enter the parameters for eric5_api.
     """
-    def __init__(self, project, parms = None, parent = None):
+    def __init__(self, project, parms=None, parent=None):
         """
         Constructor
         
@@ -35,7 +36,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
@@ -78,19 +79,19 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
     
     def __initializeDefaults(self):
         """
-        Private method to set the default values. 
+        Private method to set the default values.
         
         These are needed later on to generate the commandline
         parameters.
         """
         self.defaults = {
-            'useRecursion' : False,
-            'includePrivate' : False, 
-            'outputFile' : '',
-            'basePackage' : '',
-            'ignoreDirectories' : [],
-            'ignoreFilePatterns' : [],
-            'sourceExtensions' : [],
+            'useRecursion': False,
+            'includePrivate': False,
+            'outputFile': '',
+            'basePackage': '',
+            'ignoreDirectories': [],
+            'ignoreFilePatterns': [],
+            'sourceExtensions': [],
         }
         
         lang = self.project.getProjectLanguage()
@@ -173,7 +174,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             self.trUtf8("API files (*.api);;All files (*)"))
             
         if filename:
-            # make it relative, if it is in a subdirectory of the project path 
+            # make it relative, if it is in a subdirectory of the project path
             fn = Utilities.toNativeSeparators(filename)
             fn = self.project.getRelativePath(fn)
             self.outputFileEdit.setText(fn)
@@ -204,7 +205,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
-            # make it relative, if it is a subdirectory of the project path 
+            # make it relative, if it is a subdirectory of the project path
             dn = Utilities.toNativeSeparators(directory)
             dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
@@ -232,7 +233,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
 
     def accept(self):
         """
-        Protected slot called by the Ok button. 
+        Protected slot called by the Ok button.
         
         It saves the values in the parameters dictionary.
         """

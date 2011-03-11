@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 
 from .OpenSearchEngine import OpenSearchEngine
 
+
 class OpenSearchReader(QXmlStreamReader):
     """
     Class implementing a reader for open search engine descriptions.
@@ -109,7 +110,6 @@ class OpenSearchReader(QXmlStreamReader):
                 
             elif self.name() == "Image":
                 engine.setImageUrl(self.readElementText())
-                
             
             if engine.name() and \
                engine.description() and \

@@ -17,11 +17,12 @@ from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 import Utilities
 from DebugClients.Python3.coverage import coverage
 
+
 class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
     """
     Class implementing a dialog to display the collected code coverage data.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -43,10 +44,10 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.excludeList = ['# *pragma[: ]*[nN][oO] *[cC][oO][vV][eE][rR]']
         
         self.__menu = QMenu(self)
-        self.annotate = self.__menu.addAction(self.trUtf8('Annotate'), 
+        self.annotate = self.__menu.addAction(self.trUtf8('Annotate'),
             self.__annotate)
         self.__menu.addAction(self.trUtf8('Annotate all'), self.__annotateAll)
-        self.__menu.addAction(self.trUtf8('Delete annotated files'), 
+        self.__menu.addAction(self.trUtf8('Delete annotated files'),
             self.__deleteAnnotated)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8('Erase Coverage Info'), self.__erase)
@@ -78,7 +79,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                 start = None
                 if ind + 1 >= len(lines):
                     break
-                i = lines[ind+1]
+                i = lines[ind + 1]
         if start:
             pairs.append((start, end))
         
@@ -108,11 +109,11 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         @param missing list of lines without coverage (string)
         """
         itm = QTreeWidgetItem(self.resultList, [
-            file, 
-            str(statements), 
+            file,
+            str(statements),
             str(executed),
-            "{0:.0f}%".format(coverage), 
-            excluded, 
+            "{0:.0f}%".format(coverage),
+            excluded,
             missing
         ])
         for col in range(1, 4):
@@ -144,7 +145,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             self.path = os.path.dirname(cfn)
         files.sort()
         
-        cover = coverage(data_file = self.cfn)
+        cover = coverage(data_file=self.cfn)
         cover.use_cache(True)
         cover.load()
         
@@ -171,7 +172,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
                 if self.cancelled:
                     return
                 
-                statements, excluded, missing, readable  = cover.analysis2(file)[1:]
+                statements, excluded, missing, readable = cover.analysis2(file)[1:]
                 readableEx = excluded and self.__format_lines(excluded) or ''
                 n = len(statements)
                 m = n - len(missing)
@@ -200,7 +201,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             else:
                 pc = 100.0
             itm = QTreeWidgetItem(self.summaryList, [
-                str(total_statements), 
+                str(total_statements),
                 str(total_executed),
                 "{0:.0f}%".format(pc)
             ])
@@ -257,7 +258,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         itm = self.resultList.currentItem()
         fn = itm.text(0)
         
-        cover = coverage(data_file = self.cfn)
+        cover = coverage(data_file=self.cfn)
         cover.use_cache(True)
         cover.exclude(self.excludeList[0])
         cover.load()
@@ -280,13 +281,13 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             itm = self.resultList.topLevelItem(index)
             files.append(itm.text(0))
         
-        cover = coverage(data_file = self.cfn)
+        cover = coverage(data_file=self.cfn)
         cover.use_cache(True)
         cover.exclude(self.excludeList[0])
         cover.load()
         
         # now process them
-        progress = QProgressDialog(self.trUtf8("Annotating files..."), 
+        progress = QProgressDialog(self.trUtf8("Annotating files..."),
             self.trUtf8("Abort"), 0, len(files), self)
         progress.setMinimumDuration(0)
         count = 0
@@ -295,7 +296,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             progress.setValue(count)
             if progress.wasCanceled():
                 break
-            cover.annotate([file], None)#, True)
+            cover.annotate([file], None)  # , True)
             count += 1
         
         progress.setValue(len(files))
@@ -307,7 +308,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         This method erases the collected coverage data that is
         stored in the .coverage file.
         """
-        cover = coverage(data_file = self.cfn)
+        cover = coverage(data_file=self.cfn)
         cover.use_cache(True)
         cover.load()
         cover.erase()

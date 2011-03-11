@@ -12,11 +12,12 @@ from PyQt4.Qsci import QsciLexerCPP,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerCPP(QsciLexerCPP, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent=None, caseInsensitiveKeywords = False):
+    def __init__(self, parent=None, caseInsensitiveKeywords=False):
         """
         Constructor
         
@@ -27,13 +28,13 @@ class LexerCPP(QsciLexerCPP, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/* ',
-            'end'   : ' */'
+            'start': '/* ',
+            'end': ' */'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
 
     def initProperties(self):
@@ -69,9 +70,9 @@ class LexerCPP(QsciLexerCPP, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerCPP.Comment, 
-                         QsciLexerCPP.CommentDoc, 
-                         QsciLexerCPP.CommentLine, 
+        return style in [QsciLexerCPP.Comment,
+                         QsciLexerCPP.CommentDoc,
+                         QsciLexerCPP.CommentLine,
                          QsciLexerCPP.CommentLineDoc]
     
     def isStringStyle(self, style):
@@ -80,16 +81,16 @@ class LexerCPP(QsciLexerCPP, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerCPP.DoubleQuotedString, 
-                         QsciLexerCPP.SingleQuotedString, 
-                         QsciLexerCPP.UnclosedString, 
+        return style in [QsciLexerCPP.DoubleQuotedString,
+                         QsciLexerCPP.SingleQuotedString,
+                         QsciLexerCPP.UnclosedString,
                          QsciLexerCPP.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerCPP.keywords(self, kwSet)

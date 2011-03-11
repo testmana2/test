@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
 
+
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
     """
     Class implementing the multi project properties dialog.
     """
-    def __init__(self, multiProject, new = True, parent = None):
+    def __init__(self, multiProject, new=True, parent=None):
         """
         Constructor
         

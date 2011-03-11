@@ -35,6 +35,7 @@ pyqtApi = 2
 
 error = ""
 
+
 class TabnannyPlugin(QObject):
     """
     Class implementing the Tabnanny plugin.
@@ -74,7 +75,7 @@ class TabnannyPlugin(QObject):
         if menu:
             self.__projectAct = E5Action(self.trUtf8('Check Indentations'),
                     self.trUtf8('&Indentations...'), 0, 0,
-                    self,'project_check_indentations')
+                    self, 'project_check_indentations')
             self.__projectAct.setStatusTip(
                 self.trUtf8('Check indentations using tabnanny.'))
             self.__projectAct.setWhatsThis(self.trUtf8(
@@ -135,7 +136,7 @@ class TabnannyPlugin(QObject):
     
     def __projectShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project menu or a submenu is 
+        Private slot called, when the the project menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -148,7 +149,7 @@ class TabnannyPlugin(QObject):
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project browser context menu or a submenu is 
+        Private slot called, when the the project browser context menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -229,7 +230,7 @@ class TabnannyPlugin(QObject):
     
     def __editorShowMenu(self, menuName, menu, editor):
         """
-        Private slot called, when the the editor context menu or a submenu is 
+        Private slot called, when the the editor context menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)

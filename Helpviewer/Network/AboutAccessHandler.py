@@ -11,11 +11,12 @@ from .SchemeAccessHandler import SchemeAccessHandler
 
 from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 
+
 class AboutAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for about schemes.
     """
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         

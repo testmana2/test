@@ -20,6 +20,7 @@ from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
 
+
 class AdBlockManager(QObject):
     """
     Class implementing the AdBlock manager.
@@ -28,7 +29,7 @@ class AdBlockManager(QObject):
     """
     rulesChanged = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

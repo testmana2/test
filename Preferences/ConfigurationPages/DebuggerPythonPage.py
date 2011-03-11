@@ -18,6 +18,7 @@ from .Ui_DebuggerPythonPage import Ui_DebuggerPythonPage
 import Preferences
 import Utilities
 
+
 class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
     """
     Class implementing the Debugger Python configuration page.
@@ -56,7 +57,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Public slot to save the Debugger Python configuration.
         """
-        Preferences.setDebugger("PythonInterpreter", 
+        Preferences.setDebugger("PythonInterpreter",
             self.interpreterEdit.text())
         if self.standardButton.isChecked():
             dct = "standard"
@@ -65,13 +66,13 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         else:
             dct = "custom"
         Preferences.setDebugger("DebugClientType", dct)
-        Preferences.setDebugger("DebugClient", 
+        Preferences.setDebugger("DebugClient",
             self.debugClientEdit.text())
-        Preferences.setDebugger("PythonRedirect", 
+        Preferences.setDebugger("PythonRedirect",
             self.pyRedirectCheckBox.isChecked())
-        Preferences.setDebugger("PythonNoEncoding", 
+        Preferences.setDebugger("PythonNoEncoding",
             self.pyNoEncodingCheckBox.isChecked())
-        Preferences.setDebugger("PythonExtensions", 
+        Preferences.setDebugger("PythonExtensions",
             self.sourceExtensionsEdit.text())
         
     @pyqtSlot()
@@ -104,6 +105,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
             self.debugClientEdit.setText(
                 Utilities.toNativeSeparators(file))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

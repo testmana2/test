@@ -12,18 +12,19 @@ from PyQt4.QtGui import *
 
 from .Ui_AddLanguageDialog import Ui_AddLanguageDialog
 
+
 class AddLanguageDialog(QDialog, Ui_AddLanguageDialog):
     """
     Class implementing a dialog to add a new language to the project.
     """
-    def __init__(self, parent = None, name = None):
+    def __init__(self, parent=None, name=None):
         """
         Constructor
         
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

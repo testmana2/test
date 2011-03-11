@@ -14,13 +14,14 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
+
 class NetworkAccessManagerProxy(QNetworkAccessManager):
     """
     Class implementing a network access manager proxy for web pages.
     """
     primaryManager = None
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -60,7 +61,7 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
             self.__class__.primaryManager.authenticationRequired)
         self.finished.connect(self.__class__.primaryManager.finished)
     
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         

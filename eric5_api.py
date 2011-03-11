@@ -23,6 +23,7 @@ from UI.Info import Version
 import Utilities
 import DocumentationTools
 
+
 def usage():
     """
     Function to print some usage information.
@@ -77,6 +78,7 @@ def usage():
     print("        This option may be repeated multiple times.")
     sys.exit(1)
 
+
 def version():
     """
     Function to show the version information.
@@ -91,6 +93,7 @@ There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
+
 def main():
     """
     Main entry point into the application.
@@ -102,12 +105,12 @@ def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], "b:e:hl:o:pRrt:Vx:",
             ["base=", "eol=", "exclude=", "exclude-file=", "extension=", "help",
-             "language=", "output=", "private", "recursive", 
+             "language=", "output=", "private", "recursive",
              "version", ])
     except getopt.error:
         usage()
 
-    excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 
+    excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
                    ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
     excludePatterns = []
     outputFileName = ""
@@ -183,7 +186,7 @@ def main():
         
         for arg in args:
             if os.path.isdir(arg):
-                if os.path.exists(os.path.join(arg, 
+                if os.path.exists(os.path.join(arg,
                                                Utilities.joinext("__init__", ".py"))):
                     basename = os.path.dirname(arg)
                     if arg == '.':
@@ -211,7 +214,7 @@ def main():
                     for ext in supportedExtensions:
                         files.extend(glob.glob(os.path.join(filename,
                                                             Utilities.joinext("*", ext))))
-                        initFile = os.path.join(filename, 
+                        initFile = os.path.join(filename,
                                                 Utilities.joinext("__init__", ext))
                         if initFile in files:
                             inpackage = True
@@ -236,8 +239,8 @@ def main():
                         continue
                     
                     try:
-                        module = Utilities.ModuleParser.readModule(file, 
-                            basename = basename, inpackage = inpackage)
+                        module = Utilities.ModuleParser.readModule(file,
+                            basename=basename, inpackage=inpackage)
                         apiGenerator = APIGenerator(module)
                         api = apiGenerator.genAPI(True, basePackage, includePrivate)
                     except IOError as v:
@@ -256,7 +259,7 @@ def main():
         if outdir and not os.path.exists(outdir):
             os.makedirs(outdir)
         try:
-            out = open(outputFile, "w", encoding = "utf-8", newline = newline)
+            out = open(outputFile, "w", encoding="utf-8", newline=newline)
             out.write("\n".join(sorted(apis)) + "\n")
             out.close()
         except IOError as v:

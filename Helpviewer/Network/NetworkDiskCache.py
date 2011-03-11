@@ -10,6 +10,7 @@ Module implementing a disk cache respecting privacy.
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtNetwork import QNetworkDiskCache
 
+
 class NetworkDiskCache(QNetworkDiskCache):
     """
     Class implementing a disk cache respecting privacy.

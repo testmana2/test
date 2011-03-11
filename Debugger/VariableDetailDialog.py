@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .Ui_VariableDetailDialog import Ui_VariableDetailDialog
 
+
 class VariableDetailDialog(QDialog, Ui_VariableDetailDialog):
     """
     Class implementing the variable detail dialog.

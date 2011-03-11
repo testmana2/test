@@ -19,6 +19,7 @@ from QScintilla.Editor import Editor
 
 import UI.PixmapCache
 
+
 class StackedWidget(QStackedWidget):
     """
     Class implementing a custimized StackedWidget.
@@ -115,6 +116,7 @@ class StackedWidget(QStackedWidget):
         """
         return len(self.editors) and self.editors[0] or None
 
+
 class Listspace(QSplitter, ViewManager):
     """
     Class implementing the listspace viewmanager class.
@@ -181,7 +183,7 @@ class Listspace(QSplitter, ViewManager):
         self.currentStack = stack
         stack.currentChanged.connect(self.__currentChanged)
         stack.installEventFilter(self)
-        self.setSizes([int(self.width() * 0.2), int(self.width() * 0.8)]) # 20% for viewlist
+        self.setSizes([int(self.width() * 0.2), int(self.width() * 0.8)])  # 20% for viewlist
         self.__inRemoveView = False
         
         self.__initMenu()
@@ -303,7 +305,7 @@ class Listspace(QSplitter, ViewManager):
         else:
             self.changeCaption.emit("")
         
-    def _addView(self, win, fn = None, noName = ""):
+    def _addView(self, win, fn=None, noName=""):
         """
         Protected method to add a view (i.e. window)
         
@@ -339,7 +341,7 @@ class Listspace(QSplitter, ViewManager):
         
     def __captionChange(self, cap, editor):
         """
-        Private method to handle caption change signals from the editor. 
+        Private method to handle caption change signals from the editor.
         
         Updates the listwidget text to reflect the new caption information.
         
@@ -350,7 +352,7 @@ class Listspace(QSplitter, ViewManager):
         if fn:
             self.setEditorName(editor, fn)
         
-    def _showView(self, win, fn = None):
+    def _showView(self, win, fn=None):
         """
         Protected method to show a view (i.e. window)
         
@@ -477,7 +479,7 @@ class Listspace(QSplitter, ViewManager):
             size = self.stackArea.width()
         else:
             size = self.stackArea.height()
-        self.stackArea.setSizes([int(size/len(self.stacks))] * len(self.stacks))
+        self.stackArea.setSizes([int(size / len(self.stacks))] * len(self.stacks))
         self.splitRemoveAct.setEnabled(True)
         self.nextSplitAct.setEnabled(True)
         self.prevSplitAct.setEnabled(True)

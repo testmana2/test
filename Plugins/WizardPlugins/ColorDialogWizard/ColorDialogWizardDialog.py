@@ -16,6 +16,7 @@ from E5Gui import E5MessageBox
 
 from .Ui_ColorDialogWizardDialog import Ui_ColorDialogWizardDialog
 
+
 class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
     """
     Class implementing the color dialog wizard dialog.
@@ -79,8 +80,8 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
             if self.rQt45.isChecked():
                 QColorDialog.getColor(
                     QColor(self.sRed.value(), self.sGreen.value(),
-                           self.sBlue.value(), self.sAlpha.value()), 
-                    None, self.eTitle.text(), 
+                           self.sBlue.value(), self.sAlpha.value()),
+                    None, self.eTitle.text(),
                     QColorDialog.ColorDialogOptions(QColorDialog.ShowAlphaChannel))
             else:
                 rgba = qRgba(self.sRed.value(), self.sGreen.value(),

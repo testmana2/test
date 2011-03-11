@@ -15,11 +15,12 @@ from E5Gui.E5Application import e5App
 import UI.PixmapCache
 import Preferences
 
+
 class LogViewer(QTextEdit):
     """
     Class providing a specialized text edit for displaying logging information.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -57,7 +58,7 @@ class LogViewer(QTextEdit):
         coord = self.mapToGlobal(coord)
         self.__menu.popup(coord)
         
-    def __appendText(self, txt, error = False):
+    def __appendText(self, txt, error=False):
         """
         Public method to append text to the end.
         
@@ -80,7 +81,7 @@ class LogViewer(QTextEdit):
         
         @param txt text to be appended (string)
         """
-        self.__appendText(txt, error = False)
+        self.__appendText(txt, error=False)
         QApplication.processEvents()
         
     def appendToStderr(self, txt):
@@ -89,7 +90,7 @@ class LogViewer(QTextEdit):
         
         @param txt text to be appended (string)
         """
-        self.__appendText(txt, error = True)
+        self.__appendText(txt, error=True)
         QApplication.processEvents()
         
     def preferencesChanged(self):

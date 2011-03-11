@@ -19,6 +19,7 @@ from .Ui_EditorHighlightersPage import Ui_EditorHighlightersPage
 
 import Preferences
 
+
 class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
     """
     Class implementing the Editor Highlighter Associations configuration page.
@@ -93,7 +94,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
             self.editorFileExtEdit.clear()
             self.editorLexerCombo.setCurrentIndex(0)
             self.pygmentsLexerCombo.setCurrentIndex(0)
-            self.editorLexerList.sortItems(self.editorLexerList.sortColumn(), 
+            self.editorLexerList.sortItems(self.editorLexerList.sortColumn(),
                 self.editorLexerList.header().sortIndicatorOrder())
         
     @pyqtSlot()
@@ -155,6 +156,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         else:
             self.pygmentsLexerCombo.setEnabled(False)
             self.pygmentsLabel.setEnabled(False)
+
 
 def create(dlg):
     """

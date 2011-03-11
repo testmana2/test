@@ -10,6 +10,7 @@ Module implementing a window for showing the QtHelp index.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+
 class HelpSearchWidget(QWidget):
     """
     Class implementing a window for showing the QtHelp index.
@@ -20,7 +21,7 @@ class HelpSearchWidget(QWidget):
     linkActivated = pyqtSignal(QUrl)
     escapePressed = pyqtSignal()
     
-    def __init__(self, engine, mainWindow, parent = None):
+    def __init__(self, engine, mainWindow, parent=None):
         """
         Constructor
         

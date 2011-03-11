@@ -12,11 +12,12 @@ from PyQt4.QtGui import QLabel, QApplication, QDrag
 
 import Helpviewer.HelpWindow
 
+
 class FavIconLabel(QLabel):
     """
     Class implementing the label to show the web site icon.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -77,7 +78,7 @@ class FavIconLabel(QLabel):
             mimeData = QMimeData()
             title = self.__browser.title()
             if title == "":
-                title = str(self.__browser.url().toEncoded(), encoding = "utf-8")
+                title = str(self.__browser.url().toEncoded(), encoding="utf-8")
             mimeData.setText(title)
             mimeData.setUrls([self.__browser.url()])
             p = self.pixmap()

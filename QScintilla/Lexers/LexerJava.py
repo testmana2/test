@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerJava,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerJava(QsciLexerJava, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,13 +28,13 @@ class LexerJava(QsciLexerJava, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/* ',
-            'end'   : ' */'
+            'start': '/* ',
+            'end': ' */'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
 
     def initProperties(self):
@@ -57,9 +58,9 @@ class LexerJava(QsciLexerJava, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerJava.Comment, 
-                         QsciLexerJava.CommentDoc, 
-                         QsciLexerJava.CommentLine, 
+        return style in [QsciLexerJava.Comment,
+                         QsciLexerJava.CommentDoc,
+                         QsciLexerJava.CommentLine,
                          QsciLexerJava.CommentLineDoc]
     
     def isStringStyle(self, style):
@@ -68,16 +69,16 @@ class LexerJava(QsciLexerJava, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerJava.DoubleQuotedString, 
-                         QsciLexerJava.SingleQuotedString, 
-                         QsciLexerJava.UnclosedString, 
+        return style in [QsciLexerJava.DoubleQuotedString,
+                         QsciLexerJava.SingleQuotedString,
+                         QsciLexerJava.UnclosedString,
                          QsciLexerJava.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerJava.keywords(self, kwSet)

@@ -20,14 +20,15 @@ from .SvnDiffDialog import SvnDiffDialog
 import Utilities
 import Preferences
 
+
 class SvnLogDialog(QWidget, Ui_SvnLogDialog):
     """
     Class implementing a dialog to show the output of the svn log command process.
     
-    The dialog is nonmodal. Clicking a link in the upper text pane shows 
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the versions.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -66,9 +67,9 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         self.rx_changed = QRegExp('Changed .*\\s*')
         
         self.flags = {
-            'A' : self.trUtf8('Added'),
-            'D' : self.trUtf8('Deleted'),
-            'M' : self.trUtf8('Modified')
+            'A': self.trUtf8('Added'),
+            'D': self.trUtf8('Deleted'),
+            'M': self.trUtf8('Modified')
         }
         
         self.revisions = []  # stack of remembered revisions
@@ -91,7 +92,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         
         e.accept()
         
-    def start(self, fn, noEntries = 0):
+    def start(self, fn, noEntries=0):
         """
         Public slot to start the cvs log command.
         
@@ -170,9 +171,9 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
                     query.append(lv).append('_').append(ver)
                     url.setEncodedQuery(query)
                     dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
-                        url.toString(), 
-                        query, 
-                        self.trUtf8('diff to {0}').format(lv), 
+                        url.toString(),
+                        query,
+                        self.trUtf8('diff to {0}').format(lv),
                     )
                 except IndexError:
                     pass
@@ -212,15 +213,15 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process and inserts it into a buffer.
         """
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             self.buf.append(line)
             if self.rx_rev.exactMatch(line):
@@ -241,8 +242,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

@@ -21,11 +21,12 @@ from .Config import ConfigSvnProtocols
 
 import Utilities
 
+
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
     """
     Class implementing the Options Dialog for a new project from the repository.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -65,7 +66,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             if directory:
                 self.vcsUrlEdit.setText(Utilities.toNativeSeparators(directory))
         else:
-            dlg = SvnRepoBrowserDialog(self.vcs, mode = "select", parent = self)
+            dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
             dlg.start(self.protocolCombo.currentText() + self.vcsUrlEdit.text())
             if dlg.exec_() == QDialog.Accepted:
                 url = dlg.getSelectedUrl()
@@ -130,8 +131,8 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         if scheme == "file://" and url[0] not in ["\\", "/"]:
             url = "/{0}".format(url)
         vcsdatadict = {
-            "url" : '{0}{1}'.format(scheme, url),
-            "tag" : self.vcsTagEdit.text(), 
-            "standardLayout" : self.layoutCheckBox.isChecked(),
+            "url": '{0}{1}'.format(scheme, url),
+            "tag": self.vcsTagEdit.text(),
+            "standardLayout": self.layoutCheckBox.isChecked(),
         }
         return (self.vcsProjectDirEdit.text(), vcsdatadict)

@@ -22,6 +22,7 @@ import Preferences
 
 import UI.PixmapCache
 
+
 class SearchReplaceWidget(QWidget):
     """
     Class implementing the search and replace widget.
@@ -30,7 +31,7 @@ class SearchReplaceWidget(QWidget):
     """
     searchListChanged = pyqtSignal()
     
-    def __init__(self, replace, vm, parent = None):
+    def __init__(self, replace, vm, parent=None):
         """
         Constructor
         
@@ -49,9 +50,9 @@ class SearchReplaceWidget(QWidget):
             self.ui = Ui_ReplaceWidget()
             whatsThis = self.trUtf8(r"""
 <b>Find and Replace</b>
-<p>This dialog is used to find some text and replace it with another text. 
-By checking the various checkboxes, the search can be made more specific. The search 
-string might be a regular expression. In a regular expression, special characters 
+<p>This dialog is used to find some text and replace it with another text.
+By checking the various checkboxes, the search can be made more specific. The search
+string might be a regular expression. In a regular expression, special characters
 interpreted are:</p>
 """
             )
@@ -59,8 +60,8 @@ interpreted are:</p>
             self.ui = Ui_SearchWidget()
             whatsThis = self.trUtf8(r"""
 <b>Find</b>
-<p>This dialog is used to find some text. By checking the various checkboxes, the search 
-can be made more specific. The search string might be a regular expression. In a regular 
+<p>This dialog is used to find some text. By checking the various checkboxes, the search
+can be made more specific. The search string might be a regular expression. In a regular
 expression, special characters interpreted are:</p>
 """
             )
@@ -383,7 +384,7 @@ character except an alphabetic character.</td></tr>
         
         return ok
 
-    def __showFind(self, text = ''):
+    def __showFind(self, text=''):
         """
         Private method to display this widget in find mode.
         
@@ -598,7 +599,7 @@ character except an alphabetic character.</td></tr>
             self.viewmanager.searchPrevAct.alternateShortcut())
         self.findPrevAct.setShortcutContext(Qt.WidgetShortcut)
 
-    def show(self, text = ''):
+    def show(self, text=''):
         """
         Overridden slot from QWidget.
         

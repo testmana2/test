@@ -12,6 +12,7 @@ from PyQt4.QtCore import QUrl
 
 from .Ui_HelpTopicDialog import Ui_HelpTopicDialog
 
+
 class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
     """
     Class implementing a dialog to select a help topic to display.

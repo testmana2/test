@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 
 from .BookmarkNode import BookmarkNode
 
+
 class XmlEntityResolver(QXmlStreamEntityResolver):
     """
     Class implementing an XML entity resolver for bookmark files.
@@ -25,6 +26,7 @@ class XmlEntityResolver(QXmlStreamEntityResolver):
         if entity == "nbsp":
             return " "
         return ""
+
 
 class XbelReader(QXmlStreamReader):
     """

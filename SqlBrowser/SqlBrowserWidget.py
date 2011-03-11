@@ -16,6 +16,7 @@ from E5Gui import E5MessageBox
 from .SqlConnectionDialog import SqlConnectionDialog
 from .Ui_SqlBrowserWidget import Ui_SqlBrowserWidget
 
+
 class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     """
     Class implementing the SQL Browser widget.
@@ -26,7 +27,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     
     cCount = 0
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -124,7 +125,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         err = QSqlError()
         
         self.__class__.cCount += 1
-        db = QSqlDatabase.addDatabase(driver.upper(), 
+        db = QSqlDatabase.addDatabase(driver.upper(),
                                       "Browser{0:d}".format(self.__class__.cCount))
         db.setDatabaseName(dbName)
         db.setHostName(host)
@@ -198,11 +199,11 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             fld = rec.field(i)
             model.setData(model.index(i, 0), fld.name())
             if fld.typeID() == -1:
-                model.setData(model.index(i, 1), 
+                model.setData(model.index(i, 1),
                               QVariant.typeToName(fld.type()))
             else:
                 model.setData(model.index(i, 1), "{0} ({1})".format(
-                                                 QVariant.typeToName(fld.type()), 
+                                                 QVariant.typeToName(fld.type()),
                                                  fld.typeID()))
             if fld.length() < 0:
                 model.setData(model.index(i, 2), "?")

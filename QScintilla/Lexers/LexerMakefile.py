@@ -11,8 +11,9 @@ from PyQt4.Qsci import QsciLexerMakefile
 
 from .Lexer import Lexer
 
+
 class LexerMakefile(QsciLexerMakefile, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -47,7 +48,7 @@ class LexerMakefile(QsciLexerMakefile, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerMakefile.keywords(self, kwSet)

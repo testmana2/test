@@ -20,11 +20,12 @@ from E5Gui import E5MessageBox
 from .PluginManager import PluginManager
 from .Ui_PluginUninstallDialog import Ui_PluginUninstallDialog
 
+
 class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
     """
     Class implementing a dialog for plugin deinstallation.
     """
-    def __init__(self, pluginManager, parent = None):
+    def __init__(self, pluginManager, parent=None):
         """
         Constructor
         
@@ -36,18 +37,18 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
         
         if pluginManager is None:
             # started as external plugin deinstaller
-            self.__pluginManager = PluginManager(doLoadPlugins = False)
+            self.__pluginManager = PluginManager(doLoadPlugins=False)
             self.__external = True
         else:
             self.__pluginManager = pluginManager
             self.__external = False
         
-        self.pluginDirectoryCombo.addItem(self.trUtf8("User plugins directory"), 
+        self.pluginDirectoryCombo.addItem(self.trUtf8("User plugins directory"),
             self.__pluginManager.getPluginDir("user"))
         
         globalDir = self.__pluginManager.getPluginDir("global")
         if globalDir is not None and os.access(globalDir, os.W_OK):
-            self.pluginDirectoryCombo.addItem(self.trUtf8("Global plugins directory"), 
+            self.pluginDirectoryCombo.addItem(self.trUtf8("Global plugins directory"),
                 globalDir)
     
     @pyqtSlot(int)
@@ -151,11 +152,12 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                 .format(pluginName, pluginDirectory))
         return True
 
+
 class PluginUninstallDialog(QDialog):
     """
     Class for the dialog variant.
     """
-    def __init__(self, pluginManager, parent = None):
+    def __init__(self, pluginManager, parent=None):
         """
         Constructor
         
@@ -177,11 +179,12 @@ class PluginUninstallDialog(QDialog):
         self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
 
+
 class PluginUninstallWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

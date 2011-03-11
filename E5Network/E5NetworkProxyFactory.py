@@ -20,6 +20,7 @@ from UI.AuthenticationDialog import AuthenticationDialog
 import Preferences
 import Globals
 
+
 def schemeFromProxyType(proxyType):
     """
     Module function to determine the scheme name from the proxy type.
@@ -38,6 +39,7 @@ def schemeFromProxyType(proxyType):
         scheme = "NoProxy"
     return scheme
 
+
 def proxyAuthenticationRequired(proxy, auth):
     """
     Module slot to handle a proxy authentication request.
@@ -45,7 +47,7 @@ def proxyAuthenticationRequired(proxy, auth):
     @param proxy reference to the proxy object (QNetworkProxy)
     @param auth reference to the authenticator object (QAuthenticator)
     """
-    info = QCoreApplication.translate("E5NetworkProxyFactory", 
+    info = QCoreApplication.translate("E5NetworkProxyFactory",
         "<b>Connect to proxy '{0}' using:</b>")\
         .format(Qt.escape(proxy.hostName()))
     
@@ -61,6 +63,7 @@ def proxyAuthenticationRequired(proxy, auth):
                 Preferences.setUI("ProxyPassword/{0}".format(scheme), password)
             proxy.setUser(username)
             proxy.setPassword(password)
+
 
 class E5NetworkProxyFactory(QNetworkProxyFactory):
     """
@@ -104,7 +107,7 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                                 proxyType = QNetworkProxy.FtpCachingProxy
                             else:
                                 proxyType = QNetworkProxy.HttpProxy
-                            proxy = QNetworkProxy(proxyType, url.host(), url.port(), 
+                            proxy = QNetworkProxy(proxyType, url.host(), url.port(),
                                                   url.userName(), url.password())
                             proxyList = [proxy]
                             break
@@ -128,26 +131,26 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                 host = Preferences.getUI("ProxyHost/{0}".format(protocol))
                 if not host:
                     E5MessageBox.critical(None,
-                        QCoreApplication.translate("E5NetworkProxyFactory", 
+                        QCoreApplication.translate("E5NetworkProxyFactory",
                             "Proxy Configuration Error"),
-                        QCoreApplication.translate("E5NetworkProxyFactory", 
+                        QCoreApplication.translate("E5NetworkProxyFactory",
                             """Proxy usage was activated"""
                             """ but no proxy host for protocol"""
                             """ '{0}' configured.""").format(protocol))
                     return [QNetworkProxy(QNetworkProxy.DefaultProxy)]
                 else:
                     if protocol == "Http":
-                        proxy = QNetworkProxy(QNetworkProxy.HttpProxy, host, 
+                        proxy = QNetworkProxy(QNetworkProxy.HttpProxy, host,
                             Preferences.getUI("ProxyPort/Http"),
                             Preferences.getUI("ProxyUser/Http"),
                             Preferences.getUI("ProxyPassword/Http"))
                     elif protocol == "Https":
-                        proxy = QNetworkProxy(QNetworkProxy.HttpCachingProxy, host, 
+                        proxy = QNetworkProxy(QNetworkProxy.HttpCachingProxy, host,
                             Preferences.getUI("ProxyPort/Https"),
                             Preferences.getUI("ProxyUser/Https"),
                             Preferences.getUI("ProxyPassword/Https"))
                     elif protocol == "Ftp":
-                        proxy = QNetworkProxy(QNetworkProxy.FtpCachingProxy, host, 
+                        proxy = QNetworkProxy(QNetworkProxy.FtpCachingProxy, host,
                             Preferences.getUI("ProxyPort/Ftp"),
                             Preferences.getUI("ProxyUser/Ftp"),
                             Preferences.getUI("ProxyPassword/Ftp"))

@@ -11,6 +11,7 @@ import os
 
 from PyQt4.QtGui import QPixmap, QIcon, QPainter
 
+
 class PixmapCache(object):
     """
     Class implementing a pixmap cache for icons.
@@ -57,7 +58,8 @@ class PixmapCache(object):
 
 pixCache = PixmapCache()
 
-def getPixmap(key, cache = pixCache):
+
+def getPixmap(key, cache=pixCache):
     """
     Module function to retrieve a pixmap.
 
@@ -66,7 +68,8 @@ def getPixmap(key, cache = pixCache):
     """
     return cache.getPixmap(key)
 
-def getIcon(key, cache = pixCache):
+
+def getIcon(key, cache=pixCache):
     """
     Module function to retrieve an icon.
 
@@ -75,7 +78,8 @@ def getIcon(key, cache = pixCache):
     """
     return QIcon(cache.getPixmap(key))
 
-def getSymlinkIcon(key, cache = pixCache):
+
+def getSymlinkIcon(key, cache=pixCache):
     """
     Module function to retrieve a symbolic link icon.
 
@@ -89,7 +93,8 @@ def getSymlinkIcon(key, cache = pixCache):
     painter.end()
     return QIcon(pix1)
 
-def addSearchPath(path, cache = pixCache):
+
+def addSearchPath(path, cache=pixCache):
     """
     Module function to add a path to the search path.
 

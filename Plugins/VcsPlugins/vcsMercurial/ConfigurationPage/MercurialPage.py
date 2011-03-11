@@ -14,6 +14,7 @@ from QScintilla.MiniEditor import MiniEditor
 from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
 from .Ui_MercurialPage import Ui_MercurialPage
 
+
 class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
     """
     Class implementing the Mercurial configuration page.

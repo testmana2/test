@@ -17,7 +17,7 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
     """
     Class implementing a dialog to enter the revisions for the svn diff command.
     """
-    def __init__(self,parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

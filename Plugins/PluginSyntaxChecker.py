@@ -35,6 +35,7 @@ pyqtApi = 2
 
 error = ""
 
+
 class SyntaxCheckerPlugin(QObject):
     """
     Class implementing the Syntax Checker plugin.
@@ -133,7 +134,7 @@ class SyntaxCheckerPlugin(QObject):
     
     def __projectShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project menu or a submenu is 
+        Private slot called, when the the project menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -146,7 +147,7 @@ class SyntaxCheckerPlugin(QObject):
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project browser menu or a submenu is 
+        Private slot called, when the the project browser menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -226,7 +227,7 @@ class SyntaxCheckerPlugin(QObject):
     
     def __editorShowMenu(self, menuName, menu, editor):
         """
-        Private slot called, when the the editor context menu or a submenu is 
+        Private slot called, when the the editor context menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -246,5 +247,5 @@ class SyntaxCheckerPlugin(QObject):
         if editor is not None:
             self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
             self.__editorSyntaxCheckerDialog.show()
-            self.__editorSyntaxCheckerDialog.start(editor.getFileName(), 
+            self.__editorSyntaxCheckerDialog.start(editor.getFileName(),
                                                    editor.text())

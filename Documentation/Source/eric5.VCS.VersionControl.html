@@ -22,7 +22,7 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.VCS.VersionControl</h1>
 <p>
-Module implementing an abstract base class to be subclassed by all specific 
+Module implementing an abstract base class to be subclassed by all specific
 VCS interfaces.
 </p>
 <h3>Global Attributes</h3>
@@ -44,7 +44,7 @@ VCS interfaces.
 <a NAME="VersionControl" ID="VersionControl"></a>
 <h2>VersionControl</h2>
 <p>
-    Class implementing an abstract base class to be subclassed by all specific 
+    Class implementing an abstract base class to be subclassed by all specific
     VCS interfaces.
 </p><p>
     It defines the vcs interface to be implemented by subclasses
@@ -240,7 +240,7 @@ QObject
 </table>
 <a NAME="VersionControl.__init__" ID="VersionControl.__init__"></a>
 <h4>VersionControl (Constructor)</h4>
-<b>VersionControl</b>(<i>parent = None, name = None</i>)
+<b>VersionControl</b>(<i>parent=None, name=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -394,7 +394,7 @@ a tuple of 2 strings (dirname, filename).
 <h4>VersionControl.splitPathList</h4>
 <b>splitPathList</b>(<i>names</i>)
 <p>
-        Public method splitting the list of names into a common directory part and 
+        Public method splitting the list of names into a common directory part and
         a file list.
 </p><dl>
 <dt><i>names</i></dt>
@@ -423,7 +423,7 @@ reference to the monitor thread (QThread)
 </dd>
 </dl><a NAME="VersionControl.startSynchronizedProcess" ID="VersionControl.startSynchronizedProcess"></a>
 <h4>VersionControl.startSynchronizedProcess</h4>
-<b>startSynchronizedProcess</b>(<i>proc, program, arguments, workingDir = None</i>)
+<b>startSynchronizedProcess</b>(<i>proc, program, arguments, workingDir=None</i>)
 <p>
         Public method to start a synchroneous process
 </p><p>
@@ -455,7 +455,7 @@ flag indicating normal exit (boolean)
         Public method to stop the VCS status monitor thread.
 </p><a NAME="VersionControl.vcsAdd" ID="VersionControl.vcsAdd"></a>
 <h4>VersionControl.vcsAdd</h4>
-<b>vcsAdd</b>(<i>name, isDir = False, noDialog = False</i>)
+<b>vcsAdd</b>(<i>name, isDir=False, noDialog=False</i>)
 <p>
         Public method used to add a file/directory in the vcs.
 </p><p>
@@ -478,7 +478,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsAddBinary" ID="VersionControl.vcsAddBinary"></a>
 <h4>VersionControl.vcsAddBinary</h4>
-<b>vcsAddBinary</b>(<i>name, isDir = False</i>)
+<b>vcsAddBinary</b>(<i>name, isDir=False</i>)
 <p>
         Public method used to add a file/directory in binary mode in the vcs.
 </p><p>
@@ -539,7 +539,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsCheckout" ID="VersionControl.vcsCheckout"></a>
 <h4>VersionControl.vcsCheckout</h4>
-<b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog = False</i>)
+<b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
         Public method used to check the project out of the vcs.
 </p><dl>
@@ -595,7 +595,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsCommit" ID="VersionControl.vcsCommit"></a>
 <h4>VersionControl.vcsCommit</h4>
-<b>vcsCommit</b>(<i>name, message, noDialog = False</i>)
+<b>vcsCommit</b>(<i>name, message, noDialog=False</i>)
 <p>
         Public method used to make the change of a file/directory permanent in the vcs.
 </p><p>
@@ -725,7 +725,7 @@ a dictionary of vcs specific data
 </dd>
 </dl><a NAME="VersionControl.vcsGetProjectBrowserHelper" ID="VersionControl.vcsGetProjectBrowserHelper"></a>
 <h4>VersionControl.vcsGetProjectBrowserHelper</h4>
-<b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser = False</i>)
+<b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
         Public method to instanciate a helper object for the different project browsers.
 </p><dl>
@@ -779,7 +779,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsImport" ID="VersionControl.vcsImport"></a>
 <h4>VersionControl.vcsImport</h4>
-<b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog = False</i>)
+<b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
         Public method used to import the project into the vcs.
 </p><dl>
@@ -806,7 +806,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsInit" ID="VersionControl.vcsInit"></a>
 <h4>VersionControl.vcsInit</h4>
-<b>vcsInit</b>(<i>vcsDir, noDialog = False</i>)
+<b>vcsInit</b>(<i>vcsDir, noDialog=False</i>)
 <p>
         Public method used to initialize the vcs.
 </p><p>
@@ -860,7 +860,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsMove" ID="VersionControl.vcsMove"></a>
 <h4>VersionControl.vcsMove</h4>
-<b>vcsMove</b>(<i>name, project, target = None, noDialog = False</i>)
+<b>vcsMove</b>(<i>name, project, target=None, noDialog=False</i>)
 <p>
         Public method used to move a file/directory.
 </p><dl>
@@ -904,7 +904,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsNewProjectOptionsDialog" ID="VersionControl.vcsNewProjectOptionsDialog"></a>
 <h4>VersionControl.vcsNewProjectOptionsDialog</h4>
-<b>vcsNewProjectOptionsDialog</b>(<i>parent = None</i>)
+<b>vcsNewProjectOptionsDialog</b>(<i>parent=None</i>)
 <p>
         Public method to get a dialog to enter repository info for getting a new project.
 </p><dl>
@@ -914,7 +914,7 @@ parent widget (QWidget)
 </dd>
 </dl><a NAME="VersionControl.vcsOptionsDialog" ID="VersionControl.vcsOptionsDialog"></a>
 <h4>VersionControl.vcsOptionsDialog</h4>
-<b>vcsOptionsDialog</b>(<i>project, archive, editable = False, parent = None</i>)
+<b>vcsOptionsDialog</b>(<i>project, archive, editable=False, parent=None</i>)
 <p>
         Public method to get a dialog to enter repository info.
 </p><dl>
@@ -954,7 +954,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsRemove" ID="VersionControl.vcsRemove"></a>
 <h4>VersionControl.vcsRemove</h4>
-<b>vcsRemove</b>(<i>name, project = False, noDialog = False</i>)
+<b>vcsRemove</b>(<i>name, project=False, noDialog=False</i>)
 <p>
         Public method used to add a file/directory in the vcs.
 </p><p>
@@ -1109,7 +1109,7 @@ not implemented
 </dd>
 </dl><a NAME="VersionControl.vcsUpdate" ID="VersionControl.vcsUpdate"></a>
 <h4>VersionControl.vcsUpdate</h4>
-<b>vcsUpdate</b>(<i>name, noDialog = False</i>)
+<b>vcsUpdate</b>(<i>name, noDialog=False</i>)
 <p>
         Public method used to update a file/directory in the vcs.
 </p><p>

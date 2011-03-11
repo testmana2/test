@@ -8,7 +8,7 @@
 Eric5 Diff
 
 This is the main Python script that performs the necessary initialization
-of the Diff module and starts the Qt event loop. This is a standalone 
+of the Diff module and starts the Qt event loop. This is a standalone
 version of the integrated Diff module.
 """
 
@@ -24,6 +24,7 @@ for arg in sys.argv:
 
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -34,13 +35,14 @@ def createMainWidget(argv):
     from UI.DiffDialog import DiffWindow
     return DiffWindow()
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 Diff",

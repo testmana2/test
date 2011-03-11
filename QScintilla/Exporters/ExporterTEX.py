@@ -22,13 +22,14 @@ from .ExporterBase import ExporterBase
 
 import Preferences
 
+
 class ExporterTEX(ExporterBase):
     """
     Class implementing an exporter for TeX.
     """
     CHARZ = ord('z') - ord('a') + 1
     
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -148,7 +149,7 @@ class ExporterTEX(ExporterBase):
             styleIsUsed[QsciScintilla.STYLE_DEFAULT] = True
             
             try:
-                f = open(filename, "w", encoding = "utf-8")
+                f = open(filename, "w", encoding="utf-8")
                 
                 f.write("\\documentclass[a4paper]{article}\n")
                 f.write("\\usepackage[a4paper,margin=1.5cm]{geometry}\n")
@@ -181,7 +182,7 @@ class ExporterTEX(ExporterBase):
                     font = Preferences.getEditorOtherFonts("DefaultFont")
                     
                     self.__defineTexStyle(font, colour, paper, f, 0)
-                    self.__defineTexStyle(font, colour, paper, f, 
+                    self.__defineTexStyle(font, colour, paper, f,
                                           QsciScintilla.STYLE_DEFAULT)
                 
                 f.write("\\begin{document}\n\n")

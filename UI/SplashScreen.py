@@ -15,6 +15,7 @@ from PyQt4.QtGui import QApplication, QPixmap, QSplashScreen, QColor
 
 from eric5config import getConfig
 
+
 class SplashScreen(QSplashScreen):
     """
     Class implementing a splashscreen for eric5.
@@ -46,6 +47,7 @@ class SplashScreen(QSplashScreen):
         """
         QSplashScreen.clearMessage(self)
         QApplication.processEvents()
+
 
 class NoneSplashScreen(object):
     """

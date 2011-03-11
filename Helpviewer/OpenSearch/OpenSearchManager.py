@@ -24,18 +24,19 @@ from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
 
+
 class OpenSearchManager(QObject):
     """
     Class implementing a manager for open search engines.
     
     @signal changed() emitted to indicate a change
-    @signal currentEngineChanged() emitted to indicate a change of 
+    @signal currentEngineChanged() emitted to indicate a change of
             the current search engine
     """
     changed = pyqtSignal()
     currentEngineChanged = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

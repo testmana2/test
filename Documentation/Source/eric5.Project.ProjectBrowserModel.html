@@ -72,7 +72,7 @@ BrowserDirectoryItem, ProjectBrowserItemMixin
 </table>
 <a NAME="ProjectBrowserDirectoryItem.__init__" ID="ProjectBrowserDirectoryItem.__init__"></a>
 <h4>ProjectBrowserDirectoryItem (Constructor)</h4>
-<b>ProjectBrowserDirectoryItem</b>(<i>parent, dinfo, projectType, full = True, bold = False</i>)
+<b>ProjectBrowserDirectoryItem</b>(<i>parent, dinfo, projectType, full=True, bold=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -115,7 +115,7 @@ BrowserFileItem, ProjectBrowserItemMixin
 </table>
 <a NAME="ProjectBrowserFileItem.__init__" ID="ProjectBrowserFileItem.__init__"></a>
 <h4>ProjectBrowserFileItem (Constructor)</h4>
-<b>ProjectBrowserFileItem</b>(<i>parent, finfo, projectType, full = True, bold = False, sourceLanguage = ""</i>)
+<b>ProjectBrowserFileItem</b>(<i>parent, finfo, projectType, full=True, bold=False, sourceLanguage=""</i>)
 <p>
         Constructor
 </p><dl>
@@ -181,7 +181,7 @@ object
 </table>
 <a NAME="ProjectBrowserItemMixin.__init__" ID="ProjectBrowserItemMixin.__init__"></a>
 <h4>ProjectBrowserItemMixin (Constructor)</h4>
-<b>ProjectBrowserItemMixin</b>(<i>type_, bold = False</i>)
+<b>ProjectBrowserItemMixin</b>(<i>type_, bold=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -381,7 +381,7 @@ reference to the item cache used to store
 </dd>
 </dl><a NAME="ProjectBrowserModel.__updateVCSStatus" ID="ProjectBrowserModel.__updateVCSStatus"></a>
 <h4>ProjectBrowserModel.__updateVCSStatus</h4>
-<b>__updateVCSStatus</b>(<i>item, name, recursive = True</i>)
+<b>__updateVCSStatus</b>(<i>item, name, recursive=True</i>)
 <p>
         Private method used to update the vcs status of a node.
 </p><dl>
@@ -397,7 +397,7 @@ flag indicating a recursive update (boolean)
 </dd>
 </dl><a NAME="ProjectBrowserModel.addNewItem" ID="ProjectBrowserModel.addNewItem"></a>
 <h4>ProjectBrowserModel.addNewItem</h4>
-<b>addNewItem</b>(<i>typeString, name, additionalTypeStrings = []</i>)
+<b>addNewItem</b>(<i>typeString, name, additionalTypeStrings=[]</i>)
 <p>
         Public method to add a new item to the model.
 </p><dl>
@@ -420,8 +420,8 @@ names of additional types (list of string)
 <dt><i>statesList</i></dt>
 <dd>
 list of VCS state entries (list of strings) giving the
-            states in the first column and the path relative to the project 
-            directory starting with the third column. The allowed status flags 
+            states in the first column and the path relative to the project
+            directory starting with the third column. The allowed status flags
             are:
             <ul>
                 <li>"A" path was added but not yet comitted</li>
@@ -463,7 +463,7 @@ path of the directory (string)
 </dd>
 </dl><a NAME="ProjectBrowserModel.findChildItem" ID="ProjectBrowserModel.findChildItem"></a>
 <h4>ProjectBrowserModel.findChildItem</h4>
-<b>findChildItem</b>(<i>text, column, parentItem = None</i>)
+<b>findChildItem</b>(<i>text, column, parentItem=None</i>)
 <p>
         Public method to find a child item given some text.
 </p><dl>
@@ -499,7 +499,7 @@ reference to the item found
 </dd>
 </dl><a NAME="ProjectBrowserModel.findParentItemByName" ID="ProjectBrowserModel.findParentItemByName"></a>
 <h4>ProjectBrowserModel.findParentItemByName</h4>
-<b>findParentItemByName</b>(<i>type_, name, dontSplit = False</i>)
+<b>findParentItemByName</b>(<i>type_, name, dontSplit=False</i>)
 <p>
         Public method to find an item given it's name.
 </p><p>
@@ -538,7 +538,7 @@ index of the item found (QModelIndex)
 </dd>
 </dl><a NAME="ProjectBrowserModel.populateItem" ID="ProjectBrowserModel.populateItem"></a>
 <h4>ProjectBrowserModel.populateItem</h4>
-<b>populateItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate an item's subtree.
 </p><dl>
@@ -551,7 +551,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="ProjectBrowserModel.populateProjectDirectoryItem" ID="ProjectBrowserModel.populateProjectDirectoryItem"></a>
 <h4>ProjectBrowserModel.populateProjectDirectoryItem</h4>
-<b>populateProjectDirectoryItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateProjectDirectoryItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a directory item's subtree.
 </p><dl>
@@ -617,7 +617,7 @@ name of the file relative to the project root (string)
 </dd>
 </dl><a NAME="ProjectBrowserModel.updateVCSStatus" ID="ProjectBrowserModel.updateVCSStatus"></a>
 <h4>ProjectBrowserModel.updateVCSStatus</h4>
-<b>updateVCSStatus</b>(<i>name, recursive = True</i>)
+<b>updateVCSStatus</b>(<i>name, recursive=True</i>)
 <p>
         Public method used to update the vcs status of a node.
 </p><dl>
@@ -660,7 +660,7 @@ BrowserItem, ProjectBrowserItemMixin
 </table>
 <a NAME="ProjectBrowserSimpleDirectoryItem.__init__" ID="ProjectBrowserSimpleDirectoryItem.__init__"></a>
 <h4>ProjectBrowserSimpleDirectoryItem (Constructor)</h4>
-<b>ProjectBrowserSimpleDirectoryItem</b>(<i>parent, projectType, text, path = ""</i>)
+<b>ProjectBrowserSimpleDirectoryItem</b>(<i>parent, projectType, text, path=""</i>)
 <p>
         Constructor
 </p><dl>
@@ -710,7 +710,7 @@ true, if this item is less than other (boolean)
 </dd>
 </dl><a NAME="ProjectBrowserSimpleDirectoryItem.setName" ID="ProjectBrowserSimpleDirectoryItem.setName"></a>
 <h4>ProjectBrowserSimpleDirectoryItem.setName</h4>
-<b>setName</b>(<i>dinfo, full = True</i>)
+<b>setName</b>(<i>dinfo, full=True</i>)
 <p>
         Public method to set the directory name.
 </p><dl>

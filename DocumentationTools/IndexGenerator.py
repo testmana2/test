@@ -15,11 +15,12 @@ from . import TemplatesListsStyleCSS
 
 from Utilities import joinext
 
+
 class IndexGenerator(object):
     """
     Class implementing the index generator for the builtin documentation generator.
     """
-    def __init__(self, outputDir, colors, stylesheet = None):
+    def __init__(self, outputDir, colors, stylesheet=None):
         """
         Constructor
         
@@ -30,10 +31,10 @@ class IndexGenerator(object):
         """
         self.outputDir = outputDir
         self.packages = {
-            "00index" : {
-                "description" : "",
-                "subpackages" : {},
-                "modules" : {}
+            "00index": {
+                "description": "",
+                "subpackages": {},
+                "modules": {}
             }
         }
         self.remembered = False
@@ -66,7 +67,7 @@ class IndexGenerator(object):
         Public method to remember a documentation file.
         
         @param file The filename to be remembered. (string)
-        @param moduleDocument The ModuleDocument object containing the 
+        @param moduleDocument The ModuleDocument object containing the
             information for the file.
         @param basename The basename of the file hierarchy to be documented.
             The basename is stripped off the filename if it starts with
@@ -91,9 +92,9 @@ class IndexGenerator(object):
             elt["subpackages"][package] = moduleDocument.shortDescription()
                 
             self.packages[package] = {
-                "description" : moduleDocument.description(),
-                "subpackages" : {},
-                "modules" : {}
+                "description": moduleDocument.description(),
+                "subpackages": {},
+                "modules": {}
             }
             
             if moduleDocument.isEmpty():
@@ -107,7 +108,7 @@ class IndexGenerator(object):
         elt["modules"][moduleDocument.name()] = \
             moduleDocument.shortDescription()
     
-    def __writeIndex(self, packagename, package, newline = None):
+    def __writeIndex(self, packagename, package, newline=None):
         """
         Private method to generate an index file for a package.
         
@@ -136,12 +137,12 @@ class IndexGenerator(object):
             for name in names:
                 link = joinext("index-{0}".format(name), ".html")
                 lst.append(self.indexListEntryTemplate.format(**{
-                    "Description" : subpacks[name],
-                    "Name" : name.split(".")[-1],
-                    "Link" : link,
+                    "Description": subpacks[name],
+                    "Name": name.split(".")[-1],
+                    "Link": link,
                 }))
             subpackages = self.indexListPackagesTemplate.format(**{
-                "Entries" : "".join(lst),
+                "Entries": "".join(lst),
             })
             
         # 2) modules
@@ -155,32 +156,32 @@ class IndexGenerator(object):
                 if nam == "__init__":
                     nam = name.split(".")[-2]
                 lst.append(self.indexListEntryTemplate.format(**{
-                    "Description" : mods[name],
-                    "Name" : nam,
-                    "Link" : link,
+                    "Description": mods[name],
+                    "Name": nam,
+                    "Link": link,
                 }))
             modules = self.indexListModulesTemplate.format(**{
-                "Entries" : "".join(lst),
+                "Entries": "".join(lst),
             })
             
         doc = self.headerTemplate.format(**{ \
-                "Title" : title,
-                "Style" : self.stylesheet}) + \
+                "Title": title,
+                "Style": self.stylesheet}) + \
               self.indexBodyTemplate.format(**{ \
-                "Title" : title,
-                "Description" : package["description"],
-                "Subpackages" : subpackages,
-                "Modules" : modules,
+                "Title": title,
+                "Description": package["description"],
+                "Subpackages": subpackages,
+                "Modules": modules,
               }) + \
               self.footerTemplate
     
-        f = open(filename, "w", encoding = "utf-8", newline = newline)
+        f = open(filename, "w", encoding="utf-8", newline=newline)
         f.write(doc)
         f.close()
     
         return filename
     
-    def writeIndices(self, basename = "", newline = None):
+    def writeIndices(self, basename="", newline=None):
         """
         Public method to generate all index files.
         
@@ -200,7 +201,7 @@ class IndexGenerator(object):
         for package, element in list(self.packages.items()):
             try:
                 if basename:
-                    package = package.replace(basename,"")
+                    package = package.replace(basename, "")
                 out = self.__writeIndex(package, element, newline)
             except IOError as v:
                 sys.stderr.write("{0} error: {1}\n".format(package, v[1]))

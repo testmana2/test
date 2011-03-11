@@ -16,11 +16,12 @@ from .HistoryModel import HistoryModel
 
 import UI.PixmapCache
 
+
 class HistoryTreeModel(QAbstractProxyModel):
     """
     Class implementing the history tree model.
     """
-    def __init__(self, sourceModel, parent = None):
+    def __init__(self, sourceModel, parent=None):
         """
         Constructor
         
@@ -34,7 +35,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         
         self.setSourceModel(sourceModel)
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -45,7 +46,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         """
         return self.sourceModel().headerData(section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -79,7 +80,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         
         return QAbstractProxyModel.data(self, index, role)
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -88,7 +89,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         """
         return self.sourceModel().columnCount(self.mapToSource(parent))
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -125,7 +126,7 @@ class HistoryTreeModel(QAbstractProxyModel):
     
     def __sourceDateRow(self, row):
         """
-        Private method to translate the top level date row into the offset 
+        Private method to translate the top level date row into the offset
         where that date starts.
         
         @param row row number of the date (integer)
@@ -158,7 +159,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         return self.sourceModel().index(
             startDateRow + proxyIndex.row(), proxyIndex.column())
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -189,7 +190,7 @@ class HistoryTreeModel(QAbstractProxyModel):
             return QModelIndex()
         return self.createIndex(offset - 1, 0, 0)
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if an entry has some children.
         
@@ -290,7 +291,7 @@ class HistoryTreeModel(QAbstractProxyModel):
         row = sourceIndex.row() - self.__sourceRowCache[dateRow]
         return self.createIndex(row, sourceIndex.column(), dateRow + 1)
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         

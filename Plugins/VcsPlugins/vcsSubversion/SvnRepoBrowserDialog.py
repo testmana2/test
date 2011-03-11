@@ -20,11 +20,12 @@ import UI.PixmapCache
 
 import Preferences
 
+
 class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
     """
     Class implementing the subversion repository browser dialog.
     """
-    def __init__(self, vcs, mode = "browse", parent = None):
+    def __init__(self, vcs, mode="browse", parent=None):
         """
         Constructor
         
@@ -79,7 +80,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         """
         Private method to resort the tree.
         """
-        self.repoTree.sortItems(self.repoTree.sortColumn(), 
+        self.repoTree.sortItems(self.repoTree.sortColumn(),
             self.repoTree.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -89,7 +90,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         self.repoTree.header().resizeSections(QHeaderView.ResizeToContents)
         self.repoTree.header().setStretchLastSection(True)
     
-    def __generateItem(self, repopath, revision, author, size, date, 
+    def __generateItem(self, repopath, revision, author, size, date,
             nodekind, url):
         """
         Private method to generate a tree item in the repository tree.
@@ -107,11 +108,11 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         path = repopath
         
         itm = QTreeWidgetItem(self.parentItem, [
-            path, 
-            revision, 
-            author, 
-            size, 
-            date, 
+            path,
+            revision,
+            author,
+            size,
+            date,
         ])
         
         if nodekind == "dir":
@@ -161,8 +162,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                             repoRoot = line.replace('<root>', '').replace('</root>', '')
                             break
                 else:
-                    error = str(process.readAllStandardError(), 
-                                Preferences.getSystem("IOEncoding"), 
+                    error = str(process.readAllStandardError(),
+                                Preferences.getSystem("IOEncoding"),
                                 'replace')
                     self.errors.insertPlainText(error)
                     self.errors.ensureCursorVisible()
@@ -176,7 +177,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                 ).format('svn'))
         return repoRoot
     
-    def __listRepo(self, url, parent = None):
+    def __listRepo(self, url, parent=None):
         """
         Private method to perform the svn list command.
         
@@ -367,8 +368,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                s = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+                s = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 if self.__rx_dir.exactMatch(s):
                     revision = self.__rx_dir.cap(1)
@@ -399,8 +400,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         error pane.
         """
         if self.process is not None:
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

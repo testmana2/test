@@ -25,6 +25,7 @@ import Preferences
 
 from eric5config import getConfig
 
+
 class PluginManager(QObject):
     """
     Class implementing the Plugin Manager.
@@ -48,21 +49,21 @@ class PluginManager(QObject):
     pluginAboutToBeDeactivated = pyqtSignal(str, object)
     pluginDeactivated = pyqtSignal(str, object)
     
-    def __init__(self, parent = None, doLoadPlugins = True, develPlugin = None):
+    def __init__(self, parent=None, doLoadPlugins=True, develPlugin=None):
         """
         Constructor
         
         The Plugin Manager deals with three different plugin directories.
         The first is the one, that is part of eric5 (eric5/Plugins). The
-        second one is the global plugin directory called 'eric5plugins', 
+        second one is the global plugin directory called 'eric5plugins',
         which is located inside the site-packages directory. The last one
         is the user plugin directory located inside the .eric5 directory
         of the users home directory.
         
         @param parent reference to the parent object (QObject)
-        @keyparam doLoadPlugins flag indicating, that plugins should 
+        @keyparam doLoadPlugins flag indicating, that plugins should
             be loaded (boolean)
-        @keyparam develPlugin filename of a plugin to be loaded for 
+        @keyparam develPlugin filename of a plugin to be loaded for
             development (string)
         """
         QObject.__init__(self, parent)
@@ -74,10 +75,10 @@ class PluginManager(QObject):
         self.__inactivePluginsKey = "PluginManager/InactivePlugins"
         
         self.pluginDirs = {
-            "eric5"  : os.path.join(getConfig('ericDir'), "Plugins"), 
-            "global" : os.path.join(Utilities.getPythonModulesDirectory(), 
-                                    "eric5plugins"), 
-            "user"   : os.path.join(Utilities.getConfigDir(), "eric5plugins"), 
+            "eric5": os.path.join(getConfig('ericDir'), "Plugins"),
+            "global": os.path.join(Utilities.getPythonModulesDirectory(),
+                                    "eric5plugins"),
+            "user": os.path.join(Utilities.getConfigDir(), "eric5plugins"),
         }
         self.__priorityOrder = ["eric5", "global", "user"]
         
@@ -142,7 +143,7 @@ class PluginManager(QObject):
         
         If the plugin folders don't exist, they are created (if possible).
         
-        @return tuple of a flag indicating existence of any of the plugin 
+        @return tuple of a flag indicating existence of any of the plugin
             directories (boolean) and a message (string)
         """
         if self.__develPluginFile:
@@ -153,7 +154,7 @@ class PluginManager(QObject):
                     f = open(fname, "w")
                     f.close()
                 except IOError:
-                    return (False, 
+                    return (False,
                         self.trUtf8("Could not create a package for {0}.")\
                             .format(self.__develPluginFile))
         
@@ -173,7 +174,7 @@ class PluginManager(QObject):
                 # create the global plugins directory
                 os.mkdir(self.pluginDirs["global"], 0o755)
                 fname = os.path.join(self.pluginDirs["global"], "__init__.py")
-                f = open(fname, "w", encoding = "utf-8")
+                f = open(fname, "w", encoding="utf-8")
                 f.write('# -*- coding: utf-8 -*-' + "\n")
                 f.write("\n")
                 f.write('"""' + "\n")
@@ -187,7 +188,7 @@ class PluginManager(QObject):
             del self.pluginDirs["global"]
         
         if not os.path.exists(self.pluginDirs["eric5"]):
-            return (False, 
+            return (False,
                 self.trUtf8("The internal plugin directory <b>{0}</b> does not exits.")\
                     .format(self.pluginDirs["eric5"]))
         
@@ -283,7 +284,7 @@ class PluginManager(QObject):
             self.loadPlugin(develPluginName, develPluginPath)
             self.__develPluginName = develPluginName
     
-    def loadPlugin(self, name, directory, reload_ = False):
+    def loadPlugin(self, name, directory, reload_=False):
         """
         Public method to load a plugin module.
         
@@ -441,12 +442,12 @@ class PluginManager(QObject):
                 self.activatePlugin(name)
         self.allPlugginsActivated.emit()
     
-    def activatePlugin(self, name, onDemand = False):
+    def activatePlugin(self, name, onDemand=False):
         """
         Public method to activate a plugin.
         
         @param name name of the module to be activated
-        @keyparam onDemand flag indicating activation of an 
+        @keyparam onDemand flag indicating activation of an
             on demand plugin (boolean)
         @return reference to the initialized plugin object
         """
@@ -528,13 +529,13 @@ class PluginManager(QObject):
                 raise PluginModuleFormatError(module.eric5PluginModuleName, className)
             pluginClass = getattr(module, className)
             if not hasattr(pluginClass, "__init__"):
-                raise PluginClassFormatError(module.eric5PluginModuleName, 
+                raise PluginClassFormatError(module.eric5PluginModuleName,
                     className, "__init__")
             if not hasattr(pluginClass, "activate"):
-                raise PluginClassFormatError(module.eric5PluginModuleName, 
+                raise PluginClassFormatError(module.eric5PluginModuleName,
                     className, "activate")
             if not hasattr(pluginClass, "deactivate"):
-                raise PluginClassFormatError(module.eric5PluginModuleName, 
+                raise PluginClassFormatError(module.eric5PluginModuleName,
                     className, "deactivate")
             return True
         except PluginModuleFormatError as e:
@@ -544,12 +545,12 @@ class PluginManager(QObject):
             print(repr(e))
             return False
     
-    def deactivatePlugin(self, name, onDemand = False):
+    def deactivatePlugin(self, name, onDemand=False):
         """
         Public method to deactivate a plugin.
         
         @param name name of the module to be deactivated
-        @keyparam onDemand flag indicating deactivation of an 
+        @keyparam onDemand flag indicating deactivation of an
             on demand plugin (boolean)
         """
         try:
@@ -595,7 +596,7 @@ class PluginManager(QObject):
         """
         return getattr(module, "deactivateable", True)
     
-    def getPluginObject(self, type_, typename, maybeActive = False):
+    def getPluginObject(self, type_, typename, maybeActive=False):
         """
         Public method to activate an ondemand plugin given by type and typename.
         
@@ -608,14 +609,14 @@ class PluginManager(QObject):
         for name, module in list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "pluginTypename") == typename:
-                return self.activatePlugin(name, onDemand = True)
+                return self.activatePlugin(name, onDemand=True)
         
         if maybeActive:
             for name, module in list(self.__onDemandActiveModules.items()):
                 if getattr(module, "pluginType") == type_ and \
                    getattr(module, "pluginTypename") == typename:
-                    self.deactivatePlugin(name, onDemand = True)
-                    return self.activatePlugin(name, onDemand = True)
+                    self.deactivatePlugin(name, onDemand=True)
+                    return self.activatePlugin(name, onDemand=True)
         
         return None
     
@@ -624,7 +625,7 @@ class PluginManager(QObject):
         Public method to get infos about all loaded plugins.
         
         @return list of tuples giving module name (string), plugin name (string),
-            version (string), autoactivate (boolean), active (boolean), 
+            version (string), autoactivate (boolean), active (boolean),
             short description (string), error flag (boolean)
         """
         infos = []
@@ -656,7 +657,7 @@ class PluginManager(QObject):
         Private method to extract the short info from a module.
         
         @param module module to extract short info from
-        @return short info as a tuple giving plugin name (string), 
+        @return short info as a tuple giving plugin name (string),
             short description (string), error flag (boolean) and
             version (string)
         """
@@ -799,7 +800,7 @@ class PluginManager(QObject):
                 <li>versionCommand - commandline parameter for the exe (string)</li>
                 <li>versionStartsWith - indicator for the output line containing
                     the version (string)</li>
-                <li>versionPosition - number of element containing the 
+                <li>versionPosition - number of element containing the
                     version (integer)</li>
                 <li>version - version to be used as default (string)</li>
                 <li>versionCleanup - tuple of two integers giving string positions
@@ -847,12 +848,12 @@ class PluginManager(QObject):
           <dd>filename of the pixmap to be shown next to the display string</dd>
           <dt>page creation function</dt>
           <dd>plugin module function to be called to create the configuration
-              page. The page must be subclasses from 
+              page. The page must be subclasses from
               Preferences.ConfigurationPages.ConfigurationPageBase and must
               implement a method called 'save' to save the settings. A parent
               entry will be created in the selection list, if this value is None.</dd>
           <dt>parent key</dt>
-          <dd>dictionary key of the parent entry or None, if this defines a 
+          <dd>dictionary key of the parent entry or None, if this defines a
               toplevel entry.</dd>
           <dt>reference to configuration page</dt>
           <dd>This will be used by the configuration dialog and must always be None</dd>

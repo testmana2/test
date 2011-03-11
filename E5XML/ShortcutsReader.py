@@ -10,6 +10,7 @@ Module implementing a class for reading an XML shortcuts file.
 from .Config import shortcutsFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+
 class ShortcutsReader(XMLStreamReaderBase):
     """
     Class for reading an XML shortcuts file.

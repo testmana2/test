@@ -169,7 +169,7 @@ the column to sort on (integer)
 <p>
     Class implementing a VariableItem that represents a special variable node.
 </p><p>
-    These special variable nodes are generated for classes, lists, 
+    These special variable nodes are generated for classes, lists,
     tuples and dictionaries.
 </p>
 <h3>Derived from</h3>
@@ -377,7 +377,7 @@ text of the column (string)
 </p><p>
     This widget is used to display the variables of the program being
     debugged in a tree. Compound types will be shown with
-    their main entry first. Once the subtree has been expanded, the 
+    their main entry first. Once the subtree has been expanded, the
     individual entries will be shown. Double clicking an entry will
     popup a dialog showing the variables parameters in a more readable
     form. This is especially useful for lengthy strings.
@@ -471,7 +471,7 @@ flag indicating global (1) or local (0) variables
 <p>
         Private method used to add an item to the list.
 </p><p>
-        If the item is of a type with subelements (i.e. list, dictionary, 
+        If the item is of a type with subelements (i.e. list, dictionary,
         tuple), these subelements are added by calling this method recursively.
 </p><dl>
 <dt><i>parent</i></dt>
@@ -556,7 +556,7 @@ the found item or None
 </dd>
 </dl><a NAME="VariablesViewer.__generateItem" ID="VariablesViewer.__generateItem"></a>
 <h4>VariablesViewer.__generateItem</h4>
-<b>__generateItem</b>(<i>parent, dvar, dvalue, dtype, isSpecial = False</i>)
+<b>__generateItem</b>(<i>parent, dvar, dvalue, dtype, isSpecial=False</i>)
 <p>
         Private method used to generate a VariableItem.
 </p><dl>
@@ -656,7 +656,7 @@ reference to the item being expanded (QTreeWidgetItem)
 <h4>VariablesViewer.mouseDoubleClickEvent</h4>
 <b>mouseDoubleClickEvent</b>(<i>mouseEvent</i>)
 <p>
-        Protected method of QAbstractItemView. 
+        Protected method of QAbstractItemView.
 </p><p>
         Reimplemented to disable expanding/collapsing
         of items when double-clicking. Instead the double-clicked entry is opened.
@@ -675,7 +675,7 @@ the mouse event object (QMouseEvent)
 <dd>
 the list of subitems to be displayed.
                 The first element gives the path of the
-                parent variable. Each other listentry is 
+                parent variable. Each other listentry is
                 a tuple of three values.
                 <ul>
                 <li>the variable name (string)</li>

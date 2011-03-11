@@ -21,7 +21,8 @@ from eric5config import getConfig
 progName = None
 pyModDir = None
 
-def usage(rcode = 2):
+
+def usage(rcode=2):
     """Display a usage message and exit.
 
     rcode is the return code passed back to the calling process.
@@ -45,7 +46,7 @@ def initGlobals():
     pyModDir = distutils.sysconfig.get_python_lib(True)
 
 
-def wrapperName(dname,wfile):
+def wrapperName(dname, wfile):
     """Create the platform specific name for the wrapper script.
     """
     if sys.platform.startswith("win"):
@@ -64,7 +65,7 @@ def uninstallEric():
     
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux"):
-        for name in ["/usr/share/pixmaps/eric.png", 
+        for name in ["/usr/share/pixmaps/eric.png",
                      "/usr/share/applications/eric5.desktop"]:
             if os.path.exists(name):
                 os.remove(name)
@@ -73,27 +74,27 @@ def uninstallEric():
     rem_wnames = [
         "eric5-api", "eric5-compare",
         "eric5-configure", "eric5-diff",
-        "eric5-doc", 
-        "eric5-qregexp", "eric5-re", 
+        "eric5-doc",
+        "eric5-qregexp", "eric5-re",
         "eric5-trpreviewer", "eric5-uipreviewer",
         "eric5-unittest", "eric5",
-        "eric5-tray", "eric5-editor", 
-        "eric5-plugininstall", "eric5-pluginuninstall", 
-        "eric5-pluginrepository", "eric5-sqlbrowser", 
-        "eric5-webbrowser", "eric5-iconeditor", 
+        "eric5-tray", "eric5-editor",
+        "eric5-plugininstall", "eric5-pluginuninstall",
+        "eric5-pluginrepository", "eric5-sqlbrowser",
+        "eric5-webbrowser", "eric5-iconeditor",
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
-        "eric5_doc", 
-        "eric5_qregexp", "eric5_re", 
+        "eric5_doc",
+        "eric5_qregexp", "eric5_re",
         "eric5_trpreviewer", "eric5_uipreviewer",
         "eric5_unittest", "eric5",
-        "eric5_tray", "eric5_editor", 
-        "eric5_plugininstall", "eric5_pluginuninstall", 
-        "eric5_pluginrepository", "eric5_sqlbrowser", 
-        "eric5_webbrowser", "eric5_iconeditor", 
+        "eric5_tray", "eric5_editor",
+        "eric5_plugininstall", "eric5_pluginuninstall",
+        "eric5_pluginrepository", "eric5_sqlbrowser",
+        "eric5_webbrowser", "eric5_iconeditor",
     ]
     for rem_wname in rem_wnames:
-        rwname = wrapperName(getConfig('bindir'),rem_wname)
+        rwname = wrapperName(getConfig('bindir'), rem_wname)
         if os.path.exists(rwname):
             os.remove(rwname)
     
@@ -123,6 +124,7 @@ def uninstallEric():
         if os.path.exists(apiname):
             os.remove(apiname)
     
+
 def main(argv):
     """The main function of the script.
 
@@ -137,7 +139,7 @@ def main(argv):
     progName = os.path.basename(argv[0])
 
     try:
-        optlist, args = getopt.getopt(argv[1:],"h")
+        optlist, args = getopt.getopt(argv[1:], "h")
     except getopt.GetoptError:
         usage()
 

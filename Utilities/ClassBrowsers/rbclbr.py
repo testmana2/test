@@ -53,8 +53,8 @@ _getnext = re.compile(r"""
         |
             (?P<MethodName3> [^( \t]{1,3} )
         )
-        [ \t]* 
-        (?: 
+        [ \t]*
+        (?:
             \( (?P<MethodSignature> (?: [^)] | \)[ \t]*,? )*? ) \)
         )?
         [ \t]*
@@ -70,7 +70,7 @@ _getnext = re.compile(r"""
             [ \t]*
             (?P<ClassSupers> < [ \t]* [A-Z] [a-zA-Z0-9_:]* )?
         |
-            [ \t]* << [ \t]* 
+            [ \t]* << [ \t]*
             (?P<ClassName2> [a-zA-Z_] [a-zA-Z0-9_:]* )
         )
         [ \t]*
@@ -119,7 +119,7 @@ _getnext = re.compile(r"""
 |   (?P<Attr>
         ^
         (?P<AttrIndent> [ \t]* )
-        attr 
+        attr
         (?P<AttrType> (?: _accessor | _reader | _writer ) )?
         \(?
         [ \t]*
@@ -156,6 +156,7 @@ _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 
 _modules = {}                           # cache of modules we've seen
 
+
 class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
     """
     Mixin class implementing the notion of visibility.
@@ -165,6 +166,7 @@ class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
         Method to initialize the visibility.
         """
         self.setPublic()
+
 
 class Class(ClbrBaseClasses.Class, VisibilityMixin):
     """
@@ -183,6 +185,7 @@ class Class(ClbrBaseClasses.Class, VisibilityMixin):
         ClbrBaseClasses.Class.__init__(self, module, name, super, file, lineno)
         VisibilityMixin.__init__(self)
 
+
 class Module(ClbrBaseClasses.Module, VisibilityMixin):
     """
     Class to represent a Ruby module.
@@ -199,11 +202,12 @@ class Module(ClbrBaseClasses.Module, VisibilityMixin):
         ClbrBaseClasses.Module.__init__(self, module, name, file, lineno)
         VisibilityMixin.__init__(self)
 
+
 class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a Ruby function.
     """
-    def __init__(self, module, name, file, lineno, signature = '', separator = ','):
+    def __init__(self, module, name, file, lineno, signature='', separator=','):
         """
         Constructor
         
@@ -214,9 +218,10 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
         @param signature parameterlist of the method
         @param separator string separating the parameters
         """
-        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno, 
+        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno,
                                           signature, separator)
         VisibilityMixin.__init__(self)
+
 
 class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
     """
@@ -234,6 +239,7 @@ class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
         ClbrBaseClasses.Attribute.__init__(self, module, name, file, lineno)
         VisibilityMixin.__init__(self)
         self.setPrivate()
+
 
 def readmodule_ex(module, path=[]):
     '''
@@ -264,7 +270,7 @@ def readmodule_ex(module, path=[]):
         return dict
 
     _modules[module] = dict
-    classstack = [] # stack of (class, indent) pairs
+    classstack = []  # stack of (class, indent) pairs
     acstack = []    # stack of (access control, indent) pairs
     indent = 0
     try:
@@ -335,7 +341,7 @@ def readmodule_ex(module, path=[]):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
-            classstack.append((f, thisindent)) # Marker for nested fns
+            classstack.append((f, thisindent))  # Marker for nested fns
 
         elif m.start("String") >= 0:
             pass
@@ -481,9 +487,9 @@ def readmodule_ex(module, path=[]):
                         if not nv:
                             break
                         name = nv[0].strip()[1:]    # get rid of leading ':'
-                        attr = parent._getattribute("@"+name) or \
-                               parent._getattribute("@@"+name) or \
-                               Attribute(module, "@"+name, file, lineno)
+                        attr = parent._getattribute("@" + name) or \
+                               parent._getattribute("@@" + name) or \
+                               Attribute(module, "@" + name, file, lineno)
                         if len(nv) == 1 or nv[1].strip() == "false":
                             attr.setProtected()
                         elif nv[1].strip() == "true":
@@ -493,9 +499,9 @@ def readmodule_ex(module, path=[]):
                         access = m.group("AttrType")
                         for name in m.group("AttrList").split(","):
                             name = name.strip()[1:]     # get rid of leading ':'
-                            attr = parent._getattribute("@"+name) or \
-                                   parent._getattribute("@@"+name) or \
-                                   Attribute(module, "@"+name, file, lineno)
+                            attr = parent._getattribute("@" + name) or \
+                                   parent._getattribute("@@" + name) or \
+                                   Attribute(module, "@" + name, file, lineno)
                             if access == "_accessor":
                                 attr.setPublic()
                             elif access == "_reader" or access == "_writer":

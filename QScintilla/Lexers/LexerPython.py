@@ -14,11 +14,12 @@ from PyQt4.Qsci import QsciLexerPython,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerPython(QsciLexerPython, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, variant = "", parent = None):
+    def __init__(self, variant="", parent=None):
         """
         Constructor
         
@@ -86,7 +87,7 @@ class LexerPython(QsciLexerPython, Lexer):
                 last += indent_width
             else:
                 # special cases, like pass (unindent) or return (also unindent)
-                m = re.search('(pass\s*(#.*)?$)|(^[^#]return)', 
+                m = re.search('(pass\s*(#.*)?$)|(^[^#]return)',
                               editor.text(pline))
                 if m:
                     last -= indent_width
@@ -113,7 +114,7 @@ class LexerPython(QsciLexerPython, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerPython.Comment, 
+        return style in [QsciLexerPython.Comment,
                          QsciLexerPython.CommentBlock]
     
     def isStringStyle(self, style):
@@ -122,10 +123,10 @@ class LexerPython(QsciLexerPython, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerPython.DoubleQuotedString, 
-                         QsciLexerPython.SingleQuotedString, 
-                         QsciLexerPython.TripleDoubleQuotedString, 
-                         QsciLexerPython.TripleSingleQuotedString, 
+        return style in [QsciLexerPython.DoubleQuotedString,
+                         QsciLexerPython.SingleQuotedString,
+                         QsciLexerPython.TripleDoubleQuotedString,
+                         QsciLexerPython.TripleSingleQuotedString,
                          QsciLexerPython.UnclosedString]
     
     def defaultKeywords(self, kwSet):

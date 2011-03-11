@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_CookieDetailsDialog import Ui_CookieDetailsDialog
 
+
 class CookieDetailsDialog(QDialog, Ui_CookieDetailsDialog):
     """
     Class implementing a dialog showing the cookie data.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

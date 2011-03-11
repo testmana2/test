@@ -10,6 +10,7 @@ Module implementing a toolbar manager class.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+
 class E5ToolBarManager(QObject):
     """
     Class implementing a toolbar manager.
@@ -18,7 +19,7 @@ class E5ToolBarManager(QObject):
     ToolBarMarker = 0xfefe
     CustomToolBarMarker = 0xfdfd
     
-    def __init__(self, ui = None, parent = None):
+    def __init__(self, ui=None, parent=None):
         """
         Constructor
         
@@ -31,7 +32,7 @@ class E5ToolBarManager(QObject):
         self.__ui = ui
         
         self.__toolBars = {}            # maps toolbar IDs to actions
-        self.__toolBarsWithSeparators = {} # maps toolbar IDs to actions incl. separators
+        self.__toolBarsWithSeparators = {}  # maps toolbar IDs to actions incl. separators
         self.__defaultToolBars = {}     # maps default toolbar IDs to actions
         self.__customToolBars = []      # list of custom toolbars
         self.__allToolBars = {}         # maps toolbar IDs to toolbars
@@ -434,7 +435,7 @@ class E5ToolBarManager(QObject):
             if action in self.__categoryToActions[category]:
                 self.__categoryToActions[category].remove(action)
     
-    def saveState(self, version = 0):
+    def saveState(self, version=0):
         """
         Public method to save the state of the toolbar manager.
         
@@ -485,7 +486,7 @@ class E5ToolBarManager(QObject):
         
         return data
     
-    def restoreState(self, state, version = 0):
+    def restoreState(self, state, version=0):
         """
         Public method to restore the state of the toolbar manager.
         

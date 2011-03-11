@@ -341,7 +341,7 @@ flag indicating successfull operation (boolean)
 </dd>
 </dl><a NAME="Subversion.svnDelProp" ID="Subversion.svnDelProp"></a>
 <h4>Subversion.svnDelProp</h4>
-<b>svnDelProp</b>(<i>name, recursive = False</i>)
+<b>svnDelProp</b>(<i>name, recursive=False</i>)
 <p>
         Public method used to delete a property of a file/directory.
 </p><dl>
@@ -356,11 +356,11 @@ flag indicating a recursive list is requested
 <h4>Subversion.svnExtendedDiff</h4>
 <b>svnExtendedDiff</b>(<i>name</i>)
 <p>
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
 </p><p>
         This method gives the chance to enter the revisions to be compared.
@@ -386,7 +386,7 @@ string with the repository path URL
 </dd>
 </dl><a NAME="Subversion.svnListProps" ID="Subversion.svnListProps"></a>
 <h4>Subversion.svnListProps</h4>
-<b>svnListProps</b>(<i>name, recursive = False</i>)
+<b>svnListProps</b>(<i>name, recursive=False</i>)
 <p>
         Public method used to list the properties of a file/directory.
 </p><dl>
@@ -399,7 +399,7 @@ flag indicating a recursive list is requested
 </dd>
 </dl><a NAME="Subversion.svnListTagBranch" ID="Subversion.svnListTagBranch"></a>
 <h4>Subversion.svnListTagBranch</h4>
-<b>svnListTagBranch</b>(<i>path, tags = True</i>)
+<b>svnListTagBranch</b>(<i>path, tags=True</i>)
 <p>
         Public method used to list the available tags or branches.
 </p><dl>
@@ -431,7 +431,7 @@ reference to the parent object of the subversion dialog (QWidget)
 <h4>Subversion.svnLogBrowser</h4>
 <b>svnLogBrowser</b>(<i>path</i>)
 <p>
-        Public method used to browse the log of a file/directory from the 
+        Public method used to browse the log of a file/directory from the
         Subversion repository.
 </p><dl>
 <dt><i>path</i></dt>
@@ -442,7 +442,7 @@ file/directory name to show the log of (string)
 <h4>Subversion.svnLogLimited</h4>
 <b>svnLogLimited</b>(<i>name</i>)
 <p>
-        Public method used to view the (limited) log of a file/directory from the 
+        Public method used to view the (limited) log of a file/directory from the
         Subversion repository.
 </p><dl>
 <dt><i>name</i></dt>
@@ -489,7 +489,7 @@ name or list of names of file or directory to remove
 </dd>
 </dl><a NAME="Subversion.svnRepoBrowser" ID="Subversion.svnRepoBrowser"></a>
 <h4>Subversion.svnRepoBrowser</h4>
-<b>svnRepoBrowser</b>(<i>projectPath = None</i>)
+<b>svnRepoBrowser</b>(<i>projectPath=None</i>)
 <p>
         Public method to open the repository browser.
 </p><dl>
@@ -509,7 +509,7 @@ file/directory name to be resolved (string)
 </dd>
 </dl><a NAME="Subversion.svnSetProp" ID="Subversion.svnSetProp"></a>
 <h4>Subversion.svnSetProp</h4>
-<b>svnSetProp</b>(<i>name, recursive = False</i>)
+<b>svnSetProp</b>(<i>name, recursive=False</i>)
 <p>
         Public method used to add a property to a file/directory.
 </p><dl>
@@ -544,7 +544,7 @@ reference to the parent object of the subversion dialog (QWidget)
         repository URLs.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
 </p><p>
         This method gives the chance to enter the revisions to be compared.
@@ -555,7 +555,7 @@ file/directory name to be diffed (string)
 </dd>
 </dl><a NAME="Subversion.vcsAdd" ID="Subversion.vcsAdd"></a>
 <h4>Subversion.vcsAdd</h4>
-<b>vcsAdd</b>(<i>name, isDir = False, noDialog = False</i>)
+<b>vcsAdd</b>(<i>name, isDir=False, noDialog=False</i>)
 <p>
         Public method used to add a file/directory to the Subversion repository.
 </p><dl>
@@ -571,7 +571,7 @@ flag indicating quiet operations
 </dd>
 </dl><a NAME="Subversion.vcsAddBinary" ID="Subversion.vcsAddBinary"></a>
 <h4>Subversion.vcsAddBinary</h4>
-<b>vcsAddBinary</b>(<i>name, isDir = False</i>)
+<b>vcsAddBinary</b>(<i>name, isDir=False</i>)
 <p>
         Public method used to add a file/directory in binary mode to the
         Subversion repository.
@@ -595,7 +595,7 @@ root directory of the tree to be added (string or list of strings))
 </dd>
 </dl><a NAME="Subversion.vcsAllRegisteredStates" ID="Subversion.vcsAllRegisteredStates"></a>
 <h4>Subversion.vcsAllRegisteredStates</h4>
-<b>vcsAllRegisteredStates</b>(<i>names, dname, shortcut = True</i>)
+<b>vcsAllRegisteredStates</b>(<i>names, dname, shortcut=True</i>)
 <p>
         Public method used to get the registered states of a number of files in the vcs.
 </p><p>
@@ -621,7 +621,7 @@ the received dictionary completed with a combination of
 </dd>
 </dl><a NAME="Subversion.vcsCheckout" ID="Subversion.vcsCheckout"></a>
 <h4>Subversion.vcsCheckout</h4>
-<b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog = False</i>)
+<b>vcsCheckout</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
         Public method used to check the project out of the Subversion repository.
 </p><dl>
@@ -662,7 +662,7 @@ directory name of the working directory (string)
 </dd>
 </dl><a NAME="Subversion.vcsCommit" ID="Subversion.vcsCommit"></a>
 <h4>Subversion.vcsCommit</h4>
-<b>vcsCommit</b>(<i>name, message, noDialog = False</i>)
+<b>vcsCommit</b>(<i>name, message, noDialog=False</i>)
 <p>
         Public method used to make the change of a file/directory permanent in the
         Subversion repository.
@@ -694,11 +694,11 @@ reference to the project object
 <h4>Subversion.vcsDiff</h4>
 <b>vcsDiff</b>(<i>name</i>)
 <p>
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
 </p><p>
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
 </p><dl>
 <dt><i>name</i></dt>
@@ -735,7 +735,7 @@ flag indicating an execution without errors (boolean)
 </dd>
 </dl><a NAME="Subversion.vcsGetProjectBrowserHelper" ID="Subversion.vcsGetProjectBrowserHelper"></a>
 <h4>Subversion.vcsGetProjectBrowserHelper</h4>
-<b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser = False</i>)
+<b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
         Public method to instanciate a helper object for the different project browsers.
 </p><dl>
@@ -772,7 +772,7 @@ the project helper object
 </dd>
 </dl><a NAME="Subversion.vcsImport" ID="Subversion.vcsImport"></a>
 <h4>Subversion.vcsImport</h4>
-<b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog = False</i>)
+<b>vcsImport</b>(<i>vcsDataDict, projectDir, noDialog=False</i>)
 <p>
         Public method used to import the project into the Subversion repository.
 </p><dl>
@@ -794,7 +794,7 @@ flag indicating an execution without errors (boolean)
 </dd>
 </dl><a NAME="Subversion.vcsInit" ID="Subversion.vcsInit"></a>
 <h4>Subversion.vcsInit</h4>
-<b>vcsInit</b>(<i>vcsDir, noDialog = False</i>)
+<b>vcsInit</b>(<i>vcsDir, noDialog=False</i>)
 <p>
         Public method used to initialize the subversion repository.
 </p><p>
@@ -818,7 +818,7 @@ always TRUE
 <h4>Subversion.vcsLog</h4>
 <b>vcsLog</b>(<i>name</i>)
 <p>
-        Public method used to view the log of a file/directory from the 
+        Public method used to view the log of a file/directory from the
         Subversion repository.
 </p><dl>
 <dt><i>name</i></dt>
@@ -837,7 +837,7 @@ file/directory name to be merged (string)
 </dd>
 </dl><a NAME="Subversion.vcsMove" ID="Subversion.vcsMove"></a>
 <h4>Subversion.vcsMove</h4>
-<b>vcsMove</b>(<i>name, project, target = None, noDialog = False</i>)
+<b>vcsMove</b>(<i>name, project, target=None, noDialog=False</i>)
 <p>
         Public method used to move a file/directory.
 </p><dl>
@@ -871,7 +871,7 @@ always 'Subversion' (string)
 </dd>
 </dl><a NAME="Subversion.vcsNewProjectOptionsDialog" ID="Subversion.vcsNewProjectOptionsDialog"></a>
 <h4>Subversion.vcsNewProjectOptionsDialog</h4>
-<b>vcsNewProjectOptionsDialog</b>(<i>parent = None</i>)
+<b>vcsNewProjectOptionsDialog</b>(<i>parent=None</i>)
 <p>
         Public method to get a dialog to enter repository info for getting a new project.
 </p><dl>
@@ -881,7 +881,7 @@ parent widget (QWidget)
 </dd>
 </dl><a NAME="Subversion.vcsOptionsDialog" ID="Subversion.vcsOptionsDialog"></a>
 <h4>Subversion.vcsOptionsDialog</h4>
-<b>vcsOptionsDialog</b>(<i>project, archive, editable = False, parent = None</i>)
+<b>vcsOptionsDialog</b>(<i>project, archive, editable=False, parent=None</i>)
 <p>
         Public method to get a dialog to enter repository info.
 </p><dl>
@@ -915,7 +915,7 @@ a combination of canBeCommited and canBeAdded
 </dd>
 </dl><a NAME="Subversion.vcsRemove" ID="Subversion.vcsRemove"></a>
 <h4>Subversion.vcsRemove</h4>
-<b>vcsRemove</b>(<i>name, project = False, noDialog = False</i>)
+<b>vcsRemove</b>(<i>name, project=False, noDialog=False</i>)
 <p>
         Public method used to remove a file/directory from the Subversion repository.
 </p><p>
@@ -970,7 +970,7 @@ file/directory name to be reverted (string)
 <h4>Subversion.vcsStatus</h4>
 <b>vcsStatus</b>(<i>name</i>)
 <p>
-        Public method used to view the status of files/directories in the 
+        Public method used to view the status of files/directories in the
         Subversion repository.
 </p><dl>
 <dt><i>name</i></dt>
@@ -992,7 +992,7 @@ directory name to be switched (string)
 <h4>Subversion.vcsTag</h4>
 <b>vcsTag</b>(<i>name</i>)
 <p>
-        Public method used to set the tag of a file/directory in the 
+        Public method used to set the tag of a file/directory in the
         Subversion repository.
 </p><dl>
 <dt><i>name</i></dt>
@@ -1001,7 +1001,7 @@ file/directory name to be tagged (string)
 </dd>
 </dl><a NAME="Subversion.vcsUpdate" ID="Subversion.vcsUpdate"></a>
 <h4>Subversion.vcsUpdate</h4>
-<b>vcsUpdate</b>(<i>name, noDialog = False</i>)
+<b>vcsUpdate</b>(<i>name, noDialog=False</i>)
 <p>
         Public method used to update a file/directory with the Subversion repository.
 </p><dl>

@@ -12,6 +12,7 @@ from .Ui_EditorAutocompletionPage import Ui_EditorAutocompletionPage
 
 import Preferences
 
+
 class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPage):
     """
     Class implementing the Editor Autocompletion configuration page.
@@ -47,6 +48,7 @@ class EditorAutocompletionPage(ConfigurationPageBase, Ui_EditorAutocompletionPag
         Preferences.setEditor("AutoCompletionThreshold",
             self.acThresholdSlider.value())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

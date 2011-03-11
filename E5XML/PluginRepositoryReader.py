@@ -12,6 +12,7 @@ from .XMLStreamReaderBase import XMLStreamReaderBase
 
 import Preferences
 
+
 class PluginRepositoryReader(XMLStreamReaderBase):
     """
     Class to read the plug-in repository contents file.
@@ -39,7 +40,7 @@ class PluginRepositoryReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "Plugins":
-                    self.version = self.attribute("version", 
+                    self.version = self.attribute("version",
                         pluginRepositoryFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)
@@ -57,21 +58,21 @@ class PluginRepositoryReader(XMLStreamReaderBase):
         """
         Private method to read the plug-in info.
         """
-        pluginInfo = {"name"         : "",
-                      "short"        : "",
-                      "description"  : "",
-                      "url"          : "",
-                      "author"       : "",
-                      "version"      : "", 
-                      "filename"     : "",
+        pluginInfo = {"name": "",
+                      "short": "",
+                      "description": "",
+                      "url": "",
+                      "author": "",
+                      "version": "",
+                      "filename": "",
         }
         pluginInfo["status"] = self.attribute("status", "unknown")
         
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Plugin":
-                self.dlg.addEntry(pluginInfo["name"], pluginInfo["short"], 
-                                  pluginInfo["description"], pluginInfo["url"], 
+                self.dlg.addEntry(pluginInfo["name"], pluginInfo["short"],
+                                  pluginInfo["description"], pluginInfo["url"],
                                   pluginInfo["author"], pluginInfo["version"],
                                   pluginInfo["filename"], pluginInfo["status"])
                 break

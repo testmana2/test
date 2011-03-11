@@ -12,11 +12,12 @@ from PyQt4.QtGui import QLabel
 
 from Utilities import compactPath
 
+
 class E5SqueezeLabel(QLabel):
     """
     Class implementing a label that squeezes its contents to fit it's size.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -50,11 +51,12 @@ class E5SqueezeLabel(QLabel):
         self.__text = txt
         QLabel.setText(self, self.__text)
 
+
 class E5SqueezeLabelPath(QLabel):
     """
     Class implementing a label showing a file path compacted to fit it's size.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -102,9 +104,9 @@ class E5SqueezeLabelPath(QLabel):
         """
         fm = self.fontMetrics()
         if fm.width(self.__surrounding.format(self.__path)) > self.contentsRect().width():
-            QLabel.setText(self, 
-                self.__surrounding.format(compactPath(self.__path, 
-                                          self.contentsRect().width(), 
+            QLabel.setText(self,
+                self.__surrounding.format(compactPath(self.__path,
+                                          self.contentsRect().width(),
                                           self.length))
             )
         else:

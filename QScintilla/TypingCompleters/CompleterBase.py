@@ -13,11 +13,12 @@ user types '(').
 
 from PyQt4.QtCore import QObject
 
+
 class CompleterBase(QObject):
     """
     Class implementing the base class for all completers.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         

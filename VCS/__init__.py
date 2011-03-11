@@ -8,7 +8,7 @@ Module implementing the general part of the interface to version control systems
 
 The general part of the VCS interface defines classes to implement common
 dialogs. These are a dialog to enter command options, a dialog to display
-some repository information and an abstract base class. The individual 
+some repository information and an abstract base class. The individual
 interfaces (i.e. CVS) have to be subclasses of this base class.
 """
 
@@ -18,6 +18,7 @@ from E5Gui.E5Application import e5App
 ## Below is the factory function to instantiate the appropriate
 ## vcs object depending on the project settings.
 ######################################################################
+
 
 def factory(vcs):
     """
@@ -31,7 +32,7 @@ def factory(vcs):
         # that should not happen
         vc = None
     
-    vc = pluginManager.getPluginObject("version_control", vcs, maybeActive = True)
+    vc = pluginManager.getPluginObject("version_control", vcs, maybeActive=True)
     if vc is None:
         # try alternative vcs interfaces assuming, that there is a common
         # indicator for the alternatives
@@ -47,7 +48,7 @@ def factory(vcs):
                     for vcsSystem, vcsSystemDisplay in vcsData:
                         if vcsSystem != vcs:
                             vc = pluginManager.getPluginObject(
-                                "version_control", vcsSystem, maybeActive = True)
+                                "version_control", vcsSystem, maybeActive=True)
                             if vc is not None:
                                 break
                 break

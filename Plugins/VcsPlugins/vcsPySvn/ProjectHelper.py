@@ -20,11 +20,12 @@ from E5Gui.E5Action import E5Action
 
 import UI.PixmapCache
 
+
 class SvnProjectHelper(VcsProjectHelper):
     """
     Class implementing the VCS project helper for Subversion.
     """
-    def __init__(self, vcsObject, projectObject, parent = None, name = None):
+    def __init__(self, vcsObject, projectObject, parent=None, name=None):
         """
         Constructor
         
@@ -218,7 +219,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsStatusAct.triggered[()].connect(self._vcsStatus)
         self.actions.append(self.vcsStatusAct)
         
-        self.svnRepoInfoAct = E5Action(self.trUtf8('Show repository info'), 
+        self.svnRepoInfoAct = E5Action(self.trUtf8('Show repository info'),
                 UI.PixmapCache.getIcon("vcsRepo.png"),
                 self.trUtf8('Show repository info'),
                 0, 0, self, 'subversion_repoinfo')
@@ -233,7 +234,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.svnRepoInfoAct.triggered[()].connect(self.__svnInfo)
         self.actions.append(self.svnRepoInfoAct)
         
-        self.vcsTagAct = E5Action(self.trUtf8('Tag in repository'), 
+        self.vcsTagAct = E5Action(self.trUtf8('Tag in repository'),
                 UI.PixmapCache.getIcon("vcsTag.png"),
                 self.trUtf8('&Tag in repository...'),
                 0, 0, self, 'subversion_tag')
@@ -247,7 +248,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsTagAct.triggered[()].connect(self._vcsTag)
         self.actions.append(self.vcsTagAct)
         
-        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
+        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
                 0, 0, self, 'subversion_export')
@@ -262,7 +263,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsExportAct)
         
         self.vcsPropsAct = E5Action(self.trUtf8('Command options'),
-                self.trUtf8('Command &options...'),0,0,self,
+                self.trUtf8('Command &options...'), 0, 0, self,
                 'subversion_options')
         self.vcsPropsAct.setStatusTip(self.trUtf8('Show the VCS command options'))
         self.vcsPropsAct.setWhatsThis(self.trUtf8(
@@ -353,7 +354,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsCommandAct.triggered[()].connect(self._vcsCommand)
         self.actions.append(self.vcsCommandAct)
         
-        self.svnTagListAct = E5Action(self.trUtf8('List tags'), 
+        self.svnTagListAct = E5Action(self.trUtf8('List tags'),
                 self.trUtf8('List tags...'),
                 0, 0, self, 'subversion_list_tags')
         self.svnTagListAct.setStatusTip(self.trUtf8(
@@ -366,7 +367,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.svnTagListAct.triggered[()].connect(self.__svnTagList)
         self.actions.append(self.svnTagListAct)
         
-        self.svnBranchListAct = E5Action(self.trUtf8('List branches'), 
+        self.svnBranchListAct = E5Action(self.trUtf8('List branches'),
                 self.trUtf8('List branches...'),
                 0, 0, self, 'subversion_list_branches')
         self.svnBranchListAct.setStatusTip(self.trUtf8(
@@ -379,7 +380,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.svnBranchListAct.triggered[()].connect(self.__svnBranchList)
         self.actions.append(self.svnBranchListAct)
         
-        self.svnListAct = E5Action(self.trUtf8('List repository contents'), 
+        self.svnListAct = E5Action(self.trUtf8('List repository contents'),
                 self.trUtf8('List repository contents...'),
                 0, 0, self, 'subversion_contents')
         self.svnListAct.setStatusTip(self.trUtf8(
@@ -482,7 +483,7 @@ class SvnProjectHelper(VcsProjectHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsPySvn", "icons", "pysvn.png")), 
+                os.path.join("VcsPlugins", "vcsPySvn", "icons", "pysvn.png")),
             self.vcs.vcsName(), self._vcsInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -612,7 +613,7 @@ class SvnProjectHelper(VcsProjectHelper):
         """
         Private slot to open the repository browser.
         """
-        self.vcs.svnRepoBrowser(projectPath = self.project.ppath)
+        self.vcs.svnRepoBrowser(projectPath=self.project.ppath)
         
     def __svnConfigure(self):
         """

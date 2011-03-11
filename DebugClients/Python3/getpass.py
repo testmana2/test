@@ -15,6 +15,7 @@ is to provide a debugger compatible variant of the a.m. functions.
 
 __all__ = ["getpass", "getuser"]
 
+
 def getuser():
     """
     Function to get the username from the environment or password database.
@@ -37,7 +38,8 @@ def getuser():
     import pwd
     return pwd.getpwuid(os.getuid())[0]
 
-def getpass(prompt = 'Password: '):
+
+def getpass(prompt='Password: '):
     """
     Function to prompt for a password, with echo turned off.
     

@@ -32,6 +32,7 @@ pyqtApi = 2
 
 error = ""
 
+
 class ColorDialogWizard(QObject):
     """
     Class implementing the QColorDialog wizard plugin.
@@ -112,12 +113,12 @@ class ColorDialogWizard(QObject):
         
     def __handle(self):
         """
-        Private method to handle the wizards action 
+        Private method to handle the wizards action
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         
         if editor == None:
-                E5MessageBox.critical(self.__ui, 
+                E5MessageBox.critical(self.__ui,
                 self.trUtf8('No current editor'),
                 self.trUtf8('Please open or create a file first.'))
         else:

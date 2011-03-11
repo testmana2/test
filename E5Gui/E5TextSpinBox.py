@@ -5,11 +5,12 @@
 
 from PyQt4.QtGui import QSpinBox
 
+
 class E5TextSpinBox(QSpinBox):
     """
     Class implementing a spinbox with textual entries.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -22,7 +23,7 @@ class E5TextSpinBox(QSpinBox):
         self.setMinimum(0)
         self.setMaximum(0)
     
-    def addItem(self, txt, data = None):
+    def addItem(self, txt, data=None):
         """
         Public method to add an item with item data.
         

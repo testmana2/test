@@ -33,6 +33,7 @@ import Preferences
 
 from eric5config import getConfig
 
+
 class HelpTabWidget(E5TabWidget):
     """
     Class implementing the central widget showing the web pages.
@@ -47,7 +48,7 @@ class HelpTabWidget(E5TabWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        E5TabWidget.__init__(self, parent, dnd = True)
+        E5TabWidget.__init__(self, parent, dnd=True)
         self.__tabBar = HelpTabBar(self)
         self.setCustomTabBar(True, self.__tabBar)
         
@@ -120,7 +121,7 @@ class HelpTabWidget(E5TabWidget):
             self.trUtf8('Move Right'), self.__tabContextMenuMoveRight)
         self.__tabContextMenu.addSeparator()
         self.tabContextCloneAct = \
-            self.__tabContextMenu.addAction(self.trUtf8("Duplicate Page"), 
+            self.__tabContextMenu.addAction(self.trUtf8("Duplicate Page"),
                 self.__tabContextMenuClone)
         self.__tabContextMenu.addSeparator()
         self.tabContextCloseAct = \
@@ -129,7 +130,7 @@ class HelpTabWidget(E5TabWidget):
         self.tabContextCloseOthersAct = \
             self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("tabCloseOther.png"),
                 self.trUtf8("Close Others"), self.__tabContextMenuCloseOthers)
-        self.__tabContextMenu.addAction(self.trUtf8('Close All'), 
+        self.__tabContextMenu.addAction(self.trUtf8('Close All'),
             self.closeAllBrowsers)
         self.__tabContextMenu.addSeparator()
         self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
@@ -139,7 +140,7 @@ class HelpTabWidget(E5TabWidget):
         self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
             self.trUtf8('Print as PDF'), self.__tabContextMenuPrintPdf)
         self.__tabContextMenu.addSeparator()
-        self.__tabContextMenu.addAction(self.trUtf8('Bookmark All Tabs'), 
+        self.__tabContextMenu.addAction(self.trUtf8('Bookmark All Tabs'),
             self.__mainWindow.bookmarkAll)
     
     def __showContextMenu(self, coord, index):
@@ -218,7 +219,7 @@ class HelpTabWidget(E5TabWidget):
         browser = self.widget(self.__tabContextMenuIndex)
         self.printPreviewBrowser(browser)
     
-    def newBrowser(self, link = None):
+    def newBrowser(self, link=None):
         """
         Public method to create a new web browser tab.
         
@@ -275,7 +276,7 @@ class HelpTabWidget(E5TabWidget):
                 self.setTabText(index, self.__elide(linkName, Qt.ElideMiddle))
                 self.setTabToolTip(index, linkName)
             else:
-                self.setTabText(index, 
+                self.setTabText(index,
                     self.__elide(browser.documentTitle().replace("&", "&&")))
                 self.setTabToolTip(index, browser.documentTitle())
     
@@ -374,7 +375,7 @@ class HelpTabWidget(E5TabWidget):
             l.append(self.widget(index))
         return l
     
-    def printBrowser(self, browser = None):
+    def printBrowser(self, browser=None):
         """
         Public slot called to print the displayed page.
         
@@ -391,7 +392,7 @@ class HelpTabWidget(E5TabWidget):
         
         @param frame reference to the frame to be printed (QWebFrame)
         """
-        printer = QPrinter(mode = QPrinter.HighResolution)
+        printer = QPrinter(mode=QPrinter.HighResolution)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
         else:
@@ -413,7 +414,7 @@ class HelpTabWidget(E5TabWidget):
                                 """Please upgrade.</p>"""))
                 return
     
-    def printBrowserPdf(self, browser = None):
+    def printBrowserPdf(self, browser=None):
         """
         Public slot called to print the displayed page to PDF.
         
@@ -430,7 +431,7 @@ class HelpTabWidget(E5TabWidget):
         
         @param frame reference to the frame to be printed (QWebFrame)
         """
-        printer = QPrinter(mode = QPrinter.HighResolution)
+        printer = QPrinter(mode=QPrinter.HighResolution)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
         else:
@@ -454,7 +455,7 @@ class HelpTabWidget(E5TabWidget):
                                 """Please upgrade.</p>"""))
                 return
     
-    def printPreviewBrowser(self, browser = None):
+    def printPreviewBrowser(self, browser=None):
         """
         Public slot called to show a print preview of the displayed file.
         
@@ -465,7 +466,7 @@ class HelpTabWidget(E5TabWidget):
         if browser is None:
             browser = self.currentBrowser()
         
-        printer = QPrinter(mode = QPrinter.HighResolution)
+        printer = QPrinter(mode=QPrinter.HighResolution)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
         else:
@@ -518,7 +519,7 @@ class HelpTabWidget(E5TabWidget):
         
         self.titleChanged.emit(title)
     
-    def __elide(self, txt, mode = Qt.ElideRight, length = 40):
+    def __elide(self, txt, mode=Qt.ElideRight, length=40):
         """
         Private method to elide some text.
         
@@ -617,19 +618,19 @@ class HelpTabWidget(E5TabWidget):
         @return flag indicating a shut down (boolean)
         """
         if self.count() > 1:
-            mb = E5MessageBox.E5MessageBox(E5MessageBox.Information, 
+            mb = E5MessageBox.E5MessageBox(E5MessageBox.Information,
                 self.trUtf8("Are you sure you want to close the window?"),
-                self.trUtf8("""Are you sure you want to close the window?\n""" 
+                self.trUtf8("""Are you sure you want to close the window?\n"""
                             """You have %n tab(s) open.""", "", self.count()),
-                modal = True,
-                parent = self)
+                modal=True,
+                parent=self)
             if self.__mainWindow.fromEric:
                 quitButton = mb.addButton(self.trUtf8("&Close"), E5MessageBox.AcceptRole)
                 quitButton.setIcon(UI.PixmapCache.getIcon("close.png"))
             else:
                 quitButton = mb.addButton(self.trUtf8("&Quit"), E5MessageBox.AcceptRole)
                 quitButton.setIcon(UI.PixmapCache.getIcon("exit.png"))
-            closeTabButton = mb.addButton(self.trUtf8("C&lose Current Tab"), 
+            closeTabButton = mb.addButton(self.trUtf8("C&lose Current Tab"),
                 E5MessageBox.AcceptRole)
             closeTabButton.setIcon(UI.PixmapCache.getIcon("tabClose.png"))
             mb.addButton(E5MessageBox.Cancel)

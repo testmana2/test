@@ -17,11 +17,12 @@ from .OpenSearchEditDialog import OpenSearchEditDialog
 
 from .Ui_OpenSearchDialog import Ui_OpenSearchDialog
 
+
 class OpenSearchDialog(QDialog, Ui_OpenSearchDialog):
     """
     Class implementing a dialog for the configuration of search engines.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         """

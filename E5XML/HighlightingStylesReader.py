@@ -13,6 +13,7 @@ from PyQt4.QtGui import QColor, QFont
 from .Config import highlightingStylesFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+
 class HighlightingStylesReader(XMLStreamReaderBase):
     """
     Class for reading a highlighting styles XML file.
@@ -40,7 +41,7 @@ class HighlightingStylesReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "HighlightingStyles":
-                    self.version = self.attribute("version", 
+                    self.version = self.attribute("version",
                         highlightingStylesFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)

@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerPerl
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerPerl(QsciLexerPerl, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -61,21 +62,21 @@ class LexerPerl(QsciLexerPerl, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerPerl.DoubleQuotedHereDocument, 
-                         QsciLexerPerl.DoubleQuotedString, 
-                         QsciLexerPerl.QuotedStringQ, 
-                         QsciLexerPerl.QuotedStringQQ, 
-                         QsciLexerPerl.QuotedStringQR, 
-                         QsciLexerPerl.QuotedStringQW, 
-                         QsciLexerPerl.QuotedStringQX, 
-                         QsciLexerPerl.SingleQuotedHereDocument, 
+        return style in [QsciLexerPerl.DoubleQuotedHereDocument,
+                         QsciLexerPerl.DoubleQuotedString,
+                         QsciLexerPerl.QuotedStringQ,
+                         QsciLexerPerl.QuotedStringQQ,
+                         QsciLexerPerl.QuotedStringQR,
+                         QsciLexerPerl.QuotedStringQW,
+                         QsciLexerPerl.QuotedStringQX,
+                         QsciLexerPerl.SingleQuotedHereDocument,
                          QsciLexerPerl.SingleQuotedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerPerl.keywords(self, kwSet)

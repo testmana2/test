@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_HgRevisionSelectionDialog import Ui_HgRevisionSelectionDialog
 
+
 class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
     """
     Class implementing a dialog to select a revision.
     """
-    def __init__(self, tagsList, branchesList, showNone = False, parent = None):
+    def __init__(self, tagsList, branchesList, showNone=False, parent=None):
         """
         Constructor
         
@@ -39,7 +40,7 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         """
         Public method to retrieve the selected revision.
         
-        @return tuple naming the revision and a flag indicating a 
+        @return tuple naming the revision and a flag indicating a
             forced merge (string, boolean)
         """
         if self.numberButton.isChecked():

@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 import Preferences
 
+
 class BrowserSortFilterProxyModel(QSortFilterProxyModel):
     """
     Class implementing the browser sort filter proxy model.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -69,7 +70,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         sindex = self.mapToSource(index)
         return self.sourceModel().item(sindex)
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check for the presence of child items.
         

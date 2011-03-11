@@ -5,4 +5,4 @@
  
 """
 Package containing the listspace view manager plugin.
-""" 
+"""

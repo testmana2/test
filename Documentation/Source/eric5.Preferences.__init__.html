@@ -27,8 +27,8 @@ Package implementing the preferences interface.
 The preferences interface consists of a class, which defines the default
 values for all configuration items and stores the actual values. These
 values are read and written to the eric5 preferences file by module
-functions. The data is stored in a file in a subdirectory of the users home 
-directory. The individual configuration data is accessed by accessor functions 
+functions. The data is stored in a file in a subdirectory of the users home
+directory. The individual configuration data is accessed by accessor functions
 defined on the module level. The module is simply imported wherever it is needed
 with the statement 'import Preferences'. Do not use 'from Preferences import *'
 to import it.
@@ -357,7 +357,7 @@ object
 <hr /><hr />
 <a NAME="exportPreferences" ID="exportPreferences"></a>
 <h2>exportPreferences</h2>
-<b>exportPreferences</b>(<i>prefClass = Prefs</i>)
+<b>exportPreferences</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to export the current preferences.
 </p><dl>
@@ -370,7 +370,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="getCooperation" ID="getCooperation"></a>
 <h2>getCooperation</h2>
-<b>getCooperation</b>(<i>key, prefClass = Prefs</i>)
+<b>getCooperation</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various Cooperation settings.
 </p><dl>
@@ -391,7 +391,7 @@ the requested UI setting
 <hr /><hr />
 <a NAME="getCorba" ID="getCorba"></a>
 <h2>getCorba</h2>
-<b>getCorba</b>(<i>key, prefClass = Prefs</i>)
+<b>getCorba</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various corba settings.
 </p><dl>
@@ -412,7 +412,7 @@ the requested corba setting
 <hr /><hr />
 <a NAME="getDebugger" ID="getDebugger"></a>
 <h2>getDebugger</h2>
-<b>getDebugger</b>(<i>key, prefClass = Prefs</i>)
+<b>getDebugger</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the debugger settings.
 </p><dl>
@@ -433,7 +433,7 @@ the requested debugger setting
 <hr /><hr />
 <a NAME="getEditor" ID="getEditor"></a>
 <h2>getEditor</h2>
-<b>getEditor</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditor</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various editor settings.
 </p><dl>
@@ -454,7 +454,7 @@ the requested editor setting
 <hr /><hr />
 <a NAME="getEditorAPI" ID="getEditorAPI"></a>
 <h2>getEditorAPI</h2>
-<b>getEditorAPI</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorAPI</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various lists of api files.
 </p><dl>
@@ -475,7 +475,7 @@ the requested list of api files (list of strings)
 <hr /><hr />
 <a NAME="getEditorColour" ID="getEditorColour"></a>
 <h2>getEditorColour</h2>
-<b>getEditorColour</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorColour</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various editor marker colours.
 </p><dl>
@@ -496,7 +496,7 @@ the requested editor colour
 <hr /><hr />
 <a NAME="getEditorExporter" ID="getEditorExporter"></a>
 <h2>getEditorExporter</h2>
-<b>getEditorExporter</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorExporter</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various editor exporters settings.
 </p><dl>
@@ -517,7 +517,7 @@ the requested editor setting
 <hr /><hr />
 <a NAME="getEditorKeywords" ID="getEditorKeywords"></a>
 <h2>getEditorKeywords</h2>
-<b>getEditorKeywords</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorKeywords</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various lists of language keywords.
 </p><dl>
@@ -538,7 +538,7 @@ the requested list of language keywords (list of strings)
 <hr /><hr />
 <a NAME="getEditorLexerAssoc" ID="getEditorLexerAssoc"></a>
 <h2>getEditorLexerAssoc</h2>
-<b>getEditorLexerAssoc</b>(<i>filename, prefClass = Prefs</i>)
+<b>getEditorLexerAssoc</b>(<i>filename, prefClass=Prefs</i>)
 <p>
     Module function to retrieve a lexer association.
 </p><dl>
@@ -559,7 +559,7 @@ the requested lexer language (string)
 <hr /><hr />
 <a NAME="getEditorLexerAssocs" ID="getEditorLexerAssocs"></a>
 <h2>getEditorLexerAssocs</h2>
-<b>getEditorLexerAssocs</b>(<i>prefClass = Prefs</i>)
+<b>getEditorLexerAssocs</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve all lexer associations.
 </p><dl>
@@ -578,7 +578,7 @@ a reference to the list of lexer associations
 <hr /><hr />
 <a NAME="getEditorOtherFonts" ID="getEditorOtherFonts"></a>
 <h2>getEditorOtherFonts</h2>
-<b>getEditorOtherFonts</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorOtherFonts</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various editor fonts except the lexer fonts.
 </p><dl>
@@ -599,7 +599,7 @@ the requested editor font (QFont)
 <hr /><hr />
 <a NAME="getEditorTyping" ID="getEditorTyping"></a>
 <h2>getEditorTyping</h2>
-<b>getEditorTyping</b>(<i>key, prefClass = Prefs</i>)
+<b>getEditorTyping</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various editor typing settings.
 </p><dl>
@@ -620,7 +620,7 @@ the requested editor setting
 <hr /><hr />
 <a NAME="getFlakes" ID="getFlakes"></a>
 <h2>getFlakes</h2>
-<b>getFlakes</b>(<i>key, prefClass = Prefs</i>)
+<b>getFlakes</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the py3flakes related settings.
 </p><dl>
@@ -641,7 +641,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getGeometry" ID="getGeometry"></a>
 <h2>getGeometry</h2>
-<b>getGeometry</b>(<i>key, prefClass = Prefs</i>)
+<b>getGeometry</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the display geometry.
 </p><dl>
@@ -662,7 +662,7 @@ the requested geometry setting
 <hr /><hr />
 <a NAME="getGraphics" ID="getGraphics"></a>
 <h2>getGraphics</h2>
-<b>getGraphics</b>(<i>key, prefClass = Prefs</i>)
+<b>getGraphics</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Graphics related settings.
 </p><dl>
@@ -683,7 +683,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getHelp" ID="getHelp"></a>
 <h2>getHelp</h2>
-<b>getHelp</b>(<i>key, prefClass = Prefs</i>)
+<b>getHelp</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various help settings.
 </p><dl>
@@ -704,7 +704,7 @@ the requested help setting
 <hr /><hr />
 <a NAME="getIconEditor" ID="getIconEditor"></a>
 <h2>getIconEditor</h2>
-<b>getIconEditor</b>(<i>key, prefClass = Prefs</i>)
+<b>getIconEditor</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Icon Editor related settings.
 </p><dl>
@@ -725,7 +725,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getIcons" ID="getIcons"></a>
 <h2>getIcons</h2>
-<b>getIcons</b>(<i>key, prefClass = Prefs</i>)
+<b>getIcons</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various Icons settings.
 </p><dl>
@@ -746,7 +746,7 @@ the requested Icons setting
 <hr /><hr />
 <a NAME="getMultiProject" ID="getMultiProject"></a>
 <h2>getMultiProject</h2>
-<b>getMultiProject</b>(<i>key, prefClass = Prefs</i>)
+<b>getMultiProject</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various project handling settings.
 </p><dl>
@@ -767,7 +767,7 @@ the requested project setting
 <hr /><hr />
 <a NAME="getPluginManager" ID="getPluginManager"></a>
 <h2>getPluginManager</h2>
-<b>getPluginManager</b>(<i>key, prefClass = Prefs</i>)
+<b>getPluginManager</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the plugin manager related settings.
 </p><dl>
@@ -788,7 +788,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getPrinter" ID="getPrinter"></a>
 <h2>getPrinter</h2>
-<b>getPrinter</b>(<i>key, prefClass = Prefs</i>)
+<b>getPrinter</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various printer settings.
 </p><dl>
@@ -809,7 +809,7 @@ the requested printer setting
 <hr /><hr />
 <a NAME="getProject" ID="getProject"></a>
 <h2>getProject</h2>
-<b>getProject</b>(<i>key, prefClass = Prefs</i>)
+<b>getProject</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various project handling settings.
 </p><dl>
@@ -830,7 +830,7 @@ the requested project setting
 <hr /><hr />
 <a NAME="getProjectBrowserColour" ID="getProjectBrowserColour"></a>
 <h2>getProjectBrowserColour</h2>
-<b>getProjectBrowserColour</b>(<i>key, prefClass = Prefs</i>)
+<b>getProjectBrowserColour</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various project browser colours.
 </p><dl>
@@ -851,7 +851,7 @@ the requested project browser colour
 <hr /><hr />
 <a NAME="getProjectBrowserFlags" ID="getProjectBrowserFlags"></a>
 <h2>getProjectBrowserFlags</h2>
-<b>getProjectBrowserFlags</b>(<i>key, prefClass = Prefs</i>)
+<b>getProjectBrowserFlags</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various project browser flags settings.
 </p><dl>
@@ -872,7 +872,7 @@ the requested project setting
 <hr /><hr />
 <a NAME="getPython" ID="getPython"></a>
 <h2>getPython</h2>
-<b>getPython</b>(<i>key, prefClass = Prefs</i>)
+<b>getPython</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Python settings.
 </p><dl>
@@ -893,7 +893,7 @@ the requested debugger setting
 <hr /><hr />
 <a NAME="getQt" ID="getQt"></a>
 <h2>getQt</h2>
-<b>getQt</b>(<i>key, prefClass = Prefs</i>)
+<b>getQt</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various Qt settings.
 </p><dl>
@@ -914,7 +914,7 @@ the requested Qt setting
 <hr /><hr />
 <a NAME="getQt4DocDir" ID="getQt4DocDir"></a>
 <h2>getQt4DocDir</h2>
-<b>getQt4DocDir</b>(<i>prefClass = Prefs</i>)
+<b>getQt4DocDir</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Qt4DocDir setting.
 </p><dl>
@@ -932,7 +932,7 @@ the requested Qt4DocDir setting (string)
 <hr /><hr />
 <a NAME="getQt4TranslationsDir" ID="getQt4TranslationsDir"></a>
 <h2>getQt4TranslationsDir</h2>
-<b>getQt4TranslationsDir</b>(<i>prefClass = Prefs</i>)
+<b>getQt4TranslationsDir</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Qt4TranslationsDir setting.
 </p><dl>
@@ -950,7 +950,7 @@ the requested Qt4TranslationsDir setting (string)
 <hr /><hr />
 <a NAME="getShell" ID="getShell"></a>
 <h2>getShell</h2>
-<b>getShell</b>(<i>key, prefClass = Prefs</i>)
+<b>getShell</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various shell settings.
 </p><dl>
@@ -971,7 +971,7 @@ the requested shell setting
 <hr /><hr />
 <a NAME="getSystem" ID="getSystem"></a>
 <h2>getSystem</h2>
-<b>getSystem</b>(<i>key, prefClass = Prefs</i>)
+<b>getSystem</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various system settings.
 </p><dl>
@@ -992,7 +992,7 @@ the requested system setting
 <hr /><hr />
 <a NAME="getTasks" ID="getTasks"></a>
 <h2>getTasks</h2>
-<b>getTasks</b>(<i>key, prefClass = Prefs</i>)
+<b>getTasks</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Tasks related settings.
 </p><dl>
@@ -1013,7 +1013,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getTemplates" ID="getTemplates"></a>
 <h2>getTemplates</h2>
-<b>getTemplates</b>(<i>key, prefClass = Prefs</i>)
+<b>getTemplates</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the Templates related settings.
 </p><dl>
@@ -1034,7 +1034,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getTerminal" ID="getTerminal"></a>
 <h2>getTerminal</h2>
-<b>getTerminal</b>(<i>key, prefClass = Prefs</i>)
+<b>getTerminal</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various terminal settings.
 </p><dl>
@@ -1055,7 +1055,7 @@ the requested shell setting
 <hr /><hr />
 <a NAME="getTrayStarter" ID="getTrayStarter"></a>
 <h2>getTrayStarter</h2>
-<b>getTrayStarter</b>(<i>key, prefClass = Prefs</i>)
+<b>getTrayStarter</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the tray starter related settings.
 </p><dl>
@@ -1076,7 +1076,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getUI" ID="getUI"></a>
 <h2>getUI</h2>
-<b>getUI</b>(<i>key, prefClass = Prefs</i>)
+<b>getUI</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various UI settings.
 </p><dl>
@@ -1097,7 +1097,7 @@ the requested UI setting
 <hr /><hr />
 <a NAME="getUILanguage" ID="getUILanguage"></a>
 <h2>getUILanguage</h2>
-<b>getUILanguage</b>(<i>prefClass = Prefs</i>)
+<b>getUILanguage</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the language for the user interface.
 </p><dl>
@@ -1115,7 +1115,7 @@ the language for the UI
 <hr /><hr />
 <a NAME="getUILayout" ID="getUILayout"></a>
 <h2>getUILayout</h2>
-<b>getUILayout</b>(<i>prefClass = Prefs</i>)
+<b>getUILayout</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the layout for the user interface.
 </p><dl>
@@ -1134,7 +1134,7 @@ the UI layout as a tuple of main layout, flag for
 <hr /><hr />
 <a NAME="getUser" ID="getUser"></a>
 <h2>getUser</h2>
-<b>getUser</b>(<i>key, prefClass = Prefs</i>)
+<b>getUser</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the various user settings.
 </p><dl>
@@ -1155,7 +1155,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getVCS" ID="getVCS"></a>
 <h2>getVCS</h2>
-<b>getVCS</b>(<i>key, prefClass = Prefs</i>)
+<b>getVCS</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to retrieve the VCS related settings.
 </p><dl>
@@ -1176,7 +1176,7 @@ the requested user setting
 <hr /><hr />
 <a NAME="getVarFilters" ID="getVarFilters"></a>
 <h2>getVarFilters</h2>
-<b>getVarFilters</b>(<i>prefClass = Prefs</i>)
+<b>getVarFilters</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the variables filter settings.
 </p><dl>
@@ -1194,7 +1194,7 @@ a tuple defing the variables filter
 <hr /><hr />
 <a NAME="getViewManager" ID="getViewManager"></a>
 <h2>getViewManager</h2>
-<b>getViewManager</b>(<i>prefClass = Prefs</i>)
+<b>getViewManager</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to retrieve the selected viewmanager type.
 </p><dl>
@@ -1212,7 +1212,7 @@ the viewmanager type
 <hr /><hr />
 <a NAME="importPreferences" ID="importPreferences"></a>
 <h2>importPreferences</h2>
-<b>importPreferences</b>(<i>prefClass = Prefs</i>)
+<b>importPreferences</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to import preferences from a file previously saved by
     the export function.
@@ -1228,7 +1228,7 @@ preferences class used as the storage area
 <h2>initPreferences</h2>
 <b>initPreferences</b>(<i></i>)
 <p>
-    Module function to initialize the central configuration store. 
+    Module function to initialize the central configuration store.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1237,7 +1237,7 @@ preferences class used as the storage area
 <b>initRecentSettings</b>(<i></i>)
 <p>
     Module function to initialize the central configuration store for recently
-    opened files and projects. 
+    opened files and projects.
 </p><p>
     This function is called once upon import of the module.
 </p>
@@ -1245,7 +1245,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="isConfigured" ID="isConfigured"></a>
 <h2>isConfigured</h2>
-<b>isConfigured</b>(<i>prefClass = Prefs</i>)
+<b>isConfigured</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to check, if the the application has been configured.
 </p><dl>
@@ -1263,7 +1263,7 @@ flag indicating the configured status (boolean)
 <hr /><hr />
 <a NAME="readToolGroups" ID="readToolGroups"></a>
 <h2>readToolGroups</h2>
-<b>readToolGroups</b>(<i>prefClass = Prefs</i>)
+<b>readToolGroups</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to read the tool groups configuration.
 </p><dl>
@@ -1281,7 +1281,7 @@ list of tuples defing the tool groups
 <hr /><hr />
 <a NAME="removeProjectBrowserFlags" ID="removeProjectBrowserFlags"></a>
 <h2>removeProjectBrowserFlags</h2>
-<b>removeProjectBrowserFlags</b>(<i>key, prefClass = Prefs</i>)
+<b>removeProjectBrowserFlags</b>(<i>key, prefClass=Prefs</i>)
 <p>
     Module function to remove a project browser flags setting.
 </p><dl>
@@ -1297,7 +1297,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="resetLayout" ID="resetLayout"></a>
 <h2>resetLayout</h2>
-<b>resetLayout</b>(<i>prefClass = Prefs</i>)
+<b>resetLayout</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to set a flag not storing the current layout.
 </p><dl>
@@ -1310,7 +1310,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="saveResetLayout" ID="saveResetLayout"></a>
 <h2>saveResetLayout</h2>
-<b>saveResetLayout</b>(<i>prefClass = Prefs</i>)
+<b>saveResetLayout</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to save the reset layout.
 </p>
@@ -1318,7 +1318,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="saveToolGroups" ID="saveToolGroups"></a>
 <h2>saveToolGroups</h2>
-<b>saveToolGroups</b>(<i>toolGroups, currentGroup, prefClass = Prefs</i>)
+<b>saveToolGroups</b>(<i>toolGroups, currentGroup, prefClass=Prefs</i>)
 <p>
     Module function to write the tool groups configuration.
 </p><dl>
@@ -1337,7 +1337,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setCooperation" ID="setCooperation"></a>
 <h2>setCooperation</h2>
-<b>setCooperation</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setCooperation</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various Cooperation settings.
 </p><dl>
@@ -1356,7 +1356,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setCorba" ID="setCorba"></a>
 <h2>setCorba</h2>
-<b>setCorba</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setCorba</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various corba settings.
 </p><dl>
@@ -1375,7 +1375,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setDebugger" ID="setDebugger"></a>
 <h2>setDebugger</h2>
-<b>setDebugger</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setDebugger</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the debugger settings.
 </p><dl>
@@ -1394,7 +1394,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditor" ID="setEditor"></a>
 <h2>setEditor</h2>
-<b>setEditor</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setEditor</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various editor settings.
 </p><dl>
@@ -1413,7 +1413,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorAPI" ID="setEditorAPI"></a>
 <h2>setEditorAPI</h2>
-<b>setEditorAPI</b>(<i>key, apilist, prefClass = Prefs</i>)
+<b>setEditorAPI</b>(<i>key, apilist, prefClass=Prefs</i>)
 <p>
     Module function to store the various lists of api files.
 </p><dl>
@@ -1432,7 +1432,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorColour" ID="setEditorColour"></a>
 <h2>setEditorColour</h2>
-<b>setEditorColour</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setEditorColour</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various editor marker colours.
 </p><dl>
@@ -1451,7 +1451,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorExporter" ID="setEditorExporter"></a>
 <h2>setEditorExporter</h2>
-<b>setEditorExporter</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setEditorExporter</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various editor exporters settings.
 </p><dl>
@@ -1470,7 +1470,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorKeywords" ID="setEditorKeywords"></a>
 <h2>setEditorKeywords</h2>
-<b>setEditorKeywords</b>(<i>key, keywordsLists, prefClass = Prefs</i>)
+<b>setEditorKeywords</b>(<i>key, keywordsLists, prefClass=Prefs</i>)
 <p>
     Module function to store the various lists of language keywords.
 </p><dl>
@@ -1489,7 +1489,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorLexerAssocs" ID="setEditorLexerAssocs"></a>
 <h2>setEditorLexerAssocs</h2>
-<b>setEditorLexerAssocs</b>(<i>assocs, prefClass = Prefs</i>)
+<b>setEditorLexerAssocs</b>(<i>assocs, prefClass=Prefs</i>)
 <p>
     Module function to retrieve all lexer associations.
 </p><dl>
@@ -1505,7 +1505,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorOtherFonts" ID="setEditorOtherFonts"></a>
 <h2>setEditorOtherFonts</h2>
-<b>setEditorOtherFonts</b>(<i>key, font, prefClass = Prefs</i>)
+<b>setEditorOtherFonts</b>(<i>key, font, prefClass=Prefs</i>)
 <p>
     Module function to store the various editor fonts except the lexer fonts.
 </p><dl>
@@ -1524,7 +1524,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setEditorTyping" ID="setEditorTyping"></a>
 <h2>setEditorTyping</h2>
-<b>setEditorTyping</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setEditorTyping</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various editor typing settings.
 </p><dl>
@@ -1543,7 +1543,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setFlakes" ID="setFlakes"></a>
 <h2>setFlakes</h2>
-<b>setFlakes</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setFlakes</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the py3flakes related settings.
 </p><dl>
@@ -1562,7 +1562,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setGeometry" ID="setGeometry"></a>
 <h2>setGeometry</h2>
-<b>setGeometry</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setGeometry</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the display geometry.
 </p><dl>
@@ -1581,7 +1581,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setGraphics" ID="setGraphics"></a>
 <h2>setGraphics</h2>
-<b>setGraphics</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setGraphics</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the Graphics related settings.
 </p><dl>
@@ -1600,7 +1600,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setHelp" ID="setHelp"></a>
 <h2>setHelp</h2>
-<b>setHelp</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setHelp</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various help settings.
 </p><dl>
@@ -1619,7 +1619,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setIconEditor" ID="setIconEditor"></a>
 <h2>setIconEditor</h2>
-<b>setIconEditor</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setIconEditor</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the Icon Editor related settings.
 </p><dl>
@@ -1638,7 +1638,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setIcons" ID="setIcons"></a>
 <h2>setIcons</h2>
-<b>setIcons</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setIcons</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various Icons settings.
 </p><dl>
@@ -1657,7 +1657,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setMultiProject" ID="setMultiProject"></a>
 <h2>setMultiProject</h2>
-<b>setMultiProject</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setMultiProject</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various project handling settings.
 </p><dl>
@@ -1676,7 +1676,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setPluginManager" ID="setPluginManager"></a>
 <h2>setPluginManager</h2>
-<b>setPluginManager</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setPluginManager</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the plugin manager related settings.
 </p><dl>
@@ -1695,7 +1695,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setPrinter" ID="setPrinter"></a>
 <h2>setPrinter</h2>
-<b>setPrinter</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setPrinter</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various printer settings.
 </p><dl>
@@ -1714,7 +1714,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setProject" ID="setProject"></a>
 <h2>setProject</h2>
-<b>setProject</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setProject</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various project handling settings.
 </p><dl>
@@ -1733,7 +1733,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setProjectBrowserColour" ID="setProjectBrowserColour"></a>
 <h2>setProjectBrowserColour</h2>
-<b>setProjectBrowserColour</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setProjectBrowserColour</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various project browser colours.
 </p><dl>
@@ -1752,7 +1752,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setProjectBrowserFlags" ID="setProjectBrowserFlags"></a>
 <h2>setProjectBrowserFlags</h2>
-<b>setProjectBrowserFlags</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setProjectBrowserFlags</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various project browser flags settings.
 </p><dl>
@@ -1771,7 +1771,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setProjectBrowserFlagsDefault" ID="setProjectBrowserFlagsDefault"></a>
 <h2>setProjectBrowserFlagsDefault</h2>
-<b>setProjectBrowserFlagsDefault</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setProjectBrowserFlagsDefault</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various project browser flags settings.
 </p><dl>
@@ -1790,7 +1790,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setPython" ID="setPython"></a>
 <h2>setPython</h2>
-<b>setPython</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setPython</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the Python settings.
 </p><dl>
@@ -1809,7 +1809,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setQt" ID="setQt"></a>
 <h2>setQt</h2>
-<b>setQt</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setQt</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various Qt settings.
 </p><dl>
@@ -1828,7 +1828,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setShell" ID="setShell"></a>
 <h2>setShell</h2>
-<b>setShell</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setShell</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various shell settings.
 </p><dl>
@@ -1847,7 +1847,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setSystem" ID="setSystem"></a>
 <h2>setSystem</h2>
-<b>setSystem</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setSystem</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various system settings.
 </p><dl>
@@ -1866,7 +1866,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setTasks" ID="setTasks"></a>
 <h2>setTasks</h2>
-<b>setTasks</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setTasks</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the Tasks related settings.
 </p><dl>
@@ -1885,7 +1885,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setTemplates" ID="setTemplates"></a>
 <h2>setTemplates</h2>
-<b>setTemplates</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setTemplates</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the Templates related settings.
 </p><dl>
@@ -1904,7 +1904,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setTerminal" ID="setTerminal"></a>
 <h2>setTerminal</h2>
-<b>setTerminal</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setTerminal</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various terminal settings.
 </p><dl>
@@ -1923,7 +1923,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setTrayStarter" ID="setTrayStarter"></a>
 <h2>setTrayStarter</h2>
-<b>setTrayStarter</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setTrayStarter</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the tray starter related settings.
 </p><dl>
@@ -1942,7 +1942,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setUI" ID="setUI"></a>
 <h2>setUI</h2>
-<b>setUI</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setUI</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various UI settings.
 </p><dl>
@@ -1961,7 +1961,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setUILanguage" ID="setUILanguage"></a>
 <h2>setUILanguage</h2>
-<b>setUILanguage</b>(<i>lang, prefClass = Prefs</i>)
+<b>setUILanguage</b>(<i>lang, prefClass=Prefs</i>)
 <p>
     Module function to store the language for the user interface.
 </p><dl>
@@ -1977,7 +1977,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setUILayout" ID="setUILayout"></a>
 <h2>setUILayout</h2>
-<b>setUILayout</b>(<i>layout, prefClass = Prefs</i>)
+<b>setUILayout</b>(<i>layout, prefClass=Prefs</i>)
 <p>
     Module function to store the layout for the user interface.
 </p><dl>
@@ -1993,7 +1993,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setUser" ID="setUser"></a>
 <h2>setUser</h2>
-<b>setUser</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setUser</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the various user settings.
 </p><dl>
@@ -2012,7 +2012,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setVCS" ID="setVCS"></a>
 <h2>setVCS</h2>
-<b>setVCS</b>(<i>key, value, prefClass = Prefs</i>)
+<b>setVCS</b>(<i>key, value, prefClass=Prefs</i>)
 <p>
     Module function to store the VCS related settings.
 </p><dl>
@@ -2031,7 +2031,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setVarFilters" ID="setVarFilters"></a>
 <h2>setVarFilters</h2>
-<b>setVarFilters</b>(<i>filters, prefClass = Prefs</i>)
+<b>setVarFilters</b>(<i>filters, prefClass=Prefs</i>)
 <p>
     Module function to store the variables filter settings.
 </p><dl>
@@ -2044,7 +2044,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="setViewManager" ID="setViewManager"></a>
 <h2>setViewManager</h2>
-<b>setViewManager</b>(<i>vm, prefClass = Prefs</i>)
+<b>setViewManager</b>(<i>vm, prefClass=Prefs</i>)
 <p>
     Module function to store the selected viewmanager type.
 </p><dl>
@@ -2060,7 +2060,7 @@ preferences class used as the storage area
 <hr /><hr />
 <a NAME="shouldResetLayout" ID="shouldResetLayout"></a>
 <h2>shouldResetLayout</h2>
-<b>shouldResetLayout</b>(<i>prefClass = Prefs</i>)
+<b>shouldResetLayout</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to indicate a reset of the layout.
 </p><dl>
@@ -2078,7 +2078,7 @@ flag indicating a reset of the layout (boolean)
 <hr /><hr />
 <a NAME="syncPreferences" ID="syncPreferences"></a>
 <h2>syncPreferences</h2>
-<b>syncPreferences</b>(<i>prefClass = Prefs</i>)
+<b>syncPreferences</b>(<i>prefClass=Prefs</i>)
 <p>
     Module function to sync the preferences to disk.
 </p><p>

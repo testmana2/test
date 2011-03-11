@@ -16,11 +16,12 @@ from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 
 from E5Gui import E5MessageBox
 
+
 class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
     """
     Class implementing the templates properties dialog.
     """
-    def __init__(self, parent, groupMode = False, itm = None):
+    def __init__(self, parent, groupMode=False, itm=None):
         """
         Constructor
         
@@ -40,7 +41,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
                 """ must only consist of letters (a-z and A-Z),"""
                 """ digits (0-9) and underscores (_).</p>"""
             ))
-            self.__nameValidator = QRegExpValidator(QRegExp("[a-zA-Z0-9_]+"), 
+            self.__nameValidator = QRegExpValidator(QRegExp("[a-zA-Z0-9_]+"),
                                                     self.nameEdit)
             self.nameEdit.setValidator(self.__nameValidator)
         
@@ -182,7 +183,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         Public method to get the data entered into the dialog.
         
         @return a tuple of two strings (name, language), if the dialog is in group mode,
-            and a tuple of four strings (name, description, group name, template) 
+            and a tuple of four strings (name, description, group name, template)
             otherwise.
         """
         if self.groupMode:
@@ -191,7 +192,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
                    )
         else:
             return (self.nameEdit.text(),
-                    self.descriptionEdit.text(), 
+                    self.descriptionEdit.text(),
                     self.groupCombo.currentText(),
                     self.templateEdit.toPlainText()
                    )

@@ -20,11 +20,12 @@ from .Ui_HgDiffDialog import Ui_HgDiffDialog
 import Utilities
 import Preferences
 
+
 class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     """
     Class implementing a dialog to show the output of the hg diff command process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -83,7 +84,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             return str(version)
     
-    def start(self, fn, versions = None, bundle = None):
+    def start(self, fn, versions=None, bundle=None):
         """
         Public slot to start the hg diff command.
         
@@ -197,7 +198,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process, formats it and inserts it into
         the contents pane.
@@ -205,8 +206,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             if line.startswith('+'):
                 format = self.cAddedFormat
@@ -228,8 +229,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
@@ -284,13 +285,13 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w", encoding = "utf-8")
+            f = open(fname, "w", encoding="utf-8")
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:

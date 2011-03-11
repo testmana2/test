@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .UMLItem import UMLItem
 
+
 class PackageModel(object):
     """
     Class implementing the package model.
     """
-    def __init__(self, name, moduleslist = []):
+    def __init__(self, name, moduleslist=[]):
         """
         Constructor
         
@@ -50,12 +51,13 @@ class PackageModel(object):
         """
         return self.name
         
+
 class PackageItem(UMLItem):
     """
     Class implementing a package item.
     """
-    def __init__(self, model = None, x = 0, y = 0, rounded = False, 
-                 noModules = False, parent = None, scene = None):
+    def __init__(self, model=None, x=0, y=0, rounded=False,
+                 noModules=False, parent=None, scene=None):
         """
         Constructor
         
@@ -63,7 +65,7 @@ class PackageItem(UMLItem):
         @param x x-coordinate (integer)
         @param y y-coordinate (integer)
         @param rounded flag indicating a rounded corner (boolean)
-        @keyparam noModules flag indicating, that no module names should be 
+        @keyparam noModules flag indicating, that no module names should be
             shown (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         @keyparam scene reference to the scene object (QGraphicsScene)
@@ -148,7 +150,7 @@ class PackageItem(UMLItem):
         self.__createTexts()
         self.__calculateSize()
         
-    def paint(self, painter, option, widget = None):
+    def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
         

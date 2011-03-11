@@ -92,11 +92,11 @@ DebugClientBase.DebugClientBase, AsyncIO
         Constructor
 </p><a NAME="DebugClientThreads.attachThread" ID="DebugClientThreads.attachThread"></a>
 <h4>DebugClientThreads.attachThread</h4>
-<b>attachThread</b>(<i>target = None, args = None, kwargs = None, mainThread = False</i>)
+<b>attachThread</b>(<i>target=None, args=None, kwargs=None, mainThread=False</i>)
 <p>
         Public method to setup a thread for DebugClient to debug.
 </p><p>
-        If mainThread is non-zero, then we are attaching to the already 
+        If mainThread is non-zero, then we are attaching to the already
         started mainthread of the app and the rest of the args are ignored.
 </p><dl>
 <dt><i>target</i></dt>
@@ -120,7 +120,7 @@ identifier of the created thread
 </dd>
 </dl><a NAME="DebugClientThreads.eventLoop" ID="DebugClientThreads.eventLoop"></a>
 <h4>DebugClientThreads.eventLoop</h4>
-<b>eventLoop</b>(<i>disablePolling = False</i>)
+<b>eventLoop</b>(<i>disablePolling=False</i>)
 <p>
         Public method implementing our event loop.
 </p><dl>
@@ -131,7 +131,7 @@ flag indicating to enter an event loop with
 </dd>
 </dl><a NAME="DebugClientThreads.lockClient" ID="DebugClientThreads.lockClient"></a>
 <h4>DebugClientThreads.lockClient</h4>
-<b>lockClient</b>(<i>blocking = True</i>)
+<b>lockClient</b>(<i>blocking=True</i>)
 <p>
         Public method to acquire the lock for this client.
 </p><dl>
@@ -179,18 +179,18 @@ the DebugThread that has exited
 <hr /><hr />
 <a NAME="_debugclient_start_new_thread" ID="_debugclient_start_new_thread"></a>
 <h2>_debugclient_start_new_thread</h2>
-<b>_debugclient_start_new_thread</b>(<i>target, args, kwargs = {}</i>)
+<b>_debugclient_start_new_thread</b>(<i>target, args, kwargs={}</i>)
 <p>
     Module function used to allow for debugging of multiple threads.
 </p><p>
-    The way it works is that below, we reset _thread._start_new_thread to 
+    The way it works is that below, we reset _thread._start_new_thread to
     this function object. Thus, providing a hook for us to see when
-    threads are started. From here we forward the request onto the 
+    threads are started. From here we forward the request onto the
     DebugClient which will create a DebugThread object to allow tracing
     of the thread then start up the thread. These actions are always
     performed in order to allow dropping into debug mode.
 </p><p>
-    See DebugClientThreads.attachThread and DebugThread.DebugThread in 
+    See DebugClientThreads.attachThread and DebugThread.DebugThread in
     DebugThread.py
 </p><dl>
 <dt><i>target</i></dt>

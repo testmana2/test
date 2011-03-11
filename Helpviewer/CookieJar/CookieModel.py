@@ -10,11 +10,12 @@ Module implementing the cookie model.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+
 class CookieModel(QAbstractTableModel):
     """
     Class implementing the cookie model.
     """
-    def __init__(self, cookieJar, parent = None):
+    def __init__(self, cookieJar, parent=None):
         """
         Constructor
         
@@ -24,12 +25,12 @@ class CookieModel(QAbstractTableModel):
         QAbstractTableModel.__init__(self, parent)
         
         self.__headers = [
-            self.trUtf8("Website"), 
-            self.trUtf8("Name"), 
-            self.trUtf8("Path"), 
-            self.trUtf8("Secure"), 
-            self.trUtf8("Expires"), 
-            self.trUtf8("Contents"), 
+            self.trUtf8("Website"),
+            self.trUtf8("Name"),
+            self.trUtf8("Path"),
+            self.trUtf8("Secure"),
+            self.trUtf8("Expires"),
+            self.trUtf8("Contents"),
         ]
         self.__cookieJar = cookieJar
         self.__cookieJar.cookiesChanged.connect(self.__cookiesChanged)
@@ -96,7 +97,7 @@ class CookieModel(QAbstractTableModel):
         
         return None
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns of the model.
         
@@ -108,7 +109,7 @@ class CookieModel(QAbstractTableModel):
         else:
             return len(self.__headers)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows of the model.
         
@@ -120,7 +121,7 @@ class CookieModel(QAbstractTableModel):
         else:
             return len(self.__cookieJar.cookies())
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         

@@ -22,7 +22,8 @@ ReadOnly = QFileDialog.ReadOnly
 HideNameFilterDetails = QFileDialog.HideNameFilterDetails
 DontUseSheet = QFileDialog.DontUseSheet
 
-def __reorderFilter(filter, initialFilter = ""):
+
+def __reorderFilter(filter, initialFilter=""):
     """
     Private function to reorder the file filter to cope with a KDE issue
     introduced by distributor's usage of KDE file dialogs.
@@ -40,8 +41,9 @@ def __reorderFilter(filter, initialFilter = ""):
     else:
         return filter
 
-def getOpenFileName(parent = None, caption = "", directory = "",
-                    filter = "", options = QFileDialog.Options()):
+
+def getOpenFileName(parent=None, caption="", directory="",
+                    filter="", options=QFileDialog.Options()):
     """
     Module function to get the name of a file for opening it.
     
@@ -54,12 +56,13 @@ def getOpenFileName(parent = None, caption = "", directory = "",
     """
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
-    return QFileDialog.getOpenFileName(parent, caption, directory, 
+    return QFileDialog.getOpenFileName(parent, caption, directory,
                                        filter, options)
 
-def getOpenFileNameAndFilter(parent = None, caption = "", directory = "",
-                             filter = "", initialFilter = "", 
-                             options = QFileDialog.Options()):
+
+def getOpenFileNameAndFilter(parent=None, caption="", directory="",
+                             filter="", initialFilter="",
+                             options=QFileDialog.Options()):
     """
     Module function to get the name of a file for opening it and the selected
     file name filter.
@@ -75,12 +78,13 @@ def getOpenFileNameAndFilter(parent = None, caption = "", directory = "",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getOpenFileNameAndFilter(parent, caption, directory, 
-                                                newfilter, initialFilter, 
+    return QFileDialog.getOpenFileNameAndFilter(parent, caption, directory,
+                                                newfilter, initialFilter,
                                                 options)
 
-def getOpenFileNames(parent = None, caption = "", directory = "",
-                     filter = "", options = QFileDialog.Options()):
+
+def getOpenFileNames(parent=None, caption="", directory="",
+                     filter="", options=QFileDialog.Options()):
     """
     Module function to get a list of names of files for opening.
     
@@ -93,12 +97,13 @@ def getOpenFileNames(parent = None, caption = "", directory = "",
     """
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
-    return QFileDialog.getOpenFileNames(parent, caption, directory, 
+    return QFileDialog.getOpenFileNames(parent, caption, directory,
                                         filter, options)
 
-def getOpenFileNamesAndFilter(parent = None, caption = "", directory = "",
-                              filter = "", initialFilter = "", 
-                              options = QFileDialog.Options()):
+
+def getOpenFileNamesAndFilter(parent=None, caption="", directory="",
+                              filter="", initialFilter="",
+                              options=QFileDialog.Options()):
     """
     Module function to get a list of names of files for opening and the
     selected file name filter.
@@ -109,18 +114,19 @@ def getOpenFileNamesAndFilter(parent = None, caption = "", directory = "",
     @param filter filter string for the dialog (string)
     @param initialFilter initial filter for the dialog (string)
     @param options various options for the dialog (QFileDialog.Options)
-    @return list of file names to be opened and selected filter 
+    @return list of file names to be opened and selected filter
         (list of string, string)
     """
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getOpenFileNamesAndFilter(parent, caption, directory, 
+    return QFileDialog.getOpenFileNamesAndFilter(parent, caption, directory,
                                                 newfilter, initialFilter,
                                                 options)
 
-def getSaveFileName(parent = None, caption = "", directory = "",
-                    filter = "", options = QFileDialog.Options()):
+
+def getSaveFileName(parent=None, caption="", directory="",
+                    filter="", options=QFileDialog.Options()):
     """
     Module function to get the name of a file for saving it.
     
@@ -133,12 +139,13 @@ def getSaveFileName(parent = None, caption = "", directory = "",
     """
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
-    return QFileDialog.getSaveFileName(parent, caption, directory, 
+    return QFileDialog.getSaveFileName(parent, caption, directory,
                                        filter, options)
 
-def getSaveFileNameAndFilter(parent = None, caption = "", directory = "",
-                             filter = "", initialFilter = "", 
-                             options = QFileDialog.Options()):
+
+def getSaveFileNameAndFilter(parent=None, caption="", directory="",
+                             filter="", initialFilter="",
+                             options=QFileDialog.Options()):
     """
     Module function to get the name of a file for saving it and the selected
     file name filter.
@@ -154,12 +161,13 @@ def getSaveFileNameAndFilter(parent = None, caption = "", directory = "",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getSaveFileNameAndFilter(parent, caption, directory, 
+    return QFileDialog.getSaveFileNameAndFilter(parent, caption, directory,
                                                 newfilter, initialFilter,
                                                 options)
 
-def getExistingDirectory(parent = None, caption = "", 
-                         directory = "", options = QFileDialog.ShowDirsOnly):
+
+def getExistingDirectory(parent=None, caption="",
+                         directory="", options=QFileDialog.ShowDirsOnly):
     """
     Module function to get the name of a directory.
     
@@ -171,5 +179,5 @@ def getExistingDirectory(parent = None, caption = "",
     """
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
-    return QFileDialog.getExistingDirectory(parent, caption, directory, 
+    return QFileDialog.getExistingDirectory(parent, caption, directory,
                                             options)

@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .E5ModelMenu import E5ModelMenu
 
+
 class E5ModelToolBar(QToolBar):
     """
     Class implementing a tool bar populated from a QAbstractItemModel.
@@ -20,7 +21,7 @@ class E5ModelToolBar(QToolBar):
     """
     activated = pyqtSignal(QModelIndex)
     
-    def __init__(self, title = None, parent = None):
+    def __init__(self, title=None, parent=None):
         """
         Constructor
         
@@ -206,7 +207,7 @@ class E5ModelToolBar(QToolBar):
             self.__dropRow = row
             self.__dropIndex = parentIndex
             evt.acceptProposedAction()
-            self.__model.dropMimeData(evt.mimeData(), evt.dropAction(), 
+            self.__model.dropMimeData(evt.mimeData(), evt.dropAction(),
                                       row, 0, parentIndex)
         
         QToolBar.dropEvent(self, evt)

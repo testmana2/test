@@ -15,57 +15,58 @@ from PyQt4.QtGui import QMessageBox, QApplication
 ################################################################################
 
 # QMessageBox.Icon
-Critical    = QMessageBox.Critical
+Critical = QMessageBox.Critical
 Information = QMessageBox.Information
-Question    = QMessageBox.Question
-Warning     = QMessageBox.Warning
+Question = QMessageBox.Question
+Warning = QMessageBox.Warning
 
 StandardButtons = QMessageBox.StandardButtons
 
 # QMessageBox.StandardButton
-Abort           = QMessageBox.Abort
-Apply           = QMessageBox.Apply
-Cancel          = QMessageBox.Cancel
-Close           = QMessageBox.Close
-Discard         = QMessageBox.Discard
-Help            = QMessageBox.Help
-Ignore          = QMessageBox.Ignore
-No              = QMessageBox.No
-NoToAll         = QMessageBox.NoToAll
-Ok              = QMessageBox.Ok
-Open            = QMessageBox.Open
-Reset           = QMessageBox.Reset
+Abort = QMessageBox.Abort
+Apply = QMessageBox.Apply
+Cancel = QMessageBox.Cancel
+Close = QMessageBox.Close
+Discard = QMessageBox.Discard
+Help = QMessageBox.Help
+Ignore = QMessageBox.Ignore
+No = QMessageBox.No
+NoToAll = QMessageBox.NoToAll
+Ok = QMessageBox.Ok
+Open = QMessageBox.Open
+Reset = QMessageBox.Reset
 RestoreDefaults = QMessageBox.RestoreDefaults
-Retry           = QMessageBox.Retry
-Save            = QMessageBox.Save
-SaveAll         = QMessageBox.SaveAll
-Yes             = QMessageBox.Yes
-YesToAll        = QMessageBox.YesToAll
-NoButton        = QMessageBox.NoButton
+Retry = QMessageBox.Retry
+Save = QMessageBox.Save
+SaveAll = QMessageBox.SaveAll
+Yes = QMessageBox.Yes
+YesToAll = QMessageBox.YesToAll
+NoButton = QMessageBox.NoButton
 
 # QMessageBox.ButtonRole
-AcceptRole      = QMessageBox.AcceptRole
-ActionRole      = QMessageBox.ActionRole
-ApplyRole       = QMessageBox.ApplyRole
+AcceptRole = QMessageBox.AcceptRole
+ActionRole = QMessageBox.ActionRole
+ApplyRole = QMessageBox.ApplyRole
 DestructiveRole = QMessageBox.DestructiveRole
-InvalidRole     = QMessageBox.InvalidRole
-HelpRole        = QMessageBox.HelpRole
-NoRole          = QMessageBox.NoRole
-RejectRole      = QMessageBox.RejectRole
-ResetRole       = QMessageBox.ResetRole
-YesRole         = QMessageBox.YesRole
+InvalidRole = QMessageBox.InvalidRole
+HelpRole = QMessageBox.HelpRole
+NoRole = QMessageBox.NoRole
+RejectRole = QMessageBox.RejectRole
+ResetRole = QMessageBox.ResetRole
+YesRole = QMessageBox.YesRole
 
 ################################################################################
 ##  Replacement for the QMessageBox class                                     ##
 ################################################################################
 
+
 class E5MessageBox(QMessageBox):
     """
     Class implementing a replacement for QMessageBox.
     """
-    def __init__(self, icon, title, text, modal = False, 
-                 buttons = QMessageBox.StandardButtons(QMessageBox.NoButton), 
-                 parent = None):
+    def __init__(self, icon, title, text, modal=False,
+                 buttons=QMessageBox.StandardButtons(QMessageBox.NoButton),
+                 parent=None):
         """
         Constructor
         
@@ -98,8 +99,9 @@ class E5MessageBox(QMessageBox):
 ##  Replacements for QMessageBox static methods                               ##
 ################################################################################
 
-def __messageBox(parent, title, text, icon, 
-                 buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
+
+def __messageBox(parent, title, text, icon,
+                 buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
     """
     Private module function to show a modal message box.
     
@@ -107,7 +109,7 @@ def __messageBox(parent, title, text, icon,
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
     @param icon type of icon to be shown (QMessageBox.Icon)
-    @param buttons flags indicating which buttons to show 
+    @param buttons flags indicating which buttons to show
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
@@ -137,79 +139,84 @@ def __messageBox(parent, title, text, icon,
 about = QMessageBox.about
 aboutQt = QMessageBox.aboutQt
 
-def critical(parent, title, text, 
-             buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
+
+def critical(parent, title, text,
+             buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
     """
     Function to show a modal critical message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @param buttons flags indicating which buttons to show 
+    @param buttons flags indicating which buttons to show
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
     @return button pressed by the user (QMessageBox.StandardButton)
     """
-    return __messageBox(parent, title, text, QMessageBox.Critical, 
+    return __messageBox(parent, title, text, QMessageBox.Critical,
                         buttons, defaultButton)
 
-def information(parent, title, text, 
-                buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
+
+def information(parent, title, text,
+                buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
     """
     Function to show a modal information message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @param buttons flags indicating which buttons to show 
+    @param buttons flags indicating which buttons to show
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
     @return button pressed by the user (QMessageBox.StandardButton)
     """
-    return __messageBox(parent, title, text, QMessageBox.Information, 
+    return __messageBox(parent, title, text, QMessageBox.Information,
                         buttons, defaultButton)
 
-def question(parent, title, text, 
-             buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
+
+def question(parent, title, text,
+             buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
     """
     Function to show a modal question message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @param buttons flags indicating which buttons to show 
+    @param buttons flags indicating which buttons to show
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
     @return button pressed by the user (QMessageBox.StandardButton)
     """
-    return __messageBox(parent, title, text, QMessageBox.Question, 
+    return __messageBox(parent, title, text, QMessageBox.Question,
                         buttons, defaultButton)
 
-def warning(parent, title, text, 
-            buttons = QMessageBox.Ok, defaultButton = QMessageBox.NoButton):
+
+def warning(parent, title, text,
+            buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
     """
     Function to show a modal warning message box.
     
     @param parent parent widget of the message box (QWidget)
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
-    @param buttons flags indicating which buttons to show 
+    @param buttons flags indicating which buttons to show
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
     @return button pressed by the user (QMessageBox.StandardButton)
     """
-    return __messageBox(parent, title, text, QMessageBox.Warning, 
+    return __messageBox(parent, title, text, QMessageBox.Warning,
                         buttons, defaultButton)
 
 ################################################################################
 ##  Additional convenience functions                                          ##
 ################################################################################
 
-def yesNo(parent, title, text, icon = Question, yesDefault = False):
+
+def yesNo(parent, title, text, icon=Question, yesDefault=False):
     """
     Function to show a model yes/no message box.
     
@@ -223,12 +230,13 @@ def yesNo(parent, title, text, icon = Question, yesDefault = False):
     """
     assert icon in [Critical, Information, Question, Warning]
     
-    res = __messageBox(parent, title, text, icon, 
-                       QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No), 
+    res = __messageBox(parent, title, text, icon,
+                       QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No),
                        yesDefault and QMessageBox.Yes or QMessageBox.No)
     return res == QMessageBox.Yes
 
-def retryAbort(parent, title, text, icon = Question):
+
+def retryAbort(parent, title, text, icon=Question):
     """
     Function to show a model abort/retry message box.
     
@@ -240,10 +248,11 @@ def retryAbort(parent, title, text, icon = Question):
     """
     assert icon in [Critical, Information, Question, Warning]
     
-    res = __messageBox(parent, title, text, icon, 
-                    QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort), 
+    res = __messageBox(parent, title, text, icon,
+                    QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort),
                     QMessageBox.Retry)
     return res == QMessageBox.Retry
+
 
 def okToClearData(parent, title, text, saveFunc):
     """
@@ -256,9 +265,9 @@ def okToClearData(parent, title, text, saveFunc):
         must be a parameterless function returning a flag indicating success.
     @return flag indicating that it is ok to clear the data (boolean)
     """
-    res = __messageBox(parent, title, text, QMessageBox.Warning, 
+    res = __messageBox(parent, title, text, QMessageBox.Warning,
         QMessageBox.StandardButtons(
-            QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save), 
+            QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save),
         QMessageBox.Save)
     if res == QMessageBox.Abort:
         return False

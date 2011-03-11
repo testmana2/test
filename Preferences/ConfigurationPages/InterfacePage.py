@@ -24,6 +24,7 @@ import Utilities
 
 from eric5config import getConfig
 
+
 class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
     """
     Class implementing the Interface configuration page.
@@ -113,7 +114,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
                 Preferences.getUI("SingleCloseButton"))
         
         self.uiColours["LogStdErrColour"] = \
-            self.initColour("LogStdErrColour", self.stderrTextColourButton, 
+            self.initColour("LogStdErrColour", self.stderrTextColourButton,
                 Preferences.getUI)
         
     def save(self):
@@ -130,14 +131,14 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.uiBrowsersListFoldersFirstCheckBox.isChecked())
         Preferences.setUI("BrowsersHideNonPublic",
             self.uiBrowsersHideNonPublicCheckBox.isChecked())
-        Preferences.setUI("BrowsersListContentsByOccurrence", 
+        Preferences.setUI("BrowsersListContentsByOccurrence",
             self.uiBrowsersSortByOccurrenceCheckBox.isChecked())
-        Preferences.setUI("BrowsersListHiddenFiles", 
+        Preferences.setUI("BrowsersListHiddenFiles",
             self.uiBrowsersShowHiddenCheckBox.isChecked())
         Preferences.setUI("BrowsersFileFilters",
             self.fileFiltersEdit.text())
         
-        Preferences.setUI("LogViewerAutoRaise", 
+        Preferences.setUI("LogViewerAutoRaise",
             self.lvAutoRaiseCheckBox.isChecked())
         Preferences.setUI("CaptionShowsFilename",
             self.uiCaptionShowsFilenameGroupBox.isChecked())
@@ -147,13 +148,13 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.styleSheetEdit.text())
         
         # save the dockarea corner settings
-        Preferences.setUI("TopLeftByLeft", 
+        Preferences.setUI("TopLeftByLeft",
             self.tlLeftButton.isChecked())
-        Preferences.setUI("BottomLeftByLeft", 
+        Preferences.setUI("BottomLeftByLeft",
             self.blLeftButton.isChecked())
-        Preferences.setUI("TopRightByRight", 
+        Preferences.setUI("TopRightByRight",
             self.trRightButton.isChecked())
-        Preferences.setUI("BottomRightByRight", 
+        Preferences.setUI("BottomRightByRight",
             self.brRightButton.isChecked())
         
         # save the language settings
@@ -189,7 +190,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         layout = (layout1, layout2, layout3)
         Preferences.setUILayout(layout)
         
-        Preferences.setUI("SingleCloseButton", 
+        Preferences.setUI("SingleCloseButton",
             self.tabsCloseButtonCheckBox.isChecked())
         
         for key in list(self.uiColours.keys()):
@@ -211,7 +212,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         
     def __populateLanguageCombo(self):
         """
-        Private method to initialize the language combobox of the Interface 
+        Private method to initialize the language combobox of the Interface
         configuration page.
         """
         self.languageComboBox.clear()
@@ -226,7 +227,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
                 translator = QTranslator()
                 translator.load(fn)
                 locales[locale] = \
-                    translator.translate("InterfacePage", "English", 
+                    translator.translate("InterfacePage", "English",
                                          "Translate this with your language") + \
                     " ({0})".format(locale)
         localeList = sorted(list(locales.keys()))
@@ -276,9 +277,10 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         Private slot to set the foreground colour of the caret.
         """
         self.uiColours["LogStdErrColour"] = \
-            self.selectColour(self.stderrTextColourButton, 
+            self.selectColour(self.stderrTextColourButton,
                 self.uiColours["LogStdErrColour"])
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

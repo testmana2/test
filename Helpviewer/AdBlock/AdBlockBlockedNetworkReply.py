@@ -10,11 +10,12 @@ Module implementing a QNetworkReply subclass reporting a blocked request.
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkReply, QNetworkAccessManager
 
+
 class AdBlockBlockedNetworkReply(QNetworkReply):
     """
     Class implementing a QNetworkReply subclass reporting a blocked request.
     """
-    def __init__(self, request, rule, parent = None):
+    def __init__(self, request, rule, parent=None):
         """
         Constructor
         
@@ -26,7 +27,7 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         self.setOperation(QNetworkAccessManager.GetOperation)
         self.setRequest(request)
         self.setUrl(request.url())
-        self.setError(QNetworkReply.ContentAccessDenied, 
+        self.setError(QNetworkReply.ContentAccessDenied,
                       self.trUtf8("Blocked by AdBlock rule: {0}.").format(rule.filter()))
         QTimer.singleShot(0, self.__fireSignals)
     

@@ -16,6 +16,7 @@ from . import Lexers
 import Preferences
 import Utilities
 
+
 class APIs(QObject):
     """
     Class implementing an API storage entity.
@@ -28,7 +29,7 @@ class APIs(QObject):
     apiPreparationCancelled = pyqtSignal()
     apiPreparationStarted = pyqtSignal()
     
-    def __init__(self, language, forPreparation = False, parent = None):
+    def __init__(self, language, forPreparation=False, parent=None):
         """
         Constructor
         
@@ -67,7 +68,7 @@ class APIs(QObject):
         else:
             # load the raw files and prepare the API file
             if not self.__forPreparation and Preferences.getEditor("AutoPrepareAPIs"):
-                self.prepareAPIs(ondemand = True)
+                self.prepareAPIs(ondemand=True)
     
     def reloadAPIs(self):
         """
@@ -109,7 +110,7 @@ class APIs(QObject):
         self.__inPreparation = True
         self.apiPreparationStarted.emit()
     
-    def prepareAPIs(self, ondemand = False, rawList = None):
+    def prepareAPIs(self, ondemand=False, rawList=None):
         """
         Public method to prepare the APIs if necessary.
         
@@ -171,7 +172,7 @@ class APIs(QObject):
                     # it's the installer
                     apidir = os.path.join(qsciPath, "api", self.__lexer.lexer())
                     fnames = []
-                    filist = QDir(apidir).entryInfoList(["*.api"], QDir.Files, 
+                    filist = QDir(apidir).entryInfoList(["*.api"], QDir.Files,
                                                         QDir.IgnoreCase)
                     for fi in filist:
                         fnames.append(fi.absoluteFilePath())
@@ -192,12 +193,13 @@ class APIs(QObject):
         else:
             return ""
     
+
 class APIsManager(QObject):
     """
     Class implementing the APIsManager class, which is the central store for
     API information used by autocompletion and calltips.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -215,11 +217,11 @@ class APIsManager(QObject):
         for api in list(self.__apis.values()):
             api and api.reloadAPIs()
     
-    def getAPIs(self, language, forPreparation = False):
+    def getAPIs(self, language, forPreparation=False):
         """
         Public method to get an apis object for autocompletion/calltips.
         
-        This method creates and loads an APIs object dynamically upon request. 
+        This method creates and loads an APIs object dynamically upon request.
         This saves memory for languages, that might not be needed at the moment.
         
         @param language the language of the requested api object (string)
@@ -228,7 +230,7 @@ class APIsManager(QObject):
         @return the apis object (APIs)
         """
         if forPreparation:
-            return APIs(language, forPreparation = forPreparation)
+            return APIs(language, forPreparation=forPreparation)
         else:
             try:
                 return self.__apis[language]

@@ -28,18 +28,19 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+
 class UrlBar(E5LineEdit):
     """
     Class implementing a line edit for entering URLs.
     """
-    def __init__(self, mainWindow, parent = None):
+    def __init__(self, mainWindow, parent=None):
         """
         Constructor
         
         @param mainWindow reference to the main window (HelpWindow)
         @param parent reference to the parent widget (HelpBrowser)
         """
-        E5LineEdit.__init__(self, parent) 
+        E5LineEdit.__init__(self, parent)
         self.setInactiveText(self.trUtf8("Enter the location here."))
         
         self.__mw = mainWindow
@@ -114,7 +115,7 @@ class UrlBar(E5LineEdit):
         
         @param url new URL of the browser (QUrl)
         """
-        self.setText(str(url.toEncoded(), encoding = "utf-8"))
+        self.setText(str(url.toEncoded(), encoding="utf-8"))
         self.setCursorPosition(0)
     
     def __loadStarted(self):
@@ -242,7 +243,7 @@ class UrlBar(E5LineEdit):
                 b = (highlight.blue() + 2 * backgroundColor.blue()) // 3
                 
                 loadingColor = QColor(r, g, b)
-                if abs(loadingColor.lightness() - backgroundColor.lightness()) < 20:    
+                if abs(loadingColor.lightness() - backgroundColor.lightness()) < 20:
                     # special handling for special color schemes (e.g Gaia)
                     r = (2 * highlight.red() + backgroundColor.red()) // 3
                     g = (2 * highlight.green() + backgroundColor.green()) // 3
@@ -287,7 +288,7 @@ class UrlBar(E5LineEdit):
         @param evt reference to the key press event (QKeyEvent)
         """
         if evt.key() == Qt.Key_Escape and self.__browser is not None:
-            self.setText(str(self.__browser.url().toEncoded(), encoding = "utf-8"))
+            self.setText(str(self.__browser.url().toEncoded(), encoding="utf-8"))
             self.selectAll()
             return
         
@@ -343,7 +344,7 @@ class UrlBar(E5LineEdit):
             E5LineEdit.dropEvent(self, evt)
             return
         
-        self.setText(str(url.toEncoded(), encoding = "utf-8"))
+        self.setText(str(url.toEncoded(), encoding="utf-8"))
         self.selectAll()
         
         evt.acceptProposedAction()

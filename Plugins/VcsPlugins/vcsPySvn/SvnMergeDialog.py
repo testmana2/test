@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .Ui_SvnMergeDialog import Ui_SvnMergeDialog
 
+
 class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
     """
     Class implementing a dialog to enter the data for a merge operation.
     """
-    def __init__(self, mergelist1, mergelist2, targetlist, force = False, parent = None):
+    def __init__(self, mergelist1, mergelist2, targetlist, force=False, parent=None):
         """
         Constructor
         
@@ -79,7 +80,7 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         @return tuple naming two tag names or two revisions, a target and
             a flag indicating a forced merge (string, string, string, boolean)
         """
-        return (self.tag1Combo.currentText(), 
+        return (self.tag1Combo.currentText(),
                 self.tag2Combo.currentText(),
                 self.targetCombo.currentText(),
                 self.forceCheckBox.isChecked())

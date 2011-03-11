@@ -16,7 +16,7 @@ class TemplateSingleVariableDialog(QDialog, Ui_TemplateSingleVariableDialog):
     """
     Class implementing a dialog for entering a single template variable.
     """
-    def __init__(self, variable, parent = None):
+    def __init__(self, variable, parent=None):
         """
         Constructor
         

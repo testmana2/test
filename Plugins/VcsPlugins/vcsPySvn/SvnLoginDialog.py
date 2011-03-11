@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_SvnLoginDialog import Ui_SvnLoginDialog
 
+
 class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
     """
     Class implementing the login dialog for pysvn.
     """
-    def __init__(self, realm, username, may_save, parent = None):
+    def __init__(self, realm, username, may_save, parent=None):
         """
         Constructor
         

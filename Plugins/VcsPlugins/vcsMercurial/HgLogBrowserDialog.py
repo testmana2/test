@@ -30,19 +30,20 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
               "darkcyan", "gray", "yellow"]
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
+
 class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    IconColumn     = 0
-    BranchColumn   = 1
+    IconColumn = 0
+    BranchColumn = 1
     RevisionColumn = 2
-    AuthorColumn   = 3
-    DateColumn     = 4
-    MessageColumn  = 5
-    TagsColumn     = 6
+    AuthorColumn = 3
+    DateColumn = 4
+    MessageColumn = 5
+    TagsColumn = 6
     
-    def __init__(self, vcs, mode = "log", bundle = None, parent = None):
+    def __init__(self, vcs, mode="log", bundle=None, parent=None):
         """
         Constructor
         
@@ -96,7 +97,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
-        self.__edgesRole   = Qt.UserRole + 2
+        self.__edgesRole = Qt.UserRole + 2
         self.__parentsRole = Qt.UserRole + 3
         
         self.process = QProcess()
@@ -105,9 +106,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.flags = {
-            'A' : self.trUtf8('Added'),
-            'D' : self.trUtf8('Deleted'),
-            'M' : self.trUtf8('Modified'), 
+            'A': self.trUtf8('Added'),
+            'D': self.trUtf8('Deleted'),
+            'M': self.trUtf8('Modified'),
         }
         
         self.buf = []        # buffer for stdout
@@ -165,9 +166,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private method to resort the changed files tree.
         """
         sortColumn = self.filesTree.sortColumn()
-        self.filesTree.sortItems(1, 
+        self.filesTree.sortItems(1,
             self.filesTree.header().sortIndicatorOrder())
-        self.filesTree.sortItems(sortColumn, 
+        self.filesTree.sortItems(sortColumn,
             self.filesTree.header().sortIndicatorOrder())
     
     def __getColor(self, n):
@@ -199,7 +200,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param parents list of parent revisions (list of integers)
         @return tuple containing the column and color index for
             the given node and a list of tuples indicating the edges
-            between the given node and its parents 
+            between the given node and its parents
             (integer, integer, [(integer, integer, integer), ...])
         """
         if rev not in self.__revs:
@@ -247,9 +248,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         @param column column index of the revision (integer)
         @param color color of the node (integer)
-        @param bottomedges list of edges for the bottom of the node 
+        @param bottomedges list of edges for the bottom of the node
             (list of tuples of three integers)
-        @param topedges list of edges for the top of the node 
+        @param topedges list of edges for the top of the node
             (list of tuples of three integers)
         @param dotColor color to be used for the dot (QColor)
         @param currentRev flag indicating to draw the icon for the
@@ -322,9 +323,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         elif self.commandMode in ("incoming", "outgoing"):
             offset = radius // 2
             painter.drawConvexPolygon(
-                QPoint(dot_x + offset, dot_y), 
-                QPoint(dot_x, dot_y + offset), 
-                QPoint(dot_x + offset, dot_y + 2 * offset), 
+                QPoint(dot_x + offset, dot_y),
+                QPoint(dot_x, dot_y + offset),
+                QPoint(dot_x + offset, dot_y + 2 * offset),
                 QPoint(dot_x + 2 * offset, dot_y + offset)
             )
         else:
@@ -367,8 +368,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
                 output = \
-                    str(process.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                    str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 parents = [int(p) for p in output.strip().splitlines()]
             else:
@@ -403,8 +404,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
                 output = \
-                    str(process.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                    str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 self.__projectRevision = output.strip()
                 if self.__projectRevision.endswith("+"):
@@ -440,8 +441,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
                 output = \
-                    str(process.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                    str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 for line in output.splitlines():
                     if line.strip().endswith("(closed)"):
@@ -489,16 +490,16 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if len(msgtxt) > 30:
             msgtxt = "{0}...".format(msgtxt[:30])
         itm = QTreeWidgetItem(self.logTree, [
-            "", 
-            branches[0] + closedStr, 
-            "{0:>7}:{1}".format(rev, node), 
-            author, 
-            date, 
-            msgtxt, 
-            ", ".join(tags), 
+            "",
+            branches[0] + closedStr,
+            "{0:>7}:{1}".format(rev, node),
+            author,
+            date,
+            msgtxt,
+            ", ".join(tags),
         ])
         
-        itm.setForeground(self.BranchColumn, 
+        itm.setForeground(self.BranchColumn,
                           QBrush(QColor(self.__branchColor(branches[0]))))
         
         if not self.projectMode:
@@ -520,9 +521,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         else:
             topedges = None
         
-        icon = self.__generateIcon(column, color, edges, topedges, 
-                                   QColor(self.__branchColor(branches[0])), 
-                                   rev == self.__projectRevision, 
+        icon = self.__generateIcon(column, color, edges, topedges,
+                                   QColor(self.__branchColor(branches[0])),
+                                   rev == self.__projectRevision,
                                    rev in self.__closedBranchesRevs)
         itm.setIcon(0, icon)
         
@@ -543,14 +544,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @return reference to the generated item (QTreeWidgetItem)
         """
         itm = QTreeWidgetItem(self.filesTree, [
-            self.flags[action], 
-            path, 
-            copyfrom, 
+            self.flags[action],
+            path,
+            copyfrom,
         ])
         
         return itm
     
-    def __getLogEntries(self, startRev = None):
+    def __getLogEntries(self, startRev=None):
         """
         Private method to retrieve log entries from the repository.
         
@@ -594,7 +595,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.commandMode == "log":
             args.append('--copies')
         args.append('--style')
-        args.append(os.path.join(os.path.dirname(__file__), 
+        args.append(os.path.join(os.path.dirname(__file__),
                                  "styles", "logBrowser.style"))
         if self.commandMode == "incoming":
             if self.bundle:
@@ -686,7 +687,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private method to process the buffered output of the hg log command.
         """
         noEntries = 0
-        log = {"message" : []}
+        log = {"message": []}
         changedPaths = []
         initialText = True
         fileCopies = {}
@@ -704,7 +705,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     log["author"] = value.strip()
                 elif key == "parents":
                     log["parents"] = \
-                        [int(x.split(":", 1)[0]) 
+                        [int(x.split(":", 1)[0])
                          for x in value.strip().split()]
                 elif key == "date":
                     log["date"] = " ".join(value.strip().split()[:2])
@@ -715,31 +716,31 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         for f in value.strip().split(", "):
                             if f in fileCopies:
                                 changedPaths.append({
-                                    "action"   : "A", 
-                                    "path"     : f, 
-                                    "copyfrom" : fileCopies[f], 
+                                    "action": "A",
+                                    "path": f,
+                                    "copyfrom": fileCopies[f],
                                 })
                             else:
                                 changedPaths.append({
-                                    "action"   : "A", 
-                                    "path"     : f, 
-                                    "copyfrom" : "", 
+                                    "action": "A",
+                                    "path": f,
+                                    "copyfrom": "",
                                 })
                 elif key == "files_mods":
                     if value.strip():
                         for f in value.strip().split(", "):
                             changedPaths.append({
-                                "action"   : "M", 
-                                "path"     : f, 
-                                "copyfrom" : "", 
+                                "action": "M",
+                                "path": f,
+                                "copyfrom": "",
                             })
                 elif key == "file_dels":
                     if value.strip():
                         for f in value.strip().split(", "):
                             changedPaths.append({
-                                "action"   : "D", 
-                                "path"     : f, 
-                                "copyfrom" : "", 
+                                "action": "D",
+                                "path": f,
+                                "copyfrom": "",
                             })
                 elif key == "file_copies":
                     if value.strip():
@@ -760,7 +761,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         log["message"].append(value.strip())
             else:
                 if len(log) > 1:
-                    self.__generateLogItem(log["author"], log["date"], 
+                    self.__generateLogItem(log["author"], log["date"],
                         log["message"], log["revision"], changedPaths,
                         log["parents"], log["branches"], log["tags"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
@@ -774,7 +775,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         if self.__minDate > dt:
                             self.__minDate = dt
                     noEntries += 1
-                    log = {"message" : []}
+                    log = {"message": []}
                     changedPaths = []
                     fileCopies = {}
         
@@ -818,15 +819,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process and inserts it into a buffer.
         """
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             self.buf.append(line)
     
@@ -839,8 +840,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
@@ -1084,7 +1085,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot called, when the stop on copy/move checkbox is clicked
         """
-        self.vcs.getPlugin().setPreferences("StopLogOnCopy", 
+        self.vcs.getPlugin().setPreferences("StopLogOnCopy",
                                             self.stopCheckBox.isChecked())
         self.nextButton.setEnabled(True)
         self.limitSpinBox.setEnabled(True)

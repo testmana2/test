@@ -15,6 +15,7 @@ from .Ui_CooperationPage import Ui_CooperationPage
 
 import Preferences
 
+
 class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
     """
     Class implementing the Cooperation configuration page.
@@ -30,7 +31,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         self.__bannedUserValidator = QRegExpValidator(
             QRegExp("[a-zA-Z0-9.-]+@"
                     "(?:(?:2(?:[0-4][0-9]|5[0-5])|[01]?[0-9]{1,2})\.){3}"
-                    "(?:2(?:[0-4][0-9]|5[0-5])|[01]?[0-9]{1,2})"), 
+                    "(?:2(?:[0-4][0-9]|5[0-5])|[01]?[0-9]{1,2})"),
             self.bannedUserEdit)
         self.bannedUserEdit.setValidator(self.__bannedUserValidator)
         
@@ -53,15 +54,15 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         """
         Public slot to save the Cooperation configuration.
         """
-        Preferences.setCooperation("AutoStartServer", 
+        Preferences.setCooperation("AutoStartServer",
             self.autostartCheckBox.isChecked())
-        Preferences.setCooperation("TryOtherPorts", 
+        Preferences.setCooperation("TryOtherPorts",
             self.otherPortsCheckBox.isChecked())
-        Preferences.setCooperation("AutoAcceptConnections", 
+        Preferences.setCooperation("AutoAcceptConnections",
             self.autoAcceptCheckBox.isChecked())
-        Preferences.setCooperation("ServerPort", 
+        Preferences.setCooperation("ServerPort",
             self.serverPortSpin.value())
-        Preferences.setCooperation("MaxPortsToTry", 
+        Preferences.setCooperation("MaxPortsToTry",
             self.portToTrySpin.value())
         
         bannedUsers = []
@@ -91,7 +92,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
     @pyqtSlot()
     def on_deleteBannedUsersButton_clicked(self):
         """
-        Private slot to remove the selected users from the list of 
+        Private slot to remove the selected users from the list of
         banned users.
         """
         for itm in self.bannedUsersList.selectedItems():
@@ -107,6 +108,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         self.bannedUsersList.addItem(self.bannedUserEdit.text())
         self.bannedUserEdit.clear()
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

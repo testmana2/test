@@ -17,6 +17,7 @@ from .E5NetworkHeaderDetailsDialog import E5NetworkHeaderDetailsDialog
 
 from .Ui_E5NetworkMonitor import Ui_E5NetworkMonitor
 
+
 class E5NetworkRequest(object):
     """
     Class for storing all data related to a specific request.
@@ -34,6 +35,7 @@ class E5NetworkRequest(object):
         self.contentType = ""
         self.info = ""
         self.replyHeaders = []  # list of tuple of two items
+
 
 class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
     """
@@ -63,7 +65,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         if cls._monitor is not None:
             cls._monitor.close()
     
-    def __init__(self, networkAccessManager, parent = None):
+    def __init__(self, networkAccessManager, parent=None):
         """
         Constructor
         
@@ -108,9 +110,9 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         
         fm = self.fontMetrics()
         em = fm.width("m")
-        self.requestsList.horizontalHeader().resizeSection(0, em *  5)
+        self.requestsList.horizontalHeader().resizeSection(0, em * 5)
         self.requestsList.horizontalHeader().resizeSection(1, em * 20)
-        self.requestsList.horizontalHeader().resizeSection(3, em *  5)
+        self.requestsList.horizontalHeader().resizeSection(3, em * 5)
         self.requestsList.horizontalHeader().resizeSection(4, em * 15)
         
         self.__headersDlg = None
@@ -151,10 +153,10 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         for header in req.rawHeaderList():
             self.__requestHeaders.insertRows(0, 1, QModelIndex())
             self.__requestHeaders.setData(
-                self.__requestHeaders.index(0, 0), 
+                self.__requestHeaders.index(0, 0),
                 str(header, "utf-8"))
             self.__requestHeaders.setData(
-                self.__requestHeaders.index(0, 1), 
+                self.__requestHeaders.index(0, 1),
                 str(req.rawHeader(header), "utf-8"))
             self.__requestHeaders.item(0, 0).setFlags(
                 Qt.ItemIsSelectable | Qt.ItemIsEnabled)
@@ -164,10 +166,10 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         for header in self.__model.requests[row].replyHeaders:
             self.__replyHeaders.insertRows(0, 1, QModelIndex())
             self.__replyHeaders.setData(
-                self.__replyHeaders.index(0, 0), 
+                self.__replyHeaders.index(0, 0),
                 header[0])
             self.__replyHeaders.setData(
-                self.__replyHeaders.index(0, 1), 
+                self.__replyHeaders.index(0, 1),
                 header[1])
             self.__replyHeaders.item(0, 0).setFlags(
                 Qt.ItemIsSelectable | Qt.ItemIsEnabled)
@@ -195,11 +197,12 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         self.__headersDlg.setData(name, value)
         self.__headersDlg.show()
 
+
 class E5RequestModel(QAbstractTableModel):
     """
     Class implementing a model storing request objects.
     """
-    def __init__(self, networkAccessManager, parent = None):
+    def __init__(self, networkAccessManager, parent=None):
         """
         Constructor
         
@@ -210,19 +213,19 @@ class E5RequestModel(QAbstractTableModel):
         QAbstractTableModel.__init__(self, parent)
         
         self.__headerData = [
-            self.trUtf8("Method"), 
-            self.trUtf8("Address"), 
-            self.trUtf8("Response"), 
-            self.trUtf8("Length"), 
-            self.trUtf8("Content Type"), 
-            self.trUtf8("Info"), 
+            self.trUtf8("Method"),
+            self.trUtf8("Address"),
+            self.trUtf8("Response"),
+            self.trUtf8("Length"),
+            self.trUtf8("Content Type"),
+            self.trUtf8("Info"),
         ]
         
         self.__operations = {
-            QNetworkAccessManager.HeadOperation : "HEAD", 
-            QNetworkAccessManager.GetOperation  : "GET", 
-            QNetworkAccessManager.PutOperation  : "PUT", 
-            QNetworkAccessManager.PostOperation : "POST", 
+            QNetworkAccessManager.HeadOperation: "HEAD",
+            QNetworkAccessManager.GetOperation: "GET",
+            QNetworkAccessManager.PutOperation: "PUT",
+            QNetworkAccessManager.PostOperation: "POST",
         }
         
         self.requests = []
@@ -288,7 +291,7 @@ class E5RequestModel(QAbstractTableModel):
             self.requests[offset].info = \
                 self.trUtf8("Redirect: {0}").format(target.toString())
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get header data from the model.
         
@@ -302,7 +305,7 @@ class E5RequestModel(QAbstractTableModel):
         
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         

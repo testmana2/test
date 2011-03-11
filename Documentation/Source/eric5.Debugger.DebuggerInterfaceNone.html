@@ -235,7 +235,7 @@ flag indicating success (boolean)
         Public slot to get the banner info of the remote client.
 </p><a NAME="DebuggerInterfaceNone.remoteBreakpoint" ID="DebuggerInterfaceNone.remoteBreakpoint"></a>
 <h4>DebuggerInterfaceNone.remoteBreakpoint</h4>
-<b>remoteBreakpoint</b>(<i>fn, line, set, cond = None, temp = False</i>)
+<b>remoteBreakpoint</b>(<i>fn, line, set, cond=None, temp=False</i>)
 <p>
         Public method to set or clear a breakpoint.
 </p><dl>
@@ -307,7 +307,7 @@ regexp string for variable names to filter out (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteClientVariable" ID="DebuggerInterfaceNone.remoteClientVariable"></a>
 <h4>DebuggerInterfaceNone.remoteClientVariable</h4>
-<b>remoteClientVariable</b>(<i>scope, filter, var, framenr = 0</i>)
+<b>remoteClientVariable</b>(<i>scope, filter, var, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -326,7 +326,7 @@ framenumber of the variables to retrieve (int)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteClientVariables" ID="DebuggerInterfaceNone.remoteClientVariables"></a>
 <h4>DebuggerInterfaceNone.remoteClientVariables</h4>
-<b>remoteClientVariables</b>(<i>scope, filter, framenr = 0</i>)
+<b>remoteClientVariables</b>(<i>scope, filter, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -353,7 +353,7 @@ the text to be completed (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteContinue" ID="DebuggerInterfaceNone.remoteContinue"></a>
 <h4>DebuggerInterfaceNone.remoteContinue</h4>
-<b>remoteContinue</b>(<i>special = False</i>)
+<b>remoteContinue</b>(<i>special=False</i>)
 <p>
         Public method to continue the debugged program.
 </p><dl>
@@ -363,7 +363,7 @@ flag indicating a special continue operation
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteCoverage" ID="DebuggerInterfaceNone.remoteCoverage"></a>
 <h4>DebuggerInterfaceNone.remoteCoverage</h4>
-<b>remoteCoverage</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteCoverage</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect coverage data.
 </p><dl>
@@ -413,7 +413,7 @@ statement to execute (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteLoad" ID="DebuggerInterfaceNone.remoteLoad"></a>
 <h4>DebuggerInterfaceNone.remoteLoad</h4>
-<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter = False, autoContinue = True, autoFork = False, forkChild = False</i>)
+<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter=False, autoContinue=True, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to debug.
 </p><dl>
@@ -443,7 +443,7 @@ flag indicating to debug the child after forking (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteProfile" ID="DebuggerInterfaceNone.remoteProfile"></a>
 <h4>DebuggerInterfaceNone.remoteProfile</h4>
-<b>remoteProfile</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteProfile</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect profiling data.
 </p><dl>
@@ -472,7 +472,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceNone.remoteRun" ID="DebuggerInterfaceNone.remoteRun"></a>
 <h4>DebuggerInterfaceNone.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd, autoFork = False, forkChild = False</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -506,7 +506,7 @@ id of the thread (integer)
 <h4>DebuggerInterfaceNone.remoteStatement</h4>
 <b>remoteStatement</b>(<i>stmt</i>)
 <p>
-        Public method to execute a Python statement.  
+        Public method to execute a Python statement.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -576,7 +576,7 @@ flag indicating erasure of coverage data is requested
         public method to stop a unittest run.
 </p><a NAME="DebuggerInterfaceNone.remoteWatchpoint" ID="DebuggerInterfaceNone.remoteWatchpoint"></a>
 <h4>DebuggerInterfaceNone.remoteWatchpoint</h4>
-<b>remoteWatchpoint</b>(<i>cond, set, temp = False</i>)
+<b>remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
 <p>
         Public method to set or clear a watch expression.
 </p><dl>

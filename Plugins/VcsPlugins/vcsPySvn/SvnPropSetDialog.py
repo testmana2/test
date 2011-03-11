@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
+
 class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
     """
     Class implementing a dialog to enter the data for a new property.
     """
-    def __init__(self, recursive, parent = None):
+    def __init__(self, recursive, parent=None):
         """
         Constructor
         
@@ -32,10 +33,10 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         """
         Public slot used to retrieve the data entered into the dialog.
         
-        @return tuple of three values giving the property name, the text 
-            of the property and a flag indicating, that this property 
+        @return tuple of three values giving the property name, the text
+            of the property and a flag indicating, that this property
             should be applied recursively. (string, string, boolean)
         """
-        return (self.propNameEdit.text(), 
-                self.propTextEdit.toPlainText(), 
+        return (self.propNameEdit.text(),
+                self.propTextEdit.toPlainText(),
                 self.recurseCheckBox.isChecked())

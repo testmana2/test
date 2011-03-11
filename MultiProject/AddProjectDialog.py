@@ -17,11 +17,12 @@ from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
 import Utilities
 
+
 class AddProjectDialog(QDialog, Ui_AddProjectDialog):
     """
     Class implementing the add project dialog.
     """
-    def __init__(self, parent = None, startdir = None, project = None):
+    def __init__(self, parent=None, startdir=None, project=None):
         """
         Constructor
         
@@ -71,13 +72,13 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         Public slot to retrieve the dialogs data.
         
-        @return tuple of four values (string, string, boolean, string) giving the 
+        @return tuple of four values (string, string, boolean, string) giving the
             project name, the name of the project file, a flag telling, whether
             the project shall be the master project and a short description
             for the project
         """
-        return (self.nameEdit.text(), self.filenameEdit.text(), 
-                self.masterCheckBox.isChecked(), 
+        return (self.nameEdit.text(), self.filenameEdit.text(),
+                self.masterCheckBox.isChecked(),
                 self.descriptionEdit.toPlainText())
     
     @pyqtSlot(str)

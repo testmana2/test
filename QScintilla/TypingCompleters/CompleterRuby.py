@@ -16,11 +16,12 @@ from .CompleterBase import CompleterBase
 
 import Preferences
 
+
 class CompleterRuby(CompleterBase):
     """
     Class implementing typing completer for Ruby.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -175,7 +176,7 @@ class CompleterRuby(CompleterBase):
         """
         Private method to check, if the cursor is within a double quoted string.
         
-        @return flag indicating, if the cursor is inside a double 
+        @return flag indicating, if the cursor is inside a double
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerRuby.DoubleQuotedString
@@ -184,7 +185,7 @@ class CompleterRuby(CompleterBase):
         """
         Private method to check, if the cursor is within a single quoted string.
         
-        @return flag indicating, if the cursor is inside a single 
+        @return flag indicating, if the cursor is inside a single
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerRuby.SingleQuotedString

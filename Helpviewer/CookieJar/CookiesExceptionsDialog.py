@@ -18,11 +18,12 @@ from .Ui_CookiesExceptionsDialog import Ui_CookiesExceptionsDialog
 
 import UI.PixmapCache
 
+
 class CookiesExceptionsDialog(QDialog, Ui_CookiesExceptionsDialog):
     """
     Class implementing a dialog for the configuration of cookie exceptions.
     """
-    def __init__(self, cookieJar, parent = None):
+    def __init__(self, cookieJar, parent=None):
         """
         Constructor
         

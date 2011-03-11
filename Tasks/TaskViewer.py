@@ -28,13 +28,14 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+
 class Task(QTreeWidgetItem):
     """
     Class implementing the task data structure.
     """
-    def __init__(self, description, priority = 1, filename = "", lineno = 0, 
-                 completed = False, _time = 0, isProjectTask = False, 
-                 isBugfixTask = False, project = None, longtext = ""):
+    def __init__(self, description, priority=1, filename="", lineno=0,
+                 completed=False, _time=0, isProjectTask=False,
+                 isBugfixTask=False, project=None, longtext=""):
         """
         Constructor
         
@@ -54,7 +55,7 @@ class Task(QTreeWidgetItem):
         self.description = description
         self.longtext = longtext
         if priority in [0, 1, 2]:
-            self.priority = priority 
+            self.priority = priority
         else:
             self.priority = 1
         self.filename = filename
@@ -68,7 +69,7 @@ class Task(QTreeWidgetItem):
         if isProjectTask:
             self.filename = self.project.getRelativePath(self.filename)
             
-        QTreeWidgetItem.__init__(self, ["", "", self.description, self.filename, 
+        QTreeWidgetItem.__init__(self, ["", "", self.description, self.filename,
             (self.lineno and "{0:6d}".format(self.lineno) or "")])
         
         if self.completed:
@@ -126,7 +127,7 @@ class Task(QTreeWidgetItem):
         @param priority priority of the task (0=high, 1=normal, 2=low)
         """
         if priority in [0, 1, 2]:
-            self.priority = priority 
+            self.priority = priority
         else:
             self.priority = 1
         
@@ -195,6 +196,7 @@ class Task(QTreeWidgetItem):
         """
         return self._isProjectTask
 
+
 class TaskFilter(object):
     """
     Class implementing a filter for tasks.
@@ -224,7 +226,7 @@ class TaskFilter(object):
         """
         Public method to set the description filter.
         
-        @param filter a regular expression for the description filter 
+        @param filter a regular expression for the description filter
             to set (string) or None
         """
         if not filter:
@@ -236,7 +238,7 @@ class TaskFilter(object):
         """
         Public method to set the filename filter.
         
-        @param filter a wildcard expression for the filename filter 
+        @param filter a wildcard expression for the filename filter
             to set (string) or None
         """
         if not filter:
@@ -326,6 +328,7 @@ class TaskFilter(object):
         
         return True
     
+
 class TaskViewer(QTreeWidget):
     """
     Class implementing the task viewer.
@@ -347,7 +350,7 @@ class TaskViewer(QTreeWidget):
         self.setItemsExpandable(False)
         self.setSortingEnabled(True)
         
-        self.__headerItem = QTreeWidgetItem(["", "", self.trUtf8("Summary"), 
+        self.__headerItem = QTreeWidgetItem(["", "", self.trUtf8("Summary"),
             self.trUtf8("Filename"), self.trUtf8("Line"), ""])
         self.__headerItem.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
         self.__headerItem.setIcon(1, UI.PixmapCache.getIcon("taskPriority.png"))
@@ -384,11 +387,11 @@ class TaskViewer(QTreeWidget):
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("P&roperties..."), self.__editTaskProperties)
         self.__menu.addSeparator()
-        self.__menuFilteredAct = self.__menu.addAction(self.trUtf8("&Filtered display")) 
+        self.__menuFilteredAct = self.__menu.addAction(self.trUtf8("&Filtered display"))
         self.__menuFilteredAct.setCheckable(True)
         self.__menuFilteredAct.setChecked(False)
         self.__menuFilteredAct.triggered[bool].connect(self.__activateFilter)
-        self.__menu.addAction(self.trUtf8("Filter c&onfiguration..."), 
+        self.__menu.addAction(self.trUtf8("Filter c&onfiguration..."),
                               self.__configureFilter)
         self.__menu.addSeparator()
         self.__menu.addAction(self.trUtf8("Resi&ze columns"), self.__resizeColumns)
@@ -402,18 +405,18 @@ class TaskViewer(QTreeWidget):
             self.__backMenu.addAction(self.trUtf8("&Regenerate project tasks"),
                                       self.__regenerateProjectTasks)
         self.__backMenu.addSeparator()
-        self.backPasteItem = self.__backMenu.addAction(self.trUtf8("&Paste"), 
+        self.backPasteItem = self.__backMenu.addAction(self.trUtf8("&Paste"),
                                                        self.__pasteTask)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Delete Completed &Tasks"),
                                   self.__deleteCompleted)
         self.__backMenu.addSeparator()
         self.__backMenuFilteredAct = \
-            self.__backMenu.addAction(self.trUtf8("&Filtered display")) 
+            self.__backMenu.addAction(self.trUtf8("&Filtered display"))
         self.__backMenuFilteredAct.setCheckable(True)
         self.__backMenuFilteredAct.setChecked(False)
         self.__backMenuFilteredAct.triggered[bool].connect(self.__activateFilter)
-        self.__backMenu.addAction(self.trUtf8("Filter c&onfiguration..."), 
+        self.__backMenu.addAction(self.trUtf8("Filter c&onfiguration..."),
                               self.__configureFilter)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(self.trUtf8("Resi&ze columns"), self.__resizeColumns)
@@ -458,7 +461,7 @@ class TaskViewer(QTreeWidget):
         
     def __taskItemActivated(self, itm, col):
         """
-        Private slot to handle the activation of an item. 
+        Private slot to handle the activation of an item.
         
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
@@ -503,7 +506,7 @@ class TaskViewer(QTreeWidget):
             
             self.__menu.popup(coord)
     
-    def setProjectOpen(self, o = False):
+    def setProjectOpen(self, o=False):
         """
         Public slot to set the project status.
         
@@ -511,9 +514,9 @@ class TaskViewer(QTreeWidget):
         """
         self.projectOpen = o
     
-    def addTask(self, description, priority = 1, filename = "", lineno = 0, 
-                completed = False, _time = 0, isProjectTask = False, 
-                isBugfixTask = False, longtext = ""):
+    def addTask(self, description, priority=1, filename="", lineno=0,
+                completed=False, _time=0, isProjectTask=False,
+                isBugfixTask=False, longtext=""):
         """
         Public slot to add a task.
         
@@ -523,13 +526,13 @@ class TaskViewer(QTreeWidget):
         @param lineno line number containing the task (integer)
         @param completed flag indicating completion status (boolean)
         @param _time creation time of the task (float, if 0 use current time)
-        @param isProjectTask flag indicating a task related to the current 
+        @param isProjectTask flag indicating a task related to the current
             project (boolean)
         @param isBugfixTask flag indicating a bugfix task (boolean)
         @param longtext explanatory text of the task (string)
         """
-        task = Task(description, priority, filename, lineno, completed, 
-                   _time, isProjectTask, isBugfixTask, 
+        task = Task(description, priority, filename, lineno, completed,
+                   _time, isProjectTask, isBugfixTask,
                    self.project, longtext)
         self.tasks.append(task)
         if self.taskFilter.showTask(task):
@@ -537,8 +540,8 @@ class TaskViewer(QTreeWidget):
             self.__resort()
             self.__resizeColumns()
     
-    def addFileTask(self, description, filename, lineno, isBugfixTask = False, 
-                    longtext = ""):
+    def addFileTask(self, description, filename, lineno, isBugfixTask=False,
+                    longtext=""):
         """
         Public slot to add a file related task.
         
@@ -548,10 +551,10 @@ class TaskViewer(QTreeWidget):
         @param isBugfixTask flag indicating a bugfix task (boolean)
         @param longtext explanatory text of the task (string)
         """
-        self.addTask(description, filename = filename, lineno = lineno,
-                     isProjectTask = \
-                        self.project and self.project.isProjectSource(filename),
-                     isBugfixTask = isBugfixTask, longtext = longtext)
+        self.addTask(description, filename=filename, lineno=lineno,
+                     isProjectTask=(
+                        self.project and self.project.isProjectSource(filename)),
+                     isBugfixTask=isBugfixTask, longtext=longtext)
         
     def getProjectTasks(self):
         """
@@ -630,8 +633,8 @@ class TaskViewer(QTreeWidget):
         dlg = TaskPropertiesDialog(None, self, self.projectOpen)
         if dlg.exec_() == QDialog.Accepted:
             data = dlg.getData()
-            self.addTask(data[0], data[1], completed =  data[2], isProjectTask = data[3], 
-                longtext = data[4])
+            self.addTask(data[0], data[1], completed=data[2], isProjectTask=data[3],
+                longtext=data[4])
     
     def __markCompleted(self):
         """
@@ -670,10 +673,10 @@ class TaskViewer(QTreeWidget):
         """
         if self.copyTask:
             self.addTask(self.copyTask.description,
-                         priority = self.copyTask.priority,
-                         completed = self.copyTask.completed, 
-                         longtext = self.copyTask.longtext, 
-                         isProjectTask = self.copyTask._isProjectTask)
+                         priority=self.copyTask.priority,
+                         completed=self.copyTask.completed,
+                         longtext=self.copyTask.longtext,
+                         isProjectTask=self.copyTask._isProjectTask)
     
     def __deleteTask(self):
         """
@@ -716,7 +719,7 @@ class TaskViewer(QTreeWidget):
                 self.trUtf8("Activate task filter"),
                 self.trUtf8("""The task filter doesn't have any active filters."""
                             """ Do you want to configure the filter settings?"""),
-                yesDefault = True)
+                yesDefault=True)
             if not res:
                 on = False
             else:
@@ -749,7 +752,7 @@ class TaskViewer(QTreeWidget):
         self.clearProjectTasks()
         
         # now process them
-        progress = QProgressDialog(self.trUtf8("Extracting project tasks..."), 
+        progress = QProgressDialog(self.trUtf8("Extracting project tasks..."),
             self.trUtf8("Abort"), 0, len(files))
         progress.setMinimumDuration(0)
         count = 0

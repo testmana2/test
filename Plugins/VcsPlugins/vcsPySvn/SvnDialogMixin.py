@@ -4,18 +4,19 @@
 #
 
 """
-Module implementing a dialog mixin class providing common callback methods for 
+Module implementing a dialog mixin class providing common callback methods for
 the pysvn client.
 """
 
 from PyQt4.QtGui import QApplication, QDialog, QWidget, QCursor
 
+
 class SvnDialogMixin(object):
     """
-    Class implementing a dialog mixin providing common callback methods for 
+    Class implementing a dialog mixin providing common callback methods for
     the pysvn client.
     """
-    def __init__(self, log = ""):
+    def __init__(self, log=""):
         """
         Constructor
         
@@ -54,8 +55,8 @@ class SvnDialogMixin(object):
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
         @return tuple of four values (retcode, username, password, save).
-            Retcode should be True, if username and password should be used 
-            by subversion, username and password contain the relevant data 
+            Retcode should be True, if username and password should be used
+            by subversion, username and password contain the relevant data
             as strings and save is a flag indicating, that username and
             password should be saved.
         """
@@ -102,16 +103,16 @@ class SvnDialogMixin(object):
                         """<tr><td>Valid until:</td><td>{4}</td></tr>"""
                         """<tr><td>Issuer name:</td><td>{5}</td></tr>"""
                         """</table>""")\
-                .format(trust_dict["realm"], 
-                        trust_dict["hostname"], 
-                        trust_dict["finger_print"], 
-                        trust_dict["valid_from"], 
-                        trust_dict["valid_until"], 
+                .format(trust_dict["realm"],
+                        trust_dict["hostname"],
+                        trust_dict["finger_print"],
+                        trust_dict["valid_from"],
+                        trust_dict["valid_until"],
                         trust_dict["issuer_dname"]),
-            modal = True, parent = parent)
-        permButton = msgBox.addButton(self.trUtf8("&Permanent accept"), 
+            modal=True, parent=parent)
+        permButton = msgBox.addButton(self.trUtf8("&Permanent accept"),
                                       E5MessageBox.AcceptRole)
-        tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"), 
+        tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"),
                                       E5MessageBox.AcceptRole)
         msgBox.addButton(self.trUtf8("&Reject"), E5MessageBox.RejectRole)
         msgBox.exec_()

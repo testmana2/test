@@ -12,6 +12,7 @@ from .Ui_EmailPage import Ui_EmailPage
 
 import Preferences
 
+
 class EmailPage(ConfigurationPageBase, Ui_EmailPage):
     """
     Class implementing the Email configuration page.
@@ -43,7 +44,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         """
         Preferences.setUser("MailServer",
             self.mailServerEdit.text())
-        Preferences.setUser("MailServerPort", 
+        Preferences.setUser("MailServerPort",
             self.portSpin.value())
         Preferences.setUser("Email",
             self.emailEdit.text())
@@ -58,6 +59,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Preferences.setUser("MailServerUseTLS",
             self.useTlsCheckBox.isChecked())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

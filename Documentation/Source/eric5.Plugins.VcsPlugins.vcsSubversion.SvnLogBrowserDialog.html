@@ -156,7 +156,7 @@ QDialog, Ui_SvnLogBrowserDialog
 </table>
 <a NAME="SvnLogBrowserDialog.__init__" ID="SvnLogBrowserDialog.__init__"></a>
 <h4>SvnLogBrowserDialog (Constructor)</h4>
-<b>SvnLogBrowserDialog</b>(<i>vcs, parent = None</i>)
+<b>SvnLogBrowserDialog</b>(<i>vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -235,7 +235,7 @@ revision info (string)
 </dd><dt><i>changedPaths</i></dt>
 <dd>
 list of dictionary objects containing
-            info about the changed files/directories 
+            info about the changed files/directories
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -244,7 +244,7 @@ reference to the generated item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="SvnLogBrowserDialog.__getLogEntries" ID="SvnLogBrowserDialog.__getLogEntries"></a>
 <h4>SvnLogBrowserDialog.__getLogEntries</h4>
-<b>__getLogEntries</b>(<i>startRev = None</i>)
+<b>__getLogEntries</b>(<i>startRev=None</i>)
 <p>
         Private method to retrieve log entries from the repository.
 </p><dl>
@@ -282,7 +282,7 @@ exit status of the process (QProcess.ExitStatus)
 <h4>SvnLogBrowserDialog.__readStdout</h4>
 <b>__readStdout</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
 </p><a NAME="SvnLogBrowserDialog.__resizeColumnsFiles" ID="SvnLogBrowserDialog.__resizeColumnsFiles"></a>

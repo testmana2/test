@@ -42,6 +42,7 @@ from Helpviewer.AdBlock.AdBlockAccessHandler import AdBlockAccessHandler
 import Preferences
 import Utilities
 
+
 class NetworkAccessManager(QNetworkAccessManager):
     """
     Class implementing a QNetworkAccessManager subclass.
@@ -52,7 +53,7 @@ class NetworkAccessManager(QNetworkAccessManager):
     requestCreated = pyqtSignal(
         QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply)
     
-    def __init__(self, engine, parent = None):
+    def __init__(self, engine, parent=None):
         """
         Constructor
         
@@ -104,7 +105,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         """
         self.__schemeHandlers[scheme] = handler
     
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         
@@ -137,7 +138,7 @@ class NetworkAccessManager(QNetworkAccessManager):
             req.setRawHeader("Accept-Language", self.__acceptLanguage)
         
         # set cache policy
-        req.setAttribute(QNetworkRequest.CacheLoadControlAttribute, 
+        req.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
             Preferences.getHelp("CachePolicy"))
         
         # AdBlock code
@@ -171,8 +172,8 @@ class NetworkAccessManager(QNetworkAccessManager):
             info = self.trUtf8("<b>Enter username and password for '{0}', "
                                "realm '{1}'</b>").format(urlRoot, auth.realm())
         
-        dlg = AuthenticationDialog(info, auth.user(), 
-                                   Preferences.getHelp("SavePasswords"), 
+        dlg = AuthenticationDialog(info, auth.user(),
+                                   Preferences.getHelp("SavePasswords"),
                                    Preferences.getHelp("SavePasswords"))
         if Preferences.getHelp("SavePasswords"):
             username, password = \
@@ -228,7 +229,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                         """<ul><li>{1}</li></ul></p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(reply.url().toString(), errorString),
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         
         if ret:
             if len(caNew) > 0:
@@ -260,7 +261,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                         for cert in caMerge[server]:
                             pems.append(cert.toPem() + '\n')
                         certificateDict[server] = pems
-                    Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+                    Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
                         certificateDict)
                 else:
                     reply.abort()
@@ -293,7 +294,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                 cert.issuerInfo(QSslCertificate.CommonName)))
         
         result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
-            .format(cert.effectiveDate().toString("yyyy-MM-dd"), 
+            .format(cert.effectiveDate().toString("yyyy-MM-dd"),
                     cert.expiryDate().toString("yyyy-MM-dd"))
         
         result += "</p>"
@@ -323,7 +324,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         Public slot to (re-)load the list of accepted languages.
         """
         languages = Preferences.toList(
-            Preferences.Prefs.settings.value("Help/AcceptLanguages", 
+            Preferences.Prefs.settings.value("Help/AcceptLanguages",
                 HelpLanguagesDialog.defaultAcceptLanguages()))
         self.__acceptLanguage = HelpLanguagesDialog.httpString(languages)
     

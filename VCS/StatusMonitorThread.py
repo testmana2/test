@@ -9,6 +9,7 @@ Module implementing the VCS status monitor thread base class.
 
 from PyQt4.QtCore import QThread, QMutex, QWaitCondition, pyqtSignal
 
+
 class VcsStatusMonitorThread(QThread):
     """
     Class implementing the VCS status monitor thread base class.
@@ -20,7 +21,7 @@ class VcsStatusMonitorThread(QThread):
     vcsStatusMonitorData = pyqtSignal(list)
     vcsStatusMonitorStatus = pyqtSignal(str, str)
     
-    def __init__(self, interval, project, vcs, parent = None):
+    def __init__(self, interval, project, vcs, parent=None):
         """
         Constructor
         
@@ -180,7 +181,7 @@ class VcsStatusMonitorThread(QThread):
             <li>" " path is back at normal</li>
         </ul>
         
-        @return tuple of flag indicating successful operation (boolean) and 
+        @return tuple of flag indicating successful operation (boolean) and
             a status message in case of non successful operation (string)
         """
         raise RuntimeError('Not implemented')

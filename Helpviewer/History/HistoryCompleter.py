@@ -13,11 +13,12 @@ from PyQt4.QtGui import *
 from .HistoryModel import HistoryModel
 from .HistoryFilterModel import HistoryFilterModel
 
+
 class HistoryCompletionView(QTableView):
     """
     Class implementing a special completer view for history based completions.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -57,13 +58,14 @@ class HistoryCompletionView(QTableView):
         metrics = self.fontMetrics()
         return metrics.height()
 
+
 class HistoryCompletionModel(QSortFilterProxyModel):
     """
     Class implementing a special model for history based completions.
     """
     HistoryCompletionRole = HistoryFilterModel.MaxRole + 1
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -78,7 +80,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         
         self.setDynamicSortFilter(True)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -173,7 +175,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         """
         Protected method used to sort the displayed items.
         
-        It implements a special sorting function based on the history entry's 
+        It implements a special sorting function based on the history entry's
         frequency giving a bonus to hits that match on a word boundary so that
         e.g. "dot.python-projects.org" is a better result for typing "dot" than
         "slashdot.org". However, it only looks for the string in the host name,
@@ -206,8 +208,9 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         # Sort results in descending frequency-derived score.
         return frequency_R < frequency_L
 
+
 class HistoryCompleter(QCompleter):
-    def __init__(self, model, parent = None):
+    def __init__(self, model, parent=None):
         """
         Constructor
         

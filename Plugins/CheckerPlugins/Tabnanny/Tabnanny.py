@@ -50,6 +50,7 @@ if not hasattr(tokenize, 'NL'):
 
 __all__ = ["check", "NannyNag", "process_tokens"]
 
+
 class NannyNag(Exception):
     """
     Raised by tokeneater() if detecting an ambiguous indent.
@@ -89,7 +90,8 @@ class NannyNag(Exception):
         """
         return self.line
 
-def check(file, text = ""):
+
+def check(file, text=""):
     """
     Private function to check one Python source file for whitespace related problems.
     
@@ -133,6 +135,7 @@ def check(file, text = ""):
     
     return (False, None, None, None)
 
+
 class Whitespace(object):
     """
     Class implementing the whitespace checker.
@@ -165,7 +168,7 @@ class Whitespace(object):
         
         @param ws The string to be checked.
         """
-        self.raw  = ws
+        self.raw = ws
         S, T = Whitespace.S, Whitespace.T
         count = []
         b = n = nt = 0
@@ -182,8 +185,8 @@ class Whitespace(object):
                 b = 0
             else:
                 break
-        self.n    = n
-        self.nt   = nt
+        self.n = n
+        self.nt = nt
         self.norm = tuple(count), b
         self.is_simple = len(count) <= 1
 
@@ -197,7 +200,7 @@ class Whitespace(object):
             preceding a tab)
         """
         count, trailing = self.norm
-        return max(len(count)-1, trailing)
+        return max(len(count) - 1, trailing)
 
     def indent_level(self, tabsize):
         """
@@ -223,7 +226,7 @@ class Whitespace(object):
         count, trailing = self.norm
         il = 0
         for i in range(tabsize, len(count)):
-            il = il + i/tabsize * count[i]
+            il = il + i / tabsize * count[i]
         return trailing + tabsize * (il + self.nt)
 
     # return true iff self.indent_level(t) == other.indent_level(t)
@@ -255,11 +258,11 @@ class Whitespace(object):
         n = max(self.longest_run_of_spaces(),
                 other.longest_run_of_spaces()) + 1
         a = []
-        for ts in range(1, n+1):
+        for ts in range(1, n + 1):
             if self.indent_level(ts) != other.indent_level(ts):
-                a.append( (ts,
+                a.append((ts,
                            self.indent_level(ts),
-                           other.indent_level(ts)) )
+                           other.indent_level(ts)))
         return a
 
     # Return True iff self.indent_level(t) < other.indent_level(t)
@@ -277,7 +280,7 @@ class Whitespace(object):
     # Note that M is of the form (T*)(S*) iff len(M.norm[0]) <= 1.
     def less(self, other):
         """
-        Method to compare the indentation level against another Whitespace objects to 
+        Method to compare the indentation level against another Whitespace objects to
         be smaller.
         
         @param other Whitespace object to compare against.
@@ -290,7 +293,7 @@ class Whitespace(object):
         n = max(self.longest_run_of_spaces(),
                 other.longest_run_of_spaces()) + 1
         # the self.n >= other.n test already did it for ts=1
-        for ts in range(2, n+1):
+        for ts in range(2, n + 1):
             if self.indent_level(ts) >= other.indent_level(ts):
                 return False
         return True
@@ -313,12 +316,13 @@ class Whitespace(object):
         n = max(self.longest_run_of_spaces(),
                 other.longest_run_of_spaces()) + 1
         a = []
-        for ts in range(1, n+1):
+        for ts in range(1, n + 1):
             if self.indent_level(ts) >= other.indent_level(ts):
-                a.append( (ts,
+                a.append((ts,
                            self.indent_level(ts),
-                           other.indent_level(ts)) )
+                           other.indent_level(ts)))
         return a
+
 
 def format_witnesses(w):
     """
@@ -332,6 +336,7 @@ def format_witnesses(w):
     if len(w) > 1:
         prefix = prefix + "s"
     return prefix + " " + ', '.join(firsts)
+
 
 def process_tokens(tokens):
     """

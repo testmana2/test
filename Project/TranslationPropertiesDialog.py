@@ -19,6 +19,7 @@ from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
 import Utilities
 
+
 class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
     """
     Class implementing the Translations Properties dialog.
@@ -50,8 +51,8 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         Public method to initialize the filters.
         """
         patterns = {
-            "SOURCES"    : [], 
-            "FORMS"      : [], 
+            "SOURCES": [],
+            "FORMS": [],
         }
         for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype in patterns:

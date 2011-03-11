@@ -28,6 +28,7 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+
 class MultiProject(QObject):
     """
     Class implementing the project management functionality.
@@ -36,9 +37,9 @@ class MultiProject(QObject):
     @signal newMultiProject() emitted after a new multi project was generated
     @signal multiProjectOpened() emitted after a multi project file was read
     @signal multiProjectClosed() emitted after a multi project was closed
-    @signal multiProjectPropertiesChanged() emitted after the multi project 
+    @signal multiProjectPropertiesChanged() emitted after the multi project
             properties were changed
-    @signal showMenu(string, QMenu) emitted when a menu is about to be shown. 
+    @signal showMenu(string, QMenu) emitted when a menu is about to be shown.
             The name of the menu and a reference to the menu are given.
     @signal projectDataChanged(project data dict) emitted after a project entry
             has been changed
@@ -59,7 +60,7 @@ class MultiProject(QObject):
     projectRemoved = pyqtSignal(dict)
     projectOpened = pyqtSignal(str)
     
-    def __init__(self, project, parent = None, filename = None):
+    def __init__(self, project, parent=None, filename=None):
         """
         Constructor
         
@@ -173,7 +174,7 @@ class MultiProject(QObject):
     
     def __checkFilesExist(self):
         """
-        Private method to check, if the files in a list exist. 
+        Private method to check, if the files in a list exist.
         
         The project files are checked for existance in the
         filesystem. Non existant projects are removed from the list and the
@@ -224,7 +225,7 @@ class MultiProject(QObject):
         
         return True
 
-    def __writeMultiProject(self, fn = None):
+    def __writeMultiProject(self, fn=None):
         """
         Private method to save the multi project infos to a multi project file.
         
@@ -261,7 +262,7 @@ class MultiProject(QObject):
         
         return res
     
-    def addProject(self, startdir = None):
+    def addProject(self, startdir=None):
         """
         Public slot used to add files to the project.
         
@@ -269,7 +270,7 @@ class MultiProject(QObject):
         """
         if startdir is None:
             startdir = self.ppath
-        dlg = AddProjectDialog(self.ui, startdir = startdir)
+        dlg = AddProjectDialog(self.ui, startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             name, filename, isMaster, description = dlg.getData()
             
@@ -289,10 +290,10 @@ class MultiProject(QObject):
             
             # step 3: add the project entry
             project = {
-                'name'        : name, 
-                'file'        : filename, 
-                'master'      : isMaster, 
-                'description' : description, 
+                'name': name,
+                'file': filename,
+                'master': isMaster,
+                'description': description,
             }
             self.projects.append(project)
             self.projectAdded.emit(project)
@@ -390,12 +391,12 @@ class MultiProject(QObject):
             self.setDirty(True)
             self.multiProjectPropertiesChanged.emit()
     
-    def openMultiProject(self, fn = None, openMaster = True):
+    def openMultiProject(self, fn=None, openMaster=True):
         """
         Public slot to open a multi project.
         
         @param fn optional filename of the multi project file to be read (string)
-        @param openMaster flag indicating, that the master project 
+        @param openMaster flag indicating, that the master project
             should be opened depending on the configuration (boolean)
         """
         if not self.checkDirty():
@@ -475,7 +476,7 @@ class MultiProject(QObject):
                     self.trUtf8("Save File"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fileName),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return False
                 
@@ -495,7 +496,7 @@ class MultiProject(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = E5MessageBox.okToClearData(self.parent(), 
+            res = E5MessageBox.okToClearData(self.parent(),
                 self.trUtf8("Close Multiproject"),
                 self.trUtf8("The current multiproject has unsaved changes."),
                 self.saveMultiProject)
@@ -551,7 +552,7 @@ class MultiProject(QObject):
         act = E5Action(self.trUtf8('New multiproject'),
                 UI.PixmapCache.getIcon("multiProjectNew.png"),
                 self.trUtf8('&New...'), 0, 0,
-                self.actGrp1,'multi_project_new')
+                self.actGrp1, 'multi_project_new')
         act.setStatusTip(self.trUtf8('Generate a new multiproject'))
         act.setWhatsThis(self.trUtf8(
             """<b>New...</b>"""
@@ -564,7 +565,7 @@ class MultiProject(QObject):
         act = E5Action(self.trUtf8('Open multiproject'),
                 UI.PixmapCache.getIcon("multiProjectOpen.png"),
                 self.trUtf8('&Open...'), 0, 0,
-                self.actGrp1,'multi_project_open')
+                self.actGrp1, 'multi_project_open')
         act.setStatusTip(self.trUtf8('Open an existing multiproject'))
         act.setWhatsThis(self.trUtf8(
             """<b>Open...</b>"""
@@ -610,7 +611,7 @@ class MultiProject(QObject):
         self.addProjectAct = E5Action(self.trUtf8('Add project to multiproject'),
                 UI.PixmapCache.getIcon("fileProject.png"),
                 self.trUtf8('Add &project...'), 0, 0,
-                self,'multi_project_add_project')
+                self, 'multi_project_add_project')
         self.addProjectAct.setStatusTip(self.trUtf8(
             'Add a project to the current multiproject'))
         self.addProjectAct.setWhatsThis(self.trUtf8(
@@ -648,8 +649,8 @@ class MultiProject(QObject):
         self.recentMenu = QMenu(self.trUtf8('Open &Recent Multiprojects'), menu)
         
         self.__menus = {
-            "Main"      : menu, 
-            "Recent"    : self.recentMenu, 
+            "Main": menu,
+            "Recent": self.recentMenu,
         }
         
         # connect the aboutToShow signals
@@ -735,7 +736,7 @@ class MultiProject(QObject):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(
-                formatStr.format(idx, 
+                formatStr.format(idx,
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
@@ -746,7 +747,7 @@ class MultiProject(QObject):
     
     def __openRecent(self, act):
         """
-        Private method to open a multi project from the list of rencently 
+        Private method to open a multi project from the list of rencently
         opened multi projects.
         
         @param act reference to the action that triggered (QAction)
@@ -810,7 +811,7 @@ class MultiProject(QObject):
         self.projectObject.openProject(filename)
         self.projectOpened.emit(filename)
     
-    def __openMasterProject(self, reopen = True):
+    def __openMasterProject(self, reopen=True):
         """
         Public slot to open the master project.
         

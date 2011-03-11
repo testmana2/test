@@ -14,6 +14,7 @@ from .Ui_EditorTypingPage import Ui_EditorTypingPage
 
 import Preferences
 
+
 class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
     """
     Class implementing the Editor Typing configuration page.
@@ -145,6 +146,7 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         except KeyError:
             index = self.pageIds[' ']
         self.stackedWidget.setCurrentIndex(index)
+
 
 def create(dlg):
     """

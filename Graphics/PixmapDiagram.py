@@ -18,11 +18,12 @@ import UI.Config
 
 import Preferences
 
+
 class PixmapDiagram(QMainWindow):
     """
     Class implementing a dialog showing a pixmap.
     """
-    def __init__(self, pixmap, parent = None, name = None):
+    def __init__(self, pixmap, parent=None, name=None):
         """
         Constructor
         
@@ -194,7 +195,7 @@ class PixmapDiagram(QMainWindow):
         @param factor factor to adjust by (float)
         """
         scrollBar.setValue(int(factor * scrollBar.value()
-                                + ((factor - 1) * scrollBar.pageStep()/2)))
+                                + ((factor - 1) * scrollBar.pageStep() / 2)))
         
     def __doZoom(self, factor):
         """
@@ -241,7 +242,7 @@ class PixmapDiagram(QMainWindow):
         """
         Private slot called to print the diagram.
         """
-        printer = QPrinter(mode = QPrinter.ScreenResolution)
+        printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
@@ -263,7 +264,7 @@ class PixmapDiagram(QMainWindow):
         """
         from PyQt4.QtGui import QPrintPreviewDialog
         
-        printer = QPrinter(mode = QPrinter.ScreenResolution)
+        printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
@@ -312,7 +313,7 @@ class PixmapDiagram(QMainWindow):
         tc = QColor(50, 50, 50)
         painter.setPen(tc)
         painter.drawRect(marginX, marginY, width, height)
-        painter.drawLine(marginX, marginY + height + 2, 
+        painter.drawLine(marginX, marginY + height + 2,
                    marginX + width, marginY + height + 2)
         painter.setFont(font)
         painter.drawText(marginX, marginY + height + 4, width,

@@ -23,6 +23,8 @@ from difflib import SequenceMatcher
 
 # This function is copied from python 2.3 and slightly modified.
 # The header lines contain a tab after the filename.
+
+
 def unified_diff(a, b, fromfile='', tofile='', fromfiledate='',
                  tofiledate='', n=3, lineterm='\n'):
     """
@@ -76,14 +78,14 @@ def unified_diff(a, b, fromfile='', tofile='', fromfiledate='',
     @return a generator yielding lines of differences
     """
     started = False
-    for group in SequenceMatcher(None,a,b).get_grouped_opcodes(n):
+    for group in SequenceMatcher(None, a, b).get_grouped_opcodes(n):
         if not started:
             yield '--- {0}\t{1}{2}'.format(fromfile, fromfiledate, lineterm)
             yield '+++ {0}\t{1}{2}'.format(tofile, tofiledate, lineterm)
             started = True
         i1, i2, j1, j2 = group[0][1], group[-1][2], group[0][3], group[-1][4]
         yield "@@ -{0:d},{1:d} +{2:d},{3:d} @@{4}".format(
-            i1+1, i2-i1, j1+1, j2-j1, lineterm)
+            i1 + 1, i2 - i1, j1 + 1, j2 - j1, lineterm)
         for tag, i1, i2, j1, j2 in group:
             if tag == 'equal':
                 for line in a[i1:i2]:
@@ -98,6 +100,8 @@ def unified_diff(a, b, fromfile='', tofile='', fromfiledate='',
 
 # This function is copied from python 2.3 and slightly modified.
 # The header lines contain a tab after the filename.
+
+
 def context_diff(a, b, fromfile='', tofile='',
                  fromfiledate='', tofiledate='', n=3, lineterm='\n'):
     """
@@ -155,8 +159,8 @@ def context_diff(a, b, fromfile='', tofile='',
     """
 
     started = False
-    prefixmap = {'insert':'+ ', 'delete':'- ', 'replace':'! ', 'equal':'  '}
-    for group in SequenceMatcher(None,a,b).get_grouped_opcodes(n):
+    prefixmap = {'insert': '+ ', 'delete': '- ', 'replace': '! ', 'equal': '  '}
+    for group in SequenceMatcher(None, a, b).get_grouped_opcodes(n):
         if not started:
             yield '*** {0}\t{1}{2}'.format(fromfile, fromfiledate, lineterm)
             yield '--- {0}\t{1}{2}'.format(tofile, tofiledate, lineterm)
@@ -164,7 +168,7 @@ def context_diff(a, b, fromfile='', tofile='',
 
         yield '***************{0}'.format(lineterm)
         if group[-1][2] - group[0][1] >= 2:
-            yield '*** {0:d},{1:d} ****{2}'.format(group[0][1]+1, group[-1][2], lineterm)
+            yield '*** {0:d},{1:d} ****{2}'.format(group[0][1] + 1, group[-1][2], lineterm)
         else:
             yield '*** {0:d} ****{1}'.format(group[-1][2], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'delete')]
@@ -175,7 +179,7 @@ def context_diff(a, b, fromfile='', tofile='',
                         yield prefixmap[tag] + line
 
         if group[-1][4] - group[0][3] >= 2:
-            yield '--- {0:d},{1:d} ----{2}'.format(group[0][3]+1, group[-1][4], lineterm)
+            yield '--- {0:d},{1:d} ----{2}'.format(group[0][3] + 1, group[-1][4], lineterm)
         else:
             yield '--- {0:d} ----{1}'.format(group[-1][4], lineterm)
         visiblechanges = [e for e in group if e[0] in ('replace', 'insert')]
@@ -185,15 +189,16 @@ def context_diff(a, b, fromfile='', tofile='',
                     for line in b[j1:j2]:
                         yield prefixmap[tag] + line
 
+
 class DiffDialog(QWidget, Ui_DiffDialog):
     """
     Class implementing a dialog to compare two files.
     """
-    def __init__(self,parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         """
-        QWidget.__init__(self,parent)
+        QWidget.__init__(self, parent)
         self.setupUi(self)
         
         self.file1Completer = E5FileCompleter(self.file1Edit)
@@ -234,7 +239,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.file1Edit.textChanged.connect(self.__fileChanged)
         self.file2Edit.textChanged.connect(self.__fileChanged)
         
-    def show(self, filename = None):
+    def show(self, filename=None):
         """
         Public slot to show the dialog.
         
@@ -274,7 +279,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
             self.trUtf8("Save Diff"),
             fname,
             self.trUtf8("Patch Files (*.diff)"),
-            None, 
+            None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not fname:
@@ -290,13 +295,13 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w", encoding = "utf-8")
+            f = open(fname, "w", encoding="utf-8")
             txt = self.contents.toPlainText()
             try:
                 f.write(txt)
@@ -320,7 +325,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime1 = ""
         try:
-            f1 = open(self.filename1, "r", encoding = "utf-8")
+            f1 = open(self.filename1, "r", encoding="utf-8")
             lines1 = f1.readlines()
             f1.close()
         except IOError:
@@ -336,7 +341,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         except IOError:
             filemtime2 = ""
         try:
-            f2 = open(self.filename2, "r", encoding = "utf-8")
+            f2 = open(self.filename2, "r", encoding="utf-8")
             lines2 = f2.readlines()
             f2.close()
         except IOError:
@@ -480,11 +485,12 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         self.__selectFile(self.file2Edit)
 
+
 class DiffWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

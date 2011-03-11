@@ -14,6 +14,7 @@ from .Connection import Connection
 
 import Preferences
 
+
 class CooperationServer(QTcpServer):
     """
     Class implementing the cooperation server.
@@ -23,7 +24,7 @@ class CooperationServer(QTcpServer):
     """
     newConnection = pyqtSignal(Connection)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -41,7 +42,7 @@ class CooperationServer(QTcpServer):
         connection.setSocketDescriptor(socketDescriptor)
         self.newConnection.emit(connection)
     
-    def startListening(self, port = -1):
+    def startListening(self, port=-1):
         """
         Public method to start listening for new connections.
         

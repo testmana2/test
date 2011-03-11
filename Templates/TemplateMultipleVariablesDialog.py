@@ -10,11 +10,12 @@ Module implementing a dialog for entering multiple template variables.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+
 class TemplateMultipleVariablesDialog(QDialog):
     """
     Class implementing a dialog for entering multiple template variables.
     """
-    def __init__(self, variables, parent = None):
+    def __init__(self, variables, parent=None):
         """
         Constructor
         

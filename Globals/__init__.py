@@ -20,6 +20,7 @@ recentNameProject = "Projects"
 recentNameFiles = "Files"
 recentNameHosts = "Hosts"
 
+
 def isWindowsPlatform():
     """
     Function to check, if this is a Windows platform.
@@ -28,6 +29,7 @@ def isWindowsPlatform():
     """
     return sys.platform.startswith("win")
 
+
 def isMacPlatform():
     """
     Function to check, if this is a Mac platform.
@@ -35,6 +37,7 @@ def isMacPlatform():
     @return flag indicating Mac platform (boolean)
     """
     return sys.platform == "darwin"
+
 
 def isLinuxPlatform():
     """

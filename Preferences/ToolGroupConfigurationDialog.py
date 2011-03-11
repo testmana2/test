@@ -16,11 +16,12 @@ from E5Gui import E5MessageBox
 
 from .Ui_ToolGroupConfigurationDialog import Ui_ToolGroupConfigurationDialog
 
+
 class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
     """
     Class implementing a configuration dialog for the tool groups.
     """
-    def __init__(self, toolGroups, currentGroup, parent = None):
+    def __init__(self, toolGroups, currentGroup, parent=None):
         """
         Constructor
         
@@ -111,7 +112,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
             self.trUtf8("""<p>Do you really want to delete the tool group"""
                         """ <b>"{0}"</b>?</p>""")\
                 .format(self.groupsList.currentItem().text()),
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         if not res:
             return
         
@@ -188,7 +189,7 @@ class ToolGroupConfigurationDialog(QDialog, Ui_ToolGroupConfigurationDialog):
         
     def getToolGroups(self):
         """
-        Public method to retrieve the tool groups. 
+        Public method to retrieve the tool groups.
         
         @return a list of lists containing the group name and the
             tool group entries

@@ -6,6 +6,6 @@
 """
 Package implementing the vcs interface to Mercurial
 
-It consists of the hg class, the project helper classes and some 
+It consists of the hg class, the project helper classes and some
 Mercurial specific dialogs.
 """

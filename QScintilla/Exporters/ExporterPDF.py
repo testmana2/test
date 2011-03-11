@@ -24,7 +24,7 @@ import Preferences
 PDF_FONT_DEFAULT = 1    # Helvetica
 PDF_FONTSIZE_DEFAULT = 10
 PDF_SPACING_DEFAULT = 1.2
-PDF_MARGIN_DEFAULT = 72 # 1.0"
+PDF_MARGIN_DEFAULT = 72  # 1.0"
 PDF_ENCODING = "WinAnsiEncoding"
 
 PDFfontNames = [
@@ -32,15 +32,16 @@ PDFfontNames = [
     "Helvetica", "Helvetica-Bold", "Helvetica-Oblique", "Helvetica-BoldOblique",
     "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
 ]
-PDFfontAscenders =  [629, 718, 699]
+PDFfontAscenders = [629, 718, 699]
 PDFfontDescenders = [157, 207, 217]
-PDFfontWidths =     [600,   0,   0]
+PDFfontWidths = [600,   0,   0]
 
 PDFpageSizes = {
     # name   : (height, width)
-    "Letter" : (792, 612), 
-    "A4"     : (842, 595), 
+    "Letter": (792, 612),
+    "A4": (842, 595),
 }
+
 
 class PDFStyle(object):
     """
@@ -52,6 +53,7 @@ class PDFStyle(object):
         """
         self.fore = ""
         self.font = 0
+
 
 class PDFObjectTracker(object):
     """
@@ -114,9 +116,10 @@ class PDFObjectTracker(object):
             ind += 1
         return xrefStart
 
+
 class PDFRender(object):
     """
-    Class to manage line and page rendering. 
+    Class to manage line and page rendering.
     
     Apart from startPDF, endPDF everything goes in via add() and nextLine()
     so that line formatting and pagination can be done properly.
@@ -133,10 +136,10 @@ class PDFRender(object):
         self.segStyle = ""
         self.segment = ""
         self.pageMargins = {
-            "left"   : 72, 
-            "right"  : 72, 
-            "top"    : 72, 
-            "bottom" : 72, 
+            "left": 72,
+            "right": 72,
+            "top": 72,
+            "bottom": 72,
         }
         self.fontSize = 0
         self.fontSet = 0
@@ -172,7 +175,7 @@ class PDFRender(object):
         if styleNext != self.styleCurrent or style_ == -1:
             if self.style[self.styleCurrent].font != self.style[styleNext].font or \
                style_ == -1:
-                buf += "/F{0:d} {1:d} Tf ".format(self.style[styleNext].font + 1, 
+                buf += "/F{0:d} {1:d} Tf ".format(self.style[styleNext].font + 1,
                                                   self.fontSize)
             if self.style[self.styleCurrent].fore != self.style[styleNext].fore or \
                style_ == -1:
@@ -236,7 +239,7 @@ class PDFRender(object):
                      "/MediaBox[ 0 0 {1:d} {2:d}]\n" \
                      "/Contents {3:d} 0 R\n" \
                      "/Resources {4:d} 0 R\n>>\n".format(
-                     pagesRef, self.pageWidth, self.pageHeight, 
+                     pagesRef, self.pageWidth, self.pageHeight,
                      self.pageContentStart + i, resourceRef)
             self.oT.add(buffer)
         
@@ -291,7 +294,7 @@ class PDFRender(object):
             self.segment += '\\'
         if ch != ' ':
             self.justWhiteSpace = False
-        self.segment += ch # add to segment data
+        self.segment += ch  # add to segment data
         
     def flushSegment(self):
         """
@@ -369,11 +372,12 @@ class PDFRender(object):
             buffer = "T*\n"
         self.pageData += buffer
 
+
 class ExporterPDF(ExporterBase):
     """
     Class implementing an exporter for PDF.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -432,7 +436,7 @@ class ExporterPDF(ExporterBase):
             elif fontName == "Times":
                 self.pr.fontSet = 2
             
-            # page size: height, width, 
+            # page size: height, width,
             pageSize = Preferences.getEditorExporter("PDF/PageSize")
             try:
                 pageDimensions = PDFpageSizes[pageSize]
@@ -516,7 +520,7 @@ class ExporterPDF(ExporterBase):
             
             try:
                 # save file in win ansi using cp1250
-                f = open(filename, "w", encoding = "cp1250", errors = "backslashreplace")
+                f = open(filename, "w", encoding="cp1250", errors="backslashreplace")
                 
                 # initialise PDF rendering
                 ot = PDFObjectTracker(f)
@@ -527,7 +531,7 @@ class ExporterPDF(ExporterBase):
                 lengthDoc = self.editor.length()
                 
                 if lengthDoc == 0:
-                    self.pr.nextLine() # enable zero length docs
+                    self.pr.nextLine()  # enable zero length docs
                 else:
                     pos = 0
                     column = 0
@@ -561,14 +565,14 @@ class ExporterPDF(ExporterBase):
                                         utf8Len = 3
                                     elif (utf8Ch[0] & 0xC0) == 0xC0:
                                         utf8Len = 2
-                                    column -= 1 # will be incremented again later
+                                    column -= 1  # will be incremented again later
                                 elif len(utf8Ch) == utf8Len:
                                     ch = utf8Ch.decode('utf8')
                                     self.pr.add(ch, style)
                                     utf8Ch = b""
                                     utf8Len = 0
                                 else:
-                                    column -= 1 # will be incremented again later
+                                    column -= 1  # will be incremented again later
                             else:
                                 self.pr.add(ch.decode(), style)
                             column += 1

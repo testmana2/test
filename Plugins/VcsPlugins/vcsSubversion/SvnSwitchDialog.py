@@ -12,17 +12,18 @@ from PyQt4.QtGui import *
 
 from .Ui_SvnSwitchDialog import Ui_SvnSwitchDialog
 
+
 class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
     """
     Class implementing a dialog to enter the data for a switch operation.
     """
-    def __init__(self, taglist, reposURL, standardLayout, parent = None):
+    def __init__(self, taglist, reposURL, standardLayout, parent=None):
         """
         Constructor
         
         @param taglist list of previously entered tags (list of strings)
         @param reposURL repository path (string) or None
-        @param standardLayout flag indicating the layout of the 
+        @param standardLayout flag indicating the layout of the
             repository (boolean)
         @param parent parent widget (QWidget)
         """
@@ -53,4 +54,3 @@ class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
         if not tag:
             tagType = 4
         return (tag, tagType)
-

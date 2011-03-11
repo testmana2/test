@@ -23,6 +23,7 @@ from .Ui_DebuggerGeneralPage import Ui_DebuggerGeneralPage
 import Preferences
 import Utilities
 
+
 class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
     """
     Class implementing the Debugger General configuration page.
@@ -65,7 +66,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                     if ":" in addressEntry.ip().toString() and not socket.has_ipv6:
                         continue    # IPv6 not supported by Python
                     interfaces.append("{0} ({1})"\
-                                      .format(networkInterface.name(), 
+                                      .format(networkInterface.name(),
                                               addressEntry.ip().toString()))
         self.interfacesCombo.addItems(interfaces)
         interface = Preferences.getDebugger("NetworkInterface")
@@ -137,18 +138,18 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         """
         Public slot to save the Debugger General (1) configuration.
         """
-        Preferences.setDebugger("RemoteDbgEnabled", 
+        Preferences.setDebugger("RemoteDbgEnabled",
             self.remoteCheckBox.isChecked())
-        Preferences.setDebugger("RemoteHost", 
+        Preferences.setDebugger("RemoteHost",
             self.hostLineEdit.text())
-        Preferences.setDebugger("RemoteExecution", 
+        Preferences.setDebugger("RemoteExecution",
             self.execLineEdit.text())
         
-        Preferences.setDebugger("PassiveDbgEnabled", 
+        Preferences.setDebugger("PassiveDbgEnabled",
             self.passiveDbgCheckBox.isChecked())
-        Preferences.setDebugger("PassiveDbgPort", 
+        Preferences.setDebugger("PassiveDbgPort",
             self.passiveDbgPortSpinBox.value())
-        Preferences.setDebugger("PassiveDbgType", 
+        Preferences.setDebugger("PassiveDbgType",
             self.passiveDbgBackendCombo.currentText())
         
         if self.allInterfacesButton.isChecked():
@@ -168,19 +169,19 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             allowedHosts.append(self.allowedHostsList.item(row).text())
         Preferences.setDebugger("AllowedHosts", allowedHosts)
         
-        Preferences.setDebugger("DebugEnvironmentReplace", 
+        Preferences.setDebugger("DebugEnvironmentReplace",
             self.debugEnvironReplaceCheckBox.isChecked())
-        Preferences.setDebugger("DebugEnvironment", 
+        Preferences.setDebugger("DebugEnvironment",
             self.debugEnvironEdit.text())
-        Preferences.setDebugger("AutomaticReset", 
+        Preferences.setDebugger("AutomaticReset",
             self.automaticResetCheckBox.isChecked())
-        Preferences.setDebugger("Autosave", 
+        Preferences.setDebugger("Autosave",
             self.debugAutoSaveScriptsCheckBox.isChecked())
-        Preferences.setDebugger("ConsoleDbgEnabled", 
+        Preferences.setDebugger("ConsoleDbgEnabled",
             self.consoleDbgCheckBox.isChecked())
-        Preferences.setDebugger("ConsoleDbgCommand", 
+        Preferences.setDebugger("ConsoleDbgCommand",
             self.consoleDbgEdit.text())
-        Preferences.setDebugger("PathTranslation", 
+        Preferences.setDebugger("PathTranslation",
             self.dbgPathTranslationCheckBox.isChecked())
         Preferences.setDebugger("PathTranslationRemote",
             self.dbgTranslationRemoteEdit.text())
@@ -254,6 +255,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                         """ a valid IP v4 or IP v6 address. Aborting...</p>""")\
                         .format(allowedHost))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

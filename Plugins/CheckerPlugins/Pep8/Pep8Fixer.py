@@ -18,8 +18,9 @@ import Utilities
 
 Pep8FixableIssues = ["E101", "W191", "E201", "E202", "E203", "E211", "E221",
                      "E222", "E225", "E231", "E241", "E251", "E261", "E262",
-                     "W291", "W292", "W293", "E301", "E302", "E303", "E304", 
+                     "W291", "W292", "W293", "E301", "E302", "E303", "E304",
                      "W391", "W603"]
+
 
 class Pep8Fixer(QObject):
     """
@@ -48,33 +49,33 @@ class Pep8Fixer(QObject):
         
         if not inPlace:
             self.__origName = self.__filename
-            self.__filename = os.path.join(os.path.dirname(self.__filename), 
+            self.__filename = os.path.join(os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
         
         self.__fixes = {
-            "E101" : self.__fixTabs, 
-            "W191" : self.__fixTabs,
-            "E201" : self.__fixWhitespaceAfter, 
-            "E202" : self.__fixWhitespaceBefore, 
-            "E203" : self.__fixWhitespaceBefore,
-            "E211" : self.__fixWhitespaceBefore,
-            "E221" : self.__fixWhitespaceAroundOperator, 
-            "E222" : self.__fixWhitespaceAroundOperator,
-            "E225" : self.__fixMissingWhitespaceAroundOperator, 
-            "E231" : self.__fixMissingWhitespaceAfter,
-            "E241" : self.__fixWhitespaceAroundOperator,
-            "E251" : self.__fixWhitespaceAroundEquals,
-            "E261" : self.__fixWhitespaceBeforeInline, 
-            "E262" : self.__fixWhitespaceAfterInline, 
-            "W291" : self.__fixWhitespace, 
-            "W292" : self.__fixNewline, 
-            "W293" : self.__fixWhitespace,
-            "E301" : self.__fixOneBlankLine, 
-            "E302" : self.__fixTwoBlankLines, 
-            "E303" : self.__fixTooManyBlankLines, 
-            "E304" : self.__fixBlankLinesAfterDecorator, 
-            "W391" : self.__fixTrailingBlankLines, 
-            "W603" : self.__fixNotEqual, 
+            "E101": self.__fixTabs,
+            "W191": self.__fixTabs,
+            "E201": self.__fixWhitespaceAfter,
+            "E202": self.__fixWhitespaceBefore,
+            "E203": self.__fixWhitespaceBefore,
+            "E211": self.__fixWhitespaceBefore,
+            "E221": self.__fixWhitespaceAroundOperator,
+            "E222": self.__fixWhitespaceAroundOperator,
+            "E225": self.__fixMissingWhitespaceAroundOperator,
+            "E231": self.__fixMissingWhitespaceAfter,
+            "E241": self.__fixWhitespaceAroundOperator,
+            "E251": self.__fixWhitespaceAroundEquals,
+            "E261": self.__fixWhitespaceBeforeInline,
+            "E262": self.__fixWhitespaceAfterInline,
+            "W291": self.__fixWhitespace,
+            "W292": self.__fixNewline,
+            "W293": self.__fixWhitespace,
+            "E301": self.__fixOneBlankLine,
+            "E302": self.__fixTwoBlankLines,
+            "E303": self.__fixTooManyBlankLines,
+            "E304": self.__fixBlankLinesAfterDecorator,
+            "W391": self.__fixTrailingBlankLines,
+            "W603": self.__fixNotEqual,
         }
         self.__modified = False
         self.__stack = []   # these need to be fixed before the file is saved
@@ -179,7 +180,7 @@ class Pep8Fixer(QObject):
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        self.__source[line - 1] = re.sub(r'[\t ]*$', "", 
+        self.__source[line - 1] = re.sub(r'[\t ]*$', "",
                                          self.__source[line - 1])
         return (True, self.trUtf8("Whitespace stripped from end of line."))
     
@@ -413,7 +414,7 @@ class Pep8Fixer(QObject):
             pos -= 1
         return (True, self.trUtf8("Extraneous whitespace removed."))
     
-    def __fixMissingWhitespaceAroundOperator(self, code, line, pos, 
+    def __fixMissingWhitespaceAroundOperator(self, code, line, pos,
                                                    apply=False):
         """
         Private method to fix missing whitespace after ',;:'.

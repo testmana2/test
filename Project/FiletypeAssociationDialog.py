@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .Ui_FiletypeAssociationDialog import Ui_FiletypeAssociationDialog
 
+
 class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
     """
     Class implementing a dialog to enter filetype associations for the project.
     """
-    def __init__(self, project, parent = None):
+    def __init__(self, project, parent=None):
         """
         Constructor
         
@@ -31,11 +32,11 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         self.filetypeAssociationList.header().setSortIndicator(0, Qt.AscendingOrder)
         
         # keep these lists in sync
-        self.filetypes = ["SOURCES", "FORMS", "TRANSLATIONS", "RESOURCES", "INTERFACES", 
+        self.filetypes = ["SOURCES", "FORMS", "TRANSLATIONS", "RESOURCES", "INTERFACES",
                           "OTHERS", "__IGNORE__"]
         self.filetypeStrings = [self.trUtf8("Sources"), self.trUtf8("Forms"),
                                 self.trUtf8("Translations"), self.trUtf8("Resources"),
-                                self.trUtf8("Interfaces"), self.trUtf8("Others"), 
+                                self.trUtf8("Interfaces"), self.trUtf8("Others"),
                                 self.trUtf8("Ignore")]
         self.filetypeCombo.addItems(self.filetypeStrings)
         
@@ -54,7 +55,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         """
         Private method to resort the tree.
         """
-        self.filetypeAssociationList.sortItems(self.filetypeAssociationList.sortColumn(), 
+        self.filetypeAssociationList.sortItems(self.filetypeAssociationList.sortColumn(),
             self.filetypeAssociationList.header().sortIndicatorOrder())
         
     def __reformat(self):

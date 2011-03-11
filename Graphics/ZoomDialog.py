@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_ZoomDialog import Ui_ZoomDialog
 
+
 class ZoomDialog(QDialog, Ui_ZoomDialog):
     """
     Class implementing a zoom dialog for a graphics canvas.
     """
-    def __init__(self, zoom, parent = None, name = None):
+    def __init__(self, zoom, parent=None, name=None):
         """
         Constructor
         

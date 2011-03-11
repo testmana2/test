@@ -28,6 +28,7 @@ import Preferences
 
 from eric5config import getConfig
 
+
 class TabBar(E5WheelTabBar):
     """
     Class implementing a customized tab bar supporting drag & drop.
@@ -48,7 +49,7 @@ class TabBar(E5WheelTabBar):
     tabCopyRequested = pyqtSignal(int, int, int)
     tabCopyRequested = pyqtSignal(int, int)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -84,7 +85,7 @@ class TabBar(E5WheelTabBar):
             mimeData.setText(self.tabText(index))
             mimeData.setData("action", "tab-reordering")
             mimeData.setData("tabbar-id", QByteArray.number(id(self)))
-            mimeData.setData("source-index", 
+            mimeData.setData("source-index",
                              QByteArray.number(self.tabAt(self.__dragStartPos)))
             mimeData.setData("tabwidget-id", QByteArray.number(id(self.parentWidget())))
             drag.setMimeData(mimeData)
@@ -137,6 +138,7 @@ class TabBar(E5WheelTabBar):
                     self.tabCopyRequested.emit(fromIndex, toIndex)
                     event.acceptProposedAction()
         E5WheelTabBar.dropEvent(self, event)
+
 
 class TabWidget(E5TabWidget):
     """
@@ -230,7 +232,7 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
         self.closeOthersMenuAct = self.__menu.addAction(
-            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"), 
+            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"),
             self.__contextMenuCloseOthers)
         self.__menu.addAction(self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
@@ -245,7 +247,7 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
-        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"), 
+        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"),
             self.__contextMenuCopyPathToClipboard)
         
     def __showContextMenu(self, coord, index):
@@ -278,7 +280,7 @@ class TabWidget(E5TabWidget):
         """
         self.__navigationMenu.clear()
         for index in range(self.count()):
-            act = self.__navigationMenu.addAction(self.tabIcon(index), 
+            act = self.__navigationMenu.addAction(self.tabIcon(index),
                                                   self.tabText(index))
             act.setData(index)
         
@@ -334,8 +336,8 @@ class TabWidget(E5TabWidget):
         @param title title for the new tab (string)
         @return index of the inserted tab (integer)
         """
-        newIndex = E5TabWidget.insertTab(self, index, editor, 
-                                         UI.PixmapCache.getIcon("empty.png"), 
+        newIndex = E5TabWidget.insertTab(self, index, editor,
+                                         UI.PixmapCache.getIcon("empty.png"),
                                          title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
@@ -355,7 +357,7 @@ class TabWidget(E5TabWidget):
         
     def __captionChange(self, cap, editor):
         """
-        Private method to handle Caption change signals from the editor. 
+        Private method to handle Caption change signals from the editor.
         
         Updates the tab text and tooltip text to reflect the new caption information.
         
@@ -395,7 +397,7 @@ class TabWidget(E5TabWidget):
             self.editors.remove(object)
         
         if not self.editors:
-            E5TabWidget.addTab(self, self.emptyLabel, 
+            E5TabWidget.addTab(self, self.emptyLabel,
                 UI.PixmapCache.getIcon("empty.png"), "")
             self.emptyLabel.show()
             if self.closeButton:
@@ -444,9 +446,9 @@ class TabWidget(E5TabWidget):
         tw = self.vm.getTabWidgetById(sourceId)
         if tw is not None:
             editor = tw.widget(sourceIndex)
-            newEditor = self.vm.cloneEditor(editor, editor.getFileType(), 
+            newEditor = self.vm.cloneEditor(editor, editor.getFileType(),
                                             editor.getFileName())
-            self.vm.insertView(newEditor, self, targetIndex, 
+            self.vm.insertView(newEditor, self, targetIndex,
                                editor.getFileName(), editor.getNoName())
         
     def copyTab(self, sourceIndex, targetIndex):
@@ -457,9 +459,9 @@ class TabWidget(E5TabWidget):
         @param targetIndex index position to place it to (integer)
         """
         editor = self.widget(sourceIndex)
-        newEditor = self.vm.cloneEditor(editor, editor.getFileType(), 
+        newEditor = self.vm.cloneEditor(editor, editor.getFileType(),
                                         editor.getFileName())
-        self.vm.insertView(newEditor, self, targetIndex, 
+        self.vm.insertView(newEditor, self, targetIndex,
                            editor.getFileName(), editor.getNoName())
         
     def currentWidget(self):
@@ -599,6 +601,7 @@ class TabWidget(E5TabWidget):
         """
         self.vm.newEditor()
 
+
 class Tabview(QSplitter, ViewManager):
     """
     Class implementing a tabbed viewmanager class embedded in a splitter.
@@ -735,7 +738,7 @@ class Tabview(QSplitter, ViewManager):
         else:
             self.changeCaption.emit("")
         
-    def _addView(self, win, fn = None, noName = ""):
+    def _addView(self, win, fn=None, noName=""):
         """
         Protected method to add a view (i.e. window)
         
@@ -770,7 +773,7 @@ class Tabview(QSplitter, ViewManager):
         else:
             self.changeCaption.emit("")
         
-    def insertView(self, win, tabWidget, index, fn = None, noName = ""):
+    def insertView(self, win, tabWidget, index, fn=None, noName=""):
         """
         Protected method to add a view (i.e. window)
         
@@ -809,7 +812,7 @@ class Tabview(QSplitter, ViewManager):
         self._modificationStatusChanged(win.isModified(), win)
         self._checkActions(win)
         
-    def _showView(self, win, fn = None):
+    def _showView(self, win, fn=None):
         """
         Protected method to show a view (i.e. window)
         
@@ -925,7 +928,7 @@ class Tabview(QSplitter, ViewManager):
             size = self.width()
         else:
             size = self.height()
-        self.setSizes([int(size/len(self.tabWidgets))] * len(self.tabWidgets))
+        self.setSizes([int(size / len(self.tabWidgets))] * len(self.tabWidgets))
         self.splitRemoveAct.setEnabled(True)
         self.nextSplitAct.setEnabled(True)
         self.prevSplitAct.setEnabled(True)

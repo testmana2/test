@@ -22,14 +22,15 @@ from .HgDiffDialog import HgDiffDialog
 import Utilities
 import Preferences
 
+
 class HgLogDialog(QWidget, Ui_HgLogDialog):
     """
     Class implementing a dialog to show the output of the hg log command process.
     
-    The dialog is nonmodal. Clicking a link in the upper text pane shows 
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the revisions.
     """
-    def __init__(self, vcs, mode = "log", bundle = None, parent = None):
+    def __init__(self, vcs, mode="log", bundle=None, parent=None):
         """
         Constructor
         
@@ -86,7 +87,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         e.accept()
     
-    def start(self, fn, noEntries = 0):
+    def start(self, fn, noEntries=0):
         """
         Public slot to start the hg log command.
         
@@ -186,8 +187,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
                 output = \
-                    str(process.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                    str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 parents = [p for p in output.strip().splitlines()]
             else:
@@ -250,9 +251,9 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 query.append(parent.split(":")[0]).append('_').append(rev)
                 url.setEncodedQuery(query)
                 dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
-                    url.toString(), 
-                    str(query, encoding="ascii"), 
-                    self.trUtf8('diff to {0}').format(parent), 
+                    url.toString(),
+                    str(query, encoding="ascii"),
+                    self.trUtf8('diff to {0}').format(parent),
                 )
             dstr += '<br />\n'
             html += dstr
@@ -277,7 +278,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 for f in entry["file_adds"].strip().split(", "):
                     if f in fileCopies:
                         html += self.trUtf8('Added {0} (copied from {1})<br />\n')\
-                                .format(Utilities.html_encode(f), 
+                                .format(Utilities.html_encode(f),
                                         Utilities.html_encode(fileCopies[f]))
                     else:
                         html += self.trUtf8('Added {0}<br />\n')\
@@ -305,15 +306,15 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process and inserts it into a buffer.
         """
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             
             if s == "@@@\n":
@@ -349,8 +350,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

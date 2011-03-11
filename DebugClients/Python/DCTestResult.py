@@ -74,7 +74,7 @@ class DCTestResult(TestResult):
         self.parent.write('%s\n' % ResponseUTStopTest)
         
         # ensure that pending input is processed
-        rrdy, wrdy, xrdy = select.select([self.parent.readstream],[],[], 0.01)
+        rrdy, wrdy, xrdy = select.select([self.parent.readstream], [], [], 0.01)
 
         if self.parent.readstream in rrdy:
             self.parent.readReady(self.parent.readstream.fileno())

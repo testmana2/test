@@ -29,6 +29,7 @@ except ImportError:
 
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -42,13 +43,14 @@ def createMainWidget(argv):
     w.showConfigurationPageByName("empty")
     return w
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 Configure",

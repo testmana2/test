@@ -22,15 +22,16 @@ from Utilities.AutoSaver import AutoSaver
 import UI.PixmapCache
 import Preferences
 
+
 class DownloadManager(QDialog, Ui_DownloadManager):
     """
     Class implementing the download manager
     """
-    RemoveNever               = 0
-    RemoveExit                = 1
+    RemoveNever = 0
+    RemoveExit = 1
     RemoveSuccessFullDownload = 2
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -77,22 +78,22 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             row = self.downloadsView.selectionModel().selectedRows()[0].row()
             itm = self.__downloads[row]
             if itm.downloadCanceled():
-                menu.addAction(UI.PixmapCache.getIcon("restart.png"), 
+                menu.addAction(UI.PixmapCache.getIcon("restart.png"),
                     self.trUtf8("Retry"), self.__contextMenuRetry)
             else:
                 if itm.downloadedSuccessfully():
-                    menu.addAction(UI.PixmapCache.getIcon("open.png"), 
+                    menu.addAction(UI.PixmapCache.getIcon("open.png"),
                         self.trUtf8("Open"), self.__contextMenuOpen)
                 elif itm.downloading():
-                    menu.addAction(UI.PixmapCache.getIcon("stopLoading.png"), 
+                    menu.addAction(UI.PixmapCache.getIcon("stopLoading.png"),
                         self.trUtf8("Cancel"), self.__contextMenuCancel)
                     menu.addSeparator()
-                menu.addAction(self.trUtf8("Open Containing Folder"), 
+                menu.addAction(self.trUtf8("Open Containing Folder"),
                     self.__contextMenuOpenFolder)
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Go to Download Page"), 
+            menu.addAction(self.trUtf8("Go to Download Page"),
                 self.__contextMenuGotoPage)
-            menu.addAction(self.trUtf8("Copy Download Link"), 
+            menu.addAction(self.trUtf8("Copy Download Link"),
                 self.__contextMenuCopyLink)
             menu.addSeparator()
         menu.addAction(self.trUtf8("Select All"), self.__contextMenuSelectAll)
@@ -102,7 +103,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
                 self.downloadsView.selectionModel().selectedRows()[0].row()]\
                 .downloading()):
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Remove From List"), 
+            menu.addAction(self.trUtf8("Remove From List"),
                 self.__contextMenuRemoveSelected)
         
         menu.exec_(QCursor.pos())
@@ -138,32 +139,32 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             res = E5MessageBox.yesNo(self,
                 self.trUtf8(""),
                 self.trUtf8("""There are %n downloads in progress.\n"""
-                            """Do you want to quit anyway?""", "", 
+                            """Do you want to quit anyway?""", "",
                             self.activeDownloads()),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 self.show()
                 return False
         return True
     
-    def download(self, requestOrUrl, requestFileName = False):
+    def download(self, requestOrUrl, requestFileName=False):
         """
         Public method to download a file.
         
         @param requestOrUrl reference to a request object (QNetworkRequest)
             or a URL to be downloaded (QUrl)
-        @keyparam requestFileName flag indicating to ask for the 
+        @keyparam requestFileName flag indicating to ask for the
             download file name (boolean)
         """
         request = QNetworkRequest(requestOrUrl)
         if request.url().isEmpty():
             return
-        self.handleUnsupportedContent(self.__manager.get(request), 
-            requestFileName = requestFileName, 
-            download = True)
+        self.handleUnsupportedContent(self.__manager.get(request),
+            requestFileName=requestFileName,
+            download=True)
     
-    def handleUnsupportedContent(self, reply, requestFileName = False, 
-                                 webPage = None, download = False):
+    def handleUnsupportedContent(self, reply, requestFileName=False,
+                                 webPage=None, download=False):
         if reply is None or reply.url().isEmpty():
             return
         
@@ -171,8 +172,8 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         if size == 0:
             return
         
-        itm = DownloadItem(reply = reply, requestFilename = requestFileName, 
-            webPage = webPage, download = download, parent = self)
+        itm = DownloadItem(reply=reply, requestFilename=requestFileName,
+            webPage=webPage, download=download, parent=self)
         self.__addItem(itm)
         
         if itm.canceledFileSelect():
@@ -207,7 +208,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         self.changeOccurred()
         self.__updateActiveItemCount()
     
-    def __updateRow(self, itm = None):
+    def __updateRow(self, itm=None):
         """
         Private slot to update a download item.
         
@@ -230,7 +231,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         itm.setIcon(icon)
         
         oldHeight = self.downloadsView.rowHeight(row)
-        self.downloadsView.setRowHeight(row, 
+        self.downloadsView.setRowHeight(row,
             max(oldHeight, itm.minimumSizeHint().height()))
         
         remove = False
@@ -264,11 +265,11 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         """
         Public method to set the remove policy.
         
-        @param policy policy to be set 
-            (DownloadManager.RemoveExit, DownloadManager.RemoveNever, 
+        @param policy policy to be set
+            (DownloadManager.RemoveExit, DownloadManager.RemoveNever,
              DownloadManager.RemoveSuccessFullDownload)
         """
-        assert policy in (DownloadManager.RemoveExit, DownloadManager.RemoveNever, 
+        assert policy in (DownloadManager.RemoveExit, DownloadManager.RemoveNever,
                           DownloadManager.RemoveSuccessFullDownload)
         
         if policy == self.removePolicy():
@@ -310,7 +311,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         for download in downloads:
             if not download[0].isEmpty() and \
                download[1] != "":
-                itm = DownloadItem(parent = self)
+                itm = DownloadItem(parent=self)
                 itm.setData(download)
                 self.__addItem(itm)
         self.cleanupButton.setEnabled(
@@ -485,4 +486,3 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         Private method to remove the selected downloads from the list.
         """
         self.downloadsView.removeSelected()
-    

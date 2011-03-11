@@ -18,12 +18,13 @@ from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
 from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import UI.PixmapCache
 
+
 class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     """
     Class implementing the VCS project browser helper for Mercurial.
     """
     def __init__(self, vcsObject, browserObject, projectObject, isTranslationsBrowser,
-        parent = None, name = None):
+        parent=None, name=None):
         """
         Constructor
         
@@ -40,9 +41,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenu(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
         
         @param menu reference to the menu to be shown
@@ -68,9 +69,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuMulti(self, menu, standardItems):
         """
-        Slot called before the context menu (multiple selections) is shown. 
+        Slot called before the context menu (multiple selections) is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
         
         @param menu reference to the menu to be shown
@@ -106,9 +107,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDir(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
@@ -132,9 +133,9 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDirMulti(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
@@ -185,7 +186,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -193,20 +194,20 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         
         act = menu.addAction(UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'), 
+            self.trUtf8('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsAdd.png"),
-            self.trUtf8('Add to repository'), 
+            self.trUtf8('Add to repository'),
             self._VCSAdd)
         self.vcsAddMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'), 
+            self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository only'), 
+            self.trUtf8('Remove from repository only'),
             self.__HgForget)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
@@ -233,10 +234,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'), 
+            self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
-        self.annotateAct = menu.addAction(self.trUtf8('Show annotated file'), 
+        self.annotateAct = menu.addAction(self.trUtf8('Show annotated file'),
             self.__HgAnnotate)
         self.vcsMenuActions.append(self.annotateAct)
         menu.addSeparator()
@@ -262,7 +263,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def _addVCSMenuMulti(self, mainMenu):
         """
-        Protected method used to add the VCS menu for multi selection to all 
+        Protected method used to add the VCS menu for multi selection to all
         project browsers.
         
         @param mainMenu reference to the menu to be amended
@@ -274,7 +275,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -282,7 +283,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         
         act = menu.addAction(UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'), 
+            self.trUtf8('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -290,11 +291,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Add to repository'), self._VCSAdd)
         self.vcsAddMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'), 
+            self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository only'), 
+            self.trUtf8('Remove from repository only'),
             self.__HgForget)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -306,7 +307,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'), 
+            self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -340,7 +341,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -377,7 +378,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -385,7 +386,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         
         act = menu.addAction(UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'), 
+            self.trUtf8('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -393,7 +394,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Add to repository'), self._VCSAdd)
         self.vcsAddDirMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'), 
+            self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -420,7 +421,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'), 
+            self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -460,7 +461,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._VCSInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -468,7 +469,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         
         act = menu.addAction(UI.PixmapCache.getIcon("vcsCommit.png"),
-            self.trUtf8('Commit changes to repository...'),    
+            self.trUtf8('Commit changes to repository...'),
             self._VCSCommit)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
@@ -476,7 +477,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Add to repository'), self._VCSAdd)
         self.vcsAddDirMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRemove.png"),
-            self.trUtf8('Remove from repository (and disk)'), 
+            self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
@@ -488,7 +489,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show difference'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'), 
+            self.trUtf8('Show difference (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()

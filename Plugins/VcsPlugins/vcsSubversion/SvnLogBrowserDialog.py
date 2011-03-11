@@ -22,11 +22,12 @@ import UI.PixmapCache
 
 import Preferences
 
+
 class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -82,9 +83,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         # three blanks followed by A or D or M followed by path
         
         self.flags = {
-            'A' : self.trUtf8('Added'),
-            'D' : self.trUtf8('Deleted'),
-            'M' : self.trUtf8('Modified'), 
+            'A': self.trUtf8('Added'),
+            'D': self.trUtf8('Deleted'),
+            'M': self.trUtf8('Modified'),
         }
         
         self.buf = []        # buffer for stdout
@@ -117,7 +118,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         Private method to resort the log tree.
         """
-        self.logTree.sortItems(self.logTree.sortColumn(), 
+        self.logTree.sortItems(self.logTree.sortColumn(),
             self.logTree.header().sortIndicatorOrder())
     
     def __resizeColumnsFiles(self):
@@ -132,9 +133,9 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         Private method to resort the changed files tree.
         """
         sortColumn = self.filesTree.sortColumn()
-        self.filesTree.sortItems(1, 
+        self.filesTree.sortItems(1,
             self.filesTree.header().sortIndicatorOrder())
-        self.filesTree.sortItems(sortColumn, 
+        self.filesTree.sortItems(sortColumn,
             self.filesTree.header().sortIndicatorOrder())
     
     def __generateLogItem(self, author, date, message, revision, changedPaths):
@@ -146,7 +147,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param message text of the log message (list of strings)
         @param revision revision info (string)
         @param changedPaths list of dictionary objects containing
-            info about the changed files/directories 
+            info about the changed files/directories
         @return reference to the generated item (QTreeWidgetItem)
         """
         msg = []
@@ -154,10 +155,10 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             msg.append(line.strip())
         
         itm = QTreeWidgetItem(self.logTree, [
-            "{0:7}".format(revision), 
-            author, 
-            date, 
-            " ".join(msg), 
+            "{0:7}".format(revision),
+            author,
+            date,
+            " ".join(msg),
         ])
         
         itm.setData(0, self.__messageRole, message)
@@ -187,17 +188,17 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @return reference to the generated item (QTreeWidgetItem)
         """
         itm = QTreeWidgetItem(self.filesTree, [
-            self.flags[action], 
-            path, 
-            copyFrom, 
-            copyRev, 
+            self.flags[action],
+            path,
+            copyFrom,
+            copyRev,
         ])
         
         itm.setTextAlignment(3, Qt.AlignRight)
         
         return itm
     
-    def __getLogEntries(self, startRev = None):
+    def __getLogEntries(self, startRev=None):
         """
         Private method to retrieve log entries from the repository.
         
@@ -299,42 +300,42 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         ioEncoding = Preferences.getSystem("IOEncoding")
         
         noEntries = 0
-        log = {"message" : []}
+        log = {"message": []}
         changedPaths = []
         for s in self.buf:
             if self.rx_rev1.exactMatch(s):
                 log["revision"] = self.rx_rev.cap(1)
-                log["author"]   = self.rx_rev.cap(2)
-                log["date"]     = self.rx_rev.cap(3)
+                log["author"] = self.rx_rev.cap(2)
+                log["date"] = self.rx_rev.cap(3)
                 # number of lines is ignored
             elif self.rx_rev2.exactMatch(s):
                 log["revision"] = self.rx_rev2.cap(1)
-                log["author"]   = self.rx_rev2.cap(2)
-                log["date"]     = self.rx_rev2.cap(3)
+                log["author"] = self.rx_rev2.cap(2)
+                log["date"] = self.rx_rev2.cap(3)
                 # number of lines is ignored
             elif self.rx_flags1.exactMatch(s):
                 changedPaths.append({\
-                    "action"            : 
-                        str(self.rx_flags1.cap(1).strip(), ioEncoding, 'replace'), 
-                    "path"              : 
-                        str(self.rx_flags1.cap(2).strip(), ioEncoding, 'replace'), 
-                    "copyfrom_path"     : 
-                        str(self.rx_flags1.cap(3).strip(), ioEncoding, 'replace'), 
-                    "copyfrom_revision" : 
-                        str(self.rx_flags1.cap(4).strip(), ioEncoding, 'replace'), 
+                    "action":
+                        str(self.rx_flags1.cap(1).strip(), ioEncoding, 'replace'),
+                    "path":
+                        str(self.rx_flags1.cap(2).strip(), ioEncoding, 'replace'),
+                    "copyfrom_path":
+                        str(self.rx_flags1.cap(3).strip(), ioEncoding, 'replace'),
+                    "copyfrom_revision":
+                        str(self.rx_flags1.cap(4).strip(), ioEncoding, 'replace'),
                 })
             elif self.rx_flags2.exactMatch(s):
                 changedPaths.append({\
-                    "action"            : 
-                        str(self.rx_flags2.cap(1).strip(), ioEncoding, 'replace'), 
-                    "path"              : 
-                        str(self.rx_flags2.cap(2).strip(), ioEncoding, 'replace'), 
-                    "copyfrom_path"     : "", 
-                    "copyfrom_revision" : "", 
+                    "action":
+                        str(self.rx_flags2.cap(1).strip(), ioEncoding, 'replace'),
+                    "path":
+                        str(self.rx_flags2.cap(2).strip(), ioEncoding, 'replace'),
+                    "copyfrom_path": "",
+                    "copyfrom_revision": "",
                 })
             elif self.rx_sep1.exactMatch(s) or self.rx_sep2.exactMatch(s):
                 if len(log) > 1:
-                    self.__generateLogItem(log["author"], log["date"], 
+                    self.__generateLogItem(log["author"], log["date"],
                         log["message"], log["revision"], changedPaths)
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and not self.__minDate.isValid():
@@ -346,7 +347,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                         if self.__minDate > dt:
                             self.__minDate = dt
                     noEntries += 1
-                    log = {"message" : []}
+                    log = {"message": []}
                     changedPaths = []
             else:
                 if s.strip().endswith(":") or not s.strip():
@@ -378,15 +379,15 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process and inserts it into a buffer.
         """
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+            line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
             self.buf.append(line)
     
@@ -399,8 +400,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
@@ -447,7 +448,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         changes = current.data(0, self.__changesRole)
         if len(changes) > 0:
             for change in changes:
-                self.__generateFileItem(change["action"], change["path"], 
+                self.__generateFileItem(change["action"], change["path"],
                     change["copyfrom_path"], change["copyfrom_revision"])
             self.__resizeColumnsFiles()
             self.__resortFiles()
@@ -588,7 +589,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         Private slot called, when the stop on copy/move checkbox is clicked
         """
-        self.vcs.getPlugin().setPreferences("StopLogOnCopy", 
+        self.vcs.getPlugin().setPreferences("StopLogOnCopy",
                                             self.stopCheckBox.isChecked())
         self.nextButton.setEnabled(True)
         self.limitSpinBox.setEnabled(True)

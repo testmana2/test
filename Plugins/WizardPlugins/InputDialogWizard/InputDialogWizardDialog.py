@@ -14,6 +14,7 @@ from PyQt4.QtGui import *
 
 from .Ui_InputDialogWizardDialog import Ui_InputDialogWizardDialog
 
+
 class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
     """
     Class implementing the input dialog wizard dialog.
@@ -170,7 +171,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             code += 'self.trUtf8("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
             code += '{0}, {1}, {2}, {3:d}){4}'.format(
-                doubleDefault, doubleFrom, doubleTo, 
+                doubleDefault, doubleFrom, doubleTo,
                 self.sDoubleDecimals.value(), estring)
         elif self.rItem.isChecked():
             code += 'getItem({0}{1}'.format(os.linesep, istring)

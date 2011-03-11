@@ -26,7 +26,8 @@ from UI.Info import Version
 import Utilities
 
 # list of supported filename extensions
-supportedExtensions = [".py", ".pyw", ".ptl", ".rb"]    
+supportedExtensions = [".py", ".pyw", ".ptl", ".rb"]
+
 
 def usage():
     """
@@ -114,6 +115,7 @@ def usage():
     print("        Enable generation of QtHelp Collection files.")
     sys.exit(1)
 
+
 def version():
     """
     Function to show the version information.
@@ -128,6 +130,7 @@ There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.""".format(Version))
     sys.exit(1)
 
+
 def main():
     """
     Main entry point into the application.
@@ -139,20 +142,20 @@ def main():
         opts, args = getopt.getopt(sys.argv[1:], "c:ehio:Rrt:Vx:",
             ["exclude=", "extension=", "help", "noindex", "noempty", "outdir=",
              "recursive", "style-sheet=", "version",
-             "exclude-file=", "eol=", 
-             "body-color=", "body-background-color=", 
+             "exclude-file=", "eol=",
+             "body-color=", "body-background-color=",
              "l1header-color=", "l1header-background-color=",
              "l2header-color=", "l2header-background-color=",
              "cfheader-color=", "cfheader-background-color=",
              "link-color=",
-             "create-qhp", "qhp-outdir=", "qhp-namespace=", 
-             "qhp-virtualfolder=", "qhp-filtername=", "qhp-filterattribs=", 
-             "qhp-title=", "create-qhc", 
+             "create-qhp", "qhp-outdir=", "qhp-namespace=",
+             "qhp-virtualfolder=", "qhp-filtername=", "qhp-filterattribs=",
+             "qhp-title=", "create-qhc",
             ])
     except getopt.error:
         usage()
 
-    excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject", 
+    excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
                    ".eric5project", "_eric5project", "dist", "build", "doc", "docs"]
     excludePatterns = []
     outputDir = "doc"
@@ -266,7 +269,7 @@ def main():
 
     if stylesheetFile:
         try:
-            sf = open(stylesheetFile, "r", encoding = "utf-8")
+            sf = open(stylesheetFile, "r", encoding="utf-8")
             stylesheet = sf.read()
             sf.close()
         except IOError:
@@ -293,9 +296,9 @@ def main():
             qtHelpOutputDir = os.getcwd()
         qtHelpOutputDir = os.path.abspath(qtHelpOutputDir)
         
-        qtHelpGenerator = QtHelpGenerator(outputDir, 
-                                          qtHelpOutputDir, qtHelpNamespace, qtHelpFolder, 
-                                          qtHelpFilterName, qtHelpFilterAttribs, 
+        qtHelpGenerator = QtHelpGenerator(outputDir,
+                                          qtHelpOutputDir, qtHelpNamespace, qtHelpFolder,
+                                          qtHelpFilterName, qtHelpFilterAttribs,
                                           qtHelpTitle, qtHelpCreateCollection)
     
     for arg in args:
@@ -348,8 +351,8 @@ def main():
                     continue
                 
                 try:
-                    module = Utilities.ModuleParser.readModule(file, basename = basename, 
-                                inpackage = inpackage, extensions = supportedExtensions)
+                    module = Utilities.ModuleParser.readModule(file, basename=basename,
+                                inpackage=inpackage, extensions=supportedExtensions)
                     moduleDocument = ModuleDocument(module, colors, stylesheet)
                     doc = moduleDocument.genDocument()
                 except IOError as v:
@@ -377,7 +380,7 @@ def main():
                 
                 # generate output
                 try:
-                    out = open(f, "w", encoding = "utf-8", newline = newline)
+                    out = open(f, "w", encoding="utf-8", newline=newline)
                     out.write(doc)
                     out.close()
                 except IOError as v:
@@ -391,11 +394,11 @@ def main():
 
     # write index files
     if doIndex:
-        indexGenerator.writeIndices(basename, newline = newline)
+        indexGenerator.writeIndices(basename, newline=newline)
     
     # generate the QtHelp files
     if qtHelpCreation:
-        qtHelpGenerator.generateFiles(newline = newline)
+        qtHelpGenerator.generateFiles(newline=newline)
 
     sys.exit(0)
 

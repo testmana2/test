@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerJavaScript,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerJavaScript(QsciLexerJavaScript, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,13 +28,13 @@ class LexerJavaScript(QsciLexerJavaScript, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/* ',
-            'end'   : ' */'
+            'start': '/* ',
+            'end': ' */'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
 
     def initProperties(self):
@@ -57,9 +58,9 @@ class LexerJavaScript(QsciLexerJavaScript, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerJavaScript.Comment, 
-                         QsciLexerJavaScript.CommentDoc, 
-                         QsciLexerJavaScript.CommentLine, 
+        return style in [QsciLexerJavaScript.Comment,
+                         QsciLexerJavaScript.CommentDoc,
+                         QsciLexerJavaScript.CommentLine,
                          QsciLexerJavaScript.CommentLineDoc]
     
     def isStringStyle(self, style):
@@ -68,16 +69,16 @@ class LexerJavaScript(QsciLexerJavaScript, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerJavaScript.DoubleQuotedString, 
-                         QsciLexerJavaScript.SingleQuotedString, 
-                         QsciLexerJavaScript.UnclosedString, 
+        return style in [QsciLexerJavaScript.DoubleQuotedString,
+                         QsciLexerJavaScript.SingleQuotedString,
+                         QsciLexerJavaScript.UnclosedString,
                          QsciLexerJavaScript.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerJavaScript.keywords(self, kwSet)

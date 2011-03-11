@@ -16,7 +16,7 @@ class UMLSceneSizeDialog(QDialog, Ui_UMLSceneSizeDialog):
     """
     Class implementing a dialog to set the scene sizes.
     """
-    def __init__(self, w, h, minW, minH, parent = None, name = None):
+    def __init__(self, w, h, minW, minH, parent=None, name=None):
         """
         Constructor
         

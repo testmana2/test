@@ -25,15 +25,16 @@ import UI.PixmapCache
 
 from eric5config import getConfig
 
-pyqtSignatureRole   = Qt.UserRole + 1
+pyqtSignatureRole = Qt.UserRole + 1
 pythonSignatureRole = Qt.UserRole + 2
-rubySignatureRole   = Qt.UserRole + 3
+rubySignatureRole = Qt.UserRole + 3
+
 
 class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     """
     Class implementing a dialog to generate code for a Qt4 dialog.
     """
-    def __init__(self, formName, project, parent = None):
+    def __init__(self, formName, project, parent=None):
         """
         Constructor
         
@@ -73,7 +74,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 self.__initError = True
                 return
             
-            self.__module = ModuleParser.readModule(self.srcFile, caching = False)
+            self.__module = ModuleParser.readModule(self.srcFile, caching=False)
         
         if self.__module is not None:
             self.filenameEdit.setText(self.srcFile)
@@ -160,7 +161,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         
     def __mapType(self, type_):
         """
-        Private method to map a type as reported by Qt's meta object to the 
+        Private method to map a type as reported by Qt's meta object to the
         correct Python type.
         
         @param type_ type as reported by Qt (QByteArray)
@@ -214,8 +215,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         if self.__module is not None:
                             method = "on_{0}_{1}".format(
                                 name, metaMethod.signature().split("(")[0])
-                            method2 = "{0}({1})".format(method, 
-                                ", ".join([self.__mapType(t) 
+                            method2 = "{0}({1})".format(method,
+                                ", ".join([self.__mapType(t)
                                            for t in metaMethod.parameterTypes()]))
                             
                             if method2 in signatureList or method in signatureList:
@@ -225,7 +226,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 continue
                         
                         pyqtSignature = \
-                            ", ".join([self.__mapType(t) 
+                            ", ".join([self.__mapType(t)
                                        for t in metaMethod.parameterTypes()])
                         
                         parameterNames = metaMethod.parameterNames()
@@ -239,12 +240,12 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         
                         if methNamesSig:
                             pythonSignature = "on_{0}_{1}(self, {2})".format(
-                                name, 
-                                metaMethod.signature().split("(")[0], 
+                                name,
+                                metaMethod.signature().split("(")[0],
                                 methNamesSig)
                         else:
                             pythonSignature = "on_{0}_{1}(self)".format(
-                                name, 
+                                name,
                                 metaMethod.signature().split("(")[0])
                         itm2.setData(pyqtSignature, pyqtSignatureRole)
                         itm2.setData(pythonSignature, pythonSignatureRole)
@@ -296,7 +297,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             # new file
             try:
                 tmplName = os.path.join(getConfig('ericCodeTemplatesDir'), "impl.py.tmpl")
-                tmplFile = open(tmplName, 'r', encoding = "utf-8")
+                tmplFile = open(tmplName, 'r', encoding="utf-8")
                 template = tmplFile.read()
                 tmplFile.close()
             except IOError as why:
@@ -310,7 +311,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             objName = self.__objectName()
             if objName:
                 template = template\
-                    .replace("$FORMFILE$", 
+                    .replace("$FORMFILE$",
                              os.path.splitext(os.path.basename(self.formFile))[0])\
                     .replace("$FORMCLASS$", objName)\
                     .replace("$CLASSNAME$", self.classNameCombo.currentText())\
@@ -327,7 +328,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         else:
             # extend existing file
             try:
-                srcFile = open(self.srcFile, 'r', encoding = "utf-8")
+                srcFile = open(self.srcFile, 'r', encoding="utf-8")
                 sourceImpl = srcFile.readlines()
                 srcFile.close()
                 if not sourceImpl[-1].endswith("\n"):
@@ -350,7 +351,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 appendAtIndex = cls.endlineno - 1
             
             # determine indent string
-            for line in sourceImpl[cls.lineno:cls.endlineno+1]:
+            for line in sourceImpl[cls.lineno:cls.endlineno + 1]:
                 if line.lstrip().startswith("def __init__"):
                     indentStr = line.replace(line.lstrip(), "")
                     break
@@ -387,8 +388,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 newline = None
             else:
                 newline = self.project.getEolString()
-            srcFile = open(self.filenameEdit.text(), 'w', encoding = "utf-8", 
-                           newline = newline)
+            srcFile = open(self.filenameEdit.text(), 'w', encoding="utf-8",
+                           newline=newline)
             srcFile.write("".join(sourceImpl))
             srcFile.close()
         except IOError as why:

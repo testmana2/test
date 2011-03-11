@@ -12,6 +12,7 @@ from .XMLStreamReaderBase import XMLStreamReaderBase
 
 import Preferences
 
+
 class UserProjectReader(XMLStreamReaderBase):
     """
     Class for reading an XML user project properties file.
@@ -46,7 +47,7 @@ class UserProjectReader(XMLStreamReaderBase):
                 elif self.name() == "VcsType":
                     self.project.pudata["VCSOVERRIDE"] = [self.readElementText()]
                 elif self.name() == "VcsStatusMonitorInterval":
-                    interval = int(self.attribute("value", 
+                    interval = int(self.attribute("value",
                         Preferences.getVCS("StatusMonitorInterval")))
                     self.project.pudata["VCSSTATUSMONITORINTERVAL"] = [interval]
                 else:

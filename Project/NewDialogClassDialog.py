@@ -17,11 +17,12 @@ from E5Gui import E5FileDialog
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
 
+
 class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
     """
     Class implementing a dialog to ente the data for a new dialog class file.
     """
-    def __init__(self, defaultClassName, defaultFile, defaultPath, parent = None):
+    def __init__(self, defaultClassName, defaultFile, defaultPath, parent=None):
         """
         Constructor
         
@@ -60,8 +61,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         self.okButton.setEnabled(
             self.classnameEdit.text() != "" and \
-            self.filenameEdit.text()  != "" and \
-            self.pathnameEdit.text()  != "")
+            self.filenameEdit.text() != "" and \
+            self.pathnameEdit.text() != "")
         
     def on_classnameEdit_textChanged(self, text):
         """

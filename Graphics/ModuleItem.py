@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .UMLItem import UMLItem
 
+
 class ModuleModel(object):
     """
     Class implementing the module model.
@@ -50,12 +51,13 @@ class ModuleModel(object):
         """
         return self.name
         
+
 class ModuleItem(UMLItem):
     """
     Class implementing a module item.
     """
-    def __init__(self, model = None, x = 0, y = 0, rounded = False,
-                 parent = None, scene = None):
+    def __init__(self, model=None, x=0, y=0, rounded=False,
+                 parent=None, scene=None):
         """
         Constructor
         
@@ -132,7 +134,7 @@ class ModuleItem(UMLItem):
         self.__createTexts()
         self.__calculateSize()
         
-    def paint(self, painter, option, widget = None):
+    def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
         

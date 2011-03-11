@@ -20,11 +20,12 @@ from .Config import ConfigHgProtocols
 
 import Utilities
 
+
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
     """
     Class implementing the Options Dialog for a new project from the repository.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -108,7 +109,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         if scheme == "file://" and url[0] not in ["\\", "/"]:
             url = "/{0}".format(url)
         vcsdatadict = {
-            "url" : '{0}{1}'.format(scheme, url),
-            "revision" : self.vcsRevisionEdit.text(), 
+            "url": '{0}{1}'.format(scheme, url),
+            "revision": self.vcsRevisionEdit.text(),
         }
         return (self.vcsProjectDirEdit.text(), vcsdatadict)

@@ -213,7 +213,7 @@ flag indicating passive connection mode (boolean)
         Private method to ask the user which branch of a fork to follow.
 </p><a NAME="DebuggerInterfacePython3.__identityTranslation" ID="DebuggerInterfacePython3.__identityTranslation"></a>
 <h4>DebuggerInterfacePython3.__identityTranslation</h4>
-<b>__identityTranslation</b>(<i>fn, remote2local = True</i>)
+<b>__identityTranslation</b>(<i>fn, remote2local=True</i>)
 <p>
         Private method to perform the identity path translation.
 </p><dl>
@@ -237,7 +237,7 @@ translated filename (string)
         Private method to handle data from the client.
 </p><a NAME="DebuggerInterfacePython3.__remoteTranslation" ID="DebuggerInterfacePython3.__remoteTranslation"></a>
 <h4>DebuggerInterfacePython3.__remoteTranslation</h4>
-<b>__remoteTranslation</b>(<i>fn, remote2local = True</i>)
+<b>__remoteTranslation</b>(<i>fn, remote2local=True</i>)
 <p>
         Private method to perform the path translation.
 </p><dl>
@@ -266,7 +266,7 @@ command to send to the debug client (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.__startProcess" ID="DebuggerInterfacePython3.__startProcess"></a>
 <h4>DebuggerInterfacePython3.__startProcess</h4>
-<b>__startProcess</b>(<i>program, arguments, environment = None</i>)
+<b>__startProcess</b>(<i>program, arguments, environment=None</i>)
 <p>
         Private method to start the debugger client process.
 </p><dl>
@@ -332,7 +332,7 @@ flag indicating success (boolean)
         Public slot to get the banner info of the remote client.
 </p><a NAME="DebuggerInterfacePython3.remoteBreakpoint" ID="DebuggerInterfacePython3.remoteBreakpoint"></a>
 <h4>DebuggerInterfacePython3.remoteBreakpoint</h4>
-<b>remoteBreakpoint</b>(<i>fn, line, set, cond = None, temp = False</i>)
+<b>remoteBreakpoint</b>(<i>fn, line, set, cond=None, temp=False</i>)
 <p>
         Public method to set or clear a breakpoint.
 </p><dl>
@@ -404,7 +404,7 @@ regexp string for variable names to filter out (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteClientVariable" ID="DebuggerInterfacePython3.remoteClientVariable"></a>
 <h4>DebuggerInterfacePython3.remoteClientVariable</h4>
-<b>remoteClientVariable</b>(<i>scope, filter, var, framenr = 0</i>)
+<b>remoteClientVariable</b>(<i>scope, filter, var, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -423,7 +423,7 @@ framenumber of the variables to retrieve (int)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteClientVariables" ID="DebuggerInterfacePython3.remoteClientVariables"></a>
 <h4>DebuggerInterfacePython3.remoteClientVariables</h4>
-<b>remoteClientVariables</b>(<i>scope, filter, framenr = 0</i>)
+<b>remoteClientVariables</b>(<i>scope, filter, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -450,7 +450,7 @@ the text to be completed (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteContinue" ID="DebuggerInterfacePython3.remoteContinue"></a>
 <h4>DebuggerInterfacePython3.remoteContinue</h4>
-<b>remoteContinue</b>(<i>special = False</i>)
+<b>remoteContinue</b>(<i>special=False</i>)
 <p>
         Public method to continue the debugged program.
 </p><dl>
@@ -460,7 +460,7 @@ flag indicating a special continue operation
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteCoverage" ID="DebuggerInterfacePython3.remoteCoverage"></a>
 <h4>DebuggerInterfacePython3.remoteCoverage</h4>
-<b>remoteCoverage</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteCoverage</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect coverage data.
 </p><dl>
@@ -510,7 +510,7 @@ statement to execute (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteLoad" ID="DebuggerInterfacePython3.remoteLoad"></a>
 <h4>DebuggerInterfacePython3.remoteLoad</h4>
-<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter = False, autoContinue = True, autoFork = False, forkChild = False</i>)
+<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter=False, autoContinue=True, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to debug.
 </p><dl>
@@ -540,7 +540,7 @@ flag indicating to debug the child after forking (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteProfile" ID="DebuggerInterfacePython3.remoteProfile"></a>
 <h4>DebuggerInterfacePython3.remoteProfile</h4>
-<b>remoteProfile</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteProfile</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect profiling data.
 </p><dl>
@@ -569,7 +569,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebuggerInterfacePython3.remoteRun" ID="DebuggerInterfacePython3.remoteRun"></a>
 <h4>DebuggerInterfacePython3.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd, autoFork = False, forkChild = False</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -603,7 +603,7 @@ id of the thread (integer)
 <h4>DebuggerInterfacePython3.remoteStatement</h4>
 <b>remoteStatement</b>(<i>stmt</i>)
 <p>
-        Public method to execute a Python statement.  
+        Public method to execute a Python statement.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -673,7 +673,7 @@ flag indicating erasure of coverage data is requested
         Public method to stop a unittest run.
 </p><a NAME="DebuggerInterfacePython3.remoteWatchpoint" ID="DebuggerInterfacePython3.remoteWatchpoint"></a>
 <h4>DebuggerInterfacePython3.remoteWatchpoint</h4>
-<b>remoteWatchpoint</b>(<i>cond, set, temp = False</i>)
+<b>remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
 <p>
         Public method to set or clear a watch expression.
 </p><dl>

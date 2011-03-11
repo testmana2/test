@@ -36,6 +36,7 @@ pyqtApi = 2
 
 error = ""
 
+
 class Pep8CheckerPlugin(QObject):
     """
     Class implementing the PEP 8 Checker plugin.
@@ -142,7 +143,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __projectShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project menu or a submenu is 
+        Private slot called, when the the project menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -155,7 +156,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project browser menu or a submenu is 
+        Private slot called, when the the project browser menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -216,10 +217,10 @@ class Pep8CheckerPlugin(QObject):
         self.__projectBrowserPep8CheckerDialog.show()
         if isDir:
             self.__projectBrowserPep8CheckerDialog.start(
-                fn, save = True)
+                fn, save=True)
         else:
             self.__projectBrowserPep8CheckerDialog.start(
-                fn, save = True, repeat = True)
+                fn, save=True, repeat=True)
     
     def __editorOpened(self, editor):
         """
@@ -246,7 +247,7 @@ class Pep8CheckerPlugin(QObject):
     
     def __editorShowMenu(self, menuName, menu, editor):
         """
-        Private slot called, when the the editor context menu or a submenu is 
+        Private slot called, when the the editor context menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -269,6 +270,6 @@ class Pep8CheckerPlugin(QObject):
                 self.__editorPep8CheckerDialog = Pep8Dialog()
                 self.__editorPep8CheckerDialog.show()
                 self.__editorPep8CheckerDialog.start(
-                    editor.getFileName(), 
-                    save = True, 
-                    repeat = True)
+                    editor.getFileName(),
+                    save=True,
+                    repeat=True)

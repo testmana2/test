@@ -15,11 +15,12 @@ from VCS.StatusMonitorThread import VcsStatusMonitorThread
 
 import Preferences
 
+
 class SvnStatusMonitorThread(VcsStatusMonitorThread):
     """
     Class implementing the VCS status monitor thread class for Subversion.
     """
-    def __init__(self, interval, project, vcs, parent = None):
+    def __init__(self, interval, project, vcs, parent=None):
         """
         Constructor
         
@@ -47,7 +48,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
             <li>" " path is back at normal</li>
         </ul>
         
-        @return tuple of flag indicating successful operation (boolean) and 
+        @return tuple of flag indicating successful operation (boolean) and
             a status message in case of non successful operation (string)
         """
         self.shouldUpdate = False
@@ -62,10 +63,11 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         cwd = os.getcwd()
         os.chdir(self.projectDir)
         try:
-            allFiles = client.status('.', recurse = True, get_all = True, 
-                                          ignore = True, 
-                                          update = \
-                                            not Preferences.getVCS("MonitorLocalStatus"))
+            allFiles = client.status('.',
+                                     recurse=True,
+                                     get_all=True,
+                                     ignore=True,
+                                     update=not Preferences.getVCS("MonitorLocalStatus"))
             states = {}
             for file in allFiles:
                 uptodate = True
@@ -119,8 +121,8 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
         @return tuple of four values (retcode, username, password, save).
-            Retcode should be True, if username and password should be used 
-            by subversion, username and password contain the relevant data 
+            Retcode should be True, if username and password should be used
+            by subversion, username and password contain the relevant data
             as strings and save is a flag indicating, that username and
             password should be saved. Always returns (False, "", "", False).
         """

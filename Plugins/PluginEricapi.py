@@ -39,6 +39,7 @@ pyqtApi = 2
 
 error = ""
 
+
 def exeDisplayData():
     """
     Public method to support the display of some executable info.
@@ -48,21 +49,22 @@ def exeDisplayData():
     """
     exe = 'eric5_api'
     if Utilities.isWindowsPlatform():
-        exe = os.path.join(getConfig("bindir"), exe +'.bat')
+        exe = os.path.join(getConfig("bindir"), exe + '.bat')
     
     data = {
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("EricapiPlugin",
-                                "Eric5 API File Generator"), 
-        "exe"               : exe, 
-        "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric5_', 
-        "versionPosition"   : -3, 
-        "version"           : "", 
-        "versionCleanup"    : None, 
+        "programEntry": True,
+        "header": QApplication.translate("EricapiPlugin",
+                                "Eric5 API File Generator"),
+        "exe": exe,
+        "versionCommand": '--version',
+        "versionStartsWith": 'eric5_',
+        "versionPosition": -3,
+        "version": "",
+        "versionCleanup": None,
     }
     
     return data
+
 
 class EricapiPlugin(QObject):
     """
@@ -123,7 +125,7 @@ class EricapiPlugin(QObject):
     
     def __projectShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project menu or a submenu is 
+        Private slot called, when the the project menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -140,9 +142,9 @@ class EricapiPlugin(QObject):
         Private slot to perform the eric5_api api generation.
         """
         eolTranslation = {
-            '\r' : 'cr', 
-            '\n' : 'lf', 
-            '\r\n' : 'crlf', 
+            '\r': 'cr',
+            '\n': 'lf',
+            '\r\n': 'crlf',
         }
         project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4API")

@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 
 from .BookmarkNode import BookmarkNode
 
+
 class XbelWriter(QXmlStreamWriter):
     """
     Class implementing a writer object to generate XBEL bookmark files.

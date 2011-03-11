@@ -20,12 +20,13 @@ from Utilities.SingleApplication import SingleApplicationClient, SingleApplicati
 SAFile = "eric5_trpreviewer"
 
 # define the protocol tokens
-SALoadForm =        '>LoadForm<'
+SALoadForm = '>LoadForm<'
 SALoadTranslation = '>LoadTranslation<'
+
 
 class TRSingleApplicationServer(SingleApplicationServer):
     """
-    Class implementing the single application server embedded within the 
+    Class implementing the single application server embedded within the
     Translations Previewer.
     
     @signal loadForm(str) emitted to load a form file
@@ -78,6 +79,7 @@ class TRSingleApplicationServer(SingleApplicationServer):
         for fname in fnames:
             self.loadTranslation.emit(fname, first)
             first = False
+
 
 class TRSingleApplicationClient(SingleApplicationClient):
     """

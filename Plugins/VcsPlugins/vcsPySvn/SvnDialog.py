@@ -19,11 +19,12 @@ from .Ui_SvnDialog import Ui_SvnDialog
 
 import Preferences
 
+
 class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
     """
     Class implementing a dialog to show the output of a pysvn action.
     """
-    def __init__(self, text, command, pysvnClient, parent = None, log = ""):
+    def __init__(self, text, command, pysvnClient, parent=None, log=""):
         """
         Constructor
         
@@ -79,12 +80,12 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
             mime = eventDict["mime_type"] == "application/octet-stream" and \
                 self.trUtf8(" (binary)") or ""
             msg = self.trUtf8("{0} {1}{2}\n")\
-                .format(self.trUtf8(svnNotifyActionMap[eventDict["action"]]), 
-                        eventDict["path"], 
+                .format(self.trUtf8(svnNotifyActionMap[eventDict["action"]]),
+                        eventDict["path"],
                         mime)
             if eventDict["action"] in \
-               [pysvn.wc_notify_action.add, pysvn.wc_notify_action.commit_added, 
-                pysvn.wc_notify_action.commit_deleted, pysvn.wc_notify_action.delete, 
+               [pysvn.wc_notify_action.add, pysvn.wc_notify_action.commit_added,
+                pysvn.wc_notify_action.commit_deleted, pysvn.wc_notify_action.delete,
                 pysvn.wc_notify_action.update_add, pysvn.wc_notify_action.update_delete]:
                 self.__hasAddOrDelete = True
         if msg:

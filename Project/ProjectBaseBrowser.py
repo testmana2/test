@@ -20,6 +20,7 @@ from UI.Browser import *
 from .ProjectBrowserModel import *
 from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
 
+
 class ProjectBaseBrowser(Browser):
     """
     Baseclass implementing common functionality for the various project browsers.
@@ -28,7 +29,7 @@ class ProjectBaseBrowser(Browser):
     """
     closeSourceWindow = pyqtSignal(str)
     
-    def __init__(self, project, type_, parent = None):
+    def __init__(self, project, type_, parent=None):
         """
         Constructor
         
@@ -94,18 +95,18 @@ class ProjectBaseBrowser(Browser):
         # create the popup menu for source files
         self.sourceMenu = QMenu(self)
         self.sourceMenu.addAction(
-            QApplication.translate('ProjectBaseBrowser', 'Open'), 
+            QApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
         
         # create the popup menu for general use
         self.menu = QMenu(self)
         self.menu.addAction(
-            QApplication.translate('ProjectBaseBrowser', 'Open'), 
+            QApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
-        self.multiMenu.addAction(QApplication.translate('ProjectBaseBrowser', 'Open'), 
+        self.multiMenu.addAction(QApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
         
         # create the background menu
@@ -164,7 +165,7 @@ class ProjectBaseBrowser(Browser):
         @param selected flag giving the new selection status (boolean)
         """
         if index.isValid():
-            self.selectionModel().select(index, 
+            self.selectionModel().select(index,
                 selected and self.SelectFlags or self.DeselectFlags)
         
     def _setItemRangeSelected(self, startIndex, endIndex, selected):
@@ -176,7 +177,7 @@ class ProjectBaseBrowser(Browser):
         @param selected flag giving the new selection status (boolean)
         """
         selection = QItemSelection(startIndex, endIndex)
-        self.selectionModel().select(selection, 
+        self.selectionModel().select(selection,
             selected and self.SelectFlags or self.DeselectFlags)
         
     def __modelRowsInserted(self, parent, start, end):
@@ -227,7 +228,7 @@ class ProjectBaseBrowser(Browser):
             self.backMenu.setEnabled(True)
         
         if self.project.vcs is not None:
-            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self, 
+            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self,
                 self.project, self.isTranslationsBrowser)
             self.vcsHelper.addVCSMenus(self.mainMenu, self.multiMenu,
                 self.backMenu, self.dirMenu, self.dirMultiMenu)
@@ -246,7 +247,7 @@ class ProjectBaseBrowser(Browser):
             self.backMenu.setEnabled(True)
         
         if self.project.vcs is not None:
-            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self, 
+            self.vcsHelper = self.project.vcs.vcsGetProjectBrowserHelper(self,
                 self.project, self.isTranslationsBrowser)
             self.vcsHelper.addVCSMenus(self.mainMenu, self.multiMenu,
                 self.backMenu, self.dirMenu, self.dirMultiMenu)
@@ -359,9 +360,9 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenu(self, menu):
         """
-        Protected slot called before the context menu is shown. 
+        Protected slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
         
         @param menu reference to the menu to be shown (QMenu)
@@ -374,9 +375,9 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenuMulti(self, menu):
         """
-        Protected slot called before the context menu (multiple selections) is shown. 
+        Protected slot called before the context menu (multiple selections) is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
         
         @param menu reference to the menu to be shown (QMenu)
@@ -389,9 +390,9 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenuDir(self, menu):
         """
-        Protected slot called before the context menu is shown. 
+        Protected slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown (QMenu)
@@ -404,9 +405,9 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenuDirMulti(self, menu):
         """
-        Protected slot called before the context menu is shown. 
+        Protected slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown (QMenu)
@@ -419,14 +420,14 @@ class ProjectBaseBrowser(Browser):
         
     def _showContextMenuBack(self, menu):
         """
-        Protected slot called before the context menu is shown. 
+        Protected slot called before the context menu is shown.
         
         @param menu reference to the menu to be shown (QMenu)
         """
         # nothing to do for now
         return
         
-    def _selectEntries(self, local = True, filter = None):
+    def _selectEntries(self, local=True, filter=None):
         """
         Protected method to select entries based on their VCS status.
         
@@ -480,33 +481,33 @@ class ProjectBaseBrowser(Browser):
         if selectedEntries == 0:
             E5MessageBox.information(self,
             QApplication.translate('ProjectBaseBrowser', "Select entries"),
-            QApplication.translate('ProjectBaseBrowser', 
+            QApplication.translate('ProjectBaseBrowser',
                 """There were no matching entries found."""))
         
     def selectLocalEntries(self):
         """
         Public slot to handle the select local files context menu entries
         """
-        self._selectEntries(local = True, filter = [ProjectBrowserFileItem])
+        self._selectEntries(local=True, filter=[ProjectBrowserFileItem])
         
     def selectVCSEntries(self):
         """
         Public slot to handle the select VCS files context menu entries
         """
-        self._selectEntries(local = False, filter = [ProjectBrowserFileItem])
+        self._selectEntries(local=False, filter=[ProjectBrowserFileItem])
         
     def selectLocalDirEntries(self):
         """
         Public slot to handle the select local directories context menu entries
         """
-        self._selectEntries(local = True,
+        self._selectEntries(local=True,
             filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
         
     def selectVCSDirEntries(self):
         """
         Public slot to handle the select VCS directories context menu entries
         """
-        self._selectEntries(local = False,
+        self._selectEntries(local=False,
             filter=[ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem])
         
     def _prepareRepopulateItem(self, name):

@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerIDL,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerIDL(QsciLexerIDL, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,13 +28,13 @@ class LexerIDL(QsciLexerIDL, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/* ',
-            'end'   : ' */'
+            'start': '/* ',
+            'end': ' */'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
 
     def initProperties(self):
@@ -57,9 +58,9 @@ class LexerIDL(QsciLexerIDL, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerIDL.Comment, 
-                         QsciLexerIDL.CommentDoc, 
-                         QsciLexerIDL.CommentLine, 
+        return style in [QsciLexerIDL.Comment,
+                         QsciLexerIDL.CommentDoc,
+                         QsciLexerIDL.CommentLine,
                          QsciLexerIDL.CommentLineDoc]
     
     def isStringStyle(self, style):
@@ -68,16 +69,16 @@ class LexerIDL(QsciLexerIDL, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerIDL.DoubleQuotedString, 
-                         QsciLexerIDL.SingleQuotedString, 
-                         QsciLexerIDL.UnclosedString, 
+        return style in [QsciLexerIDL.DoubleQuotedString,
+                         QsciLexerIDL.SingleQuotedString,
+                         QsciLexerIDL.UnclosedString,
                          QsciLexerIDL.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerIDL.keywords(self, kwSet)

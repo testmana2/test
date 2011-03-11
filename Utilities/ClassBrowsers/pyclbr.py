@@ -103,6 +103,7 @@ _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 
 _modules = {}                           # cache of modules we've seen
 
+
 class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
     """
     Mixin class implementing the notion of visibility.
@@ -117,6 +118,7 @@ class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
             self.setProtected()
         else:
             self.setPublic()
+
 
 class Class(ClbrBaseClasses.Class, VisibilityMixin):
     """
@@ -135,11 +137,12 @@ class Class(ClbrBaseClasses.Class, VisibilityMixin):
         ClbrBaseClasses.Class.__init__(self, module, name, super, file, lineno)
         VisibilityMixin.__init__(self)
 
+
 class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a Python function.
     """
-    def __init__(self, module, name, file, lineno, signature = '', separator = ','):
+    def __init__(self, module, name, file, lineno, signature='', separator=','):
         """
         Constructor
         
@@ -150,9 +153,10 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
         @param signature parameterlist of the method
         @param separator string separating the parameters
         """
-        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno, 
+        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno,
                                           signature, separator)
         VisibilityMixin.__init__(self)
+
 
 class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
     """
@@ -169,6 +173,7 @@ class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
         """
         ClbrBaseClasses.Attribute.__init__(self, module, name, file, lineno)
         VisibilityMixin.__init__(self)
+
 
 class Publics(object):
     """
@@ -187,10 +192,11 @@ class Publics(object):
         self.name = '__all__'
         self.file = file
         self.lineno = lineno
-        self.identifiers = [e.replace('"','').replace("'","").strip() \
+        self.identifiers = [e.replace('"', '').replace("'", "").strip() \
                             for e in idents.split(',')]
     
-def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
+
+def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
     '''
     Read a module file and return a dictionary of classes.
 
@@ -244,8 +250,8 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
         return dict
 
     _modules[module] = dict
-    classstack = [] # stack of (class, indent) pairs
-    conditionalsstack = [] # stack of indents of conditional defines
+    classstack = []  # stack of (class, indent) pairs
+    conditionalsstack = []  # stack of indents of conditional defines
     deltastack = []
     deltaindent = 0
     deltaindentcalculated = 0
@@ -278,7 +284,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                 if thisindent > conditionalsstack[-1]:
                     if not deltaindentcalculated:
                         deltastack.append(thisindent - conditionalsstack[-1])
-                        deltaindent = reduce(lambda x,y: x+y, deltastack)
+                        deltaindent = reduce(lambda x, y:  x + y, deltastack)
                         deltaindentcalculated = 1
                     thisindent -= deltaindent
                 else:
@@ -310,7 +316,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
-            classstack.append((f, thisindent)) # Marker for nested fns
+            classstack.append((f, thisindent))  # Marker for nested fns
 
         elif m.start("String") >= 0:
             pass
@@ -444,6 +450,7 @@ def readmodule_ex(module, path=[], inpackage = False, isPyFile = False):
         del dict['__all__']
     
     return dict
+
 
 def _indent(ws):
     """

@@ -16,11 +16,12 @@ from .AdBlockSubscription import AdBlockSubscription
 import Helpviewer.HelpWindow
 from Helpviewer.Network.SchemeAccessHandler import SchemeAccessHandler
 
+
 class AdBlockAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for AdBlock URLs.
     """
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         
@@ -36,7 +37,7 @@ class AdBlockAccessHandler(SchemeAccessHandler):
         if request.url().path() != "subscribe":
             return None
         
-        subscription = AdBlockSubscription(request.url(), 
+        subscription = AdBlockSubscription(request.url(),
                             Helpviewer.HelpWindow.HelpWindow.adblockManager())
         
         res = E5MessageBox.yesNo(None,

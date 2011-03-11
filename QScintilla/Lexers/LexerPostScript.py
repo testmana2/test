@@ -12,11 +12,12 @@ from PyQt4.Qsci import QsciLexerPostScript
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerPostScript(QsciLexerPostScript, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -56,7 +57,7 @@ class LexerPostScript(QsciLexerPostScript, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerPostScript.keywords(self, kwSet)

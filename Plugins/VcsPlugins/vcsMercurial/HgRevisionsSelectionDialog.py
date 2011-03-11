@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_HgRevisionsSelectionDialog import Ui_HgRevisionsSelectionDialog
 
+
 class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
     """
     Class implementing a dialog to enter the revisions for the hg diff command.
     """
-    def __init__(self, tagsList, branchesList, parent = None):
+    def __init__(self, tagsList, branchesList, parent=None):
         """
         Constructor
         

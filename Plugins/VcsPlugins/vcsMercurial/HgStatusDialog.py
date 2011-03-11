@@ -22,11 +22,12 @@ from .Ui_HgStatusDialog import Ui_HgStatusDialog
 
 import Preferences
 
+
 class HgStatusDialog(QWidget, Ui_HgStatusDialog):
     """
     Class implementing a dialog to show the output of the hg status command process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -81,13 +82,13 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.statusList.customContextMenuRequested.connect(self.__showContextMenu)
         
         self.modifiedIndicators = [
-            self.trUtf8('added'), 
-            self.trUtf8('modified'), 
-            self.trUtf8('removed'), 
+            self.trUtf8('added'),
+            self.trUtf8('modified'),
+            self.trUtf8('removed'),
         ]
         
         self.unversionedIndicators = [
-            self.trUtf8('not tracked'), 
+            self.trUtf8('not tracked'),
         ]
         
         self.missingIndicators = [
@@ -95,20 +96,20 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         ]
         
         self.status = {
-            'A' : self.trUtf8('added'),
-            'C' : self.trUtf8('normal'),
-            'I' : self.trUtf8('ignored'),
-            'M' : self.trUtf8('modified'),
-            'R' : self.trUtf8('removed'),
-            '?' : self.trUtf8('not tracked'),
-            '!' : self.trUtf8('missing'),
+            'A': self.trUtf8('added'),
+            'C': self.trUtf8('normal'),
+            'I': self.trUtf8('ignored'),
+            'M': self.trUtf8('modified'),
+            'R': self.trUtf8('removed'),
+            '?': self.trUtf8('not tracked'),
+            '!': self.trUtf8('missing'),
         }
     
     def __resort(self):
         """
         Private method to resort the tree.
         """
-        self.statusList.sortItems(self.statusList.sortColumn(), 
+        self.statusList.sortItems(self.statusList.sortColumn(),
             self.statusList.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -127,9 +128,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         statusText = self.status[status]
         itm = QTreeWidgetItem(self.statusList, [
-            "", 
-            statusText, 
-            path, 
+            "",
+            statusText,
+            path,
         ])
         
         itm.setTextAlignment(1, Qt.AlignHCenter)
@@ -293,8 +294,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+                line = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 if line[0] in "ACIMR?!" and line[1] == " ":
                     status, path = line.strip().split(" ", 1)
@@ -309,8 +310,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

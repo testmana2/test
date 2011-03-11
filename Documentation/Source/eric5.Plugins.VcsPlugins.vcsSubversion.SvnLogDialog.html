@@ -45,7 +45,7 @@ Module implementing a dialog to show the output of the svn log command process.
 <p>
     Class implementing a dialog to show the output of the svn log command process.
 </p><p>
-    The dialog is nonmodal. Clicking a link in the upper text pane shows 
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the versions.
 </p>
 <h3>Derived from</h3>
@@ -93,7 +93,7 @@ QWidget, Ui_SvnLogDialog
 </table>
 <a NAME="SvnLogDialog.__init__" ID="SvnLogDialog.__init__"></a>
 <h4>SvnLogDialog (Constructor)</h4>
-<b>SvnLogDialog</b>(<i>vcs, parent = None</i>)
+<b>SvnLogDialog</b>(<i>vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -129,7 +129,7 @@ exit status of the process (QProcess.ExitStatus)
 <h4>SvnLogDialog.__readStdout</h4>
 <b>__readStdout</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
 </p><a NAME="SvnLogDialog.__sourceChanged" ID="SvnLogDialog.__sourceChanged"></a>
@@ -184,7 +184,7 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the subversion process.
 </p><a NAME="SvnLogDialog.start" ID="SvnLogDialog.start"></a>
 <h4>SvnLogDialog.start</h4>
-<b>start</b>(<i>fn, noEntries = 0</i>)
+<b>start</b>(<i>fn, noEntries=0</i>)
 <p>
         Public slot to start the cvs log command.
 </p><dl>

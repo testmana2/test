@@ -8,7 +8,7 @@
 Eric5 Compare
 
 This is the main Python script that performs the necessary initialization
-of the Compare module and starts the Qt event loop. This is a standalone 
+of the Compare module and starts the Qt event loop. This is a standalone
 version of the integrated Compare module.
 """
 
@@ -23,6 +23,7 @@ for arg in sys.argv:
         break
 
 from Utilities import Startup
+
 
 def createMainWidget(argv):
     """
@@ -40,13 +41,14 @@ def createMainWidget(argv):
     else:
         return CompareWindow()
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 Compare",

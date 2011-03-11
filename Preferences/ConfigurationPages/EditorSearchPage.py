@@ -14,6 +14,7 @@ from .Ui_EditorSearchPage import Ui_EditorSearchPage
 
 import Preferences
 
+
 class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
     """
     Class implementing the Editor Search configuration page.
@@ -40,21 +41,21 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
             Preferences.getEditor("MarkOccurrencesTimeout"))
         
         self.editorColours["SearchMarkers"] = \
-            self.initColour("SearchMarkers", self.searchMarkerButton, 
+            self.initColour("SearchMarkers", self.searchMarkerButton,
                 Preferences.getEditorColour)
         
     def save(self):
         """
         Public slot to save the Editor Search configuration.
         """
-        Preferences.setEditor("SearchMarkersEnabled", 
+        Preferences.setEditor("SearchMarkersEnabled",
             self.searchMarkersEnabledCheckBox.isChecked())
-        Preferences.setEditor("QuickSearchMarkersEnabled", 
+        Preferences.setEditor("QuickSearchMarkersEnabled",
             self.quicksearchMarkersEnabledCheckBox.isChecked())
-        Preferences.setEditor("MarkOccurrencesEnabled", 
+        Preferences.setEditor("MarkOccurrencesEnabled",
             self.occurrencesMarkersEnabledCheckBox.isChecked())
         
-        Preferences.setEditor("MarkOccurrencesTimeout", 
+        Preferences.setEditor("MarkOccurrencesTimeout",
             self.markOccurrencesTimeoutSpinBox.value())
         
         for key in list(self.editorColours.keys()):
@@ -66,8 +67,9 @@ class EditorSearchPage(ConfigurationPageBase, Ui_EditorSearchPage):
         Private slot to set the colour of the search markers.
         """
         self.editorColours["SearchMarkers"] = \
-            self.selectColour(self.searchMarkerButton, 
+            self.selectColour(self.searchMarkerButton,
                 self.editorColours["SearchMarkers"], True)
+
 
 def create(dlg):
     """

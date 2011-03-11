@@ -877,7 +877,7 @@ class Checker(object):
             if result is not None:
                 offset, code = result[:2]
                 args = result[2:]
-                self.report_error_args(self.line_number, offset, code, check, 
+                self.report_error_args(self.line_number, offset, code, check,
                     *args)
 
     def build_tokens_line(self):

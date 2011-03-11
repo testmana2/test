@@ -22,7 +22,7 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Utilities.__init__</h1>
 <p>
-Package implementing various functions/classes needed everywhere within eric5. 
+Package implementing various functions/classes needed everywhere within eric5.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -277,7 +277,7 @@ string representing the error message
 <hr /><hr />
 <a NAME="__showwarning" ID="__showwarning"></a>
 <h2>__showwarning</h2>
-<b>__showwarning</b>(<i>message, category, filename, lineno, file = None, line = ""</i>)
+<b>__showwarning</b>(<i>message, category, filename, lineno, file=None, line=""</i>)
 <p>
     Module function to raise a SyntaxError for a SyntaxWarning.
 </p><dl>
@@ -341,7 +341,7 @@ flag indicating good versions were found (boolean)
 <hr /><hr />
 <a NAME="compactPath" ID="compactPath"></a>
 <h2>compactPath</h2>
-<b>compactPath</b>(<i>path, width, measure = len</i>)
+<b>compactPath</b>(<i>path, width, measure=len</i>)
 <p>
     Function to return a compacted path fitting inside the given width.
 </p><dl>
@@ -365,7 +365,7 @@ compacted path (string)
 <hr /><hr />
 <a NAME="compile" ID="compile"></a>
 <h2>compile</h2>
-<b>compile</b>(<i>file, codestring = ""</i>)
+<b>compile</b>(<i>file, codestring=""</i>)
 <p>
     Function to compile one Python source file to Python bytecode.
 </p><dl>
@@ -471,7 +471,7 @@ function to be called to check for a stop
 <dt>Returns:</dt>
 <dd>
 list of all files and directories in the tree rooted
-        at path. The names are expanded to start with path. 
+        at path. The names are expanded to start with path.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -545,7 +545,7 @@ the converted text (string)
     Flags are contained in comments and are introduced by 'eflag:'.
     The rest of the line is interpreted as 'key = value'. value is
     analyzed for being an integer or float value. If that fails, it
-    is assumed to be a string. If a key does not contain a '=' 
+    is assumed to be a string. If a key does not contain a '='
     character, it is assumed to be a boolean flag. Flags are expected
     at the very end of a file. The search is ended, if a line without
     the 'eflag:' marker is found.
@@ -582,7 +582,7 @@ path with converted separator characters (string)
 <hr /><hr />
 <a NAME="generateDistroInfo" ID="generateDistroInfo"></a>
 <h2>generateDistroInfo</h2>
-<b>generateDistroInfo</b>(<i>linesep = '\n'</i>)
+<b>generateDistroInfo</b>(<i>linesep='\n'</i>)
 <p>
     Module function to generate a string with distribution infos.
 </p><dl>
@@ -600,7 +600,7 @@ string with plugins version infos (string)
 <hr /><hr />
 <a NAME="generatePluginsVersionInfo" ID="generatePluginsVersionInfo"></a>
 <h2>generatePluginsVersionInfo</h2>
-<b>generatePluginsVersionInfo</b>(<i>linesep = '\n'</i>)
+<b>generatePluginsVersionInfo</b>(<i>linesep='\n'</i>)
 <p>
     Module function to generate a string with plugins version infos.
 </p><dl>
@@ -636,7 +636,7 @@ the Qt tool name without extension (string)
 <hr /><hr />
 <a NAME="generateVersionInfo" ID="generateVersionInfo"></a>
 <h2>generateVersionInfo</h2>
-<b>generateVersionInfo</b>(<i>linesep = '\n'</i>)
+<b>generateVersionInfo</b>(<i>linesep='\n'</i>)
 <p>
     Module function to generate a string with various version infos.
 </p><dl>
@@ -688,7 +688,7 @@ list of all directories found
 <hr /><hr />
 <a NAME="getEnvironmentEntry" ID="getEnvironmentEntry"></a>
 <h2>getEnvironmentEntry</h2>
-<b>getEnvironmentEntry</b>(<i>key, default = None</i>)
+<b>getEnvironmentEntry</b>(<i>key, default=None</i>)
 <p>
     Module function to get an environment entry.
 </p><dl>
@@ -1059,7 +1059,7 @@ absolute, normalized path (string)
 <h2>normcaseabspath</h2>
 <b>normcaseabspath</b>(<i>path</i>)
 <p>
-    Function returning an absolute path, that is normalized with respect to its case 
+    Function returning an absolute path, that is normalized with respect to its case
     and references.
 </p><dl>
 <dt><i>path</i></dt>
@@ -1232,7 +1232,7 @@ encoded password (string)
 <hr /><hr />
 <a NAME="py2compile" ID="py2compile"></a>
 <h2>py2compile</h2>
-<b>py2compile</b>(<i>file, checkFlakes = False</i>)
+<b>py2compile</b>(<i>file, checkFlakes=False</i>)
 <p>
     Function to compile one Python 2 source file to Python 2 bytecode.
 </p><dl>
@@ -1296,7 +1296,7 @@ tuple of decoded text, encoding and hash value (string, string, string)
 <hr /><hr />
 <a NAME="relpath" ID="relpath"></a>
 <h2>relpath</h2>
-<b>relpath</b>(<i>path, start = os.path.curdir</i>)
+<b>relpath</b>(<i>path, start=os.path.curdir</i>)
 <p>
     Return a relative version of a path.
 </p><dl>

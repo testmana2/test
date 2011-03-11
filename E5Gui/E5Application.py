@@ -10,6 +10,7 @@ Class implementing a specialized application class.
 from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QApplication
 
+
 class E5Application(QApplication):
     """
     Eric application class with an object registry.
@@ -51,7 +52,7 @@ class E5Application(QApplication):
         else:
             raise KeyError('Object "{0}" is not registered.'.format(name))
         
-    def registerPluginObject(self, name, object, pluginType = None):
+    def registerPluginObject(self, name, object, pluginType=None):
         """
         Public method to register a plugin object in the object registry.
         

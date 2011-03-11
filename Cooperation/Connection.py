@@ -14,52 +14,53 @@ from E5Gui import E5MessageBox
 
 import Preferences
 
-MaxBufferSize   = 1024 * 1024
-TransferTimeout =   30 * 1000
-PongTimeout     =   60 * 1000
-PingInterval    =    5 * 1000
-SeparatorToken  = '|||'
+MaxBufferSize = 1024 * 1024
+TransferTimeout = 30 * 1000
+PongTimeout = 60 * 1000
+PingInterval = 5 * 1000
+SeparatorToken = '|||'
+
 
 class Connection(QTcpSocket):
     """
     Class representing a peer connection.
     
     @signal readyForUse() emitted when the connection is ready for use
-    @signal newMessage(user, message) emitted after a new message has 
+    @signal newMessage(user, message) emitted after a new message has
             arrived (string, string)
     @signal getParticipants() emitted after a get participants message has arrived
     @signal participants(participants) emitted after the list of participants has
             arrived (list of strings of "host:port")
     """
-    WaitingForGreeting  = 0
-    ReadingGreeting     = 1
-    ReadyForUse         = 2
+    WaitingForGreeting = 0
+    ReadingGreeting = 1
+    ReadyForUse = 2
     
-    PlainText       = 0
-    Ping            = 1
-    Pong            = 2
-    Greeting        = 3
+    PlainText = 0
+    Ping = 1
+    Pong = 2
+    Greeting = 3
     GetParticipants = 4
-    Participants    = 5
-    Editor          = 6
-    Undefined       = 99
+    Participants = 5
+    Editor = 6
+    Undefined = 99
     
-    ProtocolMessage         = "MESSAGE"
-    ProtocolPing            = "PING"
-    ProtocolPong            = "PONG"
-    ProtocolGreeting        = "GREETING"
+    ProtocolMessage = "MESSAGE"
+    ProtocolPing = "PING"
+    ProtocolPong = "PONG"
+    ProtocolGreeting = "GREETING"
     ProtocolGetParticipants = "GET_PARTICIPANTS"
-    ProtocolParticipants    = "PARTICIPANTS"
-    ProtocolEditor          = "EDITOR"
+    ProtocolParticipants = "PARTICIPANTS"
+    ProtocolEditor = "EDITOR"
     
-    readyForUse     = pyqtSignal()
-    newMessage      = pyqtSignal(str, str)
+    readyForUse = pyqtSignal()
+    newMessage = pyqtSignal(str, str)
     getParticipants = pyqtSignal()
-    participants    = pyqtSignal(list)
-    editorCommand   = pyqtSignal(str, str, str)
-    rejected        = pyqtSignal(str)
+    participants = pyqtSignal(list)
+    editorCommand = pyqtSignal(str, str, str)
+    rejected = pyqtSignal(str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -157,15 +158,15 @@ class Connection(QTcpSocket):
                 return
             
             try:
-                user, serverPort = str(self.__buffer, encoding = "utf-8").split(":")
+                user, serverPort = str(self.__buffer, encoding="utf-8").split(":")
             except ValueError:
                 self.abort()
                 return
             self.__serverPort = int(serverPort)
             
             self.__username = "{0}@{1}:{2}".format(
-                user, 
-                self.peerAddress().toString(), 
+                user,
+                self.peerAddress().toString(),
                 self.peerPort()
             )
             self.__currentDataType = Connection.Undefined
@@ -177,7 +178,7 @@ class Connection(QTcpSocket):
                 return
             
             bannedName = "{0}@{1}".format(
-                user, 
+                user,
                 self.peerAddress().toString()
             )
             Preferences.syncPreferences()
@@ -190,14 +191,14 @@ class Connection(QTcpSocket):
             
             if self.__serverPort != self.peerPort() and \
                not Preferences.getCooperation("AutoAcceptConnections"):
-                # don't ask for reverse connections or 
+                # don't ask for reverse connections or
                 # if we shall accept automatically
                 res = E5MessageBox.yesNo(None,
                     self.trUtf8("New Connection"),
                     self.trUtf8("""<p>Accept connection from """
                                 """<strong>{0}@{1}</strong>?</p>""").format(
                         user, self.peerAddress().toString()),
-                    yesDefault = True)
+                    yesDefault=True)
                 if not res:
                     self.abort()
                     return
@@ -240,7 +241,7 @@ class Connection(QTcpSocket):
         if self.write(data) == data.size():
             self.__isGreetingMessageSent = True
     
-    def __readDataIntoBuffer(self, maxSize = MaxBufferSize):
+    def __readDataIntoBuffer(self, maxSize=MaxBufferSize):
         """
         Private method to read some data into the buffer.
         
@@ -346,7 +347,7 @@ class Connection(QTcpSocket):
             return
         
         if self.__currentDataType == Connection.PlainText:
-            self.newMessage.emit(self.__username, str(self.__buffer, encoding = "utf-8"))
+            self.newMessage.emit(self.__username, str(self.__buffer, encoding="utf-8"))
         elif self.__currentDataType == Connection.Ping:
             self.write("{0}{1}1{1}p".format(Connection.ProtocolPong, SeparatorToken))
         elif self.__currentDataType == Connection.Pong:
@@ -354,14 +355,14 @@ class Connection(QTcpSocket):
         elif self.__currentDataType == Connection.GetParticipants:
             self.getParticipants.emit()
         elif self.__currentDataType == Connection.Participants:
-            msg = str(self.__buffer, encoding = "utf-8")
+            msg = str(self.__buffer, encoding="utf-8")
             if msg == "<empty>":
                 participantsList = []
             else:
                 participantsList = msg.split(SeparatorToken)
             self.participants.emit(participantsList[:])
         elif self.__currentDataType == Connection.Editor:
-            hash, fn, msg = str(self.__buffer, encoding = "utf-8").split(SeparatorToken)
+            hash, fn, msg = str(self.__buffer, encoding="utf-8").split(SeparatorToken)
             self.editorCommand.emit(hash, fn, msg)
         
         self.__currentDataType = Connection.Undefined
@@ -396,7 +397,7 @@ class Connection(QTcpSocket):
         Public method to send an editor command.
         
         @param projectHash hash of the project (string)
-        @param filename project relative universal file name of 
+        @param filename project relative universal file name of
             the sending editor (string)
         @param message editor command to be sent (string)
         """

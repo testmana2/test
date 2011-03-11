@@ -617,7 +617,7 @@ QObject
 </table>
 <a NAME="Project.__init__" ID="Project.__init__"></a>
 <h4>Project (Constructor)</h4>
-<b>Project</b>(<i>parent = None, filename = None</i>)
+<b>Project</b>(<i>parent=None, filename=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -649,7 +649,7 @@ target directory (string)
 </dd>
 </dl><a NAME="Project.__addSingleDirectory" ID="Project.__addSingleDirectory"></a>
 <h4>Project.__addSingleDirectory</h4>
-<b>__addSingleDirectory</b>(<i>filetype, source, target, quiet = False</i>)
+<b>__addSingleDirectory</b>(<i>filetype, source, target, quiet=False</i>)
 <p>
         Private method used to add all files of a single directory to the project.
 </p><dl>
@@ -686,7 +686,7 @@ name of the binary translations file (string)
 <h4>Project.__checkFilesExist</h4>
 <b>__checkFilesExist</b>(<i>index</i>)
 <p>
-        Private method to check, if the files in a list exist. 
+        Private method to check, if the files in a list exist.
 </p><p>
         The files in the indicated list are checked for existance in the
         filesystem. Non existant files are removed from the list and the
@@ -750,7 +750,7 @@ open ZipFile object (zipfile.ZipFile)
         Private method to delete the session file.
 </p><a NAME="Project.__doSearchNewFiles" ID="Project.__doSearchNewFiles"></a>
 <h4>Project.__doSearchNewFiles</h4>
-<b>__doSearchNewFiles</b>(<i>AI = True, onUserDemand = False</i>)
+<b>__doSearchNewFiles</b>(<i>AI=True, onUserDemand=False</i>)
 <p>
         Private method to search for new files in the project directory.
 </p><p>
@@ -805,7 +805,7 @@ reference to the action that triggered (QAction)
 </dd>
 </dl><a NAME="Project.__pluginCreateArchive" ID="Project.__pluginCreateArchive"></a>
 <h4>Project.__pluginCreateArchive</h4>
-<b>__pluginCreateArchive</b>(<i>snapshot = False</i>)
+<b>__pluginCreateArchive</b>(<i>snapshot=False</i>)
 <p>
         Private slot to create an eric5 plugin archive.
 </p><dl>
@@ -840,7 +840,7 @@ version string (string)
 </dd>
 </dl><a NAME="Project.__readDebugProperties" ID="Project.__readDebugProperties"></a>
 <h4>Project.__readDebugProperties</h4>
-<b>__readDebugProperties</b>(<i>quiet = False</i>)
+<b>__readDebugProperties</b>(<i>quiet=False</i>)
 <p>
         Private method to read in the project debugger properties file (.e4d)
 </p><dl>
@@ -866,7 +866,7 @@ flag indicating success
 </dd>
 </dl><a NAME="Project.__readSession" ID="Project.__readSession"></a>
 <h4>Project.__readSession</h4>
-<b>__readSession</b>(<i>quiet = False, indicator = ""</i>)
+<b>__readSession</b>(<i>quiet=False, indicator=""</i>)
 <p>
         Private method to read in the project session file (.e4s)
 </p><dl>
@@ -1001,7 +1001,7 @@ explanotory text for the signaled status (string)
         with the central store.
 </p><a NAME="Project.__writeDebugProperties" ID="Project.__writeDebugProperties"></a>
 <h4>Project.__writeDebugProperties</h4>
-<b>__writeDebugProperties</b>(<i>quiet = False</i>)
+<b>__writeDebugProperties</b>(<i>quiet=False</i>)
 <p>
         Private method to write the project debugger properties file (.e4d)
 </p><dl>
@@ -1012,7 +1012,7 @@ flag indicating quiet operations.
 </dd>
 </dl><a NAME="Project.__writeProject" ID="Project.__writeProject"></a>
 <h4>Project.__writeProject</h4>
-<b>__writeProject</b>(<i>fn = None</i>)
+<b>__writeProject</b>(<i>fn=None</i>)
 <p>
         Private method to save the project infos to a project file.
 </p><dl>
@@ -1031,7 +1031,7 @@ flag indicating success
 </dd>
 </dl><a NAME="Project.__writeSession" ID="Project.__writeSession"></a>
 <h4>Project.__writeSession</h4>
-<b>__writeSession</b>(<i>quiet = False, indicator = ""</i>)
+<b>__writeSession</b>(<i>quiet=False, indicator=""</i>)
 <p>
         Private method to write the session data to an XML file (.e4s).
 </p><dl>
@@ -1055,7 +1055,7 @@ indicator string (string)
         Private method to write the project data to an XML file.
 </p><a NAME="Project.addDirectory" ID="Project.addDirectory"></a>
 <h4>Project.addDirectory</h4>
-<b>addDirectory</b>(<i>filter = None, startdir = None</i>)
+<b>addDirectory</b>(<i>filter=None, startdir=None</i>)
 <p>
         Public method used to add all files of a directory to the project.
 </p><dl>
@@ -1079,7 +1079,7 @@ list of actions (list of E5Action)
 </dd>
 </dl><a NAME="Project.addFiles" ID="Project.addFiles"></a>
 <h4>Project.addFiles</h4>
-<b>addFiles</b>(<i>filter = None, startdir = None</i>)
+<b>addFiles</b>(<i>filter=None, startdir=None</i>)
 <p>
         Public slot used to add files to the project.
 </p><dl>
@@ -1158,7 +1158,7 @@ file name or directory name to add (string)
         Public slot to add forms to the current project.
 </p><a NAME="Project.appendFile" ID="Project.appendFile"></a>
 <h4>Project.appendFile</h4>
-<b>appendFile</b>(<i>fn, isSourceFile = False, updateModel = True</i>)
+<b>appendFile</b>(<i>fn, isSourceFile=False, updateModel=True</i>)
 <p>
         Public method to append a file to the project.
 </p><dl>
@@ -1205,7 +1205,7 @@ name of the entry to be cleared (string)
 </dd>
 </dl><a NAME="Project.closeProject" ID="Project.closeProject"></a>
 <h4>Project.closeProject</h4>
-<b>closeProject</b>(<i>reopen = False, noSave = False</i>)
+<b>closeProject</b>(<i>reopen=False, noSave=False</i>)
 <p>
         Public slot to close the current project.
 </p><dl>
@@ -1286,7 +1286,7 @@ the translation file to be removed (string)
 <h4>Project.getAbsoluteUniversalPath</h4>
 <b>getAbsoluteUniversalPath</b>(<i>fn</i>)
 <p>
-        Public method to convert a project relative file path with universal 
+        Public method to convert a project relative file path with universal
         separators to an absolute file path.
 </p><dl>
 <dt><i>fn</i></dt>
@@ -1401,7 +1401,7 @@ project hash as a hex string (string)
 </dd>
 </dl><a NAME="Project.getMainScript" ID="Project.getMainScript"></a>
 <h4>Project.getMainScript</h4>
-<b>getMainScript</b>(<i>normalized = False</i>)
+<b>getMainScript</b>(<i>normalized=False</i>)
 <p>
         Public method to return the main script filename.
 </p><dl>
@@ -1566,7 +1566,7 @@ project relative path or unchanged path, if path doesn't
 </dd>
 </dl><a NAME="Project.getSources" ID="Project.getSources"></a>
 <h4>Project.getSources</h4>
-<b>getSources</b>(<i>normalized = False</i>)
+<b>getSources</b>(<i>normalized=False</i>)
 <p>
         Public method to return the source script files.
 </p><dl>
@@ -1681,7 +1681,7 @@ the toolbar generated (QToolBar)
 </dd>
 </dl><a NAME="Project.initVCS" ID="Project.initVCS"></a>
 <h4>Project.initVCS</h4>
-<b>initVCS</b>(<i>vcsSystem = None, nooverride = False</i>)
+<b>initVCS</b>(<i>vcsSystem=None, nooverride=False</i>)
 <p>
         Public method used to instantiate a vcs system.
 </p><dl>
@@ -1831,7 +1831,7 @@ name of the mainscript (string)
 </dd>
 </dl><a NAME="Project.openProject" ID="Project.openProject"></a>
 <h4>Project.openProject</h4>
-<b>openProject</b>(<i>fn = None, restoreSession = True, reopen = False</i>)
+<b>openProject</b>(<i>fn=None, restoreSession=True, reopen=False</i>)
 <p>
         Public slot to open a project.
 </p><dl>
@@ -1848,7 +1848,7 @@ flag indicating a reopening of the project (boolean)
 </dd>
 </dl><a NAME="Project.othersAdded" ID="Project.othersAdded"></a>
 <h4>Project.othersAdded</h4>
-<b>othersAdded</b>(<i>fn, updateModel = True</i>)
+<b>othersAdded</b>(<i>fn, updateModel=True</i>)
 <p>
         Public slot to be called, if something was added to the OTHERS project data area.
 </p><dl>
@@ -1861,7 +1861,7 @@ flag indicating an update of the model is requested (boolean)
 </dd>
 </dl><a NAME="Project.registerProjectType" ID="Project.registerProjectType"></a>
 <h4>Project.registerProjectType</h4>
-<b>registerProjectType</b>(<i>type_, description, fileTypeCallback = None, binaryTranslationsCallback = None, lexerAssociationCallback = None</i>)
+<b>registerProjectType</b>(<i>type_, description, fileTypeCallback=None, binaryTranslationsCallback=None, lexerAssociationCallback=None</i>)
 <p>
         Public method to register a project type.
 </p><dl>
@@ -1878,7 +1878,7 @@ reference to a method returning a dictionary
 </dd><dt><i>binaryTranslationsCallback=</i></dt>
 <dd>
 reference to a method returning the
-            name of the binary translation file given the name of the raw 
+            name of the binary translation file given the name of the raw
             translation file
 </dd><dt><i>lexerAssociationCallback=</i></dt>
 <dd>
@@ -1910,7 +1910,7 @@ list of actions (list of E5Action)
 </dd>
 </dl><a NAME="Project.removeFile" ID="Project.removeFile"></a>
 <h4>Project.removeFile</h4>
-<b>removeFile</b>(<i>fn, updateModel = True</i>)
+<b>removeFile</b>(<i>fn, updateModel=True</i>)
 <p>
         Public slot to remove a file from the project.
 </p><p>
@@ -1937,7 +1937,7 @@ the translation file to be removed (string)
 </dd>
 </dl><a NAME="Project.renameFile" ID="Project.renameFile"></a>
 <h4>Project.renameFile</h4>
-<b>renameFile</b>(<i>oldfn, newfn = None</i>)
+<b>renameFile</b>(<i>oldfn, newfn=None</i>)
 <p>
         Public slot to rename a file of the project.
 </p><dl>
@@ -1955,7 +1955,7 @@ flag indicating success
 </dd>
 </dl><a NAME="Project.renameFileInPdata" ID="Project.renameFileInPdata"></a>
 <h4>Project.renameFileInPdata</h4>
-<b>renameFileInPdata</b>(<i>oldname, newname, isSourceFile = False</i>)
+<b>renameFileInPdata</b>(<i>oldname, newname, isSourceFile=False</i>)
 <p>
         Public method to rename a file in the pdata structure.
 </p><dl>
@@ -2000,7 +2000,7 @@ full name of the item to repopulate (string)
 </dd>
 </dl><a NAME="Project.saveAllScripts" ID="Project.saveAllScripts"></a>
 <h4>Project.saveAllScripts</h4>
-<b>saveAllScripts</b>(<i>reportSyntaxErrors = False</i>)
+<b>saveAllScripts</b>(<i>reportSyntaxErrors=False</i>)
 <p>
         Public method to save all scripts belonging to the project.
 </p><dl>
@@ -2059,7 +2059,7 @@ flag indicating success (boolean)
 </dd>
 </dl><a NAME="Project.setDbgInfo" ID="Project.setDbgInfo"></a>
 <h4>Project.setDbgInfo</h4>
-<b>setDbgInfo</b>(<i>argv, wd, env, excReporting, excList, excIgnoreList, autoClearShell, tracePython = None, autoContinue = None</i>)
+<b>setDbgInfo</b>(<i>argv, wd, env, excReporting, excList, excIgnoreList, autoClearShell, tracePython=None, autoContinue=None</i>)
 <p>
         Public method to set the debugging information.
 </p><dl>

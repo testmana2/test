@@ -32,6 +32,7 @@ except ImportError:
 from Utilities import Startup
 import Utilities
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -54,16 +55,17 @@ def createMainWidget(argv):
     except IndexError:
         home = ""
     
-    help = HelpWindow(home, '.', None, 'help viewer', searchWord = searchWord)
+    help = HelpWindow(home, '.', None, 'help viewer', searchWord=searchWord)
     return help
+
 
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
         ("--search=word", "search for the given word")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,

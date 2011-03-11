@@ -11,11 +11,12 @@ from PyQt4.QtGui import QToolBox, QTabWidget
 
 from .E5TabWidget import E5TabWidget
 
+
 class E5VerticalToolBox(QToolBox):
     """
     Class implementing a ToolBox class substituting QToolBox to support wheel events.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -43,11 +44,12 @@ class E5VerticalToolBox(QToolBox):
         
         event.accept()
 
+
 class E5HorizontalToolBox(E5TabWidget):
     """
     Class implementing a vertical QToolBox like widget.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

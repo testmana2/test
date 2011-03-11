@@ -23,11 +23,12 @@ import Utilities.ModuleParser
 import Utilities
 import Preferences
 
+
 class PackageDiagram(UMLDialog):
     """
     Class implementing a dialog showing a UML like class diagram of a package.
     """
-    def __init__(self, package, parent = None, name = None, noAttrs = False):
+    def __init__(self, package, parent=None, name=None, noAttrs=False):
         """
         Constructor
         
@@ -84,7 +85,7 @@ class PackageDiagram(UMLDialog):
                 progress.setValue(prog)
                 QApplication.processEvents()
                 prog += 1
-                try: 
+                try:
                     mod = Utilities.ModuleParser.readModule(module)
                 except ImportError:
                     continue
@@ -160,11 +161,11 @@ class PackageDiagram(UMLDialog):
                     else:
                         if className in module.classes:
                             # this is a local class (defined in this module)
-                            self.__addLocalClass(className, module.classes[className], 
+                            self.__addLocalClass(className, module.classes[className],
                                                  0, 0)
                         elif className in module.modules:
                             # this is a local module (defined in this module)
-                            self.__addLocalClass(className, module.modules[className], 
+                            self.__addLocalClass(className, module.modules[className],
                                                  0, 0, True)
                         else:
                             self.__addExternalClass(className, 0, 0)
@@ -182,7 +183,7 @@ class PackageDiagram(UMLDialog):
         self.__arrangeClasses(nodes, routes[:])
         self.__createAssociations(routes)
         
-    def __arrangeClasses(self, nodes, routes, whiteSpaceFactor = 1.2):
+    def __arrangeClasses(self, nodes, routes, whiteSpaceFactor=1.2):
         """
         Private method to arrange the shapes on the canvas.
         
@@ -248,7 +249,7 @@ class PackageDiagram(UMLDialog):
                 x = x + rect.width() + whiteSpace
             y = y + currentHeight + verticalWhiteSpace
             
-    def __addLocalClass(self, className, _class, x, y, isRbModule = False):
+    def __addLocalClass(self, className, _class, x, y, isRbModule=False):
         """
         Private method to add a class defined in the module.
         
@@ -264,7 +265,7 @@ class PackageDiagram(UMLDialog):
         if isRbModule:
             name = "{0} (Module)".format(name)
         cl = ClassModel(name, meths[:], attrs[:])
-        cw = ClassItem(cl, False, x, y, noAttrs = self.noAttrs, scene = self.scene)
+        cw = ClassItem(cl, False, x, y, noAttrs=self.noAttrs, scene=self.scene)
         self.allClasses[className] = cw
         
     def __addExternalClass(self, _class, x, y):
@@ -279,7 +280,7 @@ class PackageDiagram(UMLDialog):
         @param y y-coordinate (float)
         """
         cl = ClassModel(_class)
-        cw = ClassItem(cl, True, x, y, noAttrs = self.noAttrs, scene = self.scene)
+        cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         self.allClasses[_class] = cw
         
     def __createAssociations(self, routes):

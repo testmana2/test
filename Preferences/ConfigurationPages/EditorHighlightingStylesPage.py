@@ -21,15 +21,16 @@ from E5XML.HighlightingStylesReader import HighlightingStylesReader
 
 import Preferences
 
-class EditorHighlightingStylesPage(ConfigurationPageBase, 
+
+class EditorHighlightingStylesPage(ConfigurationPageBase,
                                    Ui_EditorHighlightingStylesPage):
     """
     Class implementing the Editor Highlighting Styles configuration page.
     """
-    FAMILYONLY    = 0
-    SIZEONLY      = 1
+    FAMILYONLY = 0
+    SIZEONLY = 1
     FAMILYANDSIZE = 2
-    FONT          = 99
+    FONT = 99
     
     def __init__(self, lexers):
         """
@@ -135,7 +136,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_foregroundButton_clicked(self):
         """
-        Private method used to select the foreground colour of the selected style 
+        Private method used to select the foreground colour of the selected style
         and lexer.
         """
         colour = QColorDialog.getColor(self.lexer.color(self.style))
@@ -154,7 +155,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_backgroundButton_clicked(self):
         """
-        Private method used to select the background colour of the selected style 
+        Private method used to select the background colour of the selected style
         and lexer.
         """
         colour = QColorDialog.getColor(self.lexer.paper(self.style))
@@ -173,7 +174,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
     @pyqtSlot()
     def on_allBackgroundColoursButton_clicked(self):
         """
-        Private method used to select the background colour of all styles of a 
+        Private method used to select the background colour of all styles of a
         selected lexer.
         """
         colour = QColorDialog.getColor(self.lexer.paper(self.style))
@@ -288,7 +289,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
             self,
             self.trUtf8("Fill to end of line"),
             self.trUtf8("Select fill to end of line for all styles"),
-            [on, off], 
+            [on, off],
             0, False)
         if ok:
             enabled = selection == on
@@ -334,7 +335,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         """
         Private slot to import the styles of the current lexer.
         """
-        self.__importStyles({self.lexer.language() : self.lexer})
+        self.__importStyles({self.lexer.language(): self.lexer})
         
     @pyqtSlot()
     def on_exportCurrentButton_clicked(self):
@@ -457,6 +458,7 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         self.lexerLanguageComboBox.setCurrentIndex(state[0])
         self.on_lexerLanguageComboBox_activated(self.lexerLanguageComboBox.currentText())
         self.styleElementList.setCurrentRow(state[1])
+
 
 def create(dlg):
     """

@@ -16,11 +16,12 @@ from .CompleterBase import CompleterBase
 
 import Preferences
 
+
 class CompleterPython(CompleterBase):
     """
     Class implementing typing completer for Python.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -77,9 +78,9 @@ class CompleterPython(CompleterBase):
             Preferences.getEditorTyping("Python/InsertSelf")
         self.__insertBlank = \
             Preferences.getEditorTyping("Python/InsertBlank")
-        self.__colonDetection= \
+        self.__colonDetection = \
             Preferences.getEditorTyping("Python/ColonDetection")
-        self.__dedentDef= \
+        self.__dedentDef = \
             Preferences.getEditorTyping("Python/DedentDef")
 
     def charAdded(self, charNumber):
@@ -265,7 +266,7 @@ class CompleterPython(CompleterBase):
     
     def __dedentExceptToTry(self, hasColon):
         """
-        Private method to dedent the line of the except statement to the last 
+        Private method to dedent the line of the except statement to the last
         try statement with less (or equal) indentation.
         
         @param hasColon flag indicating the except type (boolean)
@@ -288,7 +289,7 @@ class CompleterPython(CompleterBase):
     
     def __dedentFinallyToTry(self):
         """
-        Private method to dedent the line of the except statement to the last 
+        Private method to dedent the line of the except statement to the last
         try statement with less (or equal) indentation.
         """
         line, col = self.editor.getCursorPosition()
@@ -366,7 +367,7 @@ class CompleterPython(CompleterBase):
     
     def __isClassmethodDef(self):
         """
-        Private method to check, if the user is defing a classmethod 
+        Private method to check, if the user is defing a classmethod
         (@classmethod) method.
         
         @return flag indicating the definition of a classmethod method (boolean)
@@ -400,7 +401,7 @@ class CompleterPython(CompleterBase):
         """
         Private method to check, if the cursor is within a double quoted string.
         
-        @return flag indicating, if the cursor is inside a double 
+        @return flag indicating, if the cursor is inside a double
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerPython.DoubleQuotedString
@@ -409,7 +410,7 @@ class CompleterPython(CompleterBase):
         """
         Private method to check, if the cursor is within a triple double quoted string.
         
-        @return flag indicating, if the cursor is inside a triple double 
+        @return flag indicating, if the cursor is inside a triple double
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerPython.TripleDoubleQuotedString
@@ -418,7 +419,7 @@ class CompleterPython(CompleterBase):
         """
         Private method to check, if the cursor is within a single quoted string.
         
-        @return flag indicating, if the cursor is inside a single 
+        @return flag indicating, if the cursor is inside a single
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerPython.SingleQuotedString
@@ -427,7 +428,7 @@ class CompleterPython(CompleterBase):
         """
         Private method to check, if the cursor is within a triple single quoted string.
         
-        @return flag indicating, if the cursor is inside a triple single 
+        @return flag indicating, if the cursor is inside a triple single
             quoted string (boolean)
         """
         return self.editor.currentStyle() == QsciLexerPython.TripleSingleQuotedString

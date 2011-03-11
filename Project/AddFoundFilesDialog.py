@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .Ui_AddFoundFilesDialog import Ui_AddFoundFilesDialog
 
+
 class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
     """
     Class implementing a dialog to show the found files to the user.
@@ -22,7 +23,7 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
     button cancels the operation.
     """
     
-    def __init__(self, files, parent = None, name = None):
+    def __init__(self, files, parent=None, name=None):
         """
         Constructor
         
@@ -58,7 +59,7 @@ class AddFoundFilesDialog(QDialog, Ui_AddFoundFilesDialog):
     @pyqtSlot()
     def on_addAllButton_clicked(self):
         """
-        Private slot to handle the 'Add All' button press. 
+        Private slot to handle the 'Add All' button press.
         
         @return always 1 (int)
         """

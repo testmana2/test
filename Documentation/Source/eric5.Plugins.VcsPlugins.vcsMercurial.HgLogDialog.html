@@ -45,7 +45,7 @@ Module implementing a dialog to show the output of the hg log command process.
 <p>
     Class implementing a dialog to show the output of the hg log command process.
 </p><p>
-    The dialog is nonmodal. Clicking a link in the upper text pane shows 
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the revisions.
 </p>
 <h3>Derived from</h3>
@@ -96,7 +96,7 @@ QWidget, Ui_HgLogDialog
 </table>
 <a NAME="HgLogDialog.__init__" ID="HgLogDialog.__init__"></a>
 <h4>HgLogDialog (Constructor)</h4>
-<b>HgLogDialog</b>(<i>vcs, mode = "log", bundle = None, parent = None</i>)
+<b>HgLogDialog</b>(<i>vcs, mode="log", bundle=None, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -153,7 +153,7 @@ exit status of the process (QProcess.ExitStatus)
 <h4>HgLogDialog.__readStdout</h4>
 <b>__readStdout</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
 </p><a NAME="HgLogDialog.__sourceChanged" ID="HgLogDialog.__sourceChanged"></a>
@@ -208,7 +208,7 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the hg process.
 </p><a NAME="HgLogDialog.start" ID="HgLogDialog.start"></a>
 <h4>HgLogDialog.start</h4>
-<b>start</b>(<i>fn, noEntries = 0</i>)
+<b>start</b>(<i>fn, noEntries=0</i>)
 <p>
         Public slot to start the hg log command.
 </p><dl>

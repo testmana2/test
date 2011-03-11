@@ -14,6 +14,7 @@ from PyQt4.QtHelp import QHelpEngineCore
 
 from eric5config import getConfig
 
+
 class HelpDocsInstaller(QThread):
     """
     Class implementing the worker thread populating and updating the QtHelp
@@ -104,7 +105,7 @@ class HelpDocsInstaller(QThread):
         
         files = docsPath.entryList(["*.qch"])
         if not files:
-            engine.setCustomValue(versionKey, 
+            engine.setCustomValue(versionKey,
                 QDateTime().toString(Qt.ISODate) + '|')
             return False
         
@@ -132,7 +133,7 @@ class HelpDocsInstaller(QThread):
                     )
                     return False
                 
-                engine.setCustomValue(versionKey, 
+                engine.setCustomValue(versionKey,
                     fi.lastModified().toString(Qt.ISODate) + '|' + \
                     fi.absoluteFilePath())
                 return True
@@ -162,7 +163,7 @@ class HelpDocsInstaller(QThread):
         
         files = docsPath.entryList(["*.qch"])
         if not files:
-            engine.setCustomValue(versionKey, 
+            engine.setCustomValue(versionKey,
                 QDateTime().toString(Qt.ISODate) + '|')
             return False
         
@@ -189,7 +190,7 @@ class HelpDocsInstaller(QThread):
                     )
                     return False
                 
-                engine.setCustomValue(versionKey, 
+                engine.setCustomValue(versionKey,
                     fi.lastModified().toString(Qt.ISODate) + '|' + \
                     fi.absoluteFilePath())
                 return True

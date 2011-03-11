@@ -12,6 +12,7 @@ import time
 from .XMLStreamWriterBase import XMLStreamWriterBase
 from .Config import templatesFileFormatVersion
 
+
 class TemplatesWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML templates file.

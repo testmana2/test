@@ -24,11 +24,12 @@ from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 import UI.PixmapCache
 
+
 class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -64,9 +65,9 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.__changesRole = Qt.UserRole + 1
         
         self.flags = {
-            'A' : self.trUtf8('Added'),
-            'D' : self.trUtf8('Deleted'),
-            'M' : self.trUtf8('Modified')
+            'A': self.trUtf8('Added'),
+            'D': self.trUtf8('Deleted'),
+            'M': self.trUtf8('Modified')
         }
         
         self.diff = None
@@ -104,7 +105,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         """
         Private method to resort the log tree.
         """
-        self.logTree.sortItems(self.logTree.sortColumn(), 
+        self.logTree.sortItems(self.logTree.sortColumn(),
             self.logTree.header().sortIndicatorOrder())
     
     def __resizeColumnsFiles(self):
@@ -119,9 +120,9 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         Private method to resort the changed files tree.
         """
         sortColumn = self.filesTree.sortColumn()
-        self.filesTree.sortItems(1, 
+        self.filesTree.sortItems(1,
             self.filesTree.header().sortIndicatorOrder())
-        self.filesTree.sortItems(sortColumn, 
+        self.filesTree.sortItems(sortColumn,
             self.filesTree.header().sortIndicatorOrder())
     
     def __generateLogItem(self, author, date, message, revision, changedPaths):
@@ -133,7 +134,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param message text of the log message (string)
         @param revision revision info (string or pysvn.opt_revision_kind)
         @param changedPaths list of pysvn dictionary like objects containing
-            info about the changed files/directories 
+            info about the changed files/directories
         @return reference to the generated item (QTreeWidgetItem)
         """
         if revision == "":
@@ -147,8 +148,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         else:
             dt = formatTime(date)
         
-        itm = QTreeWidgetItem(self.logTree, 
-            [rev, author, dt," ".join(message.splitlines())]
+        itm = QTreeWidgetItem(self.logTree,
+            [rev, author, dt, " ".join(message.splitlines())]
         )
         
         changes = []
@@ -162,10 +163,10 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             else:
                 copyRev = "{0:7d}".format(changedPath["copyfrom_revision"].number)
             change = {
-                "action"            : changedPath["action"], 
-                "path"              : changedPath["path"], 
-                "copyfrom_path"     : copyPath, 
-                "copyfrom_revision" : copyRev, 
+                "action": changedPath["action"],
+                "path": changedPath["path"],
+                "copyfrom_path": copyPath,
+                "copyfrom_revision": copyRev,
             }
             changes.append(change)
         itm.setData(0, self.__messageRole, message)
@@ -189,7 +190,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param copyRev revision the file was copied from (None, string)
         @return reference to the generated item (QTreeWidgetItem)
         """
-        itm = QTreeWidgetItem(self.filesTree, 
+        itm = QTreeWidgetItem(self.filesTree,
             [self.flags[action], path, copyFrom, copyRev]
         )
         
@@ -197,7 +198,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         
         return itm
     
-    def __getLogEntries(self, startRev = None):
+    def __getLogEntries(self, startRev=None):
         """
         Private method to retrieve log entries from the repository.
         
@@ -232,11 +233,11 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
                 else:
                     revstart = pysvn.Revision(
                         pysvn.opt_revision_kind.number, nextRev)
-                allLogs = self.client.log(self.fname, 
-                            revision_start = revstart, 
-                            discover_changed_paths = True,
-                            limit = flimit + 1,
-                            strict_node_history = self.stopCheckBox.isChecked())
+                allLogs = self.client.log(self.fname,
+                            revision_start=revstart,
+                            discover_changed_paths=True,
+                            limit=flimit + 1,
+                            strict_node_history=self.stopCheckBox.isChecked())
                 if len(allLogs) <= flimit or self._clientCancelCallback():
                     logs.extend(allLogs)
                     break
@@ -247,7 +248,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             locker.unlock()
             
             for log in logs:
-                self.__generateLogItem(log["author"], log["date"], 
+                self.__generateLogItem(log["author"], log["date"],
                     log["message"], log["revision"], log['changed_paths'])
                 dt = dateFromTime_t(log["date"])
                 if not self.__maxDate.isValid() and not self.__minDate.isValid():
@@ -319,7 +320,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         QApplication.processEvents()
-        self.diff.start(self.filename, [rev1, rev2], pegRev = peg_rev)
+        self.diff.start(self.filename, [rev1, rev2], pegRev=peg_rev)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -347,7 +348,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         changes = current.data(0, self.__changesRole)
         if len(changes) > 0:
             for change in changes:
-                self.__generateFileItem(change["action"], change["path"], 
+                self.__generateFileItem(change["action"], change["path"],
                     change["copyfrom_path"], change["copyfrom_revision"])
             self.__resizeColumnsFiles()
             self.__resortFiles()
@@ -510,7 +511,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         """
         Private slot called, when the stop on copy/move checkbox is clicked
         """
-        self.vcs.getPlugin().setPreferences("StopLogOnCopy", 
+        self.vcs.getPlugin().setPreferences("StopLogOnCopy",
                                             int(self.stopCheckBox.isChecked()))
         self.nextButton.setEnabled(True)
         self.limitSpinBox.setEnabled(True)

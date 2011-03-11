@@ -12,11 +12,12 @@ from PyQt4.QtCore import pyqtSlot
 
 from .Ui_NewPythonPackageDialog import Ui_NewPythonPackageDialog
 
+
 class NewPythonPackageDialog(QDialog, Ui_NewPythonPackageDialog):
     """
     Class implementing a dialog to add a new Python package.
     """
-    def __init__(self, relPath, parent = None):
+    def __init__(self, relPath, parent=None):
         """
         Constructor
         

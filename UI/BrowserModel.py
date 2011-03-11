@@ -21,21 +21,22 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
-BrowserItemRoot       = 0
-BrowserItemDirectory  = 1
-BrowserItemSysPath    = 2
-BrowserItemFile       = 3
-BrowserItemClass      = 4
-BrowserItemMethod     = 5
+BrowserItemRoot = 0
+BrowserItemDirectory = 1
+BrowserItemSysPath = 2
+BrowserItemFile = 3
+BrowserItemClass = 4
+BrowserItemMethod = 5
 BrowserItemAttributes = 6
-BrowserItemAttribute  = 7
-BrowserItemCoding     = 8
+BrowserItemAttribute = 7
+BrowserItemCoding = 8
+
 
 class BrowserModel(QAbstractItemModel):
     """
     Class implementing the browser model.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -111,7 +112,7 @@ class BrowserModel(QAbstractItemModel):
         
         return Qt.ItemIsEnabled | Qt.ItemIsSelectable
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -128,7 +129,7 @@ class BrowserModel(QAbstractItemModel):
         
         return None
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -137,8 +138,8 @@ class BrowserModel(QAbstractItemModel):
         @param parent index of parent item (QModelIndex)
         @return index object (QModelIndex)
         """
-        # The model/view framework considers negative values out-of-bounds, 
-        # however in python they work when indexing into lists. So make sure 
+        # The model/view framework considers negative values out-of-bounds,
+        # however in python they work when indexing into lists. So make sure
         # we return an invalid index for out-of-bounds row/col
         if row < 0 or column < 0 or \
            row >= self.rowCount(parent) or column >= self.columnCount(parent):
@@ -178,7 +179,7 @@ class BrowserModel(QAbstractItemModel):
         
         return self.createIndex(parentItem.row(), 0, parentItem)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows.
         
@@ -198,7 +199,7 @@ class BrowserModel(QAbstractItemModel):
         
         return parentItem.childCount()
 
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check for the presence of child items.
         
@@ -313,7 +314,7 @@ class BrowserModel(QAbstractItemModel):
                     cnt, cnt)
                 if f.isDir():
                     node = BrowserDirectoryItem(itm,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        Utilities.toNativeSeparators(f.absoluteFilePath()),
                         False)
                 else:
                     node = BrowserFileItem(itm,
@@ -413,7 +414,7 @@ class BrowserModel(QAbstractItemModel):
         """
         Public slot to save the toplevel directories.
         """
-        Preferences.Prefs.settings.setValue('BrowserModel/ToplevelDirs', 
+        Preferences.Prefs.settings.setValue('BrowserModel/ToplevelDirs',
             self.toplevelDirs)
     
     def _addItem(self, itm, parentItem):
@@ -425,7 +426,7 @@ class BrowserModel(QAbstractItemModel):
         """
         parentItem.appendChild(itm)
     
-    def addItem(self, itm, parent = QModelIndex()):
+    def addItem(self, itm, parent=QModelIndex()):
         """
         Puplic slot to add an item.
         
@@ -442,7 +443,7 @@ class BrowserModel(QAbstractItemModel):
         self._addItem(itm, parentItem)
         self.endInsertRows()
 
-    def populateItem(self, parentItem, repopulate = False):
+    def populateItem(self, parentItem, repopulate=False):
         """
         Public method to populate an item's subtree.
         
@@ -462,7 +463,7 @@ class BrowserModel(QAbstractItemModel):
         elif parentItem.type() == BrowserItemAttributes:
             self.populateClassAttributesItem(parentItem, repopulate)
 
-    def populateDirectoryItem(self, parentItem, repopulate = False):
+    def populateDirectoryItem(self, parentItem, repopulate=False):
         """
         Public method to populate a directory item's subtree.
         
@@ -485,7 +486,7 @@ class BrowserModel(QAbstractItemModel):
             for f in entryInfoList:
                 if f.isDir():
                     node = BrowserDirectoryItem(parentItem,
-                        Utilities.toNativeSeparators(f.absoluteFilePath()), 
+                        Utilities.toNativeSeparators(f.absoluteFilePath()),
                         False)
                 else:
                     fileFilters = Preferences.getUI("BrowsersFileFilters").split(";")
@@ -500,7 +501,7 @@ class BrowserModel(QAbstractItemModel):
             if repopulate:
                 self.endInsertRows()
 
-    def populateSysPathItem(self, parentItem, repopulate = False):
+    def populateSysPathItem(self, parentItem, repopulate=False):
         """
         Public method to populate a sys.path item's subtree.
         
@@ -520,7 +521,7 @@ class BrowserModel(QAbstractItemModel):
             if repopulate:
                 self.endInsertRows()
 
-    def populateFileItem(self, parentItem, repopulate = False):
+    def populateFileItem(self, parentItem, repopulate=False):
         """
         Public method to populate a file item's subtree.
         
@@ -531,7 +532,7 @@ class BrowserModel(QAbstractItemModel):
         fileName = parentItem.fileName()
         try:
             dict = Utilities.ClassBrowsers.readmodule(
-                moduleName, [parentItem.dirName()], 
+                moduleName, [parentItem.dirName()],
                 parentItem.isPython2File() or parentItem.isPython3File())
         except ImportError:
             return
@@ -553,19 +554,19 @@ class BrowserModel(QAbstractItemModel):
                 except AttributeError:
                     pass
             if "@@Coding@@" in keys:
-                node = BrowserCodingItem(parentItem, 
+                node = BrowserCodingItem(parentItem,
                     QApplication.translate("BrowserModel", "Coding: {0}")\
                         .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
-                node = BrowserClassAttributesItem(parentItem, 
-                    dict["@@Globals@@"].globals, 
+                node = BrowserClassAttributesItem(parentItem,
+                    dict["@@Globals@@"].globals,
                     QApplication.translate("BrowserModel", "Globals"))
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
 
-    def populateClassItem(self, parentItem, repopulate = False):
+    def populateClassItem(self, parentItem, repopulate=False):
         """
         Public method to populate a class item's subtree.
         
@@ -600,25 +601,25 @@ class BrowserModel(QAbstractItemModel):
         
         if len(cl.attributes):
             node = BrowserClassAttributesItem(
-                parentItem, cl.attributes, 
+                parentItem, cl.attributes,
                 QApplication.translate("BrowserModel", "Attributes"))
             if repopulate:
-                self.addItem(node, 
+                self.addItem(node,
                     self.createIndex(parentItem.row(), 0, parentItem))
             else:
                 self._addItem(node, parentItem)
         
         if len(cl.globals):
             node = BrowserClassAttributesItem(
-                parentItem, cl.globals, 
+                parentItem, cl.globals,
                 QApplication.translate("BrowserModel", "Attributes (global)"))
             if repopulate:
-                self.addItem(node, 
+                self.addItem(node,
                     self.createIndex(parentItem.row(), 0, parentItem))
             else:
                 self._addItem(node, parentItem)
 
-    def populateMethodItem(self, parentItem, repopulate = False):
+    def populateMethodItem(self, parentItem, repopulate=False):
         """
         Public method to populate a method item's subtree.
         
@@ -651,7 +652,7 @@ class BrowserModel(QAbstractItemModel):
             if repopulate:
                 self.endInsertRows()
 
-    def populateClassAttributesItem(self, parentItem, repopulate = False):
+    def populateClassAttributesItem(self, parentItem, repopulate=False):
         """
         Public method to populate a class attributes item's subtree.
         
@@ -672,6 +673,7 @@ class BrowserModel(QAbstractItemModel):
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
+
 
 class BrowserItem(object):
     """
@@ -840,11 +842,12 @@ class BrowserItem(object):
         """
         return self.symlink
 
+
 class BrowserDirectoryItem(BrowserItem):
     """
     Class implementing the data structure for browser directory items.
     """
-    def __init__(self, parent, dinfo, full = True):
+    def __init__(self, parent, dinfo, full=True):
         """
         Constructor
         
@@ -870,7 +873,7 @@ class BrowserDirectoryItem(BrowserItem):
         self._populated = False
         self._lazyPopulation = True
 
-    def setName(self, dinfo, full = True):
+    def setName(self, dinfo, full=True):
         """
         Public method to set the directory name.
         
@@ -916,6 +919,7 @@ class BrowserDirectoryItem(BrowserItem):
         
         return BrowserItem.lessThan(self, other, column, order)
 
+
 class BrowserSysPathItem(BrowserItem):
     """
     Class implementing the data structure for browser sys.path items.
@@ -933,11 +937,12 @@ class BrowserSysPathItem(BrowserItem):
         self._populated = False
         self._lazyPopulation = True
 
+
 class BrowserFileItem(BrowserItem):
     """
     Class implementing the data structure for browser file items.
     """
-    def __init__(self, parent, finfo, full = True, sourceLanguage = ""):
+    def __init__(self, parent, finfo, full=True, sourceLanguage=""):
         """
         Constructor
         
@@ -1008,7 +1013,7 @@ class BrowserFileItem(BrowserItem):
         else:
             self.icon = UI.PixmapCache.getIcon(pixName)
     
-    def setName(self, finfo, full = True):
+    def setName(self, finfo, full=True):
         """
         Public method to set the directory name.
         
@@ -1185,6 +1190,7 @@ class BrowserFileItem(BrowserItem):
         
         return BrowserItem.lessThan(self, other, column, order)
 
+
 class BrowserClassItem(BrowserItem):
     """
     Class implementing the data structure for browser class items.
@@ -1217,9 +1223,9 @@ class BrowserClassItem(BrowserItem):
         self._classObject = cl
         self._filename = filename
         
-        self.isfunction = isinstance(self._classObject, 
+        self.isfunction = isinstance(self._classObject,
                                      Utilities.ClassBrowsers.ClbrBaseClasses.Function)
-        self.ismodule = isinstance(self._classObject, 
+        self.ismodule = isinstance(self._classObject,
                                    Utilities.ClassBrowsers.ClbrBaseClasses.Module)
         if self.isfunction:
             if cl.isPrivate():
@@ -1302,6 +1308,7 @@ class BrowserClassItem(BrowserItem):
         """
         return self._classObject.isPublic()
 
+
 class BrowserMethodItem(BrowserItem):
     """
     Class implementing the data structure for browser method items.
@@ -1327,7 +1334,7 @@ class BrowserMethodItem(BrowserItem):
             self.icon = UI.PixmapCache.getIcon("method_protected.png")
         else:
             self.icon = UI.PixmapCache.getIcon("method.png")
-        self.itemData[0] =  "{0}({1})".format(
+        self.itemData[0] = "{0}({1})".format(
             name, ", ".join(self._functionObject.parameters))
         # if no defaults are wanted
         # ....format(name, ", ".join(
@@ -1394,6 +1401,7 @@ class BrowserMethodItem(BrowserItem):
         """
         return self._functionObject.isPublic()
 
+
 class BrowserClassAttributesItem(BrowserItem):
     """
     Class implementing the data structure for browser class attributes items.
@@ -1438,6 +1446,7 @@ class BrowserClassAttributesItem(BrowserItem):
             return order == Qt.AscendingOrder
         
         return BrowserItem.lessThan(self, other, column, order)
+
 
 class BrowserClassAttributeItem(BrowserItem):
     """
@@ -1510,6 +1519,7 @@ class BrowserClassAttributeItem(BrowserItem):
                 return self.lineno() > other.lineno()
         
         return BrowserItem.lessThan(self, other, column, order)
+
 
 class BrowserCodingItem(BrowserItem):
     """

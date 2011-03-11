@@ -11,6 +11,7 @@ from PyQt4.QtCore import QSize, Qt
 from PyQt4.QtGui import QPixmap, QPainter
 from PyQt4.QtWebKit import QWebFrame
 
+
 def renderTabPreview(page, w, h):
     """
     Public function to render a pixmap of a page.
@@ -26,6 +27,7 @@ def renderTabPreview(page, w, h):
     pageImage = __render(page, page.viewportSize().width(), page.viewportSize().height())
     page.setViewportSize(oldSize)
     return pageImage.scaled(w, h, Qt.IgnoreAspectRatio, Qt.SmoothTransformation)
+
 
 def __render(page, w, h):
     """

@@ -16,6 +16,7 @@ from .Config import userProjectFileFormatVersion
 
 import Preferences
 
+
 class UserProjectWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML user project properties  file.

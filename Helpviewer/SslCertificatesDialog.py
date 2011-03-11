@@ -26,13 +26,14 @@ except ImportError:
 import Preferences
 import Utilities
 
+
 class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     """
     Class implementing a dialog to show and edit all certificates.
     """
     CertRole = Qt.UserRole + 1
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -77,7 +78,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
-        items = self.serversCertificatesTree.findItems(organisation, 
+        items = self.serversCertificatesTree.findItems(organisation,
             Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
             parent = QTreeWidgetItem(self.serversCertificatesTree, [organisation])
@@ -149,7 +150,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                     certificateDict[server] = pems
                 else:
                     del certificateDict[server]
-            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
                 certificateDict)
             
             # delete the certificate from the default certificates
@@ -184,7 +185,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
             if server not in certificateDict:
                 certificateDict[server] = QByteArray()
             certificateDict[server].append(pems)
-            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict", 
+            Preferences.Prefs.settings.setValue("Help/CaCertificatesDict",
                 certificateDict)
             
             self.serversCertificatesTree.clear()
@@ -259,7 +260,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
         
         # step 2: create the entry
-        items = self.caCertificatesTree.findItems(organisation, 
+        items = self.caCertificatesTree.findItems(organisation,
             Qt.MatchFixedString | Qt.MatchCaseSensitive)
         if len(items) == 0:
             parent = QTreeWidgetItem(self.caCertificatesTree, [organisation])
@@ -272,7 +273,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_caCertificatesTree_currentItemChanged(self, current, previous):
         """
-        Private slot handling a change of the current item 
+        Private slot handling a change of the current item
         in the CA certificates list.
         
         @param current new current item (QTreeWidgetItem)
@@ -394,7 +395,7 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
                         self.trUtf8("Export Certificate"),
                         self.trUtf8("<p>The file <b>{0}</b> already exists."
                                     " Overwrite it?</p>").format(fname),
-                        icon = E5MessageBox.Warning)
+                        icon=E5MessageBox.Warning)
                     if not res:
                         return
                 

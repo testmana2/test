@@ -9,9 +9,9 @@ Module defining configuration variables for the subversion package
 
 # Available protocols fpr the repository URL
 ConfigSvnProtocols = [
-    'file://', 
-    'http://', 
-    'https://', 
-    'svn://', 
-    'svn+ssh://', 
+    'file://',
+    'http://',
+    'https://',
+    'svn://',
+    'svn+ssh://',
 ]

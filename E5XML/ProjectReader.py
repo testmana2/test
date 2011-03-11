@@ -12,6 +12,7 @@ from .XMLStreamReaderBase import XMLStreamReaderBase
 
 import Utilities
 
+
 class ProjectReader(XMLStreamReaderBase):
     """
     Class for reading an XML project file.
@@ -86,7 +87,7 @@ class ProjectReader(XMLStreamReaderBase):
                 elif self.name() == "Translations":
                     self.__readFiles("Translations", "Translation", "TRANSLATIONS")
                 elif self.name() == "TranslationExceptions":
-                    self.__readFiles("TranslationExceptions", "TranslationException", 
+                    self.__readFiles("TranslationExceptions", "TranslationException",
                                      "TRANSLATIONEXCEPTIONS")
                 elif self.name() == "Resources":
                     self.__readFiles("Resources", "Resource", "RESOURCES")
@@ -104,19 +105,19 @@ class ProjectReader(XMLStreamReaderBase):
                 elif self.name() == "LexerAssociations":
                     self.__readLexerAssociations()
                 elif self.name() == "ProjectTypeSpecific":
-                    self.__readBasicDataField("ProjectTypeSpecific", 
+                    self.__readBasicDataField("ProjectTypeSpecific",
                         "ProjectTypeSpecificData", "PROJECTTYPESPECIFICDATA")
                 elif self.name() == "Documentation":
-                    self.__readBasicDataField("Documentation", 
+                    self.__readBasicDataField("Documentation",
                         "DocumentationParams", "DOCUMENTATIONPARMS")
                 elif self.name() == "Packagers":
-                    self.__readBasicDataField("Packagers", 
+                    self.__readBasicDataField("Packagers",
                         "PackagersParams", "PACKAGERSPARMS")
                 elif self.name() == "Checkers":
-                    self.__readBasicDataField("Checkers", 
+                    self.__readBasicDataField("Checkers",
                         "CheckersParams", "CHECKERSPARMS")
                 elif self.name() == "OtherTools":
-                    self.__readBasicDataField("OtherTools", 
+                    self.__readBasicDataField("OtherTools",
                         "OtherToolsParams", "OTHERTOOLSPARMS")
                 else:
                     self.raiseUnexpectedStartTag(self.name())

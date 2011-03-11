@@ -19,11 +19,12 @@ from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
 import Utilities
 
+
 class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
     """
     Class implementing a dialog to show the output of the svn blame command.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -77,7 +78,7 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
                     annotation["author"], annotation["number"] + 1, annotation["line"])
         except pysvn.ClientError as e:
             locker.unlock()
-            self.__showError(e.args[0]+'\n')
+            self.__showError(e.args[0] + '\n')
         self.__finish()
         os.chdir(cwd)
         
@@ -120,7 +121,7 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         @param lineno linenumber (string)
         @param text line of text from the annotated file (string)
         """
-        itm = QTreeWidgetItem(self.blameList, 
+        itm = QTreeWidgetItem(self.blameList,
             ["{0:d}".format(revision), author, "{0:d}".format(lineno), text])
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignRight)

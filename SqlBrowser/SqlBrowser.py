@@ -19,11 +19,12 @@ from .SqlBrowserWidget import SqlBrowserWidget
 import UI.PixmapCache
 import UI.Config
 
+
 class SqlBrowser(QMainWindow):
     """
     Class implementing the SQL Browser main window.
     """
-    def __init__(self, connections = [], parent = None):
+    def __init__(self, connections=[], parent=None):
         """
         Constructor
         
@@ -55,8 +56,8 @@ class SqlBrowser(QMainWindow):
                 self.__warnings.append(self.trUtf8("Invalid URL: {0}").format(connection))
                 continue
             
-            err = self.__browser.addConnection(url.scheme(), url.path(), 
-                                               url.userName(), url.password(), 
+            err = self.__browser.addConnection(url.scheme(), url.path(),
+                                               url.userName(), url.password(),
                                                url.host(), url.port(-1))
             if err.type() != QSqlError.NoError:
                 self.__warnings.append(
@@ -83,9 +84,9 @@ class SqlBrowser(QMainWindow):
         # list of all actions
         self.__actions = []
         
-        self.addConnectionAct = E5Action(self.trUtf8('Add Connection'), 
+        self.addConnectionAct = E5Action(self.trUtf8('Add Connection'),
             UI.PixmapCache.getIcon("databaseConnection.png"),
-            self.trUtf8('Add &Connection...'), 
+            self.trUtf8('Add &Connection...'),
             0, 0, self, 'sql_file_add_connection')
         self.addConnectionAct.setStatusTip(self.trUtf8(
                 'Open a dialog to add a new database connection'))
@@ -96,10 +97,10 @@ class SqlBrowser(QMainWindow):
         self.addConnectionAct.triggered[()].connect(self.__browser.addConnectionByDialog)
         self.__actions.append(self.addConnectionAct)
         
-        self.exitAct = E5Action(self.trUtf8('Quit'), 
+        self.exitAct = E5Action(self.trUtf8('Quit'),
             UI.PixmapCache.getIcon("exit.png"),
-            self.trUtf8('&Quit'), 
-            QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")), 
+            self.trUtf8('&Quit'),
+            QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
             0, self, 'sql_file_quit')
         self.exitAct.setStatusTip(self.trUtf8('Quit the SQL browser'))
         self.exitAct.setWhatsThis(self.trUtf8(
@@ -108,8 +109,8 @@ class SqlBrowser(QMainWindow):
         ))
         self.exitAct.triggered[()].connect(qApp.closeAllWindows)
         
-        self.aboutAct = E5Action(self.trUtf8('About'), 
-            self.trUtf8('&About'), 
+        self.aboutAct = E5Action(self.trUtf8('About'),
+            self.trUtf8('&About'),
             0, 0, self, 'sql_help_about')
         self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
@@ -119,8 +120,8 @@ class SqlBrowser(QMainWindow):
         self.aboutAct.triggered[()].connect(self.__about)
         self.__actions.append(self.aboutAct)
         
-        self.aboutQtAct = E5Action(self.trUtf8('About Qt'), 
-            self.trUtf8('About &Qt'), 
+        self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
+            self.trUtf8('About &Qt'),
             0, 0, self, 'sql_help_about_qt')
         self.aboutQtAct.setStatusTip(
             self.trUtf8('Display information about the Qt toolkit'))

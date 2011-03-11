@@ -22,14 +22,15 @@ from .SvnDiffDialog import SvnDiffDialog
 
 import Utilities
 
+
 class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
     """
     Class implementing a dialog to show the output of the svn log command.
     
-    The dialog is nonmodal. Clicking a link in the upper text pane shows 
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
     a diff of the versions.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -51,9 +52,9 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.flags = {
-            'A' : self.trUtf8('Added'),
-            'D' : self.trUtf8('Deleted'),
-            'M' : self.trUtf8('Modified')
+            'A': self.trUtf8('Added'),
+            'D': self.trUtf8('Deleted'),
+            'M': self.trUtf8('Modified')
         }
         
         self.revString = self.trUtf8('revision')
@@ -67,7 +68,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.client.callback_ssl_server_trust_prompt = \
             self._clientSslServerTrustPromptCallback
         
-    def start(self, fn, noEntries = 0):
+    def start(self, fn, noEntries=0):
         """
         Public slot to start the svn log command.
         
@@ -105,11 +106,11 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 else:
                     revstart = pysvn.Revision(
                         pysvn.opt_revision_kind.number, nextRev)
-                allLogs = self.client.log(fname, 
-                                          revision_start = revstart, 
-                                          discover_changed_paths = verbose,
-                                          limit = flimit + 1,
-                                          strict_node_history = False)
+                allLogs = self.client.log(fname,
+                                          revision_start=revstart,
+                                          discover_changed_paths=verbose,
+                                          limit=flimit + 1,
+                                          strict_node_history=False)
                 if len(allLogs) <= flimit or self._clientCancelCallback():
                     logs.extend(allLogs)
                     break
@@ -159,11 +160,11 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                     self.contents.insertHtml('<br />\n')
                     for changeInfo in log['changed_paths']:
                         dstr = '{0} {1}'\
-                               .format(self.flags[changeInfo["action"]], 
+                               .format(self.flags[changeInfo["action"]],
                                        changeInfo["path"])
                         if changeInfo["copyfrom_path"] is not None:
                             dstr += self.trUtf8(" (copied from {0}, revision {1})")\
-                                        .format(changeInfo["copyfrom_path"], 
+                                        .format(changeInfo["copyfrom_path"],
                                                 changeInfo["copyfrom_revision"].number)
                         dstr += '<br />\n'
                         self.contents.insertHtml(dstr)
@@ -229,7 +230,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         if self.diff is None:
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
-        self.diff.start(filename, [v1, v2], pegRev = self.__pegRev)
+        self.diff.start(filename, [v1, v2], pegRev=self.__pegRev)
         
     def __showError(self, msg):
         """

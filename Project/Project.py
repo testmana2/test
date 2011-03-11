@@ -64,6 +64,7 @@ from E5Gui.E5Action import E5Action, createActionGroup
 import Preferences
 import Utilities
 
+
 class Project(QObject):
     """
     Class implementing the project management functionality.
@@ -89,7 +90,7 @@ class Project(QObject):
     @signal newProjectHooks() emitted after a new project was generated but before
             the newProject() signal is sent
     @signal newProject() emitted after a new project was generated
-    @signal sourceFile(str) emitted after a project file was read to 
+    @signal sourceFile(str) emitted after a project file was read to
             open the main script
     @signal projectOpenedHooks() emitted after a project file was read but before the
             projectOpened() signal is sent
@@ -148,21 +149,21 @@ class Project(QObject):
     
     keynames = [
         "PROGLANGUAGE", "MIXEDLANGUAGE", "PROJECTTYPE",
-        "SPELLLANGUAGE", "SPELLWORDS", "SPELLEXCLUDES", 
+        "SPELLLANGUAGE", "SPELLWORDS", "SPELLEXCLUDES",
         "DESCRIPTION", "VERSION", "HASH",
         "AUTHOR", "EMAIL",
         "SOURCES", "FORMS", "RESOURCES",
-        "TRANSLATIONS", "TRANSLATIONPATTERN", "TRANSLATIONSBINPATH", 
+        "TRANSLATIONS", "TRANSLATIONPATTERN", "TRANSLATIONSBINPATH",
         "TRANSLATIONEXCEPTIONS",
-        "MAINSCRIPT", "EOL", 
+        "MAINSCRIPT", "EOL",
         "VCS", "VCSOPTIONS", "VCSOTHERDATA",
-        "OTHERS", "INTERFACES", 
-        "FILETYPES", "LEXERASSOCS", 
-        "PROJECTTYPESPECIFICDATA", 
-        "DOCUMENTATIONPARMS", 
+        "OTHERS", "INTERFACES",
+        "FILETYPES", "LEXERASSOCS",
+        "PROJECTTYPESPECIFICDATA",
+        "DOCUMENTATIONPARMS",
         "PACKAGERSPARMS",
         "CHECKERSPARMS",
-        "OTHERTOOLSPARMS", 
+        "OTHERTOOLSPARMS",
     ]
     
     dbgKeynames = [
@@ -180,7 +181,7 @@ class Project(QObject):
     
     eols = [os.linesep, "\n", "\r", "\r\n"]
     
-    def __init__(self, parent = None, filename = None):
+    def __init__(self, parent=None, filename=None):
         """
         Constructor
         
@@ -192,20 +193,20 @@ class Project(QObject):
         self.ui = parent
         
         self.sourceExtensions = {
-            "Python2"  : Preferences.getPython("PythonExtensions"),
-            "Python3" : Preferences.getPython("Python3Extensions"),
-            "Ruby"    : ['.rb'],
-            "Mixed"   : ['.py', '.ptl', '.rb']
+            "Python2": Preferences.getPython("PythonExtensions"),
+            "Python3": Preferences.getPython("Python3Extensions"),
+            "Ruby": ['.rb'],
+            "Mixed": ['.py', '.ptl', '.rb']
         }
         
         self.dbgFilters = {
-            "Python2"  : self.trUtf8(
+            "Python2": self.trUtf8(
                          "Python2 Files (*.py2);;"
                          "Python2 GUI Files (*.pyw2);;"),
-            "Python3" : self.trUtf8(
+            "Python3": self.trUtf8(
                          "Python3 Files (*.py *.py3);;"
                          "Python3 GUI Files (*.pyw *.pyw3);;"),
-            "Ruby"    : self.trUtf8("Ruby Files (*.rb);;"),
+            "Ruby": self.trUtf8("Ruby Files (*.rb);;"),
         }
         
         self.vcsMenu = None
@@ -224,9 +225,9 @@ class Project(QObject):
         
         self.__model = ProjectBrowserModel(self)
         
-        self.codemetrics        = None
-        self.codecoverage       = None
-        self.profiledata        = None
+        self.codemetrics = None
+        self.codecoverage = None
+        self.profiledata = None
         self.applicationDiagram = None
         
     def __initProjectTypes(self):
@@ -266,8 +267,8 @@ class Project(QObject):
         """
         return type_ in self.__projectTypes
         
-    def registerProjectType(self, type_, description, fileTypeCallback = None, 
-        binaryTranslationsCallback = None, lexerAssociationCallback = None):
+    def registerProjectType(self, type_, description, fileTypeCallback=None,
+        binaryTranslationsCallback=None, lexerAssociationCallback=None):
         """
         Public method to register a project type.
         
@@ -276,7 +277,7 @@ class Project(QObject):
         @keyparam fileTypeCallback reference to a method returning a dictionary
             of filetype associations.
         @keyparam binaryTranslationsCallback reference to a method returning the
-            name of the binary translation file given the name of the raw 
+            name of the binary translation file given the name of the raw
             translation file
         @keyparam lexerAssociationCallback reference to a method returning the
             lexer type to be used for syntax highlighting given the name of
@@ -321,7 +322,7 @@ class Project(QObject):
         self.translationsRoot = ""  # the translations prefix
         self.name = ""
         self.opened = False
-        self.subdirs = [""] # record the project dir as a relative path (i.e. empty path)
+        self.subdirs = [""]  # record the project dir as a relative path (i.e. empty path)
         self.otherssubdirs = []
         self.vcs = None
         self.dbgCmdline = ''
@@ -374,7 +375,7 @@ class Project(QObject):
         @param key key of the data entry to get (string).
         @return a copy of the requested data or None
         """
-        if category in ["PROJECTTYPESPECIFICDATA", "CHECKERSPARMS", "PACKAGERSPARMS", 
+        if category in ["PROJECTTYPESPECIFICDATA", "CHECKERSPARMS", "PACKAGERSPARMS",
                         "DOCUMENTATIONPARMS", "OTHERTOOLSPARMS"] and \
            key in self.pdata[category]:
             return copy.deepcopy(self.pdata[category][key])
@@ -392,7 +393,7 @@ class Project(QObject):
         @param data data to be stored
         @return flag indicating success (boolean)
         """
-        if category not in ["PROJECTTYPESPECIFICDATA","CHECKERSPARMS", "PACKAGERSPARMS", 
+        if category not in ["PROJECTTYPESPECIFICDATA", "CHECKERSPARMS", "PACKAGERSPARMS",
                             "DOCUMENTATIONPARMS", "OTHERTOOLSPARMS"]:
             return False
         
@@ -430,10 +431,10 @@ class Project(QObject):
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "E4Plugin", "PySide"]:
             self.pdata["FILETYPES"]["*.ui"] = "FORMS"
             self.pdata["FILETYPES"]["*.ui.h"] = "FORMS"
-        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin", 
+        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
             self.pdata["FILETYPES"]["*.qrc"] = "RESOURCES"
-        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin", 
+        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
             self.pdata["FILETYPES"]["*.ts"] = "TRANSLATIONS"
             self.pdata["FILETYPES"]["*.qm"] = "TRANSLATIONS"
@@ -449,7 +450,7 @@ class Project(QObject):
         """
         Public method to update the filetype associations with new default values.
         """
-        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin", 
+        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C", "E4Plugin",
                                             "PySide", "PySideC"]:
             if "*.ts" not in self.pdata["FILETYPES"]:
                 self.pdata["FILETYPES"]["*.ts"] = "TRANSLATIONS"
@@ -554,7 +555,7 @@ class Project(QObject):
         
     def __checkFilesExist(self, index):
         """
-        Private method to check, if the files in a list exist. 
+        Private method to check, if the files in a list exist.
         
         The files in the indicated list are checked for existance in the
         filesystem. Non existant files are removed from the list and the
@@ -579,9 +580,9 @@ class Project(QObject):
         Private method to generate a regular expression for the project path.
         """
         ppathRe = (self.ppath + os.sep)\
-            .replace("\\","@@")\
-            .replace("/","@@")\
-            .replace("@@",r"[\\/]")
+            .replace("\\", "@@")\
+            .replace("/", "@@")\
+            .replace("@@", r"[\\/]")
         if Utilities.isWindowsPlatform():
             self.ppathRe = re.compile(ppathRe, re.IGNORECASE)
         else:
@@ -658,13 +659,13 @@ class Project(QObject):
             if not self.pdata["HASH"][0]:
                 hash = str(QCryptographicHash.hash(
                     QByteArray(self.ppath), QCryptographicHash.Sha1).toHex(),
-                    encoding = "utf-8")
+                    encoding="utf-8")
                 self.pdata["HASH"] = [hash]
                 self.setDirty(True)
             
         return res
 
-    def __writeProject(self, fn = None):
+    def __writeProject(self, fn=None):
         """
         Private method to save the project infos to a project file.
         
@@ -746,7 +747,7 @@ class Project(QObject):
                 self.trUtf8("<p>The user specific project properties file <b>{0}</b>"
                     " could not be written.</p>").format(fn))
         
-    def __readSession(self, quiet = False, indicator = ""):
+    def __readSession(self, quiet=False, indicator=""):
         """
         Private method to read in the project session file (.e4s)
         
@@ -762,13 +763,13 @@ class Project(QObject):
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        fn = os.path.join(self.getProjectManagementDir(), 
+        fn = os.path.join(self.getProjectManagementDir(),
                           '{0}{1}.e4s'.format(fn, indicator))
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
             reader = SessionReader(f, False)
-            reader.readXML(quiet = quiet)
+            reader.readXML(quiet=quiet)
             f.close()
         else:
             if not quiet:
@@ -777,7 +778,7 @@ class Project(QObject):
                     self.trUtf8("<p>The project session file <b>{0}</b> could not be"
                         " read.</p>").format(fn))
         
-    def __writeSession(self, quiet = False, indicator = ""):
+    def __writeSession(self, quiet=False, indicator=""):
         """
         Private method to write the session data to an XML file (.e4s).
         
@@ -793,7 +794,7 @@ class Project(QObject):
             return
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        fn = os.path.join(self.getProjectManagementDir(), 
+        fn = os.path.join(self.getProjectManagementDir(),
                           '{0}{1}.e4s'.format(fn, indicator))
         
         f = QFile(fn)
@@ -877,7 +878,7 @@ class Project(QObject):
         TasksWriter(f, True, os.path.splitext(os.path.basename(fn))[0]).writeXML()
         f.close()
         
-    def __readDebugProperties(self, quiet = False):
+    def __readDebugProperties(self, quiet=False):
         """
         Private method to read in the project debugger properties file (.e4d)
         
@@ -897,7 +898,7 @@ class Project(QObject):
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
             reader = DebuggerPropertiesReader(f, self)
-            reader.readXML(quiet = quiet)
+            reader.readXML(quiet=quiet)
             f.close()
         else:
             if not quiet:
@@ -906,7 +907,7 @@ class Project(QObject):
                     self.trUtf8("<p>The project debugger properties file <b>{0}</b> could"
                                 " not be read.</p>").format(fn))
         
-    def __writeDebugProperties(self, quiet = False):
+    def __writeDebugProperties(self, quiet=False):
         """
         Private method to write the project debugger properties file (.e4d)
         
@@ -1000,8 +1001,8 @@ class Project(QObject):
         """
         return self.debugProperties[key]
         
-    def setDbgInfo(self, argv, wd, env, excReporting, excList, excIgnoreList, 
-                   autoClearShell, tracePython = None, autoContinue = None):
+    def setDbgInfo(self, argv, wd, env, excReporting, excList, excIgnoreList,
+                   autoClearShell, tracePython=None, autoContinue=None):
         """
         Public method to set the debugging information.
         
@@ -1064,8 +1065,8 @@ class Project(QObject):
         try:
             if self.__binaryTranslationsCallbacks[self.pdata["PROJECTTYPE"][0]] \
                is not None:
-                qmFile = self.__binaryTranslationsCallbacks\
-                         [self.pdata["PROJECTTYPE"][0]](langFile)
+                qmFile = self.__binaryTranslationsCallbacks[
+                    self.pdata["PROJECTTYPE"][0]](langFile)
         except KeyError:
                 qmFile = langFile.replace('.ts', '.qm')
         if qmFile == langFile:
@@ -1153,7 +1154,7 @@ class Project(QObject):
                         " deleted.</p>").format(qmFile))
                 return
         
-    def appendFile(self, fn, isSourceFile = False, updateModel = True):
+    def appendFile(self, fn, isSourceFile=False, updateModel=True):
         """
         Public method to append a file to the project.
         
@@ -1244,7 +1245,7 @@ class Project(QObject):
         if dirty:
             self.setDirty(True)
         
-    def addFiles(self, filter = None, startdir = None):
+    def addFiles(self, filter=None, startdir=None):
         """
         Public slot used to add files to the project.
         
@@ -1254,7 +1255,7 @@ class Project(QObject):
         """
         if startdir is None:
             startdir = self.ppath
-        dlg = AddFileDialog(self, self.parent(), filter, startdir = startdir)
+        dlg = AddFileDialog(self, self.parent(), filter, startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             fnames, target, isSource = dlg.getData()
             if target != '':
@@ -1271,7 +1272,7 @@ class Project(QObject):
                                     self.trUtf8("<p>The file <b>{0}</b> already"
                                         " exists.</p><p>Overwrite it?</p>")
                                         .format(targetfile),
-                                    icon = E5MessageBox.Warning)
+                                    icon=E5MessageBox.Warning)
                                 if not res:
                                     return  # don't overwrite
                                     
@@ -1290,7 +1291,7 @@ class Project(QObject):
                     self.trUtf8("Add file"),
                     self.trUtf8("The target directory must not be empty."))
         
-    def __addSingleDirectory(self, filetype, source, target, quiet = False):
+    def __addSingleDirectory(self, filetype, source, target, quiet=False):
         """
         Private method used to add all files of a single directory to the project.
         
@@ -1346,7 +1347,7 @@ class Project(QObject):
                             self.trUtf8("<p>The file <b>{0}</b> already exists.</p>"
                                         "<p>Overwrite it?</p>")
                                 .format(targetfile),
-                            icon = E5MessageBox.Warning)
+                            icon=E5MessageBox.Warning)
                         if not res:
                             continue  # don't overwrite, carry on with next file
                             
@@ -1376,7 +1377,7 @@ class Project(QObject):
                 nt = os.path.join(target, name)
                 self.__addRecursiveDirectory(filetype, ns, nt)
         
-    def addDirectory(self, filter = None, startdir = None):
+    def addDirectory(self, filter=None, startdir=None):
         """
         Public method used to add all files of a directory to the project.
         
@@ -1386,7 +1387,7 @@ class Project(QObject):
         """
         if startdir is None:
             startdir = self.ppath
-        dlg = AddDirectoryDialog(self, filter, self.parent(), startdir = startdir)
+        dlg = AddDirectoryDialog(self, filter, self.parent(), startdir=startdir)
         if dlg.exec_() == QDialog.Accepted:
             filetype, source, target, recursive = dlg.getData()
             if target == '':
@@ -1508,7 +1509,7 @@ class Project(QObject):
             self.pdata["MAINSCRIPT"] = [fn]
             self.setDirty(True)
         
-    def renameFile(self, oldfn, newfn = None):
+    def renameFile(self, oldfn, newfn=None):
         """
         Public slot to rename a file of the project.
         
@@ -1536,7 +1537,7 @@ class Project(QObject):
                 self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                             """ Overwrite it?</p>""")
                     .format(newfn),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return False
         
@@ -1559,7 +1560,7 @@ class Project(QObject):
         
         return True
         
-    def renameFileInPdata(self, oldname, newname, isSourceFile = False):
+    def renameFileInPdata(self, oldname, newname, isSourceFile=False):
         """
         Public method to rename a file in the pdata structure.
         
@@ -1641,7 +1642,7 @@ class Project(QObject):
         self.__model.addNewItem(typeString, newdn, typeStrings)
         self.directoryRemoved.emit(olddn)
         
-    def removeFile(self, fn, updateModel = True):
+    def removeFile(self, fn, updateModel=True):
         """
         Public slot to remove a file from the project.
         
@@ -1810,7 +1811,7 @@ class Project(QObject):
             
             hash = str(QCryptographicHash.hash(
                 QByteArray(self.ppath), QCryptographicHash.Sha1).toHex(),
-                encoding = "utf-8")
+                encoding="utf-8")
             self.pdata["HASH"] = [hash]
             
             # create the project directory if it doesn't exist already
@@ -1829,7 +1830,7 @@ class Project(QObject):
                 # (only for Python and Python3)
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
-                    f = open(fn, "w", encoding = "utf-8")
+                    f = open(fn, "w", encoding="utf-8")
                     f.close()
                     self.appendFile(fn, True)
                 # create an empty main script file, if a name was given
@@ -1876,7 +1877,7 @@ class Project(QObject):
                 res = E5MessageBox.yesNo(self.ui,
                     self.trUtf8("New Project"),
                     self.trUtf8("""Add existing files to the project?"""),
-                    yesDefault = True)
+                    yesDefault=True)
                 if res:
                     self.newProjectAddFiles(ms)
                 # create an empty __init__.py file to make it a Python package
@@ -1884,7 +1885,7 @@ class Project(QObject):
                 if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
                     fn = os.path.join(self.ppath, "__init__.py")
                     if not os.path.exists(fn):
-                        f = open(fn, "w", encoding = "utf-8")
+                        f = open(fn, "w", encoding="utf-8")
                         f.close()
                         self.appendFile(fn, True)
                 self.saveProject()
@@ -1935,7 +1936,7 @@ class Project(QObject):
                                     self.trUtf8("New project"),
                                     self.trUtf8("Shall the project file be added"
                                         " to the repository?"),
-                                    yesDefault = True)
+                                    yesDefault=True)
                                 if apres:
                                     self.saveProject()
                                     self.vcs.vcsAdd(self.pfile)
@@ -2042,7 +2043,7 @@ class Project(QObject):
                 mainscriptname = os.path.splitext(mainscript)[0] or \
                                  os.path.basename(tslist[0]).split('_')[0]
                 self.pdata["TRANSLATIONPATTERN"] = \
-                    [os.path.join(os.path.dirname(tslist[0]), 
+                    [os.path.join(os.path.dirname(tslist[0]),
                      "{0}_%language%{1}".format(os.path.basename(tslist[0]).split('_')[0],
                         os.path.splitext(tslist[0])[1]))]
             else:
@@ -2051,7 +2052,7 @@ class Project(QObject):
                     self.trUtf8("Translation Pattern"),
                     self.trUtf8("Enter the path pattern for translation files "
                                 "(use '%language%' in place of the language code):"),
-                    QLineEdit.Normal, 
+                    QLineEdit.Normal,
                     tslist[0])
                 if not pattern.isEmpty:
                     self.pdata["TRANSLATIONPATTERN"] = [pattern]
@@ -2069,7 +2070,7 @@ class Project(QObject):
                 elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
                     self.pdata["MAINSCRIPT"] = ['{0}.rb'.format(mainscriptname)]
             if self.pdata["TRANSLATIONSBINPATH"]:
-                tpd = os.path.join(self.ppath, 
+                tpd = os.path.join(self.ppath,
                                    self.pdata["TRANSLATIONSBINPATH"][0])
                 pattern = os.path.splitext(
                     os.path.basename(self.pdata["TRANSLATIONPATTERN"][0]))
@@ -2208,7 +2209,7 @@ class Project(QObject):
         # return empty string to signal to use the global setting
         return ""
         
-    def openProject(self, fn = None, restoreSession = True, reopen = False):
+    def openProject(self, fn=None, restoreSession=True, reopen=False):
         """
         Public slot to open a project.
         
@@ -2331,9 +2332,9 @@ class Project(QObject):
                         
                         # open a project session file being quiet about errors
                         if reopen:
-                            self.__readSession(quiet = True, indicator = "_tmp")
+                            self.__readSession(quiet=True, indicator="_tmp")
                         elif Preferences.getProject("AutoLoadSession"):
-                            self.__readSession(quiet = True)
+                            self.__readSession(quiet=True)
                     
                     # open a project debugger properties file being quiet about errors
                     if Preferences.getProject("AutoLoadDbgProperties"):
@@ -2354,9 +2355,9 @@ class Project(QObject):
         Public slot to reopen the current project.
         """
         projectFile = self.pfile
-        res = self.closeProject(reopen = True)
+        res = self.closeProject(reopen=True)
         if res:
-            self.openProject(projectFile, reopen = True)
+            self.openProject(projectFile, reopen=True)
         
     def saveProject(self):
         """
@@ -2401,7 +2402,7 @@ class Project(QObject):
                     self.trUtf8("Save File"),
                     self.trUtf8("""<p>The file <b>{0}</b> already exists."""
                                 """ Overwrite it?</p>""").format(fn),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return False
                 
@@ -2434,7 +2435,7 @@ class Project(QObject):
         @return flag indicating whether this operation was successful (boolean)
         """
         if self.isDirty():
-            res = E5MessageBox.okToClearData(self.parent(), 
+            res = E5MessageBox.okToClearData(self.parent(),
                 self.trUtf8("Close Project"),
                 self.trUtf8("The current project has unsaved changes."),
                 self.saveProject)
@@ -2453,7 +2454,7 @@ class Project(QObject):
         self.profiledata        and self.profiledata.close()
         self.applicationDiagram and self.applicationDiagram.close()
         
-    def closeProject(self, reopen = False, noSave = False):
+    def closeProject(self, reopen=False, noSave=False):
         """
         Public slot to close the current project.
         
@@ -2476,9 +2477,9 @@ class Project(QObject):
         
         # save the project session file being quiet about error
         if reopen:
-            self.__writeSession(quiet = True, indicator = "_tmp")
+            self.__writeSession(quiet=True, indicator="_tmp")
         elif Preferences.getProject("AutoSaveSession") and not noSave:
-            self.__writeSession(quiet = True)
+            self.__writeSession(quiet=True)
         
         # save the project debugger properties file being quiet about error
         if Preferences.getProject("AutoSaveDbgProperties") and \
@@ -2551,7 +2552,7 @@ class Project(QObject):
         
         return True
 
-    def saveAllScripts(self, reportSyntaxErrors = False):
+    def saveAllScripts(self, reportSyntaxErrors=False):
         """
         Public method to save all scripts belonging to the project.
         
@@ -2580,7 +2581,7 @@ class Project(QObject):
         else:
             return success
         
-    def getMainScript(self, normalized = False):
+    def getMainScript(self, normalized=False):
         """
         Public method to return the main script filename.
         
@@ -2595,7 +2596,7 @@ class Project(QObject):
         else:
             return None
         
-    def getSources(self, normalized = False):
+    def getSources(self, normalized=False):
         """
         Public method to return the source script files.
         
@@ -2738,7 +2739,7 @@ class Project(QObject):
         
     def getAbsoluteUniversalPath(self, fn):
         """
-        Public method to convert a project relative file path with universal 
+        Public method to convert a project relative file path with universal
         separators to an absolute file path.
         
         @param fn file or directory name to convert (string)
@@ -2845,7 +2846,7 @@ class Project(QObject):
         act = E5Action(self.trUtf8('New project'),
                 UI.PixmapCache.getIcon("projectNew.png"),
                 self.trUtf8('&New...'), 0, 0,
-                self.actGrp1,'project_new')
+                self.actGrp1, 'project_new')
         act.setStatusTip(self.trUtf8('Generate a new project'))
         act.setWhatsThis(self.trUtf8(
             """<b>New...</b>"""
@@ -2858,7 +2859,7 @@ class Project(QObject):
         act = E5Action(self.trUtf8('Open project'),
                 UI.PixmapCache.getIcon("projectOpen.png"),
                 self.trUtf8('&Open...'), 0, 0,
-                self.actGrp1,'project_open')
+                self.actGrp1, 'project_open')
         act.setStatusTip(self.trUtf8('Open an existing project'))
         act.setWhatsThis(self.trUtf8(
             """<b>Open...</b>"""
@@ -2905,7 +2906,7 @@ class Project(QObject):
         self.addFilesAct = E5Action(self.trUtf8('Add files to project'),
                 UI.PixmapCache.getIcon("fileMisc.png"),
                 self.trUtf8('Add &files...'), 0, 0,
-                self.actGrp2,'project_add_file')
+                self.actGrp2, 'project_add_file')
         self.addFilesAct.setStatusTip(self.trUtf8('Add files to the current project'))
         self.addFilesAct.setWhatsThis(self.trUtf8(
             """<b>Add files...</b>"""
@@ -2919,7 +2920,7 @@ class Project(QObject):
         self.addDirectoryAct = E5Action(self.trUtf8('Add directory to project'),
                 UI.PixmapCache.getIcon("dirOpen.png"),
                 self.trUtf8('Add directory...'), 0, 0,
-                self.actGrp2,'project_add_directory')
+                self.actGrp2, 'project_add_directory')
         self.addDirectoryAct.setStatusTip(
             self.trUtf8('Add a directory to the current project'))
         self.addDirectoryAct.setWhatsThis(self.trUtf8(
@@ -2933,7 +2934,7 @@ class Project(QObject):
         self.addLanguageAct = E5Action(self.trUtf8('Add translation to project'),
                 UI.PixmapCache.getIcon("linguist4.png"),
                 self.trUtf8('Add &translation...'), 0, 0,
-                self.actGrp2,'project_add_translation')
+                self.actGrp2, 'project_add_translation')
         self.addLanguageAct.setStatusTip(
             self.trUtf8('Add a translation to the current project'))
         self.addLanguageAct.setWhatsThis(self.trUtf8(
@@ -2946,7 +2947,7 @@ class Project(QObject):
 
         act = E5Action(self.trUtf8('Search new files'),
                 self.trUtf8('Searc&h new files...'), 0, 0,
-                self.actGrp2,'project_search_new_files')
+                self.actGrp2, 'project_search_new_files')
         act.setStatusTip(self.trUtf8('Search new files in the project directory.'))
         act.setWhatsThis(self.trUtf8(
             """<b>Search new files...</b>"""
@@ -3117,7 +3118,7 @@ class Project(QObject):
 
         self.codeMetricsAct = E5Action(self.trUtf8('Code Metrics'),
                 self.trUtf8('&Code Metrics...'), 0, 0,
-                self.chkGrp,'project_code_metrics')
+                self.chkGrp, 'project_code_metrics')
         self.codeMetricsAct.setStatusTip(
             self.trUtf8('Show some code metrics for the project.'))
         self.codeMetricsAct.setWhatsThis(self.trUtf8(
@@ -3129,7 +3130,7 @@ class Project(QObject):
 
         self.codeCoverageAct = E5Action(self.trUtf8('Python Code Coverage'),
                 self.trUtf8('Code Co&verage...'), 0, 0,
-                self.chkGrp,'project_code_coverage')
+                self.chkGrp, 'project_code_coverage')
         self.codeCoverageAct.setStatusTip(
             self.trUtf8('Show code coverage information for the project.'))
         self.codeCoverageAct.setWhatsThis(self.trUtf8(
@@ -3142,7 +3143,7 @@ class Project(QObject):
 
         self.codeProfileAct = E5Action(self.trUtf8('Profile Data'),
                 self.trUtf8('&Profile Data...'), 0, 0,
-                self.chkGrp,'project_profile_data')
+                self.chkGrp, 'project_profile_data')
         self.codeProfileAct.setStatusTip(
             self.trUtf8('Show profiling data for the project.'))
         self.codeProfileAct.setWhatsThis(self.trUtf8(
@@ -3154,7 +3155,7 @@ class Project(QObject):
 
         self.applicationDiagramAct = E5Action(self.trUtf8('Application Diagram'),
                 self.trUtf8('&Application Diagram...'), 0, 0,
-                self.chkGrp,'project_application_diagram')
+                self.chkGrp, 'project_application_diagram')
         self.applicationDiagramAct.setStatusTip(
             self.trUtf8('Show a diagram of the project.'))
         self.applicationDiagramAct.setWhatsThis(self.trUtf8(
@@ -3169,7 +3170,7 @@ class Project(QObject):
         self.pluginPkgListAct = E5Action(self.trUtf8('Create Package List'),
                 UI.PixmapCache.getIcon("pluginArchiveList.png"),
                 self.trUtf8('Create &Package List'), 0, 0,
-                self.pluginGrp,'project_plugin_pkglist')
+                self.pluginGrp, 'project_plugin_pkglist')
         self.pluginPkgListAct.setStatusTip(
             self.trUtf8('Create an initial PKGLIST file for an eric5 plugin.'))
         self.pluginPkgListAct.setWhatsThis(self.trUtf8(
@@ -3183,7 +3184,7 @@ class Project(QObject):
         self.pluginArchiveAct = E5Action(self.trUtf8('Create Plugin Archive'),
                 UI.PixmapCache.getIcon("pluginArchive.png"),
                 self.trUtf8('Create Plugin &Archive'), 0, 0,
-                self.pluginGrp,'project_plugin_archive')
+                self.pluginGrp, 'project_plugin_archive')
         self.pluginArchiveAct.setStatusTip(
             self.trUtf8('Create an eric5 plugin archive file.'))
         self.pluginArchiveAct.setWhatsThis(self.trUtf8(
@@ -3198,7 +3199,7 @@ class Project(QObject):
         self.pluginSArchiveAct = E5Action(self.trUtf8('Create Plugin Archive (Snapshot)'),
                 UI.PixmapCache.getIcon("pluginArchiveSnapshot.png"),
                 self.trUtf8('Create Plugin Archive (&Snapshot)'), 0, 0,
-                self.pluginGrp,'project_plugin_sarchive')
+                self.pluginGrp, 'project_plugin_sarchive')
         self.pluginSArchiveAct.setStatusTip(
             self.trUtf8('Create an eric5 plugin archive file (snapshot release).'))
         self.pluginSArchiveAct.setWhatsThis(self.trUtf8(
@@ -3246,16 +3247,16 @@ class Project(QObject):
         self.packagersMenu.setTearOffEnabled(True)
         
         self.__menus = {
-            "Main"      : menu, 
-            "Recent"    : self.recentMenu, 
-            "VCS"       : self.vcsMenu, 
-            "Checks"    : self.checksMenu, 
-            "Show"      : self.menuShow, 
-            "Graphics"  : self.graphicsMenu, 
-            "Session"   : self.sessionMenu, 
-            "Apidoc"    : self.apidocMenu, 
-            "Debugger"  : self.debuggerMenu, 
-            "Packagers" : self.packagersMenu, 
+            "Main": menu,
+            "Recent": self.recentMenu,
+            "VCS": self.vcsMenu,
+            "Checks": self.checksMenu,
+            "Show": self.menuShow,
+            "Graphics": self.graphicsMenu,
+            "Session": self.sessionMenu,
+            "Apidoc": self.apidocMenu,
+            "Debugger": self.debuggerMenu,
+            "Packagers": self.packagersMenu,
         }
         
         # connect the aboutToShow signals
@@ -3398,7 +3399,7 @@ class Project(QObject):
             else:
                 formatStr = '{0:d}. {1}'
             act = self.recentMenu.addAction(
-                formatStr.format(idx, 
+                formatStr.format(idx,
                     Utilities.compactPath(rp, self.ui.maxMenuFilePathLen)))
             act.setData(rp)
             act.setEnabled(QFileInfo(rp).exists())
@@ -3429,7 +3430,7 @@ class Project(QObject):
         """
         self.__doSearchNewFiles(False, True)
         
-    def __doSearchNewFiles(self, AI = True, onUserDemand = False):
+    def __doSearchNewFiles(self, AI=True, onUserDemand=False):
         """
         Private method to search for new files in the project directory.
         
@@ -3440,7 +3441,7 @@ class Project(QObject):
         
         @param AI flag indicating whether the automatic inclusion should
                 be honoured (boolean)
-        @param onUserDemand flag indicating whether this method was 
+        @param onUserDemand flag indicating whether this method was
                 requested by the user via a menu action (boolean)
         """
         autoInclude = Preferences.getProject("AutoIncludeNewFiles")
@@ -3535,7 +3536,7 @@ class Project(QObject):
             for file in files:
                 self.appendFile(file)
         
-    def othersAdded(self, fn, updateModel = True):
+    def othersAdded(self, fn, updateModel=True):
         """
         Public slot to be called, if something was added to the OTHERS project data area.
         
@@ -3603,7 +3604,7 @@ class Project(QObject):
     ## Below is the VCS interface
     ##############################################################
     
-    def initVCS(self, vcsSystem = None, nooverride = False):
+    def initVCS(self, vcsSystem=None, nooverride=False):
         """
         Public method used to instantiate a vcs system.
         
@@ -3636,7 +3637,7 @@ class Project(QObject):
                 if override:
                     # override failed, revert to original
                     self.pudata["VCSOVERRIDE"] = []
-                    return self.initVCS(nooverride = True)
+                    return self.initVCS(nooverride=True)
         
         if vcs:
             vcsExists, msg = vcs.vcsExists()
@@ -3650,7 +3651,7 @@ class Project(QObject):
                                     "<br/>Reverting override.</p><p>{1}</p>")\
                             .format(vcsSystem, msg))
                     self.pudata["VCSOVERRIDE"] = []
-                    return self.initVCS(nooverride = True)
+                    return self.initVCS(nooverride=True)
                 
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.critical(self.ui,
@@ -3868,10 +3869,10 @@ class Project(QObject):
         res = E5MessageBox.yesNo(self.ui,
             self.trUtf8("Application Diagram"),
             self.trUtf8("""Include module names?"""),
-            yesDefault = True)
+            yesDefault=True)
         
-        self.applicationDiagram = ApplicationDiagram(self, self.parent(), 
-            noModules = not res)
+        self.applicationDiagram = ApplicationDiagram(self, self.parent(),
+            noModules=not res)
         self.applicationDiagram.show()
     
     #########################################################################
@@ -3973,7 +3974,7 @@ class Project(QObject):
                 self.trUtf8("Create Package List"),
                 self.trUtf8("<p>The file <b>PKGLIST</b> already"
                     " exists.</p><p>Overwrite it?</p>"),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return  # don't overwrite
         
@@ -3992,7 +3993,7 @@ class Project(QObject):
                 newline = None
             else:
                 newline = self.getEolString()
-            pkglistFile = open(pkglist, "w", encoding = "utf-8", newline = newline)
+            pkglistFile = open(pkglist, "w", encoding="utf-8", newline=newline)
             pkglistFile.write("\n".join(lst))
             pkglistFile.close()
         except IOError as why:
@@ -4005,7 +4006,7 @@ class Project(QObject):
         if not "PKGLIST" in self.pdata["OTHERS"]:
             self.appendFile("PKGLIST")
         
-    def __pluginCreateArchive(self, snapshot = False):
+    def __pluginCreateArchive(self, snapshot=False):
         """
         Private slot to create an eric5 plugin archive.
         
@@ -4028,7 +4029,7 @@ class Project(QObject):
             return
         
         try:
-            pkglistFile = open(pkglist, "r", encoding = "utf-8")
+            pkglistFile = open(pkglist, "r", encoding="utf-8")
             names = pkglistFile.read()
             pkglistFile.close()
             names = sorted(names.splitlines())
@@ -4136,7 +4137,7 @@ class Project(QObject):
                 datestr = time.strftime("%Y%m%d")
                 lineend = sourcelines[lineno].replace(sourcelines[lineno].rstrip(), "")
                 sversion = "{0}-snapshot-{1}".format(
-                    sourcelines[lineno].replace("version = ", "").strip()[1:-1], 
+                    sourcelines[lineno].replace("version = ", "").strip()[1:-1],
                     datestr)
                 sourcelines[lineno] = '{0} + "-snapshot-{1}"{2}'.format(
                     sourcelines[lineno].rstrip(), datestr, lineend)

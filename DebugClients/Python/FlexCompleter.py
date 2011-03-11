@@ -5,8 +5,8 @@ Word completion for the eric5 shell
 
 <h4>NOTE for eric5 variant</h4>
 
-    This version is a re-implementation of FlexCompleter 
-    as found in the PyQwt package. It is modified to work with the eric5 debug 
+    This version is a re-implementation of FlexCompleter
+    as found in the PyQwt package. It is modified to work with the eric5 debug
     clients.
 
 
@@ -20,7 +20,7 @@ Word completion for the eric5 shell
 
 <h4>NOTE for FlexCompleter</h4>
 
-    This version is a re-implementation of rlcompleter with 
+    This version is a re-implementation of rlcompleter with
     selectable namespace.
 
     The problem with rlcompleter is that it's hardwired to work with
@@ -103,11 +103,12 @@ import __main__
 
 __all__ = ["Completer"]
 
+
 class Completer(object):
     """
     Class implementing the command line completer object.
     """
-    def __init__(self, namespace = None):
+    def __init__(self, namespace=None):
         """
         Create a new completer for the command line.
 
@@ -126,7 +127,7 @@ class Completer(object):
         """
         
         if namespace and type(namespace) != type({}):
-            raise TypeError,'namespace must be a dictionary'
+            raise TypeError('namespace must be a dictionary')
 
         # Don't bind to namespace quite yet, but flag whether the user wants a
         # specific namespace or to use __main__.__dict__. This will allow us
@@ -211,7 +212,7 @@ class Completer(object):
         expr, attr = m.group(1, 3)
         object = eval(expr, self.namespace)
         words = dir(object)
-        if hasattr(object,'__class__'):
+        if hasattr(object, '__class__'):
             words.append('__class__')
             words = words + get_class_members(object.__class__)
         matches = []
@@ -229,6 +230,7 @@ class Completer(object):
                 pass
         return matches
 
+
 def get_class_members(klass):
     """
     Module function to retrieve the class members.
@@ -241,7 +243,7 @@ def get_class_members(klass):
         return klass.getLazyNames()
     # vanilla Python stuff
     ret = dir(klass)
-    if hasattr(klass,'__bases__'):
+    if hasattr(klass, '__bases__'):
         for base in klass.__bases__:
             ret = ret + get_class_members(base)
     return ret

@@ -22,7 +22,8 @@ ericpath = os.getenv('ERICDIR', getConfig('ericDir'))
 if not ericpath in sys.path:
     sys.path.insert(-1, ericpath)
     
-def initDebugger(kind = "standard"):
+
+def initDebugger(kind="standard"):
     """
     Module function to initialize a debugger for remote debugging.
     
@@ -46,6 +47,7 @@ def initDebugger(kind = "standard"):
         
     return res
 
+
 def runcall(func, *args):
     """
     Module function mimicing the Pdb interface.
@@ -57,6 +59,7 @@ def runcall(func, *args):
     global debugger, __scriptname
     return debugger.run_call(__scriptname, func, *args)
     
+
 def setScriptname(name):
     """
     Module function to set the scriptname to be reported back to the IDE.
@@ -66,8 +69,9 @@ def setScriptname(name):
     global __scriptname
     __scriptname = name
 
-def startDebugger(enableTrace = True, exceptions = True, 
-                  tracePython = False, redirect = True):
+
+def startDebugger(enableTrace=True, exceptions=True,
+                  tracePython=False, redirect=True):
     """
     Module function used to start the remote debugger.
     
@@ -78,5 +82,5 @@ def startDebugger(enableTrace = True, exceptions = True,
     """
     global debugger
     if debugger:
-        debugger.startDebugger(enableTrace = enableTrace, exceptions = exceptions, 
-            tracePython = tracePython, redirect = redirect)
+        debugger.startDebugger(enableTrace=enableTrace, exceptions=exceptions,
+            tracePython=tracePython, redirect=redirect)

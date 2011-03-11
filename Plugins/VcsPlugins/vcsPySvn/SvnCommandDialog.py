@@ -17,6 +17,7 @@ from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 
 import Utilities
 
+
 class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
     """
     Class implementing the Subversion command dialog.
@@ -25,7 +26,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
     arbitrary subversion command. It asks the user to enter
     the commandline parameters and the working directory.
     """
-    def __init__(self, argvList, wdList, ppath, parent = None):
+    def __init__(self, argvList, wdList, ppath, parent=None):
         """
         Constructor
         

@@ -13,6 +13,7 @@ import Helpviewer.HelpWindow
 
 from .AdBlockBlockedNetworkReply import AdBlockBlockedNetworkReply
 
+
 class AdBlockNetwork(QObject):
     """
     Class implementing a network block.

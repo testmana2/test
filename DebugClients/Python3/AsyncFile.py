@@ -70,7 +70,7 @@ class AsyncFile(object):
         @param n the number of bytes to be written (int)
         """
         if n:
-            try :
+            try:
                 buf = "{0!s}{1!s}".format(self.wpending[:n], EOT)
                 try:
                     buf = buf.encode('utf8', 'backslashreplace')
@@ -82,7 +82,7 @@ class AsyncFile(object):
             except socket.error:
                 self.nWriteErrors += 1
                 if self.nWriteErrors > self.maxtries:
-                    self.wpending = '' # delete all output
+                    self.wpending = ''  # delete all output
 
     def pendingWrite(self):
         """
@@ -92,7 +92,7 @@ class AsyncFile(object):
         """
         return self.wpending.rfind('\n') + 1
 
-    def close(self, closeit = False):
+    def close(self, closeit=False):
         """
         Public method to close the file.
         
@@ -128,7 +128,7 @@ class AsyncFile(object):
         except socket.error:
             return -1
 
-    def read_p(self, size = -1):
+    def read_p(self, size=-1):
         """
         Public method to read bytes from this file.
         
@@ -142,7 +142,7 @@ class AsyncFile(object):
 
         return self.sock.recv(size).decode('utf8')
 
-    def read(self, size = -1):
+    def read(self, size=-1):
         """
         Public method to read bytes from this file.
         
@@ -156,7 +156,7 @@ class AsyncFile(object):
             buf = buf[:size]
         return buf
 
-    def readline_p(self, size = -1):
+    def readline_p(self, size=-1):
         """
         Public method to read a line from this file.
         
@@ -187,7 +187,7 @@ class AsyncFile(object):
         # Now we know how big the line is, read it for real.
         return self.sock.recv(size).decode('utf8')
 
-    def readlines(self, sizehint = -1):
+    def readlines(self, sizehint=-1):
         """
         Public method to read all lines from this file.
         
@@ -216,7 +216,7 @@ class AsyncFile(object):
 
         return lines
 
-    def readline(self, sizehint = -1):
+    def readline(self, sizehint=-1):
         """
         Public method to read one line from this file.
         
@@ -230,7 +230,7 @@ class AsyncFile(object):
             line = line[:sizehint]
         return line
     
-    def seek(self, offset, whence = 0):
+    def seek(self, offset, whence=0):
         """
         Public method to move the filepointer.
         
@@ -250,7 +250,7 @@ class AsyncFile(object):
         """
         raise IOError((29, '[Errno 29] Illegal seek'))
 
-    def truncate(self, size = -1):
+    def truncate(self, size=-1):
         """
         Public method to truncate the file.
         

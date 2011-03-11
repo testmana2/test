@@ -18,6 +18,7 @@ from .Ui_SvnDialog import Ui_SvnDialog
 
 import Preferences
 
+
 class SvnDialog(QDialog, Ui_SvnDialog):
     """
     Class implementing a dialog starting a process and showing its output.
@@ -26,7 +27,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
     shows the output of the process. The dialog is modal,
     which causes a synchronized execution of the process.
     """
-    def __init__(self, text, parent = None):
+    def __init__(self, text, parent=None):
         """
         Constructor
         
@@ -89,7 +90,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.normal = (exitStatus == QProcess.NormalExit) and (exitCode == 0)
         self.__finish()
         
-    def startProcess(self, args, workingDir = None):
+    def startProcess(self, args, workingDir=None):
         """
         Public slot used to start the process.
         
@@ -149,14 +150,14 @@ class SvnDialog(QDialog, Ui_SvnDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStdout signal. 
+        Private slot to handle the readyReadStdout signal.
         
         It reads the output of the process, formats it and inserts it into
         the contents pane.
         """
         if self.proc is not None:
-            s = str(self.proc.readAllStandardOutput(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.proc.readAllStandardOutput(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.resultbox.insertPlainText(s)
             self.resultbox.ensureCursorVisible()
@@ -176,8 +177,8 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         """
         if self.proc is not None:
             self.errorGroup.show()
-            s = str(self.proc.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.proc.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

@@ -20,6 +20,7 @@ from .Ui_BookmarksDialog import Ui_BookmarksDialog
 
 import UI.PixmapCache
 
+
 class BookmarksDialog(QDialog, Ui_BookmarksDialog):
     """
     Class implementing a dialog to manage bookmarks.
@@ -30,7 +31,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, parent = None, manager = None):
+    def __init__(self, parent=None, manager=None):
         """
         Constructor
         
@@ -186,11 +187,11 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
             return
         if newTab:
             self.newUrl.emit(
-                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole),
                 idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
         else:
             self.openUrl.emit(
-                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole), 
+                idx.sibling(idx.row(), 1).data(BookmarksModel.UrlRole),
                 idx.sibling(idx.row(), 0).data(Qt.DisplayRole))
     
     def __editName(self):

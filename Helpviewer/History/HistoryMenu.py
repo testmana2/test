@@ -21,6 +21,7 @@ from .HistoryDialog import HistoryDialog
 
 import UI.PixmapCache
 
+
 class HistoryMenuModel(QAbstractProxyModel):
     """
     Class implementing a model for the history menu.
@@ -29,7 +30,7 @@ class HistoryMenuModel(QAbstractProxyModel):
     """
     MOVEDROWS = 15
     
-    def __init__(self, sourceModel, parent = None):
+    def __init__(self, sourceModel, parent=None):
         """
         Constructor
         
@@ -53,7 +54,7 @@ class HistoryMenuModel(QAbstractProxyModel):
             return 0
         return min(self.__treeModel.rowCount(first), self.MOVEDROWS)
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -62,7 +63,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         """
         return self.__treeModel.columnCount(self.mapToSource(parent))
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -115,12 +116,12 @@ class HistoryMenuModel(QAbstractProxyModel):
         if proxyIndex.internalId() == sys.maxsize:
             bumpedItems = self.bumpedRows()
             if proxyIndex.row() < bumpedItems:
-                return self.__treeModel.index(proxyIndex.row(), proxyIndex.column(), 
+                return self.__treeModel.index(proxyIndex.row(), proxyIndex.column(),
                     self.__treeModel.index(0, 0))
             if bumpedItems <= self.MOVEDROWS and \
                bumpedItems == self.sourceModel().rowCount(self.__treeModel.index(0, 0)):
                 bumpedItems -= 1
-            return self.__treeModel.index(proxyIndex.row() - bumpedItems, 
+            return self.__treeModel.index(proxyIndex.row() - bumpedItems,
                                           proxyIndex.column())
         
         historyIndex = self.__treeModel.sourceModel()\
@@ -128,7 +129,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         treeIndex = self.__treeModel.mapFromSource(historyIndex)
         return treeIndex
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -179,8 +180,8 @@ class HistoryMenuModel(QAbstractProxyModel):
            bumpedItems == self.sourceModel().rowCount(self.sourceModel().index(0, 0)):
             bumpedItems -= 1
         
-        return self.createIndex(bumpedItems + treeIndexParent.row(), 
-                                treeIndexParent.column(), 
+        return self.createIndex(bumpedItems + treeIndexParent.row(),
+                                treeIndexParent.column(),
                                 sourceRow)
     
     def mimeData(self, indexes):
@@ -199,6 +200,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         mdata.setUrls(urls)
         return mdata
 
+
 class HistoryMenu(E5ModelMenu):
     """
     Class implementing the history menu.
@@ -209,7 +211,7 @@ class HistoryMenu(E5ModelMenu):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -234,11 +236,11 @@ class HistoryMenu(E5ModelMenu):
         """
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.UrlRole),
                       idx.data(HistoryModel.TitleRole))
         else:
             self.openUrl.emit(
-                      idx.data(HistoryModel.UrlRole), 
+                      idx.data(HistoryModel.UrlRole),
                       idx.data(HistoryModel.TitleRole))
     
     def prePopulated(self):
@@ -269,10 +271,10 @@ class HistoryMenu(E5ModelMenu):
         if len(self.__historyManager.history()) > 0:
             self.addSeparator()
         
-        act = self.addAction(UI.PixmapCache.getIcon("history.png"), 
+        act = self.addAction(UI.PixmapCache.getIcon("history.png"),
                              self.trUtf8("Show All History..."))
         act.triggered[()].connect(self.__showHistoryDialog)
-        act = self.addAction(UI.PixmapCache.getIcon("historyClear.png"), 
+        act = self.addAction(UI.PixmapCache.getIcon("historyClear.png"),
                              self.trUtf8("Clear History..."))
         act.triggered[()].connect(self.__clearHistoryDialog)
     

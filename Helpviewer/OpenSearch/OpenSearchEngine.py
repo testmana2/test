@@ -18,12 +18,13 @@ from UI.Info import Program
 
 import Preferences
 
+
 class OpenSearchEngine(QObject):
     """
     Class implementing the open search engine.
     
     @signal imageChanged() emitted after the icon has been changed
-    @signal suggestions(list of strings) emitted after the suggestions have 
+    @signal suggestions(list of strings) emitted after the suggestions have
             been received
     """
     imageChanged = pyqtSignal()
@@ -39,7 +40,7 @@ class OpenSearchEngine(QObject):
     else:
         _language = loc[:2]
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -61,8 +62,8 @@ class OpenSearchEngine(QObject):
         self.__searchMethod = "get"
         self.__suggestionsMethod = "get"
         self.__requestMethods = {
-            "get"  : QNetworkAccessManager.GetOperation, 
-            "post" : QNetworkAccessManager.PostOperation, 
+            "get": QNetworkAccessManager.GetOperation,
+            "post": QNetworkAccessManager.PostOperation,
         }
         
         self.__replies = []
@@ -83,13 +84,13 @@ class OpenSearchEngine(QObject):
         result = result.replace("{language}", cls._language)
         result = result.replace("{inputEncoding}", "UTF-8")
         result = result.replace("{outputEncoding}", "UTF-8")
-        result = result.replace("{searchTerms}", 
+        result = result.replace("{searchTerms}",
                                 bytes(QUrl.toPercentEncoding(searchTerm)).decode())
         result = re.sub(r"""\{([^\}]*:|)source\??\}""", Program, result)
 
         return result
     
-    @pyqtSlot(result = str)
+    @pyqtSlot(result=str)
     def name(self):
         """
         Public method to get the name of the engine.
@@ -152,7 +153,7 @@ class OpenSearchEngine(QObject):
         
         if self.__searchMethod != "post":
             for parameter in self._searchParameters:
-                ret.addQueryItem(parameter[0], 
+                ret.addQueryItem(parameter[0],
                                  self.parseTemplate(searchTerm, parameter[1]))
         
         return ret
@@ -197,7 +198,7 @@ class OpenSearchEngine(QObject):
         
         if self.__searchMethod != "post":
             for parameter in self._suggestionsParameters:
-                ret.addQueryItem(parameter[0], 
+                ret.addQueryItem(parameter[0],
                                  self.parseTemplate(searchTerm, parameter[1]))
         
         return ret
@@ -230,7 +231,7 @@ class OpenSearchEngine(QObject):
         """
         Public method to set the engine suggestions parameters.
         
-        @param suggestionsParameters suggestions parameters of the 
+        @param suggestionsParameters suggestions parameters of the
             engine (list of two tuples)
         """
         self._suggestionsParameters = suggestionsParameters[:]
@@ -387,7 +388,7 @@ class OpenSearchEngine(QObject):
             self._description == other._description and \
             self._imageUrl == other._imageUrl and \
             self._searchUrlTemplate == other._searchUrlTemplate and \
-            self._suggestionsUrlTemplate ==other._suggestionsUrlTemplate and \
+            self._suggestionsUrlTemplate == other._suggestionsUrlTemplate and \
             self._searchParameters == other._searchParameters and \
             self._suggestionsParameters == other._suggestionsParameters
     
@@ -473,7 +474,7 @@ class OpenSearchEngine(QObject):
         """
         Public method to set the reference to the network access manager.
         
-        @param networkAccessManager reference to the network access manager 
+        @param networkAccessManager reference to the network access manager
             object (QNetworkAccessManager)
         """
         self.__networkAccessManager = networkAccessManager

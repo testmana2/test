@@ -10,13 +10,14 @@ Module implementing the label to show some SSL info.
 from PyQt4.QtCore import Qt, pyqtSignal
 from PyQt4.QtGui import QLabel
 
+
 class SslLabel(QLabel):
     """
     Class implementing the label to show some SSL info.
     """
     clicked = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

@@ -22,6 +22,7 @@ from .Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
 import Utilities
 import Preferences
 
+
 class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
     """
     Class implementing the Spelling Properties dialog.

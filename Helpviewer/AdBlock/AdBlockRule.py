@@ -11,11 +11,12 @@ import re
 
 from PyQt4.QtCore import *
 
+
 class AdBlockRule(object):
     """
     Class implementing the AdBlock rule.
     """
-    def __init__(self, filter = ""):
+    def __init__(self, filter=""):
         """
         Constructor
         """
@@ -178,8 +179,8 @@ class AdBlockRule(object):
         pattern = re.sub(r"(\*)$", "", pattern)     # remove trailing wildcards
         pattern = re.sub(r"(\W)", "", pattern)      # escape special symbols
         pattern = re.sub(r"^\\\|\\\|",
-            r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern) # process extended anchor at expression start
-        pattern = re.sub(r"\\\^", 
+            r"^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?", pattern)  # process extended anchor at expression start
+        pattern = re.sub(r"\\\^",
             r"(?:[^\w\d\-.%]|$)", pattern)          # process separator placeholders
         pattern = re.sub(r"^\\\|", "^", pattern)    # process anchor at expression start
         pattern = re.sub(r"\\\|$", "$", pattern)    # process anchor at expression end
@@ -197,5 +198,5 @@ class AdBlockRule(object):
         if isRegExp:
             self.__regExp = QRegExp(pattern, Qt.CaseInsensitive, QRegExp.RegExp2)
         else:
-            self.__regExp = QRegExp(self.__convertPatternToRegExp(pattern), 
+            self.__regExp = QRegExp(self.__convertPatternToRegExp(pattern),
                                     Qt.CaseInsensitive, QRegExp.RegExp2)

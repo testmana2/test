@@ -17,6 +17,7 @@ from DebugProtocol import *
 
 gRecursionLimit = 64
 
+
 def printerr(s):
     """
     Module function used for debugging the debug client.
@@ -26,6 +27,7 @@ def printerr(s):
     sys.__stderr__.write('{0!s}\n'.format(s))
     sys.__stderr__.flush()
 
+
 def setRecursionLimit(limit):
     """
     Module function to set the recursion limit.
@@ -34,6 +36,7 @@ def setRecursionLimit(limit):
     """
     global gRecursionLimit
     gRecursionLimit = limit
+
 
 class DebugBase(bdb.Bdb):
     """
@@ -83,7 +86,7 @@ class DebugBase(bdb.Bdb):
         
         @return the current frame
         """
-        return self.currentFrame        
+        return self.currentFrame
     
     def getCurrentFrameLocals(self):
         """
@@ -91,7 +94,7 @@ class DebugBase(bdb.Bdb):
         
         @return locals dictionary of the current frame
         """
-        return self.currentFrameLocals        
+        return self.currentFrameLocals
     
     def step(self, traceMode):
         """
@@ -139,14 +142,14 @@ class DebugBase(bdb.Bdb):
     
     def profile(self, frame, event, arg):
         """
-        Public method used to trace some stuff independant of the debugger 
+        Public method used to trace some stuff independant of the debugger
         trace function.
         
         @param frame The current stack frame.
         @param event The trace event (string)
         @param arg The arguments
         """
-        if event == 'return':  
+        if event == 'return':
             self.cFrame = frame.f_back
             self.__recursionDepth -= 1
         elif event == 'call':
@@ -170,7 +173,7 @@ class DebugBase(bdb.Bdb):
         @return local trace function
         """
         if self.quitting:
-            return # None
+            return  # None
         
         # give the client a chance to push through new break points.
         self._dbgClient.eventPoll()
@@ -240,7 +243,7 @@ class DebugBase(bdb.Bdb):
                 raise bdb.BdbQuit
         return self.trace_dispatch
 
-    def set_trace(self, frame = None):
+    def set_trace(self, frame=None):
         """
         Overridden method of bdb.py to do some special setup.
         
@@ -264,7 +267,7 @@ class DebugBase(bdb.Bdb):
 
     def set_quit(self):
         """
-        Public method to quit. 
+        Public method to quit.
         
         It wraps call to bdb to clear the current frame properly.
         """
@@ -305,7 +308,7 @@ class DebugBase(bdb.Bdb):
 
         return frame.f_code.co_filename
 
-    def set_watch(self, cond, temporary = False):
+    def set_watch(self, cond, temporary=False):
         """
         Public method to set a watch expression.
         
@@ -330,7 +333,7 @@ class DebugBase(bdb.Bdb):
         
         @param cond expression of the watch expression to be cleared (string)
         """
-        try: 
+        try:
             possibles = bdb.Breakpoint.bplist["Watch", 0]
             for i in range(0, len(possibles)):
                 b = possibles[i]
@@ -420,7 +423,7 @@ class DebugBase(bdb.Bdb):
     
     def break_here(self, frame):
         """
-        Reimplemented from bdb.py to fix the filename from the frame. 
+        Reimplemented from bdb.py to fix the filename from the frame.
         
         See fix_frame_filename for more info.
         
@@ -576,7 +579,7 @@ class DebugBase(bdb.Bdb):
         self._dbgClient.write('{0}{1}\n'.format(ResponseLine, str(stack)))
         self._dbgClient.eventLoop()
 
-    def user_exception(self, frame, excinfo, unhandled = False):
+    def user_exception(self, frame, excinfo, unhandled=False):
         """
         Reimplemented to report an exception to the debug server.
         
@@ -694,7 +697,7 @@ class DebugBase(bdb.Bdb):
         if self.__skip_it(frame):
             return False
         
-        return bdb.Bdb.stop_here(self,frame)
+        return bdb.Bdb.stop_here(self, frame)
 
     def __skip_it(self, frame):
         """
@@ -718,8 +721,8 @@ class DebugBase(bdb.Bdb):
         if os.path.basename(fn) in [\
             'AsyncFile.py', 'AsyncIO.py',
             'DebugConfig.py', 'DCTestResult.py',
-            'DebugBase.py', 'DebugClientBase.py', 
-            'DebugClientCapabilities.py', 'DebugClient.py', 
+            'DebugBase.py', 'DebugClientBase.py',
+            'DebugClientCapabilities.py', 'DebugClient.py',
             'DebugClientThreads.py', 'DebugProtocol.py',
             'DebugThread.py', 'FlexCompleter.py',
             'PyProfile.py'] or \

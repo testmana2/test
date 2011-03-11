@@ -15,6 +15,7 @@ from .Ui_EditorExportersPage import Ui_EditorExportersPage
 
 import Preferences
 
+
 class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
     """
     Class implementing the Editor Typing configuration page.
@@ -125,19 +126,19 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
             self.odtTabsCheckBox.isChecked())
         
         # PDF
-        Preferences.setEditorExporter("PDF/Magnification", 
+        Preferences.setEditorExporter("PDF/Magnification",
             self.pdfMagnificationSlider.value())
-        Preferences.setEditorExporter("PDF/Font", 
+        Preferences.setEditorExporter("PDF/Font",
             self.pdfFontCombo.itemData(self.pdfFontCombo.currentIndex()))
-        Preferences.setEditorExporter("PDF/PageSize", 
+        Preferences.setEditorExporter("PDF/PageSize",
             self.pdfPageSizeCombo.itemData(self.pdfPageSizeCombo.currentIndex()))
-        Preferences.setEditorExporter("PDF/MarginTop", 
+        Preferences.setEditorExporter("PDF/MarginTop",
             self.pdfMarginTopSpin.value())
-        Preferences.setEditorExporter("PDF/MarginBottom", 
+        Preferences.setEditorExporter("PDF/MarginBottom",
             self.pdfMarginBottomSpin.value())
-        Preferences.setEditorExporter("PDF/MarginLeft", 
+        Preferences.setEditorExporter("PDF/MarginLeft",
             self.pdfMarginLeftSpin.value())
-        Preferences.setEditorExporter("PDF/MarginRight", 
+        Preferences.setEditorExporter("PDF/MarginRight",
             self.pdfMarginRightSpin.value())
         
         # RTF
@@ -175,6 +176,7 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         if ok:
             self.rtfFontSample.setFont(font)
             self.rtfFont = font
+
 
 def create(dlg):
     """

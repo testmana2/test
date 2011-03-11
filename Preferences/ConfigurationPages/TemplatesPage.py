@@ -12,6 +12,7 @@ from .Ui_TemplatesPage import Ui_TemplatesPage
 
 import Preferences
 
+
 class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
     """
     Class implementing the Templates configuration page.
@@ -50,6 +51,7 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         Preferences.setTemplates("ShowTooltip",
             self.templatesToolTipCheckBox.isChecked())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

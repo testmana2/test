@@ -14,6 +14,7 @@ from PyQt4.QtCore import QXmlStreamReader, QCoreApplication
 
 from E5Gui import E5MessageBox
 
+
 class XMLStreamReaderBase(QXmlStreamReader):
     """
     Class implementing a base class for all of eric5s XML stream readers.
@@ -49,7 +50,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         if self.hasError():
             msg = QCoreApplication.translate("XMLStreamReaderBase",
                 "<p>XML parse error in file <b>{0}</b>, line {1}, column {2}</p>"
-                "<p>Error: {3}</p>").format(self.device().fileName(), 
+                "<p>Error: {3}</p>").format(self.device().fileName(),
                     self.lineNumber(), self.columnNumber(), self.errorString())
             E5MessageBox.warning(None,
                 QCoreApplication.translate("XMLStreamReaderBase", "XML parse error"),
@@ -88,7 +89,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         """
         pass
     
-    def attribute(self, name, default = ""):
+    def attribute(self, name, default=""):
         """
         Public method to read the given attribute of the current tag.
         
@@ -141,7 +142,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         val = float(self.readElementText())
                     elif self.name() == "complex":
                         real, imag = self.readElementText().split()
-                        val = float(real) + float(imag)*1j
+                        val = float(real) + float(imag) * 1j
                     elif self.name() == "string":
                         val = self.readElementText()
                     elif self.name() == "unicode":  # backward compatibility to 4.6
@@ -173,7 +174,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
                         encoding = self.attribute("encoding")
                         if encoding != "base64":
                             self.raiseError(QCoreApplication.translate(
-                                "XMLStreamReaderBase", 
+                                "XMLStreamReaderBase",
                                 "Pickle data encoding '{0}' is not supported.")\
                                     .format(encoding))
                             continue

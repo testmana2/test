@@ -20,11 +20,12 @@ from .Ui_HgAnnotateDialog import Ui_HgAnnotateDialog
 import Preferences
 import Utilities
 
+
 class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
     """
     Class implementing a dialog to show the output of the hg annotate command.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -175,7 +176,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         @param date date of the tag (string)
         @param name name (path) of the tag (string)
         """
-        itm = QTreeWidgetItem(self.annotateList, 
+        itm = QTreeWidgetItem(self.annotateList,
             [revision, changeset, author, date, "{0:d}".format(self.lineno), text])
         self.lineno += 1
         itm.setTextAlignment(0, Qt.AlignRight)
@@ -209,8 +210,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

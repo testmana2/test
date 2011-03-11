@@ -12,11 +12,12 @@ from PyQt4.QtGui import QPixmap, QIcon, QAction
 
 import Helpviewer.HelpWindow
 
+
 class OpenSearchEngineAction(QAction):
     """
     Class implementing a QAction subclass for open search.
     """
-    def __init__(self, engine, parent = None):
+    def __init__(self, engine, parent=None):
         """
         Constructor
         

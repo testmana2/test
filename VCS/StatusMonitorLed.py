@@ -14,6 +14,7 @@ from E5Gui.E5Led import E5Led, E5LedRectangular
 
 import Preferences
 
+
 class StatusMonitorLed(E5Led):
     """
     Class implementing a LED to indicate the status of the VCS status monitor thread.
@@ -25,17 +26,17 @@ class StatusMonitorLed(E5Led):
         @param project reference to the project object (Project.Project)
         @param parent reference to the parent object (QWidget)
         """
-        E5Led.__init__(self, parent, shape = E5LedRectangular, rectRatio = 1.0)
+        E5Led.__init__(self, parent, shape=E5LedRectangular, rectRatio=1.0)
         
         self.project = project
         self.vcsMonitorLedColors = {
-            "off"       : QColor(Qt.lightGray),
-            "ok"        : QColor(Qt.green),
-            "nok"       : QColor(Qt.red),
-            "op"        : QColor(Qt.yellow),
-            "send"      : QColor(Qt.blue), 
-            "wait"      : QColor(Qt.cyan), 
-            "timeout"   : QColor(Qt.darkRed)
+            "off": QColor(Qt.lightGray),
+            "ok": QColor(Qt.green),
+            "nok": QColor(Qt.red),
+            "op": QColor(Qt.yellow),
+            "send": QColor(Qt.blue),
+            "wait": QColor(Qt.cyan),
+            "timeout": QColor(Qt.darkRed)
         }
         self.__on = False
         
@@ -58,7 +59,7 @@ class StatusMonitorLed(E5Led):
         self.__intervalAct = \
             self.__menu.addAction(self.trUtf8("Set interval..."), self.__setInterval)
         self.__menu.addSeparator()
-        self.__onAct  = \
+        self.__onAct = \
             self.__menu.addAction(self.trUtf8("Switch on"), self.__switchOn)
         self.__offAct = \
             self.__menu.addAction(self.trUtf8("Switch off"), self.__switchOff)
@@ -120,7 +121,7 @@ class StatusMonitorLed(E5Led):
             None,
             self.trUtf8("VCS Status Monitor"),
             self.trUtf8("Enter monitor interval [s]"),
-            self.project.getStatusMonitorInterval(), 
+            self.project.getStatusMonitorInterval(),
             0, 3600, 1)
         if ok:
             self.project.setStatusMonitorInterval(interval)

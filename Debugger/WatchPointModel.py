@@ -9,13 +9,14 @@ Module implementing the Watch expression model.
 
 from PyQt4.QtCore import *
 
+
 class WatchPointModel(QAbstractItemModel):
     """
     Class implementing a custom model for watch expressions.
     """
     dataAboutToBeChanged = pyqtSignal(QModelIndex, QModelIndex)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -38,7 +39,7 @@ class WatchPointModel(QAbstractItemModel):
                            Qt.Alignment(Qt.AlignRight),
         ]
         
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the current column count.
         
@@ -46,7 +47,7 @@ class WatchPointModel(QAbstractItemModel):
         """
         return len(self.header)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the current row count.
         
@@ -99,7 +100,7 @@ class WatchPointModel(QAbstractItemModel):
         
         return Qt.ItemIsEnabled | Qt.ItemIsSelectable
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get header data.
         
@@ -116,7 +117,7 @@ class WatchPointModel(QAbstractItemModel):
         
         return None
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -141,7 +142,7 @@ class WatchPointModel(QAbstractItemModel):
         """
         return QModelIndex()
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check for the presence of child items.
         
@@ -183,7 +184,7 @@ class WatchPointModel(QAbstractItemModel):
         if index.isValid():
             row = index.row()
             index1 = self.createIndex(row, 0, self.watchpoints[row])
-            index2 = self.createIndex(row, len(self.watchpoints[row]), 
+            index2 = self.createIndex(row, len(self.watchpoints[row]),
                      self.watchpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
             i = 0
@@ -229,7 +230,7 @@ class WatchPointModel(QAbstractItemModel):
         for index in idxList:
             if index.isValid():
                 rows.append(index.row())
-        rows.sort(reverse = True)
+        rows.sort(reverse=True)
         for row in rows:
             self.beginRemoveRows(QModelIndex(), row, row)
             del self.watchpoints[row]
@@ -253,11 +254,11 @@ class WatchPointModel(QAbstractItemModel):
             temporary flag, enabled flag, ignore count, index))
         """
         if index.isValid():
-            return self.watchpoints[index.row()][:] # return a copy
+            return self.watchpoints[index.row()][:]  # return a copy
         else:
             return []
 
-    def getWatchPointIndex(self, cond, special = ""):
+    def getWatchPointIndex(self, cond, special=""):
         """
         Public method to get the index of a watch expression given by expression.
         

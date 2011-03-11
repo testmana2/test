@@ -16,11 +16,12 @@ import Preferences
 
 from .Ui_UserPropertiesDialog import Ui_UserPropertiesDialog
 
+
 class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
     """
     Class implementing the user specific project properties dialog.
     """
-    def __init__(self, project, parent = None, name = None):
+    def __init__(self, project, parent=None, name=None):
         """
         Constructor
         

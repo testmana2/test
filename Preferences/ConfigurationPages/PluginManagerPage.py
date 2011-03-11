@@ -20,6 +20,7 @@ from .Ui_PluginManagerPage import Ui_PluginManagerPage
 import Preferences
 import Utilities
 
+
 class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
     """
     Class implementing the Plugin Manager configuration page.
@@ -44,9 +45,9 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         Public slot to save the Viewmanager configuration.
         """
-        Preferences.setPluginManager("ActivateExternal", 
+        Preferences.setPluginManager("ActivateExternal",
             self.activateExternalPluginsCheckBox.isChecked())
-        Preferences.setPluginManager("DownloadPath", 
+        Preferences.setPluginManager("DownloadPath",
             self.downloadDirEdit.text())
     
     @pyqtSlot()
@@ -66,6 +67,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
                 dn = dn[:-1]
             self.downloadDirEdit.setText(dn)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -5,4 +5,4 @@
  
 """
 Package containing the various view manager plugins.
-""" 
+"""

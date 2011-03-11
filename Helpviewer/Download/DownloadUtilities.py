@@ -5,6 +5,7 @@
 
 from PyQt4.QtCore import QCoreApplication
 
+
 def timeString(timeRemaining):
     """
     Module function to format the given time.
@@ -24,6 +25,7 @@ def timeString(timeRemaining):
             "%n seconds remaining", "", QCoreApplication.UnicodeUTF8, seconds)
     
     return remaining
+
 
 def dataString(size):
     """

@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerD, QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerD(QsciLexerD, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,13 +28,13 @@ class LexerD(QsciLexerD, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/+ ',
-            'end'   : ' +/'
+            'start': '/+ ',
+            'end': ' +/'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
     
     def initProperties(self):
@@ -64,10 +65,10 @@ class LexerD(QsciLexerD, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerD.Comment, 
-                         QsciLexerD.CommentDoc, 
-                         QsciLexerD.CommentLine, 
-                         QsciLexerD.CommentLineDoc, 
+        return style in [QsciLexerD.Comment,
+                         QsciLexerD.CommentDoc,
+                         QsciLexerD.CommentLine,
+                         QsciLexerD.CommentLineDoc,
                          QsciLexerD.CommentNested]
     
     def isStringStyle(self, style):
@@ -76,14 +77,14 @@ class LexerD(QsciLexerD, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerD.String, 
+        return style in [QsciLexerD.String,
                          QsciLexerD.UnclosedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerD.keywords(self, kwSet)

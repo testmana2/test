@@ -14,11 +14,12 @@ from .Ui_HelpLanguagesDialog import Ui_HelpLanguagesDialog
 
 import Preferences
 
+
 class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
     """
     Class implementing a dialog to configure the preferred languages.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -96,7 +97,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             return
         
         self.__model.insertRow(self.__model.rowCount())
-        self.__model.setData(self.__model.index(self.__model.rowCount() - 1), 
+        self.__model.setData(self.__model.index(self.__model.rowCount() - 1),
                              language)
         self.languagesList.setCurrentIndex(
             self.__model.index(self.__model.rowCount() - 1))
@@ -160,13 +161,13 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         allLanguages = []
         countries = QLocale.countriesForLanguage(language)
         languageString = "{0} [{1}]"\
-            .format(QLocale.languageToString(language), 
+            .format(QLocale.languageToString(language),
                     QLocale(language).name().split('_')[0])
         allLanguages.append(languageString)
         for country in countries:
             languageString = "{0}/{1} [{2}]"\
-                .format(QLocale.languageToString(language), 
-                        QLocale.countryToString(country), 
+                .format(QLocale.languageToString(language),
+                        QLocale.countryToString(country),
                         '-'.join(QLocale(language, country).name().split('_')).lower())
             if languageString not in allLanguages:
                 allLanguages.append(languageString)

@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerSQL
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerSQL(QsciLexerSQL, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -41,9 +42,9 @@ class LexerSQL(QsciLexerSQL, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerSQL.Comment, 
-                         QsciLexerSQL.CommentDoc, 
-                         QsciLexerSQL.CommentLine, 
+        return style in [QsciLexerSQL.Comment,
+                         QsciLexerSQL.CommentDoc,
+                         QsciLexerSQL.CommentLine,
                          QsciLexerSQL.CommentLineHash]
     
     def isStringStyle(self, style):
@@ -52,14 +53,14 @@ class LexerSQL(QsciLexerSQL, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerSQL.DoubleQuotedString, 
+        return style in [QsciLexerSQL.DoubleQuotedString,
                          QsciLexerSQL.SingleQuotedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerSQL.keywords(self, kwSet)

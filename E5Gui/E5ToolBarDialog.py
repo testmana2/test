@@ -16,6 +16,7 @@ from .Ui_E5ToolBarDialog import Ui_E5ToolBarDialog
 
 import UI.PixmapCache
 
+
 class E5ToolBarItem(object):
     """
     Class storing data belonging to a toolbar entry of the toolbar dialog.
@@ -34,6 +35,7 @@ class E5ToolBarItem(object):
         self.title = ""
         self.isChanged = False
     
+
 class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     """
     Class implementing a toolbar configuration dialog.
@@ -41,7 +43,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
     ActionIdRole = Qt.UserRole
     WidgetActionRole = Qt.UserRole + 1
     
-    def __init__(self, toolBarManager, parent = None):
+    def __init__(self, toolBarManager, parent=None):
         """
         Constructor
         
@@ -56,8 +58,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         self.__currentToolBarItem = None
         self.__removedToolBarIDs = []   # remember custom toolbars to be deleted
         
-        self.__widgetActionToToolBarItemID = {} # maps widget action IDs to toolbar item IDs
-        self.__toolBarItemToWidgetActionID = {} # maps toolbar item IDs to widget action IDs
+        self.__widgetActionToToolBarItemID = {}  # maps widget action IDs to toolbar item IDs
+        self.__toolBarItemToWidgetActionID = {}  # maps toolbar item IDs to widget action IDs
         
         self.upButton.setIcon(UI.PixmapCache.getIcon("1uparrow.png"))
         self.downButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
@@ -107,7 +109,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
             tbItem.actionIDs = actionIDs
             self.toolbarComboBox.addItem(tb.windowTitle(), int(id(tbItem)))
             if default:
-                self.toolbarComboBox.setItemData(self.toolbarComboBox.count() - 1, 
+                self.toolbarComboBox.setItemData(self.toolbarComboBox.count() - 1,
                     QColor(Qt.darkGreen), Qt.ForegroundRole)
         self.toolbarComboBox.model().sort(0)
         

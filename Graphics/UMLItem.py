@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 import Preferences
 
+
 class UMLItem(QGraphicsRectItem):
     """
     Class implementing the UMLItem base class.
     """
-    def __init__(self, x = 0, y = 0, rounded = False, parent = None):
+    def __init__(self, x=0, y=0, rounded=False, parent=None):
         """
         Constructor
         
@@ -125,7 +126,7 @@ class UMLItem(QGraphicsRectItem):
             self.shouldAdjustAssociations = True
         return QGraphicsItem.itemChange(self, change, value)
         
-    def paint(self, painter, option, widget = None):
+    def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
         

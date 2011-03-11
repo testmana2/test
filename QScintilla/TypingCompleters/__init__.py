@@ -7,7 +7,8 @@
 Package implementing lexers for the various supported programming languages.
 """
 
-def getCompleter(language, editor, parent = None):
+
+def getCompleter(language, editor, parent=None):
     """
     Module function to instantiate a lexer object for a given language.
     

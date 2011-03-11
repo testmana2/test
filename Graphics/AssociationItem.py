@@ -27,6 +27,7 @@ SouthEast = 7
 SouthWest = 8
 Center = 9
 
+
 class AssociationItem(E5ArrowItem):
     """
     Class implementing a graphics item for an association between two items.
@@ -34,7 +35,7 @@ class AssociationItem(E5ArrowItem):
     The association is drawn as an arrow starting at the first items and
     ending at the second.
     """
-    def __init__(self, itemA, itemB, type = Normal, parent = None):
+    def __init__(self, itemA, itemB, type=Normal, parent=None):
         """
         Constructor
         
@@ -58,7 +59,7 @@ class AssociationItem(E5ArrowItem):
             arrowType = WideArrow
             arrowFilled = False
         
-        E5ArrowItem.__init__(self, QPointF(0, 0), QPointF(100, 100), 
+        E5ArrowItem.__init__(self, QPointF(0, 0), QPointF(100, 100),
             arrowFilled, arrowType, parent)
         
         self.setFlag(QGraphicsItem.ItemIsMovable, False)
@@ -141,7 +142,7 @@ class AssociationItem(E5ArrowItem):
         Each diagonal is defined by two corners of the bounding rectangle
         
         To calculate the start point  we have to find out in which
-        region (defined by itemA's diagonals) is itemB's TopLeft corner 
+        region (defined by itemA's diagonals) is itemB's TopLeft corner
         (lets call it region M). After that the start point will be
         the middle point of rectangle's side contained in region M.
         
@@ -197,7 +198,7 @@ class AssociationItem(E5ArrowItem):
         
     def __findPointRegion(self, rect, posX, posY):
         """
-        Private method to find out, which region of rectangle rect contains the point 
+        Private method to find out, which region of rectangle rect contains the point
         (PosX, PosY) and returns the region number.
         
         @param rect rectangle to calculate the region for (QRectF)

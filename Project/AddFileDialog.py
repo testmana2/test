@@ -19,12 +19,13 @@ from .Ui_AddFileDialog import Ui_AddFileDialog
 
 import Utilities
 
+
 class AddFileDialog(QDialog, Ui_AddFileDialog):
     """
     Class implementing a dialog to add a file to the project.
     """
-    def __init__(self, pro, parent = None, filter = None, name = None,
-                 startdir = None):
+    def __init__(self, pro, parent=None, filter=None, name=None,
+                 startdir=None):
         """
         Constructor
         
@@ -45,7 +46,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         self.filter = filter
         self.ppath = pro.ppath
         self.startdir = startdir
-        self.filetypes = pro.pdata["FILETYPES"] # save a reference to the filetypes dict
+        self.filetypes = pro.pdata["FILETYPES"]  # save a reference to the filetypes dict
         
         if self.filter is not None and self.filter != 'source':
             self.sourcecodeCheckBox.hide()
@@ -79,11 +80,11 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
                 dir = self.targetDirEdit.text()
         if self.filter is None:
             patterns = {
-                "SOURCES"      : [], 
-                "FORMS"        : [], 
-                "RESOURCES"    : [], 
-                "INTERFACES"   : [], 
-                "TRANSLATIONS" : [], 
+                "SOURCES": [],
+                "FORMS": [],
+                "RESOURCES": [],
+                "INTERFACES": [],
+                "TRANSLATIONS": [],
             }
             for pattern, filetype in list(self.filetypes.items()):
                 if filetype in patterns:
@@ -95,10 +96,10 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
                 "Interface Files ({3});;"
                 "Translation Files ({4});;"
                 "All Files (*)").format(
-                    " ".join(patterns["SOURCES"]), 
-                    " ".join(patterns["FORMS"]), 
-                    " ".join(patterns["RESOURCES"]), 
-                    " ".join(patterns["INTERFACES"]), 
+                    " ".join(patterns["SOURCES"]),
+                    " ".join(patterns["FORMS"]),
+                    " ".join(patterns["RESOURCES"]),
+                    " ".join(patterns["INTERFACES"]),
                     " ".join(patterns["TRANSLATIONS"]))
             caption = self.trUtf8("Select Files")
         elif self.filter == 'form':
@@ -177,9 +178,9 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         """
         Public slot to retrieve the dialogs data.
         
-        @return tuple of three values (list of string, string, boolean) giving the 
+        @return tuple of three values (list of string, string, boolean) giving the
             source files, the target directory and a flag telling, whether
             the files shall be added as source code
         """
-        return (self.sourceFileEdit.text().split(os.pathsep), 
+        return (self.sourceFileEdit.text().split(os.pathsep),
             self.targetDirEdit.text(), self.sourcecodeCheckBox.isChecked())

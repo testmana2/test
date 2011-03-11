@@ -25,14 +25,15 @@ from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import Preferences
 import Utilities
 
+
 class ProjectResourcesBrowser(ProjectBaseBrowser):
     """
-    A class used to display the resources part of the project. 
+    A class used to display the resources part of the project.
     
     @signal appendStderr(str) emitted after something was received from
             a QProcess on stderr
     @signal sourceFile(str) emitted to open a resources file in an editor
-    @signal closeSourceWindow(str) emitted after a file has been removed/deleted 
+    @signal closeSourceWindow(str) emitted after a file has been removed/deleted
             from the project
     @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
@@ -45,7 +46,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     RCFilenameFormatPython = "{0}_rc.py"
     RCFilenameFormatRuby = "{0}_rc.rb"
     
-    def __init__(self, project, parent = None):
+    def __init__(self, project, parent=None):
         """
         Constructor
         
@@ -78,21 +79,21 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            self.menu.addAction(self.trUtf8('Compile resource'), 
+            self.menu.addAction(self.trUtf8('Compile resource'),
                 self.__compileResource)
-            self.menu.addAction(self.trUtf8('Compile all resources'), 
+            self.menu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.menu.addSeparator()
         else:
             if self.hooks["compileResource"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("compileResource", 
-                        self.trUtf8('Compile resource')), 
+                    self.hooksMenuEntries.get("compileResource",
+                        self.trUtf8('Compile resource')),
                     self.__compileResource)
             if self.hooks["compileAllResources"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources", 
-                        self.trUtf8('Compile all resources')), 
+                    self.hooksMenuEntries.get("compileAllResources",
+                        self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
             if self.hooks["compileResource"] is not None or \
                self.hooks["compileAllResources"] is not None:
@@ -111,47 +112,47 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             if self.hooks["newResource"] is not None:
                 self.menu.addAction(
-                    self.hooksMenuEntries.get("newResource", 
+                    self.hooksMenuEntries.get("newResource",
                         self.trUtf8('New resource...')), self.__newResource)
         self.menu.addAction(self.trUtf8('Add resources...'), self.__addResourceFiles)
-        self.menu.addAction(self.trUtf8('Add resources directory...'), 
+        self.menu.addAction(self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Copy Path to Clipboard'), 
+        self.menu.addAction(self.trUtf8('Copy Path to Clipboard'),
             self._copyToClipboard)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Expand all directories'), 
+        self.menu.addAction(self.trUtf8('Expand all directories'),
             self._expandAllDirs)
-        self.menu.addAction(self.trUtf8('Collapse all directories'), 
+        self.menu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            self.backMenu.addAction(self.trUtf8('Compile all resources'), 
+            self.backMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
             self.backMenu.addAction(self.trUtf8('New resource...'), self.__newResource)
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.backMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources", 
-                        self.trUtf8('Compile all resources')), 
+                    self.hooksMenuEntries.get("compileAllResources",
+                        self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.backMenu.addSeparator()
             if self.hooks["newResource"] is not None:
                 self.backMenu.addAction(
-                    self.hooksMenuEntries.get("newResource", 
+                    self.hooksMenuEntries.get("newResource",
                         self.trUtf8('New resource...')), self.__newResource)
-        self.backMenu.addAction(self.trUtf8('Add resources...'), 
+        self.backMenu.addAction(self.trUtf8('Add resources...'),
             self.project.addResourceFiles)
-        self.backMenu.addAction(self.trUtf8('Add resources directory...'), 
+        self.backMenu.addAction(self.trUtf8('Add resources directory...'),
             self.project.addResourceDir)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Expand all directories'), 
+        self.backMenu.addAction(self.trUtf8('Expand all directories'),
             self._expandAllDirs)
-        self.backMenu.addAction(self.trUtf8('Collapse all directories'), 
+        self.backMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
@@ -160,41 +161,41 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            act = self.multiMenu.addAction(self.trUtf8('Compile resources'), 
+            act = self.multiMenu.addAction(self.trUtf8('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
         else:
             if self.hooks["compileSelectedResources"] is not None:
                 act = self.multiMenu.addAction(
-                    self.hooksMenuEntries.get("compileSelectedResources", 
-                        self.trUtf8('Compile resources')), 
+                    self.hooksMenuEntries.get("compileSelectedResources",
+                        self.trUtf8('Compile resources')),
                     self.__compileSelectedResources)
                 self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Open'), self.__openFile)
         self.multiMenu.addSeparator()
-        act = self.multiMenu.addAction(self.trUtf8('Remove from project'), 
+        act = self.multiMenu.addAction(self.trUtf8('Remove from project'),
             self._removeFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(self.trUtf8('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Expand all directories'), 
+        self.multiMenu.addAction(self.trUtf8('Expand all directories'),
             self._expandAllDirs)
-        self.multiMenu.addAction(self.trUtf8('Collapse all directories'), 
+        self.multiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            self.dirMenu.addAction(self.trUtf8('Compile all resources'), 
+            self.dirMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.dirMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources", 
-                        self.trUtf8('Compile all resources')), 
+                    self.hooksMenuEntries.get("compileAllResources",
+                        self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMenu.addSeparator()
         act = self.dirMenu.addAction(self.trUtf8('Remove from project'), self._removeDir)
@@ -202,39 +203,39 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('New resource...'), self.__newResource)
         self.dirMenu.addAction(self.trUtf8('Add resources...'), self.__addResourceFiles)
-        self.dirMenu.addAction(self.trUtf8('Add resources directory...'), 
+        self.dirMenu.addAction(self.trUtf8('Add resources directory...'),
             self.__addResourcesDirectory)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Copy Path to Clipboard'), 
+        self.dirMenu.addAction(self.trUtf8('Copy Path to Clipboard'),
             self._copyToClipboard)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Expand all directories'), 
+        self.dirMenu.addAction(self.trUtf8('Expand all directories'),
             self._expandAllDirs)
-        self.dirMenu.addAction(self.trUtf8('Collapse all directories'), 
+        self.dirMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in ["Qt4", "E4Plugin", "PySide"]:
-            self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'), 
+            self.dirMultiMenu.addAction(self.trUtf8('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.dirMultiMenu.addAction(
-                    self.hooksMenuEntries.get("compileAllResources", 
-                        self.trUtf8('Compile all resources')), 
+                    self.hooksMenuEntries.get("compileAllResources",
+                        self.trUtf8('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Add resources...'), 
+        self.dirMultiMenu.addAction(self.trUtf8('Add resources...'),
             self.project.addResourceFiles)
-        self.dirMultiMenu.addAction(self.trUtf8('Add resources directory...'), 
+        self.dirMultiMenu.addAction(self.trUtf8('Add resources directory...'),
             self.project.addResourceDir)
         self.dirMultiMenu.addSeparator()
-        self.dirMultiMenu.addAction(self.trUtf8('Expand all directories'), 
+        self.dirMultiMenu.addAction(self.trUtf8('Expand all directories'),
             self._expandAllDirs)
-        self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'), 
+        self.dirMultiMenu.addAction(self.trUtf8('Collapse all directories'),
             self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(self.trUtf8('Configure...'), self._configure)
@@ -408,7 +409,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 res = E5MessageBox.yesNo(self,
                     self.trUtf8("New Resource"),
                     self.trUtf8("The file already exists! Overwrite it?"),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     # user selected to not overwrite
                     return
@@ -418,7 +419,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     newline = None
                 else:
                     newline = self.project.getEolString()
-                rcfile = open(fname, 'w', encoding = "utf-8", newline = newline)
+                rcfile = open(fname, 'w', encoding="utf-8", newline=newline)
                 rcfile.write('<!DOCTYPE RCC>\n')
                 rcfile.write('<RCC version="1.0">\n')
                 rcfile.write('<qresource>\n')
@@ -466,7 +467,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal of the 
+        Private slot to handle the readyReadStandardOutput signal of the
         pyrcc4/rbrcc process.
         """
         if self.compileProc is None:
@@ -474,13 +475,13 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.compileProc.setReadChannel(QProcess.StandardOutput)
         
         while self.compileProc and self.compileProc.canReadLine():
-            self.buf += str(self.compileProc.readLine(), 
-                            Preferences.getSystem("IOEncoding"), 
+            self.buf += str(self.compileProc.readLine(),
+                            Preferences.getSystem("IOEncoding"),
                             'replace')
         
     def __readStderr(self):
         """
-        Private slot to handle the readyReadStandardError signal of the 
+        Private slot to handle the readyReadStandardError signal of the
         pyrcc4/rbrcc process.
         """
         if self.compileProc is None:
@@ -491,7 +492,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.compileProc.setReadChannel(QProcess.StandardError)
         while self.compileProc and self.compileProc.canReadLine():
             s = self.rccCompiler + ': '
-            error = str(self.compileProc.readLine(), 
+            error = str(self.compileProc.readLine(),
                             ioEncoding, 'replace')
             s += error
             self.appendStderr.emit(s)
@@ -512,7 +513,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     newline = None
                 else:
                     newline = self.project.getEolString()
-                f = open(ofn, "w", encoding = "utf-8", newline = newline)
+                f = open(ofn, "w", encoding="utf-8", newline=newline)
                 for line in self.buf.splitlines():
                     f.write(line + "\n")
                 f.close()
@@ -536,7 +537,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     self.trUtf8("The compilation of the resource file failed."))
         self.compileProc = None
         
-    def __compileQRC(self, fn, noDialog = False, progress = None):
+    def __compileQRC(self, fn, noDialog=False, progress=None):
         """
         Privat method to compile a .qrc file to a .py file.
         
@@ -582,7 +583,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         dirname, filename = os.path.split(ofn)
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
-            self.compiledFile = os.path.join(dirname, 
+            self.compiledFile = os.path.join(dirname,
                                 self.RCFilenameFormatPython.format(filename))
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.compiledFile = os.path.join(
@@ -632,7 +633,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileAllResources"](self.project.pdata["RESOURCES"])
         else:
             numResources = len(self.project.pdata["RESOURCES"])
-            progress = QProgressDialog(self.trUtf8("Compiling resources..."), 
+            progress = QProgressDialog(self.trUtf8("Compiling resources..."),
                 self.trUtf8("Abort"), 0, numResources, self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
@@ -666,7 +667,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             self.hooks["compileSelectedResources"](files)
         else:
             numResources = len(files)
-            progress = QProgressDialog(self.trUtf8("Compiling resources..."), 
+            progress = QProgressDialog(self.trUtf8("Compiling resources..."),
                 self.trUtf8("Abort"), 0, numResources, self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
@@ -699,7 +700,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         @return flag indicating some file is newer (boolean)
         """
         try:
-            f = open(filename, "r", encoding = "utf-8")
+            f = open(filename, "r", encoding="utf-8")
             buf = f.read()
             f.close()
         except IOError:
@@ -731,7 +732,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if self.hooks["compileChangedResources"] is not None:
             self.hooks["compileChangedResources"](self.project.pdata["RESOURCES"])
         else:
-            progress = QProgressDialog(self.trUtf8("Determining changed resources..."), 
+            progress = QProgressDialog(self.trUtf8("Determining changed resources..."),
                 None, 0, 100)
             progress.setMinimumDuration(0)
             i = 0
@@ -746,11 +747,11 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if self.project.pdata["PROGLANGUAGE"][0] in \
                    ["Python", "Python2", "Python3"]:
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
-                    ofn = os.path.join(dirname, 
+                    ofn = os.path.join(dirname,
                                        self.RCFilenameFormatPython.format(filename))
                 elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
                     dirname, filename = os.path.split(os.path.splitext(ifn)[0])
-                    ofn = os.path.join(dirname, 
+                    ofn = os.path.join(dirname,
                                        self.RCFilenameFormatRuby.format(filename))
                 else:
                     return
@@ -810,9 +811,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         specified differently.
         """
         self.hooks = {
-            "compileResource"           : None, 
-            "compileAllResources"       : None, 
-            "compileChangedResources"   : None, 
-            "compileSelectedResources"  : None, 
-            "newResource"               : None, 
+            "compileResource": None,
+            "compileAllResources": None,
+            "compileChangedResources": None,
+            "compileSelectedResources": None,
+            "newResource": None,
         }

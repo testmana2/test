@@ -13,11 +13,12 @@ from PyQt4.Qsci import QsciPrinter
 
 import Preferences
 
+
 class Printer(QsciPrinter):
-    """ 
+    """
     Class implementing the QextScintillaPrinter with a header.
     """
-    def __init__(self, mode = QPrinter.ScreenResolution):
+    def __init__(self, mode=QPrinter.ScreenResolution):
         """
         Constructor
         
@@ -50,7 +51,7 @@ class Printer(QsciPrinter):
         """
         fn = self.docName()
         
-        header = QApplication.translate('Printer', 
+        header = QApplication.translate('Printer',
                                         '{0} - Printed on {1}, {2} - Page {3}')\
             .format(fn, self.date, self.time, pagenr)
         

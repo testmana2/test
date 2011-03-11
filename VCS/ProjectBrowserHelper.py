@@ -23,12 +23,13 @@ from .RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 import Preferences
 
+
 class VcsProjectBrowserHelper(QObject):
     """
     Class implementing the base class of the VCS project browser helper.
     """
     def __init__(self, vcsObject, browserObject, projectObject, isTranslationsBrowser,
-        parent = None, name = None):
+        parent=None, name=None):
         """
         Constructor
         
@@ -68,9 +69,9 @@ class VcsProjectBrowserHelper(QObject):
     
     def showContextMenu(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
         
         @param menu reference to the menu to be shown
@@ -81,9 +82,9 @@ class VcsProjectBrowserHelper(QObject):
     
     def showContextMenuMulti(self, menu, standardItems):
         """
-        Slot called before the context menu (multiple selections) is shown. 
+        Slot called before the context menu (multiple selections) is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
         
         @param menu reference to the menu to be shown
@@ -94,9 +95,9 @@ class VcsProjectBrowserHelper(QObject):
     
     def showContextMenuDir(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
@@ -107,9 +108,9 @@ class VcsProjectBrowserHelper(QObject):
     
     def showContextMenuDirMulti(self, menu, standardItems):
         """
-        Slot called before the context menu is shown. 
+        Slot called before the context menu is shown.
         
-        It enables/disables the VCS menu entries depending on the overall 
+        It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
         
         @param menu reference to the menu to be shown
@@ -280,9 +281,9 @@ class VcsProjectBrowserHelper(QObject):
             status = self.vcs.vcsRemove(names)
             if status:
                 if isRemoveDirs:
-                    self.browser._removeDir() # remove directories from Project
+                    self.browser._removeDir()  # remove directories from Project
                 else:
-                    self.browser._removeFile() # remove file(s) from project
+                    self.browser._removeFile()  # remove file(s) from project
         
     def _VCSLog(self):
         """

@@ -4,16 +4,17 @@
 #
 
 """
-Module implementing dialog-like popup that displays messages without 
+Module implementing dialog-like popup that displays messages without
 interrupting the user.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QTimer, QPoint, QRect
 from PyQt4.QtGui import QFrame, QVBoxLayout, QApplication
 
+
 class E5PassivePopup(QFrame):
     """
-    Class implementing dialog-like popup that displays messages without 
+    Class implementing dialog-like popup that displays messages without
     interrupting the user.
     """
     Boxed = 0
@@ -21,7 +22,7 @@ class E5PassivePopup(QFrame):
     
     clicked = pyqtSignal((), (QPoint, ))
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -87,7 +88,7 @@ class E5PassivePopup(QFrame):
         if delay > 0:
             self.__hideTimer.start(delay)
     
-    def show(self, p = None):
+    def show(self, p=None):
         """
         Public slot to show the popup.
         
@@ -167,7 +168,7 @@ class E5PassivePopup(QFrame):
     
     def __calculateNearbyPoint(self, target):
         """
-        Private method to calculate the position to place the popup near the 
+        Private method to calculate the position to place the popup near the
         specified rectangle.
         
         @param target rectangle to be placed at (QRect)
@@ -179,7 +180,7 @@ class E5PassivePopup(QFrame):
         w = self.minimumSizeHint().width()
         h = self.minimumSizeHint().height()
         
-        r =  QApplication.desktop().screenGeometry(QPoint(x + w // 2, y + h // 2))
+        r = QApplication.desktop().screenGeometry(QPoint(x + w // 2, y + h // 2))
         
         if x < r.center().x():
             x += target.width()

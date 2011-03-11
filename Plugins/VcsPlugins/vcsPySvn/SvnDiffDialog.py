@@ -22,11 +22,12 @@ from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
 
 import Utilities
 
+
 class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
     """
     Class implementing a dialog to show the output of the svn diff command.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -108,14 +109,14 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         else:
             return " "
         
-    def start(self, fn, versions = None, urls = None, summary = False, pegRev = None):
+    def start(self, fn, versions=None, urls=None, summary=False, pegRev=None):
         """
         Public slot to start the svn diff command.
         
         @param fn filename to be diffed (string)
         @param versions list of versions to be diffed (list of up to 2 integer or None)
         @keyparam urls list of repository URLs (list of 2 strings)
-        @keyparam summary flag indicating a summarizing diff 
+        @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
         @keyparam pegRev revision number the filename is valid (integer)
         """
@@ -195,9 +196,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                     url2 = "{0}/{1}{2}".format(urls[1], dname, name)
                     if summary:
                         diff_summary = self.client.diff_summarize(
-                            url1, revision1 = rev1, 
-                            url_or_path2 = url2, revision2 = rev2, 
-                            recurse = recurse)
+                            url1, revision1=rev1,
+                            url_or_path2=url2, revision2=rev2,
+                            recurse=recurse)
                         diff_list = []
                         for diff_sum in diff_summary:
                             diff_list.append("{0} {1}".format(
@@ -205,18 +206,18 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                                 diff_sum['path']))
                         diffText = os.linesep.join(diff_list)
                     else:
-                        diffText = self.client.diff(tmpdir, 
-                            url1, revision1 = rev1, 
-                            url_or_path2 = url2, revision2 = rev2, 
-                            recurse = recurse)
+                        diffText = self.client.diff(tmpdir,
+                            url1, revision1=rev1,
+                            url_or_path2=url2, revision2=rev2,
+                            recurse=recurse)
                 else:
                     if pegRev is not None:
-                        diffText = self.client.diff_peg(tmpdir, name, 
-                            peg_revision = self.__getVersionArg(pegRev), 
-                            revision_start = rev1, revision_end = rev2, recurse = recurse)
+                        diffText = self.client.diff_peg(tmpdir, name,
+                            peg_revision=self.__getVersionArg(pegRev),
+                            revision_start=rev1, revision_end=rev2, recurse=recurse)
                     else:
-                        diffText = self.client.diff(tmpdir, name, 
-                            revision1 = rev1, revision2 = rev2, recurse = recurse)
+                        diffText = self.client.diff(tmpdir, name,
+                            revision1=rev1, revision2=rev2, recurse=recurse)
                 counter = 0
                 for line in diffText.splitlines():
                     self.__appendText("{0}{1}".format(line, os.linesep))
@@ -334,13 +335,13 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                 self.trUtf8("Save Diff"),
                 self.trUtf8("<p>The patch file <b>{0}</b> already exists."
                             " Overwrite it?</p>").format(fname),
-                icon = E5MessageBox.Warning)
+                icon=E5MessageBox.Warning)
             if not res:
                 return
         fname = Utilities.toNativeSeparators(fname)
         
         try:
-            f = open(fname, "w", encoding = "utf-8")
+            f = open(fname, "w", encoding="utf-8")
             f.write(self.contents.toPlainText())
             f.close()
         except IOError as why:

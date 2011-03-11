@@ -18,6 +18,7 @@ from .Ui_EricapiExecDialog import Ui_EricapiExecDialog
 
 import Preferences
 
+
 class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
     """
     Class implementing a dialog to show the output of the ericapi process.
@@ -25,7 +26,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
     This class starts a QProcess and displays a dialog that
     shows the output of the documentation command process.
     """
-    def __init__(self, cmdname, parent = None):
+    def __init__(self, cmdname, parent=None):
         """
         Constructor
         
@@ -125,7 +126,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process, formats it and inserts it into
         the contents pane.
@@ -133,15 +134,15 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.contents.insertPlainText(s)
             self.contents.ensureCursorVisible()
         
     def __readStderr(self):
         """
-        Private slot to handle the readyReadStandardError signal. 
+        Private slot to handle the readyReadStandardError signal.
         
         It reads the error output of the process and inserts it into the
         error pane.
@@ -150,8 +151,8 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         
         while self.process.canReadLine():
             self.errorGroup.show()
-            s = str(self.process.readLine(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

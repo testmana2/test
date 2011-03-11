@@ -13,7 +13,8 @@ This module is a replacement for the one found in the Python distribution. It
 is to provide a debugger compatible variant of the a.m. functions.
 """
 
-__all__ = ["getpass","getuser"]
+__all__ = ["getpass", "getuser"]
+
 
 def getuser():
     """
@@ -36,6 +37,7 @@ def getuser():
     # If this fails, the exception will "explain" why
     import pwd
     return pwd.getpwuid(os.getuid())[0]
+
 
 def getpass(prompt='Password: '):
     """

@@ -21,11 +21,12 @@ from E5Gui.E5Action import E5Action
 import UI.PixmapCache
 import Preferences
 
+
 class HgProjectHelper(VcsProjectHelper):
     """
     Class implementing the VCS project helper for Mercurial.
     """
-    def __init__(self, vcsObject, projectObject, parent = None, name = None):
+    def __init__(self, vcsObject, projectObject, parent=None, name=None):
         """
         Constructor
         
@@ -164,7 +165,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgPushForcedAct.triggered[()].connect(self.__hgPushForced)
         self.actions.append(self.hgPushForcedAct)
         
-        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
+        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
                 UI.PixmapCache.getIcon("vcsExport.png"),
                 self.trUtf8('&Export from repository...'),
                 0, 0, self, 'subversion_export')
@@ -373,7 +374,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsResolveAct.triggered[()].connect(self.__hgResolve)
         self.actions.append(self.vcsResolveAct)
         
-        self.vcsTagAct = E5Action(self.trUtf8('Tag in repository'), 
+        self.vcsTagAct = E5Action(self.trUtf8('Tag in repository'),
                 UI.PixmapCache.getIcon("vcsTag.png"),
                 self.trUtf8('&Tag in repository...'),
                 0, 0, self, 'mercurial_tag')
@@ -387,7 +388,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsTagAct.triggered[()].connect(self._vcsTag)
         self.actions.append(self.vcsTagAct)
         
-        self.hgTagListAct = E5Action(self.trUtf8('List tags'), 
+        self.hgTagListAct = E5Action(self.trUtf8('List tags'),
                 self.trUtf8('List tags...'),
                 0, 0, self, 'mercurial_list_tags')
         self.hgTagListAct.setStatusTip(self.trUtf8(
@@ -400,7 +401,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgTagListAct.triggered[()].connect(self.__hgTagList)
         self.actions.append(self.hgTagListAct)
         
-        self.hgBranchListAct = E5Action(self.trUtf8('List branches'), 
+        self.hgBranchListAct = E5Action(self.trUtf8('List branches'),
                 self.trUtf8('List branches...'),
                 0, 0, self, 'mercurial_list_branches')
         self.hgBranchListAct.setStatusTip(self.trUtf8(
@@ -413,7 +414,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgBranchListAct.triggered[()].connect(self.__hgBranchList)
         self.actions.append(self.hgBranchListAct)
         
-        self.hgBranchAct = E5Action(self.trUtf8('Create branch'), 
+        self.hgBranchAct = E5Action(self.trUtf8('Create branch'),
                 UI.PixmapCache.getIcon("vcsBranch.png"),
                 self.trUtf8('Create &branch...'),
                 0, 0, self, 'mercurial_branch')
@@ -428,7 +429,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgBranchAct.triggered[()].connect(self.__hgBranch)
         self.actions.append(self.hgBranchAct)
         
-        self.hgCloseBranchAct = E5Action(self.trUtf8('Close branch'), 
+        self.hgCloseBranchAct = E5Action(self.trUtf8('Close branch'),
                 self.trUtf8('Close branch'),
                 0, 0, self, 'mercurial_close_branch')
         self.hgCloseBranchAct.setStatusTip(self.trUtf8(
@@ -441,7 +442,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgCloseBranchAct.triggered[()].connect(self.__hgCloseBranch)
         self.actions.append(self.hgCloseBranchAct)
         
-        self.hgShowBranchAct = E5Action(self.trUtf8('Show current branch'), 
+        self.hgShowBranchAct = E5Action(self.trUtf8('Show current branch'),
                 self.trUtf8('Show current branch'),
                 0, 0, self, 'mercurial_show_branch')
         self.hgShowBranchAct.setStatusTip(self.trUtf8(
@@ -495,7 +496,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsCommandAct)
         
         self.vcsPropsAct = E5Action(self.trUtf8('Command options'),
-                self.trUtf8('Command &options...'),0,0,self,
+                self.trUtf8('Command &options...'), 0, 0, self,
                 'mercurial_options')
         self.vcsPropsAct.setStatusTip(self.trUtf8('Show the Mercurial command options'))
         self.vcsPropsAct.setWhatsThis(self.trUtf8(
@@ -790,7 +791,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")), 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
             self.vcs.vcsName(), self._vcsInfoDisplay)
         font = act.font()
         font.setBold(True)
@@ -886,7 +887,7 @@ class HgProjectHelper(VcsProjectHelper):
             res = E5MessageBox.yesNo(self.parent(),
                 self.trUtf8("Pull"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
-                yesDefault = True)
+                yesDefault=True)
             if res:
                 self.project.reopenProject()
     
@@ -901,25 +902,25 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to push changes to a remote repository using
         the force option.
         """
-        self.vcs.hgPush(self.project.ppath, force = True)
+        self.vcs.hgPush(self.project.ppath, force=True)
     
     def __hgHeads(self):
         """
         Private slot used to show the heads of the repository.
         """
-        self.vcs.hgInfo(self.project.ppath, mode = "heads")
+        self.vcs.hgInfo(self.project.ppath, mode="heads")
     
     def __hgParents(self):
         """
         Private slot used to show the parents of the repository.
         """
-        self.vcs.hgInfo(self.project.ppath, mode = "parents")
+        self.vcs.hgInfo(self.project.ppath, mode="parents")
     
     def __hgTip(self):
         """
         Private slot used to show the tip of the repository.
         """
-        self.vcs.hgInfo(self.project.ppath, mode = "tip")
+        self.vcs.hgInfo(self.project.ppath, mode="tip")
     
     def __hgResolve(self):
         """
@@ -965,7 +966,7 @@ class HgProjectHelper(VcsProjectHelper):
             self.project.saveProject()
         if Preferences.getVCS("AutoSaveFiles"):
             self.project.saveAllScripts()
-        self.vcs.vcsCommit(self.project.ppath, '', closeBranch = True)
+        self.vcs.vcsCommit(self.project.ppath, '', closeBranch=True)
     
     def __hgEditRepoConfig(self):
         """
@@ -1007,7 +1008,7 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Protected slot used to create a .hgignore file for the project.
         """
-        self.vcs.hgCreateIgnoreFile(self.project.ppath, autoAdd = True)
+        self.vcs.hgCreateIgnoreFile(self.project.ppath, autoAdd=True)
     
     def __hgBundle(self):
         """

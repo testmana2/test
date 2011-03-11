@@ -23,6 +23,7 @@ import UI.PixmapCache
 
 import Preferences
 
+
 class UMLGraphicsView(E5GraphicsView):
     """
     Class implementing a specialized E5GraphicsView for our diagrams.
@@ -32,7 +33,7 @@ class UMLGraphicsView(E5GraphicsView):
     """
     relayout = pyqtSignal()
     
-    def __init__(self, scene, diagramName = "Unnamed", parent = None, name = None):
+    def __init__(self, scene, diagramName="Unnamed", parent=None, name=None):
         """
         Constructor
         
@@ -103,25 +104,25 @@ class UMLGraphicsView(E5GraphicsView):
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
-                    self.trUtf8("Increase width by {0} points").format(self.deltaSize), 
+                    self.trUtf8("Increase width by {0} points").format(self.deltaSize),
                     self)
         self.incWidthAct.triggered[()].connect(self.__incWidth)
         
         self.incHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightInc.png"),
-                    self.trUtf8("Increase height by {0} points").format(self.deltaSize), 
+                    self.trUtf8("Increase height by {0} points").format(self.deltaSize),
                     self)
         self.incHeightAct.triggered[()].connect(self.__incHeight)
         
         self.decWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthDec.png"),
-                    self.trUtf8("Decrease width by {0} points").format(self.deltaSize), 
+                    self.trUtf8("Decrease width by {0} points").format(self.deltaSize),
                     self)
         self.decWidthAct.triggered[()].connect(self.__decWidth)
         
         self.decHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightDec.png"),
-                    self.trUtf8("Decrease height by {0} points").format(self.deltaSize), 
+                    self.trUtf8("Decrease height by {0} points").format(self.deltaSize),
                     self)
         self.decHeightAct.triggered[()].connect(self.__decHeight)
         
@@ -136,37 +137,37 @@ class UMLGraphicsView(E5GraphicsView):
         self.relayoutAct.triggered[()].connect(self.__relayout)
         
         self.alignLeftAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"),
                     self.trUtf8("Align Left"), self)
         self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
         self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"),
                     self.trUtf8("Align Center Horizontal"), self)
         self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
         self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignRightAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"),
                     self.trUtf8("Align Right"), self)
         self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
         self.alignRightAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignTopAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"),
                     self.trUtf8("Align Top"), self)
         self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
         self.alignTopAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"),
                     self.trUtf8("Align Center Vertical"), self)
         self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
         self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
         
         self.alignBottomAct = \
-            QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"), 
+            QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"),
                     self.trUtf8("Align Bottom"), self)
         self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
         self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
@@ -341,7 +342,7 @@ class UMLGraphicsView(E5GraphicsView):
                     self.trUtf8("Save Diagram"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fname),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return
             
@@ -366,7 +367,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Private slot called to print the diagram.
         """
-        printer = QPrinter(mode = QPrinter.ScreenResolution)
+        printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)
@@ -388,7 +389,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         from PyQt4.QtGui import QPrintPreviewDialog
         
-        printer = QPrinter(mode = QPrinter.ScreenResolution)
+        printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
         if Preferences.getPrinter("ColorMode"):
             printer.setColorMode(QPrinter.Color)

@@ -23,11 +23,12 @@ import Utilities
 
 from eric5config import getConfig
 
+
 class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     """
     Class implementing a dialog to enter the parameters for eric5_doc.
     """
-    def __init__(self, project, parms = None, parent = None):
+    def __init__(self, project, parms=None, parent=None):
         """
         Constructor
         
@@ -35,7 +36,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
@@ -113,29 +114,29 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     
     def __initializeDefaults(self):
         """
-        Private method to set the default values. 
+        Private method to set the default values.
         
         These are needed later on to generate the commandline
         parameters.
         """
         self.defaults = {
-            'useRecursion' : 0,
-            'noindex' : 0,
-            'noempty' : 0,
-            'outputDirectory' : '',
-            'ignoreDirectories' : [],
-            'ignoreFilePatterns' : [],
-            'cssFile' : '',
-            'sourceExtensions' : [],
+            'useRecursion': 0,
+            'noindex': 0,
+            'noempty': 0,
+            'outputDirectory': '',
+            'ignoreDirectories': [],
+            'ignoreFilePatterns': [],
+            'cssFile': '',
+            'sourceExtensions': [],
             
-            'qtHelpEnabled' : False, 
-            'qtHelpOutputDirectory' : '', 
-            'qtHelpNamespace' : '', 
-            'qtHelpVirtualFolder' : 'source', 
-            'qtHelpFilterName' : 'unknown', 
-            'qtHelpFilterAttributes' : '', 
-            'qtHelpTitle' : '', 
-            'qtHelpCreateCollection' : False, 
+            'qtHelpEnabled': False,
+            'qtHelpOutputDirectory': '',
+            'qtHelpNamespace': '',
+            'qtHelpVirtualFolder': 'source',
+            'qtHelpFilterName': 'unknown',
+            'qtHelpFilterAttributes': '',
+            'qtHelpTitle': '',
+            'qtHelpCreateCollection': False,
         }
     
     def generateParameters(self):
@@ -265,7 +266,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
-            # make it relative, if it is a subdirectory of the project path 
+            # make it relative, if it is a subdirectory of the project path
             dn = Utilities.toNativeSeparators(directory)
             dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
@@ -290,7 +291,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
-            # make it relative, if it is a subdirectory of the project path 
+            # make it relative, if it is a subdirectory of the project path
             dn = Utilities.toNativeSeparators(directory)
             dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
@@ -328,7 +329,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self.trUtf8("Style sheet (*.css);;All files (*)"))
             
         if cssFile:
-            # make it relative, if it is in a subdirectory of the project path 
+            # make it relative, if it is in a subdirectory of the project path
             cf = Utilities.toNativeSeparators(cssFile)
             cf = self.project.getRelativePath(cf)
             self.cssEdit.setText(cf)
@@ -476,7 +477,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
-            # make it relative, if it is a subdirectory of the project path 
+            # make it relative, if it is a subdirectory of the project path
             dn = Utilities.toNativeSeparators(directory)
             dn = self.project.getRelativePath(dn)
             while dn.endswith(os.sep):
@@ -485,7 +486,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     
     def accept(self):
         """
-        Protected slot called by the Ok button. 
+        Protected slot called by the Ok button.
         
         It saves the values in the parameters dictionary.
         """

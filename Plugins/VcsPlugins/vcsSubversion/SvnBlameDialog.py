@@ -17,11 +17,12 @@ from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 import Preferences
 import Utilities
 
+
 class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
     """
     Class implementing a dialog to show the output of the svn blame command.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -84,7 +85,6 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         args.append('blame')
         self.vcs.addArguments(args, self.vcs.options['global'])
         args.append(fname)
-        
         
         self.process.setWorkingDirectory(dname)
         
@@ -156,7 +156,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         @param author author of the change (string)
         @param text line of text from the annotated file (string)
         """
-        itm = QTreeWidgetItem(self.blameList, 
+        itm = QTreeWidgetItem(self.blameList,
             [revision, author, "{0:d}".format(self.lineno), text])
         self.lineno += 1
         itm.setTextAlignment(0, Qt.AlignRight)
@@ -190,8 +190,8 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

@@ -29,11 +29,12 @@ from E5XML.TemplatesWriter import TemplatesWriter
 import UI.PixmapCache
 import Utilities
 
+
 class TemplateGroup(QTreeWidgetItem):
     """
     Class implementing a template group.
     """
-    def __init__(self, parent, name, language = "All"):
+    def __init__(self, parent, name, language="All"):
         """
         Constructor
         
@@ -85,7 +86,7 @@ class TemplateGroup(QTreeWidgetItem):
         """
         return self.language
         
-    def addEntry(self, name, description, template, quiet = False):
+    def addEntry(self, name, description, template, quiet=False):
         """
         Public method to add a template entry to this group.
         
@@ -154,7 +155,7 @@ class TemplateGroup(QTreeWidgetItem):
 
     def getEntryNames(self, beginning):
         """
-        Public method to get the names of all entries, who's name starts with the 
+        Public method to get the names of all entries, who's name starts with the
         given string.
         
         @param beginning string denoting the beginning of the template name
@@ -175,6 +176,7 @@ class TemplateGroup(QTreeWidgetItem):
         @return list of all entries (list of TemplateEntry)
         """
         return list(self.entries.values())
+
 
 class TemplateEntry(QTreeWidgetItem):
     """
@@ -277,7 +279,7 @@ class TemplateEntry(QTreeWidgetItem):
         
         @param varDict dictionary containing the texts of each variable
             with the variable name as key.
-        @param indent indentation of the line receiving he expanded 
+        @param indent indentation of the line receiving he expanded
             template text (string)
         @return a tuple of the expanded template text (string), the
             number of lines (integer) and the length of the last line (integer)
@@ -317,7 +319,7 @@ class TemplateEntry(QTreeWidgetItem):
                 format = var[1:-1].split(':', 1)[1]
                 if format == 'rl':
                     prefix = line[:ind]
-                    postfix = line [ind + len(var):]
+                    postfix = line[ind + len(var):]
                     for v in val.splitlines():
                         t = "{0}{1}{2}{3}{4}".format(t, os.linesep, prefix, v, postfix)
                 elif format == 'ml':
@@ -362,6 +364,7 @@ class TemplateEntry(QTreeWidgetItem):
                 self.variables.append(var)
             if var.find(':') >= 0 and not var in self.formatedVariables:
                 self.formatedVariables.append(var)
+
 
 class TemplateViewer(QTreeWidget):
     """
@@ -425,9 +428,9 @@ class TemplateViewer(QTreeWidget):
         """
         self.sortItems(self.sortColumn(), self.header().sortIndicatorOrder())
         
-    def __templateItemActivated(self, itm = None, col = 0):
+    def __templateItemActivated(self, itm=None, col=0):
         """
-        Private slot to handle the activation of an item. 
+        Private slot to handle the activation of an item.
         
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
@@ -680,7 +683,7 @@ class TemplateViewer(QTreeWidget):
             if "i_n_s_e_r_t_i_o_n" in txt:
                 lines = 1
                 for aline in txt.splitlines():
-                    count =  aline.find("i_n_s_e_r_t_i_o_n")
+                    count = aline.find("i_n_s_e_r_t_i_o_n")
                     if count >= 0:
                         txt = txt.replace("i_n_s_e_r_t_i_o_n",  "")
                         if lines == 1:
@@ -697,7 +700,7 @@ class TemplateViewer(QTreeWidget):
                 setselect = True
                 linea = 1
                 for aline in txt.splitlines():
-                    posa =  aline.find("s_e_l_e_c_t_s_t_a_r_t")
+                    posa = aline.find("s_e_l_e_c_t_s_t_a_r_t")
                     if posa >= 0:
                         txt = txt.replace("s_e_l_e_c_t_s_t_a_r_t",  "")
                         break
@@ -705,12 +708,12 @@ class TemplateViewer(QTreeWidget):
                         linea += 1
                 lineb = 1
                 for aline in txt.splitlines():
-                    posb =  aline.find("s_e_l_e_c_t_e_n_d")
+                    posb = aline.find("s_e_l_e_c_t_e_n_d")
                     if posb >= 0:
                         txt = txt.replace("s_e_l_e_c_t_e_n_d",  "")
                         break
                     else:
-                        lineb += 1          
+                        lineb += 1
             
             editor.insert(txt)
             
@@ -734,7 +737,7 @@ class TemplateViewer(QTreeWidget):
                 self.applyTemplate(template)
                 break
     
-    def addEntry(self, groupName, name, description, template, quiet = False):
+    def addEntry(self, groupName, name, description, template, quiet=False):
         """
         Public method to add a template entry.
         
@@ -744,10 +747,10 @@ class TemplateViewer(QTreeWidget):
         @param template template text of the entry (string)
         @param quiet flag indicating quiet operation (boolean)
         """
-        self.groups[groupName].addEntry(name, description, template, quiet = quiet)
+        self.groups[groupName].addEntry(name, description, template, quiet=quiet)
         self.__resort()
         
-    def addGroup(self, name, language = "All"):
+    def addGroup(self, name, language="All"):
         """
         Public method to add a group.
         
@@ -758,7 +761,7 @@ class TemplateViewer(QTreeWidget):
             self.groups[name] = TemplateGroup(self, name, language)
         self.__resort()
 
-    def changeGroup(self, oldname, newname, language = "All"):
+    def changeGroup(self, oldname, newname, language="All"):
         """
         Public method to rename a group.
         
@@ -848,7 +851,7 @@ class TemplateViewer(QTreeWidget):
         tmpl.setTemplateText(template)
         self.__resort()
 
-    def writeTemplates(self, filename = None):
+    def writeTemplates(self, filename=None):
         """
         Public method to write the templates data to an XML file (.e4c).
         
@@ -868,7 +871,7 @@ class TemplateViewer(QTreeWidget):
         TemplatesWriter(f, self).writeXML()
         f.close()
     
-    def readTemplates(self, filename = None):
+    def readTemplates(self, filename=None):
         """
         Public method to read in the templates file (.e4c)
         
@@ -881,7 +884,7 @@ class TemplateViewer(QTreeWidget):
         
         f = QFile(filename)
         if f.open(QIODevice.ReadOnly):
-            reader = TemplatesReader(f, viewer = self)
+            reader = TemplatesReader(f, viewer=self)
             reader.readXML()
             f.close()
         else:

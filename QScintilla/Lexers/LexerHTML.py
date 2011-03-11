@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerHTML
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerHTML(QsciLexerHTML, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -26,8 +27,8 @@ class LexerHTML(QsciLexerHTML, Lexer):
         Lexer.__init__(self)
         
         self.streamCommentString = {
-            'start' : '<!-- ',
-            'end'   : ' -->'
+            'start': '<!-- ',
+            'end': ' -->'
         }
     
     def initProperties(self):
@@ -50,20 +51,20 @@ class LexerHTML(QsciLexerHTML, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerHTML.HTMLComment, 
-                         QsciLexerHTML.ASPXCComment, 
-                         QsciLexerHTML.SGMLComment, 
-                         QsciLexerHTML.SGMLParameterComment, 
-                         QsciLexerHTML.JavaScriptComment, 
-                         QsciLexerHTML.JavaScriptCommentDoc, 
-                         QsciLexerHTML.JavaScriptCommentLine, 
-                         QsciLexerHTML.ASPJavaScriptComment, 
-                         QsciLexerHTML.ASPJavaScriptCommentDoc, 
-                         QsciLexerHTML.ASPJavaScriptCommentLine, 
-                         QsciLexerHTML.VBScriptComment, 
-                         QsciLexerHTML.ASPVBScriptComment, 
-                         QsciLexerHTML.PythonComment, 
-                         QsciLexerHTML.ASPPythonComment, 
+        return style in [QsciLexerHTML.HTMLComment,
+                         QsciLexerHTML.ASPXCComment,
+                         QsciLexerHTML.SGMLComment,
+                         QsciLexerHTML.SGMLParameterComment,
+                         QsciLexerHTML.JavaScriptComment,
+                         QsciLexerHTML.JavaScriptCommentDoc,
+                         QsciLexerHTML.JavaScriptCommentLine,
+                         QsciLexerHTML.ASPJavaScriptComment,
+                         QsciLexerHTML.ASPJavaScriptCommentDoc,
+                         QsciLexerHTML.ASPJavaScriptCommentLine,
+                         QsciLexerHTML.VBScriptComment,
+                         QsciLexerHTML.ASPVBScriptComment,
+                         QsciLexerHTML.PythonComment,
+                         QsciLexerHTML.ASPPythonComment,
                          QsciLexerHTML.PHPComment]
     
     def isStringStyle(self, style):
@@ -72,36 +73,36 @@ class LexerHTML(QsciLexerHTML, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerHTML.HTMLDoubleQuotedString, 
-                         QsciLexerHTML.HTMLSingleQuotedString, 
-                         QsciLexerHTML.SGMLDoubleQuotedString, 
-                         QsciLexerHTML.SGMLSingleQuotedString, 
-                         QsciLexerHTML.JavaScriptDoubleQuotedString, 
-                         QsciLexerHTML.JavaScriptSingleQuotedString, 
-                         QsciLexerHTML.JavaScriptUnclosedString, 
-                         QsciLexerHTML.ASPJavaScriptDoubleQuotedString, 
-                         QsciLexerHTML.ASPJavaScriptSingleQuotedString, 
-                         QsciLexerHTML.ASPJavaScriptUnclosedString, 
-                         QsciLexerHTML.VBScriptString, 
-                         QsciLexerHTML.VBScriptUnclosedString, 
-                         QsciLexerHTML.ASPVBScriptString, 
-                         QsciLexerHTML.ASPVBScriptUnclosedString, 
-                         QsciLexerHTML.PythonDoubleQuotedString, 
-                         QsciLexerHTML.PythonSingleQuotedString, 
-                         QsciLexerHTML.PythonTripleDoubleQuotedString, 
-                         QsciLexerHTML.PythonTripleSingleQuotedString, 
-                         QsciLexerHTML.ASPPythonDoubleQuotedString, 
-                         QsciLexerHTML.ASPPythonSingleQuotedString, 
-                         QsciLexerHTML.ASPPythonTripleDoubleQuotedString, 
-                         QsciLexerHTML.ASPPythonTripleSingleQuotedString, 
-                         QsciLexerHTML.PHPDoubleQuotedString, 
+        return style in [QsciLexerHTML.HTMLDoubleQuotedString,
+                         QsciLexerHTML.HTMLSingleQuotedString,
+                         QsciLexerHTML.SGMLDoubleQuotedString,
+                         QsciLexerHTML.SGMLSingleQuotedString,
+                         QsciLexerHTML.JavaScriptDoubleQuotedString,
+                         QsciLexerHTML.JavaScriptSingleQuotedString,
+                         QsciLexerHTML.JavaScriptUnclosedString,
+                         QsciLexerHTML.ASPJavaScriptDoubleQuotedString,
+                         QsciLexerHTML.ASPJavaScriptSingleQuotedString,
+                         QsciLexerHTML.ASPJavaScriptUnclosedString,
+                         QsciLexerHTML.VBScriptString,
+                         QsciLexerHTML.VBScriptUnclosedString,
+                         QsciLexerHTML.ASPVBScriptString,
+                         QsciLexerHTML.ASPVBScriptUnclosedString,
+                         QsciLexerHTML.PythonDoubleQuotedString,
+                         QsciLexerHTML.PythonSingleQuotedString,
+                         QsciLexerHTML.PythonTripleDoubleQuotedString,
+                         QsciLexerHTML.PythonTripleSingleQuotedString,
+                         QsciLexerHTML.ASPPythonDoubleQuotedString,
+                         QsciLexerHTML.ASPPythonSingleQuotedString,
+                         QsciLexerHTML.ASPPythonTripleDoubleQuotedString,
+                         QsciLexerHTML.ASPPythonTripleSingleQuotedString,
+                         QsciLexerHTML.PHPDoubleQuotedString,
                          QsciLexerHTML.PHPSingleQuotedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerHTML.keywords(self, kwSet)

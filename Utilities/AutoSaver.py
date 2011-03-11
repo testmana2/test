@@ -9,12 +9,13 @@ Module implementing an auto saver class.
 
 from PyQt4.QtCore import QObject, QBasicTimer, QTime
 
+
 class AutoSaver(QObject):
     """
     Class implementing the auto saver.
     """
     AUTOSAVE_IN = 1000 * 3
-    MAXWAIT     = 1000 * 15
+    MAXWAIT = 1000 * 15
     
     def __init__(self, parent, save):
         """

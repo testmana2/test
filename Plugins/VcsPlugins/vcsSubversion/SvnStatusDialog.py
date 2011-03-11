@@ -22,12 +22,13 @@ from .Ui_SvnStatusDialog import Ui_SvnStatusDialog
 
 import Preferences
 
+
 class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
     """
     Class implementing a dialog to show the output of the svn status command
     process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -64,7 +65,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.vcs.committed.connect(self.__committed)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
-        self.statusList.header().setSortIndicator(self.__pathColumn, 
+        self.statusList.header().setSortIndicator(self.__pathColumn,
                                                   Qt.AscendingOrder)
         if self.vcs.versionStr < '1.5.0':
             self.statusList.header().hideSection(self.__changelistColumn)
@@ -113,73 +114,73 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.__showContextMenu)
         
         self.modifiedIndicators = [
-            self.trUtf8('added'), 
-            self.trUtf8('deleted'), 
-            self.trUtf8('modified'), 
+            self.trUtf8('added'),
+            self.trUtf8('deleted'),
+            self.trUtf8('modified'),
         ]
         
         self.missingIndicators = [
-            self.trUtf8('missing'), 
+            self.trUtf8('missing'),
         ]
         
         self.unversionedIndicators = [
-            self.trUtf8('unversioned'), 
+            self.trUtf8('unversioned'),
         ]
         
         self.lockedIndicators = [
-            self.trUtf8('locked'), 
+            self.trUtf8('locked'),
         ]
         
         self.stealBreakLockIndicators = [
-            self.trUtf8('other lock'), 
-            self.trUtf8('stolen lock'), 
-            self.trUtf8('broken lock'), 
+            self.trUtf8('other lock'),
+            self.trUtf8('stolen lock'),
+            self.trUtf8('broken lock'),
         ]
         
         self.unlockedIndicators = [
-            self.trUtf8('not locked'), 
+            self.trUtf8('not locked'),
         ]
         
         self.status = {
-            ' ' : self.trUtf8('normal'),
-            'A' : self.trUtf8('added'),
-            'D' : self.trUtf8('deleted'),
-            'M' : self.trUtf8('modified'),
-            'R' : self.trUtf8('replaced'),
-            'C' : self.trUtf8('conflict'),
-            'X' : self.trUtf8('external'),
-            'I' : self.trUtf8('ignored'),
-            '?' : self.trUtf8('unversioned'),
-            '!' : self.trUtf8('missing'),
-            '~' : self.trUtf8('type error'), 
+            ' ': self.trUtf8('normal'),
+            'A': self.trUtf8('added'),
+            'D': self.trUtf8('deleted'),
+            'M': self.trUtf8('modified'),
+            'R': self.trUtf8('replaced'),
+            'C': self.trUtf8('conflict'),
+            'X': self.trUtf8('external'),
+            'I': self.trUtf8('ignored'),
+            '?': self.trUtf8('unversioned'),
+            '!': self.trUtf8('missing'),
+            '~': self.trUtf8('type error'),
         }
         self.propStatus = {
-            ' ' : self.trUtf8('normal'),
-            'M' : self.trUtf8('modified'),
-            'C' : self.trUtf8('conflict'), 
+            ' ': self.trUtf8('normal'),
+            'M': self.trUtf8('modified'),
+            'C': self.trUtf8('conflict'),
         }
         self.locked = {
-            ' ' : self.trUtf8('no'),
-            'L' : self.trUtf8('yes'), 
+            ' ': self.trUtf8('no'),
+            'L': self.trUtf8('yes'),
         }
         self.history = {
-            ' ' : self.trUtf8('no'),
-            '+' : self.trUtf8('yes'), 
+            ' ': self.trUtf8('no'),
+            '+': self.trUtf8('yes'),
         }
         self.switched = {
-            ' ' : self.trUtf8('no'),
-            'S' : self.trUtf8('yes'), 
+            ' ': self.trUtf8('no'),
+            'S': self.trUtf8('yes'),
         }
         self.lockinfo = {
-            ' ' : self.trUtf8('not locked'),
-            'K' : self.trUtf8('locked'),
-            'O' : self.trUtf8('other lock'),
-            'T' : self.trUtf8('stolen lock'),
-            'B' : self.trUtf8('broken lock'),
+            ' ': self.trUtf8('not locked'),
+            'K': self.trUtf8('locked'),
+            'O': self.trUtf8('other lock'),
+            'T': self.trUtf8('stolen lock'),
+            'B': self.trUtf8('broken lock'),
         }
         self.uptodate = {
-            ' ' : self.trUtf8('yes'),
-            '*' : self.trUtf8('no'), 
+            ' ': self.trUtf8('yes'),
+            '*': self.trUtf8('no'),
         }
         
         self.rx_status = \
@@ -199,7 +200,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private method to resort the tree.
         """
-        self.statusList.sortItems(self.statusList.sortColumn(), 
+        self.statusList.sortItems(self.statusList.sortColumn(),
             self.statusList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -239,18 +240,18 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         statusText = self.status[status]
         itm = QTreeWidgetItem(self.statusList, [
-            self.currentChangelist, 
-            statusText, 
-            self.propStatus[propStatus], 
-            self.locked[locked], 
-            self.history[history], 
-            self.switched[switched], 
-            self.lockinfo[lockinfo], 
-            self.uptodate[uptodate], 
-            "{0:7}".format(str(revision)), 
-            "{0:7}".format(str(change)), 
-            author, 
-            path, 
+            self.currentChangelist,
+            statusText,
+            self.propStatus[propStatus],
+            self.locked[locked],
+            self.history[history],
+            self.switched[switched],
+            self.lockinfo[lockinfo],
+            self.uptodate[uptodate],
+            "{0:7}".format(str(revision)),
+            "{0:7}".format(str(change)),
+            author,
+            path,
         ])
         
         itm.setTextAlignment(1, Qt.AlignLeft)
@@ -403,19 +404,19 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.__resort()
         self.__resizeColumns()
         
-        self.statusList.setColumnHidden(self.__changelistColumn, 
+        self.statusList.setColumnHidden(self.__changelistColumn,
                                         not self.changelistFound)
-        self.statusList.setColumnHidden(self.__propStatusColumn, 
+        self.statusList.setColumnHidden(self.__propStatusColumn,
                                         self.hidePropertyStatusColumn)
-        self.statusList.setColumnHidden(self.__lockedColumn, 
+        self.statusList.setColumnHidden(self.__lockedColumn,
                                         self.hideLockColumns)
-        self.statusList.setColumnHidden(self.__lockinfoColumn, 
+        self.statusList.setColumnHidden(self.__lockinfoColumn,
                                         self.hideLockColumns)
-        self.statusList.setColumnHidden(self.__upToDateColumn, 
+        self.statusList.setColumnHidden(self.__upToDateColumn,
                                         self.hideUpToDateColumn)
-        self.statusList.setColumnHidden(self.__historyColumn, 
+        self.statusList.setColumnHidden(self.__historyColumn,
                                         self.hideHistoryColumn)
-        self.statusList.setColumnHidden(self.__switchedColumn, 
+        self.statusList.setColumnHidden(self.__switchedColumn,
                                         self.hideSwitchedColumn)
         
         self.__updateButtons()
@@ -454,8 +455,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                s = str(self.process.readLine(), 
-                        Preferences.getSystem("IOEncoding"), 
+                s = str(self.process.readLine(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace')
                 if self.rx_status.exactMatch(s):
                     flags = self.rx_status.cap(1)
@@ -487,8 +488,8 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
@@ -778,7 +779,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnLock(names, parent = self)
+        self.vcs.svnLock(names, parent=self)
         self.on_refreshButton_clicked()
         
     def __unlock(self):
@@ -794,7 +795,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnUnlock(names, parent = self)
+        self.vcs.svnUnlock(names, parent=self)
         self.on_refreshButton_clicked()
         
     def __breakLock(self):
@@ -811,7 +812,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.svnUnlock(names, parent = self, breakIt = True)
+        self.vcs.svnUnlock(names, parent=self, breakIt=True)
         self.on_refreshButton_clicked()
 
     def __stealLock(self):

@@ -17,11 +17,12 @@ from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 
 import Utilities
 
+
 class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
     """
     Class implementing a dialog to enter the data for a new property.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

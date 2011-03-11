@@ -27,7 +27,7 @@ class DeleteFilesConfirmationDialog(QDialog, Ui_DeleteFilesConfirmationDialog):
         @param cancelLabel label for the Cancel button (string)
         @param files list of filenames to be shown (list of strings)
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         self.setModal(True)
         

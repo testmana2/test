@@ -12,6 +12,7 @@ from PyQt4 import QtWebKit
 
 import Helpviewer.HelpWindow
 
+
 class AdBlockPage(QObject):
     """
     Class to apply AdBlock rules to a web page.

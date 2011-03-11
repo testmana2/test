@@ -40,6 +40,7 @@ pyqtApi = 2
 
 error = ""
 
+
 def exeDisplayDataList():
     """
     Public method to support the display of some executable info.
@@ -52,17 +53,17 @@ def exeDisplayDataList():
     # 1. eric5_doc
     exe = 'eric5_doc'
     if Utilities.isWindowsPlatform():
-        exe = os.path.join(getConfig("bindir"), exe +'.bat')
+        exe = os.path.join(getConfig("bindir"), exe + '.bat')
     dataList.append({
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("EricdocPlugin",
-                                "Eric5 Documentation Generator"), 
-        "exe"               : exe, 
-        "versionCommand"    : '--version', 
-        "versionStartsWith" : 'eric5_', 
-        "versionPosition"   : -3, 
-        "version"           : "", 
-        "versionCleanup"    : None, 
+        "programEntry": True,
+        "header": QApplication.translate("EricdocPlugin",
+                                "Eric5 Documentation Generator"),
+        "exe": exe,
+        "versionCommand": '--version',
+        "versionStartsWith": 'eric5_',
+        "versionPosition": -3,
+        "version": "",
+        "versionCleanup": None,
     })
     
     # 2. Qt Help Generator
@@ -70,15 +71,15 @@ def exeDisplayDataList():
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("EricdocPlugin",
-                                "Qt4 Help Tools"), 
-        "exe"               : exe, 
-        "versionCommand"    : '-v', 
-        "versionStartsWith" : 'Qt', 
-        "versionPosition"   : -1, 
-        "version"           : "", 
-        "versionCleanup"    : (0, -1), 
+        "programEntry": True,
+        "header": QApplication.translate("EricdocPlugin",
+                                "Qt4 Help Tools"),
+        "exe": exe,
+        "versionCommand": '-v',
+        "versionStartsWith": 'Qt',
+        "versionPosition": -1,
+        "version": "",
+        "versionCleanup": (0, -1),
     })
     
     # 3. Qt Collection Generator
@@ -86,18 +87,19 @@ def exeDisplayDataList():
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     dataList.append({
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("EricdocPlugin",
-                                "Qt4 Help Tools"), 
-        "exe"               : exe, 
-        "versionCommand"    : '-v', 
-        "versionStartsWith" : 'Qt', 
-        "versionPosition"   : -1, 
-        "version"           : "", 
-        "versionCleanup"    : (0, -1), 
+        "programEntry": True,
+        "header": QApplication.translate("EricdocPlugin",
+                                "Qt4 Help Tools"),
+        "exe": exe,
+        "versionCommand": '-v',
+        "versionStartsWith": 'Qt',
+        "versionPosition": -1,
+        "version": "",
+        "versionCleanup": (0, -1),
     })
     
     return dataList
+
 
 class EricdocPlugin(QObject):
     """
@@ -159,7 +161,7 @@ class EricdocPlugin(QObject):
     
     def __projectShowMenu(self, menuName, menu):
         """
-        Private slot called, when the the project menu or a submenu is 
+        Private slot called, when the the project menu or a submenu is
         about to be shown.
         
         @param menuName name of the menu to be shown (string)
@@ -176,9 +178,9 @@ class EricdocPlugin(QObject):
         Private slot to perform the eric5_doc api documentation generation.
         """
         eolTranslation = {
-            '\r' : 'cr', 
-            '\n' : 'lf', 
-            '\r\n' : 'crlf', 
+            '\r': 'cr',
+            '\n': 'lf',
+            '\r\n': 'crlf',
         }
         project = e5App().getObject("Project")
         parms = project.getData('DOCUMENTATIONPARMS', "ERIC4DOC")

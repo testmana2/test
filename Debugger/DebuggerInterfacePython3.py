@@ -27,11 +27,12 @@ from eric5config import getConfig
 
 ClientDefaultCapabilities = DebugClientCapabilities.HasAll
     
+
 def getRegistryData():
     """
     Module function to get characterising data for the debugger interface.
     
-    @return list of the following data. Client type (string), client 
+    @return list of the following data. Client type (string), client
         capabilities (integer), client type association (list of strings)
     """
     exts = []
@@ -45,6 +46,7 @@ def getRegistryData():
         return ["Python3", ClientDefaultCapabilities, exts]
     else:
         return ["", 0, []]
+
 
 class DebuggerInterfacePython3(QObject):
     """
@@ -84,7 +86,7 @@ class DebuggerInterfacePython3(QObject):
             else:
                 self.translate = self.__identityTranslation
 
-    def __identityTranslation(self, fn, remote2local = True):
+    def __identityTranslation(self, fn, remote2local=True):
         """
         Private method to perform the identity path translation.
         
@@ -95,7 +97,7 @@ class DebuggerInterfacePython3(QObject):
         """
         return fn
         
-    def __remoteTranslation(self, fn, remote2local = True):
+    def __remoteTranslation(self, fn, remote2local=True):
         """
         Private method to perform the path translation.
         
@@ -109,7 +111,7 @@ class DebuggerInterfacePython3(QObject):
         else:
             return fn.replace(self.translateLocal, self.translateRemote)
         
-    def __startProcess(self, program, arguments, environment = None):
+    def __startProcess(self, program, arguments, environment=None):
         """
         Private method to start the debugger client process.
         
@@ -138,7 +140,7 @@ class DebuggerInterfacePython3(QObject):
         Public method to start a remote Python interpreter.
         
         @param port portnumber the debug server is listening on (integer)
-        @param runInConsole flag indicating to start the debugger in a 
+        @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
@@ -152,7 +154,7 @@ class DebuggerInterfacePython3(QObject):
         
         debugClientType = Preferences.getDebugger("DebugClientType3")
         if debugClientType == "standard":
-            debugClient = os.path.join(getConfig('ericDir'), 
+            debugClient = os.path.join(getConfig('ericDir'),
                                        "DebugClients", "Python3", "DebugClient.py")
         elif debugClientType == "threaded":
             debugClient = os.path.join(getConfig('ericDir'),
@@ -231,8 +233,8 @@ class DebuggerInterfacePython3(QObject):
                             """<p>The debugger backend could not be started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter, 
-            [debugClient, noencoding, str(port), redirect, ipaddr], 
+        process = self.__startProcess(interpreter,
+            [debugClient, noencoding, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
             E5MessageBox.critical(None,
@@ -245,7 +247,7 @@ class DebuggerInterfacePython3(QObject):
         Public method to start a remote Python interpreter for a project.
         
         @param port portnumber the debug server is listening on (integer)
-        @param runInConsole flag indicating to start the debugger in a 
+        @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
@@ -324,8 +326,8 @@ class DebuggerInterfacePython3(QObject):
                             """<p>The debugger backend could not be started.</p>"""))
                 return process, self.__isNetworked
         
-        process = self.__startProcess(interpreter, 
-            [debugClient, noencoding, str(port), redirect, ipaddr], 
+        process = self.__startProcess(interpreter,
+            [debugClient, noencoding, str(port), redirect, ipaddr],
             clientEnv)
         if process is None:
             E5MessageBox.critical(None,
@@ -412,8 +414,8 @@ class DebuggerInterfacePython3(QObject):
         """
         self.__sendCommand('{0}{1}\n'.format(RequestEnv, str(env)))
     
-    def remoteLoad(self, fn, argv, wd, traceInterpreter = False, autoContinue = True, 
-                   autoFork = False, forkChild = False):
+    def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
+                   autoFork=False, forkChild=False):
         """
         Public method to load a new program to debug.
         
@@ -433,10 +435,10 @@ class DebuggerInterfacePython3(QObject):
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}\n'.format(RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
-            RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)), 
+            RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)),
              traceInterpreter))
     
-    def remoteRun(self, fn, argv, wd, autoFork = False, forkChild = False):
+    def remoteRun(self, fn, argv, wd, autoFork=False, forkChild=False):
         """
         Public method to load a new program to run.
         
@@ -452,14 +454,14 @@ class DebuggerInterfacePython3(QObject):
         self.__sendCommand('{0}{1}|{2}|{3}\n'.format(
             RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
     
-    def remoteCoverage(self, fn, argv, wd, erase = False):
+    def remoteCoverage(self, fn, argv, wd, erase=False):
         """
         Public method to load a new program to collect coverage data.
         
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam erase flag indicating that coverage info should be 
+        @keyparam erase flag indicating that coverage info should be
             cleared first (boolean)
         """
         wd = self.translate(wd, False)
@@ -468,7 +470,7 @@ class DebuggerInterfacePython3(QObject):
             RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
              erase))
 
-    def remoteProfile(self, fn, argv, wd, erase = False):
+    def remoteProfile(self, fn, argv, wd, erase=False):
         """
         Public method to load a new program to collect profiling data.
         
@@ -484,7 +486,7 @@ class DebuggerInterfacePython3(QObject):
 
     def remoteStatement(self, stmt):
         """
-        Public method to execute a Python statement.  
+        Public method to execute a Python statement.
         
         @param stmt the Python statement to execute (string). It
               should not have a trailing newline.
@@ -516,7 +518,7 @@ class DebuggerInterfacePython3(QObject):
         """
         self.__sendCommand(RequestStepQuit + '\n')
 
-    def remoteContinue(self, special = False):
+    def remoteContinue(self, special=False):
         """
         Public method to continue the debugged program.
         
@@ -524,7 +526,7 @@ class DebuggerInterfacePython3(QObject):
         """
         self.__sendCommand('{0}{1:d}\n'.format(RequestContinue, special))
 
-    def remoteBreakpoint(self, fn, line, set, cond = None, temp = False):
+    def remoteBreakpoint(self, fn, line, set, cond=None, temp=False):
         """
         Public method to set or clear a breakpoint.
         
@@ -562,7 +564,7 @@ class DebuggerInterfacePython3(QObject):
         self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
             RequestBreakIgnore, fn, line, count))
     
-    def remoteWatchpoint(self, cond, set, temp = False):
+    def remoteWatchpoint(self, cond, set, temp=False):
         """
         Public method to set or clear a watch expression.
         
@@ -593,7 +595,7 @@ class DebuggerInterfacePython3(QObject):
         # cond is combination of cond and special (s. watch expression viewer)
         self.__sendCommand('{0}{1},{2:d}\n'.format(RequestWatchIgnore, cond, count))
     
-    def remoteRawInput(self,s):
+    def remoteRawInput(self, s):
         """
         Public method to send the raw input to the debugged program.
         
@@ -615,7 +617,7 @@ class DebuggerInterfacePython3(QObject):
         """
         self.__sendCommand('{0}{1:d}\n'.format(RequestThreadSet, tid))
         
-    def remoteClientVariables(self, scope, filter, framenr = 0):
+    def remoteClientVariables(self, scope, filter, framenr=0):
         """
         Public method to request the variables of the debugged program.
         
@@ -626,7 +628,7 @@ class DebuggerInterfacePython3(QObject):
         self.__sendCommand('{0}{1:d}, {2:d}, {3}\n'.format(
             RequestVariables, framenr, scope, str(filter)))
     
-    def remoteClientVariable(self, scope, filter, var, framenr = 0):
+    def remoteClientVariable(self, scope, filter, var, framenr=0):
         """
         Public method to request the variables of the debugged program.
         
@@ -770,7 +772,7 @@ class DebuggerInterfacePython3(QObject):
                         self.__autoContinue = False
                         QTimer.singleShot(0, self.remoteContinue)
                     else:
-                        self.debugServer.signalClientLine(cf[0], int(cf[1]), 
+                        self.debugServer.signalClientLine(cf[0], int(cf[1]),
                                                     resp == ResponseStack)
                         self.debugServer.signalClientStack(stack)
                     continue

@@ -12,6 +12,7 @@ from E5Gui.E5Application import e5App
 from .Config import sessionFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+
 class SessionReader(XMLStreamReaderBase):
     """
     Class for reading an XML session file.
@@ -47,7 +48,7 @@ class SessionReader(XMLStreamReaderBase):
             self.dbs.getBreakPointModel().deleteAll()
             self.dbs.getWatchPointModel().deleteAll()
     
-    def readXML(self, quiet = False):
+    def readXML(self, quiet=False):
         """
         Public method to read and parse the XML document.
         
@@ -203,7 +204,7 @@ class SessionReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Watchexpression":
-                self.dbs.getWatchPointModel().addWatchPoint(weCond, 
+                self.dbs.getWatchPointModel().addWatchPoint(weCond,
                     (weTemp, weEnabled, weCount, weSpecialCond))
                 break
             

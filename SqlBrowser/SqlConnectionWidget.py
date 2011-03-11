@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtSql import QSqlDatabase
 
+
 class SqlConnectionWidget(QWidget):
     """
     Class implementing a widget showing the SQL connections.
@@ -23,7 +24,7 @@ class SqlConnectionWidget(QWidget):
     schemaRequested = pyqtSignal(str)
     cleared = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

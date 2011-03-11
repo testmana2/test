@@ -14,6 +14,7 @@ from QScintilla.MiniEditor import MiniEditor
 from Preferences.ConfigurationPages.ConfigurationPageBase import ConfigurationPageBase
 from .Ui_SubversionPage import Ui_SubversionPage
 
+
 class SubversionPage(ConfigurationPageBase, Ui_SubversionPage):
     """
     Class implementing the Subversion configuration page.

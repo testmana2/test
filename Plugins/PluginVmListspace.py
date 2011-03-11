@@ -30,16 +30,18 @@ pyqtApi = 2
 
 error = ""
 
+
 def previewPix():
     """
     Module function to return a preview pixmap.
     
     @return preview pixmap (QPixmap)
     """
-    fname = os.path.join(os.path.dirname(__file__), 
+    fname = os.path.join(os.path.dirname(__file__),
                          "ViewManagerPlugins", "Listspace", "preview.png")
     return QPixmap(fname)
     
+
 class VmListspacePlugin(QObject):
     """
     Class implementing the Listspace view manager plugin.
@@ -57,7 +59,7 @@ class VmListspacePlugin(QObject):
         """
         Public method to activate this plugin.
         
-        @return tuple of reference to instantiated viewmanager and 
+        @return tuple of reference to instantiated viewmanager and
             activation status (boolean)
         """
         from ViewManagerPlugins.Listspace.Listspace import Listspace

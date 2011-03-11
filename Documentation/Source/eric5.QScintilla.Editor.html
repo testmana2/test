@@ -955,7 +955,7 @@ QsciScintillaCompat
 </table>
 <a NAME="Editor.__init__" ID="Editor.__init__"></a>
 <h4>Editor (Constructor)</h4>
-<b>Editor</b>(<i>dbs, fn = None, vm = None, filetype = "", editor = None, tv = None</i>)
+<b>Editor</b>(<i>dbs, fn=None, vm=None, filetype="", editor=None, tv=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -1089,7 +1089,7 @@ filename used to determine the associated typing
 </dd>
 </dl><a NAME="Editor.__bindLexer" ID="Editor.__bindLexer"></a>
 <h4>Editor.__bindLexer</h4>
-<b>__bindLexer</b>(<i>filename, pyname = ""</i>)
+<b>__bindLexer</b>(<i>filename, pyname=""</i>)
 <p>
         Private slot to set the correct lexer depending on language.
 </p><dl>
@@ -1249,9 +1249,9 @@ reference to the action that was selected (QAction)
 <h4>Editor.__cursorPositionChanged</h4>
 <b>__cursorPositionChanged</b>(<i>line, index</i>)
 <p>
-        Private slot to handle the cursorPositionChanged signal. 
+        Private slot to handle the cursorPositionChanged signal.
 </p><p>
-        It emits the signal cursorChanged with parameters fileName, 
+        It emits the signal cursorChanged with parameters fileName,
         line and pos.
 </p><dl>
 <dt><i>line</i></dt>
@@ -1294,7 +1294,7 @@ command to be processed (string)
 </dd>
 </dl><a NAME="Editor.__encodingChanged" ID="Editor.__encodingChanged"></a>
 <h4>Editor.__encodingChanged</h4>
-<b>__encodingChanged</b>(<i>encoding, propagate = True</i>)
+<b>__encodingChanged</b>(<i>encoding, propagate=True</i>)
 <p>
         Private slot to handle a change of the encoding.
 </p><dl>
@@ -1382,9 +1382,9 @@ Tuple of macro name and a flag, indicating, if the user pressed ok or
         Private to always ignore the word below the spelling context menu.
 </p><a NAME="Editor.__indentLine" ID="Editor.__indentLine"></a>
 <h4>Editor.__indentLine</h4>
-<b>__indentLine</b>(<i>indent = True</i>)
+<b>__indentLine</b>(<i>indent=True</i>)
 <p>
-        Private method to indent or unindent the current line. 
+        Private method to indent or unindent the current line.
 </p><dl>
 <dt><i>indent</i></dt>
 <dd>
@@ -1394,9 +1394,9 @@ flag indicating an indent operation (boolean)
 </dd>
 </dl><a NAME="Editor.__indentSelection" ID="Editor.__indentSelection"></a>
 <h4>Editor.__indentSelection</h4>
-<b>__indentSelection</b>(<i>indent = True</i>)
+<b>__indentSelection</b>(<i>indent=True</i>)
 <p>
-        Private method to indent or unindent the current selection. 
+        Private method to indent or unindent the current selection.
 </p><dl>
 <dt><i>indent</i></dt>
 <dd>
@@ -1486,7 +1486,7 @@ flag indicating the result (boolean)
 </dd>
 </dl><a NAME="Editor.__languageChanged" ID="Editor.__languageChanged"></a>
 <h4>Editor.__languageChanged</h4>
-<b>__languageChanged</b>(<i>language, propagate = True</i>)
+<b>__languageChanged</b>(<i>language, propagate=True</i>)
 <p>
         Private slot handling a change of a connected editor's language.
 </p><dl>
@@ -1580,7 +1580,7 @@ margin number (integer, -1 for no margin)
 <h4>Editor.__modificationChanged</h4>
 <b>__modificationChanged</b>(<i>m</i>)
 <p>
-        Private slot to handle the modificationChanged signal. 
+        Private slot to handle the modificationChanged signal.
 </p><p>
         It emits the signal modificationStatusChanged with parameters
         m and self.
@@ -1696,7 +1696,7 @@ string containing the command parameters (string)
         Private method to remove trailing whitespace.
 </p><a NAME="Editor.__resetLanguage" ID="Editor.__resetLanguage"></a>
 <h4>Editor.__resetLanguage</h4>
-<b>__resetLanguage</b>(<i>propagate = True</i>)
+<b>__resetLanguage</b>(<i>propagate=True</i>)
 <p>
         Private method used to reset the language selection.
 </p><dl>
@@ -1726,7 +1726,7 @@ name of the selected pygments lexer (string)
 </dd>
 </dl><a NAME="Editor.__send" ID="Editor.__send"></a>
 <h4>Editor.__send</h4>
-<b>__send</b>(<i>token, args = None</i>)
+<b>__send</b>(<i>token, args=None</i>)
 <p>
         Private method to send an editor command to remote editors.
 </p><dl>
@@ -1784,7 +1784,7 @@ number of the line that needs annotation (integer)
         Private method to initialize the spell checking functionality.
 </p><a NAME="Editor.__setSpellingLanguage" ID="Editor.__setSpellingLanguage"></a>
 <h4>Editor.__setSpellingLanguage</h4>
-<b>__setSpellingLanguage</b>(<i>language, pwl = "", pel = ""</i>)
+<b>__setSpellingLanguage</b>(<i>language, pwl="", pel=""</i>)
 <p>
         Private slot to set the spell checking language.
 </p><dl>
@@ -1880,7 +1880,7 @@ name of the personal/project exclude list (string)
         Private slot to set up the spelling menu before it is shown.
 </p><a NAME="Editor.__showFlakesWarning" ID="Editor.__showFlakesWarning"></a>
 <h4>Editor.__showFlakesWarning</h4>
-<b>__showFlakesWarning</b>(<i>line = -1</i>)
+<b>__showFlakesWarning</b>(<i>line=-1</i>)
 <p>
         Private slot to handle the 'Show warning' context menu action.
 </p><dl>
@@ -1905,7 +1905,7 @@ line number to show the flakes warning for (integer)
         Private method to handle the show profile data context menu action.
 </p><a NAME="Editor.__showSyntaxError" ID="Editor.__showSyntaxError"></a>
 <h4>Editor.__showSyntaxError</h4>
-<b>__showSyntaxError</b>(<i>line = -1</i>)
+<b>__showSyntaxError</b>(<i>line=-1</i>)
 <p>
         Private slot to handle the 'Show syntax error message'
         context menu action.
@@ -1941,7 +1941,7 @@ end position, that needs styling (integer)
         Private slot to handle the Enable Autocompletion context menu entry.
 </p><a NAME="Editor.__toggleBreakpoint" ID="Editor.__toggleBreakpoint"></a>
 <h4>Editor.__toggleBreakpoint</h4>
-<b>__toggleBreakpoint</b>(<i>line, temporary = False</i>)
+<b>__toggleBreakpoint</b>(<i>line, temporary=False</i>)
 <p>
         Private method to toggle a breakpoint.
 </p><dl>
@@ -1969,9 +1969,9 @@ line number of the breakpoint (integer)
         Private slot to toggle the typing aids.
 </p><a NAME="Editor.__updateReadOnly" ID="Editor.__updateReadOnly"></a>
 <h4>Editor.__updateReadOnly</h4>
-<b>__updateReadOnly</b>(<i>bForce = True</i>)
+<b>__updateReadOnly</b>(<i>bForce=True</i>)
 <p>
-        Private method to update the readOnly information for this editor. 
+        Private method to update the readOnly information for this editor.
 </p><p>
         If bForce is True, then updates everything regardless if
         the attributes have actually changed, such as during
@@ -2000,7 +2000,7 @@ reference to the cloned editor (Editor)
         Public method to signal, that this editor has been added to a project.
 </p><a NAME="Editor.autoComplete" ID="Editor.autoComplete"></a>
 <h4>Editor.autoComplete</h4>
-<b>autoComplete</b>(<i>auto = False, context = True</i>)
+<b>autoComplete</b>(<i>auto=False, context=True</i>)
 <p>
         Public method to start autocompletion.
 </p><dl>
@@ -2068,7 +2068,7 @@ flag indicating autocompletion from APIs is available (boolean)
 </dd>
 </dl><a NAME="Editor.cancelSharedEdit" ID="Editor.cancelSharedEdit"></a>
 <h4>Editor.cancelSharedEdit</h4>
-<b>cancelSharedEdit</b>(<i>send = True</i>)
+<b>cancelSharedEdit</b>(<i>send=True</i>)
 <p>
         Public slot to cancel a shared edit session for the editor.
 </p><dl>
@@ -2147,7 +2147,7 @@ linenumber of the breakpoint (integer)
         Public slot to handle the 'Clear all syntax error' context menu action.
 </p><a NAME="Editor.close" ID="Editor.close"></a>
 <h4>Editor.close</h4>
-<b>close</b>(<i>alsoDelete = False</i>)
+<b>close</b>(<i>alsoDelete=False</i>)
 <p>
         Public method called when the window gets closed.
 </p><p>
@@ -2389,7 +2389,7 @@ type of the displayed file (string)
 <dt>Returns:</dt>
 <dd>
 type of the displayed file, if set by an eflag: marker or an empty
-            string (string) 
+            string (string)
 </dd>
 </dl><a NAME="Editor.getFlakesWarnings" ID="Editor.getFlakesWarnings"></a>
 <h4>Editor.getFlakesWarnings</h4>
@@ -2414,7 +2414,7 @@ line number of the highlight bar (integer)
 </dd>
 </dl><a NAME="Editor.getLanguage" ID="Editor.getLanguage"></a>
 <h4>Editor.getLanguage</h4>
-<b>getLanguage</b>(<i>normalized = True</i>)
+<b>getLanguage</b>(<i>normalized=True</i>)
 <p>
         Public method to retrieve the language of the editor.
 </p><dl>
@@ -2465,9 +2465,9 @@ display string for this unnamed editor (string)
 </dd>
 </dl><a NAME="Editor.getSearchText" ID="Editor.getSearchText"></a>
 <h4>Editor.getSearchText</h4>
-<b>getSearchText</b>(<i>selectionOnly = False</i>)
+<b>getSearchText</b>(<i>selectionOnly=False</i>)
 <p>
-        Public method to determine the selection or the current word for the next 
+        Public method to determine the selection or the current word for the next
         search operation.
 </p><dl>
 <dt><i>selectionOnly</i></dt>
@@ -2506,7 +2506,7 @@ sorted list of all lines containing a syntax error
 </dd>
 </dl><a NAME="Editor.getWord" ID="Editor.getWord"></a>
 <h4>Editor.getWord</h4>
-<b>getWord</b>(<i>line, index, direction = 0, useWordChars = True</i>)
+<b>getWord</b>(<i>line, index, direction=0, useWordChars=True</i>)
 <p>
         Public method to get the word at a position.
 </p><dl>
@@ -2531,7 +2531,7 @@ the word at that position (string)
 </dd>
 </dl><a NAME="Editor.getWordBoundaries" ID="Editor.getWordBoundaries"></a>
 <h4>Editor.getWordBoundaries</h4>
-<b>getWordBoundaries</b>(<i>line, index, useWordChars = True</i>)
+<b>getWordBoundaries</b>(<i>line, index, useWordChars=True</i>)
 <p>
         Public method to get the word boundaries at a position.
 </p><dl>
@@ -2590,7 +2590,7 @@ the word to the right of that position (string)
 </dd>
 </dl><a NAME="Editor.gotoLine" ID="Editor.gotoLine"></a>
 <h4>Editor.gotoLine</h4>
-<b>gotoLine</b>(<i>line, pos = 1</i>)
+<b>gotoLine</b>(<i>line, pos=1</i>)
 <p>
         Public slot to jump to the beginning of a line.
 </p><dl>
@@ -2688,7 +2688,7 @@ flag indicating the presence of task markers (boolean)
 </dd>
 </dl><a NAME="Editor.highlight" ID="Editor.highlight"></a>
 <h4>Editor.highlight</h4>
-<b>highlight</b>(<i>line = None, error = False, syntaxError = False</i>)
+<b>highlight</b>(<i>line=None, error=False, syntaxError=False</i>)
 <p>
         Public method to highlight (or de-highlight) a particular line.
 </p><dl>
@@ -2746,7 +2746,7 @@ flag indicating a Ruby file (boolean)
 <h4>Editor.isSpellCheckRegion</h4>
 <b>isSpellCheckRegion</b>(<i>pos</i>)
 <p>
-        Public method to check, if the given position is within a region, that should 
+        Public method to check, if the given position is within a region, that should
         be spell checked.
 </p><dl>
 <dt><i>pos</i></dt>
@@ -2805,7 +2805,7 @@ key event (QKeyEvent)
         Public method to save a macro to a file.
 </p><a NAME="Editor.menuEditBreakpoint" ID="Editor.menuEditBreakpoint"></a>
 <h4>Editor.menuEditBreakpoint</h4>
-<b>menuEditBreakpoint</b>(<i>line = None</i>)
+<b>menuEditBreakpoint</b>(<i>line=None</i>)
 <p>
         Public slot to handle the 'Edit breakpoint' context menu action.
 </p><dl>
@@ -2914,7 +2914,7 @@ properties for the breakpoint (tuple)
         Public slot to handle changes of the project lexer associations.
 </p><a NAME="Editor.readFile" ID="Editor.readFile"></a>
 <h4>Editor.readFile</h4>
-<b>readFile</b>(<i>fn, createIt = False</i>)
+<b>readFile</b>(<i>fn, createIt=False</i>)
 <p>
         Public slot to read the text from a file.
 </p><dl>
@@ -2968,7 +2968,7 @@ reference to the cloned editor (Editor)
         Public method to revert back to the last saved state.
 </p><a NAME="Editor.saveFile" ID="Editor.saveFile"></a>
 <h4>Editor.saveFile</h4>
-<b>saveFile</b>(<i>saveas = False, path = None</i>)
+<b>saveFile</b>(<i>saveas=False, path=None</i>)
 <p>
         Public slot to save the text to a file.
 </p><dl>
@@ -2986,7 +2986,7 @@ flag indicating success (boolean)
 </dd>
 </dl><a NAME="Editor.saveFileAs" ID="Editor.saveFileAs"></a>
 <h4>Editor.saveFileAs</h4>
-<b>saveFileAs</b>(<i>path = None, toProject = False</i>)
+<b>saveFileAs</b>(<i>path=None, toProject=False</i>)
 <p>
         Public slot to save a file with a new name.
 </p><dl>
@@ -3046,7 +3046,7 @@ flag indicating the desired autocompletion status (boolean)
 <dt><i>func</i></dt>
 <dd>
 Function to be set to handle autocompletion. func
-            should be a function taking a reference to the editor and 
+            should be a function taking a reference to the editor and
             a boolean indicating to complete a context.
 </dd>
 </dl><a NAME="Editor.setAutoSpellChecking" ID="Editor.setAutoSpellChecking"></a>
@@ -3070,7 +3070,7 @@ Function to be set to determine calltips. func
 </dd>
 </dl><a NAME="Editor.setLanguage" ID="Editor.setLanguage"></a>
 <h4>Editor.setLanguage</h4>
-<b>setLanguage</b>(<i>filename, initTextDisplay = True, propagate = True, pyname = ""</i>)
+<b>setLanguage</b>(<i>filename, initTextDisplay=True, propagate=True, pyname=""</i>)
 <p>
         Public method to set a lexer language.
 </p><dl>
@@ -3199,7 +3199,7 @@ line number of the bookmark (integer)
 </dd>
 </dl><a NAME="Editor.toggleFlakesWarning" ID="Editor.toggleFlakesWarning"></a>
 <h4>Editor.toggleFlakesWarning</h4>
-<b>toggleFlakesWarning</b>(<i>line, warning, msg = ""</i>)
+<b>toggleFlakesWarning</b>(<i>line, warning, msg=""</i>)
 <p>
         Public method to toggle a flakes warning indicator.
 </p><p>
@@ -3218,7 +3218,7 @@ warning message (string)
 </dd>
 </dl><a NAME="Editor.toggleSyntaxError" ID="Editor.toggleSyntaxError"></a>
 <h4>Editor.toggleSyntaxError</h4>
-<b>toggleSyntaxError</b>(<i>line, index, error, msg = "", show = False</i>)
+<b>toggleSyntaxError</b>(<i>line, index, error, msg="", show=False</i>)
 <p>
         Public method to toggle a syntax error indicator.
 </p><dl>
@@ -3254,7 +3254,7 @@ flag indicating to set the cursor to the error position
 <h4>Editor.uncommentSelection</h4>
 <b>uncommentSelection</b>(<i></i>)
 <p>
-        Public slot to uncomment the current selection. 
+        Public slot to uncomment the current selection.
 </p><a NAME="Editor.undo" ID="Editor.undo"></a>
 <h4>Editor.undo</h4>
 <b>undo</b>(<i></i>)

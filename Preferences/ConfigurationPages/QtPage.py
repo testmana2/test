@@ -18,6 +18,7 @@ from .Ui_QtPage import Ui_QtPage
 import Preferences
 import Utilities
 
+
 class QtPage(ConfigurationPageBase, Ui_QtPage):
     """
     Class implementing the Qt configuration page.
@@ -85,7 +86,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         Private slot to update the Qt4 tools sample label.
         """
         self.qt4SampleLabel.setText("Sample: {0}designer{1}"\
-            .format(self.qt4PrefixEdit.text(), 
+            .format(self.qt4PrefixEdit.text(),
                     self.qt4PostfixEdit.text()))
     
     @pyqtSlot(str)
@@ -106,6 +107,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         self.__updateQt4Sample()
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

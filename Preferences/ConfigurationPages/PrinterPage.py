@@ -14,6 +14,7 @@ from .Ui_PrinterPage import Ui_PrinterPage
 
 import Preferences
 
+
 class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
     """
     Class implementing the Printer configuration page.
@@ -64,16 +65,16 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
             Preferences.setPrinter("FirstPageFirst", 1)
         else:
             Preferences.setPrinter("FirstPageFirst", 0)
-        Preferences.setPrinter("Magnification", 
+        Preferences.setPrinter("Magnification",
             self.printMagnificationSpinBox.value())
         Preferences.setPrinter("HeaderFont", self.printheaderFont)
-        Preferences.setPrinter("LeftMargin", 
+        Preferences.setPrinter("LeftMargin",
             self.leftMarginSpinBox.value())
-        Preferences.setPrinter("RightMargin", 
+        Preferences.setPrinter("RightMargin",
             self.rightMarginSpinBox.value())
-        Preferences.setPrinter("TopMargin", 
+        Preferences.setPrinter("TopMargin",
             self.topMarginSpinBox.value())
-        Preferences.setPrinter("BottomMargin", 
+        Preferences.setPrinter("BottomMargin",
             self.bottomMarginSpinBox.value())
         
     @pyqtSlot()
@@ -90,6 +91,7 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
         """
         self.printheaderFontSample.setFont(self.printheaderFont)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

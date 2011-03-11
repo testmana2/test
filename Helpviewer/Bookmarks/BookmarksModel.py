@@ -17,18 +17,19 @@ import Helpviewer.HelpWindow
 
 import UI.PixmapCache
 
+
 class BookmarksModel(QAbstractItemModel):
     """
     Class implementing the bookmark model.
     """
-    TypeRole      = Qt.UserRole + 1
-    UrlRole       = Qt.UserRole + 2
+    TypeRole = Qt.UserRole + 1
+    UrlRole = Qt.UserRole + 2
     UrlStringRole = Qt.UserRole + 3
     SeparatorRole = Qt.UserRole + 4
     
     MIMETYPE = "application/bookmarks.xbel"
     
-    def __init__(self, manager, parent = None):
+    def __init__(self, manager, parent=None):
         """
         Constructor
         
@@ -45,8 +46,8 @@ class BookmarksModel(QAbstractItemModel):
         manager.entryChanged.connect(self.entryChanged)
         
         self.__headers = [
-            self.trUtf8("Title"), 
-            self.trUtf8("Address"), 
+            self.trUtf8("Title"),
+            self.trUtf8("Address"),
         ]
     
     def bookmarksManager(self):
@@ -109,7 +110,7 @@ class BookmarksModel(QAbstractItemModel):
         idx = self.nodeIndex(node)
         self.dataChanged.emit(idx, idx)
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove bookmarks from the model.
         
@@ -135,7 +136,7 @@ class BookmarksModel(QAbstractItemModel):
         
         return True
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -151,7 +152,7 @@ class BookmarksModel(QAbstractItemModel):
                 pass
         return QAbstractItemModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -196,7 +197,7 @@ class BookmarksModel(QAbstractItemModel):
         
         return None
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -208,7 +209,7 @@ class BookmarksModel(QAbstractItemModel):
         else:
             return len(self.__headers)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -224,7 +225,7 @@ class BookmarksModel(QAbstractItemModel):
         itm = parent.internalPointer()
         return len(itm.children())
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to get a model index for a node cell.
         
@@ -240,7 +241,7 @@ class BookmarksModel(QAbstractItemModel):
         parentNode = self.node(parent)
         return self.createIndex(row, column, parentNode.children()[row])
     
-    def parent(self, index = QModelIndex()):
+    def parent(self, index=QModelIndex()):
         """
         Public method to get the index of the parent node.
         
@@ -264,7 +265,7 @@ class BookmarksModel(QAbstractItemModel):
         parentRow = grandParentNode.children().index(parentNode)
         return self.createIndex(parentRow, 0, parentNode)
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if a parent node has some children.
         
@@ -409,7 +410,7 @@ class BookmarksModel(QAbstractItemModel):
         
         return True
     
-    def setData(self, index, value, role = Qt.EditRole):
+    def setData(self, index, value, role=Qt.EditRole):
         """
         Public method to set the data of a node cell.
         

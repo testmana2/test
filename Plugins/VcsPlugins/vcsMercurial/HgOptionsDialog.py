@@ -11,12 +11,13 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_HgOptionsDialog import Ui_HgOptionsDialog
 
+
 class HgOptionsDialog(QDialog, Ui_HgOptionsDialog):
     """
     Class implementing a dialog to enter options used to start a project in the
     repository.
     """
-    def __init__(self, vcs, project, parent = None):
+    def __init__(self, vcs, project, parent=None):
         """
         Constructor
         
@@ -34,6 +35,6 @@ class HgOptionsDialog(QDialog, Ui_HgOptionsDialog):
         @return a dictionary containing the data entered
         """
         vcsdatadict = {
-            "message" : self.vcsLogEdit.text(),
+            "message": self.vcsLogEdit.text(),
         }
         return vcsdatadict

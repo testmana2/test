@@ -2,7 +2,7 @@
 
 # Copyright (c) 2003-2011 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is a  script to patch mod_python for eric5. 
+# This is a  script to patch mod_python for eric5.
 
 """
 Script to patch mod_python for usage with the eric5 IDE.
@@ -18,7 +18,8 @@ import distutils.sysconfig
 progName = None
 modDir = None
 
-def usage(rcode = 2):
+
+def usage(rcode=2):
     """
     Display a usage message and exit.
 
@@ -49,6 +50,7 @@ def initGlobals():
 
     modDir = os.path.join(distutils.sysconfig.get_python_lib(True), "mod_python")
 
+
 def main(argv):
     """The main function of the script.
 
@@ -63,7 +65,7 @@ def main(argv):
     initGlobals()
 
     try:
-        optlist, args = getopt.getopt(argv[1:],"hd:")
+        optlist, args = getopt.getopt(argv[1:], "hd:")
     except getopt.GetoptError:
         usage()
 
@@ -76,7 +78,7 @@ def main(argv):
     
     try:
         filename = os.path.join(modDir, "apache.py")
-        f = open(filename, "r", encoding = "utf-8")
+        f = open(filename, "r", encoding="utf-8")
     except EnvironmentError:
         print("The file {0} does not exist. Aborting.".format(filename))
         sys.exit(1)
@@ -88,7 +90,7 @@ def main(argv):
     ericFound = False
     
     sn = "apache.py"
-    s = open(sn, "w", encoding = "utf-8")
+    s = open(sn, "w", encoding="utf-8")
     for line in lines:
         if not pdbFound and line.startswith("import pdb"):
             s.write("import eric5.DebugClients.Python.eric5dbgstub as pdb\n")

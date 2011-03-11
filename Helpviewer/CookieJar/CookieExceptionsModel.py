@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .CookieJar import CookieJar
 
+
 class CookieExceptionsModel(QAbstractTableModel):
     """
     Class implementing the cookie exceptions model.
     """
-    def __init__(self, cookieJar, parent = None):
+    def __init__(self, cookieJar, parent=None):
         """
         Constructor
         
@@ -31,8 +32,8 @@ class CookieExceptionsModel(QAbstractTableModel):
         self.__sessionCookies = self.__cookieJar.allowForSessionCookies()
         
         self.__headers = [
-            self.trUtf8("Website"), 
-            self.trUtf8("Status"), 
+            self.trUtf8("Website"),
+            self.trUtf8("Status"),
         ]
     
     def headerData(self, section, orientation, role):
@@ -102,7 +103,7 @@ class CookieExceptionsModel(QAbstractTableModel):
         
         return None
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns of the model.
         
@@ -114,7 +115,7 @@ class CookieExceptionsModel(QAbstractTableModel):
         else:
             return len(self.__headers)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows of the model.
         
@@ -128,7 +129,7 @@ class CookieExceptionsModel(QAbstractTableModel):
                    len(self.__blockedCookies) + \
                    len(self.__sessionCookies)
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         
@@ -178,15 +179,15 @@ class CookieExceptionsModel(QAbstractTableModel):
             return
         
         if rule == CookieJar.Allow:
-            self.__addHost(host, 
+            self.__addHost(host,
                 self.__allowedCookies, self.__blockedCookies, self.__sessionCookies)
             return
         elif rule == CookieJar.Block:
-            self.__addHost(host, 
+            self.__addHost(host,
                 self.__blockedCookies, self.__allowedCookies, self.__sessionCookies)
             return
         elif rule == CookieJar.AllowForSession:
-            self.__addHost(host, 
+            self.__addHost(host,
                 self.__sessionCookies, self.__allowedCookies, self.__blockedCookies)
             return
     

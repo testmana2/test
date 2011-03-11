@@ -16,6 +16,7 @@ from .Ui_ViewmanagerPage import Ui_ViewmanagerPage
 
 import Preferences
 
+
 class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
     """
     Class implementing the Viewmanager configuration page.
@@ -62,7 +63,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
             self.filenameLengthSpinBox.value())
         Preferences.setUI("TabViewManagerFilenameOnly",
             self.filenameOnlyCheckBox.isChecked())
-        Preferences.setUI("RecentNumber", 
+        Preferences.setUI("RecentNumber",
             self.recentFilesSpinBox.value())
         
     @pyqtSlot(int)
@@ -79,6 +80,7 @@ class ViewmanagerPage(ConfigurationPageBase, Ui_ViewmanagerPage):
         self.previewPixmap.setPixmap(pixmap)
         self.tabViewGroupBox.setEnabled(workspace == "tabview")
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

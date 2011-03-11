@@ -12,6 +12,7 @@ from .Ui_MultiProjectPage import Ui_MultiProjectPage
 
 import Preferences
 
+
 class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
     """
     Class implementing the Multi Project configuration page.
@@ -40,9 +41,10 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             self.openMasterAutomaticallyCheckBox.isChecked())
         Preferences.setMultiProject("XMLTimestamp",
             self.multiProjectTimestampCheckBox.isChecked())
-        Preferences.setMultiProject("RecentNumber", 
+        Preferences.setMultiProject("RecentNumber",
             self.multiProjectRecentSpinBox.value())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

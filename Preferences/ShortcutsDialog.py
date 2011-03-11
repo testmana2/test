@@ -31,10 +31,10 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
     updateShortcuts = pyqtSignal()
     
     objectNameRole = Qt.UserRole
-    noCheckRole    = Qt.UserRole + 1
+    noCheckRole = Qt.UserRole + 1
     objectTypeRole = Qt.UserRole + 2
     
-    def __init__(self, parent = None, name = None, modal = False):
+    def __init__(self, parent=None, name=None, modal=False):
         """
         Constructor
         
@@ -59,7 +59,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         Private method to resort the tree.
         """
-        self.shortcutsList.sortItems(self.shortcutsList.sortColumn(), 
+        self.shortcutsList.sortItems(self.shortcutsList.sortColumn(),
             self.shortcutsList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -80,8 +80,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         itm.setExpanded(True)
         return itm
         
-    def __generateShortcutItem(self, category, action, 
-                               noCheck = False, objectType = ""):
+    def __generateShortcutItem(self, category, action,
+                               noCheck=False, objectType=""):
         """
         Private method to generate a keyboard shortcut item.
         
@@ -92,8 +92,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         @keyparam objectType type of the object (string). Objects of the same type
             are not checked for duplicate shortcuts.
         """
-        itm = QTreeWidgetItem(category, 
-            [action.iconText(), action.shortcut().toString(), 
+        itm = QTreeWidgetItem(category,
+            [action.iconText(), action.shortcut().toString(),
              action.alternateShortcut().toString()])
         itm.setIcon(0, action.icon())
         itm.setData(0, self.objectNameRole, action.objectName())
@@ -173,8 +173,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 categoryItem = self.__generateCategoryItem(category)
                 objectType = e5App().getPluginObjectType(category)
                 for act in ref.getActions():
-                    self.__generateShortcutItem(categoryItem, act, 
-                                                objectType = objectType)
+                    self.__generateShortcutItem(categoryItem, act,
+                                                objectType=objectType)
                 self.pluginCategoryItems.append(categoryItem)
         
         self.helpViewerItem = self.__generateCategoryItem(self.trUtf8("Web Browser"))
@@ -198,8 +198,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         
         self.__editTopItem = itm.parent()
         
-        self.shortcutDialog.setKeys(QKeySequence(itm.text(1)), QKeySequence(itm.text(2)), 
-            itm.data(0, self.noCheckRole), 
+        self.shortcutDialog.setKeys(QKeySequence(itm.text(1)), QKeySequence(itm.text(2)),
+            itm.data(0, self.noCheckRole),
             itm.data(0, self.objectTypeRole))
         self.shortcutDialog.show()
         
@@ -225,8 +225,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         if column != 0:
             keystr = itm.text(column).title()
             if not itm.data(0, self.noCheckRole) and \
-               not self.__checkShortcut(QKeySequence(keystr), 
-                                        itm.data(0, self.objectTypeRole), 
+               not self.__checkShortcut(QKeySequence(keystr),
+                                        itm.data(0, self.objectTypeRole),
                                         itm.parent()):
                 itm.setText(column, "")
             else:
@@ -238,7 +238,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         Private slot to handle the shortcutChanged signal of the shortcut dialog.
         
         @param keysequence the keysequence of the changed action (QKeySequence)
-        @param altKeysequence the alternative keysequence of the changed 
+        @param altKeysequence the alternative keysequence of the changed
             action (QKeySequence)
         @param noCheck flag indicating that no uniqueness check should
             be performed (boolean)
@@ -300,7 +300,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """ to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                icon = E5MessageBox.Warning)
+                                icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True
@@ -318,7 +318,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<p><b>{0}</b> hides the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                icon = E5MessageBox.Warning)
+                                icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True
@@ -334,7 +334,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                     """<b>{1}</b> action. """
                                     """Remove this binding?</p>""")
                                     .format(keystr, itm.text(0)),
-                                icon = E5MessageBox.Warning)
+                                icon=E5MessageBox.Warning)
                             if res:
                                 itm.setText(col, "")
                                 return True
@@ -363,27 +363,27 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         """
         Private slot to handle the OK button press.
         """
-        self.__saveCategoryActions(self.projectItem, 
+        self.__saveCategoryActions(self.projectItem,
             e5App().getObject("Project").getActions())
-        self.__saveCategoryActions(self.uiItem, 
+        self.__saveCategoryActions(self.uiItem,
             e5App().getObject("UserInterface").getActions('ui'))
-        self.__saveCategoryActions(self.wizardsItem, 
+        self.__saveCategoryActions(self.wizardsItem,
             e5App().getObject("UserInterface").getActions('wizards'))
-        self.__saveCategoryActions(self.debugItem, 
+        self.__saveCategoryActions(self.debugItem,
             e5App().getObject("DebugUI").getActions())
-        self.__saveCategoryActions(self.editItem, 
+        self.__saveCategoryActions(self.editItem,
             e5App().getObject("ViewManager").getActions('edit'))
-        self.__saveCategoryActions(self.fileItem, 
+        self.__saveCategoryActions(self.fileItem,
             e5App().getObject("ViewManager").getActions('file'))
-        self.__saveCategoryActions(self.searchItem, 
+        self.__saveCategoryActions(self.searchItem,
             e5App().getObject("ViewManager").getActions('search'))
-        self.__saveCategoryActions(self.viewItem, 
+        self.__saveCategoryActions(self.viewItem,
             e5App().getObject("ViewManager").getActions('view'))
-        self.__saveCategoryActions(self.macroItem, 
+        self.__saveCategoryActions(self.macroItem,
             e5App().getObject("ViewManager").getActions('macro'))
-        self.__saveCategoryActions(self.bookmarkItem, 
+        self.__saveCategoryActions(self.bookmarkItem,
             e5App().getObject("ViewManager").getActions('bookmark'))
-        self.__saveCategoryActions(self.spellingItem, 
+        self.__saveCategoryActions(self.spellingItem,
             e5App().getObject("ViewManager").getActions('spelling'))
         
         actions = e5App().getObject("ViewManager").getActions('window')
@@ -396,7 +396,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             if ref is not None and hasattr(ref, "getActions"):
                 self.__saveCategoryActions(categoryItem, ref.getActions())
         
-        self.__saveCategoryActions(self.helpViewerItem, 
+        self.__saveCategoryActions(self.helpViewerItem,
             e5App().getObject("DummyHelpViewer").getActions())
         
         Shortcuts.saveShortcuts()

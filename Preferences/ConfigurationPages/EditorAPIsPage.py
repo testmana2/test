@@ -23,6 +23,7 @@ import QScintilla.Lexers
 import Preferences
 import Utilities
 
+
 class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
     """
     Class implementing the Editor APIs configuration page.
@@ -207,8 +208,8 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         else:
             if self.__currentAPI is not None:
                 self.__currentAPI.prepareAPIs(
-                    ondemand = True, 
-                    rawList = self.__editorGetApisFromApiList())
+                    ondemand=True,
+                    rawList=self.__editorGetApisFromApiList())
         
     def __apiPreparationFinished(self):
         """
@@ -252,6 +253,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.apiLanguageComboBox.setCurrentIndex(state)
         self.on_apiLanguageComboBox_activated(self.apiLanguageComboBox.currentText())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

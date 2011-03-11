@@ -29,12 +29,13 @@ IDL_SOURCE = 130
 SUPPORTED_TYPES = [PY_SOURCE, PTL_SOURCE, RB_SOURCE, IDL_SOURCE]
 
 __extensions = {
-    "IDL"       : [".idl"],
-    "Python"    : [".py", ".pyw", ".ptl"],  # currently not used
-    "Ruby"      : [".rb"],
+    "IDL": [".idl"],
+    "Python": [".py", ".pyw", ".ptl"],  # currently not used
+    "Ruby": [".rb"],
 }
 
-def readmodule(module, path=[], isPyFile = False):
+
+def readmodule(module, path=[], isPyFile=False):
     '''
     Read a source file and return a dictionary of classes, functions, modules, etc. .
     
@@ -59,7 +60,7 @@ def readmodule(module, path=[], isPyFile = False):
          ext in Preferences.getPython("Python3Extensions") or \
          isPyFile:
         from . import pyclbr
-        dict = pyclbr.readmodule_ex(module, path, isPyFile = isPyFile)
+        dict = pyclbr.readmodule_ex(module, path, isPyFile=isPyFile)
         pyclbr._modules.clear()
     else:
         # try Python if it is without extension
@@ -69,7 +70,8 @@ def readmodule(module, path=[], isPyFile = False):
     
     return dict
 
-def find_module(name, path, isPyFile = False):
+
+def find_module(name, path, isPyFile=False):
     """
     Module function to extend the Python module finding mechanism.
     

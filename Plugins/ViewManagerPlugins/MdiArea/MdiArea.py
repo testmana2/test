@@ -21,6 +21,7 @@ from E5Gui.E5Action import E5Action, addActions
 
 import Utilities
 
+
 class MdiArea(QMdiArea, ViewManager):
     """
     Class implementing the mdi area viewmanager class.
@@ -140,7 +141,7 @@ class MdiArea(QMdiArea, ViewManager):
         win.closeIt()
         self.__removingView = False
         
-    def _addView(self, win, fn = None, noName = ""):
+    def _addView(self, win, fn=None, noName=""):
         """
         Protected method to add a view (i.e. window)
         
@@ -177,7 +178,7 @@ class MdiArea(QMdiArea, ViewManager):
         win.setFocus()
         win.installEventFilter(self)
         
-    def _showView(self, win, fn = None):
+    def _showView(self, win, fn=None):
         """
         Private method to show a view (i.e. window)
         
@@ -231,14 +232,14 @@ class MdiArea(QMdiArea, ViewManager):
             self.__windowMapper.setMapping(act, subWindow)
             idx += 1
         
-        addActions(windowMenu, 
-                   [None, self.nextChildAct, self.prevChildAct, 
-                    self.tileAct, self.cascadeAct, 
-                    self.restoreAllAct, self.iconizeAllAct, 
+        addActions(windowMenu,
+                   [None, self.nextChildAct, self.prevChildAct,
+                    self.tileAct, self.cascadeAct,
+                    self.restoreAllAct, self.iconizeAllAct,
                     None])
         for act in [self.restoreAllAct, self.iconizeAllAct]:
             act.setEnabled(len(self.editors) != 0)
-        for act in [self.nextChildAct, self.prevChildAct, self.tileAct, 
+        for act in [self.nextChildAct, self.prevChildAct, self.tileAct,
                     self.cascadeAct]:
             act.setEnabled(len(self.editors) > 1)
         

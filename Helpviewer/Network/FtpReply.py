@@ -90,11 +90,12 @@ tr.even {{
 </html>
 """
 
+
 class FtpReply(QNetworkReply):
     """
     Class implementing a network reply for FTP resources.
     """
-    def __init__(self, url, parent = None):
+    def __init__(self, url, parent=None):
         """
         Constructor
         
@@ -129,7 +130,7 @@ class FtpReply(QNetworkReply):
                 ftpProxy = proxy
                 break
         if ftpProxy.type() == QNetworkProxy.DefaultProxy:
-            self.setError(QNetworkReply.ProxyNotFoundError, 
+            self.setError(QNetworkReply.ProxyNotFoundError,
                           self.trUtf8("No suitable proxy found."))
             QTimer.singleShot(0, self.__errorSignals)
             return
@@ -284,7 +285,7 @@ class FtpReply(QNetworkReply):
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "Ok")
         self.metaDataChanged.emit()
     
-    def __cssLinkClass(self, icon, size = 32):
+    def __cssLinkClass(self, icon, size=32):
         """
         Private method to generate a link class with an icon.
         
@@ -307,7 +308,7 @@ class FtpReply(QNetworkReply):
             pixmap.fill(Qt.transparent)
             imageBuffer.buffer().clear()
             pixmap.save(imageBuffer, "PNG")
-        return cssString.format(size + 4, 
+        return cssString.format(size + 4,
             str(imageBuffer.buffer().toBase64(), encoding="ascii"))
     
     def __setListContent(self):
@@ -384,19 +385,19 @@ class FtpReply(QNetworkReply):
                         self.__cssLinkClass(icon, iconSize).format(linkClass)
             table += row.format(
                 i == 0 and "odd" or "even",
-                linkClass, 
-                child.toString(), 
-                Qt.escape(item.name()), 
+                linkClass,
+                child.toString(),
+                Qt.escape(item.name()),
                 sizeStr,
-                item.lastModified().toString("yyyy-MM-dd hh:mm"), 
+                item.lastModified().toString("yyyy-MM-dd hh:mm"),
             )
             i = 1 - i
         
         content = ftpListPage_html.format(
-            Qt.escape(baseUrl), 
-            "".join(linkClasses.values()), 
-            self.trUtf8("Listing of {0}").format(basePath), 
-            parentStr, 
+            Qt.escape(baseUrl),
+            "".join(linkClasses.values()),
+            self.trUtf8("Listing of {0}").format(basePath),
+            parentStr,
             table
         )
         self.__content = QByteArray(content.encode("utf8"))

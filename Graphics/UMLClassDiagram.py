@@ -19,11 +19,12 @@ from .ClassItem import ClassItem, ClassModel
 from .AssociationItem import AssociationItem, Generalisation
 from . import GraphicsUtilities
 
+
 class UMLClassDiagram(UMLDialog):
     """
     Class implementing a dialog showing a UML like class diagram.
     """
-    def __init__(self, file, parent = None, name = None, noAttrs = False):
+    def __init__(self, file, parent=None, name=None, noAttrs=False):
         """
         Constructor
         
@@ -131,7 +132,7 @@ class UMLClassDiagram(UMLDialog):
                 self.trUtf8("The module <b>'{0}'</b> does not contain any classes.")\
                 .format(self.file))
         
-    def __arrangeClasses(self, nodes, routes, whiteSpaceFactor = 1.2):
+    def __arrangeClasses(self, nodes, routes, whiteSpaceFactor=1.2):
         """
         Private method to arrange the shapes on the canvas.
         
@@ -197,7 +198,7 @@ class UMLClassDiagram(UMLDialog):
                 x = x + rect.width() + whiteSpace
             y = y + currentHeight + verticalWhiteSpace
         
-    def __addLocalClass(self, className, _class, x, y, isRbModule = False):
+    def __addLocalClass(self, className, _class, x, y, isRbModule=False):
         """
         Private method to add a class defined in the module.
         
@@ -213,7 +214,7 @@ class UMLClassDiagram(UMLDialog):
         if isRbModule:
             name = "{0} (Module)".format(name)
         cl = ClassModel(name, meths[:], attrs[:])
-        cw = ClassItem(cl, False, x, y, noAttrs = self.noAttrs, scene = self.scene)
+        cw = ClassItem(cl, False, x, y, noAttrs=self.noAttrs, scene=self.scene)
         self.allClasses[className] = cw
         if _class.name not in self.allModules[self.file]:
             self.allModules[self.file].append(_class.name)
@@ -230,7 +231,7 @@ class UMLClassDiagram(UMLDialog):
         @param y y-coordinate (float)
         """
         cl = ClassModel(_class)
-        cw = ClassItem(cl, True, x, y, noAttrs = self.noAttrs, scene = self.scene)
+        cw = ClassItem(cl, True, x, y, noAttrs=self.noAttrs, scene=self.scene)
         self.allClasses[_class] = cw
         if _class not in self.allModules[self.file]:
             self.allModules[self.file].append(_class)

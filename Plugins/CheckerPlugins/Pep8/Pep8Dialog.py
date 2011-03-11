@@ -29,18 +29,19 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+
 class Pep8Dialog(QDialog, Ui_Pep8Dialog):
     """
     Class implementing a dialog to show the results of the PEP 8 check.
     """
     filenameRole = Qt.UserRole + 1
-    lineRole     = Qt.UserRole + 2
+    lineRole = Qt.UserRole + 2
     positionRole = Qt.UserRole + 3
-    messageRole  = Qt.UserRole + 4
+    messageRole = Qt.UserRole + 4
     
     settingsKey = "PEP8/"
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -89,7 +90,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         Private method to resort the tree.
         """
-        self.resultList.sortItems(self.resultList.sortColumn(), 
+        self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder()
                                  )
     
@@ -111,7 +112,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             self.__lastFileItem.setData(0, self.filenameRole, file)
         
         code, message = message.split(None, 1)
-        itm = QTreeWidgetItem(self.__lastFileItem, 
+        itm = QTreeWidgetItem(self.__lastFileItem,
             ["{0:6}".format(line), code, message])
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
@@ -183,12 +184,12 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
            len(self.__data) != 6:
             # initialize the data structure
             self.__data = {
-                "ExcludeFiles" : "", 
-                "ExcludeMessages" : pep8.DEFAULT_IGNORE, 
-                "IncludeMessages" : "", 
-                "RepeatMessages" : False, 
-                "FixCodes" : "", 
-                "FixIssues" : False, 
+                "ExcludeFiles": "",
+                "ExcludeMessages": pep8.DEFAULT_IGNORE,
+                "IncludeMessages": "",
+                "RepeatMessages": False,
+                "FixCodes": "",
+                "FixIssues": False,
             }
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -197,13 +198,13 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         self.fixIssuesEdit.setText(self.__data["FixCodes"])
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
     
-    def start(self, fn, save = False, repeat = None):
+    def start(self, fn, save=False, repeat=None):
         """
         Public slot to start the PEP 8 check.
         
         @param fn file or list of files or directory to be checked
                 (string or list of strings)
-        @keyparam save flag indicating to save the given 
+        @keyparam save flag indicating to save the given
             file/file list/directory (boolean)
         @keyparam repeat state of the repeat check box if it is not None
             (None or boolean)
@@ -242,11 +243,11 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         # filter the list depending on the filter string
         if files:
             filterString = self.excludeFilesEdit.text()
-            filterList = [f.strip() for f in filterString.split(",") 
+            filterList = [f.strip() for f in filterString.split(",")
                           if f.strip()]
             for filter in filterList:
                 files = \
-                    [f for f in files 
+                    [f for f in files
                      if not fnmatch.fnmatch(f, filter.strip())]
         
         py3files = [f for f in files \
@@ -289,7 +290,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                         source = source.splitlines(True)
                     except (UnicodeError, IOError) as msg:
                         self.noResults = False
-                        self.__createResultItem(file, "1", "1", 
+                        self.__createResultItem(file, "1", "1",
                             self.trUtf8("Error: {0}").format(str(msg))\
                                 .rstrip()[1:-1], False)
                         progress += 1
@@ -298,30 +299,30 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     flags = Utilities.extractFlags(source)
                     ext = os.path.splitext(file)[1]
                     if fixIssues:
-                        fixer = Pep8Fixer(self.__project, file, source, 
+                        fixer = Pep8Fixer(self.__project, file, source,
                                           fixCodes, True)  # always fix in place
                     else:
                         fixer = None
-                    if ("FileType" in flags and 
+                    if ("FileType" in flags and
                         flags["FileType"] in ["Python", "Python2"]) or \
                        file in py2files or \
                        (ext in [".py", ".pyw"] and \
                         Preferences.getProject("DeterminePyFromProject") and \
                         self.__project.isOpen() and \
                         self.__project.isProjectFile(file) and \
-                        self.__project.getProjectLanguage() in ["Python", 
+                        self.__project.getProjectLanguage() in ["Python",
                                                                 "Python2"]):
-                        checker = Pep8Py2Checker(file, [], 
-                            repeat = repeatMessages, 
-                            select = includeMessages,
-                            ignore = excludeMessages)
+                        checker = Pep8Py2Checker(file, [],
+                            repeat=repeatMessages,
+                            select=includeMessages,
+                            ignore=excludeMessages)
                     else:
-                        checker = Pep8Checker(file, source, 
-                            repeat = repeatMessages, 
-                            select = includeMessages,
-                            ignore = excludeMessages)
+                        checker = Pep8Checker(file, source,
+                            repeat=repeatMessages,
+                            select=includeMessages,
+                            ignore=excludeMessages)
                         checker.check_all()
-                    checker.messages.sort(key = lambda a: a[1])
+                    checker.messages.sort(key=lambda a: a[1])
                     for message in checker.messages:
                         fname, lineno, position, text = message
                         if not source[lineno - 1].strip()\
@@ -381,16 +382,16 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         """
         if self.__forProject:
             data = {
-                "ExcludeFiles" : self.excludeFilesEdit.text(), 
-                "ExcludeMessages" : self.excludeMessagesEdit.text(), 
-                "IncludeMessages" : self.includeMessagesEdit.text(), 
-                "RepeatMessages" : self.repeatCheckBox.isChecked(),
-                "FixCodes" : self.fixIssuesEdit.text(), 
-                "FixIssues" : self.fixIssuesCheckBox.isChecked(),
+                "ExcludeFiles": self.excludeFilesEdit.text(),
+                "ExcludeMessages": self.excludeMessagesEdit.text(),
+                "IncludeMessages": self.includeMessagesEdit.text(),
+                "RepeatMessages": self.repeatCheckBox.isChecked(),
+                "FixCodes": self.fixIssuesEdit.text(),
+                "FixIssues": self.fixIssuesCheckBox.isChecked(),
             }
             if data != self.__data:
                 self.__data = data
-                self.__project.setData("CHECKERSPARMS", "Pep8Checker", 
+                self.__project.setData("CHECKERSPARMS", "Pep8Checker",
                                        self.__data)
         
         self.resultList.clear()
@@ -434,7 +435,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
     @pyqtSlot(QTreeWidgetItem, int)
     def on_resultList_itemActivated(self, item, column):
         """
-        Private slot to handle the activation of an item. 
+        Private slot to handle the activation of an item.
         
         @param item reference to the activated item (QTreeWidgetItem)
         @param column column the item was activated in (integer)
@@ -449,7 +450,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
             message = item.data(0, self.messageRole)
             
             vm = e5App().getObject("ViewManager")
-            vm.openSourceFile(fn, lineno = lineno, pos = position)
+            vm.openSourceFile(fn, lineno=lineno, pos=position)
             editor = vm.getOpenEditor(fn)
             
             editor.toggleFlakesWarning(lineno, True, message)

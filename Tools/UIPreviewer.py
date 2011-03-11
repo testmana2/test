@@ -17,11 +17,12 @@ import Preferences
 import UI.PixmapCache
 import UI.Config
 
+
 class UIPreviewer(QMainWindow):
     """
     Class implementing the UI Previewer main window.
     """
-    def __init__(self, filename = None, parent = None, name = None):
+    def __init__(self, filename=None, parent=None, name=None):
         """
         Constructor
         
@@ -112,7 +113,7 @@ class UIPreviewer(QMainWindow):
         """
         Private method to define the user interface actions.
         """
-        self.openAct = QAction(UI.PixmapCache.getIcon("openUI.png"), 
+        self.openAct = QAction(UI.PixmapCache.getIcon("openUI.png"),
                         self.trUtf8('&Open File'), self)
         self.openAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
         self.openAct.setStatusTip(self.trUtf8('Open a UI file for display'))
@@ -122,7 +123,7 @@ class UIPreviewer(QMainWindow):
         ))
         self.openAct.triggered[()].connect(self.__openFile)
         
-        self.printAct = QAction(UI.PixmapCache.getIcon("print.png"), 
+        self.printAct = QAction(UI.PixmapCache.getIcon("print.png"),
                         self.trUtf8('&Print'), self)
         self.printAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
         self.printAct.setStatusTip(self.trUtf8('Print a screen capture'))
@@ -132,7 +133,7 @@ class UIPreviewer(QMainWindow):
         ))
         self.printAct.triggered[()].connect(self.__printImage)
         
-        self.printPreviewAct = QAction(UI.PixmapCache.getIcon("printPreview.png"), 
+        self.printPreviewAct = QAction(UI.PixmapCache.getIcon("printPreview.png"),
                         self.trUtf8('Print Preview'), self)
         self.printPreviewAct.setStatusTip(self.trUtf8(
                 'Print preview a screen capture'))
@@ -142,7 +143,7 @@ class UIPreviewer(QMainWindow):
         ))
         self.printPreviewAct.triggered[()].connect(self.__printPreviewImage)
         
-        self.imageAct = QAction(UI.PixmapCache.getIcon("screenCapture.png"), 
+        self.imageAct = QAction(UI.PixmapCache.getIcon("screenCapture.png"),
                         self.trUtf8('&Screen Capture'), self)
         self.imageAct.setShortcut(
             QKeySequence(self.trUtf8("Ctrl+S", "File|Screen Capture")))
@@ -153,7 +154,7 @@ class UIPreviewer(QMainWindow):
         ))
         self.imageAct.triggered[()].connect(self.__saveImage)
         
-        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"), 
+        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
                         self.trUtf8('&Quit'), self)
         self.exitAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
@@ -291,7 +292,7 @@ class UIPreviewer(QMainWindow):
         Private slot to load a new file.
         """
         fn = E5FileDialog.getOpenFileName(
-            self, 
+            self,
             self.trUtf8("Select UI file"),
             self.currentFile,
             self.trUtf8("Qt User-Interface Files (*.ui)"))
@@ -356,7 +357,7 @@ class UIPreviewer(QMainWindow):
         
         self.lastQStyle = qstyle
         self.lastStyle = sstyle
-        Preferences.Prefs.settings.setValue('UIPreviewer/style', 
+        Preferences.Prefs.settings.setValue('UIPreviewer/style',
             self.styleCombo.currentIndex())
         QApplication.restoreOverrideCursor()
     
@@ -548,7 +549,7 @@ class UIPreviewer(QMainWindow):
             height = printer.height() - marginY * 2
         img = QPixmap.grabWidget(self.mainWidget).toImage()
         self.__updateChildren(self.lastStyle)
-        p.drawImage(marginX, marginY, 
-                    img.scaled(width, height, 
+        p.drawImage(marginX, marginY,
+                    img.scaled(width, height,
                                Qt.KeepAspectRatio, Qt.SmoothTransformation))
         p.end()

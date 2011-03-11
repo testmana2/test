@@ -29,6 +29,7 @@ from .ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
     OthersBrowserFlag, AllBrowsersFlag
 
+
 class ProjectBrowser(E5TabWidget):
     """
     Class implementing the project browser part of the eric5 UI.
@@ -41,7 +42,7 @@ class ProjectBrowser(E5TabWidget):
     tab with the file system browser.
     """
     
-    def __init__(self, project, parent = None, embeddedBrowser = True):
+    def __init__(self, project, parent=None, embeddedBrowser=True):
         """
         Constructor
         
@@ -60,21 +61,21 @@ class ProjectBrowser(E5TabWidget):
         self.vcsStatusIndicator = E5Led(self)
         self.setCornerWidget(self.vcsStatusIndicator, Qt.TopLeftCorner)
         self.vcsStatusColorNames = {
-            "A" : "VcsAdded",
-            "M" : "VcsModified",
-            "O" : "VcsRemoved", 
-            "R" : "VcsReplaced", 
-            "U" : "VcsUpdate",
-            "Z" : "VcsConflict",
+            "A": "VcsAdded",
+            "M": "VcsModified",
+            "O": "VcsRemoved",
+            "R": "VcsReplaced",
+            "U": "VcsUpdate",
+            "Z": "VcsConflict",
         }
         self.vcsStatusText = {
-            " " : self.trUtf8("up to date"), 
-            "A" : self.trUtf8("files added"), 
-            "M" : self.trUtf8("local modifications"), 
-            "O" : self.trUtf8("files removed"), 
-            "R" : self.trUtf8("files replaced"), 
-            "U" : self.trUtf8("update required"), 
-            "Z" : self.trUtf8("conflict"), 
+            " ": self.trUtf8("up to date"),
+            "A": self.trUtf8("files added"),
+            "M": self.trUtf8("local modifications"),
+            "O": self.trUtf8("files removed"),
+            "R": self.trUtf8("files replaced"),
+            "U": self.trUtf8("update required"),
+            "Z": self.trUtf8("conflict"),
         }
         self.__vcsStateChanged(" ")
         
@@ -166,32 +167,32 @@ class ProjectBrowser(E5TabWidget):
             self.setTabToolTip(index, self.psBrowser.windowTitle())
         
         if browserFlags & FormsBrowserFlag:
-            index = self.addTab(self.pfBrowser, 
+            index = self.addTab(self.pfBrowser,
                 UI.PixmapCache.getIcon("projectForms.png"), '')
             self.setTabToolTip(index, self.pfBrowser.windowTitle())
         
         if browserFlags & ResourcesBrowserFlag:
-            index = self.addTab(self.prBrowser, 
+            index = self.addTab(self.prBrowser,
                 UI.PixmapCache.getIcon("projectResources.png"), '')
             self.setTabToolTip(index, self.prBrowser.windowTitle())
         
         if browserFlags & TranslationsBrowserFlag:
-            index = self.addTab(self.ptBrowser, 
+            index = self.addTab(self.ptBrowser,
                 UI.PixmapCache.getIcon("projectTranslations.png"), '')
             self.setTabToolTip(index, self.ptBrowser.windowTitle())
         
         if browserFlags & InterfacesBrowserFlag:
-            index = self.addTab(self.piBrowser, 
+            index = self.addTab(self.piBrowser,
                 UI.PixmapCache.getIcon("projectInterfaces.png"), '')
             self.setTabToolTip(index, self.piBrowser.windowTitle())
         
         if browserFlags & OthersBrowserFlag:
-            index = self.addTab(self.poBrowser, 
+            index = self.addTab(self.poBrowser,
                 UI.PixmapCache.getIcon("projectOthers.png"), '')
             self.setTabToolTip(index, self.poBrowser.windowTitle())
         
         if self.embeddedBrowser:
-            index = self.addTab(self.fileBrowser, 
+            index = self.addTab(self.fileBrowser,
                 UI.PixmapCache.getIcon("browser.png"), '')
             self.setTabToolTip(index, self.fileBrowser.windowTitle())
         
@@ -260,7 +261,7 @@ class ProjectBrowser(E5TabWidget):
             endIndex = self.count() - 1
         else:
             endIndex = self.count()
-        for index in range(endIndex) :
+        for index in range(endIndex):
             self.setTabEnabled(index, self.project.isOpen())
         
         self.__setSourcesIcon()

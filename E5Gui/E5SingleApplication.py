@@ -22,9 +22,10 @@ import Utilities
 SAFile = "eric5"
 
 # define the protocol tokens
-SAOpenFile =        '>OpenFile<'
-SAOpenProject =     '>OpenProject<'
-SAArguments =       '>Arguments<'
+SAOpenFile = '>OpenFile<'
+SAOpenProject = '>OpenProject<'
+SAArguments = '>Arguments<'
+
 
 class E5SingleApplicationServer(SingleApplicationServer):
     """
@@ -78,6 +79,7 @@ class E5SingleApplicationServer(SingleApplicationServer):
         @param argsStr space delimited list of command args(string)
         """
         e5App().getObject("DebugUI").setArgvHistory(argsStr)
+
 
 class E5SingleApplicationClient(SingleApplicationClient):
     """

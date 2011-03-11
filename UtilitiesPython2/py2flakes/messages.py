@@ -7,6 +7,7 @@
 # This module is based on pyflakes for Python2 but was heavily hacked to
 # work within eric5
 
+
 class Message(object):
     """
     Class defining the base for all specific message classes.
@@ -37,10 +38,11 @@ class Message(object):
         """
         Public method to get the individual message data elements.
         
-        @return tuple containing file name, line number and message 
+        @return tuple containing file name, line number and message
             (string, integer, string)
         """
         return (self.filename, self.lineno, self.message % self.message_args)
+
 
 class UnusedImport(Message):
     """
@@ -58,6 +60,7 @@ class UnusedImport(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (name,)
+
 
 class RedefinedWhileUnused(Message):
     """
@@ -77,6 +80,7 @@ class RedefinedWhileUnused(Message):
         Message.__init__(self, filename, lineno)
         self.message_args = (name, orig_lineno)
 
+
 class ImportShadowedByLoopVar(Message):
     """
     Class defining the "Import Shadowed By Loop Var" message.
@@ -95,6 +99,7 @@ class ImportShadowedByLoopVar(Message):
         Message.__init__(self, filename, lineno)
         self.message_args = (name, orig_lineno)
 
+
 class ImportStarUsed(Message):
     """
     Class defining the "Import Star Used" message.
@@ -111,6 +116,7 @@ class ImportStarUsed(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (modname,)
+
 
 class UndefinedName(Message):
     """
@@ -129,6 +135,7 @@ class UndefinedName(Message):
         Message.__init__(self, filename, lineno)
         self.message_args = (name,)
 
+
 class UndefinedExport(Message):
     """
     Class defining the "Undefined Export" message.
@@ -145,6 +152,7 @@ class UndefinedExport(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (name,)
+
 
 class UndefinedLocal(Message):
     """
@@ -165,6 +173,7 @@ class UndefinedLocal(Message):
         Message.__init__(self, filename, lineno)
         self.message_args = (name, orig_lineno)
 
+
 class DuplicateArgument(Message):
     """
     Class defining the "Duplicate Argument" message.
@@ -181,6 +190,7 @@ class DuplicateArgument(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (name,)
+
 
 class RedefinedFunction(Message):
     """
@@ -200,6 +210,7 @@ class RedefinedFunction(Message):
         Message.__init__(self, filename, lineno)
         self.message_args = (name, orig_lineno)
 
+
 class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
@@ -216,6 +227,7 @@ class LateFutureImport(Message):
         """
         Message.__init__(self, filename, lineno)
         self.message_args = (names,)
+
 
 class UnusedVariable(Message):
     """

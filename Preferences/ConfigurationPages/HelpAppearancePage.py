@@ -18,6 +18,7 @@ from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 import Preferences
 import Utilities
 
+
 class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
     """
     Class implementing the Help Viewer Appearance page.
@@ -38,17 +39,17 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.standardFont = Preferences.getHelp("StandardFont")
         self.standardFontSample.setFont(self.standardFont)
         self.standardFontSample.setText("{0} {1}"\
-            .format(self.standardFont.family(), 
+            .format(self.standardFont.family(),
                     self.standardFont.pointSize()))
         
         self.fixedFont = Preferences.getHelp("FixedFont")
         self.fixedFontSample.setFont(self.fixedFont)
         self.fixedFontSample.setText("{0} {1}"\
-            .format(self.fixedFont.family(), 
+            .format(self.fixedFont.family(),
                     self.fixedFont.pointSize()))
         
         self.helpColours["SaveUrlColor"] = \
-            self.initColour("SaveUrlColor", self.secureURLsColourButton, 
+            self.initColour("SaveUrlColor", self.secureURLsColourButton,
                             Preferences.getHelp)
         
         self.autoLoadImagesCheckBox.setChecked(Preferences.getHelp("AutoLoadImages"))
@@ -92,7 +93,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         Private slot to set the colour for secure URLs.
         """
         self.helpColours["SaveUrlColor"] = \
-            self.selectColour(self.secureURLsColourButton, 
+            self.selectColour(self.secureURLsColourButton,
                               self.helpColours["SaveUrlColor"])
     
     @pyqtSlot()
@@ -109,6 +110,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         if file:
             self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

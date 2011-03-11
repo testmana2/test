@@ -18,6 +18,7 @@ from Preferences import Prefs, syncPreferences
 from E5XML.ShortcutsReader import ShortcutsReader
 from E5XML.ShortcutsWriter import ShortcutsWriter
 
+
 def __readShortcut(act, category, prefClass):
     """
     Private function to read a single keyboard shortcut from the settings.
@@ -36,7 +37,8 @@ def __readShortcut(act, category, prefClass):
         if accel is not None:
             act.setAlternateShortcut(QKeySequence(accel))
 
-def readShortcuts(prefClass = Prefs, helpViewer = None, pluginName = None):
+
+def readShortcuts(prefClass=Prefs, helpViewer=None, pluginName=None):
     """
     Module function to read the keyboard shortcuts for the defined QActions.
     
@@ -104,6 +106,7 @@ def readShortcuts(prefClass = Prefs, helpViewer = None, pluginName = None):
             # silently ignore non available plugins
             pass
     
+
 def __saveShortcut(act, category, prefClass):
     """
     Private function to write a single keyboard shortcut to the settings.
@@ -114,13 +117,14 @@ def __saveShortcut(act, category, prefClass):
     """
     if act.objectName():
         prefClass.settings.setValue(
-            "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()), 
+            "Shortcuts/{0}/{1}/Accel".format(category, act.objectName()),
             act.shortcut().toString())
         prefClass.settings.setValue(
-            "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()), 
+            "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()),
             act.alternateShortcut().toString())
 
-def saveShortcuts(prefClass = Prefs):
+
+def saveShortcuts(prefClass=Prefs):
     """
     Module function to write the keyboard shortcuts for the defined QActions.
     
@@ -179,6 +183,7 @@ def saveShortcuts(prefClass = Prefs):
     for act in e5App().getObject("DummyHelpViewer").getActions():
         __saveShortcut(act, "HelpViewer", prefClass)
 
+
 def exportShortcuts(fn):
     """
     Module function to export the keyboard shortcuts for the defined QActions.
@@ -196,9 +201,10 @@ def exportShortcuts(fn):
     else:
         E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts", 
+            QApplication.translate("Shortcuts",
                 "<p>The keyboard shortcuts could not be written to file <b>{0}</b>.</p>")
                 .format(fn))
+
 
 def importShortcuts(fn):
     """
@@ -223,10 +229,11 @@ def importShortcuts(fn):
     else:
         E5MessageBox.critical(None,
             QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-            QApplication.translate("Shortcuts", 
+            QApplication.translate("Shortcuts",
                 "<p>The keyboard shortcuts could not be read from file <b>{0}</b>.</p>")
                 .format(fn))
         return
+
 
 def __setAction(actions, sdict):
     """
@@ -244,55 +251,56 @@ def __setAction(actions, sdict):
             except KeyError:
                 pass
 
+
 def setActions(shortcuts):
     """
     Module function to set actions based on new format shortcuts file.
     
-    @param shortcuts dictionary containing the accelerator information 
+    @param shortcuts dictionary containing the accelerator information
         read from a XML file
     """
     if "Project" in shortcuts:
-        __setAction(e5App().getObject("Project").getActions(), 
+        __setAction(e5App().getObject("Project").getActions(),
             shortcuts["Project"])
     
     if "General" in shortcuts:
-        __setAction(e5App().getObject("UserInterface").getActions('ui'), 
+        __setAction(e5App().getObject("UserInterface").getActions('ui'),
             shortcuts["General"])
     
     if "Wizards" in shortcuts:
-        __setAction(e5App().getObject("UserInterface").getActions('wizards'), 
+        __setAction(e5App().getObject("UserInterface").getActions('wizards'),
             shortcuts["Wizards"])
     
     if "Debug" in shortcuts:
-        __setAction(e5App().getObject("DebugUI").getActions(), 
+        __setAction(e5App().getObject("DebugUI").getActions(),
             shortcuts["Debug"])
     
     if "Edit" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('edit'), 
+        __setAction(e5App().getObject("ViewManager").getActions('edit'),
             shortcuts["Edit"])
     
     if "File" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('file'), 
+        __setAction(e5App().getObject("ViewManager").getActions('file'),
             shortcuts["File"])
     
     if "Search" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('search'), 
+        __setAction(e5App().getObject("ViewManager").getActions('search'),
             shortcuts["Search"])
     
     if "View" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('view'), 
+        __setAction(e5App().getObject("ViewManager").getActions('view'),
             shortcuts["View"])
     
     if "Macro" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('macro'), 
+        __setAction(e5App().getObject("ViewManager").getActions('macro'),
             shortcuts["Macro"])
     
     if "Bookmarks" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('bookmark'), 
+        __setAction(e5App().getObject("ViewManager").getActions('bookmark'),
             shortcuts["Bookmarks"])
     
     if "Spelling" in shortcuts:
-        __setAction(e5App().getObject("ViewManager").getActions('spelling'), 
+        __setAction(e5App().getObject("ViewManager").getActions('spelling'),
             shortcuts["Spelling"])
     
     if "Window" in shortcuts:
@@ -306,5 +314,5 @@ def setActions(shortcuts):
             __setAction(actions, shortcuts[category])
     
     if "HelpViewer" in shortcuts:
-        __setAction(e5App().getObject("DummyHelpViewer").getActions(), 
+        __setAction(e5App().getObject("DummyHelpViewer").getActions(),
             shortcuts["HelpViewer"])

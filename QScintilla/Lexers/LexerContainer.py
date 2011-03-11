@@ -11,11 +11,12 @@ from PyQt4.Qsci import QsciLexer
 
 from .Lexer import Lexer
 
+
 class LexerContainer(QsciLexer, Lexer):
-    """ 
+    """
     Subclass as a base for the implementation of custom lexers.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

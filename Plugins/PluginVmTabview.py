@@ -30,16 +30,18 @@ pyqtApi = 2
 
 error = ""
 
+
 def previewPix():
     """
     Module function to return a preview pixmap.
     
     @return preview pixmap (QPixmap)
     """
-    fname = os.path.join(os.path.dirname(__file__), 
+    fname = os.path.join(os.path.dirname(__file__),
                          "ViewManagerPlugins", "Tabview", "preview.png")
     return QPixmap(fname)
     
+
 class VmTabviewPlugin(QObject):
     """
     Class implementing the Tabview view manager plugin.
@@ -57,7 +59,7 @@ class VmTabviewPlugin(QObject):
         """
         Public method to activate this plugin.
         
-        @return tuple of reference to instantiated viewmanager and 
+        @return tuple of reference to instantiated viewmanager and
             activation status (boolean)
         """
         from ViewManagerPlugins.Tabview.Tabview import Tabview

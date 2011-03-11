@@ -28,7 +28,7 @@ class AsyncIO(object):
         self.readfd = None
         self.writefd = None
 
-    def setDescriptors(self,rfd,wfd):
+    def setDescriptors(self, rfd, wfd):
         """
         Public method called to set the descriptors for the connection.
         
@@ -41,7 +41,7 @@ class AsyncIO(object):
         self.wbuf = ''
         self.writefd = wfd
 
-    def readReady(self,fd):
+    def readReady(self, fd):
         """
         Public method called when there is data ready to be read.
         
@@ -67,7 +67,7 @@ class AsyncIO(object):
             self.handleLine(s)
             eol = self.rbuf.find('\n')
 
-    def writeReady(self,fd):
+    def writeReady(self, fd):
         """
         Public method called when we are ready to write data.
         
@@ -77,7 +77,7 @@ class AsyncIO(object):
         self.writefd.flush()
         self.wbuf = ''
 
-    def write(self,s):
+    def write(self, s):
         """
         Public method to write a string.
         

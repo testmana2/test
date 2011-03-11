@@ -16,6 +16,7 @@ import QScintilla.Lexers
 
 import Preferences
 
+
 class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
     """
     Class implementing the editor highlighter keywords configuration page.
@@ -30,7 +31,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         
         # set initial values
         self.__keywords = {
-            "" : ["", "", "", "", "", "", "", "", "", ""]
+            "": ["", "", "", "", "", "", "", "", "", ""]
         }
         languages = sorted([''] + \
                     list(QScintilla.Lexers.getSupportedLanguages().keys()))
@@ -110,6 +111,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.currentApiLanguage = language
         self.currentSet = kwSet
         self.keywordsEdit.setPlainText(self.__keywords[language][kwSet])
+
 
 def create(dlg):
     """

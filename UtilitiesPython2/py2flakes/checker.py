@@ -14,6 +14,7 @@ from compiler import ast
 
 from py2flakes import messages
 
+
 class Binding(object):
     """
     Represents the binding of a value to a name.
@@ -37,10 +38,12 @@ class Binding(object):
             self.source.lineno,
             id(self))
 
+
 class UnBinding(Binding):
     '''
     Created by the 'del' operator.
     '''
+
 
 class Importation(Binding):
     """
@@ -51,10 +54,12 @@ class Importation(Binding):
         name = name.split('.')[0]
         super(Importation, self).__init__(name, source)
 
+
 class Argument(Binding):
     """
     Represents binding a name as an argument.
     """
+
 
 class Assignment(Binding):
     """
@@ -65,11 +70,13 @@ class Assignment(Binding):
     Assignments, rather it treats them as simple Bindings.
     """
 
+
 class FunctionDefinition(Binding):
     """
     Represents a function definition.
     """
     pass
+
 
 class ExportBinding(Binding):
     """
@@ -96,6 +103,7 @@ class ExportBinding(Binding):
                     names.append(node.value)
         return names
 
+
 class Scope(dict):
     """
     Class defining the scope base class.
@@ -108,11 +116,13 @@ class Scope(dict):
     def __init__(self):
         super(Scope, self).__init__()
 
+
 class ClassScope(Scope):
     """
     Class representing a name scope for a class.
     """
     pass
+
 
 class FunctionScope(Scope):
     """
@@ -122,6 +132,7 @@ class FunctionScope(Scope):
         super(FunctionScope, self).__init__()
         self.globals = {}
 
+
 class ModuleScope(Scope):
     """
     Class representing a name scope for a module.
@@ -130,6 +141,7 @@ class ModuleScope(Scope):
 
 # Globally defined names which are not attributes of the __builtin__ module.
 _MAGIC_GLOBALS = ['__file__', '__builtins__']
+
 
 class Checker(object):
     """
@@ -323,7 +335,6 @@ class Checker(object):
 
         self.handleChildren(node.body)
 
-
     def GLOBAL(self, node):
         """
         Keep track of globals declarations.
@@ -343,6 +354,7 @@ class Checker(object):
         Process bindings for loop variables.
         """
         vars = []
+
         def collectLoopVars(n):
             if hasattr(n, 'name'):
                 vars.append(n.name)
@@ -402,7 +414,6 @@ class Checker(object):
                 else:
                     self.report(messages.UndefinedName, node.lineno, node.name)
 
-
     def FUNCTION(self, node):
         if getattr(node, "decorators", None) is not None:
             self.handleChildren(node.decorators)
@@ -430,6 +441,7 @@ class Checker(object):
             for name in args:
                 self.addBinding(node.lineno, Argument(name, node), reportRedef=False)
             self.handleNode(node.code, node)
+
             def checkUnusedAssignments():
                 """
                 Check to see if any assignments have not been used.
@@ -443,7 +455,6 @@ class Checker(object):
             self.popScope()
 
         self.deferFunction(runFunction)
-
 
     def CLASS(self, node):
         """
@@ -459,7 +470,6 @@ class Checker(object):
         self.pushClassScope()
         self.handleChildren(node.code)
         self.popScope()
-
 
     def ASSNAME(self, node):
         if node.flags == 'OP_DELETE':

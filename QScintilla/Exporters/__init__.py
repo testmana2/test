@@ -9,6 +9,7 @@ Package implementing exporters for various file formats.
 
 from PyQt4.QtGui import QApplication
 
+
 def getSupportedFormats():
     """
     Module function to get a dictionary of supported exporters.
@@ -18,14 +19,15 @@ def getSupportedFormats():
         for the exporters (string)
     """
     supportedFormats = {
-        "HTML" : QApplication.translate('Exporters', "HTML"), 
-        "RTF"  : QApplication.translate('Exporters', "RTF"), 
-        "PDF"  : QApplication.translate('Exporters', "PDF"), 
-        "TeX"  : QApplication.translate('Exporters', "TeX"), 
-        "ODT"  : QApplication.translate('Exporters', "ODT"), 
+        "HTML": QApplication.translate('Exporters', "HTML"),
+        "RTF": QApplication.translate('Exporters', "RTF"),
+        "PDF": QApplication.translate('Exporters', "PDF"),
+        "TeX": QApplication.translate('Exporters', "TeX"),
+        "ODT": QApplication.translate('Exporters', "ODT"),
     }
     
     return supportedFormats
+
 
 def getExporter(format, editor):
     """

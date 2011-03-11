@@ -18,6 +18,7 @@ from .Ui_DebuggerRubyPage import Ui_DebuggerRubyPage
 import Preferences
 import Utilities
 
+
 class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
     """
     Class implementing the Debugger Ruby configuration page.
@@ -42,9 +43,9 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         Public slot to save the Debugger Ruby configuration.
         """
-        Preferences.setDebugger("RubyInterpreter", 
+        Preferences.setDebugger("RubyInterpreter",
             self.rubyInterpreterEdit.text())
-        Preferences.setDebugger("RubyRedirect", 
+        Preferences.setDebugger("RubyRedirect",
             self.rbRedirectCheckBox.isChecked())
         
     @pyqtSlot()
@@ -61,6 +62,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
             self.rubyInterpreterEdit.setText(
                 Utilities.toNativeSeparators(file))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

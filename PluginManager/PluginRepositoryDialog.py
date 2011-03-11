@@ -36,10 +36,11 @@ import UI.PixmapCache
 
 from eric5config import getConfig
 
-descrRole    = Qt.UserRole
-urlRole      = Qt.UserRole + 1
+descrRole = Qt.UserRole
+urlRole = Qt.UserRole + 1
 filenameRole = Qt.UserRole + 2
-authorRole   = Qt.UserRole + 3
+authorRole = Qt.UserRole + 3
+
 
 class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
@@ -49,7 +50,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
     """
     closeAndInstall = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -66,7 +67,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadCancelButton = \
             self.buttonBox.addButton(self.trUtf8("Cancel"), QDialogButtonBox.ActionRole)
         self.__installButton = \
-            self.buttonBox.addButton(self.trUtf8("Close && Install"), 
+            self.buttonBox.addButton(self.trUtf8("Close && Install"),
                                      QDialogButtonBox.ActionRole)
         self.__downloadCancelButton.setEnabled(False)
         self.__installButton.setEnabled(False)
@@ -171,8 +172,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         Private slot to download a new list and display the contents.
         """
         url = Preferences.getUI("PluginRepositoryUrl5")
-        self.__downloadFile(url, 
-                            self.pluginRepositoryFile, 
+        self.__downloadFile(url,
+                            self.pluginRepositoryFile,
                             self.__downloadRepositoryFileDone)
     
     def __downloadRepositoryFileDone(self, status, filename):
@@ -204,8 +205,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private method to download the next plugin.
         """
-        self.__downloadFile(self.__pluginsToDownload[0][0], 
-                            self.__pluginsToDownload[0][1], 
+        self.__downloadFile(self.__pluginsToDownload[0][0],
+                            self.__pluginsToDownload[0][1],
                             self.__downloadPluginDone)
     
     def __downloadPlugins(self):
@@ -244,7 +245,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private method to resort the tree.
         """
-        self.repositoryList.sortItems(self.repositoryList.sortColumn(), 
+        self.repositoryList.sortItems(self.repositoryList.sortColumn(),
                                       self.repositoryList.header().sortIndicatorOrder())
     
     def __populateList(self):
@@ -277,13 +278,13 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                         .format(self.pluginRepositoryFile))
         else:
             self.__repositoryMissing = True
-            QTreeWidgetItem(self.repositoryList, 
-                ["", 
+            QTreeWidgetItem(self.repositoryList,
+                ["",
                  self.trUtf8("No plugin repository file available.\nSelect Update.")
                 ])
             self.repositoryList.resizeColumnToContents(1)
     
-    def __downloadFile(self, url, filename, doneMethod = None):
+    def __downloadFile(self, url, filename, doneMethod=None):
         """
         Private slot to download the given file.
         
@@ -464,7 +465,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                         """<p>{0}</p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(errorString),
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         if ret:
             reply.ignoreSslErrors()
         else:
@@ -479,11 +480,12 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         return self.__pluginsDownloaded
 
+
 class PluginRepositoryDialog(QDialog):
     """
     Class for the dialog variant.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -519,11 +521,12 @@ class PluginRepositoryDialog(QDialog):
         """
         return self.cw.getDownloadedPlugins()
 
+
 class PluginRepositoryWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

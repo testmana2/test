@@ -20,11 +20,12 @@ from .Ui_PasswordsDialog import Ui_PasswordsDialog
 
 import UI.PixmapCache
 
+
 class PasswordsDialog(QDialog, Ui_PasswordsDialog):
     """
     Class implementing a dialog to show all saved logins.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

@@ -22,6 +22,7 @@ from Helpviewer.Download.DownloadManager import DownloadManager
 import Preferences
 import Utilities
 
+
 class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
     """
     Class implementing the Network configuration page.
@@ -73,9 +74,9 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Public slot to save the Application configuration.
         """
-        Preferences.setUI("DownloadPath", 
+        Preferences.setUI("DownloadPath",
             self.downloadDirEdit.text())
-        Preferences.setUI("RequestDownloadFilename", 
+        Preferences.setUI("RequestDownloadFilename",
             self.requestFilenameCheckBox.isChecked())
         if self.cleanupNeverButton.isChecked():
             policy = DownloadManager.RemoveNever
@@ -87,9 +88,9 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         Preferences.setUI("UseProxy",
             self.proxyGroup.isChecked())
-        Preferences.setUI("UseSystemProxy", 
+        Preferences.setUI("UseSystemProxy",
             self.systemProxyButton.isChecked())
-        Preferences.setUI("UseHttpProxyForAll", 
+        Preferences.setUI("UseHttpProxyForAll",
             self.httpProxyForAllCheckBox.isChecked())
         Preferences.setUI("ProxyHost/Http",
             self.httpProxyHostEdit.text())
@@ -121,6 +122,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
                 dn = dn[:-1]
             self.downloadDirEdit.setText(dn)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

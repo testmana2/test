@@ -17,6 +17,7 @@ from Tools import readEncodedFile, normalizeCode
 from py2flakes.checker import Checker
 from py2flakes.messages import ImportStarUsed
 
+
 def compile(file, codestring):
     """
     Function to compile one Python source file to Python bytecode.
@@ -45,7 +46,7 @@ def compile(file, codestring):
             __builtin__.compile(codestring, file, 'exec')
     except SyntaxError, detail:
         lines = traceback.format_exception_only(SyntaxError, detail)
-        match = re.match('\s*File "(.+)", line (\d+)', 
+        match = re.match('\s*File "(.+)", line (\d+)',
             lines[0].replace('<string>', '%s' % file))
         if match is not None:
             fn, line = match.group(1, 2)
@@ -93,13 +94,14 @@ def compile(file, codestring):
     
     return (0, None, None, None, None, None)
 
+
 def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     """
     Function to perform a pyflakes check.
     
     @param fileName name of the file (string)
     @param codestring source code to be checked (string)
-    @param ignoreStarImportWarnings flag indicating to 
+    @param ignoreStarImportWarnings flag indicating to
         ignore 'star import' warnings (boolean)
     @return list of strings containing the warnings
         (marker, file name, line number, message)
@@ -108,7 +110,7 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
     lines = codestring.splitlines()
     try:
         warnings = Checker(codestring, fileName)
-        warnings.messages.sort(key = lambda a: a.lineno)
+        warnings.messages.sort(key=lambda a: a.lineno)
         for warning in warnings.messages:
             if ignoreStarImportWarnings and \
                isinstance(warning, ImportStarUsed):

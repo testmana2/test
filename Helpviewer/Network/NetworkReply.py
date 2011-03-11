@@ -10,11 +10,12 @@ Module implementing a network reply object for special data.
 from PyQt4.QtCore import *
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 
+
 class NetworkReply(QNetworkReply):
     """
     Class implementing a QNetworkReply subclass for special data.
     """
-    def __init__(self, request, fileData, mimeType, parent = None):
+    def __init__(self, request, fileData, mimeType, parent=None):
         """
         Constructor
         
@@ -31,7 +32,7 @@ class NetworkReply(QNetworkReply):
         self.setOpenMode(QIODevice.ReadOnly)
         
         self.setHeader(QNetworkRequest.ContentTypeHeader, mimeType)
-        self.setHeader(QNetworkRequest.ContentLengthHeader, 
+        self.setHeader(QNetworkRequest.ContentLengthHeader,
                        QByteArray.number(fileData.length()))
         self.setAttribute(QNetworkRequest.HttpStatusCodeAttribute, 200)
         self.setAttribute(QNetworkRequest.HttpReasonPhraseAttribute, "OK")

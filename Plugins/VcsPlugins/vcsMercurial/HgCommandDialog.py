@@ -13,6 +13,7 @@ from .Ui_HgCommandDialog import Ui_HgCommandDialog
 
 import Utilities
 
+
 class HgCommandDialog(QDialog, Ui_HgCommandDialog):
     """
     Class implementing the Mercurial command dialog.
@@ -21,7 +22,7 @@ class HgCommandDialog(QDialog, Ui_HgCommandDialog):
     arbitrary Mercurial command. It asks the user to enter
     the commandline parameters.
     """
-    def __init__(self, argvList, ppath, parent = None):
+    def __init__(self, argvList, ppath, parent=None):
         """
         Constructor
         

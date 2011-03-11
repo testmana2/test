@@ -9,7 +9,9 @@ Module implementing the version control systems interface to Subversion.
 
 import os
 import shutil
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 import time
 
 from PyQt4.QtCore import *
@@ -53,6 +55,7 @@ from Plugins.VcsPlugins.vcsSubversion.SvnDialog import SvnDialog as SvnProcessDi
 
 import Utilities
 
+
 class Subversion(VersionControl):
     """
     Class implementing the version control systems interface to Subversion.
@@ -61,7 +64,7 @@ class Subversion(VersionControl):
     """
     committed = pyqtSignal()
     
-    def __init__(self, plugin, parent = None, name = None):
+    def __init__(self, plugin, parent=None, name=None):
         """
         Constructor
         
@@ -71,18 +74,18 @@ class Subversion(VersionControl):
         """
         VersionControl.__init__(self, parent, name)
         self.defaultOptions = {
-            'global' : [''],
-            'commit' : [''],
-            'checkout' : [''],
-            'update' : [''],
-            'add' : [''],
-            'remove' : [''],
-            'diff' : [''],
-            'log' : [''],
-            'history' : [''],
-            'status' : [''],
-            'tag' : [''],
-            'export' : ['']
+            'global': [''],
+            'commit': [''],
+            'checkout': [''],
+            'update': [''],
+            'add': [''],
+            'remove': [''],
+            'diff': [''],
+            'log': [''],
+            'history': [''],
+            'status': [''],
+            'tag': [''],
+            'export': ['']
         }
         self.interestingDataKeys = [
             "standardLayout",
@@ -101,7 +104,7 @@ class Subversion(VersionControl):
         self.showedBranches = False
         
         self.tagTypeList = [
-            'tags', 
+            'tags',
             'branches'
         ]
         
@@ -189,7 +192,7 @@ class Subversion(VersionControl):
         self.versionStr = ".".join([str(v) for v in pysvn.svn_version[:-1]])
         return True, ""
         
-    def vcsInit(self, vcsDir, noDialog = False):
+    def vcsInit(self, vcsDir, noDialog=False):
         """
         Public method used to initialize the subversion repository.
         
@@ -253,10 +256,10 @@ class Subversion(VersionControl):
                 project.closeProject()
                 return
             shutil.rmtree(tmpProjectDir, True)
-            project.closeProject(noSave = True)
+            project.closeProject(noSave=True)
             project.openProject(pfn)
         
-    def vcsImport(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsImport(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to import the project into the Subversion repository.
         
@@ -292,7 +295,7 @@ class Subversion(VersionControl):
                 shutil.copytree(projectDir, os.path.join(tmpDir, project))
         except OSError as e:
             if os.path.isdir(tmpDir):
-                shutil.rmtree(tmpDir, True)            
+                shutil.rmtree(tmpDir, True)
             return False, False
         
         locker = QMutexLocker(self.vcsExecutionMutex)
@@ -306,12 +309,12 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(self.trUtf8('Importing project into Subversion repository'),
                           "import{0} --message {1} .".format(
-                            (not recurse) and " --non-recursive" or "", 
+                            (not recurse) and " --non-recursive" or "",
                             msg),
                     client)
             QApplication.processEvents()
         try:
-            rev = client.import_(".", url, msg, recurse, ignore = True)
+            rev = client.import_(".", url, msg, recurse, ignore=True)
             status = True
         except pysvn.ClientError as e:
             status = False
@@ -329,7 +332,7 @@ class Subversion(VersionControl):
         shutil.rmtree(tmpDir, True)
         return status, False
         
-    def vcsCheckout(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsCheckout(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to check the project out of the Subversion repository.
         
@@ -377,7 +380,7 @@ class Subversion(VersionControl):
             dlg = \
                 SvnDialog(self.trUtf8('Checking project out of Subversion repository'),
                           "checkout{0} {1} {2}".format(
-                            (not recurse) and " --non-recursive" or "", 
+                            (not recurse) and " --non-recursive" or "",
                             url, projectDir),
                     client)
             QApplication.processEvents()
@@ -444,7 +447,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
-            client.export(url, projectDir, force = True, recurse = recurse)
+            client.export(url, projectDir, force=True, recurse=recurse)
             status = True
         except pysvn.ClientError as e:
             status = False
@@ -454,7 +457,7 @@ class Subversion(VersionControl):
         dlg.exec_()
         return status
         
-    def vcsCommit(self, name, message, noDialog = False):
+    def vcsCommit(self, name, message, noDialog=False):
         """
         Public method used to make the change of a file/directory permanent in the
         Subversion repository.
@@ -524,21 +527,21 @@ class Subversion(VersionControl):
                           "commit{0}{1}{2}{3} --message {4} {5}".format(
                             (not recurse) and " --non-recursive" or "",
                             keeplocks and " --keep-locks" or "",
-                            keepChangelists and " --keep-changelists" or "", 
+                            keepChangelists and " --keep-changelists" or "",
                             changelists and \
-                                " --changelist ".join([""] + changelists) or "", 
+                                " --changelist ".join([""] + changelists) or "",
                             msg, " ".join(fnames)),
                     client)
             QApplication.processEvents()
         try:
             if changelists:
-                rev = client.checkin(fnames, msg, 
-                                     recurse = recurse, keep_locks = keeplocks, 
-                                     keep_changelist = keepChangelists, 
-                                     changelists = changelists)
+                rev = client.checkin(fnames, msg,
+                                     recurse=recurse, keep_locks=keeplocks,
+                                     keep_changelist=keepChangelists,
+                                     changelists=changelists)
             else:
-                rev = client.checkin(fnames, msg, 
-                                     recurse = recurse, keep_locks = keeplocks)
+                rev = client.checkin(fnames, msg,
+                                     recurse=recurse, keep_locks=keeplocks)
         except pysvn.ClientError as e:
             rev = None
             if not noDialog:
@@ -553,7 +556,7 @@ class Subversion(VersionControl):
         self.committed.emit()
         self.checkVCSStatus()
         
-    def vcsUpdate(self, name, noDialog = False):
+    def vcsUpdate(self, name, noDialog=False):
         """
         Public method used to update a file/directory with the Subversion repository.
         
@@ -597,7 +600,7 @@ class Subversion(VersionControl):
         self.checkVCSStatus()
         return res
         
-    def vcsAdd(self, name, isDir = False, noDialog = False):
+    def vcsAdd(self, name, isDir=False, noDialog=False):
         """
         Public method used to add a file/directory to the Subversion repository.
         
@@ -659,7 +662,7 @@ class Subversion(VersionControl):
                     client)
             QApplication.processEvents()
         try:
-            client.add(names, recurse = recurse, force = force, ignore = not noignore)
+            client.add(names, recurse=recurse, force=force, ignore=not noignore)
         except pysvn.ClientError as e:
             if not noDialog:
                 dlg.showError(e.args[0])
@@ -669,7 +672,7 @@ class Subversion(VersionControl):
             dlg.exec_()
         os.chdir(cwd)
         
-    def vcsAddBinary(self, name, isDir = False):
+    def vcsAddBinary(self, name, isDir=False):
         """
         Public method used to add a file/directory in binary mode to the
         Subversion repository.
@@ -691,7 +694,7 @@ class Subversion(VersionControl):
             for n in path:
                 d = os.path.split(n)[0]
                 while not os.path.exists(os.path.join(d, self.adminDir)):
-                    # add directories recursively, 
+                    # add directories recursively,
                     # if they aren't in the repository already
                     if d in tree:
                         break
@@ -732,7 +735,7 @@ class Subversion(VersionControl):
                 client)
         QApplication.processEvents()
         try:
-            client.add(names, recurse = recurse, force = force, ignore = ignore)
+            client.add(names, recurse=recurse, force=force, ignore=ignore)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -740,7 +743,7 @@ class Subversion(VersionControl):
         dlg.exec_()
         os.chdir(cwd)
         
-    def vcsRemove(self, name, project = False, noDialog = False):
+    def vcsRemove(self, name, project=False, noDialog=False):
         """
         Public method used to remove a file/directory from the Subversion repository.
         
@@ -767,7 +770,7 @@ class Subversion(VersionControl):
             QApplication.processEvents()
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
-            client.remove(name, force = force)
+            client.remove(name, force=force)
             res = True
         except pysvn.ClientError as e:
             res = False
@@ -780,7 +783,7 @@ class Subversion(VersionControl):
         
         return res
         
-    def vcsMove(self, name, project, target = None, noDialog = False):
+    def vcsMove(self, name, project, target=None, noDialog=False):
         """
         Public method used to move a file/directory.
         
@@ -824,13 +827,13 @@ class Subversion(VersionControl):
                         self.trUtf8('Moving {0}').format(name),
                             "move{0}{1} {2} {3}".format(
                                 force and " --force" or "",
-                                log and (" --message {0}".format(log)) or "", 
+                                log and (" --message {0}".format(log)) or "",
                                 name, target),
-                        client, log = log)
+                        client, log=log)
                 QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
-                client.move(name, target, force = force)
+                client.move(name, target, force=force)
                 res = True
             except pysvn.ClientError as e:
                 res = False
@@ -855,7 +858,7 @@ class Subversion(VersionControl):
         
     def vcsLog(self, name):
         """
-        Public method used to view the log of a file/directory from the 
+        Public method used to view the log of a file/directory from the
         Subversion repository.
         
         @param name file/directory name to show the log of (string)
@@ -867,11 +870,11 @@ class Subversion(VersionControl):
         
     def vcsDiff(self, name):
         """
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         @param name file/directory name to be diffed (string)
@@ -883,7 +886,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -896,7 +899,7 @@ class Subversion(VersionControl):
         
     def vcsStatus(self, name):
         """
-        Public method used to view the status of files/directories in the 
+        Public method used to view the status of files/directories in the
         Subversion repository.
         
         @param name file/directory name(s) to show the status of
@@ -909,7 +912,7 @@ class Subversion(VersionControl):
         
     def vcsTag(self, name):
         """
-        Public method used to set the tag of a file/directory in the 
+        Public method used to set the tag of a file/directory in the
         Subversion repository.
         
         @param name file/directory name to be tagged (string)
@@ -966,7 +969,7 @@ class Subversion(VersionControl):
                 SvnDialog(
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
                         "copy --message {0} {1} {2}".format(log, reposURL, url),
-                    client, log = log)
+                    client, log=log)
             QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
@@ -980,7 +983,7 @@ class Subversion(VersionControl):
                 SvnDialog(
                     self.trUtf8('Tagging {0} in the Subversion repository').format(name),
                         "remove --message {0} {1}".format(log, url),
-                    client, log = log)
+                    client, log=log)
             QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
@@ -1100,7 +1103,7 @@ class Subversion(VersionControl):
         dname, fname = self.splitPath(name)
         
         opts = self.options['global']
-        dlg = SvnMergeDialog(self.mergeList[0], self.mergeList[1], self.mergeList[2], 
+        dlg = SvnMergeDialog(self.mergeList[0], self.mergeList[1], self.mergeList[2],
                              "--force" in opts)
         if dlg.exec_() == QDialog.Accepted:
             urlrev1, urlrev2, target, force = dlg.getParameters()
@@ -1181,14 +1184,14 @@ class Subversion(VersionControl):
                     "merge{0}{1} {2} {3} {4}".format(
                         (not recurse) and " --non-recursive" or "",
                         force and " --force" or "",
-                        "{0}{1}".format(url1, rev1 and ("@"+rev1) or ""),
-                        "{0}{1}".format(url2, rev2 and ("@"+rev2) or ""),
+                        "{0}{1}".format(url1, rev1 and ("@" + rev1) or ""),
+                        "{0}{1}".format(url2, rev2 and ("@" + rev2) or ""),
                         fname),
                 client)
         QApplication.processEvents()
         try:
-            client.merge(url1, revision1, url2, revision2, fname, 
-                         recurse = recurse, force = force)
+            client.merge(url1, revision1, url2, revision2, fname,
+                         recurse=recurse, force=force)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -1212,14 +1215,14 @@ class Subversion(VersionControl):
                 return self.canBeAdded
         
         name = os.path.normcase(name)
-        states = { name : 0 }
+        states = {name: 0}
         states = self.vcsAllRegisteredStates(states, dname, False)
         if states[name] == self.canBeCommitted:
             return self.canBeCommitted
         else:
             return self.canBeAdded
         
-    def vcsAllRegisteredStates(self, names, dname, shortcut = True):
+    def vcsAllRegisteredStates(self, names, dname, shortcut=True):
         """
         Public method used to get the registered states of a number of files in the vcs.
         
@@ -1230,7 +1233,7 @@ class Subversion(VersionControl):
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
         @param shortcut flag indicating a shortcut should be taken (boolean)
-        @return the received dictionary completed with a combination of 
+        @return the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
         """
         if not os.path.isdir(os.path.join(dname, self.adminDir)):
@@ -1258,8 +1261,8 @@ class Subversion(VersionControl):
             
             try:
                 locker = QMutexLocker(self.vcsExecutionMutex)
-                allFiles = client.status(dname, recurse = True, get_all = True, 
-                                              ignore = True, update = False)
+                allFiles = client.status(dname, recurse=True, get_all=True,
+                                              ignore=True, update=False)
                 locker.unlock()
                 for file in allFiles:
                     name = os.path.normcase(file.path)
@@ -1337,7 +1340,7 @@ class Subversion(VersionControl):
             if res:
                 dia.exec_()
         
-    def vcsOptionsDialog(self, project, archive, editable = False, parent = None):
+    def vcsOptionsDialog(self, project, archive, editable=False, parent=None):
         """
         Public method to get a dialog to enter repository info.
         
@@ -1348,7 +1351,7 @@ class Subversion(VersionControl):
         """
         return SvnOptionsDialog(self, project, parent)
         
-    def vcsNewProjectOptionsDialog(self, parent = None):
+    def vcsNewProjectOptionsDialog(self, parent=None):
         """
         Public method to get a dialog to enter repository info for getting a new project.
         
@@ -1370,7 +1373,7 @@ class Subversion(VersionControl):
         
         if hasattr(pysvn, 'svn_api_version'):
             apiVersion = "{0} {1}".format(
-                ".".join([str(v) for v in pysvn.svn_api_version[:3]]), 
+                ".".join([str(v) for v in pysvn.svn_api_version[:3]]),
                 pysvn.svn_api_version[3])
         else:
             apiVersion = QApplication.translate('subversion', "unknown")
@@ -1388,14 +1391,14 @@ class Subversion(VersionControl):
             """<tr><td><b>Last author</b></td><td>{8}</td></tr>"""
             """</table>"""
             )\
-            .format(".".join([str(v) for v in pysvn.version]), 
-                    ".".join([str(v) for v in pysvn.svn_version[:3]]), 
-                    apiVersion, 
-                    entry.url, 
-                    entry.revision.number, 
-                    entry.commit_revision.number, 
-                    time.strftime("%Y-%m-%d", time.localtime(entry.commit_time)), 
-                    time.strftime("%H:%M:%S %Z", time.localtime(entry.commit_time)), 
+            .format(".".join([str(v) for v in pysvn.version]),
+                    ".".join([str(v) for v in pysvn.svn_version[:3]]),
+                    apiVersion,
+                    entry.url,
+                    entry.revision.number,
+                    entry.commit_revision.number,
+                    time.strftime("%Y-%m-%d", time.localtime(entry.commit_time)),
+                    time.strftime("%H:%M:%S %Z", time.localtime(entry.commit_time)),
                     entry.commit_author
             )
     
@@ -1441,13 +1444,13 @@ class Subversion(VersionControl):
         dlg = \
             SvnDialog(self.trUtf8('Resolving conficts'),
                       "resolved{0} {1}".format(
-                        (not recurse) and " --non-recursive" or "", 
+                        (not recurse) and " --non-recursive" or "",
                         " ".join(fnames)),
                 client)
         QApplication.processEvents()
         try:
             for name in fnames:
-                client.resolved(name, recurse = recurse)
+                client.resolved(name, recurse=recurse)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -1481,9 +1484,9 @@ class Subversion(VersionControl):
                 SvnDialog(
                     self.trUtf8('Copying {0}').format(name),
                         "copy{0} {1} {2}".format(
-                            log and (" --message {0}".format(log)) or "", 
+                            log and (" --message {0}".format(log)) or "",
                             name, target),
-                    client, log = log)
+                    client, log=log)
             QApplication.processEvents()
             locker = QMutexLocker(self.vcsExecutionMutex)
             try:
@@ -1504,7 +1507,7 @@ class Subversion(VersionControl):
                     project.appendFile(target)
         return res
     
-    def svnListProps(self, name, recursive = False):
+    def svnListProps(self, name, recursive=False):
         """
         Public method used to list the properties of a file/directory.
         
@@ -1516,7 +1519,7 @@ class Subversion(VersionControl):
         QApplication.processEvents()
         self.propList.start(name, recursive)
         
-    def svnSetProp(self, name, recursive = False):
+    def svnSetProp(self, name, recursive=False):
         """
         Public method used to add a property to a file/directory.
         
@@ -1556,8 +1559,8 @@ class Subversion(VersionControl):
             QApplication.processEvents()
             try:
                 for name in fnames:
-                    client.propset(propName, propValue, name, 
-                                   recurse = recurse, skip_checks = skipchecks)
+                    client.propset(propName, propValue, name,
+                                   recurse=recurse, skip_checks=skipchecks)
             except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
@@ -1566,7 +1569,7 @@ class Subversion(VersionControl):
             dlg.exec_()
             os.chdir(cwd)
         
-    def svnDelProp(self, name, recursive = False):
+    def svnDelProp(self, name, recursive=False):
         """
         Public method used to delete a property of a file/directory.
         
@@ -1606,8 +1609,8 @@ class Subversion(VersionControl):
             QApplication.processEvents()
             try:
                 for name in fnames:
-                    client.propdel(propName, name, 
-                                   recurse = recurse, skip_checks = skipchecks)
+                    client.propdel(propName, name,
+                                   recurse=recurse, skip_checks=skipchecks)
             except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
@@ -1616,7 +1619,7 @@ class Subversion(VersionControl):
             dlg.exec_()
             os.chdir(cwd)
         
-    def svnListTagBranch(self, path, tags = True):
+    def svnListTagBranch(self, path, tags=True):
         """
         Public method used to list the available tags or branches.
         
@@ -1653,11 +1656,11 @@ class Subversion(VersionControl):
         
     def svnExtendedDiff(self, name):
         """
-        Public method used to view the difference of a file/directory to the 
+        Public method used to view the difference of a file/directory to the
         Subversion repository.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         This method gives the chance to enter the revisions to be compared.
@@ -1671,7 +1674,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -1691,7 +1694,7 @@ class Subversion(VersionControl):
         repository URLs.
         
         If name is a directory and is the project directory, all project files
-        are saved first. If name is a file (or list of files), which is/are being edited 
+        are saved first. If name is a file (or list of files), which is/are being edited
         and has unsaved modification, they can be saved or the operation may be aborted.
         
         This method gives the chance to enter the revisions to be compared.
@@ -1705,7 +1708,7 @@ class Subversion(VersionControl):
         for nam in names:
             if os.path.isfile(nam):
                 editor = e5App().getObject("ViewManager").getOpenEditor(nam)
-                if editor and not editor.checkDirty() :
+                if editor and not editor.checkDirty():
                     return
             else:
                 project = e5App().getObject("Project")
@@ -1720,11 +1723,11 @@ class Subversion(VersionControl):
             self.diff = SvnDiffDialog(self)
             self.diff.show()
             QApplication.processEvents()
-            self.diff.start(name, urls = urls, summary = summary)
+            self.diff.start(name, urls=urls, summary=summary)
         
     def svnLogLimited(self, name):
         """
-        Public method used to view the (limited) log of a file/directory from the 
+        Public method used to view the (limited) log of a file/directory from the
         Subversion repository.
         
         @param name file/directory name to show the log of (string)
@@ -1742,7 +1745,7 @@ class Subversion(VersionControl):
         
     def svnLogBrowser(self, path):
         """
-        Public method used to browse the log of a file/directory from the 
+        Public method used to browse the log of a file/directory from the
         Subversion repository.
         
         @param path file/directory name to show the log of (string)
@@ -1786,10 +1789,10 @@ class Subversion(VersionControl):
                         stealIt and " --force" or "",
                         comment and (" --message {0}".format(comment)) or "",
                         " ".join(fnames)),
-                client, parent = parent)
+                client, parent=parent)
         QApplication.processEvents()
         try:
-            client.lock(fnames, comment, force = stealIt)
+            client.lock(fnames, comment, force=stealIt)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         except AttributeError as e:
@@ -1823,10 +1826,10 @@ class Subversion(VersionControl):
                     "unlock{0} {1}".format(
                         breakIt and " --force" or "",
                         " ".join(fnames)),
-                client, parent = parent)
+                client, parent=parent)
         QApplication.processEvents()
         try:
-            client.unlock(fnames, force = breakIt)
+            client.unlock(fnames, force=breakIt)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         except AttributeError as e:
@@ -1870,14 +1873,14 @@ class Subversion(VersionControl):
                 if inside:
                     client.switch(projectPath, newUrl)
                 else:
-                    client.relocate(currUrl, newUrl, projectPath, recurse = True)
+                    client.relocate(currUrl, newUrl, projectPath, recurse=True)
             except pysvn.ClientError as e:
                 dlg.showError(e.args[0])
             locker.unlock()
             dlg.finish()
             dlg.exec_()
         
-    def svnRepoBrowser(self, projectPath = None):
+    def svnRepoBrowser(self, projectPath=None):
         """
         Public method to open the repository browser.
         
@@ -1956,7 +1959,7 @@ class Subversion(VersionControl):
         locker = QMutexLocker(self.vcsExecutionMutex)
         try:
             for name in names:
-                client.add_to_changelist(name, clname, depth = pysvn.depth.infinity)
+                client.add_to_changelist(name, clname, depth=pysvn.depth.infinity)
         except pysvn.ClientError as e:
             dlg.showError(e.args[0])
         locker.unlock()
@@ -1979,7 +1982,7 @@ class Subversion(VersionControl):
         if len(url) == 3:
             scheme = url[0]
             host = url[1]
-            port, path = url[2].split("/",1)
+            port, path = url[2].split("/", 1)
             return "{0}:{1}:{2}/{3}".format(scheme, host, port, urllib.parse.quote(path))
         else:
             scheme = url[0]
@@ -2010,7 +2013,7 @@ class Subversion(VersionControl):
     ## Methods to get the helper objects are below.
     ############################################################################
     
-    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser = False):
+    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
         """
         Public method to instanciate a helper object for the different project browsers.
         

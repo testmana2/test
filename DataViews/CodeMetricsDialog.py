@@ -20,11 +20,12 @@ import Utilities
 
 import UI.PixmapCache
 
+
 class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
     """
     Class implementing a dialog to display the code metrics.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -71,7 +72,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         @return the generated item
         """
         itm = QTreeWidgetItem(parent, strings)
-        for col in range(1,7):
+        for col in range(1, 7):
             itm.setTextAlignment(col, Qt.Alignment(Qt.AlignRight))
         return itm
         
@@ -111,7 +112,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         
         self.__data = self.__project.getData("OTHERTOOLSPARMS", "CodeMetrics")
         if self.__data is None or "ExcludeFiles" not in self.__data:
-            self.__data = {"ExcludeFiles" : ""}
+            self.__data = {"ExcludeFiles": ""}
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         
     def start(self, fn):
@@ -186,11 +187,11 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.__createSummaryItem(self.trUtf8("lines"), loc.toString(total['lines']))
         self.__createSummaryItem(self.trUtf8("bytes"), loc.toString(total['bytes']))
         self.__createSummaryItem(self.trUtf8("comments"), loc.toString(total['comments']))
-        self.__createSummaryItem(self.trUtf8("empty lines"), 
+        self.__createSummaryItem(self.trUtf8("empty lines"),
                                  loc.toString(total['empty lines']))
-        self.__createSummaryItem(self.trUtf8("non-commentary lines"), 
+        self.__createSummaryItem(self.trUtf8("non-commentary lines"),
                                  loc.toString(total['non-commentary lines']))
-        self.__createSummaryItem(self.trUtf8("documentation lines"), 
+        self.__createSummaryItem(self.trUtf8("documentation lines"),
                                  loc.toString(docstrings))
         self.__resizeSummaryColumns()
         self.__finish()

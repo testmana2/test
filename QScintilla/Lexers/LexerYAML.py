@@ -12,11 +12,12 @@ from PyQt4.Qsci import QsciLexerYAML
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerYAML(QsciLexerYAML, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -53,7 +54,7 @@ class LexerYAML(QsciLexerYAML, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerYAML.keywords(self, kwSet)

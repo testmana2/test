@@ -905,7 +905,7 @@ flag indicating whether the markers were shown or cleared
 <h4>ViewManager.__cursorChanged</h4>
 <b>__cursorChanged</b>(<i>fn, line, pos</i>)
 <p>
-        Private slot to handle the cursorChanged signal. 
+        Private slot to handle the cursorChanged signal.
 </p><p>
         It emits the signal cursorChanged with parameter editor.
 </p><dl>
@@ -1344,7 +1344,7 @@ text to search for (string)
         Private slot to set the automatic spell checking of all editors.
 </p><a NAME="ViewManager.__setSbFile" ID="ViewManager.__setSbFile"></a>
 <h4>ViewManager.__setSbFile</h4>
-<b>__setSbFile</b>(<i>fn = None, line = None, pos = None, encoding = None, language = None, eol = None</i>)
+<b>__setSbFile</b>(<i>fn=None, line=None, pos=None, encoding=None, language=None, eol=None</i>)
 <p>
         Private method to set the file info in the status bar.
 </p><dl>
@@ -1480,7 +1480,7 @@ Not implemented
 </dd>
 </dl><a NAME="ViewManager._checkActions" ID="ViewManager._checkActions"></a>
 <h4>ViewManager._checkActions</h4>
-<b>_checkActions</b>(<i>editor, setSb = True</i>)
+<b>_checkActions</b>(<i>editor, setSb=True</i>)
 <p>
         Protected slot to check some actions for their enable/disable status
         and set the statusbar info.
@@ -1509,7 +1509,7 @@ name of the filename filter (string) or None
 <h4>ViewManager._getOpenStartDir</h4>
 <b>_getOpenStartDir</b>(<i></i>)
 <p>
-        Protected method to return the starting directory for a file open dialog. 
+        Protected method to return the starting directory for a file open dialog.
 </p><p>
         The appropriate starting directory is calculated
         using the following search order, until a match is found:<br />
@@ -1719,7 +1719,7 @@ flag indicating successful reset of all dirty flags (boolean)
 </dd>
 </dl><a NAME="ViewManager.checkDirty" ID="ViewManager.checkDirty"></a>
 <h4>ViewManager.checkDirty</h4>
-<b>checkDirty</b>(<i>editor, autosave = False</i>)
+<b>checkDirty</b>(<i>editor, autosave=False</i>)
 <p>
         Public method to check dirty status and open a message window.
 </p><dl>
@@ -1801,7 +1801,7 @@ editor to be closed
 <h4>ViewManager.closeViewManager</h4>
 <b>closeViewManager</b>(<i></i>)
 <p>
-        Public method to shutdown the viewmanager. 
+        Public method to shutdown the viewmanager.
 </p><p>
         If it cannot close all editor windows, it aborts the shutdown process.
 </p><dl>
@@ -1828,7 +1828,7 @@ flag indicating success (boolean)
 <h4>ViewManager.editorsCheckFocusInEnabled</h4>
 <b>editorsCheckFocusInEnabled</b>(<i></i>)
 <p>
-        Public method returning the flag indicating editors should perform 
+        Public method returning the flag indicating editors should perform
         focus in checks.
 </p><dl>
 <dt>Returns:</dt>
@@ -1908,7 +1908,7 @@ filename of active window (string)
 </dd>
 </dl><a NAME="ViewManager.getEditor" ID="ViewManager.getEditor"></a>
 <h4>ViewManager.getEditor</h4>
-<b>getEditor</b>(<i>fn, filetype = ""</i>)
+<b>getEditor</b>(<i>fn, filetype=""</i>)
 <p>
         Public method to return the editor displaying the given file.
 </p><p>
@@ -2211,7 +2211,7 @@ flag indicating the connection status (boolean)
         Public slot to generate a new empty editor.
 </p><a NAME="ViewManager.newEditorView" ID="ViewManager.newEditorView"></a>
 <h4>ViewManager.newEditorView</h4>
-<b>newEditorView</b>(<i>fn, caller, filetype = ""</i>)
+<b>newEditorView</b>(<i>fn, caller, filetype=""</i>)
 <p>
         Public method to create a new editor displaying the given document.
 </p><dl>
@@ -2232,7 +2232,7 @@ type of the source file (string)
         Public slot used to move to the next split.
 </p><a NAME="ViewManager.openFiles" ID="ViewManager.openFiles"></a>
 <h4>ViewManager.openFiles</h4>
-<b>openFiles</b>(<i>prog = None</i>)
+<b>openFiles</b>(<i>prog=None</i>)
 <p>
         Public slot to open some files.
 </p><dl>
@@ -2242,7 +2242,7 @@ name of file to be opened (string)
 </dd>
 </dl><a NAME="ViewManager.openSourceFile" ID="ViewManager.openSourceFile"></a>
 <h4>ViewManager.openSourceFile</h4>
-<b>openSourceFile</b>(<i>fn, lineno = None, filetype = "", selStart = 0, selEnd = 0, pos = 0</i>)
+<b>openSourceFile</b>(<i>fn, lineno=None, filetype="", selStart=0, selEnd=0, pos=0</i>)
 <p>
         Public slot to display a file in an editor.
 </p><dl>
@@ -2464,7 +2464,7 @@ Not implemented
 </dd>
 </dl><a NAME="ViewManager.setFileLine" ID="ViewManager.setFileLine"></a>
 <h4>ViewManager.setFileLine</h4>
-<b>setFileLine</b>(<i>fn, line, error = False, syntaxError = False</i>)
+<b>setFileLine</b>(<i>fn, line, error=False, syntaxError=False</i>)
 <p>
         Public method to update the user interface when the current program
         or line changes.
@@ -2592,9 +2592,9 @@ Not implemented
         Public slot to start a shared edit session for the current editor.
 </p><a NAME="ViewManager.textForFind" ID="ViewManager.textForFind"></a>
 <h4>ViewManager.textForFind</h4>
-<b>textForFind</b>(<i>getCurrentWord = True</i>)
+<b>textForFind</b>(<i>getCurrentWord=True</i>)
 <p>
-        Public method to determine the selection or the current word for the next 
+        Public method to determine the selection or the current word for the next
         find operation.
 </p><dl>
 <dt><i>getCurrentWord</i></dt>
@@ -2619,7 +2619,7 @@ Not implemented
 </dd>
 </dl><a NAME="ViewManager.unhighlight" ID="ViewManager.unhighlight"></a>
 <h4>ViewManager.unhighlight</h4>
-<b>unhighlight</b>(<i>current = False</i>)
+<b>unhighlight</b>(<i>current=False</i>)
 <p>
         Public method to switch off all highlights.
 </p><dl>

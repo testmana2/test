@@ -165,6 +165,7 @@ class Redirector(QObject):
         self.buffer += str(s)
         self.__nWrite(self.__bufferedWrite())
 
+
 class UserInterface(QMainWindow):
     """
     Class implementing the main user interface.
@@ -248,7 +249,7 @@ class UserInterface(QMainWindow):
         splash.showMessage(self.trUtf8("Initializing Plugin Manager..."))
         
         # Initialize the Plugin Manager (Plugins are initialized later
-        self.pluginManager = PluginManager(self, develPlugin = plugin)
+        self.pluginManager = PluginManager(self, develPlugin=plugin)
         
         splash.showMessage(self.trUtf8("Generating Main User Interface..."))
         
@@ -258,7 +259,7 @@ class UserInterface(QMainWindow):
         
         # Generate the debugger part of the ui
         logging.debug("Creating Debugger UI...")
-        self.debuggerUI = DebugUI(self, self.viewmanager, debugServer, 
+        self.debuggerUI = DebugUI(self, self.viewmanager, debugServer,
                                   self.debugViewer, self.project)
         self.debugViewer.setDebugger(self.debuggerUI)
         self.shell.setDebuggerUI(self.debuggerUI)
@@ -449,7 +450,7 @@ class UserInterface(QMainWindow):
         self.findFilesDialog.sourceFile.connect(
             self.viewmanager.openSourceFile)
         self.findFilesDialog.designerFile.connect(self.__designer)
-        self.replaceFilesDialog = FindFileDialog(self.project, replaceMode = True)
+        self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
         self.replaceFilesDialog.sourceFile.connect(
             self.viewmanager.openSourceFile)
         self.replaceFilesDialog.designerFile.connect(self.__designer)
@@ -600,7 +601,7 @@ class UserInterface(QMainWindow):
         styleSheetFile = Preferences.getUI("StyleSheet")
         if styleSheetFile:
             try:
-                f = open(styleSheetFile, "r", encoding = "utf-8")
+                f = open(styleSheetFile, "r", encoding="utf-8")
                 styleSheet = f.read()
                 f.close()
             except IOError as msg:
@@ -678,7 +679,7 @@ class UserInterface(QMainWindow):
 
         # Create the debug viewer maybe without the embedded shell
         self.debugViewer = DebugViewer(debugServer, False, self.viewmanager, None,
-            embeddedShell=self.embeddedShell, 
+            embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
         self.debugViewer.setWindowTitle(self.trUtf8("Debug-Viewer"))
 
@@ -710,9 +711,9 @@ class UserInterface(QMainWindow):
         self.numbersViewer = NumbersWidget()
         self.numbersViewer.setWindowTitle(self.trUtf8("Numbers"))
         
-        self.windows = [self.projectBrowser, None, self.debugViewer, 
-            None, self.logViewer, self.taskViewer, self.templateViewer, 
-            self.multiProjectBrowser, self.terminal, self.cooperation, 
+        self.windows = [self.projectBrowser, None, self.debugViewer,
+            None, self.logViewer, self.taskViewer, self.templateViewer,
+            self.multiProjectBrowser, self.terminal, self.cooperation,
             self.symbolsViewer, self.numbersViewer]
 
         if self.embeddedShell:
@@ -727,7 +728,7 @@ class UserInterface(QMainWindow):
             self.browser = Browser(None)
             self.browser.setWindowTitle(self.trUtf8("File-Browser"))
             self.windows[1] = self.browser
-        elif self.embeddedFileBrowser == 1: # embedded in debug browser
+        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
             self.browser = self.debugViewer.browser
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
@@ -750,21 +751,21 @@ class UserInterface(QMainWindow):
             self.__createDockWindow("MultiProjectBrowserDock")
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
         self.__setupDockWindow(self.multiProjectBrowserDock, Qt.LeftDockWidgetArea,
-                             self.multiProjectBrowser, 
+                             self.multiProjectBrowser,
                              self.trUtf8("Multiproject-Viewer"))
 
         # Create the debug viewer maybe without the embedded shell
         self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
-        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager, 
+        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
             self.debugViewerDock,
-            embeddedShell=self.embeddedShell, 
+            embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
         self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.cooperation = ChatWidget(parent=self.cooperationDock)
         self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
                              self.cooperation, self.trUtf8("Cooperation"))
         
@@ -782,7 +783,7 @@ class UserInterface(QMainWindow):
 
         # Create the template viewer part of the user interface
         self.templateViewerDock = self.__createDockWindow("TemplateViewerDock")
-        self.templateViewer = TemplateViewer(self.templateViewerDock, 
+        self.templateViewer = TemplateViewer(self.templateViewerDock,
                                              self.viewmanager)
         self.__setupDockWindow(self.templateViewerDock, Qt.RightDockWidgetArea,
                              self.templateViewer, self.trUtf8("Template-Viewer"))
@@ -793,8 +794,8 @@ class UserInterface(QMainWindow):
         self.__setupDockWindow(self.terminalDock, Qt.BottomDockWidgetArea,
                              self.terminal, self.trUtf8("Terminal"))
         
-        self.windows = [self.projectBrowserDock, None, self.debugViewerDock, 
-            None, self.logViewerDock, self.taskViewerDock, self.templateViewerDock, 
+        self.windows = [self.projectBrowserDock, None, self.debugViewerDock,
+            None, self.logViewerDock, self.taskViewerDock, self.templateViewerDock,
             self.multiProjectBrowserDock, self.terminalDock, self.cooperationDock]
 
         if self.embeddedShell:
@@ -814,7 +815,7 @@ class UserInterface(QMainWindow):
             self.__setupDockWindow(self.browserDock, Qt.RightDockWidgetArea,
                                  self.browser, self.trUtf8("File-Browser"))
             self.windows[1] = self.browserDock
-        elif self.embeddedFileBrowser == 1: # embedded in debug browser
+        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
             self.browser = self.debugViewer.browser
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
@@ -842,69 +843,69 @@ class UserInterface(QMainWindow):
         # Create the vertical toolbox
         self.vToolboxDock = self.__createDockWindow("vToolboxDock")
         self.vToolbox = E5VerticalToolBox(self.vToolboxDock)
-        self.__setupDockWindow(self.vToolboxDock, Qt.LeftDockWidgetArea, 
+        self.__setupDockWindow(self.vToolboxDock, Qt.LeftDockWidgetArea,
                                self.vToolbox, self.trUtf8("Vertical Toolbox"))
         
         # Create the horizontal toolbox
         self.hToolboxDock = self.__createDockWindow("hToolboxDock")
         self.hToolbox = E5HorizontalToolBox(self.hToolboxDock)
-        self.__setupDockWindow(self.hToolboxDock, Qt.BottomDockWidgetArea, 
+        self.__setupDockWindow(self.hToolboxDock, Qt.BottomDockWidgetArea,
                                self.hToolbox, self.trUtf8("Horizontal Toolbox"))
         
         # Create the project browser
         self.projectBrowser = ProjectBrowser(self.project, None,
             embeddedBrowser=(self.embeddedFileBrowser == 2))
-        self.vToolbox.addItem(self.projectBrowser, 
-                              UI.PixmapCache.getIcon("projectViewer.png"), 
+        self.vToolbox.addItem(self.projectBrowser,
+                              UI.PixmapCache.getIcon("projectViewer.png"),
                               self.trUtf8("Project-Viewer"))
 
         # Create the multi project browser
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
-        self.vToolbox.addItem(self.multiProjectBrowser, 
-                              UI.PixmapCache.getIcon("multiProjectViewer.png"), 
+        self.vToolbox.addItem(self.multiProjectBrowser,
+                              UI.PixmapCache.getIcon("multiProjectViewer.png"),
                               self.trUtf8("Multiproject-Viewer"))
 
         # Create the template viewer part of the user interface
-        self.templateViewer = TemplateViewer(None, 
+        self.templateViewer = TemplateViewer(None,
                                              self.viewmanager)
-        self.vToolbox.addItem(self.templateViewer, 
-                              UI.PixmapCache.getIcon("templateViewer.png"), 
+        self.vToolbox.addItem(self.templateViewer,
+                              UI.PixmapCache.getIcon("templateViewer.png"),
                               self.trUtf8("Template-Viewer"))
 
         # Create the debug viewer maybe without the embedded shell
         self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
-        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager, 
+        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
             self.debugViewerDock,
-            embeddedShell=self.embeddedShell, 
+            embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
         self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.cooperation = ChatWidget(parent=self.cooperationDock)
         self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
                              self.cooperation, self.trUtf8("Cooperation"))
         
         # Create the terminal part of the user interface
         self.terminal = Terminal(self.viewmanager)
-        self.hToolbox.addItem(self.terminal, 
-                              UI.PixmapCache.getIcon("terminal.png"), 
+        self.hToolbox.addItem(self.terminal,
+                              UI.PixmapCache.getIcon("terminal.png"),
                               self.trUtf8("Terminal"))
 
         # Create the task viewer part of the user interface
         self.taskViewer = TaskViewer(None, self.project)
-        self.hToolbox.addItem(self.taskViewer, 
-                              UI.PixmapCache.getIcon("task.png"), 
+        self.hToolbox.addItem(self.taskViewer,
+                              UI.PixmapCache.getIcon("task.png"),
                               self.trUtf8("Task-Viewer"))
 
         # Create the log viewer part of the user interface
         self.logViewer = LogViewer()
-        self.hToolbox.addItem(self.logViewer, 
-                              UI.PixmapCache.getIcon("logViewer.png"), 
+        self.hToolbox.addItem(self.logViewer,
+                              UI.PixmapCache.getIcon("logViewer.png"),
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, None, None, 
+        self.windows = [None, None, self.debugViewerDock, None, None,
                         None, None, None, None, self.cooperationDock]
 
         if self.embeddedShell:
@@ -912,31 +913,31 @@ class UserInterface(QMainWindow):
         else:
             # Create the shell
             self.shell = Shell(debugServer, self.viewmanager)
-            self.hToolbox.insertItem(0, self.shell, 
-                                     UI.PixmapCache.getIcon("shell.png"), 
+            self.hToolbox.insertItem(0, self.shell,
+                                     UI.PixmapCache.getIcon("shell.png"),
                                      self.trUtf8("Shell"))
 
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
             self.browser = Browser()
-            self.vToolbox.addItem(self.browser, 
-                                  UI.PixmapCache.getIcon("browser.png"), 
+            self.vToolbox.addItem(self.browser,
+                                  UI.PixmapCache.getIcon("browser.png"),
                                   self.trUtf8("File-Browser"))
-        elif self.embeddedFileBrowser == 1: # embedded in debug browser
+        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
             self.browser = self.debugViewer.browser
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
         
         # Create the symbols viewer
         self.symbolsViewer = SymbolsWidget()
-        self.vToolbox.addItem(self.symbolsViewer, 
-                              UI.PixmapCache.getIcon("symbols.png"), 
+        self.vToolbox.addItem(self.symbolsViewer,
+                              UI.PixmapCache.getIcon("symbols.png"),
                               self.trUtf8("Symbols"))
         
         # Create the numbers viewer
         self.numbersViewer = NumbersWidget()
-        self.hToolbox.addItem(self.numbersViewer, 
-                              UI.PixmapCache.getIcon("numbers.png"), 
+        self.hToolbox.addItem(self.numbersViewer,
+                              UI.PixmapCache.getIcon("numbers.png"),
                               self.trUtf8("Numbers"))
         
         self.hToolbox.setCurrentIndex(0)
@@ -957,63 +958,63 @@ class UserInterface(QMainWindow):
         logging.debug("Creating Project Browser...")
         self.projectBrowser = ProjectBrowser(self.project, None,
             embeddedBrowser=(self.embeddedFileBrowser == 2))
-        self.leftSidebar.addTab(self.projectBrowser, 
-                              UI.PixmapCache.getIcon("projectViewer.png"), 
+        self.leftSidebar.addTab(self.projectBrowser,
+                              UI.PixmapCache.getIcon("projectViewer.png"),
                               self.trUtf8("Project-Viewer"))
 
         # Create the multi project browser
         logging.debug("Creating Multiproject Browser...")
         self.multiProjectBrowser = MultiProjectBrowser(self.multiProject)
-        self.leftSidebar.addTab(self.multiProjectBrowser, 
-                              UI.PixmapCache.getIcon("multiProjectViewer.png"), 
+        self.leftSidebar.addTab(self.multiProjectBrowser,
+                              UI.PixmapCache.getIcon("multiProjectViewer.png"),
                               self.trUtf8("Multiproject-Viewer"))
 
         # Create the template viewer part of the user interface
         logging.debug("Creating Template Viewer...")
-        self.templateViewer = TemplateViewer(None, 
+        self.templateViewer = TemplateViewer(None,
                                              self.viewmanager)
-        self.leftSidebar.addTab(self.templateViewer, 
-                              UI.PixmapCache.getIcon("templateViewer.png"), 
+        self.leftSidebar.addTab(self.templateViewer,
+                              UI.PixmapCache.getIcon("templateViewer.png"),
                               self.trUtf8("Template-Viewer"))
 
         # Create the debug viewer maybe without the embedded shell
         logging.debug("Creating Debug Viewer...")
         self.debugViewerDock = self.__createDockWindow("DebugViewerDock")
-        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager, 
+        self.debugViewer = DebugViewer(debugServer, True, self.viewmanager,
             self.debugViewerDock,
-            embeddedShell=self.embeddedShell, 
+            embeddedShell=self.embeddedShell,
             embeddedBrowser=(self.embeddedFileBrowser == 1))
         self.__setupDockWindow(self.debugViewerDock, Qt.RightDockWidgetArea,
                              self.debugViewer, self.trUtf8("Debug-Viewer"))
 
         # Create the chat part of the user interface
         self.cooperationDock = self.__createDockWindow("CooperationDock")
-        self.cooperation = ChatWidget(parent = self.cooperationDock)
+        self.cooperation = ChatWidget(parent=self.cooperationDock)
         self.__setupDockWindow(self.cooperationDock, Qt.RightDockWidgetArea,
                              self.cooperation, self.trUtf8("Cooperation"))
         
         # Create the terminal part of the user interface
         logging.debug("Creating Terminal...")
         self.terminal = Terminal(self.viewmanager)
-        self.bottomSidebar.addTab(self.terminal, 
-                              UI.PixmapCache.getIcon("terminal.png"), 
+        self.bottomSidebar.addTab(self.terminal,
+                              UI.PixmapCache.getIcon("terminal.png"),
                               self.trUtf8("Terminal"))
 
         # Create the task viewer part of the user interface
         logging.debug("Creating Task Viewer...")
         self.taskViewer = TaskViewer(None, self.project)
-        self.bottomSidebar.addTab(self.taskViewer, 
-                              UI.PixmapCache.getIcon("task.png"), 
+        self.bottomSidebar.addTab(self.taskViewer,
+                              UI.PixmapCache.getIcon("task.png"),
                               self.trUtf8("Task-Viewer"))
 
         # Create the log viewer part of the user interface
         logging.debug("Creating Log Viewer...")
         self.logViewer = LogViewer()
-        self.bottomSidebar.addTab(self.logViewer, 
-                              UI.PixmapCache.getIcon("logViewer.png"), 
+        self.bottomSidebar.addTab(self.logViewer,
+                              UI.PixmapCache.getIcon("logViewer.png"),
                               self.trUtf8("Log-Viewer"))
 
-        self.windows = [None, None, self.debugViewerDock, None, None, 
+        self.windows = [None, None, self.debugViewerDock, None, None,
                         None, None, None, None, self.cooperationDock]
 
         if self.embeddedShell:
@@ -1022,32 +1023,32 @@ class UserInterface(QMainWindow):
             # Create the shell
             logging.debug("Creating Shell...")
             self.shell = Shell(debugServer, self.viewmanager)
-            self.bottomSidebar.insertTab(0, self.shell, 
-                                     UI.PixmapCache.getIcon("shell.png"), 
+            self.bottomSidebar.insertTab(0, self.shell,
+                                     UI.PixmapCache.getIcon("shell.png"),
                                      self.trUtf8("Shell"))
 
         if self.embeddedFileBrowser == 0:   # separate window
             # Create the file browser
             logging.debug("Creating File Browser...")
             self.browser = Browser()
-            self.leftSidebar.addTab(self.browser, 
-                                    UI.PixmapCache.getIcon("browser.png"), 
+            self.leftSidebar.addTab(self.browser,
+                                    UI.PixmapCache.getIcon("browser.png"),
                                     self.trUtf8("File-Browser"))
-        elif self.embeddedFileBrowser == 1: # embedded in debug browser
+        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
             self.browser = self.debugViewer.browser
         else:                               # embedded in project browser
             self.browser = self.projectBrowser.fileBrowser
         
         # Create the symbols viewer
         self.symbolsViewer = SymbolsWidget()
-        self.leftSidebar.addTab(self.symbolsViewer, 
-                                UI.PixmapCache.getIcon("symbols.png"), 
+        self.leftSidebar.addTab(self.symbolsViewer,
+                                UI.PixmapCache.getIcon("symbols.png"),
                                 self.trUtf8("Symbols"))
         
         # Create the numbers viewer
         self.numbersViewer = NumbersWidget()
-        self.bottomSidebar.addTab(self.numbersViewer, 
-                                  UI.PixmapCache.getIcon("numbers.png"), 
+        self.bottomSidebar.addTab(self.numbersViewer,
+                                  UI.PixmapCache.getIcon("numbers.png"),
                                   self.trUtf8("Numbers"))
         
         self.bottomSidebar.setCurrentIndex(0)
@@ -1108,7 +1109,7 @@ class UserInterface(QMainWindow):
                 if self.bottomSidebar.isAutoHiding():
                     self.bottomSidebar.setFocus()
         
-    def __openOnStartup(self, startupType = None):
+    def __openOnStartup(self, startupType=None):
         """
         Private method to open the last file, project or multiproject.
         
@@ -1116,11 +1117,11 @@ class UserInterface(QMainWindow):
             "Nothing", "File", "Project", "MultiProject" or "Session")
         """
         startupTypeMapping = {
-            "Nothing"       : 0, 
-            "File"          : 1, 
-            "Project"       : 2, 
-            "MultiProject"  : 3, 
-            "Session"       : 4, 
+            "Nothing": 0,
+            "File": 1,
+            "Project": 2,
+            "MultiProject": 3,
+            "Session": 4,
         }
         
         if startupType is None:
@@ -1159,10 +1160,10 @@ class UserInterface(QMainWindow):
         
         @param args list of files to open<br />
             The args are processed one at a time. All arguments after a
-            '--' option are considered debug arguments to the program 
+            '--' option are considered debug arguments to the program
             for the debugger. All files named before the '--' option
-            are opened in a text editor, unless the argument ends in 
-            .e4p, then it is opened as a project file. If it ends in 
+            are opened in a text editor, unless the argument ends in
+            .e4p, then it is opened as a project file. If it ends in
             .e4m, it is opened as a multiproject.
         """
         # no args, return
@@ -1252,7 +1253,7 @@ class UserInterface(QMainWindow):
         dock.setWindowTitle(caption)
         dock.show()
 
-    def __setWindowCaption(self, editor = None, project = None):
+    def __setWindowCaption(self, editor=None, project=None):
         """
         Private method to set the caption of the Main Window.
         
@@ -1298,7 +1299,7 @@ class UserInterface(QMainWindow):
         self.exitAct = E5Action(self.trUtf8('Quit'),
                 UI.PixmapCache.getIcon("exit.png"),
                 self.trUtf8('&Quit'),
-                QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")),
+                QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
                 0, self, 'quit')
         self.exitAct.setStatusTip(self.trUtf8('Quit the IDE'))
         self.exitAct.setWhatsThis(self.trUtf8(
@@ -1364,7 +1365,7 @@ class UserInterface(QMainWindow):
         self.addAction(self.pbActivateAct)
 
         self.mpbAct = E5Action(self.trUtf8('Multiproject-Viewer'),
-                self.trUtf8('&Multiproject-Viewer'), 0, 0, self, 
+                self.trUtf8('&Multiproject-Viewer'), 0, 0, self,
                 'multi_project_viewer', True)
         self.mpbAct.setStatusTip(self.trUtf8('Toggle the Multiproject-Viewer window'))
         self.mpbAct.setWhatsThis(self.trUtf8(
@@ -1501,7 +1502,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Task-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+T")),
                 0, self,
-                'task_viewer_activate',1)
+                'task_viewer_activate', 1)
         self.taskViewerActivateAct.triggered[()].connect(self.__activateTaskViewer)
         self.actions.append(self.taskViewerActivateAct)
         self.addAction(self.taskViewerActivateAct)
@@ -1522,7 +1523,7 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate Template-Viewer'),
                 QKeySequence(self.trUtf8("Alt+Shift+A")),
                 0, self,
-                'template_viewer_activate',1)
+                'template_viewer_activate', 1)
         self.templateViewerActivateAct.triggered[()].connect(self.__activateTemplateViewer)
         self.actions.append(self.templateViewerActivateAct)
         self.addAction(self.templateViewerActivateAct)
@@ -1539,7 +1540,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.vtAct)
         
         self.htAct = E5Action(self.trUtf8('Horizontal Toolbox'),
-                self.trUtf8('&Horizontal Toolbox'), 0, 0, self, 
+                self.trUtf8('&Horizontal Toolbox'), 0, 0, self,
                 'horizontal_toolbox', True)
         self.htAct.setStatusTip(self.trUtf8('Toggle the Horizontal Toolbox window'))
         self.htAct.setWhatsThis(self.trUtf8(
@@ -1562,7 +1563,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.lsbAct)
         
         self.bsbAct = E5Action(self.trUtf8('Bottom Sidebar'),
-                self.trUtf8('&Bottom Sidebar'), 0, 0, self, 
+                self.trUtf8('&Bottom Sidebar'), 0, 0, self,
                 'bottom_sidebar', True)
         self.bsbAct.setStatusTip(self.trUtf8('Toggle the bottom sidebar window'))
         self.bsbAct.setWhatsThis(self.trUtf8(
@@ -1641,7 +1642,7 @@ class UserInterface(QMainWindow):
 
         self.whatsThisAct = E5Action(self.trUtf8('What\'s This?'),
                 UI.PixmapCache.getIcon("whatsThis.png"),
-                self.trUtf8('&What\'s This?'), 
+                self.trUtf8('&What\'s This?'),
                 QKeySequence(self.trUtf8("Shift+F1")),
                 0, self, 'whatsThis')
         self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
@@ -1658,7 +1659,7 @@ class UserInterface(QMainWindow):
 
         self.helpviewerAct = E5Action(self.trUtf8('Helpviewer'),
                 UI.PixmapCache.getIcon("help.png"),
-                self.trUtf8('&Helpviewer...'), 
+                self.trUtf8('&Helpviewer...'),
                 QKeySequence(self.trUtf8("F1")),
                 0, self, 'helpviewer')
         self.helpviewerAct.setStatusTip(self.trUtf8('Open the helpviewer window'))
@@ -1700,7 +1701,7 @@ class UserInterface(QMainWindow):
         self.actions.append(self.checkUpdateAct)
     
         self.showVersionsAct = E5Action(self.trUtf8('Show downloadable versions'),
-                self.trUtf8('Show &downloadable versions...'), 
+                self.trUtf8('Show &downloadable versions...'),
                 0, 0, self, 'show_downloadable_versions')
         self.showVersionsAct.setStatusTip(
             self.trUtf8('Show the versions available for download'))
@@ -1734,7 +1735,7 @@ class UserInterface(QMainWindow):
 
         self.utActGrp = createActionGroup(self)
         
-        self.utDialogAct = E5Action(self.trUtf8('Unittest'), 
+        self.utDialogAct = E5Action(self.trUtf8('Unittest'),
                 UI.PixmapCache.getIcon("unittest.png"),
                 self.trUtf8('&Unittest...'),
                 0, 0, self.utActGrp, 'unittest')
@@ -1791,7 +1792,7 @@ class UserInterface(QMainWindow):
             "{0}.exe".format(Utilities.generateQtToolName("designer")) or \
             Utilities.generateQtToolName("designer")
         if Utilities.isinpath(designerExe):
-            self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'), 
+            self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'),
                     UI.PixmapCache.getIcon("designer4.png"),
                     self.trUtf8('&Designer 4...'), 0, 0, self, 'qt_designer4')
             self.designer4Act.setStatusTip(self.trUtf8('Start Qt-Designer 4'))
@@ -1808,7 +1809,7 @@ class UserInterface(QMainWindow):
             "{0}.exe".format(Utilities.generateQtToolName("linguist")) or \
             Utilities.generateQtToolName("linguist")
         if Utilities.isinpath(linguistExe):
-            self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'), 
+            self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'),
                     UI.PixmapCache.getIcon("linguist4.png"),
                     self.trUtf8('&Linguist 4...'), 0, 0, self, 'qt_linguist4')
             self.linguist4Act.setStatusTip(self.trUtf8('Start Qt-Linguist 4'))
@@ -1821,7 +1822,7 @@ class UserInterface(QMainWindow):
         else:
             self.linguist4Act = None
     
-        self.uipreviewerAct = E5Action(self.trUtf8('UI Previewer'), 
+        self.uipreviewerAct = E5Action(self.trUtf8('UI Previewer'),
                 UI.PixmapCache.getIcon("uiPreviewer.png"),
                 self.trUtf8('&UI Previewer...'), 0, 0, self, 'ui_previewer')
         self.uipreviewerAct.setStatusTip(self.trUtf8('Start the UI Previewer'))
@@ -1832,7 +1833,7 @@ class UserInterface(QMainWindow):
         self.uipreviewerAct.triggered[()].connect(self.__UIPreviewer)
         self.actions.append(self.uipreviewerAct)
         
-        self.trpreviewerAct = E5Action(self.trUtf8('Translations Previewer'), 
+        self.trpreviewerAct = E5Action(self.trUtf8('Translations Previewer'),
                 UI.PixmapCache.getIcon("trPreviewer.png"),
                 self.trUtf8('&Translations Previewer...'), 0, 0, self, 'tr_previewer')
         self.trpreviewerAct.setStatusTip(self.trUtf8('Start the Translations Previewer'))
@@ -1856,7 +1857,7 @@ class UserInterface(QMainWindow):
 
         self.compareAct = E5Action(self.trUtf8('Compare Files side by side'),
                 UI.PixmapCache.getIcon("compareFiles.png"),
-                self.trUtf8('Compare Files &side by side...'), 
+                self.trUtf8('Compare Files &side by side...'),
                 0, 0, self, 'compare_files')
         self.compareAct.setStatusTip(self.trUtf8('Compare two files'))
         self.compareAct.setWhatsThis(self.trUtf8(
@@ -1869,7 +1870,7 @@ class UserInterface(QMainWindow):
 
         self.sqlBrowserAct = E5Action(self.trUtf8('SQL Browser'),
                 UI.PixmapCache.getIcon("sqlBrowser.png"),
-                self.trUtf8('SQL &Browser...'), 
+                self.trUtf8('SQL &Browser...'),
                 0, 0, self, 'sql_browser')
         self.sqlBrowserAct.setStatusTip(self.trUtf8('Browse a SQL database'))
         self.sqlBrowserAct.setWhatsThis(self.trUtf8(
@@ -1881,7 +1882,7 @@ class UserInterface(QMainWindow):
 
         self.miniEditorAct = E5Action(self.trUtf8('Mini Editor'),
                 UI.PixmapCache.getIcon("editor.png"),
-                self.trUtf8('Mini &Editor...'), 
+                self.trUtf8('Mini &Editor...'),
                 0, 0, self, 'mini_editor')
         self.miniEditorAct.setStatusTip(self.trUtf8('Mini Editor'))
         self.miniEditorAct.setWhatsThis(self.trUtf8(
@@ -1893,7 +1894,7 @@ class UserInterface(QMainWindow):
 
         self.webBrowserAct = E5Action(self.trUtf8('Web Browser'),
                 UI.PixmapCache.getIcon("ericWeb.png"),
-                self.trUtf8('&Web Browser...'), 
+                self.trUtf8('&Web Browser...'),
                 0, 0, self, 'web_browser')
         self.webBrowserAct.setStatusTip(self.trUtf8('Start the eric5 Web Browser'))
         self.webBrowserAct.setWhatsThis(self.trUtf8(
@@ -1905,7 +1906,7 @@ class UserInterface(QMainWindow):
 
         self.iconEditorAct = E5Action(self.trUtf8('Icon Editor'),
                 UI.PixmapCache.getIcon("iconEditor.png"),
-                self.trUtf8('&Icon Editor...'), 
+                self.trUtf8('&Icon Editor...'),
                 0, 0, self, 'icon_editor')
         self.iconEditorAct.setStatusTip(self.trUtf8('Start the eric5 Icon Editor'))
         self.iconEditorAct.setWhatsThis(self.trUtf8(
@@ -2038,29 +2039,29 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Activate current editor'),
                 QKeySequence(self.trUtf8("Alt+Shift+E")),
                 0, self,
-                'viewmanager_activate',1)
+                'viewmanager_activate', 1)
         self.viewmanagerActivateAct.triggered[()].connect(self.__activateViewmanager)
         self.actions.append(self.viewmanagerActivateAct)
         self.addAction(self.viewmanagerActivateAct)
 
-        self.nextTabAct = E5Action(self.trUtf8('Show next'), 
-                      self.trUtf8('Show next'), 
+        self.nextTabAct = E5Action(self.trUtf8('Show next'),
+                      self.trUtf8('Show next'),
                       QKeySequence(self.trUtf8('Ctrl+Alt+Tab')), 0,
                       self, 'view_next_tab')
         self.nextTabAct.triggered[()].connect(self.__showNext)
         self.actions.append(self.nextTabAct)
         self.addAction(self.nextTabAct)
         
-        self.prevTabAct = E5Action(self.trUtf8('Show previous'), 
-                      self.trUtf8('Show previous'), 
+        self.prevTabAct = E5Action(self.trUtf8('Show previous'),
+                      self.trUtf8('Show previous'),
                       QKeySequence(self.trUtf8('Shift+Ctrl+Alt+Tab')), 0,
                       self, 'view_previous_tab')
         self.prevTabAct.triggered[()].connect(self.__showPrevious)
         self.actions.append(self.prevTabAct)
         self.addAction(self.prevTabAct)
         
-        self.switchTabAct = E5Action(self.trUtf8('Switch between tabs'), 
-                      self.trUtf8('Switch between tabs'), 
+        self.switchTabAct = E5Action(self.trUtf8('Switch between tabs'),
+                      self.trUtf8('Switch between tabs'),
                       QKeySequence(self.trUtf8('Ctrl+1')), 0,
                       self, 'switch_tabs')
         self.switchTabAct.triggered[()].connect(self.__switchTab)
@@ -2315,7 +2316,7 @@ class UserInterface(QMainWindow):
         self.__menus["toolbars"].aboutToShow.connect(self.__showToolbarsMenu)
         self.__menus["toolbars"].triggered.connect(self.__TBMenuTriggered)
         
-        self.__showWindowMenu() # to initialize these actions
+        self.__showWindowMenu()  # to initialize these actions
 
         self.__menus["bookmarks"] = self.viewmanager.initBookmarkMenu()
         mb.addMenu(self.__menus["bookmarks"])
@@ -2591,8 +2592,8 @@ class UserInterface(QMainWindow):
             """ the current editor.</p>"""
         ))
         
-        self.viewmanager.setSbInfo(self.sbFile, self.sbLine, self.sbPos, 
-                                   self.sbWritable, self.sbEncoding, self.sbLanguage, 
+        self.viewmanager.setSbInfo(self.sbFile, self.sbLine, self.sbPos,
+                                   self.sbWritable, self.sbEncoding, self.sbLanguage,
                                    self.sbEol)
 
         self.sbVcsMonitorLed = StatusMonitorLed(self.project, self.__statusBar)
@@ -2607,9 +2608,9 @@ class UserInterface(QMainWindow):
             category = self.trUtf8("External Tools/{0}").format(toolGroup[0])
             for tool in toolGroup[1]:
                 if tool['menutext'] != '--':
-                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'], 
+                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'],
                                   self)
-                    act.setObjectName("{0}@@{1}".format(toolGroup[0], 
+                    act.setObjectName("{0}@@{1}".format(toolGroup[0],
                                       tool['menutext']))
                     act.triggered[()].connect(self.__toolActionTriggered)
                     self.toolGroupActions[act.objectName()] = act
@@ -2648,7 +2649,7 @@ class UserInterface(QMainWindow):
             if tool['menutext'] != '--':
                 key = "{0}@@{1}".format(toolGroup[0], tool['menutext'])
                 if key not in groupActionKeys:
-                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'], 
+                    act = QAction(UI.PixmapCache.getIcon(tool['icon']), tool['menutext'],
                                   self)
                     act.setObjectName(key)
                     act.triggered[()].connect(self.__toolActionTriggered)
@@ -2766,7 +2767,7 @@ class UserInterface(QMainWindow):
         """
         self.__showEmailDialog("feature")
         
-    def __showEmailDialog(self, mode, attachFile = None, deleteAttachFile = False):
+    def __showEmailDialog(self, mode, attachFile=None, deleteAttachFile=False):
         """
         Private slot to show the email dialog in a given mode.
         
@@ -2782,23 +2783,23 @@ class UserInterface(QMainWindow):
                Preferences.getUser("MailServer") == "":
                 E5MessageBox.critical(self,
                     self.trUtf8("Report Bug"),
-                    self.trUtf8("""Email address or mail server address is empty.""" 
+                    self.trUtf8("""Email address or mail server address is empty."""
                                 """ Please configure your Email settings in the"""
                                 """ Preferences Dialog."""))
                 self.showPreferences("emailPage")
                 return
                 
-            self.dlg = EmailDialog(mode = mode)
+            self.dlg = EmailDialog(mode=mode)
             if attachFile is not None:
                 self.dlg.attachFile(attachFile, deleteAttachFile)
             self.dlg.show()
         
-    def __showSystemEmailClient(self, mode, attachFile = None, deleteAttachFile = False):
+    def __showSystemEmailClient(self, mode, attachFile=None, deleteAttachFile=False):
         """
         Private slot to show the system email dialog.
         
         @param mode mode of the email dialog (string, "bug" or "feature")
-        @param attachFile name of a file to put into the body of the 
+        @param attachFile name of a file to put into the body of the
             email (string)
         @param deleteAttachFile flag indicating to delete the file after
             it has been read (boolean)
@@ -2809,15 +2810,15 @@ class UserInterface(QMainWindow):
             address = BugAddress
         subject = "[eric5] "
         if attachFile is not None:
-            f = open(attachFile, "r", encoding = "utf-8")
+            f = open(attachFile, "r", encoding="utf-8")
             body = f.read()
             f.close()
             if deleteAttachFile:
                 os.remove(attachFile)
         else:
             body = "\r\n----\r\n{0}----\r\n{1}----\r\n{2}".format(
-                Utilities.generateVersionInfo("\r\n"), 
-                Utilities.generatePluginsVersionInfo("\r\n"), 
+                Utilities.generateVersionInfo("\r\n"),
+                Utilities.generatePluginsVersionInfo("\r\n"),
                 Utilities.generateDistroInfo("\r\n"))
         
         url = QUrl("mailto:{0}".format(address))
@@ -2833,26 +2834,26 @@ class UserInterface(QMainWindow):
         if Preferences.getUI("CheckErrorLog"):
             logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
             if os.path.exists(logFile):
-                dlg = E5MessageBox.E5MessageBox(E5MessageBox.Question, 
-                    self.trUtf8("Error log found"), 
+                dlg = E5MessageBox.E5MessageBox(E5MessageBox.Question,
+                    self.trUtf8("Error log found"),
                     self.trUtf8("An error log file was found. "
-                                "What should be done with it?"), 
-                    modal = True, parent = self)
+                                "What should be done with it?"),
+                    modal=True, parent=self)
                 try:
-                    f = open(logFile, "r", encoding = "utf-8")
+                    f = open(logFile, "r", encoding="utf-8")
                     txt = f.read()
                     f.close()
                     dlg.setDetailedText(txt)
                 except IOError:
                     pass
                 emailButton = \
-                    dlg.addButton(self.trUtf8("Send Bug Email"), 
+                    dlg.addButton(self.trUtf8("Send Bug Email"),
                                   E5MessageBox.AcceptRole)
                 deleteButton = \
-                    dlg.addButton(self.trUtf8("Ignore and Delete"), 
+                    dlg.addButton(self.trUtf8("Ignore and Delete"),
                                   E5MessageBox.AcceptRole)
                 keepButton = \
-                    dlg.addButton(self.trUtf8("Ignore but Keep"), 
+                    dlg.addButton(self.trUtf8("Ignore but Keep"),
                                   E5MessageBox.AcceptRole)
                 dlg.setDefaultButton(emailButton)
                 dlg.setEscapeButton(keepButton)
@@ -2860,8 +2861,8 @@ class UserInterface(QMainWindow):
                 btn = dlg.clickedButton()
                 if btn == emailButton:
                     # start email dialog
-                    self.__showEmailDialog("bug", 
-                        attachFile = logFile, deleteAttachFile = True)
+                    self.__showEmailDialog("bug",
+                        attachFile=logFile, deleteAttachFile=True)
                 elif btn == deleteButton:
                     # delete the error log
                     os.remove(logFile)
@@ -2889,7 +2890,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to show a mini editor window.
         """
-        editor = MiniEditor(parent = self)
+        editor = MiniEditor(parent=self)
         editor.show()
         
     def addE5Actions(self, actions, type):
@@ -2905,7 +2906,7 @@ class UserInterface(QMainWindow):
         elif type == 'wizards':
             self.wizardsActions.extend(actions)
         
-    def removeE5Actions(self, actions, type = 'ui'):
+    def removeE5Actions(self, actions, type='ui'):
         """
         Public method to remove actions from the list of actions.
         
@@ -2942,7 +2943,7 @@ class UserInterface(QMainWindow):
         Public method to get a reference to an action of a menu.
         
         @param menuName name of the menu to search in (string)
-        @param actionName object name of the action to search for 
+        @param actionName object name of the action to search for
             (string)
         """
         try:
@@ -3053,7 +3054,7 @@ class UserInterface(QMainWindow):
         res = E5MessageBox.yesNo(self,
             self.trUtf8("Restart application"),
             self.trUtf8("""The application needs to be restarted. Do it now?"""),
-            yesDefault = True)
+            yesDefault=True)
         
         if res and self.__shutdown():
             e5App().closeAllWindows()
@@ -3075,7 +3076,7 @@ class UserInterface(QMainWindow):
             self.__toolGroupsConfiguration)
         act.setData(-1)
         act = self.__menus["tools"].addAction(
-            self.trUtf8("Configure current Tool Group ..."), 
+            self.trUtf8("Configure current Tool Group ..."),
             self.__toolsConfiguration)
         act.setData(-2)
         self.__menus["tools"].addSeparator()
@@ -3355,7 +3356,7 @@ class UserInterface(QMainWindow):
                 self.profiles[self.currentProfile][5][1] = self.bottomSidebar.isVisible()
             Preferences.setUI("ViewProfiles", self.profiles)
     
-    def __activateViewProfile(self, name, save = True):
+    def __activateViewProfile(self, name, save=True):
         """
         Private slot to activate a view profile.
         
@@ -3425,7 +3426,7 @@ class UserInterface(QMainWindow):
             if self.__menus["window"].isTearOffMenuVisible():
                 self.__showWindowMenu()
         
-    def __setEditProfile(self, save = True):
+    def __setEditProfile(self, save=True):
         """
         Private slot to activate the edit view profile.
         
@@ -3447,7 +3448,7 @@ class UserInterface(QMainWindow):
             if not self.embeddedShell:
                 self.bottomSidebar.setCurrentWidget(self.shell)
         
-    def setDebugProfile(self, save = True):
+    def setDebugProfile(self, save=True):
         """
         Public slot to activate the debug view profile.
         
@@ -3756,7 +3757,7 @@ class UserInterface(QMainWindow):
                 self.leftSidebar.setCurrentWidget(self.browser)
             else:
                 self.browser.show()
-        elif self.embeddedFileBrowser == 1: # embedded in debug browser
+        elif self.embeddedFileBrowser == 1:  # embedded in debug browser
             if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
                 self.debugViewerDock.show()
                 self.debugViewerDock.raise_()
@@ -3962,7 +3963,7 @@ class UserInterface(QMainWindow):
         self.unittestDialog.show()
         self.unittestDialog.raise_()
 
-    def __unittestScript(self, prog = None):
+    def __unittestScript(self, prog=None):
         """
         Private slot for displaying the unittest dialog and run the current script.
         
@@ -4013,7 +4014,7 @@ class UserInterface(QMainWindow):
         self.unittestDialog.raise_()
         self.unittestDialog.on_startButton_clicked()
         
-    def __designer(self, fn = None, version = 0):
+    def __designer(self, fn=None, version=0):
         """
         Private slot to start the Qt-Designer executable.
         
@@ -4023,7 +4024,7 @@ class UserInterface(QMainWindow):
         if fn is not None and version == 0:
             # determine version from file, if not specified
             try:
-                f = open(fn, "r", encoding = "utf-8")
+                f = open(fn, "r", encoding="utf-8")
                 found = False
                 while not found:
                     uiLine = f.readline()
@@ -4087,9 +4088,9 @@ class UserInterface(QMainWindow):
         """
         Private slot to start the Qt-Designer 4 executable.
         """
-        self.__designer(version = 4)
+        self.__designer(version=4)
         
-    def __linguist(self, fn = None, version = 0):
+    def __linguist(self, fn=None, version=0):
         """
         Private slot to start the Qt-Linguist executable.
         
@@ -4140,15 +4141,15 @@ class UserInterface(QMainWindow):
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(linguist))
 
-    def __linguist4(self, fn = None):
+    def __linguist4(self, fn=None):
         """
         Private slot to start the Qt-Linguist 4 executable.
         
         @param fn filename of the translation file to be opened
         """
-        self.__linguist(fn, version = 4)
+        self.__linguist(fn, version=4)
 
-    def __assistant(self, home = None, version = 0):
+    def __assistant(self, home=None, version=0):
         """
         Private slot to start the Qt-Assistant executable.
         
@@ -4188,9 +4189,9 @@ class UserInterface(QMainWindow):
         """
         Private slot to start the Qt-Assistant 4 executable.
         """
-        self.__assistant(version = 4)
+        self.__assistant(version=4)
     
-    def __startWebBrowser(self, home = ""):
+    def __startWebBrowser(self, home=""):
         """
         Private slot to start the eric5 web browser.
         
@@ -4198,7 +4199,7 @@ class UserInterface(QMainWindow):
         """
         self.launchHelpViewer(home)
         
-    def __customViewer(self, home = None):
+    def __customViewer(self, home=None):
         """
         Private slot to start a custom viewer.
         
@@ -4244,7 +4245,7 @@ class UserInterface(QMainWindow):
                         'Ensure that it is available as <b>hh</b>.</p>'
                     ))
         
-    def __UIPreviewer(self,fn=None):
+    def __UIPreviewer(self, fn=None):
         """
         Private slot to start the UI Previewer executable.
         
@@ -4284,7 +4285,7 @@ class UserInterface(QMainWindow):
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(viewer))
         
-    def __TRPreviewer(self, fileNames = None, ignore = False):
+    def __TRPreviewer(self, fileNames=None, ignore=False):
         """
         Private slot to start the Translation Previewer executable.
         
@@ -4348,13 +4349,13 @@ class UserInterface(QMainWindow):
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(browser))
         
-    def __editPixmap(self, fn = ""):
+    def __editPixmap(self, fn=""):
         """
         Private slot to show a pixmap in a dialog.
         
         @param fn filename of the file to show (string)
         """
-        dlg = IconEditorWindow(fn, self, fromEric = True)
+        dlg = IconEditorWindow(fn, self, fromEric=True)
         dlg.show()
         
     def __showPixmap(self, fn):
@@ -4471,7 +4472,7 @@ class UserInterface(QMainWindow):
             toolProc.setReadChannel(QProcess.StandardOutput)
             
             if toolProcData[0] is None or \
-               toolProcData[1] not in ["insert", "replaceSelection"]: 
+               toolProcData[1] not in ["insert", "replaceSelection"]:
                 # not connected to an editor or wrong mode
                 while toolProc.canReadLine():
                     s = "{0} - ".format(program)
@@ -4534,10 +4535,10 @@ class UserInterface(QMainWindow):
         pythonDocDir = Preferences.getHelp("PythonDocDir")
         if not pythonDocDir:
             if Utilities.isWindowsPlatform():
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR",
                     os.path.join(os.path.dirname(sys.executable), "doc"))
             else:
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR",
                     '/usr/share/doc/packages/python/html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
@@ -4576,7 +4577,7 @@ class UserInterface(QMainWindow):
             if hvType == 1:
                 self.launchHelpViewer(home)
             elif hvType == 2:
-                self.__assistant(home, version = 4)
+                self.__assistant(home, version=4)
             elif hvType == 3:
                 self.__webBrowser(home)
             else:
@@ -4596,7 +4597,7 @@ class UserInterface(QMainWindow):
                     default = ""
                 pythonDocDir = Utilities.getEnvironmentEntry("PYTHON2DOCDIR", default)
             else:
-                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR", 
+                pythonDocDir = Utilities.getEnvironmentEntry("PYTHON3DOCDIR",
                     '/usr/share/doc/packages/python/html/python-docs-html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
@@ -4630,7 +4631,7 @@ class UserInterface(QMainWindow):
             if hvType == 1:
                 self.launchHelpViewer(home)
             elif hvType == 2:
-                self.__assistant(home, version = 4)
+                self.__assistant(home, version=4)
             elif hvType == 3:
                 self.__webBrowser(home)
             else:
@@ -4676,7 +4677,7 @@ class UserInterface(QMainWindow):
         if hvType == 1:
             self.launchHelpViewer(home)
         elif hvType == 2:
-            self.__assistant(home, version = 4)
+            self.__assistant(home, version=4)
         elif hvType == 3:
             self.__webBrowser(home)
         else:
@@ -4735,7 +4736,7 @@ class UserInterface(QMainWindow):
         if hvType == 1:
             self.launchHelpViewer(home)
         elif hvType == 2:
-            self.__assistant(home, version = 4)
+            self.__assistant(home, version=4)
         elif hvType == 3:
             self.__webBrowser(home)
         else:
@@ -4767,7 +4768,7 @@ class UserInterface(QMainWindow):
         if hvType == 1:
             self.launchHelpViewer(home)
         elif hvType == 2:
-            self.__assistant(home, version = 4)
+            self.__assistant(home, version=4)
         elif hvType == 3:
             self.__webBrowser(home)
         else:
@@ -4815,13 +4816,13 @@ class UserInterface(QMainWindow):
         if hvType == 1:
             self.launchHelpViewer(home)
         elif hvType == 2:
-            self.__assistant(home, version = 4)
+            self.__assistant(home, version=4)
         elif hvType == 3:
             self.__webBrowser(home)
         else:
             self.__customViewer(home)
         
-    def launchHelpViewer(self, home, searchWord = None):
+    def launchHelpViewer(self, home, searchWord=None):
         """
         Public slot to start the help viewer.
         
@@ -4833,8 +4834,8 @@ class UserInterface(QMainWindow):
             if not homeUrl.scheme():
                 home = QUrl.fromLocalFile(home).toString()
         if not Preferences.getHelp("SingleHelpWindow") or self.helpWindow is None:
-            help = HelpWindow(home, '.', None, 'help viewer', True, 
-                              searchWord = searchWord)
+            help = HelpWindow(home, '.', None, 'help viewer', True,
+                              searchWord=searchWord)
 
             if QApplication.desktop().width() > 400 and \
                QApplication.desktop().height() > 500:
@@ -4869,7 +4870,7 @@ class UserInterface(QMainWindow):
         if searchWord == "":
             searchWord = None
         
-        self.launchHelpViewer("", searchWord = searchWord)
+        self.launchHelpViewer("", searchWord=searchWord)
     
     def __webBrowser(self):
         """
@@ -4877,7 +4878,7 @@ class UserInterface(QMainWindow):
         """
         self.launchHelpViewer("")
 
-    def showPreferences(self, pageName = None):
+    def showPreferences(self, pageName=None):
         """
         Public slot to set the preferences.
         
@@ -4930,14 +4931,14 @@ class UserInterface(QMainWindow):
         self.maxEditorPathLen = Preferences.getUI("CaptionFilenameLength")
         self.captionShowsFilename = Preferences.getUI("CaptionShowsFilename")
         if not self.captionShowsFilename:
-            self.__setWindowCaption(editor = "")
+            self.__setWindowCaption(editor="")
         else:
             aw = self.viewmanager.activeWindow()
             fn = aw and aw.getFileName() or None
             if fn:
-                self.__setWindowCaption(editor = fn)
+                self.__setWindowCaption(editor=fn)
             else:
-                self.__setWindowCaption(editor = "")
+                self.__setWindowCaption(editor="")
         
         self.__httpAlternatives = Preferences.getUI("VersionsUrls5")
         self.performVersionCheck(False)
@@ -5030,13 +5031,13 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the NewProject signal.
         """
-        self.__setWindowCaption(project = self.project.name)
+        self.__setWindowCaption(project=self.project.name)
         
     def __projectOpened(self):
         """
         Private slot to handle the projectOpened signal.
         """
-        self.__setWindowCaption(project = self.project.name)
+        self.__setWindowCaption(project=self.project.name)
         cap = e5App().getObject("DebugServer")\
             .getClientCapabilities(self.project.pdata["PROGLANGUAGE"][0])
         self.utProjectAct.setEnabled(cap & HasUnittest)
@@ -5046,7 +5047,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the projectClosed signal.
         """
-        self.__setWindowCaption(project = "")
+        self.__setWindowCaption(project="")
         self.utProjectAct.setEnabled(False)
         if not self.utEditorOpen:
             self.utRestartAct.setEnabled(False)
@@ -5075,7 +5076,7 @@ class UserInterface(QMainWindow):
         self.utEditorOpen = False
         if not self.utProjectOpen:
             self.utRestartAct.setEnabled(False)
-        self.__setWindowCaption(editor = "")
+        self.__setWindowCaption(editor="")
         
     def __editorOpened(self, fn):
         """
@@ -5154,7 +5155,7 @@ class UserInterface(QMainWindow):
             return
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
-            reader = TasksReader(f, viewer = self.taskViewer)
+            reader = TasksReader(f, viewer=self.taskViewer)
             reader.readXML()
             f.close()
         else:
@@ -5234,11 +5235,11 @@ class UserInterface(QMainWindow):
         self.__pluginInfoDialog = PluginInfoDialog(self.pluginManager, self)
         self.__pluginInfoDialog.show()
         
-    def __installPlugins(self, pluginFileNames = []):
+    def __installPlugins(self, pluginFileNames=[]):
         """
         Private slot to show a dialog to install a new plugin.
         
-        @param pluginFileNames list of plugin files suggested for 
+        @param pluginFileNames list of plugin files suggested for
             installation list of strings
         """
         dlg = PluginInstallDialog(self.pluginManager, pluginFileNames, self)
@@ -5386,9 +5387,9 @@ class UserInterface(QMainWindow):
                 "DebugViewer": self.debugViewer,
                 "LogViewer": self.logViewer,
                 "Shell": self.shell,
-                "FileBrowser" : self.browser,
-                "TaskViewer" : self.taskViewer,
-                "TemplateViewer" : self.templateViewer,
+                "FileBrowser": self.browser,
+                "TaskViewer": self.taskViewer,
+                "TemplateViewer": self.templateViewer,
                 "MultiProjectBrowser": self.multiProjectBrowser,
             }
             if self.embeddedShell:
@@ -5417,9 +5418,9 @@ class UserInterface(QMainWindow):
         """
         Public method to show the eric5 versions available for download.
         """
-        self.performVersionCheck(manual = True, showVersions = True)
+        self.performVersionCheck(manual=True, showVersions=True)
         
-    def performVersionCheck(self, manual = True,  alternative = 0, showVersions = False):
+    def performVersionCheck(self, manual=True,  alternative=0, showVersions=False):
         """
         Public method to check the internet for an eric5 update.
         
@@ -5458,7 +5459,7 @@ class UserInterface(QMainWindow):
         if manual:
             if self.__versionCheckProgress is None:
                 self.__versionCheckProgress = \
-                    QProgressDialog("", self.trUtf8("&Cancel"),  
+                    QProgressDialog("", self.trUtf8("&Cancel"),
                                      0,  len(self.__httpAlternatives),  self)
                 self.__versionCheckProgress.setMinimumDuration(0)
                 self.__versionCheckProgress.canceled.connect(
@@ -5497,7 +5498,7 @@ class UserInterface(QMainWindow):
                     self.trUtf8("""Could not download the versions file."""))
                 return
             else:
-                self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative, 
+                self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative,
                     self.showAvailableVersions)
                 return
         
@@ -5546,7 +5547,7 @@ class UserInterface(QMainWindow):
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[2], versions[3]),
-                        yesDefault = True)
+                        yesDefault=True)
                     url = res and versions[3] or ''
                 elif versions[0] > Version:
                     res = E5MessageBox.yesNo(self,
@@ -5554,7 +5555,7 @@ class UserInterface(QMainWindow):
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[0], versions[1]),
-                        yesDefault = True)
+                        yesDefault=True)
                     url = res and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
@@ -5569,7 +5570,7 @@ class UserInterface(QMainWindow):
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
                                     """ at <b>{1}</b>. Would you like to get it?""")\
                             .format(versions[0], versions[1]),
-                        yesDefault = True)
+                        yesDefault=True)
                     url = res and versions[1] or ''
                 else:
                     if self.manualUpdatesCheck:
@@ -5607,7 +5608,7 @@ class UserInterface(QMainWindow):
                 break
             
             versionText += """<tr><td>{0}</td><td><a href="{1}">{2}</a></td></tr>"""\
-                .format(versions[line], versions[line + 1], 
+                .format(versions[line], versions[line + 1],
                     'sourceforge' in versions[line + 1] and \
                         "SourceForge" or versions[line + 1])
             line += 2
@@ -5632,7 +5633,7 @@ class UserInterface(QMainWindow):
                         """<p>{0}</p>"""
                         """<p>Do you want to ignore these errors?</p>""")\
                 .format(errorString),
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         if ret:
             reply.ignoreSslErrors()
         else:
@@ -5645,7 +5646,7 @@ class UserInterface(QMainWindow):
 
     def checkConfigurationStatus(self):
         """
-        Public method to check, if eric5 has been configured. If it is not, 
+        Public method to check, if eric5 has been configured. If it is not,
         the configuration dialog is shown.
         """
         if not Preferences.isConfigured():
@@ -5657,7 +5658,7 @@ class UserInterface(QMainWindow):
                             """The configuration dialog will be started."""))
             self.showPreferences()
     
-    def versionIsNewer(self, required, snapshot = None):
+    def versionIsNewer(self, required, snapshot=None):
         """
         Public method to check, if the eric5 version is good compared to
         the required version.

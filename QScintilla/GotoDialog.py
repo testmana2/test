@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_GotoDialog import Ui_GotoDialog
 
+
 class GotoDialog(QDialog, Ui_GotoDialog):
     """
     Class implementing the Goto dialog.
     """
-    def __init__(self, maximum, parent, name = None, modal = False):
+    def __init__(self, maximum, parent, name=None, modal=False):
         """
         Constructor
         

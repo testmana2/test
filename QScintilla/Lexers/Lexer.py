@@ -9,8 +9,9 @@ Module implementing the lexer mixin class.
 
 import Preferences
 
+
 class Lexer(object):
-    """ 
+    """
     Class to implement the lexer mixin class.
     """
     def __init__(self):
@@ -19,13 +20,13 @@ class Lexer(object):
         """
         self.commentString = ''
         self.streamCommentString = {
-            'start' : '',
-            'end' : ''
+            'start': '',
+            'end': ''
         }
         self.boxCommentString = {
-            'start' : '',
-            'middle' : '',
-            'end' : ''
+            'start': '',
+            'middle': '',
+            'end': ''
         }
         
         # last indented line wrapper
@@ -159,8 +160,8 @@ class Lexer(object):
         
         editor.beginUndoAction()
         # iterate over the lines
-        for line in range(lineFrom, endLine+1):
-            editor.setIndentation(line, 
+        for line in range(lineFrom, endLine + 1):
+            editor.setIndentation(line,
                 editor.indentation(line) + indentDifference)
         editor.endUndoAction()
         

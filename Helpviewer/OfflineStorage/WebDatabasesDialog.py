@@ -18,11 +18,12 @@ from .WebDatabasesModel import WebDatabasesModel
 
 import UI.PixmapCache
 
+
 class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
     """
     Class implementing a dialog to show all web databases.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -48,6 +49,6 @@ class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
         header = fm.width("m") * 30
         self.databasesTree.header().resizeSection(0, header)
         self.databasesTree.model().sort(
-            self.databasesTree.header().sortIndicatorSection(), 
+            self.databasesTree.header().sortIndicatorSection(),
             Qt.AscendingOrder)
         self.databasesTree.expandAll()

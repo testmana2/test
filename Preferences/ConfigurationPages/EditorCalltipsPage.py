@@ -14,6 +14,7 @@ from .Ui_EditorCalltipsPage import Ui_EditorCalltipsPage
 
 import Preferences
 
+
 class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
     """
     Class implementing the Editor Calltips configuration page.
@@ -33,7 +34,7 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         self.ctVisibleSlider.setValue(
             Preferences.getEditor("CallTipsVisible"))
         self.callTipsBackgroundColour = \
-            self.initColour("CallTipsBackground", self.calltipsBackgroundButton, 
+            self.initColour("CallTipsBackground", self.calltipsBackgroundButton,
                 Preferences.getEditorColour)
         
         self.ctScintillaCheckBox.setChecked(
@@ -50,7 +51,7 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
             self.ctVisibleSlider.value())
         Preferences.setEditorColour("CallTipsBackground", self.callTipsBackgroundColour)
         
-        Preferences.setEditor("CallTipsScintillaOnFail", 
+        Preferences.setEditor("CallTipsScintillaOnFail",
             self.ctScintillaCheckBox.isChecked())
         
     @pyqtSlot()
@@ -59,8 +60,9 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         Private slot to set the background colour for calltips.
         """
         self.callTipsBackgroundColour = \
-            self.selectColour(self.calltipsBackgroundButton, 
+            self.selectColour(self.calltipsBackgroundButton,
                 self.callTipsBackgroundColour)
+
 
 def create(dlg):
     """

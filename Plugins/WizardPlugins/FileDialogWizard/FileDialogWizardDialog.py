@@ -18,6 +18,7 @@ from .Ui_FileDialogWizardDialog import Ui_FileDialogWizardDialog
 
 import Globals
 
+
 class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
     """
     Class implementing the color dialog wizard dialog.
@@ -181,10 +182,10 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if self.eFilters.text() == "":
                 code += '""'
             else:
-                if self.cFilters.isChecked(): 
-                    fmt = '{0}' 
-                else: 
-                    fmt = 'self.trUtf8("{0}")' 
+                if self.cFilters.isChecked():
+                    fmt = '{0}'
+                else:
+                    fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfOpenFile.isChecked():
                 code += ',{0}{1}None'.format(os.linesep, istring)
@@ -214,10 +215,10 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eFilters.text():
                 code += '""'
             else:
-                if self.cFilters.isChecked(): 
-                    fmt = '{0}' 
-                else: 
-                    fmt = 'self.trUtf8("{0}")' 
+                if self.cFilters.isChecked():
+                    fmt = '{0}'
+                else:
+                    fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfOpenFiles.isChecked():
                 code += ',{0}{1}None'.format(os.linesep, istring)
@@ -247,10 +248,10 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eFilters.text():
                 code += '""'
             else:
-                if self.cFilters.isChecked(): 
-                    fmt = '{0}' 
-                else: 
-                    fmt = 'self.trUtf8("{0}")' 
+                if self.cFilters.isChecked():
+                    fmt = '{0}'
+                else:
+                    fmt = 'self.trUtf8("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfSaveFile.isChecked():
                 code += ',{0}{1}None'.format(os.linesep, istring)

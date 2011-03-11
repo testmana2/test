@@ -16,6 +16,7 @@ from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
 
 import Preferences
 
+
 class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
     """
     Class implementing the Help web browser configuration page.
@@ -99,7 +100,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         if historyLimit == 1:
             idx = 0
         elif historyLimit == 7:
-            idx = 1 
+            idx = 1
         elif historyLimit == 14:
             idx = 2
         elif historyLimit == 30:
@@ -124,7 +125,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.saveGeometryCheckBox.isChecked())
         Preferences.setHelp("WebSearchSuggestions",
             self.webSuggestionsCheckBox.isChecked())
-        Preferences.setHelp("ShowPreview", 
+        Preferences.setHelp("ShowPreview",
             self.showTabPreviews.isChecked())
         
         Preferences.setHelp("JavaEnabled",
@@ -135,13 +136,13 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.jsOpenWindowsCheckBox.isChecked())
         Preferences.setHelp("JavaScriptCanAccessClipboard",
             self.jsClipboardCheckBox.isChecked())
-        Preferences.setHelp("PluginsEnabled", 
+        Preferences.setHelp("PluginsEnabled",
             self.pluginsCheckBox.isChecked())
         
-        Preferences.setHelp("SavePasswords", 
+        Preferences.setHelp("SavePasswords",
             self.savePasswordsCheckBox.isChecked())
         if self.dnsPrefetchCheckBox.isEnabled():
-            Preferences.setHelp("DnsPrefetchEnabled", 
+            Preferences.setHelp("DnsPrefetchEnabled",
                 self.dnsPrefetchCheckBox.isChecked())
         
         Preferences.setHelp("DiskCacheEnabled",
@@ -149,24 +150,24 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Preferences.setHelp("DiskCacheSize",
             self.cacheSizeSpinBox.value())
         if self.cacheKeepButton.isChecked():
-            Preferences.setHelp("CachePolicy", 
+            Preferences.setHelp("CachePolicy",
                 QNetworkRequest.PreferNetwork)
         elif self.cachePreferButton.isChecked():
-            Preferences.setHelp("CachePolicy", 
+            Preferences.setHelp("CachePolicy",
                 QNetworkRequest.PreferCache)
         elif self.cacheOfflineButton.isChecked():
-            Preferences.setHelp("CachePolicy", 
+            Preferences.setHelp("CachePolicy",
                 QNetworkRequest.AlwaysCache)
         
         Preferences.setHelp("PrintBackgrounds",
             self.printBackgroundsCheckBox.isChecked())
         
-        Preferences.setHelp("StartupBehavior", 
+        Preferences.setHelp("StartupBehavior",
             self.startupCombo.currentIndex())
-        Preferences.setHelp("HomePage", 
+        Preferences.setHelp("HomePage",
             self.homePageEdit.text())
         
-        Preferences.setHelp("DefaultScheme", 
+        Preferences.setHelp("DefaultScheme",
             self.defaultSchemeCombo.currentText())
         
         idx = self.expireHistory.currentIndex()
@@ -201,6 +202,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         """
         self.homePageEdit.setText(Preferences.Prefs.helpDefaults["HomePage"])
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

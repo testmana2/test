@@ -547,7 +547,7 @@ expression of watch expression to clear (string)
         Private slot to process client output received via stdout.
 </p><a NAME="DebugServer.__createDebuggerInterface" ID="DebugServer.__createDebuggerInterface"></a>
 <h4>DebugServer.__createDebuggerInterface</h4>
-<b>__createDebuggerInterface</b>(<i>clientType = None</i>)
+<b>__createDebuggerInterface</b>(<i>clientType=None</i>)
 <p>
         Private slot to create the debugger interface object.
 </p><dl>
@@ -654,7 +654,7 @@ number of occurrences to ignore (int)
 </dd>
 </dl><a NAME="DebugServer.__remoteWatchpoint" ID="DebugServer.__remoteWatchpoint"></a>
 <h4>DebugServer.__remoteWatchpoint</h4>
-<b>__remoteWatchpoint</b>(<i>cond, set, temp = False</i>)
+<b>__remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
 <p>
         Private method to set or clear a watch expression.
 </p><dl>
@@ -733,7 +733,7 @@ tuple of local expression (string) and special condition (string)
 <h4>DebugServer.__watchPointDataAboutToBeChanged</h4>
 <b>__watchPointDataAboutToBeChanged</b>(<i>startIndex, endIndex</i>)
 <p>
-        Private slot to handle the dataAboutToBeChanged signal of the 
+        Private slot to handle the dataAboutToBeChanged signal of the
         watch expression model.
 </p><dl>
 <dt><i>startIndex</i></dt>
@@ -865,7 +865,7 @@ IP address or hostname (string)
 </dd>
 </dl><a NAME="DebugServer.getSupportedLanguages" ID="DebugServer.getSupportedLanguages"></a>
 <h4>DebugServer.getSupportedLanguages</h4>
-<b>getSupportedLanguages</b>(<i>shellOnly = False</i>)
+<b>getSupportedLanguages</b>(<i>shellOnly=False</i>)
 <p>
         Public slot to return the supported programming languages.
 </p><dl>
@@ -964,7 +964,7 @@ regexp string for variable names to filter out (string)
 </dd>
 </dl><a NAME="DebugServer.remoteClientVariable" ID="DebugServer.remoteClientVariable"></a>
 <h4>DebugServer.remoteClientVariable</h4>
-<b>remoteClientVariable</b>(<i>scope, filter, var, framenr = 0</i>)
+<b>remoteClientVariable</b>(<i>scope, filter, var, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -983,7 +983,7 @@ framenumber of the variables to retrieve (int)
 </dd>
 </dl><a NAME="DebugServer.remoteClientVariables" ID="DebugServer.remoteClientVariables"></a>
 <h4>DebugServer.remoteClientVariables</h4>
-<b>remoteClientVariables</b>(<i>scope, filter, framenr = 0</i>)
+<b>remoteClientVariables</b>(<i>scope, filter, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -1010,7 +1010,7 @@ the text to be completed (string)
 </dd>
 </dl><a NAME="DebugServer.remoteContinue" ID="DebugServer.remoteContinue"></a>
 <h4>DebugServer.remoteContinue</h4>
-<b>remoteContinue</b>(<i>special = False</i>)
+<b>remoteContinue</b>(<i>special=False</i>)
 <p>
         Public method to continue the debugged program.
 </p><dl>
@@ -1020,7 +1020,7 @@ flag indicating a special continue operation
 </dd>
 </dl><a NAME="DebugServer.remoteCoverage" ID="DebugServer.remoteCoverage"></a>
 <h4>DebugServer.remoteCoverage</h4>
-<b>remoteCoverage</b>(<i>fn, argv, wd, env, autoClearShell = True, erase = False, forProject = False, runInConsole = False, clientType = ""</i>)
+<b>remoteCoverage</b>(<i>fn, argv, wd, env, autoClearShell=True, erase=False, forProject=False, runInConsole=False, clientType=""</i>)
 <p>
         Public method to load a new program to collect coverage data.
 </p><dl>
@@ -1087,7 +1087,7 @@ statement to execute (string)
 </dd>
 </dl><a NAME="DebugServer.remoteLoad" ID="DebugServer.remoteLoad"></a>
 <h4>DebugServer.remoteLoad</h4>
-<b>remoteLoad</b>(<i>fn, argv, wd, env, autoClearShell = True, tracePython = False, autoContinue = True, forProject = False, runInConsole = False, autoFork = False, forkChild = False, clientType = ""</i>)
+<b>remoteLoad</b>(<i>fn, argv, wd, env, autoClearShell=True, tracePython=False, autoContinue=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType=""</i>)
 <p>
         Public method to load a new program to debug.
 </p><dl>
@@ -1134,7 +1134,7 @@ client type to be used (string)
 </dd>
 </dl><a NAME="DebugServer.remoteProfile" ID="DebugServer.remoteProfile"></a>
 <h4>DebugServer.remoteProfile</h4>
-<b>remoteProfile</b>(<i>fn, argv, wd, env, autoClearShell = True, erase = False, forProject = False, runInConsole = False, clientType = ""</i>)
+<b>remoteProfile</b>(<i>fn, argv, wd, env, autoClearShell=True, erase=False, forProject=False, runInConsole=False, clientType=""</i>)
 <p>
         Public method to load a new program to collect profiling data.
 </p><dl>
@@ -1180,7 +1180,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebugServer.remoteRun" ID="DebugServer.remoteRun"></a>
 <h4>DebugServer.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd, env, autoClearShell = True, forProject = False, runInConsole = False, autoFork = False, forkChild = False, clientType = ""</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, env, autoClearShell=True, forProject=False, runInConsole=False, autoFork=False, forkChild=False, clientType=""</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -1231,7 +1231,7 @@ id of the thread (integer)
 <h4>DebugServer.remoteStatement</h4>
 <b>remoteStatement</b>(<i>stmt</i>)
 <p>
-        Public method to execute a Python statement.  
+        Public method to execute a Python statement.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -1414,7 +1414,7 @@ exit code as a string (string)
 </dd>
 </dl><a NAME="DebugServer.signalClientLine" ID="DebugServer.signalClientLine"></a>
 <h4>DebugServer.signalClientLine</h4>
-<b>signalClientLine</b>(<i>filename, lineno, forStack = False</i>)
+<b>signalClientLine</b>(<i>filename, lineno, forStack=False</i>)
 <p>
         Public method to process client position feedback.
 </p><dl>
@@ -1548,7 +1548,7 @@ expression of watch expression to clear (string)
 </dd>
 </dl><a NAME="DebugServer.startClient" ID="DebugServer.startClient"></a>
 <h4>DebugServer.startClient</h4>
-<b>startClient</b>(<i>unplanned = True, clType = None, forProject = False, runInConsole = False</i>)
+<b>startClient</b>(<i>unplanned=True, clType=None, forProject=False, runInConsole=False</i>)
 <p>
         Public method to start a debug client.
 </p><dl>

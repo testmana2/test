@@ -4,11 +4,12 @@
 #
 
 """
-Module implementing specialized tree views. 
+Module implementing specialized tree views.
 """
 
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QTreeView
+
 
 class E5TreeView(QTreeView):
     """
@@ -46,5 +47,5 @@ class E5TreeView(QTreeView):
         Public method to clear the view.
         """
         if self.model() is not None:
-            self.model().removeRows(0, self.model().rowCount(self.rootIndex()), 
+            self.model().removeRows(0, self.model().rowCount(self.rootIndex()),
                                     self.rootIndex())

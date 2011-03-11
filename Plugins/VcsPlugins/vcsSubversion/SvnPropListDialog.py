@@ -16,11 +16,12 @@ from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
 
 import Preferences
 
+
 class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
     """
     Class implementing a dialog to show the output of the svn proplist command process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -53,7 +54,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         Private method to resort the tree.
         """
-        self.propsList.sortItems(self.propsList.sortColumn(), 
+        self.propsList.sortItems(self.propsList.sortColumn(),
             self.propsList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -87,7 +88,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         
         e.accept()
         
-    def start(self, fn, recursive = False):
+    def start(self, fn, recursive=False):
         """
         Public slot to start the svn status command.
         
@@ -177,8 +178,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             if self.rx_path.exactMatch(s):
                 if self.lastProp:
@@ -204,8 +205,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

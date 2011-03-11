@@ -448,7 +448,7 @@ BrowserItem
 </table>
 <a NAME="BrowserDirectoryItem.__init__" ID="BrowserDirectoryItem.__init__"></a>
 <h4>BrowserDirectoryItem (Constructor)</h4>
-<b>BrowserDirectoryItem</b>(<i>parent, dinfo, full = True</i>)
+<b>BrowserDirectoryItem</b>(<i>parent, dinfo, full=True</i>)
 <p>
         Constructor
 </p><dl>
@@ -505,7 +505,7 @@ name of the item (string)
 </dd>
 </dl><a NAME="BrowserDirectoryItem.setName" ID="BrowserDirectoryItem.setName"></a>
 <h4>BrowserDirectoryItem.setName</h4>
-<b>setName</b>(<i>dinfo, full = True</i>)
+<b>setName</b>(<i>dinfo, full=True</i>)
 <p>
         Public method to set the directory name.
 </p><dl>
@@ -596,7 +596,7 @@ BrowserItem
 </table>
 <a NAME="BrowserFileItem.__init__" ID="BrowserFileItem.__init__"></a>
 <h4>BrowserFileItem (Constructor)</h4>
-<b>BrowserFileItem</b>(<i>parent, finfo, full = True, sourceLanguage = ""</i>)
+<b>BrowserFileItem</b>(<i>parent, finfo, full=True, sourceLanguage=""</i>)
 <p>
         Constructor
 </p><dl>
@@ -806,7 +806,7 @@ name of the item (string)
 </dd>
 </dl><a NAME="BrowserFileItem.setName" ID="BrowserFileItem.setName"></a>
 <h4>BrowserFileItem.setName</h4>
-<b>setName</b>(<i>finfo, full = True</i>)
+<b>setName</b>(<i>finfo, full=True</i>)
 <p>
         Public method to set the directory name.
 </p><dl>
@@ -1298,7 +1298,7 @@ QAbstractItemModel
 </table>
 <a NAME="BrowserModel.__init__" ID="BrowserModel.__init__"></a>
 <h4>BrowserModel (Constructor)</h4>
-<b>BrowserModel</b>(<i>parent = None</i>)
+<b>BrowserModel</b>(<i>parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -1346,7 +1346,7 @@ item to be removed (BrowserDirectoryItem)
 </dd>
 </dl><a NAME="BrowserModel.addItem" ID="BrowserModel.addItem"></a>
 <h4>BrowserModel.addItem</h4>
-<b>addItem</b>(<i>itm, parent = QModelIndex()</i>)
+<b>addItem</b>(<i>itm, parent=QModelIndex()</i>)
 <p>
         Puplic slot to add an item.
 </p><dl>
@@ -1432,7 +1432,7 @@ requested flags (Qt.ItemFlags)
 </dd>
 </dl><a NAME="BrowserModel.hasChildren" ID="BrowserModel.hasChildren"></a>
 <h4>BrowserModel.hasChildren</h4>
-<b>hasChildren</b>(<i>parent = QModelIndex()</i>)
+<b>hasChildren</b>(<i>parent=QModelIndex()</i>)
 <p>
         Public method to check for the presence of child items.
 </p><p>
@@ -1450,7 +1450,7 @@ flag indicating the presence of child items (boolean)
 </dd>
 </dl><a NAME="BrowserModel.headerData" ID="BrowserModel.headerData"></a>
 <h4>BrowserModel.headerData</h4>
-<b>headerData</b>(<i>section, orientation, role = Qt.DisplayRole</i>)
+<b>headerData</b>(<i>section, orientation, role=Qt.DisplayRole</i>)
 <p>
         Public method to get the header data.
 </p><dl>
@@ -1471,7 +1471,7 @@ requested header data
 </dd>
 </dl><a NAME="BrowserModel.index" ID="BrowserModel.index"></a>
 <h4>BrowserModel.index</h4>
-<b>index</b>(<i>row, column, parent = QModelIndex()</i>)
+<b>index</b>(<i>row, column, parent=QModelIndex()</i>)
 <p>
         Public method to create an index.
 </p><dl>
@@ -1522,7 +1522,7 @@ index of parent item (QModelIndex)
 </dd>
 </dl><a NAME="BrowserModel.populateClassAttributesItem" ID="BrowserModel.populateClassAttributesItem"></a>
 <h4>BrowserModel.populateClassAttributesItem</h4>
-<b>populateClassAttributesItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateClassAttributesItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a class attributes item's subtree.
 </p><dl>
@@ -1535,7 +1535,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateClassItem" ID="BrowserModel.populateClassItem"></a>
 <h4>BrowserModel.populateClassItem</h4>
-<b>populateClassItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateClassItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a class item's subtree.
 </p><dl>
@@ -1548,7 +1548,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateDirectoryItem" ID="BrowserModel.populateDirectoryItem"></a>
 <h4>BrowserModel.populateDirectoryItem</h4>
-<b>populateDirectoryItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateDirectoryItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a directory item's subtree.
 </p><dl>
@@ -1561,7 +1561,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateFileItem" ID="BrowserModel.populateFileItem"></a>
 <h4>BrowserModel.populateFileItem</h4>
-<b>populateFileItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateFileItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a file item's subtree.
 </p><dl>
@@ -1574,7 +1574,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateItem" ID="BrowserModel.populateItem"></a>
 <h4>BrowserModel.populateItem</h4>
-<b>populateItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate an item's subtree.
 </p><dl>
@@ -1587,7 +1587,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateMethodItem" ID="BrowserModel.populateMethodItem"></a>
 <h4>BrowserModel.populateMethodItem</h4>
-<b>populateMethodItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateMethodItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a method item's subtree.
 </p><dl>
@@ -1600,7 +1600,7 @@ flag indicating a repopulation (boolean)
 </dd>
 </dl><a NAME="BrowserModel.populateSysPathItem" ID="BrowserModel.populateSysPathItem"></a>
 <h4>BrowserModel.populateSysPathItem</h4>
-<b>populateSysPathItem</b>(<i>parentItem, repopulate = False</i>)
+<b>populateSysPathItem</b>(<i>parentItem, repopulate=False</i>)
 <p>
         Public method to populate a sys.path item's subtree.
 </p><dl>
@@ -1633,7 +1633,7 @@ index of the toplevel directory to be removed (QModelIndex)
 </dd>
 </dl><a NAME="BrowserModel.rowCount" ID="BrowserModel.rowCount"></a>
 <h4>BrowserModel.rowCount</h4>
-<b>rowCount</b>(<i>parent = QModelIndex()</i>)
+<b>rowCount</b>(<i>parent=QModelIndex()</i>)
 <p>
         Public method to get the number of rows.
 </p><dl>

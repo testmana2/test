@@ -18,6 +18,7 @@ from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
 
+
 class CookieJar(QNetworkCookieJar):
     """
     Class implementing a QNetworkCookieJar subclass with various accept policies.
@@ -28,19 +29,19 @@ class CookieJar(QNetworkCookieJar):
     
     JAR_VERSION = 23
     
-    AcceptAlways                    = 0
-    AcceptNever                     = 1
-    AcceptOnlyFromSitesNavigatedTo  = 2
+    AcceptAlways = 0
+    AcceptNever = 1
+    AcceptOnlyFromSitesNavigatedTo = 2
 
-    KeepUntilExpire     = 0
-    KeepUntilExit       = 1
-    KeepUntilTimeLimit  = 2
+    KeepUntilExpire = 0
+    KeepUntilExit = 1
+    KeepUntilTimeLimit = 2
     
-    Allow           = 0
-    Block           = 1
+    Allow = 0
+    Block = 1
     AllowForSession = 2
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -52,7 +53,7 @@ class CookieJar(QNetworkCookieJar):
         self.__acceptCookies = self.AcceptOnlyFromSitesNavigatedTo
         self.__saveTimer = AutoSaver(self, self.save)
         
-        self.__cookiesFile = os.path.join(Utilities.getConfigDir(), 
+        self.__cookiesFile = os.path.join(Utilities.getConfigDir(),
                                           "browser", "cookies.ini")
     
     def saveCookies(self, cookiesList):
@@ -89,7 +90,7 @@ class CookieJar(QNetworkCookieJar):
         if version != self.JAR_VERSION:
             return []
         
-        stream.readUInt32() # number of cookies
+        stream.readUInt32()  # number of cookies
         
         rawCookie = QByteArray()
         while not stream.atEnd():
@@ -170,7 +171,7 @@ class CookieJar(QNetworkCookieJar):
         cookieSettings = QSettings(self.__cookiesFile, QSettings.IniFormat)
         
         cookiesList = self.allCookies()
-        for index in range(len(cookiesList) -1, -1, -1):
+        for index in range(len(cookiesList) - 1, -1, -1):
             if cookiesList[index].isSessionCookie():
                 del cookiesList[index]
         cookies = self.saveCookies(cookiesList)
@@ -178,7 +179,7 @@ class CookieJar(QNetworkCookieJar):
         cookieSettings.setValue("Cookies", cookies)
         cookieSettings.setValue("Exceptions/block", self.__exceptionsBlock)
         cookieSettings.setValue("Exceptions/allow", self.__exceptionsAllow)
-        cookieSettings.setValue("Exceptions/allowForSession", 
+        cookieSettings.setValue("Exceptions/allowForSession",
                                 self.__exceptionsAllowForSession)
         
         Preferences.setHelp("AcceptCookies", self.__acceptCookies)

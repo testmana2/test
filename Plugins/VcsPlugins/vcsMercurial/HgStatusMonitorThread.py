@@ -13,11 +13,12 @@ from VCS.StatusMonitorThread import VcsStatusMonitorThread
 
 import Preferences
 
+
 class HgStatusMonitorThread(VcsStatusMonitorThread):
     """
     Class implementing the VCS status monitor thread class for Mercurial.
     """
-    def __init__(self, interval, project, vcs, parent = None):
+    def __init__(self, interval, project, vcs, parent=None):
         """
         Constructor
         
@@ -48,7 +49,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             <li>" " path is back at normal</li>
         </ul>
         
-        @return tuple of flag indicating successful operation (boolean) and 
+        @return tuple of flag indicating successful operation (boolean) and
             a status message in case of non successful operation (string)
         """
         self.shouldUpdate = False
@@ -91,7 +92,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                         for line in output.splitlines():
                             flag, name = line.split(" ", 1)
                             if flag == "U":
-                                states[name] = "Z" # conflict
+                                states[name] = "Z"  # conflict
                 
                 for name in states:
                     try:
@@ -109,8 +110,8 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 process.kill()
                 process.waitForFinished()
                 return False, \
-                       str(process.readAllStandardError(), 
-                            Preferences.getSystem("IOEncoding"), 
+                       str(process.readAllStandardError(),
+                            Preferences.getSystem("IOEncoding"),
                             'replace')
         else:
             process.kill()

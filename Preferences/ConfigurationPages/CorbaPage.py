@@ -18,6 +18,7 @@ from .Ui_CorbaPage import Ui_CorbaPage
 import Preferences
 import Utilities
 
+
 class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
     """
     Class implementing the Corba configuration page.
@@ -55,6 +56,7 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         if file:
             self.idlEdit.setText(Utilities.toNativeSeparators(file))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

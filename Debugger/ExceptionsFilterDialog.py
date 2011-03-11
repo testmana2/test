@@ -12,6 +12,7 @@ from PyQt4.QtGui import *
 
 from .Ui_ExceptionsFilterDialog import Ui_ExceptionsFilterDialog
 
+
 class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
     """
     Class implementing the exceptions filter dialog.

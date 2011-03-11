@@ -8,7 +8,7 @@
 Eric5 QRegExp
 
 This is the main Python script that performs the necessary initialization
-of the QRegExp wizard module and starts the Qt event loop. This is a standalone 
+of the QRegExp wizard module and starts the Qt event loop. This is a standalone
 version of the integrated QRegExp wizard.
 """
 
@@ -36,13 +36,14 @@ def createMainWidget(argv):
         QRegExpWizardWindow
     return QRegExpWizardWindow()
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 QRegExp",

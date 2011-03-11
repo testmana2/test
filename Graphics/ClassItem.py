@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .UMLItem import UMLItem
 
+
 class ClassModel(object):
     """
     Class implementing the class model.
     """
-    def __init__(self, name, methods = [], attributes = []):
+    def __init__(self, name, methods=[], attributes=[]):
         """
         Constructor
         
@@ -70,12 +71,13 @@ class ClassModel(object):
         """
         return self.name
     
+
 class ClassItem(UMLItem):
     """
     Class implementing an UML like class item.
     """
-    def __init__(self, model = None, external = False, x = 0, y = 0, 
-                 rounded = False, noAttrs = False, parent = None, scene = None):
+    def __init__(self, model=None, external=False, x=0, y=0,
+                 rounded=False, noAttrs=False, parent=None, scene=None):
         """
         Constructor
         
@@ -175,7 +177,7 @@ class ClassItem(UMLItem):
         self.__createTexts()
         self.__calculateSize()
         
-    def paint(self, painter, option, widget = None):
+    def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
         

@@ -14,6 +14,7 @@ from .Ui_GraphicsPage import Ui_GraphicsPage
 
 import Preferences
 
+
 class GraphicsPage(ConfigurationPageBase, Ui_GraphicsPage):
     """
     Class implementing the Printer configuration page.
@@ -49,6 +50,7 @@ class GraphicsPage(ConfigurationPageBase, Ui_GraphicsPage):
         """
         self.graphicsFontSample.setFont(self.graphicsFont)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

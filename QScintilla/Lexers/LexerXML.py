@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerXML
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerXML(QsciLexerXML, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -26,8 +27,8 @@ class LexerXML(QsciLexerXML, Lexer):
         Lexer.__init__(self)
         
         self.streamCommentString = {
-            'start' : '<!-- ',
-            'end'   : ' -->'
+            'start': '<!-- ',
+            'end': ' -->'
         }
     
     def initProperties(self):
@@ -51,20 +52,20 @@ class LexerXML(QsciLexerXML, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerXML.HTMLComment, 
-                         QsciLexerXML.ASPXCComment, 
-                         QsciLexerXML.SGMLComment, 
-                         QsciLexerXML.SGMLParameterComment, 
-                         QsciLexerXML.JavaScriptComment, 
-                         QsciLexerXML.JavaScriptCommentDoc, 
-                         QsciLexerXML.JavaScriptCommentLine, 
-                         QsciLexerXML.ASPJavaScriptComment, 
-                         QsciLexerXML.ASPJavaScriptCommentDoc, 
-                         QsciLexerXML.ASPJavaScriptCommentLine, 
-                         QsciLexerXML.VBScriptComment, 
-                         QsciLexerXML.ASPVBScriptComment, 
-                         QsciLexerXML.PythonComment, 
-                         QsciLexerXML.ASPPythonComment, 
+        return style in [QsciLexerXML.HTMLComment,
+                         QsciLexerXML.ASPXCComment,
+                         QsciLexerXML.SGMLComment,
+                         QsciLexerXML.SGMLParameterComment,
+                         QsciLexerXML.JavaScriptComment,
+                         QsciLexerXML.JavaScriptCommentDoc,
+                         QsciLexerXML.JavaScriptCommentLine,
+                         QsciLexerXML.ASPJavaScriptComment,
+                         QsciLexerXML.ASPJavaScriptCommentDoc,
+                         QsciLexerXML.ASPJavaScriptCommentLine,
+                         QsciLexerXML.VBScriptComment,
+                         QsciLexerXML.ASPVBScriptComment,
+                         QsciLexerXML.PythonComment,
+                         QsciLexerXML.ASPPythonComment,
                          QsciLexerXML.PHPComment]
     
     def isStringStyle(self, style):
@@ -73,36 +74,36 @@ class LexerXML(QsciLexerXML, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerXML.HTMLDoubleQuotedString, 
-                         QsciLexerXML.HTMLSingleQuotedString, 
-                         QsciLexerXML.SGMLDoubleQuotedString, 
-                         QsciLexerXML.SGMLSingleQuotedString, 
-                         QsciLexerXML.JavaScriptDoubleQuotedString, 
-                         QsciLexerXML.JavaScriptSingleQuotedString, 
-                         QsciLexerXML.JavaScriptUnclosedString, 
-                         QsciLexerXML.ASPJavaScriptDoubleQuotedString, 
-                         QsciLexerXML.ASPJavaScriptSingleQuotedString, 
-                         QsciLexerXML.ASPJavaScriptUnclosedString, 
-                         QsciLexerXML.VBScriptString, 
-                         QsciLexerXML.VBScriptUnclosedString, 
-                         QsciLexerXML.ASPVBScriptString, 
-                         QsciLexerXML.ASPVBScriptUnclosedString, 
-                         QsciLexerXML.PythonDoubleQuotedString, 
-                         QsciLexerXML.PythonSingleQuotedString, 
-                         QsciLexerXML.PythonTripleDoubleQuotedString, 
-                         QsciLexerXML.PythonTripleSingleQuotedString, 
-                         QsciLexerXML.ASPPythonDoubleQuotedString, 
-                         QsciLexerXML.ASPPythonSingleQuotedString, 
-                         QsciLexerXML.ASPPythonTripleDoubleQuotedString, 
-                         QsciLexerXML.ASPPythonTripleSingleQuotedString, 
-                         QsciLexerXML.PHPDoubleQuotedString, 
+        return style in [QsciLexerXML.HTMLDoubleQuotedString,
+                         QsciLexerXML.HTMLSingleQuotedString,
+                         QsciLexerXML.SGMLDoubleQuotedString,
+                         QsciLexerXML.SGMLSingleQuotedString,
+                         QsciLexerXML.JavaScriptDoubleQuotedString,
+                         QsciLexerXML.JavaScriptSingleQuotedString,
+                         QsciLexerXML.JavaScriptUnclosedString,
+                         QsciLexerXML.ASPJavaScriptDoubleQuotedString,
+                         QsciLexerXML.ASPJavaScriptSingleQuotedString,
+                         QsciLexerXML.ASPJavaScriptUnclosedString,
+                         QsciLexerXML.VBScriptString,
+                         QsciLexerXML.VBScriptUnclosedString,
+                         QsciLexerXML.ASPVBScriptString,
+                         QsciLexerXML.ASPVBScriptUnclosedString,
+                         QsciLexerXML.PythonDoubleQuotedString,
+                         QsciLexerXML.PythonSingleQuotedString,
+                         QsciLexerXML.PythonTripleDoubleQuotedString,
+                         QsciLexerXML.PythonTripleSingleQuotedString,
+                         QsciLexerXML.ASPPythonDoubleQuotedString,
+                         QsciLexerXML.ASPPythonSingleQuotedString,
+                         QsciLexerXML.ASPPythonTripleDoubleQuotedString,
+                         QsciLexerXML.ASPPythonTripleSingleQuotedString,
+                         QsciLexerXML.PHPDoubleQuotedString,
                          QsciLexerXML.PHPSingleQuotedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerXML.keywords(self, kwSet)

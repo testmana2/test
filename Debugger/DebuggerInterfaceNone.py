@@ -14,14 +14,16 @@ ClientDefaultCapabilities = 0
     
 ClientTypeAssociations = []
 
+
 def getRegistryData():
     """
     Module functionto get characterising data for the debugger interface.
     
-    @return list of the following data. Client type (string), client 
+    @return list of the following data. Client type (string), client
         capabilities (integer), client type association (list of strings)
     """
     return ["None", ClientDefaultCapabilities, ClientTypeAssociations]
+
 
 class DebuggerInterfaceNone(QObject):
     """
@@ -49,7 +51,7 @@ class DebuggerInterfaceNone(QObject):
         Public method to start a remote Python interpreter.
         
         @param port portnumber the debug server is listening on (integer)
-        @param runInConsole flag indicating to start the debugger in a 
+        @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
@@ -61,7 +63,7 @@ class DebuggerInterfaceNone(QObject):
         Public method to start a remote Python interpreter for a project.
         
         @param port portnumber the debug server is listening on (integer)
-        @param runInConsole flag indicating to start the debugger in a 
+        @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
         @return client process object (QProcess) and a flag to indicate
             a network connection (boolean)
@@ -117,8 +119,8 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteLoad(self, fn, argv, wd, traceInterpreter = False, autoContinue = True, 
-                   autoFork = False, forkChild = False):
+    def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
+                   autoFork=False, forkChild=False):
         """
         Public method to load a new program to debug.
         
@@ -134,7 +136,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteRun(self, fn, argv, wd, autoFork = False, forkChild = False):
+    def remoteRun(self, fn, argv, wd, autoFork=False, forkChild=False):
         """
         Public method to load a new program to run.
         
@@ -146,19 +148,19 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteCoverage(self, fn, argv, wd, erase = False):
+    def remoteCoverage(self, fn, argv, wd, erase=False):
         """
         Public method to load a new program to collect coverage data.
         
         @param fn the filename to run (string)
         @param argv the commandline arguments to pass to the program (string)
         @param wd the working directory for the program (string)
-        @keyparam erase flag indicating that coverage info should be 
+        @keyparam erase flag indicating that coverage info should be
             cleared first (boolean)
         """
         return
 
-    def remoteProfile(self, fn, argv, wd, erase = False):
+    def remoteProfile(self, fn, argv, wd, erase=False):
         """
         Public method to load a new program to collect profiling data.
         
@@ -171,7 +173,7 @@ class DebuggerInterfaceNone(QObject):
 
     def remoteStatement(self, stmt):
         """
-        Public method to execute a Python statement.  
+        Public method to execute a Python statement.
         
         @param stmt the Python statement to execute (string). It
               should not have a trailing newline.
@@ -203,7 +205,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
 
-    def remoteContinue(self, special = False):
+    def remoteContinue(self, special=False):
         """
         Public method to continue the debugged program.
         
@@ -211,7 +213,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
 
-    def remoteBreakpoint(self, fn, line, set, cond = None, temp = False):
+    def remoteBreakpoint(self, fn, line, set, cond=None, temp=False):
         """
         Public method to set or clear a breakpoint.
         
@@ -243,7 +245,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteWatchpoint(self, cond, set, temp = False):
+    def remoteWatchpoint(self, cond, set, temp=False):
         """
         Public method to set or clear a watch expression.
         
@@ -271,7 +273,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
     
-    def remoteRawInput(self,s):
+    def remoteRawInput(self, s):
         """
         Public method to send the raw input to the debugged program.
         
@@ -293,7 +295,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteClientVariables(self, scope, filter, framenr = 0):
+    def remoteClientVariables(self, scope, filter, framenr=0):
         """
         Public method to request the variables of the debugged program.
         
@@ -303,7 +305,7 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteClientVariable(self, scope, filter, var, framenr = 0):
+    def remoteClientVariable(self, scope, filter, var, framenr=0):
         """
         Public method to request the variables of the debugged program.
         

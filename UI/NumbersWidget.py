@@ -16,11 +16,12 @@ from .Ui_NumbersWidget import Ui_NumbersWidget
 
 import UI.PixmapCache
 
+
 class BinaryModel(QAbstractTableModel):
     """
     Class implementing a model for entering binary numbers.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -49,7 +50,7 @@ class BinaryModel(QAbstractTableModel):
         """
         return self.__bits
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -74,7 +75,7 @@ class BinaryModel(QAbstractTableModel):
         """
         return Qt.ItemIsUserCheckable | Qt.ItemIsEnabled | Qt.ItemIsSelectable
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get header data from the model.
         
@@ -125,7 +126,7 @@ class BinaryModel(QAbstractTableModel):
         """
         return self.__value
     
-    def setData(self, index, value, role = Qt.EditRole):
+    def setData(self, index, value, role=Qt.EditRole):
         """
         Public method to set the data of a node cell.
         
@@ -145,6 +146,7 @@ class BinaryModel(QAbstractTableModel):
         
         return False
 
+
 class NumbersWidget(QWidget, Ui_NumbersWidget):
     """
     Class implementing a widget to show numbers in different formats.
@@ -154,7 +156,7 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
     """
     insertNumber = pyqtSignal(str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

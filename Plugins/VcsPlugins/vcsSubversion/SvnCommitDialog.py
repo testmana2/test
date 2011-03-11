@@ -14,6 +14,7 @@ from .Ui_SvnCommitDialog import Ui_SvnCommitDialog
 
 import Preferences
 
+
 class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
     """
     Class implementing a dialog to enter the commit message.
@@ -24,7 +25,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
     accepted = pyqtSignal()
     rejected = pyqtSignal()
     
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -63,7 +64,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
             no = int(Preferences.Prefs.settings\
                 .value('Subversion/CommitMessages', 20))
             del self.recentCommitMessages[no:]
-            Preferences.Prefs.settings.setValue('Subversion/Commits', 
+            Preferences.Prefs.settings.setValue('Subversion/Commits',
                 self.recentCommitMessages)
         return msg
         

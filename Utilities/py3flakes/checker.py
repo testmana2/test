@@ -13,6 +13,7 @@ import ast
 
 from . import messages
 
+
 class Binding(object):
     """
     Represents the binding of a value to a name.
@@ -36,10 +37,12 @@ class Binding(object):
             self.source.lineno,
             id(self))
 
+
 class UnBinding(Binding):
     '''
     Created by the 'del' operator.
     '''
+
 
 class Importation(Binding):
     """
@@ -50,10 +53,12 @@ class Importation(Binding):
         name = name.split('.')[0]
         super(Importation, self).__init__(name, source)
 
+
 class Argument(Binding):
     """
     Represents binding a name as an argument.
     """
+
 
 class Assignment(Binding):
     """
@@ -64,11 +69,13 @@ class Assignment(Binding):
     Assignments, rather it treats them as simple Bindings.
     """
 
+
 class FunctionDefinition(Binding):
     """
     Represents a function definition.
     """
     pass
+
 
 class ExportBinding(Binding):
     """
@@ -97,6 +104,7 @@ class ExportBinding(Binding):
                     names.append(node.n)
         return names
 
+
 class Scope(dict):
     """
     Class defining the scope base class.
@@ -110,11 +118,13 @@ class Scope(dict):
     def __init__(self):
         super(Scope, self).__init__()
 
+
 class ClassScope(Scope):
     """
     Class representing a name scope for a class.
     """
     pass
+
 
 class FunctionScope(Scope):
     """
@@ -123,6 +133,7 @@ class FunctionScope(Scope):
     def __init__(self):
         super(FunctionScope, self).__init__()
         self.globals = {}
+
 
 class ModuleScope(Scope):
     """
@@ -133,6 +144,7 @@ class ModuleScope(Scope):
 # Globally defined names which are not attributes of the builtins module.
 _MAGIC_GLOBALS = ['__file__', '__builtins__']
 
+
 class Checker(object):
     """
     Class to check the cleanliness and sanity of Python code.
@@ -140,7 +152,7 @@ class Checker(object):
     nodeDepth = 0
     traceTree = False
 
-    def __init__(self, module, filename = '(none)'):
+    def __init__(self, module, filename='(none)'):
         """
         Constructor
         
@@ -301,7 +313,7 @@ class Checker(object):
     # additional node types
     COMPREHENSION = KEYWORD = handleChildren
     
-    def addBinding(self, lineno, value, reportRedef = True):
+    def addBinding(self, lineno, value, reportRedef=True):
         '''
         Called when a binding is altered.
 
@@ -367,6 +379,7 @@ class Checker(object):
         Process bindings for loop variables.
         """
         vars = []
+
         def collectLoopVars(n):
             if isinstance(n, ast.Name):
                 vars.append(n.id)
@@ -619,7 +632,7 @@ class Checker(object):
     def IMPORTFROM(self, node):
         if node.module == '__future__':
             if not self.futuresAllowed:
-                self.report(messages.LateFutureImport, node.lineno, 
+                self.report(messages.LateFutureImport, node.lineno,
                             [n.name for n in node.names])
         else:
             self.futuresAllowed = False

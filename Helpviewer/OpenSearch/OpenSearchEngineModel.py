@@ -12,11 +12,12 @@ import re
 from PyQt4.QtCore import *
 from PyQt4.QtGui import QPixmap, QIcon
 
+
 class OpenSearchEngineModel(QAbstractTableModel):
     """
     Class implementing a model for search engines.
     """
-    def __init__(self, manager, parent = None):
+    def __init__(self, manager, parent=None):
         """
         Constructor
         
@@ -29,11 +30,11 @@ class OpenSearchEngineModel(QAbstractTableModel):
         manager.changed.connect(self.__enginesChanged)
         
         self.__headers = [
-            self.trUtf8("Name"), 
-            self.trUtf8("Keywords"), 
+            self.trUtf8("Name"),
+            self.trUtf8("Keywords"),
         ]
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         
@@ -64,7 +65,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         
         return True
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows of the model.
         
@@ -76,7 +77,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         else:
             return self.__manager.enginesCount()
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns of the model.
         
@@ -145,7 +146,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         
         return None
     
-    def setData(self, index, value, role = Qt.EditRole):
+    def setData(self, index, value, role=Qt.EditRole):
         """
         Public method to set the data of a model cell.
         
@@ -169,7 +170,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         
         return True
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         

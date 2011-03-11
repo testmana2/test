@@ -5,4 +5,4 @@
  
 """
 Package containing the mdi area view manager plugin.
-""" 
+"""

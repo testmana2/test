@@ -18,6 +18,7 @@ from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
 import Preferences
 import Utilities
 
+
 class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
     """
     Class implementing the Help Documentation configuration page.
@@ -144,6 +145,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         if entry:
             self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(entry))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

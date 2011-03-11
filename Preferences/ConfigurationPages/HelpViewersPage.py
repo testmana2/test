@@ -19,6 +19,7 @@ from .Ui_HelpViewersPage import Ui_HelpViewersPage
 import Preferences
 import Utilities
 
+
 class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
     """
     Class implementing the Help Viewers configuration page.
@@ -124,6 +125,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         if file:
             self.chmviewerEdit.setText(Utilities.toNativeSeparators(file))
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

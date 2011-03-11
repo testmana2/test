@@ -22,6 +22,7 @@ for arg in sys.argv:
 
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -32,13 +33,14 @@ def createMainWidget(argv):
     from PluginManager.PluginInstallDialog import PluginInstallWindow
     return PluginInstallWindow(argv[1:])
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
         ("", "names of plugins to install")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,

@@ -13,11 +13,12 @@ from .Ui_TrayStarterPage import Ui_TrayStarterPage
 import Preferences
 import UI.PixmapCache
 
+
 class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
     """
     Class implementing the tray starter configuration page.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -57,6 +58,7 @@ class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
             iconName = "erict-bwi.png"
         Preferences.setTrayStarter("TrayStarterIcon", iconName)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

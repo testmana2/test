@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 import Helpviewer.HelpWindow
 
+
 class AdBlockModel(QAbstractItemModel):
     """
     Class implementing a model for the AdBlock dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -73,7 +74,7 @@ class AdBlockModel(QAbstractItemModel):
         except ValueError:
             return QModelIndex()
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -87,7 +88,7 @@ class AdBlockModel(QAbstractItemModel):
                 return self.trUtf8("Rule")
         return QAbstractItemModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -124,7 +125,7 @@ class AdBlockModel(QAbstractItemModel):
         
         return None
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -136,7 +137,7 @@ class AdBlockModel(QAbstractItemModel):
         else:
             return 1
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -158,7 +159,7 @@ class AdBlockModel(QAbstractItemModel):
         
         return 0
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to get a model index for a node cell.
         
@@ -177,7 +178,7 @@ class AdBlockModel(QAbstractItemModel):
         parentNode = self.subscription(parent)
         return self.createIndex(row, column, parentNode)
     
-    def parent(self, index = QModelIndex()):
+    def parent(self, index=QModelIndex()):
         """
         Public method to get the index of the parent node.
         
@@ -217,7 +218,7 @@ class AdBlockModel(QAbstractItemModel):
         
         return flags
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove bookmarks from the model.
         
@@ -250,7 +251,7 @@ class AdBlockModel(QAbstractItemModel):
         
         return False
     
-    def setData(self, index, value, role = Qt.EditRole):
+    def setData(self, index, value, role=Qt.EditRole):
         """
         Public method to set the data of a node cell.
         
@@ -303,7 +304,7 @@ class AdBlockModel(QAbstractItemModel):
         self.__manager.rulesChanged.connect(self.__rulesChanged)
         return changed
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if a parent node has some children.
         

@@ -15,11 +15,12 @@ from .UMLGraphicsView import UMLGraphicsView
 import UI.Config
 import UI.PixmapCache
 
+
 class UMLDialog(QMainWindow):
     """
     Class implementing a dialog showing UML like diagrams.
     """
-    def __init__(self, diagramName = "Unnamed", parent = None, name = None):
+    def __init__(self, diagramName="Unnamed", parent=None, name=None):
         """
         Constructor
         

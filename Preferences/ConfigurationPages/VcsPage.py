@@ -14,6 +14,7 @@ from .Ui_VcsPage import Ui_VcsPage
 
 import Preferences
 
+
 class VcsPage(ConfigurationPageBase, Ui_VcsPage):
     """
     Class implementing the VCS configuration page.
@@ -41,25 +42,25 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
             Preferences.getVCS("AutoUpdate"))
         
         self.projectBrowserColours["VcsAdded"] = \
-            self.initColour("VcsAdded", self.pbVcsAddedButton, 
+            self.initColour("VcsAdded", self.pbVcsAddedButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsConflict"] = \
-            self.initColour("VcsConflict", self.pbVcsConflictButton, 
+            self.initColour("VcsConflict", self.pbVcsConflictButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsModified"] = \
-            self.initColour("VcsModified", self.pbVcsModifiedButton, 
+            self.initColour("VcsModified", self.pbVcsModifiedButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsReplaced"] = \
-            self.initColour("VcsReplaced", self.pbVcsReplacedButton, 
+            self.initColour("VcsReplaced", self.pbVcsReplacedButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsUpdate"] = \
-            self.initColour("VcsUpdate", self.pbVcsUpdateButton, 
+            self.initColour("VcsUpdate", self.pbVcsUpdateButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsConflict"] = \
-            self.initColour("VcsConflict", self.pbVcsConflictButton, 
+            self.initColour("VcsConflict", self.pbVcsConflictButton,
                 Preferences.getProjectBrowserColour)
         self.projectBrowserColours["VcsRemoved"] = \
-            self.initColour("VcsRemoved", self.pbVcsRemovedButton, 
+            self.initColour("VcsRemoved", self.pbVcsRemovedButton,
                 Preferences.getProjectBrowserColour)
     
     def save(self):
@@ -74,9 +75,9 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
             self.vcsAutoSaveProjectCheckBox.isChecked())
         Preferences.setVCS("StatusMonitorInterval",
             self.vcsStatusMonitorIntervalSpinBox.value())
-        Preferences.setVCS("MonitorLocalStatus", 
+        Preferences.setVCS("MonitorLocalStatus",
             self.vcsMonitorLocalStatusCheckBox.isChecked())
-        Preferences.setVCS("AutoUpdate", 
+        Preferences.setVCS("AutoUpdate",
             self.autoUpdateCheckBox.isChecked())
     
         for key in list(self.projectBrowserColours.keys()):
@@ -85,62 +86,63 @@ class VcsPage(ConfigurationPageBase, Ui_VcsPage):
     @pyqtSlot()
     def on_pbVcsAddedButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "added".
         """
         self.projectBrowserColours["VcsAdded"] = \
-            self.selectColour(self.pbVcsAddedButton, 
+            self.selectColour(self.pbVcsAddedButton,
                 self.projectBrowserColours["VcsAdded"])
     
     @pyqtSlot()
     def on_pbVcsConflictButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "conflict".
         """
         self.projectBrowserColours["VcsConflict"] = \
-            self.selectColour(self.pbVcsConflictButton, 
+            self.selectColour(self.pbVcsConflictButton,
                 self.projectBrowserColours["VcsConflict"])
     
     @pyqtSlot()
     def on_pbVcsModifiedButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "modified".
         """
         self.projectBrowserColours["VcsModified"] = \
-            self.selectColour(self.pbVcsModifiedButton, 
+            self.selectColour(self.pbVcsModifiedButton,
                 self.projectBrowserColours["VcsModified"])
     
     @pyqtSlot()
     def on_pbVcsReplacedButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "replaced".
         """
         self.projectBrowserColours["VcsReplaced"] = \
-            self.selectColour(self.pbVcsReplacedButton, 
+            self.selectColour(self.pbVcsReplacedButton,
                 self.projectBrowserColours["VcsReplaced"])
     
     @pyqtSlot()
     def on_pbVcsRemovedButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "removed".
         """
         self.projectBrowserColours["VcsRemoved"] = \
-            self.selectColour(self.pbVcsRemovedButton, 
+            self.selectColour(self.pbVcsRemovedButton,
                 self.projectBrowserColours["VcsRemoved"])
     
     @pyqtSlot()
     def on_pbVcsUpdateButton_clicked(self):
         """
-        Private slot to set the background colour for entries with VCS 
+        Private slot to set the background colour for entries with VCS
         status "needs update".
         """
         self.projectBrowserColours["VcsUpdate"] = \
-            self.selectColour(self.pbVcsUpdateButton, 
+            self.selectColour(self.pbVcsUpdateButton,
                 self.projectBrowserColours["VcsUpdate"])
+
 
 def create(dlg):
     """

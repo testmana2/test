@@ -24,6 +24,7 @@ for arg in sys.argv:
 
 from Utilities import Startup
 
+
 def createMainWidget(argv):
     """
     Function to create the main widget.
@@ -34,13 +35,14 @@ def createMainWidget(argv):
     from Tools.TrayStarter import TrayStarter
     return TrayStarter()
 
+
 def main():
     """
     Main entry point into the application.
     """
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
                                   "Eric5 Tray",
@@ -49,8 +51,8 @@ def main():
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,
-                                   createMainWidget, 
-                                   quitOnLastWindowClosed = False)
+                                   createMainWidget,
+                                   quitOnLastWindowClosed=False)
     sys.exit(res)
 
 if __name__ == '__main__':

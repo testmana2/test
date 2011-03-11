@@ -16,11 +16,12 @@ from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
 
 import Preferences
 
+
 class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
     """
     Class implementing a dialog to show a list of tags or branches.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -198,7 +199,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         """
         Private method to resort the tree.
         """
-        self.tagList.sortItems(self.tagList.sortColumn(), 
+        self.tagList.sortItems(self.tagList.sortColumn(),
             self.tagList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -230,8 +231,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readLine(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             if self.rx_list.exactMatch(s):
                 rev = "{0:6}".format(self.rx_list.cap(1))
@@ -255,8 +256,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         """
         if self.process is not None:
             self.errorGroup.show()
-            s = str(self.process.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

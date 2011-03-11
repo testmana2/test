@@ -14,6 +14,7 @@ from .Ui_HgCommitDialog import Ui_HgCommitDialog
 
 import Preferences
 
+
 class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     """
     Class implementing a dialog to enter the commit message.
@@ -24,7 +25,7 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     accepted = pyqtSignal()
     rejected = pyqtSignal()
     
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -60,7 +61,7 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
             no = int(Preferences.Prefs.settings\
                 .value('Mercurial/CommitMessages', 20))
             del self.recentCommitMessages[no:]
-            Preferences.Prefs.settings.setValue('Mercurial/Commits', 
+            Preferences.Prefs.settings.setValue('Mercurial/Commits',
                 self.recentCommitMessages)
         return msg
     

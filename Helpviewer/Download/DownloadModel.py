@@ -9,11 +9,12 @@ Module implementing the download model.
 
 from PyQt4.QtCore import Qt, QAbstractListModel, QModelIndex, QMimeData, QUrl
 
+
 class DownloadModel(QAbstractListModel):
     """
     Class implementing the download model.
     """
-    def __init__(self, manager, parent = None):
+    def __init__(self, manager, parent=None):
         """
         Constructor
         
@@ -41,7 +42,7 @@ class DownloadModel(QAbstractListModel):
         
         return None
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to get the number of rows of the model.
         
@@ -53,7 +54,7 @@ class DownloadModel(QAbstractListModel):
         else:
             return self.__manager.count()
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove bookmarks from the model.
         

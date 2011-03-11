@@ -17,11 +17,12 @@ from PyQt4.QtGui import *
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnPropListDialog import Ui_SvnPropListDialog
 
+
 class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
     """
     Class implementing a dialog to show the output of the svn proplist command process.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -52,7 +53,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         """
         Private method to resort the tree.
         """
-        self.propsList.sortItems(self.propsList.sortColumn(), 
+        self.propsList.sortItems(self.propsList.sortColumn(),
             self.propsList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -72,7 +73,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         """
         QTreeWidgetItem(self.propsList, [path, propName, propValue])
         
-    def start(self, fn, recursive = False):
+    def start(self, fn, recursive=False):
         """
         Public slot to start the svn status command.
         
@@ -94,7 +95,7 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         os.chdir(dname)
         try:
             for name in fnames:
-                proplist = self.client.proplist(name, recurse = recursive)
+                proplist = self.client.proplist(name, recurse=recursive)
                 counter = 0
                 for path, prop in proplist:
                     for propName, propVal in list(prop.items()):

@@ -12,11 +12,12 @@ from PyQt4.QtGui import *
 
 from .Ui_SvnRelocateDialog import Ui_SvnRelocateDialog
 
+
 class SvnRelocateDialog(QDialog, Ui_SvnRelocateDialog):
     """
     Class implementing a dialog to enter the data to relocate the workspace.
     """
-    def __init__(self, currUrl, parent = None):
+    def __init__(self, currUrl, parent=None):
         """
         Constructor
         

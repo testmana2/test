@@ -21,11 +21,12 @@ from .AdBlockRule import AdBlockRule
 
 import UI.PixmapCache
 
+
 class AdBlockDialog(QDialog, Ui_AdBlockDialog):
     """
     Class implementing the AdBlock configuration dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         """
@@ -80,14 +81,14 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         
         menu.addAction(self.trUtf8("Add Custom Rule"), self.addCustomRule)
         
-        menu.addAction(self.trUtf8("Learn more about writing rules..."), 
+        menu.addAction(self.trUtf8("Learn more about writing rules..."),
                        self.__learnAboutWritingFilters)
         
         menu.addSeparator()
         
         idx = self.__proxyModel.mapToSource(self.subscriptionsTree.currentIndex())
         
-        act = menu.addAction(self.trUtf8("Update Subscription"), 
+        act = menu.addAction(self.trUtf8("Update Subscription"),
                              self.__updateSubscription)
         act.setEnabled(idx.isValid())
         
@@ -95,11 +96,11 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         
         menu.addSeparator()
         
-        act = menu.addAction(self.trUtf8("Remove Subscription"), 
+        act = menu.addAction(self.trUtf8("Remove Subscription"),
                              self.__removeSubscription)
         act.setEnabled(idx.isValid())
     
-    def addCustomRule(self, rule = ""):
+    def addCustomRule(self, rule=""):
         """
         Public slot to add a custom AdBlock rule.
         

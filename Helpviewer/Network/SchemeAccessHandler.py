@@ -9,11 +9,12 @@ Module implementing the base class for specific scheme access handlers.
 
 from PyQt4.QtCore import QObject
 
+
 class SchemeAccessHandler(QObject):
     """
     Clase implementing the base class for specific scheme access handlers.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -21,7 +22,7 @@ class SchemeAccessHandler(QObject):
         """
         QObject.__init__(self, parent)
     
-    def createRequest(self, op, request, outgoingData = None):
+    def createRequest(self, op, request, outgoingData=None):
         """
         Protected method to create a request.
         

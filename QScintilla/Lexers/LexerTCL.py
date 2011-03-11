@@ -13,8 +13,9 @@ from .Lexer import Lexer
 
 import Preferences
 
+
 class LexerTCL(QsciLexerTCL, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -40,9 +41,9 @@ class LexerTCL(QsciLexerTCL, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerTCL.Comment, 
-                         QsciLexerTCL.CommentBlock, 
-                         QsciLexerTCL.CommentBox, 
+        return style in [QsciLexerTCL.Comment,
+                         QsciLexerTCL.CommentBlock,
+                         QsciLexerTCL.CommentBox,
                          QsciLexerTCL.CommentLine]
     
     def isStringStyle(self, style):
@@ -57,7 +58,7 @@ class LexerTCL(QsciLexerTCL, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerTCL.keywords(self, kwSet)

@@ -20,6 +20,7 @@ import Helpviewer.HelpWindow
 
 import Utilities
 
+
 class AdBlockSubscription(QObject):
     """
     Class implementing the AdBlock subscription.
@@ -30,7 +31,7 @@ class AdBlockSubscription(QObject):
     changed = pyqtSignal()
     rulesChanged = pyqtSignal()
     
-    def __init__(self, url, parent = None):
+    def __init__(self, url, parent=None):
         """
         Constructor
         
@@ -96,7 +97,7 @@ class AdBlockSubscription(QObject):
         if not self.__enabled:
             queryItems.append(("enabled", "false"))
         if self.__lastUpdate.isValid():
-            queryItems.append(("lastUpdate", 
+            queryItems.append(("lastUpdate",
                                self.__lastUpdate.toString(Qt.ISODate)))
         url.setQueryItems(queryItems)
         return url

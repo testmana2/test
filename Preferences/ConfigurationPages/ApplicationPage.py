@@ -12,6 +12,7 @@ from .Ui_ApplicationPage import Ui_ApplicationPage
 
 import Preferences
 
+
 class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
     """
     Class implementing the Application configuration page.
@@ -93,12 +94,13 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
             period = 4
         Preferences.setUI("PerformVersionCheck", period)
         
-        Preferences.setUser("UseSystemEmailClient", 
+        Preferences.setUser("UseSystemEmailClient",
             self.systemEmailClientCheckBox.isChecked())
         
-        Preferences.setUI("CheckErrorLog", 
+        Preferences.setUI("CheckErrorLog",
             self.errorlogCheckBox.isChecked())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

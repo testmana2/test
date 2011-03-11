@@ -93,7 +93,7 @@ licenseText = \
 """Eric is {0}
 
 You may use, distribute and copy Eric under the terms of the GNU
-General Public License as published by the Free Software Foundation, 
+General Public License as published by the Free Software Foundation,
 either version 3 of the License, which is shown below, or (at your
 option) any later version.
 
@@ -729,11 +729,12 @@ import UI.PixmapCache
 
 from .Ui_AboutDialog import Ui_AboutDialog
 
+
 class AboutDialog(QDialog, Ui_AboutDialog):
     """
     Class implementing an 'About Eric' dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -746,25 +747,25 @@ class AboutDialog(QDialog, Ui_AboutDialog):
         self.ericPixmap.setPixmap(UI.PixmapCache.getPixmap("eric.png"))
         
         ####################################################################
-        ## ABOUT        
+        ## ABOUT
         ####################################################################
         
         self.aboutEdit.setHtml(aboutText)
         
         ####################################################################
-        ## Copyright, Authors        
+        ## Copyright, Authors
         ####################################################################
         
         self.authorsEdit.setPlainText(authorsText)
         
         ####################################################################
-        ## THANKS        
+        ## THANKS
         ####################################################################
         
         self.thanksEdit.setPlainText(thanksText)
         
         ####################################################################
-        ## LICENSE        
+        ## LICENSE
         ####################################################################
         
         if Utilities.isWindowsPlatform():

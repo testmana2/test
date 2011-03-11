@@ -14,6 +14,7 @@ from PyQt4.QtGui import *
 
 from .Ui_FontDialogWizardDialog import Ui_FontDialogWizardDialog
 
+
 class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
     """
     Class implementing the font dialog wizard dialog.
@@ -68,7 +69,7 @@ class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
     @pyqtSlot()
     def on_fontButton_clicked(self):
         """
-        Private slot to handle the button press to select a font via a font selection 
+        Private slot to handle the button press to select a font via a font selection
         dialog.
         """
         if self.font is None:

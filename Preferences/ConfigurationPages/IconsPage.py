@@ -20,6 +20,7 @@ from .Ui_IconsPage import Ui_IconsPage
 import Preferences
 import Utilities
 
+
 class IconsPage(ConfigurationPageBase, Ui_IconsPage):
     """
     Class implementing the Icons configuration page.
@@ -168,6 +169,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             dlg = IconsPreviewDialog(self, dir)
             dlg.exec_()
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -14,11 +14,12 @@ from PyQt4.QtGui import *
 
 import Preferences
 
+
 class E5GraphicsView(QGraphicsView):
     """
     Class implementing a graphics view.
     """
-    def __init__(self, scene, parent = None):
+    def __init__(self, scene, parent=None):
         """
         Constructor
         
@@ -92,7 +93,7 @@ class E5GraphicsView(QGraphicsView):
         """
         return self.matrix().m11()
        
-    def resizeScene(self, amount, isWidth = True):
+    def resizeScene(self, amount, isWidth=True):
         """
         Public method to resize the scene.
         
@@ -126,7 +127,7 @@ class E5GraphicsView(QGraphicsView):
         rect.setWidth(width)
         self.setSceneRect(rect)
         
-    def _getDiagramRect(self, border = 0):
+    def _getDiagramRect(self, border=0):
         """
         Protected method to calculate the minimum rectangle fitting the diagram.
         
@@ -141,7 +142,7 @@ class E5GraphicsView(QGraphicsView):
         for itm in items:
             rect = itm.sceneBoundingRect()
             itmEndX = rect.x() + rect.width()
-            itmEndY = rect.y()+ rect.height()
+            itmEndY = rect.y() + rect.height()
             itmStartX = rect.x()
             itmStartY = rect.y()
             if startx >= itmStartX:
@@ -160,7 +161,7 @@ class E5GraphicsView(QGraphicsView):
             
         return QRectF(startx, starty, endx - startx + 1, endy - starty + 1)
         
-    def _getDiagramSize(self, border = 0):
+    def _getDiagramSize(self, border=0):
         """
         Protected method to calculate the minimum size fitting the diagram.
         
@@ -173,7 +174,7 @@ class E5GraphicsView(QGraphicsView):
         for itm in items:
             rect = itm.sceneBoundingRect()
             itmEndX = rect.x() + rect.width()
-            itmEndY = rect.y()+ rect.height()
+            itmEndY = rect.y() + rect.height()
             if endx <= itmEndX:
                 endx = itmEndX
             if endy <= itmEndY:
@@ -184,9 +185,9 @@ class E5GraphicsView(QGraphicsView):
             
         return QSizeF(endx + 1, endy + 1)
         
-    def __getDiagram(self, rect, format = "PNG", filename = None):
+    def __getDiagram(self, rect, format="PNG", filename=None):
         """
-        Private method to retrieve the diagram from the scene fitting it 
+        Private method to retrieve the diagram from the scene fitting it
         in the minimum rectangle.
         
         @param rect minimum rectangle fitting the diagram (QRectF)
@@ -222,7 +223,7 @@ class E5GraphicsView(QGraphicsView):
         
         return paintDevice
         
-    def saveImage(self, filename, format = "PNG"):
+    def saveImage(self, filename, format="PNG"):
         """
         Public method to save the scene to a file.
         
@@ -232,13 +233,13 @@ class E5GraphicsView(QGraphicsView):
         """
         rect = self._getDiagramRect(self.border)
         if format == "SVG":
-            self.__getDiagram(rect, format = format, filename = filename)
+            self.__getDiagram(rect, format=format, filename=filename)
             return True
         else:
             pixmap = self.__getDiagram(rect)
             return pixmap.save(filename, format)
         
-    def printDiagram(self, printer, diagramName = ""):
+    def printDiagram(self, printer, diagramName=""):
         """
         Public method to print the diagram.
         
@@ -314,7 +315,7 @@ class E5GraphicsView(QGraphicsView):
             tc = QColor(50, 50, 50)
             painter.setPen(tc)
             painter.drawRect(marginX, marginY, width, height)
-            painter.drawLine(marginX, marginY + height + 2, 
+            painter.drawLine(marginX, marginY + height + 2,
                        marginX + width, marginY + height + 2)
             painter.setFont(font)
             painter.drawText(marginX, marginY + height + 4, width,

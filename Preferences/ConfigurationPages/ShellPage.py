@@ -14,6 +14,7 @@ from .Ui_ShellPage import Ui_ShellPage
 
 import Preferences
 
+
 class ShellPage(ConfigurationPageBase, Ui_ShellPage):
     """
     Class implementing the Shell configuration page.
@@ -69,7 +70,7 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
             self.shellSyntaxHighlightingCheckBox.isChecked())
         Preferences.setShell("MaxHistoryEntries",
             self.shellHistorySpinBox.value())
-        Preferences.setShell("ShowStdOutErr", 
+        Preferences.setShell("ShowStdOutErr",
             self.stdOutErrCheckBox.isChecked())
         
         Preferences.setShell("MonospacedFont", self.monospacedFont)
@@ -99,6 +100,7 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         self.monospacedFontSample.setFont(self.monospacedFont)
         self.marginsFontSample.setFont(self.marginsFont)
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

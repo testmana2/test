@@ -11,6 +11,7 @@ from PyQt4.QtCore import *
 
 import Helpviewer.HelpWindow
 
+
 class HistoryModel(QAbstractTableModel):
     """
     Class implementing the history model.
@@ -22,7 +23,7 @@ class HistoryModel(QAbstractTableModel):
     TitleRole = Qt.UserRole + 5
     MaxRole = TitleRole
     
-    def __init__(self, historyManager, parent = None):
+    def __init__(self, historyManager, parent=None):
         """
         Constructor
         
@@ -34,8 +35,8 @@ class HistoryModel(QAbstractTableModel):
         self.__historyManager = historyManager
         
         self.__headers = [
-            self.trUtf8("Title"), 
-            self.trUtf8("Address"), 
+            self.trUtf8("Title"),
+            self.trUtf8("Address"),
         ]
         
         self.__historyManager.historyReset.connect(self.historyReset)
@@ -65,7 +66,7 @@ class HistoryModel(QAbstractTableModel):
         idx = self.index(row, 0)
         self.dataChanged.emit(idx, idx)
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -81,7 +82,7 @@ class HistoryModel(QAbstractTableModel):
                 pass
         return QAbstractTableModel.headerData(self, section, orientation, role)
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -115,7 +116,7 @@ class HistoryModel(QAbstractTableModel):
         
         return None
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -127,7 +128,7 @@ class HistoryModel(QAbstractTableModel):
         else:
             return len(self.__headers)
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -139,7 +140,7 @@ class HistoryModel(QAbstractTableModel):
         else:
             return len(self.__historyManager.history())
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove history entries from the model.
         

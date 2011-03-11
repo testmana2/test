@@ -11,6 +11,7 @@ Script for eric5 to compile all .ui files to Python source.
 import sys
 import os
 
+
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
@@ -21,7 +22,7 @@ def compileUiFiles():
         from PyQt4.uic import compileUi
         
         def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
-            **compileUi_args):
+            ** compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
@@ -95,6 +96,7 @@ def compileUiFiles():
         return py_dir, "Ui_{0}".format(py_file)
     
     compileUiDir(".", True, pyName)
+
 
 def main(argv):
     """

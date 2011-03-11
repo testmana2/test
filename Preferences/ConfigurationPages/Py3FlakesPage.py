@@ -12,6 +12,7 @@ from .Ui_Py3FlakesPage import Ui_Py3FlakesPage
 
 import Preferences
 
+
 class Py3FlakesPage(ConfigurationPageBase, Ui_Py3FlakesPage):
     """
     Class implementing the Python configuration page.
@@ -34,11 +35,12 @@ class Py3FlakesPage(ConfigurationPageBase, Ui_Py3FlakesPage):
         """
         Public slot to save the Python configuration.
         """
-        Preferences.setFlakes("IncludeInSyntaxCheck", 
+        Preferences.setFlakes("IncludeInSyntaxCheck",
             self.includeCheckBox.isChecked())
-        Preferences.setFlakes("IgnoreStarImportWarnings", 
+        Preferences.setFlakes("IgnoreStarImportWarnings",
             self.ignoreStarImportCheckBox.isChecked())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

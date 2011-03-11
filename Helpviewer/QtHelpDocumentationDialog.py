@@ -15,6 +15,7 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_QtHelpDocumentationDialog import Ui_QtHelpDocumentationDialog
 
+
 class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
     """
     Class implementing a dialog to manage the QtHelp documentation database.
@@ -109,7 +110,7 @@ class QtHelpDocumentationDialog(QDialog, Ui_QtHelpDocumentationDialog):
                                 """documentation you are attempting to remove. """
                                 """Removing the documentation will close those """
                                 """documents. Remove anyway?"""),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return
             self.__unregisteredDocs.append(ns)

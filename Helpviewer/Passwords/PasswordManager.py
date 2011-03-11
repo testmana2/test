@@ -21,6 +21,7 @@ from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Preferences
 
+
 class LoginForm(object):
     """
     Class implementing a data structure for login forms.
@@ -32,7 +33,7 @@ class LoginForm(object):
         self.url = QUrl()
         self.name = ""
         self.hasAPassword = False
-        self.elements = []      # list of tuples of element name and value 
+        self.elements = []      # list of tuples of element name and value
                                 # (string, string)
         self.elementTypes = {}  # dict of element name as key and type as value
     
@@ -71,6 +72,7 @@ class LoginForm(object):
         for element in self.elements:
             f.write("{0} = {1}\n".format(element[0], element[1]))
 
+
 class PasswordManager(QObject):
     """
     Class implementing the password manager.
@@ -83,7 +85,7 @@ class PasswordManager(QObject):
     FORMS = "=====FORMS====="
     NEVER = "=====NEVER====="
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -170,7 +172,7 @@ class PasswordManager(QObject):
         
         loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
         try:
-            f = open(loginFile, "w", encoding = "utf-8")
+            f = open(loginFile, "w", encoding="utf-8")
             for key, login in list(self.__logins.items()):
                 f.write("{0}\n".format(key))
                 f.write("{0}\n".format(login[0]))
@@ -201,7 +203,7 @@ class PasswordManager(QObject):
         loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
         if os.path.exists(loginFile):
             try:
-                f = open(loginFile, "r", encoding = "utf-8")
+                f = open(loginFile, "r", encoding="utf-8")
                 lines = f.read()
                 f.close()
             except IOError as err:
@@ -361,7 +363,7 @@ class PasswordManager(QObject):
             boundary = None
         
         # find the matching form on the web page
-        form = self.__findForm(webPage, data, boundary = boundary)
+        form = self.__findForm(webPage, data, boundary=boundary)
         if not form.isValid():
             return
         form.url = QUrl(url)
@@ -374,12 +376,12 @@ class PasswordManager(QObject):
         key = self.__createKey(url, "")
         if key not in self.__loginForms:
             mb = E5MessageBox.E5MessageBox(E5MessageBox.Question,
-                self.trUtf8("Save password"), 
+                self.trUtf8("Save password"),
                 self.trUtf8(
                     """<b>Would you like to save this password?</b><br/>"""
                     """To review passwords you have saved and remove them, """
-                    """use the password management dialog of the Settings menu."""), 
-                modal = True)
+                    """use the password management dialog of the Settings menu."""),
+                modal=True)
             neverButton = mb.addButton(
                 self.trUtf8("Never for this site"), E5MessageBox.DestructiveRole)
             noButton = mb.addButton(self.trUtf8("Not now"), E5MessageBox.RejectRole)
@@ -422,7 +424,7 @@ class PasswordManager(QObject):
         cleanUrl.setUserInfo("")
         return cleanUrl
     
-    def __findForm(self, webPage, data, boundary = None):
+    def __findForm(self, webPage, data, boundary=None):
         """
         Private method to find the form used for logging in.
         

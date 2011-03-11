@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing an abstract base class to be subclassed by all specific 
+Module implementing an abstract base class to be subclassed by all specific
 VCS interfaces.
 """
 
@@ -18,9 +18,10 @@ from E5Gui import E5MessageBox
 
 import Preferences
 
+
 class VersionControl(QObject):
     """
-    Class implementing an abstract base class to be subclassed by all specific 
+    Class implementing an abstract base class to be subclassed by all specific
     VCS interfaces.
     
     It defines the vcs interface to be implemented by subclasses
@@ -36,7 +37,7 @@ class VersionControl(QObject):
     canBeCommitted = 1  # Indicates that a file/directory is in the vcs.
     canBeAdded = 2      # Indicates that a file/directory is not in vcs.
     
-    def __init__(self, parent = None, name = None):
+    def __init__(self, parent=None, name=None):
         """
         Constructor
         
@@ -47,18 +48,18 @@ class VersionControl(QObject):
         if name:
             self.setObjectName(name)
         self.defaultOptions = {
-            'global' : [''],
-            'commit' : [''],
-            'checkout' : [''],
-            'update' : [''],
-            'add' : [''],
-            'remove' : [''],
-            'diff' : [''],
-            'log' : [''],
-            'history' : [''],
-            'status' : [''],
-            'tag' : [''],
-            'export' : ['']
+            'global': [''],
+            'commit': [''],
+            'checkout': [''],
+            'update': [''],
+            'add': [''],
+            'remove': [''],
+            'diff': [''],
+            'log': [''],
+            'history': [''],
+            'status': [''],
+            'tag': [''],
+            'export': ['']
         }
         self.interestingDataKeys = []
         self.options = {}
@@ -86,7 +87,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsInit(self, vcsDir, noDialog = False):
+    def vcsInit(self, vcsDir, noDialog=False):
         """
         Public method used to initialize the vcs.
         
@@ -108,7 +109,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsImport(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsImport(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to import the project into the vcs.
         
@@ -121,7 +122,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsCheckout(self, vcsDataDict, projectDir, noDialog = False):
+    def vcsCheckout(self, vcsDataDict, projectDir, noDialog=False):
         """
         Public method used to check the project out of the vcs.
         
@@ -146,7 +147,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsCommit(self, name, message, noDialog = False):
+    def vcsCommit(self, name, message, noDialog=False):
         """
         Public method used to make the change of a file/directory permanent in the vcs.
         
@@ -159,7 +160,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsUpdate(self, name, noDialog = False):
+    def vcsUpdate(self, name, noDialog=False):
         """
         Public method used to update a file/directory in the vcs.
         
@@ -173,7 +174,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsAdd(self, name, isDir = False, noDialog = False):
+    def vcsAdd(self, name, isDir=False, noDialog=False):
         """
         Public method used to add a file/directory in the vcs.
         
@@ -186,7 +187,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsAddBinary(self, name, isDir = False):
+    def vcsAddBinary(self, name, isDir=False):
         """
         Public method used to add a file/directory in binary mode in the vcs.
         
@@ -209,7 +210,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsRemove(self, name, project = False, noDialog = False):
+    def vcsRemove(self, name, project=False, noDialog=False):
         """
         Public method used to add a file/directory in the vcs.
         
@@ -222,7 +223,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsMove(self, name, project, target = None, noDialog = False):
+    def vcsMove(self, name, project, target=None, noDialog=False):
         """
         Public method used to move a file/directory.
         
@@ -340,7 +341,7 @@ class VersionControl(QObject):
         
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
-        @return the received dictionary completed with a combination of 
+        @return the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
         @exception RuntimeError not implemented
         """
@@ -373,7 +374,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsOptionsDialog(self, project, archive, editable = False, parent = None):
+    def vcsOptionsDialog(self, project, archive, editable=False, parent=None):
         """
         Public method to get a dialog to enter repository info.
         
@@ -384,7 +385,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsNewProjectOptionsDialog(self, parent = None):
+    def vcsNewProjectOptionsDialog(self, parent=None):
         """
         Public method to get a dialog to enter repository info for getting a new project.
         
@@ -401,7 +402,7 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser = False):
+    def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
         """
         Public method to instanciate a helper object for the different project browsers.
         
@@ -509,7 +510,7 @@ class VersionControl(QObject):
     ## below are some utility methods
     #####################################################################
     
-    def startSynchronizedProcess(self, proc, program, arguments, workingDir = None):
+    def startSynchronizedProcess(self, proc, program, arguments, workingDir=None):
         """
         Public method to start a synchroneous process
         
@@ -560,7 +561,7 @@ class VersionControl(QObject):
     
     def splitPathList(self, names):
         """
-        Public method splitting the list of names into a common directory part and 
+        Public method splitting the list of names into a common directory part and
         a file list.
         
         @param names list of paths (list of strings)
@@ -656,7 +657,7 @@ class VersionControl(QObject):
                 self.statusMonitorThread.terminate()
                 self.statusMonitorThread.wait(10000)
             self.statusMonitorThread = None
-            self.__statusMonitorStatus("off", 
+            self.__statusMonitorStatus("off",
                 self.trUtf8("Repository status checking is switched off"))
     
     def setStatusMonitorInterval(self, interval, project):

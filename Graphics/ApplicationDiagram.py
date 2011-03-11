@@ -20,18 +20,19 @@ from .AssociationItem import AssociationItem, Imports
 import Utilities.ModuleParser
 import Utilities
 
+
 class ApplicationDiagram(UMLDialog):
     """
     Class implementing a dialog showing an imports diagram of the application.
     """
-    def __init__(self, project, parent = None, name = None,  noModules = False):
+    def __init__(self, project, parent=None, name=None,  noModules=False):
         """
         Constructor
         
         @param project reference to the project object
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
-        @keyparam noModules flag indicating, that no module names should be 
+        @keyparam noModules flag indicating, that no module names should be
             shown (boolean)
         """
         self.project = project
@@ -70,7 +71,7 @@ class ApplicationDiagram(UMLDialog):
                 prog += 1
                 if module.endswith("__init__.py"):
                     continue
-                try: 
+                try:
                     mod = Utilities.ModuleParser.readModule(module)
                 except ImportError:
                     continue
@@ -220,7 +221,7 @@ class ApplicationDiagram(UMLDialog):
         """
         modules.sort()
         pm = PackageModel(name, modules)
-        pw = PackageItem(pm, x, y, noModules = self.noModules, scene = self.scene)
+        pw = PackageItem(pm, x, y, noModules=self.noModules, scene=self.scene)
         return pw
         
     def __createAssociations(self, shapes):

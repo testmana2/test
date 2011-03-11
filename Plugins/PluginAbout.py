@@ -32,6 +32,7 @@ pyqtApi = 2
 
 error = ""
 
+
 class AboutPlugin(QObject):
     """
     Class implementing the About plugin.

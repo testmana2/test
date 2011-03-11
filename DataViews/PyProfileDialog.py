@@ -20,6 +20,7 @@ import Utilities
 
 from eric5config import getConfig
 
+
 class ProfileTreeWidgetItem(QTreeWidgetItem):
     """
     Class implementing a custom QTreeWidgetItem to allow sorting on numeric values.
@@ -47,11 +48,12 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
             return int(self.text(column)) < int(other.text(column))
         return self.text(column) < other.text(column)
         
+
 class PyProfileDialog(QDialog, Ui_PyProfileDialog):
     """
     Class implementing a dialog to display the results of a syntax check run.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -73,10 +75,10 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.resultList.header().setSortIndicator(0, Qt.DescendingOrder)
         
         self.__menu = QMenu(self)
-        self.filterItm = self.__menu.addAction(self.trUtf8('Exclude Python Library'), 
+        self.filterItm = self.__menu.addAction(self.trUtf8('Exclude Python Library'),
             self.__filter)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Erase Profiling Info'), 
+        self.__menu.addAction(self.trUtf8('Erase Profiling Info'),
             self.__eraseProfile)
         self.__menu.addAction(self.trUtf8('Erase Timing Info'), self.__eraseTiming)
         self.__menu.addSeparator()
@@ -86,7 +88,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.summaryList.setContextMenuPolicy(Qt.CustomContextMenu)
         self.summaryList.customContextMenuRequested.connect(self.__showContextMenu)
         
-    def __createResultItem(self, calls, totalTime, totalTimePerCall, cumulativeTime, 
+    def __createResultItem(self, calls, totalTime, totalTimePerCall, cumulativeTime,
                            cumulativeTimePerCall, file, line, functionName):
         """
         Private method to create an entry in the result list.
@@ -101,13 +103,13 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         @param functionName function name (string)
         """
         itm = ProfileTreeWidgetItem(self.resultList, [
-            calls, 
-            "{0: 8.3f}".format(totalTime), 
-            totalTimePerCall, 
-            "{0: 8.3f}".format(cumulativeTime), 
-            cumulativeTimePerCall, 
-            file, 
-            str(line), 
+            calls,
+            "{0: 8.3f}".format(totalTime),
+            totalTimePerCall,
+            "{0: 8.3f}".format(cumulativeTime),
+            cumulativeTimePerCall,
+            file,
+            str(line),
             functionName
         ])
         for col in [0, 1, 2, 3, 4, 6]:
@@ -127,10 +129,10 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         """
         Private method to resort the tree.
         """
-        self.resultList.sortItems(self.resultList.sortColumn(), 
+        self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder())
         
-    def __populateLists(self, exclude = False):
+    def __populateLists(self, exclude=False):
         """
         Private method used to populate the listviews.
         
@@ -145,8 +147,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         progress = 0
         total_calls = 0
-        prim_calls  = 0
-        total_tt    = 0
+        prim_calls = 0
+        total_tt = 0
         
         try:
             # disable updates of the list for speed
@@ -164,8 +166,8 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                        func[0].startswith(self.pyLibPath):
                         # calculate the totals
                         total_calls += nc
-                        prim_calls  += cc
-                        total_tt    += tt
+                        prim_calls += cc
+                        total_tt += tt
                         
                         if nc != cc:
                             c = "{0:d}/{1:d}".format(nc, cc)
@@ -174,12 +176,12 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
                         if nc == 0:
                             tpc = "{0: 8.3f}".format(0.0)
                         else:
-                            tpc = "{0: 8.3f}".format(tt/nc)
+                            tpc = "{0: 8.3f}".format(tt / nc)
                         if cc == 0:
                             cpc = "{0: 8.3f}".format(0.0)
                         else:
-                            cpc = "{0: 8.3f}".format(ct/cc)
-                        self.__createResultItem(c, tt, tpc, ct, cpc, func[0], 
+                            cpc = "{0: 8.3f}".format(ct / cc)
+                        self.__createResultItem(c, tt, tpc, ct, cpc, func[0],
                                                 func[1], func[2])
                     
                 progress += 1

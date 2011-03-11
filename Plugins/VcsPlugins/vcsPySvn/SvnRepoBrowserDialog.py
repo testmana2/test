@@ -21,11 +21,12 @@ from .Ui_SvnRepoBrowserDialog import Ui_SvnRepoBrowserDialog
 
 import UI.PixmapCache
 
+
 class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
     """
     Class implementing the subversion repository browser dialog.
     """
-    def __init__(self, vcs, mode = "browse", parent = None):
+    def __init__(self, vcs, mode="browse", parent=None):
         """
         Constructor
         
@@ -71,7 +72,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         """
         Private method to resort the tree.
         """
-        self.repoTree.sortItems(self.repoTree.sortColumn(), 
+        self.repoTree.sortItems(self.repoTree.sortColumn(),
             self.repoTree.header().sortIndicatorOrder())
     
     def __resizeColumns(self):
@@ -81,7 +82,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         self.repoTree.header().resizeSections(QHeaderView.ResizeToContents)
         self.repoTree.header().setStretchLastSection(True)
     
-    def __generateItem(self, parent, repopath, revision, author, size, date, 
+    def __generateItem(self, parent, repopath, revision, author, size, date,
             nodekind, url):
         """
         Private method to generate a tree item in the repository tree.
@@ -134,7 +135,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         
         return itm
     
-    def __listRepo(self, url, parent = None):
+    def __listRepo(self, url, parent=None):
         """
         Private method to perform the svn list command.
         
@@ -152,7 +153,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         
         try:
             try:
-                entries = self.client.list(url, recurse = False)
+                entries = self.client.list(url, recurse=False)
                 firstTime = parent == self.repoTree
                 for dirent, lock in entries:
                     if (firstTime and dirent["path"] != url) or \
@@ -165,7 +166,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                             repoUrl = dirent["path"]
                         if repoUrl != url:
                             self.__ignoreExpand = True
-                            itm = self.__generateItem(parent, "/", 
+                            itm = self.__generateItem(parent, "/",
                                 "", "", 0, "", pysvn.node_kind.dir, repoUrl)
                             itm.setExpanded(True)
                             parent = itm
@@ -173,15 +174,15 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
                             for element in dirent["repos_path"].split("/")[:-1]:
                                 if element:
                                     urlPart = "{0}/{1}".format(urlPart, element)
-                                    itm = self.__generateItem(parent, element, 
-                                        "", "", 0, "", pysvn.node_kind.dir, 
+                                    itm = self.__generateItem(parent, element,
+                                        "", "", 0, "", pysvn.node_kind.dir,
                                         urlPart)
                                     itm.setExpanded(True)
                                     parent = itm
                             self.__ignoreExpand = False
-                    itm = self.__generateItem(parent, dirent["repos_path"], 
-                                dirent["created_rev"], dirent["last_author"], 
-                                dirent["size"], dirent["time"], 
+                    itm = self.__generateItem(parent, dirent["repos_path"],
+                                dirent["created_rev"], dirent["last_author"],
+                                dirent["size"], dirent["time"],
                                 dirent["kind"], dirent["path"])
                 self.__resort()
                 self.__resizeColumns()

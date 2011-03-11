@@ -13,11 +13,12 @@ from PyQt4.QtCore import pyqtSlot
 
 from .Ui_PluginDetailsDialog import Ui_PluginDetailsDialog
 
+
 class PluginDetailsDialog(QDialog, Ui_PluginDetailsDialog):
     """
     Class implementing the Plugin Details Dialog.
     """
-    def __init__(self, details, parent = None):
+    def __init__(self, details, parent=None):
         """
         Constructor
         

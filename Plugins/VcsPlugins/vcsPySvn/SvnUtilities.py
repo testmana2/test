@@ -13,6 +13,7 @@ from PyQt4.QtCore import QDateTime, Qt
 
 import Utilities
 
+
 def formatTime(seconds):
     """
     Module function to return a formatted time string.
@@ -24,6 +25,7 @@ def formatTime(seconds):
                     .toTimeSpec(Qt.LocalTime)\
                     .toString("yyyy-MM-dd hh:mm:ss")
 
+
 def dateFromTime_t(seconds):
     """
     Module function to return the date.
@@ -32,6 +34,7 @@ def dateFromTime_t(seconds):
     @return date (QDate)
     """
     return QDateTime.fromTime_t(int(seconds)).toTimeSpec(Qt.LocalTime).date()
+
 
 def getServersPath():
     """
@@ -45,6 +48,7 @@ def getServersPath():
     else:
         homedir = Utilities.getHomeDir()
         return os.path.join(homedir, ".subversion", "servers")
+
 
 def getConfigPath():
     """

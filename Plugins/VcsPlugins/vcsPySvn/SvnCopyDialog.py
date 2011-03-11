@@ -17,11 +17,12 @@ from E5Gui import E5FileDialog
 
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
+
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
     """
     Class implementing a dialog to enter the data for a copy operation.
     """
-    def __init__(self, source, parent = None, move = False, force = False):
+    def __init__(self, source, parent=None, move=False, force=False):
         """
         Constructor
         
@@ -59,7 +60,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """
-        Private slot to handle the button press for selecting the target via a 
+        Private slot to handle the button press for selecting the target via a
         selection dialog.
         """
         if os.path.isdir(self.source):

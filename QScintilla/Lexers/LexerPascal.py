@@ -12,11 +12,12 @@ from PyQt4.Qsci import QsciLexerPascal
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerPascal(QsciLexerPascal, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -27,8 +28,8 @@ class LexerPascal(QsciLexerPascal, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '{ ',
-            'end'   : ' }'
+            'start': '{ ',
+            'end': ' }'
         }
     
     def initProperties(self):
@@ -58,12 +59,12 @@ class LexerPascal(QsciLexerPascal, Lexer):
         @return flag indicating a comment style (boolean)
         """
         try:
-            return style in [QsciLexerPascal.Comment, 
-                             QsciLexerPascal.CommentDoc, 
+            return style in [QsciLexerPascal.Comment,
+                             QsciLexerPascal.CommentDoc,
                              QsciLexerPascal.CommentLine]
         except AttributeError:
-            return style in [QsciLexerPascal.Comment, 
-                             QsciLexerPascal.CommentParenthesis, 
+            return style in [QsciLexerPascal.Comment,
+                             QsciLexerPascal.CommentParenthesis,
                              QsciLexerPascal.CommentLine]
     
     def isStringStyle(self, style):
@@ -78,7 +79,7 @@ class LexerPascal(QsciLexerPascal, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerPascal.keywords(self, kwSet)

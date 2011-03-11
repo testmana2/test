@@ -14,11 +14,12 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 import Utilities
 
+
 class ExporterBase(QObject):
     """
     Class implementing the exporter base class.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -57,7 +58,7 @@ class ExporterBase(QObject):
                     self.trUtf8("Export source"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
                                 " Overwrite it?</p>").format(fn),
-                    icon = E5MessageBox.Warning)
+                    icon=E5MessageBox.Warning)
                 if not res:
                     return ""
             

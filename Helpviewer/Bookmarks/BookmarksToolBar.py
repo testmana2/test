@@ -18,6 +18,7 @@ from .BookmarksModel import BookmarksModel
 from .BookmarksMenu import BookmarksMenu
 from .AddBookmarkDialog import AddBookmarkDialog
 
+
 class BookmarksToolBar(E5ModelToolBar):
     """
     Class implementing a tool bar showing bookmarks.
@@ -28,14 +29,14 @@ class BookmarksToolBar(E5ModelToolBar):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, model, parent = None):
+    def __init__(self, model, parent=None):
         """
         Constructor
         
         @param model reference to the bookmarks model (BookmarksModel)
         @param parent reference to the parent widget (QWidget)
         """
-        E5ModelToolBar.__init__(self, 
+        E5ModelToolBar.__init__(self,
             QApplication.translate("BookmarksToolBar", "Bookmarks"), parent)
         
         self.__bookmarksModel = model
@@ -69,7 +70,7 @@ class BookmarksToolBar(E5ModelToolBar):
                 menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
                 menuAction.setData(v)
                 
-                menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"), 
+                menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                     self.__openBookmarkInNewTab)
                 menuAction.setData(v)
                 
@@ -95,11 +96,11 @@ class BookmarksToolBar(E5ModelToolBar):
         
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
         else:
             self.openUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
     
     def __openToolBarBookmark(self):
@@ -110,11 +111,11 @@ class BookmarksToolBar(E5ModelToolBar):
         
         if self._keyboardModifiers & Qt.ControlModifier:
             self.newUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
         else:
             self.openUrl.emit(
-                idx.data(BookmarksModel.UrlRole), 
+                idx.data(BookmarksModel.UrlRole),
                 idx.data(Qt.DisplayRole))
         self.resetFlags()
     
@@ -125,7 +126,7 @@ class BookmarksToolBar(E5ModelToolBar):
         idx = self.index(self.sender())
         
         self.openUrl.emit(
-            idx.data(BookmarksModel.UrlRole), 
+            idx.data(BookmarksModel.UrlRole),
             idx.data(Qt.DisplayRole))
     
     def __openBookmarkInNewTab(self):
@@ -135,7 +136,7 @@ class BookmarksToolBar(E5ModelToolBar):
         idx = self.index(self.sender())
         
         self.newUrl.emit(
-            idx.data(BookmarksModel.UrlRole), 
+            idx.data(BookmarksModel.UrlRole),
             idx.data(Qt.DisplayRole))
     
     def __removeBookmark(self):

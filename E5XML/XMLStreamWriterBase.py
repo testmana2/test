@@ -12,6 +12,7 @@ import base64
 
 from PyQt4.QtCore import QXmlStreamWriter
 
+
 class XMLStreamWriterBase(QXmlStreamWriter):
     """
     Class implementing a base class for all of eric5s XML stream writers.
@@ -25,19 +26,19 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         QXmlStreamWriter.__init__(self, device)
         
         self.basics = {
-            type(None) : self._write_none,
-            int        : self._write_int,
-            float      : self._write_float,
-            complex    : self._write_complex,
-            bool       : self._write_bool,
-            str        : self._write_string,
-            bytes      : self._write_bytes, 
-            bytearray  : self._write_bytearray, 
-            tuple      : self._write_tuple,
-            list       : self._write_list,
-            dict       : self._write_dictionary,
-            set        : self._write_set, 
-            frozenset  : self._write_frozenset, 
+            type(None): self._write_none,
+            int: self._write_int,
+            float: self._write_float,
+            complex: self._write_complex,
+            bool: self._write_bool,
+            str: self._write_string,
+            bytes: self._write_bytes,
+            bytearray: self._write_bytearray,
+            tuple: self._write_tuple,
+            list: self._write_list,
+            dict: self._write_dictionary,
+            set: self._write_set,
+            frozenset: self._write_frozenset,
         }
         
         self.setAutoFormatting(True)

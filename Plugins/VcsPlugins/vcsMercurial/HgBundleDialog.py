@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_HgBundleDialog import Ui_HgBundleDialog
 
+
 class HgBundleDialog(QDialog, Ui_HgBundleDialog):
     """
     Class implementing a dialog to enter the data for a bundle operation.
     """
-    def __init__(self, tagsList, branchesList, parent = None):
+    def __init__(self, tagsList, branchesList, parent=None):
         """
         Constructor
         
@@ -34,7 +35,7 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         """
         Public method to retrieve the bundle data.
         
-        @return tuple naming the revision, the compression type and a flag indicating 
+        @return tuple naming the revision, the compression type and a flag indicating
             to bundle all changesets (string, string, boolean)
         """
         if self.numberButton.isChecked():

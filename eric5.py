@@ -32,7 +32,7 @@ restartArgs = [arg for arg in sys.argv[1:] if arg.split("=", 1)[0] in restartArg
 
 if "--debug" in sys.argv:
     del sys.argv[sys.argv.index("--debug")]
-    logging.basicConfig(level = logging.DEBUG)
+    logging.basicConfig(level=logging.DEBUG)
 
 for arg in sys.argv:
     if arg.startswith("--config="):
@@ -60,6 +60,7 @@ from Utilities import Startup
 logging.debug("Importing Preferences")
 import Preferences
 
+
 def handleSingleApplication(ddindex):
     """
     Global function to handle the single application mode.
@@ -85,6 +86,7 @@ def handleSingleApplication(ddindex):
     elif res < 0:
         print("eric5: {0}".format(client.errstr()))
         sys.exit(res)
+
 
 def excepthook(excType, excValue, tracebackobj):
     """
@@ -119,13 +121,14 @@ def excepthook(excType, excValue, tracebackobj):
     sections = [separator, timeString, separator, errmsg, separator, tbinfo]
     msg = '\n'.join(sections)
     try:
-        f = open(logFile, "w", encoding = "utf-8")
+        f = open(logFile, "w", encoding="utf-8")
         f.write(msg)
         f.write(versionInfo)
         f.close()
     except IOError:
         pass
     qWarning(str(notice) + str(msg) + str(versionInfo))
+
 
 def uiStartUp():
     """
@@ -144,6 +147,7 @@ def uiStartUp():
     mainWindow.performVersionCheck(False)
     mainWindow.checkConfigurationStatus()
 
+
 def main():
     """
     Main entry point into the application.
@@ -153,13 +157,13 @@ def main():
     sys.excepthook = excepthook
     
     options = [\
-        ("--config=configDir", 
-         "use the given directory as the one containing the config files"), 
-        ("--debug", "activate debugging output to the console"), 
+        ("--config=configDir",
+         "use the given directory as the one containing the config files"),
+        ("--debug", "activate debugging output to the console"),
         ("--nosplash", "don't show the splash screen"),
-        ("--noopen", "don't open anything at startup except that given in command"), 
-        ("--plugin=plugin-file", "load the given plugin file (plugin development)"), 
-        ("--start-session", "load the global session file"), 
+        ("--noopen", "don't open anything at startup except that given in command"),
+        ("--plugin=plugin-file", "load the given plugin file (plugin development)"),
+        ("--start-session", "load the global session file"),
         ("--", "indicate that there are options for the program to be debugged"),
         ("", "(everything after that is considered arguments for this program)")
     ]

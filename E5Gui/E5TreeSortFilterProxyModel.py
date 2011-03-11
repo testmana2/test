@@ -10,6 +10,7 @@ Module implementing a modified QSortFilterProxyModel.
 from PyQt4.QtCore import Qt, QModelIndex
 from PyQt4.QtGui import QSortFilterProxyModel
 
+
 class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
     """
     Class implementing a modified QSortFilterProxyModel.
@@ -17,7 +18,7 @@ class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
     It always accepts the root nodes in the tree so filtering is only done
     on the children.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -41,7 +42,7 @@ class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
         
         return QSortFilterProxyModel.filterAcceptsRow(self, sourceRow, sourceParent)
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if a parent node has some children.
         

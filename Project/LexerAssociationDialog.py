@@ -18,11 +18,12 @@ import QScintilla.Lexers
 
 from .Ui_LexerAssociationDialog import Ui_LexerAssociationDialog
 
+
 class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
     """
     Class implementing a dialog to enter lexer associations for the project.
     """
-    def __init__(self, project, parent = None):
+    def __init__(self, project, parent=None):
         """
         Constructor
         
@@ -82,7 +83,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
             self.editorFileExtEdit.clear()
             self.editorLexerCombo.setCurrentIndex(0)
             self.pygmentsLexerCombo.setCurrentIndex(0)
-            self.editorLexerList.sortItems(self.editorLexerList.sortColumn(), 
+            self.editorLexerList.sortItems(self.editorLexerList.sortColumn(),
                 self.editorLexerList.header().sortIndicatorOrder())
     
     @pyqtSlot()

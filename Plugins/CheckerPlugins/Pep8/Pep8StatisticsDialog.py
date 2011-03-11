@@ -16,12 +16,13 @@ from .Ui_Pep8StatisticsDialog import Ui_Pep8StatisticsDialog
 
 import UI.PixmapCache
 
+
 class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
     """
     Class implementing a dialog showing statistical data for the last
     PEP 8 run.
     """
-    def __init__(self, statistics, parent = None):
+    def __init__(self, statistics, parent=None):
         """
         Constructor
         
@@ -43,11 +44,11 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         
         for code in sorted(stats.keys(), key=lambda a: a[1:]):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8", 
+                message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code]).format(
                         *pep8.pep8_messages_sample_args[code])
             else:
-                message = QCoreApplication.translate("pep8", 
+                message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code])
             self.__createItem(stats[code], code, message)
             totalIssues += stats[code]
@@ -72,7 +73,7 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         @param code of a PEP 8 message (string)
         @param message PEP 8 message to be shown (string)
         """
-        itm = QTreeWidgetItem(self.statisticsList, 
+        itm = QTreeWidgetItem(self.statisticsList,
             ["{0:6}".format(count), code, message])
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))

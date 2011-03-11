@@ -12,11 +12,12 @@ from PyQt4.Qsci import QsciLexerFortran77
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerFortran77(QsciLexerFortran77, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -55,15 +56,15 @@ class LexerFortran77(QsciLexerFortran77, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerFortran77.DoubleQuotedString, 
-                         QsciLexerFortran77.SingleQuotedString, 
+        return style in [QsciLexerFortran77.DoubleQuotedString,
+                         QsciLexerFortran77.SingleQuotedString,
                          QsciLexerFortran77.UnclosedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerFortran77.keywords(self, kwSet)

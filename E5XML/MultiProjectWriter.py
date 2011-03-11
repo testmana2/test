@@ -15,6 +15,7 @@ from .Config import multiProjectFileFormatVersion
 import Preferences
 import Utilities
 
+
 class MultiProjectWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML project file.
@@ -61,7 +62,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
             self.writeStartElement("Project")
             self.writeAttribute("isMaster", str(project['master']))
             self.writeTextElement("ProjectName", project['name'])
-            self.writeTextElement("ProjectFile", 
+            self.writeTextElement("ProjectFile",
                 Utilities.fromNativeSeparators(project['file']))
             self.writeTextElement("ProjectDescription", project['description'])
             self.writeEndElement()

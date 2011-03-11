@@ -23,6 +23,7 @@ from .DownloadUtilities import timeString, dataString
 import UI.PixmapCache
 import Preferences
 
+
 class DownloadItem(QWidget, Ui_DownloadItem):
     """
     Class implementing a widget controlling a download.
@@ -35,14 +36,14 @@ class DownloadItem(QWidget, Ui_DownloadItem):
     downloadFinished = pyqtSignal()
     progress = pyqtSignal(int, int)
     
-    def __init__(self, reply = None, requestFilename = False, webPage = None, 
-                 download = False, parent = None):
+    def __init__(self, reply=None, requestFilename=False, webPage=None,
+                 download=False, parent=None):
         """
         Constructor
         
         @param reply reference to the network reply object (QNetworkReply)
         @param requestFilename flag indicating to ask the user for a filename (boolean)
-        @param webPage reference to the web page object the download originated 
+        @param webPage reference to the web page object the download originated
             from (QWebPage)
         @param download flag indicating a download operation (boolean)
         @param parent reference to the parent widget (QWidget)
@@ -88,7 +89,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         self.__initialize()
     
-    def __initialize(self, tryAgain = False):
+    def __initialize(self, tryAgain=False):
         """
         Private method to (re)initialize the widget.
         
@@ -286,7 +287,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.__output.remove()
         self.__output = QFile()
         self.__reply = reply
-        self.__initialize(tryAgain = True)
+        self.__initialize(tryAgain=True)
         self.statusChanged.emit()
     
     @pyqtSlot()
@@ -477,10 +478,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             
             info = self.trUtf8("{0} of {1} ({2}/sec) - {3}")\
                 .format(
-                    dataString(self.__bytesReceived), 
+                    dataString(self.__bytesReceived),
                     bytesTotal == -1 and self.trUtf8("?") \
-                                     or dataString(bytesTotal), 
-                    dataString(int(speed)), 
+                                     or dataString(bytesTotal),
+                    dataString(int(speed)),
                     remaining)
         else:
             if self.__bytesReceived == bytesTotal or bytesTotal == -1:
@@ -488,7 +489,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                     .format(dataString(self.__output.size()))
             else:
                 info = self.trUtf8("{0} of {1} - Stopped")\
-                    .format(dataString(self.__bytesReceived), 
+                    .format(dataString(self.__bytesReceived),
                             dataString(bytesTotal))
         self.infoLabel.setText(info)
     
@@ -578,7 +579,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @return tuple of URL, save location, flag and the
             URL of the related web page (QUrl, string, boolean,QUrl)
         """
-        return (self.__url, QFileInfo(self.__fileName).filePath(), 
+        return (self.__url, QFileInfo(self.__fileName).filePath(),
                 self.downloadedSuccessfully(), self.__pageUrl)
     
     def setData(self, data):

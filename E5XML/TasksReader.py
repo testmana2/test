@@ -16,13 +16,14 @@ from .XMLStreamReaderBase import XMLStreamReaderBase
 
 import Utilities
 
+
 class TasksReader(XMLStreamReaderBase):
     """
     Class for reading an XML tasks file.
     """
     supportedVersions = ["4.2"]
     
-    def __init__(self, device, forProject = False, viewer = None):
+    def __init__(self, device, forProject=False, viewer=None):
         """
         Constructor
         
@@ -64,14 +65,14 @@ class TasksReader(XMLStreamReaderBase):
         """
         Private method to read the task info.
         """
-        task = {"summary"     : "",
-                "priority"    : 1,
-                "completed"   : False,
-                "created"     : 0,
-                "filename"    : "",
-                "linenumber"  : 0,
-                "bugfix"      : False,
-                "description" : "",
+        task = {"summary": "",
+                "priority": 1,
+                "completed": False,
+                "created": 0,
+                "filename": "",
+                "linenumber": 0,
+                "bugfix": False,
+                "description": "",
                }
         task["priority"] = int(self.attribute("priority", "1"))
         task["completed"] = self.toBool(self.attribute("completed", "False"))
@@ -80,11 +81,11 @@ class TasksReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Task":
-                self.viewer.addTask(task["summary"], priority = task["priority"],
-                    filename = task["filename"], lineno = task["linenumber"], 
-                    completed = task["completed"], _time = task["created"], 
-                    isProjectTask = self.forProject, isBugfixTask = task["bugfix"], 
-                    longtext = task["description"])
+                self.viewer.addTask(task["summary"], priority=task["priority"],
+                    filename=task["filename"], lineno=task["linenumber"],
+                    completed=task["completed"], _time=task["created"],
+                    isProjectTask=self.forProject, isBugfixTask=task["bugfix"],
+                    longtext=task["description"])
                 break
             
             if self.isStartElement():

@@ -16,6 +16,7 @@ from .Config import shortcutsFileFormatVersion
 
 import Preferences
 
+
 class ShortcutsWriter(XMLStreamWriterBase):
     """
     Class implementing the writer class for writing an XML shortcuts file.
@@ -48,36 +49,36 @@ class ShortcutsWriter(XMLStreamWriterBase):
         self.writeStartElement("Shortcuts")
         self.writeAttribute("version", shortcutsFileFormatVersion)
         
-        self.__writeActions("Project", 
+        self.__writeActions("Project",
             e5App().getObject("Project").getActions())
-        self.__writeActions("General", 
+        self.__writeActions("General",
             e5App().getObject("UserInterface").getActions('ui'))
-        self.__writeActions("Wizards", 
+        self.__writeActions("Wizards",
             e5App().getObject("UserInterface").getActions('wizards'))
-        self.__writeActions("Debug", 
+        self.__writeActions("Debug",
             e5App().getObject("DebugUI").getActions())
-        self.__writeActions("Edit", 
+        self.__writeActions("Edit",
             e5App().getObject("ViewManager").getActions('edit'))
-        self.__writeActions("File", 
+        self.__writeActions("File",
             e5App().getObject("ViewManager").getActions('file'))
-        self.__writeActions("Search", 
+        self.__writeActions("Search",
             e5App().getObject("ViewManager").getActions('search'))
-        self.__writeActions("View", 
+        self.__writeActions("View",
             e5App().getObject("ViewManager").getActions('view'))
-        self.__writeActions("Macro", 
+        self.__writeActions("Macro",
             e5App().getObject("ViewManager").getActions('macro'))
-        self.__writeActions("Bookmarks", 
+        self.__writeActions("Bookmarks",
             e5App().getObject("ViewManager").getActions('bookmark'))
-        self.__writeActions("Spelling", 
+        self.__writeActions("Spelling",
             e5App().getObject("ViewManager").getActions('spelling'))
-        self.__writeActions("Window", 
+        self.__writeActions("Window",
             e5App().getObject("ViewManager").getActions('window'))
         
         for category, ref in e5App().getPluginObjects():
             if hasattr(ref, "getActions"):
                 self.__writeActions(category, ref.getActions())
     
-        self.__writeActions("HelpViewer", 
+        self.__writeActions("HelpViewer",
             e5App().getObject("DummyHelpViewer").getActions())
     
         # add the main end tag

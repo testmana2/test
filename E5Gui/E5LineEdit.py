@@ -4,12 +4,13 @@
 #
 
 """
-Module implementing specialized line edits. 
+Module implementing specialized line edits.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent
 from PyQt4.QtGui import QLineEdit, QStyleOptionFrameV2, QStyle, QPainter, QPalette, \
     QWidget, QHBoxLayout, QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
+
 
 class SideWidget(QWidget):
     """
@@ -17,7 +18,7 @@ class SideWidget(QWidget):
     """
     sizeHintChanged = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -36,14 +37,15 @@ class SideWidget(QWidget):
             self.sizeHintChanged.emit()
         return QWidget.event(self, evt)
 
+
 class E5LineEdit(QLineEdit):
     """
     Class implementing a line edit widget showing some inactive text.
     """
-    LeftSide  = 0
+    LeftSide = 0
     RightSide = 1
     
-    def __init__(self, parent = None, inactiveText = ""):
+    def __init__(self, parent=None, inactiveText=""):
         """
         Constructor
         

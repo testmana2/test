@@ -205,7 +205,7 @@ flag indicating passive connection mode (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.__identityTranslation" ID="DebuggerInterfaceRuby.__identityTranslation"></a>
 <h4>DebuggerInterfaceRuby.__identityTranslation</h4>
-<b>__identityTranslation</b>(<i>fn, remote2local = True</i>)
+<b>__identityTranslation</b>(<i>fn, remote2local=True</i>)
 <p>
         Private method to perform the identity path translation.
 </p><dl>
@@ -229,7 +229,7 @@ translated filename (string)
         Private method to handle data from the client.
 </p><a NAME="DebuggerInterfaceRuby.__remoteTranslation" ID="DebuggerInterfaceRuby.__remoteTranslation"></a>
 <h4>DebuggerInterfaceRuby.__remoteTranslation</h4>
-<b>__remoteTranslation</b>(<i>fn, remote2local = True</i>)
+<b>__remoteTranslation</b>(<i>fn, remote2local=True</i>)
 <p>
         Private method to perform the path translation.
 </p><dl>
@@ -258,7 +258,7 @@ command to send to the debug client (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.__startProcess" ID="DebuggerInterfaceRuby.__startProcess"></a>
 <h4>DebuggerInterfaceRuby.__startProcess</h4>
-<b>__startProcess</b>(<i>program, arguments, environment = None</i>)
+<b>__startProcess</b>(<i>program, arguments, environment=None</i>)
 <p>
         Private method to start the debugger client process.
 </p><dl>
@@ -324,7 +324,7 @@ flag indicating success (boolean)
         Public slot to get the banner info of the remote client.
 </p><a NAME="DebuggerInterfaceRuby.remoteBreakpoint" ID="DebuggerInterfaceRuby.remoteBreakpoint"></a>
 <h4>DebuggerInterfaceRuby.remoteBreakpoint</h4>
-<b>remoteBreakpoint</b>(<i>fn, line, set, cond = None, temp = False</i>)
+<b>remoteBreakpoint</b>(<i>fn, line, set, cond=None, temp=False</i>)
 <p>
         Public method to set or clear a breakpoint.
 </p><dl>
@@ -396,7 +396,7 @@ regexp string for variable names to filter out (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteClientVariable" ID="DebuggerInterfaceRuby.remoteClientVariable"></a>
 <h4>DebuggerInterfaceRuby.remoteClientVariable</h4>
-<b>remoteClientVariable</b>(<i>scope, filter, var, framenr = 0</i>)
+<b>remoteClientVariable</b>(<i>scope, filter, var, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -415,7 +415,7 @@ framenumber of the variables to retrieve (int)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteClientVariables" ID="DebuggerInterfaceRuby.remoteClientVariables"></a>
 <h4>DebuggerInterfaceRuby.remoteClientVariables</h4>
-<b>remoteClientVariables</b>(<i>scope, filter, framenr = 0</i>)
+<b>remoteClientVariables</b>(<i>scope, filter, framenr=0</i>)
 <p>
         Public method to request the variables of the debugged program.
 </p><dl>
@@ -442,7 +442,7 @@ the text to be completed (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteContinue" ID="DebuggerInterfaceRuby.remoteContinue"></a>
 <h4>DebuggerInterfaceRuby.remoteContinue</h4>
-<b>remoteContinue</b>(<i>special = False</i>)
+<b>remoteContinue</b>(<i>special=False</i>)
 <p>
         Public method to continue the debugged program.
 </p><dl>
@@ -452,7 +452,7 @@ flag indicating a special continue operation (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteCoverage" ID="DebuggerInterfaceRuby.remoteCoverage"></a>
 <h4>DebuggerInterfaceRuby.remoteCoverage</h4>
-<b>remoteCoverage</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteCoverage</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect coverage data.
 </p><dl>
@@ -502,7 +502,7 @@ statement to execute (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteLoad" ID="DebuggerInterfaceRuby.remoteLoad"></a>
 <h4>DebuggerInterfaceRuby.remoteLoad</h4>
-<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter = False, autoContinue = True, autoFork = False, forkChild = False</i>)
+<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter=False, autoContinue=True, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to debug.
 </p><dl>
@@ -533,7 +533,7 @@ flag indicating to debug the child after forking
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteProfile" ID="DebuggerInterfaceRuby.remoteProfile"></a>
 <h4>DebuggerInterfaceRuby.remoteProfile</h4>
-<b>remoteProfile</b>(<i>fn, argv, wd, erase = False</i>)
+<b>remoteProfile</b>(<i>fn, argv, wd, erase=False</i>)
 <p>
         Public method to load a new program to collect profiling data.
 </p><dl>
@@ -562,7 +562,7 @@ the raw input (string)
 </dd>
 </dl><a NAME="DebuggerInterfaceRuby.remoteRun" ID="DebuggerInterfaceRuby.remoteRun"></a>
 <h4>DebuggerInterfaceRuby.remoteRun</h4>
-<b>remoteRun</b>(<i>fn, argv, wd, autoFork = False, forkChild = False</i>)
+<b>remoteRun</b>(<i>fn, argv, wd, autoFork=False, forkChild=False</i>)
 <p>
         Public method to load a new program to run.
 </p><dl>
@@ -597,7 +597,7 @@ id of the thread (integer)
 <h4>DebuggerInterfaceRuby.remoteStatement</h4>
 <b>remoteStatement</b>(<i>stmt</i>)
 <p>
-        Public method to execute a Ruby statement.  
+        Public method to execute a Ruby statement.
 </p><dl>
 <dt><i>stmt</i></dt>
 <dd>
@@ -667,7 +667,7 @@ flag indicating erasure of coverage data is requested
         public method to stop a unittest run.
 </p><a NAME="DebuggerInterfaceRuby.remoteWatchpoint" ID="DebuggerInterfaceRuby.remoteWatchpoint"></a>
 <h4>DebuggerInterfaceRuby.remoteWatchpoint</h4>
-<b>remoteWatchpoint</b>(<i>cond, set, temp = False</i>)
+<b>remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
 <p>
         Public method to set or clear a watch expression.
 </p><dl>

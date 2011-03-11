@@ -19,12 +19,13 @@ from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
 import Utilities
 
+
 class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
     """
     Class implementing a dialog to edit breakpoint properties.
     """
-    def __init__(self, id, properties, condHistory, parent = None, name = None, 
-                 modal = False, addMode = False, filenameHistory = None):
+    def __init__(self, id, properties, condHistory, parent=None, name=None,
+                 modal=False, addMode=False, filenameHistory=None):
         """
         Constructor
         
@@ -37,7 +38,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         @param name the widget name of this dialog
         @param modal flag indicating a modal dialog
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         if name:
             self.setObjectName(name)
@@ -138,7 +139,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         @return a tuple containing the breakpoints new properties
             (condition, temporary flag, enabled flag, ignore count)
         """
-        return (self.conditionCombo.currentText(), 
+        return (self.conditionCombo.currentText(),
                 self.temporaryCheckBox.isChecked(),
                 self.enabledCheckBox.isChecked(), self.ignoreSpinBox.value())
         
@@ -151,11 +152,11 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         """
         fn = self.filenameCombo.currentText()
         if not fn:
-            fn  =  None
+            fn = None
         else:
             fn = os.path.expanduser(os.path.expandvars(fn))
         
-        return (fn, self.linenoSpinBox.value(), 
+        return (fn, self.linenoSpinBox.value(),
                 self.conditionCombo.currentText(),
                 self.temporaryCheckBox.isChecked(), self.enabledCheckBox.isChecked(),
                 self.ignoreSpinBox.value())

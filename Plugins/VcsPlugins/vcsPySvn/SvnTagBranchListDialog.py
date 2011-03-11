@@ -21,11 +21,12 @@ from .SvnUtilities import formatTime
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnTagBranchListDialog import Ui_SvnTagBranchListDialog
 
+
 class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog):
     """
     Class implementing a dialog to show a list of tags or branches.
     """
-    def __init__(self, vcs, parent = None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
@@ -52,7 +53,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         self.client.callback_ssl_server_trust_prompt = \
             self._clientSslServerTrustPromptCallback
         
-    def start(self, path, tags = True):
+    def start(self, path, tags=True):
         """
         Public slot to start the svn status command.
         
@@ -119,13 +120,13 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         cwd = os.getcwd()
         os.chdir(dname)
         try:
-            entries = self.client.list(path, recurse = False)
+            entries = self.client.list(path, recurse=False)
             for dirent, lock in entries:
                 if dirent["path"] != path:
                     name = dirent["path"].replace(path + '/', "")
-                    self.__generateItem(dirent["created_rev"].number, 
-                                        dirent["last_author"], 
-                                        formatTime(dirent["time"]), 
+                    self.__generateItem(dirent["created_rev"].number,
+                                        dirent["last_author"],
+                                        formatTime(dirent["time"]),
                                         name)
                     if self.vcs.otherData["standardLayout"]:
                         self.tagsList.append(name)
@@ -185,7 +186,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         """
         Private method to resort the tree.
         """
-        self.tagList.sortItems(self.tagList.sortColumn(), 
+        self.tagList.sortItems(self.tagList.sortColumn(),
             self.tagList.header().sortIndicatorOrder())
         
     def __resizeColumns(self):
@@ -204,7 +205,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         @param date date of the tag (string)
         @param name name (path) of the tag (string)
         """
-        itm = QTreeWidgetItem(self.tagList, 
+        itm = QTreeWidgetItem(self.tagList,
                               ["{0:6d}".format(revision), author, date, name])
         itm.setTextAlignment(0, Qt.AlignRight)
         

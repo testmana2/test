@@ -17,11 +17,12 @@ from .Connection import Connection
 
 import Preferences
 
+
 class CooperationClient(QObject):
     """
     Class implementing the client of the cooperation package.
     
-    @signal newMessage(user, message) emitted after a new message has 
+    @signal newMessage(user, message) emitted after a new message has
             arrived (string, string)
     @signal newParticipant(nickname) emitted after a new participant joined (string)
     @signal participantLeft(nickname) emitted after a participant left (string)
@@ -30,14 +31,14 @@ class CooperationClient(QObject):
     @signal editorCommand(hash, filename, message) emitted when an editor command
             has been received (string, string, string)
     """
-    newMessage      = pyqtSignal(str, str)
-    newParticipant  = pyqtSignal(str)
+    newMessage = pyqtSignal(str, str)
+    newParticipant = pyqtSignal(str)
     participantLeft = pyqtSignal(str)
     connectionError = pyqtSignal(str)
-    cannotConnect   = pyqtSignal()
-    editorCommand   = pyqtSignal(str, str, str)
+    cannotConnect = pyqtSignal()
+    editorCommand = pyqtSignal(str, str, str)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -50,7 +51,7 @@ class CooperationClient(QObject):
         
         self.__initialConnection = None
         
-        envVariables = ["USERNAME.*", "USER.*", "USERDOMAIN.*", 
+        envVariables = ["USERNAME.*", "USER.*", "USERDOMAIN.*",
                         "HOSTNAME.*", "DOMAINNAME.*"]
         environment = QProcess.systemEnvironment()
         found = False
@@ -99,12 +100,12 @@ class CooperationClient(QObject):
         @return nick name (string)
         """
         return "{0}@{1}:{2}".format(
-            self.__username, 
-            QHostInfo.localHostName(), 
+            self.__username,
+            QHostInfo.localHostName(),
             self.__server.serverPort()
         )
     
-    def hasConnection(self, senderIp, senderPort = -1):
+    def hasConnection(self, senderIp, senderPort=-1):
         """
         Public method to check for an existing connection.
         
@@ -167,7 +168,7 @@ class CooperationClient(QObject):
         @param connection reference to the new connection (Connection)
         """
         connection.setParent(self)
-        connection.setGreetingMessage(self.__username, 
+        connection.setGreetingMessage(self.__username,
                                       self.__server.serverPort())
         
         connection.error.connect(self.__connectionError)
@@ -193,8 +194,8 @@ class CooperationClient(QObject):
         if socketError != QAbstractSocket.RemoteHostClosedError:
             if connection.peerPort() != 0:
                 msg = "* {0}:{1}\n{2}\n".format(
-                    connection.peerAddress().toString(), 
-                    connection.peerPort(), 
+                    connection.peerAddress().toString(),
+                    connection.peerPort(),
                     connection.errorString()
                 )
             else:
@@ -281,7 +282,7 @@ class CooperationClient(QObject):
         Public method to send an editor command.
         
         @param projectHash hash of the project (string)
-        @param filename project relative universal file name of 
+        @param filename project relative universal file name of
             the sending editor (string)
         @param message editor command to be sent (string)
         """

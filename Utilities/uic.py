@@ -10,7 +10,8 @@ directory or directory tree.
 
 import os
 
-def compileUiFiles(dir, recurse = False):
+
+def compileUiFiles(dir, recurse=False):
     """
     Module function to compile the .ui files of a directory tree to Python sources.
     
@@ -23,7 +24,7 @@ def compileUiFiles(dir, recurse = False):
         from PyQt4.uic import compileUi
         
         def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
-            **compileUi_args):
+            ** compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.

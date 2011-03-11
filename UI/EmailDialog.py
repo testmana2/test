@@ -28,6 +28,8 @@ import Utilities
 ## package for Image and Audio mime messages.             ##
 ############################################################
 from base64 import b64encode as _bencode
+
+
 def _encode_base64(msg):
     """
     Function to encode the message's payload in Base64.
@@ -50,11 +52,12 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 
+
 class EmailDialog(QDialog, Ui_EmailDialog):
     """
     Class implementing a dialog to send bug reports.
     """
-    def __init__(self, mode = "bug", parent = None):
+    def __init__(self, mode="bug", parent=None):
         """
         Constructor
         
@@ -163,7 +166,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             return MIMEText(txt)
         except UnicodeEncodeError:
             coding = Preferences.getSystem("StringEncoding")
-            return MIMEText(txt.encode(coding), _charset = coding)
+            return MIMEText(txt.encode(coding), _charset=coding)
         
     def __encodedHeader(self, txt):
         """
@@ -186,14 +189,14 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @return string containing the mail message
         """
         msgtext = "{0}\r\n----\r\n{1}----\r\n{2}----\r\n{3}".format(
-            self.message.toPlainText(), 
-            Utilities.generateVersionInfo("\r\n"), 
-            Utilities.generatePluginsVersionInfo("\r\n"), 
+            self.message.toPlainText(),
+            Utilities.generateVersionInfo("\r\n"),
+            Utilities.generatePluginsVersionInfo("\r\n"),
             Utilities.generateDistroInfo("\r\n"))
         
         msg = self.__encodedText(msgtext)
-        msg['From']    = Preferences.getUser("Email")
-        msg['To']      = self.__toAddress
+        msg['From'] = Preferences.getUser("Email")
+        msg['To'] = self.__toAddress
         subject = '[eric5] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         
@@ -210,15 +213,15 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             "capable of displaying the attachments.")
         
         msgtext = "{0}\r\n----\r\n{1}----\r\n{2}----\r\n{3}".format(
-            self.message.toPlainText(), 
-            Utilities.generateVersionInfo("\r\n"), 
-            Utilities.generatePluginsVersionInfo("\r\n"), 
+            self.message.toPlainText(),
+            Utilities.generateVersionInfo("\r\n"),
+            Utilities.generatePluginsVersionInfo("\r\n"),
             Utilities.generateDistroInfo("\r\n"))
         
         # first part of multipart mail explains format
         msg = MIMEMultipart()
-        msg['From']    = Preferences.getUser("Email")
-        msg['To']      = self.__toAddress
+        msg['From'] = Preferences.getUser("Email")
+        msg['To'] = self.__toAddress
         subject = '[eric5] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         msg.preamble = mpPreamble
@@ -236,20 +239,20 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             name = os.path.basename(fname)
             
             if maintype == 'text':
-                txt = open(fname, 'r', encoding = "utf-8").read()
+                txt = open(fname, 'r', encoding="utf-8").read()
                 try:
                     txt.encode("us-ascii")
-                    att = MIMEText(txt, _subtype = subtype)
+                    att = MIMEText(txt, _subtype=subtype)
                 except UnicodeEncodeError:
                     att = MIMEText(
-                        txt.encode("utf-8"), _subtype = subtype, _charset = "utf-8")
+                        txt.encode("utf-8"), _subtype=subtype, _charset="utf-8")
             elif maintype == 'image':
-                att = MIMEImage(open(fname, 'rb').read(), _subtype = subtype)
+                att = MIMEImage(open(fname, 'rb').read(), _subtype=subtype)
             elif maintype == 'audio':
-                att = MIMEAudio(open(fname, 'rb').read(), _subtype = subtype)
+                att = MIMEAudio(open(fname, 'rb').read(), _subtype=subtype)
             else:
                 att = MIMEApplication(open(fname, 'rb').read())
-            att.add_header('Content-Disposition', 'attachment', filename = name)
+            att.add_header('Content-Disposition', 'attachment', filename=name)
             msg.attach(att)
             
         return msg.as_string()
@@ -262,7 +265,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @return flag indicating success (boolean)
         """
         try:
-            server = smtplib.SMTP(Preferences.getUser("MailServer"), 
+            server = smtplib.SMTP(Preferences.getUser("MailServer"),
                                   Preferences.getUser("MailServerPort"))
             if Preferences.getUser("MailServerUseTLS"):
                 server.starttls()
@@ -271,7 +274,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 password = Preferences.getUser("MailServerPassword")
                 if not password:
                     password, ok = QInputDialog.getText(
-                        self, 
+                        self,
                         self.trUtf8("Mail Server Password"),
                         self.trUtf8("Enter your mail server password"),
                         QLineEdit.Password)
@@ -326,7 +329,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         Public method to add an attachment.
         
         @param fname name of the file to be attached (string)
-        @param deleteFile flag indicating to delete the file after it has 
+        @param deleteFile flag indicating to delete the file after it has
             been sent (boolean)
         """
         type = mimetypes.guess_type(fname)[0]

@@ -12,16 +12,17 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgTagDialog import Ui_HgTagDialog
 
+
 class HgTagDialog(QDialog, Ui_HgTagDialog):
     """
     Class implementing a dialog to enter the data for a tagging operation.
     """
-    CreateRegularTag  = 1
-    CreateLocalTag    = 2
-    DeleteTag         = 3
-    CreateBranch      = 4
+    CreateRegularTag = 1
+    CreateLocalTag = 2
+    DeleteTag = 3
+    CreateBranch = 4
     
-    def __init__(self, taglist, parent = None):
+    def __init__(self, taglist, parent=None):
         """
         Constructor
         

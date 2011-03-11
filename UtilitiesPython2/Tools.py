@@ -11,9 +11,10 @@ import re
 from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
 
 coding_regexps = [
-    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')), 
-    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')), 
+    (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')),
+    (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
 ]
+
 
 def get_coding(text):
     """
@@ -31,6 +32,7 @@ def get_coding(text):
             if m:
                 return m.group(1).lower()
     return None
+
 
 def decode(text):
     """
@@ -64,6 +66,7 @@ def decode(text):
     # Assume Latin-1 (behaviour before 3.7.1)
     return unicode(text, "latin-1"), 'latin-1-guessed'
 
+
 def readEncodedFile(filename):
     """
     Function to read a file and decode it's contents into proper text.
@@ -76,6 +79,7 @@ def readEncodedFile(filename):
     f.close()
     return decode(text)
 
+
 def normalizeCode(codestring):
     """
     Function to normalize the given code.
@@ -85,7 +89,7 @@ def normalizeCode(codestring):
     """
     if type(codestring) == type(u""):
         codestring = codestring.encode('utf-8')
-    codestring = codestring.replace("\r\n","\n").replace("\r","\n")
+    codestring = codestring.replace("\r\n", "\n").replace("\r", "\n")
 
     if codestring and codestring[-1] != '\n':
         codestring = codestring + '\n'

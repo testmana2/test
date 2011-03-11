@@ -17,11 +17,12 @@ from .HelpSnap import renderTabPreview
 
 import Preferences
 
+
 class HelpTabBar(E5WheelTabBar):
     """
     Class implementing the tab bar of the web browser.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -136,7 +137,7 @@ class HelpTabBar(E5WheelTabBar):
         """
         Protected method to handle event.
         
-        This event handler just handles the tooltip event and passes the 
+        This event handler just handles the tooltip event and passes the
         handling of all others to the superclass.
         
         @param evt reference to the event to be handled (QEvent)

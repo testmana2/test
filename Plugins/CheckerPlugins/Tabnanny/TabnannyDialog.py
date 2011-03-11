@@ -24,11 +24,12 @@ import UI.PixmapCache
 
 from eric5config import getConfig
 
+
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
     Class implementing a dialog to show the results of the tabnanny check run.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -55,7 +56,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         """
         Private method to resort the tree.
         """
-        self.resultList.sortItems(self.resultList.sortColumn(), 
+        self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder())
         
     def __createResultItem(self, file, line, sourcecode):
@@ -87,7 +88,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         self.__data = self.__project.getData("CHECKERSPARMS", "Tabnanny")
         if self.__data is None or "ExcludeFiles" not in self.__data:
-            self.__data = {"ExcludeFiles" : ""}
+            self.__data = {"ExcludeFiles": ""}
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         
     def start(self, fn):
@@ -141,14 +142,14 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     source = Utilities.convertLineEnds(source, "\n")
                 except (UnicodeError, IOError) as msg:
                     self.noResults = False
-                    self.__createResultItem(file, "1", 
+                    self.__createResultItem(file, "1",
                         "Error: {0}".format(str(msg)).rstrip()[1:-1])
                     progress += 1
                     continue
                 
                 flags = Utilities.extractFlags(source)
                 ext = os.path.splitext(file)[1]
-                if ("FileType" in flags and 
+                if ("FileType" in flags and
                     flags["FileType"] in ["Python", "Python2"]) or \
                    file in py2files or \
                    (ext in [".py", ".pyw"] and \
@@ -210,7 +211,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
            filterString != self.__data["ExcludeFiles"]:
             self.__data["ExcludeFiles"] = filterString
             self.__project.setData("CHECKERSPARMS", "Tabnanny", self.__data)
-        filterList = [f.strip() for f in filterString.split(",") 
+        filterList = [f.strip() for f in filterString.split(",")
                       if f.strip()]
         if filterList:
             for filter in filterList:
@@ -224,7 +225,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
     def on_resultList_itemActivated(self, itm, col):
         """
-        Private slot to handle the activation of an item. 
+        Private slot to handle the activation of an item.
         
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
@@ -253,10 +254,10 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         """
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
-            return (True, filename, "1", 
+            return (True, filename, "1",
                 self.trUtf8("Python2 interpreter not configured."))
         
-        checker = os.path.join(getConfig('ericDir'), 
+        checker = os.path.join(getConfig('ericDir'),
                                "UtilitiesPython2", "TabnannyChecker.py")
         
         proc = QProcess()
@@ -265,8 +266,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         finished = proc.waitForFinished(15000)
         if finished:
             output = \
-                str(proc.readAllStandardOutput(), 
-                        Preferences.getSystem("IOEncoding"), 
+                str(proc.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"),
                         'replace').splitlines()
             
             nok = output[0] == "ERROR"
@@ -278,5 +279,5 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             else:
                 return (False, None, None, None)
         
-        return (True, filename, "1", 
+        return (True, filename, "1",
             self.trUtf8("Python2 interpreter did not finish within 15s."))

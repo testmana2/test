@@ -16,11 +16,12 @@ from .BookmarkNode import BookmarkNode
 
 from .Ui_AddBookmarkDialog import Ui_AddBookmarkDialog
 
+
 class AddBookmarkProxyModel(QSortFilterProxyModel):
     """
     Class implementing a proxy model used by the AddBookmarkDialog dialog.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -58,7 +59,7 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
         """
         return sourceColumn == 0
     
-    def hasChildren(self, parent = QModelIndex()):
+    def hasChildren(self, parent=QModelIndex()):
         """
         Public method to check, if a parent node has some children.
         
@@ -68,16 +69,17 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
         sindex = self.mapToSource(parent)
         return self.sourceModel().hasChildren(sindex)
 
+
 class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
     """
     Class implementing a dialog to add a bookmark or a bookmark folder.
     """
-    def __init__(self, parent = None, bookmarksManager = None):
+    def __init__(self, parent=None, bookmarksManager=None):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
-        @param bookmarksManager reference to the bookmarks manager 
+        @param bookmarksManager reference to the bookmarks manager
             object (BookmarksManager)
         """
         QDialog.__init__(self, parent)

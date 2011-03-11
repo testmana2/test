@@ -4,11 +4,12 @@
 #
 
 """
-Module implementing specialized table views. 
+Module implementing specialized table views.
 """
 
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QTableView, QItemSelectionModel
+
 
 class E5TableView(QTableView):
     """
@@ -44,7 +45,7 @@ class E5TableView(QTableView):
         idx = self.model().index(row, 0, self.rootIndex())
         if not idx.isValid():
             idx = self.model().index(row - 1, 0, self.rootIndex())
-        self.selectionModel().select(idx, 
+        self.selectionModel().select(idx,
             QItemSelectionModel.SelectCurrent | QItemSelectionModel.Rows)
         self.setCurrentIndex(idx)
     
@@ -53,5 +54,5 @@ class E5TableView(QTableView):
         Public method to clear the view.
         """
         if self.model() is not None:
-            self.model().removeRows(0, self.model().rowCount(self.rootIndex()), 
+            self.model().removeRows(0, self.model().rowCount(self.rootIndex()),
                                     self.rootIndex())

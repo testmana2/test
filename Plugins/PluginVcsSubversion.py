@@ -38,6 +38,7 @@ pyqtApi = 2
 
 error = ""
 
+
 def exeDisplayData():
     """
     Public method to support the display of some executable info.
@@ -50,18 +51,19 @@ def exeDisplayData():
         exe += '.exe'
     
     data = {
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("VcsSubversionPlugin",
-                                "Version Control - Subversion (svn)"), 
-        "exe"               : exe, 
-        "versionCommand"    : '--version', 
-        "versionStartsWith" : 'svn', 
-        "versionPosition"   : 2, 
-        "version"           : "", 
-        "versionCleanup"    : None, 
+        "programEntry": True,
+        "header": QApplication.translate("VcsSubversionPlugin",
+                                "Version Control - Subversion (svn)"),
+        "exe": exe,
+        "versionCommand": '--version',
+        "versionStartsWith": 'svn',
+        "versionPosition": 2,
+        "version": "",
+        "versionCleanup": None,
     }
     
     return data
+
 
 def getVcsSystemIndicator():
     """
@@ -80,6 +82,7 @@ def getVcsSystemIndicator():
         data["_svn"] = (pluginTypename, displayString())
     return data
 
+
 def displayString():
     """
     Public function to get the display string.
@@ -96,6 +99,7 @@ def displayString():
 
 subversionCfgPluginObject = None
 
+
 def createConfigurationPage(configDlg):
     """
     Module function to create the configuration page.
@@ -109,6 +113,7 @@ def createConfigurationPage(configDlg):
     page = SubversionPage(subversionCfgPluginObject)
     return page
     
+
 def getConfigData():
     """
     Module function returning data as required by the configuration dialog.
@@ -116,13 +121,14 @@ def getConfigData():
     @return dictionary with key "zzz_subversionPage" containing the relevant data
     """
     return {
-        "zzz_subversionPage" : \
-            [QApplication.translate("VcsSubversionPlugin", "Subversion"), 
-             os.path.join("VcsPlugins", "vcsSubversion", "icons", 
+        "zzz_subversionPage": \
+            [QApplication.translate("VcsSubversionPlugin", "Subversion"),
+             os.path.join("VcsPlugins", "vcsSubversion", "icons",
                           "preferences-subversion.png"),
              createConfigurationPage, "vcsPage", None],
     }
     
+
 def prepareUninstall():
     """
     Module function to prepare for an uninstallation.
@@ -130,6 +136,7 @@ def prepareUninstall():
     if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsSubversion"):
         Preferences.Prefs.settings.remove("Subversion")
     
+
 class VcsSubversionPlugin(QObject):
     """
     Class implementing the Subversion version control plugin.
@@ -144,19 +151,19 @@ class VcsSubversionPlugin(QObject):
         self.__ui = ui
         
         self.__subversionDefaults = {
-            "StopLogOnCopy"  : True, 
-            "LogLimit"       : 100, 
-            "CommitMessages" : 20, 
+            "StopLogOnCopy": True,
+            "LogLimit": 100,
+            "CommitMessages": 20,
         }
         
         from VcsPlugins.vcsSubversion.ProjectHelper import SvnProjectHelper
         self.__projectHelperObject = SvnProjectHelper(None, None)
         try:
-            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject, 
+            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject,
                                          pluginType)
         except KeyError:
             pass    # ignore duplicate registration
-        readShortcuts(pluginName = pluginTypename)
+        readShortcuts(pluginName=pluginTypename)
     
     def getProjectHelper(self):
         """
@@ -170,7 +177,7 @@ class VcsSubversionPlugin(QObject):
         """
         Public method to activate this plugin.
         
-        @return tuple of reference to instantiated viewmanager and 
+        @return tuple of reference to instantiated viewmanager and
             activation status (boolean)
         """
         from VcsPlugins.vcsSubversion.subversion import Subversion
@@ -199,7 +206,7 @@ class VcsSubversionPlugin(QObject):
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(
                 "Subversion/" + key))
-        else: 
+        else:
             return Preferences.Prefs.settings.value("Subversion/" + key)
     
     def setPreferences(self, key, value):

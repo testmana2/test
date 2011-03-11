@@ -10,6 +10,7 @@ Module implementing a palette widget for the icon editor.
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
+
 class IconEditorPalette(QWidget):
     """
     Class implementing a palette widget for the icon editor.
@@ -21,7 +22,7 @@ class IconEditorPalette(QWidget):
     colorSelected = pyqtSignal(QColor)
     compositingChanged = pyqtSignal(QPainter.CompositionMode)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -84,7 +85,7 @@ class IconEditorPalette(QWidget):
         self.__compositingGroup = QGroupBox(self.trUtf8("Compositing"), self)
         self.__compositingGroupLayout = QVBoxLayout(self.__compositingGroup)
         self.__compositingGroup.setLayout(self.__compositingGroupLayout)
-        self.__sourceButton = QRadioButton(self.trUtf8("Replace"), 
+        self.__sourceButton = QRadioButton(self.trUtf8("Replace"),
                                            self.__compositingGroup)
         self.__sourceButton.setWhatsThis(self.trUtf8(
             """<b>Replace</b>"""
@@ -92,7 +93,7 @@ class IconEditorPalette(QWidget):
         ))
         self.__sourceButton.clicked[bool].connect(self.__compositingChanged)
         self.__compositingGroupLayout.addWidget(self.__sourceButton)
-        self.__sourceOverButton = QRadioButton(self.trUtf8("Blend"), 
+        self.__sourceOverButton = QRadioButton(self.trUtf8("Blend"),
                                                self.__compositingGroup)
         self.__sourceOverButton.setWhatsThis(self.trUtf8(
             """<b>Blend</b>"""
@@ -146,7 +147,7 @@ class IconEditorPalette(QWidget):
         @param val value of the alpha channel
         """
         if val != self.__currentAlpha:
-            col = QColor(self.__currentColor) 
+            col = QColor(self.__currentColor)
             col.setAlpha(val)
             self.colorSelected.emit(col)
     

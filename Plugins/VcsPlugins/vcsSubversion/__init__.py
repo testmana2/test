@@ -6,6 +6,6 @@
 """
 Package implementing the vcs interface to Subversion
 
-It consists of the subversion class, the project helper classes and some 
+It consists of the subversion class, the project helper classes and some
 Subversion specific dialogs.
 """

@@ -12,11 +12,12 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgBackoutDialog import Ui_HgBackoutDialog
 
+
 class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
     """
     Class implementing a dialog to enter the data for a backout operation.
     """
-    def __init__(self, tagsList, branchesList, parent = None):
+    def __init__(self, tagsList, branchesList, parent=None):
         """
         Constructor
         
@@ -49,7 +50,7 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         """
         Public method to retrieve the backout data.
         
-        @return tuple naming the revision, a flag indicating a 
+        @return tuple naming the revision, a flag indicating a
             merge, the commit date, the commit user and a commit message
             (string, boolean, string, string, string)
         """
@@ -74,9 +75,9 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         else:
             msg = self.trUtf8("Backed out changeset <{0}>.").format(rev)
         
-        return (rev, 
-                self.mergeCheckBox.isChecked, 
-                date, 
-                self.userEdit.text(), 
+        return (rev,
+                self.mergeCheckBox.isChecked,
+                date,
+                self.userEdit.text(),
                 msg
         )

@@ -17,11 +17,12 @@ from .ExporterHTML import HTMLGenerator
 
 import Preferences
 
+
 class ExporterODT(ExporterBase):
     """
     Class implementing an exporter for ODT.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -51,12 +52,12 @@ class ExporterODT(ExporterBase):
         # generate HTML of the source
         generator = HTMLGenerator(self.editor)
         html = generator.generate(
-            tabSize = tabSize, 
-            useTabs = tabs, 
-            wysiwyg = wysiwyg, 
-            folding = False, 
-            onlyStylesUsed = onlyStylesUsed, 
-            titleFullPath = False
+            tabSize=tabSize,
+            useTabs=tabs,
+            wysiwyg=wysiwyg,
+            folding=False,
+            onlyStylesUsed=onlyStylesUsed,
+            titleFullPath=False
         )
         
         # convert HTML to ODT

@@ -14,11 +14,12 @@ from .Ui_SpellCheckingDialog import Ui_SpellCheckingDialog
 
 import Utilities
 
+
 class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
     """
     Class implementing the spell checking dialog.
     """
-    def __init__(self, spellChecker, startPos, endPos, parent = None):
+    def __init__(self, spellChecker, startPos, endPos, parent=None):
         """
         Constructor
         """
@@ -60,8 +61,8 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         lcontext, rcontext = self.__spell.getContext(self.wordStart, self.wordEnd)
         self.changeEdit.setText(self.word)
         self.contextLabel.setText('{0}<font color="#FF0000">{1}</font>{2}'.format(
-                                    Utilities.html_encode(lcontext), 
-                                    self.word, 
+                                    Utilities.html_encode(lcontext),
+                                    self.word,
                                     Utilities.html_encode(rcontext)))
         suggestions = self.__spell.getSuggestions(self.word)
         self.suggestionsList.clear()

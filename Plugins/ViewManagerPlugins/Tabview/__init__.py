@@ -5,4 +5,4 @@
  
 """
 Package containing the tabview view manager plugin.
-""" 
+"""

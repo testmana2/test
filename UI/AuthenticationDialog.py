@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog, QStyle
 
 from .Ui_AuthenticationDialog import Ui_AuthenticationDialog
 
+
 class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
     """
     Class implementing the authentication dialog for the help browser.
     """
-    def __init__(self, info, username, showSave = False, saveIt = False, parent = None):
+    def __init__(self, info, username, showSave=False, saveIt=False, parent=None):
         """
         Constructor
         

@@ -23,11 +23,12 @@ import UI.Config
 
 noTranslationName = QApplication.translate("TRPreviewer", "<No translation>")
 
+
 class TRPreviewer(QMainWindow):
     """
     Class implementing the UI Previewer main window.
     """
-    def __init__(self, filenames = [], parent = None, name = None):
+    def __init__(self, filenames=[], parent=None, name=None):
         """
         Constructor
         
@@ -120,7 +121,7 @@ class TRPreviewer(QMainWindow):
                 fi = QFileInfo(fn)
                 if fi.suffix().lower() == 'ui':
                     self.preview.loadWidget(fn)
-                elif fi.suffix().lower()== 'qm':
+                elif fi.suffix().lower() == 'qm':
                     self.translations.add(fn, first)
                     first = False
             
@@ -141,7 +142,7 @@ class TRPreviewer(QMainWindow):
         """
         Private method to define the user interface actions.
         """
-        self.openUIAct = QAction(UI.PixmapCache.getIcon("openUI.png"), 
+        self.openUIAct = QAction(UI.PixmapCache.getIcon("openUI.png"),
                         self.trUtf8('&Open UI Files...'), self)
         self.openUIAct.setStatusTip(self.trUtf8('Open UI files for display'))
         self.openUIAct.setWhatsThis(self.trUtf8(
@@ -150,7 +151,7 @@ class TRPreviewer(QMainWindow):
         ))
         self.openUIAct.triggered[()].connect(self.__openWidget)
         
-        self.openQMAct = QAction(UI.PixmapCache.getIcon("openQM.png"), 
+        self.openQMAct = QAction(UI.PixmapCache.getIcon("openQM.png"),
                         self.trUtf8('Open &Translation Files...'), self)
         self.openQMAct.setStatusTip(self.trUtf8('Open Translation files for display'))
         self.openQMAct.setWhatsThis(self.trUtf8(
@@ -159,7 +160,7 @@ class TRPreviewer(QMainWindow):
         ))
         self.openQMAct.triggered[()].connect(self.__openTranslation)
         
-        self.reloadAct = QAction(UI.PixmapCache.getIcon("reload.png"), 
+        self.reloadAct = QAction(UI.PixmapCache.getIcon("reload.png"),
                         self.trUtf8('&Reload Translations'), self)
         self.reloadAct.setStatusTip(self.trUtf8('Reload the loaded translations'))
         self.reloadAct.setWhatsThis(self.trUtf8(
@@ -168,9 +169,9 @@ class TRPreviewer(QMainWindow):
         ))
         self.reloadAct.triggered[()].connect(self.translations.reload)
         
-        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"), 
+        self.exitAct = QAction(UI.PixmapCache.getIcon("exit.png"),
                         self.trUtf8('&Quit'), self)
-        self.exitAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+Q","File|Quit")))
+        self.exitAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
         self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
         self.exitAct.setWhatsThis(self.trUtf8(
                 """<b>Quit</b>"""
@@ -227,7 +228,7 @@ class TRPreviewer(QMainWindow):
         
         self.closeAct = QAction(UI.PixmapCache.getIcon("close.png"),
                             self.trUtf8('&Close'), self)
-        self.closeAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+W","File|Close")))
+        self.closeAct.setShortcut(QKeySequence(self.trUtf8("Ctrl+W", "File|Close")))
         self.closeAct.setStatusTip(self.trUtf8('Close the current window'))
         self.closeAct.setWhatsThis(self.trUtf8(
                 """<b>Close Window</b>"""
@@ -391,6 +392,7 @@ class TRPreviewer(QMainWindow):
         """
         self.translations.reload()
 
+
 class Translation(object):
     """
     Class to store the properties of a translation
@@ -402,6 +404,7 @@ class Translation(object):
         self.fileName = None
         self.name = None
         self.translator = None
+
 
 class TranslationsDict(QObject):
     """
@@ -424,9 +427,9 @@ class TranslationsDict(QObject):
         self.selector = selector
         self.currentTranslator = None
         self.selector.addItem(noTranslationName)
-        self.translations = [] # list of Translation objects
+        self.translations = []  # list of Translation objects
     
-    def add(self, fileName, setTranslation = True):
+    def add(self, fileName, setTranslation=True):
         """
         Public method to add a translation to the list.
         
@@ -624,11 +627,12 @@ class TranslationsDict(QObject):
         """
         return len(self.translations) > 0
 
+
 class WidgetView(QWidget):
     """
     Class to show a dynamically loaded widget (or dialog).
     """
-    def __init__(self, uiFileName, parent = None, name = None):
+    def __init__(self, uiFileName, parent=None, name=None):
         """
         Constructor
         
@@ -703,6 +707,7 @@ class WidgetView(QWidget):
         """
         self.__timer.start(0)
 
+
 class WidgetArea(QMdiArea):
     """
     Specialized MDI area to show the loaded widgets.
@@ -712,7 +717,7 @@ class WidgetArea(QMdiArea):
     lastWidgetClosed = pyqtSignal()
     rebuildWidgets = pyqtSignal()
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         

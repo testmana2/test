@@ -17,6 +17,7 @@ from .EditWatchpointDialog import EditWatchpointDialog
 
 import Utilities
 
+
 class WatchPointViewer(QTreeView):
     """
     Class implementing the watch expression viewer widget.
@@ -24,13 +25,13 @@ class WatchPointViewer(QTreeView):
     Watch expressions will be shown with all their details. They can be modified through
     the context menu of this widget.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
         @param parent the parent (QWidget)
         """
-        QTreeView.__init__(self,parent)
+        QTreeView.__init__(self, parent)
         self.setObjectName("WatchExpressionViewer")
         
         self.__model = None
@@ -89,7 +90,7 @@ class WatchPointViewer(QTreeView):
         """
         Private slot to resort the tree.
         """
-        self.model().sort(self.header().sortIndicatorSection(), 
+        self.model().sort(self.header().sortIndicatorSection(),
                           self.header().sortIndicatorOrder())
         
     def __toSourceIndex(self, index):
@@ -108,7 +109,7 @@ class WatchPointViewer(QTreeView):
         """
         return self.sortingModel.mapFromSource(sindex)
         
-    def __setRowSelected(self, index, selected = True):
+    def __setRowSelected(self, index, selected=True):
         """
         Private slot to select a complete row.
         
@@ -149,13 +150,13 @@ class WatchPointViewer(QTreeView):
         self.backMenu = QMenu()
         self.backMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
         self.backMenuActions["EnableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Enable all"), 
+            self.backMenu.addAction(self.trUtf8("Enable all"),
                 self.__enableAllWatchPoints)
         self.backMenuActions["DisableAll"] = \
-            self.backMenu.addAction(self.trUtf8("Disable all"), 
+            self.backMenu.addAction(self.trUtf8("Disable all"),
                 self.__disableAllWatchPoints)
         self.backMenuActions["DeleteAll"] = \
-            self.backMenu.addAction(self.trUtf8("Delete all"), 
+            self.backMenu.addAction(self.trUtf8("Delete all"),
                 self.__deleteAllWatchPoints)
         self.backMenu.addSeparator()
         self.backMenu.addAction(self.trUtf8("Configure..."), self.__configure)
@@ -164,15 +165,15 @@ class WatchPointViewer(QTreeView):
         self.multiMenu = QMenu()
         self.multiMenu.addAction(self.trUtf8("Add"), self.__addWatchPoint)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Enable selected"), 
+        self.multiMenu.addAction(self.trUtf8("Enable selected"),
             self.__enableSelectedWatchPoints)
         self.multiMenu.addAction(self.trUtf8("Enable all"), self.__enableAllWatchPoints)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Disable selected"), 
+        self.multiMenu.addAction(self.trUtf8("Disable selected"),
             self.__disableSelectedWatchPoints)
         self.multiMenu.addAction(self.trUtf8("Disable all"), self.__disableAllWatchPoints)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8("Delete selected"), 
+        self.multiMenu.addAction(self.trUtf8("Delete selected"),
             self.__deleteSelectedWatchPoints)
         self.multiMenu.addAction(self.trUtf8("Delete all"), self.__deleteAllWatchPoints)
         self.multiMenu.addSeparator()
@@ -205,7 +206,7 @@ class WatchPointViewer(QTreeView):
         for index in self.selectedIndexes():
             self.__setRowSelected(index, False)
     
-    def __findDuplicates(self, cond, special, showMessage = False, index = QModelIndex()):
+    def __findDuplicates(self, cond, special, showMessage=False, index=QModelIndex()):
         """
         Private method to check, if an entry already exists.
         
@@ -281,7 +282,7 @@ class WatchPointViewer(QTreeView):
             if dlg.exec_() == QDialog.Accepted:
                 cond, temp, enabled, count, special = dlg.getData()
                 if not self.__findDuplicates(cond, special, True, sindex):
-                    self.__model.setWatchPointByIndex(sindex, 
+                    self.__model.setWatchPointByIndex(sindex,
                         cond, special, (temp, enabled, count))
                     self.__resizeColumns()
                     self.__resort()
@@ -402,7 +403,7 @@ class WatchPointViewer(QTreeView):
         
         @return count of items selected (integer)
         """
-        count = len(self.selectedIndexes()) // (self.__model.columnCount()-1)
+        count = len(self.selectedIndexes()) // (self.__model.columnCount() - 1)
         # column count is 1 greater than selectable
         return count
     

@@ -38,6 +38,7 @@ pyqtApi = 2
 
 error = ""
 
+
 def exeDisplayData():
     """
     Public method to support the display of some executable info.
@@ -50,18 +51,19 @@ def exeDisplayData():
         exe += '.exe'
     
     data = {
-        "programEntry"      : True, 
-        "header"            : QApplication.translate("VcsMercurialPlugin",
-                                "Version Control - Mercurial"), 
-        "exe"               : exe, 
-        "versionCommand"    : 'version', 
-        "versionStartsWith" : 'Mercurial', 
-        "versionPosition"   : -1, 
-        "version"           : "", 
-        "versionCleanup"    : (0, -1), 
+        "programEntry": True,
+        "header": QApplication.translate("VcsMercurialPlugin",
+                                "Version Control - Mercurial"),
+        "exe": exe,
+        "versionCommand": 'version',
+        "versionStartsWith": 'Mercurial',
+        "versionPosition": -1,
+        "version": "",
+        "versionCleanup": (0, -1),
     }
     
     return data
+
 
 def getVcsSystemIndicator():
     """
@@ -80,6 +82,7 @@ def getVcsSystemIndicator():
         data["_hg"] = (pluginTypename, displayString())
     return data
 
+
 def displayString():
     """
     Public function to get the display string.
@@ -96,6 +99,7 @@ def displayString():
 
 mercurialCfgPluginObject = None
 
+
 def createConfigurationPage(configDlg):
     """
     Module function to create the configuration page.
@@ -109,6 +113,7 @@ def createConfigurationPage(configDlg):
     page = MercurialPage(mercurialCfgPluginObject)
     return page
     
+
 def getConfigData():
     """
     Module function returning data as required by the configuration dialog.
@@ -116,12 +121,13 @@ def getConfigData():
     @return dictionary with key "zzz_mercurialPage" containing the relevant data
     """
     return {
-        "zzz_mercurialPage" : \
-            [QApplication.translate("VcsMercurialPlugin", "Mercurial"), 
-             os.path.join("VcsPlugins", "vcsMercurial", "icons", 
+        "zzz_mercurialPage": \
+            [QApplication.translate("VcsMercurialPlugin", "Mercurial"),
+             os.path.join("VcsPlugins", "vcsMercurial", "icons",
                           "preferences-mercurial.png"),
              createConfigurationPage, "vcsPage", None],
     }
+
 
 def prepareUninstall():
     """
@@ -130,6 +136,7 @@ def prepareUninstall():
     if not e5App().getObject("PluginManager").isPluginLoaded("PluginVcsMercurial"):
         Preferences.Prefs.settings.remove("Mercurial")
     
+
 class VcsMercurialPlugin(QObject):
     """
     Class implementing the Mercurial version control plugin.
@@ -144,23 +151,23 @@ class VcsMercurialPlugin(QObject):
         self.__ui = ui
         
         self.__mercurialDefaults = {
-            "StopLogOnCopy"  : True, # used in log browser
-            "UseLogBrowser"  : True, 
-            "LogLimit"       : 100, 
-            "CommitMessages" : 20, 
-            "PullUpdate"     : False,
-            "ServerPort"     : 8000, 
-            "ServerStyle"    : "", 
+            "StopLogOnCopy": True,  # used in log browser
+            "UseLogBrowser": True,
+            "LogLimit": 100,
+            "CommitMessages": 20,
+            "PullUpdate": False,
+            "ServerPort": 8000,
+            "ServerStyle": "",
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
         self.__projectHelperObject = HgProjectHelper(None, None)
         try:
-            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject, 
+            e5App().registerPluginObject(pluginTypename, self.__projectHelperObject,
                                          pluginType)
         except KeyError:
             pass    # ignore duplicate registration
-        readShortcuts(pluginName = pluginTypename)
+        readShortcuts(pluginName=pluginTypename)
     
     def getProjectHelper(self):
         """
@@ -174,7 +181,7 @@ class VcsMercurialPlugin(QObject):
         """
         Public method to activate this plugin.
         
-        @return tuple of reference to instantiated viewmanager and 
+        @return tuple of reference to instantiated viewmanager and
             activation status (boolean)
         """
         from VcsPlugins.vcsMercurial.hg import Hg
@@ -203,7 +210,7 @@ class VcsMercurialPlugin(QObject):
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(
                 "Mercurial/" + key))
-        else: 
+        else:
             return Preferences.Prefs.settings.value("Mercurial/" + key)
     
     def setPreferences(self, key, value):

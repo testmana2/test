@@ -17,13 +17,13 @@ class QRegExpWizardRepeatDialog(QDialog, Ui_QRegExpWizardRepeatDialog):
     """
     Class implementing a dialog for entering repeat counts.
     """
-    def __init__(self,parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         
         self.unlimitedButton.setChecked(True)

@@ -16,11 +16,12 @@ from .PluginDetailsDialog import PluginDetailsDialog
 
 from .Ui_PluginInfoDialog import Ui_PluginInfoDialog
 
+
 class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
     """
     Class implementing the Plugin Info Dialog.
     """
-    def __init__(self, pluginManager, parent = None):
+    def __init__(self, pluginManager, parent=None):
         """
         Constructor
         
@@ -57,7 +58,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         self.pluginList.clear()
         for info in self.pm.getPluginInfos():
             self.__createEntry(info)
-        self.pluginList.sortItems(self.pluginList.sortColumn(), 
+        self.pluginList.sortItems(self.pluginList.sortColumn(),
                                   self.pluginList.header().sortIndicatorOrder())
         
     def __createEntry(self, info):
@@ -67,11 +68,11 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         @param info tuple giving the info for the entry
         """
         infoList = [
-            info[0], 
-            info[1], 
-            info[2], 
-            (info[3] and self.trUtf8("Yes") or self.trUtf8("No")), 
-            (info[4] and self.trUtf8("Yes") or self.trUtf8("No")), 
+            info[0],
+            info[1],
+            info[2],
+            (info[3] and self.trUtf8("Yes") or self.trUtf8("No")),
+            (info[4] and self.trUtf8("Yes") or self.trUtf8("No")),
             info[5]
         ]
         itm = QTreeWidgetItem(self.pluginList, infoList)

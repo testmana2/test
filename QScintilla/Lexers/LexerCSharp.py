@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerCSharp,  QsciScintilla
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerCSharp(QsciLexerCSharp, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -27,13 +28,13 @@ class LexerCSharp(QsciLexerCSharp, Lexer):
         
         self.commentString = "//"
         self.streamCommentString = {
-            'start' : '/* ',
-            'end'   : ' */'
+            'start': '/* ',
+            'end': ' */'
         }
         self.boxCommentString = {
-            'start'  : '/* ',
-            'middle' : ' * ',
-            'end'    : ' */'
+            'start': '/* ',
+            'middle': ' * ',
+            'end': ' */'
         }
 
     def initProperties(self):
@@ -57,9 +58,9 @@ class LexerCSharp(QsciLexerCSharp, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerCSharp.Comment, 
-                         QsciLexerCSharp.CommentDoc, 
-                         QsciLexerCSharp.CommentLine, 
+        return style in [QsciLexerCSharp.Comment,
+                         QsciLexerCSharp.CommentDoc,
+                         QsciLexerCSharp.CommentLine,
                          QsciLexerCSharp.CommentLineDoc]
     
     def isStringStyle(self, style):
@@ -68,16 +69,16 @@ class LexerCSharp(QsciLexerCSharp, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerCSharp.DoubleQuotedString, 
-                         QsciLexerCSharp.SingleQuotedString, 
-                         QsciLexerCSharp.UnclosedString, 
+        return style in [QsciLexerCSharp.DoubleQuotedString,
+                         QsciLexerCSharp.SingleQuotedString,
+                         QsciLexerCSharp.UnclosedString,
                          QsciLexerCSharp.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerCSharp.keywords(self, kwSet)

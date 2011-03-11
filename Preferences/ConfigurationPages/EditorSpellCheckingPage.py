@@ -20,6 +20,7 @@ import Utilities
 
 from QScintilla.SpellChecker import SpellChecker
 
+
 class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage):
     """
     Class implementing the Editor Spellchecking configuration page.
@@ -41,8 +42,8 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         else:
             self.spellingFrame.setEnabled(False)
         
-        self.pwlFileCompleter = E5FileCompleter(self.pwlEdit, showHidden = True)
-        self.pelFileCompleter = E5FileCompleter(self.pelEdit, showHidden = True)
+        self.pwlFileCompleter = E5FileCompleter(self.pwlEdit, showHidden=True)
+        self.pelFileCompleter = E5FileCompleter(self.pelEdit, showHidden=True)
         
         # set initial values
         self.checkingEnabledCheckBox.setChecked(
@@ -58,7 +59,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
             Preferences.getEditor("SpellCheckingMinWordSize"))
         
         self.editorColours["SpellingMarkers"] = \
-            self.initColour("SpellingMarkers", self.spellingMarkerButton, 
+            self.initColour("SpellingMarkers", self.spellingMarkerButton,
                 Preferences.getEditorColour)
         
         self.pwlEdit.setText(Preferences.getEditor("SpellCheckingPersonalWordList"))
@@ -75,15 +76,15 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         """
         Public slot to save the Editor Search configuration.
         """
-        Preferences.setEditor("SpellCheckingEnabled", 
+        Preferences.setEditor("SpellCheckingEnabled",
             self.checkingEnabledCheckBox.isChecked())
         
-        Preferences.setEditor("SpellCheckingDefaultLanguage", 
+        Preferences.setEditor("SpellCheckingDefaultLanguage",
             self.defaultLanguageCombo.currentText())
         
-        Preferences.setEditor("SpellCheckStringsOnly", 
+        Preferences.setEditor("SpellCheckStringsOnly",
             self.stringsOnlyCheckBox.isChecked())
-        Preferences.setEditor("SpellCheckingMinWordSize", 
+        Preferences.setEditor("SpellCheckingMinWordSize",
             self.minimumWordSizeSlider.value())
         
         for key in list(self.editorColours.keys()):
@@ -92,7 +93,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Preferences.setEditor("SpellCheckingPersonalWordList", self.pwlEdit.text())
         Preferences.setEditor("SpellCheckingPersonalExcludeList", self.pelEdit.text())
         
-        Preferences.setEditor("AutoSpellCheckingEnabled", 
+        Preferences.setEditor("AutoSpellCheckingEnabled",
             self.enabledCheckBox.isChecked())
         Preferences.setEditor("AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
         
@@ -102,7 +103,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
         Private slot to set the colour of the spelling markers.
         """
         self.editorColours["SpellingMarkers"] = \
-            self.selectColour(self.spellingMarkerButton, 
+            self.selectColour(self.spellingMarkerButton,
                 self.editorColours["SpellingMarkers"], True)
     
     @pyqtSlot()
@@ -132,6 +133,7 @@ class EditorSpellCheckingPage(ConfigurationPageBase, Ui_EditorSpellCheckingPage)
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))
+
 
 def create(dlg):
     """

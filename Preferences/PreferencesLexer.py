@@ -15,6 +15,7 @@ import QScintilla.Lexers
 
 import Preferences
 
+
 class PreferencesLexerError(Exception):
     """
     Class defining a special error for the PreferencesLexer class.
@@ -24,7 +25,7 @@ class PreferencesLexerError(Exception):
         Constructor
         """
         self._errorMessage = \
-            QApplication.translate("PreferencesLexerError", 
+            QApplication.translate("PreferencesLexerError",
                 "Unspecific PreferencesLexer error.")
         
     def __repr__(self):
@@ -43,6 +44,7 @@ class PreferencesLexerError(Exception):
         """
         return self._errorMessage
 
+
 class PreferencesLexerLanguageError(PreferencesLexerError):
     """
     Class defining a special error for the PreferencesLexer class.
@@ -56,8 +58,9 @@ class PreferencesLexerLanguageError(PreferencesLexerError):
             QApplication.translate("PreferencesLexerError",
                 'Unsupported Lexer Language: {0}').format(language)
 
+
 class PreferencesLexer(QsciLexer):
-    """ 
+    """
     Subclass of QsciLexer to implement preferences specific lexer methods.
     """
     def __init__(self, language, parent=None):

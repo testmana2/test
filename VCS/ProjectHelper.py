@@ -23,11 +23,12 @@ from E5Gui.E5Application import e5App
 
 import Preferences
 
+
 class VcsProjectHelper(QObject):
     """
     Class implementing the base class of the VCS project helper.
     """
-    def __init__(self, vcsObject, projectObject, parent = None, name = None):
+    def __init__(self, vcsObject, projectObject, parent=None, name=None):
         """
         Constructor
         
@@ -73,7 +74,7 @@ class VcsProjectHelper(QObject):
         self.vcsNewAct.triggered[()].connect(self._vcsCheckout)
         self.actions.append(self.vcsNewAct)
         
-        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'), 
+        self.vcsExportAct = E5Action(self.trUtf8('Export from repository'),
                 self.trUtf8('&Export from repository...'), 0, 0, self, 'vcs_export')
         self.vcsExportAct.setStatusTip(self.trUtf8(
             'Export a project from the repository'
@@ -117,7 +118,7 @@ class VcsProjectHelper(QObject):
         """
         self.vcsAddAct.setEnabled(self.project.isOpen())
 
-    def _vcsCheckout(self, export = False):
+    def _vcsCheckout(self, export=False):
         """
         Protected slot used to create a local project from the repository.
         
@@ -213,7 +214,7 @@ class VcsProjectHelper(QObject):
                             self.trUtf8("The project retrieved from the repository"
                                 " does not contain an eric project file"
                                 " (*.e4p). Create it?"),
-                            yesDefault = True)
+                            yesDefault=True)
                         if res:
                             self.project.ppath = projectdir
                             self.project.opened = True
@@ -225,7 +226,7 @@ class VcsProjectHelper(QObject):
                                 self.project.initFileTypes()
                                 self.project.setDirty(True)
                                 try:
-                                    ms = os.path.join(self.project.ppath, 
+                                    ms = os.path.join(self.project.ppath,
                                                       self.project.pdata["MAINSCRIPT"][0])
                                     if os.path.exists(ms):
                                         self.project.appendFile(ms)
@@ -239,7 +240,7 @@ class VcsProjectHelper(QObject):
                                         self.trUtf8("New project from repository"),
                                         self.trUtf8("Shall the project file be added to"
                                             " the repository?"),
-                                        yesDefault = True)
+                                        yesDefault=True)
                                     if res:
                                         self.project.vcs.vcsAdd(self.project.pfile)
                 else:
@@ -263,9 +264,9 @@ class VcsProjectHelper(QObject):
         """
         Protected slot used to import the local project into the repository.
         
-        <b>NOTE</b>: 
+        <b>NOTE</b>:
             This does not necessarily make the local project a vcs controlled
-            project. You may have to checkout the project from the repository in 
+            project. You may have to checkout the project from the repository in
             order to accomplish that.
         """
         def revertChanges():
@@ -328,7 +329,7 @@ class VcsProjectHelper(QObject):
                     # reopen the project
                     self.project.openProject(self.project.pfile)
                 else:
-                    # revert the changes to the local project 
+                    # revert the changes to the local project
                     # because the project dir is not a VCS directory
                     revertChanges()
             else:
@@ -344,7 +345,7 @@ class VcsProjectHelper(QObject):
             res = E5MessageBox.yesNo(self.parent(),
                 self.trUtf8("Update"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
-                yesDefault = True)
+                yesDefault=True)
             if res:
                 self.project.reopenProject()
         

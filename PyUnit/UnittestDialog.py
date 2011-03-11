@@ -30,6 +30,7 @@ import UI.PixmapCache
 
 import Utilities
 
+
 class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     Class implementing the UI to the pyunit package.
@@ -38,7 +39,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     unittestFile = pyqtSignal(str, int, int)
     
-    def __init__(self,prog = None,dbs = None,ui = None,parent = None,name = None):
+    def __init__(self, prog=None, dbs=None, ui=None, parent=None, name=None):
         """
         Constructor
         
@@ -49,7 +50,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        QWidget.__init__(self,parent)
+        QWidget.__init__(self, parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)
@@ -150,10 +151,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         if self.dbs:
             py2Extensions = \
-                ' '.join(["*{0}".format(ext) 
+                ' '.join(["*{0}".format(ext)
                           for ext in self.dbs.getExtensions('Python2')])
             py3Extensions = \
-                ' '.join(["*{0}".format(ext) 
+                ' '.join(["*{0}".format(ext)
                           for ext in self.dbs.getExtensions('Python3')])
             filter = self.trUtf8(
                 "Python3 Files ({1});;Python2 Files ({0});;All Files (*)")\
@@ -211,8 +212,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         prog = self.testsuiteComboBox.currentText()
         if not prog:
-            E5MessageBox.critical(self, 
-                    self.trUtf8("Unittest"), 
+            E5MessageBox.critical(self,
+                    self.trUtf8("Unittest"),
                     self.trUtf8("You must enter a test suite file."))
             return
         
@@ -258,7 +259,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                     test = unittest.defaultTestLoader.loadTestsFromModule(module)
             except:
                 exc_type, exc_value, exc_tb = sys.exc_info()
-                E5MessageBox.critical(self, 
+                E5MessageBox.critical(self,
                         self.trUtf8("Unittest"),
                         self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                             .format(self.testName, str(exc_type), str(exc_value)))
@@ -276,7 +277,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 else:
                     mainScript = os.path.abspath(prog)
                 cover = coverage(
-                    data_file = "{0}.coverage".format(os.path.splitext(mainScript)[0]))
+                    data_file="{0}.coverage".format(os.path.splitext(mainScript)[0]))
                 cover.use_cache(True)
                 if self.coverageEraseCheckBox.isChecked():
                     cover.erase()
@@ -307,7 +308,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param exc_value value of exception occured during preparation (string)
         """
         if nrTests == 0:
-            E5MessageBox.critical(self, 
+            E5MessageBox.critical(self,
                     self.trUtf8("Unittest"),
                     self.trUtf8("<p>Unable to run test <b>{0}</b>.<br>{1}<br>{2}</p>")
                         .format(self.testName, exc_type, exc_value))
@@ -506,6 +507,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             fn, ln = fmatch.group(1, 2)
             self.unittestFile.emit(fn, int(ln), 1)
 
+
 class QtTestResult(unittest.TestResult):
     """
     A TestResult derivative to work with a graphical GUI.
@@ -561,11 +563,12 @@ class QtTestResult(unittest.TestResult):
         unittest.TestResult.stopTest(self, test)
         self.parent.testFinished()
 
+
 class UnittestWindow(QMainWindow):
     """
     Main window class for the standalone dialog.
     """
-    def __init__(self, prog = None, parent = None):
+    def __init__(self, prog=None, parent=None):
         """
         Constructor
         
@@ -573,7 +576,7 @@ class UnittestWindow(QMainWindow):
         @param parent reference to the parent widget (QWidget)
         """
         QMainWindow.__init__(self, parent)
-        self.cw = UnittestDialog(prog = prog, parent = self)
+        self.cw = UnittestDialog(prog=prog, parent=self)
         self.cw.installEventFilter(self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

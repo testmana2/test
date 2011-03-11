@@ -12,6 +12,7 @@ from .Ui_ProjectPage import Ui_ProjectPage
 
 import Preferences
 
+
 class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
     """
     Class implementing the Project configuration page.
@@ -78,11 +79,12 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
             self.projectAutoCompileResourcesCheckBox.isChecked())
         Preferences.setProject("XMLTimestamp",
             self.projectTimestampCheckBox.isChecked())
-        Preferences.setProject("RecentNumber", 
+        Preferences.setProject("RecentNumber",
             self.projectRecentSpinBox.value())
         Preferences.setProject("DeterminePyFromProject",
             self.pythonVariantCheckBox.isChecked())
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

@@ -11,11 +11,12 @@ from PyQt4.QtGui import QDialog
 
 from .Ui_OpenSearchEditDialog import Ui_OpenSearchEditDialog
 
+
 class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
     """
     Class implementing a dialog to edit the data of a search engine.
     """
-    def __init__(self, engine, parent = None):
+    def __init__(self, engine, parent=None):
         """
         Constructor
         """

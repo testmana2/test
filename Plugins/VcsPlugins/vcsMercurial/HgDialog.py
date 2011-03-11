@@ -18,6 +18,7 @@ from .Ui_HgDialog import Ui_HgDialog
 
 import Preferences
 
+
 class HgDialog(QDialog, Ui_HgDialog):
     """
     Class implementing a dialog starting a process and showing its output.
@@ -26,7 +27,7 @@ class HgDialog(QDialog, Ui_HgDialog):
     shows the output of the process. The dialog is modal,
     which causes a synchronized execution of the process.
     """
-    def __init__(self, text, parent = None):
+    def __init__(self, text, parent=None):
         """
         Constructor
         
@@ -91,7 +92,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.normal = (exitStatus == QProcess.NormalExit) and (exitCode == 0)
         self.__finish()
     
-    def startProcess(self, args, workingDir = None, showArgs = True):
+    def startProcess(self, args, workingDir=None, showArgs=True):
         """
         Public slot used to start the process.
         
@@ -158,14 +159,14 @@ class HgDialog(QDialog, Ui_HgDialog):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process, formats it and inserts it into
         the contents pane.
         """
         if self.proc is not None:
-            s = str(self.proc.readAllStandardOutput(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.proc.readAllStandardOutput(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.resultbox.insertPlainText(s)
             self.resultbox.ensureCursorVisible()
@@ -186,8 +187,8 @@ class HgDialog(QDialog, Ui_HgDialog):
         """
         if self.proc is not None:
             self.errorGroup.show()
-            s = str(self.proc.readAllStandardError(), 
-                    Preferences.getSystem("IOEncoding"), 
+            s = str(self.proc.readAllStandardError(),
+                    Preferences.getSystem("IOEncoding"),
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()

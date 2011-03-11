@@ -9,17 +9,18 @@ Module implementing the bookmark node.
 
 from PyQt4.QtCore import *
 
+
 class BookmarkNode(object):
     """
     Class implementing the bookmark node type.
     """
     # possible bookmark node types
-    Root      = 0
-    Folder    = 1
-    Bookmark  = 2
+    Root = 0
+    Folder = 1
+    Bookmark = 2
     Separator = 3
     
-    def __init__(self, type_ = Root, parent = None):
+    def __init__(self, type_=Root, parent=None):
         """
         Constructor
         
@@ -70,7 +71,7 @@ class BookmarkNode(object):
         """
         return self._parent
     
-    def add(self, child, offset = -1):
+    def add(self, child, offset=-1):
         """
         Public method to add/insert a child node.
         

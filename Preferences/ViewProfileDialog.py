@@ -14,18 +14,19 @@ from .Ui_ViewProfileDialog import Ui_ViewProfileDialog
 from .Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
 from .Ui_ViewProfileSidebarsDialog import Ui_ViewProfileSidebarsDialog
 
+
 class ViewProfileDialog(QDialog):
     """
     Class implementing a dialog to configure the various view profiles.
     """
-    def __init__(self, layout, profiles, separateShell, separateBrowser, parent = None):
+    def __init__(self, layout, profiles, separateShell, separateBrowser, parent=None):
         """
         Constructor
         
         @param layout type of the window layout (string)
         @param profiles dictionary of tuples containing the visibility
             of the windows for the various profiles
-        @param separateShell flag indicating that the Python shell 
+        @param separateShell flag indicating that the Python shell
             is a separate window (boolean)
         @param separateBrowser flag indicating that the file browser
             is a separate window (boolean)
@@ -112,15 +113,15 @@ class ViewProfileDialog(QDialog):
             self.profiles["edit"][0][2] = self.ui.epdbCheckBox.isChecked()
             self.profiles["edit"][0][9] = self.ui.epcoCheckBox.isChecked()
             self.profiles["edit"][5] = [\
-                self.ui.epvtCheckBox.isChecked(), 
-                self.ui.ephtCheckBox.isChecked(), 
+                self.ui.epvtCheckBox.isChecked(),
+                self.ui.ephtCheckBox.isChecked(),
             ]
             # get the debug profile
             self.profiles["debug"][0][2] = self.ui.dpdbCheckBox.isChecked()
             self.profiles["debug"][0][9] = self.ui.dpcoCheckBox.isChecked()
             self.profiles["debug"][5] = [\
-                self.ui.dpvtCheckBox.isChecked(), 
-                self.ui.dphtCheckBox.isChecked(), 
+                self.ui.dpvtCheckBox.isChecked(),
+                self.ui.dphtCheckBox.isChecked(),
             ]
         else:
             # get the edit profile
@@ -134,9 +135,9 @@ class ViewProfileDialog(QDialog):
                 self.ui.eptevCheckBox.isChecked(),
                 self.ui.epmpbCheckBox.isChecked(),
                 self.ui.eptwCheckBox.isChecked(),
-                self.ui.epcoCheckBox.isChecked(), 
-                self.ui.epsyCheckBox.isChecked(), 
-                self.ui.epnuCheckBox.isChecked(), 
+                self.ui.epcoCheckBox.isChecked(),
+                self.ui.epsyCheckBox.isChecked(),
+                self.ui.epnuCheckBox.isChecked(),
             ]
             
             # get the debug profile
@@ -150,9 +151,9 @@ class ViewProfileDialog(QDialog):
                 self.ui.dptevCheckBox.isChecked(),
                 self.ui.dpmpbCheckBox.isChecked(),
                 self.ui.dptwCheckBox.isChecked(),
-                self.ui.dpcoCheckBox.isChecked(), 
-                self.ui.dpsyCheckBox.isChecked(), 
-                self.ui.dpnuCheckBox.isChecked(), 
+                self.ui.dpcoCheckBox.isChecked(),
+                self.ui.dpsyCheckBox.isChecked(),
+                self.ui.dpnuCheckBox.isChecked(),
             ]
         
         return self.profiles

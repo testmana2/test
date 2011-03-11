@@ -34,7 +34,7 @@ class AsyncFile(object):
     maxtries = 10
     maxbuffersize = 1024 * 1024 * 4
     
-    def __init__(self,sock,mode,name):
+    def __init__(self, sock, mode, name):
         """
         Constructor
         
@@ -51,7 +51,7 @@ class AsyncFile(object):
 
         self.wpending = u''
 
-    def __checkMode(self,mode):
+    def __checkMode(self, mode):
         """
         Private method to check the mode.
         
@@ -61,16 +61,16 @@ class AsyncFile(object):
         @param mode the mode to be checked (string)
         """
         if mode != self.mode:
-            raise IOError, '[Errno 9] Bad file descriptor'
+            raise IOError('[Errno 9] Bad file descriptor')
 
-    def __nWrite(self,n):
+    def __nWrite(self, n):
         """
         Private method to write a specific number of pending bytes.
         
         @param n the number of bytes to be written (int)
         """
         if n:
-            try :
+            try:
                 buf = "%s%s" % (self.wpending[:n], EOT)
                 try:
                     buf = buf.encode('utf8')
@@ -82,7 +82,7 @@ class AsyncFile(object):
             except socket.error:
                 self.nWriteErrors += 1
                 if self.nWriteErrors > self.maxtries:
-                    self.wpending = u'' # delete all output
+                    self.wpending = u''  # delete all output
 
     def pendingWrite(self):
         """
@@ -128,7 +128,7 @@ class AsyncFile(object):
         except socket.error:
             return -1
 
-    def read_p(self,size=-1):
+    def read_p(self, size=-1):
         """
         Public method to read bytes from this file.
         
@@ -142,7 +142,7 @@ class AsyncFile(object):
 
         return self.sock.recv(size).decode('utf8')
 
-    def read(self,size=-1):
+    def read(self, size=-1):
         """
         Public method to read bytes from this file.
         
@@ -156,7 +156,7 @@ class AsyncFile(object):
             buf = buf[:size]
         return buf
 
-    def readline_p(self,size=-1):
+    def readline_p(self, size=-1):
         """
         Public method to read a line from this file.
         
@@ -187,7 +187,7 @@ class AsyncFile(object):
         # Now we know how big the line is, read it for real.
         return self.sock.recv(size).decode('utf8')
 
-    def readlines(self,sizehint=-1):
+    def readlines(self, sizehint=-1):
         """
         Public method to read all lines from this file.
         
@@ -230,14 +230,14 @@ class AsyncFile(object):
             line = line[:sizehint]
         return line
         
-    def seek(self,offset,whence=0):
+    def seek(self, offset, whence=0):
         """
         Public method to move the filepointer.
         
         @exception IOError This method is not supported and always raises an
         IOError.
         """
-        raise IOError, '[Errno 29] Illegal seek'
+        raise IOError('[Errno 29] Illegal seek')
 
     def tell(self):
         """
@@ -246,18 +246,18 @@ class AsyncFile(object):
         @exception IOError This method is not supported and always raises an
         IOError.
         """
-        raise IOError, '[Errno 29] Illegal seek'
+        raise IOError('[Errno 29] Illegal seek')
 
-    def truncate(self,size=-1):
+    def truncate(self, size=-1):
         """
         Public method to truncate the file.
         
         @exception IOError This method is not supported and always raises an
         IOError.
         """
-        raise IOError, '[Errno 29] Illegal seek'
+        raise IOError('[Errno 29] Illegal seek')
 
-    def write(self,s):
+    def write(self, s):
         """
         Public method to write a string to the file.
         
@@ -282,13 +282,13 @@ class AsyncFile(object):
             self.wpending += s
         self.__nWrite(self.pendingWrite())
 
-    def writelines(self,list):
+    def writelines(self, list):
         """
         Public method to write a list of strings to the file.
         
         @param list the list to be written (list of string)
         """
-        map(self.write,list)
+        map(self.write, list)
 
 #
 # eflag: FileType = Python2

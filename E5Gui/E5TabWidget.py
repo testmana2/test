@@ -10,11 +10,12 @@ Module implementing a TabWidget class substituting QTabWidget.
 from PyQt4.QtGui import QTabWidget, QTabBar, QApplication, QDrag, QStyle, QLabel, QMovie
 from PyQt4.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
 
+
 class E5WheelTabBar(QTabBar):
     """
     Class implementing a tab bar class substituting QTabBar to support wheel events.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -39,6 +40,7 @@ class E5WheelTabBar(QTabBar):
         except AttributeError:
             pass
 
+
 class E5DnDTabBar(E5WheelTabBar):
     """
     Class implementing a tab bar class substituting QTabBar.
@@ -48,7 +50,7 @@ class E5DnDTabBar(E5WheelTabBar):
     """
     tabMoveRequested = pyqtSignal(int, int)
     
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -116,6 +118,7 @@ class E5DnDTabBar(E5WheelTabBar):
             event.acceptProposedAction()
         E5WheelTabBar.dropEvent(self, event)
 
+
 class E5TabWidget(QTabWidget):
     """
     Class implementing a tab widget class substituting QTabWidget.
@@ -128,7 +131,7 @@ class E5TabWidget(QTabWidget):
     """
     customTabContextMenuRequested = pyqtSignal(QPoint, int)
     
-    def __init__(self, parent = None, dnd = False):
+    def __init__(self, parent=None, dnd=False):
         """
         Constructor
         
@@ -287,7 +290,7 @@ class E5TabWidget(QTabWidget):
         
         @return free side (QTabBar.ButtonPosition)
         """
-        side = self.__tabBar.style().styleHint(QStyle.SH_TabBar_CloseButtonPosition, 
+        side = self.__tabBar.style().styleHint(QStyle.SH_TabBar_CloseButtonPosition,
             None, None, None)
         if side == QTabBar.LeftSide:
             side = QTabBar.RightSide

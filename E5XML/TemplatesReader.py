@@ -12,13 +12,14 @@ from E5Gui.E5Application import e5App
 from .Config import templatesFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+
 class TemplatesReader(XMLStreamReaderBase):
     """
     Class for reading an XML tasks file.
     """
     supportedVersions = ["4.0"]
     
-    def __init__(self, device, viewer = None):
+    def __init__(self, device, viewer=None):
         """
         Constructor
         
@@ -83,9 +84,9 @@ class TemplatesReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "Template" and templateName:
-                self.viewer.addEntry(self.groupName, templateName, 
+                self.viewer.addEntry(self.groupName, templateName,
                                      templateDescription, templateText,
-                                     quiet = True)
+                                     quiet=True)
                 break
             
             if self.isStartElement():

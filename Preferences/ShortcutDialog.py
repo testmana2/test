@@ -12,16 +12,17 @@ from PyQt4.QtGui import *
 
 from .Ui_ShortcutDialog import Ui_ShortcutDialog
 
+
 class ShortcutDialog(QDialog, Ui_ShortcutDialog):
     """
     Class implementing a dialog for the configuration of a keyboard shortcut.
     
-    @signal shortcutChanged(QKeySequence, QKeySequence, bool, string) emitted 
+    @signal shortcutChanged(QKeySequence, QKeySequence, bool, string) emitted
         after the OK button was pressed
     """
     shortcutChanged = pyqtSignal(QKeySequence, QKeySequence, bool, str)
     
-    def __init__(self, parent = None, name = None, modal = False):
+    def __init__(self, parent=None, name=None, modal=False):
         """
         Constructor
         
@@ -79,7 +80,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.hide()
         self.shortcutChanged.emit(
                   QKeySequence(self.keyLabel.text()),
-                  QKeySequence(self.alternateKeyLabel.text()), 
+                  QKeySequence(self.alternateKeyLabel.text()),
                   self.noCheck, self.objectType)
 
     def __clear(self):

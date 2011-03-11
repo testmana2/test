@@ -12,11 +12,12 @@ from PyQt4.QtGui import QAbstractProxyModel
 
 from .HistoryModel import HistoryModel
 
+
 class HistoryData(object):
     """
     Class storing some history data.
     """
-    def __init__(self, offset, frequency = 0):
+    def __init__(self, offset, frequency=0):
         """
         Constructor
         
@@ -41,7 +42,7 @@ class HistoryData(object):
         """
         Special method determining less relation.
         
-        Note: Like the actual history entries the index mapping is sorted in reverse 
+        Note: Like the actual history entries the index mapping is sorted in reverse
         order by offset
         
         @param other reference to the history data object to compare against
@@ -50,6 +51,7 @@ class HistoryData(object):
         """
         return self.tailOffset > other.tailOffset
 
+
 class HistoryFilterModel(QAbstractProxyModel):
     """
     Class implementing the history filter model.
@@ -57,7 +59,7 @@ class HistoryFilterModel(QAbstractProxyModel):
     FrequencyRole = HistoryModel.MaxRole + 1
     MaxRole = FrequencyRole
     
-    def __init__(self, sourceModel, parent = None):
+    def __init__(self, sourceModel, parent=None):
         """
         Constructor
         
@@ -96,7 +98,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         return self.sourceModel().rowCount() - self.__historyDict[url]
     
-    def data(self, index, role = Qt.DisplayRole):
+    def data(self, index, role=Qt.DisplayRole):
         """
         Public method to get data from the model.
         
@@ -140,7 +142,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         self.dataChanged.emit(
             self.mapFromSource(topLeft), self.mapFromSource(bottomRight))
     
-    def headerData(self, section, orientation, role = Qt.DisplayRole):
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
         Public method to get the header data.
         
@@ -164,7 +166,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         self.__loaded = False
         self.reset()
     
-    def rowCount(self, parent = QModelIndex()):
+    def rowCount(self, parent=QModelIndex()):
         """
         Public method to determine the number of rows.
         
@@ -176,7 +178,7 @@ class HistoryFilterModel(QAbstractProxyModel):
             return 0
         return len(self.__historyDict)
     
-    def columnCount(self, parent = QModelIndex()):
+    def columnCount(self, parent=QModelIndex()):
         """
         Public method to get the number of columns.
         
@@ -217,7 +219,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         
         return self.createIndex(row, sourceIndex.column(), sourceOffset)
     
-    def index(self, row, column, parent = QModelIndex()):
+    def index(self, row, column, parent=QModelIndex()):
         """
         Public method to create an index.
         
@@ -292,7 +294,7 @@ class HistoryFilterModel(QAbstractProxyModel):
                 self.endRemoveRows()
             
             self.beginInsertRows(QModelIndex(), 0, 0)
-            self.__filteredRows.insert(0, HistoryData(self.sourceModel().rowCount(), 
+            self.__filteredRows.insert(0, HistoryData(self.sourceModel().rowCount(),
                 self.__frequencyScore(idx) + currentFrequency))
             self.__historyDict[url] = self.sourceModel().rowCount()
             self.endInsertRows()
@@ -307,7 +309,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         """
         self.__sourceReset()
     
-    def removeRows(self, row, count, parent = QModelIndex()):
+    def removeRows(self, row, count, parent=QModelIndex()):
         """
         Public method to remove entries from the model.
         

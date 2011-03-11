@@ -35,12 +35,13 @@ configName = 'eric5config.py'
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
-    "sip"         : ["4.11"], 
-    "PyQt4"       : ["4.7.5"], 
-    "QScintilla2" : [], 
+    "sip": ["4.11"],
+    "PyQt4": ["4.7.5"],
+    "QScintilla2": [],
 }
 
-def exit(rcode = 0):
+
+def exit(rcode=0):
     """
     Exit the install script.
     """
@@ -49,7 +50,8 @@ def exit(rcode = 0):
     
     sys.exit(rcode)
 
-def usage(rcode = 2):
+
+def usage(rcode=2):
     """
     Display a usage message and exit.
 
@@ -130,7 +132,7 @@ def copyToFile(name, text):
     @param name the name of the file.
     @param text the contents to copy to the file.
     """
-    f = open(name,"w", encoding = "utf-8")
+    f = open(name, "w", encoding="utf-8")
     f.write(text)
     f.close()
 
@@ -151,7 +153,7 @@ def wrapperName(dname, wfile):
     return wname
 
 
-def createPyWrapper(pydir, wfile, isGuiScript = True):
+def createPyWrapper(pydir, wfile, isGuiScript=True):
     """
     Create an executable wrapper for a Python script.
 
@@ -242,14 +244,14 @@ def createGlobalPluginsDir():
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
             os.mkdir(pdir,  0o755)
-        f = open(fname, "w", encoding = "utf-8")
+        f = open(fname, "w", encoding="utf-8")
         f.write(
 '''# -*- coding: utf-8 -*-
 
 """
 Package containing the global plugins.
 """
-'''        
+'''
         )
         f.close()
 
@@ -268,7 +270,7 @@ def cleanUp():
     
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux"):
-        for name in ["/usr/share/pixmaps/eric.png", 
+        for name in ["/usr/share/pixmaps/eric.png",
                      "/usr/share/applications/eric5.desktop"]:
             if os.path.exists(name):
                 os.remove(name)
@@ -277,24 +279,24 @@ def cleanUp():
     rem_wnames = [
         "eric5-api", "eric5-compare",
         "eric5-configure", "eric5-diff",
-        "eric5-doc", 
-        "eric5-qregexp", "eric5-re", 
+        "eric5-doc",
+        "eric5-qregexp", "eric5-re",
         "eric5-trpreviewer", "eric5-uipreviewer",
         "eric5-unittest", "eric5",
-        "eric5-tray", "eric5-editor", 
-        "eric5-plugininstall", "eric5-pluginuninstall", 
-        "eric5-pluginrepository", "eric5-sqlbrowser", 
-        "eric5-webbrowser", "eric5-iconeditor", 
+        "eric5-tray", "eric5-editor",
+        "eric5-plugininstall", "eric5-pluginuninstall",
+        "eric5-pluginrepository", "eric5-sqlbrowser",
+        "eric5-webbrowser", "eric5-iconeditor",
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
-        "eric5_doc", 
-        "eric5_qregexp", "eric5_re", 
+        "eric5_doc",
+        "eric5_qregexp", "eric5_re",
         "eric5_trpreviewer", "eric5_uipreviewer",
         "eric5_unittest", "eric5",
-        "eric5_tray", "eric5_editor", 
-        "eric5_plugininstall", "eric5_pluginuninstall", 
-        "eric5_pluginrepository", "eric5_sqlbrowser", 
-        "eric5_webbrowser", "eric5_iconeditor", 
+        "eric5_tray", "eric5_editor",
+        "eric5_plugininstall", "eric5_pluginuninstall",
+        "eric5_pluginrepository", "eric5_sqlbrowser",
+        "eric5_webbrowser", "eric5_iconeditor",
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'), rem_wname)
@@ -382,34 +384,34 @@ def installEric():
                 shutil.copy(configName + 'c', modDir)
         
         # copy the various parts of eric5
-        copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'], 
+        copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)])
-        copyTree(sourceDir, cfg['ericDir'], ['*.rb'], 
+        copyTree(sourceDir, cfg['ericDir'], ['*.rb'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)])
-        copyTree('{1}{0}Plugins'.format(os.sep, sourceDir), 
-            '{0}{1}Plugins'.format(cfg['ericDir'], os.sep), 
+        copyTree('{1}{0}Plugins'.format(os.sep, sourceDir),
+            '{0}{1}Plugins'.format(cfg['ericDir'], os.sep),
             ['*.png', '*.style'])
-        copyTree('{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'], 
+        copyTree('{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'],
             ['*.html', '*.qch'])
-        copyTree('{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'], 
+        copyTree('{1}{0}DTDs'.format(os.sep, sourceDir), cfg['ericDTDDir'],
             ['*.dtd'])
-        copyTree('{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'], 
+        copyTree('{1}{0}CSSs'.format(os.sep, sourceDir), cfg['ericCSSDir'],
             ['*.css'])
-        copyTree('{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'], 
+        copyTree('{1}{0}Styles'.format(os.sep, sourceDir), cfg['ericStylesDir'],
             ['*.qss'])
-        copyTree('{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'], 
+        copyTree('{1}{0}i18n'.format(os.sep, sourceDir), cfg['ericTranslationsDir'],
             ['*.qm'])
-        copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'], 
+        copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'],
             ['*.png', 'LICENSE*.*'])
-        copyTree('{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'], 
+        copyTree('{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'],
             ['*.png', '*.xpm', '*.ico'])
-        copyTree('{1}{0}DesignerTemplates'.format(os.sep, sourceDir), 
-            cfg['ericTemplatesDir'], 
+        copyTree('{1}{0}DesignerTemplates'.format(os.sep, sourceDir),
+            cfg['ericTemplatesDir'],
             ['*.tmpl'])
-        copyTree('{1}{0}CodeTemplates'.format(os.sep, sourceDir), 
-            cfg['ericCodeTemplatesDir'], 
+        copyTree('{1}{0}CodeTemplates'.format(os.sep, sourceDir),
+            cfg['ericCodeTemplatesDir'],
             ['*.tmpl'])
-        copyTree('{1}{0}Examples'.format(os.sep, sourceDir), cfg['ericExamplesDir'], 
+        copyTree('{1}{0}Examples'.format(os.sep, sourceDir), cfg['ericExamplesDir'],
             ['*.py', '*.pyc', '*.pyo'])
         
         # copy the wrappers
@@ -480,9 +482,9 @@ def installEric():
                 os.makedirs(dst)
             shutil.copy(os.path.join(sourceDir, "eric5.desktop"), dst)
         else:
-            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric.png"), 
+            shutil.copy(os.path.join(sourceDir, "icons", "default", "eric.png"),
                 "/usr/share/pixmaps")
-            shutil.copy(os.path.join(sourceDir, "eric5.desktop"), 
+            shutil.copy(os.path.join(sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
 
 
@@ -494,20 +496,20 @@ def createInstallConfig():
         
     ericdir = os.path.join(modDir, "eric5")
     cfg = {
-        'ericDir'              : ericdir,
-        'ericPixDir'           : os.path.join(ericdir, "pixmaps"),
-        'ericIconDir'          : os.path.join(ericdir, "icons"),
-        'ericDTDDir'           : os.path.join(ericdir, "DTDs"),
-        'ericCSSDir'           : os.path.join(ericdir, "CSSs"),
-        'ericStylesDir'        : os.path.join(ericdir, "Styles"),
-        'ericDocDir'           : os.path.join(ericdir, "Documentation"),
-        'ericExamplesDir'      : os.path.join(ericdir, "Examples"),
-        'ericTranslationsDir'  : os.path.join(ericdir, "i18n"),
-        'ericTemplatesDir'     : os.path.join(ericdir, "DesignerTemplates"),
-        'ericCodeTemplatesDir' : os.path.join(ericdir, 'CodeTemplates'),
-        'ericOthersDir'        : ericdir,
-        'bindir'               : platBinDir,
-        'mdir'                 : modDir,
+        'ericDir': ericdir,
+        'ericPixDir': os.path.join(ericdir, "pixmaps"),
+        'ericIconDir': os.path.join(ericdir, "icons"),
+        'ericDTDDir': os.path.join(ericdir, "DTDs"),
+        'ericCSSDir': os.path.join(ericdir, "CSSs"),
+        'ericStylesDir': os.path.join(ericdir, "Styles"),
+        'ericDocDir': os.path.join(ericdir, "Documentation"),
+        'ericExamplesDir': os.path.join(ericdir, "Examples"),
+        'ericTranslationsDir': os.path.join(ericdir, "i18n"),
+        'ericTemplatesDir': os.path.join(ericdir, "DesignerTemplates"),
+        'ericCodeTemplatesDir': os.path.join(ericdir, 'CodeTemplates'),
+        'ericOthersDir': ericdir,
+        'bindir': platBinDir,
+        'mdir': modDir,
     }
     if apisDir:
         cfg['apidir'] = apisDir
@@ -515,6 +517,7 @@ def createInstallConfig():
         cfg['apidir'] = os.path.join(ericdir, "api")
 configLength = 15
     
+
 def createConfig():
     """
     Create a config file with the respective config entries.
@@ -538,22 +541,22 @@ def createConfig():
 #
 
 _pkg_config = {{
-    'ericDir'              : r'{0}',
-    'ericPixDir'           : r'{1}',
-    'ericIconDir'          : r'{2}',
-    'ericDTDDir'           : r'{3}',
-    'ericCSSDir'           : r'{4}',
-    'ericStylesDir'        : r'{5}',
-    'ericDocDir'           : r'{6}',
-    'ericExamplesDir'      : r'{7}',
-    'ericTranslationsDir'  : r'{8}',
-    'ericTemplatesDir'     : r'{9}',
-    'ericCodeTemplatesDir' : r'{10}',
-    'ericOthersDir'        : r'{11}',
-    'bindir'               : r'{12}',
-    'mdir'                 : r'{13}',
-    'apidir'               : r'{14}',
-    'apis'                 : {15},
+    'ericDir': r'{0}',
+    'ericPixDir': r'{1}',
+    'ericIconDir': r'{2}',
+    'ericDTDDir': r'{3}',
+    'ericCSSDir': r'{4}',
+    'ericStylesDir': r'{5}',
+    'ericDocDir': r'{6}',
+    'ericExamplesDir': r'{7}',
+    'ericTranslationsDir': r'{8}',
+    'ericTemplatesDir': r'{9}',
+    'ericCodeTemplatesDir': r'{10}',
+    'ericOthersDir': r'{11}',
+    'bindir': r'{12}',
+    'mdir': r'{13}',
+    'apidir': r'{14}',
+    'apis': {15},
 }}
 
 def getConfig(name):
@@ -568,17 +571,18 @@ def getConfig(name):
         pass
 
     raise AttributeError('"{{0}}" is not a valid configuration value'.format(name))
-""".format(cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'], 
-           cfg['ericDTDDir'], cfg['ericCSSDir'], 
+""".format(cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
+           cfg['ericDTDDir'], cfg['ericCSSDir'],
            cfg['ericStylesDir'], cfg['ericDocDir'],
            cfg['ericExamplesDir'], cfg['ericTranslationsDir'],
            cfg['ericTemplatesDir'],
            cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
-           cfg['bindir'], cfg['mdir'], 
+           cfg['bindir'], cfg['mdir'],
            cfg['apidir'], apis)
     copyToFile(fn, config)
 
-def doDependancyChecks():    
+
+def doDependancyChecks():
     """
     Perform some dependency checks.
     """
@@ -692,6 +696,7 @@ def doDependancyChecks():
     print("All dependencies ok.")
     print()
 
+
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
@@ -703,7 +708,7 @@ def compileUiFiles():
         from PyQt4.uic import compileUi
         
         def compileUiDir(dir, recurse = False, map = None,  # __IGNORE_WARNING__
-            **compileUi_args):
+            ** compileUi_args):
             """
             Creates Python modules from Qt Designer .ui files in a directory or
             directory tree.
@@ -778,6 +783,7 @@ def compileUiFiles():
     
     compileUiDir(sourceDir, True, pyName)
 
+
 def main(argv):
     """
     The main function of the script.
@@ -796,9 +802,9 @@ def main(argv):
 
     try:
         if sys.platform.startswith("win"):
-            optlist, args = getopt.getopt(argv[1:],"chxza:b:d:f:")
+            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:")
         else:
-            optlist, args = getopt.getopt(argv[1:],"chxza:b:d:f:i:")
+            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:")
     except getopt.GetoptError:
         usage()
 
@@ -875,19 +881,19 @@ def main(argv):
     if doCompile:
         print("\nCompiling source files...")
         if distDir:
-            compileall.compile_dir(sourceDir, 
-                ddir = os.path.join(distDir, modDir, cfg['ericDir']), 
-                rx = re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"), 
-                quiet = True)
-            py_compile.compile(configName, 
-                               dfile = os.path.join(distDir, modDir, "eric5config.py"))
+            compileall.compile_dir(sourceDir,
+                ddir=os.path.join(distDir, modDir, cfg['ericDir']),
+                rx=re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                quiet=True)
+            py_compile.compile(configName,
+                               dfile=os.path.join(distDir, modDir, "eric5config.py"))
         else:
-            compileall.compile_dir(sourceDir, 
-                ddir = os.path.join(modDir, cfg['ericDir']), 
-                rx = re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"), 
-                quiet = True)
-            py_compile.compile(configName, 
-                               dfile = os.path.join(modDir, "eric5config.py"))
+            compileall.compile_dir(sourceDir,
+                ddir=os.path.join(modDir, cfg['ericDir']),
+                rx=re.compile(r"DebugClients[\\/]Python[\\/]|UtilitiesPython2[\\/]"),
+                quiet=True)
+            py_compile.compile(configName,
+                               dfile=os.path.join(modDir, "eric5config.py"))
     print("\nInstalling eric5 ...")
     installEric()
     

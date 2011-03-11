@@ -12,6 +12,7 @@ from .XMLStreamReaderBase import XMLStreamReaderBase
 
 import Utilities
 
+
 class MultiProjectReader(XMLStreamReaderBase):
     """
     Class for reading an XML multi project file.
@@ -40,7 +41,7 @@ class MultiProjectReader(XMLStreamReaderBase):
             self.readNext()
             if self.isStartElement():
                 if self.name() == "MultiProject":
-                    self.version = self.attribute("version", 
+                    self.version = self.attribute("version",
                         multiProjectFileFormatVersion)
                     if self.version not in self.supportedVersions:
                         self.raiseUnsupportedFormatVersion(self.version)

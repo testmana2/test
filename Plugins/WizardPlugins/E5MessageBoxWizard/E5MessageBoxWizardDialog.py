@@ -13,6 +13,7 @@ from E5Gui import E5MessageBox
 
 from .Ui_E5MessageBoxWizardDialog import Ui_E5MessageBoxWizardDialog
 
+
 class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     """
     Class implementing the eric5 message box wizard dialog.
@@ -20,7 +21,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     It displays a dialog for entering the parameters
     for the E5MessageBox code generator.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -31,25 +32,25 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         
         # keep the following three lists in sync
         self.buttonsList = [
-            self.trUtf8("No button"), 
-            self.trUtf8("Abort"), 
-            self.trUtf8("Apply"), 
-            self.trUtf8("Cancel"), 
-            self.trUtf8("Close"), 
-            self.trUtf8("Discard"), 
-            self.trUtf8("Help"), 
-            self.trUtf8("Ignore"), 
-            self.trUtf8("No"), 
-            self.trUtf8("No to all"), 
-            self.trUtf8("Ok"), 
-            self.trUtf8("Open"), 
-            self.trUtf8("Reset"), 
-            self.trUtf8("Restore defaults"), 
-            self.trUtf8("Retry"), 
-            self.trUtf8("Save"), 
-            self.trUtf8("Save all"), 
-            self.trUtf8("Yes"), 
-            self.trUtf8("Yes to all"), 
+            self.trUtf8("No button"),
+            self.trUtf8("Abort"),
+            self.trUtf8("Apply"),
+            self.trUtf8("Cancel"),
+            self.trUtf8("Close"),
+            self.trUtf8("Discard"),
+            self.trUtf8("Help"),
+            self.trUtf8("Ignore"),
+            self.trUtf8("No"),
+            self.trUtf8("No to all"),
+            self.trUtf8("Ok"),
+            self.trUtf8("Open"),
+            self.trUtf8("Reset"),
+            self.trUtf8("Restore defaults"),
+            self.trUtf8("Retry"),
+            self.trUtf8("Save"),
+            self.trUtf8("Save all"),
+            self.trUtf8("Yes"),
+            self.trUtf8("Yes to all"),
         ]
         self.buttonsCodeListBinary = [
             E5MessageBox.NoButton,
@@ -304,7 +305,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                     E5MessageBox.StandardButtons(buttons),
                     defaultButton
                 )
-            elif self.rWarning.isChecked(): 
+            elif self.rWarning.isChecked():
                 E5MessageBox.warning(self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
@@ -330,32 +331,32 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                 icon = E5MessageBox.Critical
             
             if self.rYesNo.isChecked():
-                E5MessageBox.yesNo(self, 
+                E5MessageBox.yesNo(self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
-                    icon = icon, 
-                    yesDefault = self.yesDefaultCheck.isChecked()
+                    icon=icon,
+                    yesDefault=self.yesDefaultCheck.isChecked()
                 )
             elif self.rRetryAbort.isChecked():
-                E5MessageBox.retryAbort(self, 
+                E5MessageBox.retryAbort(self,
                     self.eCaption.text(),
                     self.eMessage.toPlainText(),
-                    icon = icon
+                    icon=icon
                 )
         elif self.rOkToClearData.isChecked():
-            E5MessageBox.okToClearData(self, 
+            E5MessageBox.okToClearData(self,
                 self.eCaption.text(),
                 self.eMessage.toPlainText(),
                 lambda: True
             )
     
-    def __getStandardButtonCode(self, istring, indString, withIntro = True):
+    def __getStandardButtonCode(self, istring, indString, withIntro=True):
         """
         Private method to generate the button code for the standard buttons.
         
         @param istring indentation string (string)
         @param indString string used for indentation (space or tab) (string)
-        @keyparam withIntro flag indicating to generate a first line 
+        @keyparam withIntro flag indicating to generate a first line
             with introductory text (boolean)
         @return the button code (string)
         """
@@ -420,7 +421,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         btnCode = ""
         defaultIndex = self.defaultCombo.currentIndex()
         if defaultIndex:
-            btnCode = ',{0}{1}{2}'.format(os.linesep, istring, 
+            btnCode = ',{0}{1}{2}'.format(os.linesep, istring,
                 self.buttonsCodeListText[defaultIndex])
         return btnCode
     
@@ -469,13 +470,13 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             elif self.rWarning.isChecked():
                 msgdlg = "res = E5MessageBox.warning({0},{1}".format(parent, os.linesep)
             elif self.rCritical.isChecked():
-                msgdlg ="res = E5MessageBox.critical({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.critical({0},{1}".format(parent, os.linesep)
             elif self.rYesNo.isChecked():
-                msgdlg ="res = E5MessageBox.yesNo({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.yesNo({0},{1}".format(parent, os.linesep)
             elif self.rRetryAbort.isChecked():
-                msgdlg ="res = E5MessageBox.retryAbort({0},{1}".format(parent, os.linesep)
+                msgdlg = "res = E5MessageBox.retryAbort({0},{1}".format(parent, os.linesep)
             elif self.rOkToClearData.isChecked():
-                msgdlg ="res = E5MessageBox.okToClearData({0},{1}".format(
+                msgdlg = "res = E5MessageBox.okToClearData({0},{1}".format(
                     parent, os.linesep)
             
             msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
@@ -504,17 +505,17 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
                     saveFunc = "lambda: True"
                 msgdlg += ',{0}{1}{2}'.format(os.linesep, istring, saveFunc)
         else:
-            msgdlg ="E5MessageBox.E5MessageBox({0}, {1}".format(icon, os.linesep)
+            msgdlg = "E5MessageBox.E5MessageBox({0}, {1}".format(icon, os.linesep)
             msgdlg += '{0}self.trUtf8("{1}")'.format(istring, self.eCaption.text())
             msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
             if self.modalCheck.isChecked():
                 msgdlg += ',{0}{1}modal = True'.format(os.linesep, istring)
-            btnCode = self.__getStandardButtonCode(istring, indString, withIntro = False)
+            btnCode = self.__getStandardButtonCode(istring, indString, withIntro=False)
             if btnCode:
                 msgdlg += ',{0}{1}buttons = {2}'.format(os.linesep, istring, btnCode)
             if not self.parentNone.isChecked():
                 msgdlg += ',{0}{1}parent = {2}'.format(os.linesep, istring, parent)
         
-        msgdlg +='){0}'.format(estring)
+        msgdlg += '){0}'.format(estring)
         return msgdlg

@@ -14,6 +14,7 @@ from E5Gui.E5Application import e5App
 
 import UI.PixmapCache
 
+
 class E5SideBar(QWidget):
     """
     Class implementing a sidebar with a widget area, that is hidden or shown, if the
@@ -22,11 +23,11 @@ class E5SideBar(QWidget):
     Version = 1
     
     North = 0
-    East  = 1
+    East = 1
     South = 2
-    West  = 3
+    West = 3
     
-    def __init__(self, orientation = None, parent = None):
+    def __init__(self, orientation=None, parent=None):
         """
         Constructor
         
@@ -65,7 +66,7 @@ class E5SideBar(QWidget):
         self.splitter = None
         self.splitterSizes = []
         
-        self.__hasFocus = False # flag storing if this widget or any child has the focus
+        self.__hasFocus = False  # flag storing if this widget or any child has the focus
         self.__autoHide = False
         
         self.__tabBar.installEventFilter(self)
@@ -184,7 +185,7 @@ class E5SideBar(QWidget):
         
         return QWidget.eventFilter(self, obj, evt)
     
-    def addTab(self, widget, iconOrLabel, label = None):
+    def addTab(self, widget, iconOrLabel, label=None):
         """
         Public method to add a tab to the sidebar.
         
@@ -200,7 +201,7 @@ class E5SideBar(QWidget):
             self.__tabBar.addTab(iconOrLabel)
         self.__stackedWidget.addWidget(widget)
     
-    def insertTab(self, index, widget, iconOrLabel, label = None):
+    def insertTab(self, index, widget, iconOrLabel, label=None):
         """
         Public method to insert a tab into the sidebar.
         
@@ -488,7 +489,7 @@ class E5SideBar(QWidget):
         
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
-        stream.readUInt16() # version
+        stream.readUInt16()  # version
         minimized = stream.readBool()
         
         if minimized:

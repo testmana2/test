@@ -22,12 +22,13 @@ import tokenize
     
 import Utilities
 
-KEYWORD     = token.NT_OFFSET + 1
-COMMENT     = tokenize.COMMENT
-INDENT      = token.INDENT
-DEDENT      = token.DEDENT
-NEWLINE     = token.NEWLINE
-EMPTY       = tokenize.NL
+KEYWORD = token.NT_OFFSET + 1
+COMMENT = tokenize.COMMENT
+INDENT = token.INDENT
+DEDENT = token.DEDENT
+NEWLINE = token.NEWLINE
+EMPTY = tokenize.NL
+
 
 class Token(object):
     """
@@ -40,6 +41,7 @@ class Token(object):
         @param **kw list of key, value pairs
         """
         self.__dict__.update(kw)
+
 
 class Parser(object):
     """
@@ -92,10 +94,11 @@ class Parser(object):
         @param scol starting column of the token (int)
         @param line logical line the token was found (string)
         """
-        self.tokenlist.append(Token(type=toktype, text=toktext, row=srow, 
+        self.tokenlist.append(Token(type=toktype, text=toktext, row=srow,
                                     col=scol, line=line))
 
 spacer = ' '
+
 
 class SourceStat(object):
     """
@@ -105,9 +108,9 @@ class SourceStat(object):
         """
         Constructor
         """
-        self.identifiers = [] # list of identifiers in order of appearance
-        self.active = [('TOTAL ',-1,0)] # stack of active identifiers and indent levels
-        self.counters = {} # counters per identifier
+        self.identifiers = []  # list of identifiers in order of appearance
+        self.active = [('TOTAL ', -1, 0)]   # stack of active identifiers and indent levels
+        self.counters = {}  # counters per identifier
         self.indent_level = 0
 
     def indent(self, tok):
@@ -191,6 +194,7 @@ class SourceStat(object):
         """
         return self.counters.get(id, {}).get(key, 0)
 
+
 def summarize(total, key, value):
     """
     Module function used to collect overall statistics.
@@ -203,8 +207,9 @@ def summarize(total, key, value):
     total[key] = total.setdefault(key, 0) + value
     return value
 
+
 def analyze(filename, total):
-    """ 
+    """
     Module function used analyze the source of a Python file.
     
     @param filename name of the Python file to be analyzed (string)
@@ -230,17 +235,17 @@ def analyze(filename, total):
         elif tok.type == COMMENT:
             stats.inc('comments')
         elif tok.type == EMPTY:
-            if parser.tokenlist[idx-1].type == token.OP:
+            if parser.tokenlist[idx - 1].type == token.OP:
                 stats.inc('nloc')
             else:
                 stats.inc('empty')
-        elif tok.type == INDENT: 
+        elif tok.type == INDENT:
             stats.indent(tok)
-        elif tok.type == DEDENT: 
+        elif tok.type == DEDENT:
             stats.dedent(tok)
         elif tok.type == KEYWORD:
             if tok.text in ("class", "def"):
-                stats.push(parser.tokenlist[idx+1].text, tok.row)
+                stats.push(parser.tokenlist[idx + 1].text, tok.row)
 
     # collect overall statistics
     summarize(total, 'lines', parser.lines)
@@ -251,6 +256,7 @@ def analyze(filename, total):
 
     return stats
     
+
 def main():
     """
     Modules main function used when called as a script.

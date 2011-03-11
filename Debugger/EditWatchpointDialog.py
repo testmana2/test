@@ -17,7 +17,7 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
     """
     Class implementing a dialog to edit watch expression properties.
     """
-    def __init__(self, properties, parent = None, name = None, modal = False):
+    def __init__(self, properties, parent=None, name=None, modal=False):
         """
         Constructor
         
@@ -27,7 +27,7 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         @param name the widget name of this dialog
         @param modal flag indicating a modal dialog
         """
-        QDialog.__init__(self,parent)
+        QDialog.__init__(self, parent)
         self.setupUi(self)
         if name:
             self.setObjectName(name)
@@ -90,15 +90,15 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
             (expression, temporary flag, enabled flag, ignore count, special condition)
         """
         if self.conditionButton.isChecked():
-            return (self.conditionEdit.text(), 
+            return (self.conditionEdit.text(),
                     self.temporaryCheckBox.isChecked(),
-                    self.enabledCheckBox.isChecked(), 
+                    self.enabledCheckBox.isChecked(),
                     self.ignoreSpinBox.value(),
                     "")
         elif self.specialButton.isChecked():
-            return (self.specialEdit.text(), 
+            return (self.specialEdit.text(),
                     self.temporaryCheckBox.isChecked(),
-                    self.enabledCheckBox.isChecked(), 
+                    self.enabledCheckBox.isChecked(),
                     self.ignoreSpinBox.value(),
                     self.specialCombo.currentText())
         else:

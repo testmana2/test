@@ -10,6 +10,7 @@ Module implementing the builtin API generator.
 
 from QScintilla.Editor import Editor
 
+
 class APIGenerator(object):
     """
     Class implementing the builtin documentation generator.
@@ -26,10 +27,10 @@ class APIGenerator(object):
         """
         Method to generate the source code documentation.
         
-        @param newStyle flag indicating the api generation for QScintilla 1.7 and 
+        @param newStyle flag indicating the api generation for QScintilla 1.7 and
             newer (boolean) (ignored)
         @param basePackage name of the base package (string)
-        @param includePrivate flag indicating to include 
+        @param includePrivate flag indicating to include
             private methods/functions (boolean)
         @return The API information. (string)
         """
@@ -58,7 +59,7 @@ class APIGenerator(object):
         
     def __addGlobalsAPI(self):
         """
-        Private method to generate the api section for global variables. 
+        Private method to generate the api section for global variables.
         """
         moduleNameStr = "{0}".format(self.moduleName)
         
@@ -99,12 +100,12 @@ class APIGenerator(object):
             else:
                 id = Editor.ClassPrivateID
             self.api.append('{0}{1}?{2:d}({3})'.format(
-                self.moduleName, _class.name, id, 
+                self.moduleName, _class.name, id,
                  ', '.join(_class.methods['__init__'].parameters[1:])))
             
         classNameStr = "{0}{1}.".format(self.moduleName, className)
         for method in methods:
-            if not self.__isPrivate(_class.methods[method]): 
+            if not self.__isPrivate(_class.methods[method]):
                 if _class.methods[method].isPublic():
                     id = Editor.MethodID
                 elif _class.methods[method].isProtected():
@@ -112,7 +113,7 @@ class APIGenerator(object):
                 else:
                     id = Editor.MethodPrivateID
                 self.api.append('{0}{1}?{2:d}({3})'.format(
-                    classNameStr, method, id, 
+                    classNameStr, method, id,
                      ', '.join(_class.methods[method].parameters[1:])))
         
     def __addClassVariablesAPI(self, className):
@@ -124,7 +125,7 @@ class APIGenerator(object):
         _class = self.module.classes[className]
         classNameStr = "{0}{1}.".format(self.moduleName, className)
         for variable in sorted(_class.globals.keys()):
-            if not self.__isPrivate(_class.globals[variable]): 
+            if not self.__isPrivate(_class.globals[variable]):
                 if _class.globals[variable].isPublic():
                     id = Editor.AttributeID
                 elif _class.globals[variable].isProtected():
@@ -139,7 +140,7 @@ class APIGenerator(object):
         """
         funcNames = sorted(list(self.module.functions.keys()))
         for funcName in funcNames:
-            if not self.__isPrivate(self.module.functions[funcName]): 
+            if not self.__isPrivate(self.module.functions[funcName]):
                 if self.module.functions[funcName].isPublic():
                     id = Editor.MethodID
                 elif self.module.functions[funcName].isProtected():
@@ -147,5 +148,5 @@ class APIGenerator(object):
                 else:
                     id = Editor.MethodPrivateID
                 self.api.append('{0}{1}?{2:d}({3})'.format(
-                    self.moduleName, self.module.functions[funcName].name, id, 
+                    self.moduleName, self.module.functions[funcName].name, id,
                      ', '.join(self.module.functions[funcName].parameters)))

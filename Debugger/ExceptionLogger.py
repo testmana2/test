@@ -66,7 +66,7 @@ class ExceptionLogger(QTreeWidget):
         
     def __itemDoubleClicked(self, itm):
         """
-        Private slot to handle the double click of an item. 
+        Private slot to handle the double click of an item.
         
         @param itm the item that was double clicked(QTreeWidgetItem), ignored
         """

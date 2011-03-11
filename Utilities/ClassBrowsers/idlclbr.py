@@ -37,7 +37,7 @@ _getnext = re.compile(r"""
         (?: oneway [ \t]+ )?
         (?: [a-zA-Z0-9_:]+ | void ) [ \t]*
         (?P<MethodName> [a-zA-Z_] [a-zA-Z0-9_]* )
-        [ \t]* 
+        [ \t]*
         \(
         (?P<MethodSignature> [^)]*? )
         \);
@@ -83,11 +83,12 @@ _getnext = re.compile(r"""
 """, re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 # function to replace comments
-_commentsub = re.compile(r"""//[^\n]*\n|//[^\n]*$""").sub   
+_commentsub = re.compile(r"""//[^\n]*\n|//[^\n]*$""").sub
 # function to normalize whitespace
-_normalize = re.compile(r"""[ \t]{2,}""").sub               
+_normalize = re.compile(r"""[ \t]{2,}""").sub
 
 _modules = {}                           # cache of modules we've seen
+
 
 class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
     """
@@ -98,6 +99,7 @@ class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
         Method to initialize the visibility.
         """
         self.setPublic()
+
 
 class Module(ClbrBaseClasses.Module, VisibilityMixin):
     """
@@ -114,6 +116,7 @@ class Module(ClbrBaseClasses.Module, VisibilityMixin):
         """
         ClbrBaseClasses.Module.__init__(self, module, name, file, lineno)
         VisibilityMixin.__init__(self)
+
 
 class Interface(ClbrBaseClasses.Class, VisibilityMixin):
     """
@@ -132,11 +135,12 @@ class Interface(ClbrBaseClasses.Class, VisibilityMixin):
         ClbrBaseClasses.Class.__init__(self, module, name, super, file, lineno)
         VisibilityMixin.__init__(self)
 
+
 class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a CORBA IDL function.
     """
-    def __init__(self, module, name, file, lineno, signature = '', separator = ','):
+    def __init__(self, module, name, file, lineno, signature='', separator=','):
         """
         Constructor
         
@@ -147,9 +151,10 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
         @param signature parameterlist of the method
         @param separator string separating the parameters
         """
-        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno, 
+        ClbrBaseClasses.Function.__init__(self, module, name, file, lineno,
                                           signature, separator)
         VisibilityMixin.__init__(self)
+
 
 class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
     """
@@ -166,6 +171,7 @@ class Attribute(ClbrBaseClasses.Attribute, VisibilityMixin):
         """
         ClbrBaseClasses.Attribute.__init__(self, module, name, file, lineno)
         VisibilityMixin.__init__(self)
+
 
 def readmodule_ex(module, path=[]):
     '''
@@ -196,7 +202,7 @@ def readmodule_ex(module, path=[]):
         return dict
 
     _modules[module] = dict
-    classstack = [] # stack of (class, indent) pairs
+    classstack = []  # stack of (class, indent) pairs
     indent = 0
     try:
         src = Utilities.readEncodedFile(file)[0]
@@ -246,7 +252,7 @@ def readmodule_ex(module, path=[]):
                 else:
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
-            classstack.append((f, thisindent)) # Marker for nested fns
+            classstack.append((f, thisindent))  # Marker for nested fns
 
         elif m.start("String") >= 0:
             pass

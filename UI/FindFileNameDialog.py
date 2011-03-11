@@ -35,7 +35,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     sourceFile = pyqtSignal(str)
     designerFile = pyqtSignal(str)
     
-    def __init__(self, project, parent = None):
+    def __init__(self, project, parent=None):
         """
         Constructor
         
@@ -74,7 +74,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     
     def __openFile(self):
         """
-        Private slot to open a file. 
+        Private slot to open a file.
         
         It emits the signal
         sourceFile or designerFile depending on the file extension.
@@ -178,7 +178,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
     @pyqtSlot()
     def on_searchDirButton_clicked(self):
         """
-        Private slot to handle the clicked signal of the search directory selection 
+        Private slot to handle the clicked signal of the search directory selection
         button.
         """
         searchDir = E5FileDialog.getExistingDirectory(
@@ -217,7 +217,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         
     def on_fileList_itemActivated(self, itm, column):
         """
-        Private slot to handle the double click on a file item. 
+        Private slot to handle the double click on a file item.
         
         It emits the signal
         sourceFile or designerFile depending on the file extension.

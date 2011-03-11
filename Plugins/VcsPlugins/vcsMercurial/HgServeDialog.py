@@ -20,11 +20,12 @@ import UI.PixmapCache
 
 import Preferences
 
+
 class HgServeDialog(QMainWindow):
     """
     Class implementing a dialog for the Mercurial server.
     """
-    def __init__(self, vcs, path, parent = None):
+    def __init__(self, vcs, path, parent=None):
         """
         Constructor
         
@@ -43,17 +44,17 @@ class HgServeDialog(QMainWindow):
         
         self.__startAct = QAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "startServer.png")), 
-            self.trUtf8("Start Server"), self) 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "startServer.png")),
+            self.trUtf8("Start Server"), self)
         self.__startAct.triggered[()].connect(self.__startServer)
         self.__stopAct = QAction(
             UI.PixmapCache.getIcon(
-                os.path.join("VcsPlugins", "vcsMercurial", "icons", "stopServer.png")), 
-            self.trUtf8("Stop Server"), self) 
+                os.path.join("VcsPlugins", "vcsMercurial", "icons", "stopServer.png")),
+            self.trUtf8("Stop Server"), self)
         self.__stopAct.triggered[()].connect(self.__stopServer)
         self.__browserAct = QAction(
-            UI.PixmapCache.getIcon("home.png"), 
-            self.trUtf8("Start Browser"), self) 
+            UI.PixmapCache.getIcon("home.png"),
+            self.trUtf8("Start Browser"), self)
         self.__browserAct.triggered[()].connect(self.__startBrowser)
         
         self.__portSpin = QSpinBox(self)
@@ -179,13 +180,13 @@ class HgServeDialog(QMainWindow):
     
     def __readStdout(self):
         """
-        Private slot to handle the readyReadStandardOutput signal. 
+        Private slot to handle the readyReadStandardOutput signal.
         
         It reads the output of the process and inserts it into the log.
         """
         if self.process is not None:
-            s = str(self.process.readAllStandardOutput(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardOutput(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.__appendText(s, False)
     
@@ -196,12 +197,12 @@ class HgServeDialog(QMainWindow):
         It reads the error output of the process and inserts it into the log.
         """
         if self.process is not None:
-            s = str(self.process.readAllStandardError(), 
-                     Preferences.getSystem("IOEncoding"), 
+            s = str(self.process.readAllStandardError(),
+                     Preferences.getSystem("IOEncoding"),
                      'replace')
             self.__appendText(s, True)
     
-    def __appendText(self, txt, error = False):
+    def __appendText(self, txt, error=False):
         """
         Public method to append text to the end.
         

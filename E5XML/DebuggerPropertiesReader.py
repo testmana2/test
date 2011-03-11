@@ -10,6 +10,7 @@ Module implementing a class for reading an XML project debugger properties file.
 from .Config import debuggerPropertiesFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
+
 class DebuggerPropertiesReader(XMLStreamReaderBase):
     """
     Class for reading an XML project debugger properties file.
@@ -30,7 +31,7 @@ class DebuggerPropertiesReader(XMLStreamReaderBase):
         
         self.version = ""
     
-    def readXML(self, quiet = False):
+    def readXML(self, quiet=False):
         """
         Public method to read and parse the XML document.
         

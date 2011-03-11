@@ -17,12 +17,13 @@ WideArrow = 2
 
 ArrowheadAngleFactor = 0.26179938779914941  # 0.5 * atan(sqrt(3.0) / 3.0)
 
+
 class E5ArrowItem(QAbstractGraphicsShapeItem):
     """
     Class implementing an arrow graphics item subclass.
     """
-    def __init__(self, origin = QPointF(), end = QPointF(),
-                 filled = False, type = NormalArrow, parent = None):
+    def __init__(self, origin=QPointF(), end=QPointF(),
+                 filled=False, type=NormalArrow, parent=None):
         """
         Constructor
         
@@ -92,7 +93,7 @@ class E5ArrowItem(QAbstractGraphicsShapeItem):
             .normalized()\
             .adjusted(-extra, -extra, extra, extra)
         
-    def paint(self, painter, option, widget = None):
+    def paint(self, painter, option, widget=None):
         """
         Public method to paint the item in local coordinates.
         

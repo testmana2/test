@@ -11,8 +11,9 @@ from PyQt4.Qsci import QsciLexerDiff
 
 from .Lexer import Lexer
 
+
 class LexerDiff(QsciLexerDiff, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -44,7 +45,7 @@ class LexerDiff(QsciLexerDiff, Lexer):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerDiff.keywords(self, kwSet)

@@ -5,8 +5,8 @@ Word completion for the eric5 shell
 
 <h4>NOTE for eric5 variant</h4>
 
-    This version is a re-implementation of rlcompleter 
-    as found in the Python3 library. It is modified to work with the eric5 
+    This version is a re-implementation of rlcompleter
+    as found in the Python3 library. It is modified to work with the eric5
     debug clients.
 
 <h4>Original rlcompleter documentation</h4>
@@ -53,11 +53,12 @@ import __main__
 
 __all__ = ["Completer"]
 
+
 class Completer(object):
     """
     Class implementing the command line completer object.
     """
-    def __init__(self, namespace = None):
+    def __init__(self, namespace=None):
         """
         Create a new completer for the command line.
 
@@ -176,7 +177,7 @@ class Completer(object):
         if "__builtins__" in words:
             words.remove("__builtins__")
 
-        if hasattr(object,'__class__'):
+        if hasattr(object, '__class__'):
             words.append('__class__')
             words = words + get_class_members(object.__class__)
         matches = []
@@ -193,6 +194,7 @@ class Completer(object):
                 # bad entries and can still continue processing the others.
                 pass
         return matches
+
 
 def get_class_members(klass):
     """

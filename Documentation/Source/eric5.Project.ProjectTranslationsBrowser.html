@@ -43,7 +43,7 @@ Module implementing a class used to display the translations part of the project
 <a NAME="ProjectTranslationsBrowser" ID="ProjectTranslationsBrowser"></a>
 <h2>ProjectTranslationsBrowser</h2>
 <p>
-    A class used to display the translations part of the project. 
+    A class used to display the translations part of the project.
 </p><h4>Signals</h4>
 <dl>
 <dt>appendStderr(str)</dt>
@@ -199,7 +199,7 @@ parent widget of this browser (QWidget)
 </dd>
 </dl><a NAME="ProjectTranslationsBrowser.__TRPreview" ID="ProjectTranslationsBrowser.__TRPreview"></a>
 <h4>ProjectTranslationsBrowser.__TRPreview</h4>
-<b>__TRPreview</b>(<i>previewAll = False</i>)
+<b>__TRPreview</b>(<i>previewAll=False</i>)
 <p>
         Private slot to handle the Preview translations action.
 </p><dl>
@@ -258,7 +258,7 @@ flag indicating, that all translations
         All obsolete strings are removed from the .ts file.
 </p><a NAME="ProjectTranslationsBrowser.__generateTSFile" ID="ProjectTranslationsBrowser.__generateTSFile"></a>
 <h4>ProjectTranslationsBrowser.__generateTSFile</h4>
-<b>__generateTSFile</b>(<i>noobsolete = False, generateAll = True</i>)
+<b>__generateTSFile</b>(<i>noobsolete=False, generateAll=True</i>)
 <p>
         Private method used to run pylupdate/pylupdate4 to generate the .ts files.
 </p><dl>
@@ -306,13 +306,13 @@ propmt string (string)
 <h4>ProjectTranslationsBrowser.__readStderrLrelease</h4>
 <b>__readStderrLrelease</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardError signal of the 
+        Private slot to handle the readyReadStandardError signal of the
         lrelease process.
 </p><a NAME="ProjectTranslationsBrowser.__readStderrLupdate" ID="ProjectTranslationsBrowser.__readStderrLupdate"></a>
 <h4>ProjectTranslationsBrowser.__readStderrLupdate</h4>
 <b>__readStderrLupdate</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardError signal of the 
+        Private slot to handle the readyReadStandardError signal of the
         pylupdate process.
 </p><a NAME="ProjectTranslationsBrowser.__readStdout" ID="ProjectTranslationsBrowser.__readStdout"></a>
 <h4>ProjectTranslationsBrowser.__readStdout</h4>
@@ -331,13 +331,13 @@ prompt string (string)
 <h4>ProjectTranslationsBrowser.__readStdoutLrelease</h4>
 <b>__readStdoutLrelease</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardOutput signal of the 
+        Private slot to handle the readyReadStandardOutput signal of the
         lrelease process.
 </p><a NAME="ProjectTranslationsBrowser.__readStdoutLupdate" ID="ProjectTranslationsBrowser.__readStdoutLupdate"></a>
 <h4>ProjectTranslationsBrowser.__readStdoutLupdate</h4>
 <b>__readStdoutLupdate</b>(<i></i>)
 <p>
-        Private slot to handle the readyReadStandardOutput signal of the 
+        Private slot to handle the readyReadStandardOutput signal of the
         pylupdate process.
 </p><a NAME="ProjectTranslationsBrowser.__releaseAll" ID="ProjectTranslationsBrowser.__releaseAll"></a>
 <h4>ProjectTranslationsBrowser.__releaseAll</h4>
@@ -351,7 +351,7 @@ prompt string (string)
         Private method to release the translation files (.qm).
 </p><a NAME="ProjectTranslationsBrowser.__releaseTSFile" ID="ProjectTranslationsBrowser.__releaseTSFile"></a>
 <h4>ProjectTranslationsBrowser.__releaseTSFile</h4>
-<b>__releaseTSFile</b>(<i>generateAll = False</i>)
+<b>__releaseTSFile</b>(<i>generateAll=False</i>)
 <p>
         Private method to run lrelease to release the translation files (.qm).
 </p><dl>
@@ -400,7 +400,7 @@ flag indicating whether all translations should be
 <dt><i>langs</i></dt>
 <dd>
 list of languages to include in the process. An empty list (default)
-            means that all translations should be included. 
+            means that all translations should be included.
             (list of ProjectBrowserFileItem)
 </dd><dt><i>filter</i></dt>
 <dd>

@@ -9,6 +9,7 @@ Module implementing the single application server and client.
 
 from PyQt4.QtNetwork import QLocalServer, QLocalSocket
 
+
 class SingleApplicationServer(QLocalServer):
     """
     Class implementing the single application server base class.
@@ -95,6 +96,7 @@ class SingleApplicationServer(QLocalServer):
         """
         raise RuntimeError("'handleCommand' must be overridden")
 
+
 class SingleApplicationClient(object):
     """
     Class implementing the single application client base class.
@@ -128,7 +130,7 @@ class SingleApplicationClient(object):
             if err == QLocalSocket.ServerNotFoundError:
                 return 0
             else:
-                return -err 
+                return -err
         
     def disconnect(self):
         """

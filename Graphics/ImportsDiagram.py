@@ -21,6 +21,7 @@ import Utilities.ModuleParser
 import Utilities
 import Preferences
 
+
 class ImportsDiagram(UMLDialog):
     """
     Class implementing a dialog showing an imports diagram of a package.
@@ -28,11 +29,11 @@ class ImportsDiagram(UMLDialog):
     Note: Only package internal imports are show in order to maintain
     some readability.
     """
-    def __init__(self, package, parent = None, name = None, showExternalImports = False):
+    def __init__(self, package, parent=None, name=None, showExternalImports=False):
         """
         Constructor
         
-        @param package name of a python package to show the import 
+        @param package name of a python package to show the import
             relationships (string)
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
@@ -82,8 +83,8 @@ class ImportsDiagram(UMLDialog):
                 progress.setValue(prog)
                 QApplication.processEvents()
                 prog = prog + 1
-                try: 
-                    mod = Utilities.ModuleParser.readModule(module, caching = False)
+                try:
+                    mod = Utilities.ModuleParser.readModule(module, caching=False)
                 except ImportError:
                     continue
                 else:
@@ -211,7 +212,7 @@ class ImportsDiagram(UMLDialog):
         """
         classes.sort()
         impM = ModuleModel(name, classes)
-        impW = ModuleItem(impM, x, y, scene = self.scene)
+        impW = ModuleItem(impM, x, y, scene=self.scene)
         return impW
         
     def __createAssociations(self, shapes):

@@ -17,11 +17,12 @@ from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
 
 import Utilities
 
+
 class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
     """
     Class implementing a configuration dialog for the bookmarked files menu.
     """
-    def __init__(self, bookmarks, parent = None):
+    def __init__(self, bookmarks, parent=None):
         """
         Constructor
         
@@ -171,7 +172,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         
     def getBookmarkedFiles(self):
         """
-        Public method to retrieve the tools list. 
+        Public method to retrieve the tools list.
         
         @return a list of filenames (list of strings)
         """

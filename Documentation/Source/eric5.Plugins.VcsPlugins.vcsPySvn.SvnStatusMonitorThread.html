@@ -69,7 +69,7 @@ VcsStatusMonitorThread
 </table>
 <a NAME="SvnStatusMonitorThread.__init__" ID="SvnStatusMonitorThread.__init__"></a>
 <h4>SvnStatusMonitorThread (Constructor)</h4>
-<b>SvnStatusMonitorThread</b>(<i>interval, project, vcs, parent = None</i>)
+<b>SvnStatusMonitorThread</b>(<i>interval, project, vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -107,8 +107,8 @@ flag indicating, that subversion is willing to save
 <dt>Returns:</dt>
 <dd>
 tuple of four values (retcode, username, password, save).
-            Retcode should be True, if username and password should be used 
-            by subversion, username and password contain the relevant data 
+            Retcode should be True, if username and password should be used
+            by subversion, username and password contain the relevant data
             as strings and save is a flag indicating, that username and
             password should be saved. Always returns (False, "", "", False).
 </dd>

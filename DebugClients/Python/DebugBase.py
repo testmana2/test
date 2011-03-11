@@ -18,6 +18,7 @@ from DebugProtocol import *
 
 gRecursionLimit = 64
 
+
 def printerr(s):
     """
     Module function used for debugging the debug client.
@@ -27,6 +28,7 @@ def printerr(s):
     sys.__stderr__.write('%s\n' % unicode(s))
     sys.__stderr__.flush()
 
+
 def setRecursionLimit(limit):
     """
     Module function to set the recursion limit.
@@ -35,6 +37,7 @@ def setRecursionLimit(limit):
     """
     global gRecursionLimit
     gRecursionLimit = limit
+
 
 class DebugBase(bdb.Bdb):
     """
@@ -84,7 +87,7 @@ class DebugBase(bdb.Bdb):
         
         @return the current frame
         """
-        return self.currentFrame        
+        return self.currentFrame
     
     def getCurrentFrameLocals(self):
         """
@@ -92,7 +95,7 @@ class DebugBase(bdb.Bdb):
         
         @return locals dictionary of the current frame
         """
-        return self.currentFrameLocals        
+        return self.currentFrameLocals
     
     def step(self, traceMode):
         """
@@ -140,14 +143,14 @@ class DebugBase(bdb.Bdb):
     
     def profile(self, frame, event, arg):
         """
-        Public method used to trace some stuff independant of the debugger 
+        Public method used to trace some stuff independant of the debugger
         trace function.
         
         @param frame The current stack frame.
         @param event The trace event (string)
         @param arg The arguments
         """
-        if event == 'return':  
+        if event == 'return':
             self.cFrame = frame.f_back
             self.__recursionDepth -= 1
         elif event == 'call':
@@ -171,7 +174,7 @@ class DebugBase(bdb.Bdb):
         @return local trace function
         """
         if self.quitting:
-            return # None
+            return  # None
         
         # give the client a chance to push through new break points.
         self._dbgClient.eventPoll()
@@ -193,7 +196,7 @@ class DebugBase(bdb.Bdb):
             return self.trace_dispatch
         if event == 'c_return':
             return self.trace_dispatch
-        print 'DebugBase.trace_dispatch: unknown debugging event:', `event`
+        print 'DebugBase.trace_dispatch: unknown debugging event:', repr(event)
         return self.trace_dispatch
 
     def dispatch_line(self, frame):
@@ -241,7 +244,7 @@ class DebugBase(bdb.Bdb):
                 raise bdb.BdbQuit
         return self.trace_dispatch
 
-    def set_trace(self, frame = None):
+    def set_trace(self, frame=None):
         """
         Overridden method of bdb.py to do some special setup.
         
@@ -265,7 +268,7 @@ class DebugBase(bdb.Bdb):
 
     def set_quit(self):
         """
-        Public method to quit. 
+        Public method to quit.
         
         It wraps call to bdb to clear the current frame properly.
         """
@@ -291,7 +294,7 @@ class DebugBase(bdb.Bdb):
         @param frame the frame object
         """
         # get module name from __file__
-        if frame.f_globals.has_key('__file__') and \
+        if '__file__' in frame.f_globals and \
            frame.f_globals['__file__'] and \
            frame.f_globals['__file__'] == frame.f_code.co_filename:
             root, ext = os.path.splitext(frame.f_globals['__file__'])
@@ -316,7 +319,7 @@ class DebugBase(bdb.Bdb):
             bp.condition = cond
             bp.special = ""
         bp.values = {}
-        if not self.breaks.has_key("Watch"):
+        if "Watch" not in self.breaks:
             self.breaks["Watch"] = 1
         else:
             self.breaks["Watch"] += 1
@@ -327,7 +330,7 @@ class DebugBase(bdb.Bdb):
         
         @param cond expression of the watch expression to be cleared (string)
         """
-        try: 
+        try:
             possibles = bdb.Breakpoint.bplist["Watch", 0]
             for i in range(0, len(possibles)):
                 b = possibles[i]
@@ -416,7 +419,7 @@ class DebugBase(bdb.Bdb):
     
     def break_here(self, frame):
         """
-        Reimplemented from bdb.py to fix the filename from the frame. 
+        Reimplemented from bdb.py to fix the filename from the frame.
         
         See fix_frame_filename for more info.
         
@@ -424,10 +427,10 @@ class DebugBase(bdb.Bdb):
         @return flag indicating the break status (boolean)
         """
         filename = self.canonic(self.fix_frame_filename(frame))
-        if not self.breaks.has_key(filename) and not self.breaks.has_key("Watch"):
+        if filename not in self.breaks and "Watch" not in self.breaks:
             return 0
         
-        if self.breaks.has_key(filename):
+        if filename in self.breaks:
             lineno = frame.f_lineno
             if lineno in self.breaks[filename]:
                 # flag says ok to delete temp. bp
@@ -438,7 +441,7 @@ class DebugBase(bdb.Bdb):
                         self.__do_clear(filename, lineno)
                     return 1
         
-        if self.breaks.has_key("Watch"):
+        if "Watch" in self.breaks:
             # flag says ok to delete temp. bp
             (bp, flag) = self.__effective(frame)
             if bp:
@@ -459,9 +462,9 @@ class DebugBase(bdb.Bdb):
         @param frame the frame object
         @return flag indicating the break status (boolean)
         """
-        return self.breaks.has_key(
-            self.canonic(self.fix_frame_filename(frame))) or \
-            (self.breaks.has_key("Watch") and self.breaks["Watch"])
+        return \
+            self.canonic(self.fix_frame_filename(frame)) in self.breaks or \
+            ("Watch" in self.breaks and self.breaks["Watch"])
 
     def get_break(self, filename, lineno):
         """
@@ -475,7 +478,7 @@ class DebugBase(bdb.Bdb):
         @return breakpoint or None, if there is no bp
         """
         filename = self.canonic(filename)
-        return self.breaks.has_key(filename) and \
+        return filename in self.breaks and \
             lineno in self.breaks[filename] and \
             bdb.Breakpoint.bplist[filename, lineno][0] or None
     
@@ -567,7 +570,7 @@ class DebugBase(bdb.Bdb):
         self._dbgClient.write('%s%s\n' % (ResponseLine, unicode(stack)))
         self._dbgClient.eventLoop()
 
-    def user_exception(self,frame,(exctype,excval,exctb),unhandled=0):
+    def user_exception(self, frame, (exctype, excval, exctb), unhandled=0):
         """
         Reimplemented to report an exception to the debug server.
         
@@ -608,7 +611,7 @@ class DebugBase(bdb.Bdb):
             else:
                 exctypetxt = unicode(exctype)
             try:
-                exclist = [exctypetxt, 
+                exclist = [exctypetxt,
                            unicode(excval).encode(self._dbgClient.getCoding())]
             except TypeError:
                 exclist = [exctypetxt, str(excval)]
@@ -651,7 +654,7 @@ class DebugBase(bdb.Bdb):
         tb = None
         return stack
 
-    def user_return(self,frame,retval):
+    def user_return(self, frame, retval):
         """
         Reimplemented to report program termination to the debug server.
         
@@ -667,7 +670,7 @@ class DebugBase(bdb.Bdb):
             self.stepFrame = None
             self.user_line(frame)
 
-    def stop_here(self,frame):
+    def stop_here(self, frame):
         """
         Reimplemented to filter out debugger files.
         
@@ -679,7 +682,7 @@ class DebugBase(bdb.Bdb):
         """
         if self.__skip_it(frame):
             return 0
-        return bdb.Bdb.stop_here(self,frame)
+        return bdb.Bdb.stop_here(self, frame)
 
     def __skip_it(self, frame):
         """
@@ -703,8 +706,8 @@ class DebugBase(bdb.Bdb):
         if os.path.basename(fn) in [\
             'AsyncFile.py', 'AsyncIO.py',
             'DebugConfig.py', 'DCTestResult.py',
-            'DebugBase.py', 'DebugClientBase.py', 
-            'DebugClientCapabilities.py', 'DebugClient.py', 
+            'DebugBase.py', 'DebugClientBase.py',
+            'DebugClientCapabilities.py', 'DebugClient.py',
             'DebugClientThreads.py', 'DebugProtocol.py',
             'DebugThread.py', 'FlexCompleter.py',
             'PyProfile.py'] or \

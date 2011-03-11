@@ -23,6 +23,7 @@ from .ExporterBase import ExporterBase
 import Preferences
 import Utilities
 
+
 class HTMLGenerator(object):
     """
     Class implementing an HTML generator for exporting source code.
@@ -35,8 +36,8 @@ class HTMLGenerator(object):
         """
         self.editor = editor
     
-    def generate(self, tabSize = 4, useTabs = False, wysiwyg = True, folding = False, 
-                 onlyStylesUsed = False, titleFullPath = False):
+    def generate(self, tabSize=4, useTabs=False, wysiwyg=True, folding=False,
+                 onlyStylesUsed=False, titleFullPath=False):
         """
         Public method to generate HTML for the source editor.
         
@@ -212,7 +213,7 @@ class HTMLGenerator(object):
                 if inStyleSpan:
                     html += '''</span>'''
                     inStyleSpan = False
-                if ch not in [b'\r', b'\n']: # no need of a span for the EOL
+                if ch not in [b'\r', b'\n']:  # no need of a span for the EOL
                     if styleIsUsed[style]:
                         html += '''<span class="S{0:d}">'''.format(style)
                         inStyleSpan = True
@@ -221,8 +222,8 @@ class HTMLGenerator(object):
             if ch == b' ':
                 if wysiwyg:
                     prevCh = b''
-                    if column == 0: 
-                        # at start of line, must put a &nbsp; 
+                    if column == 0:
+                        # at start of line, must put a &nbsp;
                         # because regular space will be collapsed
                         prevCh = b' '
                     while pos < lengthDoc and self.editor.byteAt(pos) == b' ':
@@ -233,7 +234,7 @@ class HTMLGenerator(object):
                         prevCh = self.editor.byteAt(pos)
                         pos += 1
                         column += 1
-                    pos -= 1 
+                    pos -= 1
                     # the last incrementation will be done by the outer loop
                 else:
                     html += ' '
@@ -258,7 +259,7 @@ class HTMLGenerator(object):
                     html += '''</span>'''
                     inFoldSpan = False
                 if ch == b'\r' and self.editor.byteAt(pos + 1) == b'\n':
-                    pos += 1 # CR+LF line ending, skip the "extra" EOL char
+                    pos += 1  # CR+LF line ending, skip the "extra" EOL char
                 column = 0
                 if wysiwyg:
                     html += '''<br />'''
@@ -272,7 +273,7 @@ class HTMLGenerator(object):
                         while levelStack[-1] > newLevel:
                             html += '''</span>'''
                             levelStack.pop()
-                    html += '\n' # here to get clean code
+                    html += '\n'  # here to get clean code
                     if newLevel > level:
                         html += '''<span id="ln{0:d}">'''.format(line)
                         levelStack.append(newLevel)
@@ -312,14 +313,14 @@ class HTMLGenerator(object):
                                 utf8Len = 3
                             elif (utf8Ch[0] & 0xC0) == 0xC0:
                                 utf8Len = 2
-                            column -= 1 # will be incremented again later
+                            column -= 1  # will be incremented again later
                         elif len(utf8Ch) == utf8Len:
                             ch = utf8Ch.decode('utf8')
                             html += Utilities.html_encode(ch)
                             utf8Ch = b""
                             utf8Len = 0
                         else:
-                            column -= 1 # will be incremented again later
+                            column -= 1  # will be incremented again later
                     else:
                         html += ch.decode()
                 column += 1
@@ -343,11 +344,12 @@ class HTMLGenerator(object):
         
         return html
 
+
 class ExporterHTML(ExporterBase):
     """
     Class implementing an exporter for HTML.
     """
-    def __init__(self, editor, parent = None):
+    def __init__(self, editor, parent=None):
         """
         Constructor
         
@@ -379,16 +381,16 @@ class ExporterHTML(ExporterBase):
             
             generator = HTMLGenerator(self.editor)
             html = generator.generate(
-                tabSize = tabSize, 
-                useTabs = tabs, 
-                wysiwyg = wysiwyg, 
-                folding = folding, 
-                onlyStylesUsed = onlyStylesUsed, 
-                titleFullPath = titleFullPath
+                tabSize=tabSize,
+                useTabs=tabs,
+                wysiwyg=wysiwyg,
+                folding=folding,
+                onlyStylesUsed=onlyStylesUsed,
+                titleFullPath=titleFullPath
             )
             
             try:
-                f = open(filename, "w", encoding = "utf-8")
+                f = open(filename, "w", encoding="utf-8")
                 f.write(html)
                 f.close()
             except IOError as err:

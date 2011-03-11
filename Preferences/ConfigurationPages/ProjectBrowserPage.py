@@ -20,6 +20,7 @@ from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
 
 import Preferences
 
+
 class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
     """
     Class implementing the Project Browser configuration page.
@@ -37,11 +38,11 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         
         # set initial values
         self.projectTypeCombo.addItem('', '')
-        self.__projectBrowserFlags = {'' : 0}
+        self.__projectBrowserFlags = {'': 0}
         try:
             projectTypes = e5App().getObject("Project").getProjectTypes()
             for projectType in sorted(projectTypes.keys()):
-                self.projectTypeCombo.addItem(projectTypes[projectType], 
+                self.projectTypeCombo.addItem(projectTypes[projectType],
                                               projectType)
                 self.__projectBrowserFlags[projectType] = \
                     Preferences.getProjectBrowserFlags(projectType)
@@ -49,7 +50,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
             self.pbGroup.setEnabled(False)
         
         self.projectBrowserColours["Highlighted"] = \
-            self.initColour("Highlighted", self.pbHighlightedButton, 
+            self.initColour("Highlighted", self.pbHighlightedButton,
                 Preferences.getProjectBrowserColour)
         
         self.followEditorCheckBox.setChecked(
@@ -64,9 +65,9 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
         for key in list(self.projectBrowserColours.keys()):
             Preferences.setProjectBrowserColour(key, self.projectBrowserColours[key])
         
-        Preferences.setProject("FollowEditor", 
+        Preferences.setProject("FollowEditor",
             self.followEditorCheckBox.isChecked())
-        Preferences.setProject("HideGeneratedForms", 
+        Preferences.setProject("HideGeneratedForms",
             self.hideGeneratedCheckBox.isChecked())
         
         if self.pbGroup.isEnabled():
@@ -79,11 +80,11 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
     @pyqtSlot()
     def on_pbHighlightedButton_clicked(self):
         """
-        Private slot to set the colour for highlighted entries of the 
+        Private slot to set the colour for highlighted entries of the
         project others browser.
         """
         self.projectBrowserColours["Highlighted"] = \
-            self.selectColour(self.pbHighlightedButton, 
+            self.selectColour(self.pbHighlightedButton,
                 self.projectBrowserColours["Highlighted"])
     
     def __storeProjectBrowserFlags(self, projectType):
@@ -140,6 +141,7 @@ class ProjectBrowserPage(ConfigurationPageBase, Ui_ProjectBrowserPage):
             self.projectTypeCombo.itemData(index))
         self.__currentProjectTypeIndex = index
     
+
 def create(dlg):
     """
     Module function to create the configuration page.

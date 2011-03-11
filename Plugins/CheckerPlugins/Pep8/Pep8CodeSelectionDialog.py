@@ -15,11 +15,12 @@ from .Pep8Fixer import Pep8FixableIssues
 
 from .Ui_Pep8CodeSelectionDialog import Ui_Pep8CodeSelectionDialog
 
+
 class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
     """
     Class implementing a dialog to select PEP 8 message codes.
     """
-    def __init__(self, codes, showFixCodes, parent = None):
+    def __init__(self, codes, showFixCodes, parent=None):
         """
         Constructor
         
@@ -39,11 +40,11 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             selectableCodes = pep8.pep8_messages.keys()
         for code in sorted(selectableCodes, key=lambda a: a[1:]):
             if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate("pep8", 
+                message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code]).format(
                         *pep8.pep8_messages_sample_args[code])
             else:
-                message = QCoreApplication.translate("pep8", 
+                message = QCoreApplication.translate("pep8",
                     pep8.pep8_messages[code])
             itm = QTreeWidgetItem(self.codeTable, [code, message])
             if code in codeList:

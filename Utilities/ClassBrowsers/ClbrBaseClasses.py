@@ -7,6 +7,7 @@
 Module implementing base classes used by the various class browsers.
 """
 
+
 class _ClbrBase(object):
     """
     Class implementing the base of all class browser objects.
@@ -24,6 +25,7 @@ class _ClbrBase(object):
         self.name = name
         self.file = file
         self.lineno = lineno
+
 
 class ClbrBase(_ClbrBase):
     """
@@ -116,6 +118,7 @@ class ClbrBase(_ClbrBase):
         """
         self.classes[name] = _class
         
+
 class ClbrVisibilityMixinBase(object):
     """
     Class implementing the base class of all visibility mixins.
@@ -162,6 +165,7 @@ class ClbrVisibilityMixinBase(object):
         """
         self.visibility = 2
 
+
 class Attribute(_ClbrBase):
     """
     Class to represent an attribute.
@@ -176,6 +180,7 @@ class Attribute(_ClbrBase):
         @param lineno linenumber of the class definition
         """
         _ClbrBase.__init__(self, module, name, file, lineno)
+
 
 class Class(ClbrBase):
     """
@@ -196,6 +201,7 @@ class Class(ClbrBase):
             super = []
         self.super = super
 
+
 class Module(ClbrBase):
     """
     Class to represent a module.
@@ -211,11 +217,12 @@ class Module(ClbrBase):
         """
         ClbrBase.__init__(self, module, name, file, lineno)
 
+
 class Function(ClbrBase):
     """
     Class to represent a function or method.
     """
-    def __init__(self, module, name, file, lineno, signature = '', separator = ','):
+    def __init__(self, module, name, file, lineno, signature='', separator=','):
         """
         Constructor
         
@@ -228,6 +235,7 @@ class Function(ClbrBase):
         """
         ClbrBase.__init__(self, module, name, file, lineno)
         self.parameters = [e.strip() for e in signature.split(separator)]
+
 
 class Coding(ClbrBase):
     """

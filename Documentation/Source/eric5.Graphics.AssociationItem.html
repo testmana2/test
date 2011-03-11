@@ -90,7 +90,7 @@ E5ArrowItem
 </table>
 <a NAME="AssociationItem.__init__" ID="AssociationItem.__init__"></a>
 <h4>AssociationItem (Constructor)</h4>
-<b>AssociationItem</b>(<i>itemA, itemB, type = Normal, parent = None</i>)
+<b>AssociationItem</b>(<i>itemA, itemB, type=Normal, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -148,7 +148,7 @@ reference to the parent object (QGraphicsItem)
         Each diagonal is defined by two corners of the bounding rectangle
 </p><p>
         To calculate the start point  we have to find out in which
-        region (defined by itemA's diagonals) is itemB's TopLeft corner 
+        region (defined by itemA's diagonals) is itemB's TopLeft corner
         (lets call it region M). After that the start point will be
         the middle point of rectangle's side contained in region M.
 </p><p>
@@ -201,7 +201,7 @@ the intersection point (QPointF)
 <h4>AssociationItem.__findPointRegion</h4>
 <b>__findPointRegion</b>(<i>rect, posX, posY</i>)
 <p>
-        Private method to find out, which region of rectangle rect contains the point 
+        Private method to find out, which region of rectangle rect contains the point
         (PosX, PosY) and returns the region number.
 </p><dl>
 <dt><i>rect</i></dt>

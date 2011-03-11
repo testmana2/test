@@ -15,18 +15,18 @@ from DebugBase import *
 import DebugClientBase
 
 
-def _debugclient_start_new_thread(target, args, kwargs = {}):
+def _debugclient_start_new_thread(target, args, kwargs={}):
     """
     Module function used to allow for debugging of multiple threads.
     
-    The way it works is that below, we reset _thread._start_new_thread to 
+    The way it works is that below, we reset _thread._start_new_thread to
     this function object. Thus, providing a hook for us to see when
-    threads are started. From here we forward the request onto the 
+    threads are started. From here we forward the request onto the
     DebugClient which will create a DebugThread object to allow tracing
     of the thread then start up the thread. These actions are always
     performed in order to allow dropping into debug mode.
     
-    See DebugClientThreads.attachThread and DebugThread.DebugThread in 
+    See DebugClientThreads.attachThread and DebugThread.DebugThread in
     DebugThread.py
     
     @param target the start function of the target thread (i.e. the user code)
@@ -39,13 +39,14 @@ def _debugclient_start_new_thread(target, args, kwargs = {}):
     else:
         return _original_start_thread(target, args, kwargs)
     
-# make _thread hooks available to system    
+# make _thread hooks available to system
 _original_start_thread = _thread.start_new_thread
 _thread.start_new_thread = _debugclient_start_new_thread
 
-# NOTE: import threading here AFTER above hook, as threading cache's 
+# NOTE: import threading here AFTER above hook, as threading cache's
 # thread._start_new_thread.
 from threading import RLock
+
 
 class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
     """
@@ -74,17 +75,17 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
         
         self.variant = 'Threaded'
 
-    def attachThread(self, target = None, args = None, kwargs = None, mainThread = False):
+    def attachThread(self, target=None, args=None, kwargs=None, mainThread=False):
         """
         Public method to setup a thread for DebugClient to debug.
         
-        If mainThread is non-zero, then we are attaching to the already 
+        If mainThread is non-zero, then we are attaching to the already
         started mainthread of the app and the rest of the args are ignored.
         
         @param target the start function of the target thread (i.e. the user code)
         @param args arguments to pass to target
         @param kwargs keyword arguments to pass to target
-        @param mainThread True, if we are attaching to the already 
+        @param mainThread True, if we are attaching to the already
               started mainthread of the app
         @return identifier of the created thread
         """
@@ -119,7 +120,7 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
         finally:
             self.unlockClient()
     
-    def lockClient(self, blocking = True):
+    def lockClient(self, blocking=True):
         """
         Public method to acquire the lock for this client.
         
@@ -155,7 +156,7 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
         finally:
             self.unlockClient()
     
-    def eventLoop(self, disablePolling = False):
+    def eventLoop(self, disablePolling=False):
         """
         Public method implementing our event loop.
         

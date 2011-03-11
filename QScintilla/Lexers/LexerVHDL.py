@@ -12,8 +12,9 @@ from PyQt4.Qsci import QsciLexerVHDL
 from .Lexer import Lexer
 import Preferences
 
+
 class LexerVHDL(QsciLexerVHDL, Lexer):
-    """ 
+    """
     Subclass to implement some additional lexer dependant methods.
     """
     def __init__(self, parent=None):
@@ -44,7 +45,7 @@ class LexerVHDL(QsciLexerVHDL, Lexer):
         
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerVHDL.Comment, 
+        return style in [QsciLexerVHDL.Comment,
                          QsciLexerVHDL.CommentLine]
     
     def isStringStyle(self, style):
@@ -53,14 +54,14 @@ class LexerVHDL(QsciLexerVHDL, Lexer):
         
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerVHDL.String, 
+        return style in [QsciLexerVHDL.String,
                          QsciLexerVHDL.UnclosedString]
     
     def defaultKeywords(self, kwSet):
         """
         Public method to get the default keywords.
         
-        @param kwSet number of the keyword set (integer) 
+        @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
         return QsciLexerVHDL.keywords(self, kwSet)
