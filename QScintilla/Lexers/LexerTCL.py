@@ -32,7 +32,10 @@ class LexerTCL(QsciLexerTCL, Lexer):
         """
         Public slot to initialize the properties.
         """
-        self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+        try:
+            self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """
