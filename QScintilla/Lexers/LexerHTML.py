@@ -44,6 +44,11 @@ class LexerHTML(QsciLexerHTML, Lexer):
             self.setFoldScriptHeredocs(Preferences.getEditor("HtmlFoldScriptHeredocs"))
         except AttributeError:
             pass
+        try:
+            self.setDjangoTemplates(Preferences.getEditor("HtmlDjangoTemplates"))
+            self.setMakoTemplates(Preferences.getEditor("HtmlMakoTemplates"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

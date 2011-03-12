@@ -318,6 +318,7 @@ class Prefs(object):
         "CppIndentOpeningBrace": False,
         "CppIndentClosingBrace": False,
         "CppDollarsAllowed": True,
+        "CppStylePreprocessor": False, 
         
         # CSS specifics
         "CssFoldComment": True,
@@ -333,6 +334,8 @@ class Prefs(object):
         "HtmlFoldScriptComments": False,
         "HtmlFoldScriptHeredocs": False,
         "HtmlCaseSensitiveTags": False,
+        "HtmlDjangoTemplates": False,
+        "HtmlMakoTemplates": False, 
         
         # Pascal specifics
         "PascalFoldComment": True,
@@ -353,6 +356,9 @@ class Prefs(object):
         "PovFoldComment": True,
         "PovFoldDirectives": False,
         
+        # Properties specifics
+        "PropertiesInitialSpaces": True, 
+        
         # Python specifics
         "PythonBadIndentation": True,
         "PythonFoldComment": True,
@@ -361,10 +367,28 @@ class Prefs(object):
         "PythonAllowV2Unicode": True,
         "PythonAllowV3Binary": True,
         "PythonAllowV3Bytes": True,
+        "PythonFoldQuotes": False,
+        "PythonStringsOverNewLineAllowed": False,
+        
+        # Ruby specifics
+        "RubyFoldComment": False,
         
         # SQL specifics
         "SqlFoldComment": True,
         "SqlBackslashEscapes": False,
+        "SqlDottedWords": False,
+        "SqlFoldAtElse": False,
+        "SqlFoldOnlyBegin": False,
+        "SqlHashComments": False,
+        "SqlQuotedIdentifiers": False,
+        
+        # TCL specifics
+        "TclFoldComment": False,
+        
+        # TeX specifics
+        "TexFoldComment": False,
+        "TexProcessComments": False,
+        "TexProcessIf": True,
         
         # VHDL specifics
         "VHDLFoldComment": True,

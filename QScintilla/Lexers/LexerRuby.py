@@ -10,6 +10,7 @@ Module implementing a Ruby lexer with some additional methods.
 from PyQt4.Qsci import QsciLexerRuby
 
 from .Lexer import Lexer
+import Preferences
 
 
 class LexerRuby(QsciLexerRuby, Lexer):
@@ -26,6 +27,16 @@ class LexerRuby(QsciLexerRuby, Lexer):
         Lexer.__init__(self)
         
         self.commentString = "#"
+    
+    def initProperties(self):
+        """
+        Public slot to initialize the properties.
+        """
+        try:
+            self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+            self.setFoldComments(Preferences.getEditor("RubyFoldComment"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

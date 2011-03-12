@@ -59,6 +59,11 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.getEditor("CppCaseInsensitiveKeywords"))
         self.cppDollarAllowedCheckBox.setChecked(
             Preferences.getEditor("CppDollarsAllowed"))
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.cppStylePreprocessorCheckBox.setChecked(
+                Preferences.getEditor("CppStylePreprocessor"))
+        else:
+            self.cppStylePreprocessorCheckBox.setEnabled(False)
         
         # CSS
         self.foldCssCommentCheckBox.setChecked(
@@ -83,6 +88,14 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.getEditor("HtmlFoldScriptComments"))
         self.foldHtmlScriptHereDocsCheckBox.setChecked(
             Preferences.getEditor("HtmlFoldScriptHeredocs"))
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.htmlDjangoCheckBox.setChecked(
+                Preferences.getEditor("HtmlDjangoTemplates"))
+            self.htmlMakoCheckBox.setChecked(
+                Preferences.getEditor("HtmlMakoTemplates"))
+        else:
+            self.htmlDjangoCheckBox.setEnabled(False)
+            self.htmlMakoCheckBox.setEnabled(False)
         
         # Pascal
         if "Pascal" in self.languages:
@@ -125,6 +138,13 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         self.foldPovrayDirectivesCheckBox.setChecked(
             Preferences.getEditor("PovFoldDirectives"))
         
+        # Properties
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.propertiesInitialSpacesCheckBox.setChecked(
+                Preferences.getEditor("PropertiesInitialSpaces"))
+        else:
+            self.propertiesInitialSpacesCheckBox.setEnabled(False)
+        
         # Python
         self.foldPythonCommentCheckBox.setChecked(
             Preferences.getEditor("PythonFoldComment"))
@@ -140,12 +160,64 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.getEditor("PythonAllowV3Binary"))
         self.pythonV3BytesAllowedCheckBox.setChecked(
             Preferences.getEditor("PythonAllowV3Bytes"))
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.foldPythonQuotesCheckBox.setChecked(
+                Preferences.getEditor("PythonFoldQuotes"))
+            self.pythonStringsOverNewlineCheckBox.setChecked(
+                Preferences.getEditor("PythonStringsOverNewLineAllowed"))
+        else:
+            self.foldPythonQuotesCheckBox.setEnabled(False)
+            self.pythonStringsOverNewlineCheckBox.setEnabled(False)
+        
+        # Ruby
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.foldRubyCommentCheckBox.setChecked(
+                Preferences.getEditor("RubyFoldComment"))
+        else:
+            self.foldRubyCommentCheckBox.setEnabled(False)
         
         # SQL
         self.foldSqlCommentCheckBox.setChecked(
             Preferences.getEditor("SqlFoldComment"))
         self.sqlBackslashEscapesCheckBox.setChecked(
             Preferences.getEditor("SqlBackslashEscapes"))
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.sqlFoldAtElseCheckBox.setChecked(
+                Preferences.getEditor("SqlFoldAtElse"))
+            self.sqlFoldOnlyBeginCheckBox.setChecked(
+                Preferences.getEditor("SqlFoldOnlyBegin"))
+            self.sqlDottedWordsCheckBox.setChecked(
+                Preferences.getEditor("SqlDottedWords"))
+            self.sqlHashCommentsCheckBox.setChecked(
+                Preferences.getEditor("SqlHashComments"))
+            self.sqlQuotedIdentifiersCheckBox.setChecked(
+                Preferences.getEditor("SqlQuotedIdentifiers"))
+        else:
+            self.sqlFoldAtElseCheckBox.setEnabled(False)
+            self.sqlFoldOnlyBeginCheckBox.setEnabled(False)
+            self.sqlDottedWordsCheckBox.setEnabled(False)
+            self.sqlHashCommentsCheckBox.setEnabled(False)
+            self.sqlQuotedIdentifiersCheckBox.setEnabled(False)
+        
+        # TCL
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.foldTclCommentCheckBox.setChecked(
+                Preferences.getEditor("TclFoldComment"))
+        else:
+            self.foldTclCommentCheckBox.setEnabled(False)
+        
+        # TeX
+        if QSCINTILLA_VERSION() >= 0x020500:
+            self.foldTexCommentCheckBox.setChecked(
+                Preferences.getEditor("TexFoldComment"))
+            self.texProcessCommentsCheckBox.setChecked(
+                Preferences.getEditor("TexProcessComments"))
+            self.texProcessIfCheckBox.setChecked(
+                Preferences.getEditor("TexProcessIf"))
+        else:
+            self.foldTexCommentCheckBox.setEnabled(False)
+            self.texProcessCommentsCheckBox.setEnabled(False)
+            self.texProcessIfCheckBox.setEnabled(False)
         
         # VHDL
         self.vhdlFoldCommentCheckBox.setChecked(
@@ -200,6 +272,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.cppCaseInsensitiveCheckBox.isChecked())
         Preferences.setEditor("CppDollarsAllowed",
             self.cppDollarAllowedCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("CppStylePreprocessor",
+                self.cppStylePreprocessorCheckBox.isChecked())
         
         # CSS
         Preferences.setEditor("CssFoldComment",
@@ -224,6 +299,11 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.foldHtmlScriptCommentsCheckBox.isChecked())
         Preferences.setEditor("HtmlFoldScriptHeredocs",
             self.foldHtmlScriptHereDocsCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("HtmlDjangoTemplates",
+                self.htmlDjangoCheckBox.isChecked())
+            Preferences.setEditor("HtmlMakoTemplates",
+                self.htmlMakoCheckBox.isChecked())
         
         # Pascal
         if "Pascal" in self.languages:
@@ -257,6 +337,11 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         Preferences.setEditor("PovFoldDirectives",
             self.foldPovrayDirectivesCheckBox.isChecked())
         
+        # Properties
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("PropertiesInitialSpaces",
+                self.propertiesInitialSpacesCheckBox.isChecked())
+        
         # Python
         Preferences.setEditor("PythonFoldComment",
             self.foldPythonCommentCheckBox.isChecked())
@@ -272,12 +357,47 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.pythonV3BinaryAllowedCheckBox.isChecked())
         Preferences.setEditor("PythonAllowV3Bytes",
             self.pythonV3BytesAllowedCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("PythonFoldQuotes",
+                self.foldPythonQuotesCheckBox.isChecked())
+            Preferences.setEditor("PythonStringsOverNewLineAllowed",
+                self.pythonStringsOverNewlineCheckBox.isChecked())
+        
+        # Ruby
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("RubyFoldComment",
+                self.foldRubyCommentCheckBox.isChecked())
         
         # SQL
         Preferences.setEditor("SqlFoldComment",
             self.foldSqlCommentCheckBox.isChecked())
         Preferences.setEditor("SqlBackslashEscapes",
             self.sqlBackslashEscapesCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("SqlFoldAtElse",
+                self.sqlFoldAtElseCheckBox.isChecked())
+            Preferences.setEditor("SqlFoldOnlyBegin",
+                self.sqlFoldOnlyBeginCheckBox.isChecked())
+            Preferences.setEditor("SqlDottedWords",
+                self.sqlDottedWordsCheckBox.isChecked())
+            Preferences.setEditor("SqlHashComments",
+                self.sqlHashCommentsCheckBox.isChecked())
+            Preferences.setEditor("SqlQuotedIdentifiers",
+                self.sqlQuotedIdentifiersCheckBox.isChecked())
+        
+        # TCL
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("TclFoldComment",
+                self.foldTclCommentCheckBox.isChecked())
+        
+        # TeX
+        if QSCINTILLA_VERSION() >= 0x020500:
+            Preferences.setEditor("TexFoldComment",
+                self.foldTexCommentCheckBox.isChecked())
+            Preferences.setEditor("TexProcessComments",
+                self.texProcessCommentsCheckBox.isChecked())
+            Preferences.setEditor("TexProcessIf",
+                self.texProcessIfCheckBox.isChecked())
         
         # VHDL
         Preferences.setEditor("VHDLFoldComment",

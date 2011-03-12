@@ -37,6 +37,10 @@ class LexerTCL(QsciLexerTCL, Lexer):
             self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
         except AttributeError:
             pass
+        try:
+            self.setFoldComments(Preferences.getEditor("TclFoldComment"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

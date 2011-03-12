@@ -59,6 +59,12 @@ class LexerPython(QsciLexerPython, Lexer):
             self.setV3BytesAllowed(Preferences.getEditor("PythonAllowV3Bytes"))
         except AttributeError:
             pass
+        try:
+            self.setFoldQuotes(Preferences.getEditor("PythonFoldQuotes"))
+            self.setStringsOverNewlineAllowed(
+                Preferences.getEditor("PythonStringsOverNewLineAllowed"))
+        except AttributeError:
+            pass
         
     def getIndentationDifference(self, line, editor):
         """

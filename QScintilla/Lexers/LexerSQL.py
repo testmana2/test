@@ -35,6 +35,14 @@ class LexerSQL(QsciLexerSQL, Lexer):
         self.setFoldComments(Preferences.getEditor("SqlFoldComment"))
         self.setBackslashEscapes(Preferences.getEditor("SqlBackslashEscapes"))
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+        try:
+            self.setDottedWords(Preferences.getEditor("SqlDottedWords"))
+            self.setFoldAtElse(Preferences.getEditor("SqlFoldAtElse"))
+            self.setFoldOnlyBegin(Preferences.getEditor("SqlFoldOnlyBegin"))
+            self.setHashComments(Preferences.getEditor("SqlHashComments"))
+            self.setQuotedIdentifiers(Preferences.getEditor("SqlQuotedIdentifiers"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

@@ -33,6 +33,10 @@ class LexerProperties(QsciLexerProperties, Lexer):
         Public slot to initialize the properties.
         """
         self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+        try:
+            self.setInitialSpaces(Preferences.getEditor("PropertiesInitialSpaces"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

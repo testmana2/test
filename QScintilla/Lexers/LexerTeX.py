@@ -10,6 +10,7 @@ Module implementing a Tex lexer with some additional methods.
 from PyQt4.Qsci import QsciLexerTeX
 
 from .Lexer import Lexer
+import Preferences
 
 
 class LexerTeX(QsciLexerTeX, Lexer):
@@ -26,6 +27,18 @@ class LexerTeX(QsciLexerTeX, Lexer):
         Lexer.__init__(self)
         
         self.commentString = "%"
+    
+    def initProperties(self):
+        """
+        Public slot to initialize the properties.
+        """
+        try:
+            self.setFoldCompact(Preferences.getEditor("AllFoldCompact"))
+            self.setFoldComments(Preferences.getEditor("TexFoldComment"))
+            self.setProcessComments(Preferences.getEditor("TexProcessComments"))
+            self.setProcessIf(Preferences.getEditor("TexProcessIf"))
+        except AttributeError:
+            pass
     
     def isCommentStyle(self, style):
         """

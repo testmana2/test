@@ -55,6 +55,10 @@ class LexerCPP(QsciLexerCPP, Lexer):
             self.setDollarsAllowed(Preferences.getEditor("CppDollarsAllowed"))
         except AttributeError:
             pass
+        try:
+            self.setStylePreprocessor(Preferences.getEditor("CppStylePreprocessor"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

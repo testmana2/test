@@ -9997,6 +9997,7 @@
       <keyword name="LexerRuby (Constructor)" id="LexerRuby (Constructor)" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.__init__" />
       <keyword name="LexerRuby.autoCompletionWordSeparators" id="LexerRuby.autoCompletionWordSeparators" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.autoCompletionWordSeparators" />
       <keyword name="LexerRuby.defaultKeywords" id="LexerRuby.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.defaultKeywords" />
+      <keyword name="LexerRuby.initProperties" id="LexerRuby.initProperties" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.initProperties" />
       <keyword name="LexerRuby.isCommentStyle" id="LexerRuby.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.isCommentStyle" />
       <keyword name="LexerRuby.isStringStyle" id="LexerRuby.isStringStyle" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.isStringStyle" />
       <keyword name="LexerPostScript (Module)" id="LexerPostScript (Module)" ref="eric5.QScintilla.Lexers.LexerPostScript.html" />
@@ -10116,6 +10117,7 @@
       <keyword name="LexerTeX" id="LexerTeX" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX" />
       <keyword name="LexerTeX (Constructor)" id="LexerTeX (Constructor)" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX.__init__" />
       <keyword name="LexerTeX.defaultKeywords" id="LexerTeX.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX.defaultKeywords" />
+      <keyword name="LexerTeX.initProperties" id="LexerTeX.initProperties" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX.initProperties" />
       <keyword name="LexerTeX.isCommentStyle" id="LexerTeX.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX.isCommentStyle" />
       <keyword name="LexerTeX.isStringStyle" id="LexerTeX.isStringStyle" ref="eric5.QScintilla.Lexers.LexerTeX.html#LexerTeX.isStringStyle" />
       <keyword name="LexerJava (Module)" id="LexerJava (Module)" ref="eric5.QScintilla.Lexers.LexerJava.html" />
