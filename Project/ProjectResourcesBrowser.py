@@ -38,8 +38,6 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             of the menu and a reference to the menu are given.
     """
     appendStderr = pyqtSignal(str)
-    sourceFile = pyqtSignal(str)
-    closeSourceWindow = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
     
     RCFilenameFormatPython = "{0}_rc.py"

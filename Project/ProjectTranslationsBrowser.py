@@ -44,12 +44,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
     @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
-    sourceFile = pyqtSignal(str)
-    linguistFile = pyqtSignal(str)
     appendStdout = pyqtSignal(str)
     appendStderr = pyqtSignal(str)
-    closeSourceWindow = pyqtSignal(str)
-    trpreview = pyqtSignal((list, ), (list, bool))
     showMenu = pyqtSignal(str, QMenu)
     
     def __init__(self, project, parent=None):

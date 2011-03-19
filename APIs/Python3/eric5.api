@@ -4826,13 +4826,10 @@ eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._createPopupMenus?5()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._initHookMethods?5()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser._openItem?5()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.appendStderr?7
-eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.closeSourceWindow?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.compileChangedForms?4()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.handlePreferencesChanged?4()
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.menusAboutToBeCreated?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.showMenu?7
-eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.sourceFile?7
-eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.trpreview?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser.uipreview?7
 eric5.Project.ProjectFormsBrowser.ProjectFormsBrowser?1(project, parent = None)
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._contextMenuRequested?5(coord)
@@ -4840,21 +4837,14 @@ eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._createPopupMenu
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser._openItem?5()
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.appendStderr?7
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.appendStdout?7
-eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.closeSourceWindow?7
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.showMenu?7
-eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser.sourceFile?7
 eric5.Project.ProjectInterfacesBrowser.ProjectInterfacesBrowser?1(project, parent = None)
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._createPopupMenus?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._editPixmap?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._openItem?5()
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser._showContextMenu?5(menu)
-eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.closeSourceWindow?7
-eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.pixmapEditFile?7
-eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.pixmapFile?7
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.showMenu?7
-eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.sourceFile?7
-eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser.svgFile?7
 eric5.Project.ProjectOthersBrowser.ProjectOthersBrowser?1(project, parent=None)
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.RCFilenameFormatPython?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.RCFilenameFormatRuby?7
@@ -4863,19 +4853,15 @@ eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._createPopupMenus?
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._initHookMethods?5()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser._openItem?5()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.appendStderr?7
-eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.closeSourceWindow?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.compileChangedResources?4()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.handlePreferencesChanged?4()
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.showMenu?7
-eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser.sourceFile?7
 eric5.Project.ProjectResourcesBrowser.ProjectResourcesBrowser?1(project, parent = None)
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._createPopupMenus?5()
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._openItem?5()
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser._projectClosed?5()
-eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.closeSourceWindow?7
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.showMenu?7
-eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser.sourceFile?7
 eric5.Project.ProjectSourcesBrowser.ProjectSourcesBrowser?1(project, parent = None)
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._contextMenuRequested?5(coord)
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._createPopupMenus?5()
@@ -4883,11 +4869,7 @@ eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._initHookMet
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser._openItem?5()
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.appendStderr?7
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.appendStdout?7
-eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.closeSourceWindow?7
-eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.linguistFile?7
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.showMenu?7
-eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.sourceFile?7
-eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser.trpreview?7
 eric5.Project.ProjectTranslationsBrowser.ProjectTranslationsBrowser?1(project, parent=None)
 eric5.Project.PropertiesDialog.PropertiesDialog.getPPath?4()
 eric5.Project.PropertiesDialog.PropertiesDialog.getProjectType?4()
@@ -6689,7 +6671,6 @@ eric5.ViewManager.ViewManager.QuickSearchLineEdit.escPressed?7
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.focusInEvent?4(evt)
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.gotFocus?7
 eric5.ViewManager.ViewManager.QuickSearchLineEdit.keyPressEvent?4(evt)
-eric5.ViewManager.ViewManager.QuickSearchLineEdit.returnPressed?7
 eric5.ViewManager.ViewManager.ViewManager._addView?5(win, fn=None, noName="")
 eric5.ViewManager.ViewManager.ViewManager._checkActions?5(editor, setSb = True)
 eric5.ViewManager.ViewManager.ViewManager._getOpenFileFilter?5()

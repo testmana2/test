@@ -42,11 +42,9 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
     @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
     """
-    closeSourceWindow = pyqtSignal(str)
     appendStdout = pyqtSignal(str)
     appendStderr = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
-    sourceFile = pyqtSignal((str, ), (str, int))
     
     def __init__(self, project, parent = None):
         """
