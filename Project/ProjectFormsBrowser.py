@@ -48,10 +48,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             be created. This is the right moment to add or remove hook methods.
     """
     appendStderr = pyqtSignal(str)
-    sourceFile = pyqtSignal(str)
     uipreview = pyqtSignal(str)
-    trpreview = pyqtSignal(list)
-    closeSourceWindow = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
     menusAboutToBeCreated = pyqtSignal()
     

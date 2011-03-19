@@ -50,7 +50,6 @@ class QuickSearchLineEdit(QLineEdit):
     @signal gotFocus() emitted when the focus is changed to this widget
     """
     escPressed = pyqtSignal()
-    returnPressed = pyqtSignal()
     gotFocus = pyqtSignal()
     
     def editorCommand(self, cmd):

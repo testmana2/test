@@ -49,9 +49,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
     @signal sourceFile(str, int, str) emitted to open the given file as the given type
             at the given line.
     """
-    closeSourceWindow = pyqtSignal(str)
     showMenu = pyqtSignal(str, QMenu)
-    sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
     
     def __init__(self, project, parent=None):
         """

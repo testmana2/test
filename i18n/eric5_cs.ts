@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="cs_CZ" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="cs_CZ">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -20,7 +21,7 @@
     <message>
         <location filename="Plugins/AboutPlugin/AboutDialog.ui" line="89"/>
         <source>&amp;Thanks To</source>
-        <translation>Poděkování &amp;au&amp;torům</translation>
+        <translation>&amp;Poděkování autorům</translation>
     </message>
     <message>
         <location filename="Plugins/AboutPlugin/AboutDialog.ui" line="106"/>
@@ -970,7 +971,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="MultiProject/AddProjectDialog.py" line="62"/>
         <source>Project Files (*.e4p)</source>
-        <translation type="unfinished">Soubory projektu (*.e4p)</translation>
+        <translation>Soubory projektu (*.e4p)</translation>
     </message>
 </context>
 <context>
@@ -1575,8 +1576,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít nový &amp;Tab<byte value="x9"/></translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Otevřít nový &amp;Tab	</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1626,8 +1627,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="73"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít nový &amp;Tab<byte value="x9"/><byte value="x9"/></translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Otevřít nový &amp;Tab		</translation>
     </message>
 </context>
 <context>
@@ -5588,8 +5589,6 @@ Nepřipojen
         <source>%n Download(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -5597,8 +5596,6 @@ Nepřipojen
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -5652,8 +5649,6 @@ Do you want to quit anyway?</source>
         <source>Downloading %n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -5663,8 +5658,6 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="24"/>
         <source>%n seconds remaining</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -5692,8 +5685,6 @@ Do you want to quit anyway?</source>
         <location filename="Helpviewer/Download/DownloadUtilities.py" line="19"/>
         <source>%n:{0:02} minutes remaining</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -12216,8 +12207,8 @@ se zobrazenými položkami.&lt;/p&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="787"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít odkaz v novém tab okně<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Otevřít odkaz v novém tab okně	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="399"/>
@@ -12845,8 +12836,6 @@ se zobrazenými položkami.&lt;/p&gt;
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -23896,16 +23885,12 @@ the respective line and position.&lt;/p&gt;</source>
         <source>%n blank line(s) inserted.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="335"/>
         <source>%n superfluous lines removed</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -23970,16 +23955,12 @@ the respective line and position.&lt;/p&gt;</source>
         <source>%n issue(s) found</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="60"/>
         <source>%n file(s) checked</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
@@ -23988,16 +23969,12 @@ the respective line and position.&lt;/p&gt;</source>
         <source>%n file(s) with issues found</source>
         <translation type="unfinished">
             <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.py" line="58"/>
         <source>%n issue(s) fixed</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>

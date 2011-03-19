@@ -37,7 +37,8 @@ class Browser(QTreeView):
     @signal sourceFile(str, int = 0, str = "") emitted to open a Python file at a line
     @signal designerFile(str) emitted to open a Qt-Designer file
     @signal linguistFile(str) emitted to open a Qt-Linguist (*.ts) file
-    @signal trpreview(list of str) emitted to preview a Qt-Linguist (*.qm) file
+    @signal trpreview(list of str, bool = False) emitted to preview a Qt-Linguist
+            (*.qm) file
     @signal projectFile(str) emitted to open an eric4/5 project file
     @signal multiProjectFile(str) emitted to open an eric4/5 multi project file
     @signal pixmapFile(str) emitted to open a pixmap file
@@ -48,7 +49,7 @@ class Browser(QTreeView):
     sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
     designerFile = pyqtSignal(str)
     linguistFile = pyqtSignal(str)
-    trpreview = pyqtSignal(list)
+    trpreview = pyqtSignal((list, ), (list, bool))
     projectFile = pyqtSignal(str)
     multiProjectFile = pyqtSignal(str)
     pixmapFile = pyqtSignal(str)
