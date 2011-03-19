@@ -1327,6 +1327,9 @@ def getEditorColour(key, prefClass = Prefs):
     """
     col = prefClass.settings.value("Editor/Colour/" + key)
     if col is not None:
+        if len(col) == 9:
+            # color string with alpha
+            col = "#" + col[3:]
         return QtGui.QColor(col)
     else:
         return prefClass.editorColourDefaults[key]
