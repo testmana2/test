@@ -665,10 +665,11 @@ class HelpTabWidget(E5TabWidget):
         Private slot to handle the entering of an URL.
         """
         edit = self.sender()
+        url = self.__guessUrlFromPath(edit.text())
         if e5App().keyboardModifiers() == Qt.AltModifier:
-            self.newBrowser(edit.text())
+            self.newBrowser(url)
         else:
-            self.currentBrowser().setSource(QUrl(edit.text()))
+            self.currentBrowser().setSource(url)
             self.currentBrowser().setFocus()
     
     def __pathSelected(self, path):
@@ -694,9 +695,25 @@ class HelpTabWidget(E5TabWidget):
             return url
         
         try:
-            return QUrl.fromUserInput(path)
+            url = QUrl.fromUserInput(path)
         except AttributeError:
-            return QUrl(path)
+            url = QUrl(path)
+        
+        if url.scheme() == "about" and \
+           url.path() == "home":
+            url = QUrl("pyrc:home")
+        
+        if url.scheme() in ["s", "search"]:
+            url = manager.currentEngine().searchUrl(url.path().strip())
+        
+        if url.scheme() != "" and \
+           (url.host() != "" or url.path() != ""):
+            return url
+        
+        urlString = Preferences.getHelp("DefaultScheme") + path.strip()
+        url = QUrl.fromEncoded(urlString.encode(), QUrl.TolerantMode)
+        
+        return url
     
     def __currentChanged(self, index):
         """
