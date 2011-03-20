@@ -2609,11 +2609,13 @@
       <keyword name="LinkedResource" id="LinkedResource" ref="eric5.Helpviewer.HelpBrowserWV.html#LinkedResource" />
       <keyword name="contentSniff" id="contentSniff" ref="eric5.Helpviewer.HelpBrowserWV.html#contentSniff" />
       <keyword name="HelpBrowser (Constructor)" id="HelpBrowser (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__init__" />
+      <keyword name="HelpBrowser.__accessKeyShortcut" id="HelpBrowser.__accessKeyShortcut" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__accessKeyShortcut" />
       <keyword name="HelpBrowser.__addExternalBinding" id="HelpBrowser.__addExternalBinding" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__addExternalBinding" />
       <keyword name="HelpBrowser.__addSearchEngine" id="HelpBrowser.__addSearchEngine" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__addSearchEngine" />
       <keyword name="HelpBrowser.__applyZoom" id="HelpBrowser.__applyZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__applyZoom" />
       <keyword name="HelpBrowser.__blockImage" id="HelpBrowser.__blockImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__blockImage" />
       <keyword name="HelpBrowser.__bookmarkLink" id="HelpBrowser.__bookmarkLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__bookmarkLink" />
+      <keyword name="HelpBrowser.__checkForAccessKey" id="HelpBrowser.__checkForAccessKey" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__checkForAccessKey" />
       <keyword name="HelpBrowser.__copyImage" id="HelpBrowser.__copyImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyImage" />
       <keyword name="HelpBrowser.__copyImageLocation" id="HelpBrowser.__copyImageLocation" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyImageLocation" />
       <keyword name="HelpBrowser.__copyLink" id="HelpBrowser.__copyLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__copyLink" />
@@ -2623,13 +2625,16 @@
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
+      <keyword name="HelpBrowser.__hideAccessKeys" id="HelpBrowser.__hideAccessKeys" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__hideAccessKeys" />
       <keyword name="HelpBrowser.__levelForZoom" id="HelpBrowser.__levelForZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__levelForZoom" />
       <keyword name="HelpBrowser.__linkHovered" id="HelpBrowser.__linkHovered" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__linkHovered" />
       <keyword name="HelpBrowser.__loadFinished" id="HelpBrowser.__loadFinished" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadFinished" />
       <keyword name="HelpBrowser.__loadProgress" id="HelpBrowser.__loadProgress" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadProgress" />
       <keyword name="HelpBrowser.__loadStarted" id="HelpBrowser.__loadStarted" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadStarted" />
+      <keyword name="HelpBrowser.__makeAccessLabel" id="HelpBrowser.__makeAccessLabel" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__makeAccessLabel" />
       <keyword name="HelpBrowser.__openLinkInNewTab" id="HelpBrowser.__openLinkInNewTab" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__openLinkInNewTab" />
       <keyword name="HelpBrowser.__searchRequested" id="HelpBrowser.__searchRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__searchRequested" />
+      <keyword name="HelpBrowser.__showAccessKeys" id="HelpBrowser.__showAccessKeys" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__showAccessKeys" />
       <keyword name="HelpBrowser.__statusBarMessage" id="HelpBrowser.__statusBarMessage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__statusBarMessage" />
       <keyword name="HelpBrowser.__unsupportedContent" id="HelpBrowser.__unsupportedContent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__unsupportedContent" />
       <keyword name="HelpBrowser.__urlChanged" id="HelpBrowser.__urlChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__urlChanged" />
@@ -2641,7 +2646,11 @@
       <keyword name="HelpBrowser.copy" id="HelpBrowser.copy" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.copy" />
       <keyword name="HelpBrowser.createWindow" id="HelpBrowser.createWindow" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.createWindow" />
       <keyword name="HelpBrowser.documentTitle" id="HelpBrowser.documentTitle" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.documentTitle" />
+      <keyword name="HelpBrowser.dragEnterEvent" id="HelpBrowser.dragEnterEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.dragEnterEvent" />
+      <keyword name="HelpBrowser.dragMoveEvent" id="HelpBrowser.dragMoveEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.dragMoveEvent" />
+      <keyword name="HelpBrowser.dropEvent" id="HelpBrowser.dropEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.dropEvent" />
       <keyword name="HelpBrowser.findNextPrev" id="HelpBrowser.findNextPrev" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.findNextPrev" />
+      <keyword name="HelpBrowser.focusOutEvent" id="HelpBrowser.focusOutEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.focusOutEvent" />
       <keyword name="HelpBrowser.forward" id="HelpBrowser.forward" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.forward" />
       <keyword name="HelpBrowser.hasSelection" id="HelpBrowser.hasSelection" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.hasSelection" />
       <keyword name="HelpBrowser.home" id="HelpBrowser.home" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.home" />
@@ -2651,6 +2660,8 @@
       <keyword name="HelpBrowser.keyPressEvent" id="HelpBrowser.keyPressEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.keyPressEvent" />
       <keyword name="HelpBrowser.keyReleaseEvent" id="HelpBrowser.keyReleaseEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.keyReleaseEvent" />
       <keyword name="HelpBrowser.linkedResources" id="HelpBrowser.linkedResources" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.linkedResources" />
+      <keyword name="HelpBrowser.mousePressEvent" id="HelpBrowser.mousePressEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.mousePressEvent" />
+      <keyword name="HelpBrowser.mouseReleaseEvent" id="HelpBrowser.mouseReleaseEvent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.mouseReleaseEvent" />
       <keyword name="HelpBrowser.preferencesChanged" id="HelpBrowser.preferencesChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.preferencesChanged" />
       <keyword name="HelpBrowser.progress" id="HelpBrowser.progress" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.progress" />
       <keyword name="HelpBrowser.reload" id="HelpBrowser.reload" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.reload" />
@@ -2799,6 +2810,8 @@
       <keyword name="HelpWindow.cookieJar" id="HelpWindow.cookieJar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.cookieJar" />
       <keyword name="HelpWindow.currentBrowser" id="HelpWindow.currentBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.currentBrowser" />
       <keyword name="HelpWindow.downloadManager" id="HelpWindow.downloadManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.downloadManager" />
+      <keyword name="HelpWindow.eventKeyboardModifiers" id="HelpWindow.eventKeyboardModifiers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.eventKeyboardModifiers" />
+      <keyword name="HelpWindow.eventMouseButtons" id="HelpWindow.eventMouseButtons" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.eventMouseButtons" />
       <keyword name="HelpWindow.getActions" id="HelpWindow.getActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getActions" />
       <keyword name="HelpWindow.getSourceFileList" id="HelpWindow.getSourceFileList" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getSourceFileList" />
       <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
@@ -2816,6 +2829,8 @@
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
       <keyword name="HelpWindow.setBackwardAvailable" id="HelpWindow.setBackwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setBackwardAvailable" />
+      <keyword name="HelpWindow.setEventKeyboardModifiers" id="HelpWindow.setEventKeyboardModifiers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setEventKeyboardModifiers" />
+      <keyword name="HelpWindow.setEventMouseButtons" id="HelpWindow.setEventMouseButtons" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setEventMouseButtons" />
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />

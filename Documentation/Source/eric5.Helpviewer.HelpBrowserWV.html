@@ -93,6 +93,9 @@ QWebView
 <td><a href="#HelpBrowser.__init__">HelpBrowser</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__accessKeyShortcut">__accessKeyShortcut</a></td>
+<td>Private slot to switch the display of access keys.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__addExternalBinding">__addExternalBinding</a></td>
 <td>Private slot to add javascript bindings for adding search providers.</td>
 </tr><tr>
@@ -107,6 +110,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.__bookmarkLink">__bookmarkLink</a></td>
 <td>Private slot to bookmark a link via the context menu.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__checkForAccessKey">__checkForAccessKey</a></td>
+<td>Private method to check the existence of an access key and activate the corresponding link.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__copyImage">__copyImage</a></td>
 <td>Private slot to copy an image to the clipboard.</td>
@@ -135,6 +141,9 @@ QWebView
 <td><a href="#HelpBrowser.__downloadRequested">__downloadRequested</a></td>
 <td>Private slot to handle a download request.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__hideAccessKeys">__hideAccessKeys</a></td>
+<td>Private slot to hide the access key labels.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__levelForZoom">__levelForZoom</a></td>
 <td>Private method determining the zoom level index given a zoom factor.</td>
 </tr><tr>
@@ -150,11 +159,17 @@ QWebView
 <td><a href="#HelpBrowser.__loadStarted">__loadStarted</a></td>
 <td>Private method to handle the loadStarted signal.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__makeAccessLabel">__makeAccessLabel</a></td>
+<td>Private method to generate the access label for an element.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__openLinkInNewTab">__openLinkInNewTab</a></td>
 <td>Private method called by the context menu to open a link in a new window.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__searchRequested">__searchRequested</a></td>
 <td>Private slot to search for some text with a selected search engine.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__showAccessKeys">__showAccessKeys</a></td>
+<td>Private method to show the access key labels.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__statusBarMessage">__statusBarMessage</a></td>
 <td>Private slot to handle the statusBarMessage signal.</td>
@@ -189,8 +204,20 @@ QWebView
 <td><a href="#HelpBrowser.documentTitle">documentTitle</a></td>
 <td>Public method to return the title of the loaded page.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.dragEnterEvent">dragEnterEvent</a></td>
+<td>Protected method called by a drag enter event.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.dragMoveEvent">dragMoveEvent</a></td>
+<td>Protected method called by a drag move event.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.dropEvent">dropEvent</a></td>
+<td>Protected method called by a drop event.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.findNextPrev">findNextPrev</a></td>
 <td>Public slot to find the next occurrence of a text.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.focusOutEvent">focusOutEvent</a></td>
+<td>Protected method called by a focus out event.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.forward">forward</a></td>
 <td>Public slot to move forward in history.</td>
@@ -218,6 +245,12 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.linkedResources">linkedResources</a></td>
 <td>Public method to extract linked resources.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.mousePressEvent">mousePressEvent</a></td>
+<td>Protected method called by a mouse press event.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.mouseReleaseEvent">mouseReleaseEvent</a></td>
+<td>Protected method called by a mouse release event.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.preferencesChanged">preferencesChanged</a></td>
 <td>Public method to indicate a change of the settings.</td>
@@ -266,7 +299,12 @@ parent widget of this window (QWidget)
 <dd>
 name of this window (string)
 </dd>
-</dl><a NAME="HelpBrowser.__addExternalBinding" ID="HelpBrowser.__addExternalBinding"></a>
+</dl><a NAME="HelpBrowser.__accessKeyShortcut" ID="HelpBrowser.__accessKeyShortcut"></a>
+<h4>HelpBrowser.__accessKeyShortcut</h4>
+<b>__accessKeyShortcut</b>(<i></i>)
+<p>
+        Private slot to switch the display of access keys.
+</p><a NAME="HelpBrowser.__addExternalBinding" ID="HelpBrowser.__addExternalBinding"></a>
 <h4>HelpBrowser.__addExternalBinding</h4>
 <b>__addExternalBinding</b>(<i>frame=None</i>)
 <p>
@@ -296,7 +334,23 @@ reference to the web frame (QWebFrame)
 <b>__bookmarkLink</b>(<i></i>)
 <p>
         Private slot to bookmark a link via the context menu.
-</p><a NAME="HelpBrowser.__copyImage" ID="HelpBrowser.__copyImage"></a>
+</p><a NAME="HelpBrowser.__checkForAccessKey" ID="HelpBrowser.__checkForAccessKey"></a>
+<h4>HelpBrowser.__checkForAccessKey</h4>
+<b>__checkForAccessKey</b>(<i>evt</i>)
+<p>
+        Private method to check the existence of an access key and activate the
+        corresponding link.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the key event (QKeyEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.__copyImage" ID="HelpBrowser.__copyImage"></a>
 <h4>HelpBrowser.__copyImage</h4>
 <b>__copyImage</b>(<i></i>)
 <p>
@@ -364,7 +418,12 @@ name of the web database (string)
 <dd>
 reference to the request object (QNetworkRequest)
 </dd>
-</dl><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
+</dl><a NAME="HelpBrowser.__hideAccessKeys" ID="HelpBrowser.__hideAccessKeys"></a>
+<h4>HelpBrowser.__hideAccessKeys</h4>
+<b>__hideAccessKeys</b>(<i></i>)
+<p>
+        Private slot to hide the access key labels.
+</p><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
 <h4>HelpBrowser.__levelForZoom</h4>
 <b>__levelForZoom</b>(<i>zoom</i>)
 <p>
@@ -420,7 +479,21 @@ progress value (integer)
 <b>__loadStarted</b>(<i></i>)
 <p>
         Private method to handle the loadStarted signal.
-</p><a NAME="HelpBrowser.__openLinkInNewTab" ID="HelpBrowser.__openLinkInNewTab"></a>
+</p><a NAME="HelpBrowser.__makeAccessLabel" ID="HelpBrowser.__makeAccessLabel"></a>
+<h4>HelpBrowser.__makeAccessLabel</h4>
+<b>__makeAccessLabel</b>(<i>accessKey, element</i>)
+<p>
+        Private method to generate the access label for an element.
+</p><dl>
+<dt><i>accessKey</i></dt>
+<dd>
+access key to generate the label for (str)
+</dd><dt><i>element</i></dt>
+<dd>
+reference to the web element to create the label for
+            (QWebElement)
+</dd>
+</dl><a NAME="HelpBrowser.__openLinkInNewTab" ID="HelpBrowser.__openLinkInNewTab"></a>
 <h4>HelpBrowser.__openLinkInNewTab</h4>
 <b>__openLinkInNewTab</b>(<i></i>)
 <p>
@@ -435,7 +508,12 @@ progress value (integer)
 <dd>
 reference to the action that triggered this slot (QAction)
 </dd>
-</dl><a NAME="HelpBrowser.__statusBarMessage" ID="HelpBrowser.__statusBarMessage"></a>
+</dl><a NAME="HelpBrowser.__showAccessKeys" ID="HelpBrowser.__showAccessKeys"></a>
+<h4>HelpBrowser.__showAccessKeys</h4>
+<b>__showAccessKeys</b>(<i></i>)
+<p>
+        Private method to show the access key labels.
+</p><a NAME="HelpBrowser.__statusBarMessage" ID="HelpBrowser.__statusBarMessage"></a>
 <h4>HelpBrowser.__statusBarMessage</h4>
 <b>__statusBarMessage</b>(<i>text</i>)
 <p>
@@ -530,6 +608,36 @@ type of the requested window (QWebPage.WebWindowType)
 <dd>
 title (string)
 </dd>
+</dl><a NAME="HelpBrowser.dragEnterEvent" ID="HelpBrowser.dragEnterEvent"></a>
+<h4>HelpBrowser.dragEnterEvent</h4>
+<b>dragEnterEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a drag enter event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the drag enter event (QDragEnterEvent)
+</dd>
+</dl><a NAME="HelpBrowser.dragMoveEvent" ID="HelpBrowser.dragMoveEvent"></a>
+<h4>HelpBrowser.dragMoveEvent</h4>
+<b>dragMoveEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a drag move event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the drag move event (QDragMoveEvent)
+</dd>
+</dl><a NAME="HelpBrowser.dropEvent" ID="HelpBrowser.dropEvent"></a>
+<h4>HelpBrowser.dropEvent</h4>
+<b>dropEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a drop event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the drop event (QDropEvent)
+</dd>
 </dl><a NAME="HelpBrowser.findNextPrev" ID="HelpBrowser.findNextPrev"></a>
 <h4>HelpBrowser.findNextPrev</h4>
 <b>findNextPrev</b>(<i>txt, case, backwards, wrap, highlightAll</i>)
@@ -551,6 +659,16 @@ flag indicating to wrap around (boolean)
 </dd><dt><i>highlightAll</i></dt>
 <dd>
 flag indicating to highlight all occurrences (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.focusOutEvent" ID="HelpBrowser.focusOutEvent"></a>
+<h4>HelpBrowser.focusOutEvent</h4>
+<b>focusOutEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a focus out event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the focus event (QFocusEvent)
 </dd>
 </dl><a NAME="HelpBrowser.forward" ID="HelpBrowser.forward"></a>
 <h4>HelpBrowser.forward</h4>
@@ -607,24 +725,20 @@ flag indicating the loading state (boolean)
 <b>keyPressEvent</b>(<i>evt</i>)
 <p>
         Protected method called by a key press.
-</p><p>
-        This method is overridden from QTextBrowser.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
-the key event (QKeyEvent)
+reference to the key event (QKeyEvent)
 </dd>
 </dl><a NAME="HelpBrowser.keyReleaseEvent" ID="HelpBrowser.keyReleaseEvent"></a>
 <h4>HelpBrowser.keyReleaseEvent</h4>
 <b>keyReleaseEvent</b>(<i>evt</i>)
 <p>
         Protected method called by a key release.
-</p><p>
-        This method is overridden from QTextBrowser.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
-the key event (QKeyEvent)
+reference to the key event (QKeyEvent)
 </dd>
 </dl><a NAME="HelpBrowser.linkedResources" ID="HelpBrowser.linkedResources"></a>
 <h4>HelpBrowser.linkedResources</h4>
@@ -640,6 +754,26 @@ relation to extract (string)
 <dt>Returns:</dt>
 <dd>
 list of linked resources (list of LinkedResource)
+</dd>
+</dl><a NAME="HelpBrowser.mousePressEvent" ID="HelpBrowser.mousePressEvent"></a>
+<h4>HelpBrowser.mousePressEvent</h4>
+<b>mousePressEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a mouse press event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the mouse event (QMouseEvent)
+</dd>
+</dl><a NAME="HelpBrowser.mouseReleaseEvent" ID="HelpBrowser.mouseReleaseEvent"></a>
+<h4>HelpBrowser.mouseReleaseEvent</h4>
+<b>mouseReleaseEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a mouse release event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the mouse event (QMouseEvent)
 </dd>
 </dl><a NAME="HelpBrowser.preferencesChanged" ID="HelpBrowser.preferencesChanged"></a>
 <h4>HelpBrowser.preferencesChanged</h4>

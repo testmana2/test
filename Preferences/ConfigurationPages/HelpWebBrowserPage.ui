@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>613</width>
-    <height>904</height>
+    <height>982</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -70,6 +70,16 @@
        </property>
        <property name="text">
         <string>Show preview when hovering tab</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="accessKeysCheckBox">
+       <property name="toolTip">
+        <string>Select to enable support for access keys</string>
+       </property>
+       <property name="text">
+        <string>Enable access keys</string>
        </property>
       </widget>
      </item>
@@ -472,9 +482,10 @@
  </widget>
  <tabstops>
   <tabstop>singleHelpWindowCheckBox</tabstop>
-  <tabstop>saveGeometryCheckBox</tabstop>
   <tabstop>webSuggestionsCheckBox</tabstop>
+  <tabstop>saveGeometryCheckBox</tabstop>
   <tabstop>showTabPreviews</tabstop>
+  <tabstop>accessKeysCheckBox</tabstop>
   <tabstop>startupCombo</tabstop>
   <tabstop>homePageEdit</tabstop>
   <tabstop>setCurrentPageButton</tabstop>

@@ -109,6 +109,9 @@ class HelpWindow(QMainWindow):
         self.mHistory = []
         self.__lastConfigurationPageName = ""
         
+        self.__eventMouseButtons = Qt.NoButton
+        self.__eventKeyboardModifiers = Qt.NoModifier
+        
         if self.initShortcutsOnly:
             self.__initActions()
         else:
@@ -2540,3 +2543,35 @@ class HelpWindow(QMainWindow):
             QWebSettings.globalSettings().setDefaultTextEncoding("")
         else:
             QWebSettings.globalSettings().setDefaultTextEncoding(codec)
+    
+    def eventMouseButtons(self):
+        """
+        Public method to get the last recorded mouse buttons.
+        
+        @return mouse buttons (Qt.MouseButtons)
+        """
+        return self.__eventMouseButtons
+    
+    def eventKeyboardModifiers(self):
+        """
+        Public method to get the last recorded keyboard modifiers.
+        
+        @return keyboard modifiers (Qt.KeyboardModifiers)
+        """
+        return self.__eventKeyboardModifiers
+    
+    def setEventMouseButtons(self, buttons):
+        """
+        Public method to record mouse buttons.
+        
+        @param buttons mouse buttons to record (Qt.MouseButtons)
+        """
+        self.__eventMouseButtons = buttons
+    
+    def setEventKeyboardModifiers(self, modifiers):
+        """
+        Public method to record keyboard modifiers.
+        
+        @param modifiers keyboard modifiers to record (Qt.KeyboardModifiers)
+        """
+        self.__eventKeyboardModifiers = modifiers

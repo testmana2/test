@@ -325,6 +325,12 @@ QMainWindow
 <td><a href="#HelpWindow.downloadManager">downloadManager</a></td>
 <td>Class method to get a reference to the download manager.</td>
 </tr><tr>
+<td><a href="#HelpWindow.eventKeyboardModifiers">eventKeyboardModifiers</a></td>
+<td>Public method to get the last recorded keyboard modifiers.</td>
+</tr><tr>
+<td><a href="#HelpWindow.eventMouseButtons">eventMouseButtons</a></td>
+<td>Public method to get the last recorded mouse buttons.</td>
+</tr><tr>
 <td><a href="#HelpWindow.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
@@ -375,6 +381,12 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.setBackwardAvailable">setBackwardAvailable</a></td>
 <td>Public slot called when backward references are available.</td>
+</tr><tr>
+<td><a href="#HelpWindow.setEventKeyboardModifiers">setEventKeyboardModifiers</a></td>
+<td>Public method to record keyboard modifiers.</td>
+</tr><tr>
+<td><a href="#HelpWindow.setEventMouseButtons">setEventMouseButtons</a></td>
+<td>Public method to record mouse buttons.</td>
 </tr><tr>
 <td><a href="#HelpWindow.setForwardAvailable">setForwardAvailable</a></td>
 <td>Public slot called when forward references are available.</td>
@@ -981,6 +993,26 @@ reference to the current help browser (HelpBrowser)
 <dd>
 reference to the password manager (DownloadManager)
 </dd>
+</dl><a NAME="HelpWindow.eventKeyboardModifiers" ID="HelpWindow.eventKeyboardModifiers"></a>
+<h4>HelpWindow.eventKeyboardModifiers</h4>
+<b>eventKeyboardModifiers</b>(<i></i>)
+<p>
+        Public method to get the last recorded keyboard modifiers.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+keyboard modifiers (Qt.KeyboardModifiers)
+</dd>
+</dl><a NAME="HelpWindow.eventMouseButtons" ID="HelpWindow.eventMouseButtons"></a>
+<h4>HelpWindow.eventMouseButtons</h4>
+<b>eventMouseButtons</b>(<i></i>)
+<p>
+        Public method to get the last recorded mouse buttons.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+mouse buttons (Qt.MouseButtons)
+</dd>
 </dl><a NAME="HelpWindow.getActions" ID="HelpWindow.getActions"></a>
 <h4>HelpWindow.getActions</h4>
 <b>getActions</b>(<i></i>)
@@ -1158,6 +1190,26 @@ reference to the search engines configuration action (QAction)
 <dt><i>b</i></dt>
 <dd>
 flag indicating availability of the backwards action (boolean)
+</dd>
+</dl><a NAME="HelpWindow.setEventKeyboardModifiers" ID="HelpWindow.setEventKeyboardModifiers"></a>
+<h4>HelpWindow.setEventKeyboardModifiers</h4>
+<b>setEventKeyboardModifiers</b>(<i>modifiers</i>)
+<p>
+        Public method to record keyboard modifiers.
+</p><dl>
+<dt><i>modifiers</i></dt>
+<dd>
+keyboard modifiers to record (Qt.KeyboardModifiers)
+</dd>
+</dl><a NAME="HelpWindow.setEventMouseButtons" ID="HelpWindow.setEventMouseButtons"></a>
+<h4>HelpWindow.setEventMouseButtons</h4>
+<b>setEventMouseButtons</b>(<i>buttons</i>)
+<p>
+        Public method to record mouse buttons.
+</p><dl>
+<dt><i>buttons</i></dt>
+<dd>
+mouse buttons to record (Qt.MouseButtons)
 </dd>
 </dl><a NAME="HelpWindow.setForwardAvailable" ID="HelpWindow.setForwardAvailable"></a>
 <h4>HelpWindow.setForwardAvailable</h4>

@@ -443,6 +443,17 @@ class HelpBrowser(QWebView):
         
         self.mw.openSearchManager().currentEngineChanged.connect(
             self.__currentEngineChanged)
+        
+        self.setAcceptDrops(True)
+        
+        if hasattr(QtWebKit, 'QWebElement'):
+            self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
+            self.__accessKeysPressed = False
+            self.__accessKeyLabels = []
+            self.__accessKeyNodes = {}
+            
+            self.page().loadStarted.connect(self.__hideAccessKeys)
+            self.page().scrollRequested.connect(self.__hideAccessKeys)
     
     def __addExternalBinding(self, frame=None):
         """
@@ -1051,14 +1062,106 @@ class HelpBrowser(QWebView):
         dlg.setTitle(self.title())
         dlg.exec_()
     
+    def dragEnterEvent(self, evt):
+        """
+        Protected method called by a drag enter event.
+        
+        @param evt reference to the drag enter event (QDragEnterEvent)
+        """
+        evt.acceptProposedAction()
+    
+    def dragMoveEvent(self, evt):
+        """
+        Protected method called by a drag move event.
+        
+        @param evt reference to the drag move event (QDragMoveEvent)
+        """
+        evt.ignore()
+        if evt.source() != self:
+            if len(evt.mimeData().urls()) > 0:
+                evt.acceptProposedAction()
+            else:
+                url = QUrl(evt.mimeData().text())
+                if url.isValid():
+                    evt.acceptProposedAction()
+        
+        if not evt.isAccepted():
+            QWebView.dragMoveEvent(self, evt)
+    
+    def dropEvent(self, evt):
+        """
+        Protected method called by a drop event.
+        
+        @param evt reference to the drop event (QDropEvent)
+        """
+        QWebView.dropEvent(self, evt)
+        if not evt.isAccepted() and \
+           evt.source() != self and \
+           evt.possibleActions() & Qt.CopyAction:
+            url = QUrl()
+            if len(evt.mimeData().urls()) > 0:
+                url = evt.mimeData().urls()[0]
+            if not url.isValid():
+                url = QUrl(evt.mimeData().text())
+            if url.isValid():
+                self.setSource(url)
+                evt.acceptProposedAction()
+    
+    def mousePressEvent(self, evt):
+        """
+        Protected method called by a mouse press event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        self.mw.setEventMouseButtons(evt.buttons())
+        self.mw.setEventKeyboardModifiers(evt.modifiers())
+        
+        if evt.button() == Qt.XButton1:
+            self.pageAction(QWebPage.Back).trigger()
+        elif evt.button() == Qt.XButton2:
+            self.pageAction(QWebPage.Forward).trigger()
+        else:
+            QWebView.mousePressEvent(self, evt)
+    
+    def mouseReleaseEvent(self, evt):
+        """
+        Protected method called by a mouse release event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        accepted = evt.isAccepted()
+        self.__page.event(evt)
+        if not evt.isAccepted() and \
+           self.mw.eventMouseButtons() & Qt.MidButton:
+            url = QUrl(QApplication.clipboard().text(QClipboard.Selection))
+            if not url.isEmpty() and \
+               url.isValid() and \
+               url.scheme() != "":
+                self.mw.setEventMouseButtons(Qt.NoButton)
+                self.mw.setEventKeyboardModifiers(Qt.NoModifier)
+                self.setSource(url)
+        evt.setAccepted(accepted)
+    
     def keyPressEvent(self, evt):
         """
         Protected method called by a key press.
         
-        This method is overridden from QTextBrowser.
-        
-        @param evt the key event (QKeyEvent)
+        @param evt reference to the key event (QKeyEvent)
         """
+        if hasattr(QtWebKit, 'QWebElement'):
+            if self.__enableAccessKeys:
+                self.__accessKeysPressed = (
+                    evt.modifiers() == Qt.ControlModifier and \
+                    evt.key() == Qt.Key_Control)
+                if not self.__accessKeysPressed:
+                    if self.__checkForAccessKey(evt):
+                        self.__hideAccessKeys()
+                        evt.accept()
+                        return
+                    self.__hideAccessKeys()
+                else:
+                    QTimer.singleShot(300, self.__accessKeyShortcut)
+        
         self.ctrlPressed = (evt.key() == Qt.Key_Control)
         QWebView.keyPressEvent(self, evt)
     
@@ -1066,12 +1169,27 @@ class HelpBrowser(QWebView):
         """
         Protected method called by a key release.
         
-        This method is overridden from QTextBrowser.
-        
-        @param evt the key event (QKeyEvent)
+        @param evt reference to the key event (QKeyEvent)
         """
+        if hasattr(QtWebKit, 'QWebElement'):
+            if self.__enableAccessKeys:
+                self.__accessKeysPressed = evt.key() == Qt.Key_Control
+        
         self.ctrlPressed = False
         QWebView.keyReleaseEvent(self, evt)
+    
+    def focusOutEvent(self, evt):
+        """
+        Protected method called by a focus out event.
+        
+        @param evt reference to the focus event (QFocusEvent)
+        """
+        if hasattr(QtWebKit, 'QWebElement'):
+            if self.__accessKeysPressed:
+                self.__hideAccessKeys()
+                self.__accessKeysPressed = False
+        
+        QWebView.focusOutEvent(self, evt)
     
     def clearHistory(self):
         """
@@ -1296,6 +1414,163 @@ class HelpBrowser(QWebView):
         return "{0:.1f} {1}".format(size, unit)
     
     ############################################################################
+    ## Access key related methods below
+    ############################################################################
+    
+    def __accessKeyShortcut(self):
+        """
+        Private slot to switch the display of access keys.
+        """
+        if not self.hasFocus() or \
+           not self.__accessKeysPressed or \
+           not self.__enableAccessKeys:
+            return
+        
+        if self.__accessKeyLabels:
+            self.__hideAccessKeys()
+        else:
+            self.__showAccessKeys()
+        
+        self.__accessKeysPressed = False
+    
+    def __checkForAccessKey(self, evt):
+        """
+        Private method to check the existence of an access key and activate the
+        corresponding link.
+        
+        @param evt reference to the key event (QKeyEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if not self.__accessKeyLabels:
+            return False
+        
+        text = evt.text()
+        if not text:
+            return False
+        
+        key = text[0].upper()
+        handled = False
+        if key in self.__accessKeyNodes:
+            element = self.__accessKeyNodes[key]
+            p = element.geometry().center()
+            frame = element.webFrame()
+            p -= frame.scrollPosition()
+            frame = frame.parentFrame()
+            while frame and frame != self.page().mainFrame():
+                p -= frame.scrollPosition()
+                frame = frame.parentFrame()
+            pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton, 
+                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            qApp.sendEvent(self, pevent)
+            revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton, 
+                Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
+            qApp.sendEvent(self, revent)
+            handled = True
+        
+        return handled
+    
+    def __hideAccessKeys(self):
+        """
+        Private slot to hide the access key labels.
+        """
+        if self.__accessKeyLabels:
+            for label in self.__accessKeyLabels:
+                label.hide()
+                label.deleteLater()
+            self.__accessKeyLabels = []
+            self.__accessKeyNodes = {}
+            self.update()
+    
+    def __showAccessKeys(self):
+        """
+        Private method to show the access key labels.
+        """
+        supportedElements = [
+            "input", "a", "area", "button", "label", "legend", "textarea", 
+        ]
+        unusedKeys = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" \
+            " 0 1 2 3 4 5 6 7 8 9".split()
+        
+        viewport = QRect(self.__page.mainFrame().scrollPosition(), 
+                         self.__page.viewportSize())
+        # Priority first goes to elements with accesskey attributes
+        alreadyLabeled = []
+        for elementType in supportedElements:
+            result = self.page().mainFrame().findAllElements(elementType).toList()
+            for element in result:
+                geometry = element.geometry()
+                if geometry.size().isEmpty() or \
+                   not viewport.contains(geometry.topLeft()):
+                    continue
+                
+                accessKeyAttribute = element.attribute("accesskey").upper()
+                if not accessKeyAttribute:
+                    continue
+                
+                accessKey = ""
+                i = 0
+                while i < len(accessKeyAttribute):
+                    if accessKeyAttribute[i] in unusedKeys:
+                        accessKey = accessKeyAttribute[i]
+                        break
+                    i += 2
+                if accessKey == "":
+                    continue
+                unusedKeys.remove(accessKey)
+                self.__makeAccessLabel(accessKey, element)
+                alreadyLabeled.append(element)
+        
+        # Pick an access key first from the letters in the text and then from the
+        # list of unused access keys
+        for elementType in supportedElements:
+            result = self.page().mainFrame().findAllElements(elementType).toList()
+            for element in result:
+                geometry = element.geometry()
+                if not unusedKeys or \
+                   element in alreadyLabeled or \
+                   geometry.size().isEmpty() or \
+                   not viewport.contains(geometry.topLeft()):
+                    continue
+                
+                accessKey = ""
+                text = element.toPlainText().upper()
+                for c in text:
+                    if c in unusedKeys:
+                        accessKey = c
+                        break
+                if accessKey == "":
+                    accessKey = unusedKeys[0]
+                unusedKeys.remove(accessKey)
+                self.__makeAccessLabel(accessKey, element)
+    
+    def __makeAccessLabel(self, accessKey, element):
+        """
+        Private method to generate the access label for an element.
+        
+        @param accessKey access key to generate the label for (str)
+        @param element reference to the web element to create the label for
+            (QWebElement)
+        """
+        label = QLabel(self)
+        label.setText("<qt><b>{0}</b></qt>".format(accessKey))
+        
+        p = QToolTip.palette()
+        color = QColor(Qt.yellow).lighter(150)
+        color.setAlpha(175)
+        p.setColor(QPalette.Window, color)
+        label.setPalette(p)
+        label.setAutoFillBackground(True)
+        label.setFrameStyle(QFrame.Box | QFrame.Plain)
+        point = element.geometry().center()
+        point -= self.__page.mainFrame().scrollPosition()
+        label.move(point)
+        label.show()
+        point.setX(point.x() - label.width() // 2)
+        label.move(point)
+        self.__accessKeyLabels.append(label)
+        self.__accessKeyNodes[accessKey] = element
+    
+    ############################################################################
     ## Miscellaneous methods below
     ############################################################################
     
@@ -1312,6 +1587,11 @@ class HelpBrowser(QWebView):
         """
         Public method to indicate a change of the settings.
         """
+        if hasattr(QtWebKit, 'QWebElement'):
+            self.__enableAccessKeys = Preferences.getHelp("AccessKeysEnabled")
+            if not self.__enableAccessKeys:
+                self.__hideAccessKeys()
+        
         self.reload()
 
 

@@ -52,6 +52,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("WebSearchSuggestions"))
         self.showTabPreviews.setChecked(
             Preferences.getHelp("ShowPreview"))
+        self.accessKeysCheckBox.setChecked(
+            Preferences.getHelp("AccessKeysEnabled"))
         
         self.javaCheckBox.setChecked(
             Preferences.getHelp("JavaEnabled"))
@@ -127,6 +129,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.webSuggestionsCheckBox.isChecked())
         Preferences.setHelp("ShowPreview",
             self.showTabPreviews.isChecked())
+        Preferences.setHelp("AccessKeysEnabled",
+            self.accessKeysCheckBox.isChecked())
         
         Preferences.setHelp("JavaEnabled",
             self.javaCheckBox.isChecked())
