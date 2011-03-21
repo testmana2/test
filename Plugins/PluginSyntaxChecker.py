@@ -245,7 +245,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
-            self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
-            self.__editorSyntaxCheckerDialog.show()
-            self.__editorSyntaxCheckerDialog.start(editor.getFileName(),
-                                                   editor.text())
+                self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
+                self.__editorSyntaxCheckerDialog.show()
+                self.__editorSyntaxCheckerDialog.start(
+                    editor.getFileName() or "Unnamed.py", editor.text())
