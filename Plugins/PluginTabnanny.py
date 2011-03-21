@@ -247,9 +247,7 @@ class TabnannyPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
-            if not editor.checkDirty():
-                return
-            
-            self.__editorTabnannyDialog = TabnannyDialog()
-            self.__editorTabnannyDialog.show()
-            self.__editorTabnannyDialog.start(editor.getFileName())
+            if editor.checkDirty() and editor.getFileName() is not None:
+                self.__editorTabnannyDialog = TabnannyDialog()
+                self.__editorTabnannyDialog.show()
+                self.__editorTabnannyDialog.start(editor.getFileName())
