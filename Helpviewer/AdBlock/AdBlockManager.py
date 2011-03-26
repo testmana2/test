@@ -219,18 +219,20 @@ class AdBlockManager(QObject):
         if self.__subscriptionsLoaded:
             return
         
+        defaultSubscriptionUrl = \
+            "abp:subscribe?location=http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList"
         defaultSubscriptions = []
         defaultSubscriptions.append(
             bytes(self.__customSubscriptionUrl().toEncoded()).decode())
-        defaultSubscriptions.append(
-            "abp:subscribe?location=http://adblockplus.mozdev.org/easylist/easylist.txt&title=EasyList")
+        defaultSubscriptions.append(defaultSubscriptionUrl)
         
         subscriptions = Preferences.getHelp("AdBlockSubscriptions")
         if len(subscriptions) == 0:
             subscriptions = defaultSubscriptions
         for subscription in subscriptions:
             url = QUrl.fromEncoded(subscription.encode())
-            adBlockSubscription = AdBlockSubscription(url, self)
+            adBlockSubscription = AdBlockSubscription(url, self, 
+                subscription == defaultSubscriptionUrl)
             adBlockSubscription.rulesChanged.connect(self.rulesChanged)
             adBlockSubscription.changed.connect(self.rulesChanged)
             self.__subscriptions.append(adBlockSubscription)

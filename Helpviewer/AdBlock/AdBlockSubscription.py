@@ -30,18 +30,20 @@ class AdBlockSubscription(QObject):
     changed = pyqtSignal()
     rulesChanged = pyqtSignal()
     
-    def __init__(self, url, parent = None):
+    def __init__(self, url, parent = None, default = False):
         """
         Constructor
         
         @param url AdBlock URL for the subscription (QUrl)
         @param parent reference to the parent object (QObject)
+        @param default flag indicating a default subscription (Boolean)
         """
         QObject.__init__(self, parent)
         
         self.__url = url.toEncoded()
         self.__enabled = False
         self.__downloading = None
+        self.__defaultSubscription = default
         
         self.__title = ""
         self.__location = QByteArray()
@@ -261,10 +263,15 @@ class AdBlockSubscription(QObject):
         self.__downloading = None
         
         if reply.error() != QNetworkReply.NoError:
-            E5MessageBox.warning(None,
-                self.trUtf8("Downloading subscription rules"),
-                self.trUtf8("""<p>Subscription rules could not be downloaded.</p>"""
-                            """<p>Error: {0}</p>""").format(reply.errorString()))
+            if not self.__defaultSubscription:
+                # don't show error if we try to load the default
+                E5MessageBox.warning(None,
+                    self.trUtf8("Downloading subscription rules"),
+                    self.trUtf8("""<p>Subscription rules could not be downloaded.</p>"""
+                                """<p>Error: {0}</p>""").format(reply.errorString()))
+            else:
+                # reset after first download attempt
+                self.__defaultSubscription = False
             return
         
         if redirect.isValid():
