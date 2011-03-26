@@ -1700,7 +1700,7 @@ eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.setTitle?4(titl
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.title?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.updateNow?4()
 eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription.url?4()
-eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription?1(url, parent=None)
+eric5.Helpviewer.AdBlock.AdBlockSubscription.AdBlockSubscription?1(url, parent=None, default=False)
 eric5.Helpviewer.Bookmarks.AddBookmarkDialog.AddBookmarkDialog.accept?4()
 eric5.Helpviewer.Bookmarks.AddBookmarkDialog.AddBookmarkDialog.addedNode?4()
 eric5.Helpviewer.Bookmarks.AddBookmarkDialog.AddBookmarkDialog.currentIndex?4()
