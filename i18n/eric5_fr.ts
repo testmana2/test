@@ -217,42 +217,42 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Load subscription rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="287"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="294"/>
         <source>Downloading subscription rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="279"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="286"/>
         <source>Got empty subscription rules.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Saving subscription rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="204"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="206"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Adblock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="265"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="269"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40490,92 +40490,92 @@ correspondante.&lt;/p&gt;</translation>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Filename</source>
         <translation>Nom de fichier</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Line</source>
         <translation>Ligne</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="377"/>
+        <location filename="Tasks/TaskViewer.py" line="387"/>
         <source>&amp;Go To</source>
         <translation>&amp;Aller à</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="379"/>
+        <location filename="Tasks/TaskViewer.py" line="389"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copier</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="408"/>
+        <location filename="Tasks/TaskViewer.py" line="416"/>
         <source>&amp;Paste</source>
         <translation>Col&amp;ler</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="381"/>
+        <location filename="Tasks/TaskViewer.py" line="391"/>
         <source>&amp;Delete</source>
         <translation>&amp;Supprimer</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="383"/>
+        <location filename="Tasks/TaskViewer.py" line="393"/>
         <source>&amp;Mark Completed</source>
         <translation>&amp;Marquer effectuée</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="419"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Effacer les &amp;tâches effecuées</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="402"/>
+        <location filename="Tasks/TaskViewer.py" line="412"/>
         <source>&amp;New Task...</source>
         <translation>&amp;Nouvelle tâche...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="388"/>
+        <location filename="Tasks/TaskViewer.py" line="398"/>
         <source>P&amp;roperties...</source>
         <translation>&amp;Propriétés...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="415"/>
+        <location filename="Tasks/TaskViewer.py" line="423"/>
         <source>&amp;Filtered display</source>
         <translation>Affichage &amp;filtré</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="419"/>
+        <location filename="Tasks/TaskViewer.py" line="427"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>&amp;Configuration du filtre...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="422"/>
+        <location filename="Tasks/TaskViewer.py" line="430"/>
         <source>Resi&amp;ze columns</source>
         <translation>Ajuster la largeur des &amp;colonnes</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>Activate task filter</source>
         <translation>Activer le filtre de tâches</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Le filtre de tâches n&apos;a aucun filtre actif. Voulez-vous configurer les paramètres de filtre ?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="405"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>&amp;Regénérer les tâches de projet</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Extracting project tasks...</source>
         <translation>Extraction des tâches de projet...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Abort</source>
         <translation>Abandon</translation>
     </message>
@@ -40587,19 +40587,39 @@ correspondante.&lt;/p&gt;</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Summary</source>
         <translation>Bilan</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="424"/>
+        <location filename="Tasks/TaskViewer.py" line="432"/>
         <source>Configure...</source>
         <translation>Configuration...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="761"/>
+        <location filename="Tasks/TaskViewer.py" line="790"/>
         <source>Extracting project tasks...
 {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="378"/>
+        <source>&amp;Configure scan options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Scan Filter Patterns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

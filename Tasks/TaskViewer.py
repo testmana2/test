@@ -13,6 +13,7 @@ introductory text. This text is configurable.
 
 import os
 import time
+import fnmatch
 
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -363,16 +364,25 @@ class TaskViewer(QTreeWidget):
         self.copyTask = None
         self.projectOpen = False
         self.project = project
+        self.projectTasksScanFilter = ""
         
         self.taskFilter = TaskFilter()
         self.taskFilter.setActive(False)
         
+        self.__projectTasksMenu = QMenu(
+            self.trUtf8("P&roject Tasks"), self)
+        self.__projectTasksMenu.addAction(
+            self.trUtf8("&Regenerate project tasks"),
+            self.__regenerateProjectTasks)
+        self.__projectTasksMenu.addSeparator()
+        self.__projectTasksMenu.addAction(
+            self.trUtf8("&Configure scan options"), 
+            self.__configureProjectTasksScanOptions)
+        
         self.__menu = QMenu(self)
         self.__menu.addAction(self.trUtf8("&New Task..."), self.__newTask)
         self.__menu.addSeparator()
-        self.regenerateProjectTasksItem = \
-            self.__menu.addAction(self.trUtf8("&Regenerate project tasks"),
-                                  self.__regenerateProjectTasks)
+        self.projectTasksMenuItem = self.__menu.addMenu(self.__projectTasksMenu)
         self.__menu.addSeparator()
         self.gotoItem = self.__menu.addAction(self.trUtf8("&Go To"), self.__goToTask)
         self.__menu.addSeparator()
@@ -401,9 +411,7 @@ class TaskViewer(QTreeWidget):
         self.__backMenu = QMenu(self)
         self.__backMenu.addAction(self.trUtf8("&New Task..."), self.__newTask)
         self.__backMenu.addSeparator()
-        self.backRegenerateProjectTasksItem = \
-            self.__backMenu.addAction(self.trUtf8("&Regenerate project tasks"),
-                                      self.__regenerateProjectTasks)
+        self.backProjectTasksMenuItem = self.__backMenu.addMenu(self.__projectTasksMenu)
         self.__backMenu.addSeparator()
         self.backPasteItem = self.__backMenu.addAction(self.trUtf8("&Paste"),
                                                        self.__pasteTask)
@@ -481,14 +489,14 @@ class TaskViewer(QTreeWidget):
         itm = self.itemAt(coord)
         coord = self.mapToGlobal(coord)
         if itm is None:
-            self.backRegenerateProjectTasksItem.setEnabled(self.projectOpen)
+            self.backProjectTasksMenuItem.setEnabled(self.projectOpen)
             if self.copyTask:
                 self.backPasteItem.setEnabled(True)
             else:
                 self.backPasteItem.setEnabled(False)
             self.__backMenu.popup(coord)
         else:
-            self.regenerateProjectTasksItem.setEnabled(self.projectOpen)
+            self.projectTasksMenuItem.setEnabled(self.projectOpen)
             if itm.getFilename():
                 self.gotoItem.setEnabled(True)
                 self.deleteItem.setEnabled(True)
@@ -740,6 +748,20 @@ class TaskViewer(QTreeWidget):
             dlg.configureTaskFilter(self.taskFilter)
             self.__refreshDisplay()
 
+    def __configureProjectTasksScanOptions(self):
+        """
+        Private slot to configure scan options for project tasks.
+        """
+        filter, ok = QInputDialog.getText(
+            self,
+            self.trUtf8("Scan Filter Patterns"),
+            self.trUtf8("Enter filename patterns of files"
+                        " to be excluded separated by a comma:"),
+            QLineEdit.Normal, 
+            self.projectTasksScanFilter)
+        if ok:
+            self.projectTasksScanFilter = filter
+    
     def __regenerateProjectTasks(self):
         """
         Private slot to handle the "Regenerated project tasks" context menu entry.
@@ -747,6 +769,13 @@ class TaskViewer(QTreeWidget):
         todoMarkers = Preferences.getTasks("TasksMarkers").split()
         bugfixMarkers = Preferences.getTasks("TasksMarkersBugfix").split()
         files = self.project.pdata["SOURCES"]
+        
+        # apply file filter
+        filterList = [f.strip() for f in self.projectTasksScanFilter.split(",")
+                      if f.strip()]
+        if filterList:
+            for filter in filterList:
+                files = [f for f in files if not fnmatch.fnmatch(f, filter)]
         
         # remove all project tasks
         self.clearProjectTasks()

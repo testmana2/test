@@ -17,6 +17,8 @@ Version 5.2-snapshot-2011mmdd:
 - added support for access keys and drag & drop to the web browser
 - added support for search schemes ("s:" or "search:") and "about:home" to
   the web browser
+- added capability to the tasks viewer to ignore files based on a wildcard
+  during a project tasks scan
 
 Version 5.1-snapshot-20110123:
 - bug fixes

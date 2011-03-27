@@ -5487,6 +5487,7 @@
       <keyword name="TaskViewer.__activateFilter" id="TaskViewer.__activateFilter" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__activateFilter" />
       <keyword name="TaskViewer.__configure" id="TaskViewer.__configure" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__configure" />
       <keyword name="TaskViewer.__configureFilter" id="TaskViewer.__configureFilter" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__configureFilter" />
+      <keyword name="TaskViewer.__configureProjectTasksScanOptions" id="TaskViewer.__configureProjectTasksScanOptions" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__configureProjectTasksScanOptions" />
       <keyword name="TaskViewer.__copyTask" id="TaskViewer.__copyTask" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__copyTask" />
       <keyword name="TaskViewer.__deleteCompleted" id="TaskViewer.__deleteCompleted" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__deleteCompleted" />
       <keyword name="TaskViewer.__deleteTask" id="TaskViewer.__deleteTask" ref="eric5.Tasks.TaskViewer.html#TaskViewer.__deleteTask" />

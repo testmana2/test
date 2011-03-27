@@ -169,42 +169,42 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Load subscription rules</source>
         <translation>Üyelik kuralları yükleniyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="204"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="206"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>&apos;{0}&apos; dosyasına okuma blokesini kaldır.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Adblock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation>Block&apos;{0}&apos; dosyası [Adblock ile başlamıyor.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="287"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="294"/>
         <source>Downloading subscription rules</source>
         <translation>Üyelik kuralları indiriliyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="265"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="269"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Üyelik kuralları indirilemiyor.&lt;/p&gt;&lt;p&gt;Hatar: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="279"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="286"/>
         <source>Got empty subscription rules.</source>
         <translation>Boş üyelik kuralları alındı.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation>&apos;{0}&apos; dosyasına yazma blokesini kaldır.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Saving subscription rules</source>
         <translation>Üyelik kurallarını kaydediliyor</translation>
     </message>
@@ -37017,111 +37017,131 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Summary</source>
         <translation>Özet</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Filename</source>
         <translation>Dosyaadı</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Line</source>
         <translation>Satır</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="402"/>
+        <location filename="Tasks/TaskViewer.py" line="412"/>
         <source>&amp;New Task...</source>
         <translation>Ye&amp;ni Görev...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="405"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>P&amp;roje görevlerini yeniden üret</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="377"/>
+        <location filename="Tasks/TaskViewer.py" line="387"/>
         <source>&amp;Go To</source>
         <translation>Buraya &amp;Git</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="379"/>
+        <location filename="Tasks/TaskViewer.py" line="389"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="408"/>
+        <location filename="Tasks/TaskViewer.py" line="416"/>
         <source>&amp;Paste</source>
         <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="381"/>
+        <location filename="Tasks/TaskViewer.py" line="391"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="383"/>
+        <location filename="Tasks/TaskViewer.py" line="393"/>
         <source>&amp;Mark Completed</source>
         <translation>İşaretle&amp;me Tamamlandı</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="419"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>&amp;Tamalanan Görevleri Sil</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="388"/>
+        <location filename="Tasks/TaskViewer.py" line="398"/>
         <source>P&amp;roperties...</source>
         <translation>Özellikle&amp;r...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="415"/>
+        <location filename="Tasks/TaskViewer.py" line="423"/>
         <source>&amp;Filtered display</source>
         <translation>Süzgeçlenmiş Görüntü &amp;f</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="419"/>
+        <location filename="Tasks/TaskViewer.py" line="427"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>Süzgeç Ayarları &amp;o...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="422"/>
+        <location filename="Tasks/TaskViewer.py" line="430"/>
         <source>Resi&amp;ze columns</source>
         <translation>Sütünları yeniden boyutlandır &amp;z</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="424"/>
+        <location filename="Tasks/TaskViewer.py" line="432"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>Activate task filter</source>
         <translation>Görev süzgeçini etkinleştir</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Görev süzgeçlerinin etkin olan hiç süzgeçi yok. Bu süzgeçlerin ayarlarını yapmak ister misiniz?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Extracting project tasks...</source>
         <translation>Proje görevleri çıkarılıyor...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Abort</source>
         <translation>Vazgeç</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="761"/>
+        <location filename="Tasks/TaskViewer.py" line="790"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Proje görevleri çıkarılıyor...
 {0}</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="378"/>
+        <source>&amp;Configure scan options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Scan Filter Patterns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <source>P&amp;roject Tasks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -169,42 +169,42 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Load subscription rules</source>
         <translation>Nahrát odebíraná pravidla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="287"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="294"/>
         <source>Downloading subscription rules</source>
         <translation>Stažení odebíraných pravidel</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="279"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="286"/>
         <source>Got empty subscription rules.</source>
         <translation>Odebíraná pravidla jsou prázdná.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Saving subscription rules</source>
         <translation>Ukládání odebíraných pravidel</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="204"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="206"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>Nelze otevřít adblock soubor &apos;{0}&apos; pro čtení.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="212"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="214"/>
         <source>Adblock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation>Adblock soubor &apos;{0}&apos; nezačíná s [Adblock.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="265"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="269"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pravidla pro předplatné nelze stáhnout.&lt;/p&gt;&lt;p&gt;Chyba: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="308"/>
+        <location filename="Helpviewer/AdBlock/AdBlockSubscription.py" line="315"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation>Nelze otevřít adblock soubor &apos;{0}&apos; pro zápis.</translation>
     </message>
@@ -37166,110 +37166,130 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Filename</source>
         <translation>Jméno souboru</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Line</source>
         <translation>Řádek</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="402"/>
+        <location filename="Tasks/TaskViewer.py" line="412"/>
         <source>&amp;New Task...</source>
         <translation>&amp;Nová úloha...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="377"/>
+        <location filename="Tasks/TaskViewer.py" line="387"/>
         <source>&amp;Go To</source>
         <translation>&amp;Jít na</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="379"/>
+        <location filename="Tasks/TaskViewer.py" line="389"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopírovat</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="408"/>
+        <location filename="Tasks/TaskViewer.py" line="416"/>
         <source>&amp;Paste</source>
         <translation>V&amp;ložit</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="381"/>
+        <location filename="Tasks/TaskViewer.py" line="391"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="383"/>
+        <location filename="Tasks/TaskViewer.py" line="393"/>
         <source>&amp;Mark Completed</source>
         <translation>Značka &amp;Hotovo</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="419"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Smaza&amp;t hotové úlohy</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="388"/>
+        <location filename="Tasks/TaskViewer.py" line="398"/>
         <source>P&amp;roperties...</source>
         <translation>&amp;Natavení...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="415"/>
+        <location filename="Tasks/TaskViewer.py" line="423"/>
         <source>&amp;Filtered display</source>
         <translation>&amp;Filtrovaný výstup</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="419"/>
+        <location filename="Tasks/TaskViewer.py" line="427"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>Konfigura&amp;ce filtru...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="422"/>
+        <location filename="Tasks/TaskViewer.py" line="430"/>
         <source>Resi&amp;ze columns</source>
         <translation>&amp;Změnit šířky sloupců</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>Activate task filter</source>
         <translation>Aktivovat filtr úloh</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="718"/>
+        <location filename="Tasks/TaskViewer.py" line="726"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Filtr úloh nemá žádný aktivní. Chcete konfigurovat nastavení filtru?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="405"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>Znovu vygene&amp;rovat úlohy projektu</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Extracting project tasks...</source>
         <translation>Extrahovat úlohy projektu...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <location filename="Tasks/TaskViewer.py" line="784"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="353"/>
+        <location filename="Tasks/TaskViewer.py" line="354"/>
         <source>Summary</source>
         <translation>Souhrn</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="424"/>
+        <location filename="Tasks/TaskViewer.py" line="432"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="761"/>
+        <location filename="Tasks/TaskViewer.py" line="790"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Extrahování úloh projektu....{0}</translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="378"/>
+        <source>&amp;Configure scan options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Scan Filter Patterns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="755"/>
+        <source>Enter filename patterns of files to be excluded separated by a comma:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <source>P&amp;roject Tasks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

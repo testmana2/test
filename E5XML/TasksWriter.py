@@ -58,6 +58,11 @@ class TasksWriter(XMLStreamWriterBase):
         self.writeStartElement("Tasks")
         self.writeAttribute("version", tasksFileFormatVersion)
         
+        # write the project scan filter
+        if self.forProject:
+            self.writeTextElement("ProjectScanFilter",
+                e5App().getObject("TaskViewer").projectTasksScanFilter.strip())
+        
         # do the tasks
         if self.forProject:
             tasks = e5App().getObject("TaskViewer").getProjectTasks()
