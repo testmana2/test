@@ -16,11 +16,12 @@ class GotoDialog(QDialog, Ui_GotoDialog):
     """
     Class implementing the Goto dialog.
     """
-    def __init__(self, maximum, parent, name=None, modal=False):
+    def __init__(self, maximum, curLine, parent, name=None, modal=False):
         """
         Constructor
         
-        @param maximum the maximum allowed for the spinbox (int)
+        @param maximum maximum allowed for the spinbox (integer)
+        @param curLine current line number (integer)
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         @param modal flag indicating a modal dialog (boolean)
@@ -32,6 +33,7 @@ class GotoDialog(QDialog, Ui_GotoDialog):
         self.setModal(modal)
         
         self.linenumberSpinBox.setMaximum(maximum)
+        self.linenumberSpinBox.setValue(curLine)
         self.linenumberSpinBox.selectAll()
         
     def getLinenumber(self):

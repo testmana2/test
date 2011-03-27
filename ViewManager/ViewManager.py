@@ -4089,7 +4089,9 @@ class ViewManager(QObject):
         Private method to handle the goto action.
         """
         aw = self.activeWindow()
-        dlg = GotoDialog(aw.lines(), self.ui, None, True)
+        lines = aw.lines()
+        curLine = aw.getCursorPosition()[0] + 1
+        dlg = GotoDialog(lines, curLine, self.ui, None, True)
         if dlg.exec_() == QDialog.Accepted:
             aw.gotoLine(dlg.getLinenumber())
         
