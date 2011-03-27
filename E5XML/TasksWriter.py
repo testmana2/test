@@ -12,7 +12,7 @@ import time
 from E5Gui.E5Application import e5App
 
 from .XMLStreamWriterBase import XMLStreamWriterBase
-from .Config import tasksFileFormatVersion
+from .Config import tasksFileFormatVersion, tasksFileFormatVersionAlternative
 
 import Preferences
 import Utilities
@@ -38,10 +38,15 @@ class TasksWriter(XMLStreamWriterBase):
         """
         Public method to write the XML to the file.
         """
+        viewer = e5App().getObject("TaskViewer")
+        
         XMLStreamWriterBase.writeXML(self)
         
+        formatVersion = tasksFileFormatVersion
+        if self.forProject and viewer.projectTasksScanFilter is not None:
+            formatVersion = tasksFileFormatVersionAlternative
         self.writeDTD('<!DOCTYPE Tasks SYSTEM "Tasks-{0}.dtd">'.format(
-            tasksFileFormatVersion))
+            formatVersion))
         
         # add some generation comments
         if self.forProject:
@@ -57,11 +62,16 @@ class TasksWriter(XMLStreamWriterBase):
         self.writeStartElement("Tasks")
         self.writeAttribute("version", tasksFileFormatVersion)
         
+        # write the project scan filter
+        if self.forProject and viewer.projectTasksScanFilter is not None:
+            self.writeTextElement("ProjectScanFilter",
+                e5App().getObject("TaskViewer").projectTasksScanFilter.strip())
+        
         # do the tasks
         if self.forProject:
-            tasks = e5App().getObject("TaskViewer").getProjectTasks()
+            tasks = viewer.getProjectTasks()
         else:
-            tasks = e5App().getObject("TaskViewer").getGlobalTasks()
+            tasks = viewer.getGlobalTasks()
         for task in tasks:
             self.writeStartElement("Task")
             self.writeAttribute("priority", str(task.priority))

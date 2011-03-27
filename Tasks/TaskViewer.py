@@ -360,6 +360,7 @@ class TaskViewer(QTreeWidget):
         self.copyTask = None
         self.projectOpen = False
         self.project = project
+        self.projectTasksScanFilter = None
         
         self.taskFilter = TaskFilter()
         self.taskFilter.setActive(False)

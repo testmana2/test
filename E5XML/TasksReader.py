@@ -20,7 +20,7 @@ class TasksReader(XMLStreamReaderBase):
     """
     Class for reading an XML tasks file.
     """
-    supportedVersions = ["4.2"]
+    supportedVersions = ["4.2", "5.0"]
     
     def __init__(self, device, forProject = False, viewer = None):
         """
@@ -55,6 +55,10 @@ class TasksReader(XMLStreamReaderBase):
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "Task":
                     self.__readTask()
+                elif self.name() == "ProjectScanFilter":
+                    filter = self.readElementText()
+                    if self.forProject:
+                        self.viewer.projectTasksScanFilter = filter
                 else:
                     self.raiseUnexpectedStartTag(self.name())
         
