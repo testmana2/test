@@ -63,13 +63,16 @@ QDialog, Ui_GotoDialog
 </table>
 <a NAME="GotoDialog.__init__" ID="GotoDialog.__init__"></a>
 <h4>GotoDialog (Constructor)</h4>
-<b>GotoDialog</b>(<i>maximum, parent, name = None, modal = False</i>)
+<b>GotoDialog</b>(<i>maximum, curLine, parent, name = None, modal = False</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>maximum</i></dt>
 <dd>
-the maximum allowed for the spinbox (int)
+maximum allowed for the spinbox (integer)
+</dd><dt><i>curLine</i></dt>
+<dd>
+current line number (integer)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this dialog (QWidget)
