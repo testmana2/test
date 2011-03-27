@@ -429,6 +429,20 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgBranchAct.triggered[()].connect(self.__hgBranch)
         self.actions.append(self.hgBranchAct)
         
+        self.hgPushBranchAct = E5Action(self.trUtf8('Push new branch'), 
+                self.trUtf8('Push new branch'),
+                0, 0, self, 'mercurial_push_branch')
+        self.hgPushBranchAct.setStatusTip(self.trUtf8(
+            'Push the current branch of the local project as a new named branch'
+        ))
+        self.hgPushBranchAct.setWhatsThis(self.trUtf8(
+            """<b>Push new branch</b>"""
+            """<p>This pushes the current branch of the local project"""
+            """ as a new named branch.</p>"""
+        ))
+        self.hgPushBranchAct.triggered[()].connect(self.__hgPushNewBranch)
+        self.actions.append(self.hgPushBranchAct)
+        
         self.hgCloseBranchAct = E5Action(self.trUtf8('Close branch'),
                 self.trUtf8('Close branch'),
                 0, 0, self, 'mercurial_close_branch')
@@ -817,6 +831,8 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsTagAct)
         menu.addAction(self.hgTagListAct)
         menu.addAction(self.hgBranchAct)
+        if self.vcs.versionStr >= '1.6.0':
+            menu.addAction(self.hgPushBranchAct)
         menu.addAction(self.hgCloseBranchAct)
         menu.addAction(self.hgBranchListAct)
         menu.addSeparator()
@@ -960,7 +976,7 @@ class HgProjectHelper(VcsProjectHelper):
     
     def __hgCloseBranch(self):
         """
-        Protected slot used to close the current branch of the local project.
+        Private slot used to close the current branch of the local project.
         """
         if Preferences.getVCS("AutoSaveProject"):
             self.project.saveProject()
@@ -968,104 +984,110 @@ class HgProjectHelper(VcsProjectHelper):
             self.project.saveAllScripts()
         self.vcs.vcsCommit(self.project.ppath, '', closeBranch=True)
     
+    def __hgPushNewBranch(self):
+        """
+        Private slot to push a new named branch.
+        """
+        self.vcs.hgPush(self.project.ppath, newBranch = True)
+    
     def __hgEditRepoConfig(self):
         """
-        Protected slot used to edit the repository config file.
+        Private slot used to edit the repository config file.
         """
         self.vcs.hgEditConfig(self.project.ppath)
     
     def __hgShowConfig(self):
         """
-        Protected slot used to show the combined config.
+        Private slot used to show the combined config.
         """
         self.vcs.hgShowConfig(self.project.ppath)
     
     def __hgVerify(self):
         """
-        Protected slot used to verify the integrity of the repository.
+        Private slot used to verify the integrity of the repository.
         """
         self.vcs.hgVerify(self.project.ppath)
     
     def __hgShowPaths(self):
         """
-        Protected slot used to show the aliases for remote repositories.
+        Private slot used to show the aliases for remote repositories.
         """
         self.vcs.hgShowPaths(self.project.ppath)
     
     def __hgRecover(self):
         """
-        Protected slot used to recover from an interrupted transaction.
+        Private slot used to recover from an interrupted transaction.
         """
         self.vcs.hgRecover(self.project.ppath)
     
     def __hgIdentify(self):
         """
-        Protected slot used to identify the project directory.
+        Private slot used to identify the project directory.
         """
         self.vcs.hgIdentify(self.project.ppath)
     
     def __hgCreateIgnore(self):
         """
-        Protected slot used to create a .hgignore file for the project.
+        Private slot used to create a .hgignore file for the project.
         """
         self.vcs.hgCreateIgnoreFile(self.project.ppath, autoAdd=True)
     
     def __hgBundle(self):
         """
-        Protected slot used to create a changegroup file.
+        Private slot used to create a changegroup file.
         """
         self.vcs.hgBundle(self.project.ppath)
     
     def __hgPreviewBundle(self):
         """
-        Protected slot used to preview a changegroup file.
+        Private slot used to preview a changegroup file.
         """
         self.vcs.hgPreviewBundle(self.project.ppath)
     
     def __hgIdentifyBundle(self):
         """
-        Protected slot used to identify a changegroup file.
+        Private slot used to identify a changegroup file.
         """
         self.vcs.hgIdentifyBundle(self.project.ppath)
     
     def __hgUnbundle(self):
         """
-        Protected slot used to apply changegroup files.
+        Private slot used to apply changegroup files.
         """
         self.vcs.hgUnbundle(self.project.ppath)
     
     def __hgBisectGood(self):
         """
-        Protected slot used to execute the bisect --good command.
+        Private slot used to execute the bisect --good command.
         """
         self.vcs.hgBisect(self.project.ppath, "good")
     
     def __hgBisectBad(self):
         """
-        Protected slot used to execute the bisect --bad command.
+        Private slot used to execute the bisect --bad command.
         """
         self.vcs.hgBisect(self.project.ppath, "bad")
     
     def __hgBisectSkip(self):
         """
-        Protected slot used to execute the bisect --skip command.
+        Private slot used to execute the bisect --skip command.
         """
         self.vcs.hgBisect(self.project.ppath, "skip")
     
     def __hgBisectReset(self):
         """
-        Protected slot used to execute the bisect --reset command.
+        Private slot used to execute the bisect --reset command.
         """
         self.vcs.hgBisect(self.project.ppath, "reset")
     
     def __hgBackout(self):
         """
-        Protected slot used to back out changes of a changeset.
+        Private slot used to back out changes of a changeset.
         """
         self.vcs.hgBackout(self.project.ppath)
     
     def __hgServe(self):
         """
-        Protected slot used to serve the project.
+        Private slot used to serve the project.
         """
         self.vcs.hgServe(self.project.ppath)

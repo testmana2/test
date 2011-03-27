@@ -19,6 +19,7 @@ Version 5.2-snapshot-2011mmdd:
   the web browser
 - added capability to the tasks viewer to ignore files based on a wildcard
   during a project tasks scan
+- added an action to push a new named branch to the Mercurial plug-in
 
 Version 5.1-snapshot-20110123:
 - bug fixes
