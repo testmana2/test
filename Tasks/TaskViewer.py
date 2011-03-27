@@ -75,8 +75,14 @@ class Task(QTreeWidgetItem):
         
         if self.completed:
             self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
+            strikeOut = True
         else:
             self.setIcon(0, UI.PixmapCache.getIcon("empty.png"))
+            strikeOut = False
+        for column in range(2, 5):
+            f = self.font(column)
+            f.setStrikeOut(strikeOut)
+            self.setFont(column, f)
         
         if self.priority == 1:
             self.setIcon(1, UI.PixmapCache.getIcon("empty.png"))
@@ -150,8 +156,14 @@ class Task(QTreeWidgetItem):
         self.completed = completed
         if self.completed:
             self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))
+            strikeOut = True
         else:
             self.setIcon(0, UI.PixmapCache.getIcon("empty.png"))
+            strikeOut = False
+        for column in range(2, 5):
+            f = self.font(column)
+            f.setStrikeOut(strikeOut)
+            self.setFont(column, f)
     
     def isCompleted(self):
         """
