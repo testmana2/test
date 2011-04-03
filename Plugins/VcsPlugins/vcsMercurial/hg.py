@@ -245,9 +245,8 @@ class Hg(VersionControl):
                 args.append('--addremove')
                 args.append('--message')
                 args.append(msg)
-                args.append(projectDir)
                 dia = HgDialog(self.trUtf8('Initial commit to Mercurial repository'))
-                res = dia.startProcess(args)
+                res = dia.startProcess(args, projectDir)
                 if res:
                     dia.exec_()
                 status = dia.normalExit()
