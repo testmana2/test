@@ -299,7 +299,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             QApplication.restoreOverrideCursor()
         except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
-            res = E5MessageBox.critical(self,
+            res = E5MessageBox.retryAbort(self,
                 self.trUtf8("Send bug report"),
                 self.trUtf8("""<p>Message could not be sent.<br>Reason: {0}</p>""")
                     .format(str(e)),
