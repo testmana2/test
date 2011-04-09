@@ -105,6 +105,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         self.__model = E5RequestModel(networkAccessManager, self)
         self.__proxyModel.setSourceModel(self.__model)
         self.requestsList.setModel(self.__proxyModel)
+        self.__proxyModel.rowsInserted.connect(self.requestsList.scrollToBottom)
         self.requestsList.selectionModel().currentChanged[QModelIndex, QModelIndex]\
             .connect(self.__currentChanged)
         
