@@ -9,7 +9,7 @@ Module implementing a network monitor dialog.
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, QNetworkAccessManager
+from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 import UI.PixmapCache
 
@@ -229,9 +229,7 @@ class E5RequestModel(QAbstractTableModel):
         }
         
         self.requests = []
-        networkAccessManager\
-            .requestCreated[QNetworkAccessManager.Operation, QNetworkRequest, QNetworkReply]\
-            .connect(self.__requestCreated)
+        networkAccessManager.requestCreated.connect(self.__requestCreated)
     
     def __requestCreated(self, operation, request, reply):
         """
