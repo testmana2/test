@@ -3497,8 +3497,12 @@ class Editor(QsciScintillaCompat):
             Preferences.getEditor("AutoCompletionCaseSensitivity"))
         self.setAutoCompletionReplaceWord(
             Preferences.getEditor("AutoCompletionReplaceWord"))
-        self.setAutoCompletionShowSingle(
-        Preferences.getEditor("AutoCompletionShowSingle"))
+        try:
+            self.setAutoCompletionUseSingle(
+                Preferences.getEditor("AutoCompletionShowSingle"))
+        except AttributeError:
+            self.setAutoCompletionShowSingle(
+                Preferences.getEditor("AutoCompletionShowSingle"))
         autoCompletionSource = Preferences.getEditor("AutoCompletionSource")
         if autoCompletionSource == QsciScintilla.AcsDocument:
             self.setAutoCompletionSource(QsciScintilla.AcsDocument)
