@@ -871,6 +871,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>eric5_webbrowser.pyw</Source>
     <Source>eric5_api.py</Source>
     <Source>eric5_doc.py</Source>
+    <Source>Helpviewer/VirusTotalApi.py</Source>
+    <Source>Preferences/ConfigurationPages/HelpVirusTotalPage.py</Source>
+    <Source>Helpviewer/Download/DownloadAskActionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1108,6 +1111,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8Dialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8CodeSelectionDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
+    <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

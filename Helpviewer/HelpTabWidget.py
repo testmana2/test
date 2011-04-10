@@ -219,11 +219,13 @@ class HelpTabWidget(E5TabWidget):
         browser = self.widget(self.__tabContextMenuIndex)
         self.printPreviewBrowser(browser)
     
-    def newBrowser(self, link=None):
+    def newBrowser(self, link=None, requestData=None):
         """
         Public method to create a new web browser tab.
         
         @param link link to be shown (string or QUrl)
+        @param requestData tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
         """
         if link is None:
             linkName = ""
@@ -267,7 +269,8 @@ class HelpTabWidget(E5TabWidget):
         self.__closeButton and self.__closeButton.setEnabled(True)
         self.__navigationButton.setEnabled(True)
         
-        if not linkName and Preferences.getHelp("StartupBehavior") == 0:
+        if not linkName and not requestData and \
+           Preferences.getHelp("StartupBehavior") == 0:
             linkName = Preferences.getHelp("HomePage")
         
         if linkName:
@@ -279,6 +282,8 @@ class HelpTabWidget(E5TabWidget):
                 self.setTabText(index,
                     self.__elide(browser.documentTitle().replace("&", "&&")))
                 self.setTabToolTip(index, browser.documentTitle())
+        elif requestData:
+            browser.load(*requestData)
     
     def __showNavigationMenu(self):
         """

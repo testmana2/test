@@ -1875,6 +1875,8 @@ eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.on_bl
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.on_domainEdit_textChanged?4(txt)
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog.setDomainName?4(domain)
 eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.CookiesExceptionsDialog?1(cookieJar, parent=None)
+eric5.Helpviewer.Download.DownloadAskActionDialog.DownloadAskActionDialog.getAction?4()
+eric5.Helpviewer.Download.DownloadAskActionDialog.DownloadAskActionDialog?1(fileName, mimeType, baseUrl, parent=None)
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.absoluteFilePath?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesReceived?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.bytesTotal?4()
@@ -1900,7 +1902,7 @@ eric5.Helpviewer.Download.DownloadItem.DownloadItem.retry?4()
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.setData?4(data)
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.setIcon?4(icon)
 eric5.Helpviewer.Download.DownloadItem.DownloadItem.statusChanged?7
-eric5.Helpviewer.Download.DownloadItem.DownloadItem?1(reply=None, requestFilename=False, webPage=None, download=False, parent=None)
+eric5.Helpviewer.Download.DownloadItem.DownloadItem?1(reply=None, requestFilename=False, webPage=None, download=False, parent=None, mainWindow=None)
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveExit?7
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveNever?7
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.RemoveSuccessFullDownload?7
@@ -1909,10 +1911,10 @@ eric5.Helpviewer.Download.DownloadManager.DownloadManager.allowQuit?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.changeOccurred?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.cleanup?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.count?4()
-eric5.Helpviewer.Download.DownloadManager.DownloadManager.download?4(requestOrUrl, requestFileName=False)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.download?4(requestOrUrl, requestFileName=False, mainWindow=None)
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.downloadDirectory?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.downloads?4()
-eric5.Helpviewer.Download.DownloadManager.DownloadManager.handleUnsupportedContent?4(reply, requestFileName=False, webPage=None, download=False)
+eric5.Helpviewer.Download.DownloadManager.DownloadManager.handleUnsupportedContent?4(reply, requestFileName=False, webPage=None, download=False, mainWindow=None)
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.on_cleanupButton_clicked?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.removePolicy?4()
 eric5.Helpviewer.Download.DownloadManager.DownloadManager.save?4()
@@ -2033,7 +2035,7 @@ eric5.Helpviewer.HelpTabWidget.HelpTabWidget.closeBrowserAt?4(index)
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.currentBrowser?4()
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.currentUrlBar?4()
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.getSourceFileList?4()
-eric5.Helpviewer.HelpTabWidget.HelpTabWidget.newBrowser?4(link=None)
+eric5.Helpviewer.HelpTabWidget.HelpTabWidget.newBrowser?4(link=None, requestData=None)
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.preferencesChanged?4()
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.printBrowser?4(browser=None)
 eric5.Helpviewer.HelpTabWidget.HelpTabWidget.printBrowserPdf?4(browser=None)
@@ -2090,7 +2092,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.icon?4(url)
 eric5.Helpviewer.HelpWindow.HelpWindow.mainWindow?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.maxMenuFilePathLen?7
 eric5.Helpviewer.HelpWindow.HelpWindow.networkAccessManager?4()
-eric5.Helpviewer.HelpWindow.HelpWindow.newTab?4(link=None)
+eric5.Helpviewer.HelpWindow.HelpWindow.newTab?4(link=None, requestData=None)
 eric5.Helpviewer.HelpWindow.HelpWindow.newWindow?4(link=None)
 eric5.Helpviewer.HelpWindow.HelpWindow.openSearchManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.openUrl?4(url, title)
@@ -2098,6 +2100,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.openUrlNewTab?4(url, title)
 eric5.Helpviewer.HelpWindow.HelpWindow.passwordManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.preferencesChanged?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.privacyChanged?7
+eric5.Helpviewer.HelpWindow.HelpWindow.requestVirusTotalScan?4(url)
 eric5.Helpviewer.HelpWindow.HelpWindow.search?4(word)
 eric5.Helpviewer.HelpWindow.HelpWindow.searchEnginesAction?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.setBackwardAvailable?4(b)
@@ -2438,6 +2441,23 @@ eric5.Helpviewer.UrlBar.UrlBar.UrlBar.setPrivateMode?4(on)
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar?1(mainWindow, parent=None)
 eric5.Helpviewer.UserAgent.UserAgentDefaults.UserAgentDefaults?7
 eric5.Helpviewer.UserAgent.UserAgentMenu.UserAgentMenu?1(title, parent=None)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetFileReportPattern?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetUrlReportPattern?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ReportFileScanPagePattern?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ReportUrlScanPagePattern?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ScanUrlPattern?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.SearchUrl?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_InvalidServiceKey?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemNotPresent?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemPresent?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_RequestLimitReached?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.TestServiceKeyScanID?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.checkServiceKeyValidity?4(key, protocol="")
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getFileScanReportUrl?4(scanId)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getSearchRequestData?4(term)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getUrlScanReportUrl?4(scanId)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.submitUrl?4(url)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI?1(parent=None)
 eric5.IconEditor.IconEditorGrid.IconEditCommand.redo?4()
 eric5.IconEditor.IconEditorGrid.IconEditCommand.setAfterImage?4(image)
 eric5.IconEditor.IconEditorGrid.IconEditCommand.undo?4()
@@ -4272,6 +4292,11 @@ eric5.Preferences.ConfigurationPages.HelpViewersPage.HelpViewersPage.on_webbrows
 eric5.Preferences.ConfigurationPages.HelpViewersPage.HelpViewersPage.save?4()
 eric5.Preferences.ConfigurationPages.HelpViewersPage.HelpViewersPage?1()
 eric5.Preferences.ConfigurationPages.HelpViewersPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.on_testButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged?4(txt)
+eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage.save?4()
+eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage?1(parent = None)
+eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_defaultHomeButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_setCurrentPageButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.save?4()

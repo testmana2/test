@@ -9,16 +9,17 @@ Module implementing a widget controlling a download.
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, QUrl, \
     QIODevice
-from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices
+from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QDialog
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5FileDialog
 
 from .Ui_DownloadItem import Ui_DownloadItem
 
 import Helpviewer.HelpWindow
 
 from .DownloadUtilities import timeString, dataString
+from .DownloadAskActionDialog import DownloadAskActionDialog
 
 import UI.PixmapCache
 import Preferences
@@ -37,16 +38,17 @@ class DownloadItem(QWidget, Ui_DownloadItem):
     progress = pyqtSignal(int, int)
     
     def __init__(self, reply=None, requestFilename=False, webPage=None,
-                 download=False, parent=None):
+                 download=False, parent=None, mainWindow=None):
         """
         Constructor
         
-        @param reply reference to the network reply object (QNetworkReply)
-        @param requestFilename flag indicating to ask the user for a filename (boolean)
-        @param webPage reference to the web page object the download originated
+        @keyparam reply reference to the network reply object (QNetworkReply)
+        @keyparam requestFilename flag indicating to ask the user for a filename (boolean)
+        @keyparam webPage reference to the web page object the download originated
             from (QWebPage)
-        @param download flag indicating a download operation (boolean)
-        @param parent reference to the parent widget (QWidget)
+        @keyparam download flag indicating a download operation (boolean)
+        @keyparam parent reference to the parent widget (QWidget)
+        @keyparam mainWindow reference to the main window (HelpWindow)
         """
         QWidget.__init__(self, parent)
         self.setupUi(self)
@@ -68,6 +70,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         icon = self.style().standardIcon(QStyle.SP_FileIcon)
         self.fileIcon.setPixmap(icon.pixmap(48, 48))
         
+        self.__mainWindow = mainWindow
         self.__reply = reply
         self.__requestFilename = requestFilename
         self.__page = webPage
@@ -149,15 +152,13 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             ask = True
         self.__autoOpen = False
         if not self.__toDownload:
-            res = E5MessageBox.question(self,
-                self.trUtf8("Downloading"),
-                self.trUtf8("""<p>You are about to download the file <b>{0}</b>.</p>"""
-                            """<p>What do you want to do?</p>""").format(fileName),
-                E5MessageBox.StandardButtons(
-                    E5MessageBox.Open | \
-                    E5MessageBox.Save | \
-                    E5MessageBox.Cancel))
-            if res == E5MessageBox.Cancel:
+            url = self.__reply.url()
+            dlg = DownloadAskActionDialog(
+                QFileInfo(fileName).fileName(),
+                self.__reply.header(QNetworkRequest.ContentTypeHeader),
+                "{0}://{1}".format(url.scheme(), url.authority()),
+                self)
+            if dlg.exec_() == QDialog.Rejected or dlg.getAction() == "cancel":
                 self.progressBar.setVisible(False)
                 self.__reply.close()
                 self.on_stopButton_clicked()
@@ -166,7 +167,19 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__canceledFileSelect = True
                 return
             
-            self.__autoOpen = res == E5MessageBox.Open
+            if dlg.getAction() == "scan":
+                self.__mainWindow.requestVirusTotalScan(url)
+                
+                self.progressBar.setVisible(False)
+                self.__reply.close()
+                self.on_stopButton_clicked()
+                self.filenameLabel.setText(
+                    self.trUtf8("VirusTotal scan scheduled: {0}").format(
+                        QFileInfo(defaultFileName).fileName()))
+                self.__canceledFileSelect = True
+                return
+            
+            self.__autoOpen = dlg.getAction() == "open"
             fileName = QDesktopServices.storageLocation(QDesktopServices.TempLocation) + \
                         '/' + QFileInfo(fileName).completeBaseName()
         

@@ -20,6 +20,7 @@ Version 5.2-snapshot-2011mmdd:
 - added capability to the tasks viewer to ignore files based on a wildcard
   during a project tasks scan
 - added an action to push a new named branch to the Mercurial plug-in
+- added an interface to VirusTotal to the web browser
 
 Version 5.1-snapshot-20110123:
 - bug fixes

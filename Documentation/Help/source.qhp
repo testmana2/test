@@ -220,6 +220,7 @@
               <section title="eric5.Helpviewer.CookieJar.CookiesExceptionsDialog" ref="eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.html" />
             </section>
             <section title="eric5.Helpviewer.Download" ref="index-eric5.Helpviewer.Download.html">
+              <section title="eric5.Helpviewer.Download.DownloadAskActionDialog" ref="eric5.Helpviewer.Download.DownloadAskActionDialog.html" />
               <section title="eric5.Helpviewer.Download.DownloadItem" ref="eric5.Helpviewer.Download.DownloadItem.html" />
               <section title="eric5.Helpviewer.Download.DownloadManager" ref="eric5.Helpviewer.Download.DownloadManager.html" />
               <section title="eric5.Helpviewer.Download.DownloadModel" ref="eric5.Helpviewer.Download.DownloadModel.html" />
@@ -299,6 +300,7 @@
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
             <section title="eric5.Helpviewer.SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
             <section title="eric5.Helpviewer.SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html" />
+            <section title="eric5.Helpviewer.VirusTotalApi" ref="eric5.Helpviewer.VirusTotalApi.html" />
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
             <section title="eric5.IconEditor.cursors" ref="index-eric5.IconEditor.cursors.html">
@@ -550,6 +552,7 @@
               <section title="eric5.Preferences.ConfigurationPages.HelpAppearancePage" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpDocumentationPage" ref="eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpViewersPage" ref="eric5.Preferences.ConfigurationPages.HelpViewersPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.IconsPage" ref="eric5.Preferences.ConfigurationPages.IconsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.IconsPreviewDialog" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
@@ -2570,6 +2573,15 @@
       <keyword name="HelpTabBar.mouseMoveEvent" id="HelpTabBar.mouseMoveEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mouseMoveEvent" />
       <keyword name="HelpTabBar.mousePressEvent" id="HelpTabBar.mousePressEvent" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.mousePressEvent" />
       <keyword name="HelpTabBar.tabRemoved" id="HelpTabBar.tabRemoved" ref="eric5.Helpviewer.HelpTabBar.html#HelpTabBar.tabRemoved" />
+      <keyword name="VirusTotalApi (Module)" id="VirusTotalApi (Module)" ref="eric5.Helpviewer.VirusTotalApi.html" />
+      <keyword name="VirusTotalAPI" id="VirusTotalAPI" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI" />
+      <keyword name="VirusTotalAPI (Constructor)" id="VirusTotalAPI (Constructor)" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__init__" />
+      <keyword name="VirusTotalAPI.__loadSettings" id="VirusTotalAPI.__loadSettings" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__loadSettings" />
+      <keyword name="VirusTotalAPI.checkServiceKeyValidity" id="VirusTotalAPI.checkServiceKeyValidity" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.checkServiceKeyValidity" />
+      <keyword name="VirusTotalAPI.getFileScanReportUrl" id="VirusTotalAPI.getFileScanReportUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getFileScanReportUrl" />
+      <keyword name="VirusTotalAPI.getSearchRequestData" id="VirusTotalAPI.getSearchRequestData" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getSearchRequestData" />
+      <keyword name="VirusTotalAPI.getUrlScanReportUrl" id="VirusTotalAPI.getUrlScanReportUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getUrlScanReportUrl" />
+      <keyword name="VirusTotalAPI.submitUrl" id="VirusTotalAPI.submitUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.submitUrl" />
       <keyword name="SslInfoDialog (Module)" id="SslInfoDialog (Module)" ref="eric5.Helpviewer.SslInfoDialog.html" />
       <keyword name="SslInfoDialog" id="SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog" />
       <keyword name="SslInfoDialog (Constructor)" id="SslInfoDialog (Constructor)" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__init__" />
@@ -2638,6 +2650,7 @@
       <keyword name="HelpBrowser.__statusBarMessage" id="HelpBrowser.__statusBarMessage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__statusBarMessage" />
       <keyword name="HelpBrowser.__unsupportedContent" id="HelpBrowser.__unsupportedContent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__unsupportedContent" />
       <keyword name="HelpBrowser.__urlChanged" id="HelpBrowser.__urlChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__urlChanged" />
+      <keyword name="HelpBrowser.__virusTotal" id="HelpBrowser.__virusTotal" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__virusTotal" />
       <keyword name="HelpBrowser.__webInspector" id="HelpBrowser.__webInspector" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__webInspector" />
       <keyword name="HelpBrowser.addBookmark" id="HelpBrowser.addBookmark" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.addBookmark" />
       <keyword name="HelpBrowser.backward" id="HelpBrowser.backward" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.backward" />
@@ -2795,6 +2808,9 @@
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />
+      <keyword name="HelpWindow.__virusTotalScanCurrentSite" id="HelpWindow.__virusTotalScanCurrentSite" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalScanCurrentSite" />
+      <keyword name="HelpWindow.__virusTotalSearch" id="HelpWindow.__virusTotalSearch" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearch" />
+      <keyword name="HelpWindow.__virusTotalSearchChanged" id="HelpWindow.__virusTotalSearchChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearchChanged" />
       <keyword name="HelpWindow.__warning" id="HelpWindow.__warning" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__warning" />
       <keyword name="HelpWindow.__whatsThis" id="HelpWindow.__whatsThis" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__whatsThis" />
       <keyword name="HelpWindow.__zoomIn" id="HelpWindow.__zoomIn" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomIn" />
@@ -2826,6 +2842,7 @@
       <keyword name="HelpWindow.openUrlNewTab" id="HelpWindow.openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrlNewTab" />
       <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
+      <keyword name="HelpWindow.requestVirusTotalScan" id="HelpWindow.requestVirusTotalScan" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.requestVirusTotalScan" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
       <keyword name="HelpWindow.setBackwardAvailable" id="HelpWindow.setBackwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setBackwardAvailable" />
@@ -7559,6 +7576,10 @@
       <keyword name="BookmarkInfoDialog.accept" id="BookmarkInfoDialog.accept" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.accept" />
       <keyword name="BookmarkInfoDialog.on_removeButton_clicked" id="BookmarkInfoDialog.on_removeButton_clicked" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.on_removeButton_clicked" />
       <keyword name="Download (Package)" id="Download (Package)" ref="index-eric5.Helpviewer.Download.html" />
+      <keyword name="DownloadAskActionDialog (Module)" id="DownloadAskActionDialog (Module)" ref="eric5.Helpviewer.Download.DownloadAskActionDialog.html" />
+      <keyword name="DownloadAskActionDialog" id="DownloadAskActionDialog" ref="eric5.Helpviewer.Download.DownloadAskActionDialog.html#DownloadAskActionDialog" />
+      <keyword name="DownloadAskActionDialog (Constructor)" id="DownloadAskActionDialog (Constructor)" ref="eric5.Helpviewer.Download.DownloadAskActionDialog.html#DownloadAskActionDialog.__init__" />
+      <keyword name="DownloadAskActionDialog.getAction" id="DownloadAskActionDialog.getAction" ref="eric5.Helpviewer.Download.DownloadAskActionDialog.html#DownloadAskActionDialog.getAction" />
       <keyword name="DownloadManager (Module)" id="DownloadManager (Module)" ref="eric5.Helpviewer.Download.DownloadManager.html" />
       <keyword name="DownloadManager" id="DownloadManager" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager" />
       <keyword name="DownloadManager (Constructor)" id="DownloadManager (Constructor)" ref="eric5.Helpviewer.Download.DownloadManager.html#DownloadManager.__init__" />
@@ -7923,6 +7944,13 @@
       <keyword name="EditorGeneralPage (Constructor)" id="EditorGeneralPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorGeneralPage.html#EditorGeneralPage.__init__" />
       <keyword name="EditorGeneralPage.on_tabforindentationCheckBox_toggled" id="EditorGeneralPage.on_tabforindentationCheckBox_toggled" ref="eric5.Preferences.ConfigurationPages.EditorGeneralPage.html#EditorGeneralPage.on_tabforindentationCheckBox_toggled" />
       <keyword name="EditorGeneralPage.save" id="EditorGeneralPage.save" ref="eric5.Preferences.ConfigurationPages.EditorGeneralPage.html#EditorGeneralPage.save" />
+      <keyword name="HelpVirusTotalPage (Module)" id="HelpVirusTotalPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html" />
+      <keyword name="HelpVirusTotalPage" id="HelpVirusTotalPage" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#create" />
+      <keyword name="HelpVirusTotalPage (Constructor)" id="HelpVirusTotalPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.__init__" />
+      <keyword name="HelpVirusTotalPage.on_testButton_clicked" id="HelpVirusTotalPage.on_testButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.on_testButton_clicked" />
+      <keyword name="HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" id="HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" />
+      <keyword name="HelpVirusTotalPage.save" id="HelpVirusTotalPage.save" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.save" />
       <keyword name="ViewmanagerPage (Module)" id="ViewmanagerPage (Module)" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html" />
       <keyword name="ViewmanagerPage" id="ViewmanagerPage" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ViewmanagerPage.html#create" />
@@ -10441,6 +10469,7 @@
       <file>eric5.Helpviewer.CookieJar.CookiesConfigurationDialog.html</file>
       <file>eric5.Helpviewer.CookieJar.CookiesDialog.html</file>
       <file>eric5.Helpviewer.CookieJar.CookiesExceptionsDialog.html</file>
+      <file>eric5.Helpviewer.Download.DownloadAskActionDialog.html</file>
       <file>eric5.Helpviewer.Download.DownloadItem.html</file>
       <file>eric5.Helpviewer.Download.DownloadManager.html</file>
       <file>eric5.Helpviewer.Download.DownloadModel.html</file>
@@ -10505,6 +10534,7 @@
       <file>eric5.Helpviewer.UrlBar.UrlBar.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentDefaults.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentMenu.html</file>
+      <file>eric5.Helpviewer.VirusTotalApi.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>
@@ -10688,6 +10718,7 @@
       <file>eric5.Preferences.ConfigurationPages.HelpAppearancePage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpDocumentationPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpViewersPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.IconsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html</file>

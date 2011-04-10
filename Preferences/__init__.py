@@ -629,7 +629,10 @@ class Prefs(object):
         "DownloadManagerSize": QtCore.QSize(400, 300),
         "DownloadManagerPosition": QtCore.QPoint(),
         "DownloadManagerDownloads": [],
-        "AccessKeysEnabled": True, 
+        "AccessKeysEnabled": True,
+        "VirusTotalEnabled": False,
+        "VirusTotalServiceKey": "",
+        "VirusTotalSecure": False,
     }
     
     websettings = QWebSettings.globalSettings()
@@ -1937,7 +1940,8 @@ def getHelp(key, prefClass=Prefs):
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows",
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
-                 "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled"]:
+                 "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled",
+                 "VirusTotalEnabled", "VirusTotalSecure"]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

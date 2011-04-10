@@ -248,6 +248,9 @@ class ConfigurationWidget(QWidget):
                 "helpViewersPage": \
                     [self.trUtf8("Help Viewers"), "preferences-helpviewers.png",
                     "HelpViewersPage", "0helpPage", None],
+                "helpVirusTotalPage": \
+                    [self.trUtf8("VirusTotal Interface"), "virustotal.png",
+                    "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage": \
                     [self.trUtf8("Eric Web Browser"), "ericWeb.png",
                     "HelpWebBrowserPage", "0helpPage", None],
@@ -306,6 +309,9 @@ class ConfigurationWidget(QWidget):
                 "helpViewersPage": \
                     [self.trUtf8("Help Viewers"), "preferences-helpviewers.png",
                     "HelpViewersPage", "0helpPage", None],
+                "helpVirusTotalPage": \
+                    [self.trUtf8("VirusTotal Interface"), "virustotal.png",
+                    "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage": \
                     [self.trUtf8("Eric Web Browser"), "ericWeb.png",
                     "HelpWebBrowserPage", "0helpPage", None],

@@ -42,6 +42,7 @@ from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialo
 from .UserAgent.UserAgentMenu import UserAgentMenu
 from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
+from .VirusTotalApi import VirusTotalAPI
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
@@ -1372,6 +1373,72 @@ class HelpWindow(QMainWindow):
         self.addToolBarBreak()
         self.addToolBar(self.bookmarksToolBar)
         
+        self.addToolBarBreak()
+        vttb = self.addToolBar(self.trUtf8("VirusTotal"))
+        vttb.setObjectName("VirusTotalToolBar")
+        vttb.setIconSize(UI.Config.ToolBarIconSize)
+        vttb.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
+        self.virustotalSearchEdit = QLineEdit()
+        self.virustotalSearchEdit.setMaximumWidth(250)
+        self.virustotalSearchEdit.setWhatsThis(self.trUtf8(
+            """<h2>File search</h2>"""
+            """<p>In order to search for the last VirusTotal report on a given file"""
+            """ just enter its hash. Currently the allowed hashes are MD5, SHA1 and"""
+            """ SHA256. You can also search for a particular file report by typing"""
+            """ in its permalink id.</p>"""
+            """<h2>URL search</h2>"""
+            """<p>URL searches are simple, just type in the given URL, the application"""
+            """ will normalize it and compare it with the entries in VirusTotal's"""
+            """ database. Alternatively you may enter the MD5 hash of an URL preceded"""
+            """ by "url:", e.g. url:7f911bbcf618f052ac6b9928600d2820.</p>"""
+            """<h2>User search</h2>"""
+            """<p>Do you want to know whether a friend has a VT Community account?"""
+            """ Simply type in his nick preceded by the symbol "@", e.g."""
+            """ @EmilianoMartinez.</p>"""
+            """<h2>Search through comments</h2>"""
+            """<p>The comments in VT Community may often help in disinfecting your PC"""
+            """ or may proof themselves useful when analysing a particular malware"""
+            """ sample, comment tags enable users to search through the VT Community"""
+            """ reviews. The standard file tags are: {0} The standard URL tags are: {1}"""
+            """User generated tags are preceded by the symbol "#", e.g."""
+            """ #disinfect.</p>"""
+        ).format(
+            """<ul>"""
+            """<li>goodware</li>"""
+            """<li>malware</li>"""
+            """<li>spamattachmentorlink</li>"""
+            """<li>p2pdownload</li>"""
+            """<li>impropagating</li>"""
+            """<li>networkworm</li>"""
+            """<li>drivebydownload</li>"""
+            """</ul>""", 
+            """<ul>"""
+            """<li>malicious</li>"""
+            """<li>benign</li>"""
+            """<li>malewaredownload</li>"""
+            """<li>phishingsite</li>"""
+            """<li>browserexploit</li>"""
+            """<li>spamlink</li>"""
+            """</ul>""", 
+        ))
+        self.virustotalSearchEdit.textChanged.connect(self.__virusTotalSearchChanged)
+        self.virustotalSearchEdit.returnPressed.connect(self.__virusTotalSearch)
+        vttb.addWidget(self.virustotalSearchEdit)
+        self.virustotalSearchAct = vttb.addAction(
+            UI.PixmapCache.getIcon("virustotal.png"),
+            self.trUtf8("Search VirusTotal"),
+            self.__virusTotalSearch)
+        self.virustotalSearchAct.setEnabled(False)
+        vttb.addSeparator()
+        self.virustotalScanCurrentAct = vttb.addAction(
+            UI.PixmapCache.getIcon("virustotal.png"),
+            self.trUtf8("Scan current site"),
+            self.__virusTotalScanCurrentSite)
+        if not Preferences.getHelp("VirusTotalEnabled") or \
+           Preferences.getHelp("VirusTotalServiceKey") == "":
+            self.virustotalSearchEdit.setEnabled(False)
+            self.virustotalScanCurrentAct.setEnabled(False)
+        
     def __nextTab(self):
         """
         Private slot used to show the next tab.
@@ -1433,13 +1500,15 @@ class HelpWindow(QMainWindow):
         self.historyManager().updateHistoryEntry(
             self.currentBrowser().url().toString(), title)
     
-    def newTab(self, link=None):
+    def newTab(self, link=None, requestData=None):
         """
         Public slot called to open a new help window tab.
         
         @param link file to be displayed in the new window (string or QUrl)
+        @param requestData tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
         """
-        self.tabWidget.newBrowser(link)
+        self.tabWidget.newBrowser(link, requestData)
     
     def newWindow(self, link=None):
         """
@@ -1865,6 +1934,15 @@ class HelpWindow(QMainWindow):
         self.tabWidget.preferencesChanged()
         
         self.searchEdit.preferencesChanged()
+        
+        if not Preferences.getHelp("VirusTotalEnabled") or \
+           Preferences.getHelp("VirusTotalServiceKey") == "":
+            self.virustotalSearchEdit.setEnabled(False)
+            self.virustotalScanCurrentAct.setEnabled(False)
+        else:
+            self.virustotalSearchEdit.setEnabled(True)
+            self.virustotalScanCurrentAct.setEnabled(True)
+        self.__virusTotalSearchChanged(self.virustotalSearchEdit.text())
     
     def __showAcceptedLanguages(self):
         """
@@ -2575,3 +2653,53 @@ class HelpWindow(QMainWindow):
         @param modifiers keyboard modifiers to record (Qt.KeyboardModifiers)
         """
         self.__eventKeyboardModifiers = modifiers
+    
+    ###########################################################################
+    ## Interface to VirusTotal below                                         ##
+    ###########################################################################
+    
+    def __virusTotalSearchChanged(self, txt):
+        """
+        Private slot to react upon changes of the VirusTotal search text.
+        
+        @param txt contents of the search (string)
+        """
+        self.virustotalSearchAct.setEnabled(txt != "" and \
+            Preferences.getHelp("VirusTotalEnabled") and \
+            Preferences.getHelp("VirusTotalServiceKey") != "")
+    
+    def __virusTotalSearch(self):
+        """
+        Private slot to search VirusTotal for a given entry.
+        """
+        search = self.virustotalSearchEdit.text()
+        if search:
+            requestData = VirusTotalAPI.getSearchRequestData(search)
+            self.newTab(requestData=requestData)
+    
+    def __virusTotalScanCurrentSite(self):
+        """
+        Private slot to ask VirusTotal for a scan of the URL of the current browser.
+        """
+        cb = self.currentBrowser()
+        if cb is not None:
+            url = cb.url()
+            if url.scheme() in ["http", "https", "ftp"]:
+                self.requestVirusTotalScan(url)
+    
+    def requestVirusTotalScan(self, url):
+        """
+        Public method to submit a request to scan an URL by VirusTotal.
+        """
+        vt = VirusTotalAPI(self)
+        ok, res = vt.submitUrl(url)
+        if ok:
+            self.newTab(vt.getUrlScanReportUrl(res))
+            fileScanPageUrl = vt.getFileScanReportUrl(res)
+            if fileScanPageUrl:
+                self.newTab(fileScanPageUrl)
+        else:
+            E5MessageBox.critical(self,
+                self.trUtf8("VirusTotal Scan"),
+                self.trUtf8("""<p>The VirusTotal scan could not be"""
+                            """ scheduled.<p>\n<p>Reason: {0}</p>""").format(res))

@@ -22,6 +22,7 @@ import sip
 from E5Gui import E5MessageBox
 
 import Preferences
+import UI.PixmapCache
 
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
@@ -804,6 +805,11 @@ class HelpBrowser(QWebView):
             act.setData(hit.linkUrl())
             menu.addSeparator()
             menu.addAction(self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
+            if Preferences.getHelp("VirusTotalEnabled") and \
+               Preferences.getHelp("VirusTotalServiceKey") != "":
+                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"), 
+                    self.trUtf8("Scan Link with VirusTotal"), self.__virusTotal)
+                act.setData(hit.linkUrl())
         
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
@@ -820,6 +826,11 @@ class HelpBrowser(QWebView):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Block Image"), self.__blockImage)
             act.setData(hit.imageUrl().toString())
+            if Preferences.getHelp("VirusTotalEnabled") and \
+               Preferences.getHelp("VirusTotalServiceKey") != "":
+                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"), 
+                    self.trUtf8("Scan Image with VirusTotal"), self.__virusTotal)
+                act.setData(hit.imageUrl())
         
         if not menu.isEmpty():
             menu.addSeparator()
@@ -934,6 +945,14 @@ class HelpBrowser(QWebView):
         url = act.data()
         dlg = Helpviewer.HelpWindow.HelpWindow.adblockManager().showDialog()
         dlg.addCustomRule(url)
+    
+    def __virusTotal(self):
+        """
+        Private slot to scan the selected URL with VirusTotal.
+        """
+        act = self.sender()
+        url = act.data()
+        self.mw.requestVirusTotalScan(url)
     
     def __searchRequested(self, act):
         """
@@ -1285,7 +1304,7 @@ class HelpBrowser(QWebView):
         if url.isEmpty():
             return
         
-        self.mw.downloadManager().download(url, True)
+        self.mw.downloadManager().download(url, True, mainWindow=self.mw)
     
     def __unsupportedContent(self, reply, requestFilename=None, download=False):
         """
@@ -1308,7 +1327,7 @@ class HelpBrowser(QWebView):
         if reply.error() == QNetworkReply.NoError:
             if reply.header(QNetworkRequest.ContentTypeHeader):
                 self.mw.downloadManager().handleUnsupportedContent(
-                    reply, webPage=self.page())
+                    reply, webPage=self.page(), mainWindow=self.mw)
                 return
         
         replyUrl = reply.url()
@@ -1360,7 +1379,7 @@ class HelpBrowser(QWebView):
         
         @param request reference to the request object (QNetworkRequest)
         """
-        self.mw.downloadManager().download(request)
+        self.mw.downloadManager().download(request, mainWindow=self.mw)
     
     def __databaseQuotaExceeded(self, frame, databaseName):
         """

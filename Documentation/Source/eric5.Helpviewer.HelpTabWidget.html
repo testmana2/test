@@ -477,13 +477,17 @@ dictionary with tab id as key and host/namespace as value
 </dd>
 </dl><a NAME="HelpTabWidget.newBrowser" ID="HelpTabWidget.newBrowser"></a>
 <h4>HelpTabWidget.newBrowser</h4>
-<b>newBrowser</b>(<i>link=None</i>)
+<b>newBrowser</b>(<i>link=None, requestData=None</i>)
 <p>
         Public method to create a new web browser tab.
 </p><dl>
 <dt><i>link</i></dt>
 <dd>
 link to be shown (string or QUrl)
+</dd><dt><i>requestData</i></dt>
+<dd>
+tuple containing the request data (QNetworkRequest,
+            QNetworkAccessManager.Operation, QByteArray)
 </dd>
 </dl><a NAME="HelpTabWidget.preferencesChanged" ID="HelpTabWidget.preferencesChanged"></a>
 <h4>HelpTabWidget.preferencesChanged</h4>

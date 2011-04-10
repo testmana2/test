@@ -168,26 +168,29 @@ QWidget, Ui_DownloadItem
 </table>
 <a NAME="DownloadItem.__init__" ID="DownloadItem.__init__"></a>
 <h4>DownloadItem (Constructor)</h4>
-<b>DownloadItem</b>(<i>reply=None, requestFilename=False, webPage=None, download=False, parent=None</i>)
+<b>DownloadItem</b>(<i>reply=None, requestFilename=False, webPage=None, download=False, parent=None, mainWindow=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>reply</i></dt>
+<dt><i>reply=</i></dt>
 <dd>
 reference to the network reply object (QNetworkReply)
-</dd><dt><i>requestFilename</i></dt>
+</dd><dt><i>requestFilename=</i></dt>
 <dd>
 flag indicating to ask the user for a filename (boolean)
-</dd><dt><i>webPage</i></dt>
+</dd><dt><i>webPage=</i></dt>
 <dd>
 reference to the web page object the download originated
             from (QWebPage)
-</dd><dt><i>download</i></dt>
+</dd><dt><i>download=</i></dt>
 <dd>
 flag indicating a download operation (boolean)
-</dd><dt><i>parent</i></dt>
+</dd><dt><i>parent=</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd><dt><i>mainWindow=</i></dt>
+<dd>
+reference to the main window (HelpWindow)
 </dd>
 </dl><a NAME="DownloadItem.__downloadProgress" ID="DownloadItem.__downloadProgress"></a>
 <h4>DownloadItem.__downloadProgress</h4>

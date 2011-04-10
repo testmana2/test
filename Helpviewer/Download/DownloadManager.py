@@ -147,7 +147,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
                 return False
         return True
     
-    def download(self, requestOrUrl, requestFileName=False):
+    def download(self, requestOrUrl, requestFileName=False, mainWindow=None):
         """
         Public method to download a file.
         
@@ -155,16 +155,29 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             or a URL to be downloaded (QUrl)
         @keyparam requestFileName flag indicating to ask for the
             download file name (boolean)
+        @keyparam mainWindow reference to the main window (HelpWindow)
         """
         request = QNetworkRequest(requestOrUrl)
         if request.url().isEmpty():
             return
         self.handleUnsupportedContent(self.__manager.get(request),
             requestFileName=requestFileName,
-            download=True)
+            download=True,
+            mainWindow=mainWindow)
     
     def handleUnsupportedContent(self, reply, requestFileName=False,
-                                 webPage=None, download=False):
+                                 webPage=None, download=False, mainWindow=None):
+        """
+        Public method to handle unsupported content by downloading the
+        referenced resource.
+        
+        @param reply reference to the reply object (QNetworkReply)
+        @keyparam requestFilename indicating to ask for a filename
+            (boolean)
+        @keyparam webPage reference to the web page (HelpWebPage)
+        @keyparam download flag indicating a download request (boolean)
+        @keyparam mainWindow reference to the main window (HelpWindow)
+        """
         if reply is None or reply.url().isEmpty():
             return
         
@@ -173,7 +186,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
             return
         
         itm = DownloadItem(reply=reply, requestFilename=requestFileName,
-            webPage=webPage, download=download, parent=self)
+            webPage=webPage, download=download, parent=self, mainWindow=mainWindow)
         self.__addItem(itm)
         
         if itm.canceledFileSelect():

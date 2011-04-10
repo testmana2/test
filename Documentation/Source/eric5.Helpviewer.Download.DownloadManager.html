@@ -130,7 +130,7 @@ QDialog, Ui_DownloadManager
 <td>Public method to get a reference to the downloads.</td>
 </tr><tr>
 <td><a href="#DownloadManager.handleUnsupportedContent">handleUnsupportedContent</a></td>
-<td></td>
+<td>Public method to handle unsupported content by downloading the referenced resource.</td>
 </tr><tr>
 <td><a href="#DownloadManager.on_cleanupButton_clicked">on_cleanupButton_clicked</a></td>
 <td>Private slot cleanup the downloads.</td>
@@ -303,7 +303,7 @@ number of downloads (integer)
 </dd>
 </dl><a NAME="DownloadManager.download" ID="DownloadManager.download"></a>
 <h4>DownloadManager.download</h4>
-<b>download</b>(<i>requestOrUrl, requestFileName=False</i>)
+<b>download</b>(<i>requestOrUrl, requestFileName=False, mainWindow=None</i>)
 <p>
         Public method to download a file.
 </p><dl>
@@ -315,6 +315,9 @@ reference to a request object (QNetworkRequest)
 <dd>
 flag indicating to ask for the
             download file name (boolean)
+</dd><dt><i>mainWindow=</i></dt>
+<dd>
+reference to the main window (HelpWindow)
 </dd>
 </dl><a NAME="DownloadManager.downloadDirectory" ID="DownloadManager.downloadDirectory"></a>
 <h4>DownloadManager.downloadDirectory</h4>
@@ -338,8 +341,29 @@ reference to the downloads (list of DownloadItem)
 </dd>
 </dl><a NAME="DownloadManager.handleUnsupportedContent" ID="DownloadManager.handleUnsupportedContent"></a>
 <h4>DownloadManager.handleUnsupportedContent</h4>
-<b>handleUnsupportedContent</b>(<i>reply, requestFileName=False, webPage=None, download=False</i>)
-<a NAME="DownloadManager.on_cleanupButton_clicked" ID="DownloadManager.on_cleanupButton_clicked"></a>
+<b>handleUnsupportedContent</b>(<i>reply, requestFileName=False, webPage=None, download=False, mainWindow=None</i>)
+<p>
+        Public method to handle unsupported content by downloading the
+        referenced resource.
+</p><dl>
+<dt><i>reply</i></dt>
+<dd>
+reference to the reply object (QNetworkReply)
+</dd><dt><i>requestFilename=</i></dt>
+<dd>
+indicating to ask for a filename
+            (boolean)
+</dd><dt><i>webPage=</i></dt>
+<dd>
+reference to the web page (HelpWebPage)
+</dd><dt><i>download=</i></dt>
+<dd>
+flag indicating a download request (boolean)
+</dd><dt><i>mainWindow=</i></dt>
+<dd>
+reference to the main window (HelpWindow)
+</dd>
+</dl><a NAME="DownloadManager.on_cleanupButton_clicked" ID="DownloadManager.on_cleanupButton_clicked"></a>
 <h4>DownloadManager.on_cleanupButton_clicked</h4>
 <b>on_cleanupButton_clicked</b>(<i></i>)
 <p>
