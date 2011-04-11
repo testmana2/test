@@ -210,6 +210,11 @@ class HelpWindow(QMainWindow):
             
             self.__initHelpDb()
             
+            self.__virusTotal = VirusTotalAPI(self)
+            self.__virusTotal.submitUrlError.connect(self.__virusTotalSubmitUrlError)
+            self.__virusTotal.urlScanReport.connect(self.__virusTotalUrlScanReport)
+            self.__virusTotal.fileScanReport.connect(self.__virusTotalFileScanReport)
+            
             QTimer.singleShot(0, self.__lookForNewDocumentation)
             if self.__searchWord is not None:
                 QTimer.singleShot(0, self.__searchForWord)
@@ -1935,6 +1940,7 @@ class HelpWindow(QMainWindow):
         
         self.searchEdit.preferencesChanged()
         
+        self.__virusTotal.preferencesChanged()
         if not Preferences.getHelp("VirusTotalEnabled") or \
            Preferences.getHelp("VirusTotalServiceKey") == "":
             self.virustotalSearchEdit.setEnabled(False)
@@ -2690,16 +2696,34 @@ class HelpWindow(QMainWindow):
     def requestVirusTotalScan(self, url):
         """
         Public method to submit a request to scan an URL by VirusTotal.
+        
+        @param url URL to be scanned (QUrl)
         """
-        vt = VirusTotalAPI(self)
-        ok, res = vt.submitUrl(url)
-        if ok:
-            self.newTab(vt.getUrlScanReportUrl(res))
-            fileScanPageUrl = vt.getFileScanReportUrl(res)
-            if fileScanPageUrl:
-                self.newTab(fileScanPageUrl)
-        else:
-            E5MessageBox.critical(self,
-                self.trUtf8("VirusTotal Scan"),
-                self.trUtf8("""<p>The VirusTotal scan could not be"""
-                            """ scheduled.<p>\n<p>Reason: {0}</p>""").format(res))
+        self.__virusTotal.submitUrl(url)
+    
+    def __virusTotalSubmitUrlError(self, msg):
+        """
+        Private slot to handle an URL scan submission error.
+        
+        @param msg error message (str)
+        """
+        E5MessageBox.critical(self,
+            self.trUtf8("VirusTotal Scan"),
+            self.trUtf8("""<p>The VirusTotal scan could not be"""
+                        """ scheduled.<p>\n<p>Reason: {0}</p>""").format(msg))
+    
+    def __virusTotalUrlScanReport(self, url):
+        """
+        Private slot to initiate the display of the URL scan report page.
+        
+        @param url URL of the URL scan report page (string)
+        """
+        self.newTab(url)
+    
+    def __virusTotalFileScanReport(self, url):
+        """
+        Private slot to initiate the display of the file scan report page.
+        
+        @param url URL of the file scan report page (string)
+        """
+        self.newTab(url)

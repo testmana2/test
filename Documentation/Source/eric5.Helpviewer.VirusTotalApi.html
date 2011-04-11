@@ -44,7 +44,25 @@ Module implementing the <a href="http://www.virustotal.com">VirusTotal</a> API c
 <h2>VirusTotalAPI</h2>
 <p>
     Class implementing the <a href="http://www.virustotal.com">VirusTotal</a> API.
-</p>
+</p><h4>Signals</h4>
+<dl>
+<dt>checkServiceKeyFinished(bool, str)</dt>
+<dd>
+emitted after the service key check
+            has been performed. It gives a flag indicating validity (boolean) and
+            an error message in case of a network error (string).
+</dd><dt>fileScanReport(str)</dt>
+<dd>
+emitted with the URL of the file scan report page
+</dd><dt>submitUrlError(str)</dt>
+<dd>
+emitted with the error string, if the URL scan
+            submission returned an error. 
+</dd><dt>urlScanReport(str)</dt>
+<dd>
+emitted with the URL of the URL scan report page
+</dd>
+</dl>
 <h3>Derived from</h3>
 QObject
 <h3>Class Attributes</h3>
@@ -57,20 +75,29 @@ QObject
 <td><a href="#VirusTotalAPI.__init__">VirusTotalAPI</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#VirusTotalAPI.__checkServiceKeyValidityFinished">__checkServiceKeyValidityFinished</a></td>
+<td>Private slot to determine the result of the service key validity check.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__getFileScanReportUrl">__getFileScanReportUrl</a></td>
+<td>Private method to get the report URL for a file scan.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__getFileScanReportUrlFinished">__getFileScanReportUrlFinished</a></td>
+<td>Private slot to determine the result of the file scan report URL request.</td>
+</tr><tr>
 <td><a href="#VirusTotalAPI.__loadSettings">__loadSettings</a></td>
 <td>Private method to load the settings.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__submitUrlFinished">__submitUrlFinished</a></td>
+<td>Private slot to determine the result of the URL scan submission.</td>
 </tr><tr>
 <td><a href="#VirusTotalAPI.checkServiceKeyValidity">checkServiceKeyValidity</a></td>
 <td>Public method to check the validity of the given service key.</td>
 </tr><tr>
-<td><a href="#VirusTotalAPI.getFileScanReportUrl">getFileScanReportUrl</a></td>
-<td>Public method to get the report URL for a file scan.</td>
-</tr><tr>
 <td><a href="#VirusTotalAPI.getSearchRequestData">getSearchRequestData</a></td>
-<td></td>
+<td>Class method to assemble the search request data structure.</td>
 </tr><tr>
-<td><a href="#VirusTotalAPI.getUrlScanReportUrl">getUrlScanReportUrl</a></td>
-<td>Public method to get the report URL for a URL scan.</td>
+<td><a href="#VirusTotalAPI.preferencesChanged">preferencesChanged</a></td>
+<td>Public slot to handle a change of preferences.</td>
 </tr><tr>
 <td><a href="#VirusTotalAPI.submitUrl">submitUrl</a></td>
 <td>Public method to submit an URL to be scanned.</td>
@@ -86,11 +113,41 @@ QObject
 <dd>
 reference to the parent object (QObject)
 </dd>
-</dl><a NAME="VirusTotalAPI.__loadSettings" ID="VirusTotalAPI.__loadSettings"></a>
+</dl><a NAME="VirusTotalAPI.__checkServiceKeyValidityFinished" ID="VirusTotalAPI.__checkServiceKeyValidityFinished"></a>
+<h4>VirusTotalAPI.__checkServiceKeyValidityFinished</h4>
+<b>__checkServiceKeyValidityFinished</b>(<i></i>)
+<p>
+        Private slot to determine the result of the service key validity check.
+</p><a NAME="VirusTotalAPI.__getFileScanReportUrl" ID="VirusTotalAPI.__getFileScanReportUrl"></a>
+<h4>VirusTotalAPI.__getFileScanReportUrl</h4>
+<b>__getFileScanReportUrl</b>(<i>scanId</i>)
+<p>
+        Private method to get the report URL for a file scan.
+</p><dl>
+<dt><i>scanId</i></dt>
+<dd>
+ID of the scan to get the report URL for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+file scan report URL (string)
+</dd>
+</dl><a NAME="VirusTotalAPI.__getFileScanReportUrlFinished" ID="VirusTotalAPI.__getFileScanReportUrlFinished"></a>
+<h4>VirusTotalAPI.__getFileScanReportUrlFinished</h4>
+<b>__getFileScanReportUrlFinished</b>(<i></i>)
+<p>
+        Private slot to determine the result of the file scan report URL request.
+</p><a NAME="VirusTotalAPI.__loadSettings" ID="VirusTotalAPI.__loadSettings"></a>
 <h4>VirusTotalAPI.__loadSettings</h4>
 <b>__loadSettings</b>(<i></i>)
 <p>
         Private method to load the settings.
+</p><a NAME="VirusTotalAPI.__submitUrlFinished" ID="VirusTotalAPI.__submitUrlFinished"></a>
+<h4>VirusTotalAPI.__submitUrlFinished</h4>
+<b>__submitUrlFinished</b>(<i></i>)
+<p>
+        Private slot to determine the result of the URL scan submission.
 </p><a NAME="VirusTotalAPI.checkServiceKeyValidity" ID="VirusTotalAPI.checkServiceKeyValidity"></a>
 <h4>VirusTotalAPI.checkServiceKeyValidity</h4>
 <b>checkServiceKeyValidity</b>(<i>key, protocol=""</i>)
@@ -110,44 +167,28 @@ protocol used to access VirusTotal (string)
 flag indicating validity (boolean) and an error message in
             case of a network error (string)
 </dd>
-</dl><a NAME="VirusTotalAPI.getFileScanReportUrl" ID="VirusTotalAPI.getFileScanReportUrl"></a>
-<h4>VirusTotalAPI.getFileScanReportUrl</h4>
-<b>getFileScanReportUrl</b>(<i>scanId</i>)
-<p>
-        Public method to get the report URL for a file scan.
-</p><dl>
-<dt><i>scanId</i></dt>
-<dd>
-ID of the scan to get the report URL for (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-file scan report URL (string)
-</dd>
 </dl><a NAME="VirusTotalAPI.getSearchRequestData" ID="VirusTotalAPI.getSearchRequestData"></a>
 <h4>VirusTotalAPI.getSearchRequestData</h4>
 <b>getSearchRequestData</b>(<i>term</i>)
 <p>
-
-</p><p>
-
-</p><a NAME="VirusTotalAPI.getUrlScanReportUrl" ID="VirusTotalAPI.getUrlScanReportUrl"></a>
-<h4>VirusTotalAPI.getUrlScanReportUrl</h4>
-<b>getUrlScanReportUrl</b>(<i>scanId</i>)
-<p>
-        Public method to get the report URL for a URL scan.
+        Class method to assemble the search request data structure.
 </p><dl>
-<dt><i>scanId</i></dt>
+<dt><i>term</i></dt>
 <dd>
-ID of the scan to get the report URL for (string)
+search term (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-URL scan report URL (string)
+tuple of network request object, operation and parameters
+            (QNetworkRequest, QNetworkAccessManager.Operation, QByteArray)
 </dd>
-</dl><a NAME="VirusTotalAPI.submitUrl" ID="VirusTotalAPI.submitUrl"></a>
+</dl><a NAME="VirusTotalAPI.preferencesChanged" ID="VirusTotalAPI.preferencesChanged"></a>
+<h4>VirusTotalAPI.preferencesChanged</h4>
+<b>preferencesChanged</b>(<i></i>)
+<p>
+        Public slot to handle a change of preferences.
+</p><a NAME="VirusTotalAPI.submitUrl" ID="VirusTotalAPI.submitUrl"></a>
 <h4>VirusTotalAPI.submitUrl</h4>
 <b>submitUrl</b>(<i>url</i>)
 <p>

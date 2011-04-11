@@ -2576,11 +2576,14 @@
       <keyword name="VirusTotalApi (Module)" id="VirusTotalApi (Module)" ref="eric5.Helpviewer.VirusTotalApi.html" />
       <keyword name="VirusTotalAPI" id="VirusTotalAPI" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI" />
       <keyword name="VirusTotalAPI (Constructor)" id="VirusTotalAPI (Constructor)" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__init__" />
+      <keyword name="VirusTotalAPI.__checkServiceKeyValidityFinished" id="VirusTotalAPI.__checkServiceKeyValidityFinished" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__checkServiceKeyValidityFinished" />
+      <keyword name="VirusTotalAPI.__getFileScanReportUrl" id="VirusTotalAPI.__getFileScanReportUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrl" />
+      <keyword name="VirusTotalAPI.__getFileScanReportUrlFinished" id="VirusTotalAPI.__getFileScanReportUrlFinished" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrlFinished" />
       <keyword name="VirusTotalAPI.__loadSettings" id="VirusTotalAPI.__loadSettings" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__loadSettings" />
+      <keyword name="VirusTotalAPI.__submitUrlFinished" id="VirusTotalAPI.__submitUrlFinished" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__submitUrlFinished" />
       <keyword name="VirusTotalAPI.checkServiceKeyValidity" id="VirusTotalAPI.checkServiceKeyValidity" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.checkServiceKeyValidity" />
-      <keyword name="VirusTotalAPI.getFileScanReportUrl" id="VirusTotalAPI.getFileScanReportUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getFileScanReportUrl" />
       <keyword name="VirusTotalAPI.getSearchRequestData" id="VirusTotalAPI.getSearchRequestData" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getSearchRequestData" />
-      <keyword name="VirusTotalAPI.getUrlScanReportUrl" id="VirusTotalAPI.getUrlScanReportUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getUrlScanReportUrl" />
+      <keyword name="VirusTotalAPI.preferencesChanged" id="VirusTotalAPI.preferencesChanged" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.preferencesChanged" />
       <keyword name="VirusTotalAPI.submitUrl" id="VirusTotalAPI.submitUrl" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.submitUrl" />
       <keyword name="SslInfoDialog (Module)" id="SslInfoDialog (Module)" ref="eric5.Helpviewer.SslInfoDialog.html" />
       <keyword name="SslInfoDialog" id="SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog" />
@@ -2808,9 +2811,12 @@
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />
+      <keyword name="HelpWindow.__virusTotalFileScanReport" id="HelpWindow.__virusTotalFileScanReport" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalFileScanReport" />
       <keyword name="HelpWindow.__virusTotalScanCurrentSite" id="HelpWindow.__virusTotalScanCurrentSite" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalScanCurrentSite" />
       <keyword name="HelpWindow.__virusTotalSearch" id="HelpWindow.__virusTotalSearch" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearch" />
       <keyword name="HelpWindow.__virusTotalSearchChanged" id="HelpWindow.__virusTotalSearchChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearchChanged" />
+      <keyword name="HelpWindow.__virusTotalSubmitUrlError" id="HelpWindow.__virusTotalSubmitUrlError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSubmitUrlError" />
+      <keyword name="HelpWindow.__virusTotalUrlScanReport" id="HelpWindow.__virusTotalUrlScanReport" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalUrlScanReport" />
       <keyword name="HelpWindow.__warning" id="HelpWindow.__warning" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__warning" />
       <keyword name="HelpWindow.__whatsThis" id="HelpWindow.__whatsThis" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__whatsThis" />
       <keyword name="HelpWindow.__zoomIn" id="HelpWindow.__zoomIn" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomIn" />
@@ -7948,6 +7954,7 @@
       <keyword name="HelpVirusTotalPage" id="HelpVirusTotalPage" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#create" />
       <keyword name="HelpVirusTotalPage (Constructor)" id="HelpVirusTotalPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.__init__" />
+      <keyword name="HelpVirusTotalPage.__checkServiceKeyFinished" id="HelpVirusTotalPage.__checkServiceKeyFinished" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.__checkServiceKeyFinished" />
       <keyword name="HelpVirusTotalPage.on_testButton_clicked" id="HelpVirusTotalPage.on_testButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.on_testButton_clicked" />
       <keyword name="HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" id="HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.on_vtServiceKeyEdit_textChanged" />
       <keyword name="HelpVirusTotalPage.save" id="HelpVirusTotalPage.save" ref="eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.save" />

@@ -9,7 +9,7 @@ Module implementing the <a href="http://www.virustotal.com">VirusTotal</a> API c
 
 import json
 
-from PyQt4.QtCore import QObject, QUrl, QByteArray, QCoreApplication, QThread
+from PyQt4.QtCore import QObject, QUrl, QByteArray, pyqtSignal
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, QNetworkAccessManager
 
 import Helpviewer.HelpWindow
@@ -19,7 +19,20 @@ import Preferences
 class VirusTotalAPI(QObject):
     """
     Class implementing the <a href="http://www.virustotal.com">VirusTotal</a> API.
+    
+    @signal checkServiceKeyFinished(bool, str) emitted after the service key check
+            has been performed. It gives a flag indicating validity (boolean) and
+            an error message in case of a network error (string).
+    @signal submitUrlError(str) emitted with the error string, if the URL scan
+            submission returned an error. 
+    @signal urlScanReport(str) emitted with the URL of the URL scan report page
+    @signal fileScanReport(str) emitted with the URL of the file scan report page
     """
+    checkServiceKeyFinished = pyqtSignal(bool, str)
+    submitUrlError = pyqtSignal(str)
+    urlScanReport = pyqtSignal(str)
+    fileScanReport = pyqtSignal(str)
+    
     TestServiceKeyScanID = \
         "4feed2c2e352f105f6188efd1d5a558f24aee6971bdf96d5fdb19c197d6d3fad"
     
@@ -45,6 +58,8 @@ class VirusTotalAPI(QObject):
         """
         QObject.__init__(self, parent)
         
+        self.__replies = []
+        
         self.__loadSettings()
     
     def __loadSettings(self):
@@ -64,6 +79,12 @@ class VirusTotalAPI(QObject):
             -1: self.trUtf8("Invalid key given."),
              0: self.trUtf8("Requested item is not present.")
         }
+    
+    def preferencesChanged(self):
+        """
+        Public slot to handle a change of preferences.
+        """
+        self.__loadSettings()
     
     def checkServiceKeyValidity(self, key, protocol=""):
         """
@@ -86,20 +107,26 @@ class VirusTotalAPI(QObject):
         
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
-        while not reply.isFinished():
-            QCoreApplication.processEvents()
-            QThread.msleep(100)
-            if QCoreApplication.closingDown():
-                reply.abort()
-            QCoreApplication.processEvents()
+        reply.finished.connect(self.__checkServiceKeyValidityFinished)
+        self.__replies.append(reply)
+    
+    def __checkServiceKeyValidityFinished(self):
+        """
+        Private slot to determine the result of the service key validity check.
+        """
+        res = False
+        msg = ""
+        
+        reply = self.sender()
         if reply.error() == QNetworkReply.NoError:
             result = json.loads(str(reply.readAll(), "utf-8"))
             if result["result"] != self.ServiceResult_InvalidServiceKey:
-                return True, ""
-            else:
-                return False, ""
+                res = True
+        else:
+            msg = reply.errorString()
+        self.__replies.remove(reply)
         
-        return False, reply.errorString()
+        self.checkServiceKeyFinished.emit(res, msg)
     
     def submitUrl(self, url):
         """
@@ -117,39 +144,33 @@ class VirusTotalAPI(QObject):
         
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
-        while not reply.isFinished():
-            QCoreApplication.processEvents()
-            QThread.msleep(100)
-            if QCoreApplication.closingDown():
-                reply.abort()
-            QCoreApplication.processEvents()
+        reply.finished.connect(self.__submitUrlFinished)
+        self.__replies.append(reply)
+    
+    def __submitUrlFinished(self):
+        """
+        Private slot to determine the result of the URL scan submission.
+        """
+        reply = self.sender()
         if reply.error() == QNetworkReply.NoError:
             result = json.loads(str(reply.readAll(), "utf-8"))
             if result["result"] == self.ServiceResult_ItemPresent:
-                return True, result["scan_id"]
+                self.urlScanReport.emit(
+                    self.ReportUrlScanPagePattern.format(result["scan_id"]))
+                self.__getFileScanReportUrl(result["scan_id"])
             else:
-                return False, self.errorMessages[result["result"]]
-        
-        return False, reply.errorString()
+                self.submitUrlError.emit(self.errorMessages[result["result"]])
+        else:
+            self.submitUrlError.emit(reply.errorString())
+        self.__replies.remove(reply)
     
-    def getUrlScanReportUrl(self, scanId):
+    def __getFileScanReportUrl(self, scanId):
         """
-        Public method to get the report URL for a URL scan.
-        
-        @param scanId ID of the scan to get the report URL for (string)
-        @return URL scan report URL (string)
-        """
-        return self.ReportUrlScanPagePattern.format(scanId)
-        
-    def getFileScanReportUrl(self, scanId):
-        """
-        Public method to get the report URL for a file scan.
+        Private method to get the report URL for a file scan.
         
         @param scanId ID of the scan to get the report URL for (string)
         @return file scan report URL (string)
         """
-        fileScanPageUrl = ""    # default value
-        
         request = QNetworkRequest(QUrl(self.GetUrlReportUrl))
         request.setHeader(QNetworkRequest.ContentTypeHeader,
                           "application/x-www-form-urlencoded")
@@ -158,24 +179,29 @@ class VirusTotalAPI(QObject):
         
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
         reply = nam.post(request, params)
-        while not reply.isFinished():
-            QCoreApplication.processEvents()
-            QThread.msleep(100)
-            if QCoreApplication.closingDown():
-                reply.abort()
-            QCoreApplication.processEvents()
+        reply.finished.connect(self.__getFileScanReportUrlFinished)
+        self.__replies.append(reply)
+    
+    def __getFileScanReportUrlFinished(self):
+        """
+        Private slot to determine the result of the file scan report URL request.
+        """
+        reply = self.sender()
         if reply.error() == QNetworkReply.NoError:
             result = json.loads(str(reply.readAll(), "utf-8"))
             if "file-report" in result:
-                fileScanPageUrl = self.ReportFileScanPagePattern.format(
-                    result["file-report"])
-        
-        return fileScanPageUrl
+                self.fileScanReport.emit(
+                    self.ReportFileScanPagePattern.format(result["file-report"]))
+        self.__replies.remove(reply)
     
     @classmethod
     def getSearchRequestData(cls, term):
         """
+        Class method to assemble the search request data structure.
         
+        @param term search term (string)
+        @return tuple of network request object, operation and parameters
+            (QNetworkRequest, QNetworkAccessManager.Operation, QByteArray)
         """
         request = QNetworkRequest(QUrl(cls.SearchUrl))
         request.setHeader(QNetworkRequest.ContentTypeHeader,

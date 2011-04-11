@@ -60,6 +60,9 @@ ConfigurationPageBase, Ui_HelpVirusTotalPage
 <td><a href="#HelpVirusTotalPage.__init__">HelpVirusTotalPage</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpVirusTotalPage.__checkServiceKeyFinished">__checkServiceKeyFinished</a></td>
+<td>Private slot to receive the result of the service key check.</td>
+</tr><tr>
 <td><a href="#HelpVirusTotalPage.on_testButton_clicked">on_testButton_clicked</a></td>
 <td>Private slot to test the entered service key.</td>
 </tr><tr>
@@ -79,6 +82,19 @@ ConfigurationPageBase, Ui_HelpVirusTotalPage
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HelpVirusTotalPage.__checkServiceKeyFinished" ID="HelpVirusTotalPage.__checkServiceKeyFinished"></a>
+<h4>HelpVirusTotalPage.__checkServiceKeyFinished</h4>
+<b>__checkServiceKeyFinished</b>(<i>result, msg</i>)
+<p>
+        Private slot to receive the result of the service key check.
+</p><dl>
+<dt><i>result</i></dt>
+<dd>
+flag indicating a successful check (boolean)
+</dd><dt><i>msg</i></dt>
+<dd>
+network error message (str)
 </dd>
 </dl><a NAME="HelpVirusTotalPage.on_testButton_clicked" ID="HelpVirusTotalPage.on_testButton_clicked"></a>
 <h4>HelpVirusTotalPage.on_testButton_clicked</h4>

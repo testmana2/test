@@ -2452,11 +2452,14 @@ eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemNotPresent?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemPresent?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_RequestLimitReached?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.TestServiceKeyScanID?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.checkServiceKeyFinished?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.checkServiceKeyValidity?4(key, protocol="")
-eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getFileScanReportUrl?4(scanId)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.fileScanReport?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getSearchRequestData?4(term)
-eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.getUrlScanReportUrl?4(scanId)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.preferencesChanged?4()
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.submitUrl?4(url)
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.submitUrlError?7
+eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.urlScanReport?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI?1(parent=None)
 eric5.IconEditor.IconEditorGrid.IconEditCommand.redo?4()
 eric5.IconEditor.IconEditorGrid.IconEditCommand.setAfterImage?4(image)

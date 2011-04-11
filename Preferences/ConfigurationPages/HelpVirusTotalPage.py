@@ -33,6 +33,9 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         
         self.testResultLabel.setHidden(True)
         
+        self.__vt = VirusTotalAPI(self)
+        self.__vt.checkServiceKeyFinished.connect(self.__checkServiceKeyFinished)
+        
         # set initial values
         self.vtEnabledCheckBox.setChecked(
             Preferences.getHelp("VirusTotalEnabled"))
@@ -70,12 +73,20 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         self.testResultLabel.setHidden(False)
         self.testResultLabel.setText(
             self.trUtf8("Checking validity of the service key..."))
-        vt = VirusTotalAPI(self)
         if self.vtSecureCheckBox.isChecked():
             protocol = "https"
         else:
             protocol = "http"
-        result, msg = vt.checkServiceKeyValidity(self.vtServiceKeyEdit.text(), protocol)
+        self.__vt.checkServiceKeyValidity(self.vtServiceKeyEdit.text(), protocol)
+    
+    @pyqtSlot(bool, str)
+    def __checkServiceKeyFinished(self, result, msg):
+        """
+        Private slot to receive the result of the service key check.
+        
+        @param result flag indicating a successful check (boolean)
+        @param msg network error message (str)
+        """
         if result:
             self.testResultLabel.setText(self.trUtf8("The service key is valid."))
         else:
