@@ -38,10 +38,13 @@ class FavIconLabel(QLabel):
         """
         Private slot to set the icon.
         """
-        url = QUrl()
-        if self.__browser:
-            url = self.__browser.url()
-        self.setPixmap(Helpviewer.HelpWindow.HelpWindow.icon(url).pixmap(16, 16))
+        try:
+            url = QUrl()
+            if self.__browser:
+                url = self.__browser.url()
+            self.setPixmap(Helpviewer.HelpWindow.HelpWindow.icon(url).pixmap(16, 16))
+        except RuntimeError:
+            pass
     
     def setBrowser(self, browser):
         """

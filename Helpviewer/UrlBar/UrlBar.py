@@ -130,35 +130,38 @@ class UrlBar(E5LineEdit):
         
         @param ok flag indicating a successful load (boolean)
         """
-        if self.__browser.url().scheme() in ["pyrc", "about"]:
-            self.__bookmarkButton.setVisible(False)
-        else:
-            if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-               .bookmarkForUrl(self.__browser.url()) is None:
-                self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
+        try:
+            if self.__browser.url().scheme() in ["pyrc", "about"]:
+                self.__bookmarkButton.setVisible(False)
             else:
-                self.__bookmarkButton.setIcon(self.__bmActiveIcon)
-            self.__bookmarkButton.setVisible(True)
-        
-        if ok and \
-           self.__browser.url().scheme() == "https" and \
-           QSslCertificate is not None:
-            sslInfo = self.__browser.page().getSslInfo()
-            if sslInfo is not None:
-                org = Utilities.decodeString(
-                    sslInfo.subjectInfo(QSslCertificate.Organization))
-                if org == "":
-                    cn = Utilities.decodeString(
-                        sslInfo.subjectInfo(QSslCertificate.CommonName))
-                    if cn != "":
-                        org = cn.split(".", 1)[1]
+                if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                   .bookmarkForUrl(self.__browser.url()) is None:
+                    self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
+                else:
+                    self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+                self.__bookmarkButton.setVisible(True)
+            
+            if ok and \
+               self.__browser.url().scheme() == "https" and \
+               QSslCertificate is not None:
+                sslInfo = self.__browser.page().getSslInfo()
+                if sslInfo is not None:
+                    org = Utilities.decodeString(
+                        sslInfo.subjectInfo(QSslCertificate.Organization))
                     if org == "":
-                        org = self.trUtf8("Unknown")
-                self.__sslLabel.setText(" {0} ".format(org))
-                self.__sslLabel.setVisible(True)
-                return
-        
-        self.__sslLabel.setVisible(False)
+                        cn = Utilities.decodeString(
+                            sslInfo.subjectInfo(QSslCertificate.CommonName))
+                        if cn != "":
+                            org = cn.split(".", 1)[1]
+                        if org == "":
+                            org = self.trUtf8("Unknown")
+                    self.__sslLabel.setText(" {0} ".format(org))
+                    self.__sslLabel.setVisible(True)
+                    return
+            
+            self.__sslLabel.setVisible(False)
+        except RuntimeError:
+            pass
     
     def setPrivateMode(self, on):
         """
