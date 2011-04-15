@@ -1352,6 +1352,7 @@ class Editor(QsciScintillaCompat):
             if ext in [".py", ".pyw"]  and \
                Preferences.getProject("DeterminePyFromProject")and \
                self.project.isOpen() and \
+               self.fileName is not None and \
                self.project.isProjectFile(self.fileName):
                 if self.project.getProjectLanguage() in ["Python", "Python2"]:
                     language = "Python2"
