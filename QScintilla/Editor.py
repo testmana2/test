@@ -4223,7 +4223,7 @@ class Editor(QsciScintillaCompat):
             self.clearFlakesWarnings()
             if self.isPy3File():
                 syntaxError, _fn, errorline, _code, _error = \
-                    Utilities.compile(self.fileName, self.text())
+                    Utilities.compile(self.fileName or "(Unnamed)", self.text())
                 if syntaxError:
                     self.toggleSyntaxError(int(errorline), True, _error)
                 else:
@@ -4249,7 +4249,7 @@ class Editor(QsciScintillaCompat):
                             else:
                                 msg = err.msg
                             self.toggleSyntaxError(err.lineno, True, msg)
-            elif self.isPy2File():
+            elif self.isPy2File() and self.fileName is not None:
                 syntaxError, _fn, errorline, _code, _error, warnings = \
                     Utilities.py2compile(
                         self.fileName, 
