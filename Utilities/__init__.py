@@ -1097,7 +1097,7 @@ def compile(file, codestring=""):
         try:
             codestring = readEncodedFile(file)[0]
         except (UnicodeDecodeError, IOError):
-            return (False, None, None, None, None)
+            return (False, None, None, None, None, None)
 
     codestring = codestring.replace("\r\n", "\n")
     codestring = codestring.replace("\r", "\n")
@@ -1110,7 +1110,7 @@ def compile(file, codestring=""):
             try:
                 import quixote.ptl_compile
             except ImportError:
-                return (False, None, None, None, None)
+                return (False, None, None, None, None, None)
             template = quixote.ptl_compile.Template(codestring, file)
             template.compile()
         else:
