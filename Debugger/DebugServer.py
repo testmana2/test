@@ -116,8 +116,8 @@ class DebugServer(QTcpServer):
     utPrepared = pyqtSignal(int, str, str)
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
-    utTestFailed = pyqtSignal(str, str)
-    utTestErrored = pyqtSignal(str, str)
+    utTestFailed = pyqtSignal(str, list)
+    utTestErrored = pyqtSignal(str, list)
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
     
@@ -1228,7 +1228,7 @@ class DebugServer(QTcpServer):
         Public method to process the client test failed info.
         
         @param testname name of the test (string)
-        @param traceback lines of traceback info (string)
+        @param traceback lines of traceback info (list of strings)
         """
         self.utTestFailed.emit(testname, traceback)
         
@@ -1237,7 +1237,7 @@ class DebugServer(QTcpServer):
         Public method to process the client test errored info.
         
         @param testname name of the test (string)
-        @param traceback lines of traceback info (string)
+        @param traceback lines of traceback info (list of strings)
         """
         self.utTestErrored.emit(testname, traceback)
         
