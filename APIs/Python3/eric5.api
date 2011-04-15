@@ -4093,7 +4093,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_buttonBox_clicked?4
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.setPreferences?4()
-eric5.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName)
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName, setCurrent=True)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent=None, fromEric=True, displayMode=DefaultMode)
 eric5.Preferences.ConfigurationDialog.ConfigurationWindow.accept?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWindow.showConfigurationPageByName?4(pageName)

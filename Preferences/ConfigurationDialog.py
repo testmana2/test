@@ -473,7 +473,7 @@ class ConfigurationWidget(QWidget):
         @param column column that was selected (integer) (ignored)
         """
         pageName = itm.getPageName()
-        self.showConfigurationPageByName(pageName)
+        self.showConfigurationPageByName(pageName, setCurrent=False)
         
     def __initPage(self, pageData):
         """
@@ -494,11 +494,12 @@ class ConfigurationWidget(QWidget):
             pageData[-1] = page
         return page
         
-    def showConfigurationPageByName(self, pageName):
+    def showConfigurationPageByName(self, pageName, setCurrent=True):
         """
         Public slot to show a named configuration page.
         
         @param pageName name of the configuration page to show (string)
+        @param setCurrent flag indicating to set the current item (boolean)
         """
         if pageName == "empty":
             page = self.emptyPage
@@ -511,7 +512,7 @@ class ConfigurationWidget(QWidget):
                 page = pageData[-1]
             if page is None:
                 page = self.emptyPage
-            else:
+            elif setCurrent:
                 items = self.configList.findItems(pageData[0],
                     Qt.MatchFixedString | Qt.MatchRecursive)
                 if items:
