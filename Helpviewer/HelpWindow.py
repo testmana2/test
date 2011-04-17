@@ -1416,7 +1416,7 @@ class HelpWindow(QMainWindow):
             """<li>impropagating</li>"""
             """<li>networkworm</li>"""
             """<li>drivebydownload</li>"""
-            """</ul>""", 
+            """</ul>""",
             """<ul>"""
             """<li>malicious</li>"""
             """<li>benign</li>"""
@@ -1424,7 +1424,7 @@ class HelpWindow(QMainWindow):
             """<li>phishingsite</li>"""
             """<li>browserexploit</li>"""
             """<li>spamlink</li>"""
-            """</ul>""", 
+            """</ul>""",
         ))
         self.virustotalSearchEdit.textChanged.connect(self.__virusTotalSearchChanged)
         self.virustotalSearchEdit.returnPressed.connect(self.__virusTotalSearch)

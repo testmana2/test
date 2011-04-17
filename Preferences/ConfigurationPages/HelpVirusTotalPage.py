@@ -21,7 +21,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
     """
     Class documentation goes here.
     """
-    def __init__(self, parent = None):
+    def __init__(self, parent=None):
         """
         Constructor
         
@@ -49,11 +49,11 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         """
         Public slot to save the VirusTotal configuration.
         """
-        Preferences.setHelp("VirusTotalEnabled", 
+        Preferences.setHelp("VirusTotalEnabled",
             self.vtEnabledCheckBox.isChecked())
-        Preferences.setHelp("VirusTotalSecure", 
+        Preferences.setHelp("VirusTotalSecure",
             self.vtSecureCheckBox.isChecked())
-        Preferences.setHelp("VirusTotalServiceKey", 
+        Preferences.setHelp("VirusTotalServiceKey",
             self.vtServiceKeyEdit.text())
     
     @pyqtSlot(str)

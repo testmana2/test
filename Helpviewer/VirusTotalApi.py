@@ -16,6 +16,7 @@ import Helpviewer.HelpWindow
 
 import Preferences
 
+
 class VirusTotalAPI(QObject):
     """
     Class implementing the <a href="http://www.virustotal.com">VirusTotal</a> API.
@@ -24,7 +25,7 @@ class VirusTotalAPI(QObject):
             has been performed. It gives a flag indicating validity (boolean) and
             an error message in case of a network error (string).
     @signal submitUrlError(str) emitted with the error string, if the URL scan
-            submission returned an error. 
+            submission returned an error.
     @signal urlScanReport(str) emitted with the URL of the URL scan report page
     @signal fileScanReport(str) emitted with the URL of the file scan report page
     """

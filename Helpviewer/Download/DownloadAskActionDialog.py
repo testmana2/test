@@ -13,6 +13,7 @@ from .Ui_DownloadAskActionDialog import Ui_DownloadAskActionDialog
 
 import Preferences
 
+
 class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
     """
     Class implementing a dialog to ask for a download action.

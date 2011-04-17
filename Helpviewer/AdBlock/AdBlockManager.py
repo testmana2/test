@@ -232,7 +232,7 @@ class AdBlockManager(QObject):
             subscriptions = defaultSubscriptions
         for subscription in subscriptions:
             url = QUrl.fromEncoded(subscription.encode())
-            adBlockSubscription = AdBlockSubscription(url, self, 
+            adBlockSubscription = AdBlockSubscription(url, self,
                 subscription == defaultSubscriptionUrl)
             adBlockSubscription.rulesChanged.connect(self.rulesChanged)
             adBlockSubscription.changed.connect(self.rulesChanged)

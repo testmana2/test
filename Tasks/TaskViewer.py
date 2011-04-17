@@ -388,7 +388,7 @@ class TaskViewer(QTreeWidget):
             self.__regenerateProjectTasks)
         self.__projectTasksMenu.addSeparator()
         self.__projectTasksMenu.addAction(
-            self.trUtf8("&Configure scan options"), 
+            self.trUtf8("&Configure scan options"),
             self.__configureProjectTasksScanOptions)
         
         self.__menu = QMenu(self)
@@ -769,7 +769,7 @@ class TaskViewer(QTreeWidget):
             self.trUtf8("Scan Filter Patterns"),
             self.trUtf8("Enter filename patterns of files"
                         " to be excluded separated by a comma:"),
-            QLineEdit.Normal, 
+            QLineEdit.Normal,
             self.projectTasksScanFilter)
         if ok:
             self.projectTasksScanFilter = filter

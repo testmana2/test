@@ -429,7 +429,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgBranchAct.triggered[()].connect(self.__hgBranch)
         self.actions.append(self.hgBranchAct)
         
-        self.hgPushBranchAct = E5Action(self.trUtf8('Push new branch'), 
+        self.hgPushBranchAct = E5Action(self.trUtf8('Push new branch'),
                 self.trUtf8('Push new branch'),
                 0, 0, self, 'mercurial_push_branch')
         self.hgPushBranchAct.setStatusTip(self.trUtf8(
@@ -988,7 +988,7 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Private slot to push a new named branch.
         """
-        self.vcs.hgPush(self.project.ppath, newBranch = True)
+        self.vcs.hgPush(self.project.ppath, newBranch=True)
     
     def __hgEditRepoConfig(self):
         """

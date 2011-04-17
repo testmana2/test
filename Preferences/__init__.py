@@ -318,7 +318,7 @@ class Prefs(object):
         "CppIndentOpeningBrace": False,
         "CppIndentClosingBrace": False,
         "CppDollarsAllowed": True,
-        "CppStylePreprocessor": False, 
+        "CppStylePreprocessor": False,
         
         # CSS specifics
         "CssFoldComment": True,
@@ -335,7 +335,7 @@ class Prefs(object):
         "HtmlFoldScriptHeredocs": False,
         "HtmlCaseSensitiveTags": False,
         "HtmlDjangoTemplates": False,
-        "HtmlMakoTemplates": False, 
+        "HtmlMakoTemplates": False,
         
         # Pascal specifics
         "PascalFoldComment": True,
@@ -357,7 +357,7 @@ class Prefs(object):
         "PovFoldDirectives": False,
         
         # Properties specifics
-        "PropertiesInitialSpaces": True, 
+        "PropertiesInitialSpaces": True,
         
         # Python specifics
         "PythonBadIndentation": True,

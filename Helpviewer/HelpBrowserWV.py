@@ -807,7 +807,7 @@ class HelpBrowser(QWebView):
             menu.addAction(self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"), 
+                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
                     self.trUtf8("Scan Link with VirusTotal"), self.__virusTotal)
                 act.setData(hit.linkUrl())
         
@@ -828,7 +828,7 @@ class HelpBrowser(QWebView):
             act.setData(hit.imageUrl().toString())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"), 
+                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
                     self.trUtf8("Scan Image with VirusTotal"), self.__virusTotal)
                 act.setData(hit.imageUrl())
         
@@ -1478,10 +1478,10 @@ class HelpBrowser(QWebView):
             while frame and frame != self.page().mainFrame():
                 p -= frame.scrollPosition()
                 frame = frame.parentFrame()
-            pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton, 
+            pevent = QMouseEvent(QEvent.MouseButtonPress, p, Qt.LeftButton,
                 Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, pevent)
-            revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton, 
+            revent = QMouseEvent(QEvent.MouseButtonRelease, p, Qt.LeftButton,
                 Qt.MouseButtons(Qt.NoButton), Qt.KeyboardModifiers(Qt.NoModifier))
             qApp.sendEvent(self, revent)
             handled = True
@@ -1505,12 +1505,12 @@ class HelpBrowser(QWebView):
         Private method to show the access key labels.
         """
         supportedElements = [
-            "input", "a", "area", "button", "label", "legend", "textarea", 
+            "input", "a", "area", "button", "label", "legend", "textarea",
         ]
         unusedKeys = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z" \
             " 0 1 2 3 4 5 6 7 8 9".split()
         
-        viewport = QRect(self.__page.mainFrame().scrollPosition(), 
+        viewport = QRect(self.__page.mainFrame().scrollPosition(),
                          self.__page.viewportSize())
         # Priority first goes to elements with accesskey attributes
         alreadyLabeled = []
