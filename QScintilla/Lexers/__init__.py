@@ -9,6 +9,8 @@ Package implementing lexers for the various supported programming languages.
 
 from PyQt4.QtGui import QApplication
 
+from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
+
 import Preferences
 
 # The lexer registry
@@ -101,6 +103,12 @@ def getSupportedLanguages():
         "XML": [QApplication.translate('Lexers', "XML"), 'dummy.xml'],
         "YAML": [QApplication.translate('Lexers', "YAML"), 'dummy.yml'],
     }
+    
+    if QSCINTILLA_VERSION() >= 0x020501:
+        supportedLanguages.update({
+            "Matlab": [QApplication.translate('Lexers', "Matlab"), 'dummy.m.matlab'],
+            "Octave": [QApplication.translate('Lexers', "Octave"), 'dummy.m.octave'],
+        })
     
     for name in LexerRegistry:
         supportedLanguages[name] = LexerRegistry[name][:2]
@@ -210,6 +218,12 @@ def getLexer(language, parent=None, pyname=""):
             elif language == "YAML":
                 from .LexerYAML import LexerYAML
                 return LexerYAML(parent)
+            elif language == "Matlab":
+                from .LexerMatlab import LexerMatlab
+                return LexerMatlab(parent)
+            elif language == "Octave":
+                from .LexerOctave import LexerOctave
+                return LexerOctave(parent)
             
             elif language in LexerRegistry:
                 return LexerRegistry[language][2](parent)
@@ -326,6 +340,14 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
         QApplication.translate('Lexers',
             'YAML Files (*.yaml *.yml)'),
     ]
+    
+    if QSCINTILLA_VERSION() >= 0x020501:
+        openFileFiltersList.extend([
+            QApplication.translate('Lexers',
+                'Matlab Files (*.m *.m.matlab)'),
+            QApplication.translate('Lexers',
+                'Octave Files (*.m *.m.matlab)'),
+        ])
     
     for name in LexerRegistry:
         openFileFiltersList.append(LexerRegistry[name][3])
@@ -456,6 +478,14 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
             'YAML Files (*.yml)'),
     ]
     
+    if QSCINTILLA_VERSION() >= 0x020501:
+        saveFileFiltersList.extend([
+            QApplication.translate('Lexers',
+                'Matlab Files (*.m)'),
+            QApplication.translate('Lexers',
+                'Octave Files (*.m.octave)'),
+        ])
+    
     for name in LexerRegistry:
         saveFileFiltersList.append(LexerRegistry[name][4])
     
@@ -474,6 +504,11 @@ def getSaveFileFiltersList(includeAll=False, asString=False, withAdditional=True
 
 
 def getDefaultLexerAssociations():
+    """
+    Module function to get a dictionary with the default associations.
+    
+    @return dictionary with the default lexer associations
+    """
     assocs = {
         '*.sh': "Bash",
         '*.bash': "Bash",
@@ -595,6 +630,13 @@ def getDefaultLexerAssociations():
         '*.e5s': "XML",
         '*.e5t': "XML",
     }
+    
+    if QSCINTILLA_VERSION() >= 0x020501:
+        assocs.update({
+            '*.m': "Matlab", 
+            '*.m.matlab': "Matlab", 
+            '*.m.octave': "Octave", 
+        })
     
     for name in LexerRegistry:
         for pattern in LexerRegistry[name][5]:

@@ -874,6 +874,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/VirusTotalApi.py</Source>
     <Source>Preferences/ConfigurationPages/HelpVirusTotalPage.py</Source>
     <Source>Helpviewer/Download/DownloadAskActionDialog.py</Source>
+    <Source>QScintilla/Lexers/LexerMatlab.py</Source>
+    <Source>QScintilla/Lexers/LexerOctave.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

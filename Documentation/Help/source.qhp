@@ -645,6 +645,8 @@
               <section title="eric5.QScintilla.Lexers.LexerJavaScript" ref="eric5.QScintilla.Lexers.LexerJavaScript.html" />
               <section title="eric5.QScintilla.Lexers.LexerLua" ref="eric5.QScintilla.Lexers.LexerLua.html" />
               <section title="eric5.QScintilla.Lexers.LexerMakefile" ref="eric5.QScintilla.Lexers.LexerMakefile.html" />
+              <section title="eric5.QScintilla.Lexers.LexerMatlab" ref="eric5.QScintilla.Lexers.LexerMatlab.html" />
+              <section title="eric5.QScintilla.Lexers.LexerOctave" ref="eric5.QScintilla.Lexers.LexerOctave.html" />
               <section title="eric5.QScintilla.Lexers.LexerPOV" ref="eric5.QScintilla.Lexers.LexerPOV.html" />
               <section title="eric5.QScintilla.Lexers.LexerPascal" ref="eric5.QScintilla.Lexers.LexerPascal.html" />
               <section title="eric5.QScintilla.Lexers.LexerPerl" ref="eric5.QScintilla.Lexers.LexerPerl.html" />
@@ -10024,6 +10026,12 @@
       <keyword name="LexerBatch.defaultKeywords" id="LexerBatch.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerBatch.html#LexerBatch.defaultKeywords" />
       <keyword name="LexerBatch.isCommentStyle" id="LexerBatch.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerBatch.html#LexerBatch.isCommentStyle" />
       <keyword name="LexerBatch.isStringStyle" id="LexerBatch.isStringStyle" ref="eric5.QScintilla.Lexers.LexerBatch.html#LexerBatch.isStringStyle" />
+      <keyword name="LexerMatlab (Module)" id="LexerMatlab (Module)" ref="eric5.QScintilla.Lexers.LexerMatlab.html" />
+      <keyword name="LexerMatlab" id="LexerMatlab" ref="eric5.QScintilla.Lexers.LexerMatlab.html#LexerMatlab" />
+      <keyword name="LexerMatlab (Constructor)" id="LexerMatlab (Constructor)" ref="eric5.QScintilla.Lexers.LexerMatlab.html#LexerMatlab.__init__" />
+      <keyword name="LexerMatlab.defaultKeywords" id="LexerMatlab.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerMatlab.html#LexerMatlab.defaultKeywords" />
+      <keyword name="LexerMatlab.isCommentStyle" id="LexerMatlab.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerMatlab.html#LexerMatlab.isCommentStyle" />
+      <keyword name="LexerMatlab.isStringStyle" id="LexerMatlab.isStringStyle" ref="eric5.QScintilla.Lexers.LexerMatlab.html#LexerMatlab.isStringStyle" />
       <keyword name="LexerSQL (Module)" id="LexerSQL (Module)" ref="eric5.QScintilla.Lexers.LexerSQL.html" />
       <keyword name="LexerSQL" id="LexerSQL" ref="eric5.QScintilla.Lexers.LexerSQL.html#LexerSQL" />
       <keyword name="LexerSQL (Constructor)" id="LexerSQL (Constructor)" ref="eric5.QScintilla.Lexers.LexerSQL.html#LexerSQL.__init__" />
@@ -10143,6 +10151,12 @@
       <keyword name="LexerYAML.initProperties" id="LexerYAML.initProperties" ref="eric5.QScintilla.Lexers.LexerYAML.html#LexerYAML.initProperties" />
       <keyword name="LexerYAML.isCommentStyle" id="LexerYAML.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerYAML.html#LexerYAML.isCommentStyle" />
       <keyword name="LexerYAML.isStringStyle" id="LexerYAML.isStringStyle" ref="eric5.QScintilla.Lexers.LexerYAML.html#LexerYAML.isStringStyle" />
+      <keyword name="LexerOctave (Module)" id="LexerOctave (Module)" ref="eric5.QScintilla.Lexers.LexerOctave.html" />
+      <keyword name="LexerOctave" id="LexerOctave" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave" />
+      <keyword name="LexerOctave (Constructor)" id="LexerOctave (Constructor)" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.__init__" />
+      <keyword name="LexerOctave.defaultKeywords" id="LexerOctave.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.defaultKeywords" />
+      <keyword name="LexerOctave.isCommentStyle" id="LexerOctave.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.isCommentStyle" />
+      <keyword name="LexerOctave.isStringStyle" id="LexerOctave.isStringStyle" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.isStringStyle" />
       <keyword name="LexerJavaScript (Module)" id="LexerJavaScript (Module)" ref="eric5.QScintilla.Lexers.LexerJavaScript.html" />
       <keyword name="LexerJavaScript" id="LexerJavaScript" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript" />
       <keyword name="LexerJavaScript (Constructor)" id="LexerJavaScript (Constructor)" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.__init__" />
@@ -10811,6 +10825,8 @@
       <file>eric5.QScintilla.Lexers.LexerJavaScript.html</file>
       <file>eric5.QScintilla.Lexers.LexerLua.html</file>
       <file>eric5.QScintilla.Lexers.LexerMakefile.html</file>
+      <file>eric5.QScintilla.Lexers.LexerMatlab.html</file>
+      <file>eric5.QScintilla.Lexers.LexerOctave.html</file>
       <file>eric5.QScintilla.Lexers.LexerPOV.html</file>
       <file>eric5.QScintilla.Lexers.LexerPascal.html</file>
       <file>eric5.QScintilla.Lexers.LexerPerl.html</file>

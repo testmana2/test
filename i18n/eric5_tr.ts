@@ -6630,7 +6630,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2321"/>
+        <location filename="QScintilla/Editor.py" line="2366"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
@@ -6720,7 +6720,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Tüm seçimi iptal et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5675"/>
+        <location filename="QScintilla/Editor.py" line="5720"/>
         <source>Check spelling...</source>
         <translation>Yazım Kontrolü...</translation>
     </message>
@@ -6970,7 +6970,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Bekleme noktasını düzenle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4024"/>
+        <location filename="QScintilla/Editor.py" line="4069"/>
         <source>Enable breakpoint</source>
         <translation>Beklemenoktasını etkinleştir</translation>
     </message>
@@ -7085,57 +7085,57 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Kullanmak için Pygment lexer seç.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1531"/>
+        <location filename="QScintilla/Editor.py" line="1532"/>
         <source>Modification of Read Only file</source>
         <translation>Yalnızca okunabilir dosyada değişiklik</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1531"/>
+        <location filename="QScintilla/Editor.py" line="1532"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Yalnızca okunabilir bir dosyayı değiştirmeşe çalışıyorsunuz. Lütfen önce farklı bir isimde kaydediniz.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2100"/>
+        <location filename="QScintilla/Editor.py" line="2145"/>
         <source>Printing...</source>
         <translation>Yazılıyor...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2117"/>
+        <location filename="QScintilla/Editor.py" line="2162"/>
         <source>Printing completed</source>
         <translation>Yazdırma tamalandı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2119"/>
+        <location filename="QScintilla/Editor.py" line="2164"/>
         <source>Error while printing</source>
         <translation>Yazdırılırken hata</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2122"/>
+        <location filename="QScintilla/Editor.py" line="2167"/>
         <source>Printing aborted</source>
         <translation>Yazdırma iptal edildi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2273"/>
+        <location filename="QScintilla/Editor.py" line="2318"/>
         <source>File Modified</source>
         <translation>Dosya Değiştirildi</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2273"/>
+        <location filename="QScintilla/Editor.py" line="2318"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyasında kaydedilmemiş değişiklikler var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2321"/>
+        <location filename="QScintilla/Editor.py" line="2366"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; açılamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2470"/>
+        <location filename="QScintilla/Editor.py" line="2515"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2422"/>
+        <location filename="QScintilla/Editor.py" line="2467"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; kaydedilemiyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
@@ -7145,117 +7145,117 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3561"/>
+        <location filename="QScintilla/Editor.py" line="3606"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3561"/>
+        <location filename="QScintilla/Editor.py" line="3606"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Otomatiktamamlama uygun değil çünkü bu otomatiktamamlama kaynağı değil.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4027"/>
+        <location filename="QScintilla/Editor.py" line="4072"/>
         <source>Disable breakpoint</source>
         <translation>Durmanoktasını iptal et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4361"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4316"/>
+        <location filename="QScintilla/Editor.py" line="4361"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4362"/>
+        <location filename="QScintilla/Editor.py" line="4407"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Kodların Dipnotunu Göster</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4358"/>
+        <location filename="QScintilla/Editor.py" line="4403"/>
         <source>All lines have been covered.</source>
         <translation>Tüm satırlar korumaya alındı.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4362"/>
+        <location filename="QScintilla/Editor.py" line="4407"/>
         <source>There is no coverage file available.</source>
         <translation>Hazırda koruma dosyası yok.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4454"/>
+        <location filename="QScintilla/Editor.py" line="4499"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4454"/>
+        <location filename="QScintilla/Editor.py" line="4499"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4584"/>
+        <location filename="QScintilla/Editor.py" line="4629"/>
         <source>Syntax Error</source>
         <translation>Sözdizimi Hatası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4584"/>
+        <location filename="QScintilla/Editor.py" line="4629"/>
         <source>No syntax error message available.</source>
         <translation>Uygun söz dizimi hata mesajı yok.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4710"/>
+        <location filename="QScintilla/Editor.py" line="4755"/>
         <source>py3flakes Warning</source>
         <translation>Py3Parçaları Uyarısı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4710"/>
+        <location filename="QScintilla/Editor.py" line="4755"/>
         <source>No py3flakes warning message available.</source>
         <translation>Hazırda Pyparçaları &quot;uyarı mesajı&quot; yok.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4809"/>
+        <location filename="QScintilla/Editor.py" line="4854"/>
         <source>Macro Name</source>
         <translation>Makro Adı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4809"/>
+        <location filename="QScintilla/Editor.py" line="4854"/>
         <source>Select a macro name:</source>
         <translation>Bir makro ismi seç:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4837"/>
+        <location filename="QScintilla/Editor.py" line="4882"/>
         <source>Load macro file</source>
         <translation>Makro dosyasını yükle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4877"/>
+        <location filename="QScintilla/Editor.py" line="4922"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro dosyaları (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4903"/>
         <source>Error loading macro</source>
         <translation>Makronun yüklenmesinde hata</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4851"/>
+        <location filename="QScintilla/Editor.py" line="4896"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4858"/>
+        <location filename="QScintilla/Editor.py" line="4903"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; bozuk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4877"/>
+        <location filename="QScintilla/Editor.py" line="4922"/>
         <source>Save macro file</source>
         <translation>Makro Dosyasını Kaydet</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4894"/>
+        <location filename="QScintilla/Editor.py" line="4939"/>
         <source>Save macro</source>
         <translation>Makro Kaydet</translation>
     </message>
@@ -7265,37 +7265,37 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten açık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4909"/>
+        <location filename="QScintilla/Editor.py" line="4954"/>
         <source>Error saving macro</source>
         <translation>Makronun kaydedilmesinde hata</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4909"/>
+        <location filename="QScintilla/Editor.py" line="4954"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4920"/>
+        <location filename="QScintilla/Editor.py" line="4965"/>
         <source>Start Macro Recording</source>
         <translation>Makro Kaydı Başladı</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4920"/>
+        <location filename="QScintilla/Editor.py" line="4965"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Makro kaydı şuan aktif. Yeniden başlasın mı?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4945"/>
+        <location filename="QScintilla/Editor.py" line="4990"/>
         <source>Macro Recording</source>
         <translation>Makro Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4945"/>
+        <location filename="QScintilla/Editor.py" line="4990"/>
         <source>Enter name of the macro:</source>
         <translation>Makronun ismini gir:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5058"/>
+        <location filename="QScintilla/Editor.py" line="5103"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eric5 ile açıldıktan sonra &lt;b&gt;{0}&lt;/b&gt; dosyasında değişiklik olmuş. Yeniden açılsın mı?&lt;/p&gt;</translation>
     </message>
@@ -7305,137 +7305,137 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Uyarı:&lt;/b&gt; Yapılan değişiklikleri yeniden açarken kaybedebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5067"/>
+        <location filename="QScintilla/Editor.py" line="5112"/>
         <source>File changed</source>
         <translation>Dosya değiştirilmiş</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5146"/>
+        <location filename="QScintilla/Editor.py" line="5191"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5263"/>
+        <location filename="QScintilla/Editor.py" line="5308"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5263"/>
+        <location filename="QScintilla/Editor.py" line="5308"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; bir dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5281"/>
+        <location filename="QScintilla/Editor.py" line="5326"/>
         <source>Resources</source>
         <translation>Kaynaklar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5283"/>
+        <location filename="QScintilla/Editor.py" line="5328"/>
         <source>Add file...</source>
         <translation>Dosya ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5285"/>
+        <location filename="QScintilla/Editor.py" line="5330"/>
         <source>Add files...</source>
         <translation>Dosyaları ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5287"/>
+        <location filename="QScintilla/Editor.py" line="5332"/>
         <source>Add aliased file...</source>
         <translation>Kısaltmalar dosyasına ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5289"/>
+        <location filename="QScintilla/Editor.py" line="5334"/>
         <source>Add localized resource...</source>
         <translation>Yaral kaynak ekle...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5292"/>
+        <location filename="QScintilla/Editor.py" line="5337"/>
         <source>Add resource frame</source>
         <translation>Çerçeve kaynağı ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5310"/>
+        <location filename="QScintilla/Editor.py" line="5355"/>
         <source>Add file resource</source>
         <translation>Dosya kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5326"/>
+        <location filename="QScintilla/Editor.py" line="5371"/>
         <source>Add file resources</source>
         <translation>Dosya kaynaklarını ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5353"/>
+        <location filename="QScintilla/Editor.py" line="5398"/>
         <source>Add aliased file resource</source>
         <translation>Kısaltmalar dosyası kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5353"/>
+        <location filename="QScintilla/Editor.py" line="5398"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>&lt;b&gt;{0} dosyası için takma ad&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5414"/>
+        <location filename="QScintilla/Editor.py" line="5459"/>
         <source>Package Diagram</source>
         <translation>Paket Şeması</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5414"/>
+        <location filename="QScintilla/Editor.py" line="5459"/>
         <source>Include class attributes?</source>
         <translation>Sınıf nitelikleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5431"/>
+        <location filename="QScintilla/Editor.py" line="5476"/>
         <source>Imports Diagram</source>
         <translation>Şemayı İçe Aktar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5431"/>
+        <location filename="QScintilla/Editor.py" line="5476"/>
         <source>Include imports from external modules?</source>
         <translation>Harici modüllerdan içe aktarım dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5443"/>
+        <location filename="QScintilla/Editor.py" line="5488"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5443"/>
+        <location filename="QScintilla/Editor.py" line="5488"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5677"/>
+        <location filename="QScintilla/Editor.py" line="5722"/>
         <source>Add to dictionary</source>
         <translation>Sözlüğe ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5679"/>
+        <location filename="QScintilla/Editor.py" line="5724"/>
         <source>Ignore All</source>
         <translation>Hepsini Yoksay</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2470"/>
+        <location filename="QScintilla/Editor.py" line="2515"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4753"/>
+        <location filename="QScintilla/Editor.py" line="4798"/>
         <source>Warning: {0}</source>
         <translation>Dikkat: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4759"/>
+        <location filename="QScintilla/Editor.py" line="4804"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4894"/>
+        <location filename="QScintilla/Editor.py" line="4939"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5063"/>
+        <location filename="QScintilla/Editor.py" line="5108"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13112,22 +13112,22 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="71"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="74"/>
         <source>Checking validity of the service key...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="80"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="91"/>
         <source>The service key is valid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="83"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="94"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;The service key is not valid.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="86"/>
+        <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="97"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13554,7 +13554,7 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2219"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2225"/>
         <source>eric5 Web Browser</source>
         <translation>Eric5 Web Gözatıcısı</translation>
     </message>
@@ -13564,12 +13564,12 @@ You have %n tab(s) open.</source>
         <translation>İçerik</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="938"/>
+        <location filename="Helpviewer/HelpWindow.py" line="943"/>
         <source>Index</source>
         <translation>Dizin</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="951"/>
+        <location filename="Helpviewer/HelpWindow.py" line="956"/>
         <source>Search</source>
         <translation>Ara</translation>
     </message>
@@ -13579,1089 +13579,1089 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Yönlendirme Menüsünü Göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="463"/>
+        <location filename="Helpviewer/HelpWindow.py" line="468"/>
         <source>Close the current help window</source>
         <translation>Geçerli yardım penceresini kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="319"/>
+        <location filename="Helpviewer/HelpWindow.py" line="324"/>
         <source>Open a new help window tab</source>
         <translation>Yeni bir yardım penceresi sekmesi aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="314"/>
+        <location filename="Helpviewer/HelpWindow.py" line="319"/>
         <source>New Tab</source>
         <translation>Yeni Sekme</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="314"/>
+        <location filename="Helpviewer/HelpWindow.py" line="319"/>
         <source>&amp;New Tab</source>
         <translation>Ye&amp;ni Sekme</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="314"/>
+        <location filename="Helpviewer/HelpWindow.py" line="319"/>
         <source>Ctrl+T</source>
         <comment>File|New Tab</comment>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="320"/>
+        <location filename="Helpviewer/HelpWindow.py" line="325"/>
         <source>&lt;b&gt;New Tab&lt;/b&gt;&lt;p&gt;This opens a new help window tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni Sekme&lt;/b&gt;&lt;p&gt;Bu yeni bin yardım penceresi sekmesi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="328"/>
+        <location filename="Helpviewer/HelpWindow.py" line="333"/>
         <source>New Window</source>
         <translation>Yeni Pencere</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="328"/>
+        <location filename="Helpviewer/HelpWindow.py" line="333"/>
         <source>New &amp;Window</source>
         <translation>Yeni &amp;Pencere</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="328"/>
+        <location filename="Helpviewer/HelpWindow.py" line="333"/>
         <source>Ctrl+N</source>
         <comment>File|New Window</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="333"/>
+        <location filename="Helpviewer/HelpWindow.py" line="338"/>
         <source>Open a new help browser window</source>
         <translation>Yeni bir yardım gözatıcı penceresi aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="334"/>
+        <location filename="Helpviewer/HelpWindow.py" line="339"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new help browser window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeni Pencere&lt;/b&gt;&lt;p&gt;Bu yeni bir yardım gözatıcı penceresi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1552"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1557"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="342"/>
+        <location filename="Helpviewer/HelpWindow.py" line="347"/>
         <source>&amp;Open File</source>
         <translation>D&amp;osya Aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="342"/>
+        <location filename="Helpviewer/HelpWindow.py" line="347"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="347"/>
+        <location filename="Helpviewer/HelpWindow.py" line="352"/>
         <source>Open a help file for display</source>
         <translation>Göstermek için bir yardım dosyası aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="348"/>
+        <location filename="Helpviewer/HelpWindow.py" line="353"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new help file for display. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dosya Aç&lt;/b&gt;&lt;p&gt;Bu göstermek için yeni bir yardım dosyası açar. Dosya seçme diyaloğu görünür.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="357"/>
+        <location filename="Helpviewer/HelpWindow.py" line="362"/>
         <source>Open File in New Tab</source>
         <translation>Yeni Sekmede Dosya Aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="357"/>
+        <location filename="Helpviewer/HelpWindow.py" line="362"/>
         <source>Open File in New &amp;Tab</source>
         <translation>Yeni Sek&amp;mede Dosya Aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="357"/>
+        <location filename="Helpviewer/HelpWindow.py" line="362"/>
         <source>Shift+Ctrl+O</source>
         <comment>File|Open in new tab</comment>
         <translation>Shift+Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="362"/>
+        <location filename="Helpviewer/HelpWindow.py" line="367"/>
         <source>Open a help file for display in a new tab</source>
         <translation>Yeni bir sekmede göstermek için bir yardım dosyası aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="364"/>
+        <location filename="Helpviewer/HelpWindow.py" line="369"/>
         <source>&lt;b&gt;Open File in New Tab&lt;/b&gt;&lt;p&gt;This opens a new help file for display in a new tab. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="373"/>
+        <location filename="Helpviewer/HelpWindow.py" line="378"/>
         <source>Save As </source>
         <translation>Farklı Kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="373"/>
+        <location filename="Helpviewer/HelpWindow.py" line="378"/>
         <source>&amp;Save As...</source>
         <translation>Farklı K&amp;aydet...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="373"/>
+        <location filename="Helpviewer/HelpWindow.py" line="378"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="383"/>
         <source>Save the current page to disk</source>
         <translation>Geçerli sayfayı harddiske kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="380"/>
+        <location filename="Helpviewer/HelpWindow.py" line="385"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current page to disk.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Farklı Kaydet...&lt;/b&gt;&lt;p&gt;Geçerli sayfayı harddiske kaydet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="389"/>
+        <location filename="Helpviewer/HelpWindow.py" line="394"/>
         <source>Import Bookmarks</source>
         <translation>Yerimlerini İçeaktar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="389"/>
+        <location filename="Helpviewer/HelpWindow.py" line="394"/>
         <source>&amp;Import Bookmarks...</source>
         <translation>Yerimlerini &amp;İçeaktar...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="392"/>
+        <location filename="Helpviewer/HelpWindow.py" line="397"/>
         <source>Import bookmarks from other browsers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="394"/>
+        <location filename="Helpviewer/HelpWindow.py" line="399"/>
         <source>&lt;b&gt;Import Bookmarks&lt;/b&gt;&lt;p&gt;Import bookmarks from other browsers.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="403"/>
+        <location filename="Helpviewer/HelpWindow.py" line="408"/>
         <source>Export Bookmarks</source>
         <translation>Yerimlerini Dışaaktar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="403"/>
+        <location filename="Helpviewer/HelpWindow.py" line="408"/>
         <source>&amp;Export Bookmarks...</source>
         <translation>Y&amp;erimlerini Dışaaktar...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="406"/>
+        <location filename="Helpviewer/HelpWindow.py" line="411"/>
         <source>Export the bookmarks into a file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="408"/>
+        <location filename="Helpviewer/HelpWindow.py" line="413"/>
         <source>&lt;b&gt;Export Bookmarks&lt;/b&gt;&lt;p&gt;Export the bookmarks into a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="417"/>
+        <location filename="Helpviewer/HelpWindow.py" line="422"/>
         <source>Print</source>
         <translation>Yazdır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="417"/>
+        <location filename="Helpviewer/HelpWindow.py" line="422"/>
         <source>&amp;Print</source>
         <translation>&amp;Yazdır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="417"/>
+        <location filename="Helpviewer/HelpWindow.py" line="422"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="422"/>
+        <location filename="Helpviewer/HelpWindow.py" line="427"/>
         <source>Print the displayed help</source>
         <translation>Görüntülenen yardımı yazdır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="423"/>
+        <location filename="Helpviewer/HelpWindow.py" line="428"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazdır&lt;/b&gt;&lt;p&gt;Görüntülenen yardım metnini yazdır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="444"/>
+        <location filename="Helpviewer/HelpWindow.py" line="449"/>
         <source>Print Preview</source>
         <translation>Baskı Öngörünümü</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="448"/>
+        <location filename="Helpviewer/HelpWindow.py" line="453"/>
         <source>Print preview of the displayed help</source>
         <translation>Görüntülenen yardımının baskıöngörünümünü göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="450"/>
+        <location filename="Helpviewer/HelpWindow.py" line="455"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yazıcı Öngörünümü&lt;/b&gt;&lt;p&gt;Görüntülenen yardım metninin yazıcı öngörünümü.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="458"/>
+        <location filename="Helpviewer/HelpWindow.py" line="463"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="458"/>
+        <location filename="Helpviewer/HelpWindow.py" line="463"/>
         <source>&amp;Close</source>
         <translation>&amp;Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="458"/>
+        <location filename="Helpviewer/HelpWindow.py" line="463"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="464"/>
+        <location filename="Helpviewer/HelpWindow.py" line="469"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current help window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kapat&lt;/b&gt;&lt;p&gt;Geçerli yardım penceresini kapat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="472"/>
+        <location filename="Helpviewer/HelpWindow.py" line="477"/>
         <source>Close All</source>
         <translation>Hepsini Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="472"/>
+        <location filename="Helpviewer/HelpWindow.py" line="477"/>
         <source>Close &amp;All</source>
         <translation>Hepsini K&amp;apat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="475"/>
+        <location filename="Helpviewer/HelpWindow.py" line="480"/>
         <source>Close all help windows</source>
         <translation>Tüm yardım pencerelerini kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="476"/>
+        <location filename="Helpviewer/HelpWindow.py" line="481"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all help windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hepisini Kapat&lt;/b&gt;&lt;p&gt;İlk açılan hariç tüm yardım pencerelerini kapat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="488"/>
+        <location filename="Helpviewer/HelpWindow.py" line="493"/>
         <source>Private Browsing</source>
         <translation>Özel Gözatım</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="484"/>
+        <location filename="Helpviewer/HelpWindow.py" line="489"/>
         <source>Private &amp;Browsing</source>
         <translation>Özel &amp;Gözatım</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="489"/>
+        <location filename="Helpviewer/HelpWindow.py" line="494"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="499"/>
+        <location filename="Helpviewer/HelpWindow.py" line="504"/>
         <source>Quit</source>
         <translation>Çık</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="499"/>
+        <location filename="Helpviewer/HelpWindow.py" line="504"/>
         <source>&amp;Quit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="499"/>
+        <location filename="Helpviewer/HelpWindow.py" line="504"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="504"/>
+        <location filename="Helpviewer/HelpWindow.py" line="509"/>
         <source>Quit the web browser</source>
         <translation>Web Gözatıcısından Çık</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="505"/>
+        <location filename="Helpviewer/HelpWindow.py" line="510"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Çık&lt;/b&gt;&lt;p&gt;Web gözatıcısından çık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <location filename="Helpviewer/HelpWindow.py" line="521"/>
         <source>Backward</source>
         <translation>Geriye Doğru</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <location filename="Helpviewer/HelpWindow.py" line="521"/>
         <source>&amp;Backward</source>
         <translation>Geriye &amp;Doğru</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <location filename="Helpviewer/HelpWindow.py" line="521"/>
         <source>Alt+Left</source>
         <comment>Go|Backward</comment>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <location filename="Helpviewer/HelpWindow.py" line="521"/>
         <source>Backspace</source>
         <comment>Go|Backward</comment>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="522"/>
+        <location filename="Helpviewer/HelpWindow.py" line="527"/>
         <source>Move one help screen backward</source>
         <translation>Önceki yardım ekranına götür</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="523"/>
+        <location filename="Helpviewer/HelpWindow.py" line="528"/>
         <source>&lt;b&gt;Backward&lt;/b&gt;&lt;p&gt;Moves one help screen backward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Geriye Doğru&lt;/b&gt;&lt;p&gt;Bir yardım ekranın geriye taşı. Eğer hazırda bir tane yoksa ,bu işlem iptal edilir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="532"/>
+        <location filename="Helpviewer/HelpWindow.py" line="537"/>
         <source>Forward</source>
         <translation>İleriye</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="532"/>
+        <location filename="Helpviewer/HelpWindow.py" line="537"/>
         <source>&amp;Forward</source>
         <translation>İleri&amp;ye</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="532"/>
+        <location filename="Helpviewer/HelpWindow.py" line="537"/>
         <source>Alt+Right</source>
         <comment>Go|Forward</comment>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="532"/>
+        <location filename="Helpviewer/HelpWindow.py" line="537"/>
         <source>Shift+Backspace</source>
         <comment>Go|Forward</comment>
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="538"/>
+        <location filename="Helpviewer/HelpWindow.py" line="543"/>
         <source>Move one help screen forward</source>
         <translation>Bir yardım görüntüsü ileri taşı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="544"/>
         <source>&lt;b&gt;Forward&lt;/b&gt;&lt;p&gt;Moves one help screen forward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;İleriye Doğru&lt;/b&gt;&lt;p&gt;Yardım ekranın bir ileriye taşı. Eğer hazırda bir tane yoksa ,bu işlem iptal edilir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="548"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="548"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>&amp;Home</source>
         <translation>&amp;Ev</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="548"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Ctrl+Home</source>
         <comment>Go|Home</comment>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="553"/>
+        <location filename="Helpviewer/HelpWindow.py" line="558"/>
         <source>Move to the initial help screen</source>
         <translation>İlk yardım sayfasına taşı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="554"/>
+        <location filename="Helpviewer/HelpWindow.py" line="559"/>
         <source>&lt;b&gt;Home&lt;/b&gt;&lt;p&gt;Moves to the initial help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Giriş&lt;/b&gt;&lt;p&gt;Yardım ekranını ilk baştakine taşı.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="562"/>
+        <location filename="Helpviewer/HelpWindow.py" line="567"/>
         <source>Reload</source>
         <translation>Yeniden Yükle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="562"/>
+        <location filename="Helpviewer/HelpWindow.py" line="567"/>
         <source>&amp;Reload</source>
         <translation>&amp;Yeniden Yükle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="562"/>
+        <location filename="Helpviewer/HelpWindow.py" line="567"/>
         <source>Ctrl+R</source>
         <comment>Go|Reload</comment>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="562"/>
+        <location filename="Helpviewer/HelpWindow.py" line="567"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="568"/>
+        <location filename="Helpviewer/HelpWindow.py" line="573"/>
         <source>Reload the current help screen</source>
         <translation>Geçerli yardım ekranını yeniden yükle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="569"/>
+        <location filename="Helpviewer/HelpWindow.py" line="574"/>
         <source>&lt;b&gt;Reload&lt;/b&gt;&lt;p&gt;Reloads the current help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yeniden Yükle&lt;/b&gt;&lt;p&gt;Geçerli yardım görüntüsünü yeniden yükle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="582"/>
         <source>Stop</source>
         <translation>Dur</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="582"/>
         <source>&amp;Stop</source>
         <translation>D&amp;ur</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="582"/>
         <source>Ctrl+.</source>
         <comment>Go|Stop</comment>
         <translation>Ctrl+.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="582"/>
         <source>Esc</source>
         <comment>Go|Stop</comment>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="583"/>
+        <location filename="Helpviewer/HelpWindow.py" line="588"/>
         <source>Stop loading</source>
         <translation>Yüklemeyi durdur</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="584"/>
+        <location filename="Helpviewer/HelpWindow.py" line="589"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="597"/>
         <source>Copy</source>
         <translation>Kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="597"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="597"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="597"/>
+        <location filename="Helpviewer/HelpWindow.py" line="602"/>
         <source>Copy the selected text</source>
         <translation>Seçilen metni kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="598"/>
+        <location filename="Helpviewer/HelpWindow.py" line="603"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopya&lt;/b&gt;&lt;p&gt;Seçilen metni clipboard kopyala.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="611"/>
         <source>Find...</source>
         <translation>Bul...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="611"/>
         <source>&amp;Find...</source>
         <translation>&amp;Bul...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="606"/>
+        <location filename="Helpviewer/HelpWindow.py" line="611"/>
         <source>Ctrl+F</source>
         <comment>Edit|Find</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="611"/>
+        <location filename="Helpviewer/HelpWindow.py" line="616"/>
         <source>Find text in page</source>
         <translation>Metni sayfa içinde bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="612"/>
+        <location filename="Helpviewer/HelpWindow.py" line="617"/>
         <source>&lt;b&gt;Find&lt;/b&gt;&lt;p&gt;Find text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;BUl&lt;/b&gt;&lt;p&gt;Metni geçerli sayfada bul.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="625"/>
         <source>Find next</source>
         <translation>Sonrakini bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="625"/>
         <source>Find &amp;next</source>
         <translation>So&amp;nrakini Bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="620"/>
+        <location filename="Helpviewer/HelpWindow.py" line="625"/>
         <source>F3</source>
         <comment>Edit|Find next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="625"/>
+        <location filename="Helpviewer/HelpWindow.py" line="630"/>
         <source>Find next occurrence of text in page</source>
         <translation>Geçerli sayfadaki metinde bir sonrakini bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="626"/>
+        <location filename="Helpviewer/HelpWindow.py" line="631"/>
         <source>&lt;b&gt;Find next&lt;/b&gt;&lt;p&gt;Find the next occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Bir sonrakini bul&lt;/b&gt;&lt;p&gt;Geçerli sayfadaki metinde bir sonrakini bul.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="634"/>
+        <location filename="Helpviewer/HelpWindow.py" line="639"/>
         <source>Find previous</source>
         <translation>Öncekini bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="634"/>
+        <location filename="Helpviewer/HelpWindow.py" line="639"/>
         <source>Find &amp;previous</source>
         <translation>Öncekini b&amp;ul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="634"/>
+        <location filename="Helpviewer/HelpWindow.py" line="639"/>
         <source>Shift+F3</source>
         <comment>Edit|Find previous</comment>
         <translation>Shift+F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="639"/>
+        <location filename="Helpviewer/HelpWindow.py" line="644"/>
         <source>Find previous occurrence of text in page</source>
         <translation>Geçerli sayfadaki metinde bir öncekini bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="641"/>
+        <location filename="Helpviewer/HelpWindow.py" line="646"/>
         <source>&lt;b&gt;Find previous&lt;/b&gt;&lt;p&gt;Find the previous occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Bir öncekini bul&lt;/b&gt;&lt;p&gt;Geçerli sayfadaki metinde bir öncekini bul.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="649"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>Manage Bookmarks</source>
         <translation>Yerimleri Yönetimi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="649"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>&amp;Manage Bookmarks...</source>
         <translation>Yerimleri Yöneti&amp;mi...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="649"/>
+        <location filename="Helpviewer/HelpWindow.py" line="654"/>
         <source>Ctrl+Shift+B</source>
         <comment>Help|Manage bookmarks</comment>
         <translation>Ctrl+Shift+B</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="653"/>
+        <location filename="Helpviewer/HelpWindow.py" line="658"/>
         <source>Open a dialog to manage the bookmarks.</source>
         <translation>Yerimlerini yönetmek için diyalog aç.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="655"/>
+        <location filename="Helpviewer/HelpWindow.py" line="660"/>
         <source>&lt;b&gt;Manage Bookmarks...&lt;/b&gt;&lt;p&gt;Open a dialog to manage the bookmarks.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yerimlerini Yönet...&lt;/b&gt;&lt;p&gt;Yerimlerini düzenlemek için bir diyalog açılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="663"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Add Bookmark</source>
         <translation>Yerimi Ekle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="663"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Add &amp;Bookmark...</source>
         <translation>&amp;Yerimi Ekle...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="663"/>
+        <location filename="Helpviewer/HelpWindow.py" line="668"/>
         <source>Ctrl+D</source>
         <comment>Help|Add bookmark</comment>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="669"/>
+        <location filename="Helpviewer/HelpWindow.py" line="674"/>
         <source>Open a dialog to add a bookmark.</source>
         <translation>Yerimlerine eklemek için bir diyalog aç.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="670"/>
+        <location filename="Helpviewer/HelpWindow.py" line="675"/>
         <source>&lt;b&gt;Add Bookmark&lt;/b&gt;&lt;p&gt;Open a dialog to add the current URL as a bookmark.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yerimi Ekle&lt;/b&gt;&lt;p&gt;Geçerli URL yi yerimi olarak eklemek için bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="678"/>
+        <location filename="Helpviewer/HelpWindow.py" line="683"/>
         <source>Add Folder</source>
         <translation>,Dizin Ekle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="678"/>
+        <location filename="Helpviewer/HelpWindow.py" line="683"/>
         <source>Add &amp;Folder...</source>
         <translation>Dizin &amp;Ekle...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="681"/>
+        <location filename="Helpviewer/HelpWindow.py" line="686"/>
         <source>Open a dialog to add a new bookmarks folder.</source>
         <translation>Yeni yerimi dizini eklemek için bir diyalog açar.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="688"/>
         <source>&lt;b&gt;Add Folder...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kalsör Ekle...&lt;/b&gt;&lt;p&gt;Yeni yerimi klasörü eklemek için bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="691"/>
+        <location filename="Helpviewer/HelpWindow.py" line="696"/>
         <source>Bookmark All Tabs</source>
         <translation>Tüm Sekmeleri Yerimi yap</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="691"/>
+        <location filename="Helpviewer/HelpWindow.py" line="696"/>
         <source>Bookmark All Tabs...</source>
         <translation>Tüm Sekmeleri Yerimi yap...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="694"/>
+        <location filename="Helpviewer/HelpWindow.py" line="699"/>
         <source>Bookmark all open tabs.</source>
         <translation>Tüm Açık Sekmeleri Yerimi yap.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="696"/>
+        <location filename="Helpviewer/HelpWindow.py" line="701"/>
         <source>&lt;b&gt;Bookmark All Tabs...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder for all open tabs.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="705"/>
+        <location filename="Helpviewer/HelpWindow.py" line="710"/>
         <source>What&apos;s This?</source>
         <translation>Bu nedir?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="705"/>
+        <location filename="Helpviewer/HelpWindow.py" line="710"/>
         <source>&amp;What&apos;s This?</source>
         <translation>Bu &amp;Nedir?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="705"/>
+        <location filename="Helpviewer/HelpWindow.py" line="710"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="710"/>
+        <location filename="Helpviewer/HelpWindow.py" line="715"/>
         <source>Context sensitive help</source>
         <translation>Duyarlı yardım</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="711"/>
+        <location filename="Helpviewer/HelpWindow.py" line="716"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Duyarlı yardım içeriğini görüntüle&lt;/b&gt;&lt;p&gt;Bu Nedir? modunda, Fare imleci soru işeretiyle beraber bir ok şeklindedir ve bir arayüz elemanı üzerinde tıklarsanız bu elemanın nasıl kullanılacağı ve hakkında kısa bilgi verir. bu özellik diyaloglarda başlık çubuğu üzerindeyken çıkarılan açılır menülerde de bulunmaktadır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="723"/>
+        <location filename="Helpviewer/HelpWindow.py" line="728"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="723"/>
+        <location filename="Helpviewer/HelpWindow.py" line="728"/>
         <source>&amp;About</source>
         <translation>H&amp;akkında</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="726"/>
+        <location filename="Helpviewer/HelpWindow.py" line="731"/>
         <source>Display information about this software</source>
         <translation>Bu yazılım hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="727"/>
+        <location filename="Helpviewer/HelpWindow.py" line="732"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hakkında&lt;/b&gt;&lt;p&gt;Bu yazılım hakkındaki çeşitli bilgileri gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="735"/>
+        <location filename="Helpviewer/HelpWindow.py" line="740"/>
         <source>About Qt</source>
         <translation>Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="735"/>
+        <location filename="Helpviewer/HelpWindow.py" line="740"/>
         <source>About &amp;Qt</source>
         <translation>&amp;Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="738"/>
+        <location filename="Helpviewer/HelpWindow.py" line="743"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Qt araçkiti hakkında bilgi göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="740"/>
+        <location filename="Helpviewer/HelpWindow.py" line="745"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt Hakkında&lt;/b&gt;&lt;p&gt;Qt Araçkiti hakkında bazı bilgiler gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="748"/>
+        <location filename="Helpviewer/HelpWindow.py" line="753"/>
         <source>Zoom in</source>
         <translation>Büyüt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="748"/>
+        <location filename="Helpviewer/HelpWindow.py" line="753"/>
         <source>Zoom &amp;in</source>
         <translation>Bü&amp;yült</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="748"/>
+        <location filename="Helpviewer/HelpWindow.py" line="753"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="753"/>
+        <location filename="Helpviewer/HelpWindow.py" line="758"/>
         <source>Zoom in on the text</source>
         <translation>MEtni Büyüt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="754"/>
+        <location filename="Helpviewer/HelpWindow.py" line="759"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Büyüt&lt;/b&gt;&lt;p&gt;Metin içinde büyüt. Bu metni daha  büyük yapar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="762"/>
+        <location filename="Helpviewer/HelpWindow.py" line="767"/>
         <source>Zoom out</source>
         <translation>Küçült</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="762"/>
+        <location filename="Helpviewer/HelpWindow.py" line="767"/>
         <source>Zoom &amp;out</source>
         <translation>Küçü&amp;lt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="762"/>
+        <location filename="Helpviewer/HelpWindow.py" line="767"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="772"/>
         <source>Zoom out on the text</source>
         <translation>Metin üzerinde küçült</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="768"/>
+        <location filename="Helpviewer/HelpWindow.py" line="773"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Küçült&lt;/b&gt;&lt;p&gt;Metin üzerinde küçült. Bu metni daha küçük yapar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="776"/>
+        <location filename="Helpviewer/HelpWindow.py" line="781"/>
         <source>Zoom reset</source>
         <translation>Büyütmeyi sıfırla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="776"/>
+        <location filename="Helpviewer/HelpWindow.py" line="781"/>
         <source>Zoom &amp;reset</source>
         <translation>Büyütmeyi sıfı&amp;rla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="776"/>
+        <location filename="Helpviewer/HelpWindow.py" line="781"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="781"/>
+        <location filename="Helpviewer/HelpWindow.py" line="786"/>
         <source>Reset the zoom of the text</source>
         <translation>Metin büyütme durumunu sıfırla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="782"/>
+        <location filename="Helpviewer/HelpWindow.py" line="787"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Büyütmeyi başa döndür&lt;/b&gt;&lt;p&gt;Metin büyütmesini sıfırla. Bu büyütme katsayısını 100% e ayarlar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="792"/>
+        <location filename="Helpviewer/HelpWindow.py" line="797"/>
         <source>Zoom text only</source>
         <translation>Yalnızca metni büyüt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="792"/>
+        <location filename="Helpviewer/HelpWindow.py" line="797"/>
         <source>Zoom &amp;text only</source>
         <translation>Yalnızca me&amp;tni büyüt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="796"/>
+        <location filename="Helpviewer/HelpWindow.py" line="801"/>
         <source>Zoom text only; pictures remain constant</source>
         <translation>Yalnıza metni yaklaştır; resimler sabit kalsın</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="803"/>
         <source>&lt;b&gt;Zoom text only&lt;/b&gt;&lt;p&gt;Zoom text only; pictures remain constant.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yanız metni yaklaştır&lt;/b&gt;&lt;p&gt;Yalnızca metni yaklaştır; resimler sabit kalsın.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="813"/>
         <source>Show page source</source>
         <translation>Sayfa kaynağını göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="808"/>
+        <location filename="Helpviewer/HelpWindow.py" line="813"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="817"/>
         <source>Show the page source in an editor</source>
         <translation>Sayfa kaynağını bir düzenleyici sayfasinda göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="813"/>
+        <location filename="Helpviewer/HelpWindow.py" line="818"/>
         <source>&lt;b&gt;Show page source&lt;/b&gt;&lt;p&gt;Show the page source in an editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sayfa kaynağını göster&lt;/b&gt;&lt;p&gt;Sayfa kaynağını bir düzenleyicide göster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="822"/>
+        <location filename="Helpviewer/HelpWindow.py" line="827"/>
         <source>Full Screen</source>
         <translation>Tam Ekran</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="822"/>
+        <location filename="Helpviewer/HelpWindow.py" line="827"/>
         <source>&amp;Full Screen</source>
         <translation>&amp;Tam Ekran</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="822"/>
+        <location filename="Helpviewer/HelpWindow.py" line="827"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="832"/>
+        <location filename="Helpviewer/HelpWindow.py" line="837"/>
         <source>Show next tab</source>
         <translation>Sonraki sekmeyi göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="832"/>
+        <location filename="Helpviewer/HelpWindow.py" line="837"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="841"/>
+        <location filename="Helpviewer/HelpWindow.py" line="846"/>
         <source>Show previous tab</source>
         <translation>Önceki sekmeyi göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="841"/>
+        <location filename="Helpviewer/HelpWindow.py" line="846"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="850"/>
+        <location filename="Helpviewer/HelpWindow.py" line="855"/>
         <source>Switch between tabs</source>
         <translation>Sekmeler arasında değiştir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="850"/>
+        <location filename="Helpviewer/HelpWindow.py" line="855"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="859"/>
+        <location filename="Helpviewer/HelpWindow.py" line="864"/>
         <source>Preferences</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="859"/>
+        <location filename="Helpviewer/HelpWindow.py" line="864"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Seçenekler...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="862"/>
+        <location filename="Helpviewer/HelpWindow.py" line="867"/>
         <source>Set the prefered configuration</source>
         <translation>tercih edilen ayarları yapınız</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="863"/>
+        <location filename="Helpviewer/HelpWindow.py" line="868"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tercihler&lt;/b&gt;&lt;p&gt;Uygulamanın ayarlama maddelerini tercih ettiğiniz değerlerle ayarlayınız.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="872"/>
+        <location filename="Helpviewer/HelpWindow.py" line="877"/>
         <source>Languages</source>
         <translation>Diller</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="872"/>
+        <location filename="Helpviewer/HelpWindow.py" line="877"/>
         <source>&amp;Languages...</source>
         <translation>Di&amp;ller...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="875"/>
+        <location filename="Helpviewer/HelpWindow.py" line="880"/>
         <source>Configure the accepted languages for web pages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="877"/>
+        <location filename="Helpviewer/HelpWindow.py" line="882"/>
         <source>&lt;b&gt;Languages&lt;/b&gt;&lt;p&gt;Configure the accepted languages for web pages.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="885"/>
+        <location filename="Helpviewer/HelpWindow.py" line="890"/>
         <source>Cookies</source>
         <translation>Çerezler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="885"/>
+        <location filename="Helpviewer/HelpWindow.py" line="890"/>
         <source>C&amp;ookies...</source>
         <translation>&amp;Çerezler...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="888"/>
+        <location filename="Helpviewer/HelpWindow.py" line="893"/>
         <source>Configure cookies handling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="890"/>
+        <location filename="Helpviewer/HelpWindow.py" line="895"/>
         <source>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configure cookies handling.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="911"/>
+        <location filename="Helpviewer/HelpWindow.py" line="916"/>
         <source>Sync with Table of Contents</source>
         <translation>İçindekiler Tablosu ile senkronize et</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="915"/>
+        <location filename="Helpviewer/HelpWindow.py" line="920"/>
         <source>Synchronizes the table of contents with current page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="917"/>
+        <location filename="Helpviewer/HelpWindow.py" line="922"/>
         <source>&lt;b&gt;Sync with Table of Contents&lt;/b&gt;&lt;p&gt;Synchronizes the table of contents with current page.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="925"/>
+        <location filename="Helpviewer/HelpWindow.py" line="930"/>
         <source>Table of Contents</source>
         <translation>İçindekiler Tablosu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="928"/>
+        <location filename="Helpviewer/HelpWindow.py" line="933"/>
         <source>Shows the table of contents window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="930"/>
+        <location filename="Helpviewer/HelpWindow.py" line="935"/>
         <source>&lt;b&gt;Table of Contents&lt;/b&gt;&lt;p&gt;Shows the table of contents window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="941"/>
+        <location filename="Helpviewer/HelpWindow.py" line="946"/>
         <source>Shows the index window</source>
         <translation>Dizin penceresini göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="943"/>
+        <location filename="Helpviewer/HelpWindow.py" line="948"/>
         <source>&lt;b&gt;Index&lt;/b&gt;&lt;p&gt;Shows the index window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dizin&lt;/b&gt;&lt;p&gt;Dizin penceresini gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="954"/>
+        <location filename="Helpviewer/HelpWindow.py" line="959"/>
         <source>Shows the search window</source>
         <translation>Arama pencerelerini göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="956"/>
+        <location filename="Helpviewer/HelpWindow.py" line="961"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Shows the search window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Arama&lt;/b&gt;&lt;p&gt;Arama penceresini gösterir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="964"/>
+        <location filename="Helpviewer/HelpWindow.py" line="969"/>
         <source>Manage QtHelp Documents</source>
         <translation>OtHelp Dökümanlları Yönetimi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="964"/>
+        <location filename="Helpviewer/HelpWindow.py" line="969"/>
         <source>Manage QtHelp &amp;Documents</source>
         <translation>OtHelp &amp;Dökümanlları Yönetimi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="967"/>
+        <location filename="Helpviewer/HelpWindow.py" line="972"/>
         <source>Shows a dialog to manage the QtHelp documentation set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="969"/>
+        <location filename="Helpviewer/HelpWindow.py" line="974"/>
         <source>&lt;b&gt;Manage QtHelp Documents&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp documentation set.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="977"/>
+        <location filename="Helpviewer/HelpWindow.py" line="982"/>
         <source>Manage QtHelp Filters</source>
         <translation>QtHelp Süzgeçlerini Yönet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="977"/>
+        <location filename="Helpviewer/HelpWindow.py" line="982"/>
         <source>Manage QtHelp &amp;Filters</source>
         <translation>QtHelp &amp;Filtre Yöneticisi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="980"/>
+        <location filename="Helpviewer/HelpWindow.py" line="985"/>
         <source>Shows a dialog to manage the QtHelp filters</source>
         <translation>QtHelp filtrelerini yönetmek için bir diyalog gösterir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="982"/>
+        <location filename="Helpviewer/HelpWindow.py" line="987"/>
         <source>&lt;b&gt;Manage QtHelp Filters&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp filters.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="990"/>
+        <location filename="Helpviewer/HelpWindow.py" line="995"/>
         <source>Reindex Documentation</source>
         <translation>Belgeyi Yeniden İindexle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="990"/>
+        <location filename="Helpviewer/HelpWindow.py" line="995"/>
         <source>&amp;Reindex Documentation</source>
         <translation>&amp;Belgeyi Yeniden İindexle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="993"/>
+        <location filename="Helpviewer/HelpWindow.py" line="998"/>
         <source>Reindexes the documentation set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="995"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1000"/>
         <source>&lt;b&gt;Reindex Documentation&lt;/b&gt;&lt;p&gt;Reindexes the documentation set.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1008"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1013"/>
         <source>Clear private data</source>
         <translation>Özel verileri temizle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1004"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1009"/>
         <source>&amp;Clear private data</source>
         <translation>&amp;Özel verileri temizle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1009"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1014"/>
         <source>&lt;b&gt;Clear private data&lt;/b&gt;&lt;p&gt;Clears the private data like browsing history, search history or the favicons database.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1018"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1023"/>
         <source>Clear icons database</source>
         <translation>İkon veritabanını temizle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1018"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1023"/>
         <source>Clear &amp;icons database</source>
         <translation>İkon ver&amp;itabanını temizle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1022"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1027"/>
         <source>Clear the database of favicons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1023"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1028"/>
         <source>&lt;b&gt;Clear icons database&lt;/b&gt;&lt;p&gt;Clears the database of favicons of previously visited URLs.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1031"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>Configure Search Engines</source>
         <translation>Arama Motoru Ayarları</translation>
     </message>
@@ -14671,122 +14671,122 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Arama Motoru Ayarlanı&amp;yor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1035"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1040"/>
         <source>Configure the available search engines</source>
         <translation>Ulaşılabilen Arama motorunu ayarla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1037"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1042"/>
         <source>&lt;b&gt;Configure Search Engines...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available search engines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Arama Motoru Ayarlanıyor...&lt;/b&gt;&lt;p&gt;Ulaşılabilen arama motorunu ayarlamak için bir diyalog açılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1045"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1050"/>
         <source>Manage Saved Passwords</source>
         <translation>Kaydedilmiş Parolaları Yönet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1045"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1050"/>
         <source>Manage Saved Passwords...</source>
         <translation>Kaydedilmiş Parolaları Yönet...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1049"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1054"/>
         <source>Manage the saved passwords</source>
         <translation>Kaydedilmiş parolaları yönet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1051"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1056"/>
         <source>&lt;b&gt;Manage Saved Passwords...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved passwords.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kaydadilmiş Parolaların Yönetimi...&lt;/b&gt;&lt;p&gt;Kaydedilmiş parolalları yönetmek için bir diyalog açılır.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1059"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1064"/>
         <source>Ad Block</source>
         <translation>Engel ekle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1059"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1064"/>
         <source>&amp;Ad Block...</source>
         <translation>&amp;Engel Ekle...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1063"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1068"/>
         <source>Configure AdBlock subscriptions and rules</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1065"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1070"/>
         <source>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure AdBlock subscriptions and rules.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1088"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1093"/>
         <source>Show Network Monitor</source>
         <translation>Ağ Gözleyicisini Göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1088"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1093"/>
         <source>Show &amp;Network Monitor</source>
         <translation>Ağ Gözleyicisi&amp;ni Göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1092"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1097"/>
         <source>Show the network monitor dialog</source>
         <translation>Ağ Gözleyicisi diyaloğunu göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1093"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1098"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ağ Gözleyicisini Göster&lt;/b&gt;&lt;p&gt;Ağ gözleyicisi diyaloğunu göster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1134"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1139"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1157"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1162"/>
         <source>&amp;Edit</source>
         <translation>Düz&amp;en</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1165"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1170"/>
         <source>&amp;View</source>
         <translation>&amp;Görünüm</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1181"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1186"/>
         <source>&amp;Go</source>
         <translation>&amp;Git</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1194"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1199"/>
         <source>H&amp;istory</source>
         <translation>Geçmi&amp;ş</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1201"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1206"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Yerimleri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1213"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1218"/>
         <source>&amp;Settings</source>
         <translation>Ayar&amp;lar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1238"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1243"/>
         <source>&amp;Tools</source>
         <translation>&amp;Araçlar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1242"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1247"/>
         <source>&amp;Window</source>
         <translation>&amp;Pencere</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1252"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1257"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
@@ -14811,47 +14811,47 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Diğerlerini Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1263"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1268"/>
         <source>File</source>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1280"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1285"/>
         <source>Edit</source>
         <translation>Düzen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1285"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1290"/>
         <source>View</source>
         <translation>Görünüm</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1294"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1299"/>
         <source>Find</source>
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1301"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
         <source>Filter</source>
         <translation>Süzgeç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1306"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1311"/>
         <source>Filtered by: </source>
         <translation>Süzülen: </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1312"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1317"/>
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1320"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1325"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1327"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1332"/>
         <source>Go</source>
         <translation>Git</translation>
     </message>
@@ -14861,12 +14861,12 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;p&gt;Görüntülenen bu düzenleme alanından direkt yardım dosyasını gir. Aşağı kayan listededen öncelikle görünmesini istediğiniz yardım dosyasını seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1552"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1557"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Yardım Dosyaları (*.html *.htm);;PDF Dosyaları (*.pdf);;CHM Dosyaları (*.chm);;Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1589"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1594"/>
         <source>Eric Web Browser</source>
         <translation>Eric Web Gözatıcısı</translation>
     </message>
@@ -14876,12 +14876,12 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;p&gt;PyQt4 te hatyı yazdırmak tam olarak mümkün değil. Lütfen güncelleyiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1580"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1585"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation>&lt;h3&gt;Eric Web Gözatıcısı Hakkındar&lt;/h3&gt;&lt;p&gt;Eric Web Gözatıcısı Yardım dosyası ve HTML gözatıcısının birleştirilmiş halidir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1659"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1664"/>
         <source>Saved Tabs</source>
         <translation>Sekmeleri Kaydet</translation>
     </message>
@@ -14901,182 +14901,182 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Yükleme bitirildi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2049"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2055"/>
         <source>Could not find an associated content.</source>
         <translation>Birleştirilmiş bir içerek bulunamadı.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2158"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2164"/>
         <source>Updating search index</source>
         <translation>Arama index yenileniyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2210"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2216"/>
         <source>Looking for Documentation...</source>
         <translation>Dökümanlara bakılıyor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2240"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2246"/>
         <source>Unfiltered</source>
         <translation>Süzülmemiş</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2259"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2265"/>
         <source>Help Engine</source>
         <translation>Yardım Motoru</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="431"/>
+        <location filename="Helpviewer/HelpWindow.py" line="436"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="435"/>
+        <location filename="Helpviewer/HelpWindow.py" line="440"/>
         <source>Print the displayed help as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="436"/>
+        <location filename="Helpviewer/HelpWindow.py" line="441"/>
         <source>&lt;b&gt;Print as PDF&lt;/b&gt;&lt;p&gt;Print the displayed help text as a PDF file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="898"/>
+        <location filename="Helpviewer/HelpWindow.py" line="903"/>
         <source>Offline Storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="898"/>
+        <location filename="Helpviewer/HelpWindow.py" line="903"/>
         <source>Offline &amp;Storage...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="901"/>
+        <location filename="Helpviewer/HelpWindow.py" line="906"/>
         <source>Configure offline storage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="903"/>
+        <location filename="Helpviewer/HelpWindow.py" line="908"/>
         <source>&lt;b&gt;Offline Storage&lt;/b&gt;&lt;p&gt;Opens a dialog to configure offline storage.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1031"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>Configure Search &amp;Engines...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1074"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1079"/>
         <source>Manage Certificates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1074"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1079"/>
         <source>Manage Certificates...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1078"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1083"/>
         <source>Manage the saved certificates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1080"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1085"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1101"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1106"/>
         <source>Downloads</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1104"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1109"/>
         <source>Shows the downloads window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1106"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1111"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1176"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1181"/>
         <source>Text Encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1228"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1233"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1835"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1840"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2574"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2580"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2575"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2581"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2576"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2582"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2577"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2583"/>
         <source>Unicode</source>
         <translation>Evrensel kod</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2578"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2584"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2579"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2585"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2601"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2607"/>
         <source>Default Encoding</source>
         <translation>Varsayılan Kodlama</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1377"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1382"/>
         <source>VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1383"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1388"/>
         <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1427"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1432"/>
         <source>Search VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1433"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1438"/>
         <source>Scan current site</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2702"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2710"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2702"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2710"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -20791,107 +20791,107 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>Lexers</name>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="73"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="75"/>
         <source>Bash</source>
         <translation>Bash</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="74"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="76"/>
         <source>Batch</source>
         <translation>Batch</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="75"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="77"/>
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="76"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="78"/>
         <source>C#</source>
         <translation>C#</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="77"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="79"/>
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="78"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="80"/>
         <source>CSS</source>
         <translation>CSS</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="79"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="81"/>
         <source>D</source>
         <translation>D</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="80"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="82"/>
         <source>Diff</source>
         <translation>Diff</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="81"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="83"/>
         <source>Fortran</source>
         <translation>Fortran</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="82"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="84"/>
         <source>Fortran77</source>
         <translation>Fortran77</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="83"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="85"/>
         <source>HTML/PHP/XML</source>
         <translation>HTML/PHP/XML</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="84"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="86"/>
         <source>IDL</source>
         <translation>IDL</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="85"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="87"/>
         <source>Java</source>
         <translation>Java</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="86"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="88"/>
         <source>JavaScript</source>
         <translation>JavaScript</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="87"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="89"/>
         <source>Lua</source>
         <translation>Lua</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="88"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="90"/>
         <source>Makefile</source>
         <translation>Makefile</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="89"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="91"/>
         <source>Pascal</source>
         <translation>Pascal</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="90"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="92"/>
         <source>Perl</source>
         <translation>Perl</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="91"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="93"/>
         <source>PostScript</source>
         <translation>PostScript</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="92"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="94"/>
         <source>Povray</source>
         <translation>Povray</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="93"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="95"/>
         <source>Properties</source>
         <translation>Özellikler</translation>
     </message>
@@ -20901,232 +20901,232 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Python</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="96"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="98"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="97"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="99"/>
         <source>SQL</source>
         <translation>SQL</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="98"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="100"/>
         <source>TCL</source>
         <translation>TCL</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="99"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="101"/>
         <source>TeX</source>
         <translation>TeX</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="100"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="102"/>
         <source>VHDL</source>
         <translation>VHDL</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="101"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="103"/>
         <source>XML</source>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="102"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="104"/>
         <source>YAML</source>
         <translation>YAML</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="109"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="117"/>
         <source>Pygments</source>
         <translation>Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="254"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="268"/>
         <source>Python Files (*.py *.py2 *.py3)</source>
         <translation>Python Dosyaları (*.py *.py2 *.py3)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="256"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="270"/>
         <source>Python GUI Files (*.pyw *.pyw2 *.pyw3)</source>
         <translation>Python GUI Dosyaları (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="367"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="389"/>
         <source>Pyrex Files (*.pyx)</source>
         <translation>Pyrex Dosyaları (*.pyx)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="369"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="391"/>
         <source>Quixote Template Files (*.ptl)</source>
         <translation>Quixote Template Dosyaları (*.ptl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="371"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="393"/>
         <source>Ruby Files (*.rb)</source>
         <translation>Ruby Dosyaları (*.rb)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="373"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="395"/>
         <source>IDL Files (*.idl)</source>
         <translation>IDL Dosyaları (*.idl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="266"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="280"/>
         <source>C Files (*.h *.c)</source>
         <translation>C Dosyalır (*.h *.c)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="268"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="282"/>
         <source>C++ Files (*.h *.hpp *.hh *.cxx *.cpp *.cc)</source>
         <translation>C++ Dosyaları (*.h *.hpp *.hh *.cxx *.cpp *.cc)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="381"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="403"/>
         <source>C# Files (*.cs)</source>
         <translation>C# Dosyaları (*.cs)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="272"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="286"/>
         <source>HTML Files (*.html *.htm *.asp *.shtml)</source>
         <translation>HTML Dosyaları (*.html *.htm *.asp *.shtml)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="389"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="411"/>
         <source>CSS Files (*.css)</source>
         <translation>CSS Dosyaları (*.css)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="391"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="413"/>
         <source>QSS Files (*.qss)</source>
         <translation>QSS Dosyaları (*.qss)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="278"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="292"/>
         <source>PHP Files (*.php *.php3 *.php4 *.php5 *.phtml)</source>
         <translation>PHP Dosyaları (*.php *.php3 *.php4 *.php5 *.phtml)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="280"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="294"/>
         <source>XML Files (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</source>
         <translation>XML Dosyaları (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="399"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="421"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Qt Kaynak Dosyaları (*.qrc)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="284"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="298"/>
         <source>D Files (*.d *.di)</source>
         <translation>D Dosyaları (*.d *.di)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="405"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="427"/>
         <source>Java Files (*.java)</source>
         <translation>Java Dosyaları (*.java)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="407"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="429"/>
         <source>JavaScript Files (*.js)</source>
         <translation>JavaScript Dosyaları (*.js)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="409"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="431"/>
         <source>SQL Files (*.sql)</source>
         <translation>SQL Dosyaları (*.sql)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="411"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="433"/>
         <source>Docbook Files (*.docbook)</source>
         <translation>Docbook Dosyaları (*.docbook)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="294"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="308"/>
         <source>Perl Files (*.pl *.pm *.ph)</source>
         <translation>Perl Dosyaları (*.pl *.pm *.ph)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="417"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="439"/>
         <source>Lua Files (*.lua)</source>
         <translation>Lua Dosyaları (*.lua)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="298"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="312"/>
         <source>Tex Files (*.tex *.sty *.aux *.toc *.idx)</source>
         <translation>Tex Dosyaları (*.tex *.sty *.aux *.toc *.idx)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="419"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="441"/>
         <source>Shell Files (*.sh)</source>
         <translation>Kabuk Dosyaları (*.sh)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="302"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="316"/>
         <source>Batch Files (*.bat *.cmd)</source>
         <translation>Batch Dosyaları (*.bat *.cmd)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="304"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="318"/>
         <source>Diff Files (*.diff *.patch)</source>
         <translation>Diff Dosyaları (*.diff *.patch)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="306"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="320"/>
         <source>Makefiles (*.mak)</source>
         <translation>Make Dosyaları (*.mak)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="308"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="322"/>
         <source>Properties Files (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</source>
         <translation>Ayarlar Dosyaları (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="435"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="457"/>
         <source>Povray Files (*.pov)</source>
         <translation>Povray Dosyaları (*.pov)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="312"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="326"/>
         <source>CMake Files (CMakeLists.txt *.cmake *.ctest)</source>
         <translation>CMake Dosyaları (CMakeLists.txt *.cmake *.ctest)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="314"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="328"/>
         <source>VHDL Files (*.vhd *.vhdl)</source>
         <translation>VHDL Dosyaları (*.vhd *.vhdl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="316"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="330"/>
         <source>TCL/Tk Files (*.tcl *.tk)</source>
         <translation>TCL/Tk Dosyaları (*.tcl *.tk)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="318"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="332"/>
         <source>Fortran Files (*.f90 *.f95 *.f2k)</source>
         <translation>Fortran Dosyaları (*.f90 *.f95 *.f2k)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="320"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="334"/>
         <source>Fortran77 Files (*.f *.for)</source>
         <translation>Fortran77 Dosyaları (*.f *.for)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="322"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="336"/>
         <source>Pascal Files (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</source>
         <translation>Pascal Dosyaları (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="453"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="475"/>
         <source>PostScript Files (*.ps)</source>
         <translation>PostScript Dosyaları (*.ps)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="326"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="340"/>
         <source>YAML Files (*.yaml *.yml)</source>
         <translation>YAML Dosyaları (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="468"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="498"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
@@ -21136,7 +21136,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Python Dosyaları (*.py2)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="361"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="383"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python Dosyaları (*.py3)</translation>
     </message>
@@ -21146,174 +21146,204 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Python GUI Dosyaları (*.pyw2)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="365"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="387"/>
         <source>Python3 GUI Files (*.pyw)</source>
         <translation>Python GUI Dosyaları (*.pyw3)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="375"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="397"/>
         <source>C Files (*.c)</source>
         <translation>C Dosyaları (*.c)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="377"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="399"/>
         <source>C++ Files (*.cpp)</source>
         <translation>C++ Dosyaları (*.cpp)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="379"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="401"/>
         <source>C++/C Header Files (*.h)</source>
         <translation>C++/C Yardımcı Dosyaları (*.h)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="383"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="405"/>
         <source>HTML Files (*.html)</source>
         <translation>HTML Dosyaları (*.html)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="385"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="407"/>
         <source>PHP Files (*.php)</source>
         <translation>PHP Dosyaları (*.php)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="387"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="409"/>
         <source>ASP Files (*.asp)</source>
         <translation>ASP Dosyaları (*.asp)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="393"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="415"/>
         <source>XML Files (*.xml)</source>
         <translation>XML Dosyaları (*.xml)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="395"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="417"/>
         <source>XSL Files (*.xsl)</source>
         <translation>XSL Dosyaları (*.xsl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="397"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="419"/>
         <source>DTD Files (*.dtd)</source>
         <translation>DTD Dosyaları (*.dtd)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="401"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="423"/>
         <source>D Files (*.d)</source>
         <translation>D Dosyaları (*.d)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="403"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="425"/>
         <source>D Interface Files (*.di)</source>
         <translation>D Interface Dosyaları (*.di)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="413"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="435"/>
         <source>Perl Files (*.pl)</source>
         <translation>Perl Dosyaları (*.pl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="415"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="437"/>
         <source>Perl Module Files (*.pm)</source>
         <translation>Perl Module Dosyaları (*.pm)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="421"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="443"/>
         <source>Batch Files (*.bat)</source>
         <translation>Batch Dosyaları (*.bat)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="423"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="445"/>
         <source>TeX Files (*.tex)</source>
         <translation>TeX Dosyaları (*.tex)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="425"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="447"/>
         <source>TeX Template Files (*.sty)</source>
         <translation>TeXŞablon Dosyası (*.sty)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="427"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="449"/>
         <source>Diff Files (*.diff)</source>
         <translation>Diff  Dosyaları (*.diff)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="429"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="451"/>
         <source>Make Files (*.mak)</source>
         <translation>Make Dosyaları (*.mak)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="431"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="453"/>
         <source>Properties Files (*.ini)</source>
         <translation>Özellikler Dosyaları (*.ini)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="433"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="455"/>
         <source>Configuration Files (*.cfg)</source>
         <translation>Ayar Dosyaları (*.cfg)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="437"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="459"/>
         <source>CMake Files (CMakeLists.txt)</source>
         <translation>CMake Dosyaları (CMakeLists.txt)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="439"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="461"/>
         <source>CMake Macro Files (*.cmake)</source>
         <translation>CMake Makro Dosyaları (*.cmake)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="441"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="463"/>
         <source>VHDL Files (*.vhd)</source>
         <translation>VHDL Dosyaları (*.vhd)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="443"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="465"/>
         <source>TCL Files (*.tcl)</source>
         <translation>TCL Dosyaları (*.tcl)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="445"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="467"/>
         <source>Tk Files (*.tk)</source>
         <translation>Tk Dosyaları (*.tk)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="447"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="469"/>
         <source>Fortran Files (*.f95)</source>
         <translation>Fortran Dosyaları (*.f95)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="449"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="471"/>
         <source>Fortran77 Files (*.f)</source>
         <translation>Fortran77 Dosyaları (*.f)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="451"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="473"/>
         <source>Pascal Files (*.pas)</source>
         <translation>Pascal Dosyaları (*.pas)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="455"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="477"/>
         <source>YAML Files (*.yml)</source>
         <translation>YAML Dosyaları (*.yml)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="94"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="96"/>
         <source>Python2</source>
         <translation>Python2</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="95"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="97"/>
         <source>Python3</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="359"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="381"/>
         <source>Python2 Files (*.py2)</source>
         <translation>Python2 Dosyaları (*.py2)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="363"/>
+        <location filename="QScintilla/Lexers/__init__.py" line="385"/>
         <source>Python2 GUI Files (*.pyw2)</source>
         <translation>Python2 GUI Dosyaları (*.pyw2)</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="108"/>
+        <source>Matlab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="108"/>
+        <source>Octave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Matlab Files (*.m *.m.matlab)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Octave Files (*.m *.m.matlab)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="482"/>
+        <source>Matlab Files (*.m)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="482"/>
+        <source>Octave Files (*.m.octave)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -39595,7 +39625,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Konumunuzu buraya giriniz.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="157"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="158"/>
         <source>Unknown</source>
         <translation>Bilinmeyen</translation>
     </message>
@@ -45109,17 +45139,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>VirusTotalAPI</name>
     <message>
-        <location filename="Helpviewer/VirusTotalApi.py" line="63"/>
+        <location filename="Helpviewer/VirusTotalApi.py" line="79"/>
         <source>Request limit has been reached.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/VirusTotalApi.py" line="64"/>
+        <location filename="Helpviewer/VirusTotalApi.py" line="80"/>
         <source>Invalid key given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/VirusTotalApi.py" line="65"/>
+        <location filename="Helpviewer/VirusTotalApi.py" line="81"/>
         <source>Requested item is not present.</source>
         <translation type="unfinished"></translation>
     </message>

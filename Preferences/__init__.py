@@ -1520,11 +1520,11 @@ def getEditorLexerAssocs(prefClass=Prefs):
                 defaultValue = ""
             editorLexerAssoc[key] = \
                 prefClass.settings.value("Editor/LexerAssociations/" + key, defaultValue)
-        if len(list(editorLexerAssoc.keys())) < len(list(editorLexerAssocDefaults.keys())):
-            # new default lexer associations
-            for key in list(editorLexerAssocDefaults.keys()):
-                if key not in editorLexerAssoc:
-                    editorLexerAssoc[key] = editorLexerAssocDefaults[key]
+        
+        # check for new default lexer associations
+        for key in list(editorLexerAssocDefaults.keys()):
+            if key not in editorLexerAssoc:
+                editorLexerAssoc[key] = editorLexerAssocDefaults[key]
     return editorLexerAssoc
     
 
