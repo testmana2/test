@@ -5957,6 +5957,7 @@
       <keyword name="Editor.commentSelection" id="Editor.commentSelection" ref="eric5.QScintilla.Editor.html#Editor.commentSelection" />
       <keyword name="Editor.contextMenuEvent" id="Editor.contextMenuEvent" ref="eric5.QScintilla.Editor.html#Editor.contextMenuEvent" />
       <keyword name="Editor.curLineHasBreakpoint" id="Editor.curLineHasBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.curLineHasBreakpoint" />
+      <keyword name="Editor.determineFileType" id="Editor.determineFileType" ref="eric5.QScintilla.Editor.html#Editor.determineFileType" />
       <keyword name="Editor.dragEnterEvent" id="Editor.dragEnterEvent" ref="eric5.QScintilla.Editor.html#Editor.dragEnterEvent" />
       <keyword name="Editor.dragLeaveEvent" id="Editor.dragLeaveEvent" ref="eric5.QScintilla.Editor.html#Editor.dragLeaveEvent" />
       <keyword name="Editor.dragMoveEvent" id="Editor.dragMoveEvent" ref="eric5.QScintilla.Editor.html#Editor.dragMoveEvent" />

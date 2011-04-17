@@ -21,6 +21,8 @@ Version 5.2-snapshot-2011mmdd:
   during a project tasks scan
 - added an action to push a new named branch to the Mercurial plug-in
 - added an interface to VirusTotal to the web browser
+- changed algorithm to determine the debugger backend type to be used by
+  analysing a first line starting with '#!'
 
 Version 5.1-snapshot-20110123:
 - bug fixes

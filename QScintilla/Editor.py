@@ -495,7 +495,7 @@ class Editor(QsciScintillaCompat):
                 self.filetype = "Python2"
             elif "python" in line0:
                 bindName = "dummy.py"
-                self.filetype = "Python"
+                self.filetype = "Python2"
             elif ("/bash" in line0 or "/sh" in line0):
                 bindName = "dummy.sh"
             elif "ruby" in line0:
@@ -1578,6 +1578,27 @@ class Editor(QsciScintillaCompat):
         else:
             return ""
         
+    def determineFileType(self):
+        """
+        Public method to determine the file type using various tests.
+        
+        @return type of the displayed file or an empty string (string)
+        """
+        ftype = self.filetype
+        if not ftype:
+            ftype = self.getFileTypeByFlag()
+        if not ftype:
+            if self.isPy2File():
+                ftype = "Python2"
+            elif self.isPy3File():
+                ftype = "Python3"
+            elif self.isRubyFile():
+                ftype = "Ruby"
+            else:
+                ftype = ""
+        
+        return ftype
+        
     def getEncoding(self):
         """
         Public method to return the current encoding.
@@ -1595,13 +1616,20 @@ class Editor(QsciScintillaCompat):
         if self.filetype in ["Python", "Python2"]:
             return True
         
-        if self.filetype == "" and self.fileName is not None:
-            ext = os.path.splitext(self.fileName)[1]
-            if ext in [".py", ".pyw"] and \
-               Preferences.getProject("DeterminePyFromProject") and \
-               self.project.isOpen() and \
-               self.project.isProjectFile(self.fileName):
-                return self.project.getProjectLanguage() in ["Python", "Python2"]
+        if self.filetype == "":
+            line0 = self.text(0)
+            if line0.startswith("#!") and \
+               ("python2" in line0 or \
+                ("python" in line0 and not "python3" in line0)):
+                return True
+            
+            if self.fileName is not None:
+                ext = os.path.splitext(self.fileName)[1]
+                if ext in [".py", ".pyw"] and \
+                   Preferences.getProject("DeterminePyFromProject") and \
+                   self.project.isOpen() and \
+                   self.project.isProjectFile(self.fileName):
+                    return self.project.getProjectLanguage() in ["Python", "Python2"]
             
             if ext in self.dbs.getExtensions('Python2'):
                 return True
@@ -1617,13 +1645,19 @@ class Editor(QsciScintillaCompat):
         if self.filetype in ["Python3"]:
             return True
         
-        if self.filetype == "" and self.fileName is not None:
-            ext = os.path.splitext(self.fileName)[1]
-            if ext in [".py", ".pyw"] and \
-               Preferences.getProject("DeterminePyFromProject") and \
-               self.project.isOpen() and \
-               self.project.isProjectFile(self.fileName):
-                return self.project.getProjectLanguage() in ["Python3"]
+        if self.filetype == "":
+            line0 = self.text(0)
+            if line0.startswith("#!") and \
+               "python3" in line0:
+                return True
+            
+            if self.fileName is not None:
+                ext = os.path.splitext(self.fileName)[1]
+                if ext in [".py", ".pyw"] and \
+                   Preferences.getProject("DeterminePyFromProject") and \
+                   self.project.isOpen() and \
+                   self.project.isProjectFile(self.fileName):
+                    return self.project.getProjectLanguage() in ["Python3"]
             
             if ext in self.dbs.getExtensions('Python3'):
                 return True
@@ -1636,10 +1670,20 @@ class Editor(QsciScintillaCompat):
         
         @return flag indicating a Ruby file (boolean)
         """
-        return self.filetype == "Ruby" or \
-            (self.filetype == "" and \
-             self.fileName is not None and \
-             os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'))
+        if self.filetype == "Ruby":
+            return True
+        
+        if self.filetype == "":
+            line0 = self.text(0)
+            if line0.startswith("#!") and \
+               "ruby" in line0:
+                return True
+            
+            if self.fileName is not None and \
+               os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'):
+                return True
+        
+        return False
         
     def highlightVisible(self):
         """

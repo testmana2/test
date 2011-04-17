@@ -1380,7 +1380,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 6
-                self.clientType = ""
+                self.clientType = self.project.getProjectLanguage()
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1393,7 +1393,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 5
-                self.clientType = editor.getFileTypeByFlag()
+                self.clientType = editor.determineFileType()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1487,7 +1487,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 8
-                self.clientType = ""
+                self.clientType = self.project.getProjectLanguage()
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1500,7 +1500,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 7
-                self.clientType = editor.getFileTypeByFlag()
+                self.clientType = editor.determineFileType()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1596,7 +1596,7 @@ class DebugUI(QObject):
                     self.excIgnoreList, clearShell)
                 
                 self.lastStartAction = 4
-                self.clientType = ""
+                self.clientType = self.project.getProjectLanguage()
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1609,7 +1609,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 3
-                self.clientType = editor.getFileTypeByFlag()
+                self.clientType = editor.determineFileType()
                 
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn
@@ -1707,7 +1707,7 @@ class DebugUI(QObject):
                     autoContinue=self.autoContinue)
                 
                 self.lastStartAction = 2
-                self.clientType = ""
+                self.clientType = self.project.getProjectLanguage()
             else:
                 editor = self.viewmanager.activeWindow()
                 if editor is None:
@@ -1720,7 +1720,7 @@ class DebugUI(QObject):
                     
                 fn = editor.getFileName()
                 self.lastStartAction = 1
-                self.clientType = editor.getFileTypeByFlag()
+                self.clientType = editor.determineFileType()
             
             # save the filename for use by the restart method
             self.lastDebuggedFile = fn

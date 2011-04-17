@@ -5053,6 +5053,7 @@ eric5.QScintilla.Editor.Editor.contextMenuEvent?4(evt)
 eric5.QScintilla.Editor.Editor.coverageMarkersShown?7
 eric5.QScintilla.Editor.Editor.curLineHasBreakpoint?4()
 eric5.QScintilla.Editor.Editor.cursorChanged?7
+eric5.QScintilla.Editor.Editor.determineFileType?4()
 eric5.QScintilla.Editor.Editor.dragEnterEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragLeaveEvent?4(event)
 eric5.QScintilla.Editor.Editor.dragMoveEvent?4(event)
