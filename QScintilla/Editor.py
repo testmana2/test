@@ -1630,9 +1630,9 @@ class Editor(QsciScintillaCompat):
                    self.project.isOpen() and \
                    self.project.isProjectFile(self.fileName):
                     return self.project.getProjectLanguage() in ["Python", "Python2"]
-            
-            if ext in self.dbs.getExtensions('Python2'):
-                return True
+                
+                if ext in self.dbs.getExtensions('Python2'):
+                    return True
         
         return False
 
@@ -1658,9 +1658,9 @@ class Editor(QsciScintillaCompat):
                    self.project.isOpen() and \
                    self.project.isProjectFile(self.fileName):
                     return self.project.getProjectLanguage() in ["Python3"]
-            
-            if ext in self.dbs.getExtensions('Python3'):
-                return True
+                
+                if ext in self.dbs.getExtensions('Python3'):
+                    return True
         
         return False
 
@@ -2487,7 +2487,11 @@ class Editor(QsciScintillaCompat):
             
             # save to project, if a project is loaded
             if self.project.isOpen():
-                path = self.project.getProjectPath()
+                if self.fileName is not None and \
+                   self.project.startswithProjectPath(self.fileName):
+                    path = os.path.dirname(self.fileName)
+                else:
+                    path = self.project.getProjectPath()
             
             if not path and self.fileName is not None:
                 path = os.path.dirname(self.fileName)
