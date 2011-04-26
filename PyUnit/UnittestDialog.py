@@ -222,7 +222,11 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.sbLabel.setText(self.trUtf8("Preparing Testsuite"))
         QApplication.processEvents()
         
-        testFunctionName = self.testComboBox.currentText() or "suite"
+        testFunctionName = self.testComboBox.currentText()
+        if testFunctionName:
+            self.insertTestName(testFunctionName)
+        else:
+            testFunctionName = "suite"
         
         # build the module name from the filename without extension
         self.testName = os.path.splitext(os.path.basename(prog))[0]
