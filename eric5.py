@@ -203,7 +203,9 @@ def main():
         pyqtDataDir = pyqtconfig._pkg_config["pyqt_mod_dir"]
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
             path = os.path.join(pyqtDataDir, "bin") + os.pathsep + os.environ["PATH"]
-            os.environ["PATH"] = path
+        else:
+            path = pyqtDataDir + os.pathsep + os.environ["PATH"]
+        os.environ["PATH"] = path
     except (AttributeError, ImportError):
         pass
     
