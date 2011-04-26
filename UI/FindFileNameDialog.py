@@ -94,12 +94,17 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         """
         fileName = self.fileNameEdit.text()
         if not fileName:
+            self.fileList.clear()
             return
         fileExt = self.fileExtEdit.text()
+        if not fileExt and Utilities.isWindowsPlatform():
+            self.fileList.clear()
+            return
+        
         patternFormat = fileExt and "{0}{1}{2}*" or "{0}*{1}{2}"
         fileNamePattern = patternFormat.format(fileName, os.extsep,
             fileExt and fileExt or '*')
-            
+        
         searchPaths = []
         if self.searchDirCheckBox.isChecked() and \
            self.searchDirEdit.text() != "":
@@ -108,7 +113,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
             searchPaths.append(self.project.ppath)
         if self.syspathCheckBox.isChecked():
             searchPaths.extend(sys.path)
-            
+        
         found = False
         self.fileList.clear()
         locations = {}
