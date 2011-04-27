@@ -24,6 +24,8 @@ Version 5.2-snapshot-2011mmdd:
 - changed algorithm to determine the debugger backend type to be used by
   analysing a first line starting with '#!'
 - added support for the Matlab and Octave lexers for QScintilla >= 2.5.1
+- enhanced the autocompletion of templates to observe the language of the
+  current file
 
 Version 5.1-snapshot-20110123:
 - bug fixes

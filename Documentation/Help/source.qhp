@@ -2334,6 +2334,7 @@
       <keyword name="TemplateViewer.getAllGroups" id="TemplateViewer.getAllGroups" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.getAllGroups" />
       <keyword name="TemplateViewer.getGroupNames" id="TemplateViewer.getGroupNames" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.getGroupNames" />
       <keyword name="TemplateViewer.getTemplateNames" id="TemplateViewer.getTemplateNames" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.getTemplateNames" />
+      <keyword name="TemplateViewer.hasGroup" id="TemplateViewer.hasGroup" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.hasGroup" />
       <keyword name="TemplateViewer.hasTemplate" id="TemplateViewer.hasTemplate" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.hasTemplate" />
       <keyword name="TemplateViewer.readTemplates" id="TemplateViewer.readTemplates" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.readTemplates" />
       <keyword name="TemplateViewer.removeEntry" id="TemplateViewer.removeEntry" ref="eric5.Templates.TemplateViewer.html#TemplateViewer.removeEntry" />

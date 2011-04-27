@@ -725,13 +725,23 @@ class TemplateViewer(QTreeWidget):
             editor.endUndoAction()
             editor.setFocus()
 
-    def applyNamedTemplate(self, templateName):
+    def applyNamedTemplate(self, templateName, groupName=None):
         """
         Public method to apply a template given a template name.
         
         @param templateName name of the template item to apply (string)
+        @param groupName name of the group to get the entry from (string).
+            None or empty means to apply the first template found with the
+            given name.
         """
-        for group in list(self.groups.values()):
+        if groupName:
+            if self.hasGroup(groupName):
+                groups = [self.groups[groupName]]
+            else:
+                return
+        else:
+            groups = list(self.groups.values())
+        for group in groups:
             template = group.getEntry(templateName)
             if template is not None:
                 self.applyTemplate(template)
@@ -749,7 +759,16 @@ class TemplateViewer(QTreeWidget):
         """
         self.groups[groupName].addEntry(name, description, template, quiet=quiet)
         self.__resort()
+    
+    def hasGroup(self, name):
+        """
+        Public method to check, if a group with the given name exists.
         
+        @param name name of the group to be checked for (string)
+        @return flag indicating an existing group (boolean)
+        """
+        return name in self.groups
+    
     def addGroup(self, name, language="All"):
         """
         Public method to add a group.
@@ -899,27 +918,45 @@ class TemplateViewer(QTreeWidget):
         """
         e5App().getObject("UserInterface").showPreferences("templatesPage")
     
-    def hasTemplate(self, entryName):
+    def hasTemplate(self, entryName, groupName=None):
         """
         Public method to check, if an entry of the given name exists.
         
         @param entryName name of the entry to check for (string)
+        @param groupName name of the group to check for the entry (string).
+            None or empty means to check all groups.
         @return flag indicating the existence (boolean)
         """
-        for group in list(self.groups.values()):
+        if groupName:
+            if self.hasGroup(groupName):
+                groups = [self.groups[groupName]]
+            else:
+                groups = []
+        else:
+            groups = list(self.groups.values())
+        for group in groups:
             if group.hasEntry(entryName):
                 return True
         
         return False
     
-    def getTemplateNames(self, start):
+    def getTemplateNames(self, start, groupName=None):
         """
         Public method to get the names of templates starting with the given string.
         
         @param start start string of the name (string)
+        @param groupName name of the group to get the entry from (string).
+            None or empty means to look in all groups.
         @return sorted list of matching template names (list of strings)
         """
         names = []
-        for group in list(self.groups.values()):
+        if groupName:
+            if self.hasGroup(groupName):
+                groups = [self.groups[groupName]]
+            else:
+                groups = []
+        else:
+            groups = list(self.groups.values())
+        for group in groups:
             names.extend(group.getEntryNames(start))
         return sorted(names)

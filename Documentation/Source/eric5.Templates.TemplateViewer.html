@@ -538,6 +538,9 @@ QTreeWidget
 <td><a href="#TemplateViewer.getTemplateNames">getTemplateNames</a></td>
 <td>Public method to get the names of templates starting with the given string.</td>
 </tr><tr>
+<td><a href="#TemplateViewer.hasGroup">hasGroup</a></td>
+<td>Public method to check, if a group with the given name exists.</td>
+</tr><tr>
 <td><a href="#TemplateViewer.hasTemplate">hasTemplate</a></td>
 <td>Public method to check, if an entry of the given name exists.</td>
 </tr><tr>
@@ -687,13 +690,18 @@ programming language for the group (string)
 </dd>
 </dl><a NAME="TemplateViewer.applyNamedTemplate" ID="TemplateViewer.applyNamedTemplate"></a>
 <h4>TemplateViewer.applyNamedTemplate</h4>
-<b>applyNamedTemplate</b>(<i>templateName</i>)
+<b>applyNamedTemplate</b>(<i>templateName, groupName=None</i>)
 <p>
         Public method to apply a template given a template name.
 </p><dl>
 <dt><i>templateName</i></dt>
 <dd>
 name of the template item to apply (string)
+</dd><dt><i>groupName</i></dt>
+<dd>
+name of the group to get the entry from (string).
+            None or empty means to apply the first template found with the
+            given name.
 </dd>
 </dl><a NAME="TemplateViewer.applyTemplate" ID="TemplateViewer.applyTemplate"></a>
 <h4>TemplateViewer.applyTemplate</h4>
@@ -766,28 +774,51 @@ list of all group names (list of strings)
 </dd>
 </dl><a NAME="TemplateViewer.getTemplateNames" ID="TemplateViewer.getTemplateNames"></a>
 <h4>TemplateViewer.getTemplateNames</h4>
-<b>getTemplateNames</b>(<i>start</i>)
+<b>getTemplateNames</b>(<i>start, groupName=None</i>)
 <p>
         Public method to get the names of templates starting with the given string.
 </p><dl>
 <dt><i>start</i></dt>
 <dd>
 start string of the name (string)
+</dd><dt><i>groupName</i></dt>
+<dd>
+name of the group to get the entry from (string).
+            None or empty means to look in all groups.
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
 sorted list of matching template names (list of strings)
 </dd>
+</dl><a NAME="TemplateViewer.hasGroup" ID="TemplateViewer.hasGroup"></a>
+<h4>TemplateViewer.hasGroup</h4>
+<b>hasGroup</b>(<i>name</i>)
+<p>
+        Public method to check, if a group with the given name exists.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the group to be checked for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an existing group (boolean)
+</dd>
 </dl><a NAME="TemplateViewer.hasTemplate" ID="TemplateViewer.hasTemplate"></a>
 <h4>TemplateViewer.hasTemplate</h4>
-<b>hasTemplate</b>(<i>entryName</i>)
+<b>hasTemplate</b>(<i>entryName, groupName=None</i>)
 <p>
         Public method to check, if an entry of the given name exists.
 </p><dl>
 <dt><i>entryName</i></dt>
 <dd>
 name of the entry to check for (string)
+</dd><dt><i>groupName</i></dt>
+<dd>
+name of the group to check for the entry (string).
+            None or empty means to check all groups.
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

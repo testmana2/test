@@ -5524,14 +5524,16 @@ class Editor(QsciScintillaCompat):
             line, index = self.getCursorPosition()
             tmplName = self.getWordLeft(line, index)
             if tmplName:
-                if e5App().getObject("TemplateViewer").hasTemplate(tmplName):
+                if e5App().getObject("TemplateViewer").hasTemplate(
+                        tmplName, self.getLanguage()):
                     self.__applyTemplate(tmplName)
                     return
                 else:
                     templateNames = \
-                        e5App().getObject("TemplateViewer").getTemplateNames(tmplName)
+                        e5App().getObject("TemplateViewer").getTemplateNames(
+                            tmplName, self.getLanguage())
                     if len(templateNames) == 1:
-                        self.__applyTemplate(templateNames[0])
+                        self.__applyTemplate(templateNames[0], self.getLanguage())
                         return
                     elif len(templateNames) > 1:
                         self.showUserList(TemplateCompletionListID,
@@ -5549,17 +5551,21 @@ class Editor(QsciScintillaCompat):
         @param txt the selected text (string)
         """
         if id == TemplateCompletionListID:
-            self.__applyTemplate(txt)
+            self.__applyTemplate(txt, self.getLanguage())
     
-    def __applyTemplate(self, templateName):
+    def __applyTemplate(self, templateName, language):
         """
         Private method to apply a template by name.
         
         @param templateName name of the template to apply (string)
+        @param language name of the language (group) to get the template
+            from (string)
         """
-        if e5App().getObject("TemplateViewer").hasTemplate(templateName):
+        if e5App().getObject("TemplateViewer").hasTemplate(
+                templateName, self.getLanguage()):
             self.extendSelectionWordLeft()
-            e5App().getObject("TemplateViewer").applyNamedTemplate(templateName)
+            e5App().getObject("TemplateViewer").applyNamedTemplate(
+                templateName, self.getLanguage())
     
     #######################################################################
     ## Project related methods
