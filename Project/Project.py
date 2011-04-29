@@ -1030,14 +1030,23 @@ class Project(QObject):
         if autoContinue is not None:
             self.dbgAutoContinue = autoContinue
     
+    def getTranslationPattern(self):
+        """
+        Public method to get the translation pattern.
+        
+        @return translation pattern (string)
+        """
+        if self.pdata["TRANSLATIONPATTERN"]:
+            return self.pdata["TRANSLATIONPATTERN"][0]
+        else:
+            return ""
+    
     def addLanguage(self):
         """
         Public slot used to add a language to the project.
         """
-        if self.pdata["PROJECTTYPE"][0] in \
-                ["Qt4", "Qt4C", "E4Plugin", "PySide", "PySideC"] and \
-           (len(self.pdata["TRANSLATIONPATTERN"]) == 0 or \
-            self.pdata["TRANSLATIONPATTERN"][0] == ''):
+        if len(self.pdata["TRANSLATIONPATTERN"]) == 0 or \
+           self.pdata["TRANSLATIONPATTERN"][0] == '':
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Add Language"),
                 self.trUtf8("You have to specify a translation pattern first."))
@@ -1805,6 +1814,9 @@ class Project(QObject):
             self.menuApidocAct.setEnabled(True)
             self.menuPackagersAct.setEnabled(True)
             self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
+            self.addLanguageAct.setEnabled(
+                len(self.pdata["TRANSLATIONPATTERN"]) > 0 and \
+                self.pdata["TRANSLATIONPATTERN"][0] != '')
             
             self.projectAboutToBeCreated.emit()
             
@@ -2309,6 +2321,9 @@ class Project(QObject):
                     self.menuApidocAct.setEnabled(True)
                     self.menuPackagersAct.setEnabled(True)
                     self.pluginGrp.setEnabled(self.pdata["PROJECTTYPE"][0] == "E4Plugin")
+                    self.addLanguageAct.setEnabled(
+                        len(self.pdata["TRANSLATIONPATTERN"]) > 0 and \
+                        self.pdata["TRANSLATIONPATTERN"][0] != '')
                     
                     self.__model.projectOpened()
                     self.projectOpenedHooks.emit()

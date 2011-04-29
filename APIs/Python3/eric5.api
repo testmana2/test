@@ -1461,6 +1461,7 @@ eric5.E5XML.Config.projectFileFormatVersion?7
 eric5.E5XML.Config.sessionFileFormatVersion?7
 eric5.E5XML.Config.shortcutsFileFormatVersion?7
 eric5.E5XML.Config.tasksFileFormatVersion?7
+eric5.E5XML.Config.tasksFileFormatVersionAlternative?7
 eric5.E5XML.Config.templatesFileFormatVersion?7
 eric5.E5XML.Config.userProjectFileFormatVersion?7
 eric5.E5XML.DebuggerPropertiesReader.DebuggerPropertiesReader.readXML?4(quiet = False)
@@ -4647,6 +4648,7 @@ eric5.Project.Project.Project.getRelativeUniversalPath?4(path)
 eric5.Project.Project.Project.getSources?4(normalized = False)
 eric5.Project.Project.Project.getStatusMonitorAutoUpdate?4()
 eric5.Project.Project.Project.getStatusMonitorInterval?4()
+eric5.Project.Project.Project.getTranslationPattern?4()
 eric5.Project.Project.Project.getVcs?4()
 eric5.Project.Project.Project.handleApplicationDiagram?4()
 eric5.Project.Project.Project.handlePreferencesChanged?4()

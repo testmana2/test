@@ -199,7 +199,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteLanguageFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Add translation...'), self.project.addLanguage)
+        self.__addTranslationAct = self.menu.addAction(
+            self.trUtf8('Add translation...'), self.project.addLanguage)
         self.menu.addAction(self.trUtf8('Add translation files...'), 
             self.__addTranslationFiles)
         self.menu.addSeparator()
@@ -250,8 +251,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__releaseAll)
                 self.qmprocBackMenuActions.append(act)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Add translation...'), 
-            self.project.addLanguage)
+        self.__addTranslationBackAct = self.backMenu.addAction(
+            self.trUtf8('Add translation...'), self.project.addLanguage)
         self.backMenu.addAction(self.trUtf8('Add translation files...'), 
             self.__addTranslationFiles)
         self.backMenu.addSeparator()
@@ -373,8 +374,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
                     self.__releaseAll)
                 self.qmprocDirMenuActions.append(act)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Add translation...'), 
-            self.project.addLanguage)
+        self.__addTranslationDirAct = self.dirMenu.addAction(
+            self.trUtf8('Add translation...'), self.project.addLanguage)
         self.dirMenu.addAction(self.trUtf8('Add translation files...'), 
             self.__addTranslationFiles)
         self.dirMenu.addSeparator()
@@ -464,6 +465,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.lreleaseProcRunning:
                 for act in self.qmprocMenuActions:
                     act.setEnabled(True)
+        self.__addTranslationAct.setEnabled(self.project.getTranslationPattern() != "")
         
         ProjectBaseBrowser._showContextMenu(self, self.menu)
         
@@ -520,6 +522,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.lreleaseProcRunning:
                 for act in self.qmprocDirMenuActions:
                     act.setEnabled(True)
+        self.__addTranslationDirAct.setEnabled(self.project.getTranslationPattern() != "")
         
         ProjectBaseBrowser._showContextMenuDir(self, self.dirMenu)
         
@@ -537,6 +540,8 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             if self.lreleaseProcRunning:
                 for act in self.qmprocBackMenuActions:
                     act.setEnabled(True)
+        self.__addTranslationBackAct.setEnabled(
+            self.project.getTranslationPattern() != "")
         
         self.showMenu.emit("MainBack", self.backMenu)
         
