@@ -4787,6 +4787,7 @@
       <keyword name="Project.getSources" id="Project.getSources" ref="eric5.Project.Project.html#Project.getSources" />
       <keyword name="Project.getStatusMonitorAutoUpdate" id="Project.getStatusMonitorAutoUpdate" ref="eric5.Project.Project.html#Project.getStatusMonitorAutoUpdate" />
       <keyword name="Project.getStatusMonitorInterval" id="Project.getStatusMonitorInterval" ref="eric5.Project.Project.html#Project.getStatusMonitorInterval" />
+      <keyword name="Project.getTranslationPattern" id="Project.getTranslationPattern" ref="eric5.Project.Project.html#Project.getTranslationPattern" />
       <keyword name="Project.getVcs" id="Project.getVcs" ref="eric5.Project.Project.html#Project.getVcs" />
       <keyword name="Project.handleApplicationDiagram" id="Project.handleApplicationDiagram" ref="eric5.Project.Project.html#Project.handleApplicationDiagram" />
       <keyword name="Project.handlePreferencesChanged" id="Project.handlePreferencesChanged" ref="eric5.Project.Project.html#Project.handlePreferencesChanged" />
