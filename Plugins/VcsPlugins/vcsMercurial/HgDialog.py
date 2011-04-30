@@ -9,7 +9,7 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import QProcess, QTimer, pyqtSlot, Qt
+from PyQt4.QtCore import QProcess, QTimer, pyqtSlot, Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QLineEdit
 
 from E5Gui import E5MessageBox
@@ -177,6 +177,8 @@ class HgDialog(QDialog, Ui_HgDialog):
                     if '.e4p' in line:
                         self.__hasAddOrDelete = True
                         break
+        
+        QCoreApplication.processEvents()
     
     def __readStderr(self):
         """
@@ -192,6 +194,8 @@ class HgDialog(QDialog, Ui_HgDialog):
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
+        
+        QCoreApplication.processEvents()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """
