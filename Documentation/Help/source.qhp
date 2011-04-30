@@ -8365,6 +8365,7 @@
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
+      <keyword name="Hg.hgRollback" id="Hg.hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRollback" />
       <keyword name="Hg.hgServe" id="Hg.hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgServe" />
       <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
       <keyword name="Hg.hgShowConfig" id="Hg.hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowConfig" />
@@ -8465,6 +8466,7 @@
       <keyword name="HgProjectHelper.__hgPushNewBranch" id="HgProjectHelper.__hgPushNewBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPushNewBranch" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
       <keyword name="HgProjectHelper.__hgResolve" id="HgProjectHelper.__hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgResolve" />
+      <keyword name="HgProjectHelper.__hgRollback" id="HgProjectHelper.__hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRollback" />
       <keyword name="HgProjectHelper.__hgServe" id="HgProjectHelper.__hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgServe" />
       <keyword name="HgProjectHelper.__hgShowBranch" id="HgProjectHelper.__hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowBranch" />
       <keyword name="HgProjectHelper.__hgShowConfig" id="HgProjectHelper.__hgShowConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowConfig" />

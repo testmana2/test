@@ -150,6 +150,9 @@ VersionControl
 <td><a href="#Hg.hgResolve">hgResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
 </tr><tr>
+<td><a href="#Hg.hgRollback">hgRollback</a></td>
+<td>Public method used to rollback the last transaction.</td>
+</tr><tr>
 <td><a href="#Hg.hgServe">hgServe</a></td>
 <td>Public method used to edit the repository config file.</td>
 </tr><tr>
@@ -349,7 +352,7 @@ file name to show the annotations for (string)
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-directory name (string or list of strings))
+directory name (string or list of strings)
 </dd>
 </dl><a NAME="Hg.hgBisect" ID="Hg.hgBisect"></a>
 <h4>Hg.hgBisect</h4>
@@ -628,6 +631,16 @@ file/directory name (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd>
+</dl><a NAME="Hg.hgRollback" ID="Hg.hgRollback"></a>
+<h4>Hg.hgRollback</h4>
+<b>hgRollback</b>(<i>name</i>)
+<p>
+        Public method used to rollback the last transaction.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name (string or list of strings)
 </dd>
 </dl><a NAME="Hg.hgServe" ID="Hg.hgServe"></a>
 <h4>Hg.hgServe</h4>

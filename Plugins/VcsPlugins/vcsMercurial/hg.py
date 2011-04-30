@@ -1951,7 +1951,7 @@ class Hg(VersionControl):
         """
         Public method used to backout an earlier changeset from the Mercurial repository.
         
-        @param name directory name (string or list of strings))
+        @param name directory name (string or list of strings)
         """
         dname, fname = self.splitPath(name)
         
@@ -1991,6 +1991,31 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
     
+    def hgRollback(self, name):
+        """
+        Public method used to rollback the last transaction.
+        
+        @param name directory name (string or list of strings)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        res = E5MessageBox.yesNo(None,
+            self.trUtf8("Rollback last transaction"),
+            self.trUtf8("""Are you sure you want to rollback the last transaction?"""),
+            icon = E5MessageBox.Warning)
+        if res:
+            dia = HgDialog(self.trUtf8('Rollback last transaction'))
+            res = dia.startProcess(["rollback"], repodir)
+            if res:
+                dia.exec_()
+
     def hgServe(self, name):
         """
         Public method used to edit the repository config file.

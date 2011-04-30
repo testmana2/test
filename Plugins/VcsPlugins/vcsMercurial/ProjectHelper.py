@@ -745,6 +745,31 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgBackoutAct.triggered[()].connect(self.__hgBackout)
         self.actions.append(self.hgBackoutAct)
         
+        self.hgRollbackAct = E5Action(self.trUtf8('Rollback last transaction'),
+                self.trUtf8('Rollback last transaction'),
+                0, 0, self, 'mercurial_rollback')
+        self.hgRollbackAct.setStatusTip(self.trUtf8(
+            'Rollback the last transaction'
+        ))
+        self.hgRollbackAct.setWhatsThis(self.trUtf8(
+            """<b>Rollback last transaction</b>"""
+            """<p>This performs a rollback of the last transaction. Transactions"""
+            """ are used to encapsulate the effects of all commands that create new"""
+            """ changesets or propagate existing changesets into a repository."""
+            """ For example, the following commands are transactional, and"""
+            """ their effects can be rolled back:<ul>"""
+            """<li>commit</li>"""
+            """<li>import</li>"""
+            """<li>pull</li>"""
+            """<li>push (with this repository as the destination)</li>"""
+            """<li>unbundle</li>"""
+            """</ul>"""
+            """</p><p><strong>This command is dangerous. Please use with care."""
+            """</strong></p>"""
+        ))
+        self.hgRollbackAct.triggered[()].connect(self.__hgRollback)
+        self.actions.append(self.hgRollbackAct)
+        
         self.hgServeAct = E5Action(self.trUtf8('Serve project repository'),
                 self.trUtf8('Serve project repository...'),
                 0, 0, self, 'mercurial_serve')
@@ -783,6 +808,7 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgRecoverAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgBackoutAct)
+        adminMenu.addAction(self.hgRollbackAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgVerifyAct)
         
@@ -1085,6 +1111,12 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to back out changes of a changeset.
         """
         self.vcs.hgBackout(self.project.ppath)
+    
+    def __hgRollback(self):
+        """
+        Private slot used to rollback the last transaction.
+        """
+        self.vcs.hgRollback(self.project.ppath)
     
     def __hgServe(self):
         """
