@@ -633,9 +633,9 @@ def getDefaultLexerAssociations():
     
     if QSCINTILLA_VERSION() >= 0x020501:
         assocs.update({
-            '*.m': "Matlab", 
-            '*.m.matlab': "Matlab", 
-            '*.m.octave': "Octave", 
+            '*.m': "Matlab",
+            '*.m.matlab': "Matlab",
+            '*.m.octave': "Octave",
         })
     
     for name in LexerRegistry:
