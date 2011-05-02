@@ -876,6 +876,12 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Download/DownloadAskActionDialog.py</Source>
     <Source>QScintilla/Lexers/LexerMatlab.py</Source>
     <Source>QScintilla/Lexers/LexerOctave.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1115,6 +1121,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/CheckerPlugins/Pep8/Pep8StatisticsDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
     <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
@@ -1563,7 +1572,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>FixIssues</string>
             </key>
             <value>
-              <bool>False</bool>
+              <bool>True</bool>
             </value>
             <key>
               <string>IncludeMessages</string>

@@ -16,6 +16,8 @@ from E5Gui.E5Application import e5App
 
 from VCS.ProjectHelper import VcsProjectHelper
 
+from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
+
 from E5Gui.E5Action import E5Action
 
 import UI.PixmapCache
@@ -36,6 +38,24 @@ class HgProjectHelper(VcsProjectHelper):
         @param name name of this object (string)
         """
         VcsProjectHelper.__init__(self, vcsObject, projectObject, parent, name)
+        
+        # instantiate the extensions
+        self.__extensions = {
+            "bookmarks" : BookmarksProjectHelper(),
+        }
+    
+    def setObjects(self, vcsObject, projectObject):
+        """
+        Public method to set references to the vcs and project objects.
+        
+        @param vcsObject reference to the vcs object
+        @param projectObject reference to the project object
+        """
+        self.vcs = vcsObject
+        self.project = projectObject
+        
+        for extension in self.__extensions.values():
+            extension.setObjects(vcsObject, projectObject)
     
     def getActions(self):
         """
@@ -43,7 +63,10 @@ class HgProjectHelper(VcsProjectHelper):
         
         @return list of all actions (list of E5Action)
         """
-        return self.actions[:]
+        actions = self.actions[:]
+        for extension in self.__extensions.values():
+            actions.extend(extension.getActions())
+        return actions
     
     def initActions(self):
         """
@@ -829,6 +852,13 @@ class HgProjectHelper(VcsProjectHelper):
         bisectMenu.addAction(self.hgBisectSkipAct)
         bisectMenu.addAction(self.hgBisectResetAct)
         
+        extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
+        extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
+        self.extensionMenus = {}
+        for extensionName in self.__extensions:
+            self.extensionMenus[extensionName] = extensionsMenu.addMenu(
+                self.__extensions[extensionName].initMenu(extensionsMenu))
+        
         act = menu.addAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
@@ -847,6 +877,8 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgPushAct)
         menu.addSeparator()
         menu.addMenu(bundleMenu)
+        menu.addSeparator()
+        menu.addMenu(extensionsMenu)
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
@@ -889,6 +921,14 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
         menu.addAction(self.hgConfigAct)
+    
+    def __showExtensionMenu(self):
+        """
+        Private slot showing the extensions menu.
+        """
+        for extensionName in self.extensionMenus:
+            self.extensionMenus[extensionName].setEnabled(
+                self.vcs.isExtensionActive(extensionName))
     
     def __hgExtendedDiff(self):
         """

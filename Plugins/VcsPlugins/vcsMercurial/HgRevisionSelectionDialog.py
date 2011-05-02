@@ -40,8 +40,7 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         """
         Public method to retrieve the selected revision.
         
-        @return tuple naming the revision and a flag indicating a
-            forced merge (string, boolean)
+        @return selected revision (string)
         """
         if self.numberButton.isChecked():
             rev = str(self.numberSpinBox.value())

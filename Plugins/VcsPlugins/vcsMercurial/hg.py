@@ -13,7 +13,7 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
-from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo
+from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
 from PyQt4.QtGui import QApplication, QDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
@@ -44,6 +44,9 @@ from .HgCommandDialog import HgCommandDialog
 from .HgBundleDialog import HgBundleDialog
 from .HgBackoutDialog import HgBackoutDialog
 from .HgServeDialog import HgServeDialog
+from .HgUtilities import getConfigPath
+
+from .BookmarksExtension.bookmarks import Bookmarks
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -120,6 +123,17 @@ class Hg(VersionControl):
         self.__commitDialog = None
         
         self.__forgotNames = []
+        
+        self.__activeExtensions = []
+        
+        self.__iniWatcher = QFileSystemWatcher(self)
+        self.__iniWatcher.fileChanged.connect(self.__iniFileChanged)
+        self.__iniWatcher.addPath(getConfigPath())
+        
+        # instantiate the extensions
+        self.__extensions = {
+            "bookmarks" : Bookmarks(self),
+        }
     
     def getPlugin(self):
         """
@@ -148,6 +162,10 @@ class Hg(VersionControl):
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
+        
+        # shut down the extensions
+        for extension in self.__extensions.values():
+            extension.shutdown()
     
     def vcsExists(self):
         """
@@ -168,6 +186,7 @@ class Hg(VersionControl):
                 output = \
                     str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 self.versionStr = output.splitlines()[0].split()[-1][0:-1]
+                self.__getExtensionsInfo()
                 return True, errMsg
             else:
                 if finished:
@@ -2009,7 +2028,7 @@ class Hg(VersionControl):
         res = E5MessageBox.yesNo(None,
             self.trUtf8("Rollback last transaction"),
             self.trUtf8("""Are you sure you want to rollback the last transaction?"""),
-            icon = E5MessageBox.Warning)
+            icon=E5MessageBox.Warning)
         if res:
             dia = HgDialog(self.trUtf8('Rollback last transaction'))
             res = dia.startProcess(["rollback"], repodir)
@@ -2035,12 +2054,85 @@ class Hg(VersionControl):
         self.serveDlg.show()
     
     ############################################################################
+    ## Methods to handle extensions are below.
+    ############################################################################
+    
+    def __iniFileChanged(self, path):
+        """
+        Private slot to handle a change of the Mercurial config file.
+        
+        @path path name of the changed file (string)
+        """
+        self.__getExtensionsInfo()
+    
+    def __monitorRepoIniFile(self, name):
+        """
+        Private slot to add a repository config file to the list of monitored files.
+        
+        @param name directory name pointing into the repository (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = str(dname)
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
+        self.__iniWatcher.addPath(cfgFile)
+    
+    def __getExtensionsInfo(self):
+        """
+        Private method to get the active extensions from Mercurial.
+        """
+        self.__activeExtensions = []
+        
+        process = QProcess()
+        args = []
+        args.append('showconfig')
+        args.append('extensions')
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = str(process.readAllStandardOutput(),
+                    Preferences.getSystem("IOEncoding"), 'replace')
+                for line in output.splitlines():
+                    extensionName = line.split("=", 1)[0].strip().split(".")[-1].strip()
+                    self.__activeExtensions.append(extensionName)
+        
+        if self.versionStr >= "1.8":
+            if "bookmarks" not in self.__activeExtensions:
+                self.__activeExtensions.append("bookmarks")
+    
+    def isExtensionActive(self, extensionName):
+        """
+        Public method to check, if an extension is active.
+        
+        @param extensionName name of the extension to check for (string)
+        @return flag indicating an active extension (boolean)
+        """
+        return extensionName.strip() in self.__activeExtensions
+    
+    def getExtensionObject(self, extensionName):
+        """
+        Public method to get a reference to an extension object. 
+        
+        @param extensionName name of the extension (string)
+        @return reference to the extension object (boolean)
+        """
+        return self.__extensions[extensionName]
+    
+    ############################################################################
     ## Methods to get the helper objects are below.
     ############################################################################
     
     def vcsGetProjectBrowserHelper(self, browser, project, isTranslationsBrowser=False):
         """
-        Public method to instanciate a helper object for the different project browsers.
+        Public method to instantiate a helper object for the different project browsers.
         
         @param browser reference to the project browser object
         @param project reference to the project object
@@ -2052,13 +2144,14 @@ class Hg(VersionControl):
         
     def vcsGetProjectHelper(self, project):
         """
-        Public method to instanciate a helper object for the project.
+        Public method to instantiate a helper object for the project.
         
         @param project reference to the project object
         @return the project helper object
         """
         helper = self.__plugin.getProjectHelper()
         helper.setObjects(self, project)
+        self.__monitorRepoIniFile(project.ppath)
         return helper
 
     ############################################################################
