@@ -130,6 +130,10 @@ class VcsProjectHelper(QObject):
         
         vcsSystemsDict = e5App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
+        if not vcsSystemsDict:
+            # no version control system found
+            return
+        
         vcsSystemsDisplay = []
         keys = sorted(vcsSystemsDict.keys())
         for key in keys:
@@ -290,6 +294,10 @@ class VcsProjectHelper(QObject):
         vcsHelper = self.project.vcsProjectHelper
         vcsSystemsDict = e5App().getObject("PluginManager")\
             .getPluginDisplayStrings("version_control")
+        if not vcsSystemsDict:
+            # no version control system found
+            return
+        
         vcsSystemsDisplay = []
         keys = sorted(list(vcsSystemsDict.keys()))
         for key in keys:
