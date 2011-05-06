@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1574,8 +1575,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1625,8 +1626,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="73"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -2891,7 +2892,7 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="313"/>
         <source>VirusTotal Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Interfaz de VirusTotal</translation>
     </message>
 </context>
 <context>
@@ -5346,57 +5347,57 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="14"/>
         <source>What to do?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Qué hacer?</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="23"/>
         <source>You are about to download this file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Está a punto de descargar este archivo:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="49"/>
         <source>Type:</source>
-        <translation type="unfinished">Tipo:</translation>
+        <translation>Tipo:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="69"/>
         <source>From:</source>
-        <translation type="unfinished">Desde:</translation>
+        <translation>Desde:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="100"/>
         <source>Select to open the downloaded file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para abrir el archivo descargado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="103"/>
         <source>&amp;Open File</source>
-        <translation type="unfinished">&amp;Abrir archivo</translation>
+        <translation>&amp;Abrir Archivo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="110"/>
         <source>Select to scan the file with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para analizar el archivo con VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="113"/>
         <source>Scan with &amp;VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizar con &amp;VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="133"/>
         <source>Select to save the file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para guardar el archivo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="136"/>
         <source>&amp;Save File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Guardar Archivo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="146"/>
         <source>&lt;b&gt;What do you want to do?&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;¿Qué desea hacer?&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -5532,7 +5533,7 @@ Not connected
     <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="176"/>
         <source>VirusTotal scan scheduled: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Scan de VirusTotal programado: {0}</translation>
     </message>
 </context>
 <context>
@@ -7319,7 +7320,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="5112"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
 </context>
 <context>
@@ -8127,7 +8128,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="58"/>
         <source>Reread automatically when changed externally</source>
-        <translation type="unfinished"></translation>
+        <translation>Releer automáticamente cuando cambie externamente</translation>
     </message>
 </context>
 <context>
@@ -8917,142 +8918,142 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="151"/>
         <source>Select to style preprocessor lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para aplicar estilo a las líneas de preprocesador</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="154"/>
         <source>Style preprocessor lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo a las líneas de preprocesador</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="297"/>
         <source>Select to enable support for Django templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar soporte para plantillas Django</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="300"/>
         <source>Enable Django templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar plantillas Django</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="307"/>
         <source>Select to enable support for Mako templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar soporte para plantillas Mako</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="310"/>
         <source>Enable Mako templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar plantillas Mako</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="518"/>
         <source>Properties Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Analizador Léxico de Propiedades</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="524"/>
         <source>Select to allow initial spaces in a line</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir espacios al inicio en una línea</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="527"/>
         <source>Allow initial spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Permitir espacios al inicio</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="563"/>
         <source>Select whether folding of triple quoted strings shall be possible</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar si el plegado de cadenas con triple comilla debe ser posible</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="566"/>
         <source>Fold triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Plegado de cadenas de triple comilla</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="593"/>
         <source>Select to allow strings to span newline characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir a las cadenas generar caracteres de nueva línea</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="596"/>
         <source>Strings may span newline characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Las cadenas pueden generar caracteres de nueva línea</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
         <source>Ruby Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Analizador Léxico de Ruby</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="681"/>
         <source>Select whether only BEGIN blocks can be folded</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona si solamente los bloques BEGIN pueden ser plegados</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="684"/>
         <source>Only BEGIN blocks can be folded</source>
-        <translation type="unfinished"></translation>
+        <translation>Solamente los bloques BEGIN pueden ser plegados</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
         <source>Select if words may contain dots</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar si las palabras pueden contener puntos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
         <source>Words may contain dots</source>
-        <translation type="unfinished"></translation>
+        <translation>Las palabras pueden contener puntos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir &apos;#&apos; como carácter de comentario</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
         <source>Allow &apos;#&apos; as comment character</source>
-        <translation type="unfinished"></translation>
+        <translation>Permitir &apos;#&apos; como carácter de comentario</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
         <source>Select to enable quoted identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar identificadores entre comillas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
         <source>Enable quoted identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar identificadores entre comillas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
         <source>TCL Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Analizador Léxico de TCL</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
         <source>TeX Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Analizador Léxico de TeX</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="769"/>
         <source>Select to treat comments as TeX source</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para tratar comentarios como fuente TeX</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="772"/>
         <source>Treat comments as TeX source</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratar comentarios como fuente TeX</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="779"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para tratar \if&lt;unknown&gt; como un comando</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="782"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratar \if&lt;unknown&gt; como comando</translation>
     </message>
 </context>
 <context>
@@ -9901,37 +9902,37 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
         <source>Whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacios en blanco</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1194"/>
         <source>Whitespace size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño de espacio en blanco:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1201"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el tamaño de los puntos utilizados para visualizar espacios en blanco</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1234"/>
         <source>Whitespace foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de primer plano para espacios en blanco:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1247"/>
         <source>Select the foreground colour for visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de primer plano para espacios en blanco visibles</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1257"/>
         <source>Whitespace background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fondo para espacios en blanco:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1270"/>
         <source>Select the background colour for visible whitespace</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de fondo para espacios en blanco visibles</translation>
     </message>
 </context>
 <context>
@@ -10554,22 +10555,22 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginEricapi.py" line="97"/>
         <source>Generate API file (eric5_api)</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar archivo API (eric5_api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="97"/>
         <source>Generate &amp;API file (eric5_api)</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar archivo &amp;API (eric5_api)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="100"/>
         <source>Generate an API file using eric5_api</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar un archivo API utilizando eric5_api</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricapi.py" line="102"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Generar un archivo API&lt;/b&gt;&lt;p&gt;Generar un archivo API utilizando eric5_api.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10999,22 +11000,22 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate documentation (eric5_doc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar documentación (eric5_doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="133"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar &amp;documentación (eric5_doc)</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="136"/>
         <source>Generate API documentation using eric5_doc</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar documentación de API utilizando eric5_doc</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="138"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Generar documentación&lt;/b&gt;&lt;p&gt;Generar documentación de API utilizando eric5_doc.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -12171,7 +12172,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -12357,12 +12358,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="810"/>
         <source>Scan Link with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizar enlace con VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="831"/>
         <source>Scan Image with VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizar Imagen con VirusTotal</translation>
     </message>
 </context>
 <context>
@@ -12931,62 +12932,62 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="20"/>
         <source>&lt;b&gt;Configure VirusTotal Interface&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar la Interfaz de VirusTotal&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="40"/>
         <source>Select to enable the VirusTotal interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar la interfaz de VirusTotal</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="43"/>
         <source>Enable VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar VirusTotal</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="50"/>
         <source>Service Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Service Key</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="56"/>
         <source>Enter your personal VirusTotal service key (s. &lt;a href=&quot;http://virustotal.com&quot;&gt;VirusTotal &amp;copy;&lt;/a&gt; for details):</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca su service key personal de VirusTotal (s. &lt;a href=&quot;http://virustotal.com&quot;&gt;VirusTotal &amp;copy;&lt;/a&gt; for details):</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="107"/>
         <source>Test Service Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Probar Service Key</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="132"/>
         <source>Select to use secure (https) connections</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar conexiones (https) seguras</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.ui" line="135"/>
         <source>Use secure (https) connections</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar conexiones (https) seguras</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="74"/>
         <source>Checking validity of the service key...</source>
-        <translation type="unfinished"></translation>
+        <translation>Comprobando la validez de la service key...</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="91"/>
         <source>The service key is valid.</source>
-        <translation type="unfinished"></translation>
+        <translation>La service key es válida.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="94"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;The service key is not valid.&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;font color=&quot;#FF0000&quot;&gt;La service key no es válida.&lt;/font&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpVirusTotalPage.py" line="97"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</translation>
     </message>
 </context>
 <context>
@@ -13319,12 +13320,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="79"/>
         <source>Select to enable support for access keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar soporte para claves de acceso</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="82"/>
         <source>Enable access keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar claves de acceso</translation>
     </message>
 </context>
 <context>
@@ -14855,33 +14856,34 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1382"/>
         <source>VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1388"/>
         <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Búsqueda de archivo&lt;/h2&gt;&lt;p&gt;Para buscar el último informe de VirusTotal en un archivo dado, solamente introduzca su hash. Los hashes permitidos actualmente son MD5, SHA1 y SHA256. Tambien puede buscar un informe para un archivo concreto introduciendo su permalink id.&lt;/p&gt;&lt;h2&gt;Búsqueda de URL&lt;/h2&gt;&lt;p&gt;Las búsquedas de URL son sencillas, simplemente introduzca la URL concreta, la aplicación la normalizará y comparará contra las entradas en la base de datos de VirusTotal. Alternativamente se puede introducir el hash MD5 de una URL precedido por &quot;url:&quot;, por ejemplo url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;Búsqueda de Usuario&lt;/h2&gt;&lt;p&gt;¿Desea saber si un amigo tiene cuenta Community de VT? Simplemente teclee su nick precedido por el símbolo &quot;@&quot;,por ejemplo. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Búsqueda a través de comentarios&lt;/h2&gt;&lt;p&gt;Los comentarios en la Comunidad de VT pueden a menudo ser útiles en la desinfección de su PC, o bien pueden demostrar su utilidad al analizar una muestra en particular de malware, las etiquetas de comentario habilitan a los usuarios a través de las revisiones de la Comunidad de VT. Las etiquetas estándar de archivo son: {0} Las etiquetas estándar de URL son: {1} Las etiquetas generadas por los usuarios se preceden del símbolo &quot;#&quot;, por ejemplo. #disinfect.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1432"/>
         <source>Search VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1438"/>
         <source>Scan current site</source>
-        <translation type="unfinished"></translation>
+        <translation>Analizar sitio actual</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2710"/>
         <source>VirusTotal Scan</source>
-        <translation type="unfinished"></translation>
+        <translation>Análisis con VirusTotal</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="2710"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El análisis con VirusTotal no se ha podido programar.&lt;p&gt;
+&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15124,12 +15126,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2014"/>
         <source>Rollback last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Rollback de la última transacción</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2009"/>
         <source>Are you sure you want to rollback the last transaction?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Está seguro de que quiere aplicar un rollback a la última transacción?</translation>
     </message>
 </context>
 <context>
@@ -17512,32 +17514,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="432"/>
         <source>Push new branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer push de nueva rama</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="435"/>
         <source>Push the current branch of the local project as a new named branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Ejecutar push de la rama actual del proyecto local como una nueva rama con nombre</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="438"/>
         <source>&lt;b&gt;Push new branch&lt;/b&gt;&lt;p&gt;This pushes the current branch of the local project as a new named branch.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hacer push de nueva rama&lt;/b&gt;&lt;p&gt;Hace un push de la rama actual del proyecto local como una nueva rama con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="748"/>
         <source>Rollback last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Rollback de última transacción</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="751"/>
         <source>Rollback the last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Rollback de la última transacción</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="754"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care.&lt;/strong&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Rollback de última transacción&lt;/b&gt;&lt;p&gt;Lleva a cabo un rollback de la última transacción. Las transactiones se utilizan para encapsular los efectos de todos los comandos que crean nuevos changesets or propagan changesets existentes hacia un repository. Por ejemplo, los siguientes comandos son transaccionales, y sus efectos pueden ser revertidos (rollback):&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (con este repositorio como destino)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Este comando es peligroso. Utiliícelo por favor con cuidado.&lt;/strong&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17971,87 +17973,87 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="39"/>
         <source>&amp;Filter on Status:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtro sobre Status:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="49"/>
         <source>Select the status of entries to be shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el status de las entradas a mostrar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="100"/>
         <source>Commit the selected changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar commit a los cambios seleccionados</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="103"/>
         <source>&amp;Commit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="117"/>
         <source>Add the selected entries to the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir las entradas seleccionadas al repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="120"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Add</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="127"/>
         <source>Show differences of the selected entries to the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar las diferencias de las entradas seleccionadas con el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="130"/>
         <source>&amp;Differences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="137"/>
         <source>Revert the selected entries to the last revision in the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Revertir las entradas seleccionadas a la última revisión en el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="140"/>
         <source>Re&amp;vert</source>
-        <translation type="unfinished"></translation>
+        <translation>Re&amp;vert</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="147"/>
         <source>Forget about the selected missing entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Olvidar las entradas perdidas seleccionadas</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="150"/>
         <source>For&amp;get</source>
-        <translation type="unfinished"></translation>
+        <translation>Ol&amp;vidar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="157"/>
         <source>Restore the selected missing entries from the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar las entradas perdidas seleccionadas desde el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="160"/>
         <source>&amp;Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Restore</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="67"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="73"/>
         <source>Restore missing</source>
-        <translation type="unfinished"></translation>
+        <translation>Restore sobre elementos perdidos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="414"/>
         <source>all</source>
-        <translation type="unfinished"></translation>
+        <translation>todo</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="603"/>
@@ -18061,12 +18063,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="604"/>
         <source>Differences</source>
-        <translation type="unfinished"></translation>
+        <translation>Diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="502"/>
         <source>There are no entries selected to be committed.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay entradas seleccionadas sobre las que aplicar commit.</translation>
     </message>
 </context>
 <context>
@@ -20296,12 +20298,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="85"/>
         <source>Filter out files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrar archivos:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/InterfacePage.ui" line="92"/>
         <source>Enter wildcard file patterns separated by semicolon. Files matching these patterns will not be shown by the file browsers.</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir patrones de comodín para archivos separados por punto y coma. Los archivos que concuerden con estos patrones no serán mostrados por los navegadores de archivos.</translation>
     </message>
 </context>
 <context>
@@ -21143,32 +21145,32 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="108"/>
         <source>Matlab</source>
-        <translation type="unfinished"></translation>
+        <translation>Matlab</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="108"/>
         <source>Octave</source>
-        <translation type="unfinished"></translation>
+        <translation>Octave</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="345"/>
         <source>Matlab Files (*.m *.m.matlab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Matlab (*.m *.m.matlab)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="345"/>
         <source>Octave Files (*.m *.m.matlab)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Octave (*.m *.m.matlab)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Matlab Files (*.m)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Matlab (*.m)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Octave Files (*.m.octave)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Octave (*.m.octave)</translation>
     </message>
 </context>
 <context>
@@ -35122,77 +35124,77 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="39"/>
         <source>&amp;Filter on Status:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Filtro sobre Status:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="49"/>
         <source>Select the status of entries to be shown</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el status de las entradas a mostrar</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="153"/>
         <source>Commit the selected changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer commit de los cambios seleccionados</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="156"/>
         <source>&amp;Commit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="170"/>
         <source>Add the selected entries to the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir las entradas seleccionadas al repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="173"/>
         <source>&amp;Add</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Add</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="180"/>
         <source>Show differences of the selected entries to the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar las diferencias de las entradas seleccionadas con el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="183"/>
         <source>&amp;Differences</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="190"/>
         <source>Revert the selected entries to the last revision in the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Revertir las entradas seleccionadas a la última revisión en el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="193"/>
         <source>Re&amp;vert</source>
-        <translation type="unfinished"></translation>
+        <translation>Re&amp;vert</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="200"/>
         <source>Restore the selected missing entries from the repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar las entradas perdidas seleccionadas desde el repositorio</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="203"/>
         <source>&amp;Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Restore</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="88"/>
         <source>Restore missing</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar perdidas</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="496"/>
         <source>all</source>
-        <translation type="unfinished"></translation>
+        <translation>todo</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="662"/>
@@ -35202,17 +35204,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="663"/>
         <source>Differences</source>
-        <translation type="unfinished"></translation>
+        <translation>Diferencias</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="577"/>
         <source>There are no entries selected to be committed.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay entradas seleccionads sobre las que hacer commit.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="646"/>
         <source>There are no missing entries available/selected.</source>
-        <translation type="unfinished">No hay entradas perdidas disponibles/seleccionadas.</translation>
+        <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
 </context>
 <context>
@@ -37090,22 +37092,22 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Tasks/TaskViewer.py" line="390"/>
         <source>&amp;Configure scan options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Configurar opciones de análisis</translation>
     </message>
     <message>
         <location filename="Tasks/TaskViewer.py" line="767"/>
         <source>Scan Filter Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrones de filtro de análisis</translation>
     </message>
     <message>
         <location filename="Tasks/TaskViewer.py" line="767"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir patrones de nombre de archivo para los archivos a ser excluidos separados por una coma:</translation>
     </message>
     <message>
         <location filename="Tasks/TaskViewer.py" line="384"/>
         <source>P&amp;roject Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Tareas de P&amp;royecto</translation>
     </message>
 </context>
 <context>
@@ -38601,7 +38603,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Tools/TrayStarter.py" line="101"/>
         <source>Icon Editor</source>
-        <translation type="unfinished">Editor de Iconos</translation>
+        <translation>Editor de Iconos</translation>
     </message>
 </context>
 <context>
@@ -44865,17 +44867,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/VirusTotalApi.py" line="79"/>
         <source>Request limit has been reached.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha alcanzado el límite de solicitudes.</translation>
     </message>
     <message>
         <location filename="Helpviewer/VirusTotalApi.py" line="80"/>
         <source>Invalid key given.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha proporcionado una clave no válida.</translation>
     </message>
     <message>
         <location filename="Helpviewer/VirusTotalApi.py" line="81"/>
         <source>Requested item is not present.</source>
-        <translation type="unfinished"></translation>
+        <translation>El elemento solicitado no está presente.</translation>
     </message>
 </context>
 <context>
