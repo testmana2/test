@@ -882,6 +882,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1124,6 +1125,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

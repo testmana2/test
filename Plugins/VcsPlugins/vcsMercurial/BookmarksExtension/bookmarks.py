@@ -17,6 +17,7 @@ from ..HgDialog import HgDialog
 from .HgBookmarksListDialog import HgBookmarksListDialog
 from .HgBookmarkDialog import HgBookmarkDialog
 from .HgBookmarkRenameDialog import HgBookmarkRenameDialog
+from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
 
 import Preferences
 
@@ -34,6 +35,7 @@ class Bookmarks(QObject):
         self.vcs = vcs
         
         self.bookmarksListDlg = None
+        self.bookmarksInOutDlg = None
         self.bookmarksList = []
     
     def shutdown(self):
@@ -42,6 +44,8 @@ class Bookmarks(QObject):
         """
         if self.bookmarksListDlg is not None:
             self.bookmarksListDlg.close()
+        if self.bookmarksInOutDlg is not None:
+            self.bookmarksInOutDlg.close()
     
     def hgListBookmarks(self, path):
         """
@@ -93,10 +97,8 @@ class Bookmarks(QObject):
         
         @param name file/directory name (string)
         """
-        dname, fname = self.vcs.splitPath(name)
-        
         # find the root of the repo
-        repodir = str(dname)
+        repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -127,10 +129,8 @@ class Bookmarks(QObject):
         
         @param name file/directory name (string)
         """
-        dname, fname = self.vcs.splitPath(name)
-        
         # find the root of the repo
-        repodir = str(dname)
+        repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -159,10 +159,8 @@ class Bookmarks(QObject):
         
         @param name file/directory name (string)
         """
-        dname, fname = self.vcs.splitPath(name)
-        
         # find the root of the repo
-        repodir = str(dname)
+        repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -189,10 +187,8 @@ class Bookmarks(QObject):
         
         @param name file/directory name (string)
         """
-        dname, fname = self.vcs.splitPath(name)
-        
         # find the root of the repo
-        repodir = str(dname)
+        repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -217,3 +213,124 @@ class Bookmarks(QObject):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgBookmarkIncoming(self, name):
+        """
+        Public method to show a list of incoming bookmarks.
+        
+        @param name file/directory name (string)
+        """
+        self.bookmarksInOutDlg = HgBookmarksInOutDialog(
+            self.vcs, HgBookmarksInOutDialog.INCOMING)
+        self.bookmarksInOutDlg.show()
+        self.bookmarksInOutDlg.start(name)
+    
+    def hgBookmarkOutgoing(self, name):
+        """
+        Public method to show a list of outgoing bookmarks.
+        
+        @param name file/directory name (string)
+        """
+        self.bookmarksInOutDlg = HgBookmarksInOutDialog(
+            self.vcs, HgBookmarksInOutDialog.OUTGOING)
+        self.bookmarksInOutDlg.show()
+        self.bookmarksInOutDlg.start(name)
+    
+    def __getInOutBookmarks(self, repodir, incoming):
+        """
+        Public method to get the list of incoming or outgoing bookmarks.
+        
+        @param repodir directory name of the repository (string)
+        @param incoming flag indicating to get incoming bookmarks (boolean)
+        @return list of bookmarks (list of string)
+        """
+        bookmarksList = []
+        
+        ioEncoding = Preferences.getSystem("IOEncoding")
+        process = QProcess()
+        args = []
+        if incoming:
+            args.append('incoming')
+        else:
+            args.append('outgoing')
+        args.append('--bookmarks')
+        process.setWorkingDirectory(repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                for line in output.splitlines():
+                    if line.startswith(" "):
+                        l = line.strip().split()
+                        del l[-1]
+                        name = " ".join(l)
+                        bookmarksList.append(name)
+        
+        return bookmarksList
+    
+    def hgBookmarkPull(self, name):
+        """
+        Public method to pull a bookmark from a remote repository.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        bookmarks = self.__getInOutBookmarks(repodir, True)
+        
+        bookmark, ok = QInputDialog.getItem(
+            None,
+            self.trUtf8("Pull Bookmark"),
+            self.trUtf8("Select the bookmark to be pulled:"),
+            [""] + sorted(bookmarks),
+            0, True)
+        if ok and bookmark:
+            args = []
+            args.append('pull')
+            args.append('--bookmark')
+            args.append(bookmark)
+        
+        dia = HgDialog(self.trUtf8('Pulling bookmark from a remote Mercurial repository'))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
+    
+    def hgBookmarkPush(self, name):
+        """
+        Public method to push a bookmark to a remote repository.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        bookmarks = self.__getInOutBookmarks(repodir, False)
+        
+        bookmark, ok = QInputDialog.getItem(
+            None,
+            self.trUtf8("Push Bookmark"),
+            self.trUtf8("Select the bookmark to be push:"),
+            [""] + sorted(bookmarks),
+            0, True)
+        if ok and bookmark:
+            args = []
+            args.append('push')
+            args.append('--bookmark')
+            args.append(bookmark)
+        
+        dia = HgDialog(self.trUtf8('Pushing bookmark to a remote Mercurial repository'))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()

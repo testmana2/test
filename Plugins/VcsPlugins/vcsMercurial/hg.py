@@ -109,6 +109,7 @@ class Hg(VersionControl):
             self.adminDir = '.hg'
         
         self.log = None
+        self.logBrowser = None
         self.diff = None
         self.status = None
         self.tagbranchList = None
@@ -149,6 +150,8 @@ class Hg(VersionControl):
         """
         if self.log is not None:
             self.log.close()
+        if self.logBrowser is not None:
+            self.logBrowser.close()
         if self.diff is not None:
             self.diff.close()
         if self.status is not None:
