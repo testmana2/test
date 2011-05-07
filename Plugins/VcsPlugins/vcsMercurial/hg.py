@@ -694,18 +694,15 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
                 return
         
-        dlg = HgTagDialog(self.tagsList)
+        dlg = HgTagDialog(self.hgGetTagsList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             tag, tagOp = dlg.getParameters()
-            if tag in self.tagsList:
-                self.tagsList.remove(tag)
-            self.tagsList.insert(0, tag)
         else:
             return
         
@@ -767,23 +764,30 @@ class Hg(VersionControl):
         """
         dname, fname = self.splitPath(name)
         
-        opts = self.options['global'][:]
-        force = '--force' in opts
-        if force:
-            del opts[opts.index('--force')]
-        
-        dlg = HgMergeDialog(force, self.tagsList, self.branchesList)
-        if dlg.exec_() == QDialog.Accepted:
-            rev, force = dlg.getParameters()
-        else:
-            return
-        
         # find the root of the repo
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
                 return
+        
+        opts = self.options['global'][:]
+        force = '--force' in opts
+        if force:
+            del opts[opts.index('--force')]
+        
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        dlg = HgMergeDialog(force, self.hgGetTagsList(repodir),
+                            self.hgGetBranchesList(repodir),
+                            bookmarksList)
+        if dlg.exec_() == QDialog.Accepted:
+            rev, force = dlg.getParameters()
+        else:
+            return
         
         args = []
         args.append('merge')
@@ -806,7 +810,23 @@ class Hg(VersionControl):
         
         @param name directory name to be switched (string)
         """
-        dlg = HgRevisionSelectionDialog(self.tagsList, self.branchesList)
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
+                                        self.hgGetBranchesList(repodir), 
+                                        bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
             self.vcsUpdate(name, revision=rev)
@@ -1184,6 +1204,74 @@ class Hg(VersionControl):
                         project.appendFile(target)
         return res
     
+    def hgGetTagsList(self, repodir):
+        """
+        Public method to get the list of tags.
+        
+        @param repodir directory name of the repository (string)
+        @return list of tags (list of string)
+        """
+        ioEncoding = Preferences.getSystem("IOEncoding")
+        process = QProcess()
+        args = []
+        args.append('tags')
+        args.append('--verbose')
+        process.setWorkingDirectory(repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                self.tagsList = []
+                output = \
+                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                for line in output.splitlines():
+                    l = line.strip().split()
+                    if l[-1][0] in "1234567890":
+                        # last element is a rev:changeset
+                        del l[-1]
+                    else:
+                        del l[-2:]
+                    name = " ".join(l)
+                    if name not in ["tip", "default"]:
+                        self.tagsList.append(name)
+        
+        return self.tagsList[:]
+    
+    def hgGetBranchesList(self, repodir):
+        """
+        Public method to get the list of branches.
+        
+        @param repodir directory name of the repository (string)
+        @return list of branches (list of string)
+        """
+        ioEncoding = Preferences.getSystem("IOEncoding")
+        process = QProcess()
+        args = []
+        args.append('branches')
+        args.append('--closed')
+        process.setWorkingDirectory(repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                self.branchesList = []
+                output = \
+                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                for line in output.splitlines():
+                    l = line.strip().split()
+                    if l[-1][0] in "1234567890":
+                        # last element is a rev:changeset
+                        del l[-1]
+                    else:
+                        del l[-2:]
+                    name = " ".join(l)
+                    if name not in ["tip", "default"]:
+                        self.branchesList.append(name)
+        
+        return self.branchesList[:]
+    
     def hgListTagBranch(self, path, tags=True):
         """
         Public method used to list the available tags or branches.
@@ -1237,8 +1325,10 @@ class Hg(VersionControl):
         @param name file/directory name to be diffed (string)
         """
         if isinstance(name, list):
+            dname, fnames = self.splitPathList(name)
             names = name[:]
         else:
+            dname, fname = self.splitPath(name)
             names = [name]
         for nam in names:
             if os.path.isfile(nam):
@@ -1249,7 +1339,22 @@ class Hg(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
-        dlg = HgRevisionsSelectionDialog(self.tagsList, self.branchesList)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
+                                         self.hgGetBranchesList(repodir),
+                                         bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             revisions = dlg.getRevisions()
             self.diff = HgDiffDialog(self)
@@ -1495,7 +1600,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1505,7 +1610,7 @@ class Hg(VersionControl):
             None,
             self.trUtf8("Create Branch"),
             self.trUtf8("Enter branch name"),
-            self.branchesList,
+            sorted(self.hgGetBranchesList(repodir)),
             0, True)
         if ok and name:
             args = []
@@ -1526,7 +1631,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1549,7 +1654,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1574,7 +1679,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1597,7 +1702,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1621,7 +1726,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1644,7 +1749,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1667,7 +1772,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1735,13 +1840,20 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
                 return
         
-        dlg = HgBundleDialog(self.tagsList, self.branchesList)
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        dlg = HgBundleDialog(self.hgGetTagsList(repodir),
+                             self.hgGetBranchesList(repodir),
+                             bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             rev, compression, all = dlg.getParameters()
             
@@ -1799,7 +1911,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1830,7 +1942,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1860,7 +1972,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1903,7 +2015,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -1911,7 +2023,14 @@ class Hg(VersionControl):
         
         rev = ""
         if subcommand in ("good", "bad"):
-            dlg = HgRevisionSelectionDialog(self.tagsList, self.branchesList,
+            if self.isExtensionActive("bookmarks"):
+                bookmarksList = \
+                    self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+            else:
+                bookmarksList = None
+            dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
+                                            self.hgGetBranchesList(repodir),
+                                            bookmarksList,
                                             showNone=True)
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
@@ -1975,13 +2094,20 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
                 return
         
-        dlg = HgBackoutDialog(self.tagsList, self.branchesList)
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        dlg = HgBackoutDialog(self.hgGetTagsList(repodir),
+                              self.hgGetBranchesList(repodir),
+                              bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             rev, merge, date, user, message = dlg.getParameters()
             if not rev:
@@ -2019,7 +2145,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -2044,7 +2170,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
@@ -2074,7 +2200,7 @@ class Hg(VersionControl):
         dname, fname = self.splitPath(name)
         
         # find the root of the repo
-        repodir = str(dname)
+        repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:

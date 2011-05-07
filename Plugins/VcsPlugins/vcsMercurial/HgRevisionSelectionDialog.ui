@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>372</width>
-    <height>225</height>
+    <height>224</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,7 +143,36 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="3">
+      <item row="4" column="0">
+       <widget class="QRadioButton" name="bookmarkButton">
+        <property name="toolTip">
+         <string>Select to specify a revision by a bookmark</string>
+        </property>
+        <property name="text">
+         <string>Bookmark:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QComboBox" name="bookmarkCombo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Enter a bookmark name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="3">
        <widget class="QRadioButton" name="tipButton">
         <property name="toolTip">
          <string>Select tip revision of repository</string>
@@ -180,6 +209,8 @@
   <tabstop>tagCombo</tabstop>
   <tabstop>branchButton</tabstop>
   <tabstop>branchCombo</tabstop>
+  <tabstop>bookmarkButton</tabstop>
+  <tabstop>bookmarkCombo</tabstop>
   <tabstop>tipButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
@@ -197,7 +228,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
-     <y>224</y>
+     <y>223</y>
     </hint>
    </hints>
   </connection>
@@ -213,7 +244,7 @@
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
-     <y>224</y>
+     <y>223</y>
     </hint>
    </hints>
   </connection>
@@ -224,12 +255,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>42</y>
+     <x>55</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>113</x>
-     <y>43</y>
+     <x>125</x>
+     <y>42</y>
     </hint>
    </hints>
   </connection>
@@ -240,12 +271,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>38</x>
-     <y>76</y>
+     <x>41</x>
+     <y>69</y>
     </hint>
     <hint type="destinationlabel">
-     <x>125</x>
-     <y>75</y>
+     <x>121</x>
+     <y>68</y>
     </hint>
    </hints>
   </connection>
@@ -256,12 +287,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>52</x>
-     <y>104</y>
+     <x>69</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
-     <x>124</x>
-     <y>99</y>
+     <x>132</x>
+     <y>98</y>
     </hint>
    </hints>
   </connection>
@@ -272,12 +303,28 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>71</x>
-     <y>127</y>
+     <x>60</x>
+     <y>120</y>
     </hint>
     <hint type="destinationlabel">
-     <x>123</x>
-     <y>130</y>
+     <x>117</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookmarkButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>bookmarkCombo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>149</y>
     </hint>
    </hints>
   </connection>

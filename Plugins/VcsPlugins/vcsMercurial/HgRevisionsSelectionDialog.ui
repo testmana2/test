@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>371</width>
-    <height>450</height>
+    <height>465</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -134,7 +134,36 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="3">
+      <item row="4" column="0">
+       <widget class="QRadioButton" name="bookmark1Button">
+        <property name="toolTip">
+         <string>Select to specify a revision by a bookmark</string>
+        </property>
+        <property name="text">
+         <string>Bookmark:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QComboBox" name="bookmark1Combo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Enter a bookmark name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="3">
        <widget class="QRadioButton" name="tip1Button">
         <property name="toolTip">
          <string>Select tip revision of repository</string>
@@ -147,7 +176,7 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0" colspan="3">
+      <item row="6" column="0" colspan="3">
        <widget class="QRadioButton" name="prev1Button">
         <property name="toolTip">
          <string>Select revision before last commit</string>
@@ -277,7 +306,36 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="3">
+      <item row="4" column="0">
+       <widget class="QRadioButton" name="bookmark2Button">
+        <property name="toolTip">
+         <string>Select to specify a revision by a bookmark</string>
+        </property>
+        <property name="text">
+         <string>Bookmark:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QComboBox" name="bookmark2Combo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Enter a bookmark name</string>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="3">
        <widget class="QRadioButton" name="tip2Button">
         <property name="toolTip">
          <string>Select tip revision of repository</string>
@@ -290,7 +348,7 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0" colspan="3">
+      <item row="6" column="0" colspan="3">
        <widget class="QRadioButton" name="prev2Button">
         <property name="toolTip">
          <string>Select revision before last commit</string>
@@ -314,6 +372,10 @@
     </widget>
    </item>
   </layout>
+  <zorder>rev1GroupBox</zorder>
+  <zorder>rev2GroupBox</zorder>
+  <zorder>buttonBox</zorder>
+  <zorder>prev2Button</zorder>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
@@ -326,6 +388,8 @@
   <tabstop>tag1Combo</tabstop>
   <tabstop>branch1Button</tabstop>
   <tabstop>branch1Combo</tabstop>
+  <tabstop>bookmark1Button</tabstop>
+  <tabstop>bookmark1Combo</tabstop>
   <tabstop>tip1Button</tabstop>
   <tabstop>prev1Button</tabstop>
   <tabstop>number2Button</tabstop>
@@ -336,6 +400,8 @@
   <tabstop>tag2Combo</tabstop>
   <tabstop>branch2Button</tabstop>
   <tabstop>branch2Combo</tabstop>
+  <tabstop>bookmark2Button</tabstop>
+  <tabstop>bookmark2Combo</tabstop>
   <tabstop>tip2Button</tabstop>
   <tabstop>prev2Button</tabstop>
   <tabstop>buttonBox</tabstop>
@@ -445,8 +511,8 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>106</y>
+     <x>59</x>
+     <y>105</y>
     </hint>
     <hint type="destinationlabel">
      <x>129</x>
@@ -499,6 +565,38 @@
     <hint type="destinationlabel">
      <x>140</x>
      <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookmark1Button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>bookmark1Combo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>24</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>135</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookmark2Button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>bookmark2Combo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>361</y>
     </hint>
    </hints>
   </connection>

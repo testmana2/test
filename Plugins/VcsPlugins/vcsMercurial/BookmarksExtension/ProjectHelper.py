@@ -101,6 +101,19 @@ class BookmarksProjectHelper(QObject):
         self.hgBookmarkRenameAct.triggered[()].connect(self.__hgBookmarkRename)
         self.actions.append(self.hgBookmarkRenameAct)
     
+        self.hgBookmarkMoveAct = E5Action(self.trUtf8('Move bookmark'),
+                self.trUtf8('Move bookmark...'),
+                0, 0, self, 'mercurial_move_bookmark')
+        self.hgBookmarkMoveAct.setStatusTip(self.trUtf8(
+            'Move a bookmark of the project'
+        ))
+        self.hgBookmarkMoveAct.setWhatsThis(self.trUtf8(
+            """<b>Move bookmark</b>"""
+            """<p>This moves a bookmark of the project to another changeset.</p>"""
+        ))
+        self.hgBookmarkMoveAct.triggered[()].connect(self.__hgBookmarkMove)
+        self.actions.append(self.hgBookmarkMoveAct)
+    
     def initMenu(self, mainMenu):
         """
         Public method to generate the VCS menu.
@@ -113,6 +126,7 @@ class BookmarksProjectHelper(QObject):
         menu.addAction(self.hgBookmarkDefineAct)
         menu.addAction(self.hgBookmarkDeleteAct)
         menu.addAction(self.hgBookmarkRenameAct)
+        menu.addAction(self.hgBookmarkMoveAct)
         menu.addSeparator()
         menu.addAction(self.hgBookmarksListAct)
         
@@ -141,7 +155,14 @@ class BookmarksProjectHelper(QObject):
     
     def __hgBookmarkRename(self):
         """
-        Private slot used to delete a bookmark.
+        Private slot used to rename a bookmark.
         """
         self.vcs.getExtensionObject("bookmarks")\
             .hgBookmarkRename(self.project.getProjectPath())
+    
+    def __hgBookmarkMove(self):
+        """
+        Private slot used to move a bookmark.
+        """
+        self.vcs.getExtensionObject("bookmarks")\
+            .hgBookmarkMove(self.project.getProjectPath())

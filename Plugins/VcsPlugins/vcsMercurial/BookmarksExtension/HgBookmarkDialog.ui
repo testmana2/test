@@ -33,6 +33,19 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QComboBox" name="nameCombo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Select a bookmark</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -220,6 +233,7 @@
  </widget>
  <tabstops>
   <tabstop>nameEdit</tabstop>
+  <tabstop>nameCombo</tabstop>
   <tabstop>numberButton</tabstop>
   <tabstop>numberSpinBox</tabstop>
   <tabstop>idButton</tabstop>
