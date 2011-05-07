@@ -73,7 +73,10 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 self.__initError = True
                 return
             
-            self.__module = ModuleParser.readModule(self.srcFile, caching = False)
+            try:
+                self.__module = ModuleParser.readModule(self.srcFile, caching=False)
+            except ImportError:
+                pass
         
         if self.__module is not None:
             self.filenameEdit.setText(self.srcFile)
@@ -84,7 +87,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             classesList.sort()
             self.classNameCombo.addItems(classesList)
         
-        if os.path.exists(self.srcFile) and self.classNameCombo.count() == 0:
+        if os.path.exists(self.srcFile) and \
+           self.__module is not None and \
+           self.classNameCombo.count() == 0:
             self.__initError = True
             E5MessageBox.critical(self,
                 self.trUtf8("Create Dialog Code"),
