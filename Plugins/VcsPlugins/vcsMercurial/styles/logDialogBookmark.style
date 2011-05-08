@@ -1,4 +1,4 @@
-changeset = 'change|{rev}:{node|short}\nuser|{author|email}\nparents|{parents}\ndate|{date|isodate}\ndescription|{desc}\nfile_copies|{file_copies}\nfile_adds|{file_adds}\nfiles_mods|{file_mods}\nfile_dels|{file_dels}\nbranches|{branches}\ntags|{tags}\nbookmarks|{bookmarks}\n@@@\n'
+changeset = 'change|{rev}:{node|short}\nbranches|{branches}\ntags|{tags}\nparents|{parents}\nuser|{author}\ndate|{date|isodate}\ndescription|{desc}\nfile_copies|{file_copies}\nfile_adds|{file_adds}\nfiles_mods|{file_mods}\nfile_dels|{file_dels}\nbookmarks|{bookmarks}\n@@@\n'
 file_mod = '{file_mod}, '
 last_file_mod = '{file_mod}'
 file_add = '{file_add}, '

@@ -1058,7 +1058,7 @@ class Hg(VersionControl):
         args.append('parents')
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
-                    '{date|isodate}@@@{branches}\n')
+                    '{date|isodate}@@@{branches}@@@{bookmarks}\n')
         process.setWorkingDirectory(ppath)
         process.start('hg', args)
         procStarted = process.waitForStarted()
@@ -1070,7 +1070,7 @@ class Hg(VersionControl):
                 index = 0
                 for line in output.splitlines():
                     index += 1
-                    changeset, tags, author, date, branches = line.split("@@@")
+                    changeset, tags, author, date, branches, bookmarks = line.split("@@@")
                     cdate, ctime = date.split()[:2]
                     info.append("""<p><table>""")
                     info.append(QApplication.translate("mercurial",
@@ -1081,6 +1081,10 @@ class Hg(VersionControl):
                         info.append(QApplication.translate("mercurial",
                             """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
                             .format('<br/>'.join(tags.split())))
+                    if bookmarks:
+                        info.append(QApplication.translate("mercurial",
+                            """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                            .format('<br/>'.join(bookmarks.split())))
                     if branches:
                         info.append(QApplication.translate("mercurial",
                             """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
@@ -1509,7 +1513,7 @@ class Hg(VersionControl):
         args.append(mode)
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
-                    '{date|isodate}@@@{branches}@@@{parents}\n')
+                    '{date|isodate}@@@{branches}@@@{parents}@@@{bookmarks}\n')
         
         process.setWorkingDirectory(repodir)
         process.start('hg', args)
@@ -1522,7 +1526,8 @@ class Hg(VersionControl):
                 index = 0
                 for line in output.splitlines():
                     index += 1
-                    changeset, tags, author, date, branches, parents = line.split("@@@")
+                    changeset, tags, author, date, branches, parents, bookmarks = \
+                        line.split("@@@")
                     cdate, ctime = date.split()[:2]
                     info.append("""<p><table>""")
                     if mode == "heads":
@@ -1543,6 +1548,10 @@ class Hg(VersionControl):
                         info.append(QApplication.translate("mercurial",
                             """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
                             .format('<br/>'.join(tags.split())))
+                    if bookmarks:
+                        info.append(QApplication.translate("mercurial",
+                            """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                            .format('<br/>'.join(bookmarks.split())))
                     if branches:
                         info.append(QApplication.translate("mercurial",
                             """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\

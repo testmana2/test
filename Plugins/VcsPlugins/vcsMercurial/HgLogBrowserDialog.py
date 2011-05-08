@@ -766,7 +766,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 elif key == "tags":
                     log["tags"] = value.strip().split(", ")
                 elif key == "bookmarks":
-                    log["bookmarks"] = value.strip().split()
+                    log["bookmarks"] = value.strip().split(", ")
                 else:
                     if initialText:
                         continue
