@@ -63,8 +63,17 @@ VersionControl
 <td><a href="#Hg.__init__">Hg</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
+<td>Private method to get the active extensions from Mercurial.</td>
+</tr><tr>
 <td><a href="#Hg.__hgURL">__hgURL</a></td>
 <td>Private method to format a url for Mercurial.</td>
+</tr><tr>
+<td><a href="#Hg.__iniFileChanged">__iniFileChanged</a></td>
+<td>Private slot to handle a change of the Mercurial config file.</td>
+</tr><tr>
+<td><a href="#Hg.__monitorRepoIniFile">__monitorRepoIniFile</a></td>
+<td>Private slot to add a repository config file to the list of monitored files.</td>
 </tr><tr>
 <td><a href="#Hg.__vcsCommit_Step2">__vcsCommit_Step2</a></td>
 <td>Private slot performing the second step of the commit action.</td>
@@ -74,6 +83,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.clearStatusCache">clearStatusCache</a></td>
 <td>Public method to clear the status cache.</td>
+</tr><tr>
+<td><a href="#Hg.getExtensionObject">getExtensionObject</a></td>
+<td>Public method to get a reference to an extension object.</td>
 </tr><tr>
 <td><a href="#Hg.getPlugin">getPlugin</a></td>
 <td>Public method to get a reference to the plugin object.</td>
@@ -107,6 +119,12 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgForget">hgForget</a></td>
 <td>Public method used to remove a file from the Mercurial repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgGetBranchesList">hgGetBranchesList</a></td>
+<td>Public method to get the list of branches.</td>
+</tr><tr>
+<td><a href="#Hg.hgGetTagsList">hgGetTagsList</a></td>
+<td>Public method to get the list of tags.</td>
 </tr><tr>
 <td><a href="#Hg.hgIdentify">hgIdentify</a></td>
 <td>Public method to identify the current working directory.</td>
@@ -171,6 +189,9 @@ VersionControl
 <td><a href="#Hg.hgVerify">hgVerify</a></td>
 <td>Public method to verify the integrity of the repository.</td>
 </tr><tr>
+<td><a href="#Hg.isExtensionActive">isExtensionActive</a></td>
+<td>Public method to check, if an extension is active.</td>
+</tr><tr>
 <td><a href="#Hg.vcsAdd">vcsAdd</a></td>
 <td>Public method used to add a file/directory to the Mercurial repository.</td>
 </tr><tr>
@@ -208,10 +229,10 @@ VersionControl
 <td>Public method used to export a directory from the Subversion repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsGetProjectBrowserHelper">vcsGetProjectBrowserHelper</a></td>
-<td>Public method to instanciate a helper object for the different project browsers.</td>
+<td>Public method to instantiate a helper object for the different project browsers.</td>
 </tr><tr>
 <td><a href="#Hg.vcsGetProjectHelper">vcsGetProjectHelper</a></td>
-<td>Public method to instanciate a helper object for the project.</td>
+<td>Public method to instantiate a helper object for the project.</td>
 </tr><tr>
 <td><a href="#Hg.vcsImport">vcsImport</a></td>
 <td>Public method used to import the project into the Subversion repository.</td>
@@ -281,7 +302,12 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
+</dl><a NAME="Hg.__getExtensionsInfo" ID="Hg.__getExtensionsInfo"></a>
+<h4>Hg.__getExtensionsInfo</h4>
+<b>__getExtensionsInfo</b>(<i></i>)
+<p>
+        Private method to get the active extensions from Mercurial.
+</p><a NAME="Hg.__hgURL" ID="Hg.__hgURL"></a>
 <h4>Hg.__hgURL</h4>
 <b>__hgURL</b>(<i>url</i>)
 <p>
@@ -295,6 +321,26 @@ unformatted url string (string)
 <dt>Returns:</dt>
 <dd>
 properly formated url for subversion (string)
+</dd>
+</dl><a NAME="Hg.__iniFileChanged" ID="Hg.__iniFileChanged"></a>
+<h4>Hg.__iniFileChanged</h4>
+<b>__iniFileChanged</b>(<i>path</i>)
+<p>
+        Private slot to handle a change of the Mercurial config file.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+name of the changed file (string)
+</dd>
+</dl><a NAME="Hg.__monitorRepoIniFile" ID="Hg.__monitorRepoIniFile"></a>
+<h4>Hg.__monitorRepoIniFile</h4>
+<b>__monitorRepoIniFile</b>(<i>name</i>)
+<p>
+        Private slot to add a repository config file to the list of monitored files.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name pointing into the repository (string)
 </dd>
 </dl><a NAME="Hg.__vcsCommit_Step2" ID="Hg.__vcsCommit_Step2"></a>
 <h4>Hg.__vcsCommit_Step2</h4>
@@ -324,7 +370,22 @@ reference to the monitor thread (QThread)
 <b>clearStatusCache</b>(<i></i>)
 <p>
         Public method to clear the status cache.
-</p><a NAME="Hg.getPlugin" ID="Hg.getPlugin"></a>
+</p><a NAME="Hg.getExtensionObject" ID="Hg.getExtensionObject"></a>
+<h4>Hg.getExtensionObject</h4>
+<b>getExtensionObject</b>(<i>extensionName</i>)
+<p>
+        Public method to get a reference to an extension object. 
+</p><dl>
+<dt><i>extensionName</i></dt>
+<dd>
+name of the extension (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the extension object (boolean)
+</dd>
+</dl><a NAME="Hg.getPlugin" ID="Hg.getPlugin"></a>
 <h4>Hg.getPlugin</h4>
 <b>getPlugin</b>(<i></i>)
 <p>
@@ -462,6 +523,36 @@ file/directory name to be diffed (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be removed (string or list of strings))
+</dd>
+</dl><a NAME="Hg.hgGetBranchesList" ID="Hg.hgGetBranchesList"></a>
+<h4>Hg.hgGetBranchesList</h4>
+<b>hgGetBranchesList</b>(<i>repodir</i>)
+<p>
+        Public method to get the list of branches.
+</p><dl>
+<dt><i>repodir</i></dt>
+<dd>
+directory name of the repository (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of branches (list of string)
+</dd>
+</dl><a NAME="Hg.hgGetTagsList" ID="Hg.hgGetTagsList"></a>
+<h4>Hg.hgGetTagsList</h4>
+<b>hgGetTagsList</b>(<i>repodir</i>)
+<p>
+        Public method to get the list of tags.
+</p><dl>
+<dt><i>repodir</i></dt>
+<dd>
+directory name of the repository (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of tags (list of string)
 </dd>
 </dl><a NAME="Hg.hgIdentify" ID="Hg.hgIdentify"></a>
 <h4>Hg.hgIdentify</h4>
@@ -702,6 +793,21 @@ directory name (string)
 <dd>
 file/directory name (string)
 </dd>
+</dl><a NAME="Hg.isExtensionActive" ID="Hg.isExtensionActive"></a>
+<h4>Hg.isExtensionActive</h4>
+<b>isExtensionActive</b>(<i>extensionName</i>)
+<p>
+        Public method to check, if an extension is active.
+</p><dl>
+<dt><i>extensionName</i></dt>
+<dd>
+name of the extension to check for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an active extension (boolean)
+</dd>
 </dl><a NAME="Hg.vcsAdd" ID="Hg.vcsAdd"></a>
 <h4>Hg.vcsAdd</h4>
 <b>vcsAdd</b>(<i>name, isDir=False, noDialog=False</i>)
@@ -889,7 +995,7 @@ flag indicating an execution without errors (boolean)
 <h4>Hg.vcsGetProjectBrowserHelper</h4>
 <b>vcsGetProjectBrowserHelper</b>(<i>browser, project, isTranslationsBrowser=False</i>)
 <p>
-        Public method to instanciate a helper object for the different project browsers.
+        Public method to instantiate a helper object for the different project browsers.
 </p><dl>
 <dt><i>browser</i></dt>
 <dd>
@@ -911,7 +1017,7 @@ the project browser helper object
 <h4>Hg.vcsGetProjectHelper</h4>
 <b>vcsGetProjectHelper</b>(<i>project</i>)
 <p>
-        Public method to instanciate a helper object for the project.
+        Public method to instantiate a helper object for the project.
 </p><dl>
 <dt><i>project</i></dt>
 <dd>

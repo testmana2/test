@@ -168,6 +168,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgVerify">__hgVerify</a></td>
 <td>Private slot used to verify the integrity of the repository.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__showExtensionMenu">__showExtensionMenu</a></td>
+<td>Private slot showing the extensions menu.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
@@ -176,6 +179,9 @@ VcsProjectHelper
 </tr><tr>
 <td><a href="#HgProjectHelper.initMenu">initMenu</a></td>
 <td>Public method to generate the VCS menu.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.setObjects">setObjects</a></td>
+<td>Public method to set references to the vcs and project objects.</td>
 </tr>
 </table>
 <a NAME="HgProjectHelper.__init__" ID="HgProjectHelper.__init__"></a>
@@ -383,6 +389,11 @@ name of this object (string)
 <b>__hgVerify</b>(<i></i>)
 <p>
         Private slot used to verify the integrity of the repository.
+</p><a NAME="HgProjectHelper.__showExtensionMenu" ID="HgProjectHelper.__showExtensionMenu"></a>
+<h4>HgProjectHelper.__showExtensionMenu</h4>
+<b>__showExtensionMenu</b>(<i></i>)
+<p>
+        Private slot showing the extensions menu.
 </p><a NAME="HgProjectHelper.getActions" ID="HgProjectHelper.getActions"></a>
 <h4>HgProjectHelper.getActions</h4>
 <b>getActions</b>(<i></i>)
@@ -407,6 +418,19 @@ list of all actions (list of E5Action)
 <dt><i>menu</i></dt>
 <dd>
 reference to the menu to be populated (QMenu)
+</dd>
+</dl><a NAME="HgProjectHelper.setObjects" ID="HgProjectHelper.setObjects"></a>
+<h4>HgProjectHelper.setObjects</h4>
+<b>setObjects</b>(<i>vcsObject, projectObject</i>)
+<p>
+        Public method to set references to the vcs and project objects.
+</p><dl>
+<dt><i>vcsObject</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>projectObject</i></dt>
+<dd>
+reference to the project object
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

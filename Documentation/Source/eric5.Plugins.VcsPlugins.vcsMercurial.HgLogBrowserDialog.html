@@ -324,7 +324,7 @@ icon for the node (QIcon)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__generateLogItem" ID="HgLogBrowserDialog.__generateLogItem"></a>
 <h4>HgLogBrowserDialog.__generateLogItem</h4>
-<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths, parents, branches, tags</i>)
+<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths, parents, branches, tags, bookmarks=None</i>)
 <p>
         Private method to generate a log tree entry.
 </p><dl>
@@ -353,6 +353,9 @@ list of branches (list of strings)
 </dd><dt><i>tags</i></dt>
 <dd>
 list of tags (string)
+</dd><dt><i>bookmarks</i></dt>
+<dd>
+list of bookmarks (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

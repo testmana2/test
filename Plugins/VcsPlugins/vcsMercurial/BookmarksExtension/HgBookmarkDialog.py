@@ -39,8 +39,10 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
         if mode == self.MOVE_MODE:
             self.nameEdit.hide()
             self.nameCombo.addItems([""] + sorted(bookmarksList))
+            self.setWindowTitle(self.trUtf8("Move Bookmark"))
         else:
             self.nameCombo.hide()
+            self.setWindowTitle(self.trUtf8("Define Bookmark"))
         
         self.__bookmarksList = bookmarksList[:]
         

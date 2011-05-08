@@ -2199,7 +2199,7 @@ class Hg(VersionControl):
         """
         Private slot to handle a change of the Mercurial config file.
         
-        @path path name of the changed file (string)
+        @param path name of the changed file (string)
         """
         self.__getExtensionsInfo()
     
