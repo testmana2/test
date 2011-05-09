@@ -122,7 +122,7 @@ class BookmarksProjectHelper(QObject):
         self.actions.append(self.hgBookmarkMoveAct)
         
         self.hgBookmarkIncomingAct = E5Action(self.trUtf8('Show incoming bookmarks'),
-                UI.PixmapCache.getIcon("vcsUpdate.png"),
+                UI.PixmapCache.getIcon("incomingBookmark.png"),
                 self.trUtf8('Show incoming bookmarks'),
                 0, 0, self, 'mercurial_incoming_bookmarks')
         self.hgBookmarkIncomingAct.setStatusTip(self.trUtf8(
@@ -137,7 +137,7 @@ class BookmarksProjectHelper(QObject):
         self.actions.append(self.hgBookmarkIncomingAct)
         
         self.hgBookmarkPullAct = E5Action(self.trUtf8('Pull bookmark'),
-                UI.PixmapCache.getIcon("vcsUpdate.png"),
+                UI.PixmapCache.getIcon("pullBookmark.png"),
                 self.trUtf8('Pull bookmark'),
                 0, 0, self, 'mercurial_pull_bookmark')
         self.hgBookmarkPullAct.setStatusTip(self.trUtf8(
@@ -152,7 +152,7 @@ class BookmarksProjectHelper(QObject):
         self.actions.append(self.hgBookmarkPullAct)
         
         self.hgBookmarkOutgoingAct = E5Action(self.trUtf8('Show outgoing bookmarks'),
-                UI.PixmapCache.getIcon("vcsCommit.png"),
+                UI.PixmapCache.getIcon("outgoingBookmark.png"),
                 self.trUtf8('Show outgoing bookmarks'),
                 0, 0, self, 'mercurial_outgoing_bookmarks')
         self.hgBookmarkOutgoingAct.setStatusTip(self.trUtf8(
@@ -167,7 +167,7 @@ class BookmarksProjectHelper(QObject):
         self.actions.append(self.hgBookmarkOutgoingAct)
         
         self.hgBookmarkPushAct = E5Action(self.trUtf8('Push bookmark'),
-                UI.PixmapCache.getIcon("vcsCommit.png"),
+                UI.PixmapCache.getIcon("pushBookmark.png"),
                 self.trUtf8('Push bookmark'),
                 0, 0, self, 'mercurial_push_bookmark')
         self.hgBookmarkPushAct.setStatusTip(self.trUtf8(
