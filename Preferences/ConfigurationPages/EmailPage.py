@@ -7,6 +7,14 @@
 Module implementing the Email configuration page.
 """
 
+import smtplib
+import socket
+
+from PyQt4.QtCore import pyqtSlot,  Qt
+from PyQt4.QtGui import QApplication, QCursor
+
+from E5Gui import E5MessageBox
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EmailPage import Ui_EmailPage
 
@@ -59,6 +67,95 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         Preferences.setUser("MailServerUseTLS",
             self.useTlsCheckBox.isChecked())
     
+    
+    def __updateTestButton(self):
+        """
+        Private slot to update the enabled state of the test button.
+        """
+        self.testButton.setEnabled(
+            self.mailAuthenticationCheckBox.isChecked() and \
+            self.mailUserEdit.text() != "" and \
+            self.mailPasswordEdit.text() != "" and \
+            self.mailServerEdit.text() != ""
+        )
+    
+    @pyqtSlot(bool)
+    def on_mailAuthenticationCheckBox_toggled(self, checked):
+        """
+        Private slot to handle a change of the state of the authentication
+        selector.
+        
+        @param checked state of the checkbox (boolean)
+        """
+        self.__updateTestButton()
+    
+    @pyqtSlot(str)
+    def on_mailUserEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the text of the user edit.
+        
+        @param txt current text of the edit (string)
+        """
+        self.__updateTestButton()
+    
+    @pyqtSlot(str)
+    def on_mailPasswordEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the text of the user edit.
+        
+        @param txt current text of the edit (string)
+        """
+        self.__updateTestButton()
+    
+    @pyqtSlot()
+    def on_testButton_clicked(self):
+        """
+        Private slot to test the mail server login data.
+        """
+        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
+        QApplication.processEvents()
+        try:
+            server = smtplib.SMTP(self.mailServerEdit.text(),
+                                  self.portSpin.value(), 
+                                  "", 10)
+            if self.useTlsCheckBox.isChecked():
+                server.starttls()
+            try:
+                server.login(self.mailUserEdit.text(),
+                             self.mailPasswordEdit.text())
+                QApplication.restoreOverrideCursor()
+                E5MessageBox.information(self,
+                    self.trUtf8("Login Test"),
+                    self.trUtf8("""The login test succeeded."""))
+            except (smtplib.SMTPException, socket.error) as e:
+                QApplication.restoreOverrideCursor()
+                if isinstance(e,  smtplib.SMTPResponseException):
+                    errorStr = e.smtp_error.decode()
+                elif isinstance(e, socket.timeout):
+                    errorStr = str(e)
+                elif isinstance(e, socket.error):
+                    errorStr = e[1]
+                else:
+                    errorStr = str(e)
+                E5MessageBox.critical(self,
+                    self.trUtf8("Login Test"),
+                    self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
+                        .format(errorStr))
+            server.quit()
+        except (smtplib.SMTPException, socket.error) as e:
+            QApplication.restoreOverrideCursor()
+            if isinstance(e,  smtplib.SMTPResponseException):
+                errorStr = e.smtp_error.decode()
+            elif isinstance(e, socket.timeout):
+                errorStr = str(e)
+            elif isinstance(e, socket.error):
+                errorStr = e[1]
+            else:
+                errorStr = str(e)
+            E5MessageBox.critical(self,
+                self.trUtf8("Login Test"),
+                self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
+                    .format(errorStr))
 
 def create(dlg):
     """

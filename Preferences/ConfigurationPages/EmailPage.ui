@@ -187,6 +187,16 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="testButton">
+       <property name="toolTip">
+        <string>Press to test the login data</string>
+       </property>
+       <property name="text">
+        <string>Test Login</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item>
@@ -223,12 +233,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>35</x>
-     <y>292</y>
+     <x>39</x>
+     <y>350</y>
     </hint>
     <hint type="destinationlabel">
-     <x>44</x>
-     <y>316</y>
+     <x>49</x>
+     <y>377</y>
     </hint>
    </hints>
   </connection>
@@ -239,12 +249,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>70</x>
-     <y>289</y>
+     <x>74</x>
+     <y>350</y>
     </hint>
     <hint type="destinationlabel">
-     <x>11</x>
-     <y>343</y>
+     <x>16</x>
+     <y>403</y>
     </hint>
    </hints>
   </connection>
@@ -255,12 +265,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>288</y>
+     <x>105</x>
+     <y>350</y>
     </hint>
     <hint type="destinationlabel">
-     <x>122</x>
-     <y>316</y>
+     <x>193</x>
+     <y>377</y>
     </hint>
    </hints>
   </connection>
@@ -271,12 +281,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>172</x>
-     <y>290</y>
+     <x>176</x>
+     <y>350</y>
     </hint>
     <hint type="destinationlabel">
-     <x>172</x>
-     <y>346</y>
+     <x>243</x>
+     <y>403</y>
     </hint>
    </hints>
   </connection>

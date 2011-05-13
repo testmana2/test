@@ -60,6 +60,21 @@ ConfigurationPageBase, Ui_EmailPage
 <td><a href="#EmailPage.__init__">EmailPage</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#EmailPage.__updateTestButton">__updateTestButton</a></td>
+<td>Private slot to update the enabled state of the test button.</td>
+</tr><tr>
+<td><a href="#EmailPage.on_mailAuthenticationCheckBox_toggled">on_mailAuthenticationCheckBox_toggled</a></td>
+<td>Private slot to handle a change of the state of the authentication selector.</td>
+</tr><tr>
+<td><a href="#EmailPage.on_mailPasswordEdit_textChanged">on_mailPasswordEdit_textChanged</a></td>
+<td>Private slot to handle a change of the text of the user edit.</td>
+</tr><tr>
+<td><a href="#EmailPage.on_mailUserEdit_textChanged">on_mailUserEdit_textChanged</a></td>
+<td>Private slot to handle a change of the text of the user edit.</td>
+</tr><tr>
+<td><a href="#EmailPage.on_testButton_clicked">on_testButton_clicked</a></td>
+<td>Private slot to test the mail server login data.</td>
+</tr><tr>
 <td><a href="#EmailPage.save">save</a></td>
 <td>Public slot to save the Email configuration.</td>
 </tr>
@@ -69,6 +84,47 @@ ConfigurationPageBase, Ui_EmailPage
 <b>EmailPage</b>(<i></i>)
 <p>
         Constructor
+</p><a NAME="EmailPage.__updateTestButton" ID="EmailPage.__updateTestButton"></a>
+<h4>EmailPage.__updateTestButton</h4>
+<b>__updateTestButton</b>(<i></i>)
+<p>
+        Private slot to update the enabled state of the test button.
+</p><a NAME="EmailPage.on_mailAuthenticationCheckBox_toggled" ID="EmailPage.on_mailAuthenticationCheckBox_toggled"></a>
+<h4>EmailPage.on_mailAuthenticationCheckBox_toggled</h4>
+<b>on_mailAuthenticationCheckBox_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle a change of the state of the authentication
+        selector.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the checkbox (boolean)
+</dd>
+</dl><a NAME="EmailPage.on_mailPasswordEdit_textChanged" ID="EmailPage.on_mailPasswordEdit_textChanged"></a>
+<h4>EmailPage.on_mailPasswordEdit_textChanged</h4>
+<b>on_mailPasswordEdit_textChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle a change of the text of the user edit.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+current text of the edit (string)
+</dd>
+</dl><a NAME="EmailPage.on_mailUserEdit_textChanged" ID="EmailPage.on_mailUserEdit_textChanged"></a>
+<h4>EmailPage.on_mailUserEdit_textChanged</h4>
+<b>on_mailUserEdit_textChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle a change of the text of the user edit.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+current text of the edit (string)
+</dd>
+</dl><a NAME="EmailPage.on_testButton_clicked" ID="EmailPage.on_testButton_clicked"></a>
+<h4>EmailPage.on_testButton_clicked</h4>
+<b>on_testButton_clicked</b>(<i></i>)
+<p>
+        Private slot to test the mail server login data.
 </p><a NAME="EmailPage.save" ID="EmailPage.save"></a>
 <h4>EmailPage.save</h4>
 <b>save</b>(<i></i>)

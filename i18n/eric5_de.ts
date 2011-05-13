@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="73"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -10319,17 +10320,17 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>EmailDialog</name>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>Send bug report</source>
         <translation>Sende Fehlerbericht</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="321"/>
+        <location filename="UI/EmailDialog.py" line="333"/>
         <source>Attach file</source>
         <translation>Datei anhängen</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>&lt;p&gt;Message could not be sent.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nachricht konnte nicht gesendet werden.&lt;br&gt;Grund: {0}&lt;/p&gt;</translation>
     </message>
@@ -10344,7 +10345,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Geben sie ihr Mail Server Passwort ein</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="288"/>
+        <location filename="UI/EmailDialog.py" line="294"/>
         <source>&lt;p&gt;Authentication failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Autorisierung fehlgeschlagen.&lt;br&gt;Grund: {0}&lt;/p&gt;</translation>
     </message>
@@ -10525,6 +10526,31 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="53"/>
         <source>Outgoing mail server port:</source>
         <translation>Ausgangsmailserver Port:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="193"/>
+        <source>Press to test the login data</source>
+        <translation>Drücken, um die Anmeldedaten zu testen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="196"/>
+        <source>Test Login</source>
+        <translation>Anmeldung testen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>Login Test</source>
+        <translation>Anmeldetest</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <source>The login test succeeded.</source>
+        <translation>Der Anmeldetest war erfolgreich.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Der Anmeldetest ist fehlgeschlagen.&lt;br&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -12347,7 +12373,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -18622,7 +18648,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="147"/>
         <source>Forget about the selected missing entries</source>
-        <translation>Die ausgewählten fehlenden Einträge vergessen.</translation>
+        <translation>Die ausgewählten fehlenden Einträge vergessen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="150"/>
@@ -24360,47 +24386,47 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gespeichert werden. Überspringe sie.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="171"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="172"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Tabulator in 4 Leerzeichen gewandelt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="185"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="186"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Leerzeichen am Zeilenende entfernt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="198"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="199"/>
         <source>newline added to end of file.</source>
         <translation>Zeilenvorschub am Dateiende angefügt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="217"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="218"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Überflüssige Leerzeilen am Dateiende gelöscht.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="231"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="232"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; durch &apos;!=&apos; ersetzt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="256"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="257"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Überflüssige Leerzeilen nach Funktionsdekorator gelöscht.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="281"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="282"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Überflüssige Leerzeilen gelöscht.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="299"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="300"/>
         <source>One blank line inserted.</source>
         <translation>Eine Leerzeile eingefügt.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="333"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>%n Leerzeile eingefügt.</numerusform>
@@ -24408,7 +24434,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="335"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="336"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>%n überflüssige Zeile gelöscht</numerusform>
@@ -24416,22 +24442,22 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="378"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="379"/>
         <source>Superfluous whitespace removed.</source>
         <translation>Überflüssige Leerzeichen entfernt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="480"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="481"/>
         <source>Missing whitespace added.</source>
         <translation>Fehlende Leerzeichen eingefügt.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="457"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Überzählige Leerzeichen gelöscht.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="504"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="505"/>
         <source>Whitespace after inline comment sign corrected.</source>
         <translation>Leerzeichen nach Inline Kommentarzeichen korrigiert.</translation>
     </message>

@@ -10378,17 +10378,17 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EmailDialog</name>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>Send bug report</source>
         <translation>Отправить сообщение об ошибке</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="321"/>
+        <location filename="UI/EmailDialog.py" line="333"/>
         <source>Attach file</source>
         <translation>Прицепить файл</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>&lt;p&gt;Message could not be sent.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Сообщение не может быть отправлено по причине: {0}&lt;/p&gt;</translation>
     </message>
@@ -10403,7 +10403,7 @@ whole selection.&lt;/li&gt;
         <translation>Задайте свой пароль к почтовому серверу</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="288"/>
+        <location filename="UI/EmailDialog.py" line="294"/>
         <source>&lt;p&gt;Authentication failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Аутентификация не удалась по причине: {0}&lt;/p&gt;</translation>
     </message>
@@ -10584,6 +10584,31 @@ whole selection.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="53"/>
         <source>Outgoing mail server port:</source>
         <translation>Номер порта на почтовом сервере для отсылки сообщений:</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="193"/>
+        <source>Press to test the login data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="196"/>
+        <source>Test Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>Login Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <source>The login test succeeded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -24485,47 +24510,47 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу сохранить файл &lt;b&gt;{0}&lt;/b&gt;. Пропускаю.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="171"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="172"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Символы табуляции заменены на 4 пробела.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="185"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="186"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Завершающие пробелы обрезаны.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="198"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="199"/>
         <source>newline added to end of file.</source>
         <translation>Перевод строки добавлен в конец файла.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="217"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="218"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Удалены пустые строчки в конце файла.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="231"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="232"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; заменен на &apos;!=&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="256"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="257"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Удалены пустые строчки после декоратора функции.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="281"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="282"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Удалены излишние пустые строчки.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="299"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="300"/>
         <source>One blank line inserted.</source>
         <translation>Добавлена одна пустая строка.</translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="333"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>Добавлена %n пустая строка.</numerusform>
@@ -24534,7 +24559,7 @@ the respective line and position.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="335"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="336"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>Удалена %n излишняя пустая строчка</numerusform>
@@ -24543,22 +24568,22 @@ the respective line and position.&lt;/p&gt;</source>
         </translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="378"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="379"/>
         <source>Superfluous whitespace removed.</source>
         <translation>Удалены излишние пробелы.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="480"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="481"/>
         <source>Missing whitespace added.</source>
         <translation>Добавлены недостающие пробелы.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="457"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Удалены излишние пробелы.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="504"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="505"/>
         <source>Whitespace after inline comment sign corrected.</source>
         <translation>Исправлено количество пробелов после символа комментариев.</translation>
     </message>

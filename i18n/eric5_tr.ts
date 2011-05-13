@@ -10459,7 +10459,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>EmailDialog</name>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>Send bug report</source>
         <translation>Hata raporu gönder</translation>
     </message>
@@ -10564,17 +10564,17 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Posta sunucu parolanızı giriniz</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="288"/>
+        <location filename="UI/EmailDialog.py" line="294"/>
         <source>&lt;p&gt;Authentication failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Doğrulama hatası.&lt;br&gt;Sebip: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="305"/>
+        <location filename="UI/EmailDialog.py" line="317"/>
         <source>&lt;p&gt;Message could not be sent.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Mesaj gönderilemedi.&lt;br&gt;Sebep: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/EmailDialog.py" line="321"/>
+        <location filename="UI/EmailDialog.py" line="333"/>
         <source>Attach file</source>
         <translation>Dosya ekle</translation>
     </message>
@@ -10665,6 +10665,31 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="183"/>
         <source>Enter your password for accessing the mail server</source>
         <translation>Posta sunucusunu açmak için parolanızı giriniz</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="193"/>
+        <source>Press to test the login data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="196"/>
+        <source>Test Login</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>Login Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <source>The login test succeeded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -24737,47 +24762,47 @@ the respective line and position.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="171"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="172"/>
         <source>Tab converted to 4 spaces.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="185"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="186"/>
         <source>Whitespace stripped from end of line.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="198"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="199"/>
         <source>newline added to end of file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="217"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="218"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="231"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="232"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="256"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="257"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="281"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="282"/>
         <source>Superfluous blank lines removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="299"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="300"/>
         <source>One blank line inserted.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="333"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="334"/>
         <source>%n blank line(s) inserted.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -24785,7 +24810,7 @@ the respective line and position.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="335"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="336"/>
         <source>%n superfluous lines removed</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -24793,22 +24818,22 @@ the respective line and position.&lt;/p&gt;</source>
         </translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="378"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="379"/>
         <source>Superfluous whitespace removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="480"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="481"/>
         <source>Missing whitespace added.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="457"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="458"/>
         <source>Extraneous whitespace removed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="504"/>
+        <location filename="Plugins/CheckerPlugins/Pep8/Pep8Fixer.py" line="505"/>
         <source>Whitespace after inline comment sign corrected.</source>
         <translation type="unfinished"></translation>
     </message>

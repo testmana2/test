@@ -7878,6 +7878,11 @@
       <keyword name="EmailPage" id="EmailPage" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#create" />
       <keyword name="EmailPage (Constructor)" id="EmailPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.__init__" />
+      <keyword name="EmailPage.__updateTestButton" id="EmailPage.__updateTestButton" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.__updateTestButton" />
+      <keyword name="EmailPage.on_mailAuthenticationCheckBox_toggled" id="EmailPage.on_mailAuthenticationCheckBox_toggled" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_mailAuthenticationCheckBox_toggled" />
+      <keyword name="EmailPage.on_mailPasswordEdit_textChanged" id="EmailPage.on_mailPasswordEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_mailPasswordEdit_textChanged" />
+      <keyword name="EmailPage.on_mailUserEdit_textChanged" id="EmailPage.on_mailUserEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_mailUserEdit_textChanged" />
+      <keyword name="EmailPage.on_testButton_clicked" id="EmailPage.on_testButton_clicked" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_testButton_clicked" />
       <keyword name="EmailPage.save" id="EmailPage.save" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.save" />
       <keyword name="TerminalPage (Module)" id="TerminalPage (Module)" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html" />
       <keyword name="TerminalPage" id="TerminalPage" ref="eric5.Preferences.ConfigurationPages.TerminalPage.html#TerminalPage" />
