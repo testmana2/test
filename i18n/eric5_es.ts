@@ -10564,17 +10564,17 @@ selección completa.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>Login Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="127"/>
         <source>The login test succeeded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21841,7 +21841,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="345"/>
         <source>Octave Files (*.m *.m.matlab)</source>
-        <translation>Archivos Octave (*.m *.m.matlab)</translation>
+        <translation type="obsolete">Archivos Octave (*.m *.m.matlab)</translation>
     </message>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
@@ -21852,6 +21852,11 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Octave Files (*.m.octave)</source>
         <translation>Archivos Octave (*.m.octave)</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Octave Files (*.m *.m.octave)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

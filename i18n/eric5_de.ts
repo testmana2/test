@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1641,8 +1640,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1860,7 +1859,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="73"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -10538,17 +10537,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Anmeldung testen</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>Login Test</source>
         <translation>Anmeldetest</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="127"/>
         <source>The login test succeeded.</source>
         <translation>Der Anmeldetest war erfolgreich.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Anmeldetest ist fehlgeschlagen.&lt;br&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
@@ -12373,7 +12372,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -21778,11 +21777,6 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Matlab Dateien (*.m *.m.matlab)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
-        <source>Octave Files (*.m *.m.matlab)</source>
-        <translation>Octave Dateien (*.m *.m.matlab)</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Matlab Files (*.m)</source>
         <translation>Matlab Dateien (*.m)</translation>
@@ -21791,6 +21785,11 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Octave Files (*.m.octave)</source>
         <translation>Octave Dateien (*.m.octave)</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Octave Files (*.m *.m.octave)</source>
+        <translation>Octave Dateien (*.m *.m.octave)</translation>
     </message>
 </context>
 <context>

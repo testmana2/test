@@ -346,7 +346,7 @@ def getOpenFileFiltersList(includeAll=False, asString=False, withAdditional=True
             QApplication.translate('Lexers',
                 'Matlab Files (*.m *.m.matlab)'),
             QApplication.translate('Lexers',
-                'Octave Files (*.m *.m.matlab)'),
+                'Octave Files (*.m *.m.octave)'),
         ])
     
     for name in LexerRegistry:

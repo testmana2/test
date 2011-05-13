@@ -10677,17 +10677,17 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>Login Test</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="122"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="127"/>
         <source>The login test succeeded.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="144"/>
+        <location filename="Preferences/ConfigurationPages/EmailPage.py" line="155"/>
         <source>&lt;p&gt;The login test failed.&lt;br&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22038,11 +22038,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
-        <source>Octave Files (*.m *.m.matlab)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Matlab Files (*.m)</source>
         <translation type="unfinished"></translation>
@@ -22050,6 +22045,11 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Octave Files (*.m.octave)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Octave Files (*.m *.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
