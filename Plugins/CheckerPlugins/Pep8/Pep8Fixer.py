@@ -114,15 +114,16 @@ class Pep8Fixer(QObject):
         """
         Public method to fix the fixable issues.
         
-        @param line line number of issue (integer or string)
-        @param pos character position of issue (integer or string)
+        @param line line number of issue (integer)
+        @param pos character position of issue (integer)
         @param message message text (string)
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
         code = message.split(None, 1)[0].strip()
         
-        if (code in self.__fixCodes or len(self.__fixCodes) == 0) and \
+        if line <= len(self.__source) and \
+           (code in self.__fixCodes or len(self.__fixCodes) == 0) and \
            code in self.__fixes:
             res = self.__fixes[code](code, line, pos)
             if res[0]:
