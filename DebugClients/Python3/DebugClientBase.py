@@ -1861,6 +1861,14 @@ class DebugClientBase(object):
                 elif args[0] == '--no-encoding':
                     self.noencoding = True
                     del args[0]
+                elif args[0] == '--fork-child':
+                    self.fork_auto = True
+                    self.fork_child = True
+                    del args[0]
+                elif args[0] == '--fork-parent':
+                    self.fork_auto = True
+                    self.fork_child = False
+                    del args[0]
                 elif args[0] == '--':
                     del args[0]
                     break

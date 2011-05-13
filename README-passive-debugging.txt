@@ -28,7 +28,13 @@ README for passive mode debugging
     -t -- this enables tracing into the Python library
     
     -n -- this disables the redirection of stdin, stdout and stderr
-        
+    
+    -e -- this disables reporting of exceptions
+    
+    --fork-child -- this tells the debugger to follow the child when forking
+    
+    --fork-parent -- this tells the debugger to follow the parent when forking
+    
     The commandline parameters have to be followed by '--' (double dash),
     the script to be debugged and its commandline parameters.
     
