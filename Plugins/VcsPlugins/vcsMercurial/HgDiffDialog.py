@@ -84,13 +84,14 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             return str(version)
     
-    def start(self, fn, versions=None, bundle=None):
+    def start(self, fn, versions=None, bundle=None, qdiff=False):
         """
         Public slot to start the hg diff command.
         
         @param fn filename to be diffed (string)
         @param versions list of versions to be diffed (list of up to 2 strings or None)
         @param bundle name of a bundle file (string)
+        @param qdiff flag indicating qdiff command shall be used (boolean)
         """
         self.errorGroup.hide()
         self.inputGroup.show()
@@ -103,34 +104,38 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.paras = 0
         
         args = []
-        args.append('diff')
-        self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['diff'])
-        
-        if bundle:
-            args.append('--repository')
-            args.append(bundle)
-        elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
-            args.append('--repository')
-            args.append(self.vcs.bundleFile)
-        
-        if versions is not None:
-            self.raise_()
-            self.activateWindow()
+        if qdiff:
+            args.append('qdiff')
+            self.setWindowTitle(self.trUtf8("Patch Contents"))
+        else:
+            args.append('diff')
+            self.vcs.addArguments(args, self.vcs.options['global'])
+            self.vcs.addArguments(args, self.vcs.options['diff'])
             
-            rev1 = self.__getVersionArg(versions[0])
-            rev2 = None
-            if len(versions) == 2:
-                rev2 = self.__getVersionArg(versions[1])
+            if bundle:
+                args.append('--repository')
+                args.append(bundle)
+            elif self.vcs.bundleFile and os.path.exists(self.vcs.bundleFile):
+                args.append('--repository')
+                args.append(self.vcs.bundleFile)
             
-            if rev1 is not None or rev2 is not None:
-                args.append('-r')
-                if rev1 is not None and rev2 is not None:
-                    args.append('{0}:{1}'.format(rev1, rev2))
-                elif rev2 is None:
-                    args.append(rev1)
-                elif rev1 is None:
-                    args.append(':{0}'.format(rev2))
+            if versions is not None:
+                self.raise_()
+                self.activateWindow()
+                
+                rev1 = self.__getVersionArg(versions[0])
+                rev2 = None
+                if len(versions) == 2:
+                    rev2 = self.__getVersionArg(versions[1])
+                
+                if rev1 is not None or rev2 is not None:
+                    args.append('-r')
+                    if rev1 is not None and rev2 is not None:
+                        args.append('{0}:{1}'.format(rev1, rev2))
+                    elif rev2 is None:
+                        args.append(rev1)
+                    elif rev1 is None:
+                        args.append(':{0}'.format(rev2))
         
         if isinstance(fn, list):
             dname, fnames = self.vcs.splitPathList(fn)
