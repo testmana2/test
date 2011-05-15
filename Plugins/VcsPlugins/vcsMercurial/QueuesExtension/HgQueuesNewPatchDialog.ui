@@ -96,10 +96,10 @@
    <item row="3" column="0" colspan="2">
     <widget class="QGroupBox" name="dateGroup">
      <property name="toolTip">
-      <string>Select to give date information</string>
+      <string>Select to give date and time information</string>
      </property>
      <property name="title">
-      <string>Date</string>
+      <string>Date and Time</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -111,17 +111,17 @@
       <item row="0" column="0" colspan="3">
        <widget class="QCheckBox" name="currentDateCheckBox">
         <property name="toolTip">
-         <string>Select to use the current date</string>
+         <string>Select to use the current date and time</string>
         </property>
         <property name="text">
-         <string>Use current date</string>
+         <string>Use current date and time</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Date:</string>
+         <string>Date/Time:</string>
         </property>
        </widget>
       </item>

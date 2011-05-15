@@ -129,7 +129,7 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueueListAct.setWhatsThis(self.trUtf8(
             """<b>List Patches</b>"""
-            """<p>This list all applied and unapplied patches.</p>"""
+            """<p>This lists all applied and unapplied patches.</p>"""
         ))
         self.hgQueueListAct.triggered[()].connect(self.__hgQueueListPatches)
         self.actions.append(self.hgQueueListAct)
@@ -228,7 +228,7 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueuePushUntilAct.setWhatsThis(self.trUtf8(
             """<b>Push Patches</b>"""
-            """<p>This pushes patches onto the stack  of applied patches until"""
+            """<p>This pushes patches onto the stack of applied patches until"""
             """ a named patch is at the top of the stack.</p>"""
         ))
         self.hgQueuePushUntilAct.triggered[()].connect(self.__hgQueuePushPatches)

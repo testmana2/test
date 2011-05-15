@@ -15144,247 +15144,247 @@ Tiene %n pestañas abiertas.</numerusform>
 <context>
     <name>Hg</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="197"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="199"/>
         <source>The hg process finished with the exit code {0}</source>
         <translation>El proceso hg ha terminado con código de salida {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="202"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>El proceso hg no terminó en un plazo de 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="202"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="204"/>
         <source>Could not start the hg executable.</source>
         <translation>No se ha podido iniciar el ejecutable de hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="228"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="230"/>
         <source>Create project repository</source>
         <translation>Crear repositorio del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="228"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="230"/>
         <source>The project repository could not be created.</source>
         <translation>No se ha podido crear el repositorio del proyecto.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="255"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="257"/>
         <source>Creating Mercurial repository</source>
         <translation>Creando repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="270"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="272"/>
         <source>Initial commit to Mercurial repository</source>
         <translation>Commit inicial al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="311"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="313"/>
         <source>Cloning project from a Mercurial repository</source>
         <translation>Clonando proyecto desde un repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="407"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="409"/>
         <source>Commiting changes to Mercurial repository</source>
         <translation>Haciendo commit de cambios al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="455"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="457"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation>Sincronizando con el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="503"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="505"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation>Añadiendo archivos/directorios al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="563"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="565"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation>Eliminando archivos/directorios del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="621"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="623"/>
         <source>Renaming {0}</source>
         <translation>Renombrando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="804"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="806"/>
         <source>Merging</source>
         <translation>Haciendo un merge</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1200"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1202"/>
         <source>Copying {0}</source>
         <translation>Copiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1378"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1380"/>
         <source>Mercurial Log</source>
         <translation>Registro de Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1378"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1380"/>
         <source>Select number of entries to show.</source>
         <translation>Seleccionar número de entradas a mostrar.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1453"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1455"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation>Haciendo pull de un repositorio remoto Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1485"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1487"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation>Haciendo push a un repositorio remoto Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1599"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1601"/>
         <source>Resolving files/directories</source>
         <translation>Resolviendo archivos/directorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="726"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="728"/>
         <source>Taging in the Mercurial repository</source>
         <translation>Haciendo tag en el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="756"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="758"/>
         <source>Reverting changes</source>
         <translation>Revirtiendo cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1023"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1025"/>
         <source>Mercurial command</source>
         <translation>Comando de Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1621"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1623"/>
         <source>Create Branch</source>
         <translation>Crear Branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1621"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1623"/>
         <source>Enter branch name</source>
         <translation>Introducir nombre de branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1632"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1634"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation>Creando branch en el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1703"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1705"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation>Verificando la integridad del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1727"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1729"/>
         <source>Showing the combined configuration settings</source>
         <translation>Mostrando los ajustes de configuración combinados</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1750"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1752"/>
         <source>Showing aliases for remote repositories</source>
         <translation>Mostrando alias para repositorios remotos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1773"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1775"/>
         <source>Recovering from interrupted transaction</source>
         <translation>Recuperando de transacción interrumpida</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1999"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2001"/>
         <source>Shall the working directory be updated?</source>
         <translation>¿Debe ser actualizado el directorio de trabajo?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1655"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1657"/>
         <source>Showing current branch</source>
         <translation>Mostrando la branch actual</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1911"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1913"/>
         <source>Create changegroup</source>
         <translation>Crear changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2010"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2012"/>
         <source>Apply changegroups</source>
         <translation>Aplicar changegroups</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2024"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2026"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Subcomando bisect ({0}) inválido.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2058"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2060"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1963"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1965"/>
         <source>Preview changegroup</source>
         <translation>Previsualizar changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1796"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1798"/>
         <source>Identifying project directory</source>
         <translation>Identificando directorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1821"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1823"/>
         <source>Create .hgignore file</source>
         <translation>Crear archivo .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1821"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1823"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2090"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2092"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Eliminando archivos unicamente del repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1872"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1874"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1993"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1995"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1973"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1975"/>
         <source>Identifying changegroup file</source>
         <translation>Identificando archivo de changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2146"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2148"/>
         <source>Backing out changeset</source>
         <translation>Haciendo respaldo de changeset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2128"/>
         <source>No revision given. Aborting...</source>
         <translation>No se ha proporcionado revisión. Abortando...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1889"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1891"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo changegroup de Mercurial &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2171"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2173"/>
         <source>Rollback last transaction</source>
         <translation>Hacer Rollback de la última transacción</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2166"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2168"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation>¿Está seguro de que quiere aplicar un rollback a la última transacción?</translation>
     </message>
@@ -16364,39 +16364,44 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="155"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="160"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="155"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="160"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="173"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="178"/>
         <source>There is no difference.</source>
         <translation>No hay ninguna diferencia.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="298"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="303"/>
         <source>Save Diff</source>
         <translation>Guardar Diff</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="267"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="272"/>
         <source>Patch Files (*.diff)</source>
         <translation>Archivos de Parche (*.diff)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="298"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="303"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="284"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="289"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de parche &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="109"/>
+        <source>Patch Contents</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -17193,1003 +17198,1320 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>HgProjectHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="75"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="77"/>
         <source>New from repository</source>
         <translation>Nuevo desde repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="75"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="77"/>
         <source>&amp;New from repository...</source>
         <translation>&amp;Nuevo desde repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="78"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="80"/>
         <source>Create (clone) a new project from a Mercurial repository</source>
         <translation>Crear (clonar) un nuevo proyecto desde un repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="81"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="83"/>
         <source>&lt;b&gt;New from repository&lt;/b&gt;&lt;p&gt;This creates (clones) a new local project from a Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo desde repositorio&lt;/b&gt;&lt;p&gt;Crea (clona) un nuevo proyecto local desde un repositorio Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="91"/>
         <source>Show incoming log</source>
         <translation>Mostrar log entrante</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="95"/>
         <source>Show the log of incoming changes</source>
         <translation>Mostrar el log de los cambios entrantes</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="96"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="98"/>
         <source>&lt;b&gt;Show incoming log&lt;/b&gt;&lt;p&gt;This shows the log of changes coming into the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar log entrante&lt;/b&gt;&lt;p&gt;Muestra el log de cambios entrantes en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="103"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="105"/>
         <source>Pull changes</source>
         <translation>Hacer pull de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="109"/>
         <source>Pull changes from a remote repository</source>
         <translation>Hacer pull de cambios desde un repositorio remoto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="110"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="112"/>
         <source>&lt;b&gt;Pull changes&lt;/b&gt;&lt;p&gt;This pulls changes from a remote repository into the local repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer pull de cambios&lt;/b&gt;&lt;p&gt;Hace un pull de cambios desde un repositorio remoto al repositorio local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="118"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="120"/>
         <source>Update from repository</source>
         <translation>Hacer update desde repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="118"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="120"/>
         <source>&amp;Update from repository</source>
         <translation>Hacer &amp;update desde repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="122"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="124"/>
         <source>Update the local project from the Mercurial repository</source>
         <translation>Actualizar el proyecto local desde el repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="125"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="127"/>
         <source>&lt;b&gt;Update from repository&lt;/b&gt;&lt;p&gt;This updates the local project from the Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer update desde repositorio&lt;/b&gt;&lt;p&gt;Actualiza el proyecto local desde el repositorio Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="134"/>
         <source>Commit changes to repository</source>
         <translation>Hacer commit de los cambios al repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="134"/>
         <source>&amp;Commit changes to repository...</source>
         <translation>Hacer &amp;commit de los cambios al repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="138"/>
         <source>Commit changes to the local project to the Mercurial repository</source>
         <translation>Hacer commit de los cambios en el proyecto local al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="139"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="141"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the Mercurial repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;Envia los cambios del proyecto local al repositorio Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="147"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="149"/>
         <source>Show outgoing log</source>
         <translation>Mostrar log saliente</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="151"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="153"/>
         <source>Show the log of outgoing changes</source>
         <translation>Mostrar el log de los cambios salientes</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="154"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="156"/>
         <source>&lt;b&gt;Show outgoing log&lt;/b&gt;&lt;p&gt;This shows the log of changes outgoing out of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar log saliente&lt;/b&gt;&lt;p&gt;Muestra el log de cambios salientes en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="161"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="163"/>
         <source>Push changes</source>
         <translation>Hacer push de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="165"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="167"/>
         <source>Push changes to a remote repository</source>
         <translation>Hacer push de cambios hacia un repositorio remoto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="168"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="170"/>
         <source>&lt;b&gt;Push changes&lt;/b&gt;&lt;p&gt;This pushes changes from the local repository to a remote repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer push de cambios&lt;/b&gt;&lt;p&gt;Hace un push de cambios desde un repositorio local a un repositorio remoto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="191"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="193"/>
         <source>Export from repository</source>
         <translation>Exportar desde repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="191"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="193"/>
         <source>&amp;Export from repository...</source>
         <translation>&amp;Exportar desde repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="195"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="197"/>
         <source>Export a project from the repository</source>
         <translation>Exportar un proyecto desde el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="198"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="200"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exportar desde repositorio&lt;/b&gt;&lt;p&gt;Exporta un proyecto desde el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="205"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="207"/>
         <source>Add to repository</source>
         <translation>Añadir al repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="205"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="207"/>
         <source>&amp;Add to repository...</source>
         <translation>&amp;Añadir al repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="208"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="210"/>
         <source>Add the local project to the repository</source>
         <translation>Añadir el proyecto local al repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="211"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="213"/>
         <source>&lt;b&gt;Add to repository&lt;/b&gt;&lt;p&gt;This adds (imports) the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir al repositorio&lt;/b&gt;&lt;p&gt;Añade (import) el proyecto local al repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="218"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="220"/>
         <source>Remove from repository (and disk)</source>
         <translation>Eliminar del repositorio (y del disco)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="218"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="220"/>
         <source>&amp;Remove from repository (and disk)</source>
         <translation>Eliminar del &amp;repositorio (y del disco)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="222"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="224"/>
         <source>Remove the local project from the repository (and  disk)</source>
         <translation>Eliminar el proyecto local del repositorio (y del disco)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="225"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="227"/>
         <source>&lt;b&gt;Remove from repository&lt;/b&gt;&lt;p&gt;This removes the local project from the repository (and disk).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eliminar del repositorio&lt;/b&gt;&lt;p&gt;Elimina el proyecto local del repositorio (y del disco).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="233"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="235"/>
         <source>Show log</source>
         <translation>Mostrar log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="233"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="235"/>
         <source>Show &amp;log</source>
         <translation>Mostrar &amp;log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="237"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="239"/>
         <source>Show the log of the local project</source>
         <translation>Mostrar el log del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="240"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="242"/>
         <source>&lt;b&gt;Show log&lt;/b&gt;&lt;p&gt;This shows the log of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar log&lt;/b&gt;&lt;p&gt;Muestra el log del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="247"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="249"/>
         <source>Show limited log</source>
         <translation>Mostrar log limitado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="251"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="253"/>
         <source>Show a limited log of the local project</source>
         <translation>Muestra un log limitado del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="254"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="256"/>
         <source>&lt;b&gt;Show limited log&lt;/b&gt;&lt;p&gt;This shows the log of the local project limited to a selectable number of entries.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar log limitado&lt;/b&gt;&lt;p&gt;Muestra el log del proyecto local limitado a un número seleccionable de entradas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="264"/>
         <source>Show log browser</source>
         <translation>Mostrar navegador de log</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="266"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="268"/>
         <source>Show a dialog to browse the log of the local project</source>
         <translation>Mostrar un diálogo para navegar el log del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="269"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="271"/>
         <source>&lt;b&gt;Show log browser&lt;/b&gt;&lt;p&gt;This shows a dialog to browse the log of the local project. A limited number of entries is shown first. More can be retrieved later on.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar navegador de log&lt;/b&gt;&lt;p&gt;Muestra un diálogo para navegar el log del proyecto local. Al principio se muestra un número limitado de entradas. Se pueden recuperar más entradas despues.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="278"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show difference</source>
         <translation>Mostrar diferencia</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="278"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show &amp;difference</source>
         <translation>Mostrar &amp;diferencia</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="282"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="284"/>
         <source>Show the difference of the local project to the repository</source>
         <translation>Muestra las diferencias entre el proyecto local y el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="285"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="287"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar direfencia&lt;/b&gt;&lt;p&gt;Muestra la diferencia que hay entre el proyecto local y el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="292"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="294"/>
         <source>Show difference (extended)</source>
         <translation>Mostrar diferencia (extendida)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="298"/>
         <source>Show the difference of revisions of the project to the repository</source>
         <translation>Muestra la diferencia de revisiones entre el proyecto local y el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="299"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="301"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar direfencia (extendida)&lt;/b&gt;&lt;p&gt;Muestra la diferencia entre revisiones seleccionables del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="320"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="322"/>
         <source>Show heads</source>
         <translation>Mostrar heads</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="325"/>
         <source>Show the heads of the repository</source>
         <translation>Mostrar los heads del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="326"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="328"/>
         <source>&lt;b&gt;Show heads&lt;/b&gt;&lt;p&gt;This shows the heads of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar heads&lt;/b&gt;&lt;p&gt;Muestra los heads del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="333"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="335"/>
         <source>Show parents</source>
         <translation>Mostrar parents</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="336"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="338"/>
         <source>Show the parents of the repository</source>
         <translation>Mostrar los parents del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="339"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="341"/>
         <source>&lt;b&gt;Show parents&lt;/b&gt;&lt;p&gt;This shows the parents of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar parents&lt;/b&gt;&lt;p&gt;Muestra los parents del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="346"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="348"/>
         <source>Show tip</source>
         <translation>Mostrar tip</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="349"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="351"/>
         <source>Show the tip of the repository</source>
         <translation>Mostrar el tip del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="352"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="354"/>
         <source>&lt;b&gt;Show tip&lt;/b&gt;&lt;p&gt;This shows the tip of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar tip&lt;/b&gt;&lt;p&gt;Muestra el tip del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="373"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
         <source>Merge</source>
         <translation>Hacer merge</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="373"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
         <source>Mer&amp;ge changes...</source>
         <translation>Hacer mer&amp;ge de los cambios...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="377"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="379"/>
         <source>Merge changes of a revision into the local project</source>
         <translation>Hacer merge de los cambios de una revision en el proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="380"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="382"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;Hace un merge de los cambios de una revision en el proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="387"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
         <source>Resolve conflicts</source>
         <translation>Resolver conflictos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="387"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
         <source>Resolve con&amp;flicts</source>
         <translation>Resolver con&amp;flictos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="390"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="392"/>
         <source>Resolve all conflicts of the local project</source>
         <translation>Resolver todos los conflictos del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="393"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="395"/>
         <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Resolver conflictos&lt;/b&gt;&lt;p&gt;Resuelve todos los conflictos del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="306"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="308"/>
         <source>Show status</source>
         <translation>Mostrar estado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="306"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="308"/>
         <source>Show &amp;status</source>
         <translation>Mostrar e&amp;stado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="310"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="312"/>
         <source>Show the status of the local project</source>
         <translation>Mostrar el estado del proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="313"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="315"/>
         <source>&lt;b&gt;Show status&lt;/b&gt;&lt;p&gt;This shows the status of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar estado&lt;/b&gt;&lt;p&gt;Muestra el estado del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="359"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="361"/>
         <source>Revert changes</source>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="359"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="361"/>
         <source>Re&amp;vert changes</source>
         <translation>Re&amp;vertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="363"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="365"/>
         <source>Revert all changes made to the local project</source>
         <translation>Revertir todos los cambios hechos al proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="366"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="368"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Revertir cambios&lt;/b&gt;&lt;p&gt;Revierte todos los cambios hechos al proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
         <source>Tag in repository</source>
         <translation>Crear un Tag en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
         <source>&amp;Tag in repository...</source>
         <translation>Crear un &amp;Tag en el repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="406"/>
         <source>Tag the local project in the repository</source>
         <translation>Crea un tag del proyecto local en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="407"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="409"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un Tag en el repositorio&lt;/b&gt;&lt;p&gt;Crea un tag del proyecto local en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="414"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>List tags</source>
         <translation>Listar tags</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="414"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>List tags...</source>
         <translation>Listar tags...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="419"/>
         <source>List tags of the project</source>
         <translation>Lista los tags del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="420"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="422"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar tags&lt;/b&gt;&lt;p&gt;Lista los tags del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="429"/>
         <source>List branches</source>
         <translation>Listar branches</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="429"/>
         <source>List branches...</source>
         <translation>Listar branches...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="430"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="432"/>
         <source>List branches of the project</source>
         <translation>Lista las branches del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="433"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="435"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Listar branches&lt;/b&gt;&lt;p&gt;Lista las branches del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="440"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="442"/>
         <source>Create branch</source>
         <translation>Crear branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="440"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="442"/>
         <source>Create &amp;branch...</source>
         <translation>Crear &amp;branch...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="444"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="446"/>
         <source>Create a new branch for the local project in the repository</source>
         <translation>Crear una nueva branch para el proyecto local en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="447"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="449"/>
         <source>&lt;b&gt;Create branch&lt;/b&gt;&lt;p&gt;This creates a new branch for the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear branch&lt;/b&gt;&lt;p&gt;Crea una nueva branch para el proyecto local en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="469"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="471"/>
         <source>Close branch</source>
         <translation>Cerrar branch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="472"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="474"/>
         <source>Close the current branch of the local project</source>
         <translation>Cerrar la branch actual para el proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="475"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="477"/>
         <source>&lt;b&gt;Close branch&lt;/b&gt;&lt;p&gt;This closes the current branch of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar branch&lt;/b&gt;&lt;p&gt;Cierra la branch actual del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="495"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>Switch</source>
         <translation>Hacer switch</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="495"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>S&amp;witch...</source>
         <translation>Hacer s&amp;witch...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="501"/>
         <source>Switch the working directory to another revision</source>
         <translation>Hacer switch del directorio de trabajo a otra revisión</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="504"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the working directory to another revision.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer switch&lt;/b&gt;&lt;p&gt;Hace un switch del directorio de trabajo a otra revisión.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="509"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="511"/>
         <source>Cleanup</source>
         <translation>Limpiar (cleanup)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="509"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="511"/>
         <source>Cleanu&amp;p</source>
         <translation>Lim&amp;piar  (cleanup)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="512"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="514"/>
         <source>Cleanup the local project</source>
         <translation>Limpiar (cleanup) el proyecto local</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="515"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="517"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpieza (cleanup)&lt;/b&gt;&lt;p&gt;Lleva a cabo un cleanup del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="522"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="524"/>
         <source>Execute command</source>
         <translation>Ejecutar comando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="522"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="524"/>
         <source>E&amp;xecute command...</source>
         <translation>E&amp;jecutar comando...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="525"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="527"/>
         <source>Execute an arbitrary Mercurial command</source>
         <translation>Ejecuta un comando Mercurial arbitrario</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="528"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="530"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary Mercurial command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecutar comando&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir un comando Mercurial arbitrario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="535"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="537"/>
         <source>Command options</source>
         <translation>Opciones de comando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="535"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="537"/>
         <source>Command &amp;options...</source>
         <translation>&amp;Opciones de comando...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="538"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="540"/>
         <source>Show the Mercurial command options</source>
         <translation>Mostrar opciones de comando Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="539"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="541"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the Mercurial command options.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Opciones de comando...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las opciones de comando Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="548"/>
         <source>Configure</source>
         <translation>Configurar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="546"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="548"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="551"/>
         <source>Show the configuration dialog with the Mercurial page selected</source>
         <translation>Mostrar el diálogo de configuración con la página de Mercurial seleccionada</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="554"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Mercurial page selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Configurar&lt;/b&gt;&lt;p&gt;Mostrar el diálogo de configuración con la página de Mercurial seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="559"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="561"/>
         <source>Edit repository config</source>
         <translation>Editar configuración del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="559"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="561"/>
         <source>Edit repository config...</source>
         <translation>Editar configuración del repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="562"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="564"/>
         <source>Show an editor to edit the repository config file</source>
         <translation>Mostrar un editor para editar el archivo de configuración del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="565"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="567"/>
         <source>&lt;b&gt;Edit repository config&lt;/b&gt;&lt;p&gt;Show an editor to edit the repository config file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Editar configuración del repositorio&lt;/b&gt;&lt;p&gt;Mostrar un editor para editar el archivo de configuración del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="574"/>
         <source>Show combined config settings</source>
         <translation>Mostrar ajustes de configuración combinados</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="572"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="574"/>
         <source>Show combined config settings...</source>
         <translation>Mostrar ajustes de configuración combinados...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="575"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="577"/>
         <source>Show the combined config settings from all config files</source>
         <translation>Mostrar los ajustes de configuración combinados con todos los archivos de configuración</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="580"/>
         <source>&lt;b&gt;Show combined config settings&lt;/b&gt;&lt;p&gt;This shows the combined config settings from all config files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar ajustes de configuración combinados&lt;/b&gt;&lt;p&gt;Muestra los ajustes de configuración combinados con todos los archivos de configuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="587"/>
         <source>Show paths</source>
         <translation>Mostrar rutas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="587"/>
         <source>Show paths...</source>
         <translation>Mostrar rutas...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="588"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="590"/>
         <source>Show the aliases for remote repositories</source>
         <translation>Mostrar los alias para los repositorios remotos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="591"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="593"/>
         <source>&lt;b&gt;Show paths&lt;/b&gt;&lt;p&gt;This shows the aliases for remote repositories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar rutas&lt;/b&gt;&lt;p&gt;Muestra los alias para los repositorios remotos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="598"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="600"/>
         <source>Verify repository</source>
         <translation>Verificar repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="598"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="600"/>
         <source>Verify repository...</source>
         <translation>Verificar repositorio...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="601"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="603"/>
         <source>Verify the integrity of the repository</source>
         <translation>Verificar la integridad del repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="604"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="606"/>
         <source>&lt;b&gt;Verify repository&lt;/b&gt;&lt;p&gt;This verifies the integrity of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Verificar repositorio&lt;/b&gt;&lt;p&gt;Verifica la integridad del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="611"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="613"/>
         <source>Recover</source>
         <translation>Recuperar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="611"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="613"/>
         <source>Recover...</source>
         <translation>Recuperar...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="614"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="616"/>
         <source>Recover from an interrupted transaction</source>
         <translation>Recuperar de una transacción interrumpida</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="617"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="619"/>
         <source>&lt;b&gt;Recover&lt;/b&gt;&lt;p&gt;This recovers from an interrupted transaction.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Recuperar&lt;/b&gt;&lt;p&gt;Recupera de una transacción interrumpida.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="637"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="639"/>
         <source>Create .hgignore</source>
         <translation>Crear .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="640"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="642"/>
         <source>Create a .hgignore file with default values</source>
         <translation>Creare un archivo .hgignore con valores por defecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="643"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="645"/>
         <source>&lt;b&gt;Create .hgignore&lt;/b&gt;&lt;p&gt;This creates a .hgignore file with default values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear .hgignore&lt;/b&gt;&lt;p&gt;Crea un archivo .hgignore con valores por defecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="817"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="819"/>
         <source>Repository Administration</source>
         <translation>Administración del Repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="650"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="652"/>
         <source>Create changegroup</source>
         <translation>Crear changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="650"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="652"/>
         <source>Create changegroup...</source>
         <translation>Crear changegroup...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="653"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="655"/>
         <source>Create changegroup file collecting changesets</source>
         <translation>Crea un archivo de changegroup recogiendo changesets</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="692"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="694"/>
         <source>Apply changegroups</source>
         <translation>Aplicar changegroups</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="692"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="694"/>
         <source>Apply changegroups...</source>
         <translation>Aplicar changegroups...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="695"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="697"/>
         <source>Apply one or several changegroup files</source>
         <translation>Aplicar uno o varios archivos de changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="843"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="845"/>
         <source>Changegroup Management</source>
         <translation>Gestión de Chagegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="656"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="658"/>
         <source>&lt;b&gt;Create changegroup&lt;/b&gt;&lt;p&gt;This creates a changegroup file collecting selected changesets (hg bundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear changegroup&lt;/b&gt;&lt;p&gt;Crea un archivo de changegroup recogiendo los changeset seleccionados (hg bundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="698"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="700"/>
         <source>&lt;b&gt;Apply changegroups&lt;/b&gt;&lt;p&gt;This applies one or several changegroup files generated by the &apos;Create changegroup&apos; action (hg unbundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aplicar changegroups&lt;/b&gt;&lt;p&gt;Aplica uno o varios archivos de changegroup generados por la acción &apos;Crear changegroup&apos; (hg unbundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="482"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="484"/>
         <source>Show current branch</source>
         <translation>Mostrar la branch actual</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="485"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="487"/>
         <source>Show the current branch of the project</source>
         <translation>Mostrar la branch actual del proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="488"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="490"/>
         <source>&lt;b&gt;Show current branch&lt;/b&gt;&lt;p&gt;This shows the current branch of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar branch actual&lt;/b&gt;&lt;p&gt;Muestra la branch actual del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="706"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="708"/>
         <source>Mark as &quot;good&quot;</source>
         <translation>Marcar como &quot;bueno&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="711"/>
         <source>Mark a selectable changeset as good</source>
         <translation>Marcar un changeset seleccionable como bueno</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="712"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="714"/>
         <source>&lt;b&gt;Mark as good&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as good.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Marcar como bueno&lt;/b&gt;&lt;p&gt;Marca un changeset seleccionable como bueno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="721"/>
         <source>Mark as &quot;bad&quot;</source>
         <translation>Marcar como &quot;malo&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="722"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="724"/>
         <source>Mark a selectable changeset as bad</source>
         <translation>Marcar un changeset seleccionable como malo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="725"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="727"/>
         <source>&lt;b&gt;Mark as bad&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as bad.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Marcar como malo&lt;/b&gt;&lt;p&gt;Marca un changeset seleccionable como malo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="732"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="734"/>
         <source>Skip</source>
         <translation>Saltar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="735"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="737"/>
         <source>Skip the current changeset</source>
         <translation>Saltar el changeset actual</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="738"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="740"/>
         <source>&lt;b&gt;Skip&lt;/b&gt;&lt;p&gt;This skips the current changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Saltar&lt;/b&gt;&lt;p&gt;Salta el changeset actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="745"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="747"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="748"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="750"/>
         <source>Reset the bisect search data</source>
         <translation>Reiniciar los datos de búsqueda de bisect</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="753"/>
         <source>&lt;b&gt;Reset&lt;/b&gt;&lt;p&gt;This resets the bisect search data.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reiniciar&lt;/b&gt;&lt;p&gt;Reinicia los datos de búsqueda de bisect.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="849"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="851"/>
         <source>Bisect</source>
         <translation>Bisect</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="706"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="708"/>
         <source>Mark as &quot;good&quot;...</source>
         <translation>Marcar como &quot;bueno&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="719"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="721"/>
         <source>Mark as &quot;bad&quot;...</source>
         <translation>Marcar como &quot;malo&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="666"/>
         <source>Preview changegroup</source>
         <translation>Previsualizar changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="666"/>
         <source>Preview changegroup...</source>
         <translation>Previsualizar changegroup...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="626"/>
         <source>Identify</source>
         <translation>Identificar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="626"/>
         <source>Identify...</source>
         <translation>Identificar...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="627"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="629"/>
         <source>Identify the project directory</source>
         <translation>Identificar el directorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="630"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="632"/>
         <source>&lt;b&gt;Identify&lt;/b&gt;&lt;p&gt;This identifies the project directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Identificar&lt;/b&gt;&lt;p&gt;Identifica el directorio de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="667"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="669"/>
         <source>Preview a changegroup file containing a collection of changesets</source>
         <translation>Previsualizar un archivo de changegroup conteniendo una colección de changesets</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="670"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="672"/>
         <source>&lt;b&gt;Preview changegroup&lt;/b&gt;&lt;p&gt;This previews a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Previsualizar changegroup&lt;/b&gt;&lt;p&gt;Previsualiza un archivo de changegroup conteniendo una colección de changesets.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="678"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="680"/>
         <source>Identify changegroup</source>
         <translation>Identificar changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="678"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="680"/>
         <source>Identify changegroup...</source>
         <translation>Identificar changegroup...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="681"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="683"/>
         <source>Identify a changegroup file containing a collection of changesets</source>
         <translation>Identificar un archivo de changegroup conteniendo una colección de changesets</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="684"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="686"/>
         <source>&lt;b&gt;Identify changegroup&lt;/b&gt;&lt;p&gt;This identifies a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Identificar changegroup&lt;/b&gt;&lt;p&gt;Identifica un archivo de changegroup conteniendo una colección de changesets.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="758"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="760"/>
         <source>Back out changeset</source>
         <translation>Hacer respaldo de changeset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="761"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="763"/>
         <source>Back out changes of an earlier changeset</source>
         <translation>Hacer respaldo de cambios de un changeset anterior</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="764"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="766"/>
         <source>&lt;b&gt;Back out changeset&lt;/b&gt;&lt;p&gt;This backs out changes of an earlier changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer respaldo de changeset&lt;/b&gt;&lt;p&gt;Hace un respaldo de cambios de un changeset anterior.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="176"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="178"/>
         <source>Push changes (force)</source>
         <translation>Hacer push de cambios (force)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="180"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="182"/>
         <source>Push changes to a remote repository with force option</source>
         <translation>Se hace un push de los cambios a un repositorio remoto con la opción force</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="183"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="185"/>
         <source>&lt;b&gt;Push changes (force)&lt;/b&gt;&lt;p&gt;This pushes changes from the local repository to a remote repository using the &apos;force&apos; option.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer push de cambios (force)&lt;/b&gt;&lt;p&gt;Se hace un push de los cambios desde el repositorio local a un repositorio remoto utilizando la opción &apos;force&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="838"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="840"/>
         <source>Specials</source>
         <translation>Especial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="796"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="798"/>
         <source>Serve project repository</source>
         <translation>Servir repositorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="796"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="798"/>
         <source>Serve project repository...</source>
         <translation>Servir repositorio de proyecto...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="799"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="801"/>
         <source>Serve the project repository</source>
         <translation>Servir el repositorio de proyecto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="802"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="804"/>
         <source>&lt;b&gt;Serve project repository&lt;/b&gt;&lt;p&gt;This serves the project repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Servir repositorio de proyecto&lt;/b&gt;&lt;p&gt;Esto sirve el repositorio de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="969"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="971"/>
         <source>Pull</source>
         <translation>Hacer Pull</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="969"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="971"/>
         <source>The project should be reread. Do this now?</source>
         <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="455"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
         <source>Push new branch</source>
         <translation>Hacer push de nueva rama</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="458"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="460"/>
         <source>Push the current branch of the local project as a new named branch</source>
         <translation>Ejecutar push de la rama actual del proyecto local como una nueva rama con nombre</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="461"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="463"/>
         <source>&lt;b&gt;Push new branch&lt;/b&gt;&lt;p&gt;This pushes the current branch of the local project as a new named branch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer push de nueva rama&lt;/b&gt;&lt;p&gt;Hace un push de la rama actual del proyecto local como una nueva rama con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="771"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="773"/>
         <source>Rollback last transaction</source>
         <translation>Rollback de última transacción</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="774"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="776"/>
         <source>Rollback the last transaction</source>
         <translation>Rollback de la última transacción</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="777"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="779"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care.&lt;/strong&gt;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rollback de última transacción&lt;/b&gt;&lt;p&gt;Lleva a cabo un rollback de la última transacción. Las transactiones se utilizan para encapsular los efectos de todos los comandos que crean nuevos changesets or propagan changesets existentes hacia un repository. Por ejemplo, los siguientes comandos son transaccionales, y sus efectos pueden ser revertidos (rollback):&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (con este repositorio como destino)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Este comando es peligroso. Utiliícelo por favor con cuidado.&lt;/strong&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="855"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="857"/>
         <source>Extensions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgQueuesFoldDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="14"/>
+        <source>Fold Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="23"/>
+        <source>Message:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="39"/>
+        <source>Enter commit message for the folded patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="165"/>
+        <source>Name</source>
+        <translation type="unfinished">Nombre</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="170"/>
+        <source>Summary</source>
+        <translation type="unfinished">Resumen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="105"/>
+        <source>Press to add the selected entry to the list of selected patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="118"/>
+        <source>Press to remove the selected entry from the list of selected patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="196"/>
+        <source>Press to move the selected patch up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="209"/>
+        <source>Press to move the selected patch down</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgQueuesHeaderDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.ui" line="14"/>
+        <source>Commit Message</source>
+        <translation type="unfinished">Mensaje de Commit</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="86"/>
+        <source>Process Generation Error</source>
+        <translation type="unfinished">Error de Generación de Proceso</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="86"/>
+        <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
+        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="154"/>
+        <source>Error: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgQueuesListDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="14"/>
+        <source>List of Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="17"/>
+        <source>&lt;b&gt;List of Patches&lt;/b&gt;
+&lt;p&gt;This dialog shows a list of applied and unapplied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="33"/>
+        <source>&lt;b&gt;Patches List&lt;/b&gt;
+&lt;p&gt;This shows a list of applied and unapplied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="58"/>
+        <source>Name</source>
+        <translation type="unfinished">Nombre</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="63"/>
+        <source>Status</source>
+        <translation type="unfinished">Estado</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="68"/>
+        <source>Summary</source>
+        <translation type="unfinished">Resumen</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="82"/>
+        <source>Errors</source>
+        <translation type="unfinished">Errores</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="104"/>
+        <source>Input</source>
+        <translation type="unfinished">Input</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="126"/>
+        <source>Press to send the input to the hg process</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="129"/>
+        <source>&amp;Send</source>
+        <translation type="unfinished">&amp;Enviar</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="132"/>
+        <source>Alt+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="139"/>
+        <source>Enter data to be sent to the hg process</source>
+        <translation type="unfinished">Introduzca los datos a enviar al proceso de hg</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="146"/>
+        <source>Select to switch the input field to password mode</source>
+        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="149"/>
+        <source>&amp;Password Mode</source>
+        <translation type="unfinished">&amp;Modo de contraseña</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="152"/>
+        <source>Alt+P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="160"/>
+        <source>Process Generation Error</source>
+        <translation type="unfinished">Error de Generación de Proceso</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="160"/>
+        <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
+        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="192"/>
+        <source>no patches found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="244"/>
+        <source>applied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="244"/>
+        <source>not applied</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgQueuesNewPatchDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="14"/>
+        <source>New Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="23"/>
+        <source>Name:</source>
+        <translation type="unfinished">Nombre:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="30"/>
+        <source>Enter the patch name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="37"/>
+        <source>Message:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="47"/>
+        <source>Enter the commit message for the patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="57"/>
+        <source>Select to give user information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="60"/>
+        <source>User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="72"/>
+        <source>Select to use the name of the current user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="75"/>
+        <source>Use current user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="82"/>
+        <source>Username:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="89"/>
+        <source>Enter the user name to be used for the patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="102"/>
+        <source>Date</source>
+        <translation type="obsolete">Fecha</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="131"/>
+        <source>Enter the date and time to be used for the patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="99"/>
+        <source>Select to give date and time information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="102"/>
+        <source>Date and Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="114"/>
+        <source>Select to use the current date and time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="117"/>
+        <source>Use current date and time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="124"/>
+        <source>Date/Time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>HgQueuesRenamePatchDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="14"/>
+        <source>Rename Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="25"/>
+        <source>New Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="32"/>
+        <source>Enter the new name for the selected patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="41"/>
+        <source>Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="47"/>
+        <source>Select to rename the current patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="60"/>
+        <source>Select to rename the selected named patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="63"/>
+        <source>Named Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="73"/>
+        <source>Select the patch to be renamed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.py" line="31"/>
+        <source>Current Patch ({0})</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -30251,6 +30573,447 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <location filename="Preferences/ConfigurationPages/QtPage.ui" line="119"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>El ejecutable de la herramienta se compone del prefijo, el nombre de la herramienta y el postfijo. Para win, la extensión se añade automáticamente.</translation>
+    </message>
+</context>
+<context>
+    <name>Queues</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="196"/>
+        <source>New Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="245"/>
+        <source>Update Current Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="295"/>
+        <source>Pop Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="299"/>
+        <source>Push Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="303"/>
+        <source>Go to Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="431"/>
+        <source>Select Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="314"/>
+        <source>Select the target patch name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="431"/>
+        <source>No patches to select from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="363"/>
+        <source>Finish Applied Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="395"/>
+        <source>Rename Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="417"/>
+        <source>Select the patch to be deleted:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="426"/>
+        <source>Delete Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="471"/>
+        <source>Fold Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="467"/>
+        <source>No patches selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="471"/>
+        <source>No patches available to be folded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>QueuesProjectHelper</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="54"/>
+        <source>New Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="54"/>
+        <source>New Patch...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="57"/>
+        <source>Create a new patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="60"/>
+        <source>&lt;b&gt;New Patch&lt;/b&gt;&lt;p&gt;This creates a new named patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="67"/>
+        <source>Update Current Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="70"/>
+        <source>Update the current patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="73"/>
+        <source>&lt;b&gt;Update Current Patch&lt;/b&gt;&lt;p&gt;This updates the current patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="80"/>
+        <source>Update Current Patch (with Message)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="84"/>
+        <source>Update the current patch and edit commit message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="87"/>
+        <source>&lt;b&gt;Update Current Patch (with Message)&lt;/b&gt;&lt;p&gt;This updates the current patch after giving the chance to change the current commit message.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="96"/>
+        <source>Show Current Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="96"/>
+        <source>Show Current Patch...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="99"/>
+        <source>Show the contents the current patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="102"/>
+        <source>&lt;b&gt;Show Current Patch&lt;/b&gt;&lt;p&gt;This shows the contents of the current patch including any changes which have been made in the working directory since the last refresh.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="111"/>
+        <source>Show Current Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="111"/>
+        <source>Show Current Message...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="114"/>
+        <source>Show the commit message of the current patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="117"/>
+        <source>&lt;b&gt;Show Current Message&lt;/b&gt;&lt;p&gt;This shows the commit message of the current patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="124"/>
+        <source>List Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="124"/>
+        <source>List Patches...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="127"/>
+        <source>List applied and unapplied patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="137"/>
+        <source>Finish Applied Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="140"/>
+        <source>Finish applied patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="143"/>
+        <source>&lt;b&gt;Finish Applied Patches&lt;/b&gt;&lt;p&gt;This finishes the applied patches by moving them out of mq control into regular repository history.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="151"/>
+        <source>Rename Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="154"/>
+        <source>Rename a patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="157"/>
+        <source>&lt;b&gt;Rename Patch&lt;/b&gt;&lt;p&gt;This renames the current or a named patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="164"/>
+        <source>Delete Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="167"/>
+        <source>Delete unapplied patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="170"/>
+        <source>&lt;b&gt;Delete Patch&lt;/b&gt;&lt;p&gt;This deletes an unapplied patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="177"/>
+        <source>Fold Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="180"/>
+        <source>Fold unapplied patches into the current patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="183"/>
+        <source>&lt;b&gt;Fold Patches&lt;/b&gt;&lt;p&gt;This folds unapplied patches into the current patch.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="295"/>
+        <source>Push Next Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="200"/>
+        <source>Push the next patch onto the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="203"/>
+        <source>&lt;b&gt;Push Next Patch&lt;/b&gt;&lt;p&gt;This pushes the next patch onto the stack of applied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="309"/>
+        <source>Push All Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="213"/>
+        <source>Push all patches onto the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="216"/>
+        <source>&lt;b&gt;Push All Patches&lt;/b&gt;&lt;p&gt;This pushes all patches onto the stack of applied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="324"/>
+        <source>Push Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="226"/>
+        <source>Push patches onto the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="339"/>
+        <source>Pop Current Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="240"/>
+        <source>Pop the current patch off the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="243"/>
+        <source>&lt;b&gt;Pop Current Patch&lt;/b&gt;&lt;p&gt;This pops the current patch off the stack of applied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="353"/>
+        <source>Pop All Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="253"/>
+        <source>Pop all patches off the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="256"/>
+        <source>&lt;b&gt;Pop All Patches&lt;/b&gt;&lt;p&gt;This pops all patches off the stack of applied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="368"/>
+        <source>Pop Patches</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="266"/>
+        <source>Pop patches off the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="269"/>
+        <source>&lt;b&gt;Pop Patches&lt;/b&gt;&lt;p&gt;This pops patches off the stack of applied patches until a named patch is at the top of the stack.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="382"/>
+        <source>Go to Patch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="280"/>
+        <source>Push or pop patches until named patch is at top of stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="283"/>
+        <source>&lt;b&gt;Go to Patch&lt;/b&gt;&lt;p&gt;This pushes or pops patches until a named patch is at the top of the stack.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="298"/>
+        <source>Push the next patch onto the stack on top of local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="301"/>
+        <source>&lt;b&gt;Push Next Patch&lt;/b&gt;&lt;p&gt;This pushes the next patch onto the stack of applied patches on top of local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="312"/>
+        <source>Push all patches onto the stack on top of local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="315"/>
+        <source>&lt;b&gt;Push All Patches&lt;/b&gt;&lt;p&gt;This pushes all patches onto the stack of applied patches on top of local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="327"/>
+        <source>Push patches onto the stack on top of local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="330"/>
+        <source>&lt;b&gt;Push Patches&lt;/b&gt;&lt;p&gt;This pushes patches onto the stack  of applied patches until a named patch is at the top of the stack on top of local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="342"/>
+        <source>Pop the current patch off the stack forgetting local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="345"/>
+        <source>&lt;b&gt;Pop Current Patch&lt;/b&gt;&lt;p&gt;This pops the current patch off the stack of applied patches forgetting local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="356"/>
+        <source>Pop all patches off the stack forgetting local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="359"/>
+        <source>&lt;b&gt;Pop All Patches&lt;/b&gt;&lt;p&gt;This pops all patches off the stack of applied patches  forgetting local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="371"/>
+        <source>Pop patches off the stack forgetting local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="374"/>
+        <source>&lt;b&gt;Pop Patches&lt;/b&gt;&lt;p&gt;This pops patches off the stack of applied patches until a named patch is at the top of the stack forgetting local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="385"/>
+        <source>Push or pop patches until named patch is at top of stack overwriting any local changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="389"/>
+        <source>&lt;b&gt;Go to Patch&lt;/b&gt;&lt;p&gt;This pushes or pops patches until a named patch is at the top of the stack overwriting any local changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="404"/>
+        <source>Queues</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="406"/>
+        <source>Push/Pop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="417"/>
+        <source>Push/Pop (force)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="130"/>
+        <source>&lt;b&gt;List Patches&lt;/b&gt;&lt;p&gt;This lists all applied and unapplied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="229"/>
+        <source>&lt;b&gt;Push Patches&lt;/b&gt;&lt;p&gt;This pushes patches onto the stack of applied patches until a named patch is at the top of the stack.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -45888,17 +46651,17 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1548"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1550"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Etiquetas&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1556"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1558"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1563"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1565"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -45909,31 +46672,31 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 &lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1542"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1544"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Pista&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1544"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1546"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1560"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1562"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Padres&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1076"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1078"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Padre #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1092"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1094"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
@@ -45942,7 +46705,7 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de commit&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1116"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1118"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -45959,7 +46722,7 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 {2}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1552"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1554"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
