@@ -18,7 +18,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="nameLabel">
      <property name="text">
       <string>Name:</string>
      </property>
@@ -126,12 +126,12 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QDateEdit" name="dateEdit">
+       <widget class="QDateTimeEdit" name="dateTimeEdit">
         <property name="toolTip">
-         <string>Enter the date to be used for the patch</string>
+         <string>Enter the date and time to be used for the patch</string>
         </property>
         <property name="displayFormat">
-         <string notr="true">yyyy-MM-dd</string>
+         <string notr="true">yyyy-MM-dd hh:mm</string>
         </property>
         <property name="calendarPopup">
          <bool>true</bool>
@@ -171,7 +171,7 @@
   <tabstop>userEdit</tabstop>
   <tabstop>dateGroup</tabstop>
   <tabstop>currentDateCheckBox</tabstop>
-  <tabstop>dateEdit</tabstop>
+  <tabstop>dateTimeEdit</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
@@ -237,22 +237,6 @@
     <hint type="destinationlabel">
      <x>23</x>
      <y>204</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>currentDateCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dateEdit</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>55</x>
-     <y>269</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>82</x>
-     <y>294</y>
     </hint>
    </hints>
   </connection>

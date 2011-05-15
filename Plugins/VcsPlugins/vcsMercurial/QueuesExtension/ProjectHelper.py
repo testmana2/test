@@ -12,6 +12,8 @@ from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
 
+from .queues import Queues
+
 
 class QueuesProjectHelper(QObject):
     """
@@ -75,6 +77,22 @@ class QueuesProjectHelper(QObject):
         self.hgQueueRefreshAct.triggered[()].connect(self.__hgQueueRefreshPatch)
         self.actions.append(self.hgQueueRefreshAct)
         
+        self.hgQueueRefreshMessageAct = E5Action(
+                self.trUtf8('Update Current Patch (with Message)'),
+                self.trUtf8('Update Current Patch (with Message)'),
+                0, 0, self, 'mercurial_queues_refresh_message')
+        self.hgQueueRefreshMessageAct.setStatusTip(self.trUtf8(
+            'Update the current patch and edit commit message'
+        ))
+        self.hgQueueRefreshMessageAct.setWhatsThis(self.trUtf8(
+            """<b>Update Current Patch (with Message)</b>"""
+            """<p>This updates the current patch after giving the chance to change"""
+            """ the current commit message.</p>"""
+        ))
+        self.hgQueueRefreshMessageAct.triggered[()].connect(
+            self.__hgQueueRefreshPatchMessage)
+        self.actions.append(self.hgQueueRefreshMessageAct)
+        
         self.hgQueueDiffAct = E5Action(self.trUtf8('Show Current Patch'),
                 self.trUtf8('Show Current Patch...'),
                 0, 0, self, 'mercurial_queues_show')
@@ -89,6 +107,19 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueueDiffAct.triggered[()].connect(self.__hgQueueShowPatch)
         self.actions.append(self.hgQueueDiffAct)
+        
+        self.hgQueueHeaderAct = E5Action(self.trUtf8('Show Current Message'),
+                self.trUtf8('Show Current Message...'),
+                0, 0, self, 'mercurial_queues_show_message')
+        self.hgQueueHeaderAct.setStatusTip(self.trUtf8(
+            'Show the commit message of the current patch'
+        ))
+        self.hgQueueHeaderAct.setWhatsThis(self.trUtf8(
+            """<b>Show Current Message</b>"""
+            """<p>This shows the commit message of the current patch.</p>"""
+        ))
+        self.hgQueueHeaderAct.triggered[()].connect(self.__hgQueueShowHeader)
+        self.actions.append(self.hgQueueHeaderAct)
         
         self.hgQueueListAct = E5Action(self.trUtf8('List Patches'),
                 self.trUtf8('List Patches...'),
@@ -111,11 +142,50 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueueFinishAct.setWhatsThis(self.trUtf8(
             """<b>Finish Applied Patches</b>"""
-            """<p>This finishes the applied patches) by moving them out of"""
+            """<p>This finishes the applied patches by moving them out of"""
             """ mq control into regular repository history.</p>"""
         ))
         self.hgQueueFinishAct.triggered[()].connect(self.__hgQueueFinishAppliedPatches)
         self.actions.append(self.hgQueueFinishAct)
+        
+        self.hgQueueRenameAct = E5Action(self.trUtf8('Rename Patch'),
+                self.trUtf8('Rename Patch'),
+                0, 0, self, 'mercurial_queues_rename')
+        self.hgQueueRenameAct.setStatusTip(self.trUtf8(
+            'Rename a patch'
+        ))
+        self.hgQueueRenameAct.setWhatsThis(self.trUtf8(
+            """<b>Rename Patch</b>"""
+            """<p>This renames the current or a named patch.</p>"""
+        ))
+        self.hgQueueRenameAct.triggered[()].connect(self.__hgQueueRenamePatch)
+        self.actions.append(self.hgQueueRenameAct)
+        
+        self.hgQueueDeleteAct = E5Action(self.trUtf8('Delete Patch'),
+                self.trUtf8('Delete Patch'),
+                0, 0, self, 'mercurial_queues_delete')
+        self.hgQueueDeleteAct.setStatusTip(self.trUtf8(
+            'Delete unapplied patch'
+        ))
+        self.hgQueueDeleteAct.setWhatsThis(self.trUtf8(
+            """<b>Delete Patch</b>"""
+            """<p>This deletes an unapplied patch.</p>"""
+        ))
+        self.hgQueueDeleteAct.triggered[()].connect(self.__hgQueueDeletePatch)
+        self.actions.append(self.hgQueueDeleteAct)
+        
+        self.hgQueueFoldAct = E5Action(self.trUtf8('Fold Patches'),
+                self.trUtf8('Fold Patches'),
+                0, 0, self, 'mercurial_queues_fold')
+        self.hgQueueFoldAct.setStatusTip(self.trUtf8(
+            'Fold unapplied patches into the current patch'
+        ))
+        self.hgQueueFoldAct.setWhatsThis(self.trUtf8(
+            """<b>Fold Patches</b>"""
+            """<p>This folds unapplied patches into the current patch.</p>"""
+        ))
+        self.hgQueueFoldAct.triggered[()].connect(self.__hgQueueFoldUnappliedPatches)
+        self.actions.append(self.hgQueueFoldAct)
         
         self.__initPushPopActions()
         self.__initPushPopForceActions()
@@ -203,6 +273,20 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueuePopUntilAct.triggered[()].connect(self.__hgQueuePopPatches)
         self.actions.append(self.hgQueuePopUntilAct)
+        
+        self.hgQueueGotoAct = E5Action(self.trUtf8('Go to Patch'),
+                self.trUtf8('Go to Patch'),
+                0, 0, self, 'mercurial_queues_goto')
+        self.hgQueueGotoAct.setStatusTip(self.trUtf8(
+            'Push or pop patches until named patch is at top of stack'
+        ))
+        self.hgQueueGotoAct.setWhatsThis(self.trUtf8(
+            """<b>Go to Patch</b>"""
+            """<p>This pushes or pops patches until a named patch is at the"""
+            """ top of the stack.</p>"""
+        ))
+        self.hgQueueGotoAct.triggered[()].connect(self.__hgQueueGotoPatch)
+        self.actions.append(self.hgQueueGotoAct)
     
     def __initPushPopForceActions(self):
         """
@@ -294,6 +378,21 @@ class QueuesProjectHelper(QObject):
         ))
         self.hgQueuePopUntilForceAct.triggered[()].connect(self.__hgQueuePopPatchesForced)
         self.actions.append(self.hgQueuePopUntilForceAct)
+        
+        self.hgQueueGotoForceAct = E5Action(self.trUtf8('Go to Patch'),
+                self.trUtf8('Go to Patch'),
+                0, 0, self, 'mercurial_queues_goto_force')
+        self.hgQueueGotoForceAct.setStatusTip(self.trUtf8(
+            'Push or pop patches until named patch is at top of stack overwriting'
+            ' any local changes'
+        ))
+        self.hgQueueGotoForceAct.setWhatsThis(self.trUtf8(
+            """<b>Go to Patch</b>"""
+            """<p>This pushes or pops patches until a named patch is at the"""
+            """ top of the stack overwriting any local changes.</p>"""
+        ))
+        self.hgQueueGotoForceAct.triggered[()].connect(self.__hgQueueGotoPatchForced)
+        self.actions.append(self.hgQueueGotoForceAct)
     
     def initMenu(self, mainMenu):
         """
@@ -308,28 +407,41 @@ class QueuesProjectHelper(QObject):
         pushPopMenu.addAction(self.hgQueuePushAct)
         pushPopMenu.addAction(self.hgQueuePushUntilAct)
         pushPopMenu.addAction(self.hgQueuePushAllAct)
+        pushPopMenu.addSeparator()
         pushPopMenu.addAction(self.hgQueuePopAct)
         pushPopMenu.addAction(self.hgQueuePopUntilAct)
         pushPopMenu.addAction(self.hgQueuePopAllAct)
+        pushPopMenu.addSeparator()
+        pushPopMenu.addAction(self.hgQueueGotoAct)
         
         pushPopForceMenu = QMenu(self.trUtf8("Push/Pop (force)"), menu)
         pushPopForceMenu.addAction(self.hgQueuePushForceAct)
         pushPopForceMenu.addAction(self.hgQueuePushUntilForceAct)
         pushPopForceMenu.addAction(self.hgQueuePushAllForceAct)
+        pushPopForceMenu.addSeparator()
         pushPopForceMenu.addAction(self.hgQueuePopForceAct)
         pushPopForceMenu.addAction(self.hgQueuePopUntilForceAct)
         pushPopForceMenu.addAction(self.hgQueuePopAllForceAct)
+        pushPopForceMenu.addSeparator()
+        pushPopForceMenu.addAction(self.hgQueueGotoForceAct)
         
         menu.addAction(self.hgQueueNewAct)
         menu.addAction(self.hgQueueRefreshAct)
+        menu.addAction(self.hgQueueRefreshMessageAct)
         menu.addAction(self.hgQueueFinishAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueDiffAct)
+        menu.addAction(self.hgQueueHeaderAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueListAct)
         menu.addSeparator()
         menu.addMenu(pushPopMenu)
         menu.addMenu(pushPopForceMenu)
+        menu.addSeparator()
+        menu.addAction(self.hgQueueRenameAct)
+        menu.addAction(self.hgQueueDeleteAct)
+        menu.addSeparator()
+        menu.addAction(self.hgQueueFoldAct)
         
         return menu
     
@@ -347,6 +459,13 @@ class QueuesProjectHelper(QObject):
         self.vcs.getExtensionObject("mq")\
             .hgQueueRefreshPatch(self.project.getProjectPath())
     
+    def __hgQueueRefreshPatchMessage(self):
+        """
+        Private slot used to refresh the current patch and it's commit message. 
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueRefreshPatch(self.project.getProjectPath(), editMessage=True)
+    
     def __hgQueueShowPatch(self):
         """
         Private slot used to show the contents of the current patch. 
@@ -354,13 +473,20 @@ class QueuesProjectHelper(QObject):
         self.vcs.getExtensionObject("mq")\
             .hgQueueShowPatch(self.project.getProjectPath())
     
+    def __hgQueueShowHeader(self):
+        """
+        Private slot used to show the commit message of the current patch. 
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueShowHeader(self.project.getProjectPath())
+    
     def __hgQueuePushPatch(self):
         """
         Private slot used to push the next patch onto the stack. 
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=False, named=False)
+                operation=Queues.PUSH, all=False, named=False)
     
     def __hgQueuePushPatchForced(self):
         """
@@ -369,7 +495,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=False, named=False, force=True)
+                operation=Queues.PUSH, all=False, named=False, force=True)
     
     def __hgQueuePushAllPatches(self):
         """
@@ -377,7 +503,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=True, named=False)
+                operation=Queues.PUSH, all=True, named=False)
     
     def __hgQueuePushAllPatchesForced(self):
         """
@@ -386,7 +512,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=True, named=False, force=True)
+                operation=Queues.PUSH, all=True, named=False, force=True)
     
     def __hgQueuePushPatches(self):
         """
@@ -395,7 +521,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=False, named=True)
+                operation=Queues.PUSH, all=False, named=True)
     
     def __hgQueuePushPatchesForced(self):
         """
@@ -404,7 +530,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=False, all=False, named=True, force=True)
+                operation=Queues.PUSH, all=False, named=True, force=True)
     
     def __hgQueuePopPatch(self):
         """
@@ -412,7 +538,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=False, named=False)
+                operation=Queues.POP, all=False, named=False)
     
     def __hgQueuePopPatchForced(self):
         """
@@ -421,7 +547,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=False, named=False)
+                operation=Queues.POP, all=False, named=False, force=True)
     
     def __hgQueuePopAllPatches(self):
         """
@@ -429,7 +555,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=True, named=False)
+                operation=Queues.POP, all=True, named=False)
     
     def __hgQueuePopAllPatchesForced(self):
         """
@@ -438,7 +564,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=True, named=False, force=True)
+                operation=Queues.POP, all=True, named=False, force=True)
     
     def __hgQueuePopPatches(self):
         """
@@ -447,7 +573,7 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=False, named=True)
+                operation=Queues.POP, all=False, named=True)
     
     def __hgQueuePopPatchesForced(self):
         """
@@ -456,18 +582,57 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueuePushPopPatches(self.project.getProjectPath(), 
-                pop=True, all=False, named=True)
+                operation=Queues.POP, all=False, named=True, force=True)
+    
+    def __hgQueueGotoPatch(self):
+        """
+        Private slot used to push or pop patches until the a named one
+        is at the top of the stack.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueuePushPopPatches(self.project.getProjectPath(), 
+                operation=Queues.GOTO, all=False, named=True)
+    
+    def __hgQueueGotoPatchForced(self):
+        """
+        Private slot used to push or pop patches until the a named one
+        is at the top of the stack overwriting local changes.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueuePushPopPatches(self.project.getProjectPath(), 
+                operation=Queues.GOTO, all=False, named=True, force=True)
     
     def __hgQueueListPatches(self):
         """
-        Private slot used to show a list of applied and unapplied patches. 
+        Private slot used to show a list of applied and unapplied patches.
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueListPatches(self.project.getProjectPath())
     
     def __hgQueueFinishAppliedPatches(self):
         """
-        Private slot used to finish all applied patches. 
+        Private slot used to finish all applied patches.
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueFinishAppliedPatches(self.project.getProjectPath())
+    
+    def __hgQueueRenamePatch(self):
+        """
+        Private slot used to rename a patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueRenamePatch(self.project.getProjectPath())
+    
+    def __hgQueueDeletePatch(self):
+        """
+        Private slot used to delete a patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueDeletePatch(self.project.getProjectPath())
+    
+    def __hgQueueFoldUnappliedPatches(self):
+        """
+        Private slot used to fold patches into the current patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueFoldUnappliedPatches(self.project.getProjectPath())

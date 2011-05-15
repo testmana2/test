@@ -7,7 +7,7 @@
 Module implementing a dialog to get the data for a new patch.
 """
 
-from PyQt4.QtCore import pyqtSlot, QDate
+from PyQt4.QtCore import pyqtSlot, QDateTime
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgQueuesNewPatchDialog import Ui_HgQueuesNewPatchDialog
@@ -17,25 +17,47 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
     """
     Class implementing a dialog to get the data for a new patch.
     """
-    def __init__(self, parent=None):
+    NEW_MODE = 0
+    REFRESH_MODE = 1
+    
+    def __init__(self, mode, message="", parent=None):
         """
         Constructor
         
+        @param mode mode of the dialog (HgQueuesNewPatchDialog.NEW_MODE,
+            HgQueuesNewPatchDialog.REFRESH_MODE)
+        @param message text to set as the commit message (string)
         @param parent reference to the parent widget (QWidget)
         """
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        self.dateEdit.setDate(QDate.currentDate())
+        self.__mode = mode
+        if self.__mode == HgQueuesNewPatchDialog.REFRESH_MODE:
+            self.nameLabel.hide()
+            self.nameEdit.hide()
+        elif self.__mode == HgQueuesNewPatchDialog.NEW_MODE:
+            # nothing special here
+            pass
+        else:
+            raise ValueError("invalid value for mode")
         
-        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        if message:
+            self.messageEdit.setPlainText(message)
+        
+        self.dateTimeEdit.setDateTime(QDateTime.currentDateTime())
+        
+        self.__updateUI()
     
     def __updateUI(self):
         """
         Private slot to update the UI.
         """
-        enable = self.nameEdit.text() != "" and \
-                 self.messageEdit.toPlainText() != ""
+        if self.__mode == HgQueuesNewPatchDialog.REFRESH_MODE:
+            enable = self.messageEdit.toPlainText() != ""
+        else:
+            enable = self.nameEdit.text() != "" and \
+                     self.messageEdit.toPlainText() != ""
         if self.userGroup.isChecked():
             enable = enable and \
                 (self.currentUserCheckBox.isChecked() or \
@@ -61,6 +83,33 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
         """
         self.__updateUI()
     
+    @pyqtSlot(bool)
+    def on_userGroup_toggled(self, checked):
+        """
+        Private slot to handle changes of the user group state.
+        
+        @param checked flag giving the checked state (boolean)
+        """
+        self.__updateUI()
+    
+    @pyqtSlot(bool)
+    def on_currentUserCheckBox_toggled(self, checked):
+        """
+        Private slot to handle changes of the currentuser state.
+        
+        @param checked flag giving the checked state (boolean)
+        """
+        self.__updateUI()
+    
+    @pyqtSlot(str)
+    def on_userEdit_textChanged(self, txt):
+        """
+        Private slot to handle changes of the user name.
+        
+        @param txt text of the edit (string)
+        """
+        self.__updateUI()
+    
     def getData(self):
         """
         Public method to retrieve the entered data.
@@ -77,6 +126,6 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
                     self.userEdit.text())
         dateData = (self.dateGroup.isChecked(), 
                     self.currentDateCheckBox.isChecked(), 
-                    self.dateEdit.date().toString("yyyy-MM-dd"))
+                    self.dateTimeEdit.dateTime().toString("yyyy-MM-dd hh:mm"))
         return (self.nameEdit.text(), self.messageEdit.toPlainText(), 
             userData, dateData)
