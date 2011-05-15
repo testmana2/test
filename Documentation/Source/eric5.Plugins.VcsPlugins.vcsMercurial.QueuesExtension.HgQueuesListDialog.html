@@ -132,7 +132,7 @@ parent widget (QWidget)
         Private slot called when the process finished or the user pressed the button.
 </p><a NAME="HgQueuesListDialog.__generateItem" ID="HgQueuesListDialog.__generateItem"></a>
 <h4>HgQueuesListDialog.__generateItem</h4>
-<b>__generateItem</b>(<i>name, summary</i>)
+<b>__generateItem</b>(<i>name, summary, error=False</i>)
 <p>
         Private method to generate a patch item in the list of patches.
 </p><dl>
@@ -142,6 +142,9 @@ name of the patch (string)
 </dd><dt><i>summary</i></dt>
 <dd>
 first line of the patch header (string)
+</dd><dt><i>error</i></dt>
+<dd>
+flag indicating an error entry (boolean)
 </dd>
 </dl><a NAME="HgQueuesListDialog.__getApplied" ID="HgQueuesListDialog.__getApplied"></a>
 <h4>HgQueuesListDialog.__getApplied</h4>

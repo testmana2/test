@@ -189,7 +189,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         
         if self.patchesList.topLevelItemCount() == 0:
             # no bookmarks defined
-            self.__generateItem(self.trUtf8("no patches found"), "")
+            self.__generateItem(self.trUtf8("no patches found"), "", True)
         self.patchesList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
@@ -233,22 +233,31 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.patchesList.header().resizeSections(QHeaderView.ResizeToContents)
         self.patchesList.header().setStretchLastSection(True)
     
-    def __generateItem(self, name, summary):
+    def __generateItem(self, name, summary, error=False):
         """
         Private method to generate a patch item in the list of patches.
         
         @param name name of the patch (string)
-        @param summary first line of the patch header (string) 
+        @param summary first line of the patch header (string)
+        @param error flag indicating an error entry (boolean)
         """
-        self.__patchesCount += 1
-        itm = QTreeWidgetItem(self.patchesList, [
-            "{0:>7}".format(self.__patchesCount),
-            name,
-            self.__mode == "qapplied" and \
-                self.trUtf8("applied") or \
-                self.trUtf8("not applied"),
-            summary
-        ])
+        if error:
+            itm = QTreeWidgetItem(self.patchesList, [
+                "",
+                name,
+                "",
+                summary
+            ])
+        else:
+            self.__patchesCount += 1
+            itm = QTreeWidgetItem(self.patchesList, [
+                "{0:>7}".format(self.__patchesCount),
+                name,
+                self.__mode == "qapplied" and \
+                    self.trUtf8("applied") or \
+                    self.trUtf8("not applied"),
+                summary
+            ])
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignHCenter)
     
