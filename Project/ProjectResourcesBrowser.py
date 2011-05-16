@@ -380,7 +380,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             try:
                 path = os.path.dirname(itm.fileName())
             except AttributeError:
-                path = os.path.join(self.project.ppath, itm.data(0))
+                try:
+                    path = itm.dirName()
+                except AttributeError:
+                    path = os.path.join(self.project.ppath, itm.data(0))
         
         if self.hooks["newResource"] is not None:
             self.hooks["newResource"](path)
