@@ -1948,7 +1948,7 @@ class DebugUI(QObject):
                             curr, True)
 
         if ok:
-            if arg.isNull():
+            if not arg:
                 return
 
             # This moves any previous occurrence of this expression to the head
@@ -1977,7 +1977,7 @@ class DebugUI(QObject):
                             curr, True)
 
         if ok:
-            if stmt.isNull():
+            if not stmt:
                 return
 
             # This moves any previous occurrence of this statement to the head
