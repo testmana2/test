@@ -2065,23 +2065,18 @@ class Project(QObject):
                                 "(use '%language%' in place of the language code):"),
                     QLineEdit.Normal, 
                     tslist[0])
-                if not pattern.isEmpty:
+                if pattern:
                     self.pdata["TRANSLATIONPATTERN"] = [pattern]
-            self.pdata["TRANSLATIONPATTERN"][0] = \
-                self.getRelativePath(self.pdata["TRANSLATIONPATTERN"][0])
-            pattern = self.pdata["TRANSLATIONPATTERN"][0].replace("%language%", "*")
-            for ts in tslist:
-                if fnmatch.fnmatch(ts, pattern):
-                    self.pdata["TRANSLATIONS"].append(ts)
-                    self.projectLanguageAdded.emit(ts)
-            if len(self.pdata["MAINSCRIPT"]) == 0 or \
-               len(self.pdata["MAINSCRIPT"][0]) == 0:
-                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
-                    self.pdata["MAINSCRIPT"] = ['{0}.py'.format(mainscriptname)]
-                elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
-                    self.pdata["MAINSCRIPT"] = ['{0}.rb'.format(mainscriptname)]
+            if self.pdata["TRANSLATIONPATTERN"]:
+                self.pdata["TRANSLATIONPATTERN"][0] = \
+                    self.getRelativePath(self.pdata["TRANSLATIONPATTERN"][0])
+                pattern = self.pdata["TRANSLATIONPATTERN"][0].replace("%language%", "*")
+                for ts in tslist:
+                    if fnmatch.fnmatch(ts, pattern):
+                        self.pdata["TRANSLATIONS"].append(ts)
+                        self.projectLanguageAdded.emit(ts)
             if self.pdata["TRANSLATIONSBINPATH"]:
-                tpd = os.path.join(self.ppath, 
+                tpd = os.path.join(self.ppath,
                                    self.pdata["TRANSLATIONSBINPATH"][0])
                 pattern = os.path.splitext(
                     os.path.basename(self.pdata["TRANSLATIONPATTERN"][0]))
@@ -2090,6 +2085,12 @@ class Project(QObject):
                 for qm in qmlist:
                     self.pdata["TRANSLATIONS"].append(qm)
                     self.projectLanguageAdded.emit(qm)
+            if len(self.pdata["MAINSCRIPT"]) == 0 or \
+               len(self.pdata["MAINSCRIPT"][0]) == 0:
+                if self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
+                    self.pdata["MAINSCRIPT"] = ['{0}.py'.format(mainscriptname)]
+                elif self.pdata["PROGLANGUAGE"][0] == "Ruby":
+                    self.pdata["MAINSCRIPT"] = ['{0}.rb'.format(mainscriptname)]
         self.setDirty(True)
         QApplication.restoreOverrideCursor()
     
