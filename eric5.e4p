@@ -891,6 +891,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListGuardsDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1139,6 +1142,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListGuardsDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

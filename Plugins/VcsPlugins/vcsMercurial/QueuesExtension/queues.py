@@ -21,6 +21,9 @@ from .HgQueuesListDialog import HgQueuesListDialog
 from .HgQueuesRenamePatchDialog import HgQueuesRenamePatchDialog
 from .HgQueuesFoldDialog import HgQueuesFoldDialog
 from .HgQueuesHeaderDialog import HgQueuesHeaderDialog
+from .HgQueuesListGuardsDialog import HgQueuesListGuardsDialog
+from .HgQueuesListAllGuardsDialog import HgQueuesListAllGuardsDialog
+from .HgQueuesDefineGuardsDialog import HgQueuesDefineGuardsDialog
 
 import Preferences
 
@@ -47,6 +50,10 @@ class Queues(QObject):
         
         self.qdiffDialog = None
         self.qheaderDialog = None
+        self.queuesListDialog = None
+        self.queuesListGuardsDialog = None
+        self.queuesListAllGuardsDialog = None
+        self.queuesDefineGuardsDialog = None
     
     def shutdown(self):
         """
@@ -56,6 +63,14 @@ class Queues(QObject):
             self.qdiffDialog.close()
         if self.qheaderDialog is not None:
             self.qheaderDialog.close()
+        if self.queuesListDialog is not None:
+            self.queuesListDialog.close()
+        if self.queuesListGuardsDialog is not None:
+            self.queuesListGuardsDialog.close()
+        if self.queuesListAllGuardsDialog is not None:
+            self.queuesListAllGuardsDialog.close()
+        if self.queuesDefineGuardsDialog is not None:
+            self.queuesDefineGuardsDialog.close()
     
     def __getPatchesList(self, repodir, listType, withSummary=False):
         """
@@ -471,3 +486,103 @@ class Queues(QObject):
             E5MessageBox.information(None,
                 self.trUtf8("Fold Patches"),
                 self.trUtf8("""No patches available to be folded."""))
+    
+    def hgQueueGuardsList(self, name):
+        """
+        Public method to list the guards for the current or a named patch.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        patchnames = sorted(
+            self.__getPatchesList(repodir, Queues.SERIES_LIST))
+        if patchnames:
+            self.queuesListGuardsDialog = HgQueuesListGuardsDialog(self.vcs, patchnames)
+            self.queuesListGuardsDialog.show()
+            self.queuesListGuardsDialog.start(name)
+        else:
+            E5MessageBox.information(None,
+                self.trUtf8("List Guards"),
+                self.trUtf8("""No patches available to list guards for."""))
+    
+    def hgQueueGuardsListAll(self, name):
+        """
+        Public method to list all guards of all patches.
+        
+        @param name file/directory name (string)
+        """
+        self.queuesListAllGuardsDialog = HgQueuesListAllGuardsDialog(self.vcs)
+        self.queuesListAllGuardsDialog.show()
+        self.queuesListAllGuardsDialog.start(name)
+    
+    def hgQueueGuardsDefine(self, name):
+        """
+        Public method to define guards for the current or a named patch.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        patchnames = sorted(
+            self.__getPatchesList(repodir, Queues.SERIES_LIST))
+        if patchnames:
+            self.queuesDefineGuardsDialog = HgQueuesDefineGuardsDialog(
+                self.vcs, patchnames)
+            self.queuesDefineGuardsDialog.show()
+            self.queuesDefineGuardsDialog.start(name)
+        else:
+            E5MessageBox.information(None,
+                self.trUtf8("Define Guards"),
+                self.trUtf8("""No patches available to define guards for."""))
+    
+    def hgQueueGuardsDropAll(self, name):
+        """
+        Public method to drop all guards of the current or a named patch.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        patchnames = sorted(
+            self.__getPatchesList(repodir, Queues.SERIES_LIST))
+        if patchnames:
+            patch, ok = QInputDialog.getItem(
+                None,
+                self.trUtf8("Drop All Guards"),
+                self.trUtf8("Select the patch to drop guards for"
+                            " (leave empty for the current patch):"),
+                [""] + patchnames,
+                0, False)
+            if ok:
+                process = QProcess()
+                args = []
+                args.append("qguard")
+                if patch:
+                    args.append(patch)
+                args.append("--none")
+                
+                process.setWorkingDirectory(repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    process.waitForFinished(30000)
+        else:
+            E5MessageBox.information(None,
+                self.trUtf8("Drop All Guards"),
+                self.trUtf8("""No patches available to define guards for."""))

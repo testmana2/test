@@ -189,6 +189,7 @@ class QueuesProjectHelper(QObject):
         
         self.__initPushPopActions()
         self.__initPushPopForceActions()
+        self.__initGuardsActions()
     
     def __initPushPopActions(self):
         """
@@ -394,6 +395,107 @@ class QueuesProjectHelper(QObject):
         self.hgQueueGotoForceAct.triggered[()].connect(self.__hgQueueGotoPatchForced)
         self.actions.append(self.hgQueueGotoForceAct)
     
+    
+    def __initGuardsActions(self):
+        """
+        Public method to generate the guards action objects.
+        """
+        self.hgQueueDefineGuardsAct = E5Action(self.trUtf8('Define Guards'),
+                self.trUtf8('Define Guards...'),
+                0, 0, self, 'mercurial_queues_guards_define')
+        self.hgQueueDefineGuardsAct.setStatusTip(self.trUtf8(
+            'Define guards for the current or a named patch'
+        ))
+        self.hgQueueDefineGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>Define Guards</b>"""
+            """<p>This opens a dialog to define guards for the current"""
+            """ or a named patch.</p>"""
+        ))
+        self.hgQueueDefineGuardsAct.triggered[()].connect(self.__hgQueueGuardsDefine)
+        self.actions.append(self.hgQueueDefineGuardsAct)
+        
+        self.hgQueueDropAllGuardsAct = E5Action(self.trUtf8('Drop All Guards'),
+                self.trUtf8('Drop All Guards...'),
+                0, 0, self, 'mercurial_queues_guards_drop_all')
+        self.hgQueueDropAllGuardsAct.setStatusTip(self.trUtf8(
+            'Drop all guards of the current or a named patch'
+        ))
+        self.hgQueueDropAllGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>Drop All Guards</b>"""
+            """<p>This drops all guards of the current or a named patch.</p>"""
+        ))
+        self.hgQueueDropAllGuardsAct.triggered[()].connect(self.__hgQueueGuardsDropAll)
+        self.actions.append(self.hgQueueDropAllGuardsAct)
+        
+        self.hgQueueListGuardsAct = E5Action(self.trUtf8('List Guards'),
+                self.trUtf8('List Guards...'),
+                0, 0, self, 'mercurial_queues_guards_list')
+        self.hgQueueListGuardsAct.setStatusTip(self.trUtf8(
+            'List guards of the current or a named patch'
+        ))
+        self.hgQueueListGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>List Guards</b>"""
+            """<p>This lists the guards of the current or a named patch.</p>"""
+        ))
+        self.hgQueueListGuardsAct.triggered[()].connect(self.__hgQueueGuardsList)
+        self.actions.append(self.hgQueueListGuardsAct)
+        
+        self.hgQueueListAllGuardsAct = E5Action(self.trUtf8('List All Guards'),
+                self.trUtf8('List All Guards...'),
+                0, 0, self, 'mercurial_queues_guards_list_all')
+        self.hgQueueListAllGuardsAct.setStatusTip(self.trUtf8(
+            'List all guards of all patches'
+        ))
+        self.hgQueueListAllGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>List All Guards</b>"""
+            """<p>This lists all guards of all patches.</p>"""
+        ))
+        self.hgQueueListAllGuardsAct.triggered[()].connect(self.__hgQueueGuardsListAll)
+        self.actions.append(self.hgQueueListAllGuardsAct)
+        
+        self.hgQueueActivateGuardsAct = E5Action(self.trUtf8('Set Active Guards'),
+                self.trUtf8('Set Active Guards...'),
+                0, 0, self, 'mercurial_queues_guards_set_active')
+        self.hgQueueActivateGuardsAct.setStatusTip(self.trUtf8(
+            'Set the list of active guards'
+        ))
+        self.hgQueueActivateGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>Set Active Guards</b>"""
+            """<p>This opens a dialog to set the active guards.</p>"""
+        ))
+        self.hgQueueActivateGuardsAct.triggered[()].connect(self.__hgQueueGuardsSetActive)
+        self.actions.append(self.hgQueueActivateGuardsAct)
+        
+        self.hgQueueDeactivateGuardsAct = E5Action(self.trUtf8('Deactivate Guards'),
+                self.trUtf8('Deactivate Guards...'),
+                0, 0, self, 'mercurial_queues_guards_deactivate')
+        self.hgQueueDeactivateGuardsAct.setStatusTip(self.trUtf8(
+            'Deactivate all active guards'
+        ))
+        self.hgQueueDeactivateGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>Deactivate Guards</b>"""
+            """<p>This deactivates all active guards.</p>"""
+        ))
+        self.hgQueueDeactivateGuardsAct.triggered[()].connect(
+            self.__hgQueueGuardsDeactivate)
+        self.actions.append(self.hgQueueDeactivateGuardsAct)
+        
+        self.hgQueueIdentifyActiveGuardsAct = E5Action(
+                self.trUtf8('Identify Active Guards'),
+                self.trUtf8('Identify Active Guards...'),
+                0, 0, self, 'mercurial_queues_guards_identify_active')
+        self.hgQueueIdentifyActiveGuardsAct.setStatusTip(self.trUtf8(
+            'Show a list of active guards and affected patches'
+        ))
+        self.hgQueueIdentifyActiveGuardsAct.setWhatsThis(self.trUtf8(
+            """<b>Identify Active Guards</b>"""
+            """<p>This opens a dialog show a list of active guards and the"""
+            """ patches directly affected by them.</p>"""
+        ))
+        self.hgQueueIdentifyActiveGuardsAct.triggered[()].connect(
+            self.__hgQueueGuardsIdentifyActive)
+        self.actions.append(self.hgQueueIdentifyActiveGuardsAct)
+    
     def initMenu(self, mainMenu):
         """
         Public method to generate the VCS menu.
@@ -425,6 +527,18 @@ class QueuesProjectHelper(QObject):
         pushPopForceMenu.addSeparator()
         pushPopForceMenu.addAction(self.hgQueueGotoForceAct)
         
+        guardsMenu = QMenu(self.trUtf8("Guards"), menu)
+        guardsMenu.addAction(self.hgQueueDefineGuardsAct)
+        guardsMenu.addAction(self.hgQueueDropAllGuardsAct)
+        guardsMenu.addSeparator()
+        guardsMenu.addAction(self.hgQueueListGuardsAct)
+        guardsMenu.addAction(self.hgQueueListAllGuardsAct)
+        guardsMenu.addSeparator()
+        guardsMenu.addAction(self.hgQueueActivateGuardsAct)
+        guardsMenu.addAction(self.hgQueueDeactivateGuardsAct)
+        guardsMenu.addSeparator()
+        guardsMenu.addAction(self.hgQueueIdentifyActiveGuardsAct)
+        
         menu.addAction(self.hgQueueNewAct)
         menu.addAction(self.hgQueueRefreshAct)
         menu.addAction(self.hgQueueRefreshMessageAct)
@@ -442,6 +556,8 @@ class QueuesProjectHelper(QObject):
         menu.addAction(self.hgQueueDeleteAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueFoldAct)
+        menu.addSeparator()
+        menu.addMenu(guardsMenu)
         
         return menu
     
@@ -636,3 +752,49 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueFoldUnappliedPatches(self.project.getProjectPath())
+    
+    def __hgQueueGuardsDefine(self):
+        """
+        Private slot used to define guards for the current or a named patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsDefine(self.project.getProjectPath())
+    
+    def __hgQueueGuardsDropAll(self):
+        """
+        Private slot used to drop all guards of the current or a named patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsDropAll(self.project.getProjectPath())
+    
+    def __hgQueueGuardsList(self):
+        """
+        Private slot used to list the guards for the current or a named patch.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsList(self.project.getProjectPath())
+    
+    def __hgQueueGuardsListAll(self):
+        """
+        Private slot used to list all guards of all patches.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsListAll(self.project.getProjectPath())
+    
+    def __hgQueueGuardsSetActive(self):
+        """
+        Private slot used to set the active guards.
+        """
+        pass
+    
+    def __hgQueueGuardsDeactivate(self):
+        """
+        Private slot used to deactivate all active guards.
+        """
+        pass
+    
+    def __hgQueueGuardsIdentifyActive(self):
+        """
+        Private slot used to list all active guards and their patches.
+        """
+        pass
