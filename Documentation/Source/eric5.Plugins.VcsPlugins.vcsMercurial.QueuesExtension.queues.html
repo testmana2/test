@@ -66,6 +66,9 @@ QObject
 <td><a href="#Queues.__getPatchesList">__getPatchesList</a></td>
 <td>Public method to get a list of patches of a given type.</td>
 </tr><tr>
+<td><a href="#Queues.getGuardsList">getGuardsList</a></td>
+<td>Public method to get a list of all guards defined.</td>
+</tr><tr>
 <td><a href="#Queues.hgQueueDeletePatch">hgQueueDeletePatch</a></td>
 <td>Public method to delete a selected unapplied patch.</td>
 </tr><tr>
@@ -74,6 +77,27 @@ QObject
 </tr><tr>
 <td><a href="#Queues.hgQueueFoldUnappliedPatches">hgQueueFoldUnappliedPatches</a></td>
 <td>Public method to fold patches into the current patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsDeactivate">hgQueueGuardsDeactivate</a></td>
+<td>Public method to deactivate all active guards.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsDefine">hgQueueGuardsDefine</a></td>
+<td>Public method to define guards for the current or a named patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsDropAll">hgQueueGuardsDropAll</a></td>
+<td>Public method to drop all guards of the current or a named patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsIdentifyActive">hgQueueGuardsIdentifyActive</a></td>
+<td>Public method to list all active guards.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsList">hgQueueGuardsList</a></td>
+<td>Public method to list the guards for the current or a named patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsListAll">hgQueueGuardsListAll</a></td>
+<td>Public method to list all guards of all patches.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueGuardsSetActive">hgQueueGuardsSetActive</a></td>
+<td>Public method to set the active guards.</td>
 </tr><tr>
 <td><a href="#Queues.hgQueueListPatches">hgQueueListPatches</a></td>
 <td>Public method to show a list of all patches.</td>
@@ -157,6 +181,24 @@ flag indicating to get a summary as well (boolean)
 <dd>
 list of patches (list of string)
 </dd>
+</dl><a NAME="Queues.getGuardsList" ID="Queues.getGuardsList"></a>
+<h4>Queues.getGuardsList</h4>
+<b>getGuardsList</b>(<i>repodir, all=True</i>)
+<p>
+        Public method to get a list of all guards defined.
+</p><dl>
+<dt><i>repodir</i></dt>
+<dd>
+directory name of the repository (string)
+</dd><dt><i>all</i></dt>
+<dd>
+flag indicating to get all guards (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+sorted list of guards (list of strings)
+</dd>
 </dl><a NAME="Queues.hgQueueDeletePatch" ID="Queues.hgQueueDeletePatch"></a>
 <h4>Queues.hgQueueDeletePatch</h4>
 <b>hgQueueDeletePatch</b>(<i>name</i>)
@@ -182,6 +224,76 @@ file/directory name (string)
 <b>hgQueueFoldUnappliedPatches</b>(<i>name</i>)
 <p>
         Public method to fold patches into the current patch.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsDeactivate" ID="Queues.hgQueueGuardsDeactivate"></a>
+<h4>Queues.hgQueueGuardsDeactivate</h4>
+<b>hgQueueGuardsDeactivate</b>(<i>name</i>)
+<p>
+        Public method to deactivate all active guards.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsDefine" ID="Queues.hgQueueGuardsDefine"></a>
+<h4>Queues.hgQueueGuardsDefine</h4>
+<b>hgQueueGuardsDefine</b>(<i>name</i>)
+<p>
+        Public method to define guards for the current or a named patch.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsDropAll" ID="Queues.hgQueueGuardsDropAll"></a>
+<h4>Queues.hgQueueGuardsDropAll</h4>
+<b>hgQueueGuardsDropAll</b>(<i>name</i>)
+<p>
+        Public method to drop all guards of the current or a named patch.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsIdentifyActive" ID="Queues.hgQueueGuardsIdentifyActive"></a>
+<h4>Queues.hgQueueGuardsIdentifyActive</h4>
+<b>hgQueueGuardsIdentifyActive</b>(<i>name</i>)
+<p>
+        Public method to list all active guards.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsList" ID="Queues.hgQueueGuardsList"></a>
+<h4>Queues.hgQueueGuardsList</h4>
+<b>hgQueueGuardsList</b>(<i>name</i>)
+<p>
+        Public method to list the guards for the current or a named patch.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsListAll" ID="Queues.hgQueueGuardsListAll"></a>
+<h4>Queues.hgQueueGuardsListAll</h4>
+<b>hgQueueGuardsListAll</b>(<i>name</i>)
+<p>
+        Public method to list all guards of all patches.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueGuardsSetActive" ID="Queues.hgQueueGuardsSetActive"></a>
+<h4>Queues.hgQueueGuardsSetActive</h4>
+<b>hgQueueGuardsSetActive</b>(<i>name</i>)
+<p>
+        Public method to set the active guards.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>

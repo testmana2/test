@@ -72,6 +72,27 @@ QObject
 <td><a href="#QueuesProjectHelper.__hgQueueGotoPatchForced">__hgQueueGotoPatchForced</a></td>
 <td>Private slot used to push or pop patches until the a named one is at the top of the stack overwriting local changes.</td>
 </tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsDeactivate">__hgQueueGuardsDeactivate</a></td>
+<td>Private slot used to deactivate all active guards.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsDefine">__hgQueueGuardsDefine</a></td>
+<td>Private slot used to define guards for the current or a named patch.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsDropAll">__hgQueueGuardsDropAll</a></td>
+<td>Private slot used to drop all guards of the current or a named patch.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsIdentifyActive">__hgQueueGuardsIdentifyActive</a></td>
+<td>Private slot used to list all active guards.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsList">__hgQueueGuardsList</a></td>
+<td>Private slot used to list the guards for the current or a named patch.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsListAll">__hgQueueGuardsListAll</a></td>
+<td>Private slot used to list all guards of all patches.</td>
+</tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueueGuardsSetActive">__hgQueueGuardsSetActive</a></td>
+<td>Private slot used to set the active guards.</td>
+</tr><tr>
 <td><a href="#QueuesProjectHelper.__hgQueueListPatches">__hgQueueListPatches</a></td>
 <td>Private slot used to show a list of applied and unapplied patches.</td>
 </tr><tr>
@@ -129,6 +150,9 @@ QObject
 <td><a href="#QueuesProjectHelper.__hgQueueShowPatch">__hgQueueShowPatch</a></td>
 <td>Private slot used to show the contents of the current patch.</td>
 </tr><tr>
+<td><a href="#QueuesProjectHelper.__initGuardsActions">__initGuardsActions</a></td>
+<td>Public method to generate the guards action objects.</td>
+</tr><tr>
 <td><a href="#QueuesProjectHelper.__initPushPopActions">__initPushPopActions</a></td>
 <td>Public method to generate the push and pop action objects.</td>
 </tr><tr>
@@ -180,6 +204,41 @@ QObject
 <p>
         Private slot used to push or pop patches until the a named one
         is at the top of the stack overwriting local changes.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsDeactivate" ID="QueuesProjectHelper.__hgQueueGuardsDeactivate"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsDeactivate</h4>
+<b>__hgQueueGuardsDeactivate</b>(<i></i>)
+<p>
+        Private slot used to deactivate all active guards.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsDefine" ID="QueuesProjectHelper.__hgQueueGuardsDefine"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsDefine</h4>
+<b>__hgQueueGuardsDefine</b>(<i></i>)
+<p>
+        Private slot used to define guards for the current or a named patch.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsDropAll" ID="QueuesProjectHelper.__hgQueueGuardsDropAll"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsDropAll</h4>
+<b>__hgQueueGuardsDropAll</b>(<i></i>)
+<p>
+        Private slot used to drop all guards of the current or a named patch.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsIdentifyActive" ID="QueuesProjectHelper.__hgQueueGuardsIdentifyActive"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsIdentifyActive</h4>
+<b>__hgQueueGuardsIdentifyActive</b>(<i></i>)
+<p>
+        Private slot used to list all active guards.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsList" ID="QueuesProjectHelper.__hgQueueGuardsList"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsList</h4>
+<b>__hgQueueGuardsList</b>(<i></i>)
+<p>
+        Private slot used to list the guards for the current or a named patch.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsListAll" ID="QueuesProjectHelper.__hgQueueGuardsListAll"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsListAll</h4>
+<b>__hgQueueGuardsListAll</b>(<i></i>)
+<p>
+        Private slot used to list all guards of all patches.
+</p><a NAME="QueuesProjectHelper.__hgQueueGuardsSetActive" ID="QueuesProjectHelper.__hgQueueGuardsSetActive"></a>
+<h4>QueuesProjectHelper.__hgQueueGuardsSetActive</h4>
+<b>__hgQueueGuardsSetActive</b>(<i></i>)
+<p>
+        Private slot used to set the active guards.
 </p><a NAME="QueuesProjectHelper.__hgQueueListPatches" ID="QueuesProjectHelper.__hgQueueListPatches"></a>
 <h4>QueuesProjectHelper.__hgQueueListPatches</h4>
 <b>__hgQueueListPatches</b>(<i></i>)
@@ -283,6 +342,11 @@ QObject
 <b>__hgQueueShowPatch</b>(<i></i>)
 <p>
         Private slot used to show the contents of the current patch. 
+</p><a NAME="QueuesProjectHelper.__initGuardsActions" ID="QueuesProjectHelper.__initGuardsActions"></a>
+<h4>QueuesProjectHelper.__initGuardsActions</h4>
+<b>__initGuardsActions</b>(<i></i>)
+<p>
+        Public method to generate the guards action objects.
 </p><a NAME="QueuesProjectHelper.__initPushPopActions" ID="QueuesProjectHelper.__initPushPopActions"></a>
 <h4>QueuesProjectHelper.__initPushPopActions</h4>
 <b>__initPushPopActions</b>(<i></i>)
