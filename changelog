@@ -2,7 +2,8 @@ Change Log
 ----------
 Version 5.2-snapshot-2011mmdd:
 - bug fixes
-- added support for bookmarks to the Mercurial interface
+- added support for the Mercurial bookmarks extension
+- added support for the Mercurial queues extension
 - added function to test the login data to the Email config page
 
 Version 5.2-snapshot-20110501:
