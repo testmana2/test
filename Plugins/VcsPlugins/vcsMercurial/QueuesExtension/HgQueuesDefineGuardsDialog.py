@@ -24,11 +24,12 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
     """
     Class implementing a dialog to define guards for patches.
     """
-    def __init__(self, vcs, patchesList, parent=None):
+    def __init__(self, vcs, extension, patchesList, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param extension reference to the extension module (Queues)
         @param patchesList list of patches (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
@@ -37,6 +38,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.extension = extension
         
         self.__patches = patchesList[:]
         self.patchSelector.addItems([""] + self.__patches)
@@ -93,35 +95,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         self.__repodir = repodir
         self.on_patchSelector_activated("")
     
-    def __getGuards(self):
-        """
-        Private method to get a list of all guards defined.
-        
-        @return list of guards (list of strings)
-        """
-        guardsList = []
-        
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
-        args = []
-        args.append("qselect")
-        args.append("--series")
-        
-        process.setWorkingDirectory(self.__repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for guard in output.splitlines():
-                    guard = guard.strip()[1:]
-                    if guard not in guardsList:
-                        guardsList.append(guard)
-        
-        return sorted(guardsList)
-    
     @pyqtSlot(str)
     def on_patchSelector_activated(self, patch):
         """
@@ -147,7 +120,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         self.patchNameLabel.setText("")
         
         self.guardCombo.clear()
-        guardsList = self.__getGuards()
+        guardsList = self.extension.getGuardsList(self.__repodir)
         self.guardCombo.addItems(guardsList)
         self.guardCombo.setEditText("")
         

@@ -24,6 +24,7 @@ from .HgQueuesHeaderDialog import HgQueuesHeaderDialog
 from .HgQueuesListGuardsDialog import HgQueuesListGuardsDialog
 from .HgQueuesListAllGuardsDialog import HgQueuesListAllGuardsDialog
 from .HgQueuesDefineGuardsDialog import HgQueuesDefineGuardsDialog
+from .HgQueuesGuardsSelectionDialog import HgQueuesGuardsSelectionDialog
 
 import Preferences
 
@@ -170,6 +171,40 @@ class Queues(QObject):
                     ioEncoding, 'replace')
         
         return message
+    
+    def getGuardsList(self, repodir, all=True):
+        """
+        Public method to get a list of all guards defined.
+        
+        @param repodir directory name of the repository (string)
+        @param all flag indicating to get all guards (boolean)
+        @return sorted list of guards (list of strings)
+        """
+        guardsList = []
+        
+        ioEncoding = Preferences.getSystem("IOEncoding")
+        process = QProcess()
+        args = []
+        args.append("qselect")
+        if all:
+            args.append("--series")
+        
+        process.setWorkingDirectory(repodir)
+        process.start('hg', args)
+        procStarted = process.waitForStarted()
+        if procStarted:
+            finished = process.waitForFinished(30000)
+            if finished and process.exitCode() == 0:
+                output = \
+                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                for guard in output.splitlines():
+                    guard = guard.strip()
+                    if all:
+                        guard = guard[1:]
+                    if guard not in guardsList:
+                        guardsList.append(guard)
+        
+        return sorted(guardsList)
     
     def hgQueueNewPatch(self, name):
         """
@@ -538,7 +573,7 @@ class Queues(QObject):
             self.__getPatchesList(repodir, Queues.SERIES_LIST))
         if patchnames:
             self.queuesDefineGuardsDialog = HgQueuesDefineGuardsDialog(
-                self.vcs, patchnames)
+                self.vcs, self, patchnames)
             self.queuesDefineGuardsDialog.show()
             self.queuesDefineGuardsDialog.start(name)
         else:
@@ -586,3 +621,78 @@ class Queues(QObject):
             E5MessageBox.information(None,
                 self.trUtf8("Drop All Guards"),
                 self.trUtf8("""No patches available to define guards for."""))
+    
+    def hgQueueGuardsSetActive(self, name):
+        """
+        Public method to set the active guards.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        guardsList = self.getGuardsList(repodir)
+        if guardsList:
+            activeGuardsList = self.getGuardsList(repodir, all=False)
+            dlg = HgQueuesGuardsSelectionDialog(
+                guardsList, activeGuards=activeGuardsList, listOnly=False)
+            if dlg.exec_() == QDialog.Accepted:
+                guards = dlg.getData()
+                if guards:
+                    args = []
+                    args.append("qselect")
+                    args.extend(guards)
+                    
+                    dia = HgDialog(self.trUtf8('Set Active Guards'))
+                    res = dia.startProcess(args, repodir)
+                    if res:
+                        dia.exec_()
+        else:
+            E5MessageBox.information(None,
+                self.trUtf8("Set Active Guards"),
+                self.trUtf8("""No guards available to select from."""))
+            return
+    
+    def hgQueueGuardsDeactivate(self, name):
+        """
+        Public method to deactivate all active guards.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        args = []
+        args.append("qselect")
+        args.append("--none")
+        
+        dia = HgDialog(self.trUtf8('Deactivate Guards'))
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
+    
+    def hgQueueGuardsIdentifyActive(self, name):
+        """
+        Public method to list all active guards.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        guardsList = self.getGuardsList(repodir, all=False)
+        if guardsList:
+            dlg = HgQueuesGuardsSelectionDialog(guardsList, listOnly=True)
+            dlg.exec_()

@@ -485,12 +485,11 @@ class QueuesProjectHelper(QObject):
                 self.trUtf8('Identify Active Guards...'),
                 0, 0, self, 'mercurial_queues_guards_identify_active')
         self.hgQueueIdentifyActiveGuardsAct.setStatusTip(self.trUtf8(
-            'Show a list of active guards and affected patches'
+            'Show a list of active guards'
         ))
         self.hgQueueIdentifyActiveGuardsAct.setWhatsThis(self.trUtf8(
             """<b>Identify Active Guards</b>"""
-            """<p>This opens a dialog show a list of active guards and the"""
-            """ patches directly affected by them.</p>"""
+            """<p>This opens a dialog showing a list of active guards.</p>"""
         ))
         self.hgQueueIdentifyActiveGuardsAct.triggered[()].connect(
             self.__hgQueueGuardsIdentifyActive)
@@ -785,16 +784,19 @@ class QueuesProjectHelper(QObject):
         """
         Private slot used to set the active guards.
         """
-        pass
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsSetActive(self.project.getProjectPath())
     
     def __hgQueueGuardsDeactivate(self):
         """
         Private slot used to deactivate all active guards.
         """
-        pass
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsDeactivate(self.project.getProjectPath())
     
     def __hgQueueGuardsIdentifyActive(self):
         """
-        Private slot used to list all active guards and their patches.
+        Private slot used to list all active guards.
         """
-        pass
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueGuardsIdentifyActive(self.project.getProjectPath())
