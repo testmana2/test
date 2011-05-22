@@ -895,6 +895,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesGuardsSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesQueueManagementDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1147,6 +1148,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesGuardsSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesQueueManagementDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

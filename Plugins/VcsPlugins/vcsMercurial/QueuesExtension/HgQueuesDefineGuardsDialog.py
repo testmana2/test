@@ -283,7 +283,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                             self.trUtf8("""<p>The defined guards could not be"""
                                         """ applied.</p><p>Reason: {0}</p>""")\
                                 .format(error))
-                        
                 else:
                     E5MessageBox.warning(self,
                         self.trUtf8("Apply Guard Definitions"),

@@ -49,7 +49,7 @@ Module implementing the queues extension interface.
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>APPLIED_LIST</td></tr><tr><td>GOTO</td></tr><tr><td>POP</td></tr><tr><td>PUSH</td></tr><tr><td>SERIES_LIST</td></tr><tr><td>UNAPPLIED_LIST</td></tr>
+<tr><td>APPLIED_LIST</td></tr><tr><td>GOTO</td></tr><tr><td>POP</td></tr><tr><td>PUSH</td></tr><tr><td>QUEUE_ACTIVATE</td></tr><tr><td>QUEUE_DELETE</td></tr><tr><td>QUEUE_PURGE</td></tr><tr><td>SERIES_LIST</td></tr><tr><td>UNAPPLIED_LIST</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -69,8 +69,14 @@ QObject
 <td><a href="#Queues.getGuardsList">getGuardsList</a></td>
 <td>Public method to get a list of all guards defined.</td>
 </tr><tr>
+<td><a href="#Queues.hgQueueCreateRenameQueue">hgQueueCreateRenameQueue</a></td>
+<td>Public method to create a new queue or rename the active queue.</td>
+</tr><tr>
 <td><a href="#Queues.hgQueueDeletePatch">hgQueueDeletePatch</a></td>
 <td>Public method to delete a selected unapplied patch.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueDeletePurgeActivateQueue">hgQueueDeletePurgeActivateQueue</a></td>
+<td>Public method to delete the reference to a queue and optionally remove the patch directory or set the active queue.</td>
 </tr><tr>
 <td><a href="#Queues.hgQueueFinishAppliedPatches">hgQueueFinishAppliedPatches</a></td>
 <td>Public method to finish all applied patches.</td>
@@ -101,6 +107,9 @@ QObject
 </tr><tr>
 <td><a href="#Queues.hgQueueListPatches">hgQueueListPatches</a></td>
 <td>Public method to show a list of all patches.</td>
+</tr><tr>
+<td><a href="#Queues.hgQueueListQueues">hgQueueListQueues</a></td>
+<td>Public method to list available queues.</td>
 </tr><tr>
 <td><a href="#Queues.hgQueueNewPatch">hgQueueNewPatch</a></td>
 <td>Public method to create a new named patch.</td>
@@ -199,6 +208,19 @@ flag indicating to get all guards (boolean)
 <dd>
 sorted list of guards (list of strings)
 </dd>
+</dl><a NAME="Queues.hgQueueCreateRenameQueue" ID="Queues.hgQueueCreateRenameQueue"></a>
+<h4>Queues.hgQueueCreateRenameQueue</h4>
+<b>hgQueueCreateRenameQueue</b>(<i>name, isCreate</i>)
+<p>
+        Public method to create a new queue or rename the active queue.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd><dt><i>isCreate</i></dt>
+<dd>
+flag indicating to create a new queue (boolean)
+</dd>
 </dl><a NAME="Queues.hgQueueDeletePatch" ID="Queues.hgQueueDeletePatch"></a>
 <h4>Queues.hgQueueDeletePatch</h4>
 <b>hgQueueDeletePatch</b>(<i>name</i>)
@@ -208,6 +230,21 @@ sorted list of guards (list of strings)
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueDeletePurgeActivateQueue" ID="Queues.hgQueueDeletePurgeActivateQueue"></a>
+<h4>Queues.hgQueueDeletePurgeActivateQueue</h4>
+<b>hgQueueDeletePurgeActivateQueue</b>(<i>name, operation</i>)
+<p>
+        Public method to delete the reference to a queue and optionally
+        remove the patch directory or set the active queue.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd><dt><i>operation</i></dt>
+<dd>
+operation to be performed (Queues.QUEUE_DELETE,
+            Queues.QUEUE_PURGE, Queues.QUEUE_ACTIVATE)
 </dd>
 </dl><a NAME="Queues.hgQueueFinishAppliedPatches" ID="Queues.hgQueueFinishAppliedPatches"></a>
 <h4>Queues.hgQueueFinishAppliedPatches</h4>
@@ -304,6 +341,16 @@ file/directory name (string)
 <b>hgQueueListPatches</b>(<i>name</i>)
 <p>
         Public method to show a list of all patches.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Queues.hgQueueListQueues" ID="Queues.hgQueueListQueues"></a>
+<h4>Queues.hgQueueListQueues</h4>
+<b>hgQueueListQueues</b>(<i>name</i>)
+<p>
+        Public method to list available queues.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>

@@ -190,6 +190,7 @@ class QueuesProjectHelper(QObject):
         self.__initPushPopActions()
         self.__initPushPopForceActions()
         self.__initGuardsActions()
+        self.__initQueuesMgmtActions()
     
     def __initPushPopActions(self):
         """
@@ -495,6 +496,95 @@ class QueuesProjectHelper(QObject):
             self.__hgQueueGuardsIdentifyActive)
         self.actions.append(self.hgQueueIdentifyActiveGuardsAct)
     
+    def __initQueuesMgmtActions(self):
+        """
+        Public method to generate the queues management action objects.
+        """
+        self.hgQueueCreateQueueAct = E5Action(self.trUtf8('Create Queue'),
+                self.trUtf8('Create Queue'),
+                0, 0, self, 'mercurial_queues_create_queue')
+        self.hgQueueCreateQueueAct.setStatusTip(self.trUtf8(
+            'Create a new patch queue'
+        ))
+        self.hgQueueCreateQueueAct.setWhatsThis(self.trUtf8(
+            """<b>Create Queue</b>"""
+            """<p>This creates a new patch queue.</p>"""
+        ))
+        self.hgQueueCreateQueueAct.triggered[()].connect(
+            self.__hgQueueCreateQueue)
+        self.actions.append(self.hgQueueCreateQueueAct)
+        
+        self.hgQueueRenameQueueAct = E5Action(self.trUtf8('Rename Queue'),
+                self.trUtf8('Rename Queue'),
+                0, 0, self, 'mercurial_queues_rename_queue')
+        self.hgQueueRenameQueueAct.setStatusTip(self.trUtf8(
+            'Rename the active patch queue'
+        ))
+        self.hgQueueRenameQueueAct.setWhatsThis(self.trUtf8(
+            """<b>Rename Queue</b>"""
+            """<p>This renames the active patch queue.</p>"""
+        ))
+        self.hgQueueRenameQueueAct.triggered[()].connect(
+            self.__hgQueueRenameQueue)
+        self.actions.append(self.hgQueueRenameQueueAct)
+        
+        self.hgQueueDeleteQueueAct = E5Action(self.trUtf8('Delete Queue'),
+                self.trUtf8('Delete Queue'),
+                0, 0, self, 'mercurial_queues_delete_queue')
+        self.hgQueueDeleteQueueAct.setStatusTip(self.trUtf8(
+            'Delete the reference to a patch queue'
+        ))
+        self.hgQueueDeleteQueueAct.setWhatsThis(self.trUtf8(
+            """<b>Delete Queue</b>"""
+            """<p>This deletes the reference to a patch queue.</p>"""
+        ))
+        self.hgQueueDeleteQueueAct.triggered[()].connect(
+            self.__hgQueueDeleteQueue)
+        self.actions.append(self.hgQueueDeleteQueueAct)
+        
+        self.hgQueuePurgeQueueAct = E5Action(self.trUtf8('Purge Queue'),
+                self.trUtf8('Purge Queue'),
+                0, 0, self, 'mercurial_queues_purge_queue')
+        self.hgQueuePurgeQueueAct.setStatusTip(self.trUtf8(
+            'Delete the reference to a patch queue and remove the patch directory'
+        ))
+        self.hgQueuePurgeQueueAct.setWhatsThis(self.trUtf8(
+            """<b>Purge Queue</b>"""
+            """<p>This deletes the reference to a patch queue and removes"""
+            """ the patch directory.</p>"""
+        ))
+        self.hgQueuePurgeQueueAct.triggered[()].connect(
+            self.__hgQueuePurgeQueue)
+        self.actions.append(self.hgQueuePurgeQueueAct)
+        
+        self.hgQueueActivateQueueAct = E5Action(self.trUtf8('Activate Queue'),
+                self.trUtf8('Activate Queue'),
+                0, 0, self, 'mercurial_queues_activate_queue')
+        self.hgQueueActivateQueueAct.setStatusTip(self.trUtf8(
+            'Set the active queue'
+        ))
+        self.hgQueueActivateQueueAct.setWhatsThis(self.trUtf8(
+            """<b>Activate Queue</b>"""
+            """<p>This sets the active queue.</p>"""
+        ))
+        self.hgQueueActivateQueueAct.triggered[()].connect(
+            self.__hgQueueActivateQueue)
+        self.actions.append(self.hgQueueActivateQueueAct)
+        
+        self.hgQueueListQueuesAct = E5Action(self.trUtf8('List Queues'),
+                self.trUtf8('List Queues...'),
+                0, 0, self, 'mercurial_queues_list_queues')
+        self.hgQueueListQueuesAct.setStatusTip(self.trUtf8(
+            'List the available queues'
+        ))
+        self.hgQueueListQueuesAct.setWhatsThis(self.trUtf8(
+            """<b>List Queues</b>"""
+            """<p>This opens a dialog showing all available queues.</p>"""
+        ))
+        self.hgQueueListQueuesAct.triggered[()].connect(
+            self.__hgQueueListQueues)
+        self.actions.append(self.hgQueueListQueuesAct)
+    
     def initMenu(self, mainMenu):
         """
         Public method to generate the VCS menu.
@@ -538,6 +628,16 @@ class QueuesProjectHelper(QObject):
         guardsMenu.addSeparator()
         guardsMenu.addAction(self.hgQueueIdentifyActiveGuardsAct)
         
+        queuesMenu = QMenu(self.trUtf8("Queue Management"), menu)
+        queuesMenu.addAction(self.hgQueueCreateQueueAct)
+        queuesMenu.addAction(self.hgQueueRenameQueueAct)
+        queuesMenu.addAction(self.hgQueueDeleteQueueAct)
+        queuesMenu.addAction(self.hgQueuePurgeQueueAct)
+        queuesMenu.addSeparator()
+        queuesMenu.addAction(self.hgQueueActivateQueueAct)
+        queuesMenu.addSeparator()
+        queuesMenu.addAction(self.hgQueueListQueuesAct)
+        
         menu.addAction(self.hgQueueNewAct)
         menu.addAction(self.hgQueueRefreshAct)
         menu.addAction(self.hgQueueRefreshMessageAct)
@@ -557,6 +657,8 @@ class QueuesProjectHelper(QObject):
         menu.addAction(self.hgQueueFoldAct)
         menu.addSeparator()
         menu.addMenu(guardsMenu)
+        menu.addSeparator()
+        menu.addMenu(queuesMenu)
         
         return menu
     
@@ -800,3 +902,49 @@ class QueuesProjectHelper(QObject):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueGuardsIdentifyActive(self.project.getProjectPath())
+    
+    def __hgQueueCreateQueue(self):
+        """
+        Private slot used to create a new queue.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueCreateRenameQueue(self.project.getProjectPath(), True)
+    
+    def __hgQueueRenameQueue(self):
+        """
+        Private slot used to rename the active queue.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueCreateRenameQueue(self.project.getProjectPath(), False)
+    
+    def __hgQueueDeleteQueue(self):
+        """
+        Private slot used to delete the reference to a queue.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueDeletePurgeActivateQueue(self.project.getProjectPath(),
+                                             Queues.QUEUE_DELETE)
+    
+    def __hgQueuePurgeQueue(self):
+        """
+        Private slot used to delete the reference to a queue and remove
+        the patch directory.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueDeletePurgeActivateQueue(self.project.getProjectPath(),
+                                             Queues.QUEUE_PURGE)
+    
+    def __hgQueueActivateQueue(self):
+        """
+        Private slot used to set the active queue.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueDeletePurgeActivateQueue(self.project.getProjectPath(),
+                                             Queues.QUEUE_ACTIVATE)
+    
+    def __hgQueueListQueues(self):
+        """
+        Private slot used to list available queues.
+        """
+        self.vcs.getExtensionObject("mq")\
+            .hgQueueListQueues(self.project.getProjectPath())

@@ -3482,6 +3482,15 @@ eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesNewPatchDialog.HgQ
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesNewPatchDialog.HgQueuesNewPatchDialog.on_userEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesNewPatchDialog.HgQueuesNewPatchDialog.on_userGroup_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesNewPatchDialog.HgQueuesNewPatchDialog?1(mode, message="", parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.NAME_INPUT?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.NO_INPUT?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.QUEUE_INPUT?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.getData?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.on_buttonBox_clicked?4(button)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.on_nameEdit_textChanged?4(txt)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.on_queuesList_itemSelectionChanged?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog.refresh?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.HgQueuesQueueManagementDialog?1(mode, title, suppressActive, repodir, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesRenamePatchDialog.HgQueuesRenamePatchDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesRenamePatchDialog.HgQueuesRenamePatchDialog.on_nameCombo_currentIndexChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesRenamePatchDialog.HgQueuesRenamePatchDialog.on_nameEdit_textChanged?4(txt)
@@ -3496,10 +3505,15 @@ eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.APPLIED_LIST
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.GOTO?7
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.POP?7
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.PUSH?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.QUEUE_ACTIVATE?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.QUEUE_DELETE?7
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.QUEUE_PURGE?7
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.SERIES_LIST?7
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.UNAPPLIED_LIST?7
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.getGuardsList?4(repodir, all=True)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueCreateRenameQueue?4(name, isCreate)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueDeletePatch?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueDeletePurgeActivateQueue?4(name, operation)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueFinishAppliedPatches?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueFoldUnappliedPatches?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueGuardsDeactivate?4(name)
@@ -3510,6 +3524,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueGuard
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueGuardsListAll?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueGuardsSetActive?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueListPatches?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueListQueues?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueNewPatch?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueuePushPopPatches?4(name, operation, all=False, named=False, force=False)
 eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.Queues.hgQueueRefreshPatch?4(name, editMessage=False)

@@ -25,6 +25,7 @@ from .HgQueuesListGuardsDialog import HgQueuesListGuardsDialog
 from .HgQueuesListAllGuardsDialog import HgQueuesListAllGuardsDialog
 from .HgQueuesDefineGuardsDialog import HgQueuesDefineGuardsDialog
 from .HgQueuesGuardsSelectionDialog import HgQueuesGuardsSelectionDialog
+from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
 
 import Preferences
 
@@ -41,6 +42,10 @@ class Queues(QObject):
     PUSH = 1
     GOTO = 2
     
+    QUEUE_DELETE = 0
+    QUEUE_PURGE = 1
+    QUEUE_ACTIVATE = 2
+    
     def __init__(self, vcs):
         """
         Constructor
@@ -55,6 +60,7 @@ class Queues(QObject):
         self.queuesListGuardsDialog = None
         self.queuesListAllGuardsDialog = None
         self.queuesDefineGuardsDialog = None
+        self.queuesListQueuesDialog = None
     
     def shutdown(self):
         """
@@ -72,6 +78,8 @@ class Queues(QObject):
             self.queuesListAllGuardsDialog.close()
         if self.queuesDefineGuardsDialog is not None:
             self.queuesDefineGuardsDialog.close()
+        if self.queuesListQueuesDialog is not None:
+            self.queuesListQueuesDialog.close()
     
     def __getPatchesList(self, repodir, listType, withSummary=False):
         """
@@ -696,3 +704,142 @@ class Queues(QObject):
         if guardsList:
             dlg = HgQueuesGuardsSelectionDialog(guardsList, listOnly=True)
             dlg.exec_()
+    
+    def hgQueueCreateRenameQueue(self, name, isCreate):
+        """
+        Public method to create a new queue or rename the active queue.
+        
+        @param name file/directory name (string)
+        @param isCreate flag indicating to create a new queue (boolean)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        if isCreate:
+            title = self.trUtf8("Create New Queue")
+        else:
+            title = self.trUtf8("Rename Active Queue")
+        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.NAME_INPUT, 
+            title, False, repodir)
+        if dlg.exec_() == QDialog.Accepted:
+            queueName = dlg.getData()
+            if queueName:
+                ioEncoding = Preferences.getSystem("IOEncoding")
+                process = QProcess()
+                args = []
+                args.append("qqueue")
+                if isCreate:
+                    args.append("--create")
+                else:
+                    args.append("--rename")
+                args.append(queueName)
+                
+                process.setWorkingDirectory(repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished:
+                        if process.exitCode() != 0:
+                            error = \
+                                str(process.readAllStandardError(), ioEncoding, 'replace')
+                            if isCreate:
+                                errMsg = self.trUtf8(
+                                    "Error while creating a new queue.")
+                            else:
+                                errMsg = self.trUtf8(
+                                    "Error while renaming the active queue.")
+                            E5MessageBox.warning(None,
+                                title,
+                                """<p>{0}</p><p>{1}</p>""".format(errMsg, error))
+                        else:
+                            if self.queuesListQueuesDialog is not None and \
+                               self.queuesListQueuesDialog.isVisible():
+                                self.queuesListQueuesDialog.refresh()
+    
+    def hgQueueDeletePurgeActivateQueue(self, name, operation):
+        """
+        Public method to delete the reference to a queue and optionally
+        remove the patch directory or set the active queue.
+        
+        @param name file/directory name (string)
+        @param operation operation to be performed (Queues.QUEUE_DELETE,
+            Queues.QUEUE_PURGE, Queues.QUEUE_ACTIVATE)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        if operation == Queues.QUEUE_PURGE:
+            title = self.trUtf8("Purge Queue")
+        elif operation == Queues.QUEUE_DELETE:
+            title = self.trUtf8("Delete Queue")
+        elif operation == Queues.QUEUE_ACTIVATE:
+            title = self.trUtf8("Activate Queue")
+        else:
+            raise ValueError("illegal value for operation")
+        
+        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.QUEUE_INPUT, 
+            title, True, repodir)
+        if dlg.exec_() == QDialog.Accepted:
+            queueName = dlg.getData()
+            if queueName:
+                ioEncoding = Preferences.getSystem("IOEncoding")
+                process = QProcess()
+                args = []
+                args.append("qqueue")
+                if operation == Queues.QUEUE_PURGE:
+                    args.append("--purge")
+                elif operation == Queues.QUEUE_DELETE:
+                    args.append("--delete")
+                args.append(queueName)
+                
+                process.setWorkingDirectory(repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished:
+                        if process.exitCode() != 0:
+                            error = \
+                                str(process.readAllStandardError(), ioEncoding, 'replace')
+                            if operation == Queues.QUEUE_PURGE:
+                                errMsg = self.trUtf8("Error while purging the queue.")
+                            elif operation == Queues.QUEUE_DELETE:
+                                errMsg = self.trUtf8("Error while deleting the queue.")
+                            elif operation == Queues.QUEUE_ACTIVATE:
+                                errMsg = self.trUtf8(
+                                    "Error while setting the active queue.")
+                            E5MessageBox.warning(None,
+                                title,
+                                """<p>{0}</p><p>{1}</p>""".format(errMsg, error))
+                        else:
+                            if self.queuesListQueuesDialog is not None and \
+                               self.queuesListQueuesDialog.isVisible():
+                                self.queuesListQueuesDialog.refresh()
+    
+    def hgQueueListQueues(self, name):
+        """
+        Public method to list available queues.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.vcs.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(
+            HgQueuesQueueManagementDialog.NO_INPUT,
+            self.trUtf8("Available Queues"), 
+            False, repodir)
+        self.queuesListQueuesDialog.show()
