@@ -45,6 +45,13 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
+        
+        self.__statusDict = {
+            "A": self.trUtf8("applied"),
+            "U": self.trUtf8("not applied"),
+            "G": self.trUtf8("guarded"),
+            "D": self.trUtf8("missing"),
+        }
     
     def closeEvent(self, e):
         """
@@ -81,46 +88,27 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 return
         
         self.__repodir = repodir
-        self.__patchesCount = 0
-        self.__getApplied()
+        self.__getSeries()
     
-    def __getApplied(self):
+    def __getSeries(self, missing=False):
         """
-        Private slot to get the list of applied patches.
+        Private slot to get the list of applied, unapplied and guarded patches and
+        patches missing in the series file.
+        
+        @param missing flag indicating to get the patches missing in the series file
+            (boolean)
         """
-        self.__mode = "qapplied"
-        
-        args = []
-        args.append('qapplied')
-        args.append('--summary')
-        
-        self.process.kill()
-        self.process.setWorkingDirectory(self.__repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
-            self.inputGroup.setEnabled(False)
-            self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+        if missing:
+            self.__mode = "missing"
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
-    
-    def __getUnapplied(self):
-        """
-        Private slot to get the list of unapplied patches.
-        """
-        self.__mode = "qunapplied"
+            self.__mode = "qseries"
         
         args = []
-        args.append('qunapplied')
+        args.append('qseries')
         args.append('--summary')
+        args.append('--verbose')
+        if missing:
+            args.append('--missing')
         
         self.process.kill()
         self.process.setWorkingDirectory(self.__repodir)
@@ -188,7 +176,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process = None
         
         if self.patchesList.topLevelItemCount() == 0:
-            # no bookmarks defined
+            # no patches present
             self.__generateItem(self.trUtf8("no patches found"), "", True)
         self.patchesList.doItemsLayout()
         self.__resizeColumns()
@@ -212,9 +200,9 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         @param exitCode exit code of the process (integer)
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
-        if self.__mode == "qapplied":
-            self.__getUnapplied()
-        elif self.__mode == "qunapplied":
+        if self.__mode == "qseries":
+            self.__getSeries(True)
+        elif self.__mode == "missing":
             self.__getTop()
         else:
             self.__finish()
@@ -233,10 +221,12 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.patchesList.header().resizeSections(QHeaderView.ResizeToContents)
         self.patchesList.header().setStretchLastSection(True)
     
-    def __generateItem(self, name, summary, error=False):
+    def __generateItem(self, index, status, name, summary, error=False):
         """
         Private method to generate a patch item in the list of patches.
         
+        @param index index of the patch (integer, -1 for missing)
+        @param status status of the patch (string)
         @param name name of the patch (string)
         @param summary first line of the patch header (string)
         @param error flag indicating an error entry (boolean)
@@ -249,15 +239,29 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 summary
             ])
         else:
-            self.__patchesCount += 1
+            if index == -1:
+                indexStr = ""
+            else:
+                indexStr = "{0:>7}".format(index)
+            try:
+                statusStr = self.__statusDict[status]
+            except KeyError:
+                statusStr = self.trUtf8("unknown")
             itm = QTreeWidgetItem(self.patchesList, [
-                "{0:>7}".format(self.__patchesCount),
+                indexStr,
                 name,
-                self.__mode == "qapplied" and \
-                    self.trUtf8("applied") or \
-                    self.trUtf8("not applied"),
+                statusStr,
                 summary
             ])
+            if status == "A":
+                # applied
+                for column in range(itm.columnCount()):
+                    itm.setForeground(column, Qt.blue)
+            elif status == "D":
+                # missing
+                for column in range(itm.columnCount()):
+                    itm.setForeground(column, Qt.red)
+        
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignHCenter)
     
@@ -293,10 +297,18 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             else:
                 l = s.split(": ", 1)
                 if len(l) == 1:
-                    name, summary = l[0][:-1], ""
+                    data, summary = l[0][:-1], ""
                 else:
-                    name, summary = l[0], l[1]
-                self.__generateItem(name, summary)
+                    data, summary = l[0], l[1]
+                l = data.split(None, 2)
+                if len(l) == 2:
+                    # missing entry
+                    index, status, name = -1, l[0], l[1]
+                elif len(l) == 3:
+                    index, status, name = l[:3]
+                else:
+                    continue
+                self.__generateItem(index, status, name, summary)
     
     def __readStderr(self):
         """

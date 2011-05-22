@@ -9610,9 +9610,8 @@
       <keyword name="HgQueuesListDialog (Constructor)" id="HgQueuesListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__init__" />
       <keyword name="HgQueuesListDialog.__finish" id="HgQueuesListDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__finish" />
       <keyword name="HgQueuesListDialog.__generateItem" id="HgQueuesListDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__generateItem" />
-      <keyword name="HgQueuesListDialog.__getApplied" id="HgQueuesListDialog.__getApplied" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__getApplied" />
+      <keyword name="HgQueuesListDialog.__getSeries" id="HgQueuesListDialog.__getSeries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__getSeries" />
       <keyword name="HgQueuesListDialog.__getTop" id="HgQueuesListDialog.__getTop" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__getTop" />
-      <keyword name="HgQueuesListDialog.__getUnapplied" id="HgQueuesListDialog.__getUnapplied" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__getUnapplied" />
       <keyword name="HgQueuesListDialog.__markTopItem" id="HgQueuesListDialog.__markTopItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__markTopItem" />
       <keyword name="HgQueuesListDialog.__procFinished" id="HgQueuesListDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__procFinished" />
       <keyword name="HgQueuesListDialog.__readStderr" id="HgQueuesListDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListDialog.html#HgQueuesListDialog.__readStderr" />
