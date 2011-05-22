@@ -5697,16 +5697,6 @@ Not connected
         <translation>Premi per aprire il file scaricato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="152"/>
-        <source>Downloading</source>
-        <translation type="obsolete">Scaricamento</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="152"/>
-        <source>&lt;p&gt;You are about to download the file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;What do you want to do?&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Stai per scaricare il file  &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Cosa vuoi fare ?&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Download/DownloadItem.py" line="198"/>
         <source>Download canceled: {0}</source>
         <translation>Download cancellato: {0}</translation>
@@ -7088,11 +7078,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Inserisci un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5063"/>
-        <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will loose your changes upon reopening it.</source>
-        <translation type="obsolete">&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
-    </message>
-    <message>
         <location filename="QScintilla/Editor.py" line="5116"/>
         <source>File changed</source>
         <translation>File modificato</translation>
@@ -7545,7 +7530,7 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="5112"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
     </message>
 </context>
 <context>
@@ -8118,11 +8103,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="55"/>
         <source>Select to reread the file automatically, if it was changed externally</source>
         <translation>Seleziona per rileggere un file automaticamente, se viene modificato esternamente</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="58"/>
-        <source>Reopen automatically</source>
-        <translation type="obsolete">Riapri automaticamente</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="69"/>
@@ -10787,26 +10767,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Generatore file API Eric5</translation>
     </message>
     <message>
-        <location filename="Plugins/PluginEricapi.py" line="95"/>
-        <source>Generate API file (eric5-api)</source>
-        <translation type="obsolete">Genera file API (eric5-api)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricapi.py" line="95"/>
-        <source>Generate &amp;API file (eric5-api)</source>
-        <translation type="obsolete">Genera file &amp;API (eric5-api)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricapi.py" line="98"/>
-        <source>Generate an API file using eric5-api</source>
-        <translation type="obsolete">Genera un file API usando eric5-api</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricapi.py" line="100"/>
-        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5-api.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Genera file API&lt;/b&gt;&lt;p&gt;Genera un file API usando eric5-api.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Plugins/PluginEricapi.py" line="97"/>
         <source>Generate API file (eric5_api)</source>
         <translation type="unfinished"></translation>
@@ -11227,26 +11187,6 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="Plugins/PluginEricdoc.py" line="57"/>
         <source>Eric5 Documentation Generator</source>
         <translation>Generatore di documentazione di Eric5</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="131"/>
-        <source>Generate documentation (eric5-doc)</source>
-        <translation type="obsolete">Genera documentazione (eric5-doc) </translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="131"/>
-        <source>Generate &amp;documentation (eric5-doc)</source>
-        <translation type="obsolete">Genera &amp;documentazione (eric5-doc)</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="134"/>
-        <source>Generate API documentation using eric5-doc</source>
-        <translation type="obsolete">Genera la documentazione delle API usando eric5-doc</translation>
-    </message>
-    <message>
-        <location filename="Plugins/PluginEricdoc.py" line="136"/>
-        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5-doc.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Genera documentazione&lt;/b&gt;&lt;p&gt;Genera la documentazione delle API usando eric5-doc.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/PluginEricdoc.py" line="89"/>
@@ -15630,11 +15570,6 @@ Hai %n schede aperta.</numerusform>
 <context>
     <name>HgBookmarkDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py" line="45"/>
-        <source>Define Bookmark</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="25"/>
         <source>Name:</source>
         <translation type="unfinished">Nome:</translation>
@@ -15742,6 +15677,11 @@ Hai %n schede aperta.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py" line="42"/>
         <source>Move Bookmark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py" line="45"/>
+        <source>Define Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -18610,16 +18550,6 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="102"/>
-        <source>Date</source>
-        <translation type="obsolete">Data</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="131"/>
-        <source>Enter the date and time to be used for the patch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="99"/>
         <source>Select to give date and time information</source>
         <translation type="unfinished"></translation>
@@ -18642,6 +18572,11 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="124"/>
         <source>Date/Time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="131"/>
+        <source>Enter the date and time to be used for the patch</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -19237,18 +19172,13 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="603"/>
-        <source>Difference</source>
-        <translation type="obsolete">Difference</translation>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="502"/>
+        <source>There are no entries selected to be committed.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="604"/>
         <source>Differences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="502"/>
-        <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22339,6 +22269,11 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
+        <source>Octave Files (*.m *.m.octave)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Matlab Files (*.m)</source>
         <translation type="unfinished"></translation>
@@ -22346,11 +22281,6 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
     <message>
         <location filename="QScintilla/Lexers/__init__.py" line="482"/>
         <source>Octave Files (*.m.octave)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="QScintilla/Lexers/__init__.py" line="345"/>
-        <source>Octave Files (*.m *.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26047,16 +25977,6 @@ Selezionare Aggiorna.</translation>
         <location filename="Preferences/ProgramsDialog.py" line="124"/>
         <source>Resource Compiler (Python, PySide)</source>
         <translation>Compilatore Risorse (Python, PySide)</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="141"/>
-        <source>Eric5 Translation Previewer</source>
-        <translation type="obsolete">Anteprima traduzione di Eric5</translation>
-    </message>
-    <message>
-        <location filename="Preferences/ProgramsDialog.py" line="147"/>
-        <source>Eric5 Forms Previewer</source>
-        <translation type="obsolete">Anteprima form di Eric5</translation>
     </message>
     <message>
         <location filename="Preferences/ProgramsDialog.py" line="176"/>
@@ -30984,6 +30904,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="130"/>
+        <source>&lt;b&gt;List Patches&lt;/b&gt;&lt;p&gt;This lists all applied and unapplied patches.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="137"/>
         <source>Finish Applied Patches</source>
         <translation type="unfinished"></translation>
@@ -31081,6 +31006,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="227"/>
         <source>Push patches onto the stack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="230"/>
+        <source>&lt;b&gt;Push Patches&lt;/b&gt;&lt;p&gt;This pushes patches onto the stack of applied patches until a named patch is at the top of the stack.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -31211,31 +31141,6 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="390"/>
         <source>&lt;b&gt;Go to Patch&lt;/b&gt;&lt;p&gt;This pushes or pops patches until a named patch is at the top of the stack overwriting any local changes.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="505"/>
-        <source>Queues</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="507"/>
-        <source>Push/Pop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="518"/>
-        <source>Push/Pop (force)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="130"/>
-        <source>&lt;b&gt;List Patches&lt;/b&gt;&lt;p&gt;This lists all applied and unapplied patches.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="230"/>
-        <source>&lt;b&gt;Push Patches&lt;/b&gt;&lt;p&gt;This pushes patches onto the stack of applied patches until a named patch is at the top of the stack.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -31376,6 +31281,21 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="490"/>
         <source>&lt;b&gt;Identify Active Guards&lt;/b&gt;&lt;p&gt;This opens a dialog showing a list of active guards.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="505"/>
+        <source>Queues</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="507"/>
+        <source>Push/Pop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="518"/>
+        <source>Push/Pop (force)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -37024,16 +36944,6 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="662"/>
-        <source>Difference</source>
-        <translation type="obsolete">Difference</translation>
-    </message>
-    <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="663"/>
-        <source>Differences</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="577"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
@@ -37042,6 +36952,11 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="646"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished">Non ci sono elementi mancati disponibili/selezionati.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="663"/>
+        <source>Differences</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -38920,6 +38835,11 @@ un elemento apre una finestra di edit e posiziona il cursore alla linea corretta
 {0}</translation>
     </message>
     <message>
+        <location filename="Tasks/TaskViewer.py" line="384"/>
+        <source>P&amp;roject Tasks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="Tasks/TaskViewer.py" line="390"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
@@ -38932,11 +38852,6 @@ un elemento apre una finestra di edit e posiziona il cursore alla linea corretta
     <message>
         <location filename="Tasks/TaskViewer.py" line="767"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Tasks/TaskViewer.py" line="384"/>
-        <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
