@@ -97,7 +97,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
                     str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 for queue in output.splitlines():
                     queue = queue.strip()
-                    if queue.endswith("(active)"):
+                    if queue.endswith(")"):
                         queue = queue.rsplit(None, 1)[0]
                         activeQueue = queue
                     queuesList.append(queue)
