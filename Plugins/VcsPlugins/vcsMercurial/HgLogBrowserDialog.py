@@ -776,7 +776,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if len(log) > 1:
                     self.__generateLogItem(log["author"], log["date"],
                         log["message"], log["revision"], changedPaths,
-                        log["parents"], log["branches"], log["tags"], 
+                        log["parents"], log["branches"], log["tags"],
                         log["bookmarks"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and \

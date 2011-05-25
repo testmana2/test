@@ -122,10 +122,10 @@ class HgQueuesNewPatchDialog(QDialog, Ui_HgQueuesNewPatchDialog):
             (boolean, boolean, string))
         """
         userData = (self.userGroup.isChecked(),
-                    self.currentUserCheckBox.isChecked(), 
+                    self.currentUserCheckBox.isChecked(),
                     self.userEdit.text())
-        dateData = (self.dateGroup.isChecked(), 
-                    self.currentDateCheckBox.isChecked(), 
+        dateData = (self.dateGroup.isChecked(),
+                    self.currentDateCheckBox.isChecked(),
                     self.dateTimeEdit.dateTime().toString("yyyy-MM-dd hh:mm"))
-        return (self.nameEdit.text(), self.messageEdit.toPlainText(), 
+        return (self.nameEdit.text(), self.messageEdit.toPlainText(),
             userData, dateData)

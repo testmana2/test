@@ -134,8 +134,8 @@ class Hg(VersionControl):
         
         # instantiate the extensions
         self.__extensions = {
-            "bookmarks" : Bookmarks(self),
-            "mq" : Queues(self),
+            "bookmarks": Bookmarks(self),
+            "mq": Queues(self),
         }
     
     def getPlugin(self):
@@ -830,7 +830,7 @@ class Hg(VersionControl):
         else:
             bookmarksList = None
         dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
-                                        self.hgGetBranchesList(repodir), 
+                                        self.hgGetBranchesList(repodir),
                                         bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
@@ -2259,7 +2259,7 @@ class Hg(VersionControl):
     
     def getExtensionObject(self, extensionName):
         """
-        Public method to get a reference to an extension object. 
+        Public method to get a reference to an extension object.
         
         @param extensionName name of the extension (string)
         @return reference to the extension object (boolean)

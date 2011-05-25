@@ -207,7 +207,7 @@ class BookmarksProjectHelper(QObject):
     
     def __hgBookmarksList(self):
         """
-        Private slot used to list the bookmarks. 
+        Private slot used to list the bookmarks.
         """
         self.vcs.getExtensionObject("bookmarks")\
             .hgListBookmarks(self.project.getProjectPath())

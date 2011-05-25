@@ -723,7 +723,7 @@ class Queues(QObject):
             title = self.trUtf8("Create New Queue")
         else:
             title = self.trUtf8("Rename Active Queue")
-        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.NAME_INPUT, 
+        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.NAME_INPUT,
             title, False, repodir)
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
@@ -786,7 +786,7 @@ class Queues(QObject):
         else:
             raise ValueError("illegal value for operation")
         
-        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.QUEUE_INPUT, 
+        dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.QUEUE_INPUT,
             title, True, repodir)
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
@@ -840,6 +840,6 @@ class Queues(QObject):
         
         self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(
             HgQueuesQueueManagementDialog.NO_INPUT,
-            self.trUtf8("Available Queues"), 
+            self.trUtf8("Available Queues"),
             False, repodir)
         self.queuesListQueuesDialog.show()

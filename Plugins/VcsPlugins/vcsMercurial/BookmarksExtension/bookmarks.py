@@ -104,7 +104,7 @@ class Bookmarks(QObject):
             if repodir == os.sep:
                 return
         
-        dlg = HgBookmarkDialog(HgBookmarkDialog.DEFINE_MODE, 
+        dlg = HgBookmarkDialog(HgBookmarkDialog.DEFINE_MODE,
                                self.vcs.hgGetTagsList(repodir),
                                self.vcs.hgGetBranchesList(repodir),
                                self.hgGetBookmarksList(repodir))
@@ -194,7 +194,7 @@ class Bookmarks(QObject):
             if repodir == os.sep:
                 return
         
-        dlg = HgBookmarkDialog(HgBookmarkDialog.MOVE_MODE, 
+        dlg = HgBookmarkDialog(HgBookmarkDialog.MOVE_MODE,
                                self.vcs.hgGetTagsList(repodir),
                                self.vcs.hgGetBranchesList(repodir),
                                self.hgGetBookmarksList(repodir))

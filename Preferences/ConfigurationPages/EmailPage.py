@@ -116,7 +116,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         QApplication.processEvents()
         try:
             server = smtplib.SMTP(self.mailServerEdit.text(),
-                                  self.portSpin.value(), 
+                                  self.portSpin.value(),
                                   "", 10)
             if self.useTlsCheckBox.isChecked():
                 server.starttls()
@@ -156,6 +156,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                 self.trUtf8("Login Test"),
                 self.trUtf8("""<p>The login test failed.<br>Reason: {0}</p>""")
                     .format(errorStr))
+
 
 def create(dlg):
     """

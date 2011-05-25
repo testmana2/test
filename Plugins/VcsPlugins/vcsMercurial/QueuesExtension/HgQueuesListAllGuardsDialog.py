@@ -63,7 +63,6 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
             if repodir == os.sep:
                 return
         
-        
         ioEncoding = Preferences.getSystem("IOEncoding")
         process = QProcess()
         args = []

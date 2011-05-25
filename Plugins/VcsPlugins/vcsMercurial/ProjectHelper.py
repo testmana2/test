@@ -42,8 +42,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         # instantiate the extensions
         self.__extensions = {
-            "bookmarks" : BookmarksProjectHelper(),
-            "mq" : QueuesProjectHelper(),
+            "bookmarks": BookmarksProjectHelper(),
+            "mq": QueuesProjectHelper(),
         }
     
     def setObjects(self, vcsObject, projectObject):
