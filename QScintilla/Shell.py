@@ -405,6 +405,8 @@ class Shell(QsciScintillaCompat):
         self.inRawMode = False
         self.echoInput = True
         self.clientCapabilities = 0
+        self.inCommandExecution = False
+        self.interruptCommandExecution = False
         
     def __clientCapabilities(self, cap, clType):
         """
