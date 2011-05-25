@@ -1,0 +1,212 @@
+<ui version="4.0" >
+ <class>TasksPage</class>
+ <widget class="QWidget" name="TasksPage" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QLabel" name="headerLabel" >
+     <property name="text" >
+      <string>&lt;b>Configure Tasks&lt;/b></string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line11_2_2_2" >
+     <property name="frameShape" >
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Tasks Markers</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="0" column="1" >
+       <widget class="QLineEdit" name="tasksMarkerEdit" >
+        <property name="toolTip" >
+         <string>Enter the tasks markers separated by a space character.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="textLabel4_3" >
+        <property name="text" >
+         <string>Standard tasks:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QLineEdit" name="tasksMarkerBugfixEdit" >
+        <property name="toolTip" >
+         <string>Enter the tasks markers separated by a space character.</string>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="textLabel5_3" >
+        <property name="text" >
+         <string>Bugfix tasks:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2" >
+     <property name="title" >
+      <string>Tasks Colours</string>
+     </property>
+     <layout class="QGridLayout" >
+      <item row="3" column="1" >
+       <widget class="QPushButton" name="tasksProjectBgColourButton" >
+        <property name="minimumSize" >
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip" >
+         <string>Select the background colour for project tasks.</string>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QPushButton" name="tasksBgColourButton" >
+        <property name="minimumSize" >
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip" >
+         <string>Select the background colour for global tasks.</string>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QPushButton" name="tasksBugfixColourButton" >
+        <property name="minimumSize" >
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip" >
+         <string>Select the colour for bugfix tasks.</string>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QPushButton" name="tasksColourButton" >
+        <property name="minimumSize" >
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip" >
+         <string>Select the colour for standard tasks.</string>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="textLabel2_8" >
+        <property name="text" >
+         <string>Bugfix tasks foreground colour:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="textLabel6_3" >
+        <property name="text" >
+         <string>Global tasks background colour:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QLabel" name="textLabel3_4" >
+        <property name="text" >
+         <string>Project tasks background colour:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QLabel" name="textLabel1_3" >
+        <property name="text" >
+         <string>Standard tasks foreground colour:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" >
+       <spacer>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0" >
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tasksMarkerEdit</tabstop>
+  <tabstop>tasksMarkerBugfixEdit</tabstop>
+  <tabstop>tasksColourButton</tabstop>
+  <tabstop>tasksBugfixColourButton</tabstop>
+  <tabstop>tasksBgColourButton</tabstop>
+  <tabstop>tasksProjectBgColourButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

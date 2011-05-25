@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Preferences.ConfigurationPages.EditorStylesPage</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Preferences.ConfigurationPages.EditorStylesPage</h1>
+<p>
+Module implementing the Editor Styles configuration page.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#EditorStylesPage">EditorStylesPage</a></td>
+<td>Class implementing the Editor Styles configuration page.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#create">create</a></td>
+<td>Module function to create the configuration page.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="EditorStylesPage" ID="EditorStylesPage"></a>
+<h2>EditorStylesPage</h2>
+<p>
+    Class implementing the Editor Styles configuration page.
+</p>
+<h3>Derived from</h3>
+ConfigurationPageBase, Ui_EditorStylesPage
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#EditorStylesPage.__init__">EditorStylesPage</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_annotationsErrorBgButton_clicked">on_annotationsErrorBgButton_clicked</a></td>
+<td>Private slot to set the background colour of the error annotations.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_annotationsErrorFgButton_clicked">on_annotationsErrorFgButton_clicked</a></td>
+<td>Private slot to set the foreground colour of the error annotations.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_annotationsWarningBgButton_clicked">on_annotationsWarningBgButton_clicked</a></td>
+<td>Private slot to set the background colour of the warning annotations.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_annotationsWarningFgButton_clicked">on_annotationsWarningFgButton_clicked</a></td>
+<td>Private slot to set the foreground colour of the warning annotations.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_caretForegroundButton_clicked">on_caretForegroundButton_clicked</a></td>
+<td>Private slot to set the foreground colour of the caret.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_caretlineBackgroundButton_clicked">on_caretlineBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour of the caretline.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_currentLineMarkerButton_clicked">on_currentLineMarkerButton_clicked</a></td>
+<td>Private slot to set the colour for the highlight of the current line.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_defaultFontButton_clicked">on_defaultFontButton_clicked</a></td>
+<td>Private method used to select the default font for the editor.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_edgeBackgroundColorButton_clicked">on_edgeBackgroundColorButton_clicked</a></td>
+<td>Private slot to set the colour for the edge background or line.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_errorMarkerButton_clicked">on_errorMarkerButton_clicked</a></td>
+<td>Private slot to set the colour for the highlight of the error line.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_foldmarginBackgroundButton_clicked">on_foldmarginBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour for the foldmargin.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_foldmarkersBackgroundButton_clicked">on_foldmarkersBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour for the margins.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_foldmarkersForegroundButton_clicked">on_foldmarkersForegroundButton_clicked</a></td>
+<td>Private slot to set the foreground colour for the foldmarkers.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_linenumbersFontButton_clicked">on_linenumbersFontButton_clicked</a></td>
+<td>Private method used to select the font for the editor margins.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_marginsBackgroundButton_clicked">on_marginsBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour for the margins.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_marginsForegroundButton_clicked">on_marginsForegroundButton_clicked</a></td>
+<td>Private slot to set the foreground colour for the margins.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_matchingBracesBackButton_clicked">on_matchingBracesBackButton_clicked</a></td>
+<td>Private slot to set the background colour for highlighting matching braces.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_matchingBracesButton_clicked">on_matchingBracesButton_clicked</a></td>
+<td>Private slot to set the colour for highlighting matching braces.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_monospacedFontButton_clicked">on_monospacedFontButton_clicked</a></td>
+<td>Private method used to select the font to be used as the monospaced font.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_nonmatchingBracesBackButton_clicked">on_nonmatchingBracesBackButton_clicked</a></td>
+<td>Private slot to set the background colour for highlighting nonmatching braces.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_nonmatchingBracesButton_clicked">on_nonmatchingBracesButton_clicked</a></td>
+<td>Private slot to set the colour for highlighting nonmatching braces.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_selectionBackgroundButton_clicked">on_selectionBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour of the selection.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_selectionForegroundButton_clicked">on_selectionForegroundButton_clicked</a></td>
+<td>Private slot to set the foreground colour of the selection.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_whitespaceBackgroundButton_clicked">on_whitespaceBackgroundButton_clicked</a></td>
+<td>Private slot to set the background colour of visible whitespace.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.on_whitespaceForegroundButton_clicked">on_whitespaceForegroundButton_clicked</a></td>
+<td>Private slot to set the foreground colour of visible whitespace.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.polishPage">polishPage</a></td>
+<td>Public slot to perform some polishing actions.</td>
+</tr><tr>
+<td><a href="#EditorStylesPage.save">save</a></td>
+<td>Public slot to save the Editor Styles configuration.</td>
+</tr>
+</table>
+<a NAME="EditorStylesPage.__init__" ID="EditorStylesPage.__init__"></a>
+<h4>EditorStylesPage (Constructor)</h4>
+<b>EditorStylesPage</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="EditorStylesPage.on_annotationsErrorBgButton_clicked" ID="EditorStylesPage.on_annotationsErrorBgButton_clicked"></a>
+<h4>EditorStylesPage.on_annotationsErrorBgButton_clicked</h4>
+<b>on_annotationsErrorBgButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour of the error annotations.
+</p><a NAME="EditorStylesPage.on_annotationsErrorFgButton_clicked" ID="EditorStylesPage.on_annotationsErrorFgButton_clicked"></a>
+<h4>EditorStylesPage.on_annotationsErrorFgButton_clicked</h4>
+<b>on_annotationsErrorFgButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour of the error annotations.
+</p><a NAME="EditorStylesPage.on_annotationsWarningBgButton_clicked" ID="EditorStylesPage.on_annotationsWarningBgButton_clicked"></a>
+<h4>EditorStylesPage.on_annotationsWarningBgButton_clicked</h4>
+<b>on_annotationsWarningBgButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour of the warning annotations.
+</p><a NAME="EditorStylesPage.on_annotationsWarningFgButton_clicked" ID="EditorStylesPage.on_annotationsWarningFgButton_clicked"></a>
+<h4>EditorStylesPage.on_annotationsWarningFgButton_clicked</h4>
+<b>on_annotationsWarningFgButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour of the warning annotations.
+</p><a NAME="EditorStylesPage.on_caretForegroundButton_clicked" ID="EditorStylesPage.on_caretForegroundButton_clicked"></a>
+<h4>EditorStylesPage.on_caretForegroundButton_clicked</h4>
+<b>on_caretForegroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour of the caret.
+</p><a NAME="EditorStylesPage.on_caretlineBackgroundButton_clicked" ID="EditorStylesPage.on_caretlineBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_caretlineBackgroundButton_clicked</h4>
+<b>on_caretlineBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour of the caretline.
+</p><a NAME="EditorStylesPage.on_currentLineMarkerButton_clicked" ID="EditorStylesPage.on_currentLineMarkerButton_clicked"></a>
+<h4>EditorStylesPage.on_currentLineMarkerButton_clicked</h4>
+<b>on_currentLineMarkerButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the colour for the highlight of the current line.
+</p><a NAME="EditorStylesPage.on_defaultFontButton_clicked" ID="EditorStylesPage.on_defaultFontButton_clicked"></a>
+<h4>EditorStylesPage.on_defaultFontButton_clicked</h4>
+<b>on_defaultFontButton_clicked</b>(<i></i>)
+<p>
+        Private method used to select the default font for the editor.
+</p><a NAME="EditorStylesPage.on_edgeBackgroundColorButton_clicked" ID="EditorStylesPage.on_edgeBackgroundColorButton_clicked"></a>
+<h4>EditorStylesPage.on_edgeBackgroundColorButton_clicked</h4>
+<b>on_edgeBackgroundColorButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the colour for the edge background or line.
+</p><a NAME="EditorStylesPage.on_errorMarkerButton_clicked" ID="EditorStylesPage.on_errorMarkerButton_clicked"></a>
+<h4>EditorStylesPage.on_errorMarkerButton_clicked</h4>
+<b>on_errorMarkerButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the colour for the highlight of the error line.
+</p><a NAME="EditorStylesPage.on_foldmarginBackgroundButton_clicked" ID="EditorStylesPage.on_foldmarginBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_foldmarginBackgroundButton_clicked</h4>
+<b>on_foldmarginBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour for the foldmargin.
+</p><a NAME="EditorStylesPage.on_foldmarkersBackgroundButton_clicked" ID="EditorStylesPage.on_foldmarkersBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_foldmarkersBackgroundButton_clicked</h4>
+<b>on_foldmarkersBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour for the margins.
+</p><a NAME="EditorStylesPage.on_foldmarkersForegroundButton_clicked" ID="EditorStylesPage.on_foldmarkersForegroundButton_clicked"></a>
+<h4>EditorStylesPage.on_foldmarkersForegroundButton_clicked</h4>
+<b>on_foldmarkersForegroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour for the foldmarkers.
+</p><a NAME="EditorStylesPage.on_linenumbersFontButton_clicked" ID="EditorStylesPage.on_linenumbersFontButton_clicked"></a>
+<h4>EditorStylesPage.on_linenumbersFontButton_clicked</h4>
+<b>on_linenumbersFontButton_clicked</b>(<i></i>)
+<p>
+        Private method used to select the font for the editor margins.
+</p><a NAME="EditorStylesPage.on_marginsBackgroundButton_clicked" ID="EditorStylesPage.on_marginsBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_marginsBackgroundButton_clicked</h4>
+<b>on_marginsBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour for the margins.
+</p><a NAME="EditorStylesPage.on_marginsForegroundButton_clicked" ID="EditorStylesPage.on_marginsForegroundButton_clicked"></a>
+<h4>EditorStylesPage.on_marginsForegroundButton_clicked</h4>
+<b>on_marginsForegroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour for the margins.
+</p><a NAME="EditorStylesPage.on_matchingBracesBackButton_clicked" ID="EditorStylesPage.on_matchingBracesBackButton_clicked"></a>
+<h4>EditorStylesPage.on_matchingBracesBackButton_clicked</h4>
+<b>on_matchingBracesBackButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour for highlighting matching braces.
+</p><a NAME="EditorStylesPage.on_matchingBracesButton_clicked" ID="EditorStylesPage.on_matchingBracesButton_clicked"></a>
+<h4>EditorStylesPage.on_matchingBracesButton_clicked</h4>
+<b>on_matchingBracesButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the colour for highlighting matching braces.
+</p><a NAME="EditorStylesPage.on_monospacedFontButton_clicked" ID="EditorStylesPage.on_monospacedFontButton_clicked"></a>
+<h4>EditorStylesPage.on_monospacedFontButton_clicked</h4>
+<b>on_monospacedFontButton_clicked</b>(<i></i>)
+<p>
+        Private method used to select the font to be used as the monospaced font.
+</p><a NAME="EditorStylesPage.on_nonmatchingBracesBackButton_clicked" ID="EditorStylesPage.on_nonmatchingBracesBackButton_clicked"></a>
+<h4>EditorStylesPage.on_nonmatchingBracesBackButton_clicked</h4>
+<b>on_nonmatchingBracesBackButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour for highlighting nonmatching braces.
+</p><a NAME="EditorStylesPage.on_nonmatchingBracesButton_clicked" ID="EditorStylesPage.on_nonmatchingBracesButton_clicked"></a>
+<h4>EditorStylesPage.on_nonmatchingBracesButton_clicked</h4>
+<b>on_nonmatchingBracesButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the colour for highlighting nonmatching braces.
+</p><a NAME="EditorStylesPage.on_selectionBackgroundButton_clicked" ID="EditorStylesPage.on_selectionBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_selectionBackgroundButton_clicked</h4>
+<b>on_selectionBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour of the selection.
+</p><a NAME="EditorStylesPage.on_selectionForegroundButton_clicked" ID="EditorStylesPage.on_selectionForegroundButton_clicked"></a>
+<h4>EditorStylesPage.on_selectionForegroundButton_clicked</h4>
+<b>on_selectionForegroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour of the selection.
+</p><a NAME="EditorStylesPage.on_whitespaceBackgroundButton_clicked" ID="EditorStylesPage.on_whitespaceBackgroundButton_clicked"></a>
+<h4>EditorStylesPage.on_whitespaceBackgroundButton_clicked</h4>
+<b>on_whitespaceBackgroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the background colour of visible whitespace.
+</p><a NAME="EditorStylesPage.on_whitespaceForegroundButton_clicked" ID="EditorStylesPage.on_whitespaceForegroundButton_clicked"></a>
+<h4>EditorStylesPage.on_whitespaceForegroundButton_clicked</h4>
+<b>on_whitespaceForegroundButton_clicked</b>(<i></i>)
+<p>
+        Private slot to set the foreground colour of visible whitespace.
+</p><a NAME="EditorStylesPage.polishPage" ID="EditorStylesPage.polishPage"></a>
+<h4>EditorStylesPage.polishPage</h4>
+<b>polishPage</b>(<i></i>)
+<p>
+        Public slot to perform some polishing actions.
+</p><a NAME="EditorStylesPage.save" ID="EditorStylesPage.save"></a>
+<h4>EditorStylesPage.save</h4>
+<b>save</b>(<i></i>)
+<p>
+        Public slot to save the Editor Styles configuration.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="create" ID="create"></a>
+<h2>create</h2>
+<b>create</b>(<i>dlg</i>)
+<p>
+    Module function to create the configuration page.
+</p><dl>
+<dt><i>dlg</i></dt>
+<dd>
+reference to the configuration dialog
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

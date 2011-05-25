@@ -1,0 +1,105 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2003 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing the font dialog wizard dialog.
+"""
+
+import os
+
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+
+from .Ui_FontDialogWizardDialog import Ui_FontDialogWizardDialog
+
+
+class FontDialogWizardDialog(QDialog, Ui_FontDialogWizardDialog):
+    """
+    Class implementing the font dialog wizard dialog.
+    
+    It displays a dialog for entering the parameters
+    for the QFontDialog code generator.
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor
+        
+        @param parent parent widget (QWidget)
+        """
+        QDialog.__init__(self, parent)
+        self.setupUi(self)
+        
+        self.bTest = \
+            self.buttonBox.addButton(self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+        
+        self.font = None
+        
+    def on_buttonBox_clicked(self, button):
+        """
+        Private slot called by a button of the button box clicked.
+        
+        @param button button that was clicked (QAbstractButton)
+        """
+        if button == self.bTest:
+            self.on_bTest_clicked()
+    
+    @pyqtSlot()
+    def on_bTest_clicked(self):
+        """
+        Private method to test the selected options.
+        """
+        if self.font is None:
+            QFontDialog.getFont()
+        else:
+            QFontDialog.getFont(self.font)
+        
+    def on_eVariable_textChanged(self, text):
+        """
+        Private slot to handle the textChanged signal of eVariable.
+        
+        @param text the new text (string)
+        """
+        if not text:
+            self.bTest.setEnabled(True)
+        else:
+            self.bTest.setEnabled(False)
+        
+    @pyqtSlot()
+    def on_fontButton_clicked(self):
+        """
+        Private slot to handle the button press to select a font via a font selection
+        dialog.
+        """
+        if self.font is None:
+            font, ok = QFontDialog.getFont()
+        else:
+            font, ok = QFontDialog.getFont(self.font)
+        if ok:
+            self.font = font
+        else:
+            self.font = None
+        
+    def getCode(self, indLevel, indString):
+        """
+        Public method to get the source code.
+        
+        @param indLevel indentation level (int)
+        @param indString string used for indentation (space or tab) (string)
+        @return generated code (string)
+        """
+        estring = os.linesep + indLevel * indString
+        
+        # generate the code
+        code = 'QFontDialog.getFont('
+        if not self.eVariable.text():
+            if self.font is not None:
+                code += 'QFont("{0}", {1:d}, {2:d}, {3:d})'.format(
+                    self.font.family(), self.font.pointSize(),
+                    self.font.weight(), self.font.italic())
+        else:
+            code += self.eVariable.text()
+        code += '){0}'.format(estring)
+            
+        return code
