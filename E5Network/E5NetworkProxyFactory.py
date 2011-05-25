@@ -122,10 +122,10 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                     return [QNetworkProxy(QNetworkProxy.NoProxy)]
             else:
                 if Preferences.getUI("UseHttpProxyForAll"):
-                    protocol = "Http"
+                    protocolKey = "Http"
                 else:
-                    protocol = query.protocolTag().capitalize()
-                host = Preferences.getUI("ProxyHost/{0}".format(protocol))
+                    protocolKey = query.protocolTag().capitalize()
+                host = Preferences.getUI("ProxyHost/{0}".format(protocolKey))
                 if not host:
                     E5MessageBox.critical(None,
                         QCoreApplication.translate("E5NetworkProxyFactory", 
@@ -133,24 +133,20 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                         QCoreApplication.translate("E5NetworkProxyFactory", 
                             """Proxy usage was activated"""
                             """ but no proxy host for protocol"""
-                            """ '{0}' configured.""").format(protocol))
+                            """ '{0}' configured.""").format(protocolKey))
                     return [QNetworkProxy(QNetworkProxy.DefaultProxy)]
                 else:
-                    if protocol == "Http":
-                        proxy = QNetworkProxy(QNetworkProxy.HttpProxy, host, 
-                            Preferences.getUI("ProxyPort/Http"),
-                            Preferences.getUI("ProxyUser/Http"),
-                            Preferences.getUI("ProxyPassword/Http"))
-                    elif protocol == "Https":
-                        proxy = QNetworkProxy(QNetworkProxy.HttpCachingProxy, host, 
-                            Preferences.getUI("ProxyPort/Https"),
-                            Preferences.getUI("ProxyUser/Https"),
-                            Preferences.getUI("ProxyPassword/Https"))
-                    elif protocol == "Ftp":
-                        proxy = QNetworkProxy(QNetworkProxy.FtpCachingProxy, host, 
-                            Preferences.getUI("ProxyPort/Ftp"),
-                            Preferences.getUI("ProxyUser/Ftp"),
-                            Preferences.getUI("ProxyPassword/Ftp"))
+                    if protocolKey in ["Http", "Https", "Ftp"]:
+                        if query.protocolTag() == "ftp":
+                            proxyType = QNetworkProxy.FtpCachingProxy
+                        elif query.protocolTag() == "https":
+                            proxyType = QNetworkProxy.HttpCachingProxy
+                        else:
+                            proxyType = QNetworkProxy.HttpProxy
+                        proxy = QNetworkProxy(proxyType, host,
+                            Preferences.getUI("ProxyPort/" + protocolKey),
+                            Preferences.getUI("ProxyUser/" + protocolKey),
+                            Preferences.getUI("ProxyPassword/" + protocolKey))
                     else:
                         proxy = QNetworkProxy(QNetworkProxy.DefaultProxy)
                     return [proxy, QNetworkProxy(QNetworkProxy.DefaultProxy)]
