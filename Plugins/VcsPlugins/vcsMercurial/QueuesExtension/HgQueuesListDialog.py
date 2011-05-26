@@ -177,7 +177,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         
         if self.patchesList.topLevelItemCount() == 0:
             # no patches present
-            self.__generateItem(self.trUtf8("no patches found"), "", True)
+            self.__generateItem(0, "", self.trUtf8("no patches found"), "", True)
         self.patchesList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
