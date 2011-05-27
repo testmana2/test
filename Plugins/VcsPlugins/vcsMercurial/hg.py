@@ -109,6 +109,7 @@ class Hg(VersionControl):
         self.annotate = None
         self.editor = None
         self.serveDlg = None
+        
         self.bundleFile = None
         
         self.statusCache = {}
@@ -142,6 +143,8 @@ class Hg(VersionControl):
             self.annotate.close()
         if self.serveDlg is not None:
             self.serveDlg.close()
+        if self.editor is not None:
+            self.editor.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
@@ -1987,7 +1990,7 @@ class Hg(VersionControl):
     
     def hgServe(self, name):
         """
-        Public method used to edit the repository config file.
+        Public method used to serve the project.
         
         @param name directory name (string)
         """
