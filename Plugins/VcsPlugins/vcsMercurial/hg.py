@@ -115,8 +115,10 @@ class Hg(VersionControl):
         self.status = None
         self.tagbranchList = None
         self.annotate = None
-        self.editor = None
+        self.repoEditor = None
+        self.userEditor = None
         self.serveDlg = None
+        
         self.bundleFile = None
         
         self.statusCache = {}
@@ -164,6 +166,10 @@ class Hg(VersionControl):
             self.annotate.close()
         if self.serveDlg is not None:
             self.serveDlg.close()
+        if self.repoEditor is not None:
+            self.repoEditor.close()
+        if self.userEditor is not None:
+            self.userEditor.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
@@ -1659,9 +1665,17 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
     
+    def hgEditUserConfig(self):
+        """
+        Public method used to edit the user configuration file.
+        """
+        cfgFile = getConfigPath()
+        self.userEditor = MiniEditor(cfgFile, "Properties")
+        self.userEditor.show()
+    
     def hgEditConfig(self, name):
         """
-        Public method used to edit the repository config file.
+        Public method used to edit the repository configuration file.
         
         @param name file/directory name (string)
         """
@@ -1681,8 +1695,8 @@ class Hg(VersionControl):
                 cfg.close()
             except IOError:
                 pass
-        self.editor = MiniEditor(cfgFile, "Properties")
-        self.editor.show()
+        self.repoEditor = MiniEditor(cfgFile, "Properties")
+        self.repoEditor.show()
     
     def hgVerify(self, name):
         """
@@ -1709,7 +1723,7 @@ class Hg(VersionControl):
     
     def hgShowConfig(self, name):
         """
-        Public method to show the combined config.
+        Public method to show the combined configuration.
         
         @param name file/directory name (string)
         """
@@ -2177,7 +2191,7 @@ class Hg(VersionControl):
 
     def hgServe(self, name):
         """
-        Public method used to edit the repository config file.
+        Public method used to serve the project.
         
         @param name directory name (string)
         """
@@ -2199,7 +2213,7 @@ class Hg(VersionControl):
     
     def __iniFileChanged(self, path):
         """
-        Private slot to handle a change of the Mercurial config file.
+        Private slot to handle a change of the Mercurial configuration file.
         
         @param path name of the changed file (string)
         """
@@ -2207,7 +2221,8 @@ class Hg(VersionControl):
     
     def __monitorRepoIniFile(self, name):
         """
-        Private slot to add a repository config file to the list of monitored files.
+        Private slot to add a repository configuration file to the list of monitored
+        files.
         
         @param name directory name pointing into the repository (string)
         """

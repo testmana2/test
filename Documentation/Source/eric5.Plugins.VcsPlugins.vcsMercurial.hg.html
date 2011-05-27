@@ -70,10 +70,10 @@ VersionControl
 <td>Private method to format a url for Mercurial.</td>
 </tr><tr>
 <td><a href="#Hg.__iniFileChanged">__iniFileChanged</a></td>
-<td>Private slot to handle a change of the Mercurial config file.</td>
+<td>Private slot to handle a change of the Mercurial configuration file.</td>
 </tr><tr>
 <td><a href="#Hg.__monitorRepoIniFile">__monitorRepoIniFile</a></td>
-<td>Private slot to add a repository config file to the list of monitored files.</td>
+<td>Private slot to add a repository configuration file to the list of monitored files.</td>
 </tr><tr>
 <td><a href="#Hg.__vcsCommit_Step2">__vcsCommit_Step2</a></td>
 <td>Private slot performing the second step of the commit action.</td>
@@ -112,7 +112,10 @@ VersionControl
 <td>Public method to create the ignore file.</td>
 </tr><tr>
 <td><a href="#Hg.hgEditConfig">hgEditConfig</a></td>
-<td>Public method used to edit the repository config file.</td>
+<td>Public method used to edit the repository configuration file.</td>
+</tr><tr>
+<td><a href="#Hg.hgEditUserConfig">hgEditUserConfig</a></td>
+<td>Public method used to edit the user configuration file.</td>
 </tr><tr>
 <td><a href="#Hg.hgExtendedDiff">hgExtendedDiff</a></td>
 <td>Public method used to view the difference of a file/directory to the Mercurial repository.</td>
@@ -172,13 +175,13 @@ VersionControl
 <td>Public method used to rollback the last transaction.</td>
 </tr><tr>
 <td><a href="#Hg.hgServe">hgServe</a></td>
-<td>Public method used to edit the repository config file.</td>
+<td>Public method used to serve the project.</td>
 </tr><tr>
 <td><a href="#Hg.hgShowBranch">hgShowBranch</a></td>
 <td>Public method used to show the current branch the working directory.</td>
 </tr><tr>
 <td><a href="#Hg.hgShowConfig">hgShowConfig</a></td>
-<td>Public method to show the combined config.</td>
+<td>Public method to show the combined configuration.</td>
 </tr><tr>
 <td><a href="#Hg.hgShowPaths">hgShowPaths</a></td>
 <td>Public method to show the path aliases for remote repositories.</td>
@@ -326,7 +329,7 @@ properly formated url for subversion (string)
 <h4>Hg.__iniFileChanged</h4>
 <b>__iniFileChanged</b>(<i>path</i>)
 <p>
-        Private slot to handle a change of the Mercurial config file.
+        Private slot to handle a change of the Mercurial configuration file.
 </p><dl>
 <dt><i>path</i></dt>
 <dd>
@@ -336,7 +339,8 @@ name of the changed file (string)
 <h4>Hg.__monitorRepoIniFile</h4>
 <b>__monitorRepoIniFile</b>(<i>name</i>)
 <p>
-        Private slot to add a repository config file to the list of monitored files.
+        Private slot to add a repository configuration file to the list of monitored
+        files.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -374,7 +378,7 @@ reference to the monitor thread (QThread)
 <h4>Hg.getExtensionObject</h4>
 <b>getExtensionObject</b>(<i>extensionName</i>)
 <p>
-        Public method to get a reference to an extension object. 
+        Public method to get a reference to an extension object.
 </p><dl>
 <dt><i>extensionName</i></dt>
 <dd>
@@ -489,13 +493,18 @@ flag indicating success
 <h4>Hg.hgEditConfig</h4>
 <b>hgEditConfig</b>(<i>name</i>)
 <p>
-        Public method used to edit the repository config file.
+        Public method used to edit the repository configuration file.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
 </dd>
-</dl><a NAME="Hg.hgExtendedDiff" ID="Hg.hgExtendedDiff"></a>
+</dl><a NAME="Hg.hgEditUserConfig" ID="Hg.hgEditUserConfig"></a>
+<h4>Hg.hgEditUserConfig</h4>
+<b>hgEditUserConfig</b>(<i></i>)
+<p>
+        Public method used to edit the user configuration file.
+</p><a NAME="Hg.hgExtendedDiff" ID="Hg.hgExtendedDiff"></a>
 <h4>Hg.hgExtendedDiff</h4>
 <b>hgExtendedDiff</b>(<i>name</i>)
 <p>
@@ -737,7 +746,7 @@ directory name (string or list of strings)
 <h4>Hg.hgServe</h4>
 <b>hgServe</b>(<i>name</i>)
 <p>
-        Public method used to edit the repository config file.
+        Public method used to serve the project.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
@@ -757,7 +766,7 @@ file/directory name (string)
 <h4>Hg.hgShowConfig</h4>
 <b>hgShowConfig</b>(<i>name</i>)
 <p>
-        Public method to show the combined config.
+        Public method to show the combined configuration.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>

@@ -49,7 +49,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
     @pyqtSlot()
     def on_configButton_clicked(self):
         """
-        Private slot to edit the (per user) Mercurial config file.
+        Private slot to edit the (per user) Mercurial configuration file.
         """
         cfgFile = self.__plugin.getConfigPath()
         editor = MiniEditor(cfgFile, "Properties", self)

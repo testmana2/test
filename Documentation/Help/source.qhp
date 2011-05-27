@@ -8380,6 +8380,7 @@
       <keyword name="Hg.hgCopy" id="Hg.hgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCopy" />
       <keyword name="Hg.hgCreateIgnoreFile" id="Hg.hgCreateIgnoreFile" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCreateIgnoreFile" />
       <keyword name="Hg.hgEditConfig" id="Hg.hgEditConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgEditConfig" />
+      <keyword name="Hg.hgEditUserConfig" id="Hg.hgEditUserConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgEditUserConfig" />
       <keyword name="Hg.hgExtendedDiff" id="Hg.hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgExtendedDiff" />
       <keyword name="Hg.hgForget" id="Hg.hgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgForget" />
       <keyword name="Hg.hgGetBranchesList" id="Hg.hgGetBranchesList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetBranchesList" />
@@ -8484,6 +8485,7 @@
       <keyword name="HgProjectHelper.__hgConfigure" id="HgProjectHelper.__hgConfigure" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgConfigure" />
       <keyword name="HgProjectHelper.__hgCreateIgnore" id="HgProjectHelper.__hgCreateIgnore" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCreateIgnore" />
       <keyword name="HgProjectHelper.__hgEditRepoConfig" id="HgProjectHelper.__hgEditRepoConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgEditRepoConfig" />
+      <keyword name="HgProjectHelper.__hgEditUserConfig" id="HgProjectHelper.__hgEditUserConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgEditUserConfig" />
       <keyword name="HgProjectHelper.__hgExtendedDiff" id="HgProjectHelper.__hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgExtendedDiff" />
       <keyword name="HgProjectHelper.__hgHeads" id="HgProjectHelper.__hgHeads" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgHeads" />
       <keyword name="HgProjectHelper.__hgIdentify" id="HgProjectHelper.__hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentify" />

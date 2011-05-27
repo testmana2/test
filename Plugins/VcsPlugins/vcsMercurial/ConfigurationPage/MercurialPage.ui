@@ -159,10 +159,10 @@
    <item>
     <widget class="QPushButton" name="configButton">
      <property name="toolTip">
-      <string>Edit the mercurial config file</string>
+      <string>Edit the Mercurial configuration file</string>
      </property>
      <property name="text">
-      <string>Edit config file</string>
+      <string>Edit configuration file</string>
      </property>
     </widget>
    </item>

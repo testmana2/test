@@ -558,28 +558,43 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgConfigAct.triggered[()].connect(self.__hgConfigure)
         self.actions.append(self.hgConfigAct)
         
-        self.hgRepoConfigAct = E5Action(self.trUtf8('Edit repository config'),
-                self.trUtf8('Edit repository config...'),
+        self.hgEditUserConfigAct = E5Action(self.trUtf8('Edit user configuration'),
+                self.trUtf8('Edit user configuration...'),
+                0, 0, self, 'mercurial_user_configure')
+        self.hgEditUserConfigAct.setStatusTip(self.trUtf8(
+            'Show an editor to edit the user configuration file'
+        ))
+        self.hgEditUserConfigAct.setWhatsThis(self.trUtf8(
+            """<b>Edit user configuration</b>"""
+            """<p>Show an editor to edit the user configuration file.</p>"""
+        ))
+        self.hgEditUserConfigAct.triggered[()].connect(self.__hgEditUserConfig)
+        self.actions.append(self.hgEditUserConfigAct)
+        
+        self.hgRepoConfigAct = E5Action(self.trUtf8('Edit repository configuration'),
+                self.trUtf8('Edit repository configuration...'),
                 0, 0, self, 'mercurial_repo_configure')
         self.hgRepoConfigAct.setStatusTip(self.trUtf8(
-            'Show an editor to edit the repository config file'
+            'Show an editor to edit the repository configuration file'
         ))
         self.hgRepoConfigAct.setWhatsThis(self.trUtf8(
-            """<b>Edit repository config</b>"""
-            """<p>Show an editor to edit the repository config file.</p>"""
+            """<b>Edit repository configuration</b>"""
+            """<p>Show an editor to edit the repository configuration file.</p>"""
         ))
         self.hgRepoConfigAct.triggered[()].connect(self.__hgEditRepoConfig)
         self.actions.append(self.hgRepoConfigAct)
         
-        self.hgShowConfigAct = E5Action(self.trUtf8('Show combined config settings'),
-                self.trUtf8('Show combined config settings...'),
+        self.hgShowConfigAct = E5Action(
+                self.trUtf8('Show combined configuration settings'),
+                self.trUtf8('Show combined configuration settings...'),
                 0, 0, self, 'mercurial_show_config')
         self.hgShowConfigAct.setStatusTip(self.trUtf8(
-            'Show the combined config settings from all config files'
+            'Show the combined configuration settings from all configuration files'
         ))
         self.hgShowConfigAct.setWhatsThis(self.trUtf8(
-            """<b>Show combined config settings</b>"""
-            """<p>This shows the combined config settings from all config files.</p>"""
+            """<b>Show combined configuration settings</b>"""
+            """<p>This shows the combined configuration settings"""
+            """ from all configuration files.</p>"""
         ))
         self.hgShowConfigAct.triggered[()].connect(self.__hgShowConfig)
         self.actions.append(self.hgShowConfigAct)
@@ -922,6 +937,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
+        menu.addAction(self.hgEditUserConfigAct)
         menu.addAction(self.hgConfigAct)
     
     def __showExtensionMenu(self):
@@ -1058,15 +1074,21 @@ class HgProjectHelper(VcsProjectHelper):
         """
         self.vcs.hgPush(self.project.ppath, newBranch=True)
     
+    def __hgEditUserConfig(self):
+        """
+        Private slot used to edit the repository configuration file.
+        """
+        self.vcs.hgEditUserConfig()
+    
     def __hgEditRepoConfig(self):
         """
-        Private slot used to edit the repository config file.
+        Private slot used to edit the repository configuration file.
         """
         self.vcs.hgEditConfig(self.project.ppath)
     
     def __hgShowConfig(self):
         """
-        Private slot used to show the combined config.
+        Private slot used to show the combined configuration.
         """
         self.vcs.hgShowConfig(self.project.ppath)
     
