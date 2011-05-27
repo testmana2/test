@@ -3701,6 +3701,15 @@ class Editor(QsciScintillaCompat):
             should be a function taking a reference to the editor and
             a boolean indicating to complete a context.
         """
+        if self.__acHookFunction is not None:
+            # there is another provider registered already
+            E5MessageBox.warning(self,
+                self.trUtf8("Activating Auto-Completion Provider"),
+                self.trUtf8("""Auto-completion provider cannot be connected"""
+                            """ because there is already another one active."""
+                            """ Please check your configuration."""))
+            return
+        
         if self.autoCompletionThreshold() > 0:
             self.setAutoCompletionThreshold(0)
         self.__acHookFunction = func
@@ -3877,6 +3886,15 @@ class Editor(QsciScintillaCompat):
             left of the cursor. It should return the possible
             calltips as a list of strings.
         """
+        if self.__ctHookFunction is not None:
+            # there is another provider registered already
+            E5MessageBox.warning(self,
+                self.trUtf8("Activating Calltip Provider"),
+                self.trUtf8("""Calltip provider cannot be connected"""
+                            """ because there is already another one active."""
+                            """ Please check your configuration."""))
+            return
+        
         self.__ctHookFunction = func
     
     def unsetCallTipHook(self):
