@@ -19,6 +19,7 @@ from VCS.ProjectHelper import VcsProjectHelper
 from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
 from .QueuesExtension.ProjectHelper import QueuesProjectHelper
 from .FetchExtension.ProjectHelper import FetchProjectHelper
+from .PurgeExtension.ProjectHelper import PurgeProjectHelper
 
 from E5Gui.E5Action import E5Action
 
@@ -46,7 +47,10 @@ class HgProjectHelper(VcsProjectHelper):
             "bookmarks": BookmarksProjectHelper(),
             "mq": QueuesProjectHelper(),
             "fetch": FetchProjectHelper(),
+            "purge": PurgeProjectHelper(),
         }
+        
+        # TODO: create a dictionary of menu titles to extension key to be used below
     
     def setObjects(self, vcsObject, projectObject):
         """
@@ -833,6 +837,7 @@ class HgProjectHelper(VcsProjectHelper):
         """
         menu.clear()
         
+        # TODO: make submenus tearable
         adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
         adminMenu.addAction(self.hgHeadsAct)
         adminMenu.addAction(self.hgParentsAct)
@@ -874,7 +879,8 @@ class HgProjectHelper(VcsProjectHelper):
         extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
         extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
         self.extensionMenus = {}
-        for extensionName in self.__extensions:
+        # TODO: use extension menu titles for sorting
+        for extensionName in sorted(self.__extensions):
             self.extensionMenus[extensionName] = extensionsMenu.addMenu(
                 self.__extensions[extensionName].initMenu(extensionsMenu))
         

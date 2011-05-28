@@ -376,6 +376,11 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesDefineGuardsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesDefineGuardsDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesFoldDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesFoldDialog.html" />
@@ -9792,6 +9797,28 @@
       <keyword name="HgBookmarkRenameDialog.getData" id="HgBookmarkRenameDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.getData" />
       <keyword name="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" id="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" />
       <keyword name="HgBookmarkRenameDialog.on_nameEdit_textChanged" id="HgBookmarkRenameDialog.on_nameEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_nameEdit_textChanged" />
+      <keyword name="PurgeExtension (Package)" id="PurgeExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html" />
+      <keyword name="HgPurgeListDialog (Module)" id="HgPurgeListDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html" />
+      <keyword name="HgPurgeListDialog" id="HgPurgeListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html#HgPurgeListDialog" />
+      <keyword name="HgPurgeListDialog (Constructor)" id="HgPurgeListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html#HgPurgeListDialog.__init__" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
+      <keyword name="PurgeProjectHelper" id="PurgeProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper" />
+      <keyword name="PurgeProjectHelper (Constructor)" id="PurgeProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__init__" />
+      <keyword name="PurgeProjectHelper.__hgPurge" id="PurgeProjectHelper.__hgPurge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurge" />
+      <keyword name="PurgeProjectHelper.__hgPurgeAll" id="PurgeProjectHelper.__hgPurgeAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeAll" />
+      <keyword name="PurgeProjectHelper.__hgPurgeAllList" id="PurgeProjectHelper.__hgPurgeAllList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeAllList" />
+      <keyword name="PurgeProjectHelper.__hgPurgeList" id="PurgeProjectHelper.__hgPurgeList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeList" />
+      <keyword name="PurgeProjectHelper.getActions" id="PurgeProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.getActions" />
+      <keyword name="PurgeProjectHelper.initActions" id="PurgeProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initActions" />
+      <keyword name="PurgeProjectHelper.initMenu" id="PurgeProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initMenu" />
+      <keyword name="PurgeProjectHelper.setObjects" id="PurgeProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.setObjects" />
+      <keyword name="purge (Module)" id="purge (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html" />
+      <keyword name="Purge" id="Purge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge" />
+      <keyword name="Purge (Constructor)" id="Purge (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.__init__" />
+      <keyword name="Purge.__getEntries" id="Purge.__getEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.__getEntries" />
+      <keyword name="Purge.hgPurge" id="Purge.hgPurge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.hgPurge" />
+      <keyword name="Purge.hgPurgeList" id="Purge.hgPurgeList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.hgPurgeList" />
+      <keyword name="Purge.shutdown" id="Purge.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.shutdown" />
       <keyword name="ConfigurationPage (Package)" id="ConfigurationPage (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.html" />
       <keyword name="SubversionPage (Module)" id="SubversionPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.SubversionPage.html" />
       <keyword name="SubversionPage" id="SubversionPage" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.SubversionPage.html#SubversionPage" />
@@ -11024,6 +11051,9 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesDefineGuardsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesFoldDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesGuardsSelectionDialog.html</file>
@@ -11391,6 +11421,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.html</file>

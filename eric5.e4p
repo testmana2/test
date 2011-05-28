@@ -900,6 +900,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/FetchExtension/fetch.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/PurgeExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/PurgeExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/PurgeExtension/purge.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/PurgeExtension/HgPurgeListDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1154,6 +1158,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesGuardsSelectionDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesQueueManagementDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/PurgeExtension/HgPurgeListDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
