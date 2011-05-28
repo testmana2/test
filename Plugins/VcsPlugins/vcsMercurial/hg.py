@@ -168,10 +168,6 @@ class Hg(VersionControl):
             self.annotate.close()
         if self.serveDlg is not None:
             self.serveDlg.close()
-        if self.repoEditor is not None:
-            self.repoEditor.close()
-        if self.userEditor is not None:
-            self.userEditor.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
