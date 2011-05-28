@@ -125,6 +125,7 @@ class PurgeProjectHelper(QObject):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Purge"), mainMenu)
+        menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgPurgeAct)
         menu.addAction(self.hgPurgeAllAct)

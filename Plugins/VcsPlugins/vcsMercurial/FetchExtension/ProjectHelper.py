@@ -78,6 +78,7 @@ class FetchProjectHelper(QObject):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Fetch"), mainMenu)
+        menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgFetchAct)
         

@@ -594,8 +594,10 @@ class QueuesProjectHelper(QObject):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Queues"), mainMenu)
+        menu.setTearOffEnabled(True)
         
         pushPopMenu = QMenu(self.trUtf8("Push/Pop"), menu)
+        pushPopMenu.setTearOffEnabled(True)
         pushPopMenu.addAction(self.hgQueuePushAct)
         pushPopMenu.addAction(self.hgQueuePushUntilAct)
         pushPopMenu.addAction(self.hgQueuePushAllAct)
@@ -607,6 +609,7 @@ class QueuesProjectHelper(QObject):
         pushPopMenu.addAction(self.hgQueueGotoAct)
         
         pushPopForceMenu = QMenu(self.trUtf8("Push/Pop (force)"), menu)
+        pushPopForceMenu.setTearOffEnabled(True)
         pushPopForceMenu.addAction(self.hgQueuePushForceAct)
         pushPopForceMenu.addAction(self.hgQueuePushUntilForceAct)
         pushPopForceMenu.addAction(self.hgQueuePushAllForceAct)
@@ -618,6 +621,7 @@ class QueuesProjectHelper(QObject):
         pushPopForceMenu.addAction(self.hgQueueGotoForceAct)
         
         guardsMenu = QMenu(self.trUtf8("Guards"), menu)
+        guardsMenu.setTearOffEnabled(True)
         guardsMenu.addAction(self.hgQueueDefineGuardsAct)
         guardsMenu.addAction(self.hgQueueDropAllGuardsAct)
         guardsMenu.addSeparator()
@@ -630,6 +634,7 @@ class QueuesProjectHelper(QObject):
         guardsMenu.addAction(self.hgQueueIdentifyActiveGuardsAct)
         
         queuesMenu = QMenu(self.trUtf8("Queue Management"), menu)
+        queuesMenu.setTearOffEnabled(True)
         queuesMenu.addAction(self.hgQueueCreateQueueAct)
         queuesMenu.addAction(self.hgQueueRenameQueueAct)
         queuesMenu.addAction(self.hgQueueDeleteQueueAct)

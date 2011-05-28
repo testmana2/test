@@ -189,6 +189,7 @@ class BookmarksProjectHelper(QObject):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.trUtf8("Bookmarks"), mainMenu)
+        menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgBookmarkDefineAct)
         menu.addAction(self.hgBookmarkDeleteAct)
