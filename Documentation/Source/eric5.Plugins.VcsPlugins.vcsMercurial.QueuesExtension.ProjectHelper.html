@@ -150,6 +150,9 @@ QObject
 <td><a href="#QueuesProjectHelper.__hgQueuePushPatchesForced">__hgQueuePushPatchesForced</a></td>
 <td>Private slot used to push patches onto the stack until a named one is at the top on top of local changes.</td>
 </tr><tr>
+<td><a href="#QueuesProjectHelper.__hgQueuePushPopPatches">__hgQueuePushPopPatches</a></td>
+<td>Private method to push patches onto the stack or pop patches off the stack.</td>
+</tr><tr>
 <td><a href="#QueuesProjectHelper.__hgQueueRefreshPatch">__hgQueueRefreshPatch</a></td>
 <td>Private slot used to refresh the current patch.</td>
 </tr><tr>
@@ -364,7 +367,36 @@ QObject
 <p>
         Private slot used to push patches onto the stack until a named
         one is at the top on top of local changes.
-</p><a NAME="QueuesProjectHelper.__hgQueueRefreshPatch" ID="QueuesProjectHelper.__hgQueueRefreshPatch"></a>
+</p><a NAME="QueuesProjectHelper.__hgQueuePushPopPatches" ID="QueuesProjectHelper.__hgQueuePushPopPatches"></a>
+<h4>QueuesProjectHelper.__hgQueuePushPopPatches</h4>
+<b>__hgQueuePushPopPatches</b>(<i>name, operation, all=False, named=False, force=False</i>)
+<p>
+        Private method to push patches onto the stack or pop patches off the stack.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd><dt><i>operation</i></dt>
+<dd>
+operation type to be performed (Queues.POP,
+            Queues.PUSH, Queues.GOTO)
+</dd><dt><i>all=</i></dt>
+<dd>
+flag indicating to push/pop all (boolean)
+</dd><dt><i>named=</i></dt>
+<dd>
+flag indicating to push/pop until a named patch
+            is at the top of the stack (boolean)
+</dd><dt><i>force=</i></dt>
+<dd>
+flag indicating a forceful pop (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the project should be reread (boolean)
+</dd>
+</dl><a NAME="QueuesProjectHelper.__hgQueueRefreshPatch" ID="QueuesProjectHelper.__hgQueueRefreshPatch"></a>
 <h4>QueuesProjectHelper.__hgQueueRefreshPatch</h4>
 <b>__hgQueueRefreshPatch</b>(<i></i>)
 <p>

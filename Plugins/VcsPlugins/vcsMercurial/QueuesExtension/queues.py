@@ -342,13 +342,14 @@ class Queues(QObject):
         @keyparam named flag indicating to push/pop until a named patch
             is at the top of the stack (boolean)
         @keyparam force flag indicating a forceful pop (boolean)
+        @return flag indicating that the project should be reread (boolean)
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return
+                return False
         
         args = []
         if operation == Queues.POP:
@@ -365,6 +366,7 @@ class Queues(QObject):
             listType = Queues.SERIES_LIST
         else:
             raise ValueError("illegal value for operation")
+        args.append("-v")
         if force:
             args.append("--force")
         if all and operation in (Queues.POP, Queues.PUSH):
@@ -381,18 +383,20 @@ class Queues(QObject):
                 if ok and patch:
                     args.append(patch)
                 else:
-                    return
+                    return False
             else:
                 E5MessageBox.information(None,
                     self.trUtf8("Select Patch"),
                     self.trUtf8("""No patches to select from."""))
-                return
+                return False
         
         dia = HgDialog(title)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+            res = dia.hasAddOrDelete()
             self.vcs.checkVCSStatus()
+        return res
     
     def hgQueueListPatches(self, name):
         """

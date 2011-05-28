@@ -11,6 +11,7 @@ from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
+from E5Gui import E5MessageBox
 
 from .queues import Queues
 
@@ -697,12 +698,37 @@ class QueuesProjectHelper(QObject):
         self.vcs.getExtensionObject("mq")\
             .hgQueueShowHeader(self.project.getProjectPath())
     
+    
+    def __hgQueuePushPopPatches(self, name, operation, all=False, named=False,
+                                force=False):
+        """
+        Private method to push patches onto the stack or pop patches off the stack.
+        
+        @param name file/directory name (string)
+        @param operation operation type to be performed (Queues.POP,
+            Queues.PUSH, Queues.GOTO)
+        @keyparam all flag indicating to push/pop all (boolean)
+        @keyparam named flag indicating to push/pop until a named patch
+            is at the top of the stack (boolean)
+        @keyparam force flag indicating a forceful pop (boolean)
+        @return flag indicating that the project should be reread (boolean)
+        """
+        shouldReopen = self.vcs.getExtensionObject("mq")\
+            .hgQueuePushPopPatches(name, operation=operation, all=all, named=named,
+                force=force)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(None,
+                self.trUtf8("Changing Applied Patches"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
+    
     def __hgQueuePushPatch(self):
         """
         Private slot used to push the next patch onto the stack.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=False, named=False)
     
     def __hgQueuePushPatchForced(self):
@@ -710,16 +736,14 @@ class QueuesProjectHelper(QObject):
         Private slot used to push the next patch onto the stack on top
         of local changes.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=False, named=False, force=True)
     
     def __hgQueuePushAllPatches(self):
         """
         Private slot used to push all patches onto the stack.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=True, named=False)
     
     def __hgQueuePushAllPatchesForced(self):
@@ -727,8 +751,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to push all patches onto the stack on top
         of local changes.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=True, named=False, force=True)
     
     def __hgQueuePushPatches(self):
@@ -736,8 +759,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to push patches onto the stack until a named
         one is at the top.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=False, named=True)
     
     def __hgQueuePushPatchesForced(self):
@@ -745,16 +767,14 @@ class QueuesProjectHelper(QObject):
         Private slot used to push patches onto the stack until a named
         one is at the top on top of local changes.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.PUSH, all=False, named=True, force=True)
     
     def __hgQueuePopPatch(self):
         """
         Private slot used to pop the current patch off the stack.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=False, named=False)
     
     def __hgQueuePopPatchForced(self):
@@ -762,16 +782,14 @@ class QueuesProjectHelper(QObject):
         Private slot used to pop the current patch off the stack forgetting
         any local changes to patched files.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=False, named=False, force=True)
     
     def __hgQueuePopAllPatches(self):
         """
         Private slot used to pop all patches off the stack.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=True, named=False)
     
     def __hgQueuePopAllPatchesForced(self):
@@ -779,8 +797,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to pop all patches off the stack forgetting
         any local changes to patched files.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=True, named=False, force=True)
     
     def __hgQueuePopPatches(self):
@@ -788,8 +805,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to pop patches off the stack until a named
         one is at the top.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=False, named=True)
     
     def __hgQueuePopPatchesForced(self):
@@ -797,8 +813,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to pop patches off the stack until a named
         one is at the top forgetting any local changes to patched files.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.POP, all=False, named=True, force=True)
     
     def __hgQueueGotoPatch(self):
@@ -806,8 +821,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to push or pop patches until the a named one
         is at the top of the stack.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.GOTO, all=False, named=True)
     
     def __hgQueueGotoPatchForced(self):
@@ -815,8 +829,7 @@ class QueuesProjectHelper(QObject):
         Private slot used to push or pop patches until the a named one
         is at the top of the stack overwriting local changes.
         """
-        self.vcs.getExtensionObject("mq")\
-            .hgQueuePushPopPatches(self.project.getProjectPath(),
+        self.__hgQueuePushPopPatches(self.project.getProjectPath(),
                 operation=Queues.GOTO, all=False, named=True, force=True)
     
     def __hgQueueListPatches(self):
