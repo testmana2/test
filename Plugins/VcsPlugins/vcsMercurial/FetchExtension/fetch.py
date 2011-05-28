@@ -42,13 +42,14 @@ class Fetch(QObject):
         Public method to fetch changes from a remote repository.
         
         @param name file/directory name (string)
+        @return flag indicating that the project should be reread (boolean)
         """
         # find the root of the repo
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return
+                return False
         
         res = False
         dlg = HgFetchDialog()
