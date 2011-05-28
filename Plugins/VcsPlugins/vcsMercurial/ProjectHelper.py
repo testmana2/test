@@ -752,6 +752,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.clear()
         
         adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
+        adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)
         adminMenu.addAction(self.hgParentsAct)
         adminMenu.addAction(self.hgTipAct)
@@ -772,17 +773,20 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgVerifyAct)
         
         specialsMenu = QMenu(self.trUtf8("Specials"), menu)
+        specialsMenu.setTearOffEnabled(True)
         specialsMenu.addAction(self.hgPushForcedAct)
         specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgServeAct)
         
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
+        bundleMenu.setTearOffEnabled(True)
         bundleMenu.addAction(self.hgBundleAct)
         bundleMenu.addAction(self.hgIdentifyBundleAct)
         bundleMenu.addAction(self.hgPreviewBundleAct)
         bundleMenu.addAction(self.hgUnbundleAct)
         
         bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
+        bisectMenu.setTearOffEnabled(True)
         bisectMenu.addAction(self.hgBisectGoodAct)
         bisectMenu.addAction(self.hgBisectBadAct)
         bisectMenu.addAction(self.hgBisectSkipAct)
