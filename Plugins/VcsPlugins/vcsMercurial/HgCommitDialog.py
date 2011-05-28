@@ -92,6 +92,8 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     def on_recentComboBox_activated(self, txt):
         """
         Private slot to select a commit message from recent ones.
+        
+        @param txt text of the selected entry (string)
         """
         if txt:
             self.logEdit.setPlainText(txt)

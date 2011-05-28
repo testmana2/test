@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper</h1>
+<p>
+Module implementing the fetch extension project helper.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#FetchProjectHelper">FetchProjectHelper</a></td>
+<td>Class implementing the fetch extension project helper.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="FetchProjectHelper" ID="FetchProjectHelper"></a>
+<h2>FetchProjectHelper</h2>
+<p>
+    Class implementing the fetch extension project helper.
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#FetchProjectHelper.__init__">FetchProjectHelper</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#FetchProjectHelper.__hgFetch">__hgFetch</a></td>
+<td>Private slot used to fetch changes from a remote repository.</td>
+</tr><tr>
+<td><a href="#FetchProjectHelper.getActions">getActions</a></td>
+<td>Public method to get a list of all actions.</td>
+</tr><tr>
+<td><a href="#FetchProjectHelper.initActions">initActions</a></td>
+<td>Public method to generate the action objects.</td>
+</tr><tr>
+<td><a href="#FetchProjectHelper.initMenu">initMenu</a></td>
+<td>Public method to generate the extension menu.</td>
+</tr><tr>
+<td><a href="#FetchProjectHelper.setObjects">setObjects</a></td>
+<td>Public method to set references to the vcs and project objects.</td>
+</tr>
+</table>
+<a NAME="FetchProjectHelper.__init__" ID="FetchProjectHelper.__init__"></a>
+<h4>FetchProjectHelper (Constructor)</h4>
+<b>FetchProjectHelper</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="FetchProjectHelper.__hgFetch" ID="FetchProjectHelper.__hgFetch"></a>
+<h4>FetchProjectHelper.__hgFetch</h4>
+<b>__hgFetch</b>(<i></i>)
+<p>
+        Private slot used to fetch changes from a remote repository.
+</p><a NAME="FetchProjectHelper.getActions" ID="FetchProjectHelper.getActions"></a>
+<h4>FetchProjectHelper.getActions</h4>
+<b>getActions</b>(<i></i>)
+<p>
+        Public method to get a list of all actions.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of all actions (list of E5Action)
+</dd>
+</dl><a NAME="FetchProjectHelper.initActions" ID="FetchProjectHelper.initActions"></a>
+<h4>FetchProjectHelper.initActions</h4>
+<b>initActions</b>(<i></i>)
+<p>
+        Public method to generate the action objects.
+</p><a NAME="FetchProjectHelper.initMenu" ID="FetchProjectHelper.initMenu"></a>
+<h4>FetchProjectHelper.initMenu</h4>
+<b>initMenu</b>(<i>mainMenu</i>)
+<p>
+        Public method to generate the extension menu.
+</p><dl>
+<dt><i>mainMenu</i></dt>
+<dd>
+reference to the main menu (QMenu)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+populated menu (QMenu)
+</dd>
+</dl><a NAME="FetchProjectHelper.setObjects" ID="FetchProjectHelper.setObjects"></a>
+<h4>FetchProjectHelper.setObjects</h4>
+<b>setObjects</b>(<i>vcsObject, projectObject</i>)
+<p>
+        Public method to set references to the vcs and project objects.
+</p><dl>
+<dt><i>vcsObject</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>projectObject</i></dt>
+<dd>
+reference to the project object
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

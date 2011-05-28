@@ -29,6 +29,8 @@ class Bookmarks(QObject):
     def __init__(self, vcs):
         """
         Constructor
+        
+        @param vcs reference to the Mercurial vcs object
         """
         QObject.__init__(self, vcs)
         

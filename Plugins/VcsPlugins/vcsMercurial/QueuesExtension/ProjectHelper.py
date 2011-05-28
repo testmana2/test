@@ -587,7 +587,7 @@ class QueuesProjectHelper(QObject):
     
     def initMenu(self, mainMenu):
         """
-        Public method to generate the VCS menu.
+        Public method to generate the extension menu.
         
         @param mainMenu reference to the main menu (QMenu)
         @return populated menu (QMenu)

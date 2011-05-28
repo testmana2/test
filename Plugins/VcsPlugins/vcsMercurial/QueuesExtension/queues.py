@@ -6,6 +6,7 @@
 """
 Module implementing the queues extension interface.
 """
+
 import os
 
 from PyQt4.QtCore import QObject, QProcess
@@ -49,6 +50,8 @@ class Queues(QObject):
     def __init__(self, vcs):
         """
         Constructor
+        
+        @param vcs reference to the Mercurial vcs object
         """
         QObject.__init__(self, vcs)
         

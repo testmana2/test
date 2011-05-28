@@ -18,6 +18,7 @@ from VCS.ProjectHelper import VcsProjectHelper
 
 from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
 from .QueuesExtension.ProjectHelper import QueuesProjectHelper
+from .FetchExtension.ProjectHelper import FetchProjectHelper
 
 from E5Gui.E5Action import E5Action
 
@@ -44,6 +45,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.__extensions = {
             "bookmarks": BookmarksProjectHelper(),
             "mq": QueuesProjectHelper(),
+            "fetch": FetchProjectHelper(),
         }
     
     def setObjects(self, vcsObject, projectObject):

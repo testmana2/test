@@ -48,6 +48,7 @@ from .HgUtilities import getConfigPath
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
+from .FetchExtension.fetch import Fetch
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -138,6 +139,7 @@ class Hg(VersionControl):
         self.__extensions = {
             "bookmarks": Bookmarks(self),
             "mq": Queues(self),
+            "fetch": Fetch(self),
         }
     
     def getPlugin(self):

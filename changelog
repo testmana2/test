@@ -4,6 +4,7 @@ Version 5.2-snapshot-2011mmdd:
 - bug fixes
 - added support for the Mercurial bookmarks extension
 - added support for the Mercurial queues extension
+- added support for the Mercurial fetch extension
 - added function to test the login data to the Email config page
 
 Version 5.2-snapshot-20110501:

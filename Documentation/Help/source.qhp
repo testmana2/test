@@ -371,6 +371,11 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesDefineGuardsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesDefineGuardsDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesFoldDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesFoldDialog.html" />
@@ -9505,6 +9510,25 @@
       <keyword name="MercurialPage (Constructor)" id="MercurialPage (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.__init__" />
       <keyword name="MercurialPage.on_configButton_clicked" id="MercurialPage.on_configButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.on_configButton_clicked" />
       <keyword name="MercurialPage.save" id="MercurialPage.save" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.save" />
+      <keyword name="FetchExtension (Package)" id="FetchExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html" />
+      <keyword name="HgFetchDialog (Module)" id="HgFetchDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
+      <keyword name="HgFetchDialog" id="HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog" />
+      <keyword name="HgFetchDialog (Constructor)" id="HgFetchDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog.__init__" />
+      <keyword name="HgFetchDialog.getData" id="HgFetchDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog.getData" />
+      <keyword name="HgFetchDialog.on_recentComboBox_activated" id="HgFetchDialog.on_recentComboBox_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog.on_recentComboBox_activated" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
+      <keyword name="FetchProjectHelper" id="FetchProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper" />
+      <keyword name="FetchProjectHelper (Constructor)" id="FetchProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__init__" />
+      <keyword name="FetchProjectHelper.__hgFetch" id="FetchProjectHelper.__hgFetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__hgFetch" />
+      <keyword name="FetchProjectHelper.getActions" id="FetchProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.getActions" />
+      <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
+      <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
+      <keyword name="FetchProjectHelper.setObjects" id="FetchProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.setObjects" />
+      <keyword name="fetch (Module)" id="fetch (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
+      <keyword name="Fetch" id="Fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch" />
+      <keyword name="Fetch (Constructor)" id="Fetch (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.__init__" />
+      <keyword name="Fetch.hgFetch" id="Fetch.hgFetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.hgFetch" />
+      <keyword name="Fetch.shutdown" id="Fetch.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.shutdown" />
       <keyword name="QueuesExtension (Package)" id="QueuesExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html" />
       <keyword name="HgQueuesListGuardsDialog (Module)" id="HgQueuesListGuardsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListGuardsDialog.html" />
       <keyword name="HgQueuesListGuardsDialog" id="HgQueuesListGuardsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListGuardsDialog.html#HgQueuesListGuardsDialog" />
@@ -10973,6 +10997,9 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
@@ -11362,6 +11389,7 @@
       <file>index-eric5.Plugins.VcsPlugins.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.html</file>
