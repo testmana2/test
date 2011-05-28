@@ -50,7 +50,10 @@ class HgProjectHelper(VcsProjectHelper):
             "purge": PurgeProjectHelper(),
         }
         
-        # TODO: create a dictionary of menu titles to extension key to be used below
+        self.__extensionMenuTitles = {}
+        for extension in self.__extensions:
+            self.__extensionMenuTitles[self.__extensions[extension].menuTitle()] = \
+                extension
     
     def setObjects(self, vcsObject, projectObject):
         """
@@ -837,7 +840,6 @@ class HgProjectHelper(VcsProjectHelper):
         """
         menu.clear()
         
-        # TODO: make submenus tearable
         adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
         adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)
@@ -883,8 +885,8 @@ class HgProjectHelper(VcsProjectHelper):
         extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
         extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
         self.extensionMenus = {}
-        # TODO: use extension menu titles for sorting
-        for extensionName in sorted(self.__extensions):
+        for extensionMenuTitle in sorted(self.__extensionMenuTitles):
+            extensionName = self.__extensionMenuTitles[extensionMenuTitle]
             self.extensionMenus[extensionName] = extensionsMenu.addMenu(
                 self.__extensions[extensionName].initMenu(extensionsMenu))
         

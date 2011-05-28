@@ -77,12 +77,18 @@ class FetchProjectHelper(QObject):
         @param mainMenu reference to the main menu (QMenu)
         @return populated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Fetch"), mainMenu)
+        menu = QMenu(self.menuTitle(), mainMenu)
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgFetchAct)
         
         return menu
+    
+    def menuTitle(self):
+        """
+        Public method to get the menu title.
+        """
+        return self.trUtf8("Fetch")
     
     def __hgFetch(self):
         """

@@ -9528,6 +9528,7 @@
       <keyword name="FetchProjectHelper.getActions" id="FetchProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.getActions" />
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
+      <keyword name="FetchProjectHelper.menuTitle" id="FetchProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.menuTitle" />
       <keyword name="FetchProjectHelper.setObjects" id="FetchProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.setObjects" />
       <keyword name="fetch (Module)" id="fetch (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
       <keyword name="Fetch" id="Fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch" />
@@ -9622,6 +9623,7 @@
       <keyword name="QueuesProjectHelper.getActions" id="QueuesProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.getActions" />
       <keyword name="QueuesProjectHelper.initActions" id="QueuesProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.initActions" />
       <keyword name="QueuesProjectHelper.initMenu" id="QueuesProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.initMenu" />
+      <keyword name="QueuesProjectHelper.menuTitle" id="QueuesProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.menuTitle" />
       <keyword name="QueuesProjectHelper.setObjects" id="QueuesProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.setObjects" />
       <keyword name="HgQueuesQueueManagementDialog (Module)" id="HgQueuesQueueManagementDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.html" />
       <keyword name="HgQueuesQueueManagementDialog" id="HgQueuesQueueManagementDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.html#HgQueuesQueueManagementDialog" />
@@ -9789,6 +9791,7 @@
       <keyword name="BookmarksProjectHelper.getActions" id="BookmarksProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.getActions" />
       <keyword name="BookmarksProjectHelper.initActions" id="BookmarksProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initActions" />
       <keyword name="BookmarksProjectHelper.initMenu" id="BookmarksProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initMenu" />
+      <keyword name="BookmarksProjectHelper.menuTitle" id="BookmarksProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.menuTitle" />
       <keyword name="BookmarksProjectHelper.setObjects" id="BookmarksProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.setObjects" />
       <keyword name="HgBookmarkRenameDialog (Module)" id="HgBookmarkRenameDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html" />
       <keyword name="HgBookmarkRenameDialog" id="HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog" />
@@ -9811,6 +9814,7 @@
       <keyword name="PurgeProjectHelper.getActions" id="PurgeProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.getActions" />
       <keyword name="PurgeProjectHelper.initActions" id="PurgeProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initActions" />
       <keyword name="PurgeProjectHelper.initMenu" id="PurgeProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initMenu" />
+      <keyword name="PurgeProjectHelper.menuTitle" id="PurgeProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.menuTitle" />
       <keyword name="PurgeProjectHelper.setObjects" id="PurgeProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.setObjects" />
       <keyword name="purge (Module)" id="purge (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html" />
       <keyword name="Purge" id="Purge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge" />

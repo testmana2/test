@@ -593,7 +593,7 @@ class QueuesProjectHelper(QObject):
         @param mainMenu reference to the main menu (QMenu)
         @return populated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Queues"), mainMenu)
+        menu = QMenu(self.menuTitle(), mainMenu)
         menu.setTearOffEnabled(True)
         
         pushPopMenu = QMenu(self.trUtf8("Push/Pop"), menu)
@@ -667,6 +667,12 @@ class QueuesProjectHelper(QObject):
         menu.addMenu(queuesMenu)
         
         return menu
+    
+    def menuTitle(self):
+        """
+        Public method to get the menu title.
+        """
+        return self.trUtf8("Queues")
     
     def __hgQueueNewPatch(self):
         """

@@ -124,7 +124,7 @@ class PurgeProjectHelper(QObject):
         @param mainMenu reference to the main menu (QMenu)
         @return populated menu (QMenu)
         """
-        menu = QMenu(self.trUtf8("Purge"), mainMenu)
+        menu = QMenu(self.menuTitle(), mainMenu)
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgPurgeAct)
@@ -134,6 +134,12 @@ class PurgeProjectHelper(QObject):
         menu.addAction(self.hgPurgeAllListAct)
         
         return menu
+    
+    def menuTitle(self):
+        """
+        Public method to get the menu title.
+        """
+        return self.trUtf8("Purge")
     
     def __hgPurge(self):
         """
