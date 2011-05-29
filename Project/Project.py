@@ -2535,7 +2535,6 @@ class Project(QObject):
         
         # now shutdown the vcs interface
         if self.vcs:
-            # TODO: if not reopen: close torn off vcs menus
             self.vcs.vcsShutdown()
             self.vcs = None
             e5App().getObject("PluginManager").deactivateVcsPlugins()

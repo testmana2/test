@@ -176,6 +176,9 @@ class Hg(VersionControl):
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
         
+        # shut down the project helpers
+        self.__projectHelper.shutdown()
+        
         # shut down the extensions
         for extension in self.__extensions.values():
             extension.shutdown()
@@ -2306,10 +2309,10 @@ class Hg(VersionControl):
         @param project reference to the project object
         @return the project helper object
         """
-        helper = self.__plugin.getProjectHelper()
-        helper.setObjects(self, project)
+        self.__projectHelper = self.__plugin.getProjectHelper()
+        self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.ppath)
-        return helper
+        return self.__projectHelper
 
     ############################################################################
     ##  Status Monitor Thread methods

@@ -842,7 +842,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         menu.clear()
         
-        # TODO: close torn off menus in the shutdown method (extend base class with this method)
+        self.subMenus = []
+        
         adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
         adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)
@@ -864,12 +865,14 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addAction(self.hgRollbackAct)
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgVerifyAct)
+        self.subMenus.append(adminMenu)
         
         specialsMenu = QMenu(self.trUtf8("Specials"), menu)
         specialsMenu.setTearOffEnabled(True)
         specialsMenu.addAction(self.hgPushForcedAct)
         specialsMenu.addSeparator()
         specialsMenu.addAction(self.hgServeAct)
+        self.subMenus.append(specialsMenu)
         
         bundleMenu = QMenu(self.trUtf8("Changegroup Management"), menu)
         bundleMenu.setTearOffEnabled(True)
@@ -877,6 +880,7 @@ class HgProjectHelper(VcsProjectHelper):
         bundleMenu.addAction(self.hgIdentifyBundleAct)
         bundleMenu.addAction(self.hgPreviewBundleAct)
         bundleMenu.addAction(self.hgUnbundleAct)
+        self.subMenus.append(bundleMenu)
         
         bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
         bisectMenu.setTearOffEnabled(True)
@@ -884,6 +888,7 @@ class HgProjectHelper(VcsProjectHelper):
         bisectMenu.addAction(self.hgBisectBadAct)
         bisectMenu.addAction(self.hgBisectSkipAct)
         bisectMenu.addAction(self.hgBisectResetAct)
+        self.subMenus.append(bisectMenu)
         
         extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
         extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
@@ -956,6 +961,21 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.hgEditUserConfigAct)
         menu.addAction(self.hgConfigAct)
+    
+    def shutdown(self):
+        """
+        Public method to perform shutdown actions.
+        """
+        # close torn off sub menus
+        for menu in self.subMenus:
+            if menu.isTearOffMenuVisible():
+                menu.hideTearOffMenu()
+        
+        # close torn off extension menus
+        for extensionName in self.extensionMenus:
+            menu = self.extensionMenus[extensionName].menu()
+            if menu.isTearOffMenuVisible():
+                menu.hideTearOffMenu()
     
     def __showExtensionMenu(self):
         """
