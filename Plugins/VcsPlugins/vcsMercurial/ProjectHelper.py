@@ -20,6 +20,7 @@ from .BookmarksExtension.ProjectHelper import BookmarksProjectHelper
 from .QueuesExtension.ProjectHelper import QueuesProjectHelper
 from .FetchExtension.ProjectHelper import FetchProjectHelper
 from .PurgeExtension.ProjectHelper import PurgeProjectHelper
+from .GpgExtension.ProjectHelper import GpgProjectHelper
 
 from E5Gui.E5Action import E5Action
 
@@ -48,6 +49,7 @@ class HgProjectHelper(VcsProjectHelper):
             "mq": QueuesProjectHelper(),
             "fetch": FetchProjectHelper(),
             "purge": PurgeProjectHelper(),
+            "gpg": GpgProjectHelper(),
         }
         
         self.__extensionMenuTitles = {}
@@ -840,6 +842,7 @@ class HgProjectHelper(VcsProjectHelper):
         """
         menu.clear()
         
+        # TODO: close torn off menus in the shutdown method (extend base class with this method)
         adminMenu = QMenu(self.trUtf8("Repository Administration"), menu)
         adminMenu.setTearOffEnabled(True)
         adminMenu.addAction(self.hgHeadsAct)

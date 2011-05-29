@@ -50,6 +50,7 @@ from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
 from .FetchExtension.fetch import Fetch
 from .PurgeExtension.purge import Purge
+from .GpgExtension.gpg import Gpg
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -142,6 +143,7 @@ class Hg(VersionControl):
             "mq": Queues(self),
             "fetch": Fetch(self),
             "purge": Purge(self),
+            "gpg": Gpg(self),
         }
     
     def getPlugin(self):

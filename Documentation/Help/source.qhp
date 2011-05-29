@@ -376,6 +376,12 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.HgPurgeListDialog.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html" />
@@ -9823,6 +9829,60 @@
       <keyword name="Purge.hgPurge" id="Purge.hgPurge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.hgPurge" />
       <keyword name="Purge.hgPurgeList" id="Purge.hgPurgeList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.hgPurgeList" />
       <keyword name="Purge.shutdown" id="Purge.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.shutdown" />
+      <keyword name="GpgExtension (Package)" id="GpgExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html" />
+      <keyword name="HgGpgSignaturesDialog (Module)" id="HgGpgSignaturesDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html" />
+      <keyword name="HgGpgSignaturesDialog" id="HgGpgSignaturesDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog" />
+      <keyword name="HgGpgSignaturesDialog (Constructor)" id="HgGpgSignaturesDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__init__" />
+      <keyword name="HgGpgSignaturesDialog.__filterSignatures" id="HgGpgSignaturesDialog.__filterSignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__filterSignatures" />
+      <keyword name="HgGpgSignaturesDialog.__finish" id="HgGpgSignaturesDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__finish" />
+      <keyword name="HgGpgSignaturesDialog.__generateItem" id="HgGpgSignaturesDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__generateItem" />
+      <keyword name="HgGpgSignaturesDialog.__procFinished" id="HgGpgSignaturesDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__procFinished" />
+      <keyword name="HgGpgSignaturesDialog.__readStderr" id="HgGpgSignaturesDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__readStderr" />
+      <keyword name="HgGpgSignaturesDialog.__readStdout" id="HgGpgSignaturesDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__readStdout" />
+      <keyword name="HgGpgSignaturesDialog.__resizeColumns" id="HgGpgSignaturesDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__resizeColumns" />
+      <keyword name="HgGpgSignaturesDialog.__resort" id="HgGpgSignaturesDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.__resort" />
+      <keyword name="HgGpgSignaturesDialog.closeEvent" id="HgGpgSignaturesDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.closeEvent" />
+      <keyword name="HgGpgSignaturesDialog.keyPressEvent" id="HgGpgSignaturesDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.keyPressEvent" />
+      <keyword name="HgGpgSignaturesDialog.on_buttonBox_clicked" id="HgGpgSignaturesDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_buttonBox_clicked" />
+      <keyword name="HgGpgSignaturesDialog.on_categoryCombo_activated" id="HgGpgSignaturesDialog.on_categoryCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_categoryCombo_activated" />
+      <keyword name="HgGpgSignaturesDialog.on_input_returnPressed" id="HgGpgSignaturesDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_input_returnPressed" />
+      <keyword name="HgGpgSignaturesDialog.on_passwordCheckBox_toggled" id="HgGpgSignaturesDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgGpgSignaturesDialog.on_rxEdit_textChanged" id="HgGpgSignaturesDialog.on_rxEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_rxEdit_textChanged" />
+      <keyword name="HgGpgSignaturesDialog.on_sendButton_clicked" id="HgGpgSignaturesDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_sendButton_clicked" />
+      <keyword name="HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" id="HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" />
+      <keyword name="HgGpgSignaturesDialog.on_verifyButton_clicked" id="HgGpgSignaturesDialog.on_verifyButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_verifyButton_clicked" />
+      <keyword name="HgGpgSignaturesDialog.start" id="HgGpgSignaturesDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.start" />
+      <keyword name="gpg (Module)" id="gpg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html" />
+      <keyword name="Gpg" id="Gpg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg" />
+      <keyword name="Gpg (Constructor)" id="Gpg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg.__init__" />
+      <keyword name="Gpg.hgGpgSign" id="Gpg.hgGpgSign" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg.hgGpgSign" />
+      <keyword name="Gpg.hgGpgSignatures" id="Gpg.hgGpgSignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg.hgGpgSignatures" />
+      <keyword name="Gpg.hgGpgVerifySignatures" id="Gpg.hgGpgVerifySignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg.hgGpgVerifySignatures" />
+      <keyword name="Gpg.shutdown" id="Gpg.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html#Gpg.shutdown" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html" />
+      <keyword name="GpgProjectHelper" id="GpgProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper" />
+      <keyword name="GpgProjectHelper (Constructor)" id="GpgProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__init__" />
+      <keyword name="GpgProjectHelper.__hgGpgSign" id="GpgProjectHelper.__hgGpgSign" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgSign" />
+      <keyword name="GpgProjectHelper.__hgGpgSignatures" id="GpgProjectHelper.__hgGpgSignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgSignatures" />
+      <keyword name="GpgProjectHelper.__hgGpgVerifySignatures" id="GpgProjectHelper.__hgGpgVerifySignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgVerifySignatures" />
+      <keyword name="GpgProjectHelper.getActions" id="GpgProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.getActions" />
+      <keyword name="GpgProjectHelper.initActions" id="GpgProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.initActions" />
+      <keyword name="GpgProjectHelper.initMenu" id="GpgProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.initMenu" />
+      <keyword name="GpgProjectHelper.menuTitle" id="GpgProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.menuTitle" />
+      <keyword name="GpgProjectHelper.setObjects" id="GpgProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.setObjects" />
+      <keyword name="HgGpgSignDialog (Module)" id="HgGpgSignDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html" />
+      <keyword name="HgGpgSignDialog" id="HgGpgSignDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog" />
+      <keyword name="HgGpgSignDialog (Constructor)" id="HgGpgSignDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.__init__" />
+      <keyword name="HgGpgSignDialog.__updateOK" id="HgGpgSignDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.__updateOK" />
+      <keyword name="HgGpgSignDialog.getData" id="HgGpgSignDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.getData" />
+      <keyword name="HgGpgSignDialog.on_bookmarkButton_toggled" id="HgGpgSignDialog.on_bookmarkButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_bookmarkButton_toggled" />
+      <keyword name="HgGpgSignDialog.on_bookmarkCombo_editTextChanged" id="HgGpgSignDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_bookmarkCombo_editTextChanged" />
+      <keyword name="HgGpgSignDialog.on_branchButton_toggled" id="HgGpgSignDialog.on_branchButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_branchButton_toggled" />
+      <keyword name="HgGpgSignDialog.on_branchCombo_editTextChanged" id="HgGpgSignDialog.on_branchCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_branchCombo_editTextChanged" />
+      <keyword name="HgGpgSignDialog.on_idButton_toggled" id="HgGpgSignDialog.on_idButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_idButton_toggled" />
+      <keyword name="HgGpgSignDialog.on_idEdit_textChanged" id="HgGpgSignDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_idEdit_textChanged" />
+      <keyword name="HgGpgSignDialog.on_tagButton_toggled" id="HgGpgSignDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_tagButton_toggled" />
+      <keyword name="HgGpgSignDialog.on_tagCombo_editTextChanged" id="HgGpgSignDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.on_tagCombo_editTextChanged" />
       <keyword name="ConfigurationPage (Package)" id="ConfigurationPage (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.html" />
       <keyword name="SubversionPage (Module)" id="SubversionPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.SubversionPage.html" />
       <keyword name="SubversionPage" id="SubversionPage" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.SubversionPage.html#SubversionPage" />
@@ -11032,6 +11092,10 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
@@ -11425,6 +11489,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>

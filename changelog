@@ -6,6 +6,7 @@ Version 5.2-snapshot-2011mmdd:
 - added support for the Mercurial queues extension
 - added support for the Mercurial fetch extension
 - added support for the Mercurial purge extension
+- added support for the Mercurial gpg extension
 - added function to test the login data to the Email config page
 
 Version 5.2-snapshot-20110501:
