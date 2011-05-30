@@ -51,6 +51,7 @@ from .QueuesExtension.queues import Queues
 from .FetchExtension.fetch import Fetch
 from .PurgeExtension.purge import Purge
 from .GpgExtension.gpg import Gpg
+from .TransplantExtension.transplant import Transplant
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -144,6 +145,7 @@ class Hg(VersionControl):
             "fetch": Fetch(self),
             "purge": Purge(self),
             "gpg": Gpg(self),
+            "transplant": Transplant(self),
         }
     
     def getPlugin(self):
@@ -994,6 +996,7 @@ class Hg(VersionControl):
         
         @param name directory name to be cleaned up (string)
         """
+        # TODO: make this configurable
         patterns = ['*.orig', '*.rej']
         
         entries = []

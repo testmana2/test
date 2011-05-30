@@ -21,6 +21,7 @@ from .QueuesExtension.ProjectHelper import QueuesProjectHelper
 from .FetchExtension.ProjectHelper import FetchProjectHelper
 from .PurgeExtension.ProjectHelper import PurgeProjectHelper
 from .GpgExtension.ProjectHelper import GpgProjectHelper
+from .TransplantExtension.ProjectHelper import TransplantProjectHelper
 
 from E5Gui.E5Action import E5Action
 
@@ -50,6 +51,7 @@ class HgProjectHelper(VcsProjectHelper):
             "fetch": FetchProjectHelper(),
             "purge": PurgeProjectHelper(),
             "gpg": GpgProjectHelper(),
+            "transplant": TransplantProjectHelper(),
         }
         
         self.__extensionMenuTitles = {}

@@ -401,6 +401,11 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.Config" ref="eric5.Plugins.VcsPlugins.vcsMercurial.Config.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
@@ -8532,6 +8537,7 @@
       <keyword name="HgProjectHelper.initActions" id="HgProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initActions" />
       <keyword name="HgProjectHelper.initMenu" id="HgProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initMenu" />
       <keyword name="HgProjectHelper.setObjects" id="HgProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.setObjects" />
+      <keyword name="HgProjectHelper.shutdown" id="HgProjectHelper.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.shutdown" />
       <keyword name="HgAnnotateDialog (Module)" id="HgAnnotateDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
       <keyword name="HgAnnotateDialog" id="HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog" />
       <keyword name="HgAnnotateDialog (Constructor)" id="HgAnnotateDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog.__init__" />
@@ -9515,6 +9521,34 @@
       <keyword name="SvnSwitchDialog (Constructor)" id="SvnSwitchDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnSwitchDialog.html#SvnSwitchDialog.__init__" />
       <keyword name="SvnSwitchDialog.getParameters" id="SvnSwitchDialog.getParameters" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnSwitchDialog.html#SvnSwitchDialog.getParameters" />
       <keyword name="SvnConst (Module)" id="SvnConst (Module)" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnConst.html" />
+      <keyword name="TransplantExtension (Package)" id="TransplantExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html" />
+      <keyword name="TransplantDialog (Module)" id="TransplantDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html" />
+      <keyword name="RevisionsValidator" id="RevisionsValidator" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator" />
+      <keyword name="TransplantDialog" id="TransplantDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog" />
+      <keyword name="RevisionsValidator (Constructor)" id="RevisionsValidator (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.__init__" />
+      <keyword name="RevisionsValidator.validate" id="RevisionsValidator.validate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.validate" />
+      <keyword name="TransplantDialog (Constructor)" id="TransplantDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.__init__" />
+      <keyword name="TransplantDialog.__updateOk" id="TransplantDialog.__updateOk" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.__updateOk" />
+      <keyword name="TransplantDialog.getData" id="TransplantDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.getData" />
+      <keyword name="TransplantDialog.on_allCheckBox_clicked" id="TransplantDialog.on_allCheckBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.on_allCheckBox_clicked" />
+      <keyword name="TransplantDialog.on_branchesCombo_editTextChanged" id="TransplantDialog.on_branchesCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.on_branchesCombo_editTextChanged" />
+      <keyword name="TransplantDialog.on_revisionsEdit_textChanged" id="TransplantDialog.on_revisionsEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#TransplantDialog.on_revisionsEdit_textChanged" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html" />
+      <keyword name="TransplantProjectHelper" id="TransplantProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper" />
+      <keyword name="TransplantProjectHelper (Constructor)" id="TransplantProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__init__" />
+      <keyword name="TransplantProjectHelper.__hgTransplant" id="TransplantProjectHelper.__hgTransplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__hgTransplant" />
+      <keyword name="TransplantProjectHelper.__hgTransplantContinue" id="TransplantProjectHelper.__hgTransplantContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__hgTransplantContinue" />
+      <keyword name="TransplantProjectHelper.getActions" id="TransplantProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.getActions" />
+      <keyword name="TransplantProjectHelper.initActions" id="TransplantProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initActions" />
+      <keyword name="TransplantProjectHelper.initMenu" id="TransplantProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initMenu" />
+      <keyword name="TransplantProjectHelper.menuTitle" id="TransplantProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.menuTitle" />
+      <keyword name="TransplantProjectHelper.setObjects" id="TransplantProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.setObjects" />
+      <keyword name="transplant (Module)" id="transplant (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
+      <keyword name="Transplant" id="Transplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant" />
+      <keyword name="Transplant (Constructor)" id="Transplant (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.__init__" />
+      <keyword name="Transplant.hgTransplant" id="Transplant.hgTransplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.hgTransplant" />
+      <keyword name="Transplant.hgTransplantContinue" id="Transplant.hgTransplantContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.hgTransplantContinue" />
+      <keyword name="Transplant.shutdown" id="Transplant.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.shutdown" />
       <keyword name="ConfigurationPage (Package)" id="ConfigurationPage (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html" />
       <keyword name="MercurialPage (Module)" id="MercurialPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
       <keyword name="MercurialPage" id="MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage" />
@@ -11134,6 +11168,9 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesRenamePatchDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.hg.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.SubversionPage.html</file>
@@ -11492,6 +11529,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.html</file>
