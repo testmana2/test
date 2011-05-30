@@ -309,6 +309,8 @@ class VersionControl(QObject):
         It must not return anything.
         
         @param name directory name to be switched (string)
+        @return flag indicating, that the switch contained an add
+            or delete (boolean)
         @exception RuntimeError not implemented
         """
         raise RuntimeError('Not implemented')

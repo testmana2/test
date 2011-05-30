@@ -911,7 +911,7 @@ class Subversion(VersionControl):
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The switch operation will"""
                     """ be aborted"""))
-            return
+            return False
         
         if self.otherData["standardLayout"]:
             url = None
@@ -925,7 +925,7 @@ class Subversion(VersionControl):
                 self.allTagsBranchesList.remove(tag)
             self.allTagsBranchesList.insert(0, tag)
         else:
-            return
+            return False
         
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
@@ -935,7 +935,7 @@ class Subversion(VersionControl):
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
                         """ be aborted"""))
-                return
+                return False
             
             reposRoot = rx_base.cap(1)
             tn = tag
@@ -963,6 +963,9 @@ class Subversion(VersionControl):
         res = dia.startProcess(args)
         if res:
             dia.exec_()
+            res = dia.hasAddOrDelete()
+        self.checkVCSStatus()
+        return res
         
     def vcsMerge(self, name):
         """

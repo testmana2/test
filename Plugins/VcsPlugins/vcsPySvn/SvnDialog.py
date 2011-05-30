@@ -83,6 +83,8 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
                 .format(self.trUtf8(svnNotifyActionMap[eventDict["action"]]),
                         eventDict["path"],
                         mime)
+            if '.e4p' in eventDict["path"]:
+                self.__hasAddOrDelete = True
             if eventDict["action"] in \
                [pysvn.wc_notify_action.add, pysvn.wc_notify_action.commit_added,
                 pysvn.wc_notify_action.commit_deleted, pysvn.wc_notify_action.delete,

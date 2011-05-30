@@ -827,6 +827,8 @@ class Hg(VersionControl):
         Public method used to switch a working directory to a different revision.
         
         @param name directory name to be switched (string)
+        @return flag indicating, that the switch contained an add
+            or delete (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -835,7 +837,7 @@ class Hg(VersionControl):
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return
+                return False
         
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
@@ -847,7 +849,9 @@ class Hg(VersionControl):
                                         bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
-            self.vcsUpdate(name, revision=rev)
+            return self.vcsUpdate(name, revision=rev)
+        
+        return False
 
     def vcsRegisteredState(self, name):
         """

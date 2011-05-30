@@ -430,7 +430,14 @@ class VcsProjectHelper(QObject):
         """
         Protected slot used to switch the local project to another tag/branch.
         """
-        self.vcs.vcsSwitch(self.project.ppath)
+        shouldReopen = self.vcs.vcsSwitch(self.project.ppath)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(self.parent(),
+                self.trUtf8("Switch"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
         
     def _vcsMerge(self):
         """

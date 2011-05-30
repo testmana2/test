@@ -1029,6 +1029,8 @@ class Subversion(VersionControl):
         Public method used to switch a directory to a different tag/branch.
         
         @param name directory name to be switched (string)
+        @return flag indicating, that the switch contained an add
+            or delete (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -1039,7 +1041,7 @@ class Subversion(VersionControl):
                 self.trUtf8("""The URL of the project repository could not be"""
                     """ retrieved from the working copy. The switch operation will"""
                     """ be aborted"""))
-            return
+            return False
         
         if self.otherData["standardLayout"]:
             url = None
@@ -1053,7 +1055,7 @@ class Subversion(VersionControl):
                 self.allTagsBranchesList.remove(tag)
             self.allTagsBranchesList.insert(0, tag)
         else:
-            return
+            return False
         
         if self.otherData["standardLayout"]:
             rx_base = QRegExp('(.+)/(trunk|tags|branches).*')
@@ -1063,7 +1065,7 @@ class Subversion(VersionControl):
                     self.trUtf8("""The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
                         """ be aborted"""))
-                return
+                return False
             
             reposRoot = rx_base.cap(1)
             tn = tag
@@ -1093,6 +1095,9 @@ class Subversion(VersionControl):
         locker.unlock()
         dlg.finish()
         dlg.exec_()
+        res = dlg.hasAddOrDelete()
+        self.checkVCSStatus()
+        return res
         
     def vcsMerge(self, name):
         """
