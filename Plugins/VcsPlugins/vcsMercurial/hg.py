@@ -1000,8 +1000,7 @@ class Hg(VersionControl):
         
         @param name directory name to be cleaned up (string)
         """
-        # TODO: make this configurable
-        patterns = ['*.orig', '*.rej']
+        patterns = self.getPlugin().getPreferences("CleanupPatterns").split()
         
         entries = []
         for pat in patterns:

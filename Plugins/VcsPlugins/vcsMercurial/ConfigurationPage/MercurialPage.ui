@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>406</width>
-    <height>384</height>
+    <height>491</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -157,6 +157,29 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>Cleanup</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Pattern:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="cleanupPatternEdit">
+        <property name="toolTip">
+         <string>Enter the file name patterns to be used for cleaning up (entries separated by a space character)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="configButton">
      <property name="toolTip">
       <string>Edit the Mercurial configuration file</string>
@@ -186,6 +209,7 @@
   <tabstop>commitSpinBox</tabstop>
   <tabstop>logBrowserCheckBox</tabstop>
   <tabstop>pullUpdateCheckBox</tabstop>
+  <tabstop>cleanupPatternEdit</tabstop>
   <tabstop>configButton</tabstop>
  </tabstops>
  <resources/>

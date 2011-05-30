@@ -158,6 +158,7 @@ class VcsMercurialPlugin(QObject):
             "PullUpdate": False,
             "ServerPort": 8000,
             "ServerStyle": "",
+            "CleanupPatterns": "*.orig *.rej",
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
@@ -205,13 +206,14 @@ class VcsMercurialPlugin(QObject):
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages", "ServerPort"]:
-            return int(Preferences.Prefs.settings.value("Mercurial/" + key,
-                self.__mercurialDefaults[key]))
+            return int(Preferences.Prefs.settings.value(
+                "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(
-                "Mercurial/" + key))
+                "Mercurial/" + key, self.__mercurialDefaults[key]))
         else:
-            return Preferences.Prefs.settings.value("Mercurial/" + key)
+            return Preferences.Prefs.settings.value(
+                "Mercurial/" + key, self.__mercurialDefaults[key])
     
     def setPreferences(self, key, value):
         """
