@@ -239,6 +239,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                 author = self.rx_list.cap(2)
                 date = self.rx_list.cap(3)
                 path = self.rx_list.cap(4)
+                if path == ".":
+                    continue
                 self.__generateItem(rev, author, date, path)
                 if not self.vcs.otherData["standardLayout"]:
                     path = self.path + '/' + path
