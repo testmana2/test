@@ -297,8 +297,6 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         """
         Private method to process the buffered output of the svn log command.
         """
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        
         noEntries = 0
         log = {"message": []}
         changedPaths = []
@@ -316,20 +314,20 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             elif self.rx_flags1.exactMatch(s):
                 changedPaths.append({\
                     "action":
-                        str(self.rx_flags1.cap(1).strip(), ioEncoding, 'replace'),
+                        self.rx_flags1.cap(1).strip(),
                     "path":
-                        str(self.rx_flags1.cap(2).strip(), ioEncoding, 'replace'),
+                        self.rx_flags1.cap(2).strip(),
                     "copyfrom_path":
-                        str(self.rx_flags1.cap(3).strip(), ioEncoding, 'replace'),
+                        self.rx_flags1.cap(3).strip(),
                     "copyfrom_revision":
-                        str(self.rx_flags1.cap(4).strip(), ioEncoding, 'replace'),
+                        self.rx_flags1.cap(4).strip(),
                 })
             elif self.rx_flags2.exactMatch(s):
                 changedPaths.append({\
                     "action":
-                        str(self.rx_flags2.cap(1).strip(), ioEncoding, 'replace'),
+                        self.rx_flags2.cap(1).strip(),
                     "path":
-                        str(self.rx_flags2.cap(2).strip(), ioEncoding, 'replace'),
+                        self.rx_flags2.cap(2).strip(),
                     "copyfrom_path": "",
                     "copyfrom_revision": "",
                 })
