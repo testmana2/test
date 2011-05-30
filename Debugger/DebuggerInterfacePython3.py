@@ -820,6 +820,8 @@ class DebuggerInterfacePython3(QObject):
                         exctype = exclist[0]
                         excmessage = exclist[1]
                         stack = exclist[2:]
+                        if stack and stack[0] and stack[0][0] == "<string>":
+                            stack = []
                     except (IndexError, ValueError, SyntaxError):
                         exctype = None
                         excmessage = ''
