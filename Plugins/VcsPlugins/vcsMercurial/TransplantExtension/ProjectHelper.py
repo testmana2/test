@@ -14,6 +14,8 @@ from E5Gui import E5MessageBox
 
 from ..HgExtensionProjectHelper import HgExtensionProjectHelper
 
+import UI.PixmapCache
+
 
 class TransplantProjectHelper(HgExtensionProjectHelper):
     """
@@ -30,6 +32,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgTransplantAct = E5Action(self.trUtf8('Transplant Changesets'),
+                UI.PixmapCache.getIcon("vcsTransplant.png"),
                 self.trUtf8('Transplant Changesets'),
                 0, 0, self, 'mercurial_transplant')
         self.hgTransplantAct.setStatusTip(self.trUtf8(
