@@ -64,8 +64,11 @@ class Hg(VersionControl):
     Class implementing the version control systems interface to Mercurial.
     
     @signal committed() emitted after the commit action has completed
+    @signal activeExtensionsChanged() emitted when the list of active extensions
+            has changed
     """
     committed = pyqtSignal()
+    activeExtensionsChanged = pyqtSignal()
     
     def __init__(self, plugin, parent=None, name=None):
         """
@@ -2253,6 +2256,7 @@ class Hg(VersionControl):
         """
         Private method to get the active extensions from Mercurial.
         """
+        activeExtensions = sorted(self.__activeExtensions)
         self.__activeExtensions = []
         
         process = QProcess()
@@ -2273,6 +2277,9 @@ class Hg(VersionControl):
         if self.versionStr >= "1.8":
             if "bookmarks" not in self.__activeExtensions:
                 self.__activeExtensions.append("bookmarks")
+        
+        if activeExtensions != sorted(self.__activeExtensions):
+            self.activeExtensionsChanged.emit()
     
     def isExtensionActive(self, extensionName):
         """

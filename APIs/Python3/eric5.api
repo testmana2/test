@@ -3605,6 +3605,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.Transplant.
 eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.Transplant.hgTransplantContinue?4(path)
 eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.Transplant?1(vcs)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg._createStatusMonitorThread?5(interval, project)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.activeExtensionsChanged?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.clearStatusCache?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.committed?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.getExtensionObject?4(extensionName)

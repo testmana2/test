@@ -892,13 +892,15 @@ class HgProjectHelper(VcsProjectHelper):
         bisectMenu.addAction(self.hgBisectResetAct)
         self.subMenus.append(bisectMenu)
         
-        extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
-        extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
+        self.__extensionsMenu = QMenu(self.trUtf8("Extensions"), menu)
+        self.__extensionsMenu.setTearOffEnabled(True)
+        self.__extensionsMenu.aboutToShow.connect(self.__showExtensionMenu)
         self.extensionMenus = {}
         for extensionMenuTitle in sorted(self.__extensionMenuTitles):
             extensionName = self.__extensionMenuTitles[extensionMenuTitle]
-            self.extensionMenus[extensionName] = extensionsMenu.addMenu(
-                self.__extensions[extensionName].initMenu(extensionsMenu))
+            self.extensionMenus[extensionName] = self.__extensionsMenu.addMenu(
+                self.__extensions[extensionName].initMenu(self.__extensionsMenu))
+        self.vcs.activeExtensionsChanged.connect(self.__showExtensionMenu)
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -919,7 +921,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addMenu(bundleMenu)
         menu.addSeparator()
-        menu.addMenu(extensionsMenu)
+        menu.addMenu(self.__extensionsMenu)
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
@@ -968,6 +970,8 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Public method to perform shutdown actions.
         """
+        self.vcs.activeExtensionsChanged.disconnect(self.__showExtensionMenu)
+        
         # close torn off sub menus
         for menu in self.subMenus:
             if menu.isTearOffMenuVisible():
@@ -978,6 +982,9 @@ class HgProjectHelper(VcsProjectHelper):
             menu = self.extensionMenus[extensionName].menu()
             if menu.isTearOffMenuVisible():
                 menu.hideTearOffMenu()
+        
+        if self.__extensionsMenu.isTearOffMenuVisible():
+            self.__extensionsMenu.hideTearOffMenu()
     
     def __showExtensionMenu(self):
         """
@@ -986,6 +993,9 @@ class HgProjectHelper(VcsProjectHelper):
         for extensionName in self.extensionMenus:
             self.extensionMenus[extensionName].setEnabled(
                 self.vcs.isExtensionActive(extensionName))
+            if not self.extensionMenus[extensionName].isEnabled() and \
+               self.extensionMenus[extensionName].menu().isTearOffMenuVisible():
+                self.extensionMenus[extensionName].menu().hideTearOffMenu()
     
     def __hgExtendedDiff(self):
         """
