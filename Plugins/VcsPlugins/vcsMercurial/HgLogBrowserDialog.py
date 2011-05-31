@@ -68,6 +68,12 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.headerItem().setText(self.filesTree.columnCount(), "")
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
+        self.refreshButton = \
+            self.buttonBox.addButton(self.trUtf8("&Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.trUtf8("Press to refresh the list of changesets"))
+        self.refreshButton.setEnabled(False)
+        
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
             self.commandMode = mode
@@ -75,9 +81,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.commandMode = "log"
         self.bundle = bundle
         
-        self.__maxDate = QDate()
-        self.__minDate = QDate()
-        self.__filterLogsEnabled = True
+        self.__initData()
+        
+        self.__allBranchesFilter = self.trUtf8("All")
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
@@ -111,6 +117,23 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             'M': self.trUtf8('Modified'),
         }
         
+        self.__dotRadius = 8
+        self.__rowHeight = 20
+        
+        self.logTree.setIconSize(
+            QSize(100 * self.__rowHeight, self.__rowHeight))
+        if self.vcs.versionStr >= "1.8":
+            self.logTree.headerItem().setText(self.logTree.columnCount(),
+                self.trUtf8("Bookmarks"))
+    
+    def __initData(self):
+        """
+        Private method to (re-)initialize some data.
+        """
+        self.__maxDate = QDate()
+        self.__minDate = QDate()
+        self.__filterLogsEnabled = True
+        
         self.buf = []        # buffer for stdout
         self.diff = None
         self.__started = False
@@ -122,17 +145,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__revColors = {}
         self.__revColor = 0
         
-        self.__dotRadius = 8
-        self.__rowHeight = 20
-        
         self.__branchColors = {}
-        self.__allBranchesFilter = self.trUtf8("All")
-        
-        self.logTree.setIconSize(
-            QSize(100 * self.__rowHeight, self.__rowHeight))
-        if self.vcs.versionStr >= "1.8":
-            self.logTree.headerItem().setText(self.logTree.columnCount(),
-                self.trUtf8("Bookmarks"))
         
         self.__projectRevision = -1
     
@@ -692,6 +705,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
+        self.refreshButton.setEnabled(True)
     
     def __processBuffer(self):
         """
@@ -885,6 +899,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.cancelled = True
             self.__finish()
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
     
     def __updateDiffButtons(self):
         """
@@ -893,9 +909,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         selectionLength = len(self.logTree.selectedItems())
         if selectionLength <= 1:
             current = self.logTree.currentItem()
-            parents = current.data(0, self.__parentsRole)
-            self.diffP1Button.setEnabled(len(parents) > 0)
-            self.diffP2Button.setEnabled(len(parents) > 1)
+            if current is None:
+                self.diffP1Button.setEnabled(False)
+                self.diffP2Button.setEnabled(False)
+            else:
+                parents = current.data(0, self.__parentsRole)
+                self.diffP1Button.setEnabled(len(parents) > 0)
+                self.diffP2Button.setEnabled(len(parents) > 1)
             
             self.diffRevisionsButton.setEnabled(False)
         elif selectionLength == 2:
@@ -918,17 +938,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param previous reference to the old current item (QTreeWidgetItem)
         """
         self.messageEdit.clear()
-        for line in current.data(0, self.__messageRole):
-            self.messageEdit.append(line.strip())
-        
         self.filesTree.clear()
-        changes = current.data(0, self.__changesRole)
-        if len(changes) > 0:
-            for change in changes:
-                self.__generateFileItem(
-                    change["action"], change["path"], change["copyfrom"])
-            self.__resizeColumnsFiles()
-            self.__resortFiles()
+        
+        if current is not None:
+            for line in current.data(0, self.__messageRole):
+                self.messageEdit.append(line.strip())
+            
+            changes = current.data(0, self.__changesRole)
+            if len(changes) > 0:
+                for change in changes:
+                    self.__generateFileItem(
+                        change["action"], change["path"], change["copyfrom"])
+                self.__resizeColumnsFiles()
+                self.__resortFiles()
         
         self.__updateDiffButtons()
     
@@ -1103,6 +1125,23 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                                             self.stopCheckBox.isChecked())
         self.nextButton.setEnabled(True)
         self.limitSpinBox.setEnabled(True)
+    
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the log.
+        """
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        
+        self.inputGroup.setEnabled(True)
+        self.inputGroup.show()
+        self.refreshButton.setEnabled(False)
+        
+        self.__initData()
+        
+        self.start(self.filename)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

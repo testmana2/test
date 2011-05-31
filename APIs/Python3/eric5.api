@@ -3370,6 +3370,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_l
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_itemSelectionChanged?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_nextButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_passwordCheckBox_toggled?4(isOn)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_refreshButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_rxEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_sendButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_stopCheckBox_clicked?4(checked)

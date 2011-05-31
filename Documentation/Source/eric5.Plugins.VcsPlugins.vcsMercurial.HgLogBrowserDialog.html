@@ -96,6 +96,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__identifyProject">__identifyProject</a></td>
 <td>Private method to determine the revision of the project directory.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__initData">__initData</a></td>
+<td>Private method to (re-)initialize some data.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -167,6 +170,9 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
 <td>Private slot to handle the password checkbox toggled.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the log.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_rxEdit_textChanged">on_rxEdit_textChanged</a></td>
 <td>Private slot called, when a filter expression is entered.</td>
@@ -413,6 +419,11 @@ list of parent revisions (list of integers)
 <b>__identifyProject</b>(<i></i>)
 <p>
         Private method to determine the revision of the project directory.
+</p><a NAME="HgLogBrowserDialog.__initData" ID="HgLogBrowserDialog.__initData"></a>
+<h4>HgLogBrowserDialog.__initData</h4>
+<b>__initData</b>(<i></i>)
+<p>
+        Private method to (re-)initialize some data.
 </p><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
 <h4>HgLogBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
@@ -597,7 +608,12 @@ reference to the old current item (QTreeWidgetItem)
 <dd>
 flag indicating the status of the check box (boolean)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_rxEdit_textChanged" ID="HgLogBrowserDialog.on_rxEdit_textChanged"></a>
+</dl><a NAME="HgLogBrowserDialog.on_refreshButton_clicked" ID="HgLogBrowserDialog.on_refreshButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+<p>
+        Private slot to refresh the log.
+</p><a NAME="HgLogBrowserDialog.on_rxEdit_textChanged" ID="HgLogBrowserDialog.on_rxEdit_textChanged"></a>
 <h4>HgLogBrowserDialog.on_rxEdit_textChanged</h4>
 <b>on_rxEdit_textChanged</b>(<i>txt</i>)
 <p>

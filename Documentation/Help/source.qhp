@@ -8694,6 +8694,7 @@
       <keyword name="HgLogBrowserDialog.__getLogEntries" id="HgLogBrowserDialog.__getLogEntries" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getLogEntries" />
       <keyword name="HgLogBrowserDialog.__getParents" id="HgLogBrowserDialog.__getParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getParents" />
       <keyword name="HgLogBrowserDialog.__identifyProject" id="HgLogBrowserDialog.__identifyProject" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__identifyProject" />
+      <keyword name="HgLogBrowserDialog.__initData" id="HgLogBrowserDialog.__initData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__initData" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
       <keyword name="HgLogBrowserDialog.__readStderr" id="HgLogBrowserDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStderr" />
@@ -8718,6 +8719,7 @@
       <keyword name="HgLogBrowserDialog.on_logTree_itemSelectionChanged" id="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_itemSelectionChanged" />
       <keyword name="HgLogBrowserDialog.on_nextButton_clicked" id="HgLogBrowserDialog.on_nextButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_nextButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_passwordCheckBox_toggled" id="HgLogBrowserDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgLogBrowserDialog.on_refreshButton_clicked" id="HgLogBrowserDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_refreshButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_rxEdit_textChanged" id="HgLogBrowserDialog.on_rxEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_rxEdit_textChanged" />
       <keyword name="HgLogBrowserDialog.on_sendButton_clicked" id="HgLogBrowserDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_sendButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_stopCheckBox_clicked" id="HgLogBrowserDialog.on_stopCheckBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_stopCheckBox_clicked" />
