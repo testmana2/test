@@ -16,10 +16,10 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
-    <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="0" rowspan="4">
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
         <string>Source / Base Revision</string>
@@ -210,7 +210,24 @@
        </layout>
       </widget>
      </item>
-     <item row="0" column="1">
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>18</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
       <widget class="QGroupBox" name="rev2GroupBox">
        <property name="title">
         <string>&amp;Destination Revision</string>
@@ -369,7 +386,7 @@
        </layout>
       </widget>
      </item>
-     <item row="1" column="1">
+     <item>
       <widget class="QCheckBox" name="collapseCheckBox">
        <property name="toolTip">
         <string>Select to collapse the rebased changesets</string>
@@ -379,7 +396,7 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="1">
+     <item>
       <widget class="QCheckBox" name="keepChangesetsCheckBox">
        <property name="toolTip">
         <string>Select to keep the original changesets</string>
@@ -389,7 +406,7 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
+     <item>
       <widget class="QCheckBox" name="keepBranchCheckBox">
        <property name="toolTip">
         <string>Select to keep the original branch names</string>
@@ -399,20 +416,7 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>13</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="4" column="1">
+     <item>
       <widget class="QCheckBox" name="detachCheckBox">
        <property name="toolTip">
         <string>Select to detach the source from its original branch</string>
@@ -424,7 +428,7 @@
      </item>
     </layout>
    </item>
-   <item>
+   <item row="1" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
