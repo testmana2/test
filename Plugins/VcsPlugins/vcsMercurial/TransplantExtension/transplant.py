@@ -50,6 +50,7 @@ class Transplant(HgExtension):
             
             args = []
             args.append("transplant")
+            args.append("--verbose")
             if sourceRepo:
                 args.append("--source")
                 args.append(sourceRepo)
@@ -93,6 +94,7 @@ class Transplant(HgExtension):
         args = []
         args.append("transplant")
         args.append("--continue")
+        args.append("--verbose")
         
         dia = HgDialog(self.trUtf8('Transplant Changesets (Continue'))
         res = dia.startProcess(args, repodir)

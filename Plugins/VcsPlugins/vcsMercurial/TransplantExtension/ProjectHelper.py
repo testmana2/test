@@ -47,14 +47,14 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         self.actions.append(self.hgTransplantAct)
         
         self.hgTransplantContinueAct = E5Action(
-                self.trUtf8('Continue'),
-                self.trUtf8('Continue'),
+                self.trUtf8('Continue Transplant Session'),
+                self.trUtf8('Continue Transplant Session'),
                 0, 0, self, 'mercurial_transplant_continue')
         self.hgTransplantContinueAct.setStatusTip(self.trUtf8(
             'Continue the last transplant session after repair'
         ))
         self.hgTransplantContinueAct.setWhatsThis(self.trUtf8(
-            """<b>Continue</b>"""
+            """<b>Continue Transplant Session</b>"""
             """<p>This continues the last transplant session after repair.</p>"""
         ))
         self.hgTransplantContinueAct.triggered[()].connect(self.__hgTransplantContinue)
