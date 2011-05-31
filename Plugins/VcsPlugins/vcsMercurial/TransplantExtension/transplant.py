@@ -78,7 +78,7 @@ class Transplant(HgExtension):
     
     def hgTransplantContinue(self, path):
         """
-        Public method to transplant changesets from another branch.
+        Public method to continue transplanting changesets from another branch.
         
         @param path directory name of the project (string)
         @return flag indicating that the project should be reread (boolean)
