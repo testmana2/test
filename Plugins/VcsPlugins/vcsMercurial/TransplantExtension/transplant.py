@@ -9,15 +9,15 @@ Module implementing the transplant extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
 from .TransplantDialog import TransplantDialog
 
 
-class Transplant(QObject):
+class Transplant(HgExtension):
     """
     Class implementing the transplant extension interface.
     """
@@ -27,15 +27,7 @@ class Transplant(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
-    
-    def shutdown(self):
-        """
-        Public method used to shutdown the transplant interface.
-        """
-        pass
+        super().__init__(vcs)
     
     def hgTransplant(self, path):
         """

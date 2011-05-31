@@ -7,16 +7,17 @@
 Module implementing the queues extension project helper.
 """
 
-from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 
+from ..HgExtensionProjectHelper import HgExtensionProjectHelper
+
 from .queues import Queues
 
 
-class QueuesProjectHelper(QObject):
+class QueuesProjectHelper(HgExtensionProjectHelper):
     """
     Class implementing the queues extension project helper.
     """
@@ -24,29 +25,7 @@ class QueuesProjectHelper(QObject):
         """
         Constructor
         """
-        QObject.__init__(self)
-        
-        self.actions = []
-        
-        self.initActions()
-    
-    def setObjects(self, vcsObject, projectObject):
-        """
-        Public method to set references to the vcs and project objects.
-        
-        @param vcsObject reference to the vcs object
-        @param projectObject reference to the project object
-        """
-        self.vcs = vcsObject
-        self.project = projectObject
-    
-    def getActions(self):
-        """
-        Public method to get a list of all actions.
-        
-        @return list of all actions (list of E5Action)
-        """
-        return self.actions[:]
+        super().__init__()
     
     def initActions(self):
         """
@@ -671,6 +650,8 @@ class QueuesProjectHelper(QObject):
     def menuTitle(self):
         """
         Public method to get the menu title.
+        
+        @return title of the menu (string)
         """
         return self.trUtf8("Queues")
     

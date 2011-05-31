@@ -9,11 +9,12 @@ Module implementing the queues extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject, QProcess
+from PyQt4.QtCore import QProcess
 from PyQt4.QtGui import QDialog, QApplication, QInputDialog
 
 from E5Gui import E5MessageBox
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 from ..HgDiffDialog import HgDiffDialog
 
@@ -31,7 +32,7 @@ from .HgQueuesQueueManagementDialog import HgQueuesQueueManagementDialog
 import Preferences
 
 
-class Queues(QObject):
+class Queues(HgExtension):
     """
     Class implementing the queues extension interface.
     """
@@ -53,9 +54,7 @@ class Queues(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
+        super().__init__(vcs)
         
         self.qdiffDialog = None
         self.qheaderDialog = None

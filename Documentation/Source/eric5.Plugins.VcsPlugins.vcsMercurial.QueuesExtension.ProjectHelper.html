@@ -46,7 +46,7 @@ Module implementing the queues extension project helper.
     Class implementing the queues extension project helper.
 </p>
 <h3>Derived from</h3>
-QObject
+HgExtensionProjectHelper
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -183,9 +183,6 @@ QObject
 <td><a href="#QueuesProjectHelper.__initQueuesMgmtActions">__initQueuesMgmtActions</a></td>
 <td>Public method to generate the queues management action objects.</td>
 </tr><tr>
-<td><a href="#QueuesProjectHelper.getActions">getActions</a></td>
-<td>Public method to get a list of all actions.</td>
-</tr><tr>
 <td><a href="#QueuesProjectHelper.initActions">initActions</a></td>
 <td>Public method to generate the action objects.</td>
 </tr><tr>
@@ -194,9 +191,6 @@ QObject
 </tr><tr>
 <td><a href="#QueuesProjectHelper.menuTitle">menuTitle</a></td>
 <td>Public method to get the menu title.</td>
-</tr><tr>
-<td><a href="#QueuesProjectHelper.setObjects">setObjects</a></td>
-<td>Public method to set references to the vcs and project objects.</td>
 </tr>
 </table>
 <a NAME="QueuesProjectHelper.__init__" ID="QueuesProjectHelper.__init__"></a>
@@ -449,17 +443,7 @@ flag indicating that the project should be reread (boolean)
 <b>__initQueuesMgmtActions</b>(<i></i>)
 <p>
         Public method to generate the queues management action objects.
-</p><a NAME="QueuesProjectHelper.getActions" ID="QueuesProjectHelper.getActions"></a>
-<h4>QueuesProjectHelper.getActions</h4>
-<b>getActions</b>(<i></i>)
-<p>
-        Public method to get a list of all actions.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-list of all actions (list of E5Action)
-</dd>
-</dl><a NAME="QueuesProjectHelper.initActions" ID="QueuesProjectHelper.initActions"></a>
+</p><a NAME="QueuesProjectHelper.initActions" ID="QueuesProjectHelper.initActions"></a>
 <h4>QueuesProjectHelper.initActions</h4>
 <b>initActions</b>(<i></i>)
 <p>
@@ -484,18 +468,10 @@ populated menu (QMenu)
 <b>menuTitle</b>(<i></i>)
 <p>
         Public method to get the menu title.
-</p><a NAME="QueuesProjectHelper.setObjects" ID="QueuesProjectHelper.setObjects"></a>
-<h4>QueuesProjectHelper.setObjects</h4>
-<b>setObjects</b>(<i>vcsObject, projectObject</i>)
-<p>
-        Public method to set references to the vcs and project objects.
 </p><dl>
-<dt><i>vcsObject</i></dt>
+<dt>Returns:</dt>
 <dd>
-reference to the vcs object
-</dd><dt><i>projectObject</i></dt>
-<dd>
-reference to the project object
+title of the menu (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

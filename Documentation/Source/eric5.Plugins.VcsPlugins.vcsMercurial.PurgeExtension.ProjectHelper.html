@@ -46,7 +46,7 @@ Module implementing the purge extension project helper.
     Class implementing the purge extension project helper.
 </p>
 <h3>Derived from</h3>
-QObject
+HgExtensionProjectHelper
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -69,9 +69,6 @@ QObject
 <td><a href="#PurgeProjectHelper.__hgPurgeList">__hgPurgeList</a></td>
 <td>Private slot used to list files not tracked by Mercurial.</td>
 </tr><tr>
-<td><a href="#PurgeProjectHelper.getActions">getActions</a></td>
-<td>Public method to get a list of all actions.</td>
-</tr><tr>
 <td><a href="#PurgeProjectHelper.initActions">initActions</a></td>
 <td>Public method to generate the action objects.</td>
 </tr><tr>
@@ -80,9 +77,6 @@ QObject
 </tr><tr>
 <td><a href="#PurgeProjectHelper.menuTitle">menuTitle</a></td>
 <td>Public method to get the menu title.</td>
-</tr><tr>
-<td><a href="#PurgeProjectHelper.setObjects">setObjects</a></td>
-<td>Public method to set references to the vcs and project objects.</td>
 </tr>
 </table>
 <a NAME="PurgeProjectHelper.__init__" ID="PurgeProjectHelper.__init__"></a>
@@ -110,17 +104,7 @@ QObject
 <b>__hgPurgeList</b>(<i></i>)
 <p>
         Private slot used to list files not tracked by Mercurial.
-</p><a NAME="PurgeProjectHelper.getActions" ID="PurgeProjectHelper.getActions"></a>
-<h4>PurgeProjectHelper.getActions</h4>
-<b>getActions</b>(<i></i>)
-<p>
-        Public method to get a list of all actions.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-list of all actions (list of E5Action)
-</dd>
-</dl><a NAME="PurgeProjectHelper.initActions" ID="PurgeProjectHelper.initActions"></a>
+</p><a NAME="PurgeProjectHelper.initActions" ID="PurgeProjectHelper.initActions"></a>
 <h4>PurgeProjectHelper.initActions</h4>
 <b>initActions</b>(<i></i>)
 <p>
@@ -145,18 +129,10 @@ populated menu (QMenu)
 <b>menuTitle</b>(<i></i>)
 <p>
         Public method to get the menu title.
-</p><a NAME="PurgeProjectHelper.setObjects" ID="PurgeProjectHelper.setObjects"></a>
-<h4>PurgeProjectHelper.setObjects</h4>
-<b>setObjects</b>(<i>vcsObject, projectObject</i>)
-<p>
-        Public method to set references to the vcs and project objects.
 </p><dl>
-<dt><i>vcsObject</i></dt>
+<dt>Returns:</dt>
 <dd>
-reference to the vcs object
-</dd><dt><i>projectObject</i></dt>
-<dd>
-reference to the project object
+title of the menu (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -415,6 +415,8 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html" />
@@ -8592,6 +8594,14 @@
       <keyword name="HgProjectBrowserHelper.showContextMenuDir" id="HgProjectBrowserHelper.showContextMenuDir" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.showContextMenuDir" />
       <keyword name="HgProjectBrowserHelper.showContextMenuDirMulti" id="HgProjectBrowserHelper.showContextMenuDirMulti" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.showContextMenuDirMulti" />
       <keyword name="HgProjectBrowserHelper.showContextMenuMulti" id="HgProjectBrowserHelper.showContextMenuMulti" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.showContextMenuMulti" />
+      <keyword name="HgExtensionProjectHelper (Module)" id="HgExtensionProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
+      <keyword name="HgExtensionProjectHelper" id="HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper" />
+      <keyword name="HgExtensionProjectHelper (Constructor)" id="HgExtensionProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.__init__" />
+      <keyword name="HgExtensionProjectHelper.getActions" id="HgExtensionProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.getActions" />
+      <keyword name="HgExtensionProjectHelper.initActions" id="HgExtensionProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.initActions" />
+      <keyword name="HgExtensionProjectHelper.initMenu" id="HgExtensionProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.initMenu" />
+      <keyword name="HgExtensionProjectHelper.menuTitle" id="HgExtensionProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.menuTitle" />
+      <keyword name="HgExtensionProjectHelper.setObjects" id="HgExtensionProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html#HgExtensionProjectHelper.setObjects" />
       <keyword name="HgRevisionsSelectionDialog (Module)" id="HgRevisionsSelectionDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html" />
       <keyword name="HgRevisionsSelectionDialog" id="HgRevisionsSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html#HgRevisionsSelectionDialog" />
       <keyword name="HgRevisionsSelectionDialog (Constructor)" id="HgRevisionsSelectionDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html#HgRevisionsSelectionDialog.__init__" />
@@ -8647,6 +8657,10 @@
       <keyword name="HgRevisionSelectionDialog.on_idEdit_textChanged" id="HgRevisionSelectionDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog.on_idEdit_textChanged" />
       <keyword name="HgRevisionSelectionDialog.on_tagButton_toggled" id="HgRevisionSelectionDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog.on_tagButton_toggled" />
       <keyword name="HgRevisionSelectionDialog.on_tagCombo_editTextChanged" id="HgRevisionSelectionDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html#HgRevisionSelectionDialog.on_tagCombo_editTextChanged" />
+      <keyword name="HgExtension (Module)" id="HgExtension (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
+      <keyword name="HgExtension" id="HgExtension" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension" />
+      <keyword name="HgExtension (Constructor)" id="HgExtension (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension.__init__" />
+      <keyword name="HgExtension.shutdown" id="HgExtension.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension.shutdown" />
       <keyword name="Config (Module)" id="Config (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.Config.html" />
       <keyword name="HgDialog (Module)" id="HgDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
       <keyword name="HgDialog" id="HgDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog" />
@@ -9540,17 +9554,14 @@
       <keyword name="TransplantProjectHelper (Constructor)" id="TransplantProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__init__" />
       <keyword name="TransplantProjectHelper.__hgTransplant" id="TransplantProjectHelper.__hgTransplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__hgTransplant" />
       <keyword name="TransplantProjectHelper.__hgTransplantContinue" id="TransplantProjectHelper.__hgTransplantContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.__hgTransplantContinue" />
-      <keyword name="TransplantProjectHelper.getActions" id="TransplantProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.getActions" />
       <keyword name="TransplantProjectHelper.initActions" id="TransplantProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initActions" />
       <keyword name="TransplantProjectHelper.initMenu" id="TransplantProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.initMenu" />
       <keyword name="TransplantProjectHelper.menuTitle" id="TransplantProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.menuTitle" />
-      <keyword name="TransplantProjectHelper.setObjects" id="TransplantProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html#TransplantProjectHelper.setObjects" />
       <keyword name="transplant (Module)" id="transplant (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
       <keyword name="Transplant" id="Transplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant" />
       <keyword name="Transplant (Constructor)" id="Transplant (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.__init__" />
       <keyword name="Transplant.hgTransplant" id="Transplant.hgTransplant" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.hgTransplant" />
       <keyword name="Transplant.hgTransplantContinue" id="Transplant.hgTransplantContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.hgTransplantContinue" />
-      <keyword name="Transplant.shutdown" id="Transplant.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html#Transplant.shutdown" />
       <keyword name="ConfigurationPage (Package)" id="ConfigurationPage (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html" />
       <keyword name="MercurialPage (Module)" id="MercurialPage (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
       <keyword name="MercurialPage" id="MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage" />
@@ -9567,16 +9578,13 @@
       <keyword name="FetchProjectHelper" id="FetchProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper" />
       <keyword name="FetchProjectHelper (Constructor)" id="FetchProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__init__" />
       <keyword name="FetchProjectHelper.__hgFetch" id="FetchProjectHelper.__hgFetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.__hgFetch" />
-      <keyword name="FetchProjectHelper.getActions" id="FetchProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.getActions" />
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
       <keyword name="FetchProjectHelper.menuTitle" id="FetchProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.menuTitle" />
-      <keyword name="FetchProjectHelper.setObjects" id="FetchProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.setObjects" />
       <keyword name="fetch (Module)" id="fetch (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
       <keyword name="Fetch" id="Fetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch" />
       <keyword name="Fetch (Constructor)" id="Fetch (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.__init__" />
       <keyword name="Fetch.hgFetch" id="Fetch.hgFetch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.hgFetch" />
-      <keyword name="Fetch.shutdown" id="Fetch.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html#Fetch.shutdown" />
       <keyword name="QueuesExtension (Package)" id="QueuesExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html" />
       <keyword name="HgQueuesListGuardsDialog (Module)" id="HgQueuesListGuardsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListGuardsDialog.html" />
       <keyword name="HgQueuesListGuardsDialog" id="HgQueuesListGuardsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesListGuardsDialog.html#HgQueuesListGuardsDialog" />
@@ -9662,11 +9670,9 @@
       <keyword name="QueuesProjectHelper.__initPushPopActions" id="QueuesProjectHelper.__initPushPopActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initPushPopActions" />
       <keyword name="QueuesProjectHelper.__initPushPopForceActions" id="QueuesProjectHelper.__initPushPopForceActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initPushPopForceActions" />
       <keyword name="QueuesProjectHelper.__initQueuesMgmtActions" id="QueuesProjectHelper.__initQueuesMgmtActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.__initQueuesMgmtActions" />
-      <keyword name="QueuesProjectHelper.getActions" id="QueuesProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.getActions" />
       <keyword name="QueuesProjectHelper.initActions" id="QueuesProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.initActions" />
       <keyword name="QueuesProjectHelper.initMenu" id="QueuesProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.initMenu" />
       <keyword name="QueuesProjectHelper.menuTitle" id="QueuesProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.menuTitle" />
-      <keyword name="QueuesProjectHelper.setObjects" id="QueuesProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html#QueuesProjectHelper.setObjects" />
       <keyword name="HgQueuesQueueManagementDialog (Module)" id="HgQueuesQueueManagementDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.html" />
       <keyword name="HgQueuesQueueManagementDialog" id="HgQueuesQueueManagementDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.html#HgQueuesQueueManagementDialog" />
       <keyword name="HgQueuesQueueManagementDialog (Constructor)" id="HgQueuesQueueManagementDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesQueueManagementDialog.html#HgQueuesQueueManagementDialog.__init__" />
@@ -9830,11 +9836,9 @@
       <keyword name="BookmarksProjectHelper.__hgBookmarkPush" id="BookmarksProjectHelper.__hgBookmarkPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkPush" />
       <keyword name="BookmarksProjectHelper.__hgBookmarkRename" id="BookmarksProjectHelper.__hgBookmarkRename" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkRename" />
       <keyword name="BookmarksProjectHelper.__hgBookmarksList" id="BookmarksProjectHelper.__hgBookmarksList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarksList" />
-      <keyword name="BookmarksProjectHelper.getActions" id="BookmarksProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.getActions" />
       <keyword name="BookmarksProjectHelper.initActions" id="BookmarksProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initActions" />
       <keyword name="BookmarksProjectHelper.initMenu" id="BookmarksProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initMenu" />
       <keyword name="BookmarksProjectHelper.menuTitle" id="BookmarksProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.menuTitle" />
-      <keyword name="BookmarksProjectHelper.setObjects" id="BookmarksProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.setObjects" />
       <keyword name="HgBookmarkRenameDialog (Module)" id="HgBookmarkRenameDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html" />
       <keyword name="HgBookmarkRenameDialog" id="HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog" />
       <keyword name="HgBookmarkRenameDialog (Constructor)" id="HgBookmarkRenameDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.__init__" />
@@ -9853,11 +9857,9 @@
       <keyword name="PurgeProjectHelper.__hgPurgeAll" id="PurgeProjectHelper.__hgPurgeAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeAll" />
       <keyword name="PurgeProjectHelper.__hgPurgeAllList" id="PurgeProjectHelper.__hgPurgeAllList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeAllList" />
       <keyword name="PurgeProjectHelper.__hgPurgeList" id="PurgeProjectHelper.__hgPurgeList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.__hgPurgeList" />
-      <keyword name="PurgeProjectHelper.getActions" id="PurgeProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.getActions" />
       <keyword name="PurgeProjectHelper.initActions" id="PurgeProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initActions" />
       <keyword name="PurgeProjectHelper.initMenu" id="PurgeProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.initMenu" />
       <keyword name="PurgeProjectHelper.menuTitle" id="PurgeProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.menuTitle" />
-      <keyword name="PurgeProjectHelper.setObjects" id="PurgeProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.ProjectHelper.html#PurgeProjectHelper.setObjects" />
       <keyword name="purge (Module)" id="purge (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html" />
       <keyword name="Purge" id="Purge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge" />
       <keyword name="Purge (Constructor)" id="Purge (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.purge.html#Purge.__init__" />
@@ -9901,11 +9903,9 @@
       <keyword name="GpgProjectHelper.__hgGpgSign" id="GpgProjectHelper.__hgGpgSign" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgSign" />
       <keyword name="GpgProjectHelper.__hgGpgSignatures" id="GpgProjectHelper.__hgGpgSignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgSignatures" />
       <keyword name="GpgProjectHelper.__hgGpgVerifySignatures" id="GpgProjectHelper.__hgGpgVerifySignatures" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.__hgGpgVerifySignatures" />
-      <keyword name="GpgProjectHelper.getActions" id="GpgProjectHelper.getActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.getActions" />
       <keyword name="GpgProjectHelper.initActions" id="GpgProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.initActions" />
       <keyword name="GpgProjectHelper.initMenu" id="GpgProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.initMenu" />
       <keyword name="GpgProjectHelper.menuTitle" id="GpgProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.menuTitle" />
-      <keyword name="GpgProjectHelper.setObjects" id="GpgProjectHelper.setObjects" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html#GpgProjectHelper.setObjects" />
       <keyword name="HgGpgSignDialog (Module)" id="HgGpgSignDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html" />
       <keyword name="HgGpgSignDialog" id="HgGpgSignDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog" />
       <keyword name="HgGpgSignDialog (Constructor)" id="HgGpgSignDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignDialog.html#HgGpgSignDialog.__init__" />
@@ -11140,6 +11140,8 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html</file>

@@ -9,9 +9,10 @@ Module implementing the purge extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject, QProcess
+from PyQt4.QtCore import QProcess
 from PyQt4.QtGui import QDialog
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
 from .HgPurgeListDialog import HgPurgeListDialog
@@ -21,7 +22,7 @@ from UI.DeleteFilesConfirmationDialog import DeleteFilesConfirmationDialog
 import Preferences
 
 
-class Purge(QObject):
+class Purge(HgExtension):
     """
     Class implementing the purge extension interface.
     """
@@ -31,9 +32,7 @@ class Purge(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
+        super().__init__(vcs)
         
         self.purgeListDialog = None
     

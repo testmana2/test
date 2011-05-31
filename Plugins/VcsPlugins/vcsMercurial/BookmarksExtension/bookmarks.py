@@ -9,9 +9,10 @@ Module implementing the bookmarks extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject, QProcess
+from PyQt4.QtCore import QProcess
 from PyQt4.QtGui import QDialog, QInputDialog
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
 from .HgBookmarksListDialog import HgBookmarksListDialog
@@ -22,7 +23,7 @@ from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
 import Preferences
 
 
-class Bookmarks(QObject):
+class Bookmarks(HgExtension):
     """
     Class implementing the bookmarks extension interface.
     """
@@ -32,9 +33,7 @@ class Bookmarks(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
+        super().__init__(vcs)
         
         self.bookmarksListDlg = None
         self.bookmarksInOutDlg = None

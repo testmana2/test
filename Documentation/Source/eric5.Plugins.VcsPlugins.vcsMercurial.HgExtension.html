@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html><head>
-<title>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch</title>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension</title>
 <style>
 body {
     background: #EDECE6;
@@ -20,9 +20,9 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch</h1>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension</h1>
 <p>
-Module implementing the fetch extension interface.
+Module implementing the base class for Mercurial extension interfaces.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -31,8 +31,8 @@ Module implementing the fetch extension interface.
 <h3>Classes</h3>
 <table>
 <tr>
-<td><a href="#Fetch">Fetch</a></td>
-<td>Class implementing the fetch extension interface.</td>
+<td><a href="#HgExtension">HgExtension</a></td>
+<td>Class implementing the base class for Mercurial extension interfaces.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -40,13 +40,13 @@ Module implementing the fetch extension interface.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
-<a NAME="Fetch" ID="Fetch"></a>
-<h2>Fetch</h2>
+<a NAME="HgExtension" ID="HgExtension"></a>
+<h2>HgExtension</h2>
 <p>
-    Class implementing the fetch extension interface.
+    Class implementing the base class for Mercurial extension interfaces.
 </p>
 <h3>Derived from</h3>
-HgExtension
+QObject
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -54,16 +54,16 @@ HgExtension
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#Fetch.__init__">Fetch</a></td>
+<td><a href="#HgExtension.__init__">HgExtension</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#Fetch.hgFetch">hgFetch</a></td>
-<td>Public method to fetch changes from a remote repository.</td>
+<td><a href="#HgExtension.shutdown">shutdown</a></td>
+<td>Public method used to shutdown the extension interface.</td>
 </tr>
 </table>
-<a NAME="Fetch.__init__" ID="Fetch.__init__"></a>
-<h4>Fetch (Constructor)</h4>
-<b>Fetch</b>(<i>vcs</i>)
+<a NAME="HgExtension.__init__" ID="HgExtension.__init__"></a>
+<h4>HgExtension (Constructor)</h4>
+<b>HgExtension</b>(<i>vcs</i>)
 <p>
         Constructor
 </p><dl>
@@ -71,22 +71,14 @@ HgExtension
 <dd>
 reference to the Mercurial vcs object
 </dd>
-</dl><a NAME="Fetch.hgFetch" ID="Fetch.hgFetch"></a>
-<h4>Fetch.hgFetch</h4>
-<b>hgFetch</b>(<i>name</i>)
+</dl><a NAME="HgExtension.shutdown" ID="HgExtension.shutdown"></a>
+<h4>HgExtension.shutdown</h4>
+<b>shutdown</b>(<i></i>)
 <p>
-        Public method to fetch changes from a remote repository.
-</p><dl>
-<dt><i>name</i></dt>
-<dd>
-file/directory name (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating that the project should be reread (boolean)
-</dd>
-</dl>
+        Public method used to shutdown the extension interface.
+</p><p>
+        The method of this base class does nothing.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

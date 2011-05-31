@@ -9,9 +9,9 @@ Module implementing the gpg extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 from ..HgRevisionSelectionDialog import HgRevisionSelectionDialog
 
@@ -19,7 +19,7 @@ from .HgGpgSignaturesDialog import HgGpgSignaturesDialog
 from .HgGpgSignDialog import HgGpgSignDialog
 
 
-class Gpg(QObject):
+class Gpg(HgExtension):
     """
     Class implementing the fetch extension interface.
     """
@@ -29,9 +29,7 @@ class Gpg(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
+        super().__init__(vcs)
         
         self.gpgSignaturesDialog = None
     

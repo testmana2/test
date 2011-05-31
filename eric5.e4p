@@ -913,6 +913,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/transplant.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgExtension.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgExtensionProjectHelper.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

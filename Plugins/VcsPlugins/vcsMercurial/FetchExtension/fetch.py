@@ -9,15 +9,15 @@ Module implementing the fetch extension interface.
 
 import os
 
-from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
+from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
 
 from .HgFetchDialog import HgFetchDialog
 
 
-class Fetch(QObject):
+class Fetch(HgExtension):
     """
     Class implementing the fetch extension interface.
     """
@@ -27,15 +27,7 @@ class Fetch(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
-        
-        self.vcs = vcs
-    
-    def shutdown(self):
-        """
-        Public method used to shutdown the fetch interface.
-        """
-        pass
+        super().__init__(vcs)
     
     def hgFetch(self, name):
         """
