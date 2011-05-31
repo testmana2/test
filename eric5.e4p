@@ -915,6 +915,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgExtension.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgExtensionProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/rebase.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1173,6 +1177,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

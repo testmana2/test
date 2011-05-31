@@ -401,6 +401,11 @@
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
                 </section>
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.html">
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html" />
+                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html" />
+                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html" />
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html" />
@@ -9568,6 +9573,44 @@
       <keyword name="MercurialPage (Constructor)" id="MercurialPage (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.__init__" />
       <keyword name="MercurialPage.on_configButton_clicked" id="MercurialPage.on_configButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.on_configButton_clicked" />
       <keyword name="MercurialPage.save" id="MercurialPage.save" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.save" />
+      <keyword name="RebaseExtension (Package)" id="RebaseExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.html" />
+      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html" />
+      <keyword name="RebaseProjectHelper" id="RebaseProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper" />
+      <keyword name="RebaseProjectHelper (Constructor)" id="RebaseProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.__init__" />
+      <keyword name="RebaseProjectHelper.__hgRebase" id="RebaseProjectHelper.__hgRebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.__hgRebase" />
+      <keyword name="RebaseProjectHelper.__hgRebaseAbort" id="RebaseProjectHelper.__hgRebaseAbort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.__hgRebaseAbort" />
+      <keyword name="RebaseProjectHelper.__hgRebaseContinue" id="RebaseProjectHelper.__hgRebaseContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.__hgRebaseContinue" />
+      <keyword name="RebaseProjectHelper.initActions" id="RebaseProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.initActions" />
+      <keyword name="RebaseProjectHelper.initMenu" id="RebaseProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.initMenu" />
+      <keyword name="RebaseProjectHelper.menuTitle" id="RebaseProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.menuTitle" />
+      <keyword name="rebase (Module)" id="rebase (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html" />
+      <keyword name="Rebase" id="Rebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html#Rebase" />
+      <keyword name="Rebase (Constructor)" id="Rebase (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html#Rebase.__init__" />
+      <keyword name="Rebase.hgRebase" id="Rebase.hgRebase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html#Rebase.hgRebase" />
+      <keyword name="Rebase.hgRebaseAbort" id="Rebase.hgRebaseAbort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html#Rebase.hgRebaseAbort" />
+      <keyword name="Rebase.hgRebaseContinue" id="Rebase.hgRebaseContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html#Rebase.hgRebaseContinue" />
+      <keyword name="HgRebaseDialog (Module)" id="HgRebaseDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html" />
+      <keyword name="HgRebaseDialog" id="HgRebaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog" />
+      <keyword name="HgRebaseDialog (Constructor)" id="HgRebaseDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.__init__" />
+      <keyword name="HgRebaseDialog.__getRevision" id="HgRebaseDialog.__getRevision" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.__getRevision" />
+      <keyword name="HgRebaseDialog.__updateOK" id="HgRebaseDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.__updateOK" />
+      <keyword name="HgRebaseDialog.getData" id="HgRebaseDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.getData" />
+      <keyword name="HgRebaseDialog.on_bookmark1Button_toggled" id="HgRebaseDialog.on_bookmark1Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_bookmark1Button_toggled" />
+      <keyword name="HgRebaseDialog.on_bookmark1Combo_editTextChanged" id="HgRebaseDialog.on_bookmark1Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_bookmark1Combo_editTextChanged" />
+      <keyword name="HgRebaseDialog.on_bookmark2Button_toggled" id="HgRebaseDialog.on_bookmark2Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_bookmark2Button_toggled" />
+      <keyword name="HgRebaseDialog.on_bookmark2Combo_editTextChanged" id="HgRebaseDialog.on_bookmark2Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_bookmark2Combo_editTextChanged" />
+      <keyword name="HgRebaseDialog.on_branch1Button_toggled" id="HgRebaseDialog.on_branch1Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_branch1Button_toggled" />
+      <keyword name="HgRebaseDialog.on_branch1Combo_editTextChanged" id="HgRebaseDialog.on_branch1Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_branch1Combo_editTextChanged" />
+      <keyword name="HgRebaseDialog.on_branch2Button_toggled" id="HgRebaseDialog.on_branch2Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_branch2Button_toggled" />
+      <keyword name="HgRebaseDialog.on_branch2Combo_editTextChanged" id="HgRebaseDialog.on_branch2Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_branch2Combo_editTextChanged" />
+      <keyword name="HgRebaseDialog.on_id1Button_toggled" id="HgRebaseDialog.on_id1Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_id1Button_toggled" />
+      <keyword name="HgRebaseDialog.on_id1Edit_textChanged" id="HgRebaseDialog.on_id1Edit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_id1Edit_textChanged" />
+      <keyword name="HgRebaseDialog.on_id2Button_toggled" id="HgRebaseDialog.on_id2Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_id2Button_toggled" />
+      <keyword name="HgRebaseDialog.on_id2Edit_textChanged" id="HgRebaseDialog.on_id2Edit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_id2Edit_textChanged" />
+      <keyword name="HgRebaseDialog.on_tag1Button_toggled" id="HgRebaseDialog.on_tag1Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag1Button_toggled" />
+      <keyword name="HgRebaseDialog.on_tag1Combo_editTextChanged" id="HgRebaseDialog.on_tag1Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag1Combo_editTextChanged" />
+      <keyword name="HgRebaseDialog.on_tag2Button_toggled" id="HgRebaseDialog.on_tag2Button_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag2Button_toggled" />
+      <keyword name="HgRebaseDialog.on_tag2Combo_editTextChanged" id="HgRebaseDialog.on_tag2Combo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html#HgRebaseDialog.on_tag2Combo_editTextChanged" />
       <keyword name="FetchExtension (Package)" id="FetchExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html" />
       <keyword name="HgFetchDialog (Module)" id="HgFetchDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html" />
       <keyword name="HgFetchDialog" id="HgFetchDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html#HgFetchDialog" />
@@ -11172,6 +11215,9 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.HgQueuesRenamePatchDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.HgRebaseDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.rebase.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html</file>
@@ -11533,6 +11579,7 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.PurgeExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.html</file>
+      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsPySvn.ConfigurationPage.html</file>

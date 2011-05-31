@@ -106,8 +106,10 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.intercept = False
         
         self.__hasAddOrDelete = False
-        if args[0] in ["update", "fetch", "qpush", "qpop", "qgoto", "transplant"] or \
-           (args[0] == "pull" and "--update" in args[1:]):
+        if args[0] in ["fetch", "qpush", "qpop", "qgoto", "rebase", "transplant",
+                       "update"] or \
+           (args[0] == "pull" and \
+            ("--update" in args[1:] or "--rebase" in args[1:])):
             self.__updateCommand = True
         else:
             self.__updateCommand = False

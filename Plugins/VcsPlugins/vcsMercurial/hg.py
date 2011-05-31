@@ -52,6 +52,7 @@ from .FetchExtension.fetch import Fetch
 from .PurgeExtension.purge import Purge
 from .GpgExtension.gpg import Gpg
 from .TransplantExtension.transplant import Transplant
+from .RebaseExtension.rebase import Rebase
 
 from .ProjectBrowserHelper import HgProjectBrowserHelper
 
@@ -149,6 +150,7 @@ class Hg(VersionControl):
             "purge": Purge(self),
             "gpg": Gpg(self),
             "transplant": Transplant(self),
+            "rebase": Rebase(self),
         }
     
     def getPlugin(self):

@@ -22,6 +22,7 @@ from .FetchExtension.ProjectHelper import FetchProjectHelper
 from .PurgeExtension.ProjectHelper import PurgeProjectHelper
 from .GpgExtension.ProjectHelper import GpgProjectHelper
 from .TransplantExtension.ProjectHelper import TransplantProjectHelper
+from .RebaseExtension.ProjectHelper import RebaseProjectHelper
 
 from E5Gui.E5Action import E5Action
 
@@ -52,6 +53,7 @@ class HgProjectHelper(VcsProjectHelper):
             "purge": PurgeProjectHelper(),
             "gpg": GpgProjectHelper(),
             "transplant": TransplantProjectHelper(),
+            "rebase": RebaseProjectHelper(),
         }
         
         self.__extensionMenuTitles = {}
