@@ -7705,6 +7705,7 @@
       <keyword name="DownloadItem.getInfoData" id="DownloadItem.getInfoData" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.getInfoData" />
       <keyword name="DownloadItem.getPageUrl" id="DownloadItem.getPageUrl" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.getPageUrl" />
       <keyword name="DownloadItem.on_openButton_clicked" id="DownloadItem.on_openButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_openButton_clicked" />
+      <keyword name="DownloadItem.on_pauseButton_clicked" id="DownloadItem.on_pauseButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_pauseButton_clicked" />
       <keyword name="DownloadItem.on_stopButton_clicked" id="DownloadItem.on_stopButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_stopButton_clicked" />
       <keyword name="DownloadItem.on_tryAgainButton_clicked" id="DownloadItem.on_tryAgainButton_clicked" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.on_tryAgainButton_clicked" />
       <keyword name="DownloadItem.openFile" id="DownloadItem.openFile" ref="eric5.Helpviewer.Download.DownloadItem.html#DownloadItem.openFile" />

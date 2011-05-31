@@ -63,6 +63,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.tryAgainButton.setEnabled(False)
         self.tryAgainButton.setVisible(False)
         self.stopButton.setIcon(UI.PixmapCache.getIcon("stopLoading.png"))
+        self.pauseButton.setIcon(UI.PixmapCache.getIcon("pause.png"))
         self.openButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         self.openButton.setEnabled(False)
         self.openButton.setVisible(False)
@@ -81,6 +82,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__downloadTime = QTime()
         self.__output = QFile()
         self.__fileName = ""
+        self.__originalFileName = ""
         self.__startedSaving = False
         self.__finishedDownloading = False
         self.__gettingFileName = False
@@ -106,15 +108,16 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__bytesReceived = 0
         self.__bytesTotal = -1
         
-        self.openButton.setEnabled(False)
-        self.openButton.setVisible(False)
-        
+##        self.openButton.setEnabled(False)
+##        self.openButton.setVisible(False)
+##        
         # start timer for the download estimation
         self.__downloadTime.start()
         
         # attach to the reply object
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
+        self.__reply.setReadBufferSize(0)
         self.__reply.readyRead[()].connect(self.__readyRead)
         self.__reply.error.connect(self.__networkError)
         self.__reply.downloadProgress.connect(self.__downloadProgress)
@@ -144,17 +147,19 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         if self.__fileName:
             fileName = self.__fileName
+            originalFileName = self.__originalFileName
             self.__toDownload = True
             ask = False
         else:
-            defaultFileName = self.__saveFileName(downloadDirectory)
+            defaultFileName, originalFileName = self.__saveFileName(downloadDirectory)
             fileName = defaultFileName
+            self.__originalFileName = originalFileName
             ask = True
         self.__autoOpen = False
         if not self.__toDownload:
             url = self.__reply.url()
             dlg = DownloadAskActionDialog(
-                QFileInfo(fileName).fileName(),
+                QFileInfo(originalFileName).fileName(),
                 self.__reply.header(QNetworkRequest.ContentTypeHeader),
                 "{0}://{1}".format(url.scheme(), url.authority()),
                 self)
@@ -205,7 +210,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             fileInfo.absoluteDir().absolutePath())
         self.filenameLabel.setText(fileInfo.fileName())
         
-        self.__output.setFileName(fileName)
+        self.__output.setFileName(fileName + ".part")
         self.__fileName = fileName
         
         # check file path for saving
@@ -228,7 +233,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         Private method to calculate a name for the file to download.
         
         @param directory name of the directory to store the file into (string)
-        @return proposed filename (string)
+        @return proposed filename and original filename (string, string)
         """
         path = ""
         if self.__reply.hasRawHeader("Content-Disposition"):
@@ -249,17 +254,21 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if not baseName:
             baseName = "unnamed_download"
         
+        origName = baseName
+        if endName:
+            origName += '.' + endName
+        
         name = directory + baseName
         if endName:
             name += '.' + endName
-        i = 1
-        while QFile.exists(name):
-            # file exists already, don't overwrite
-            name = directory + baseName + ('-{0:d}'.format(i))
-            if endName:
-                name += '.' + endName
-            i += 1
-        return name
+##        i = 1
+##        while QFile.exists(name):
+##            # file exists already, don't overwrite
+##            name = directory + baseName + ('-{0:d}'.format(i))
+##            if endName:
+##                name += '.' + endName
+##            i += 1
+        return name, origName
     
     def __open(self):
         """
@@ -289,6 +298,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.openButton.setVisible(False)
         self.stopButton.setEnabled(True)
         self.stopButton.setVisible(True)
+        self.pauseButton.setEnabled(True)
+        self.pauseButton.setVisible(True)
         self.progressBar.setVisible(True)
         
         if self.__page:
@@ -302,6 +313,20 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__reply = reply
         self.__initialize(tryAgain=True)
         self.statusChanged.emit()
+    
+    @pyqtSlot(bool)
+    def on_pauseButton_clicked(self, checked):
+        """
+        Private slot to pause the download.
+        
+        @param checked flag indicating the state of the button (boolean)
+        """
+        if checked:
+            self.__reply.readyRead[()].disconnect(self.__readyRead)
+            self.__reply.setReadBufferSize(16 * 1024)
+        else:
+            self.__reply.readyRead[()].connect(self.__readyRead)
+            self.__reply.setReadBufferSize(0)
     
     @pyqtSlot()
     def on_stopButton_clicked(self):
@@ -317,6 +342,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.setUpdatesEnabled(False)
         self.stopButton.setEnabled(False)
         self.stopButton.setVisible(False)
+        self.pauseButton.setEnabled(False)
+        self.pauseButton.setVisible(False)
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
         self.openButton.setEnabled(False)
@@ -543,9 +570,14 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.progressBar.setVisible(False)
         self.stopButton.setEnabled(False)
         self.stopButton.setVisible(False)
+        self.pauseButton.setEnabled(False)
+        self.pauseButton.setVisible(False)
         self.openButton.setEnabled(noError)
         self.openButton.setVisible(noError)
         self.__output.close()
+        if QFile.exists(self.__fileName):
+            QFile.remove(self.__fileName)
+        self.__output.rename(self.__fileName)
         self.__updateInfoLabel()
         self.statusChanged.emit()
         self.downloadFinished.emit()
@@ -611,6 +643,8 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         
         self.stopButton.setEnabled(False)
         self.stopButton.setVisible(False)
+        self.pauseButton.setEnabled(False)
+        self.pauseButton.setVisible(False)
         self.openButton.setEnabled(data[2])
         self.openButton.setVisible(data[2])
         self.tryAgainButton.setEnabled(not data[2])

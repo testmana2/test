@@ -141,6 +141,9 @@ QWidget, Ui_DownloadItem
 <td><a href="#DownloadItem.on_openButton_clicked">on_openButton_clicked</a></td>
 <td>Private slot to open the downloaded file.</td>
 </tr><tr>
+<td><a href="#DownloadItem.on_pauseButton_clicked">on_pauseButton_clicked</a></td>
+<td>Private slot to pause the download.</td>
+</tr><tr>
 <td><a href="#DownloadItem.on_stopButton_clicked">on_stopButton_clicked</a></td>
 <td>Private slot to stop the download.</td>
 </tr><tr>
@@ -263,7 +266,7 @@ name of the directory to store the file into (string)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-proposed filename (string)
+proposed filename and original filename (string, string)
 </dd>
 </dl><a NAME="DownloadItem.__updateInfoLabel" ID="DownloadItem.__updateInfoLabel"></a>
 <h4>DownloadItem.__updateInfoLabel</h4>
@@ -401,7 +404,17 @@ URL of the download page (QUrl)
 <b>on_openButton_clicked</b>(<i></i>)
 <p>
         Private slot to open the downloaded file.
-</p><a NAME="DownloadItem.on_stopButton_clicked" ID="DownloadItem.on_stopButton_clicked"></a>
+</p><a NAME="DownloadItem.on_pauseButton_clicked" ID="DownloadItem.on_pauseButton_clicked"></a>
+<h4>DownloadItem.on_pauseButton_clicked</h4>
+<b>on_pauseButton_clicked</b>(<i>checked</i>)
+<p>
+        Private slot to pause the download.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+flag indicating the state of the button (boolean)
+</dd>
+</dl><a NAME="DownloadItem.on_stopButton_clicked" ID="DownloadItem.on_stopButton_clicked"></a>
 <h4>DownloadItem.on_stopButton_clicked</h4>
 <b>on_stopButton_clicked</b>(<i></i>)
 <p>

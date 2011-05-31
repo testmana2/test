@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="73"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -5668,94 +5669,99 @@ Nicht verbunden
 <context>
     <name>DownloadItem</name>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="23"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="20"/>
         <source>Icon</source>
         <translation>Symbol</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="38"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="35"/>
         <source>Filename</source>
         <translation>Dateiname</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="60"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="57"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="75"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="72"/>
         <source>Press to repeat the download</source>
         <translation>Drücken, um den Download zu wiederholen</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="98"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="85"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
         <source>Press to cancel the download</source>
         <translation>Drücken, um den Download abzubrechen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="105"/>
         <source>Press to open the downloaded file</source>
         <translation>Drücken, um die geladenen Datei zu öffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="198"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="203"/>
         <source>Download canceled: {0}</source>
         <translation>Download abgebrochen: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="188"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="193"/>
         <source>Save File</source>
         <translation>Datei speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="217"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="222"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation>Das Downloadverzeichnis ({0}) konnte nicht erzeugt werden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="363"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="390"/>
         <source>Error opening save file: {0}</source>
         <translation>Fehler beim Öffnen der zu speichernden Datei: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="372"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="399"/>
         <source>Error saving: {0}</source>
         <translation>Fehler beim Speichern: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="384"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="411"/>
         <source>Network Error: {0}</source>
         <translation>Netzwerkfehler: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="492"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="519"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
         <translation>{0} von {1} ({2}/s) - {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="493"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="520"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="501"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
         <source>{0} downloaded</source>
         <translation>{0} heruntergeladen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="504"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="531"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} von {1} - Angehalten</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="176"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="181"/>
         <source>VirusTotal scan scheduled: {0}</source>
         <translation>Prüfung mit VirusTotal beauftragt: {0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="82"/>
+        <source>Press to pause the download</source>
+        <translation>Drücken, um den Download zu pausieren</translation>
     </message>
 </context>
 <context>
@@ -12499,7 +12505,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="799"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>

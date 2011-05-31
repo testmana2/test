@@ -5666,37 +5666,37 @@ Not connected
 <context>
     <name>DownloadItem</name>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="23"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="20"/>
         <source>Icon</source>
         <translation>Icono</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="38"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="35"/>
         <source>Filename</source>
         <translation>Nombre de archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="60"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="57"/>
         <source>Info</source>
         <translation>Información</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="75"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="72"/>
         <source>Press to repeat the download</source>
         <translation>Pulse para repetir la descarga</translation>
     </message>
     <message>
         <location filename="Helpviewer/Download/DownloadItem.ui" line="98"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="85"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
         <source>Press to cancel the download</source>
         <translation>Pulse para cancelar la descarga</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="105"/>
         <source>Press to open the downloaded file</source>
         <translation>Pulse para abrir el archivo descargado</translation>
     </message>
@@ -5711,59 +5711,64 @@ Not connected
         <translation type="obsolete">&lt;p&gt;Está a punto de descargar el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;¿Qué desea hacer?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="198"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="203"/>
         <source>Download canceled: {0}</source>
         <translation>Descarga cancelada: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="188"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="193"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="217"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="222"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation>El directorio de descargas ({0}) no ha podido ser creado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="363"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="390"/>
         <source>Error opening save file: {0}</source>
         <translation>Error al abrir el fichero a guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="372"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="399"/>
         <source>Error saving: {0}</source>
         <translation>Error al guardar: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="384"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="411"/>
         <source>Network Error: {0}</source>
         <translation>Error de Red: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="492"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="519"/>
         <source>{0} of {1} ({2}/sec) - {3}</source>
         <translation>{0} de {1} ({2}/sec) - {3}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="493"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="520"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="501"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
         <source>{0} downloaded</source>
         <translation>{0} descargado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="504"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="531"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} de {1} - Parado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="176"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="181"/>
         <source>VirusTotal scan scheduled: {0}</source>
         <translation>Scan de VirusTotal programado: {0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="82"/>
+        <source>Press to pause the download</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
