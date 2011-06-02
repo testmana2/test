@@ -2323,8 +2323,8 @@ class HelpWindow(QMainWindow):
         if dlg.exec_() == QDialog.Accepted:
             # browsing history, search history, favicons, disk cache, cookies,
             # passwords, web databases, downloads
-            history, searches, favicons, cache, cookies,
-            passwords, databases, downloads = \
+            (history, searches, favicons, cache, cookies,
+             passwords, databases, downloads) = \
                 dlg.getData()
             if history:
                 self.historyManager().clear()
