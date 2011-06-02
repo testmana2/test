@@ -236,7 +236,7 @@ class OpenSearchManager(QObject):
         
         engine = self.__engines[name]
         for keyword in [k for k in self.__keywords if self.__keywords[k] == engine]:
-            del self.__keywords[k]
+            del self.__keywords[keyword]
         del self.__engines[name]
         
         file_ = QDir(self.enginesDirectory()).filePath(self.generateEngineFileName(name))
