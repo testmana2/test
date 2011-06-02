@@ -8,7 +8,7 @@ Module implementing a widget controlling a download.
 """
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, QUrl, \
-    QIODevice
+    QIODevice, QCryptographicHash
 from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QDialog
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
@@ -89,6 +89,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__canceledFileSelect = False
         self.__autoOpen = False
         
+        self.__sha1Hash = QCryptographicHash(QCryptographicHash.Sha1)
+        self.__md5Hash = QCryptographicHash(QCryptographicHash.Md5)
+        
         if not requestFilename:
             self.__requestFilename = Preferences.getUI("RequestDownloadFilename")
         
@@ -108,9 +111,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__bytesReceived = 0
         self.__bytesTotal = -1
         
-##        self.openButton.setEnabled(False)
-##        self.openButton.setVisible(False)
-##        
+        self.__sha1Hash.reset()
+        self.__md5Hash.reset()
+        
         # start timer for the download estimation
         self.__downloadTime.start()
         
@@ -261,13 +264,15 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         name = directory + baseName
         if endName:
             name += '.' + endName
-##        i = 1
-##        while QFile.exists(name):
-##            # file exists already, don't overwrite
-##            name = directory + baseName + ('-{0:d}'.format(i))
-##            if endName:
-##                name += '.' + endName
-##            i += 1
+            if not self.__requestFilename:
+                # do not overwrite, if the user is not being asked
+                i = 1
+                while QFile.exists(name):
+                    # file exists already, don't overwrite
+                    name = directory + baseName + ('-{0:d}'.format(i))
+                    if endName:
+                        name += '.' + endName
+                    i += 1
         return name, origName
     
     def __open(self):
@@ -394,7 +399,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 return
             self.statusChanged.emit()
         
-        bytesWritten = self.__output.write(self.__reply.readAll())
+        buffer = self.__reply.readAll()
+        self.__sha1Hash.addData(buffer)
+        self.__md5Hash.addData(buffer)
+        bytesWritten = self.__output.write(buffer)
         if bytesWritten == -1:
             self.infoLabel.setText(self.trUtf8("Error saving: {0}")\
                 .format(self.__output.errorString()))
@@ -516,7 +524,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if bytesTotal > 0:
                 remaining = timeString(timeRemaining)
             
-            info = self.trUtf8("{0} of {1} ({2}/sec) - {3}")\
+            info = self.trUtf8("{0} of {1} ({2}/sec)\n{3}")\
                 .format(
                     dataString(self.__bytesReceived),
                     bytesTotal == -1 and self.trUtf8("?") \
@@ -525,8 +533,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                     remaining)
         else:
             if self.__bytesReceived == bytesTotal or bytesTotal == -1:
-                info = self.trUtf8("{0} downloaded")\
-                    .format(dataString(self.__output.size()))
+                info = self.trUtf8("{0} downloaded\nSHA1: {1}\nMD5: {2}")\
+                    .format(dataString(self.__output.size()), 
+                            str(self.__sha1Hash.result().toHex(), encoding = "ascii"), 
+                            str(self.__md5Hash.result().toHex(), encoding = "ascii"))
             else:
                 info = self.trUtf8("{0} of {1} - Stopped")\
                     .format(dataString(self.__bytesReceived),
