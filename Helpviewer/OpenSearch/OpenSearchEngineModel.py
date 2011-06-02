@@ -130,9 +130,9 @@ class OpenSearchEngineModel(QAbstractTableModel):
                 description = self.trUtf8("<strong>Description:</strong> {0}")\
                               .format(engine.description())
                 if engine.providesSuggestions():
-                    description.append("<br/>")
-                    description.append(
-                        self.trUtf8("<strong>Provides contextual suggestions</strong>"))
+                    description += "<br/>"
+                    description += \
+                        self.trUtf8("<strong>Provides contextual suggestions</strong>")
                 
                 return description
         elif index.column() == 1:
