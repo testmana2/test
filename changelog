@@ -11,7 +11,8 @@ Version 5.2-snapshot-2011mmdd:
 - added support for the Mercurial rebase extension
 - enhanced the Mercurial log browser dialog
 - added function to test the login data to the Email config page
-- added a puse button to the web browser download
+- added a pause button to the web browser download
+- added some more user agent strings to the web browser
 
 Version 5.2-snapshot-20110501:
 - bug fixes

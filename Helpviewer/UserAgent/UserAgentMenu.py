@@ -38,6 +38,8 @@ class UserAgentMenu(QMenu):
         """
         self.aboutToShow.disconnect(self.__populateMenu)
         
+        self.__actionGroup = QActionGroup(self)
+        
         # add default action
         self.__defaultUserAgent = QAction(self)
         self.__defaultUserAgent.setText(self.trUtf8("Default"))
@@ -45,9 +47,11 @@ class UserAgentMenu(QMenu):
         self.__defaultUserAgent.triggered[()].connect(self.__switchToDefaultUserAgent)
         self.__defaultUserAgent.setChecked(HelpWebPage().userAgent() == "")
         self.addAction(self.__defaultUserAgent)
+        self.__actionGroup.addAction(self.__defaultUserAgent)
+        isChecked = self.__defaultUserAgent.isChecked()
         
         # add default extra user agents
-        self.__addDefaultActions()
+        isChecked = self.__addDefaultActions() or isChecked
         
         # add other action
         self.addSeparator()
@@ -56,14 +60,8 @@ class UserAgentMenu(QMenu):
         self.__otherUserAgent.setCheckable(True)
         self.__otherUserAgent.triggered[()].connect(self.__switchToOtherUserAgent)
         self.addAction(self.__otherUserAgent)
-        
-        usingCustomUserAgent = True
-        actionGroup = QActionGroup(self)
-        for act in self.actions():
-            actionGroup.addAction(act)
-            if act.isChecked():
-                usingCustomUserAgent = False
-        self.__otherUserAgent.setChecked(usingCustomUserAgent)
+        self.__actionGroup.addAction(self.__otherUserAgent)
+        self.__otherUserAgent.setChecked(not isChecked)
     
     def __switchToDefaultUserAgent(self):
         """
@@ -94,7 +92,11 @@ class UserAgentMenu(QMenu):
     def __addDefaultActions(self):
         """
         Private slot to add the default user agent entries.
+        
+        @return flag indicating that a user agent entry is checked (boolean)
         """
+        menuStack = []
+        isChecked = False
         defaultUserAgents = QByteArray(UserAgentDefaults)
         
         currentUserAgentString = HelpWebPage().userAgent()
@@ -102,7 +104,10 @@ class UserAgentMenu(QMenu):
         while not xml.atEnd():
             xml.readNext()
             if xml.isStartElement() and xml.name() == "separator":
-                self.addSeparator()
+                if menuStack:
+                    menuStack[-1].addSeparator()
+                else:
+                    self.addSeparator()
                 continue
             
             if xml.isStartElement() and xml.name() == "useragent":
@@ -117,10 +122,31 @@ class UserAgentMenu(QMenu):
                 act.setCheckable(True)
                 act.setChecked(userAgent == currentUserAgentString)
                 act.triggered[()].connect(self.__changeUserAgent)
-                self.addAction(act)
+                if menuStack:
+                    menuStack[-1].addAction(act)
+                else:
+                    self.addAction(act)
+                self.__actionGroup.addAction(act)
+                isChecked = isChecked or act.isChecked()
+            
+            if xml.isStartElement() and xml.name() == "useragentmenu":
+                attributes = xml.attributes()
+                title = attributes.value("title")
+                if title == "v_a_r_i_o_u_s":
+                    title = self.trUtf8("Various")
+                
+                menu = QMenu(self)
+                menu.setTitle(title)
+                self.addMenu(menu)
+                menuStack.append(menu)
+            
+            if xml.isEndElement() and xml.name() == "useragentmenu":
+                menuStack.pop()
         
         if xml.hasError():
             E5MessageBox.critical(self,
                 self.trUtf8("Parsing default user agents"),
                 self.trUtf8("""<p>Error parsing default user agents.</p><p>{0}</p>""")\
                     .format(xml.errorString()))
+        
+        return isChecked
