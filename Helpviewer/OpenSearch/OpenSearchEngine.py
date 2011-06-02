@@ -17,6 +17,7 @@ from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 from UI.Info import Program
 
 import Preferences
+import Utilities
 
 class OpenSearchEngine(QObject):
     """
@@ -440,7 +441,8 @@ class OpenSearchEngine(QObject):
         """
         Private slot to receive the suggestions.
         """
-        response = str(self.__suggestionsReply.readAll(), "utf-8")
+        buffer = bytes(self.__suggestionsReply.readAll())
+        response = Utilities.decode(buffer)[0]
         response = response.strip()
         
         self.__suggestionsReply.close()
