@@ -168,6 +168,7 @@ class BookmarksProjectHelper(HgExtensionProjectHelper):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.menuTitle(), mainMenu)
+        menu.setIcon(UI.PixmapCache.getIcon("bookmark22.png"))
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgBookmarkDefineAct)

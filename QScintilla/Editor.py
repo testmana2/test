@@ -248,7 +248,7 @@ class Editor(QsciScintillaCompat):
         self.dbreakpoint = \
             self.markerDefine(UI.PixmapCache.getPixmap("breakDisabled.png"))
         self.bookmark = \
-            self.markerDefine(UI.PixmapCache.getPixmap("bookmark.png"))
+            self.markerDefine(UI.PixmapCache.getPixmap("bookmark16.png"))
         self.syntaxerror = \
             self.markerDefine(UI.PixmapCache.getPixmap("syntaxError.png"))
         self.notcovered = \

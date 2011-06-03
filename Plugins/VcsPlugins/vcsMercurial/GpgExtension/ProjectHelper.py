@@ -81,6 +81,7 @@ class GpgProjectHelper(HgExtensionProjectHelper):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.menuTitle(), mainMenu)
+        menu.setIcon(UI.PixmapCache.getIcon("changesetSign.png"))
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgGpgListAct)

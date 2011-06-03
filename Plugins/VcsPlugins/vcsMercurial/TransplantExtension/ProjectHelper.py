@@ -68,6 +68,7 @@ class TransplantProjectHelper(HgExtensionProjectHelper):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.menuTitle(), mainMenu)
+        menu.setIcon(UI.PixmapCache.getIcon("vcsTransplant.png"))
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgTransplantAct)

@@ -81,6 +81,7 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.menuTitle(), mainMenu)
+        menu.setIcon(UI.PixmapCache.getIcon("vcsRebase.png"))
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgRebaseAct)

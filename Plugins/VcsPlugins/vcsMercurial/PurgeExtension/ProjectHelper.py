@@ -104,6 +104,7 @@ class PurgeProjectHelper(HgExtensionProjectHelper):
         @return populated menu (QMenu)
         """
         menu = QMenu(self.menuTitle(), mainMenu)
+        menu.setIcon(UI.PixmapCache.getIcon("fileDelete.png"))
         menu.setTearOffEnabled(True)
         
         menu.addAction(self.hgPurgeAct)

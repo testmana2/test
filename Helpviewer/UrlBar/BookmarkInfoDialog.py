@@ -33,7 +33,7 @@ class BookmarkInfoDialog(QDialog, Ui_BookmarkInfoDialog):
         
         self.__bookmark = bookmark
         
-        self.icon.setPixmap(UI.PixmapCache.getPixmap("bookmarkBig.png"))
+        self.icon.setPixmap(UI.PixmapCache.getPixmap("bookmark32.png"))
         
         font = QFont()
         font.setPointSize(font.pointSize() + 2)

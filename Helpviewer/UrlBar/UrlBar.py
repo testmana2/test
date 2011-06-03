@@ -48,7 +48,7 @@ class UrlBar(E5LineEdit):
         self.__privateMode = QWebSettings.globalSettings().testAttribute(
             QWebSettings.PrivateBrowsingEnabled)
         
-        self.__bmActiveIcon = UI.PixmapCache.getIcon("bookmark.png")
+        self.__bmActiveIcon = UI.PixmapCache.getIcon("bookmark16.png")
         self.__bmInactiveIcon = QIcon(self.__bmActiveIcon.pixmap(16, 16, QIcon.Disabled))
         
         self.__favicon = FavIconLabel(self)

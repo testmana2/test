@@ -1271,6 +1271,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>CSSs/default.css</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmark.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmark.style</Other>
+    <Other>icons/default/bookmark16.png</Other>
+    <Other>icons/default/bookmark32.png</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
