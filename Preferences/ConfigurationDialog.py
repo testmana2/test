@@ -290,9 +290,6 @@ class ConfigurationWidget(QWidget):
                 "printerPage" : \
                     [self.trUtf8("Printer"), "preferences-printer.png",
                     "PrinterPage", None, None],
-                "pythonPage" : \
-                    [self.trUtf8("Python"), "preferences-python.png",
-                    "PythonPage", None, None],
                 
                 "0helpPage" : \
                     [self.trUtf8("Help"), "preferences-help.png",
