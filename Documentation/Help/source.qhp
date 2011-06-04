@@ -2410,6 +2410,7 @@
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />
       <keyword name="decode" id="decode" ref="eric5.Utilities.__init__.html#decode" />
+      <keyword name="decodeBytes" id="decodeBytes" ref="eric5.Utilities.__init__.html#decodeBytes" />
       <keyword name="decodeString" id="decodeString" ref="eric5.Utilities.__init__.html#decodeString" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
@@ -7887,6 +7888,7 @@
       <keyword name="HelpAppearancePage.on_standardFontButton_clicked" id="HelpAppearancePage.on_standardFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_standardFontButton_clicked" />
       <keyword name="HelpAppearancePage.on_styleSheetButton_clicked" id="HelpAppearancePage.on_styleSheetButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_styleSheetButton_clicked" />
       <keyword name="HelpAppearancePage.save" id="HelpAppearancePage.save" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.save" />
+      <keyword name="HelpAppearancePage.setMode" id="HelpAppearancePage.setMode" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.setMode" />
       <keyword name="EditorFilePage (Module)" id="EditorFilePage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html" />
       <keyword name="EditorFilePage" id="EditorFilePage" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#EditorFilePage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EditorFilePage.html#create" />

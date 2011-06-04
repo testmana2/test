@@ -633,6 +633,7 @@ class Prefs(object):
         "VirusTotalEnabled": False,
         "VirusTotalServiceKey": "",
         "VirusTotalSecure": False,
+        "SearchLanguage": QtCore.QLocale().language(),
     }
     
     websettings = QWebSettings.globalSettings()
@@ -1931,7 +1932,8 @@ def getHelp(key, prefClass=Prefs):
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
-                 "CachePolicy", "DownloadManagerRemovePolicy"]:
+                 "CachePolicy", "DownloadManagerRemovePolicy", 
+                 "SearchLanguage"]:
         return int(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",

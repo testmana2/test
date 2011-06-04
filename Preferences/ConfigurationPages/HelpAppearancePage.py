@@ -15,6 +15,8 @@ from E5Gui import E5FileDialog
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 
+from ..ConfigurationDialog import ConfigurationWidget
+
 import Preferences
 import Utilities
 
@@ -34,6 +36,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
         self.helpColours = {}
+        self.__displayMode = None
         
         # set initial values
         self.standardFont = Preferences.getHelp("StandardFont")
@@ -55,6 +58,28 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.autoLoadImagesCheckBox.setChecked(Preferences.getHelp("AutoLoadImages"))
         
         self.styleSheetEdit.setText(Preferences.getHelp("UserStyleSheet"))
+        
+        self.tabsCloseButtonCheckBox.setChecked(Preferences.getUI("SingleCloseButton"))
+    
+    def setMode(self, displayMode):
+        """
+        Public method to perform mode dependent setups.
+        
+        @param displayMode mode of the configuration dialog
+            (ConfigurationWidget.DefaultMode, ConfigurationWidget.HelpBrowserMode,
+             ConfigurationWidget.TrayStarterMode)
+        """
+        assert displayMode in (
+            ConfigurationWidget.DefaultMode,
+            ConfigurationWidget.HelpBrowserMode,
+            ConfigurationWidget.TrayStarterMode
+        )
+        
+        self.__displayMode = displayMode
+        if self.__displayMode != ConfigurationWidget.HelpBrowserMode:
+            self.separatorLine.hide()
+            self.nextStartupNoteLabel.hide()
+            self.tabsGroupBox.hide()
     
     def save(self):
         """
@@ -70,6 +95,10 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         
         for key in list(self.helpColours.keys()):
             Preferences.setHelp(key, self.helpColours[key])
+        
+        if self.__displayMode == ConfigurationWidget.HelpBrowserMode:
+            Preferences.setUI("SingleCloseButton",
+                self.tabsCloseButtonCheckBox.isChecked())
     
     @pyqtSlot()
     def on_standardFontButton_clicked(self):

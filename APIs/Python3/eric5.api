@@ -2274,14 +2274,12 @@ eric5.Helpviewer.OpenSearch.OpenSearchDialog.OpenSearchDialog.on_restoreButton_c
 eric5.Helpviewer.OpenSearch.OpenSearchDialog.OpenSearchDialog?1(parent=None)
 eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.OpenSearchEditDialog.accept?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEditDialog.OpenSearchEditDialog?1(engine, parent=None)
-eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine._language?8
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.description?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.image?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.imageChanged?7
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.imageUrl?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.isValid?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.loadImage?4()
-eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.loc?7
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.name?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.networkAccessManager?4()
 eric5.Helpviewer.OpenSearch.OpenSearchEngine.OpenSearchEngine.parseTemplate?4(searchTerm, searchTemplate)
@@ -4587,6 +4585,7 @@ eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.on_se
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.on_standardFontButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.on_styleSheetButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.save?4()
+eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage.setMode?4(displayMode)
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.HelpAppearancePage?1()
 eric5.Preferences.ConfigurationPages.HelpAppearancePage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.on_pyqt4DocDirButton_clicked?4()
@@ -6612,6 +6611,7 @@ eric5.Utilities.compile?4(file, codestring="")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
 eric5.Utilities.decode?4(text)
+eric5.Utilities.decodeBytes?4(buffer)
 eric5.Utilities.decodeString?4(text)
 eric5.Utilities.direntries?4(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None)
 eric5.Utilities.encode?4(text, orig_coding)

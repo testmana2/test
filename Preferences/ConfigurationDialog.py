@@ -292,9 +292,9 @@ class ConfigurationWidget(QWidget):
                 "networkPage": \
                     [self.trUtf8("Network"), "preferences-network.png",
                      "NetworkPage", None, None],
-                "pythonPage": \
-                    [self.trUtf8("Python"), "preferences-python.png",
-                    "PythonPage", None, None],
+                "printerPage": \
+                    [self.trUtf8("Printer"), "preferences-printer.png",
+                    "PrinterPage", None, None],
                 
                 "0helpPage": \
                     [self.trUtf8("Help"), "preferences-help.png",
@@ -492,6 +492,10 @@ class ConfigurationWidget(QWidget):
         if page is not None:
             self.configStack.addWidget(page)
             pageData[-1] = page
+            try:
+                page.setMode(self.displayMode)
+            except AttributeError:
+                pass
         return page
         
     def showConfigurationPageByName(self, pageName, setCurrent=True):

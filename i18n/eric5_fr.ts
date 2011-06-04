@@ -2011,7 +2011,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="194"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="195"/>
         <source>Bookmarks</source>
         <translation type="unfinished">Signets</translation>
     </message>
@@ -3120,12 +3120,12 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Gestionnaire de plugins</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="133"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="296"/>
         <source>Printer</source>
         <translation>Impression</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="296"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="170"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
@@ -6181,22 +6181,22 @@ Not connected
 <context>
     <name>DownloadItem</name>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="20"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="26"/>
         <source>Icon</source>
         <translation type="unfinished">Icône</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="35"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="41"/>
         <source>Filename</source>
         <translation type="unfinished">Nom de fichier</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="57"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="63"/>
         <source>Info</source>
         <translation type="unfinished">Info</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="72"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="78"/>
         <source>Press to repeat the download</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6206,73 +6206,76 @@ Not connected
         <translation type="obsolete">...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="95"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="101"/>
         <source>Press to cancel the download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="105"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="111"/>
         <source>Press to open the downloaded file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="203"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="206"/>
         <source>Download canceled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="193"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="196"/>
         <source>Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="222"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="225"/>
         <source>Download directory ({0}) couldn&apos;t be created.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="390"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="395"/>
         <source>Error opening save file: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="399"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="407"/>
         <source>Error saving: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="411"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="419"/>
         <source>Network Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="519"/>
-        <source>{0} of {1} ({2}/sec) - {3}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="520"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
         <source>?</source>
         <translation type="unfinished">?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="528"/>
-        <source>{0} downloaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="531"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="541"/>
         <source>{0} of {1} - Stopped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.py" line="181"/>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="184"/>
         <source>VirusTotal scan scheduled: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Download/DownloadItem.ui" line="82"/>
+        <location filename="Helpviewer/Download/DownloadItem.ui" line="88"/>
         <source>Press to pause the download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="527"/>
+        <source>{0} of {1} ({2}/sec)
+{3}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Download/DownloadItem.py" line="536"/>
+        <source>{0} downloaded
+SHA1: {1}
+MD5: {2}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12581,12 +12584,12 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="81"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="82"/>
         <source>Fetch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="81"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="82"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13478,7 +13481,7 @@ et le curseurest placé après la parenthèse fermante</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="98"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/ProjectHelper.py" line="99"/>
         <source>GPG</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13504,104 +13507,119 @@ et le curseurest placé après la parenthèse fermante</translation>
 <context>
     <name>HelpAppearancePage</name>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="16"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="17"/>
         <source>&lt;b&gt;Configure help viewer appearance&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configuration de l&apos;apparence du visualiseur d&apos;aide&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="36"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="37"/>
         <source>Fonts</source>
         <translation>Polices</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="42"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="43"/>
         <source>Press to select the standard font</source>
         <translation>Cliquer pour sélectionner une police standard</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="45"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="46"/>
         <source>Standard Font</source>
         <translation>Polices standards</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="55"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="56"/>
         <source>Times 16</source>
         <translation>Times 16</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="68"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="69"/>
         <source>Press to select the fixed-width font</source>
         <translation>Cliquer pour sélectionner une police monospacée</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="71"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="72"/>
         <source>Fixed-Width Font</source>
         <translation>Polices monospacées</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="81"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="82"/>
         <source>Courier 13</source>
         <translation>Courier 13</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="142"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="143"/>
         <source>Images</source>
         <translation>Images</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="148"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="149"/>
         <source>Select to load images</source>
         <translation>Cocher pour charger les images</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="151"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="152"/>
         <source>Load images</source>
         <translation>Charger les images</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="161"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="162"/>
         <source>Style Sheet</source>
         <translation>Feuille de style</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="167"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="168"/>
         <source>User Style Sheet:</source>
         <translation>Feuille de style utilisateur:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="174"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="175"/>
         <source>Enter the file name of a user style sheet</source>
         <translation>Entrer le nom d&apos;une feuille de styles</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="181"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="182"/>
         <source>Select the user style sheet via a file selection dialog</source>
         <translation>Sélectionne une feuille de styles via une boite de sélection</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="184"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="185"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="104"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="133"/>
         <source>Select Style Sheet</source>
         <translation>Sélection d&apos;une feuille de styles</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="97"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="98"/>
         <source>Colours</source>
         <translation>Couleurs</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="103"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="104"/>
         <source>Background colour of secure URLs:</source>
         <translation>Couleur de fond pour les URLs sécurisées:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="116"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="117"/>
         <source>Select the background colour for secure URLs.</source>
         <translation>Sélectionne une couleur de fond pour les URLs sécurisées.</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
+        <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
+        <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; Les paramètres seront activés au prochain lancement de l&apos;application.&lt;/font&gt;</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="215"/>
+        <source>Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="221"/>
+        <source>Show only one close button instead of one for each tab</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14750,17 +14768,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
         <source>Printing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="458"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="497"/>
         <source>Select to print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="461"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="500"/>
         <source>Print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14967,6 +14985,21 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="82"/>
         <source>Enable access keys</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <source>Web Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="458"/>
+        <source>Language:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="465"/>
+        <source>Select the language to be used for web searches</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -20667,132 +20700,132 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="222"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
         <source>Select to specify a revision by number</source>
         <translation type="unfinished">Sélectionner pour spécifier une révision par son numéro</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="225"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="242"/>
         <source>Number</source>
         <translation type="unfinished">Numéro</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="235"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="252"/>
         <source>Enter a revision number</source>
         <translation type="unfinished">Entrer un numéro de révision</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="264"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="281"/>
         <source>Select to specify a revision by changeset id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="267"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="284"/>
         <source>Id:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="277"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="294"/>
         <source>Enter a changeset id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="284"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="301"/>
         <source>Select to specify a revision by a tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="287"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="304"/>
         <source>Tag:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="297"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="314"/>
         <source>Enter a tag name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="307"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="324"/>
         <source>Select to specify a revision by a branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="310"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="327"/>
         <source>Branch:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="320"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="337"/>
         <source>Enter a branch name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="330"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="347"/>
         <source>Select to specify a revision by a bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="333"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="350"/>
         <source>Bookmark:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="349"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="366"/>
         <source>Enter a bookmark name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="216"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="233"/>
         <source>&amp;Destination Revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="359"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="376"/>
         <source>Select tip revision of repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="362"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="379"/>
         <source>TIP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="392"/>
         <source>Select to collapse the rebased changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="378"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="395"/>
         <source>Collapse Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="385"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="402"/>
         <source>Select to keep the original changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="388"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="405"/>
         <source>Keep Original Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="395"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="412"/>
         <source>Select to keep the original branch names</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="398"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="415"/>
         <source>Keep Original Branch Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="418"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="422"/>
         <source>Select to detach the source from its original branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="421"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="425"/>
         <source>Detach Source</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27155,7 +27188,7 @@ Voulez-vous enregistrer les modifications?</translation>
 <context>
     <name>OpenSearchEngineModel</name>
     <message>
-        <location filename="Helpviewer/OpenSearch/OpenSearchEngineModel.py" line="135"/>
+        <location filename="Helpviewer/OpenSearch/OpenSearchEngineModel.py" line="136"/>
         <source>&lt;strong&gt;Provides contextual suggestions&lt;/strong&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28635,17 +28668,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="936"/>
+        <location filename="Preferences/__init__.py" line="937"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="963"/>
+        <location filename="Preferences/__init__.py" line="964"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="963"/>
+        <location filename="Preferences/__init__.py" line="964"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32272,7 +32305,7 @@ en cliquant sur le bouton à droite.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/PurgeExtension/ProjectHelper.py" line="123"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/PurgeExtension/ProjectHelper.py" line="124"/>
         <source>Purge</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35231,7 +35264,7 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
 <context>
     <name>RebaseProjectHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="108"/>
         <source>Rebase Changesets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35276,22 +35309,22 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="98"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="99"/>
         <source>Rebase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="136"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="121"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="122"/>
         <source>Rebase Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="136"/>
         <source>Rebase Changesets (Abort)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45297,7 +45330,7 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TransplantProjectHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="94"/>
         <source>Transplant Changesets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45322,17 +45355,17 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="84"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="85"/>
         <source>Transplant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="108"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="108"/>
         <source>Transplant Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46372,34 +46405,39 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
 <context>
     <name>UserAgentMenu</name>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="43"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="45"/>
         <source>Default</source>
         <translation type="unfinished">Défaut</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="55"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="59"/>
         <source>Other...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="78"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
         <source>Custom user agent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="78"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
         <source>User agent:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="123"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="147"/>
         <source>Parsing default user agents</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="123"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="147"/>
         <source>&lt;p&gt;Error parsing default user agents.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="136"/>
+        <source>Various</source>
+        <translation type="unfinished">Divers</translation>
     </message>
 </context>
 <context>
@@ -48728,17 +48766,17 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1001"/>
+        <location filename="Utilities/__init__.py" line="1023"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vous pouvez utiliser la syntaxe &quot;%-code&quot; dans la chaine de caractères. Les codes supportés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;colonne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;répertoire de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nom de fichier de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;répertoire &apos;home&apos; de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;ligne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;chemin du projet courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texte sélectionné dans l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nom d&apos;utilisateur de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;le signe pourcent&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1187"/>
+        <location filename="Utilities/__init__.py" line="1209"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1233"/>
+        <location filename="Utilities/__init__.py" line="1255"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>

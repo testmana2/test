@@ -7,7 +7,7 @@
 Module implementing the Help web browser configuration page.
 """
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtCore import pyqtSlot, QLocale
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtNetwork import QNetworkRequest
 
@@ -94,8 +94,9 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         self.homePageEdit.setText(
             Preferences.getHelp("HomePage"))
         
-        self.defaultSchemeCombo.setEditText(
-            Preferences.getHelp("DefaultScheme"))
+        self.defaultSchemeCombo.setCurrentIndex(
+            self.defaultSchemeCombo.findText(
+                Preferences.getHelp("DefaultScheme")))
         
         historyLimit = Preferences.getHelp("HistoryLimit")
         idx = 0
@@ -116,6 +117,16 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         else:
             idx = 5
         self.expireHistory.setCurrentIndex(idx)
+        
+        for language in range(2, QLocale.LastLanguage + 1):
+            if len(QLocale.countriesForLanguage(language)) > 0:
+                self.languageCombo.addItem(QLocale.languageToString(language), language)
+        self.languageCombo.model().sort(0)
+        self.languageCombo.insertSeparator(0)
+        self.languageCombo.insertItem(0, QLocale.languageToString(0), 0)
+        index = self.languageCombo.findData(Preferences.getHelp("SearchLanguage"))
+        if index > -1:
+            self.languageCombo.setCurrentIndex(index)
         
     def save(self):
         """
@@ -190,6 +201,14 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         elif idx == 6:
             historyLimit = -2
         Preferences.setHelp("HistoryLimit", historyLimit)
+        
+        languageIndex = self.languageCombo.currentIndex()
+        if languageIndex > -1:
+            language = self.languageCombo.itemData(languageIndex)
+        else:
+            # fall back to system default
+            language = QLocale.system().language()
+        Preferences.setHelp("SearchLanguage", language)
     
     @pyqtSlot()
     def on_setCurrentPageButton_clicked(self):

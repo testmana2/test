@@ -31,20 +31,6 @@ class OpenSearchEngine(QObject):
     imageChanged = pyqtSignal()
     suggestions = pyqtSignal(list)
     
-    loc = Preferences.getUILanguage()
-    if loc == "System":
-        loc = QLocale.system().name()
-    if loc is None:
-        _language = "en"
-    elif loc == "C":
-        _language = ""
-    else:
-        _language = loc[:2]
-    _language = _language.replace("_", "-")
-    _country = _language
-    if "-" in _country:
-        _country = _country[_county.index["-"] + 1:]
-    
     def __init__(self, parent=None):
         """
         Constructor
@@ -82,12 +68,16 @@ class OpenSearchEngine(QObject):
         @param searchTemplate template to be parsed (string)
         @return parsed template (string)
         """
+        locale = QLocale(Preferences.getHelp("SearchLanguage"))
+        language = locale.name().split("_")[0]
+        country = language.lower()
+        
         result = searchTemplate
         result = result.replace("{count}", "20")
         result = result.replace("{startIndex}", "0")
         result = result.replace("{startPage}", "0")
-        result = result.replace("{language}", cls._language)
-        result = result.replace("{country}", cls._country.lower())
+        result = result.replace("{language}", language)
+        result = result.replace("{country}", country)
         result = result.replace("{inputEncoding}", "UTF-8")
         result = result.replace("{outputEncoding}", "UTF-8")
         result = result.replace("{searchTerms}",
@@ -448,7 +438,7 @@ class OpenSearchEngine(QObject):
         Private slot to receive the suggestions.
         """
         buffer = bytes(self.__suggestionsReply.readAll())
-        response = Utilities.decode(buffer)[0]
+        response = Utilities.decodeBytes(buffer)
         response = response.strip()
         
         self.__suggestionsReply.close()
