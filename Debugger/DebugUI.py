@@ -17,6 +17,7 @@ from .VariablesFilterDialog import *
 from .ExceptionsFilterDialog import *
 from .StartDialog import *
 from .EditBreakpointDialog import EditBreakpointDialog
+from .EditWatchpointDialog import EditWatchpointDialog
 
 from .DebugClientCapabilities import *
 import Preferences
