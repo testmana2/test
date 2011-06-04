@@ -91,8 +91,9 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         self.homePageEdit.setText(
             Preferences.getHelp("HomePage"))
         
-        self.defaultSchemeCombo.setEditText(
-            Preferences.getHelp("DefaultScheme"))
+        self.defaultSchemeCombo.setCurrentIndex(
+            self.defaultSchemeCombo.findText(
+                Preferences.getHelp("DefaultScheme")))
         
         historyLimit = Preferences.getHelp("HistoryLimit")
         idx = 0

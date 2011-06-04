@@ -2354,6 +2354,7 @@
       <keyword name="compile" id="compile" ref="eric5.Utilities.__init__.html#compile" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric5.Utilities.__init__.html#convertLineEnds" />
       <keyword name="decode" id="decode" ref="eric5.Utilities.__init__.html#decode" />
+      <keyword name="decodeBytes" id="decodeBytes" ref="eric5.Utilities.__init__.html#decodeBytes" />
       <keyword name="decodeString" id="decodeString" ref="eric5.Utilities.__init__.html#decodeString" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />

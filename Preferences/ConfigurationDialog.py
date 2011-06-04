@@ -287,6 +287,9 @@ class ConfigurationWidget(QWidget):
                 "networkPage" : \
                     [self.trUtf8("Network"), "preferences-network.png", 
                      "NetworkPage", None, None], 
+                "printerPage" : \
+                    [self.trUtf8("Printer"), "preferences-printer.png",
+                    "PrinterPage", None, None],
                 "pythonPage" : \
                     [self.trUtf8("Python"), "preferences-python.png",
                     "PythonPage", None, None],

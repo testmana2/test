@@ -442,7 +442,7 @@ class OpenSearchEngine(QObject):
         Private slot to receive the suggestions.
         """
         buffer = bytes(self.__suggestionsReply.readAll())
-        response = Utilities.decode(buffer)[0]
+        response = Utilities.decodeBytes(buffer)
         response = response.strip()
         
         self.__suggestionsReply.close()

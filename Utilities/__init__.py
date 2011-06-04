@@ -321,26 +321,48 @@ def decodeString(text):
             buf += bytes(text[index], encoding="ascii")
             index += 1
     buf = buf.replace(b"\x00", b"")
+    return decodeBytes(buf)
+    
+def decodeBytes(buffer):
+    """
+    Function to decode some byte text into a string.
+    
+    @param buffer byte buffer to decode (bytes)
+    @return decoded text (string)
+    """
+    # try UTF with BOM
+    try:
+        if buffer.startswith(BOM_UTF8):
+            # UTF-8 with BOM
+            return str(buffer[len(BOM_UTF8):], encoding='utf-8')
+        elif buffer.startswith(BOM_UTF16):
+            # UTF-16 with BOM
+            return str(buffer[len(BOM_UTF16):], encoding='utf-16')
+        elif buffer.startswith(BOM_UTF32):
+            # UTF-32 with BOM
+            return str(buffer[len(BOM_UTF32):], encoding='utf-32')
+    except (UnicodeError, LookupError):
+        pass
     
     # try UTF-8
     try:
-        return str(buf, encoding="utf-8")
+        return str(buffer, encoding="utf-8")
     except UnicodeError:
         pass
     
     # try codec detection
     try:
         import ThirdParty.CharDet.chardet
-        guess = ThirdParty.CharDet.chardet.detect(buf)
+        guess = ThirdParty.CharDet.chardet.detect(buffer)
         if guess and guess['encoding'] is not None:
             codec = guess['encoding'].lower()
-            return str(buf, codec)
+            return str(buffer, encoding=codec)
     except (UnicodeError, LookupError):
         pass
     except ImportError:
         pass
     
-    return str(text, "utf-8", "ignore")
+    return str(buffer, encoding="utf-8", errors="ignore")
 
 _escape = re.compile("[&<>\"\u0080-\uffff]")
 

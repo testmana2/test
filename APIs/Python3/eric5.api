@@ -6223,6 +6223,7 @@ eric5.Utilities.compile?4(file, codestring = "")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
 eric5.Utilities.decode?4(text)
+eric5.Utilities.decodeBytes?4(buffer)
 eric5.Utilities.decodeString?4(text)
 eric5.Utilities.direntries?4(path, filesonly=False, pattern=None, followsymlinks=True, checkStop=None)
 eric5.Utilities.encode?4(text, orig_coding)
