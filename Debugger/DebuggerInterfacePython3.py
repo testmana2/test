@@ -212,7 +212,7 @@ class DebuggerInterfacePython3(QObject):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 clientEnv[str(key)] = str(value)
-            except UnpackError:
+            except ValueError:
                 pass
         
         ipaddr = self.debugServer.getHostAddress(True)
@@ -304,7 +304,7 @@ class DebuggerInterfacePython3(QObject):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 clientEnv[str(key)] = str(value)
-            except UnpackError:
+            except ValueError:
                 pass
         
         ipaddr = self.debugServer.getHostAddress(True)

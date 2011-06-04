@@ -624,7 +624,7 @@ class DebugServer(QTcpServer):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 envdict[key] = value
-            except UnpackError:
+            except ValueError:
                 pass
         self.debuggerInterface.remoteEnvironment(envdict)
         
