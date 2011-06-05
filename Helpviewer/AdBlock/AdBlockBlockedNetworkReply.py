@@ -7,7 +7,7 @@
 Module implementing a QNetworkReply subclass reporting a blocked request.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QTimer
 from PyQt4.QtNetwork import QNetworkReply, QNetworkAccessManager
 
 

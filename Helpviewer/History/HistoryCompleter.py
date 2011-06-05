@@ -7,8 +7,9 @@
 Module implementing a special completer for the history.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QRegExp, QTimer
+from PyQt4.QtGui import QTableView, QAbstractItemView, QSortFilterProxyModel, \
+    QCompleter
 
 from .HistoryModel import HistoryModel
 from .HistoryFilterModel import HistoryFilterModel

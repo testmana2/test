@@ -9,8 +9,9 @@ Module implementing a dialog to browse the log history.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QCursor, QHeaderView, QLineEdit, QDialog, \
+    QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

@@ -9,7 +9,8 @@ Module implementing a manager for open search engines.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile, QDir, QIODevice, QByteArray, \
+    QBuffer
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from .OpenSearchDefaultEngines import OpenSearchDefaultEngines

@@ -7,7 +7,7 @@
 Module implementing a reader for open search engine descriptions.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QXmlStreamReader, QIODevice, QCoreApplication
 
 from .OpenSearchEngine import OpenSearchEngine
 

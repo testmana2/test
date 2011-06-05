@@ -7,7 +7,7 @@
 Module implementing a writer for open search engine descriptions.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QXmlStreamWriter, QIODevice
 
 
 class OpenSearchWriter(QXmlStreamWriter):

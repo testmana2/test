@@ -7,8 +7,8 @@
 Module implementing the exporter base class.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, QObject
+from PyQt4.QtGui import QApplication
 
 from E5Gui import E5MessageBox, E5FileDialog
 

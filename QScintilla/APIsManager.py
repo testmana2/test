@@ -9,7 +9,7 @@ Module implementing the APIsManager.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QDir, QFileInfo, pyqtSignal, QObject
 from PyQt4.Qsci import QsciAPIs
 
 from . import Lexers

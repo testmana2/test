@@ -7,8 +7,8 @@
 Module implementing a dialog to enter the revisions for the svn diff command.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDate, QDateTime, Qt
+from PyQt4.QtGui import QDialog
 
 from .Ui_SvnRevisionSelectionDialog import Ui_SvnRevisionSelectionDialog
 

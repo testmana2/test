@@ -9,8 +9,8 @@ Module implementing a dialog to show the output of the svn log command process.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QByteArray, QProcess, QRegExp, QUrl, pyqtSlot
+from PyQt4.QtGui import QWidget, QLineEdit, QApplication, QTextCursor, QDialogButtonBox
 
 from E5Gui import E5MessageBox
 

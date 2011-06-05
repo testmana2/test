@@ -7,8 +7,8 @@
 Module implementing a dialog to manage the QtHelp filters.
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, QInputDialog, QLineEdit
 from PyQt4.QtHelp import QHelpEngineCore
 
 from .Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog

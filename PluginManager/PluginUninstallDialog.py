@@ -12,8 +12,8 @@ import os
 import imp
 import shutil
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout, QMainWindow
 
 from E5Gui import E5MessageBox
 

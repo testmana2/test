@@ -9,8 +9,9 @@ Module implementing a Python code coverage dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
+    QApplication, QProgressDialog
 
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 

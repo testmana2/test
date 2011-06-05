@@ -10,8 +10,8 @@ the other categories.
 
 import mimetypes
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl
+from PyQt4.QtGui import QDesktopServices, QDialog, QMenu
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \

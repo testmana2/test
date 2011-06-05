@@ -7,7 +7,7 @@
 Module implementing the history model.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 
 import Helpviewer.HelpWindow
 

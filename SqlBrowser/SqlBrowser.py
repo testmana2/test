@@ -7,8 +7,8 @@
 Module implementing the SQL Browser main window.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QUrl
+from PyQt4.QtGui import QKeySequence, qApp, QMainWindow
 from PyQt4.QtSql import QSqlError, QSqlDatabase
 
 from E5Gui.E5Action import E5Action

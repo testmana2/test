@@ -534,9 +534,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         else:
             if self.__bytesReceived == bytesTotal or bytesTotal == -1:
                 info = self.trUtf8("{0} downloaded\nSHA1: {1}\nMD5: {2}")\
-                    .format(dataString(self.__output.size()), 
-                            str(self.__sha1Hash.result().toHex(), encoding = "ascii"), 
-                            str(self.__md5Hash.result().toHex(), encoding = "ascii"))
+                    .format(dataString(self.__output.size()),
+                            str(self.__sha1Hash.result().toHex(), encoding="ascii"),
+                            str(self.__md5Hash.result().toHex(), encoding="ascii"))
             else:
                 info = self.trUtf8("{0} of {1} - Stopped")\
                     .format(dataString(self.__bytesReceived),

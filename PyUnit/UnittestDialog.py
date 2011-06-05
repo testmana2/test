@@ -14,8 +14,9 @@ import time
 import re
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QEvent, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QColor, QDialog, QApplication, QDialogButtonBox, \
+    QMainWindow
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter

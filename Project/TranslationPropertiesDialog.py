@@ -9,8 +9,8 @@ Module implementing the Translations Properties dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QListWidgetItem, QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 from E5Gui import E5FileDialog

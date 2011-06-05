@@ -9,7 +9,7 @@ Module implementing a QNetworkAccessManager subclass.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QByteArray
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:

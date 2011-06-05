@@ -10,8 +10,9 @@ Module implementing the open search engine.
 import re
 import json
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, QBuffer, \
+    QIODevice, QObject
+from PyQt4.QtGui import QImage
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 from UI.Info import Program

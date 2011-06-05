@@ -9,8 +9,9 @@ Module implementing the QRegExp wizard dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, QRegExp, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QDialog, QApplication, QClipboard, QTextCursor, \
+    QDialogButtonBox, QMainWindow, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 

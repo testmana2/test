@@ -7,8 +7,8 @@
 Module implementing a menu populated from a QAbstractItemModel.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QModelIndex, QPoint
+from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, QPixmap
 
 import UI.PixmapCache
 

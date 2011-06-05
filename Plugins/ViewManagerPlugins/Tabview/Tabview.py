@@ -9,8 +9,9 @@ Module implementing a tabbed viewmanager class.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QPoint, QFileInfo, pyqtSignal, QEvent, QByteArray, QMimeData, Qt
+from PyQt4.QtGui import QWidget, QColor, QHBoxLayout, QDrag, QPixmap, QSplitter, \
+    QTabBar, QApplication, QToolButton, QMenu, QLabel
 
 from E5Gui.E5Application import e5App
 

@@ -9,7 +9,7 @@ Module implementing the debug server.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QModelIndex
 from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
 
 from E5Gui.E5Application import e5App
@@ -625,7 +625,7 @@ class DebugServer(QTcpServer):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 envdict[key] = value
-            except UnpackError:
+            except ValueError:
                 pass
         self.debuggerInterface.remoteEnvironment(envdict)
         

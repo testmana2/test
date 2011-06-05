@@ -7,8 +7,8 @@
 Module implementing a dialog for the configuration of cookie exceptions.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, QFontMetrics
 
 from .CookieJar import CookieJar
 from .CookieExceptionsModel import CookieExceptionsModel

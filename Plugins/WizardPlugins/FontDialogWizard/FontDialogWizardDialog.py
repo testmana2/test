@@ -9,8 +9,8 @@ Module implementing the font dialog wizard dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QFontDialog
 
 from .Ui_FontDialogWizardDialog import Ui_FontDialogWizardDialog
 

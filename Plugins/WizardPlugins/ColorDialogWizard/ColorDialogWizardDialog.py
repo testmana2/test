@@ -9,8 +9,8 @@ Module implementing the color dialog wizard dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import qVersion, pyqtSlot
+from PyQt4.QtGui import QColor, QColorDialog, QDialog, qRgba, QDialogButtonBox
 
 from E5Gui import E5MessageBox
 

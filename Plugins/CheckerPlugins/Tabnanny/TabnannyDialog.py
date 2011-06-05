@@ -10,8 +10,9 @@ Module implementing a dialog to show the output of the tabnanny command process.
 import os
 import fnmatch
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt, QProcess
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QApplication, \
+    QHeaderView
 
 from E5Gui.E5Application import e5App
 

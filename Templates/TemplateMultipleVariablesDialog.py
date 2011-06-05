@@ -7,8 +7,9 @@
 Module implementing a dialog for entering multiple template variables.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QSize, Qt
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
+    QPushButton, QTextEdit, QDialog, QScrollArea, QFrame, QGridLayout, QVBoxLayout, QLabel
 
 
 class TemplateMultipleVariablesDialog(QDialog):

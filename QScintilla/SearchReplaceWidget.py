@@ -7,8 +7,8 @@
 Module implementing the search and replace widget.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget
 
 from .Ui_SearchWidget import Ui_SearchWidget
 from .Ui_ReplaceWidget import Ui_ReplaceWidget

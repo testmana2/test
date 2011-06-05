@@ -9,8 +9,11 @@ Module implementing the TR Previewer main window.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
+    QTranslator, QObject, Qt
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QKeySequence, \
+    QWhatsThis, QMdiArea, qApp, QApplication, QMainWindow, QComboBox, QVBoxLayout, \
+    QAction, QLabel
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -759,13 +762,13 @@ class WidgetArea(QMdiArea):
                 del wview
                 return
             
-            self.rebuildWidgets.connect(wview.buildWidget)
-            wview.installEventFilter(self)
+            self.rebuildWidgets.connect(wview.buildWidget)  # __IGNORE_WARNING__
+            wview.installEventFilter(self)  # __IGNORE_WARNING__
             
-            win = self.addSubWindow(wview)
+            win = self.addSubWindow(wview)  # __IGNORE_WARNING__
             self.widgets.append(win)
         
-        wview.showNormal()
+        wview.showNormal()  # __IGNORE_WARNING__
     
     def eventFilter(self, obj, ev):
         """

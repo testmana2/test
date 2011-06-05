@@ -9,8 +9,9 @@ Module implementing the listspace viewmanager class.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
+from PyQt4.QtGui import QStackedWidget, QSplitter, QListWidget, QListWidgetItem, \
+    QSizePolicy, QMenu
 
 from ViewManager.ViewManager import ViewManager
 

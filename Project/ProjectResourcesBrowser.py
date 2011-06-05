@@ -9,8 +9,8 @@ Module implementing a class used to display the resources part of the project.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, PYQT_VERSION, QProcess
+from PyQt4.QtGui import QDialog, QApplication, QMenu, QProgressDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog

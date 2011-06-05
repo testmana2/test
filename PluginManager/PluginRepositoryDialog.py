@@ -12,8 +12,9 @@ import sys
 import os
 import zipfile
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, QProcess
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QTreeWidgetItem, \
+    QDialog, QVBoxLayout, QMainWindow
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
     from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__

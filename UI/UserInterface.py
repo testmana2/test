@@ -11,8 +11,11 @@ import os
 import sys
 import logging
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QFile, QFileInfo, pyqtSignal, PYQT_VERSION_STR, QDate, \
+    QIODevice, QByteArray, qVersion, QProcess, QSize, QUrl, QObject, Qt
+from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
+    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, QStyleFactory, \
+    QMainWindow, QProgressDialog, QVBoxLayout, QDockWidget, QAction, QLabel
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
@@ -63,7 +66,7 @@ from Templates.TemplateViewer import TemplateViewer
 from Cooperation.ChatWidget import ChatWidget
 
 from .Browser import Browser
-from .Info import *
+from .Info import Version, BugAddress, Program, FeatureAddress
 from . import Config
 from .EmailDialog import EmailDialog
 from .DiffDialog import DiffDialog
@@ -5624,7 +5627,7 @@ class UserInterface(QMainWindow):
         @param errors list of SSL errors (list of QSslError)
         """
         errorStrings = []
-        for err in sslErrors:
+        for err in errors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
         ret = E5MessageBox.yesNo(self,

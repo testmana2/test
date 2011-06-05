@@ -7,8 +7,6 @@
 Module implementing the bookmark node.
 """
 
-from PyQt4.QtCore import *
-
 
 class BookmarkNode(object):
     """

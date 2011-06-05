@@ -7,8 +7,8 @@
 Module implementing a window for showing the QtHelp index.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QUrl, QEvent
+from PyQt4.QtGui import QWidget, QVBoxLayout, QLabel, QLineEdit, QMenu, QDialog
 
 from .HelpTopicDialog import HelpTopicDialog
 

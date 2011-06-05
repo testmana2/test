@@ -6,18 +6,15 @@
 """
 Module implementing the editor component of the eric5 IDE.
 """
-
 import os
 import re
 import difflib
 
-from PyQt4.Qsci import QsciScintilla, QsciMacro
-try:
-    from PyQt4.Qsci import QsciStyledText
-except ImportError:
-    QsciStyledText = None   # __IGNORE_WARNING__
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
+    QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
+from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, QActionGroup, \
+    QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
+from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox

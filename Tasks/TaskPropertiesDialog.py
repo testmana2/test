@@ -9,8 +9,7 @@ Module implementing the task properties dialog.
 
 import time
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 

@@ -9,16 +9,19 @@ Module implementing the debugger UI.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QObject, Qt
+from PyQt4.QtGui import QKeySequence, QMenu, QToolBar, QApplication, QDialog, \
+    QInputDialog
 
-from UI.Info import *
-from .VariablesFilterDialog import *
-from .ExceptionsFilterDialog import *
-from .StartDialog import *
+from UI.Info import Program
+from .VariablesFilterDialog import VariablesFilterDialog
+from .ExceptionsFilterDialog import ExceptionsFilterDialog
+from .StartDialog import StartDialog
 from .EditBreakpointDialog import EditBreakpointDialog
+from .EditWatchpointDialog import EditWatchpointDialog
 
-from .DebugClientCapabilities import *
+from .DebugClientCapabilities import HasDebugger, HasInterpreter, HasProfiler, \
+    HasCoverage
 import Preferences
 import Utilities
 import UI.PixmapCache

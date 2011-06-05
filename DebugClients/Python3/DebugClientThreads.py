@@ -8,10 +8,10 @@ Module implementing the multithreaded version of the debug client.
 """
 
 import _thread
+import sys
 
-from AsyncIO import *
-from DebugThread import *
-from DebugBase import *
+from AsyncIO import AsyncIO
+from DebugThread import DebugThread
 import DebugClientBase
 
 

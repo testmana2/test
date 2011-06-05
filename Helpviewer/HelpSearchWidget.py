@@ -7,8 +7,8 @@
 Module implementing a window for showing the QtHelp index.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QEvent, QUrl
+from PyQt4.QtGui import QWidget, QVBoxLayout, QTextBrowser, QApplication, QMenu
 
 
 class HelpSearchWidget(QWidget):

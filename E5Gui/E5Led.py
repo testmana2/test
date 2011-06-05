@@ -9,8 +9,8 @@ Module implementing a LED widget.
 It was inspired by KLed.
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QSize
+from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, QBrush
 
 E5LedRectangular = 0
 E5LedCircular = 1

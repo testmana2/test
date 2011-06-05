@@ -18,10 +18,10 @@ import imp
 import re
 
 
-from DebugProtocol import *
+import DebugProtocol
 import DebugClientCapabilities
 from DebugBase import setRecursionLimit, printerr   # __IGNORE_WARNING__
-from AsyncFile import *
+from AsyncFile import AsyncFile, AsyncPendingWrite
 from DebugConfig import ConfigVarTypeStrings
 from FlexCompleter import Completer
 
@@ -206,7 +206,7 @@ class DebugClientBase(object):
         self.globalsFilterObjects = []
         self.localsFilterObjects = []
 
-        self.pendingResponse = ResponseOK
+        self.pendingResponse = DebugProtocol.ResponseOK
         self.fncache = {}
         self.dircache = []
         self.inRawMode = 0
@@ -318,7 +318,8 @@ class DebugClientBase(object):
             d["broken"] = self.isBroken()
             threadList.append(d)
         
-        self.write('%s%s\n' % (ResponseThreadList, unicode((currentId, threadList))))
+        self.write('%s%s\n' % (DebugProtocol.ResponseThreadList,
+                               unicode((currentId, threadList))))
     
     def raw_input(self, prompt, echo):
         """
@@ -328,7 +329,7 @@ class DebugClientBase(object):
         @param echo Flag indicating echoing of the input (boolean)
         @return the entered string
         """
-        self.write("%s%s\n" % (ResponseRaw, unicode((prompt, echo))))
+        self.write("%s%s\n" % (DebugProtocol.ResponseRaw, unicode((prompt, echo))))
         self.inRawMode = 1
         self.eventLoop(True)
         return self.rawLine
@@ -348,7 +349,7 @@ class DebugClientBase(object):
         
         It ensures that the debug server is informed of the raised exception.
         """
-        self.pendingResponse = ResponseException
+        self.pendingResponse = DebugProtocol.ResponseException
     
     def sessionClose(self, exit=1):
         """
@@ -398,45 +399,45 @@ class DebugClientBase(object):
             cmd = line[:eoc + 1]
             arg = line[eoc + 1:]
             
-            if cmd == RequestVariables:
+            if cmd == DebugProtocol.RequestVariables:
                 frmnr, scope, filter = eval(arg)
                 self.__dumpVariables(int(frmnr), int(scope), filter)
                 return
             
-            if cmd == RequestVariable:
+            if cmd == DebugProtocol.RequestVariable:
                 var, frmnr, scope, filter = eval(arg)
                 self.__dumpVariable(var, int(frmnr), int(scope), filter)
                 return
             
-            if cmd == RequestThreadList:
+            if cmd == DebugProtocol.RequestThreadList:
                 self.__dumpThreadList()
                 return
             
-            if cmd == RequestThreadSet:
+            if cmd == DebugProtocol.RequestThreadSet:
                 tid = eval(arg)
                 if tid in self.threads:
                     self.setCurrentThread(tid)
-                    self.write(ResponseThreadSet + '\n')
+                    self.write(DebugProtocol.ResponseThreadSet + '\n')
                     stack = self.currentThread.getStack()
-                    self.write('%s%s\n' % (ResponseStack, unicode(stack)))
+                    self.write('%s%s\n' % (DebugProtocol.ResponseStack, unicode(stack)))
                 return
             
-            if cmd == RequestStep:
+            if cmd == DebugProtocol.RequestStep:
                 self.currentThread.step(1)
                 self.eventExit = 1
                 return
 
-            if cmd == RequestStepOver:
+            if cmd == DebugProtocol.RequestStepOver:
                 self.currentThread.step(0)
                 self.eventExit = 1
                 return
             
-            if cmd == RequestStepOut:
+            if cmd == DebugProtocol.RequestStepOut:
                 self.currentThread.stepOut()
                 self.eventExit = 1
                 return
             
-            if cmd == RequestStepQuit:
+            if cmd == DebugProtocol.RequestStepQuit:
                 if self.passive:
                     self.progTerminated(42)
                 else:
@@ -444,18 +445,18 @@ class DebugClientBase(object):
                     self.eventExit = 1
                 return
 
-            if cmd == RequestContinue:
+            if cmd == DebugProtocol.RequestContinue:
                 special = int(arg)
                 self.currentThread.go(special)
                 self.eventExit = 1
                 return
 
-            if cmd == RequestOK:
+            if cmd == DebugProtocol.RequestOK:
                 self.write(self.pendingResponse + '\n')
-                self.pendingResponse = ResponseOK
+                self.pendingResponse = DebugProtocol.ResponseOK
                 return
 
-            if cmd == RequestEnv:
+            if cmd == DebugProtocol.RequestEnv:
                 env = eval(arg)
                 for key, value in env.items():
                     if key.endswith("+"):
@@ -467,7 +468,7 @@ class DebugClientBase(object):
                         os.environ[key] = value
                 return
 
-            if cmd == RequestLoad:
+            if cmd == DebugProtocol.RequestLoad:
                 self.fncache = {}
                 self.dircache = []
                 sys.argv = []
@@ -510,7 +511,7 @@ class DebugClientBase(object):
                 self.progTerminated(res)
                 return
 
-            if cmd == RequestRun:
+            if cmd == DebugProtocol.RequestRun:
                 sys.argv = []
                 wd, fn, args = arg.split('|')
                 self.__setCoding(fn)
@@ -542,7 +543,7 @@ class DebugClientBase(object):
                 self.writestream.flush()
                 return
 
-            if cmd == RequestCoverage:
+            if cmd == DebugProtocol.RequestCoverage:
                 from coverage import coverage
                 sys.argv = []
                 wd, fn, args, erase = arg.split('@@')
@@ -575,7 +576,7 @@ class DebugClientBase(object):
                 self.writestream.flush()
                 return
 
-            if cmd == RequestProfile:
+            if cmd == DebugProtocol.RequestProfile:
                 sys.setprofile(None)
                 import PyProfile
                 sys.argv = []
@@ -605,11 +606,11 @@ class DebugClientBase(object):
                 self.writestream.flush()
                 return
 
-            if cmd == RequestShutdown:
+            if cmd == DebugProtocol.RequestShutdown:
                 self.sessionClose()
                 return
             
-            if cmd == RequestBreak:
+            if cmd == DebugProtocol.RequestBreak:
                 fn, line, temporary, set, cond = arg.split('@@')
                 line = int(line)
                 set = int(set)
@@ -623,7 +624,7 @@ class DebugClientBase(object):
                             compile(cond, '<string>', 'eval')
                         except SyntaxError:
                             self.write('%s%s,%d\n' % \
-                                (ResponseBPConditionError, fn, line))
+                                (DebugProtocol.ResponseBPConditionError, fn, line))
                             return
                     self.mainThread.set_break(fn, line, temporary, cond)
                 else:
@@ -631,7 +632,7 @@ class DebugClientBase(object):
 
                 return
             
-            if cmd == RequestBreakEnable:
+            if cmd == DebugProtocol.RequestBreakEnable:
                 fn, line, enable = arg.split(',')
                 line = int(line)
                 enable = int(enable)
@@ -645,7 +646,7 @@ class DebugClientBase(object):
                     
                 return
             
-            if cmd == RequestBreakIgnore:
+            if cmd == DebugProtocol.RequestBreakIgnore:
                 fn, line, count = arg.split(',')
                 line = int(line)
                 count = int(count)
@@ -656,7 +657,7 @@ class DebugClientBase(object):
                     
                 return
             
-            if cmd == RequestWatch:
+            if cmd == DebugProtocol.RequestWatch:
                 cond, temporary, set = arg.split('@@')
                 set = int(set)
                 temporary = int(temporary)
@@ -667,7 +668,8 @@ class DebugClientBase(object):
                         try:
                             compile(cond, '<string>', 'eval')
                         except SyntaxError:
-                            self.write('%s%s\n' % (ResponseWPConditionError, cond))
+                            self.write('%s%s\n' % (
+                                DebugProtocol.ResponseWPConditionError, cond))
                             return
                     self.mainThread.set_watch(cond, temporary)
                 else:
@@ -675,7 +677,7 @@ class DebugClientBase(object):
 
                 return
             
-            if cmd == RequestWatchEnable:
+            if cmd == DebugProtocol.RequestWatchEnable:
                 cond, enable = arg.split(',')
                 enable = int(enable)
                 
@@ -688,7 +690,7 @@ class DebugClientBase(object):
                     
                 return
             
-            if cmd == RequestWatchIgnore:
+            if cmd == DebugProtocol.RequestWatchIgnore:
                 cond, count = arg.split(',')
                 count = int(count)
                 
@@ -698,7 +700,7 @@ class DebugClientBase(object):
                     
                 return
             
-            if cmd == RequestEval:
+            if cmd == DebugProtocol.RequestEval:
                 try:
                     value = eval(arg, self.currentThread.getCurrentFrame().f_globals,
                                       self.currentThread.getCurrentFrameLocals())
@@ -721,15 +723,15 @@ class DebugClientBase(object):
 
                     map(self.write, list)
 
-                    self.write(ResponseException + '\n')
+                    self.write(DebugProtocol.ResponseException + '\n')
                 
                 else:
                     self.write(unicode(value) + '\n')
-                    self.write(ResponseOK + '\n')
+                    self.write(DebugProtocol.ResponseOK + '\n')
                 
                 return
             
-            if cmd == RequestExec:
+            if cmd == DebugProtocol.RequestExec:
                 _globals = self.currentThread.getCurrentFrame().f_globals
                 _locals = self.currentThread.getCurrentFrameLocals()
                 try:
@@ -754,31 +756,31 @@ class DebugClientBase(object):
 
                     map(self.write, list)
 
-                    self.write(ResponseException + '\n')
+                    self.write(DebugProtocol.ResponseException + '\n')
                 
                 return
             
-            if cmd == RequestBanner:
-                self.write('%s%s\n' % (ResponseBanner,
+            if cmd == DebugProtocol.RequestBanner:
+                self.write('%s%s\n' % (DebugProtocol.ResponseBanner,
                     unicode(("Python %s" % sys.version, socket.gethostname(),
                              self.variant))))
                 return
             
-            if cmd == RequestCapabilities:
-                self.write('%s%d, "Python"\n' % (ResponseCapabilities,
+            if cmd == DebugProtocol.RequestCapabilities:
+                self.write('%s%d, "Python"\n' % (DebugProtocol.ResponseCapabilities,
                     self.__clientCapabilities()))
                 return
             
-            if cmd == RequestCompletion:
+            if cmd == DebugProtocol.RequestCompletion:
                 self.__completionList(arg)
                 return
             
-            if cmd == RequestSetFilter:
+            if cmd == DebugProtocol.RequestSetFilter:
                 scope, filterString = eval(arg)
                 self.__generateFilterObjects(int(scope), filterString)
                 return
             
-            if cmd == RequestUTPrepare:
+            if cmd == DebugProtocol.RequestUTPrepare:
                 fn, tn, tfn, cov, covname, erase = arg.split('|')
                 sys.path.insert(0, os.path.dirname(os.path.abspath(fn)))
                 os.chdir(sys.path[0])
@@ -798,7 +800,7 @@ class DebugClientBase(object):
                                     .loadTestsFromModule(utModule)
                 except:
                     exc_type, exc_value, exc_tb = sys.exc_info()
-                    self.write('%s%s\n' % (ResponseUTPrepared,
+                    self.write('%s%s\n' % (DebugProtocol.ResponseUTPrepared,
                         unicode((0, str(exc_type), str(exc_value)))))
                     self.__exceptionRaised()
                     return
@@ -814,11 +816,11 @@ class DebugClientBase(object):
                 else:
                     self.cover = None
                 
-                self.write('%s%s\n' % (ResponseUTPrepared,
+                self.write('%s%s\n' % (DebugProtocol.ResponseUTPrepared,
                     unicode((self.test.countTestCases(), "", ""))))
                 return
             
-            if cmd == RequestUTRun:
+            if cmd == DebugProtocol.RequestUTRun:
                 from DCTestResult import DCTestResult
                 self.testResult = DCTestResult(self)
                 if self.cover:
@@ -827,20 +829,20 @@ class DebugClientBase(object):
                 if self.cover:
                     self.cover.stop()
                     self.cover.save()
-                self.write('%s\n' % ResponseUTFinished)
+                self.write('%s\n' % DebugProtocol.ResponseUTFinished)
                 return
             
-            if cmd == RequestUTStop:
+            if cmd == DebugProtocol.RequestUTStop:
                 self.testResult.stop()
                 return
             
-            if cmd == ResponseForkTo:
+            if cmd == DebugProtocol.ResponseForkTo:
                 # this results from a separate event loop
                 self.fork_child = (arg == 'child')
                 self.eventExit = 1
                 return
             
-            if cmd == RequestForkMode:
+            if cmd == DebugProtocol.RequestForkMode:
                 self.fork_auto, self.fork_child = eval(arg)
                 return
         
@@ -868,7 +870,7 @@ class DebugClientBase(object):
             self.__exceptionRaised()
         else:
             if code is None:
-                self.pendingResponse = ResponseContinue
+                self.pendingResponse = DebugProtocol.ResponseContinue
             else:
                 self.buffer = ''
 
@@ -1058,7 +1060,7 @@ class DebugClientBase(object):
         """
         if remoteAddress is None:                               # default: 127.0.0.1
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((DebugAddress, port))
+            sock.connect((DebugProtocol.DebugAddress, port))
         elif ":" in remoteAddress:                              # IPv6
             sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
             sock.connect((remoteAddress, port))
@@ -1171,7 +1173,7 @@ class DebugClientBase(object):
         if self.running:
             self.set_quit()
             self.running = None
-            self.write('%s%d\n' % (ResponseExit, status))
+            self.write('%s%d\n' % (DebugProtocol.ResponseExit, status))
         
         # reset coding
         self.__coding = self.defaultCoding
@@ -1212,7 +1214,7 @@ class DebugClientBase(object):
             vlist = self.__formatVariablesList(keylist, dict, scope, filter)
             varlist.extend(vlist)
             
-        self.write('%s%s\n' % (ResponseVariables, unicode(varlist)))
+        self.write('%s%s\n' % (DebugProtocol.ResponseVariables, unicode(varlist)))
     
     def __dumpVariable(self, var, frmnr, scope, filter):
         """
@@ -1317,9 +1319,9 @@ class DebugClientBase(object):
                             oaccess = ''
                         try:
                             exec 'mdict = dict%s.__dict__' % access
-                            ndict.update(mdict)
+                            ndict.update(mdict)     # __IGNORE_WARNING__
                             exec 'obj = dict%s' % access
-                            if mdict and not "sipThis" in mdict.keys():
+                            if mdict and not "sipThis" in mdict.keys(): # __IGNORE_WARNING__
                                 del rvar[0:2]
                                 access = ""
                         except:
@@ -1327,7 +1329,7 @@ class DebugClientBase(object):
                         try:
                             cdict = {}
                             exec 'slv = dict%s.__slots__' % access
-                            for v in slv:
+                            for v in slv:   # __IGNORE_WARNING__
                                 try:
                                     exec 'cdict[v] = dict%s.%s' % (access, v)
                                 except:
@@ -1400,7 +1402,7 @@ class DebugClientBase(object):
                 elif unicode(repr(obj)).startswith('('):
                     varlist.append(('...', 'tuple', "%d" % len(obj)))
         
-        self.write('%s%s\n' % (ResponseVariable, unicode(varlist)))
+        self.write('%s%s\n' % (DebugProtocol.ResponseVariable, unicode(varlist)))
         
     def __formatQt4Variable(self, value, vtype):
         """
@@ -1660,7 +1662,8 @@ class DebugClientBase(object):
             except:
                 comp = None
             
-        self.write("%s%s||%s\n" % (ResponseCompletion, unicode(completions), text))
+        self.write("%s%s||%s\n" % (DebugProtocol.ResponseCompletion,
+                                   unicode(completions), text))
 
     def startDebugger(self, filename=None, host=None, port=None,
             enableTrace=1, exceptions=1, tracePython=0, redirect=1):
@@ -1693,7 +1696,7 @@ class DebugClientBase(object):
         if self.running:
             self.__setCoding(self.running)
         self.passive = 1
-        self.write("%s%s|%d\n" % (PassiveStartup, self.running, exceptions))
+        self.write("%s%s|%d\n" % (DebugProtocol.PassiveStartup, self.running, exceptions))
         self.__interact()
         
         # setup the debugger variables
@@ -1752,7 +1755,7 @@ class DebugClientBase(object):
         self.debugging = 1
         
         self.passive = 1
-        self.write("%s%s|%d\n" % (PassiveStartup, self.running, exceptions))
+        self.write("%s%s|%d\n" % (DebugProtocol.PassiveStartup, self.running, exceptions))
         self.__interact()
         
         self.attachThread(mainThread=1)
@@ -1902,7 +1905,7 @@ class DebugClientBase(object):
         Public method implementing a fork routine deciding which branch to follow.
         """
         if not self.fork_auto:
-            self.write(RequestForkTo + '\n')
+            self.write(DebugProtocol.RequestForkTo + '\n')
             self.eventLoop(True)
         pid = DebugClientOrigFork()
         if pid == 0:

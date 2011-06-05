@@ -7,8 +7,8 @@
 Module implementing a graphics item for an association between two items.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QPointF, QRectF, QLineF
+from PyQt4.QtGui import QGraphicsItem
 
 from E5Graphics.E5ArrowItem import E5ArrowItem, NormalArrow, WideArrow
 

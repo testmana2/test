@@ -7,7 +7,8 @@
 Module implementing a class to read XBEL bookmark files.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, QIODevice, \
+    QFile, QCoreApplication
 
 from .BookmarkNode import BookmarkNode
 

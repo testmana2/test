@@ -7,8 +7,11 @@
 Module implementing a dialog to show the output of the svn blame command.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+import os
+
+from PyQt4.QtCore import QTimer, QProcess, Qt, pyqtSlot
+from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QDialogButtonBox, QFont, \
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

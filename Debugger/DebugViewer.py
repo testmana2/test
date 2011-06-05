@@ -21,8 +21,9 @@ The views avaliable are:
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal
+from PyQt4.QtGui import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QSizePolicy, \
+    QPushButton, QComboBox, QLabel, QTreeWidget, QTreeWidgetItem, QHeaderView
 
 from QScintilla.Shell import Shell
 from .VariablesViewer import VariablesViewer

@@ -7,8 +7,9 @@
 Module implementing a widget showing the SQL connections.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt
+from PyQt4.QtGui import QWidget, QHeaderView, QTreeWidget, QVBoxLayout, \
+    QTreeWidgetItem, QAction
 from PyQt4.QtSql import QSqlDatabase
 
 

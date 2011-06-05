@@ -7,8 +7,7 @@
 Module implementing the user specific project properties dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
 

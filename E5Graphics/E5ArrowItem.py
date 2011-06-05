@@ -7,15 +7,15 @@
 Module implementing a graphics item subclass for an arrow.
 """
 
-from math import *
+import math
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QPointF, QRectF, QSizeF, QLineF, Qt
+from PyQt4.QtGui import QAbstractGraphicsShapeItem, QGraphicsItem, QStyle, QPen, QPolygonF
 
 NormalArrow = 1
 WideArrow = 2
 
-ArrowheadAngleFactor = 0.26179938779914941  # 0.5 * atan(sqrt(3.0) / 3.0)
+ArrowheadAngleFactor = 0.26179938779914941  # 0.5 * math.atan(math.sqrt(3.0) / 3.0)
 
 
 class E5ArrowItem(QAbstractGraphicsShapeItem):
@@ -113,17 +113,17 @@ class E5ArrowItem(QAbstractGraphicsShapeItem):
         
         # draw the arrow head
         arrowAngle = self._type * ArrowheadAngleFactor
-        slope = atan2(line.dy(), line.dx())
+        slope = math.atan2(line.dy(), line.dx())
         
         # Calculate left arrow point
         arrowSlope = slope + arrowAngle
-        a1 = QPointF(self._end.x() - self._halfLength * cos(arrowSlope),
-                     self._end.y() - self._halfLength * sin(arrowSlope))
+        a1 = QPointF(self._end.x() - self._halfLength * math.cos(arrowSlope),
+                     self._end.y() - self._halfLength * math.sin(arrowSlope))
         
         # Calculate right arrow point
         arrowSlope = slope - arrowAngle
-        a2 = QPointF(self._end.x() - self._halfLength * cos(arrowSlope),
-                     self._end.y() - self._halfLength * sin(arrowSlope))
+        a2 = QPointF(self._end.x() - self._halfLength * math.cos(arrowSlope),
+                     self._end.y() - self._halfLength * math.sin(arrowSlope))
         
         if self._filled:
             painter.setBrush(Qt.black)

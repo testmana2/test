@@ -7,8 +7,8 @@
 Module implementing a toolbar manager class.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QObject, QByteArray, QDataStream, QIODevice
+from PyQt4.QtGui import QToolBar
 
 
 class E5ToolBarManager(QObject):
@@ -231,7 +231,7 @@ class E5ToolBarManager(QObject):
             if action.isSeparator():
                 del action
             else:
-                self.__actionToToolBars[id(action)].remove(toolBar)
+                self.__actionToToolBars[id(action)].remove(toolBar)  # __IGNORE_WARNING__
         
         # step 3: set the actions as requested
         newActionsWithSeparators = []
@@ -261,7 +261,7 @@ class E5ToolBarManager(QObject):
         
         @param toolBar reference to the toolbar to configure (QToolBar)
         """
-        if not isDefaultToolBar():
+        if not self.isDefaultToolBar():
             return
         self.setToolBar(toolBar, self.__defaultToolBars[id(toolBar)])
     

@@ -9,17 +9,17 @@ Module implementing the spell checker for the editor component.
 The spell checker is based on pyenchant.
 """
 
+import os
+
+from PyQt4.QtCore import QTimer, QObject
+
+import Preferences
+import Utilities
+
 try:
     import enchant
 except (ImportError, AttributeError, OSError):
     pass
-
-import os
-
-from PyQt4.QtCore import *
-
-import Preferences
-import Utilities
 
 
 class SpellChecker(QObject):

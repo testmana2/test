@@ -12,7 +12,8 @@ import traceback
 from unittest import TestResult
 
 
-from DebugProtocol import *
+from DebugProtocol import ResponseUTTestFailed, ResponseUTTestErrored, \
+    ResponseUTStartTest, ResponseUTStopTest
 
 
 class DCTestResult(TestResult):

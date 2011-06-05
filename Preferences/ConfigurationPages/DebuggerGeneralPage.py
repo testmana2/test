@@ -9,9 +9,9 @@ Module implementing the Debugger General configuration page.
 
 import socket
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from PyQt4.QtNetwork import *
+from PyQt4.QtCore import QRegExp, pyqtSlot
+from PyQt4.QtGui import QLineEdit, QInputDialog
+from PyQt4.QtNetwork import QNetworkInterface, QAbstractSocket, QHostAddress
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter

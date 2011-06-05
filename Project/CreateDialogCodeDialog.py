@@ -9,8 +9,9 @@ Module implementing a dialog to generate code for a Qt4 dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, QMetaMethod
+from PyQt4.QtGui import QWidget, QSortFilterProxyModel, QStandardItemModel, QDialog, \
+    QBrush, QStandardItem, QDialogButtonBox, QAction
 from PyQt4 import uic
 
 from E5Gui.E5Application import e5App

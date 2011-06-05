@@ -9,8 +9,8 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QProcess, pyqtSlot
+from PyQt4.QtGui import QLineEdit, QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
 

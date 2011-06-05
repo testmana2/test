@@ -7,8 +7,8 @@
 Module implementing a dialog to enter the connection parameters.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 from PyQt4.QtSql import QSqlDatabase
 
 from E5Gui.E5Completers import E5FileCompleter

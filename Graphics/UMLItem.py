@@ -4,11 +4,11 @@
 #
 
 """
-Module implementing the UMLWidget base class.
+Module implementing the UMLItem base class.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QSizeF
+from PyQt4.QtGui import QGraphicsItem, QGraphicsRectItem, QStyle
 
 import Preferences
 

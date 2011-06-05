@@ -7,8 +7,8 @@
 Module implementing a dialog to add files of a directory to the project.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

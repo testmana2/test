@@ -9,9 +9,9 @@ Module implementing the password manager.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl
 from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import *
+from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 from E5Gui import E5MessageBox
 

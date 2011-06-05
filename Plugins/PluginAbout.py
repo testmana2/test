@@ -9,7 +9,7 @@ Module implementing the About plugin.
 
 from PyQt4.QtCore import QObject
 
-from UI.Info import *
+import UI.Info
 import UI.PixmapCache
 
 from E5Gui.E5Action import E5Action
@@ -74,15 +74,15 @@ class AboutPlugin(QObject):
         """
         acts = []
         
-        self.aboutAct = E5Action(self.trUtf8('About {0}').format(Program),
+        self.aboutAct = E5Action(self.trUtf8('About {0}').format(UI.Info.Program),
                 UI.PixmapCache.getIcon("helpAbout.png"),
-                self.trUtf8('&About {0}').format(Program),
+                self.trUtf8('&About {0}').format(UI.Info.Program),
                 0, 0, self, 'about_eric')
         self.aboutAct.setStatusTip(self.trUtf8('Display information about this software'))
         self.aboutAct.setWhatsThis(self.trUtf8(
             """<b>About {0}</b>"""
             """<p>Display some information about this software.</p>"""
-                             ).format(Program))
+                             ).format(UI.Info.Program))
         self.aboutAct.triggered[()].connect(self.__about)
         acts.append(self.aboutAct)
         
@@ -125,4 +125,4 @@ class AboutPlugin(QObject):
         """
         Private slot to handle the About Qt dialog.
         """
-        E5MessageBox.aboutQt(self.__ui, Program)
+        E5MessageBox.aboutQt(self.__ui, UI.Info.Program)

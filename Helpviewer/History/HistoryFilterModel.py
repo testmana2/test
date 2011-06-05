@@ -7,7 +7,7 @@
 Module implementing the history filter model.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QDateTime, QModelIndex
 from PyQt4.QtGui import QAbstractProxyModel
 
 from .HistoryModel import HistoryModel

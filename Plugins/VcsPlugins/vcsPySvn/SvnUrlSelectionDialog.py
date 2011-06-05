@@ -7,8 +7,8 @@
 Module implementing a dialog to enter the URLs for the svn diff command.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QRegExp, pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -16,6 +16,8 @@ from E5Gui import E5MessageBox
 import pysvn
 
 from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
+
+import Utilities
 
 
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):

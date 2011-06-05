@@ -7,8 +7,8 @@
 Module implementing a dialog to add a bookmark or a bookmark folder.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QModelIndex
+from PyQt4.QtGui import QSortFilterProxyModel, QDialog, QTreeView
 
 import Helpviewer.HelpWindow
 

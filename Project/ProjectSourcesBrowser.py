@@ -9,8 +9,8 @@ Module implementing a class used to display the Sources part of the project.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal
+from PyQt4.QtGui import QDialog, QInputDialog, QMenu
 
 from E5Gui import E5MessageBox
 

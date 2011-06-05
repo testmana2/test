@@ -7,8 +7,7 @@
 Module implementing a dialog to enter the data for a new property.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog
 
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
 

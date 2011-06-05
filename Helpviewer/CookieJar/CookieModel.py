@@ -7,8 +7,8 @@
 Module implementing the cookie model.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
+from PyQt4.QtGui import QFont, QFontMetrics
 
 
 class CookieModel(QAbstractTableModel):

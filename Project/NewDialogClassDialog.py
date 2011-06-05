@@ -9,8 +9,8 @@ Module implementing a dialog to enter the data for a new dialog class file.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

@@ -333,6 +333,7 @@ def decodeString(text):
     buf = buf.replace(b"\x00", b"")
     return decodeBytes(buf)
     
+
 def decodeBytes(buffer):
     """
     Function to decode some byte text into a string.

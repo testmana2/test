@@ -7,8 +7,8 @@
 Module implementing a dialog to enter the data for a merge operation.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QRegExp
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_SvnMergeDialog import Ui_SvnMergeDialog
 

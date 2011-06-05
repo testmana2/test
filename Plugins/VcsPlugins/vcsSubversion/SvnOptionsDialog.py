@@ -9,8 +9,8 @@ Module implementing a dialog to enter options used to start a project in the VCS
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

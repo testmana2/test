@@ -7,8 +7,8 @@
 Module implementing a tool bar populated from a QAbstractItemModel.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QModelIndex, QPoint, QEvent
+from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, QToolButton
 
 from .E5ModelMenu import E5ModelMenu
 

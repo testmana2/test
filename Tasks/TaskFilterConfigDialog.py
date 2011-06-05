@@ -7,8 +7,7 @@
 Module implementing the task filter configuration dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog
 
 from .Ui_TaskFilterConfigDialog import Ui_TaskFilterConfigDialog
 

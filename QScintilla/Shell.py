@@ -10,8 +10,9 @@ Module implementing a graphical Python shell.
 import sys
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, Qt
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QClipboard, QMenu, \
+    QPalette, QFont
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App

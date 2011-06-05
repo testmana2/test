@@ -10,8 +10,10 @@ Module implementing a dialog for the configuration of eric5.
 import os
 import types
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QMetaObject, pyqtSignal, Qt, QRect, pyqtSlot
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QPixmap, QTreeWidget, \
+    QStackedWidget, QDialog, QSplitter, QScrollArea, QApplication, QDialogButtonBox, \
+    QFrame, QMainWindow, QVBoxLayout, QTreeWidgetItem, QLabel
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

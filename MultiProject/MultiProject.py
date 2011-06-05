@@ -9,8 +9,8 @@ Module implementing the multi project management functionality.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QFileInfo, QFile, QIODevice, QObject
+from PyQt4.QtGui import QMenu, QApplication, QDialog, QCursor, QToolBar
 
 from Globals import recentNameMultiProject
 
@@ -475,7 +475,7 @@ class MultiProject(QObject):
                 res = E5MessageBox.yesNo(self.parent(),
                     self.trUtf8("Save File"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fileName),
+                                " Overwrite it?</p>").format(fn),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return False

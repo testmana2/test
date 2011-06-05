@@ -9,8 +9,9 @@ Module implementing the bookmarks manager.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, QByteArray, \
+    QBuffer, QIODevice, QXmlStreamReader, QDate, QFileInfo, QUrl
+from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication
 from PyQt4.QtWebKit import QWebPage
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -402,7 +403,7 @@ class BookmarksManager(QObject):
             E5MessageBox.critical(None,
                 self.trUtf8("Exporting Bookmarks"),
                 self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")\
-                    .format(bookmarkFile))
+                    .format(fileName))
     
     def __convertFromOldBookmarks(self):
         """

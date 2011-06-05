@@ -7,8 +7,8 @@
 Module implementing a dialog to manage the QtHelp documentation database.
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import QDialog, QItemSelectionModel
 from PyQt4.QtHelp import QHelpEngineCore
 
 from E5Gui import E5MessageBox, E5FileDialog

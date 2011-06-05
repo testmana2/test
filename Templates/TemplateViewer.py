@@ -11,8 +11,8 @@ import datetime
 import os
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFile, QFileInfo, QIODevice, Qt
+from PyQt4.QtGui import QTreeWidget, QDialog, QApplication, QMenu, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog

@@ -7,8 +7,8 @@
 Module implementing the spell checking dialog.
 """
 
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog
-from PyQt4.QtCore import *
 
 from .Ui_SpellCheckingDialog import Ui_SpellCheckingDialog
 

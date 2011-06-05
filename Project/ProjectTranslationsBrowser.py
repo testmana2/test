@@ -11,8 +11,8 @@ import os
 import shutil
 import fnmatch
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QProcess
+from PyQt4.QtGui import QDialog, QMenu
 
 from E5Gui import E5MessageBox
 

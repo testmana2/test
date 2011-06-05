@@ -7,8 +7,7 @@
 Module implementing a package item.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
 from .UMLItem import UMLItem
 
@@ -33,7 +32,7 @@ class PackageModel(object):
         
         @param modulename module name to be added (string)
         """
-        self.moduleslist.append(classname)
+        self.moduleslist.append(modulename)
         
     def getModules(self):
         """

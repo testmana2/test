@@ -11,8 +11,8 @@ import sys
 import os
 import fnmatch
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, QFileSystemWatcher, Qt
+from PyQt4.QtGui import QImageReader, QApplication, QFont
 
 import Utilities.ClassBrowsers
 import Utilities.ClassBrowsers.ClbrBaseClasses

@@ -8,8 +8,11 @@
 Module implementing the helpbrowser using QWebView.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
+    QBuffer, QIODevice, QByteArray, QFileInfo, Qt, QTimer, QEvent, QRect
+from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
+    QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
+    QPalette, QFrame
 from PyQt4 import QtWebKit
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
 try:

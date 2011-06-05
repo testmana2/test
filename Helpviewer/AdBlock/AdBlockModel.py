@@ -7,8 +7,7 @@
 Module implementing a model for the AdBlock dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex
 
 import Helpviewer.HelpWindow
 

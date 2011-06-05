@@ -7,8 +7,8 @@
 Module implementing a LED to indicate the status of the VCS status monitor thread.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QColor, QInputDialog, QMenu
 
 from E5Gui.E5Led import E5Led, E5LedRectangular
 

@@ -11,8 +11,8 @@ import sys
 import os
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QSignalMapper, QTimer, QByteArray, QProcess
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App

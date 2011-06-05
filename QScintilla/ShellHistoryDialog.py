@@ -9,8 +9,8 @@ Module implementing the shell history dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QListWidgetItem, QItemSelectionModel, QDialog
 
 from .Ui_ShellHistoryDialog import Ui_ShellHistoryDialog
 

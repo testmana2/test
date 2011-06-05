@@ -7,8 +7,7 @@
 Module implementing the variables filter dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from Debugger.Config import ConfigVarTypeDispStrings
 import Preferences

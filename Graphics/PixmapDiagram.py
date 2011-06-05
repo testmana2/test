@@ -7,8 +7,10 @@
 Module implementing a dialog showing a pixmap.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QSize
+from PyQt4.QtGui import QMainWindow, QLabel, QPalette, QSizePolicy, QScrollArea, \
+    QAction, QMenu, QToolBar, QImage, QPixmap, QDialog, QPrinter, QPrintDialog, \
+    QPainter, QFont, QColor
 
 from E5Gui import E5MessageBox
 

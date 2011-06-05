@@ -10,8 +10,7 @@ Module implementing a dialog showing an imports diagram of a package.
 import glob
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
 from .UMLDialog import UMLDialog
 from .ModuleItem import ModuleItem, ModuleModel

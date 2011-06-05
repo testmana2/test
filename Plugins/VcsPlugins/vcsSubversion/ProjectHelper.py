@@ -9,9 +9,6 @@ Module implementing the VCS project helper for Subversion.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-
 from E5Gui.E5Application import e5App
 
 from VCS.ProjectHelper import VcsProjectHelper

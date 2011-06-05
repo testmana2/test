@@ -9,7 +9,7 @@ Module implementing the history tree model.
 
 import bisect
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QModelIndex, QDate
 from PyQt4.QtGui import QAbstractProxyModel
 
 from .HistoryModel import HistoryModel

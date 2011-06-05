@@ -10,8 +10,9 @@ Module implementing a code metrics dialog.
 import os
 import fnmatch
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt, QLocale
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
+    QApplication
 
 from .Ui_CodeMetricsDialog import Ui_CodeMetricsDialog
 from . import CodeMetrics

@@ -10,8 +10,9 @@ Module implementing a dialog to display profile data.
 import os
 import pickle
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, QTreeWidgetItem, \
+    QApplication
 
 from E5Gui import E5MessageBox
 

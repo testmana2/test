@@ -7,8 +7,8 @@
 Module implementing the bookmarks menu.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QUrl
+from PyQt4.QtGui import QMenu, QCursor
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 

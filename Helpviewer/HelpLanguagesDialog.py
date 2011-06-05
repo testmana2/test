@@ -7,8 +7,8 @@
 Module implementing a dialog to configure the preferred languages.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, QByteArray, QLocale
+from PyQt4.QtGui import QDialog, QStringListModel
 
 from .Ui_HelpLanguagesDialog import Ui_HelpLanguagesDialog
 

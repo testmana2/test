@@ -11,8 +11,8 @@ import os
 import shutil
 import copy
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, QFileInfo, QObject
+from PyQt4.QtGui import QDialog, QInputDialog
 
 from .CommandOptionsDialog import vcsCommandOptionsDialog
 from .RepositoryInfoDialog import VcsRepositoryInfoDialog

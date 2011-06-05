@@ -7,8 +7,8 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo
+from PyQt4.QtGui import QAction, QToolBar, QDialog, QPrinter, QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
@@ -256,7 +256,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         # step 2: select all given items
         for itm in items:
-            if isinstance(itm, UMLWidget):
+            if isinstance(itm, UMLItem):
                 itm.setSelected(True)
         
     def selectItem(self, item):
@@ -265,7 +265,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         @param item item to be selected (QGraphicsItemItem)
         """
-        if isinstance(item, UMLWidget):
+        if isinstance(item, UMLItem):
             item.setSelected(not item.isSelected())
         
     def __deleteShape(self):

@@ -7,7 +7,7 @@
 Module implementing a class to write XBEL bookmark files.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile
 
 from .BookmarkNode import BookmarkNode
 

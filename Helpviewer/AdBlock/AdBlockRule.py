@@ -9,7 +9,7 @@ Module implementing the AdBlock rule class.
 
 import re
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QRegExp, QUrl
 
 
 class AdBlockRule(object):

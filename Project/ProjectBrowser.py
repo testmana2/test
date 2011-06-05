@@ -7,8 +7,8 @@
 Module implementing the project browser part of the eric5 UI.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QColor, QApplication
 
 from UI.Browser import Browser
 

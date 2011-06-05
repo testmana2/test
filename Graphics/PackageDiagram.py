@@ -11,8 +11,7 @@ import glob
 import os.path
 import itertools
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QProgressDialog, QApplication, QGraphicsTextItem
 
 from .UMLDialog import UMLDialog
 from .ClassItem import ClassItem, ClassModel

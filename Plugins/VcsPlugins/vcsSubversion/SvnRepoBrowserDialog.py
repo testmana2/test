@@ -9,8 +9,9 @@ Module implementing the subversion repository browser dialog.
 
 import os
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtGui import QWidget, QCursor, QHeaderView, QLineEdit, QDialog, \
+    QApplication, QDialogButtonBox, QTreeWidgetItem
+from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt, pyqtSlot
 
 from E5Gui import E5MessageBox
 

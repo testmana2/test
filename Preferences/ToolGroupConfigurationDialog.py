@@ -9,8 +9,8 @@ Module implementing a configuration dialog for the tools menu.
 
 import copy
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui import E5MessageBox
 

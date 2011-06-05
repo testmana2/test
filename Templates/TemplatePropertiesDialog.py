@@ -7,8 +7,8 @@
 Module implementing the templates properties dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QRegExp, Qt, pyqtSlot
+from PyQt4.QtGui import QDialog, QRegExpValidator
 
 import QScintilla.Lexers
 

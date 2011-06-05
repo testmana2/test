@@ -7,8 +7,8 @@
 Module implementing the search bar for the web browser.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import QWidget, QPalette, QBrush, QColor
 from PyQt4.QtWebKit import QWebPage
 
 from .Ui_SearchWidget import Ui_SearchWidget

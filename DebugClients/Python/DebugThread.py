@@ -10,7 +10,7 @@ Module implementing the debug thread.
 import bdb
 import sys
 
-from DebugBase import *
+from DebugBase import DebugBase
 
 
 class DebugThread(DebugBase):

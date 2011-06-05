@@ -7,7 +7,6 @@
 Module implementing a special QextScintilla lexer to handle the preferences.
 """
 
-from PyQt4.QtCore import *
 from PyQt4.QtGui import QColor, QFont, QApplication
 from PyQt4.Qsci import QsciLexer
 

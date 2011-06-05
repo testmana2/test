@@ -11,8 +11,8 @@ import sys
 import os
 import copy
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QColorDialog, QColor
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

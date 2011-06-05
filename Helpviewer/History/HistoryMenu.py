@@ -9,10 +9,11 @@ Module implementing the history menu.
 
 import sys
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex
+from PyQt4.QtGui import QAbstractProxyModel
 
 from E5Gui.E5ModelMenu import E5ModelMenu
+from E5Gui import E5MessageBox
 
 import Helpviewer.HelpWindow
 

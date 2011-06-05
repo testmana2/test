@@ -7,8 +7,9 @@
 Module implementing the icon editor main window.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile
+from PyQt4.QtGui import QMainWindow, QScrollArea, QPalette, QImage, QImageReader, \
+    QImageWriter, QKeySequence, qApp, QLabel, QDockWidget, QDialog, QWhatsThis
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox

@@ -9,8 +9,8 @@ Module implementing the Spelling Properties dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog

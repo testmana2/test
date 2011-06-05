@@ -7,14 +7,17 @@
 Module implementing an 'About Eric' dialog.
 """
 
-from PyQt4.QtGui import QApplication
+from PyQt4.QtGui import QApplication, QDialog
 
-from UI.Info import *
+from .Ui_AboutDialog import Ui_AboutDialog
 
 import Utilities
 
+import UI.PixmapCache
+import UI.Info
 
-titleText = "<b>{0} - {1}</b>".format(Program, Version)
+
+titleText = "<b>{0} - {1}</b>".format(UI.Info.Program, UI.Info.Version)
 
 aboutText = QApplication.translate("AboutDialog",
     """<p>{0} is an Integrated Development Environment for the Python"""
@@ -28,7 +31,7 @@ aboutText = QApplication.translate("AboutDialog",
     """<p>{0} uses third party software which is copyrighted"""
     """ by it's respective copyright holder. For details see"""
     """ the copyright notice of the individual package.</p>"""
-).format(Program, Homepage, BugAddress, FeatureAddress)
+).format(UI.Info.Program, UI.Info.Homepage, UI.Info.BugAddress, UI.Info.FeatureAddress)
 
 authorsText = \
 """\
@@ -719,15 +722,7 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
-                     END OF TERMS AND CONDITIONS""".format(Copyright)
-
-
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
-
-import UI.PixmapCache
-
-from .Ui_AboutDialog import Ui_AboutDialog
+                     END OF TERMS AND CONDITIONS""".format(UI.Info.Copyright)
 
 
 class AboutDialog(QDialog, Ui_AboutDialog):

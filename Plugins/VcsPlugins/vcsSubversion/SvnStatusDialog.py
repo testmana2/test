@@ -10,8 +10,9 @@ process.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QHeaderView, QLineEdit, QApplication, QMenu, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

@@ -10,8 +10,9 @@ Module implementing the Python re wizard dialog.
 import os
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, pyqtSlot
+from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, QClipboard, \
+    QTextCursor, QDialogButtonBox, QMainWindow, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 

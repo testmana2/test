@@ -8,8 +8,8 @@ Module implementing a thread class populating and updating the QtHelp
 documentation database.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QThread, qVersion, Qt, QMutex, QDateTime, QDir, \
+    QLibraryInfo, QFileInfo
 from PyQt4.QtHelp import QHelpEngineCore
 
 from eric5config import getConfig

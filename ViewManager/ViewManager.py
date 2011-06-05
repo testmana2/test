@@ -9,8 +9,10 @@ Module implementing the viewmanager base class.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QSignalMapper, QTimer, QFileInfo, pyqtSignal, QRegExp, \
+    QObject, Qt
+from PyQt4.QtGui import QColor, QKeySequence, QLineEdit, QToolBar, QWidgetAction, \
+    QDialog, QApplication, QMenu, QPalette, QComboBox
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App

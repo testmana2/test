@@ -7,7 +7,7 @@
 Module implementing a network reply object for special data.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QTimer, QIODevice, QByteArray
 from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
 
 

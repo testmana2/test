@@ -12,8 +12,8 @@ Module implementing an exporter for HTML.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QCursor, QFontInfo, QApplication
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui import E5MessageBox
@@ -245,7 +245,7 @@ class HTMLGenerator(object):
                     html += '''&nbsp;''' * ts
                     column += ts
                 else:
-                    if tabs:
+                    if useTabs:
                         html += '\t'
                         column += 1
                     else:

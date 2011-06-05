@@ -7,8 +7,8 @@
 Module implementing a network monitor dialog.
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
+from PyQt4.QtGui import QDialog, QStandardItemModel, QSortFilterProxyModel
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 import UI.PixmapCache

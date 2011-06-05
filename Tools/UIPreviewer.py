@@ -7,8 +7,11 @@
 Module implementing the UI Previewer main window.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, QFileInfo, QEvent, QSize, Qt
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QCursor, \
+    QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, QImageWriter, QPainter, \
+    QDialog, QScrollArea, qApp, QApplication, QStyleFactory, QFrame, QMainWindow, \
+    QComboBox, QVBoxLayout, QAction, QLabel
 from PyQt4 import uic
 
 from E5Gui import E5MessageBox, E5FileDialog

@@ -14,8 +14,9 @@ import zipfile
 import compileall
 import urllib.parse
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QApplication, \
+    QDialog, QVBoxLayout, QMainWindow
 
 from E5Gui import E5FileDialog
 

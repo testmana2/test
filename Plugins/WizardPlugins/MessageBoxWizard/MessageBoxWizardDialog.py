@@ -9,8 +9,8 @@ Module implementing the message box wizard dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QMessageBox, QDialog, QDialogButtonBox
 
 from .Ui_MessageBoxWizardDialog import Ui_MessageBoxWizardDialog
 

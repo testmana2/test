@@ -7,8 +7,7 @@
 Module implementing a dialog to enter the data for a tagging operation.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_SvnTagDialog import Ui_SvnTagDialog
 

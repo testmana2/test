@@ -10,8 +10,9 @@ Module implementing a dialog to search for text in files.
 import os
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
+from PyQt4.QtGui import QCursor, QDialog, QApplication, QMenu, QDialogButtonBox, \
+    QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -590,7 +591,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     text, encoding, hash = \
                         Utilities.readEncodedFileWithHash(fn)
                     lines = text.splitlines(True)
-                except (UnicodeError, IOError):
+                except (UnicodeError, IOError) as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(

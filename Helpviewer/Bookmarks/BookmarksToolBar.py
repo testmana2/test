@@ -7,8 +7,8 @@
 Module implementing a tool bar showing bookmarks.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QUrl
+from PyQt4.QtGui import QMenu, QApplication, QCursor
 
 from E5Gui.E5ModelToolBar import E5ModelToolBar
 

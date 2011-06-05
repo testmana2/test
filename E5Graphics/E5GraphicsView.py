@@ -9,8 +9,8 @@ Module implementing a canvas view class.
 
 import sys
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QRectF, QSize, QSizeF, Qt
+from PyQt4.QtGui import QGraphicsView, QBrush, QPainter, QPixmap, QFont, QColor
 
 import Preferences
 

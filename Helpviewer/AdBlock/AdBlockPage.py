@@ -7,7 +7,7 @@
 Module implementing a class to apply AdBlock rules to a web page.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QObject
 from PyQt4 import QtWebKit
 
 import Helpviewer.HelpWindow

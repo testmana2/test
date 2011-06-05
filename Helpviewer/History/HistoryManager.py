@@ -7,8 +7,8 @@
 Module implementing the history manager.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, QUrl, QTimer, \
+    QFile, QIODevice, QByteArray, QDataStream, QTemporaryFile
 from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
 
 from E5Gui import E5MessageBox

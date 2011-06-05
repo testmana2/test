@@ -7,8 +7,8 @@
 Module implementing the SQL Browser widget.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QVariant, Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QStandardItemModel, QDialog, QAbstractItemView
 from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, QSqlQueryModel, QSqlQuery
 
 from E5Gui import E5MessageBox

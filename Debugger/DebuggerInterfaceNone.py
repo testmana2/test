@@ -7,7 +7,7 @@
 Module implementing a dummy debugger interface for the debug server.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QObject
 
 
 ClientDefaultCapabilities = 0

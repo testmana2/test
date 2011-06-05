@@ -152,7 +152,7 @@ class HgGpgSignDialog(QDialog, Ui_HgGpgSignDialog):
         return (
             rev,
             self.nocommitCheckBox.isChecked(),
-            self.messageEdit.toPlainText(), 
+            self.messageEdit.toPlainText(),
             self.keyEdit.text(),
             self.localCheckBox.isChecked(),
             self.forceCheckBox.isChecked()

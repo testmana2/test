@@ -9,8 +9,7 @@ Module implementing a dialog to show the output of a pysvn action.
 
 import pysvn
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QDialog, QApplication, QDialogButtonBox
 
 from .SvnConst import svnNotifyActionMap
 

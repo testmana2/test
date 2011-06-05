@@ -7,8 +7,8 @@
 Module implementing functions dealing with keyboard shortcuts.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFile, QIODevice
+from PyQt4.QtGui import QKeySequence, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

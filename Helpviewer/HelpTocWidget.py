@@ -7,8 +7,8 @@
 Module implementing a window for showing the QtHelp TOC.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QEvent, QUrl
+from PyQt4.QtGui import QWidget, QVBoxLayout, QMenu
 
 
 class HelpTocWidget(QWidget):

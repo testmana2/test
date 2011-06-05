@@ -7,8 +7,9 @@
 Module implementing the variables viewer widget.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QRegExp
+from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, QAbstractItemView, \
+    QMenu
 
 from E5Gui.E5Application import e5App
 

@@ -9,7 +9,8 @@ Module implementing the AdBlock subscription class.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, QUrl, \
+    QCryptographicHash, QFile, QIODevice, QTextStream
 from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
 
 from E5Gui import E5MessageBox

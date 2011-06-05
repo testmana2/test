@@ -7,8 +7,8 @@
 Module implementing a Qt free version of the debug client.
 """
 
-from AsyncIO import *
-from DebugBase import *
+from AsyncIO import AsyncIO
+from DebugBase import DebugBase
 import DebugClientBase
 
 

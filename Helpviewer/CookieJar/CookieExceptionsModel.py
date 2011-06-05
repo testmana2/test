@@ -7,8 +7,8 @@
 Module implementing the cookie exceptions model.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
+from PyQt4.QtGui import QFont, QFontMetrics
 
 from .CookieJar import CookieJar
 

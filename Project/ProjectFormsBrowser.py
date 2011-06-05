@@ -11,8 +11,8 @@ import os
 import sys
 import shutil
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
+from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QProgressDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -715,7 +715,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         fn = itm.fileName()
         
         if self.hooks["generateDialogCode"] is not None:
-            self.hooks["generateDialogCode"](filename)
+            self.hooks["generateDialogCode"](fn)
         else:
             from .CreateDialogCodeDialog import CreateDialogCodeDialog
             

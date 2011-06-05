@@ -7,8 +7,8 @@
 Module implementing a configuration dialog for the bookmarked files menu.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, Qt, pyqtSlot
+from PyQt4.QtGui import QListWidgetItem, QColor, QDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog

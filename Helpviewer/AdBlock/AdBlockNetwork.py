@@ -7,7 +7,7 @@
 Module implementing the network block class.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QObject
 
 import Helpviewer.HelpWindow
 

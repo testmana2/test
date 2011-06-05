@@ -9,15 +9,17 @@ Module implementing the baseclass for the various project browsers.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QModelIndex, pyqtSignal, Qt
+from PyQt4.QtGui import QTreeView, QCursor, QItemSelection, QItemSelectionModel, \
+    QApplication, QMenu, QAbstractItemView
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from UI.Browser import *
+from UI.Browser import Browser
 
-from .ProjectBrowserModel import *
+from .ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem, \
+    ProjectBrowserDirectoryItem, ProjectBrowserFileItem
 from .ProjectBrowserSortFilterProxyModel import ProjectBrowserSortFilterProxyModel
 
 

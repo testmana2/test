@@ -10,8 +10,9 @@ Module implementing a simple Python syntax checker.
 import os
 import fnmatch
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QApplication, \
+    QHeaderView
 
 from E5Gui.E5Application import e5App
 

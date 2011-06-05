@@ -7,8 +7,8 @@
 Module implementing a dialog to show all cookies.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, Qt, QDateTime, QByteArray
+from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
 from .CookieModel import CookieModel
 from .CookieDetailsDialog import CookieDetailsDialog

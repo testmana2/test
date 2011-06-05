@@ -10,8 +10,11 @@ Module implementing a minimalistic editor for simple editing tasks.
 import os
 import re
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QSignalMapper, QPoint, QTimer, QFileInfo, pyqtSignal, QSize, \
+    QRegExp, Qt
+from PyQt4.QtGui import QWidget, QCursor, QPrinter, QKeySequence, QPrintDialog, \
+    QWhatsThis, QActionGroup, QDialog, QAbstractPrintDialog, QInputDialog, \
+    QApplication, QMenu, QPalette, QMainWindow, QFont, QVBoxLayout, QLabel
 from PyQt4.Qsci import QsciScintilla
 
 from E5Gui.E5Action import E5Action, createActionGroup

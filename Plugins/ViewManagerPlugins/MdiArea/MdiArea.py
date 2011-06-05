@@ -7,8 +7,8 @@
 Module implementing the mdi area viewmanager class.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QSignalMapper, pyqtSignal, QEvent, QSize, Qt
+from PyQt4.QtGui import QWidget, QMdiArea, QMenu
 
 from ViewManager.ViewManager import ViewManager
 

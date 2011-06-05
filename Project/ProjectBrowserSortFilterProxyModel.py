@@ -7,9 +7,6 @@
 Module implementing the browser sort filter proxy model.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-
 from UI.BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 from .ProjectBrowserModel import ProjectBrowserSourceType
 

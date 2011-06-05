@@ -7,7 +7,8 @@
 Module implementing the bookmark model class.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, QByteArray, \
+    QDataStream, QIODevice, QBuffer, QMimeData
 
 from .BookmarkNode import BookmarkNode
 from .XbelWriter import XbelWriter

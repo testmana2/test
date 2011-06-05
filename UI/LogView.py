@@ -7,8 +7,8 @@
 Module implementing the log viewer widget and the log widget.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt
+from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor
 
 from E5Gui.E5Application import e5App
 

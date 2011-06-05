@@ -10,8 +10,9 @@ Module implementing a dialog to compare two files.
 import os
 import time
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QFileInfo, QEvent, pyqtSlot
+from PyQt4.QtGui import QWidget, QColor, QBrush, QApplication, QTextCursor, \
+    QDialogButtonBox, QMainWindow
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog

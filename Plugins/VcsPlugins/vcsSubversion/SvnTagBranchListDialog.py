@@ -7,8 +7,11 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+import os
+
+from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt, pyqtSlot
+from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QInputDialog, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

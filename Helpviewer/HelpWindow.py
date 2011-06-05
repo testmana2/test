@@ -9,8 +9,12 @@ Module implementing the helpviewer main window.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, QUrl, \
+    QThread, QTextCodec
+from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
+    QDesktopServices, QKeySequence, qApp, QComboBox, QFont, QFontMetrics, QLabel, \
+    QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
+    QHBoxLayout, QProgressBar, QAction, QIcon
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
@@ -910,7 +914,8 @@ class HelpWindow(QMainWindow):
             """<p>Opens a dialog to configure offline storage.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.offlineStorageAct.triggered[()].connect(self.__showOfflineStorageConfiguration)
+            self.offlineStorageAct.triggered[()].connect(
+                self.__showOfflineStorageConfiguration)
         self.__actions.append(self.offlineStorageAct)
         
         self.syncTocAct = E5Action(self.trUtf8('Sync with Table of Contents'),
@@ -976,7 +981,8 @@ class HelpWindow(QMainWindow):
                 """<p>Shows a dialog to manage the QtHelp documentation set.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.manageQtHelpDocsAct.triggered[()].connect(self.__manageQtHelpDocumentation)
+            self.manageQtHelpDocsAct.triggered[()].connect(
+                self.__manageQtHelpDocumentation)
         self.__actions.append(self.manageQtHelpDocsAct)
         
         self.manageQtHelpFiltersAct = E5Action(self.trUtf8('Manage QtHelp Filters'),
@@ -1044,7 +1050,8 @@ class HelpWindow(QMainWindow):
                 """<p>Opens a dialog to configure the available search engines.</p>"""
         ))
         if not self.initShortcutsOnly:
-            self.searchEnginesAct.triggered[()].connect(self.__showEnginesConfigurationDialog)
+            self.searchEnginesAct.triggered[()].connect(
+                self.__showEnginesConfigurationDialog)
         self.__actions.append(self.searchEnginesAct)
         
         self.passwordsAct = E5Action(self.trUtf8('Manage Saved Passwords'),

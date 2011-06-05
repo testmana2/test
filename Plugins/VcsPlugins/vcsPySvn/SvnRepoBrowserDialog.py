@@ -9,8 +9,9 @@ Module implementing the subversion repository browser dialog.
 
 import pysvn
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QMutexLocker, Qt, pyqtSlot
+from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, QDialogButtonBox, \
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

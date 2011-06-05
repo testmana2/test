@@ -7,8 +7,8 @@
 Module implementing a dialog to show all saved logins.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSlot, QFont, QFontMetrics, QSortFilterProxyModel
+from PyQt4.QtGui import QDialog
 
 from E5Gui import E5MessageBox
 

@@ -9,7 +9,7 @@ Module implementing a model for search engines.
 
 import re
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QUrl, QAbstractTableModel, QModelIndex
 from PyQt4.QtGui import QPixmap, QIcon
 
 

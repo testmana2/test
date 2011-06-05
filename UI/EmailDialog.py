@@ -12,8 +12,9 @@ import mimetypes
 import smtplib
 import socket
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, pyqtSlot
+from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, QInputDialog, \
+    QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -22,12 +23,21 @@ from .Ui_EmailDialog import Ui_EmailDialog
 from .Info import BugAddress, FeatureAddress
 import Preferences
 import Utilities
+from base64 import b64encode as _bencode
+
+from email import encoders
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.audio import MIMEAudio
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from email.header import Header
+
 
 ############################################################
 ## This code is to work around a bug in the Python email  ##
 ## package for Image and Audio mime messages.             ##
 ############################################################
-from base64 import b64encode as _bencode
 
 
 def _encode_base64(msg):
@@ -43,14 +53,7 @@ def _encode_base64(msg):
     msg.set_payload(encdata)
     msg['Content-Transfer-Encoding'] = 'base64'
 
-from email import encoders
 encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our corrected encoder
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from email.mime.audio import MIMEAudio
-from email.mime.application import MIMEApplication
-from email.mime.multipart import MIMEMultipart
-from email.header import Header
 
 
 class EmailDialog(QDialog, Ui_EmailDialog):

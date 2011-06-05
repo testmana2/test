@@ -11,12 +11,13 @@ import os
 import sys
 import imp
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QObject
 from PyQt4.QtGui import QPixmap
 
 from E5Gui import E5MessageBox
 
-from .PluginExceptions import *
+from .PluginExceptions import PluginPathError, PluginModulesError, PluginLoadError, \
+    PluginActivationError, PluginModuleFormatError, PluginClassFormatError
 
 import UI.PixmapCache
 
@@ -733,7 +734,8 @@ class PluginManager(QObject):
         pluginDict = {}
         
         for name, module in \
-            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
+            list(self.__onDemandActiveModules.items()) + \
+            list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "error", "") == "":
                 plugin_name = getattr(module, "pluginTypename")
@@ -758,7 +760,8 @@ class PluginManager(QObject):
         @return preview pixmap (QPixmap)
         """
         for modname, module in \
-            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
+            list(self.__onDemandActiveModules.items()) + \
+            list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == type_ and \
                getattr(module, "pluginTypename") == name:
                 if hasattr(module, "previewPix"):
@@ -911,7 +914,8 @@ class PluginManager(QObject):
         vcsDict = {}
         
         for name, module in \
-            list(self.__onDemandActiveModules.items()) + list(self.__onDemandInactiveModules.items()):
+            list(self.__onDemandActiveModules.items()) + \
+            list(self.__onDemandInactiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 if hasattr(module, "getVcsSystemIndicator"):
                     res = module.getVcsSystemIndicator()

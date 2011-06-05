@@ -9,7 +9,7 @@ Module implementing the AdBlock manager.
 
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile
 
 from .AdBlockNetwork import AdBlockNetwork
 from .AdBlockPage import AdBlockPage

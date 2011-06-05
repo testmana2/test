@@ -7,8 +7,10 @@
 Module implementing a palette widget for the icon editor.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt
+from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, QFrame, \
+    QPushButton, QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, QSpacerItem, \
+    QSizePolicy, QPixmap, QColorDialog
 
 
 class IconEditorPalette(QWidget):

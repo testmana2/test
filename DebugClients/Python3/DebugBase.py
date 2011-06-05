@@ -13,7 +13,8 @@ import os
 import atexit
 import inspect
 
-from DebugProtocol import *
+from DebugProtocol import ResponseClearWatch, ResponseClearBreak, ResponseLine, \
+    ResponseSyntax, ResponseException
 
 gRecursionLimit = 64
 

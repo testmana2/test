@@ -7,7 +7,7 @@
 Module implementing a model for password management.
 """
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
 
 
 class PasswordModel(QAbstractTableModel):

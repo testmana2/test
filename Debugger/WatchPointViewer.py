@@ -7,8 +7,9 @@
 Module implementing the watch expression viewer widget.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import Qt, QModelIndex
+from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, QSortFilterProxyModel, \
+    QHeaderView, QItemSelectionModel, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

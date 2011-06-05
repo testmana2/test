@@ -9,8 +9,8 @@ Module implementing the project properties dialog.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QDir, pyqtSlot
+from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter

@@ -10,8 +10,9 @@ Module implementing a dialog to search for files.
 import os
 import sys
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, pyqtSlot
+from PyQt4.QtGui import QWidget, QHeaderView, QApplication, QDialogButtonBox, \
+    QTreeWidgetItem
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

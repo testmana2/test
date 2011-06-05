@@ -10,13 +10,13 @@ Module implementing the Python3 debugger interface for the debug server.
 import sys
 import os
 
-from PyQt4.QtCore import *
+from PyQt4.QtCore import QObject, QTextCodec, QProcess, QTimer
 from PyQt4.QtGui import QInputDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from .DebugProtocol import *
+from . import DebugProtocol
 from . import DebugClientCapabilities
 
 import Preferences
@@ -214,7 +214,7 @@ class DebuggerInterfacePython3(QObject):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 clientEnv[str(key)] = str(value)
-            except UnpackError:
+            except ValueError:
                 pass
         
         ipaddr = self.debugServer.getHostAddress(True)
@@ -306,7 +306,7 @@ class DebuggerInterfacePython3(QObject):
                 if value.startswith('"') or value.startswith("'"):
                     value = value[1:-1]
                 clientEnv[str(key)] = str(value)
-            except UnpackError:
+            except ValueError:
                 pass
         
         ipaddr = self.debugServer.getHostAddress(True)
@@ -389,7 +389,7 @@ class DebuggerInterfacePython3(QObject):
         self.qsock.readyRead[()].disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.
-        self.__sendCommand('{0}\n'.format(RequestShutdown))
+        self.__sendCommand('{0}\n'.format(DebugProtocol.RequestShutdown))
         self.qsock.flush()
         
         self.qsock.close()
@@ -412,7 +412,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param env environment settings (dictionary)
         """
-        self.__sendCommand('{0}{1}\n'.format(RequestEnv, str(env)))
+        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestEnv, str(env)))
     
     def remoteLoad(self, fn, argv, wd, traceInterpreter=False, autoContinue=True,
                    autoFork=False, forkChild=False):
@@ -433,9 +433,10 @@ class DebuggerInterfacePython3(QObject):
         
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('{0}{1}\n'.format(RequestForkMode, repr((autoFork, forkChild))))
+        self.__sendCommand('{0}{1}\n'.format(
+            DebugProtocol.RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
-            RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)),
+            DebugProtocol.RequestLoad, wd, fn, str(Utilities.parseOptionString(argv)),
              traceInterpreter))
     
     def remoteRun(self, fn, argv, wd, autoFork=False, forkChild=False):
@@ -450,9 +451,10 @@ class DebuggerInterfacePython3(QObject):
         """
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('{0}{1}\n'.format(RequestForkMode, repr((autoFork, forkChild))))
+        self.__sendCommand('{0}{1}\n'.format(
+            DebugProtocol.RequestForkMode, repr((autoFork, forkChild))))
         self.__sendCommand('{0}{1}|{2}|{3}\n'.format(
-            RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
+            DebugProtocol.RequestRun, wd, fn, str(Utilities.parseOptionString(argv))))
     
     def remoteCoverage(self, fn, argv, wd, erase=False):
         """
@@ -467,7 +469,7 @@ class DebuggerInterfacePython3(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}@@{2}@@{3}@@{4:d}\n'.format(
-            RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
+            DebugProtocol.RequestCoverage, wd, fn, str(Utilities.parseOptionString(argv)),
              erase))
 
     def remoteProfile(self, fn, argv, wd, erase=False):
@@ -482,7 +484,8 @@ class DebuggerInterfacePython3(QObject):
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
-            RequestProfile, wd, fn, str(Utilities.parseOptionString(argv)), erase))
+            DebugProtocol.RequestProfile, wd, fn,
+            str(Utilities.parseOptionString(argv)), erase))
 
     def remoteStatement(self, stmt):
         """
@@ -492,31 +495,31 @@ class DebuggerInterfacePython3(QObject):
               should not have a trailing newline.
         """
         self.__sendCommand('{0}\n'.format(stmt))
-        self.__sendCommand(RequestOK + '\n')
+        self.__sendCommand(DebugProtocol.RequestOK + '\n')
 
     def remoteStep(self):
         """
         Public method to single step the debugged program.
         """
-        self.__sendCommand(RequestStep + '\n')
+        self.__sendCommand(DebugProtocol.RequestStep + '\n')
 
     def remoteStepOver(self):
         """
         Public method to step over the debugged program.
         """
-        self.__sendCommand(RequestStepOver + '\n')
+        self.__sendCommand(DebugProtocol.RequestStepOver + '\n')
 
     def remoteStepOut(self):
         """
         Public method to step out the debugged program.
         """
-        self.__sendCommand(RequestStepOut + '\n')
+        self.__sendCommand(DebugProtocol.RequestStepOut + '\n')
 
     def remoteStepQuit(self):
         """
         Public method to stop the debugged program.
         """
-        self.__sendCommand(RequestStepQuit + '\n')
+        self.__sendCommand(DebugProtocol.RequestStepQuit + '\n')
 
     def remoteContinue(self, special=False):
         """
@@ -524,7 +527,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param special flag indicating a special continue operation
         """
-        self.__sendCommand('{0}{1:d}\n'.format(RequestContinue, special))
+        self.__sendCommand('{0}{1:d}\n'.format(DebugProtocol.RequestContinue, special))
 
     def remoteBreakpoint(self, fn, line, set, cond=None, temp=False):
         """
@@ -538,7 +541,7 @@ class DebuggerInterfacePython3(QObject):
         """
         fn = self.translate(fn, False)
         self.__sendCommand('{0}{1}@@{2:d}@@{3:d}@@{4:d}@@{5}\n'.format(
-                           RequestBreak, fn, line, temp, set, cond))
+                           DebugProtocol.RequestBreak, fn, line, temp, set, cond))
     
     def remoteBreakpointEnable(self, fn, line, enable):
         """
@@ -550,7 +553,7 @@ class DebuggerInterfacePython3(QObject):
         """
         fn = self.translate(fn, False)
         self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
-            RequestBreakEnable, fn, line, enable))
+            DebugProtocol.RequestBreakEnable, fn, line, enable))
     
     def remoteBreakpointIgnore(self, fn, line, count):
         """
@@ -562,7 +565,7 @@ class DebuggerInterfacePython3(QObject):
         """
         fn = self.translate(fn, False)
         self.__sendCommand('{0}{1},{2:d},{3:d}\n'.format(
-            RequestBreakIgnore, fn, line, count))
+            DebugProtocol.RequestBreakIgnore, fn, line, count))
     
     def remoteWatchpoint(self, cond, set, temp=False):
         """
@@ -573,7 +576,8 @@ class DebuggerInterfacePython3(QObject):
         @param temp flag indicating a temporary watch expression (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('{0}{1}@@{2:d}@@{3:d}\n'.format(RequestWatch, cond, temp, set))
+        self.__sendCommand('{0}{1}@@{2:d}@@{3:d}\n'.format(
+            DebugProtocol.RequestWatch, cond, temp, set))
     
     def remoteWatchpointEnable(self, cond, enable):
         """
@@ -583,7 +587,8 @@ class DebuggerInterfacePython3(QObject):
         @param enable flag indicating enabling or disabling a watch expression (boolean)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('{0}{1},{2:d}\n'.format(RequestWatchEnable, cond, enable))
+        self.__sendCommand('{0}{1},{2:d}\n'.format(
+            DebugProtocol.RequestWatchEnable, cond, enable))
     
     def remoteWatchpointIgnore(self, cond, count):
         """
@@ -593,7 +598,8 @@ class DebuggerInterfacePython3(QObject):
         @param count number of occurrences to ignore (int)
         """
         # cond is combination of cond and special (s. watch expression viewer)
-        self.__sendCommand('{0}{1},{2:d}\n'.format(RequestWatchIgnore, cond, count))
+        self.__sendCommand('{0}{1},{2:d}\n'.format(
+            DebugProtocol.RequestWatchIgnore, cond, count))
     
     def remoteRawInput(self, s):
         """
@@ -607,7 +613,7 @@ class DebuggerInterfacePython3(QObject):
         """
         Public method to request the list of threads from the client.
         """
-        self.__sendCommand('{0}\n'.format(RequestThreadList))
+        self.__sendCommand('{0}\n'.format(DebugProtocol.RequestThreadList))
         
     def remoteSetThread(self, tid):
         """
@@ -615,7 +621,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param tid id of the thread (integer)
         """
-        self.__sendCommand('{0}{1:d}\n'.format(RequestThreadSet, tid))
+        self.__sendCommand('{0}{1:d}\n'.format(DebugProtocol.RequestThreadSet, tid))
         
     def remoteClientVariables(self, scope, filter, framenr=0):
         """
@@ -626,7 +632,7 @@ class DebuggerInterfacePython3(QObject):
         @param framenr framenumber of the variables to retrieve (int)
         """
         self.__sendCommand('{0}{1:d}, {2:d}, {3}\n'.format(
-            RequestVariables, framenr, scope, str(filter)))
+            DebugProtocol.RequestVariables, framenr, scope, str(filter)))
     
     def remoteClientVariable(self, scope, filter, var, framenr=0):
         """
@@ -638,7 +644,7 @@ class DebuggerInterfacePython3(QObject):
         @param framenr framenumber of the variables to retrieve (int)
         """
         self.__sendCommand('{0}{1}, {2:d}, {3:d}, {4}\n'.format(
-            RequestVariable, str(var), framenr, scope, str(filter)))
+            DebugProtocol.RequestVariable, str(var), framenr, scope, str(filter)))
     
     def remoteClientSetFilter(self, scope, filter):
         """
@@ -647,7 +653,8 @@ class DebuggerInterfacePython3(QObject):
         @param scope the scope of the variables (0 = local, 1 = global)
         @param filter regexp string for variable names to filter out (string)
         """
-        self.__sendCommand('{0}{1:d}, "{2}"\n'.format(RequestSetFilter, scope, filter))
+        self.__sendCommand('{0}{1:d}, "{2}"\n'.format(
+            DebugProtocol.RequestSetFilter, scope, filter))
     
     def remoteEval(self, arg):
         """
@@ -655,7 +662,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param arg the arguments to evaluate (string)
         """
-        self.__sendCommand('{0}{1}\n'.format(RequestEval, arg))
+        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestEval, arg))
     
     def remoteExec(self, stmt):
         """
@@ -663,19 +670,19 @@ class DebuggerInterfacePython3(QObject):
         
         @param stmt statement to execute (string)
         """
-        self.__sendCommand('{0}{1}\n'.format(RequestExec, stmt))
+        self.__sendCommand('{0}{1}\n'.format(DebugProtocol.RequestExec, stmt))
     
     def remoteBanner(self):
         """
         Public slot to get the banner info of the remote client.
         """
-        self.__sendCommand(RequestBanner + '\n')
+        self.__sendCommand(DebugProtocol.RequestBanner + '\n')
     
     def remoteCapabilities(self):
         """
         Public slot to get the debug clients capabilities.
         """
-        self.__sendCommand(RequestCapabilities + '\n')
+        self.__sendCommand(DebugProtocol.RequestCapabilities + '\n')
     
     def remoteCompletion(self, text):
         """
@@ -684,7 +691,7 @@ class DebuggerInterfacePython3(QObject):
         
         @param text the text to be completed (string)
         """
-        self.__sendCommand("{0}{1}\n".format(RequestCompletion, text))
+        self.__sendCommand("{0}{1}\n".format(DebugProtocol.RequestCompletion, text))
     
     def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase):
         """
@@ -700,19 +707,19 @@ class DebuggerInterfacePython3(QObject):
         """
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}|{5}|{6:d}\n'.format(
-            RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
+            DebugProtocol.RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
     
     def remoteUTRun(self):
         """
         Public method to start a unittest run.
         """
-        self.__sendCommand('{0}\n'.format(RequestUTRun))
+        self.__sendCommand('{0}\n'.format(DebugProtocol.RequestUTRun))
     
     def remoteUTStop(self):
         """
         Public method to stop a unittest run.
         """
-        self.__sendCommand('{0}\n'.format(RequestUTStop))
+        self.__sendCommand('{0}\n'.format(DebugProtocol.RequestUTStop))
     
     def __askForkTo(self):
         """
@@ -726,9 +733,9 @@ class DebuggerInterfacePython3(QObject):
             selections,
             0, False)
         if not ok or res == selections[0]:
-            self.__sendCommand(ResponseForkTo + 'parent\n')
+            self.__sendCommand(DebugProtocol.ResponseForkTo + 'parent\n')
         else:
-            self.__sendCommand(ResponseForkTo + 'child\n')
+            self.__sendCommand(DebugProtocol.ResponseForkTo + 'child\n')
     
     def __parseClientLine(self):
         """
@@ -740,8 +747,8 @@ class DebuggerInterfacePython3(QObject):
                 line = self.codec.toUnicode(qs)
             else:
                 line = bytes(qs).decode()
-            if line.endswith(EOT):
-                line = line[:-len(EOT)]
+            if line.endswith(DebugProtocol.EOT):
+                line = line[:-len(DebugProtocol.EOT)]
                 if not line:
                     continue
             
@@ -763,7 +770,8 @@ class DebuggerInterfacePython3(QObject):
             if boc >= 0 and eoc > boc:
                 resp = line[boc:eoc]
                 
-                if resp == ResponseLine or resp == ResponseStack:
+                if resp == DebugProtocol.ResponseLine or \
+                   resp == DebugProtocol.ResponseStack:
                     stack = eval(line[eoc:-1])
                     for s in stack:
                         s[0] = self.translate(s[0], True)
@@ -773,20 +781,20 @@ class DebuggerInterfacePython3(QObject):
                         QTimer.singleShot(0, self.remoteContinue)
                     else:
                         self.debugServer.signalClientLine(cf[0], int(cf[1]),
-                                                    resp == ResponseStack)
+                                                    resp == DebugProtocol.ResponseStack)
                         self.debugServer.signalClientStack(stack)
                     continue
                 
-                if resp == ResponseThreadList:
+                if resp == DebugProtocol.ResponseThreadList:
                     currentId, threadList = eval(line[eoc:-1])
                     self.debugServer.signalClientThreadList(currentId, threadList)
                     continue
                 
-                if resp == ResponseThreadSet:
+                if resp == DebugProtocol.ResponseThreadSet:
                     self.debugServer.signalClientThreadSet()
                     continue
                 
-                if resp == ResponseVariables:
+                if resp == DebugProtocol.ResponseVariables:
                     vlist = eval(line[eoc:-1])
                     scope = vlist[0]
                     try:
@@ -796,7 +804,7 @@ class DebuggerInterfacePython3(QObject):
                     self.debugServer.signalClientVariables(scope, variables)
                     continue
                 
-                if resp == ResponseVariable:
+                if resp == DebugProtocol.ResponseVariable:
                     vlist = eval(line[eoc:-1])
                     scope = vlist[0]
                     try:
@@ -806,15 +814,15 @@ class DebuggerInterfacePython3(QObject):
                     self.debugServer.signalClientVariable(scope, variables)
                     continue
                 
-                if resp == ResponseOK:
+                if resp == DebugProtocol.ResponseOK:
                     self.debugServer.signalClientStatement(False)
                     continue
                 
-                if resp == ResponseContinue:
+                if resp == DebugProtocol.ResponseContinue:
                     self.debugServer.signalClientStatement(True)
                     continue
                 
-                if resp == ResponseException:
+                if resp == DebugProtocol.ResponseException:
                     exc = line[eoc:-1]
                     exc = self.translate(exc, True)
                     try:
@@ -831,7 +839,7 @@ class DebuggerInterfacePython3(QObject):
                     self.debugServer.signalClientException(exctype, excmessage, stack)
                     continue
                 
-                if resp == ResponseSyntax:
+                if resp == DebugProtocol.ResponseSyntax:
                     exc = line[eoc:-1]
                     exc = self.translate(exc, True)
                     try:
@@ -848,92 +856,92 @@ class DebuggerInterfacePython3(QObject):
                     self.debugServer.signalClientSyntaxError(message, fn, ln, cn)
                     continue
                 
-                if resp == ResponseExit:
+                if resp == DebugProtocol.ResponseExit:
                     self.debugServer.signalClientExit(line[eoc:-1])
                     continue
                 
-                if resp == ResponseClearBreak:
+                if resp == DebugProtocol.ResponseClearBreak:
                     fn, lineno = line[eoc:-1].split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
                     self.debugServer.signalClientClearBreak(fn, lineno)
                     continue
                 
-                if resp == ResponseBPConditionError:
+                if resp == DebugProtocol.ResponseBPConditionError:
                     fn, lineno = line[eoc:-1].split(',')
                     lineno = int(lineno)
                     fn = self.translate(fn, True)
                     self.debugServer.signalClientBreakConditionError(fn, lineno)
                     continue
                 
-                if resp == ResponseClearWatch:
+                if resp == DebugProtocol.ResponseClearWatch:
                     cond = line[eoc:-1]
                     self.debugServer.signalClientClearWatch(cond)
                     continue
                 
-                if resp == ResponseWPConditionError:
+                if resp == DebugProtocol.ResponseWPConditionError:
                     cond = line[eoc:-1]
                     self.debugServer.signalClientWatchConditionError(cond)
                     continue
                 
-                if resp == ResponseRaw:
+                if resp == DebugProtocol.ResponseRaw:
                     prompt, echo = eval(line[eoc:-1])
                     self.debugServer.signalClientRawInput(prompt, echo)
                     continue
                 
-                if resp == ResponseBanner:
+                if resp == DebugProtocol.ResponseBanner:
                     version, platform, dbgclient = eval(line[eoc:-1])
                     self.debugServer.signalClientBanner(version, platform, dbgclient)
                     continue
                 
-                if resp == ResponseCapabilities:
+                if resp == DebugProtocol.ResponseCapabilities:
                     cap, clType = eval(line[eoc:-1])
                     self.clientCapabilities = cap
                     self.debugServer.signalClientCapabilities(cap, clType)
                     continue
                 
-                if resp == ResponseCompletion:
+                if resp == DebugProtocol.ResponseCompletion:
                     clstring, text = line[eoc:-1].split('||')
                     cl = eval(clstring)
                     self.debugServer.signalClientCompletionList(cl, text)
                     continue
                 
-                if resp == PassiveStartup:
+                if resp == DebugProtocol.PassiveStartup:
                     fn, exc = line[eoc:-1].split('|')
                     exc = bool(exc)
                     fn = self.translate(fn, True)
                     self.debugServer.passiveStartUp(fn, exc)
                     continue
                 
-                if resp == ResponseUTPrepared:
+                if resp == DebugProtocol.ResponseUTPrepared:
                     res, exc_type, exc_value = eval(line[eoc:-1])
                     self.debugServer.clientUtPrepared(res, exc_type, exc_value)
                     continue
                 
-                if resp == ResponseUTStartTest:
+                if resp == DebugProtocol.ResponseUTStartTest:
                     testname, doc = eval(line[eoc:-1])
                     self.debugServer.clientUtStartTest(testname, doc)
                     continue
                 
-                if resp == ResponseUTStopTest:
+                if resp == DebugProtocol.ResponseUTStopTest:
                     self.debugServer.clientUtStopTest()
                     continue
                 
-                if resp == ResponseUTTestFailed:
+                if resp == DebugProtocol.ResponseUTTestFailed:
                     testname, traceback = eval(line[eoc:-1])
                     self.debugServer.clientUtTestFailed(testname, traceback)
                     continue
                 
-                if resp == ResponseUTTestErrored:
+                if resp == DebugProtocol.ResponseUTTestErrored:
                     testname, traceback = eval(line[eoc:-1])
                     self.debugServer.clientUtTestErrored(testname, traceback)
                     continue
                 
-                if resp == ResponseUTFinished:
+                if resp == DebugProtocol.ResponseUTFinished:
                     self.debugServer.clientUtFinished()
                     continue
                 
-                if resp == RequestForkTo:
+                if resp == DebugProtocol.RequestForkTo:
                     self.__askForkTo()
                     continue
             

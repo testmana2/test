@@ -10,8 +10,9 @@ Module implementing a dialog to compare two files and show the result side by si
 import re
 from difflib import _mdiff, IS_CHARACTER_JUNK
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTimer, QEvent, pyqtSlot
+from PyQt4.QtGui import QWidget, QColor, QFontMetrics, QBrush, QApplication, \
+    QTextCursor, QDialogButtonBox, QMainWindow
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog

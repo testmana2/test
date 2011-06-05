@@ -7,8 +7,9 @@
 Module implementing a dialog for entering character classes.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QRegExp
+from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, QLineEdit, \
+    QPushButton, QDialog, QScrollArea, QComboBox, QVBoxLayout, QRegExpValidator, QLabel
 
 from .Ui_QRegExpWizardCharactersDialog import Ui_QRegExpWizardCharactersDialog
 

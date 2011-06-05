@@ -14,8 +14,8 @@ import urllib.parse
 import urllib.error
 import time
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QMutexLocker, pyqtSignal, QRegExp
+from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

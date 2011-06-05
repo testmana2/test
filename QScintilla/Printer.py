@@ -7,8 +7,8 @@
 Module implementing the printer functionality.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QTime, QDate, Qt
+from PyQt4.QtGui import QColor, QPrinter, QApplication
 from PyQt4.Qsci import QsciPrinter
 
 import Preferences

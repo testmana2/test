@@ -7,8 +7,8 @@
 Module implementing the AdBlock configuration dialog.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QUrl
+from PyQt4.QtGui import QDialog, QMenu, QToolButton, QApplication, QDesktopServices
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 

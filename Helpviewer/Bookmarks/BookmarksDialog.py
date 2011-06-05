@@ -7,8 +7,8 @@
 Module implementing a dialog to manage bookmarks.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, Qt, QUrl, QModelIndex
+from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 

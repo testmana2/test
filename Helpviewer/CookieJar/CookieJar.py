@@ -9,8 +9,8 @@ Module implementing a QNetworkCookieJar subclass with various accept policies.
 
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, QSettings, \
+    QDateTime
 from PyQt4.QtNetwork import QNetworkCookieJar, QNetworkCookie
 from PyQt4.QtWebKit import QWebSettings
 

@@ -7,8 +7,9 @@
 Module implementing a web search widget for the web browser.
 """
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer
+from PyQt4.QtGui import QWidget, QMenu, QHBoxLayout, QStandardItem, QStandardItemModel, \
+    QCompleter, QFont, QIcon, QPixmap
 from PyQt4.QtWebKit import QWebSettings
 
 import UI.PixmapCache
