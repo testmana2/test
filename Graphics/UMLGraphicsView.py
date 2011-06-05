@@ -255,7 +255,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         # step 2: select all given items
         for itm in items:
-            if isinstance(itm, UMLWidget):
+            if isinstance(itm, UMLItem):
                 itm.setSelected(True)
         
     def selectItem(self, item):
@@ -264,7 +264,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         @param item item to be selected (QGraphicsItemItem)
         """
-        if isinstance(item, UMLWidget):
+        if isinstance(item, UMLItem):
             item.setSelected(not item.isSelected())
         
     def __deleteShape(self):

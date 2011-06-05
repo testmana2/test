@@ -591,7 +591,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                     text, encoding, hash = \
                         Utilities.readEncodedFileWithHash(fn)
                     lines = text.splitlines(True)
-                except (UnicodeError, IOError):
+                except (UnicodeError, IOError) as err:
                     E5MessageBox.critical(self,
                         self.trUtf8("Replace in Files"),
                         self.trUtf8(

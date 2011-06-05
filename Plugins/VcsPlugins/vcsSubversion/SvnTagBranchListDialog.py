@@ -7,6 +7,8 @@
 Module implementing a dialog to show a list of tags or branches.
 """
 
+import os
+
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 

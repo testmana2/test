@@ -714,7 +714,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         fn = itm.fileName()
         
         if self.hooks["generateDialogCode"] is not None:
-            self.hooks["generateDialogCode"](filename)
+            self.hooks["generateDialogCode"](fn)
         else:
             from .CreateDialogCodeDialog import CreateDialogCodeDialog
             

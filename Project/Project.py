@@ -812,10 +812,9 @@ class Project(QObject):
         Private method to delete the session file.
         """
         if self.pfile is None:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Delete project session"),
-                    self.trUtf8("Please save the project first."))
+            E5MessageBox.critical(self.ui,
+                self.trUtf8("Delete project session"),
+                self.trUtf8("Please save the project first."))
             return
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
@@ -941,10 +940,9 @@ class Project(QObject):
         Private method to delete the project debugger properties file (.e4d)
         """
         if self.pfile is None:
-            if not quiet:
-                E5MessageBox.critical(self.ui,
-                    self.trUtf8("Delete debugger properties"),
-                    self.trUtf8("Please save the project first."))
+            E5MessageBox.critical(self.ui,
+                self.trUtf8("Delete debugger properties"),
+                self.trUtf8("Please save the project first."))
             return
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
@@ -1754,7 +1752,7 @@ class Project(QObject):
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Delete directory"),
                 self.trUtf8("<p>The selected directory <b>{0}</b> could not be"
-                    " deleted.</p>").format(fn))
+                    " deleted.</p>").format(dn))
             return False
         
         self.removeDirectory(dn)
@@ -4142,7 +4140,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, str(why)))
+                            """<p>Reason: {1}</p>""").format(filename, str(why)))
             return b"", ""
         
         lineno = 0
@@ -4179,7 +4177,7 @@ class Project(QObject):
                 self.trUtf8("Create Plugin Archive"),
                 self.trUtf8("""<p>The plugin file <b>{0}</b> could """
                             """not be read.</p>"""
-                            """<p>Reason: {1}</p>""").format(archive, str(why)))
+                            """<p>Reason: {1}</p>""").format(filename, str(why)))
             return ""
         
         for sourceline in sourcelines:

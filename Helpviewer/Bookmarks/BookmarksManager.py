@@ -401,7 +401,7 @@ class BookmarksManager(QObject):
             E5MessageBox.critical(None,
                 self.trUtf8("Exporting Bookmarks"),
                 self.trUtf8("""Error exporting bookmarks to <b>{0}</b>.""")\
-                    .format(bookmarkFile))
+                    .format(fileName))
     
     def __convertFromOldBookmarks(self):
         """

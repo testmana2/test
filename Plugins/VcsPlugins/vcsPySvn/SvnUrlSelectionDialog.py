@@ -17,6 +17,8 @@ import pysvn
 
 from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
+import Utilities
+
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
     """
     Class implementing a dialog to enter the URLs for the svn diff command.

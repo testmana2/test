@@ -15,6 +15,8 @@ from E5Gui import E5MessageBox
 
 from .Ui_SvnUrlSelectionDialog import Ui_SvnUrlSelectionDialog
 
+import Utilities
+
 
 class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
     """

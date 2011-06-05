@@ -260,7 +260,7 @@ class E5ToolBarManager(QObject):
         
         @param toolBar reference to the toolbar to configure (QToolBar)
         """
-        if not isDefaultToolBar():
+        if not self.isDefaultToolBar():
             return
         self.setToolBar(toolBar, self.__defaultToolBars[id(toolBar)])
     

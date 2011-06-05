@@ -244,7 +244,7 @@ class HTMLGenerator(object):
                     html += '''&nbsp;''' * ts
                     column += ts
                 else:
-                    if tabs:
+                    if useTabs:
                         html += '\t'
                         column += 1
                     else:

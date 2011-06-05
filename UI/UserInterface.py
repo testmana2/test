@@ -5617,7 +5617,7 @@ class UserInterface(QMainWindow):
         @param errors list of SSL errors (list of QSslError)
         """
         errorStrings = []
-        for err in sslErrors:
+        for err in errors:
             errorStrings.append(err.errorString())
         errorString = '.<br />'.join(errorStrings)
         ret = E5MessageBox.yesNo(self,

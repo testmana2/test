@@ -32,7 +32,7 @@ class PackageModel(object):
         
         @param modulename module name to be added (string)
         """
-        self.moduleslist.append(classname)
+        self.moduleslist.append(modulename)
         
     def getModules(self):
         """

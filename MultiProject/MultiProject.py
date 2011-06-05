@@ -474,7 +474,7 @@ class MultiProject(QObject):
                 res = E5MessageBox.yesNo(self.parent(),
                     self.trUtf8("Save File"),
                     self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fileName),
+                                " Overwrite it?</p>").format(fn),
                     icon = E5MessageBox.Warning)
                 if not res:
                     return False
