@@ -20,9 +20,12 @@ import os
 import fnmatch
 import shutil
 
-from PyQt4 import QtCore, QtGui, QtNetwork
-from PyQt4 import Qsci
+from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
+    QByteArray, QSize, QUrl, Qt
+from PyQt4.QtGui import QColor, QFont
+from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
+from PyQt4.Qsci import QsciScintilla
 
 from E5Gui import E5FileDialog
 
@@ -158,7 +161,7 @@ class Prefs(object):
                     [b"", b"", b"", b""],
                 ],
         },
-        "ToolbarManagerState": QtCore.QByteArray(),
+        "ToolbarManagerState": QByteArray(),
         "ShowSplash": True,
         "SingleCloseButton": False,
         
@@ -200,7 +203,7 @@ class Prefs(object):
         "RequestDownloadFilename": True,
         "CheckErrorLog": True,
         
-        "LogStdErrColour": QtGui.QColor(QtCore.Qt.red),
+        "LogStdErrColour": QColor(Qt.red),
     }
     viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][2])
     
@@ -243,7 +246,7 @@ class Prefs(object):
         "StripTrailingWhitespace": False,
         "CommentColumn0": True,
         
-        "EdgeMode": Qsci.QsciScintilla.EdgeNone,
+        "EdgeMode": QsciScintilla.EdgeNone,
         "EdgeColumn": 80,
         
         "AutoIndentation": True,
@@ -261,13 +264,13 @@ class Prefs(object):
         "AutoCompletionCaseSensitivity": True,
         "AutoCompletionReplaceWord": False,
         "AutoCompletionShowSingle": False,
-        "AutoCompletionSource": Qsci.QsciScintilla.AcsDocument,
+        "AutoCompletionSource": QsciScintilla.AcsDocument,
         "AutoCompletionThreshold": 2,
         "AutoCompletionFillups": False,
         
         "CallTipsEnabled": False,
         "CallTipsVisible": 0,
-        "CallTipsStyle": Qsci.QsciScintilla.CallTipsNoContext,
+        "CallTipsStyle": QsciScintilla.CallTipsNoContext,
         "CallTipsScintillaOnFail": False,
         # show QScintilla calltips, if plugin fails
         
@@ -404,36 +407,36 @@ class Prefs(object):
     }
     
     if isWindowsPlatform():
-        editorDefaults["EOLMode"] = Qsci.QsciScintilla.EolWindows
+        editorDefaults["EOLMode"] = QsciScintilla.EolWindows
     else:
-        editorDefaults["EOLMode"] = Qsci.QsciScintilla.EolUnix
+        editorDefaults["EOLMode"] = QsciScintilla.EolUnix
     
     editorColourDefaults = {
-        "CurrentMarker": QtGui.QColor(QtCore.Qt.yellow),
-        "ErrorMarker": QtGui.QColor(QtCore.Qt.red),
-        "MatchingBrace": QtGui.QColor(QtCore.Qt.green),
-        "MatchingBraceBack": QtGui.QColor(QtCore.Qt.white),
-        "NonmatchingBrace": QtGui.QColor(QtCore.Qt.red),
-        "NonmatchingBraceBack": QtGui.QColor(QtCore.Qt.white),
-        "CallTipsBackground": QtGui.QColor(QtCore.Qt.white),
-        "CaretForeground": QtGui.QColor(QtCore.Qt.black),
-        "CaretLineBackground": QtGui.QColor(QtCore.Qt.white),
-        "Edge": QtGui.QColor(QtCore.Qt.lightGray),
-        "SelectionBackground": QtGui.QColor(QtCore.Qt.black),
-        "SelectionForeground": QtGui.QColor(QtCore.Qt.white),
-        "SearchMarkers": QtGui.QColor(QtCore.Qt.blue),
-        "MarginsBackground": QtGui.QColor(QtCore.Qt.lightGray),
-        "MarginsForeground": QtGui.QColor(QtCore.Qt.black),
-        "FoldmarginBackground": QtGui.QColor("#e6e6e6"),
-        "FoldMarkersForeground": QtGui.QColor(QtCore.Qt.white),
-        "FoldMarkersBackground": QtGui.QColor(QtCore.Qt.black),
-        "SpellingMarkers": QtGui.QColor(QtCore.Qt.red),
-        "AnnotationsWarningForeground": QtGui.QColor("#606000"),
-        "AnnotationsWarningBackground": QtGui.QColor("#ffffd0"),
-        "AnnotationsErrorForeground": QtGui.QColor("#600000"),
-        "AnnotationsErrorBackground": QtGui.QColor("#ffd0d0"),
-        "WhitespaceForeground": QtGui.QColor(QtCore.Qt.darkGray),
-        "WhitespaceBackground": QtGui.QColor(QtCore.Qt.white),
+        "CurrentMarker": QColor(Qt.yellow),
+        "ErrorMarker": QColor(Qt.red),
+        "MatchingBrace": QColor(Qt.green),
+        "MatchingBraceBack": QColor(Qt.white),
+        "NonmatchingBrace": QColor(Qt.red),
+        "NonmatchingBraceBack": QColor(Qt.white),
+        "CallTipsBackground": QColor(Qt.white),
+        "CaretForeground": QColor(Qt.black),
+        "CaretLineBackground": QColor(Qt.white),
+        "Edge": QColor(Qt.lightGray),
+        "SelectionBackground": QColor(Qt.black),
+        "SelectionForeground": QColor(Qt.white),
+        "SearchMarkers": QColor(Qt.blue),
+        "MarginsBackground": QColor(Qt.lightGray),
+        "MarginsForeground": QColor(Qt.black),
+        "FoldmarginBackground": QColor("#e6e6e6"),
+        "FoldMarkersForeground": QColor(Qt.white),
+        "FoldMarkersBackground": QColor(Qt.black),
+        "SpellingMarkers": QColor(Qt.red),
+        "AnnotationsWarningForeground": QColor("#606000"),
+        "AnnotationsWarningBackground": QColor("#ffffd0"),
+        "AnnotationsErrorForeground": QColor("#600000"),
+        "AnnotationsErrorBackground": QColor("#ffd0d0"),
+        "WhitespaceForeground": QColor(Qt.darkGray),
+        "WhitespaceBackground": QColor(Qt.white),
     }
     
     editorOtherFontsDefaults = {
@@ -582,14 +585,14 @@ class Prefs(object):
     
     # defaults for the project browser colour settings
     projectBrowserColourDefaults = {
-        "Highlighted": QtGui.QColor(QtCore.Qt.red),
+        "Highlighted": QColor(Qt.red),
         
-        "VcsAdded": QtGui.QColor(QtCore.Qt.blue),
-        "VcsConflict": QtGui.QColor(QtCore.Qt.red),
-        "VcsModified": QtGui.QColor(QtCore.Qt.yellow),
-        "VcsReplaced": QtGui.QColor(QtCore.Qt.cyan),
-        "VcsUpdate": QtGui.QColor(QtCore.Qt.green),
-        "VcsRemoved": QtGui.QColor(QtCore.Qt.magenta)
+        "VcsAdded": QColor(Qt.blue),
+        "VcsConflict": QColor(Qt.red),
+        "VcsModified": QColor(Qt.yellow),
+        "VcsReplaced": QColor(Qt.cyan),
+        "VcsUpdate": QColor(Qt.green),
+        "VcsRemoved": QColor(Qt.magenta)
     }
     
     # defaults for the help settings
@@ -604,13 +607,13 @@ class Prefs(object):
         "PySideDocDir": "",
         "SingleHelpWindow": True,
         "SaveGeometry": True,
-        "HelpViewerState": QtCore.QByteArray(),
+        "HelpViewerState": QByteArray(),
         "WebSearchSuggestions": True,
         "WebSearchEngine": "Google",
         "WebSearchKeywords": [],   # array of two tuples (keyword, search engine name)
         "DiskCacheEnabled": True,
         "DiskCacheSize": 50,       # 50 MB
-        "CachePolicy": QtNetwork.QNetworkRequest.PreferNetwork,
+        "CachePolicy": QNetworkRequest.PreferNetwork,
         "AcceptCookies": 2,        # CookieJar.AcceptOnlyFromSitesNavigatedTo
         "KeepCookiesUntil": 0,     # CookieJar.KeepUntilExpire
         "FilterTrackingCookies": True,
@@ -626,28 +629,28 @@ class Prefs(object):
         "UserAgent": "",
         "ShowPreview": True,
         "DownloadManagerRemovePolicy": 0,      # never delete downloads
-        "DownloadManagerSize": QtCore.QSize(400, 300),
-        "DownloadManagerPosition": QtCore.QPoint(),
+        "DownloadManagerSize": QSize(400, 300),
+        "DownloadManagerPosition": QPoint(),
         "DownloadManagerDownloads": [],
         "AccessKeysEnabled": True,
         "VirusTotalEnabled": False,
         "VirusTotalServiceKey": "",
         "VirusTotalSecure": False,
-        "SearchLanguage": QtCore.QLocale().language(),
+        "SearchLanguage": QLocale().language(),
     }
     
     websettings = QWebSettings.globalSettings()
     fontFamily = websettings.fontFamily(QWebSettings.StandardFont)
     fontSize = websettings.fontSize(QWebSettings.DefaultFontSize)
-    helpDefaults["StandardFont"] = QtGui.QFont(fontFamily, fontSize).toString()
+    helpDefaults["StandardFont"] = QFont(fontFamily, fontSize).toString()
     fontFamily = websettings.fontFamily(QWebSettings.FixedFont)
     fontSize = websettings.fontSize(QWebSettings.DefaultFixedFontSize)
-    helpDefaults["FixedFont"] = QtGui.QFont(fontFamily, fontSize).toString()
+    helpDefaults["FixedFont"] = QFont(fontFamily, fontSize).toString()
     helpDefaults.update({
         "AutoLoadImages":
             websettings.testAttribute(QWebSettings.AutoLoadImages),
         "UserStyleSheet": "",
-        "SaveUrlColor": QtGui.QColor(248, 248, 210),
+        "SaveUrlColor": QColor(248, 248, 210),
         "JavaEnabled":
             websettings.testAttribute(QWebSettings.JavaEnabled),
         "JavaScriptEnabled":
@@ -754,10 +757,10 @@ class Prefs(object):
         "TasksMarkers": "TO" + "DO:",
         "TasksMarkersBugfix": "FIX" + "ME:",
         # needed to keep it from being recognized as a task
-        "TasksColour": QtGui.QColor(QtCore.Qt.black),
-        "TasksBugfixColour": QtGui.QColor(QtCore.Qt.red),
-        "TasksBgColour": QtGui.QColor(QtCore.Qt.white),
-        "TasksProjectBgColour": QtGui.QColor(QtCore.Qt.lightGray),
+        "TasksColour": QColor(Qt.black),
+        "TasksBugfixColour": QColor(Qt.red),
+        "TasksBgColour": QColor(Qt.white),
+        "TasksProjectBgColour": QColor(Qt.lightGray),
     }
     
     # defaults for templates related stuff
@@ -781,7 +784,7 @@ class Prefs(object):
     
     # defaults for the icon editor
     iconEditorDefaults = {
-        "IconEditorState": QtCore.QByteArray(),
+        "IconEditorState": QByteArray(),
     }
     
     # defaults for py3flakes
@@ -799,9 +802,9 @@ class Prefs(object):
     
     # defaults for geometry
     geometryDefaults = {
-        "HelpViewerGeometry": QtCore.QByteArray(),
-        "IconEditorGeometry": QtCore.QByteArray(),
-        "MainGeometry": QtCore.QByteArray(),
+        "HelpViewerGeometry": QByteArray(),
+        "IconEditorGeometry": QByteArray(),
+        "MainGeometry": QByteArray(),
         "MainMaximized": False,
     }
 
@@ -905,15 +908,15 @@ def initPreferences():
     """
     Module function to initialize the central configuration store.
     """
-    Prefs.settings = QtCore.QSettings(
-        QtCore.QSettings.IniFormat, QtCore.QSettings.UserScope,
+    Prefs.settings = QSettings(
+        QSettings.IniFormat, QSettings.UserScope,
         settingsNameOrganization, settingsNameGlobal)
     if not isWindowsPlatform():
-        hp = QtCore.QDir.homePath()
-        dn = QtCore.QDir(hp)
+        hp = QDir.homePath()
+        dn = QDir(hp)
         dn.mkdir(".eric5")
-    QtCore.QCoreApplication.setOrganizationName(settingsNameOrganization)
-    QtCore.QCoreApplication.setApplicationName(settingsNameGlobal)
+    QCoreApplication.setOrganizationName(settingsNameOrganization)
+    QCoreApplication.setApplicationName(settingsNameGlobal)
     
 
 def syncPreferences(prefClass=Prefs):
@@ -936,14 +939,14 @@ def exportPreferences(prefClass=Prefs):
     """
     filename, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
         None,
-        QtCore.QCoreApplication.translate("Preferences", "Export Preferences"),
+        QCoreApplication.translate("Preferences", "Export Preferences"),
         "",
-        QtCore.QCoreApplication.translate("Preferences",
+        QCoreApplication.translate("Preferences",
             "Properties File (*.ini);;All Files (*)"),
         None,
         E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
     if filename:
-        ext = QtCore.QFileInfo(filename).suffix()
+        ext = QFileInfo(filename).suffix()
         if not ext:
             ex = selectedFilter.split("(*")[1].split(")")[0]
             if ex:
@@ -963,9 +966,9 @@ def importPreferences(prefClass=Prefs):
     """
     filename = E5FileDialog.getOpenFileName(
         None,
-        QtCore.QCoreApplication.translate("Preferences", "Import Preferences"),
+        QCoreApplication.translate("Preferences", "Import Preferences"),
         "",
-        QtCore.QCoreApplication.translate("Preferences",
+        QCoreApplication.translate("Preferences",
             "Properties File (*.ini);;All Files (*)"))
     if filename:
         settingsFile = prefClass.settings.fileName()
@@ -990,8 +993,8 @@ def initRecentSettings():
     
     This function is called once upon import of the module.
     """
-    Prefs.rsettings = QtCore.QSettings(
-        QtCore.QSettings.IniFormat, QtCore.QSettings.UserScope,
+    Prefs.rsettings = QSettings(
+        QSettings.IniFormat, QSettings.UserScope,
         settingsNameOrganization, settingsNameRecent)
     
 
@@ -1206,7 +1209,7 @@ def getUI(key, prefClass=Prefs):
     elif key in ["LogStdErrColour"]:
         col = prefClass.settings.value("UI/" + key)
         if col is not None:
-            return QtGui.QColor(col)
+            return QColor(col)
         else:
             return prefClass.uiDefaults[key]
     elif key == "ViewProfiles":
@@ -1393,9 +1396,9 @@ def getEditorColour(key, prefClass=Prefs):
     if col is not None:
         if len(col) == 9:
             # color string with alpha
-            return QtGui.QColor.fromRgba(int(col[1:], 16))
+            return QColor.fromRgba(int(col[1:], 16))
         else:
-            return QtGui.QColor(col)
+            return QColor(col)
     else:
         return prefClass.editorColourDefaults[key]
     
@@ -1423,7 +1426,7 @@ def getEditorOtherFonts(key, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     @return the requested editor font (QFont)
     """
-    f = QtGui.QFont()
+    f = QFont()
     f.fromString(prefClass.settings.value("Editor/Other Fonts/" + key,
         prefClass.editorOtherFontsDefaults[key]))
     return f
@@ -1594,7 +1597,7 @@ def getEditorExporter(key, prefClass=Prefs):
     @return the requested editor setting
     """
     if key in ["RTF/Font"]:
-        f = QtGui.QFont()
+        f = QFont()
         f.fromString(prefClass.settings.value("Editor/Exporters/" + key,
             prefClass.editorExporterDefaults[key]))
         return f
@@ -1645,7 +1648,7 @@ def getPrinter(key, prefClass=Prefs):
         return float(prefClass.settings.value("Printer/" + key,
             prefClass.printerDefaults[key]))
     elif key in ["HeaderFont"]:
-        f = QtGui.QFont()
+        f = QFont()
         f.fromString(prefClass.settings.value("Printer/" + key,
             prefClass.printerDefaults[key]))
         return f
@@ -1677,7 +1680,7 @@ def getShell(key, prefClass=Prefs):
     @return the requested shell setting
     """
     if key in ["MonospacedFont", "MarginsFont"]:
-        f = QtGui.QFont()
+        f = QFont()
         f.fromString(prefClass.settings.value("Shell/" + key,
             prefClass.shellDefaults[key]))
         return f
@@ -1715,7 +1718,7 @@ def getTerminal(key, prefClass=Prefs):
         return prefClass.settings.value("Terminal/" + key,
             prefClass.terminalDefaults[key])
     elif key in ["MonospacedFont", "MarginsFont"]:
-        f = QtGui.QFont()
+        f = QFont()
         f.fromString(prefClass.settings.value("Terminal/" + key,
             prefClass.terminalDefaults[key]))
         return f
@@ -1826,7 +1829,7 @@ def getProjectBrowserColour(key, prefClass=Prefs):
     """
     col = prefClass.settings.value("Project/Colour/" + key)
     if col is not None:
-        return QtGui.QColor(col)
+        return QColor(col)
     else:
         return prefClass.projectBrowserColourDefaults[key]
     
@@ -1893,14 +1896,14 @@ def getHelp(key, prefClass=Prefs):
     @return the requested help setting
     """
     if key in ["StandardFont", "FixedFont"]:
-        f = QtGui.QFont()
+        f = QFont()
         f.fromString(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
         return f
     elif key in ["SaveUrlColor"]:
         col = prefClass.settings.value("Help/" + key)
         if col is not None:
-            return QtGui.QColor(col)
+            return QColor(col)
         else:
             return prefClass.helpDefaults[key]
     elif key in ["WebSearchKeywords"]:
@@ -1925,7 +1928,7 @@ def getHelp(key, prefClass=Prefs):
             done = toBool(prefClass.settings.value("Done"))
             pageUrl = prefClass.settings.value("PageURL")
             if pageUrl is None:
-                pageUrl = QtCore.QUrl()
+                pageUrl = QUrl()
             downloads.append((url, location, done, pageUrl))
         prefClass.settings.endArray()
         return downloads
@@ -2163,7 +2166,7 @@ def getTasks(key, prefClass=Prefs):
                "TasksBgColour", "TasksProjectBgColour"]:
         col = prefClass.settings.value("Tasks/" + key)
         if col is not None:
-            return QtGui.QColor(col)
+            return QColor(col)
         else:
             return prefClass.tasksDefaults[key]
     else:
@@ -2251,11 +2254,11 @@ def getGraphics(key, prefClass=Prefs):
     if key in ["Font"]:
         font = prefClass.settings.value("Graphics/" + key,
             prefClass.graphicsDefaults[key])
-        if isinstance(font, QtGui.QFont):
+        if isinstance(font, QFont):
             # workaround for an old bug in eric < 4.4
             return font
         else:
-            f = QtGui.QFont()
+            f = QFont()
             f.fromString(font)
             return f
     else:
@@ -2454,7 +2457,7 @@ def toByteArray(value):
     @return converted data
     """
     if value is None:
-        return QtCore.QByteArray()
+        return QByteArray()
     else:
         return value
 
