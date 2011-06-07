@@ -5497,8 +5497,9 @@ class UserInterface(QMainWindow):
                     self.__versionCheckProgress.reset()
                     self.__versionCheckProgress = None
                 E5MessageBox.warning(self,
-                    self.trUtf8("Error downloading versions file"),
-                    self.trUtf8("""Could not download the versions file."""))
+                    self.trUtf8("Error getting versions information"),
+                    self.trUtf8("""The versions information could not be downloaded."""
+                                """ Please go online and try again."""))
                 return
             else:
                 self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative,
