@@ -204,7 +204,7 @@ exec "{0}" "{1}/{2}.py" "$@"
     return wname
 
 
-def copyTree(src, dst, filters, excludeDirs=[]):
+def copyTree(src, dst, filters, excludeDirs=[], excludePatterns=[]):
     """
     Copy Python, translation, documentation, wizards configuration,
     designer template files and DTDs of a directory tree.
@@ -213,6 +213,7 @@ def copyTree(src, dst, filters, excludeDirs=[]):
     @param dst name of the destination directory
     @param filters list of filter pattern determining the files to be copied
     @param excludeDirs list of (sub)directories to exclude from copying
+    @keyparam excludePatterns list of filter pattern determining the files to be skipped
     """
     try:
         names = os.listdir(src)
@@ -220,17 +221,23 @@ def copyTree(src, dst, filters, excludeDirs=[]):
         return      # ignore missing directories (most probably the i18n directory)
     
     for name in names:
-        srcname = os.path.join(src, name)
-        dstname = os.path.join(dst, name)
-        for filter in filters:
-            if fnmatch.fnmatch(srcname, filter):
-                if not os.path.isdir(dst):
-                    os.makedirs(dst)
-                shutil.copy2(srcname, dstname)
+        skipIt = False
+        for excludePattern in excludePatterns:
+            if fnmatch.fnmatch(name, excludePattern):
+                skipIt = True
                 break
-        else:
-            if os.path.isdir(srcname) and not srcname in excludeDirs:
-                copyTree(srcname, dstname, filters)
+        if not skipIt:
+            srcname = os.path.join(src, name)
+            dstname = os.path.join(dst, name)
+            for filter in filters:
+                if fnmatch.fnmatch(srcname, filter):
+                    if not os.path.isdir(dst):
+                        os.makedirs(dst)
+                    shutil.copy2(srcname, dstname)
+                    break
+            else:
+                if os.path.isdir(srcname) and not srcname in excludeDirs:
+                    copyTree(srcname, dstname, filters, excludePatterns=excludePatterns)
 
 
 def createGlobalPluginsDir():
@@ -385,7 +392,8 @@ def installEric():
         
         # copy the various parts of eric5
         copyTree(sourceDir, cfg['ericDir'], ['*.py', '*.pyc', '*.pyo', '*.pyw'],
-            ['{1}{0}Examples'.format(os.sep, sourceDir)])
+            ['{1}{0}Examples'.format(os.sep, sourceDir)], 
+            excludePatterns=["eric5config.py*"])
         copyTree(sourceDir, cfg['ericDir'], ['*.rb'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)])
         copyTree('{1}{0}Plugins'.format(os.sep, sourceDir),
