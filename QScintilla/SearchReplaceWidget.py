@@ -263,6 +263,8 @@ character except an alphabetic character.</td></tr>
                 lineFrom, indexFrom, lineTo, indexTo)
         while ok:
             tgtPos, tgtLen = aw.getFoundTarget()
+            if tgtLen == 0:
+                break
             aw.setSearchIndicator(tgtPos, tgtLen)
             ok = aw.findNextTarget()
     
