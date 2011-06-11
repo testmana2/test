@@ -162,19 +162,22 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         for the selected lexer language.
         """
         installedAPIFiles = self.__currentAPI.installedAPIFiles()
-        installedAPIFilesPath = QFileInfo(installedAPIFiles[0]).path()
-        installedAPIFilesShort = []
-        for installedAPIFile in installedAPIFiles:
-            installedAPIFilesShort.append(QFileInfo(installedAPIFile).fileName())
-        file, ok = QInputDialog.getItem(
-            self,
-            self.trUtf8("Add from installed APIs"),
-            self.trUtf8("Select from the list of installed API files"),
-            installedAPIFilesShort,
-            0, False)
-        if ok:
-            self.apiList.addItem(Utilities.toNativeSeparators(
-                QFileInfo(QDir(installedAPIFilesPath), file).absoluteFilePath()))
+        if installedAPIFiles:
+            installedAPIFilesPath = QFileInfo(installedAPIFiles[0]).path()
+            installedAPIFilesShort = []
+            for installedAPIFile in installedAPIFiles:
+                installedAPIFilesShort.append(QFileInfo(installedAPIFile).fileName())
+            file, ok = QInputDialog.getItem(
+                self,
+                self.trUtf8("Add from installed APIs"),
+                self.trUtf8("Select from the list of installed API files"),
+                installedAPIFilesShort,
+                0, False)
+            if ok:
+                self.apiList.addItem(Utilities.toNativeSeparators(
+                    QFileInfo(QDir(installedAPIFilesPath), file).absoluteFilePath()))
+        else:
+            self.addInstalledApiFileButton.setEnabled(False)
         
     @pyqtSlot()
     def on_addPluginApiFileButton_clicked(self):
