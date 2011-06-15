@@ -117,7 +117,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         try:
             server = smtplib.SMTP(self.mailServerEdit.text(),
                                   self.portSpin.value(),
-                                  "", 10)
+                                  timeout=10)
             if self.useTlsCheckBox.isChecked():
                 server.starttls()
             try:
