@@ -292,7 +292,7 @@ class Prefs(object):
         "AutoSpellCheckChunkSize": 30,
         "SpellCheckStringsOnly": True,
         "SpellCheckingMinWordSize": 3,
-        "SpellCheckingDefaultLanguage": "en",
+        "SpellCheckingDefaultLanguage": "en_US",
         "SpellCheckingPersonalWordList": "",
         "SpellCheckingPersonalExcludeList": "",
         
