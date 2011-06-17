@@ -1150,7 +1150,7 @@ def py2compile(file, checkFlakes = False):
         syntax error was detected by the syntax checker.
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isExecutable(interpreter):
+    if interpreter == "" or not isinpath(interpreter):
         return (True, file, "1", "", 
             QCoreApplication.translate("Utilities", 
                                        "Python2 interpreter not configured."), 
