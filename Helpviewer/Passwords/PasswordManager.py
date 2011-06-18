@@ -436,12 +436,13 @@ class PasswordManager(QObject):
         if boundary is not None:
             args = self.__extractMultipartQueryItems(data, boundary)
         else:
-            argsUrl = QUrl.fromEncoded(QByteArray("foo://bar.com/?" + data))
+            argsUrl = QUrl.fromEncoded(
+                QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
             encodedArgs = argsUrl.queryItems()
             args = set()
             for arg in encodedArgs:
                 key = arg[0]
-                value = arg[1].replace("+", " ")
+                value = arg[1]
                 args.add((key, value))
         
         # extract the forms
