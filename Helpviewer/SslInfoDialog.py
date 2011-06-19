@@ -27,7 +27,7 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         @param certificate reference to the SSL certificate (QSslCertificate)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.subjectCommonNameLabel.setText(self.__certificateString(

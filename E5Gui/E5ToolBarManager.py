@@ -26,7 +26,7 @@ class E5ToolBarManager(QObject):
         @param ui reference to the user interface object (UI.UserInterface)
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__mainWindow = None
         self.__ui = ui

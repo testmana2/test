@@ -71,7 +71,7 @@ class Task(QTreeWidgetItem):
         if isProjectTask:
             self.filename = self.project.getRelativePath(self.filename)
             
-        QTreeWidgetItem.__init__(self, ["", "", self.description, self.filename,
+        super().__init__(["", "", self.description, self.filename,
             (self.lineno and "{0:6d}".format(self.lineno) or "")])
         
         if self.completed:
@@ -358,7 +358,7 @@ class TaskViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param project reference to the project object
         """
-        QTreeWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.setRootIsDecorated(False)
         self.setItemsExpandable(False)

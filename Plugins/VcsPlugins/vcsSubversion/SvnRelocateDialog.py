@@ -23,7 +23,7 @@ class SvnRelocateDialog(QDialog, Ui_SvnRelocateDialog):
         @param currUrl current repository URL (string)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.currUrlLabel.setText(currUrl)

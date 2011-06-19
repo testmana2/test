@@ -34,7 +34,7 @@ class HelpIndexWidget(QWidget):
         @param mainWindow reference to the main window object (QMainWindow)
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.__engine = engine
         self.__mw = mainWindow

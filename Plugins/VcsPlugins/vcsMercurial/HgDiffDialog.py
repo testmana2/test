@@ -32,7 +32,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
@@ -353,4 +353,4 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

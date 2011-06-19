@@ -30,7 +30,7 @@ class IconEditorPalette(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         if self.layoutDirection == Qt.Horizontal:
             direction = QBoxLayout.LeftToRight

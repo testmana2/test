@@ -56,7 +56,7 @@ class JavaScriptExternalObject(QObject):
         @param mw reference to the main window 8HelpWindow)
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__mw = mw
     
@@ -105,7 +105,7 @@ class JavaScriptEricObject(QObject):
         @param mw reference to the main window 8HelpWindow)
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__mw = mw
     
@@ -161,7 +161,7 @@ class HelpWebPage(QWebPage):
         
         @param parent parent widget of this window (QWidget)
         """
-        QWebPage.__init__(self, parent)
+        super().__init__(parent)
         
         self.__lastRequest = None
         self.__lastRequestType = QWebPage.NavigationTypeOther
@@ -398,7 +398,7 @@ class HelpBrowser(QWebView):
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
         """
-        QWebView.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName(name)
         self.setWhatsThis(self.trUtf8(
                 """<b>Help Window</b>"""
@@ -752,7 +752,7 @@ class HelpBrowser(QWebView):
             evt.accept()
             return
         
-        QWebView.wheelEvent(self, evt)
+        super().wheelEvent(evt)
     
     def hasSelection(self):
         """
@@ -1108,7 +1108,7 @@ class HelpBrowser(QWebView):
                     evt.acceptProposedAction()
         
         if not evt.isAccepted():
-            QWebView.dragMoveEvent(self, evt)
+            super().dragMoveEvent(evt)
     
     def dropEvent(self, evt):
         """
@@ -1116,7 +1116,7 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the drop event (QDropEvent)
         """
-        QWebView.dropEvent(self, evt)
+        super().dropEvent(evt)
         if not evt.isAccepted() and \
            evt.source() != self and \
            evt.possibleActions() & Qt.CopyAction:
@@ -1143,7 +1143,7 @@ class HelpBrowser(QWebView):
         elif evt.button() == Qt.XButton2:
             self.pageAction(QWebPage.Forward).trigger()
         else:
-            QWebView.mousePressEvent(self, evt)
+            super().mousePressEvent(evt)
     
     def mouseReleaseEvent(self, evt):
         """
@@ -1185,7 +1185,7 @@ class HelpBrowser(QWebView):
                     QTimer.singleShot(300, self.__accessKeyShortcut)
         
         self.ctrlPressed = (evt.key() == Qt.Key_Control)
-        QWebView.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)
     
     def keyReleaseEvent(self, evt):
         """
@@ -1198,7 +1198,7 @@ class HelpBrowser(QWebView):
                 self.__accessKeysPressed = evt.key() == Qt.Key_Control
         
         self.ctrlPressed = False
-        QWebView.keyReleaseEvent(self, evt)
+        super().keyReleaseEvent(evt)
     
     def focusOutEvent(self, evt):
         """
@@ -1211,7 +1211,7 @@ class HelpBrowser(QWebView):
                 self.__hideAccessKeys()
                 self.__accessKeysPressed = False
         
-        QWebView.focusOutEvent(self, evt)
+        super().focusOutEvent(evt)
     
     def clearHistory(self):
         """

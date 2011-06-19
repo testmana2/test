@@ -30,7 +30,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         @param name name of this dialog (string)
         @param modal flag to indicate a modal dialog (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)

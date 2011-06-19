@@ -37,7 +37,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__saveTimer = AutoSaver(self, self.save)

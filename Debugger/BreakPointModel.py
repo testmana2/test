@@ -22,7 +22,7 @@ class BreakPointModel(QAbstractItemModel):
         
         @param reference to the parent widget (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.breakpoints = []
         self.header = [

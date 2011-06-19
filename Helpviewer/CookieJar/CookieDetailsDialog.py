@@ -22,7 +22,7 @@ class CookieDetailsDialog(QDialog, Ui_CookieDetailsDialog):
         
         @param parent reference to the parent object (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
     
     def setData(self, domain, name, path, secure, expires, value):

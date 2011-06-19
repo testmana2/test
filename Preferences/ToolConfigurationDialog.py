@@ -30,7 +30,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         @param toollist list of configured tools
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.iconCompleter = E5FileCompleter(self.iconEdit)

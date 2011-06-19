@@ -26,7 +26,7 @@ class UMLItem(QGraphicsRectItem):
         @param rounded flag indicating a rounded corner (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
-        QGraphicsRectItem.__init__(self, parent)
+        super().__init__(parent)
         self.font = Preferences.getGraphics("Font")
         self.margin = 5
         self.associations = []
@@ -101,7 +101,7 @@ class UMLItem(QGraphicsRectItem):
         @param dx relative movement in x-direction (float)
         @param dy relative movement in y-direction (float)
         """
-        QGraphicsRectItem.moveBy(self, dx, dy)
+        super().moveBy(dx, dy)
         self.adjustAssociations()
         
     def setPos(self, x, y):
@@ -111,7 +111,7 @@ class UMLItem(QGraphicsRectItem):
         @param x absolute x-position (float)
         @param y absolute y-position (float)
         """
-        QGraphicsRectItem.setPos(self, x, y)
+        super().setPos(x, y)
         self.adjustAssociations()
         
     def itemChange(self, change, value):

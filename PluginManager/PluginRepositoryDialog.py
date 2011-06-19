@@ -57,7 +57,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         
         @param parent parent of this dialog (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__updateButton = \
@@ -492,7 +492,7 @@ class PluginRepositoryDialog(QDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -533,7 +533,7 @@ class PluginRepositoryWindow(QMainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.cw = PluginRepositoryWidget(self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

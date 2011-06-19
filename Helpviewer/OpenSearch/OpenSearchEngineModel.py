@@ -24,7 +24,7 @@ class OpenSearchEngineModel(QAbstractTableModel):
         @param manager reference to the search engine manager (OpenSearchManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__manager = manager
         manager.changed.connect(self.__enginesChanged)
@@ -191,4 +191,4 @@ class OpenSearchEngineModel(QAbstractTableModel):
         """
         Private slot handling a change of the registered engines.
         """
-        QAbstractTableModel.reset(self)
+        super().reset()

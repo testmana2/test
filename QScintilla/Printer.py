@@ -24,7 +24,7 @@ class Printer(QsciPrinter):
         
         @param mode mode of the printer (QPrinter.PrinterMode)
         """
-        QsciPrinter.__init__(self, mode)
+        super().__init__(mode)
         
         self.setMagnification(Preferences.getPrinter("Magnification"))
         if Preferences.getPrinter("ColorMode"):

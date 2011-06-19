@@ -32,7 +32,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         @param new flag indicating the generation of a new project
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.project = project

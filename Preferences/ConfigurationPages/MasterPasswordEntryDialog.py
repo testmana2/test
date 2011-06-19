@@ -26,7 +26,7 @@ class MasterPasswordEntryDialog(QDialog, Ui_MasterPasswordEntryDialog):
         @param oldPasswordHash hash of the current password (string)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__oldPasswordHash = oldPasswordHash

@@ -31,7 +31,7 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))

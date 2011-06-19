@@ -37,7 +37,7 @@ class XbelReader(QXmlStreamReader):
         """
         Constructor
         """
-        QXmlStreamReader.__init__(self)
+        super().__init__()
         
         self.__resolver = XmlEntityResolver()
         self.setEntityResolver(self.__resolver)

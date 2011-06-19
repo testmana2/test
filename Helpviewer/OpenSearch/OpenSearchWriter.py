@@ -18,7 +18,7 @@ class OpenSearchWriter(QXmlStreamWriter):
         """
         Constructor
         """
-        QXmlStreamWriter.__init__(self)
+        super().__init__()
         
         self.setAutoFormatting(True)
     

@@ -23,7 +23,7 @@ class FavIconLabel(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QLabel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__browser = None
         self.__dragStartPos = QPoint()
@@ -65,7 +65,7 @@ class FavIconLabel(QLabel):
         """
         if evt.button() == Qt.LeftButton:
             self.__dragStartPos = evt.pos()
-        QLabel.mousePressEvent(self, evt)
+        super().mousePressEvent(evt)
     
     def mouseMoveEvent(self, evt):
         """

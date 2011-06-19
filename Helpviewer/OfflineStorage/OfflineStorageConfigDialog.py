@@ -27,7 +27,7 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.databaseEnabledCheckBox.setChecked(

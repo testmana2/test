@@ -222,7 +222,7 @@ class ProjectBrowserModel(BrowserModel):
         
         @param parent reference to parent object (Project.Project)
         """
-        QAbstractItemModel.__init__(self, parent)
+        super().__init__(parent)
         
         rootData = self.trUtf8("Name")
         self.rootItem = BrowserItem(None, rootData)

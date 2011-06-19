@@ -31,7 +31,7 @@ class ViewProfileDialog(QDialog):
             is a separate window (boolean)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         
         self.__layout = layout
         if self.__layout == "Toolboxes":

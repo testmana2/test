@@ -26,7 +26,7 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent parent widget of the dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

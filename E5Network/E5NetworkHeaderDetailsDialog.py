@@ -22,7 +22,7 @@ class E5NetworkHeaderDetailsDialog(QDialog, Ui_E5NetworkHeaderDetailsDialog):
         
         @param parent reference to the parent object (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
     
     def setData(self, name, value):

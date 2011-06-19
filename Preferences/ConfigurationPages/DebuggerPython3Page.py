@@ -27,7 +27,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
         

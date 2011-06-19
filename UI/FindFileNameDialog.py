@@ -43,7 +43,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         @param project reference to the project object
         @param parent parent widget of this dialog (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.searchDirCompleter = E5DirCompleter(self.searchDirEdit)
@@ -247,4 +247,4 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         self.fileNameEdit.selectAll()
         self.fileNameEdit.setFocus()
         
-        QWidget.show(self)
+        super().show()

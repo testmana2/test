@@ -29,7 +29,7 @@ class Pep8CodeSelectionDialog(QDialog, Ui_Pep8CodeSelectionDialog):
             issues (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         codeList = [code.strip() for code in codes.split(",") if code.strip()]

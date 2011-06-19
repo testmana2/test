@@ -34,7 +34,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         @param text text to be shown by the label (string)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -247,7 +247,7 @@ class HgDialog(QDialog, Ui_HgDialog):
             self.intercept = False
             evt.accept()
             return
-        QDialog.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)
     
     def hasAddOrDelete(self):
         """

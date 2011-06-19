@@ -57,7 +57,7 @@ class VirusTotalAPI(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__replies = []
         

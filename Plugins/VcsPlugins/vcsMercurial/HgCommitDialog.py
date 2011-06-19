@@ -32,7 +32,7 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent, Qt.WindowFlags(Qt.Window))
+        super().__init__(parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
     
     def showEvent(self, evt):

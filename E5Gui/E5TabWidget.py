@@ -21,7 +21,7 @@ class E5WheelTabBar(QTabBar):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QTabBar.__init__(self, parent)
+        super().__init__(parent)
         self._tabWidget = parent
     
     def wheelEvent(self, event):
@@ -138,7 +138,7 @@ class E5TabWidget(QTabWidget):
         @param parent reference to the parent widget (QWidget)
         @keyparam dnd flag indicating the support for Drag & Drop (boolean)
         """
-        QTabWidget.__init__(self, parent)
+        super().__init__(parent)
         
         if dnd:
             if not hasattr(self, 'setMovable'):

@@ -30,7 +30,7 @@ class HgCommandDialog(QDialog, Ui_HgCommandDialog):
         @param ppath pathname of the project directory (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

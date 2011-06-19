@@ -23,7 +23,7 @@ class LexerCMake(QsciLexerCMake, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerCMake.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

@@ -55,7 +55,7 @@ class StartDialog(QDialog):
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setModal(True)
         
         self.type = type

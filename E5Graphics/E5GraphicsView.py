@@ -26,7 +26,7 @@ class E5GraphicsView(QGraphicsView):
         @param scene reference to the scene object (QGraphicsScene)
         @param parent parent widget (QWidget)
         """
-        QGraphicsView.__init__(self, scene, parent)
+        super().__init__(scene, parent)
         self.setObjectName("E5GraphicsView")
         
         self.setBackgroundBrush(QBrush(Qt.white))

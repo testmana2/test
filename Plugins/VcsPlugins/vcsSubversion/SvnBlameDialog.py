@@ -32,7 +32,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -247,4 +247,4 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
             self.intercept = False
             evt.accept()
             return
-        QDialog.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

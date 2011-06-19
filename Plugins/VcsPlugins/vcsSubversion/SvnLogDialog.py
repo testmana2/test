@@ -35,7 +35,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -320,4 +320,4 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

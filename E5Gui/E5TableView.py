@@ -26,7 +26,7 @@ class E5TableView(QTableView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            QTableView.keyPressEvent(self, evt)
+            super().keyPressEvent(evt)
     
     def removeSelected(self):
         """

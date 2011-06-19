@@ -26,7 +26,7 @@ class SvnSwitchDialog(QDialog, Ui_SvnSwitchDialog):
             repository (boolean)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
        
         self.tagCombo.clear()

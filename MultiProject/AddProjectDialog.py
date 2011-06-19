@@ -30,7 +30,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         @param startdir start directory for the selection dialog (string)
         @param project dictionary containing project data
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.fileCompleter = E5FileCompleter(self.filenameEdit)

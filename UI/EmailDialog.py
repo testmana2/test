@@ -67,7 +67,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         @param mode mode of this dialog (string, "bug" or "feature")
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__mode = mode

@@ -23,7 +23,7 @@ class GraphicsPage(ConfigurationPageBase, Ui_GraphicsPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("GraphicsPage")
         

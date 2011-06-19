@@ -27,7 +27,7 @@ class SvnMergeDialog(QDialog, Ui_SvnMergeDialog):
         @param force flag indicating a forced merge (boolean)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
        
         self.forceCheckBox.setChecked(force)

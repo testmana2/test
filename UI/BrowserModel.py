@@ -42,7 +42,7 @@ class BrowserModel(QAbstractItemModel):
         
         @param parent reference to parent object (QObject)
         """
-        QAbstractItemModel.__init__(self, parent)
+        super().__init__(parent)
         
         rootData = QApplication.translate("BrowserModel", "Name")
         self.rootItem = BrowserItem(None, rootData)

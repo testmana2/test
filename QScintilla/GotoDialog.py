@@ -26,7 +26,7 @@ class GotoDialog(QDialog, Ui_GotoDialog):
         @param name name of this dialog (string)
         @param modal flag indicating a modal dialog (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

@@ -24,7 +24,7 @@ class LexerTCL(QsciLexerTCL, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerTCL.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

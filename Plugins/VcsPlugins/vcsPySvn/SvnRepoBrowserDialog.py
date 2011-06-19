@@ -35,7 +35,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         @param mode mode of the dialog (string, "browse" or "select")
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -277,7 +277,7 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         if self.focusWidget() == self.urlCombo:
             return
         
-        QDialog.accept(self)
+        super().accept()
     
     def getSelectedUrl(self):
         """

@@ -32,7 +32,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         @param vcs reference to the version control object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)

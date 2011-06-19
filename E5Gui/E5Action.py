@@ -81,7 +81,7 @@ class E5Action(QAction):
                 7 + incr, len(args)))
             
         parent = args[4 + incr]
-        QAction.__init__(self, parent)
+        super().__init__(parent)
         name = args[5 + incr]
         if name:
             self.setObjectName(name)
@@ -138,7 +138,7 @@ class E5Action(QAction):
         
         @param shortcut the accelerator (QKeySequence)
         """
-        QAction.setShortcut(self, shortcut)
+        super().setShortcut(shortcut)
         self.__ammendToolTip()
         
     def setShortcuts(self, shortcuts):
@@ -149,7 +149,7 @@ class E5Action(QAction):
             or key for a platform dependent list of accelerators
             (QKeySequence.StandardKey)
         """
-        QAction.setShortcuts(self, shortcuts)
+        super().setShortcuts(shortcuts)
         self.__ammendToolTip()
         
     def __ammendToolTip(self):

@@ -25,7 +25,7 @@ class PluginDetailsDialog(QDialog, Ui_PluginDetailsDialog):
         @param details dictionary containing the info to be displayed
         @param parent parent of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__autoactivate = details["autoactivate"]

@@ -26,7 +26,7 @@ class LogViewer(QTextEdit):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QTextEdit.__init__(self, parent)
+        super().__init__(parent)
         self.setAcceptRichText(False)
         self.setLineWrapMode(QTextEdit.NoWrap)
         self.setReadOnly(True)

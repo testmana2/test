@@ -26,7 +26,7 @@ class E5ListView(QListView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            QListView.keyPressEvent(self, evt)
+            super().keyPressEvent(evt)
     
     def removeSelected(self):
         """

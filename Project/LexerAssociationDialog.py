@@ -30,7 +30,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         @param project reference to the project object
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
 
         self.editorLexerList.headerItem().setText(self.editorLexerList.columnCount(), "")

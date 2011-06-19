@@ -24,7 +24,7 @@ class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QSortFilterProxyModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.setFilterCaseSensitivity(Qt.CaseInsensitive)
     

@@ -32,7 +32,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorAPIsPage")
         

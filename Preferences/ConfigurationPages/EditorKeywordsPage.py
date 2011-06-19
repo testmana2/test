@@ -25,7 +25,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorKeywordsPage")
         

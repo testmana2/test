@@ -34,7 +34,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         @param path pathname to determine the repository URL from (string)
         @param parent parent widget of the dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if not hasattr(pysvn.Client(), 'diff_summarize'):

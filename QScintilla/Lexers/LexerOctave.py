@@ -22,7 +22,7 @@ class LexerOctave(QsciLexerOctave, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerOctave.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

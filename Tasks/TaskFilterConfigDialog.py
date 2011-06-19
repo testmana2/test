@@ -23,7 +23,7 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         @param taskFilter the task filter object to be configured
         @param parent the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if taskFilter.descriptionFilter is None or \

@@ -31,7 +31,7 @@ class SqlBrowser(QMainWindow):
         @param connections list of database connections to add (list of strings)
         @param reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("SqlBrowser")
         
         self.setWindowTitle(self.trUtf8("SQL Browser"))

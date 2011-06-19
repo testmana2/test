@@ -23,7 +23,7 @@ class NewPythonPackageDialog(QDialog, Ui_NewPythonPackageDialog):
         
         @param relPath initial package path relative to the project root (string)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

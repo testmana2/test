@@ -38,7 +38,7 @@ class HistoryMenuModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractProxyModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__treeModel = sourceModel
         

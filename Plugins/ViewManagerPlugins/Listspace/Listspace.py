@@ -31,7 +31,7 @@ class StackedWidget(QStackedWidget):
         
         @param parent parent widget (QWidget)
         """
-        QStackedWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setAttribute(Qt.WA_DeleteOnClose, True)
         
         self.editors = []
@@ -42,7 +42,7 @@ class StackedWidget(QStackedWidget):
         
         @param editor the editor object to be added (QScintilla.Editor.Editor)
         """
-        QStackedWidget.addWidget(self, editor)
+        super().addWidget(editor)
         if not editor in self.editors:
             self.editors.append(editor)
         
@@ -52,7 +52,7 @@ class StackedWidget(QStackedWidget):
         
         @param widget widget to be removed (QWidget)
         """
-        QStackedWidget.removeWidget(self, widget)
+        super().removeWidget(widget)
         if isinstance(widget, QScintilla.Editor.Editor):
             self.editors.remove(widget)
         
@@ -65,7 +65,7 @@ class StackedWidget(QStackedWidget):
         if isinstance(widget, QScintilla.Editor.Editor):
             self.editors.remove(widget)
             self.editors.insert(0, widget)
-        QStackedWidget.setCurrentWidget(self, widget)
+        super().setCurrentWidget(widget)
         
     def setCurrentIndex(self, index):
         """

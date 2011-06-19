@@ -23,7 +23,7 @@ class LexerCPP(QsciLexerCPP, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerCPP.__init__(self, parent, caseInsensitiveKeywords)
+        super().__init__(parent, caseInsensitiveKeywords)
         Lexer.__init__(self)
         
         self.commentString = "//"

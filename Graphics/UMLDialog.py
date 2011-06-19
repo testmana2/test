@@ -27,7 +27,7 @@ class UMLDialog(QMainWindow):
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         
         if not name:
             self.setObjectName("UMLDialog")

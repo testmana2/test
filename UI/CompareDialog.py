@@ -86,7 +86,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             (list of two tuples of two strings)
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.file1Completer = E5FileCompleter(self.file1Edit)
@@ -168,7 +168,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         if filename:
             self.file1Edit.setText(filename)
-        QWidget.show(self)
+        super().show()
         
     def __appendText(self, pane, linenumber, line, format, interLine=False):
         """
@@ -435,7 +435,7 @@ class CompareWindow(QMainWindow):
             (list of two tuples of two strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.cw = CompareDialog(files, self)
         self.cw.installEventFilter(self)
         size = self.cw.size()

@@ -41,7 +41,7 @@ class VcsProjectBrowserHelper(QObject):
         @param parent parent widget (QWidget)
         @param name name of this object (string)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         

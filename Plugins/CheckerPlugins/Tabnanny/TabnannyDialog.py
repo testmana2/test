@@ -36,7 +36,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         @param parent The parent widget (QWidget).
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

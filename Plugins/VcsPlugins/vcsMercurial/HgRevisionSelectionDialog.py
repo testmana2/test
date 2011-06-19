@@ -28,7 +28,7 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         @param showNone flag influencing the label of the 'None' selection (boolean)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
        
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

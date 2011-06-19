@@ -31,7 +31,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         @param defaultPath default path for the new file (string)
         @param parent parent widget if the dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

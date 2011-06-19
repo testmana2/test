@@ -39,7 +39,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         @param bundle name of a bundle file (string)
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -434,4 +434,4 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

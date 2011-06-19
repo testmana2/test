@@ -28,7 +28,7 @@ class UserAgentMenu(QMenu):
         @param title title of the menu (string)
         @param parent reference to the parent widget (QWidget)
         """
-        QMenu.__init__(self, title, parent)
+        super().__init__(title, parent)
         
         self.aboutToShow.connect(self.__populateMenu)
     

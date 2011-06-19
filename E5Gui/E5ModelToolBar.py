@@ -29,9 +29,9 @@ class E5ModelToolBar(QToolBar):
         @param parent reference to the parent widget (QWidget)
         """
         if title is not None:
-            QToolBar.__init__(self, title, parent)
+            super().__init__(title, parent)
         else:
-            QToolBar.__init__(self, parent)
+            super().__init__(parent)
         
         self.__model = None
         
@@ -183,7 +183,7 @@ class E5ModelToolBar(QToolBar):
                 if evt.mimeData().hasFormat(mimeType):
                     evt.acceptProposedAction()
         
-        QToolBar.dragEnterEvent(self, evt)
+        super().dragEnterEvent(evt)
     
     def dropEvent(self, evt):
         """
@@ -210,7 +210,7 @@ class E5ModelToolBar(QToolBar):
             self.__model.dropMimeData(evt.mimeData(), evt.dropAction(),
                                       row, 0, parentIndex)
         
-        QToolBar.dropEvent(self, evt)
+        super().dropEvent(evt)
     
     def mouseMoveEvent(self, evt):
         """
@@ -219,21 +219,21 @@ class E5ModelToolBar(QToolBar):
         @param evt reference to the event (QMouseEvent)
         """
         if self.__model is None:
-            QToolBar.mouseMoveEvent(self, evt)
+            super().mouseMoveEvent(evt)
             return
         
         if not (evt.buttons() & Qt.LeftButton):
-            QToolBar.mouseMoveEvent(self, evt)
+            super().mouseMoveEvent(evt)
             return
         
         manhattanLength = (evt.pos() - self.__dragStartPosition).manhattanLength()
         if manhattanLength <= QApplication.startDragDistance():
-            QToolBar.mouseMoveEvent(self, evt)
+            super().mouseMoveEvent(evt)
             return
         
         act = self.actionAt(self.__dragStartPosition)
         if act is None:
-            QToolBar.mouseMoveEvent(self, evt)
+            super().mouseMoveEvent(evt)
             return
         
         idx = self.index(act)
@@ -257,7 +257,7 @@ class E5ModelToolBar(QToolBar):
         @param evt reference to the hide event (QHideEvent)
         """
         self.clear()
-        QToolBar.hideEvent(self, evt)
+        super().hideEvent(evt)
     
     def showEvent(self, evt):
         """
@@ -267,7 +267,7 @@ class E5ModelToolBar(QToolBar):
         """
         if len(self.actions()) == 0:
             self._build()
-        QToolBar.showEvent(self, evt)
+        super().showEvent(evt)
     
     def resetFlags(self):
         """

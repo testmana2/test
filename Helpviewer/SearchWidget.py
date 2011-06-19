@@ -27,7 +27,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         @param mainWindow reference to the main window (QMainWindow)
         @param parent parent widget of this dialog (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__mainWindow = mainWindow

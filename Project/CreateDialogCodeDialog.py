@@ -43,7 +43,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         @param project reference to the project object
         @param parent parent widget if the dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

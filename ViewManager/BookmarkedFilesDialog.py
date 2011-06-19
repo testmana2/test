@@ -29,7 +29,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         @param bookmarks list of bookmarked files (list of strings)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.fileCompleter = E5FileCompleter(self.fileEdit)

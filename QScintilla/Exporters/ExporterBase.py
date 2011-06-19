@@ -26,7 +26,7 @@ class ExporterBase(QObject):
         @param editor reference to the editor object (QScintilla.Editor.Editor)
         @param parent parent object of the exporter (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         self.editor = editor
     
     def _getFileName(self, filter):

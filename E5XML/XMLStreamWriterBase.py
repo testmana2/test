@@ -23,7 +23,7 @@ class XMLStreamWriterBase(QXmlStreamWriter):
         
         @param device reference to the I/O device to write to (QIODevice)
         """
-        QXmlStreamWriter.__init__(self, device)
+        super().__init__(device)
         
         self.basics = {
             type(None): self._write_none,

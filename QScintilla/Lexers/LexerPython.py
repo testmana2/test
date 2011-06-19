@@ -26,7 +26,7 @@ class LexerPython(QsciLexerPython, Lexer):
         @param variant name of the language variant (string)
         @param parent parent widget of this lexer
         """
-        QsciLexerPython.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.variant = variant

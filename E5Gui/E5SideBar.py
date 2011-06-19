@@ -34,7 +34,7 @@ class E5SideBar(QWidget):
         @param orientation orientation of the sidebar widget (North, East, South, West)
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.__tabBar = QTabBar()
         self.__tabBar.setDrawBase(True)

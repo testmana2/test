@@ -27,7 +27,7 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorStylesPage")
         

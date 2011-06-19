@@ -22,7 +22,7 @@ class CookieModel(QAbstractTableModel):
         @param cookieJar reference to the cookie jar (CookieJar)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__headers = [
             self.trUtf8("Website"),

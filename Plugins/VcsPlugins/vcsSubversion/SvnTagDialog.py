@@ -26,7 +26,7 @@ class SvnTagDialog(QDialog, Ui_SvnTagDialog):
             repository (boolean)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

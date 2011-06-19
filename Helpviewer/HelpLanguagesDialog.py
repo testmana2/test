@@ -25,7 +25,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__model = QStringListModel()
@@ -111,7 +111,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             Preferences.Prefs.settings.remove("Help/AcceptLanguages")
         else:
             Preferences.Prefs.settings.setValue("Help/AcceptLanguages", result)
-        QDialog.accept(self)
+        super().accept()
     
     @classmethod
     def httpString(cls, languages):

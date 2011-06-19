@@ -17,6 +17,6 @@ class VcsRepositoryInfoDialog(QDialog, Ui_VcsRepositoryInfoDialog):
     Class implemting a dialog to show repository information.
     """
     def __init__(self, parent, info):
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.infoBrowser.setHtml(info)

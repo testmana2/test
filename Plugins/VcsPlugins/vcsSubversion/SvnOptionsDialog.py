@@ -35,7 +35,7 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         @param project reference to the project object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)

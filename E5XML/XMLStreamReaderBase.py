@@ -25,7 +25,7 @@ class XMLStreamReaderBase(QXmlStreamReader):
         
         @param device reference to the I/O device to read from (QIODevice)
         """
-        QXmlStreamReader.__init__(self, device)
+        super().__init__(device)
     
     def toBool(self, value):
         """

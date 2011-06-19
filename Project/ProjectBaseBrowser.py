@@ -39,7 +39,7 @@ class ProjectBaseBrowser(Browser):
         @param type project browser type (string)
         @param parent parent widget of this browser
         """
-        QTreeView.__init__(self, parent)
+        super().__init__(parent)
         
         self.project = project
         

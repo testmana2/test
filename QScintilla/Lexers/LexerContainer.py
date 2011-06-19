@@ -22,7 +22,7 @@ class LexerContainer(QsciLexer, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexer.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.editor = parent

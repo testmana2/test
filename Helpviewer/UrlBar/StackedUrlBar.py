@@ -20,7 +20,7 @@ class StackedUrlBar(QStackedWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QStackedWidget.__init__(self, parent)
+        super().__init__(parent)
         
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(6)

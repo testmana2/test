@@ -40,7 +40,7 @@ class AdBlockSubscription(QObject):
         @param parent reference to the parent object (QObject)
         @param default flag indicating a default subscription (Boolean)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__url = url.toEncoded()
         self.__enabled = False

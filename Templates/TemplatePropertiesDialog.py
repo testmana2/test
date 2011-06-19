@@ -30,7 +30,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         @param itm item (TemplateEntry or TemplateGroup) to
             read the data from
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if not groupMode:

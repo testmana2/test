@@ -47,7 +47,7 @@ class Pep8CheckerPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        QObject.__init__(self, ui)
+        super().__init__(ui)
         self.__ui = ui
         self.__initialize()
         

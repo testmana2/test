@@ -40,7 +40,7 @@ class SpellChecker(QObject):
             The string should be in language locale format (e.g. en_US, de).
         @keyparam checkRegion reference to a function to check for a valid region
         """
-        QObject.__init__(self, editor)
+        super().__init__(editor)
         
         self.editor = editor
         self.indicator = indicator

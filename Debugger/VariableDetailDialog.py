@@ -28,7 +28,7 @@ class VariableDetailDialog(QDialog, Ui_VariableDetailDialog):
         @param vtype the variables type (string)
         @param value the variables value (string)
         """
-        QDialog.__init__(self)
+        super().__init__()
         self.setupUi(self)
         
         # set the different fields

@@ -1637,7 +1637,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>FixIssues</string>
             </key>
             <value>
-              <bool>True</bool>
+              <bool>False</bool>
             </value>
             <key>
               <string>IncludeMessages</string>

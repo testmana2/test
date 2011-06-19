@@ -53,7 +53,7 @@ class DebuggerInterfaceRuby(QObject):
         @param debugServer reference to the debug server (DebugServer)
         @param passive flag indicating passive connection mode (boolean)
         """
-        QObject.__init__(self)
+        super().__init__()
         
         self.__isNetworked = True
         self.__autoContinue = not passive

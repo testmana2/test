@@ -24,7 +24,7 @@ class OpenSearchEngineAction(QAction):
         @param engine reference to the open search engine object (OpenSearchEngine)
         @param parent reference to the parent object (QObject)
         """
-        QAction.__init__(self, parent)
+        super().__init__(parent)
         
         self.__engine = engine
         if self.__engine.networkAccessManager() is None:

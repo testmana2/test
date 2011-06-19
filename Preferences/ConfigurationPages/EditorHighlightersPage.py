@@ -30,7 +30,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         
         @param lexers reference to the lexers dictionary
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorHighlightersPage")
         

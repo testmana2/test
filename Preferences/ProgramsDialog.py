@@ -32,7 +32,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         
         @param parent The parent widget of this dialog. (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.setObjectName("ProgramsDialog")
         

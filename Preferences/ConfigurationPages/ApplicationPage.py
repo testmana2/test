@@ -21,7 +21,7 @@ class ApplicationPage(ConfigurationPageBase, Ui_ApplicationPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("ApplicationPage")
         

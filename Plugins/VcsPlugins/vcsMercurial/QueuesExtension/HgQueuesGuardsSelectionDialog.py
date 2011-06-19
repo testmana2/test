@@ -25,7 +25,7 @@ class HgQueuesGuardsSelectionDialog(QDialog, Ui_HgQueuesGuardsSelectionDialog):
         @param listOnly flag indicating to only list the guards (boolean)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         for guard in guards:

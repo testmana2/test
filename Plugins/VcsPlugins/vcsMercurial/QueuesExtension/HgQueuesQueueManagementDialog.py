@@ -37,7 +37,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         @param repodir name of the repository directory (string)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if mode not in (HgQueuesQueueManagementDialog.NO_INPUT,

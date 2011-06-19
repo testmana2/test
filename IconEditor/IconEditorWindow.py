@@ -46,7 +46,7 @@ class IconEditorWindow(QMainWindow):
         @keyparam initShortcutsOnly flag indicating to just initialize the keyboard
             shortcuts (boolean)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("eric5_icon_editor")
         self.setAttribute(Qt.WA_DeleteOnClose)
         

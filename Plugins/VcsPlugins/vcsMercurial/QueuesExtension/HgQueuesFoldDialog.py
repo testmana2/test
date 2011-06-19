@@ -26,7 +26,7 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         @param patchesList list of patches to select from (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.addButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))

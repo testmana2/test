@@ -45,7 +45,7 @@ class OpenSearchManager(QObject):
         """
         if parent is None:
             parent = e5App()
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__replies = []
         self.__engines = {}

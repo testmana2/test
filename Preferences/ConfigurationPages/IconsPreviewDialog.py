@@ -26,7 +26,7 @@ class IconsPreviewDialog(QDialog, Ui_IconsPreviewDialog):
         @param parent parent widget (QWidget)
         @param dirName name of directory to show (string)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         dir = QDir(dirName)

@@ -24,7 +24,7 @@ class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.infoLabel.setText("<b>{0}</b>".format(fileName))

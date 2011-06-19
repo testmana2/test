@@ -23,7 +23,7 @@ class LexerFortran77(QsciLexerFortran77, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerFortran77.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "c"

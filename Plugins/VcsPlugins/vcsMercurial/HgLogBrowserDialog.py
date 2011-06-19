@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
      QSize, QPoint
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
-    QTreeWidgetItem, QApplication, QCursor, QWidget, QLineEdit, QColor, \
+    QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
     QPixmap, QPainter, QPen, QBrush, QIcon
 
 from E5Gui.E5Application import e5App
@@ -52,7 +52,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param bundle name of a bundle file (string)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if mode == "log":
@@ -1192,4 +1192,4 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

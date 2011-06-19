@@ -23,7 +23,7 @@ class TemplateMultipleVariablesDialog(QDialog):
         @param variables list of template variable names (list of strings)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
 
         self.TemplateMultipleVariablesDialogLayout = QVBoxLayout(self)
         self.TemplateMultipleVariablesDialogLayout.setMargin(6)

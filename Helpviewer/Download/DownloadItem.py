@@ -50,7 +50,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @keyparam parent reference to the parent widget (QWidget)
         @keyparam mainWindow reference to the main window (HelpWindow)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         p = self.infoLabel.palette()

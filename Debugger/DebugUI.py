@@ -65,7 +65,7 @@ class DebugUI(QObject):
         @param debugViewer reference to the debug viewer widget
         @param project reference to the project object
         """
-        QObject.__init__(self, ui)
+        super().__init__(ui)
         
         self.ui = ui
         self.viewmanager = vm

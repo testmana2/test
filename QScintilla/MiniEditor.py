@@ -45,7 +45,7 @@ class MiniScintilla(QsciScintillaCompat):
         @param name name of this instance (string)
         @param flags window flags
         """
-        QsciScintillaCompat.__init__(self, parent)
+        super().__init__(parent)
         
         self.mw = parent
     
@@ -75,7 +75,7 @@ class MiniScintilla(QsciScintillaCompat):
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        QsciScintillaCompat.focusInEvent(self, event)
+        super().focusInEvent(event)
     
     def focusOutEvent(self, event):
         """
@@ -86,7 +86,7 @@ class MiniScintilla(QsciScintillaCompat):
         self.mw.editorActGrp.setEnabled(False)
         self.setCaretWidth(0)
         
-        QsciScintillaCompat.focusOutEvent(self, event)
+        super().focusOutEvent(event)
 
 
 class MiniEditor(QMainWindow):
@@ -106,7 +106,7 @@ class MiniEditor(QMainWindow):
         @param parent reference to the parent widget (QWidget)
         @param name object name of the window (string)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         if name is not None:
             self.setObjectName(name)
         self.setAttribute(Qt.WA_DeleteOnClose)

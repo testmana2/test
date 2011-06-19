@@ -21,7 +21,7 @@ class IconSizeDialog(QDialog, Ui_IconSizeDialog):
         @param height height to be set (integer)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.widthSpin.setValue(width)

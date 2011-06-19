@@ -30,7 +30,7 @@ class SymbolsModel(QAbstractTableModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__headerData = [
             self.trUtf8("Code"),
@@ -330,7 +330,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

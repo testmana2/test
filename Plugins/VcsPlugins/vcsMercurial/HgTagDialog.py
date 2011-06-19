@@ -29,7 +29,7 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         @param taglist list of previously entered tags (list of strings)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
        
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

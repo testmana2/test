@@ -38,7 +38,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         @param name the widget name of this dialog
         @param modal flag indicating a modal dialog
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         if name:
             self.setObjectName(name)

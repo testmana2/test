@@ -25,7 +25,7 @@ class vcsCommandOptionsDialog(QDialog, Ui_vcsCommandOptionsDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if Utilities.isWindowsPlatform():

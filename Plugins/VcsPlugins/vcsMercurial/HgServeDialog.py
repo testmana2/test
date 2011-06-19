@@ -33,7 +33,7 @@ class HgServeDialog(QMainWindow):
         @param path path of the repository to serve (string)
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         
         self.vcs = vcs
         self.__repoPath = path

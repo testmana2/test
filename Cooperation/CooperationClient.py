@@ -44,7 +44,7 @@ class CooperationClient(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__server = CooperationServer(self)
         self.__peers = collections.defaultdict(list)

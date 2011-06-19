@@ -30,7 +30,7 @@ class ExceptionLogger(QTreeWidget):
         
         @param parent the parent widget of this widget
         """
-        QTreeWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("ExceptionLogger")
         
         self.setWindowTitle(self.trUtf8("Exceptions"))

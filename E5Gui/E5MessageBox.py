@@ -77,7 +77,7 @@ class E5MessageBox(QMessageBox):
         @keyparam buttons set of standard buttons to generate (StandardButtons)
         @keyparam parent parent widget of the message box (QWidget)
         """
-        QMessageBox.__init__(self, parent)
+        super().__init__(parent)
         self.setIcon(icon)
         if modal:
             if parent is not None:

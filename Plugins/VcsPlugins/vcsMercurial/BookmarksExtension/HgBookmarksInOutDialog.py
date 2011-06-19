@@ -36,7 +36,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
             HgBookmarksInOutDialog.OUTGOING)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -277,4 +277,4 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
             self.intercept = False
             evt.accept()
             return
-        QDialog.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

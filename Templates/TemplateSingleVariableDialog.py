@@ -23,7 +23,7 @@ class TemplateSingleVariableDialog(QDialog, Ui_TemplateSingleVariableDialog):
         @param variable template variable name (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.variableLabel.setText(variable)

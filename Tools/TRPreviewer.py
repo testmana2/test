@@ -42,7 +42,7 @@ class TRPreviewer(QMainWindow):
         self.mainWidget = None
         self.currentFile = QDir.currentPath()
         
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         if not name:
             self.setObjectName("TRPreviewer")
         else:
@@ -116,7 +116,7 @@ class TRPreviewer(QMainWindow):
         the main window has been shown. This way, previewing a dialog
         doesn't interfere with showing the main window.
         """
-        QMainWindow.show(self)
+        super().show()
         if self.filesToLoad:
             filenames, self.filesToLoad = (self.filesToLoad[:], [])
             first = True
@@ -425,7 +425,7 @@ class TranslationsDict(QObject):
             available languages (QComboBox)
         @param parent parent widget (QWidget)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.selector = selector
         self.currentTranslator = None
@@ -643,7 +643,7 @@ class WidgetView(QWidget):
         @param parent parent widget (QWidget)
         @param name name of this widget (string)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
             self.setWindowTitle(name)
@@ -726,7 +726,7 @@ class WidgetArea(QMdiArea):
         
         @param parent parent widget (QWidget)
         """
-        QMdiArea.__init__(self, parent)
+        super().__init__(parent)
         
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)

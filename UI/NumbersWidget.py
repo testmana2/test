@@ -27,7 +27,7 @@ class BinaryModel(QAbstractTableModel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__bits = 0
         self.__value = 0
@@ -162,7 +162,7 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

@@ -24,7 +24,7 @@ class SideWidget(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
     
     def event(self, evt):
         """
@@ -52,7 +52,7 @@ class E5LineEdit(QLineEdit):
         @param parent reference to the parent widget (QWidget)
         @param inactiveText text to be shown on inactivity (string)
         """
-        QLineEdit.__init__(self, parent)
+        super().__init__(parent)
         
         self.setMinimumHeight(22)
         
@@ -106,7 +106,7 @@ class E5LineEdit(QLineEdit):
         @param evt reference to the resize event (QResizeEvent)
         """
         self.__updateSideWidgetLocations()
-        QLineEdit.resizeEvent(self, evt)
+        super().resizeEvent(evt)
     
     def paintEvent(self, evt):
         """
@@ -114,7 +114,7 @@ class E5LineEdit(QLineEdit):
         
         @param evt reference to the paint event (QPaintEvent)
         """
-        QLineEdit.paintEvent(self, evt)
+        super().paintEvent(evt)
         
         if not self.text() and \
            self.__inactiveText and \

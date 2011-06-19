@@ -23,7 +23,7 @@ class SslLabel(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QLabel.__init__(self, parent)
+        super().__init__(parent)
         
         self.setFocusPolicy(Qt.NoFocus)
         self.setCursor(Qt.ArrowCursor)
@@ -37,7 +37,7 @@ class SslLabel(QLabel):
         if evt.button() == Qt.LeftButton:
             self.clicked.emit()
         else:
-            QLabel.mouseReleaseEvent(self, evt)
+            super().mouseReleaseEvent(evt)
     
     def mouseDoubleClickEvent(self, evt):
         """
@@ -48,4 +48,4 @@ class SslLabel(QLabel):
         if evt.button() == Qt.LeftButton:
             self.clicked.emit()
         else:
-            QLabel.mouseDoubleClickEvent(self, evt)
+            super().mouseDoubleClickEvent(evt)

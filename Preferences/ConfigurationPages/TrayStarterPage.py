@@ -24,7 +24,7 @@ class TrayStarterPage(ConfigurationPageBase, Ui_TrayStarterPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("Py3FlakesPage")
         

@@ -28,7 +28,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         @param pluginManager reference to the plugin manager object
         @param parent parent of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.pm = pluginManager

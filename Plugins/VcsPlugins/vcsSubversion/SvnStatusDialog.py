@@ -36,7 +36,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__toBeCommittedColumn = 0
@@ -543,7 +543,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)
         
     @pyqtSlot()
     def on_refreshButton_clicked(self):

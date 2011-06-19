@@ -28,7 +28,7 @@ class E5PassivePopup(QFrame):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QFrame.__init__(self, None)
+        super().__init__(None)
         
         self.__popupStyle = DEFAULT_POPUP_TYPE
         self.__msgView = None
@@ -70,7 +70,7 @@ class E5PassivePopup(QFrame):
         @param visible flag indicating the visibility status (boolean)
         """
         if not visible:
-            QFrame.setVisible(self, visible)
+            super().setVisible(visible)
             return
         
         if self.size() != self.sizeHint():
@@ -80,7 +80,7 @@ class E5PassivePopup(QFrame):
             self.__positionSelf()
         else:
             self.move(self.__fixedPosition)
-        QFrame.setVisible(self, True)
+        super().setVisible(True)
         
         delay = self.__hideDelay
         if delay < 0:
@@ -96,7 +96,7 @@ class E5PassivePopup(QFrame):
         """
         if p is not None:
             self.__fixedPosition = p
-        QFrame.show(self)
+        super().show()
     
     def setTimeout(self, delay):
         """

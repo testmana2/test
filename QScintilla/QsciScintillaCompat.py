@@ -53,7 +53,7 @@ class QsciScintillaCompat(QsciScintilla):
         @param name name of this instance (string)
         @param flags window flags
         """
-        QsciScintilla.__init__(self, parent)
+        super().__init__(parent)
         
         self.zoom = 0
         
@@ -69,7 +69,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         @param lex the lexer to be set or None to reset it.
         """
-        QsciScintilla.setLexer(self, lex)
+        super().setLexer(lex)
         if lex is None:
             self.clearStyles()
     
@@ -306,7 +306,7 @@ class QsciScintillaCompat(QsciScintilla):
         @param zoom zoom factor increment
         """
         self.zoom += zoom
-        QsciScintilla.zoomIn(self, zoom)
+        super().zoomIn(zoom)
     
     def zoomOut(self, zoom=1):
         """
@@ -315,7 +315,7 @@ class QsciScintillaCompat(QsciScintilla):
         @param zoom zoom factor decrement
         """
         self.zoom -= zoom
-        QsciScintilla.zoomOut(self, zoom)
+        super().zoomOut(zoom)
     
     def zoomTo(self, zoom):
         """
@@ -324,7 +324,7 @@ class QsciScintillaCompat(QsciScintilla):
         @param zoom zoom factor
         """
         self.zoom = zoom
-        QsciScintilla.zoomTo(self, zoom)
+        super().zoomTo(zoom)
     
     def getZoom(self):
         """
@@ -878,10 +878,10 @@ class QsciScintillaCompat(QsciScintilla):
         @param margin margin number (integer)
         """
         if style < self.ArrowFoldStyle:
-            QsciScintilla.setFolding(self, style, margin)
+            super().setFolding(style, margin)
         else:
-            QsciScintilla.setFolding(
-                self, QsciScintilla.PlainFoldStyle, margin)
+            super().setFolding(
+                QsciScintilla.PlainFoldStyle, margin)
             
             if style == self.ArrowFoldStyle:
                 self.__setFoldMarker(QsciScintilla.SC_MARKNUM_FOLDER,
@@ -984,7 +984,7 @@ class QsciScintillaCompat(QsciScintilla):
         if self.isListActive():
             self.cancelList()
         
-        QsciScintilla.focusOutEvent(self, event)
+        super().focusOutEvent(event)
 
     ###########################################################################
     # interface methods to the mini editor

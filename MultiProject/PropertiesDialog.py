@@ -24,7 +24,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @param new flag indicating the generation of a new multi project
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.multiProject = multiProject

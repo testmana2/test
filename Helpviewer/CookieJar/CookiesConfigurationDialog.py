@@ -25,7 +25,7 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         """
         Constructor
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__mw = parent
@@ -74,7 +74,7 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         jar.setKeepPolicy(keepPolicy)
         jar.setFilterTrackingCookies(self.filterTrackingCookiesCheckbox.isChecked())
         
-        QDialog.accept(self)
+        super().accept()
     
     @pyqtSlot()
     def on_exceptionsButton_clicked(self):

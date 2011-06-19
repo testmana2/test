@@ -23,7 +23,7 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         @param fileData reference to the data buffer (QByteArray)
         @param mimeType for the reply (string)
         """
-        QNetworkReply.__init__(self, parent)
+        super().__init__(parent)
         self.setOperation(QNetworkAccessManager.GetOperation)
         self.setRequest(request)
         self.setUrl(request.url())

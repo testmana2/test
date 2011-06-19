@@ -30,7 +30,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         Constructor
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))

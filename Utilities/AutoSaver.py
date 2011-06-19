@@ -24,7 +24,7 @@ class AutoSaver(QObject):
         @param parent reference to the parent object (QObject)
         @param save slot to be called to perform the save operation
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         if parent is None:
             raise RuntimeError("AutoSaver: parent must not be None.")
@@ -55,7 +55,7 @@ class AutoSaver(QObject):
         if evt.timerId() == self.__timer.timerId():
             self.saveIfNeccessary()
         else:
-            QObject.timerEvent(self, evt)
+            super().timerEvent(evt)
     
     def saveIfNeccessary(self):
         """

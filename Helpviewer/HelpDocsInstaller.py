@@ -33,7 +33,7 @@ class HelpDocsInstaller(QThread):
         
         @param collection full pathname of the collection file (string)
         """
-        QThread.__init__(self)
+        super().__init__()
         
         self.__abort = False
         self.__collection = collection

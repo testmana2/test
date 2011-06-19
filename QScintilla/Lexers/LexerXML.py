@@ -23,7 +23,7 @@ class LexerXML(QsciLexerXML, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerXML.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.streamCommentString = {

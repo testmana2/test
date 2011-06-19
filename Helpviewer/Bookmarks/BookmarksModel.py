@@ -37,7 +37,7 @@ class BookmarksModel(QAbstractItemModel):
         @param manager reference to the bookmark manager object (BookmarksManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractItemModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__endMacro = False
         self.__bookmarksManager = manager

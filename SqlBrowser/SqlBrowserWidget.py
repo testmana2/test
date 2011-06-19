@@ -33,7 +33,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.table.addAction(self.insertRowAction)

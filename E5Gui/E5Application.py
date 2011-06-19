@@ -21,7 +21,7 @@ class E5Application(QApplication):
         
         @param argv command line arguments
         """
-        QApplication.__init__(self, argv)
+        super().__init__(argv)
         
         self.__objectRegistry = {}
         self.__pluginObjectRegistry = {}

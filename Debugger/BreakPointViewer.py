@@ -33,7 +33,7 @@ class BreakPointViewer(QTreeView):
         
         @param parent the parent (QWidget)
         """
-        QTreeView.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("BreakPointViewer")
         
         self.__model = None
@@ -66,7 +66,7 @@ class BreakPointViewer(QTreeView):
         
         self.sortingModel = QSortFilterProxyModel()
         self.sortingModel.setSourceModel(self.__model)
-        QTreeView.setModel(self, self.sortingModel)
+        super().setModel(self.sortingModel)
         
         header = self.header()
         header.setSortIndicator(0, Qt.AscendingOrder)

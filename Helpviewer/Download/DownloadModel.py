@@ -21,7 +21,7 @@ class DownloadModel(QAbstractListModel):
         @param manager reference to the download manager (DownloadManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractListModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__manager = manager
     

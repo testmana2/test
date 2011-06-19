@@ -38,7 +38,7 @@ class HelpWebSearchWidget(QWidget):
         @param inactiveText text to be shown on inactivity (string)
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.mw = parent
         

@@ -29,7 +29,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         

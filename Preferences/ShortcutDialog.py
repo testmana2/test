@@ -30,7 +30,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         @param name The name of this dialog. (string)
         @param modal Flag indicating a modal dialog. (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)

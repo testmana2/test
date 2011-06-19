@@ -23,7 +23,7 @@ class SpellCheckingDialog(QDialog, Ui_SpellCheckingDialog):
         """
         Constructor
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__spell = spellChecker

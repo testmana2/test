@@ -21,7 +21,7 @@ class Py3FlakesPage(ConfigurationPageBase, Ui_Py3FlakesPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("Py3FlakesPage")
         

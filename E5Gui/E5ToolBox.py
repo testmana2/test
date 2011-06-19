@@ -22,7 +22,7 @@ class E5VerticalToolBox(QToolBox):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QToolBox.__init__(self, parent)
+        super().__init__(parent)
     
     def wheelEvent(self, event):
         """

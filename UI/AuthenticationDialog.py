@@ -25,7 +25,7 @@ class AuthenticationDialog(QDialog, Ui_AuthenticationDialog):
         @param showSave flag to indicate to show the save checkbox (boolean)
         @param saveIt flag indicating the value for the save checkbox (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.infoLabel.setText(info)

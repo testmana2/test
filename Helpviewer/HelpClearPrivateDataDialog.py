@@ -22,7 +22,7 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
     
     def getData(self):

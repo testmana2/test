@@ -25,7 +25,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         @param engine reference to the help engine (QHelpEngine)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__engine = engine

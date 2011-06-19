@@ -36,7 +36,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
@@ -260,4 +260,4 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             self.parameters['languages'].append(itm.text())
         
         # call the accept slot of the base class
-        QDialog.accept(self)
+        super().accept()

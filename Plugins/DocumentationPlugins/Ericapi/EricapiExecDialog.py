@@ -33,7 +33,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         @param cmdname name of the ericapi generator (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setModal(True)
         self.setupUi(self)
         

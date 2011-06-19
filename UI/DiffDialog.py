@@ -199,7 +199,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         Constructor
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.file1Completer = E5FileCompleter(self.file1Edit)
@@ -248,7 +248,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         if filename:
             self.file1Edit.setText(filename)
-        QWidget.show(self)
+        super().show()
         
     def on_buttonBox_clicked(self, button):
         """
@@ -497,7 +497,7 @@ class DiffWindow(QMainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.cw = DiffDialog(self)
         self.cw.installEventFilter(self)
         size = self.cw.size()

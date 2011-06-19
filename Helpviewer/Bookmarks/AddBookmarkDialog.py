@@ -27,7 +27,7 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QSortFilterProxyModel.__init__(self, parent)
+        super().__init__(parent)
     
     def columnCount(self, parent):
         """
@@ -82,7 +82,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         @param bookmarksManager reference to the bookmarks manager
             object (BookmarksManager)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__bookmarksManager = None
@@ -206,7 +206,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         """
         if (not self.__addFolder and not self.addressEdit.text()) or \
            not self.nameEdit.text():
-            QDialog.accept(self)
+            super().accept()
             return
         
         idx = self.currentIndex()
@@ -226,4 +226,4 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         self.__bookmarksManager.addBookmark(parent, bookmark)
         self.__addedNode = bookmark
         
-        QDialog.accept(self)
+        super().accept()

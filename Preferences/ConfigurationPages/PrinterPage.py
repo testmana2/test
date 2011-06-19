@@ -23,7 +23,7 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("PrinterPage")
         

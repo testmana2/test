@@ -34,7 +34,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         @keyparam parent parent widget (QWidget)
         @keyparam log optional log message (string)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self, log)
         

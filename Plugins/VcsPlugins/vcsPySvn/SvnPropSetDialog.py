@@ -23,7 +23,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         @param recursive flag indicating a recursive set is requested
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.recurseCheckBox.setChecked(recursive)

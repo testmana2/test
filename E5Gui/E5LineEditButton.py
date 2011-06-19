@@ -21,7 +21,7 @@ class E5LineEditButton(QAbstractButton):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QAbstractButton.__init__(self, parent)
+        super().__init__(parent)
         
         self.__menu = None
         self.__image = None
@@ -59,7 +59,7 @@ class E5LineEditButton(QAbstractButton):
             self.__image = None
         else:
             self.__image = icon.pixmap(16, 16).toImage()
-        QAbstractButton.setIcon(self, icon)
+        super().setIcon(icon)
     
     def __clicked(self):
         """

@@ -23,7 +23,7 @@ class EditorCalltipsPage(ConfigurationPageBase, Ui_EditorCalltipsPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("EditorCalltipsPage")
         

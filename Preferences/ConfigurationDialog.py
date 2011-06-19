@@ -41,7 +41,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
         @param pageName name of the configuration page (string)
         @param iconFile file name of the icon to be shown (string)
         """
-        QTreeWidgetItem.__init__(self, parent, [text])
+        super().__init__(parent, [text])
         self.setIcon(0, UI.PixmapCache.getIcon(iconFile))
         
         self.__pageName = pageName
@@ -86,7 +86,7 @@ class ConfigurationWidget(QWidget):
             ConfigurationWidget.TrayStarterMode
         )
         
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.fromEric = fromEric
         self.displayMode = displayMode
         
@@ -675,7 +675,7 @@ class ConfigurationDialog(QDialog):
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)
@@ -742,7 +742,7 @@ class ConfigurationWindow(QMainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         
         self.cw = ConfigurationWidget(self, fromEric=False)
         size = self.cw.size()

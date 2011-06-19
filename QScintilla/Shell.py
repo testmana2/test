@@ -44,7 +44,7 @@ class Shell(QsciScintillaCompat):
         @param vm reference to the viewmanager object
         @param parent parent widget (QWidget)
         """
-        QsciScintillaCompat.__init__(self, parent)
+        super().__init__(parent)
         self.setUtf8(True)
         
         self.vm = vm
@@ -534,7 +534,7 @@ class Shell(QsciScintillaCompat):
         @param platform platform of the remote interpreter (string)
         @param dbgclient debug client variant used (string)
         """
-        QsciScintillaCompat.clear(self)
+        super().clear()
         if self.passive and not self.dbs.isConnected():
             self.__write(self.trUtf8('Passive Debug Mode'))
             self.__write(self.trUtf8('\nNot connected'))
@@ -722,7 +722,7 @@ class Shell(QsciScintillaCompat):
         if event.button() == Qt.MidButton:
             self.__middleMouseButton()
         else:
-            QsciScintillaCompat.mousePressEvent(self, event)
+            super().mousePressEvent(event)
         
     def editorCommand(self, cmd):
         """
@@ -760,7 +760,7 @@ class Shell(QsciScintillaCompat):
                 self.prline, self.prcol = self.getCursorPosition()
             if self.echoInput:
                 ac = self.isListActive()
-                QsciScintillaCompat.keyPressEvent(self, ev)
+                super().keyPressEvent(ev)
                 self.incrementalSearchActive = True
                 if ac and \
                    self.racEnabled:
@@ -1334,7 +1334,7 @@ class Shell(QsciScintillaCompat):
         if self.inDragDrop:
             event.acceptProposedAction()
         else:
-            QsciScintillaCompat.dragEnterEvent(self, event)
+            super().dragEnterEvent(event)
         
     def dragMoveEvent(self, event):
         """
@@ -1345,7 +1345,7 @@ class Shell(QsciScintillaCompat):
         if self.inDragDrop:
             event.accept()
         else:
-            QsciScintillaCompat.dragMoveEvent(self, event)
+            super().dragMoveEvent(event)
         
     def dragLeaveEvent(self, event):
         """
@@ -1357,7 +1357,7 @@ class Shell(QsciScintillaCompat):
             self.inDragDrop = False
             event.accept()
         else:
-            QsciScintillaCompat.dragLeaveEvent(self, event)
+            super().dragLeaveEvent(event)
         
     def dropEvent(self, event):
         """
@@ -1384,7 +1384,7 @@ class Shell(QsciScintillaCompat):
                 self.executeLines(s)
             del s
         else:
-            QsciScintillaCompat.dropEvent(self, event)
+            super().dropEvent(event)
         
         self.inDragDrop = False
         
@@ -1410,7 +1410,7 @@ class Shell(QsciScintillaCompat):
         self.setCaretWidth(self.caretWidth)
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        QsciScintillaCompat.focusInEvent(self, event)
+        super().focusInEvent(event)
         
     def focusOutEvent(self, event):
         """
@@ -1423,7 +1423,7 @@ class Shell(QsciScintillaCompat):
         except AttributeError:
             pass
         self.setCaretWidth(0)
-        QsciScintillaCompat.focusOutEvent(self, event)
+        super().focusOutEvent(event)
         
     def insert(self, txt):
         """

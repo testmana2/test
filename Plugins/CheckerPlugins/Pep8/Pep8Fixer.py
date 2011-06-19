@@ -38,7 +38,7 @@ class Pep8Fixer(QObject):
             string (string)
         @param inPlace flag indicating to modify the file in place (boolean)
         """
-        QObject.__init__(self)
+        super().__init__()
         
         self.__project = project
         self.__filename = filename

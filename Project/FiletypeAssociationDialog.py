@@ -24,7 +24,7 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         @param project reference to the project object
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
 
         self.filetypeAssociationList.headerItem().setText(

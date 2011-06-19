@@ -26,7 +26,7 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         @param bookmarksList list of bookmarks (list of strings)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

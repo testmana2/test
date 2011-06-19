@@ -30,7 +30,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.bTest = \

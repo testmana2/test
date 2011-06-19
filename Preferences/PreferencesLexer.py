@@ -69,7 +69,7 @@ class PreferencesLexer(QsciLexer):
         @param language The lexer language. (string)
         @param parent The parent widget of this lexer. (QextScintilla)
         """
-        QsciLexer.__init__(self, parent)
+        super().__init__(parent)
         
         # instantiate a lexer object for the given language
         lex = QScintilla.Lexers.getLexer(language)

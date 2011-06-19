@@ -23,7 +23,7 @@ class IconZoomDialog(QDialog, Ui_IconZoomDialog):
         @param zoom zoom factor to show in the spinbox
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.zoomSpinBox.setValue(zoom * 100)

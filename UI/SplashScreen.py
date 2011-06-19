@@ -27,7 +27,7 @@ class SplashScreen(QSplashScreen):
         ericPic = QPixmap(os.path.join(getConfig('ericPixDir'), 'ericSplash.png'))
         self.labelAlignment = \
             Qt.Alignment(Qt.AlignBottom | Qt.AlignRight | Qt.AlignAbsolute)
-        QSplashScreen.__init__(self, ericPic)
+        super().__init__(ericPic)
         self.show()
         QApplication.flush()
         
@@ -38,14 +38,14 @@ class SplashScreen(QSplashScreen):
         @param msg message to be shown (string)
         """
         logging.debug(msg)
-        QSplashScreen.showMessage(self, msg, self.labelAlignment, QColor(Qt.white))
+        super().showMessage(msg, self.labelAlignment, QColor(Qt.white))
         QApplication.processEvents()
         
     def clearMessage(self):
         """
         Public method to clear the message shown.
         """
-        QSplashScreen.clearMessage(self)
+        super().clearMessage()
         QApplication.processEvents()
 
 

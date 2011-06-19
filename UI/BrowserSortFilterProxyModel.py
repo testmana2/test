@@ -23,7 +23,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QSortFilterProxyModel.__init__(self, parent)
+        super().__init__(parent)
         self.hideNonPublic = Preferences.getUI("BrowsersHideNonPublic")
         
     def sort(self, column, order):
@@ -35,7 +35,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         """
         self.__sortColumn = column
         self.__sortOrder = order
-        QSortFilterProxyModel.sort(self, column, order)
+        super().sort(column, order)
         
     def lessThan(self, left, right):
         """

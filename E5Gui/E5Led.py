@@ -29,7 +29,7 @@ class E5Led(QWidget):
         @param shape shape of the LED (E5LedCircular, E5LedRectangular)
         @param rectRation ratio width to height, if shape is rectangular (float)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         if color is None:
             color = QColor("green")

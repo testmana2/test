@@ -68,7 +68,7 @@ class MultiProject(QObject):
         @param parent parent widget (usually the ui object) (QWidget)
         @param filename optional filename of a multi project file to open (string)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.ui = parent
         self.projectObject = project

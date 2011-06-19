@@ -30,7 +30,7 @@ class VcsStatusMonitorThread(QThread):
         @param vcs reference to the version control object
         @param parent reference to the parent object (QObject)
         """
-        QThread.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("VcsStatusMonitorThread")
         
         self.setTerminationEnabled(True)

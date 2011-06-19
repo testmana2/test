@@ -25,7 +25,7 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         @param patchesList list of patches to select from (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.currentButton.setText(

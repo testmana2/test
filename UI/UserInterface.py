@@ -128,7 +128,7 @@ class Redirector(QObject):
         
         @param stderr flag indicating stderr is being redirected
         """
-        QObject.__init__(self)
+        super().__init__()
         self.stderr = stderr
         self.buffer = ''
         
@@ -207,7 +207,7 @@ class UserInterface(QMainWindow):
         @param restartArguments list of command line parameters to be used for a
             restart (list of strings)
         """
-        QMainWindow.__init__(self)
+        super().__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
         
         self.__restartArgs = restartArguments[:]

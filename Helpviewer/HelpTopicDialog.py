@@ -26,7 +26,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
         @param links dictionary with help topic as key (string) and
             URL as value (QUrl)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.label.setText(self.trUtf8("Choose a &topic for <b>{0}</b>:")\

@@ -23,7 +23,7 @@ class LexerJava(QsciLexerJava, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerJava.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "//"

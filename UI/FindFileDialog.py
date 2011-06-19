@@ -51,7 +51,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         @param project reference to the project object
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowFlags(Qt.Window))
         
@@ -181,7 +181,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findList.clear()
             self.replacetextCombo.setEditText("")
         
-        QDialog.show(self)
+        super().show()
         
     def on_findtextCombo_editTextChanged(self, text):
         """

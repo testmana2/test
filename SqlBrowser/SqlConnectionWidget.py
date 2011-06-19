@@ -31,7 +31,7 @@ class SqlConnectionWidget(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         layout = QVBoxLayout(self)
         layout.setMargin(0)

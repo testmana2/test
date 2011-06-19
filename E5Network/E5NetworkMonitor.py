@@ -73,7 +73,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
             (QNetworkAccessManager)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
@@ -125,14 +125,14 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         @param evt reference to the close event object (QCloseEvent)
         """
         self.__class__._monitor = None
-        QDialog.closeEvent(self, evt)
+        super().closeEvent(evt)
     
     def reject(self):
         """
         Public slot to close the dialog with a Reject status.
         """
         self.__class__._monitor = None
-        QDialog.reject(self)
+        super().reject()
     
     def __currentChanged(self, current, previous):
         """
@@ -211,7 +211,7 @@ class E5RequestModel(QAbstractTableModel):
             (QNetworkAccessManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__headerData = [
             self.trUtf8("Method"),

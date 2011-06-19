@@ -32,7 +32,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

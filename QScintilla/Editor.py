@@ -140,7 +140,7 @@ class Editor(QsciScintillaCompat):
         @param editor reference to an Editor object, if this is a cloned view
         @param tv reference to the task viewer object
         """
-        QsciScintillaCompat.__init__(self)
+        super().__init__()
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.setAttribute(Qt.WA_KeyCompression)
         self.setUtf8(True)
@@ -3755,7 +3755,7 @@ class Editor(QsciScintillaCompat):
         if self.__ctHookFunction is not None:
             self.__callTip()
         else:
-            QsciScintillaCompat.callTip(self)
+            super().callTip()
     
     def __callTip(self):
         """
@@ -3803,7 +3803,7 @@ class Editor(QsciScintillaCompat):
         if len(callTips) == 0:
             if Preferences.getEditor("CallTipsScintillaOnFail"):
                 # try QScintilla calltips
-                QsciScintillaCompat.callTip(self)
+                super().callTip()
             return
         
         ctshift = 0
@@ -5025,7 +5025,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to undo the last recorded change.
         """
-        QsciScintillaCompat.undo(self)
+        super().undo()
         self.undoAvailable.emit(self.isUndoAvailable())
         self.redoAvailable.emit(self.isRedoAvailable())
         
@@ -5033,7 +5033,7 @@ class Editor(QsciScintillaCompat):
         """
         Public method to redo the last recorded change.
         """
-        QsciScintillaCompat.redo(self)
+        super().redo()
         self.undoAvailable.emit(self.isUndoAvailable())
         self.redoAvailable.emit(self.isRedoAvailable())
         
@@ -5074,7 +5074,7 @@ class Editor(QsciScintillaCompat):
             self.project.projectPropertiesChanged.disconnect(
                 self.__projectPropertiesChanged)
         
-        QsciScintillaCompat.close(self)
+        super().close()
         
     def keyPressEvent(self, ev):
         """
@@ -5086,7 +5086,7 @@ class Editor(QsciScintillaCompat):
         
         # See it is text to insert.
         if len(txt) and txt >= " ":
-            QsciScintillaCompat.keyPressEvent(self, ev)
+            super().keyPressEvent(ev)
         else:
             ev.ignore()
         
@@ -5141,7 +5141,7 @@ class Editor(QsciScintillaCompat):
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        QsciScintillaCompat.focusInEvent(self, event)
+        super().focusInEvent(event)
         
     def focusOutEvent(self, event):
         """
@@ -5152,7 +5152,7 @@ class Editor(QsciScintillaCompat):
         self.vm.editorActGrp.setEnabled(False)
         self.setCaretWidth(0)
         
-        QsciScintillaCompat.focusOutEvent(self, event)
+        super().focusOutEvent(event)
         
     def changeEvent(self, evt):
         """
@@ -5177,7 +5177,7 @@ class Editor(QsciScintillaCompat):
                 cap = self.trUtf8("{0} (ro)").format(cap)
             self.setWindowTitle(cap)
         
-        QsciScintillaCompat.changeEvent(self, evt)
+        super().changeEvent(evt)
         
     def mousePressEvent(self, event):
         """
@@ -5186,7 +5186,7 @@ class Editor(QsciScintillaCompat):
         @param event the mouse press event (QMouseEvent)
         """
         self.vm.eventFilter(self, event)
-        QsciScintillaCompat.mousePressEvent(self, event)
+        super().mousePressEvent(event)
         
     def __updateReadOnly(self, bForce=True):
         """
@@ -5286,7 +5286,7 @@ class Editor(QsciScintillaCompat):
         if self.inDragDrop:
             event.acceptProposedAction()
         else:
-            QsciScintillaCompat.dragEnterEvent(self, event)
+            super().dragEnterEvent(event)
         
     def dragMoveEvent(self, event):
         """
@@ -5297,7 +5297,7 @@ class Editor(QsciScintillaCompat):
         if self.inDragDrop:
             event.accept()
         else:
-            QsciScintillaCompat.dragMoveEvent(self, event)
+            super().dragMoveEvent(event)
         
     def dragLeaveEvent(self, event):
         """
@@ -5309,7 +5309,7 @@ class Editor(QsciScintillaCompat):
             self.inDragDrop = False
             event.accept()
         else:
-            QsciScintillaCompat.dragLeaveEvent(self, event)
+            super().dragLeaveEvent(event)
         
     def dropEvent(self, event):
         """
@@ -5330,7 +5330,7 @@ class Editor(QsciScintillaCompat):
                                 .format(fname))
             event.acceptProposedAction()
         else:
-            QsciScintillaCompat.dropEvent(self, event)
+            super().dropEvent(event)
         
         self.inDragDrop = False
     
@@ -5556,7 +5556,7 @@ class Editor(QsciScintillaCompat):
                              for t in templateNames])
                         return
         
-        QsciScintillaCompat.editorCommand(self, cmd)
+        super().editorCommand(cmd)
     
     def __completionListSelected(self, id, txt):
         """

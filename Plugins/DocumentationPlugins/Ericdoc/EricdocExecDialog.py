@@ -33,7 +33,7 @@ class EricdocExecDialog(QDialog, Ui_EricdocExecDialog):
         @param cmdname name of the documentation generator (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setModal(True)
         self.setupUi(self)
         

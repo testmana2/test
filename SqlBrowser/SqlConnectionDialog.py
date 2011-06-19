@@ -27,7 +27,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         Constructor
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.databaseFileCompleter = E5FileCompleter()

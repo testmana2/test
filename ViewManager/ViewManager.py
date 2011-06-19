@@ -81,7 +81,7 @@ class QuickSearchLineEdit(QLineEdit):
         if evt.key() == Qt.Key_Escape:
             self.escPressed.emit()
         else:
-            QLineEdit.keyPressEvent(self, evt)  # pass it on
+            super().keyPressEvent(evt)  # pass it on
     
     def focusInEvent(self, evt):
         """
@@ -90,7 +90,7 @@ class QuickSearchLineEdit(QLineEdit):
         @param evt focus event (QFocusEvent)
         """
         self.gotFocus.emit()
-        QLineEdit.focusInEvent(self, evt)   # pass it on
+        super().focusInEvent(evt)   # pass it on
 
 
 class ViewManager(QObject):
@@ -132,7 +132,7 @@ class ViewManager(QObject):
         @param ui reference to the main user interface
         @param dbs reference to the debug server object
         """
-        QObject.__init__(self)
+        super().__init__()
         
         # initialize the instance variables
         self.editors = []

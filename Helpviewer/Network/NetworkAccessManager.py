@@ -60,7 +60,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         @param engine reference to the help engine (QHelpEngine)
         @param parent reference to the parent object (QObject)
         """
-        QNetworkAccessManager.__init__(self, parent)
+        super().__init__(parent)
         
         self.__adblockNetwork = None
         

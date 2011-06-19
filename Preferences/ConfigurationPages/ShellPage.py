@@ -23,7 +23,7 @@ class ShellPage(ConfigurationPageBase, Ui_ShellPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("ShellPage")
         

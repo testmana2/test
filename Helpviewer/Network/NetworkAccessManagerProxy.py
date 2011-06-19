@@ -27,7 +27,7 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
         
         @param parent reference to the parent object (QObject)
         """
-        QNetworkAccessManager.__init__(self, parent)
+        super().__init__(parent)
         self.__webPage = None
     
     def setWebPage(self, page):

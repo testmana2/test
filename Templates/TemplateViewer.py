@@ -46,7 +46,7 @@ class TemplateGroup(QTreeWidgetItem):
         self.language = language
         self.entries = {}
         
-        QTreeWidgetItem.__init__(self, parent, [name])
+        super().__init__(parent, [name])
         
         if Preferences.getTemplates("ShowTooltip"):
             self.setToolTip(0, language)
@@ -196,7 +196,7 @@ class TemplateEntry(QTreeWidgetItem):
         self.template = templateText
         self.__extractVariables()
         
-        QTreeWidgetItem.__init__(self, parent, [self.__displayText()])
+        super().__init__(parent, [self.__displayText()])
         if Preferences.getTemplates("ShowTooltip"):
             self.setToolTip(0, self.template)
 
@@ -377,7 +377,7 @@ class TemplateViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param viewmanager reference to the viewmanager object
         """
-        QTreeWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.viewmanager = viewmanager
         self.groups = {}

@@ -30,7 +30,7 @@ class CooperationServer(QTcpServer):
         
         @param parent reference to the parent object (QObject)
         """
-        QTcpServer.__init__(self, parent)
+        super().__init__(parent)
     
     def incomingConnection(self, socketDescriptor):
         """

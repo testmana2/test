@@ -25,7 +25,7 @@ class SubversionPage(ConfigurationPageBase, Ui_SubversionPage):
         
         @param plugin reference to the plugin object
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("SubversionPage")
         

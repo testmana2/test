@@ -29,7 +29,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         # set the validators for the double line edots

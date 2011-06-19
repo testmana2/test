@@ -25,7 +25,7 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         @param ignore flag indicating the ignore exceptions mode (boolean)
         @param parent the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         self.setModal(True)
         

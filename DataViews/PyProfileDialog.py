@@ -60,7 +60,7 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

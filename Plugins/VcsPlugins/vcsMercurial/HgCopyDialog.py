@@ -31,7 +31,7 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         @param move flag indicating a move operation
         @param force flag indicating a forced operation (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
        
         self.source = source

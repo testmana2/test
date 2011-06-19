@@ -25,7 +25,7 @@ class SvnLoginDialog(QDialog, Ui_SvnLoginDialog):
         @param may_save flag indicating, that subversion is willing to save
             the answers returned (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.realmLabel.setText(self.trUtf8("<b>Enter login data for realm {0}.</b>")\

@@ -47,7 +47,7 @@ class CookieJar(QNetworkCookieJar):
         
         @param parent reference to the parent object (QObject)
         """
-        QNetworkCookieJar.__init__(self, parent)
+        super().__init__(parent)
         
         self.__loaded = False
         self.__acceptCookies = self.AcceptOnlyFromSitesNavigatedTo

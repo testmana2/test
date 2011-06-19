@@ -102,7 +102,7 @@ class FtpReply(QNetworkReply):
         @param url requested FTP URL (QUrl)
         @param parent reference to the parent object (QObject)
         """
-        QNetworkReply.__init__(self, parent)
+        super().__init__(parent)
         
         self.__manager = parent
         

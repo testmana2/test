@@ -38,7 +38,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

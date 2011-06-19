@@ -26,7 +26,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         @param configDialog reference to the configuration dialog (ConfigurationDialog)
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("HelpWebBrowserPage")
         

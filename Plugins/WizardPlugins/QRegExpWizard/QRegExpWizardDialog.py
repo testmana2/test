@@ -36,7 +36,7 @@ class QRegExpWizardWidget(QWidget, Ui_QRegExpWizardDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         # initialize icons of the tool buttons
@@ -485,7 +485,7 @@ class QRegExpWizardDialog(QDialog):
         @param parent parent widget (QWidget)
         @param fromEric flag indicating a call from within eric5
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setModal(fromEric)
         self.setSizeGripEnabled(True)
         
@@ -522,7 +522,7 @@ class QRegExpWizardWindow(QMainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.cw = QRegExpWizardWidget(self, fromEric=False)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

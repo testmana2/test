@@ -16,7 +16,7 @@ class E5TextSpinBox(QSpinBox):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QSpinBox.__init__(self, parent)
+        super().__init__(parent)
         
         self.__items = []
         

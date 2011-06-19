@@ -33,7 +33,7 @@ class E5ArrowItem(QAbstractGraphicsShapeItem):
         @param type arrow type (NormalArrow, WideArrow)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
-        QAbstractGraphicsShapeItem.__init__(self, parent)
+        super().__init__(parent)
         
         self._origin = origin
         self._end = end

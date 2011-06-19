@@ -26,7 +26,7 @@ class E5TreeView(QTreeView):
             self.removeSelected()
             evt.setAccepted(True)
         else:
-            QTreeView.keyPressEvent(self, evt)
+            super().keyPressEvent(evt)
     
     def removeSelected(self):
         """

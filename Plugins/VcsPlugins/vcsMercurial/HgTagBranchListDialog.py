@@ -31,7 +31,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -295,4 +295,4 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             self.intercept = False
             evt.accept()
             return
-        QDialog.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)

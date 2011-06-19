@@ -30,7 +30,7 @@ class HistoryModel(QAbstractTableModel):
         @param historyManager reference to the history manager object (HistoryManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__historyManager = historyManager
         

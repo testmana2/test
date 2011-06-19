@@ -25,7 +25,7 @@ class HgOptionsDialog(QDialog, Ui_HgOptionsDialog):
         @param project reference to the project object
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
     
     def getData(self):

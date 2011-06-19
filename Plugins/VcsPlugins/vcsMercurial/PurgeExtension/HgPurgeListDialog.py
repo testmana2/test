@@ -23,7 +23,7 @@ class HgPurgeListDialog(QDialog, Ui_HgPurgeListDialog):
         @param entries list of entries to be shown (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.purgeList.addItems(sorted(entries))

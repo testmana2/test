@@ -64,7 +64,7 @@ class Browser(QTreeView):
         
         @param parent parent widget (QWidget)
         """
-        QTreeView.__init__(self, parent)
+        super().__init__(parent)
         
         self.setWindowTitle(QApplication.translate('Browser', 'File-Browser'))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

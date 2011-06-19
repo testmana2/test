@@ -28,7 +28,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.propFileCompleter = E5FileCompleter(self.propFileEdit)

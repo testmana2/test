@@ -108,7 +108,7 @@ class BookmarksManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)
@@ -535,7 +535,7 @@ class RemoveBookmarksCommand(QUndoCommand):
         @param parent reference to the parent node (BookmarkNode)
         @param row row number of bookmark (integer)
         """
-        QUndoCommand.__init__(self,
+        super().__init__(
             QApplication.translate("BookmarksManager", "Remove Bookmark"))
         
         self._row = row
@@ -605,7 +605,7 @@ class ChangeBookmarkCommand(QUndoCommand):
         @param title flag indicating a change of the title (True) or
             the URL (False) (boolean)
         """
-        QUndoCommand.__init__(self)
+        super().__init__()
         
         self._bookmarksManager = bookmarksManager
         self._title = title

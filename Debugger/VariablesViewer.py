@@ -39,7 +39,7 @@ class VariableItem(QTreeWidgetItem):
             dvalue = QApplication.translate("VariableItem",
                                             "<double click to show value>")
         
-        QTreeWidgetItem.__init__(self, parent, [dvar, dvalue, dtype])
+        super().__init__(parent, [dvar, dvalue, dtype])
         
         self.populated = True
         
@@ -256,7 +256,7 @@ class VariablesViewer(QTreeWidget):
         @param parent the parent (QWidget)
         @param scope flag indicating global (1) or local (0) variables
         """
-        QTreeWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',   # Python types
                            'Array': '[]', 'Hash': '{}'}                # Ruby types
@@ -675,7 +675,7 @@ class VariablesViewer(QTreeWidget):
             parentItem.expand()
             self.__resort()
         except AttributeError:
-            QTreeWidget.expandItem(self, parentItem)
+            super().expandItem(parentItem)
 
     def collapseItem(self, parentItem):
         """
@@ -689,7 +689,7 @@ class VariablesViewer(QTreeWidget):
         try:
             parentItem.collapse()
         except AttributeError:
-            QTreeWidget.collapseItem(self, parentItem)
+            super().collapseItem(parentItem)
 
     def __resort(self):
         """

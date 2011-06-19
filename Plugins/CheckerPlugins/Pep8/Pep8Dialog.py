@@ -47,7 +47,7 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.statisticsButton = self.buttonBox.addButton(

@@ -36,7 +36,7 @@ class UIPreviewer(QMainWindow):
         self.mainWidget = None
         self.currentFile = QDir.currentPath()
         
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         if not name:
             self.setObjectName("UIPreviewer")
         else:
@@ -107,7 +107,7 @@ class UIPreviewer(QMainWindow):
         the main window has been shown. This way, previewing a dialog
         doesn't interfere with showing the main window.
         """
-        QMainWindow.show(self)
+        super().show()
         if self.fileToLoad is not None:
             fn, self.fileToLoad = (self.fileToLoad, None)
             self.__loadFile(fn)

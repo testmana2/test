@@ -25,7 +25,7 @@ class HistoryCompletionView(QTableView):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QTableView.__init__(self, parent)
+        super().__init__(parent)
         
         self.horizontalHeader().hide()
         self.verticalHeader().hide()
@@ -48,7 +48,7 @@ class HistoryCompletionView(QTableView):
         self.horizontalHeader().resizeSection(0, 0.65 * self.width())
         self.horizontalHeader().setStretchLastSection(True)
         
-        QTableView.resizeEvent(self, evt)
+        super().resizeEvent(evt)
     
     def sizeHintForRow(self, row):
         """
@@ -72,7 +72,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QSortFilterProxyModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__searchString = ""
         self.__searchMatcher = QRegExp("", Qt.CaseInsensitive, QRegExp.FixedString)
@@ -218,7 +218,7 @@ class HistoryCompleter(QCompleter):
         @param model reference to the model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        QCompleter.__init__(self, model, parent)
+        super().__init__(model, parent)
         
         self.setPopup(HistoryCompletionView())
         

@@ -24,7 +24,7 @@ class NetworkReply(QNetworkReply):
         @param mimeType for the reply (string)
         @param parent reference to the parent object (QObject)
         """
-        QNetworkReply.__init__(self, parent)
+        super().__init__(parent)
         
         self.__data = fileData
         

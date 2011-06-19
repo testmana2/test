@@ -54,7 +54,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         @param port port to be used for the cooperation server (integer)
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.shareButton.setIcon(

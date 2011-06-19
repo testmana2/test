@@ -21,7 +21,7 @@ class HgExtensionProjectHelper(QObject):
         """
         Constructor
         """
-        QObject.__init__(self)
+        super().__init__()
         
         self.actions = []
         

@@ -27,7 +27,7 @@ class ShellHistoryDialog(QDialog, Ui_ShellHistoryDialog):
         @param vm reference to the viewmanager object
         @param shell reference to the shell object
         """
-        QDialog.__init__(self, shell)
+        super().__init__(shell)
         self.setupUi(self)
         
         self.historyList.addItems(history)

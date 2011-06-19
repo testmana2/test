@@ -39,7 +39,7 @@ class SearchReplaceWidget(QWidget):
         @param vm reference to the viewmanager object
         @param parent parent widget of this widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.viewmanager = vm
         self.replace = replace
@@ -611,7 +611,7 @@ character except an alphabetic character.</td></tr>
             self.__showReplace(text)
         else:
             self.__showFind(text)
-        QWidget.show(self)
+        super().show()
         self.activateWindow()
 
     @pyqtSlot()

@@ -20,7 +20,7 @@ class SingleApplicationServer(QLocalServer):
         
         @param name name this server is listening to (string)
         """
-        QLocalServer.__init__(self)
+        super().__init__()
         
         res = self.listen(name)
         if not res:

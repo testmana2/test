@@ -73,7 +73,7 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
         """
         Constructor
         """
-        QNetworkProxyFactory.__init__(self)
+        super().__init__()
     
     def queryProxy(self, query):
         """

@@ -98,7 +98,7 @@ class HistoryManager(QWebHistoryInterface):
         
         @param parent reference to the parent object (QObject)
         """
-        QWebHistoryInterface.__init__(self, parent)
+        super().__init__(parent)
         
         self.__saveTimer = AutoSaver(self, self.save)
         self.__daysToExpire = Preferences.getHelp("HistoryLimit")
@@ -122,7 +122,7 @@ class HistoryManager(QWebHistoryInterface):
         self.__historyFilterModel = HistoryFilterModel(self.__historyModel, self)
         self.__historyTreeModel = HistoryTreeModel(self.__historyFilterModel, self)
         
-        QWebHistoryInterface.setDefaultInterface(self)
+        super().setDefaultInterface()
         self.__startFrequencyTimer()
     
     def close(self):

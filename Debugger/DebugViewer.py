@@ -66,7 +66,7 @@ class DebugViewer(QWidget):
                 have the file browser in a separate window or embedded
                 in the project browser instead.
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.debugServer = debugServer
         self.debugUI = None

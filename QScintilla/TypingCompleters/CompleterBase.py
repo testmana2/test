@@ -29,7 +29,7 @@ class CompleterBase(QObject):
         if parent is None:
             parent = editor
         
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         
         self.editor = editor
         self.enabled = False

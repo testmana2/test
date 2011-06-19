@@ -66,7 +66,7 @@ class Connection(QTcpSocket):
         
         @param parent referenec to the parent object (QObject)
         """
-        QTcpSocket.__init__(self, parent)
+        super().__init__(parent)
         
         self.__greetingMessage = self.trUtf8("undefined")
         self.__username = self.trUtf8("unknown")

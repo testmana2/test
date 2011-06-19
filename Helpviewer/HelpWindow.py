@@ -102,7 +102,7 @@ class HelpWindow(QMainWindow):
             shortcuts (boolean)
         @keyparam searchWord word to search for (string)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName(name)
         self.setAttribute(Qt.WA_DeleteOnClose)
         self.setWindowTitle(self.trUtf8("eric5 Web Browser"))

@@ -42,7 +42,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             installation (list of strings)
         @param parent parent of this dialog (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         if pluginManager is None:
@@ -520,7 +520,7 @@ class PluginInstallDialog(QDialog):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -556,7 +556,7 @@ class PluginInstallWindow(QMainWindow):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         self.cw = PluginInstallWidget(None, pluginFileNames, self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

@@ -125,7 +125,7 @@ class DebugServer(QTcpServer):
         """
         Constructor
         """
-        QTcpServer.__init__(self)
+        super().__init__()
         
         # create our models
         self.breakpointModel = BreakPointModel(self)

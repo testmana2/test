@@ -38,7 +38,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         @param parent reference to the parent widget (QWidget
         @param manager reference to the bookmarks manager object (BookmarksManager)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
@@ -84,7 +84,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         Protected method called when the dialog is rejected.
         """
         self.__shutdown()
-        QDialog.reject(self)
+        super().reject()
     
     def __shutdown(self):
         """

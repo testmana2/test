@@ -32,7 +32,7 @@ class TrayStarter(QSystemTrayIcon):
         """
         Constructor
         """
-        QSystemTrayIcon.__init__(self,
+        super().__init__(
             UI.PixmapCache.getIcon(Preferences.getTrayStarter("TrayStarterIcon")))
         
         self.maxMenuFilePathLen = 75

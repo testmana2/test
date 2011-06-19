@@ -24,7 +24,7 @@ class RevisionsValidator(QValidator):
         @param multiRevsAllowed flag indicating, if multi revs are allowed (boolean)
         @param parent reference to the parent object (QObject)
         """
-        QValidator.__init__(self, parent)
+        super().__init__(parent)
         
         self.__multiRevsAllowed = multiRevsAllowed
     
@@ -78,7 +78,7 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         @param branchesList list of available branch names (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.branchesCombo.addItems(["", "default"] + sorted(branchesList))

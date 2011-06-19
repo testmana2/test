@@ -34,7 +34,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__toBeCommittedColumn = 0
@@ -364,7 +364,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.intercept = False
             evt.accept()
             return
-        QWidget.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)
     
     @pyqtSlot()
     def on_refreshButton_clicked(self):

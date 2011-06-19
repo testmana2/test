@@ -41,7 +41,7 @@ class Terminal(QsciScintillaCompat):
         @param vm reference to the viewmanager object
         @param parent parent widget (QWidget)
         """
-        QsciScintillaCompat.__init__(self, parent)
+        super().__init__(parent)
         self.setUtf8(True)
         
         self.vm = vm
@@ -199,7 +199,7 @@ class Terminal(QsciScintillaCompat):
         """
         Private method called, when the shell process has finished.
         """
-        QsciScintilla.clear(self)
+        super().clear()
         
         self.__startAct.setEnabled(True)
         self.__stopAct.setEnabled(False)
@@ -481,7 +481,7 @@ class Terminal(QsciScintillaCompat):
         @param event the mouse press event (QMouseEvent)
         """
         self.setFocus()
-        QsciScintillaCompat.mousePressEvent(self, event)
+        super().mousePressEvent(event)
         
     def editorCommand(self, cmd):
         """
@@ -517,7 +517,7 @@ class Terminal(QsciScintillaCompat):
                 line, col = self.__getEndPos()
                 self.setCursorPosition(line, col)
                 self.prline, self.prcol = self.getCursorPosition()
-            QsciScintillaCompat.keyPressEvent(self, ev)
+            super().keyPressEvent(ev)
             self.incrementalSearchActive = True
         else:
             ev.ignore()
@@ -830,7 +830,7 @@ class Terminal(QsciScintillaCompat):
         """
         Public slot to clear the display.
         """
-        QsciScintillaCompat.clear(self)
+        super().clear()
         self.__send("\n")
         
     def __reset(self):
@@ -907,7 +907,7 @@ class Terminal(QsciScintillaCompat):
         self.setCaretWidth(self.caretWidth)
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        QsciScintillaCompat.focusInEvent(self, event)
+        super().focusInEvent(event)
         
     def focusOutEvent(self, event):
         """
@@ -920,7 +920,7 @@ class Terminal(QsciScintillaCompat):
         except AttributeError:
             pass
         self.setCaretWidth(0)
-        QsciScintillaCompat.focusOutEvent(self, event)
+        super().focusOutEvent(event)
         
     def insert(self, txt):
         """

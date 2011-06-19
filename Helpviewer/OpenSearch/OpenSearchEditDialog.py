@@ -20,7 +20,7 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
         """
         Constructor
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__engine = engine
@@ -41,4 +41,4 @@ class OpenSearchEditDialog(QDialog, Ui_OpenSearchEditDialog):
         self.__engine.setSearchUrlTemplate(self.searchEdit.text())
         self.__engine.setSuggestionsUrlTemplate(self.suggestionsEdit.text())
         
-        QDialog.accept(self)
+        super().accept()

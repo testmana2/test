@@ -33,7 +33,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
         @param parent parent widget (QWidget)
         """
-        QWidget.__init__(self, parent, Qt.WindowFlags(Qt.Window))
+        super().__init__(parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
         if pysvn.svn_version < (1, 5, 0) or pysvn.version < (1, 6, 0):

@@ -31,7 +31,7 @@ class IconEditCommand(QUndoCommand):
         @param oldImage copy of the icon before the changes were applied (QImage)
         @param parent reference to the parent command (QUndoCommand)
         """
-        QUndoCommand.__init__(self, text, parent)
+        super().__init__(text, parent)
         
         self.__grid = grid
         self.__imageBefore = QImage(oldImage)
@@ -108,7 +108,7 @@ class IconEditorGrid(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         
         self.setAttribute(Qt.WA_StaticContents)
         self.setSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)

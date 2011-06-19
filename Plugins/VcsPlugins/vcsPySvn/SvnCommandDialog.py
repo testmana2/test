@@ -35,7 +35,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         @param ppath pathname of the project directory (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.workdirCompleter = E5DirCompleter(self.workdirCombo)

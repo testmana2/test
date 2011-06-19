@@ -66,7 +66,7 @@ class HistoryFilterModel(QAbstractProxyModel):
         @param sourceModel reference to the source model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractProxyModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__loaded = False
         self.__filteredRows = []
@@ -123,7 +123,7 @@ class HistoryFilterModel(QAbstractProxyModel):
             self.sourceModel().rowsInserted.disconnect(self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.disconnect(self.__sourceRowsRemoved)
         
-        QAbstractProxyModel.setSourceModel(self, sourceModel)
+        super().setSourceModel(sourceModel)
         
         if self.sourceModel() is not None:
             self.__loaded = False

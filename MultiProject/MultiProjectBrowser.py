@@ -28,7 +28,7 @@ class MultiProjectBrowser(QListWidget):
         @param project reference to the multi project object
         @param parent parent widget (QWidget)
         """
-        QListWidget.__init__(self, parent)
+        super().__init__(parent)
         self.multiProject = multiProject
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))

@@ -22,7 +22,7 @@ class AdBlockModel(QAbstractItemModel):
         
         @param parent reference to the parent object (QObject)
         """
-        QAbstractItemModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()
         self.__manager.rulesChanged.connect(self.__rulesChanged)

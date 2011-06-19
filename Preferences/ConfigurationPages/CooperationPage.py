@@ -24,7 +24,7 @@ class CooperationPage(ConfigurationPageBase, Ui_CooperationPage):
         """
         Constructor
         """
-        ConfigurationPageBase.__init__(self)
+        super().__init__()
         self.setupUi(self)
         self.setObjectName("CooperationPage")
         

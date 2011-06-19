@@ -28,7 +28,7 @@ class E5FileCompleter(QCompleter):
             completer (QCompleter.CompletionMode)
         @keyparam showHidden flag indicating to show hidden entries as well (boolean)
         """
-        QCompleter.__init__(self, parent)
+        super().__init__(parent)
         self.__model = QDirModel(self)
         if showHidden:
             self.__model.setFilter(
@@ -60,7 +60,7 @@ class E5DirCompleter(QCompleter):
             completer (QCompleter.CompletionMode)
         @keyparam showHidden flag indicating to show hidden entries as well (boolean)
         """
-        QCompleter.__init__(self, parent)
+        super().__init__(parent)
         self.__model = QDirModel(self)
         if showHidden:
             self.__model.setFilter(
@@ -90,7 +90,7 @@ class E5StringListCompleter(QCompleter):
         @keyparam completionMode completion mode of the
             completer (QCompleter.CompletionMode)
         """
-        QCompleter.__init__(self, parent)
+        super().__init__(parent)
         self.__model = QStringListModel(strings, parent)
         self.setModel(self.__model)
         self.setCompletionMode(completionMode)

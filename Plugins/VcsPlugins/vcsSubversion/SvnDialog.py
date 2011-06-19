@@ -34,7 +34,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         @param text text to be shown by the label (string)
         @param parent parent widget (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -234,7 +234,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
             self.intercept = False
             evt.accept()
             return
-        QDialog.keyPressEvent(self, evt)
+        super().keyPressEvent(evt)
         
     def hasAddOrDelete(self):
         """

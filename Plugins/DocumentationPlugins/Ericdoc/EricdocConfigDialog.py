@@ -36,7 +36,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
@@ -527,4 +527,4 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self.qtHelpGenerateCollectionCheckBox.isChecked()
         
         # call the accept slot of the base class
-        QDialog.accept(self)
+        super().accept()

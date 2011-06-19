@@ -23,7 +23,7 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
         
         @param parent parent widget of the dialog (QWidget)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.date1Edit.setDate(QDate.currentDate())

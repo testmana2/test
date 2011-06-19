@@ -38,7 +38,7 @@ class APIs(QObject):
             for a preparation process (boolean)
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("APIs_{0}".format(language))
         
         self.__inPreparation = False
@@ -205,7 +205,7 @@ class APIsManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        QObject.__init__(self, parent)
+        super().__init__(parent)
         self.setObjectName("APIsManager")
         
         self.__apis = {}

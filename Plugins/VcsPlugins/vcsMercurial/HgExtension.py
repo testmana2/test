@@ -20,7 +20,7 @@ class HgExtension(QObject):
         
         @param vcs reference to the Mercurial vcs object
         """
-        QObject.__init__(self, vcs)
+        super().__init__(vcs)
         
         self.vcs = vcs
     

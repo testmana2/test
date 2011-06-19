@@ -28,7 +28,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         @param parent the parent widget (QWidget)
         @param projectOpen flag indicating status of the project (boolean)
         """
-        QDialog.__init__(self, parent)
+        super().__init__(parent)
         self.setupUi(self)
         
         self.filenameCompleter = E5FileCompleter(self.filenameEdit)

@@ -21,7 +21,7 @@ class PasswordModel(QAbstractTableModel):
         @param manager reference to the password manager (PasswordManager)
         @param parent reference to the parent object (QObject)
         """
-        QAbstractTableModel.__init__(self, parent)
+        super().__init__(parent)
         
         self.__manager = manager
         manager.changed.connect(self.__passwordsChanged)

@@ -33,7 +33,7 @@ class PixmapDiagram(QMainWindow):
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
-        QMainWindow.__init__(self, parent)
+        super().__init__(parent)
         if name:
             self.setObjectName(name)
         else:

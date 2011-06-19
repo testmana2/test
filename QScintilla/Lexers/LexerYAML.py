@@ -23,7 +23,7 @@ class LexerYAML(QsciLexerYAML, Lexer):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerYAML.__init__(self, parent)
+        super().__init__(parent)
         Lexer.__init__(self)
         
         self.commentString = "---"
