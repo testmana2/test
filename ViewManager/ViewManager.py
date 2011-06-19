@@ -2193,6 +2193,8 @@ class ViewManager(QObject):
         qtb.addAction(self.quickSearchBackAct)
         qtb.addAction(self.quickSearchExtendAct)
         self.quickFindtextCombo.setEnabled(False)
+        self.__quickSearchToolbar = qtb
+        self.__quickSearchToolbarVisibility = None
         
         tb = QToolBar(QApplication.translate('ViewManager', 'Search'), self.ui)
         tb.setIconSize(UI.Config.ToolBarIconSize)
@@ -3691,7 +3693,13 @@ class ViewManager(QObject):
             self.editActGrp.setEnabled(False)
             self.copyActGrp.setEnabled(False)
             self.viewActGrp.setEnabled(False)
+        
+        if not isinstance(now, (Editor, Shell, Terminal)) and \
+           now is not self.quickFindtextCombo:
             self.searchActGrp.setEnabled(False)
+        
+        if now is self.quickFindtextCombo:
+            self.searchActGrp.setEnabled(True)
         
         if isinstance(old, (Editor, Shell, Terminal)):
             self.__lastFocusWidget = old
@@ -3911,6 +3919,10 @@ class ViewManager(QObject):
         """
         # first we have to check if quick search is active
         # and try to activate it if not
+        if self.__quickSearchToolbarVisibility is None:
+            self.__quickSearchToolbarVisibility = self.__quickSearchToolbar.isVisible()
+        if not self.__quickSearchToolbar.isVisible():
+            self.__quickSearchToolbar.show()
         if not self.quickFindtextCombo.lineEdit().hasFocus():
             aw = self.activeWindow()
             self.quickFindtextCombo.lastActive = aw
@@ -3939,6 +3951,9 @@ class ViewManager(QObject):
         """
         if self.quickFindtextCombo.lastActive:
             self.quickFindtextCombo.lastActive.setFocus()
+        if self.__quickSearchToolbarVisibility is not None:
+            self.__quickSearchToolbar.setVisible(self.__quickSearchToolbarVisibility)
+            self.__quickSearchToolbarVisibility = None
         
     def __quickSearchEscape(self):
         """
@@ -3951,6 +3966,9 @@ class ViewManager(QObject):
             if aw and self.quickFindtextCombo.lastCursorPos:
                 aw.setCursorPosition(self.quickFindtextCombo.lastCursorPos[0],
                                      self.quickFindtextCombo.lastCursorPos[1])
+        if self.__quickSearchToolbarVisibility is not None:
+            self.__quickSearchToolbar.setVisible(self.__quickSearchToolbarVisibility)
+            self.__quickSearchToolbarVisibility = None
         
     def __quickSearchText(self):
         """
@@ -4062,7 +4080,7 @@ class ViewManager(QObject):
         re = QRegExp('[^\w_]')
         end = re.indexIn(text, index)
         if end > index:
-            ext = text[index:end + 1]
+            ext = text[index:end]
             txt += ext
             self.quickFindtextCombo.lineEdit().setText(txt)
         
