@@ -1289,6 +1289,13 @@ eric5.E5Gui.E5PassivePopup.E5PassivePopup.timeout?4()
 eric5.E5Gui.E5PassivePopup.E5PassivePopup.view?4()
 eric5.E5Gui.E5PassivePopup.E5PassivePopup?1(parent=None)
 eric5.E5Gui.E5PassivePopup.POPUP_FLAGS?7
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.app?7
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.checkPasswordStrength?4(password)
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.meter?7
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setMaximum?4(value)
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setMinimum?4(value)
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter.setValue?4(value)
+eric5.E5Gui.E5PasswordMeter.E5PasswordMeter?1(parent=None)
 eric5.E5Gui.E5SideBar.E5SideBar.East?7
 eric5.E5Gui.E5SideBar.E5SideBar.North?7
 eric5.E5Gui.E5SideBar.E5SideBar.South?7
@@ -2091,6 +2098,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.helpwindows?7
 eric5.Helpviewer.HelpWindow.HelpWindow.historyManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.icon?4(url)
 eric5.Helpviewer.HelpWindow.HelpWindow.mainWindow?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.masterPasswordChanged?4(oldPassword, newPassword)
 eric5.Helpviewer.HelpWindow.HelpWindow.maxMenuFilePathLen?7
 eric5.Helpviewer.HelpWindow.HelpWindow.networkAccessManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.newTab?4(link=None, requestData=None)
@@ -2359,6 +2367,7 @@ eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.clear?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.close?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.fill?4(page)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.getLogin?4(url, realm)
+eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.masterPasswordChanged?4(oldPassword, newPassword)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.post?4(request, data)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.removePassword?4(site)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.save?4()
@@ -4378,6 +4387,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationDialog.DefaultMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.getConfigurationPageName?4()
+eric5.Preferences.ConfigurationDialog.ConfigurationDialog.masterPasswordChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.setPreferences?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationDialog.showConfigurationPageByName?4(pageName)
@@ -4391,6 +4401,7 @@ eric5.Preferences.ConfigurationDialog.ConfigurationWidget.calledFromEric?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getConfigurationPageName?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getLexers?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.getPage?4(pageName)
+eric5.Preferences.ConfigurationDialog.ConfigurationWidget.masterPasswordChanged?7
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_applyButton_clicked?4()
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_buttonBox_clicked?4(button)
 eric5.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked?4()
@@ -4631,9 +4642,16 @@ eric5.Preferences.ConfigurationPages.InterfacePage.InterfacePage.on_styleSheetBu
 eric5.Preferences.ConfigurationPages.InterfacePage.InterfacePage.save?4()
 eric5.Preferences.ConfigurationPages.InterfacePage.InterfacePage?1()
 eric5.Preferences.ConfigurationPages.InterfacePage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog.getCurrentPassword?4()
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog.getMasterPassword?4()
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged?4(txt)
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged?4(txt)
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog.on_newPasswordEdit_textChanged?4(txt)
+eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.MasterPasswordEntryDialog?1(oldPasswordHash, parent=None)
 eric5.Preferences.ConfigurationPages.MultiProjectPage.MultiProjectPage.save?4()
 eric5.Preferences.ConfigurationPages.MultiProjectPage.MultiProjectPage?1()
 eric5.Preferences.ConfigurationPages.MultiProjectPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_clearProxyPasswordsButton_clicked?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.on_downloadDirButton_clicked?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage.save?4()
 eric5.Preferences.ConfigurationPages.NetworkPage.NetworkPage?1()
@@ -4668,6 +4686,11 @@ eric5.Preferences.ConfigurationPages.QtPage.QtPage.on_qt4TransButton_clicked?4()
 eric5.Preferences.ConfigurationPages.QtPage.QtPage.save?4()
 eric5.Preferences.ConfigurationPages.QtPage.QtPage?1()
 eric5.Preferences.ConfigurationPages.QtPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.SecurityPage.SecurityPage.on_masterPasswordButton_clicked?4()
+eric5.Preferences.ConfigurationPages.SecurityPage.SecurityPage.on_masterPasswordCheckBox_clicked?4(checked)
+eric5.Preferences.ConfigurationPages.SecurityPage.SecurityPage.save?4()
+eric5.Preferences.ConfigurationPages.SecurityPage.SecurityPage?1(configDialog)
+eric5.Preferences.ConfigurationPages.SecurityPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.ShellPage.ShellPage.on_linenumbersFontButton_clicked?4()
 eric5.Preferences.ConfigurationPages.ShellPage.ShellPage.on_monospacedFontButton_clicked?4()
 eric5.Preferences.ConfigurationPages.ShellPage.ShellPage.polishPage?4()
@@ -4816,6 +4839,7 @@ eric5.Preferences.ToolGroupConfigurationDialog.ToolGroupConfigurationDialog.on_u
 eric5.Preferences.ToolGroupConfigurationDialog.ToolGroupConfigurationDialog?1(toolGroups, currentGroup, parent=None)
 eric5.Preferences.ViewProfileDialog.ViewProfileDialog.getProfiles?4()
 eric5.Preferences.ViewProfileDialog.ViewProfileDialog?1(layout, profiles, separateShell, separateBrowser, parent=None)
+eric5.Preferences.convertPasswords?4(oldPassword, newPassword, prefClass=Prefs)
 eric5.Preferences.exportPreferences?4(prefClass=Prefs)
 eric5.Preferences.getCooperation?4(key, prefClass=Prefs)
 eric5.Preferences.getCorba?4(key, prefClass=Prefs)
@@ -6448,6 +6472,7 @@ eric5.UI.UserInterface.UserInterface.getToolBarIconSize?4()
 eric5.UI.UserInterface.UserInterface.getToolbar?4(name)
 eric5.UI.UserInterface.UserInterface.getViewProfile?4()
 eric5.UI.UserInterface.UserInterface.launchHelpViewer?4(home, searchWord=None)
+eric5.UI.UserInterface.UserInterface.masterPasswordChanged?7
 eric5.UI.UserInterface.UserInterface.maxFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxMenuFilePathLen?7
 eric5.UI.UserInterface.UserInterface.maxSbFilePathLen?7
@@ -6580,6 +6605,16 @@ eric5.Utilities.ModuleParser.find_module?4(name, path, extensions)
 eric5.Utilities.ModuleParser.readModule?4(module, path=[], inpackage=False, basename="", extensions=None, caching=True)
 eric5.Utilities.ModuleParser.resetParsedModule?4(module, basename="")
 eric5.Utilities.ModuleParser.resetParsedModules?4()
+eric5.Utilities.PasswordChecker.PasswordChecker.Complexity_Good?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Complexity_Strong?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Complexity_VeryStrong?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Complexity_VeryWeak?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Complexity_Weak?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Status_Exceeded?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Status_Failed?7
+eric5.Utilities.PasswordChecker.PasswordChecker.Status_Passed?7
+eric5.Utilities.PasswordChecker.PasswordChecker.checkPassword?4(password)
+eric5.Utilities.PasswordChecker.PasswordChecker?1()
 eric5.Utilities.SingleApplication.SingleApplicationClient.connect?4()
 eric5.Utilities.SingleApplication.SingleApplicationClient.disconnect?4()
 eric5.Utilities.SingleApplication.SingleApplicationClient.errstr?4()
@@ -6610,6 +6645,39 @@ eric5.Utilities.compactPath?4(path, width, measure=len)
 eric5.Utilities.compile?4(file, codestring="")
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
+eric5.Utilities.crypto.CryptoMarker?7
+eric5.Utilities.crypto.Delimiter?7
+eric5.Utilities.crypto.EncodeMarker?7
+eric5.Utilities.crypto.MasterPassword?7
+eric5.Utilities.crypto.changeRememberedMaster?4(newPassword)
+eric5.Utilities.crypto.pwConvert?4(pw, encode=True)
+eric5.Utilities.crypto.pwDecode?4(epw)
+eric5.Utilities.crypto.pwDecrypt?4(epw, masterPW=None)
+eric5.Utilities.crypto.pwEncode?4(pw)
+eric5.Utilities.crypto.pwEncrypt?4(pw, masterPW=None)
+eric5.Utilities.crypto.pwRecode?4(epw, oldPassword, newPassword)
+eric5.Utilities.crypto.pwReencrypt?4(epw, oldPassword, newPassword)
+eric5.Utilities.crypto.py3AES.AES.KeySize?7
+eric5.Utilities.crypto.py3AES.AES.Rcon?7
+eric5.Utilities.crypto.py3AES.AES.decrypt?4(iput, key, size)
+eric5.Utilities.crypto.py3AES.AES.encrypt?4(iput, key, size)
+eric5.Utilities.crypto.py3AES.AES.rsbox?7
+eric5.Utilities.crypto.py3AES.AES.sbox?7
+eric5.Utilities.crypto.py3AES.AESModeOfOperation.ModeOfOperation?7
+eric5.Utilities.crypto.py3AES.AESModeOfOperation.aes?7
+eric5.Utilities.crypto.py3AES.AESModeOfOperation.decrypt?4(cipherIn, originalsize, mode, key, size, IV)
+eric5.Utilities.crypto.py3AES.AESModeOfOperation.encrypt?4(input, mode, key, size, IV)
+eric5.Utilities.crypto.py3AES.append_PKCS7_padding?4(b)
+eric5.Utilities.crypto.py3AES.decryptData?4(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"])
+eric5.Utilities.crypto.py3AES.encryptData?4(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"])
+eric5.Utilities.crypto.py3AES.strip_PKCS7_padding?4(b)
+eric5.Utilities.crypto.py3PBKDF2.Delimiter?7
+eric5.Utilities.crypto.py3PBKDF2.Hashes?7
+eric5.Utilities.crypto.py3PBKDF2.hashPassword?4(password, digestMod=hashlib.sha512, iterations=10000, saltSize=32)
+eric5.Utilities.crypto.py3PBKDF2.hashPasswordTuple?4(password, digestMod=hashlib.sha512, iterations=10000, saltSize=32)
+eric5.Utilities.crypto.py3PBKDF2.pbkdf2?4(password, salt, iterations, digestMod)
+eric5.Utilities.crypto.py3PBKDF2.rehashPassword?4(password, hashParameters)
+eric5.Utilities.crypto.py3PBKDF2.verifyPassword?4(password, hash)
 eric5.Utilities.decode?4(text)
 eric5.Utilities.decodeBytes?4(buffer)
 eric5.Utilities.decodeString?4(text)
@@ -6653,8 +6721,6 @@ eric5.Utilities.parseEnvironmentString?4(s)
 eric5.Utilities.parseOptionString?4(s)
 eric5.Utilities.parseString?4(s, rx)
 eric5.Utilities.prepareQtMacBundle?4(toolname, version, args)
-eric5.Utilities.pwDecode?4(epw)
-eric5.Utilities.pwEncode?4(pw)
 eric5.Utilities.py2compile?4(file, checkFlakes=False)
 eric5.Utilities.py3flakes.checker.Binding?1(name, source)
 eric5.Utilities.py3flakes.checker.Checker.ASSIGN?4(node)
@@ -7246,7 +7312,7 @@ eric5.install.compile_ui?4(ui_dir, ui_file)
 eric5.install.configLength?7
 eric5.install.configName?7
 eric5.install.copyToFile?4(name, text)
-eric5.install.copyTree?4(src, dst, filters, excludeDirs=[])
+eric5.install.copyTree?4(src, dst, filters, excludeDirs=[], excludePatterns=[])
 eric5.install.createConfig?4()
 eric5.install.createGlobalPluginsDir?4()
 eric5.install.createInstallConfig?4()

@@ -38,6 +38,7 @@ from QScintilla.SpellChecker import SpellChecker
 from PyUnit.UnittestDialog import UnittestDialog
 
 from Helpviewer.HelpWindow import HelpWindow
+from Helpviewer.Passwords.PasswordManager import PasswordManager
 
 from Preferences.ConfigurationDialog import ConfigurationDialog
 from Preferences.ViewProfileDialog import ViewProfileDialog
@@ -179,12 +180,15 @@ class UserInterface(QMainWindow):
     @signal reloadAPIs() emitted to reload the api information
     @signal showMenu(str, QMenu) emitted when a menu is about to be shown. The name
             of the menu and a reference to the menu are given.
+    @signal masterPasswordChanged(str, str) emitted after the master
+            password has been changed with the old and the new password
     """
     appendStderr = pyqtSignal(str)
     appendStdout = pyqtSignal(str)
     preferencesChanged = pyqtSignal()
     reloadAPIs = pyqtSignal()
     showMenu = pyqtSignal(str, QMenu)
+    masterPasswordChanged = pyqtSignal(str, str)
     
     maxFilePathLen = 100
     maxSbFilePathLen = 150
@@ -4850,6 +4854,7 @@ class UserInterface(QMainWindow):
                 self.helpWindow = help
                 self.helpWindow.helpClosed.connect(self.__helpClosed)
                 self.preferencesChanged.connect(self.helpWindow.preferencesChanged)
+                self.masterPasswordChanged.connect(self.helpWindow.masterPasswordChanged)
         elif searchWord is not None:
             self.helpWindow.search(searchWord)
             self.helpWindow.raise_()
@@ -4863,6 +4868,7 @@ class UserInterface(QMainWindow):
         """
         if Preferences.getHelp("SingleHelpWindow"):
             self.preferencesChanged.disconnect(self.helpWindow.preferencesChanged)
+            self.masterPasswordChanged.disconnect(self.helpWindow.masterPasswordChanged)
             self.helpWindow = None
     
     def __helpViewer(self):
@@ -4889,6 +4895,7 @@ class UserInterface(QMainWindow):
         """
         dlg = ConfigurationDialog(self, 'Configuration', True)
         dlg.preferencesChanged.connect(self.__preferencesChanged)
+        dlg.masterPasswordChanged.connect(self.__masterPasswordChanged)
         dlg.show()
         if pageName is not None:
             dlg.showConfigurationPageByName(pageName)
@@ -4952,6 +4959,21 @@ class UserInterface(QMainWindow):
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
         self.preferencesChanged.emit()
+        
+    
+    def __masterPasswordChanged(self, oldPassword, newPassword):
+        """
+        Private slot to handle the change of the master password.
+        
+        @param oldPassword current master password (string)
+        @param newPassword new master password (string)
+        """
+        self.masterPasswordChanged.emit(oldPassword, newPassword)
+        Preferences.convertPasswords(oldPassword, newPassword)
+        if self.helpWindow is None:
+            pwManager = PasswordManager()
+            pwManager.masterPasswordChanged(oldPassword, newPassword)
+        Utilities.crypto.changeRememberedMaster(newPassword)
         
     def __reloadAPIs(self):
         """

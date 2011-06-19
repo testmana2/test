@@ -40,7 +40,7 @@
       <item row="0" column="0">
        <widget class="QLineEdit" name="interpreterEdit">
         <property name="toolTip">
-         <string>Enter the path of the Python interpreter to be used by the debug client.  Leave empty to use the default.</string>
+         <string>Enter the path of the Python interpreter to be used by the debug client.</string>
         </property>
        </widget>
       </item>

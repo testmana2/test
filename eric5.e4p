@@ -919,6 +919,13 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/rebase.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.py</Source>
+    <Source>Utilities/PasswordChecker.py</Source>
+    <Source>E5Gui/E5PasswordMeter.py</Source>
+    <Source>Preferences/ConfigurationPages/MasterPasswordEntryDialog.py</Source>
+    <Source>Utilities/crypto/__init__.py</Source>
+    <Source>Utilities/crypto/py3AES.py</Source>
+    <Source>Utilities/crypto/py3PBKDF2.py</Source>
+    <Source>Preferences/ConfigurationPages/SecurityPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1178,6 +1185,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/SecurityPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
@@ -1271,8 +1280,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>CSSs/default.css</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmark.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmark.style</Other>
-    <Other>icons/default/bookmark16.png</Other>
-    <Other>icons/default/bookmark32.png</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

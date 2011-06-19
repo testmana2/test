@@ -260,35 +260,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="title">
-      <string>Security</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QCheckBox" name="savePasswordsCheckBox">
-        <property name="toolTip">
-         <string>Select to save passwords</string>
-        </property>
-        <property name="text">
-         <string>Save passwords</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="dnsPrefetchCheckBox">
-        <property name="toolTip">
-         <string>Select to enable DNS prefetch</string>
-        </property>
-        <property name="text">
-         <string>Use DNS prefetching to improve page loading</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>History</string>
@@ -535,8 +506,6 @@
   <tabstop>jsOpenWindowsCheckBox</tabstop>
   <tabstop>jsClipboardCheckBox</tabstop>
   <tabstop>pluginsCheckBox</tabstop>
-  <tabstop>savePasswordsCheckBox</tabstop>
-  <tabstop>dnsPrefetchCheckBox</tabstop>
   <tabstop>expireHistory</tabstop>
   <tabstop>diskCacheCheckBox</tabstop>
   <tabstop>cacheKeepButton</tabstop>

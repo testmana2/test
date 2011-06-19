@@ -2651,7 +2651,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">给定文本编码 &apos;%1&apos; 错误。</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="95"/>
+        <location filename="Utilities/__init__.py" line="93"/>
         <source>The coding &apos;{0}&apos; is wrong for the given text.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3083,228 +3083,228 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>ConfigurationWidget</name>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="111"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="114"/>
         <source>Application</source>
         <translation>应用程序</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="117"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
         <source>CORBA</source>
         <translation>CORBA</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="120"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
         <source>Email</source>
         <translation>电子邮件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="123"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
         <source>Graphics</source>
         <translation>图形</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="126"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="129"/>
         <source>Icons</source>
         <translation>图标</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="295"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="301"/>
         <source>Network</source>
         <translation>网络</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="132"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="135"/>
         <source>Plugin Manager</source>
         <translation>插件管理器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="298"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="304"/>
         <source>Printer</source>
         <translation>打印机</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="172"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="144"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="147"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
         <source>Shell</source>
         <translation>命令行</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="150"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="156"/>
         <source>Tasks</source>
         <translation>任务</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="153"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="159"/>
         <source>Templates</source>
         <translation>模板</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="156"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
         <source>Terminal</source>
         <translation>终端</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="162"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="168"/>
         <source>Version Control Systems</source>
         <translation>版本控制系统</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="166"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="172"/>
         <source>Debugger</source>
         <translation>调试器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="201"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="207"/>
         <source>General</source>
         <translation>通用配置</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="178"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="184"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="182"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="188"/>
         <source>Editor</source>
         <translation>编辑器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="185"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="191"/>
         <source>APIs</source>
         <translation>API</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="188"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="194"/>
         <source>Autocompletion</source>
         <translation>自动完成</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="198"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="204"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="195"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="201"/>
         <source>Calltips</source>
         <translation>调用提示</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="204"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
         <source>Filehandling</source>
         <translation>文件处理</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="207"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
         <source>Searching</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="210"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
         <source>Spell checking</source>
         <translation>拼写检查</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="213"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
         <source>Style</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="216"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Typing</source>
         <translation>键盘输入</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="219"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="225"/>
         <source>Exporters</source>
         <translation>输出器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="223"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="229"/>
         <source>Highlighters</source>
         <translation>高亮功能</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="226"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="232"/>
         <source>Filetype Associations</source>
         <translation>文件类型关联</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="230"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="236"/>
         <source>Styles</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="237"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="243"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="302"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="311"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="308"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="317"/>
         <source>Help Documentation</source>
         <translation>帮助文档</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="312"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="321"/>
         <source>Help Viewers</source>
         <translation>帮助浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="267"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="273"/>
         <source>Project</source>
         <translation>项目</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="264"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="270"/>
         <source>Project Viewer</source>
         <translation>项目浏览器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="270"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="276"/>
         <source>Multiproject</source>
         <translation>多重项目</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="277"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="283"/>
         <source>Interface</source>
         <translation>界面</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="280"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="286"/>
         <source>Viewmanager</source>
         <translation>视图管理器</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="305"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="314"/>
         <source>Appearance</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="424"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="433"/>
         <source>Preferences</source>
         <translation>参数选择</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="429"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="438"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>请在左边选择一个列表项以显示配置页面。</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="464"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="473"/>
         <source>Configuration Page Error</source>
         <translation>配置页面错误</translation>
     </message>
@@ -3314,43 +3314,48 @@ to display the configuration page.</source>
         <translation type="obsolete">&lt;p&gt;无法载入配置页面 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="175"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="181"/>
         <source>Python3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="318"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
         <source>Eric Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="464"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="473"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="234"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="240"/>
         <source>Keywords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="114"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="117"/>
         <source>Cooperation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="330"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="339"/>
         <source>Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="138"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="141"/>
         <source>PyFlakes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="315"/>
+        <location filename="Preferences/ConfigurationDialog.py" line="324"/>
         <source>VirusTotal Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="307"/>
+        <source>Security</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3985,6 +3990,29 @@ to display the configuration page.</source>
     <message>
         <location filename="Project/CreateDialogCodeDialog.py" line="402"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Crypto</name>
+    <message>
+        <location filename="Utilities/crypto/__init__.py" line="140"/>
+        <source>Master Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Utilities/crypto/__init__.py" line="118"/>
+        <source>Enter the master password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Utilities/crypto/__init__.py" line="130"/>
+        <source>The given password is incorrect.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Utilities/crypto/__init__.py" line="135"/>
+        <source>There is no master password registered.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5539,11 +5567,6 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="53"/>
-        <source>Enter the path of the Python3 interpreter to be used by the debug client.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="60"/>
         <source>Press to select the Python3 interpreter via a file selection dialog</source>
         <translation type="unfinished"></translation>
@@ -5658,6 +5681,11 @@ Not connected
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
         <translation type="unfinished">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?}</translation>
     </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="53"/>
+        <source>Enter the path of the Python3 interpreter to be used by the debug client. Leave empty to use the default.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DebuggerPythonPage</name>
@@ -5684,7 +5712,7 @@ Not connected
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
         <source>Enter the path of the Python interpreter to be used by the debug client.  Leave empty to use the default.</source>
-        <translation>输入调试客户使用的 Python 解释器路径。为空时使用默认设置。</translation>
+        <translation type="obsolete">输入调试客户使用的 Python 解释器路径。为空时使用默认设置。</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="50"/>
@@ -5794,6 +5822,11 @@ Not connected
     <message>
         <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.py" line="98"/>
         <source>Python Files (*.py *.py2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
+        <source>Enter the path of the Python interpreter to be used by the debug client.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8459,7 +8492,7 @@ whole selection.&lt;/li&gt;
         <translation>点击以从已安装的 AIP 文件列表中选择一个 API 文件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="170"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="181"/>
         <source>Add from installed APIs</source>
         <translation>从已安装的 API 中添加</translation>
     </message>
@@ -8469,7 +8502,7 @@ whole selection.&lt;/li&gt;
         <translation>点击以从通过插件安装的 API 文件列表中选择一个 API 文件</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="190"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
         <source>Add from Plugin APIs</source>
         <translation>从插件 API 中添加</translation>
     </message>
@@ -8479,7 +8512,7 @@ whole selection.&lt;/li&gt;
         <translation>点击编译已选 API 定义</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="221"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="228"/>
         <source>Compile APIs</source>
         <translation>编译 API</translation>
     </message>
@@ -8494,19 +8527,24 @@ whole selection.&lt;/li&gt;
         <translation>API 文件 (*.api);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="170"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="171"/>
         <source>Select from the list of installed API files</source>
         <translation>选择从已安装的 API 文件列表</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="190"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
         <source>Select from the list of API files installed by plugins</source>
         <translation>选择从通过插件安装的 API 文件列表</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="236"/>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="243"/>
         <source>Cancel compilation</source>
         <translation>取消编译</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorAPIsPage.py" line="181"/>
+        <source>There are no APIs installed yet. Selection is not available.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14709,42 +14747,42 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="358"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="329"/>
         <source>Browser Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="335"/>
         <source>Enable disk cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="410"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="381"/>
         <source>Cache size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="417"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="388"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="423"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="394"/>
         <source> MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="462"/>
         <source>Printing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="497"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="468"/>
         <source>Select to print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="500"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
         <source>Print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14804,52 +14842,52 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="294"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="265"/>
         <source>History</source>
         <translation type="unfinished">历史</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="271"/>
         <source>Remove history items:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="313"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="284"/>
         <source>Select the period for expiration of history entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="317"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="288"/>
         <source>After one day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="322"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="293"/>
         <source>After one week</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="327"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="298"/>
         <source>After two weeks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="332"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="303"/>
         <source>After one month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="337"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="308"/>
         <source>After one year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="342"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="313"/>
         <source>Manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="347"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="318"/>
         <source>On application exit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14874,62 +14912,37 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="265"/>
-        <source>Security</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="271"/>
-        <source>Select to save passwords</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="274"/>
-        <source>Save passwords</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="281"/>
-        <source>Select to enable DNS prefetch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="284"/>
-        <source>Use DNS prefetching to improve page loading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="371"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="342"/>
         <source>Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="377"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="348"/>
         <source>Select to prefer the network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="380"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="351"/>
         <source>Keep cache in sync</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="387"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="358"/>
         <source>Select to prefer cached data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="390"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
         <source>Use cache whenever possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="368"/>
         <source>Select to use cached data only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="400"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="371"/>
         <source>Offline browsing mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14954,17 +14967,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="423"/>
         <source>Web Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="458"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="429"/>
         <source>Language:</source>
         <translation type="unfinished">语言：</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="465"/>
+        <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="436"/>
         <source>Select the language to be used for web searches</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15953,7 +15966,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2062"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2076"/>
         <source>Could not find an associated content.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16018,22 +16031,22 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2171"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2185"/>
         <source>Updating search index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2223"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2237"/>
         <source>Looking for Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2253"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2267"/>
         <source>Unfiltered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2272"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2286"/>
         <source>Help Engine</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16520,7 +16533,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2232"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2246"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16585,37 +16598,37 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2587"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2601"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2588"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2602"/>
         <source>Windows</source>
         <translation type="unfinished">Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2589"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2603"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2590"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2604"/>
         <source>Unicode</source>
         <translation type="unfinished">Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2591"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2605"/>
         <source>Other</source>
         <translation type="unfinished">其它</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2592"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2606"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2614"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2628"/>
         <source>Default Encoding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16675,12 +16688,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2717"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2731"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2717"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2731"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -24734,6 +24747,79 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>MasterPasswordEntryDialog</name>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="14"/>
+        <source>Master Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="23"/>
+        <source>&lt;p&gt;Enter your master password below. This password will be used to encrypt sensitive data. You will be asked once per session for this password when the data needs to be accessed for the first time.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Note: If you forget the master password, the encrypted data cannot be recovered!&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="48"/>
+        <source>Current Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="55"/>
+        <source>Enter the current password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="65"/>
+        <source>New Password:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="72"/>
+        <source>Enter the new password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="82"/>
+        <source>New Password (again):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="89"/>
+        <source>Repeat the new password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="101"/>
+        <source>Shows an indication for the password strength</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="36"/>
+        <source>(not defined yet)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="51"/>
+        <source>Wrong password entered.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="55"/>
+        <source>New password must not be empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="60"/>
+        <source>Repeated password is wrong.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="65"/>
+        <source>Old and new password must not be the same.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MdiArea</name>
     <message>
         <location filename="Plugins/ViewManagerPlugins/MdiArea/MdiArea.py" line="120"/>
@@ -26710,6 +26796,16 @@ Do you want to save your changes?</source>
         <source>When download finished successfully</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="309"/>
+        <source>Press to clear the saved proxy passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="312"/>
+        <source>Clear Proxy Passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NetworkProtocolUnknownErrorReply</name>
@@ -27242,48 +27338,53 @@ Do you want to save your changes?</source>
 <context>
     <name>PasswordManager</name>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="193"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="196"/>
         <source>Saving login data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="233"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="236"/>
         <source>Loading login data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="378"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="385"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="389"/>
         <source>Never for this site</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="387"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="391"/>
         <source>Not now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="193"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="196"/>
         <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="213"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="233"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="236"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="378"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>Save password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="586"/>
+        <source>Re-encoding saved passwords...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -28634,17 +28735,17 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="940"/>
+        <location filename="Preferences/__init__.py" line="942"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="967"/>
+        <location filename="Preferences/__init__.py" line="969"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="967"/>
+        <location filename="Preferences/__init__.py" line="969"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35662,17 +35763,17 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="obsolete">没有替换任何东西，因为“%1”未找到。</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="476"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="478"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="548"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="550"/>
         <source>Replaced {0} occurrences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="552"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="554"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35747,6 +35848,64 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="Helpviewer/SearchWidget.ui" line="90"/>
         <source>Highlight all</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SecurityPage</name>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="37"/>
+        <source>Passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="43"/>
+        <source>Select to save passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="46"/>
+        <source>Save passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="55"/>
+        <source>Select to use a master password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="58"/>
+        <source>Use Master Password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="81"/>
+        <source>Press to change the master password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="84"/>
+        <source>Change Master Password...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="96"/>
+        <source>DNS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="102"/>
+        <source>Select to enable DNS prefetch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="105"/>
+        <source>Use DNS prefetching to improve page loading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="17"/>
+        <source>&lt;b&gt;Configure security settings&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -46413,67 +46572,67 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>UserInterface</name>
     <message>
-        <location filename="UI/UserInterface.py" line="252"/>
+        <location filename="UI/UserInterface.py" line="256"/>
         <source>Initializing Plugin Manager...</source>
         <translation>初始化插件管理器……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="257"/>
+        <location filename="UI/UserInterface.py" line="261"/>
         <source>Generating Main User Interface...</source>
         <translation>生成主用户界面……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="283"/>
+        <location filename="UI/UserInterface.py" line="287"/>
         <source>Setting up connections...</source>
         <translation>建立连接……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="475"/>
+        <location filename="UI/UserInterface.py" line="479"/>
         <source>Initializing Tools...</source>
         <translation>初始化工具……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="484"/>
+        <location filename="UI/UserInterface.py" line="488"/>
         <source>Registering Objects...</source>
         <translation>注册对象……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="506"/>
+        <location filename="UI/UserInterface.py" line="510"/>
         <source>Initializing Actions...</source>
         <translation>初始化动作……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="508"/>
+        <location filename="UI/UserInterface.py" line="512"/>
         <source>Initializing Menus...</source>
         <translation>初始化菜单……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="510"/>
+        <location filename="UI/UserInterface.py" line="514"/>
         <source>Initializing Toolbars...</source>
         <translation>初始化工具栏……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="512"/>
+        <location filename="UI/UserInterface.py" line="516"/>
         <source>Initializing Statusbar...</source>
         <translation>初始化状态栏……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="536"/>
+        <location filename="UI/UserInterface.py" line="540"/>
         <source>Initializing Single Application Server...</source>
         <translation>初始化单应用程序服务器……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="544"/>
+        <location filename="UI/UserInterface.py" line="548"/>
         <source>Activating Plugins...</source>
         <translation>激活插件……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="551"/>
+        <location filename="UI/UserInterface.py" line="555"/>
         <source>Restoring Toolbarmanager...</source>
         <translation>恢复工具拦管理器……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="611"/>
+        <location filename="UI/UserInterface.py" line="615"/>
         <source>Loading Style Sheet</source>
         <translation>样式表载入中</translation>
     </message>
@@ -46483,57 +46642,57 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法读取 Qt 样式表文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;br&gt;原因： %2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1350"/>
+        <location filename="UI/UserInterface.py" line="1354"/>
         <source>Project-Viewer</source>
         <translation>项目浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1370"/>
+        <location filename="UI/UserInterface.py" line="1374"/>
         <source>Multiproject-Viewer</source>
         <translation>多重项目浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1391"/>
+        <location filename="UI/UserInterface.py" line="1395"/>
         <source>Debug-Viewer</source>
         <translation>调试浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1473"/>
+        <location filename="UI/UserInterface.py" line="1477"/>
         <source>Log-Viewer</source>
         <translation>日志浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1493"/>
+        <location filename="UI/UserInterface.py" line="1497"/>
         <source>Task-Viewer</source>
         <translation>任务浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1513"/>
+        <location filename="UI/UserInterface.py" line="1517"/>
         <source>Template-Viewer</source>
         <translation>模板浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1432"/>
+        <location filename="UI/UserInterface.py" line="1436"/>
         <source>Terminal</source>
         <translation>终端</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1452"/>
+        <location filename="UI/UserInterface.py" line="1456"/>
         <source>File-Browser</source>
         <translation>文件浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1411"/>
+        <location filename="UI/UserInterface.py" line="1415"/>
         <source>Shell</source>
         <translation>命令行</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1534"/>
+        <location filename="UI/UserInterface.py" line="1538"/>
         <source>Vertical Toolbox</source>
         <translation>纵向工具箱</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1545"/>
+        <location filename="UI/UserInterface.py" line="1549"/>
         <source>Horizontal Toolbox</source>
         <translation>横向工具箱</translation>
     </message>
@@ -46553,108 +46712,108 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">%1 - %2 - %3 - 被动模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>&amp;Quit</source>
         <translation>退出(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1302"/>
+        <location filename="UI/UserInterface.py" line="1306"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1307"/>
+        <location filename="UI/UserInterface.py" line="1311"/>
         <source>Quit the IDE</source>
         <translation>退出程序</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1308"/>
+        <location filename="UI/UserInterface.py" line="1312"/>
         <source>&lt;b&gt;Quit the IDE&lt;/b&gt;&lt;p&gt;This quits the IDE. Any unsaved changes may be saved first. Any Python program being debugged will be stopped and the preferences will be written to disc.&lt;/p&gt;</source>
         <translation>&lt;b&gt;退出程序&lt;/b&gt;&lt;p&gt;退出本程序。 先保存任何未保存的更改。任何被调试的 Python 程序都将停止，并将选项写入磁盘。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1319"/>
+        <location filename="UI/UserInterface.py" line="1323"/>
         <source>Edit Profile</source>
         <translation>编辑模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1324"/>
+        <location filename="UI/UserInterface.py" line="1328"/>
         <source>Activate the edit view profile</source>
         <translation>激活编辑视图模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1325"/>
+        <location filename="UI/UserInterface.py" line="1329"/>
         <source>&lt;b&gt;Edit Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Edit View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;编辑模式&lt;/b&gt;&lt;p&gt;激活“编辑视图模式”。如果激活了该模式，则显示的窗口将按“视图模式配置”对话框进行配置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1334"/>
+        <location filename="UI/UserInterface.py" line="1338"/>
         <source>Debug Profile</source>
         <translation>调试模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1339"/>
+        <location filename="UI/UserInterface.py" line="1343"/>
         <source>Activate the debug view profile</source>
         <translation>激活调试模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1341"/>
+        <location filename="UI/UserInterface.py" line="1345"/>
         <source>&lt;b&gt;Debug Profile&lt;/b&gt;&lt;p&gt;Activate the &quot;Debug View Profile&quot;. Windows being shown, if this profile is active, may be configured with the &quot;View Profile Configuration&quot; dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;调试模式&lt;/b&gt;&lt;p&gt;激活“调试视图模式”。如果激活了该模式，则显示的窗口将按“视图模式配置”对话框进行配置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1350"/>
+        <location filename="UI/UserInterface.py" line="1354"/>
         <source>&amp;Project-Viewer</source>
         <translation>项目浏览器(&amp;P)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1352"/>
+        <location filename="UI/UserInterface.py" line="1356"/>
         <source>Toggle the Project-Viewer window</source>
         <translation>切换项目浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1353"/>
+        <location filename="UI/UserInterface.py" line="1357"/>
         <source>&lt;b&gt;Toggle the Project-Viewer window&lt;/b&gt;&lt;p&gt;If the Project-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换项目浏览器窗口&lt;/b&gt;&lt;p&gt;在项目浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1361"/>
+        <location filename="UI/UserInterface.py" line="1365"/>
         <source>Activate Project-Viewer</source>
         <translation>激活项目浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1361"/>
+        <location filename="UI/UserInterface.py" line="1365"/>
         <source>Alt+Shift+P</source>
         <translation>Alt+Shift+P</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1370"/>
+        <location filename="UI/UserInterface.py" line="1374"/>
         <source>&amp;Multiproject-Viewer</source>
         <translation>多重项目浏览器(&amp;M)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1373"/>
+        <location filename="UI/UserInterface.py" line="1377"/>
         <source>Toggle the Multiproject-Viewer window</source>
         <translation>切换多重项目浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1374"/>
+        <location filename="UI/UserInterface.py" line="1378"/>
         <source>&lt;b&gt;Toggle the Multiproject-Viewer window&lt;/b&gt;&lt;p&gt;If the Multiproject-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换多重项目浏览器窗口&lt;/b&gt;&lt;p&gt;在多重项目浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1382"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>Activate Multiproject-Viewer</source>
         <translation>激活多重项目浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1382"/>
+        <location filename="UI/UserInterface.py" line="1386"/>
         <source>Alt+Shift+M</source>
         <translation>Alt+Shift+M</translation>
     </message>
@@ -46684,232 +46843,232 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">激活调试浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1402"/>
+        <location filename="UI/UserInterface.py" line="1406"/>
         <source>Alt+Shift+D</source>
         <translation>Alt+Shift+D</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1411"/>
+        <location filename="UI/UserInterface.py" line="1415"/>
         <source>&amp;Shell</source>
         <translation>命令行(&amp;S)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1413"/>
+        <location filename="UI/UserInterface.py" line="1417"/>
         <source>Toggle the Shell window</source>
         <translation>切换命令行窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1414"/>
+        <location filename="UI/UserInterface.py" line="1418"/>
         <source>&lt;b&gt;Toggle the Shell window&lt;/b&gt;&lt;p&gt;If the Shell window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换命令行窗口&lt;/b&gt;&lt;p&gt;在命令行窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1423"/>
+        <location filename="UI/UserInterface.py" line="1427"/>
         <source>Activate Shell</source>
         <translation>激活命令行</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1423"/>
+        <location filename="UI/UserInterface.py" line="1427"/>
         <source>Alt+Shift+S</source>
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1432"/>
+        <location filename="UI/UserInterface.py" line="1436"/>
         <source>Te&amp;rminal</source>
         <translation>终端(&amp;r)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1434"/>
+        <location filename="UI/UserInterface.py" line="1438"/>
         <source>Toggle the Terminal window</source>
         <translation>切换终端窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1435"/>
+        <location filename="UI/UserInterface.py" line="1439"/>
         <source>&lt;b&gt;Toggle the Terminal window&lt;/b&gt;&lt;p&gt;If the Terminal window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换终端窗口&lt;/b&gt;&lt;p&gt;在终端窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1443"/>
+        <location filename="UI/UserInterface.py" line="1447"/>
         <source>Activate Terminal</source>
         <translation>激活终端</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1443"/>
+        <location filename="UI/UserInterface.py" line="1447"/>
         <source>Alt+Shift+R</source>
         <translation>Alt+Shift+R</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1452"/>
+        <location filename="UI/UserInterface.py" line="1456"/>
         <source>File-&amp;Browser</source>
         <translation>文件浏览器(&amp;B)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1454"/>
+        <location filename="UI/UserInterface.py" line="1458"/>
         <source>Toggle the File-Browser window</source>
         <translation>切换文件浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1455"/>
+        <location filename="UI/UserInterface.py" line="1459"/>
         <source>&lt;b&gt;Toggle the File-Browser window&lt;/b&gt;&lt;p&gt;If the File-Browser window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换文件浏览器窗口&lt;/b&gt;&lt;p&gt;在文件浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1464"/>
+        <location filename="UI/UserInterface.py" line="1468"/>
         <source>Activate File-Browser</source>
         <translation>激活文件浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1464"/>
+        <location filename="UI/UserInterface.py" line="1468"/>
         <source>Alt+Shift+F</source>
         <translation>Alt+Shift+F</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1473"/>
+        <location filename="UI/UserInterface.py" line="1477"/>
         <source>&amp;Log-Viewer</source>
         <translation>日志浏览器(&amp;L)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1475"/>
+        <location filename="UI/UserInterface.py" line="1479"/>
         <source>Toggle the Log-Viewer window</source>
         <translation>切换日志浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1476"/>
+        <location filename="UI/UserInterface.py" line="1480"/>
         <source>&lt;b&gt;Toggle the Log-Viewer window&lt;/b&gt;&lt;p&gt;If the Log-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换日志浏览器窗口&lt;/b&gt;&lt;p&gt;在日志浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1484"/>
+        <location filename="UI/UserInterface.py" line="1488"/>
         <source>Activate Log-Viewer</source>
         <translation>激活日志浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1484"/>
+        <location filename="UI/UserInterface.py" line="1488"/>
         <source>Alt+Shift+G</source>
         <translation>Alt+Shift+G</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1493"/>
+        <location filename="UI/UserInterface.py" line="1497"/>
         <source>T&amp;ask-Viewer</source>
         <translation>任务浏览器(&amp;a)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1495"/>
+        <location filename="UI/UserInterface.py" line="1499"/>
         <source>Toggle the Task-Viewer window</source>
         <translation>切换任务浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1496"/>
+        <location filename="UI/UserInterface.py" line="1500"/>
         <source>&lt;b&gt;Toggle the Task-Viewer window&lt;/b&gt;&lt;p&gt;If the Task-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换任务浏览器窗口&lt;/b&gt;&lt;p&gt;在任务浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1504"/>
+        <location filename="UI/UserInterface.py" line="1508"/>
         <source>Activate Task-Viewer</source>
         <translation>激活任务浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1504"/>
+        <location filename="UI/UserInterface.py" line="1508"/>
         <source>Alt+Shift+T</source>
         <translation>Alt+Shift+T</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1513"/>
+        <location filename="UI/UserInterface.py" line="1517"/>
         <source>Temp&amp;late-Viewer</source>
         <translation>模板浏览器(&amp;l)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1515"/>
+        <location filename="UI/UserInterface.py" line="1519"/>
         <source>Toggle the Template-Viewer window</source>
         <translation>切换模板浏览器窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1517"/>
+        <location filename="UI/UserInterface.py" line="1521"/>
         <source>&lt;b&gt;Toggle the Template-Viewer window&lt;/b&gt;&lt;p&gt;If the Template-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换模板浏览器窗口&lt;/b&gt;&lt;p&gt;在模板浏览器窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1525"/>
+        <location filename="UI/UserInterface.py" line="1529"/>
         <source>Activate Template-Viewer</source>
         <translation>激活模板浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1525"/>
+        <location filename="UI/UserInterface.py" line="1529"/>
         <source>Alt+Shift+A</source>
         <translation>Alt+Shift+A</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1534"/>
+        <location filename="UI/UserInterface.py" line="1538"/>
         <source>&amp;Vertical Toolbox</source>
         <translation>纵向工具箱(&amp;V)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1536"/>
+        <location filename="UI/UserInterface.py" line="1540"/>
         <source>Toggle the Vertical Toolbox window</source>
         <translation>切换纵向工具箱窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1537"/>
+        <location filename="UI/UserInterface.py" line="1541"/>
         <source>&lt;b&gt;Toggle the Vertical Toolbox window&lt;/b&gt;&lt;p&gt;If the Vertical Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换纵向工具箱窗口&lt;/b&gt;&lt;p&gt;在纵向工具箱窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1545"/>
+        <location filename="UI/UserInterface.py" line="1549"/>
         <source>&amp;Horizontal Toolbox</source>
         <translation>横向工具箱(&amp;H)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1548"/>
+        <location filename="UI/UserInterface.py" line="1552"/>
         <source>Toggle the Horizontal Toolbox window</source>
         <translation>切换横向工具箱窗口</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1549"/>
+        <location filename="UI/UserInterface.py" line="1553"/>
         <source>&lt;b&gt;Toggle the Horizontal Toolbox window&lt;/b&gt;&lt;p&gt;If the Horizontal Toolbox window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation>&lt;b&gt;切换横向工具箱窗口&lt;/b&gt;&lt;p&gt;在横向工具箱窗口的显示和隐藏状态间切换。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1646"/>
+        <location filename="UI/UserInterface.py" line="1650"/>
         <source>What&apos;s This?</source>
         <translation>这是什么？</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1646"/>
+        <location filename="UI/UserInterface.py" line="1650"/>
         <source>&amp;What&apos;s This?</source>
         <translation>这是什么(&amp;W)？</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1646"/>
+        <location filename="UI/UserInterface.py" line="1650"/>
         <source>Shift+F1</source>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1651"/>
+        <location filename="UI/UserInterface.py" line="1655"/>
         <source>Context sensitive help</source>
         <translation>背景帮助</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1652"/>
+        <location filename="UI/UserInterface.py" line="1656"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;显示背景帮助&lt;/b&gt;&lt;p&gt;在“这是什么？”模式中，鼠标光标显示为带问号的箭头，通过点击界面元素你可以获得“在做什么”和“怎样使用”的简短描述。使用标题栏中的上下文帮助按钮可以获得此功能。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1663"/>
+        <location filename="UI/UserInterface.py" line="1667"/>
         <source>Helpviewer</source>
         <translation>帮助浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1663"/>
+        <location filename="UI/UserInterface.py" line="1667"/>
         <source>&amp;Helpviewer...</source>
         <translation>帮助浏览器(&amp;H)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1663"/>
+        <location filename="UI/UserInterface.py" line="1667"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1668"/>
+        <location filename="UI/UserInterface.py" line="1672"/>
         <source>Open the helpviewer window</source>
         <translation>打开帮助浏览器窗口</translation>
     </message>
@@ -46919,32 +47078,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;帮助浏览器&lt;/b&gt;&lt;p&gt;显示帮助浏览器窗口。该窗口将显示 HTML 帮助文件。具有链接导航、设置书签、打印显示的帮助和其它更多的功能。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1686"/>
+        <location filename="UI/UserInterface.py" line="1690"/>
         <source>Show Versions</source>
         <translation>显示版本</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1686"/>
+        <location filename="UI/UserInterface.py" line="1690"/>
         <source>Show &amp;Versions</source>
         <translation>显示版本(&amp;V)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1688"/>
+        <location filename="UI/UserInterface.py" line="1692"/>
         <source>Display version information</source>
         <translation>显示版本信息</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1689"/>
+        <location filename="UI/UserInterface.py" line="1693"/>
         <source>&lt;b&gt;Show Versions&lt;/b&gt;&lt;p&gt;Display version information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;显示版本&lt;/b&gt;&lt;p&gt;显示版本信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1698"/>
+        <location filename="UI/UserInterface.py" line="1702"/>
         <source>Check for Updates</source>
         <translation>检查更新</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1696"/>
+        <location filename="UI/UserInterface.py" line="1700"/>
         <source>Check for &amp;Updates...</source>
         <translation>检查更新(&amp;U)……</translation>
     </message>
@@ -46954,17 +47113,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;检查更新……&lt;/b&gt;&lt;p&gt;从互联网检查 Eric4 的更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1706"/>
+        <location filename="UI/UserInterface.py" line="1710"/>
         <source>Show downloadable versions</source>
         <translation>显示可下载的版本</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1706"/>
+        <location filename="UI/UserInterface.py" line="1710"/>
         <source>Show &amp;downloadable versions...</source>
         <translation>显示可下载的版本(&amp;d)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1709"/>
+        <location filename="UI/UserInterface.py" line="1713"/>
         <source>Show the versions available for download</source>
         <translation>显示可以下载的版本</translation>
     </message>
@@ -46974,122 +47133,122 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;显示可下载版本……&lt;/b&gt;&lt;p&gt;显示可以从互联网下载的 Eric4 版本。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2787"/>
+        <location filename="UI/UserInterface.py" line="2791"/>
         <source>Report Bug</source>
         <translation>报告错误</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1719"/>
+        <location filename="UI/UserInterface.py" line="1723"/>
         <source>Report &amp;Bug...</source>
         <translation>报告错误(&amp;B)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1721"/>
+        <location filename="UI/UserInterface.py" line="1725"/>
         <source>Report a bug</source>
         <translation>报告一个错误</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1722"/>
+        <location filename="UI/UserInterface.py" line="1726"/>
         <source>&lt;b&gt;Report Bug...&lt;/b&gt;&lt;p&gt;Opens a dialog to report a bug.&lt;/p&gt;</source>
         <translation>&lt;b&gt;报告错误……&lt;/b&gt;&lt;p&gt;打开一个对话框并报告一个错误。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1729"/>
+        <location filename="UI/UserInterface.py" line="1733"/>
         <source>Request Feature</source>
         <translation>请求功能</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1729"/>
+        <location filename="UI/UserInterface.py" line="1733"/>
         <source>Request &amp;Feature...</source>
         <translation>请求功能(&amp;F)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1731"/>
+        <location filename="UI/UserInterface.py" line="1735"/>
         <source>Send a feature request</source>
         <translation>发送一个功能请求</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1732"/>
+        <location filename="UI/UserInterface.py" line="1736"/>
         <source>&lt;b&gt;Request Feature...&lt;/b&gt;&lt;p&gt;Opens a dialog to send a feature request.&lt;/p&gt;</source>
         <translation>&lt;b&gt;请求功能……&lt;/b&gt;&lt;p&gt;打开一个对话框并发送一个功能请求。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2409"/>
+        <location filename="UI/UserInterface.py" line="2413"/>
         <source>Unittest</source>
         <translation>单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1741"/>
+        <location filename="UI/UserInterface.py" line="1745"/>
         <source>&amp;Unittest...</source>
         <translation>单元测试(&amp;U)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1745"/>
+        <location filename="UI/UserInterface.py" line="1749"/>
         <source>Start unittest dialog</source>
         <translation>打开单元测试对话框</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1746"/>
+        <location filename="UI/UserInterface.py" line="1750"/>
         <source>&lt;b&gt;Unittest&lt;/b&gt;&lt;p&gt;Perform unit tests. The dialog gives you the ability to select and run a unittest suite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;单元测试&lt;/b&gt;&lt;p&gt;执行单元测试。通过对话框可以选择和运行一个单元测试组件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1754"/>
+        <location filename="UI/UserInterface.py" line="1758"/>
         <source>Unittest Restart</source>
         <translation>单元测试重启</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1754"/>
+        <location filename="UI/UserInterface.py" line="1758"/>
         <source>&amp;Restart Unittest...</source>
         <translation>重启单元测试(&amp;R)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1758"/>
+        <location filename="UI/UserInterface.py" line="1762"/>
         <source>Restart last unittest</source>
         <translation>重启最后的单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1759"/>
+        <location filename="UI/UserInterface.py" line="1763"/>
         <source>&lt;b&gt;Restart Unittest&lt;/b&gt;&lt;p&gt;Restart the unittest performed last.&lt;/p&gt;</source>
         <translation>&lt;b&gt;重启单元测试&lt;/b&gt;&lt;p&gt;重新启动最后执行的单元测试。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1767"/>
+        <location filename="UI/UserInterface.py" line="1771"/>
         <source>Unittest Script</source>
         <translation>脚本单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1767"/>
+        <location filename="UI/UserInterface.py" line="1771"/>
         <source>Unittest &amp;Script...</source>
         <translation>脚本单元测试(&amp;S)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1771"/>
+        <location filename="UI/UserInterface.py" line="1775"/>
         <source>Run unittest with current script</source>
         <translation>对当前脚本运行单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1772"/>
+        <location filename="UI/UserInterface.py" line="1776"/>
         <source>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Run unittest with current script.&lt;/p&gt;</source>
         <translation>&lt;b&gt;脚本单元测试&lt;/b&gt;&lt;p&gt;对当前脚本运动单元测试。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4001"/>
+        <location filename="UI/UserInterface.py" line="4005"/>
         <source>Unittest Project</source>
         <translation>项目单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1780"/>
+        <location filename="UI/UserInterface.py" line="1784"/>
         <source>Unittest &amp;Project...</source>
         <translation>项目单元测试(&amp;P)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1784"/>
+        <location filename="UI/UserInterface.py" line="1788"/>
         <source>Run unittest with current project</source>
         <translation>对当前项目运行单元测试</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1785"/>
+        <location filename="UI/UserInterface.py" line="1789"/>
         <source>&lt;b&gt;Unittest Project&lt;/b&gt;&lt;p&gt;Run unittest with current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;项目单元测试&lt;/b&gt;&lt;p&gt;对当前项目运行单元测试。&lt;/p&gt;</translation>
     </message>
@@ -47134,222 +47293,222 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Qt 语言家 3&lt;/b&gt;&lt;p&gt;开启 Qt 语言家 3。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1798"/>
+        <location filename="UI/UserInterface.py" line="1802"/>
         <source>Qt-Designer 4</source>
         <translation>Qt 设计师 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1798"/>
+        <location filename="UI/UserInterface.py" line="1802"/>
         <source>&amp;Designer 4...</source>
         <translation>设计师(&amp;D) 4……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1801"/>
+        <location filename="UI/UserInterface.py" line="1805"/>
         <source>Start Qt-Designer 4</source>
         <translation>开启 Qt 设计师 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1802"/>
+        <location filename="UI/UserInterface.py" line="1806"/>
         <source>&lt;b&gt;Qt-Designer 4&lt;/b&gt;&lt;p&gt;Start Qt-Designer 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt 设计师 4&lt;/b&gt;&lt;p&gt;开启 Qt 设计师 4。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1815"/>
+        <location filename="UI/UserInterface.py" line="1819"/>
         <source>Qt-Linguist 4</source>
         <translation>Qt 语言家 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1815"/>
+        <location filename="UI/UserInterface.py" line="1819"/>
         <source>&amp;Linguist 4...</source>
         <translation>语言家(&amp;L) 4……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1818"/>
+        <location filename="UI/UserInterface.py" line="1822"/>
         <source>Start Qt-Linguist 4</source>
         <translation>开启 Qt 语言家 4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1819"/>
+        <location filename="UI/UserInterface.py" line="1823"/>
         <source>&lt;b&gt;Qt-Linguist 4&lt;/b&gt;&lt;p&gt;Start Qt-Linguist 4.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt 语言家 4&lt;/b&gt;&lt;p&gt;开启 Qt 语言家 4。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1828"/>
+        <location filename="UI/UserInterface.py" line="1832"/>
         <source>UI Previewer</source>
         <translation>用户界面预览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1828"/>
+        <location filename="UI/UserInterface.py" line="1832"/>
         <source>&amp;UI Previewer...</source>
         <translation>用户界面(&amp;U)预览器……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1831"/>
+        <location filename="UI/UserInterface.py" line="1835"/>
         <source>Start the UI Previewer</source>
         <translation>开启用户界面预览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1832"/>
+        <location filename="UI/UserInterface.py" line="1836"/>
         <source>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Start the UI Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;助词界面预览器&lt;/b&gt;&lt;p&gt;开启用户界面预览器。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1839"/>
+        <location filename="UI/UserInterface.py" line="1843"/>
         <source>Translations Previewer</source>
         <translation>翻译预览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1839"/>
+        <location filename="UI/UserInterface.py" line="1843"/>
         <source>&amp;Translations Previewer...</source>
         <translation>翻译预览器(&amp;T)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1842"/>
+        <location filename="UI/UserInterface.py" line="1846"/>
         <source>Start the Translations Previewer</source>
         <translation>开启翻译预览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1843"/>
+        <location filename="UI/UserInterface.py" line="1847"/>
         <source>&lt;b&gt;Translations Previewer&lt;/b&gt;&lt;p&gt;Start the Translations Previewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;翻译预览器&lt;/b&gt;&lt;p&gt;开启翻译预览器。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1850"/>
+        <location filename="UI/UserInterface.py" line="1854"/>
         <source>Compare Files</source>
         <translation>比较文件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1850"/>
+        <location filename="UI/UserInterface.py" line="1854"/>
         <source>&amp;Compare Files...</source>
         <translation>比较文件(&amp;C)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1865"/>
+        <location filename="UI/UserInterface.py" line="1869"/>
         <source>Compare two files</source>
         <translation>比较两个文件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1854"/>
+        <location filename="UI/UserInterface.py" line="1858"/>
         <source>&lt;b&gt;Compare Files&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;比较文件&lt;/b&gt;&lt;p&gt;打开对话框比较两个文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1861"/>
+        <location filename="UI/UserInterface.py" line="1865"/>
         <source>Compare Files side by side</source>
         <translation>并排比较文件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1861"/>
+        <location filename="UI/UserInterface.py" line="1865"/>
         <source>Compare Files &amp;side by side...</source>
         <translation>并排比较文件(&amp;s)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1866"/>
+        <location filename="UI/UserInterface.py" line="1870"/>
         <source>&lt;b&gt;Compare Files side by side&lt;/b&gt;&lt;p&gt;Open a dialog to compare two files and show the result side by side.&lt;/p&gt;</source>
         <translation>&lt;b&gt;并排比较文件&lt;/b&gt;&lt;p&gt;打开对话框比较两个文件，并排显示结果。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1890"/>
+        <location filename="UI/UserInterface.py" line="1894"/>
         <source>Mini Editor</source>
         <translation>小型编辑器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1886"/>
+        <location filename="UI/UserInterface.py" line="1890"/>
         <source>Mini &amp;Editor...</source>
         <translation>小型编辑器(&amp;E)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1891"/>
+        <location filename="UI/UserInterface.py" line="1895"/>
         <source>&lt;b&gt;Mini Editor&lt;/b&gt;&lt;p&gt;Open a dialog with a simplified editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;小型编辑器&lt;/b&gt;&lt;p&gt;打开一个具有简化功能编辑器的对话框。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1922"/>
+        <location filename="UI/UserInterface.py" line="1926"/>
         <source>Preferences</source>
         <translation>参数选择</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1922"/>
+        <location filename="UI/UserInterface.py" line="1926"/>
         <source>&amp;Preferences...</source>
         <translation>参数选择(&amp;P)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1925"/>
+        <location filename="UI/UserInterface.py" line="1929"/>
         <source>Set the prefered configuration</source>
         <translation>设定偏好配置</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1926"/>
+        <location filename="UI/UserInterface.py" line="1930"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;参数选择&lt;/b&gt;&lt;p&gt;将应用程序的配置项设定为你喜欢的值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1934"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1934"/>
+        <location filename="UI/UserInterface.py" line="1938"/>
         <source>E&amp;xport Preferences...</source>
         <translation>导出首选项(&amp;x)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1937"/>
+        <location filename="UI/UserInterface.py" line="1941"/>
         <source>Export the current configuration</source>
         <translation>导出当前配置</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1938"/>
+        <location filename="UI/UserInterface.py" line="1942"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;导出首选项&lt;/b&gt;&lt;p&gt;将当前配置导出到一个文件中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1945"/>
+        <location filename="UI/UserInterface.py" line="1949"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1945"/>
+        <location filename="UI/UserInterface.py" line="1949"/>
         <source>I&amp;mport Preferences...</source>
         <translation>导入首选项(&amp;m)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1948"/>
+        <location filename="UI/UserInterface.py" line="1952"/>
         <source>Import a previously exported configuration</source>
         <translation>导入以前导出的配置</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1950"/>
+        <location filename="UI/UserInterface.py" line="1954"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation>&lt;b&gt;导入首选项&lt;/b&gt;&lt;p&gt;导入以前导出的配置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1957"/>
+        <location filename="UI/UserInterface.py" line="1961"/>
         <source>Reload APIs</source>
         <translation>重新载入 API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1957"/>
+        <location filename="UI/UserInterface.py" line="1961"/>
         <source>Reload &amp;APIs</source>
         <translation>重新载入 &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1959"/>
+        <location filename="UI/UserInterface.py" line="1963"/>
         <source>Reload the API information</source>
         <translation>重新载入 API 信息</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1960"/>
+        <location filename="UI/UserInterface.py" line="1964"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;重新载入 API&lt;/b&gt;&lt;p&gt;重新载入 API 信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1970"/>
+        <location filename="UI/UserInterface.py" line="1974"/>
         <source>Show external tools</source>
         <translation>显示外部工具</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1967"/>
+        <location filename="UI/UserInterface.py" line="1971"/>
         <source>Show external &amp;tools</source>
         <translation>显示外部工具(&amp;t)</translation>
     </message>
@@ -47359,212 +47518,212 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;显示外部工具&lt;/b&gt;&lt;p&gt;打开一个对话框显示 Eric4 使用的所有外部工具的路径和版本。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1983"/>
         <source>View Profiles</source>
         <translation>视图模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1983"/>
         <source>&amp;View Profiles...</source>
         <translation>视图模式(&amp;V)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1986"/>
         <source>Configure view profiles</source>
         <translation>配置视图模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1983"/>
+        <location filename="UI/UserInterface.py" line="1987"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation>&lt;b&gt;视图模式&lt;/b&gt;&lt;p&gt;配置视图模式。通过该对话框可以为预先确定的视图设置多个窗口的可见性。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1992"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Toolbars</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1992"/>
+        <location filename="UI/UserInterface.py" line="1996"/>
         <source>Tool&amp;bars...</source>
         <translation>工具栏(&amp;b)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1995"/>
+        <location filename="UI/UserInterface.py" line="1999"/>
         <source>Configure toolbars</source>
         <translation>配置工具栏</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1996"/>
+        <location filename="UI/UserInterface.py" line="2000"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation>&lt;b&gt;工具栏&lt;/b&gt;&lt;p&gt;配置工具栏通过该对话框可以改变显示于多个工具栏的动作，还可以自定义工具栏。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="2009"/>
         <source>Keyboard Shortcuts</source>
         <translation>键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="2009"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>键盘快捷键(&amp;S)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2008"/>
+        <location filename="UI/UserInterface.py" line="2012"/>
         <source>Set the keyboard shortcuts</source>
         <translation>设置键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2009"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;键盘快捷键&lt;/b&gt;&lt;p&gt;将程序的键盘快捷键设置成你喜欢的按键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5001"/>
+        <location filename="UI/UserInterface.py" line="5023"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>导出键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2017"/>
+        <location filename="UI/UserInterface.py" line="2021"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>导出键盘快捷键(&amp;E)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2021"/>
+        <location filename="UI/UserInterface.py" line="2025"/>
         <source>Export the keyboard shortcuts</source>
         <translation>导出键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2022"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;导出键盘快捷键&lt;/b&gt;&lt;p&gt;导出程序的键盘快捷键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5024"/>
+        <location filename="UI/UserInterface.py" line="5046"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>导入键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2029"/>
+        <location filename="UI/UserInterface.py" line="2033"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>导入键盘快捷键(&amp;I)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2033"/>
+        <location filename="UI/UserInterface.py" line="2037"/>
         <source>Import the keyboard shortcuts</source>
         <translation>导入键盘快捷键</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2034"/>
+        <location filename="UI/UserInterface.py" line="2038"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;导入键盘快捷键&lt;/b&gt;&lt;p&gt;导入程序的键盘快捷键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2041"/>
+        <location filename="UI/UserInterface.py" line="2045"/>
         <source>Activate current editor</source>
         <translation>激活当前编辑器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2041"/>
+        <location filename="UI/UserInterface.py" line="2045"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2050"/>
+        <location filename="UI/UserInterface.py" line="2054"/>
         <source>Show next</source>
         <translation>显示下一个</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2050"/>
+        <location filename="UI/UserInterface.py" line="2054"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2058"/>
+        <location filename="UI/UserInterface.py" line="2062"/>
         <source>Show previous</source>
         <translation>显示上一个</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2058"/>
+        <location filename="UI/UserInterface.py" line="2062"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2070"/>
         <source>Switch between tabs</source>
         <translation>在选项卡间切换</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2066"/>
+        <location filename="UI/UserInterface.py" line="2070"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2074"/>
+        <location filename="UI/UserInterface.py" line="2078"/>
         <source>Plugin Infos</source>
         <translation>插件信息</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2074"/>
+        <location filename="UI/UserInterface.py" line="2078"/>
         <source>&amp;Plugin Infos...</source>
         <translation>插件信息(&amp;P)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2077"/>
+        <location filename="UI/UserInterface.py" line="2081"/>
         <source>Show Plugin Infos</source>
         <translation>显示插件信息</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2078"/>
+        <location filename="UI/UserInterface.py" line="2082"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;插件信息……&lt;/b&gt;&lt;p&gt;打开一个对话框，显示与已载入插件有关的一些信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2089"/>
+        <location filename="UI/UserInterface.py" line="2093"/>
         <source>Install Plugins</source>
         <translation>安装插件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2086"/>
+        <location filename="UI/UserInterface.py" line="2090"/>
         <source>&amp;Install Plugins...</source>
         <translation>安装插件(&amp;I)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2090"/>
+        <location filename="UI/UserInterface.py" line="2094"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;安装插件……&lt;/b&gt;&lt;p&gt;打开一个对话框安装或更新插件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2104"/>
         <source>Uninstall Plugin</source>
         <translation>卸载插件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2097"/>
+        <location filename="UI/UserInterface.py" line="2101"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>卸载插件(&amp;U)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2101"/>
+        <location filename="UI/UserInterface.py" line="2105"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;卸载插件……&lt;/b&gt;&lt;p&gt;打开一个对话框卸载插件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2112"/>
         <source>Plugin Repository</source>
         <translation>插件储存库</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2112"/>
         <source>Plugin &amp;Repository...</source>
         <translation>插件储存库(&amp;R)……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2111"/>
+        <location filename="UI/UserInterface.py" line="2115"/>
         <source>Show Plugins available for download</source>
         <translation>显示可以下载的插件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2113"/>
+        <location filename="UI/UserInterface.py" line="2117"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;插件储存库……&lt;/b&gt;&lt;p&gt;打开一个对话框，显示互联网上可用的插件列表。&lt;/p&gt;</translation>
     </message>
@@ -47589,42 +47748,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Qt 文档&lt;/b&gt;&lt;p&gt;显示 Qt 文档。根据你的设置，显示 Eric 的联机帮助浏览器中的帮助，或者执行网络浏览器或 Qt 助手。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2137"/>
+        <location filename="UI/UserInterface.py" line="2141"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2137"/>
+        <location filename="UI/UserInterface.py" line="2141"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Qt&amp;4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2139"/>
+        <location filename="UI/UserInterface.py" line="2143"/>
         <source>Open Qt4 Documentation</source>
         <translation>打开 Qt4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2140"/>
+        <location filename="UI/UserInterface.py" line="2144"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Qt4 文档&lt;/b&gt;&lt;p&gt;显示 Qt4 文档。根据你的设置，显示 Eric 的联机帮助浏览器中的帮助，或者执行网络浏览器或 Qt 助手。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2149"/>
+        <location filename="UI/UserInterface.py" line="2153"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2149"/>
+        <location filename="UI/UserInterface.py" line="2153"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>P&amp;yQt4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2151"/>
+        <location filename="UI/UserInterface.py" line="2155"/>
         <source>Open PyQt4 Documentation</source>
         <translation>打开 PyQt4 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2152"/>
+        <location filename="UI/UserInterface.py" line="2156"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;PyQt4 文档&lt;/b&gt;&lt;p&gt;显示 PyQt4 文档。根据你的设置，显示 Eric 的联机帮助浏览器中的帮助，或者执行网络浏览器或 Qt 助手。&lt;/p&gt;</translation>
     </message>
@@ -47664,17 +47823,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Python 文档&lt;/b&gt;&lt;p&gt;显示 Python 文档。如果没有配置文档文件夹，则在 Windows 下将 Python 文档位置指定为可执行 Python 下的 doc 文件夹，在 Unix 下为 &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; 。在你的环境中设置 PYTHONDOCDIR 可以进行控制。 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2205"/>
         <source>Eric API Documentation</source>
         <translation>Eric API 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2201"/>
+        <location filename="UI/UserInterface.py" line="2205"/>
         <source>&amp;Eric API Documentation</source>
         <translation>&amp;Eric API 文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2203"/>
+        <location filename="UI/UserInterface.py" line="2207"/>
         <source>Open Eric API Documentation</source>
         <translation>打开 Eric API 文档</translation>
     </message>
@@ -47684,117 +47843,117 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;Eric API 文档&lt;/b&gt;&lt;p&gt;显示 Eric API 文档。文档位置为 Eric4 安装文件夹下的文档或源代码子文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2257"/>
+        <location filename="UI/UserInterface.py" line="2261"/>
         <source>&amp;Unittest</source>
         <translation>单元测试(&amp;U)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2272"/>
+        <location filename="UI/UserInterface.py" line="2276"/>
         <source>E&amp;xtras</source>
         <translation>附加程序(&amp;x)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2277"/>
+        <location filename="UI/UserInterface.py" line="2281"/>
         <source>Wi&amp;zards</source>
         <translation>向导(&amp;z)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2284"/>
+        <location filename="UI/UserInterface.py" line="2288"/>
         <source>&amp;Tools</source>
         <translation>工具(&amp;T)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2287"/>
+        <location filename="UI/UserInterface.py" line="2291"/>
         <source>Select Tool Group</source>
         <translation>选择工具组</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2293"/>
+        <location filename="UI/UserInterface.py" line="2297"/>
         <source>Se&amp;ttings</source>
         <translation>设置(&amp;t)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2311"/>
+        <location filename="UI/UserInterface.py" line="2315"/>
         <source>&amp;Window</source>
         <translation>窗口(&amp;W)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2317"/>
+        <location filename="UI/UserInterface.py" line="2321"/>
         <source>&amp;Toolbars</source>
         <translation>工具栏(&amp;T)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2328"/>
+        <location filename="UI/UserInterface.py" line="2332"/>
         <source>P&amp;lugins</source>
         <translation>插件(&amp;l)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2337"/>
+        <location filename="UI/UserInterface.py" line="2341"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2342"/>
+        <location filename="UI/UserInterface.py" line="2346"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2408"/>
+        <location filename="UI/UserInterface.py" line="2412"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2410"/>
+        <location filename="UI/UserInterface.py" line="2414"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4213"/>
+        <location filename="UI/UserInterface.py" line="4217"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2412"/>
+        <location filename="UI/UserInterface.py" line="2416"/>
         <source>Profiles</source>
         <translation>模式</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2413"/>
+        <location filename="UI/UserInterface.py" line="2417"/>
         <source>Plugins</source>
         <translation>插件</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2549"/>
+        <location filename="UI/UserInterface.py" line="2553"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑器语言。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2556"/>
+        <location filename="UI/UserInterface.py" line="2560"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑器编码。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2563"/>
+        <location filename="UI/UserInterface.py" line="2567"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑器行尾设置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2570"/>
+        <location filename="UI/UserInterface.py" line="2574"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑器文件是否可写。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2579"/>
+        <location filename="UI/UserInterface.py" line="2583"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑的文件名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2586"/>
+        <location filename="UI/UserInterface.py" line="2590"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑的行号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2593"/>
+        <location filename="UI/UserInterface.py" line="2597"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;状态栏的这一部分显示当前编辑器的光标位置。&lt;/p&gt;</translation>
     </message>
@@ -47804,7 +47963,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">外部工具 / %1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2736"/>
+        <location filename="UI/UserInterface.py" line="2740"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;版本号&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -47849,62 +48008,62 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;tr&gt;&lt;td&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;%2&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5619"/>
+        <location filename="UI/UserInterface.py" line="5641"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2787"/>
+        <location filename="UI/UserInterface.py" line="2791"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>电子邮件地址或邮件服务器地址为空。请在参数选择对话框中配置你的电子邮件设置。</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3057"/>
+        <location filename="UI/UserInterface.py" line="3061"/>
         <source>Restart application</source>
         <translation>重启程序</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3057"/>
+        <location filename="UI/UserInterface.py" line="3061"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>程序需要重启。现在重启？</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3078"/>
+        <location filename="UI/UserInterface.py" line="3082"/>
         <source>Configure Tool Groups ...</source>
         <translation>配置工具组……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3081"/>
+        <location filename="UI/UserInterface.py" line="3085"/>
         <source>Configure current Tool Group ...</source>
         <translation>配置当前工具组……</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3129"/>
+        <location filename="UI/UserInterface.py" line="3133"/>
         <source>&amp;Builtin Tools</source>
         <translation>内建工具(&amp;B)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3137"/>
+        <location filename="UI/UserInterface.py" line="3141"/>
         <source>&amp;Plugin Tools</source>
         <translation>插件工具(&amp;P)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3290"/>
+        <location filename="UI/UserInterface.py" line="3294"/>
         <source>&amp;Show all</source>
         <translation>全部显示(&amp;S)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3292"/>
+        <location filename="UI/UserInterface.py" line="3296"/>
         <source>&amp;Hide all</source>
         <translation>全部隐藏(&amp;H)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4001"/>
+        <location filename="UI/UserInterface.py" line="4005"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>当前项目未定义主脚本。终止</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4321"/>
+        <location filename="UI/UserInterface.py" line="4325"/>
         <source>Problem</source>
         <translation>问题</translation>
     </message>
@@ -47914,7 +48073,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;文件 &lt;b&gt;%1&lt;/b&gt; 不存在或长度为零。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4454"/>
+        <location filename="UI/UserInterface.py" line="4458"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
@@ -47944,7 +48103,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">无法启动网络浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4213"/>
+        <location filename="UI/UserInterface.py" line="4217"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>目前没有选择自定义浏览器。请使用参数选择对话框指定一个。</translation>
     </message>
@@ -47954,7 +48113,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法开启自定义浏览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4244"/>
+        <location filename="UI/UserInterface.py" line="4248"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;无法开启帮助浏览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
@@ -47969,7 +48128,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法开启翻译预览器。&lt;br&gt;确保其有效如 &lt;b&gt;%1&lt;/b&gt;。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4402"/>
+        <location filename="UI/UserInterface.py" line="4406"/>
         <source>External Tools</source>
         <translation>外部工具</translation>
     </message>
@@ -48003,7 +48162,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4804"/>
+        <location filename="UI/UserInterface.py" line="4808"/>
         <source>Documentation Missing</source>
         <translation>文档丢失</translation>
     </message>
@@ -48013,12 +48172,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;未找到文档起点“&lt;b&gt;%1&lt;/b&gt;”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4789"/>
+        <location filename="UI/UserInterface.py" line="4793"/>
         <source>Documentation</source>
         <translation>文档</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4698"/>
+        <location filename="UI/UserInterface.py" line="4702"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;未配置 PyQt4 文档起点。&lt;/p&gt;</translation>
     </message>
@@ -48043,7 +48202,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Eric4 键盘快捷键文件 (*.e4k *.e4kz);;Eric3 键盘快捷键文件 (*.e3k *.e3kz)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5143"/>
+        <location filename="UI/UserInterface.py" line="5165"/>
         <source>Save tasks</source>
         <translation>保存任务</translation>
     </message>
@@ -48053,7 +48212,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;无法写入任务文件 &lt;b&gt;%1&lt;/b&gt; 。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5165"/>
+        <location filename="UI/UserInterface.py" line="5187"/>
         <source>Read tasks</source>
         <translation>读取任务</translation>
     </message>
@@ -48068,7 +48227,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;不支持任务文件 &lt;b&gt;%1&lt;/b&gt; 的格式。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5180"/>
+        <location filename="UI/UserInterface.py" line="5202"/>
         <source>Save session</source>
         <translation>保存会话</translation>
     </message>
@@ -48078,7 +48237,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;会话文件 &lt;b&gt;%1&lt;/b&gt; 无法写入。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5225"/>
         <source>Read session</source>
         <translation>读取会话</translation>
     </message>
@@ -48093,7 +48252,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;不支持会话文件 &lt;b&gt;%1&lt;/b&gt; 的格式。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5321"/>
+        <location filename="UI/UserInterface.py" line="5343"/>
         <source>Drop Error</source>
         <translation>降落误差</translation>
     </message>
@@ -48103,7 +48262,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;%1&lt;/b&gt; 不是一个文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5585"/>
+        <location filename="UI/UserInterface.py" line="5607"/>
         <source>Error during updates check</source>
         <translation>检查更新时出错</translation>
     </message>
@@ -48113,7 +48272,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">代理使用被激活但是没有配置代理主机。</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5465"/>
+        <location filename="UI/UserInterface.py" line="5487"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -48133,7 +48292,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">无法下载版本文件。</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5572"/>
+        <location filename="UI/UserInterface.py" line="5594"/>
         <source>Update available</source>
         <translation>可用更新</translation>
     </message>
@@ -48153,12 +48312,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">当前使用的是 Eric4 最新的版本</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5585"/>
+        <location filename="UI/UserInterface.py" line="5607"/>
         <source>Could not perform updates check.</source>
         <translation>无法完成更新检查。</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5606"/>
+        <location filename="UI/UserInterface.py" line="5628"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;可用版本&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -48173,7 +48332,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;连接到代理 &apos;%1&apos; ，使用：&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5634"/>
+        <location filename="UI/UserInterface.py" line="5656"/>
         <source>SSL Errors</source>
         <translation>SSL 错误</translation>
     </message>
@@ -48183,7 +48342,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;p&gt;SSL 错误：&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;要忽略这些错误吗？&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5681"/>
         <source>First time usage</source>
         <translation>第一次使用</translation>
     </message>
@@ -48193,504 +48352,504 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">尚未配置 Eric4。将打开配置对话框。</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1557"/>
+        <location filename="UI/UserInterface.py" line="1561"/>
         <source>Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1557"/>
+        <location filename="UI/UserInterface.py" line="1561"/>
         <source>&amp;Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1559"/>
+        <location filename="UI/UserInterface.py" line="1563"/>
         <source>Toggle the left sidebar window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1560"/>
+        <location filename="UI/UserInterface.py" line="1564"/>
         <source>&lt;b&gt;Toggle the left sidebar window&lt;/b&gt;&lt;p&gt;If the left sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1568"/>
+        <location filename="UI/UserInterface.py" line="1572"/>
         <source>Bottom Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1568"/>
+        <location filename="UI/UserInterface.py" line="1572"/>
         <source>&amp;Bottom Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1571"/>
+        <location filename="UI/UserInterface.py" line="1575"/>
         <source>Toggle the bottom sidebar window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1572"/>
+        <location filename="UI/UserInterface.py" line="1576"/>
         <source>&lt;b&gt;Toggle the bottom sidebar window&lt;/b&gt;&lt;p&gt;If the bottom sidebar window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1391"/>
+        <location filename="UI/UserInterface.py" line="1395"/>
         <source>&amp;Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1393"/>
+        <location filename="UI/UserInterface.py" line="1397"/>
         <source>Toggle the Debug-Viewer window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1394"/>
+        <location filename="UI/UserInterface.py" line="1398"/>
         <source>&lt;b&gt;Toggle the Debug-Viewer window&lt;/b&gt;&lt;p&gt;If the Debug-Viewer window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1402"/>
+        <location filename="UI/UserInterface.py" line="1406"/>
         <source>Activate Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1874"/>
+        <location filename="UI/UserInterface.py" line="1878"/>
         <source>SQL Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1874"/>
+        <location filename="UI/UserInterface.py" line="1878"/>
         <source>SQL &amp;Browser...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1878"/>
+        <location filename="UI/UserInterface.py" line="1882"/>
         <source>Browse a SQL database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1879"/>
+        <location filename="UI/UserInterface.py" line="1883"/>
         <source>&lt;b&gt;SQL Browser&lt;/b&gt;&lt;p&gt;Browse a SQL database.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2840"/>
+        <location filename="UI/UserInterface.py" line="2844"/>
         <source>Error log found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2840"/>
+        <location filename="UI/UserInterface.py" line="2844"/>
         <source>An error log file was found. What should be done with it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2853"/>
+        <location filename="UI/UserInterface.py" line="2857"/>
         <source>Send Bug Email</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2856"/>
+        <location filename="UI/UserInterface.py" line="2860"/>
         <source>Ignore and Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2859"/>
+        <location filename="UI/UserInterface.py" line="2863"/>
         <source>Ignore but Keep</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1898"/>
+        <location filename="UI/UserInterface.py" line="1902"/>
         <source>Web Browser</source>
         <translation type="unfinished">网络浏览器</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1898"/>
+        <location filename="UI/UserInterface.py" line="1902"/>
         <source>&amp;Web Browser...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1914"/>
         <source>Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1910"/>
+        <location filename="UI/UserInterface.py" line="1914"/>
         <source>&amp;Icon Editor...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4163"/>
+        <location filename="UI/UserInterface.py" line="4167"/>
         <source>Qt 3 support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2222"/>
+        <location filename="UI/UserInterface.py" line="2226"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4789"/>
+        <location filename="UI/UserInterface.py" line="4793"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2219"/>
+        <location filename="UI/UserInterface.py" line="2223"/>
         <source>PySide Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2219"/>
+        <location filename="UI/UserInterface.py" line="2223"/>
         <source>Py&amp;Side Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2221"/>
+        <location filename="UI/UserInterface.py" line="2225"/>
         <source>Open PySide Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="611"/>
+        <location filename="UI/UserInterface.py" line="615"/>
         <source>&lt;p&gt;The Qt Style Sheet file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1274"/>
+        <location filename="UI/UserInterface.py" line="1278"/>
         <source>{0} - Passive Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1279"/>
+        <location filename="UI/UserInterface.py" line="1283"/>
         <source>{0} - {1} - Passive Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1282"/>
+        <location filename="UI/UserInterface.py" line="1286"/>
         <source>{0} - {1} - {2} - Passive Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1669"/>
+        <location filename="UI/UserInterface.py" line="1673"/>
         <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1699"/>
+        <location filename="UI/UserInterface.py" line="1703"/>
         <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;检查更新……&lt;/b&gt;&lt;p&gt;从互联网检查 Eric4 的更新。&lt;/p&gt; {5.?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1711"/>
+        <location filename="UI/UserInterface.py" line="1715"/>
         <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;显示可下载版本……&lt;/b&gt;&lt;p&gt;显示可以从互联网下载的 Eric4 版本。&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
+        <location filename="UI/UserInterface.py" line="1906"/>
         <source>Start the eric5 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1903"/>
+        <location filename="UI/UserInterface.py" line="1907"/>
         <source>&lt;b&gt;Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1914"/>
+        <location filename="UI/UserInterface.py" line="1918"/>
         <source>Start the eric5 Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1915"/>
+        <location filename="UI/UserInterface.py" line="1919"/>
         <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1971"/>
+        <location filename="UI/UserInterface.py" line="1975"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;显示外部工具&lt;/b&gt;&lt;p&gt;打开一个对话框显示 Eric4 使用的所有外部工具的路径和版本。&lt;/p&gt; {5.?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2204"/>
+        <location filename="UI/UserInterface.py" line="2208"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Eric API 文档&lt;/b&gt;&lt;p&gt;显示 Eric API 文档。文档位置为 Eric4 安装文件夹下的文档或源代码子文件夹。&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2650"/>
+        <location filename="UI/UserInterface.py" line="2654"/>
         <source>External Tools/{0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4163"/>
+        <location filename="UI/UserInterface.py" line="4167"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4321"/>
+        <location filename="UI/UserInterface.py" line="4325"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4083"/>
+        <location filename="UI/UserInterface.py" line="4087"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4140"/>
+        <location filename="UI/UserInterface.py" line="4144"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4184"/>
+        <location filename="UI/UserInterface.py" line="4188"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4225"/>
+        <location filename="UI/UserInterface.py" line="4229"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4284"/>
+        <location filename="UI/UserInterface.py" line="4288"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4329"/>
+        <location filename="UI/UserInterface.py" line="4333"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4348"/>
+        <location filename="UI/UserInterface.py" line="4352"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4396"/>
+        <location filename="UI/UserInterface.py" line="4400"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4402"/>
+        <location filename="UI/UserInterface.py" line="4406"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4438"/>
+        <location filename="UI/UserInterface.py" line="4442"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4454"/>
+        <location filename="UI/UserInterface.py" line="4458"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4531"/>
+        <location filename="UI/UserInterface.py" line="4535"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4804"/>
+        <location filename="UI/UserInterface.py" line="4808"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5143"/>
+        <location filename="UI/UserInterface.py" line="5165"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5165"/>
+        <location filename="UI/UserInterface.py" line="5187"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5180"/>
+        <location filename="UI/UserInterface.py" line="5202"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5203"/>
+        <location filename="UI/UserInterface.py" line="5225"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5321"/>
+        <location filename="UI/UserInterface.py" line="5343"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5470"/>
+        <location filename="UI/UserInterface.py" line="5492"/>
         <source>Trying host {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5572"/>
+        <location filename="UI/UserInterface.py" line="5594"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5581"/>
+        <location filename="UI/UserInterface.py" line="5603"/>
         <source>Eric5 is up to date</source>
         <translation type="unfinished">Eric4 已是最新版本 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5581"/>
+        <location filename="UI/UserInterface.py" line="5603"/>
         <source>You are using the latest version of eric5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5634"/>
+        <location filename="UI/UserInterface.py" line="5656"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5681"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation type="unfinished">尚未配置 Eric4。将打开配置对话框。 {5 ?}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1580"/>
+        <location filename="UI/UserInterface.py" line="1584"/>
         <source>Cooperation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1580"/>
+        <location filename="UI/UserInterface.py" line="1584"/>
         <source>&amp;Cooperation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1582"/>
+        <location filename="UI/UserInterface.py" line="1586"/>
         <source>Toggle the Cooperation window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1584"/>
+        <location filename="UI/UserInterface.py" line="1588"/>
         <source>&lt;b&gt;Toggle the Cooperation window&lt;/b&gt;&lt;p&gt;If the Cooperation window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1592"/>
+        <location filename="UI/UserInterface.py" line="1596"/>
         <source>Activate Cooperation-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1592"/>
+        <location filename="UI/UserInterface.py" line="1596"/>
         <source>Alt+Shift+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1602"/>
+        <location filename="UI/UserInterface.py" line="1606"/>
         <source>Symbols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1602"/>
+        <location filename="UI/UserInterface.py" line="1606"/>
         <source>&amp;Symbols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1604"/>
+        <location filename="UI/UserInterface.py" line="1608"/>
         <source>Toggle the Symbols window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1606"/>
+        <location filename="UI/UserInterface.py" line="1610"/>
         <source>&lt;b&gt;Toggle the Symbols window&lt;/b&gt;&lt;p&gt;If the Symbols window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1614"/>
+        <location filename="UI/UserInterface.py" line="1618"/>
         <source>Activate Symbols-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1614"/>
+        <location filename="UI/UserInterface.py" line="1618"/>
         <source>Alt+Shift+Y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1624"/>
+        <location filename="UI/UserInterface.py" line="1628"/>
         <source>Numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1624"/>
+        <location filename="UI/UserInterface.py" line="1628"/>
         <source>&amp;Numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1626"/>
+        <location filename="UI/UserInterface.py" line="1630"/>
         <source>Toggle the Numbers window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1628"/>
+        <location filename="UI/UserInterface.py" line="1632"/>
         <source>&lt;b&gt;Toggle the Numbers window&lt;/b&gt;&lt;p&gt;If the Numbers window is hidden then display it. If it is displayed then close it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1636"/>
+        <location filename="UI/UserInterface.py" line="1640"/>
         <source>Activate Numbers-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1636"/>
+        <location filename="UI/UserInterface.py" line="1640"/>
         <source>Alt+Shift+B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5024"/>
+        <location filename="UI/UserInterface.py" line="5046"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2165"/>
+        <location filename="UI/UserInterface.py" line="2169"/>
         <source>Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2165"/>
+        <location filename="UI/UserInterface.py" line="2169"/>
         <source>Python &amp;3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2167"/>
+        <location filename="UI/UserInterface.py" line="2171"/>
         <source>Open Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2168"/>
+        <location filename="UI/UserInterface.py" line="2172"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2180"/>
+        <location filename="UI/UserInterface.py" line="2184"/>
         <source>Python 2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2180"/>
+        <location filename="UI/UserInterface.py" line="2184"/>
         <source>Python &amp;2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2182"/>
+        <location filename="UI/UserInterface.py" line="2186"/>
         <source>Open Python 2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2183"/>
+        <location filename="UI/UserInterface.py" line="2187"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5499"/>
+        <location filename="UI/UserInterface.py" line="5521"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5499"/>
+        <location filename="UI/UserInterface.py" line="5521"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48748,17 +48907,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1024"/>
+        <location filename="Utilities/__init__.py" line="1022"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;可以在字符串中使用“%-代码”作为占位符。支持的代码有：&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在列&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;当前编辑器的文件夹&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;当前编辑器的文件名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;当前用户的根目录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;当前编辑器的光标所在行&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;当前项目的路径&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;当前编辑器中选择的文本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;当前用户的用户名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;百分比符号&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1210"/>
+        <location filename="Utilities/__init__.py" line="1208"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1256"/>
+        <location filename="Utilities/__init__.py" line="1254"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>

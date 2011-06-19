@@ -124,6 +124,7 @@
             <section title="eric5.E5Gui.E5ModelMenu" ref="eric5.E5Gui.E5ModelMenu.html" />
             <section title="eric5.E5Gui.E5ModelToolBar" ref="eric5.E5Gui.E5ModelToolBar.html" />
             <section title="eric5.E5Gui.E5PassivePopup" ref="eric5.E5Gui.E5PassivePopup.html" />
+            <section title="eric5.E5Gui.E5PasswordMeter" ref="eric5.E5Gui.E5PasswordMeter.html" />
             <section title="eric5.E5Gui.E5SideBar" ref="eric5.E5Gui.E5SideBar.html" />
             <section title="eric5.E5Gui.E5SingleApplication" ref="eric5.E5Gui.E5SingleApplication.html" />
             <section title="eric5.E5Gui.E5SqueezeLabels" ref="eric5.E5Gui.E5SqueezeLabels.html" />
@@ -607,6 +608,7 @@
               <section title="eric5.Preferences.ConfigurationPages.IconsPage" ref="eric5.Preferences.ConfigurationPages.IconsPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.IconsPreviewDialog" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
               <section title="eric5.Preferences.ConfigurationPages.InterfacePage" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
               <section title="eric5.Preferences.ConfigurationPages.MultiProjectPage" ref="eric5.Preferences.ConfigurationPages.MultiProjectPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.NetworkPage" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PluginManagerPage" ref="eric5.Preferences.ConfigurationPages.PluginManagerPage.html" />
@@ -616,6 +618,7 @@
               <section title="eric5.Preferences.ConfigurationPages.Py3FlakesPage" ref="eric5.Preferences.ConfigurationPages.Py3FlakesPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.QtPage" ref="eric5.Preferences.ConfigurationPages.QtPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.SecurityPage" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.ShellPage" ref="eric5.Preferences.ConfigurationPages.ShellPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.TemplatesPage" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html" />
@@ -784,12 +787,18 @@
               <section title="eric5.Utilities.ClassBrowsers.pyclbr" ref="eric5.Utilities.ClassBrowsers.pyclbr.html" />
               <section title="eric5.Utilities.ClassBrowsers.rbclbr" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
             </section>
+            <section title="eric5.Utilities.crypto" ref="index-eric5.Utilities.crypto.html">
+              <section title="eric5.Utilities.crypto.__init__" ref="eric5.Utilities.crypto.__init__.html" />
+              <section title="eric5.Utilities.crypto.py3AES" ref="eric5.Utilities.crypto.py3AES.html" />
+              <section title="eric5.Utilities.crypto.py3PBKDF2" ref="eric5.Utilities.crypto.py3PBKDF2.html" />
+            </section>
             <section title="eric5.Utilities.py3flakes" ref="index-eric5.Utilities.py3flakes.html">
               <section title="eric5.Utilities.py3flakes.checker" ref="eric5.Utilities.py3flakes.checker.html" />
               <section title="eric5.Utilities.py3flakes.messages" ref="eric5.Utilities.py3flakes.messages.html" />
             </section>
             <section title="eric5.Utilities.AutoSaver" ref="eric5.Utilities.AutoSaver.html" />
             <section title="eric5.Utilities.ModuleParser" ref="eric5.Utilities.ModuleParser.html" />
+            <section title="eric5.Utilities.PasswordChecker" ref="eric5.Utilities.PasswordChecker.html" />
             <section title="eric5.Utilities.SingleApplication" ref="eric5.Utilities.SingleApplication.html" />
             <section title="eric5.Utilities.Startup" ref="eric5.Utilities.Startup.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
@@ -2452,8 +2461,6 @@
       <keyword name="parseOptionString" id="parseOptionString" ref="eric5.Utilities.__init__.html#parseOptionString" />
       <keyword name="parseString" id="parseString" ref="eric5.Utilities.__init__.html#parseString" />
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric5.Utilities.__init__.html#prepareQtMacBundle" />
-      <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.__init__.html#pwDecode" />
-      <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.__init__.html#pwEncode" />
       <keyword name="py2compile" id="py2compile" ref="eric5.Utilities.__init__.html#py2compile" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.__init__.html#readEncodedFile" />
       <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric5.Utilities.__init__.html#readEncodedFileWithHash" />
@@ -2483,6 +2490,13 @@
       <keyword name="compileUiFiles" id="compileUiFiles" ref="eric5.Utilities.uic.html#compileUiFiles" />
       <keyword name="compile_ui" id="compile_ui" ref="eric5.Utilities.uic.html#compile_ui" />
       <keyword name="pyName" id="pyName" ref="eric5.Utilities.uic.html#pyName" />
+      <keyword name="PasswordChecker (Module)" id="PasswordChecker (Module)" ref="eric5.Utilities.PasswordChecker.html" />
+      <keyword name="PasswordChecker" id="PasswordChecker" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker" />
+      <keyword name="PasswordChecker (Constructor)" id="PasswordChecker (Constructor)" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker.__init__" />
+      <keyword name="PasswordChecker.__determineBinaryStatus" id="PasswordChecker.__determineBinaryStatus" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker.__determineBinaryStatus" />
+      <keyword name="PasswordChecker.__determineStatus" id="PasswordChecker.__determineStatus" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker.__determineStatus" />
+      <keyword name="PasswordChecker.__strReverse" id="PasswordChecker.__strReverse" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker.__strReverse" />
+      <keyword name="PasswordChecker.checkPassword" id="PasswordChecker.checkPassword" ref="eric5.Utilities.PasswordChecker.html#PasswordChecker.checkPassword" />
       <keyword name="ModuleParser (Module)" id="ModuleParser (Module)" ref="eric5.Utilities.ModuleParser.html" />
       <keyword name="Attribute" id="Attribute" ref="eric5.Utilities.ModuleParser.html#Attribute" />
       <keyword name="Class" id="Class" ref="eric5.Utilities.ModuleParser.html#Class" />
@@ -2894,6 +2908,7 @@
       <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
       <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
+      <keyword name="HelpWindow.masterPasswordChanged" id="HelpWindow.masterPasswordChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.masterPasswordChanged" />
       <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
@@ -3020,6 +3035,7 @@
       <keyword name="HelpTabWidget.stackedUrlBar" id="HelpTabWidget.stackedUrlBar" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.stackedUrlBar" />
       <keyword name="Preferences (Package)" id="Preferences (Package)" ref="index-eric5.Preferences.html" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
+      <keyword name="convertPasswords" id="convertPasswords" ref="eric5.Preferences.__init__.html#convertPasswords" />
       <keyword name="exportPreferences" id="exportPreferences" ref="eric5.Preferences.__init__.html#exportPreferences" />
       <keyword name="getCooperation" id="getCooperation" ref="eric5.Preferences.__init__.html#getCooperation" />
       <keyword name="getCorba" id="getCorba" ref="eric5.Preferences.__init__.html#getCorba" />
@@ -3167,6 +3183,7 @@
       <keyword name="ConfigurationWidget" id="ConfigurationWidget" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWidget" />
       <keyword name="ConfigurationWindow" id="ConfigurationWindow" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationWindow" />
       <keyword name="ConfigurationDialog (Constructor)" id="ConfigurationDialog (Constructor)" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.__init__" />
+      <keyword name="ConfigurationDialog.__masterPasswordChanged" id="ConfigurationDialog.__masterPasswordChanged" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.__masterPasswordChanged" />
       <keyword name="ConfigurationDialog.__preferencesChanged" id="ConfigurationDialog.__preferencesChanged" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.__preferencesChanged" />
       <keyword name="ConfigurationDialog.getConfigurationPageName" id="ConfigurationDialog.getConfigurationPageName" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.getConfigurationPageName" />
       <keyword name="ConfigurationDialog.setPreferences" id="ConfigurationDialog.setPreferences" ref="eric5.Preferences.ConfigurationDialog.html#ConfigurationDialog.setPreferences" />
@@ -4179,6 +4196,7 @@
       <keyword name="UserInterface.__lastEditorClosed" id="UserInterface.__lastEditorClosed" ref="eric5.UI.UserInterface.html#UserInterface.__lastEditorClosed" />
       <keyword name="UserInterface.__linguist" id="UserInterface.__linguist" ref="eric5.UI.UserInterface.html#UserInterface.__linguist" />
       <keyword name="UserInterface.__linguist4" id="UserInterface.__linguist4" ref="eric5.UI.UserInterface.html#UserInterface.__linguist4" />
+      <keyword name="UserInterface.__masterPasswordChanged" id="UserInterface.__masterPasswordChanged" ref="eric5.UI.UserInterface.html#UserInterface.__masterPasswordChanged" />
       <keyword name="UserInterface.__newProject" id="UserInterface.__newProject" ref="eric5.UI.UserInterface.html#UserInterface.__newProject" />
       <keyword name="UserInterface.__openMiniEditor" id="UserInterface.__openMiniEditor" ref="eric5.UI.UserInterface.html#UserInterface.__openMiniEditor" />
       <keyword name="UserInterface.__openOnStartup" id="UserInterface.__openOnStartup" ref="eric5.UI.UserInterface.html#UserInterface.__openOnStartup" />
@@ -4560,6 +4578,13 @@
       <keyword name="E5Application.registerObject" id="E5Application.registerObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerObject" />
       <keyword name="E5Application.registerPluginObject" id="E5Application.registerPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.registerPluginObject" />
       <keyword name="E5Application.unregisterPluginObject" id="E5Application.unregisterPluginObject" ref="eric5.E5Gui.E5Application.html#E5Application.unregisterPluginObject" />
+      <keyword name="E5PasswordMeter (Module)" id="E5PasswordMeter (Module)" ref="eric5.E5Gui.E5PasswordMeter.html" />
+      <keyword name="E5PasswordMeter" id="E5PasswordMeter" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter" />
+      <keyword name="E5PasswordMeter (Constructor)" id="E5PasswordMeter (Constructor)" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.__init__" />
+      <keyword name="E5PasswordMeter.checkPasswordStrength" id="E5PasswordMeter.checkPasswordStrength" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.checkPasswordStrength" />
+      <keyword name="E5PasswordMeter.setMaximum" id="E5PasswordMeter.setMaximum" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMaximum" />
+      <keyword name="E5PasswordMeter.setMinimum" id="E5PasswordMeter.setMinimum" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMinimum" />
+      <keyword name="E5PasswordMeter.setValue" id="E5PasswordMeter.setValue" ref="eric5.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setValue" />
       <keyword name="E5TreeSortFilterProxyModel (Module)" id="E5TreeSortFilterProxyModel (Module)" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html" />
       <keyword name="E5TreeSortFilterProxyModel" id="E5TreeSortFilterProxyModel" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel" />
       <keyword name="E5TreeSortFilterProxyModel (Constructor)" id="E5TreeSortFilterProxyModel (Constructor)" ref="eric5.E5Gui.E5TreeSortFilterProxyModel.html#E5TreeSortFilterProxyModel.__init__" />
@@ -6908,6 +6933,52 @@
       <keyword name="Interface (Constructor)" id="Interface (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Interface.__init__" />
       <keyword name="Module (Constructor)" id="Module (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Module.__init__" />
       <keyword name="VisibilityMixin (Constructor)" id="VisibilityMixin (Constructor)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#VisibilityMixin.__init__" />
+      <keyword name="crypto (Package)" id="crypto (Package)" ref="index-eric5.Utilities.crypto.html" />
+      <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric5.Utilities.crypto.__init__.html#__getMasterPassword" />
+      <keyword name="changeRememberedMaster" id="changeRememberedMaster" ref="eric5.Utilities.crypto.__init__.html#changeRememberedMaster" />
+      <keyword name="pwConvert" id="pwConvert" ref="eric5.Utilities.crypto.__init__.html#pwConvert" />
+      <keyword name="pwDecode" id="pwDecode" ref="eric5.Utilities.crypto.__init__.html#pwDecode" />
+      <keyword name="pwDecrypt" id="pwDecrypt" ref="eric5.Utilities.crypto.__init__.html#pwDecrypt" />
+      <keyword name="pwEncode" id="pwEncode" ref="eric5.Utilities.crypto.__init__.html#pwEncode" />
+      <keyword name="pwEncrypt" id="pwEncrypt" ref="eric5.Utilities.crypto.__init__.html#pwEncrypt" />
+      <keyword name="pwRecode" id="pwRecode" ref="eric5.Utilities.crypto.__init__.html#pwRecode" />
+      <keyword name="pwReencrypt" id="pwReencrypt" ref="eric5.Utilities.crypto.__init__.html#pwReencrypt" />
+      <keyword name="py3AES (Module)" id="py3AES (Module)" ref="eric5.Utilities.crypto.py3AES.html" />
+      <keyword name="AES" id="AES" ref="eric5.Utilities.crypto.py3AES.html#AES" />
+      <keyword name="AESModeOfOperation" id="AESModeOfOperation" ref="eric5.Utilities.crypto.py3AES.html#AESModeOfOperation" />
+      <keyword name="append_PKCS7_padding" id="append_PKCS7_padding" ref="eric5.Utilities.crypto.py3AES.html#append_PKCS7_padding" />
+      <keyword name="decryptData" id="decryptData" ref="eric5.Utilities.crypto.py3AES.html#decryptData" />
+      <keyword name="encryptData" id="encryptData" ref="eric5.Utilities.crypto.py3AES.html#encryptData" />
+      <keyword name="strip_PKCS7_padding" id="strip_PKCS7_padding" ref="eric5.Utilities.crypto.py3AES.html#strip_PKCS7_padding" />
+      <keyword name="AES.__addRoundKey" id="AES.__addRoundKey" ref="eric5.Utilities.crypto.py3AES.html#AES.__addRoundKey" />
+      <keyword name="AES.__aes_invMain" id="AES.__aes_invMain" ref="eric5.Utilities.crypto.py3AES.html#AES.__aes_invMain" />
+      <keyword name="AES.__aes_invRound" id="AES.__aes_invRound" ref="eric5.Utilities.crypto.py3AES.html#AES.__aes_invRound" />
+      <keyword name="AES.__aes_main" id="AES.__aes_main" ref="eric5.Utilities.crypto.py3AES.html#AES.__aes_main" />
+      <keyword name="AES.__aes_round" id="AES.__aes_round" ref="eric5.Utilities.crypto.py3AES.html#AES.__aes_round" />
+      <keyword name="AES.__core" id="AES.__core" ref="eric5.Utilities.crypto.py3AES.html#AES.__core" />
+      <keyword name="AES.__createRoundKey" id="AES.__createRoundKey" ref="eric5.Utilities.crypto.py3AES.html#AES.__createRoundKey" />
+      <keyword name="AES.__expandKey" id="AES.__expandKey" ref="eric5.Utilities.crypto.py3AES.html#AES.__expandKey" />
+      <keyword name="AES.__galois_multiplication" id="AES.__galois_multiplication" ref="eric5.Utilities.crypto.py3AES.html#AES.__galois_multiplication" />
+      <keyword name="AES.__getRconValue" id="AES.__getRconValue" ref="eric5.Utilities.crypto.py3AES.html#AES.__getRconValue" />
+      <keyword name="AES.__getSBoxInvert" id="AES.__getSBoxInvert" ref="eric5.Utilities.crypto.py3AES.html#AES.__getSBoxInvert" />
+      <keyword name="AES.__getSBoxValue" id="AES.__getSBoxValue" ref="eric5.Utilities.crypto.py3AES.html#AES.__getSBoxValue" />
+      <keyword name="AES.__mixColumn" id="AES.__mixColumn" ref="eric5.Utilities.crypto.py3AES.html#AES.__mixColumn" />
+      <keyword name="AES.__mixColumns" id="AES.__mixColumns" ref="eric5.Utilities.crypto.py3AES.html#AES.__mixColumns" />
+      <keyword name="AES.__rotate" id="AES.__rotate" ref="eric5.Utilities.crypto.py3AES.html#AES.__rotate" />
+      <keyword name="AES.__shiftRow" id="AES.__shiftRow" ref="eric5.Utilities.crypto.py3AES.html#AES.__shiftRow" />
+      <keyword name="AES.__shiftRows" id="AES.__shiftRows" ref="eric5.Utilities.crypto.py3AES.html#AES.__shiftRows" />
+      <keyword name="AES.__subBytes" id="AES.__subBytes" ref="eric5.Utilities.crypto.py3AES.html#AES.__subBytes" />
+      <keyword name="AES.decrypt" id="AES.decrypt" ref="eric5.Utilities.crypto.py3AES.html#AES.decrypt" />
+      <keyword name="AES.encrypt" id="AES.encrypt" ref="eric5.Utilities.crypto.py3AES.html#AES.encrypt" />
+      <keyword name="AESModeOfOperation.__extractBytes" id="AESModeOfOperation.__extractBytes" ref="eric5.Utilities.crypto.py3AES.html#AESModeOfOperation.__extractBytes" />
+      <keyword name="AESModeOfOperation.decrypt" id="AESModeOfOperation.decrypt" ref="eric5.Utilities.crypto.py3AES.html#AESModeOfOperation.decrypt" />
+      <keyword name="AESModeOfOperation.encrypt" id="AESModeOfOperation.encrypt" ref="eric5.Utilities.crypto.py3AES.html#AESModeOfOperation.encrypt" />
+      <keyword name="py3PBKDF2 (Module)" id="py3PBKDF2 (Module)" ref="eric5.Utilities.crypto.py3PBKDF2.html" />
+      <keyword name="hashPassword" id="hashPassword" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPassword" />
+      <keyword name="hashPasswordTuple" id="hashPasswordTuple" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPasswordTuple" />
+      <keyword name="pbkdf2" id="pbkdf2" ref="eric5.Utilities.crypto.py3PBKDF2.html#pbkdf2" />
+      <keyword name="rehashPassword" id="rehashPassword" ref="eric5.Utilities.crypto.py3PBKDF2.html#rehashPassword" />
+      <keyword name="verifyPassword" id="verifyPassword" ref="eric5.Utilities.crypto.py3PBKDF2.html#verifyPassword" />
       <keyword name="py3flakes (Package)" id="py3flakes (Package)" ref="index-eric5.Utilities.py3flakes.html" />
       <keyword name="checker (Module)" id="checker (Module)" ref="eric5.Utilities.py3flakes.checker.html" />
       <keyword name="Argument" id="Argument" ref="eric5.Utilities.py3flakes.checker.html#Argument" />
@@ -7022,6 +7093,7 @@
       <keyword name="PasswordManager.close" id="PasswordManager.close" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.close" />
       <keyword name="PasswordManager.fill" id="PasswordManager.fill" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.fill" />
       <keyword name="PasswordManager.getLogin" id="PasswordManager.getLogin" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.getLogin" />
+      <keyword name="PasswordManager.masterPasswordChanged" id="PasswordManager.masterPasswordChanged" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.masterPasswordChanged" />
       <keyword name="PasswordManager.post" id="PasswordManager.post" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.post" />
       <keyword name="PasswordManager.removePassword" id="PasswordManager.removePassword" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.removePassword" />
       <keyword name="PasswordManager.save" id="PasswordManager.save" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.save" />
@@ -7980,6 +8052,7 @@
       <keyword name="NetworkPage" id="NetworkPage" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#create" />
       <keyword name="NetworkPage (Constructor)" id="NetworkPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.__init__" />
+      <keyword name="NetworkPage.on_clearProxyPasswordsButton_clicked" id="NetworkPage.on_clearProxyPasswordsButton_clicked" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_clearProxyPasswordsButton_clicked" />
       <keyword name="NetworkPage.on_downloadDirButton_clicked" id="NetworkPage.on_downloadDirButton_clicked" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_downloadDirButton_clicked" />
       <keyword name="NetworkPage.save" id="NetworkPage.save" ref="eric5.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.save" />
       <keyword name="HelpWebBrowserPage (Module)" id="HelpWebBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
@@ -8148,6 +8221,15 @@
       <keyword name="ShellPage.on_monospacedFontButton_clicked" id="ShellPage.on_monospacedFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.on_monospacedFontButton_clicked" />
       <keyword name="ShellPage.polishPage" id="ShellPage.polishPage" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.polishPage" />
       <keyword name="ShellPage.save" id="ShellPage.save" ref="eric5.Preferences.ConfigurationPages.ShellPage.html#ShellPage.save" />
+      <keyword name="MasterPasswordEntryDialog (Module)" id="MasterPasswordEntryDialog (Module)" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
+      <keyword name="MasterPasswordEntryDialog" id="MasterPasswordEntryDialog" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog" />
+      <keyword name="MasterPasswordEntryDialog (Constructor)" id="MasterPasswordEntryDialog (Constructor)" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.__init__" />
+      <keyword name="MasterPasswordEntryDialog.__updateUI" id="MasterPasswordEntryDialog.__updateUI" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.__updateUI" />
+      <keyword name="MasterPasswordEntryDialog.getCurrentPassword" id="MasterPasswordEntryDialog.getCurrentPassword" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.getCurrentPassword" />
+      <keyword name="MasterPasswordEntryDialog.getMasterPassword" id="MasterPasswordEntryDialog.getMasterPassword" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.getMasterPassword" />
+      <keyword name="MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" id="MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" />
+      <keyword name="MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" id="MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" />
+      <keyword name="MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" id="MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" />
       <keyword name="DebuggerGeneralPage (Module)" id="DebuggerGeneralPage (Module)" ref="eric5.Preferences.ConfigurationPages.DebuggerGeneralPage.html" />
       <keyword name="DebuggerGeneralPage" id="DebuggerGeneralPage" ref="eric5.Preferences.ConfigurationPages.DebuggerGeneralPage.html#DebuggerGeneralPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.DebuggerGeneralPage.html#create" />
@@ -8198,6 +8280,13 @@
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#create" />
       <keyword name="ApplicationPage (Constructor)" id="ApplicationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.__init__" />
       <keyword name="ApplicationPage.save" id="ApplicationPage.save" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.save" />
+      <keyword name="SecurityPage (Module)" id="SecurityPage (Module)" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html" />
+      <keyword name="SecurityPage" id="SecurityPage" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#create" />
+      <keyword name="SecurityPage (Constructor)" id="SecurityPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.__init__" />
+      <keyword name="SecurityPage.on_masterPasswordButton_clicked" id="SecurityPage.on_masterPasswordButton_clicked" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.on_masterPasswordButton_clicked" />
+      <keyword name="SecurityPage.on_masterPasswordCheckBox_clicked" id="SecurityPage.on_masterPasswordCheckBox_clicked" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.on_masterPasswordCheckBox_clicked" />
+      <keyword name="SecurityPage.save" id="SecurityPage.save" ref="eric5.Preferences.ConfigurationPages.SecurityPage.html#SecurityPage.save" />
       <keyword name="EditorSpellCheckingPage (Module)" id="EditorSpellCheckingPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html" />
       <keyword name="EditorSpellCheckingPage" id="EditorSpellCheckingPage" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#create" />
@@ -10967,6 +11056,7 @@
       <file>eric5.E5Gui.E5ModelMenu.html</file>
       <file>eric5.E5Gui.E5ModelToolBar.html</file>
       <file>eric5.E5Gui.E5PassivePopup.html</file>
+      <file>eric5.E5Gui.E5PasswordMeter.html</file>
       <file>eric5.E5Gui.E5SideBar.html</file>
       <file>eric5.E5Gui.E5SingleApplication.html</file>
       <file>eric5.E5Gui.E5SqueezeLabels.html</file>
@@ -11336,6 +11426,7 @@
       <file>eric5.Preferences.ConfigurationPages.IconsPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.InterfacePage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html</file>
       <file>eric5.Preferences.ConfigurationPages.MultiProjectPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.NetworkPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PluginManagerPage.html</file>
@@ -11345,6 +11436,7 @@
       <file>eric5.Preferences.ConfigurationPages.Py3FlakesPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.PythonPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.QtPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.SecurityPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.ShellPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TasksPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.TemplatesPage.html</file>
@@ -11487,9 +11579,13 @@
       <file>eric5.Utilities.ClassBrowsers.pyclbr.html</file>
       <file>eric5.Utilities.ClassBrowsers.rbclbr.html</file>
       <file>eric5.Utilities.ModuleParser.html</file>
+      <file>eric5.Utilities.PasswordChecker.html</file>
       <file>eric5.Utilities.SingleApplication.html</file>
       <file>eric5.Utilities.Startup.html</file>
       <file>eric5.Utilities.__init__.html</file>
+      <file>eric5.Utilities.crypto.__init__.html</file>
+      <file>eric5.Utilities.crypto.py3AES.html</file>
+      <file>eric5.Utilities.crypto.py3PBKDF2.html</file>
       <file>eric5.Utilities.py3flakes.checker.html</file>
       <file>eric5.Utilities.py3flakes.messages.html</file>
       <file>eric5.Utilities.uic.html</file>
@@ -11617,6 +11713,7 @@
       <file>index-eric5.Tools.html</file>
       <file>index-eric5.UI.html</file>
       <file>index-eric5.Utilities.ClassBrowsers.html</file>
+      <file>index-eric5.Utilities.crypto.html</file>
       <file>index-eric5.Utilities.html</file>
       <file>index-eric5.Utilities.py3flakes.html</file>
       <file>index-eric5.UtilitiesPython2.html</file>

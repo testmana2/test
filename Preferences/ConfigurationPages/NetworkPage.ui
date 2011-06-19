@@ -303,6 +303,16 @@
         </layout>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="clearProxyPasswordsButton">
+        <property name="toolTip">
+         <string>Press to clear the saved proxy passwords</string>
+        </property>
+        <property name="text">
+         <string>Clear Proxy Passwords</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>

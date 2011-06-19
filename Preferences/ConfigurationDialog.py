@@ -60,8 +60,11 @@ class ConfigurationWidget(QWidget):
     Class implementing a dialog for the configuration of eric5.
     
     @signal preferencesChanged() emitted after settings have been changed
+    @signal masterPasswordChanged(str, str) emitted after the master
+        password has been changed with the old and the new password
     """
     preferencesChanged = pyqtSignal()
+    masterPasswordChanged = pyqtSignal(str, str)
     
     DefaultMode = 0
     HelpBrowserMode = 1
@@ -143,6 +146,9 @@ class ConfigurationWidget(QWidget):
                 "qtPage": \
                     [self.trUtf8("Qt"), "preferences-qtlogo.png",
                     "QtPage", None, None],
+                "securityPage": \
+                    [self.trUtf8("Security"), "preferences-security.png",
+                    "SecurityPage", None, None],
                 "shellPage": \
                     [self.trUtf8("Shell"), "preferences-shell.png",
                     "ShellPage", None, None],
@@ -297,6 +303,9 @@ class ConfigurationWidget(QWidget):
                 "printerPage": \
                     [self.trUtf8("Printer"), "preferences-printer.png",
                     "PrinterPage", None, None],
+                "securityPage": \
+                    [self.trUtf8("Security"), "preferences-security.png",
+                    "SecurityPage", None, None],
                 
                 "0helpPage": \
                     [self.trUtf8("Help"), "preferences-help.png",
@@ -643,8 +652,11 @@ class ConfigurationDialog(QDialog):
     Class for the dialog variant.
     
     @signal preferencesChanged() emitted after settings have been changed
+    @signal masterPasswordChanged(str, str) emitted after the master
+        password has been changed with the old and the new password
     """
     preferencesChanged = pyqtSignal()
+    masterPasswordChanged = pyqtSignal(str, str)
     
     DefaultMode = ConfigurationWidget.DefaultMode
     HelpBrowserMode = ConfigurationWidget.HelpBrowserMode
@@ -680,12 +692,22 @@ class ConfigurationDialog(QDialog):
         self.cw.buttonBox.accepted[()].connect(self.accept)
         self.cw.buttonBox.rejected[()].connect(self.reject)
         self.cw.preferencesChanged.connect(self.__preferencesChanged)
+        self.cw.masterPasswordChanged.connect(self.__masterPasswordChanged)
         
     def __preferencesChanged(self):
         """
         Private slot to handle a change of the preferences.
         """
         self.preferencesChanged.emit()
+        
+    def __masterPasswordChanged(self, oldPassword, newPassword):
+        """
+        Private slot to handle the change of the master password.
+        
+        @param oldPassword current master password (string)
+        @param newPassword new master password (string)
+        """
+        self.masterPasswordChanged.emit(oldPassword, newPassword)
         
     def showConfigurationPageByName(self, pageName):
         """

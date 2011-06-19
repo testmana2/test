@@ -1920,6 +1920,7 @@ class HelpWindow(QMainWindow):
                                   fromEric=self.fromEric,
                                   displayMode=ConfigurationDialog.HelpBrowserMode)
         dlg.preferencesChanged.connect(self.preferencesChanged)
+        dlg.masterPasswordChanged.connect(self.masterPasswordChanged)
         dlg.show()
         if self.__lastConfigurationPageName:
             dlg.showConfigurationPageByName(self.__lastConfigurationPageName)
@@ -1956,6 +1957,19 @@ class HelpWindow(QMainWindow):
             self.virustotalSearchEdit.setEnabled(True)
             self.virustotalScanCurrentAct.setEnabled(True)
         self.__virusTotalSearchChanged(self.virustotalSearchEdit.text())
+    
+    def masterPasswordChanged(self, oldPassword, newPassword):
+        """
+        Public slot to handle the change of the master password.
+        
+        @param oldPassword current master password (string)
+        @param newPassword new master password (string)
+        """
+        self.passwordManager().masterPasswordChanged(oldPassword, newPassword)
+        if self.fromEric and isinstance(self.sender(), ConfigurationDialog):
+            # we were called from our local configuration dialog
+            Preferences.convertPasswords(oldPassword, newPassword)
+            Utilities.crypto.changeRememberedMaster(newPassword)
     
     def __showAcceptedLanguages(self):
         """

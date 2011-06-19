@@ -14,6 +14,8 @@ Version 5.2-snapshot-2011mmdd:
 - added a pause button to the web browser download
 - added some more user agent strings to the web browser
 - added some more search engines to the web browser
+- added capability to encrypt saved passwords with a master password
+  and rearranged some configuration parameters related to security
 
 Version 5.2-snapshot-20110501:
 - bug fixes

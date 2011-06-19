@@ -142,6 +142,10 @@ emitted to write data to stderr logger
 </dd><dt>appendStdout(str)</dt>
 <dd>
 emitted to write data to stdout logger
+</dd><dt>masterPasswordChanged(str, str)</dt>
+<dd>
+emitted after the master
+            password has been changed with the old and the new password
 </dd><dt>preferencesChanged()</dt>
 <dd>
 emitted after the preferences were changed
@@ -348,6 +352,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#UserInterface.__linguist4">__linguist4</a></td>
 <td>Private slot to start the Qt-Linguist 4 executable.</td>
+</tr><tr>
+<td><a href="#UserInterface.__masterPasswordChanged">__masterPasswordChanged</a></td>
+<td>Private slot to handle the change of the master password.</td>
 </tr><tr>
 <td><a href="#UserInterface.__newProject">__newProject</a></td>
 <td>Private slot to handle the NewProject signal.</td>
@@ -1174,6 +1181,19 @@ indication for the requested version (Qt 4) (integer)
 <dt><i>fn</i></dt>
 <dd>
 filename of the translation file to be opened
+</dd>
+</dl><a NAME="UserInterface.__masterPasswordChanged" ID="UserInterface.__masterPasswordChanged"></a>
+<h4>UserInterface.__masterPasswordChanged</h4>
+<b>__masterPasswordChanged</b>(<i>oldPassword, newPassword</i>)
+<p>
+        Private slot to handle the change of the master password.
+</p><dl>
+<dt><i>oldPassword</i></dt>
+<dd>
+current master password (string)
+</dd><dt><i>newPassword</i></dt>
+<dd>
+new master password (string)
 </dd>
 </dl><a NAME="UserInterface.__newProject" ID="UserInterface.__newProject"></a>
 <h4>UserInterface.__newProject</h4>

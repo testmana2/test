@@ -622,7 +622,6 @@ class Prefs(object):
         "HomePage": "pyrc:home",
         "HistoryLimit": 30,
         "DefaultScheme": "file://",
-        "SavePasswords": False,
         "AdBlockEnabled": False,
         "AdBlockSubscriptions": [],
         "OfflineStorageDatabaseQuota": 50,     # 50 MB
@@ -740,6 +739,9 @@ class Prefs(object):
         "MailServerUseTLS": False,
         "MailServerPort": 25,
         "UseSystemEmailClient": False,
+        "MasterPassword": "",           # stores the password hash
+        "UseMasterPassword": False,
+        "SavePasswords": False,
     }
     
     # defaults for vcs related stuff
@@ -1204,8 +1206,10 @@ def getUI(key, prefClass=Prefs):
             prefClass.uiDefaults[key]))
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",
                  "ProxyPassword/Ftp", ]:
-        from Utilities import pwDecode
-        return pwDecode(prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
+        from Utilities.crypto import pwConvert
+        return pwConvert(
+            prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]),
+            encode=False)
     elif key in ["LogStdErrColour"]:
         col = prefClass.settings.value("UI/" + key)
         if col is not None:
@@ -1280,8 +1284,8 @@ def setUI(key, value, prefClass=Prefs):
         prefClass.settings.setValue("UI/" + key, value.name())
     elif key in ["ProxyPassword/Http", "ProxyPassword/Https",
                  "ProxyPassword/Ftp", ]:
-        from Utilities import pwEncode
-        prefClass.settings.setValue("UI/" + key, pwEncode(value))
+        from Utilities.crypto import pwConvert
+        prefClass.settings.setValue("UI/" + key, pwConvert(value, encode=True))
     else:
         prefClass.settings.setValue("UI/" + key, value)
     
@@ -1941,7 +1945,7 @@ def getHelp(key, prefClass=Prefs):
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",
                  "DiskCacheEnabled", "FilterTrackingCookies", "PrintBackgrounds",
-                 "SavePasswords", "AdBlockEnabled", "AutoLoadImages",
+                 "AdBlockEnabled", "AutoLoadImages",
                  "JavaEnabled", "JavaScriptEnabled", "JavaScriptCanOpenWindows",
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
@@ -2099,14 +2103,15 @@ def getUser(key, prefClass=Prefs):
     @return the requested user setting
     """
     if key == "MailServerPassword":
-        from Utilities import pwDecode
-        return pwDecode(prefClass.settings.value("User/" + key,
-            prefClass.userDefaults[key]))
+        from Utilities.crypto import pwConvert
+        return pwConvert(prefClass.settings.value("User/" + key,
+            prefClass.userDefaults[key]), encode=False)
     elif key in ["MailServerPort"]:
         return int(prefClass.settings.value("User/" + key,
             prefClass.userDefaults[key]))
     elif key in ["MailServerAuthentication", "MailServerUseTLS",
-                 "UseSystemEmailClient"]:
+                 "UseSystemEmailClient", "UseMasterPassword",
+                 "SavePasswords"]:
         return toBool(prefClass.settings.value("User/" + key,
             prefClass.userDefaults[key]))
     else:
@@ -2122,9 +2127,13 @@ def setUser(key, value, prefClass=Prefs):
     @param prefClass preferences class used as the storage area
     """
     if key == "MailServerPassword":
-        from Utilities import pwEncode
+        from Utilities.crypto import pwConvert
         prefClass.settings.setValue(
-            "User/" + key, pwEncode(value))
+            "User/" + key, pwConvert(value, encode=True))
+    elif key == "MasterPassword":
+        from Utilities.crypto.py3PBKDF2 import hashPassword
+        prefClass.settings.setValue(
+            "User/" + key, hashPassword(value))
     else:
         prefClass.settings.setValue("User/" + key, value)
     
@@ -2473,6 +2482,29 @@ def toDict(value):
         return {}
     else:
         return value
+
+
+def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
+    """
+    Module function to convert all passwords.
     
+    @param oldPassword current master password (string)
+    @param newPassword new master password (string)
+    @param prefClass preferences class used as the storage area
+    """
+    from Utilities.crypto import pwRecode
+    for key in ["ProxyPassword/Http", "ProxyPassword/Https",
+                "ProxyPassword/Ftp", ]:
+        prefClass.settings.setValue("UI/" + key, pwRecode(
+            prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]),
+            oldPassword,
+            newPassword))
+    for key in ["MailServerPassword"]:
+        prefClass.settings.setValue("User/" + key, pwRecode(
+            prefClass.settings.value("User/" + key, prefClass.userDefaults[key]),
+            oldPassword,
+            newPassword))
+
+
 initPreferences()
 initRecentSettings()

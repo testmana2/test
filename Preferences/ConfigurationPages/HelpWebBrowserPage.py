@@ -8,7 +8,6 @@ Module implementing the Help web browser configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot, QLocale
-from PyQt4.QtWebKit import QWebSettings
 from PyQt4.QtNetwork import QNetworkRequest
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -31,6 +30,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         self.setupUi(self)
         self.setObjectName("HelpWebBrowserPage")
         
+        self.__configDlg = configDialog
         mw = configDialog.parent().parent()
         if hasattr(mw, "helpWindow") and mw.helpWindow is not None:
             self.__helpWindow = mw.helpWindow
@@ -65,14 +65,6 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("JavaScriptCanAccessClipboard"))
         self.pluginsCheckBox.setChecked(
             Preferences.getHelp("PluginsEnabled"))
-        
-        self.savePasswordsCheckBox.setChecked(
-            Preferences.getHelp("SavePasswords"))
-        if hasattr(QWebSettings, "DnsPrefetchEnabled"):
-            self.dnsPrefetchCheckBox.setChecked(
-            Preferences.getHelp("DnsPrefetchEnabled"))
-        else:
-            self.dnsPrefetchCheckBox.setEnabled(False)
         
         self.diskCacheCheckBox.setChecked(
             Preferences.getHelp("DiskCacheEnabled"))
@@ -127,7 +119,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         index = self.languageCombo.findData(Preferences.getHelp("SearchLanguage"))
         if index > -1:
             self.languageCombo.setCurrentIndex(index)
-        
+    
     def save(self):
         """
         Public slot to save the Help Viewers configuration.
@@ -153,12 +145,6 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.jsClipboardCheckBox.isChecked())
         Preferences.setHelp("PluginsEnabled",
             self.pluginsCheckBox.isChecked())
-        
-        Preferences.setHelp("SavePasswords",
-            self.savePasswordsCheckBox.isChecked())
-        if self.dnsPrefetchCheckBox.isEnabled():
-            Preferences.setHelp("DnsPrefetchEnabled",
-                self.dnsPrefetchCheckBox.isChecked())
         
         Preferences.setHelp("DiskCacheEnabled",
             self.diskCacheCheckBox.isChecked())
@@ -224,7 +210,7 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Private slot to set the default home page.
         """
         self.homePageEdit.setText(Preferences.Prefs.helpDefaults["HomePage"])
-    
+
 
 def create(dlg):
     """

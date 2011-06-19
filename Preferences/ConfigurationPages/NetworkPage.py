@@ -122,6 +122,15 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
                 dn = dn[:-1]
             self.downloadDirEdit.setText(dn)
     
+    @pyqtSlot()
+    def on_clearProxyPasswordsButton_clicked(self):
+        """
+        Private slot to clear the saved proxy passwords.
+        """
+        Preferences.setUI("ProxyPassword/Http", "")
+        Preferences.setUI("ProxyPassword/Https", "")
+        Preferences.setUI("ProxyPassword/Ftp", "")
+    
 
 def create(dlg):
     """

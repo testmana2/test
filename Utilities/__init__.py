@@ -12,8 +12,6 @@ import sys
 import re
 import fnmatch
 import glob
-import random
-import base64
 import getpass
 
 
@@ -1206,8 +1204,8 @@ def py2compile(file, checkFlakes=False):
         be empty, if a syntax error was detected by the syntax checker.
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isExecutable(interpreter):
-        return (True, file, "1", "",
+    if interpreter == "" or not isinpath(interpreter):
+        return (True, file, "1", "0", "",
             QCoreApplication.translate("Utilities",
                                        "Python2 interpreter not configured."),
             [])
@@ -1515,36 +1513,6 @@ def checkBlacklistedVersions():
                 return False
     
     return True
-
-################################################################################
-# password handling functions below
-################################################################################
-
-
-def pwEncode(pw):
-    """
-    Module function to encode a password.
-    
-    @param pw password to encode (string)
-    @return encoded password (string)
-    """
-    pop = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,;:-_!$?*+#"
-    marker = "CE4"
-    rpw = "".join(random.sample(pop, 32)) + pw + "".join(random.sample(pop, 32))
-    return marker + base64.b64encode(rpw.encode()).decode()
-
-
-def pwDecode(epw):
-    """
-    Module function to decode a password.
-    
-    @param pw encoded password to decode (string)
-    @return decoded password (string)
-    """
-    if not epw.startswith("CE4"):
-        return epw  # it was not encoded using pwEncode
-    
-    return base64.b64decode(epw[3:].encode())[32:-32].decode()
 
 ################################################################################
 # posix compatibility functions below

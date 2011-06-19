@@ -9,7 +9,8 @@ Module implementing the password manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl
+from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QCoreApplication
+from PyQt4.QtGui import QProgressDialog, QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebPage
 
@@ -19,6 +20,7 @@ from Helpviewer.JavaScriptResources import parseForms_js
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
+import Utilities.crypto
 import Preferences
 
 
@@ -129,7 +131,8 @@ class PasswordManager(QObject):
         
         key = self.__createKey(url, realm)
         try:
-            return self.__logins[key][0], Utilities.pwDecode(self.__logins[key][1])
+            return self.__logins[key][0], Utilities.crypto.pwConvert(
+                self.__logins[key][1], encode=False)
         except KeyError:
             return "", ""
     
@@ -146,7 +149,7 @@ class PasswordManager(QObject):
             self.__load()
         
         key = self.__createKey(url, realm)
-        self.__logins[key] = (username, Utilities.pwEncode(password))
+        self.__logins[key] = (username, Utilities.crypto.pwConvert(password, encode=True))
         self.changed.emit()
     
     def __createKey(self, url, realm):
@@ -308,7 +311,8 @@ class PasswordManager(QObject):
         if site not in self.__logins:
             return None
         
-        return self.__logins[site][0], Utilities.pwDecode(self.__logins[site][1])
+        return self.__logins[site][0], Utilities.crypto.pwConvert(
+            self.__logins[site][1], encode=False)
     
     def post(self, request, data):
         """
@@ -318,7 +322,7 @@ class PasswordManager(QObject):
         @param data data to be sent (QByteArray)
         """
         # shall passwords be saved?
-        if not Preferences.getHelp("SavePasswords"):
+        if not Preferences.getUser("SavePasswords"):
             return
         
         # observe privacy
@@ -407,7 +411,7 @@ class PasswordManager(QObject):
                 password = element[1]
                 form.elements[index] = (element[0], "--PASSWORD--")
         if user and password:
-            self.__logins[key] = (user, Utilities.pwEncode(password))
+            self.__logins[key] = (user, Utilities.crypto.pwConvert(password, encode=True))
             self.__loginForms[key] = form
             self.changed.emit()
     
@@ -438,12 +442,13 @@ class PasswordManager(QObject):
         if boundary is not None:
             args = self.__extractMultipartQueryItems(data, boundary)
         else:
-            argsUrl = QUrl.fromEncoded(QByteArray("foo://bar.com/?" + data))
+            argsUrl = QUrl.fromEncoded(
+                QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
             encodedArgs = argsUrl.queryItems()
             args = set()
             for arg in encodedArgs:
                 key = arg[0]
-                value = arg[1].replace("+", " ")
+                value = arg[1]
                 args.add((key, value))
         
         # extract the forms
@@ -560,10 +565,37 @@ class PasswordManager(QObject):
                type_ in ["hidden", "reset", "submit"]:
                 continue
             if type_ == "password":
-                value = Utilities.pwDecode(self.__logins[key][1])
+                value = Utilities.crypto.pwConvert(self.__logins[key][1], encode=False)
             setType = type_ == "checkbox" and "checked" or "value"
             value = value.replace("\\", "\\\\")
             value = value.replace('"', '\\"')
             javascript = 'document.forms[{0}].elements["{1}"].{2}="{3}";'.format(
                          formName, name, setType, value)
             page.mainFrame().evaluateJavaScript(javascript)
+    
+    def masterPasswordChanged(self, oldPassword, newPassword):
+        """
+        Public slot to handle the change of the master password.
+        
+        @param oldPassword current master password (string)
+        @param newPassword new master password (string)
+        """
+        if not self.__loaded:
+            self.__load()
+        
+        progress = QProgressDialog(self.trUtf8("Re-encoding saved passwords..."),
+            None, 0, len(self.__logins), QApplication.activeModalWidget())
+        progress.setMinimumDuration(0)
+        count = 0
+        
+        for key in self.__logins:
+            progress.setValue(count)
+            QCoreApplication.processEvents()
+            username, hash = self.__logins[key]
+            hash = Utilities.crypto.pwRecode(hash, oldPassword, newPassword)
+            self.__logins[key] = (username, hash)
+            count += 1
+        
+        progress.setValue(len(self.__logins))
+        QCoreApplication.processEvents()
+        self.changed.emit()

@@ -173,9 +173,9 @@ class NetworkAccessManager(QNetworkAccessManager):
                                "realm '{1}'</b>").format(urlRoot, auth.realm())
         
         dlg = AuthenticationDialog(info, auth.user(),
-                                   Preferences.getHelp("SavePasswords"),
-                                   Preferences.getHelp("SavePasswords"))
-        if Preferences.getHelp("SavePasswords"):
+                                   Preferences.getUser("SavePasswords"),
+                                   Preferences.getUser("SavePasswords"))
+        if Preferences.getUser("SavePasswords"):
             username, password = \
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().getLogin(
                     reply.url(), auth.realm())
@@ -185,7 +185,7 @@ class NetworkAccessManager(QNetworkAccessManager):
             username, password = dlg.getData()
             auth.setUser(username)
             auth.setPassword(password)
-            if Preferences.getHelp("SavePasswords"):
+            if Preferences.getUser("SavePasswords"):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().setLogin(
                     reply.url(), auth.realm(), username, password)
     
