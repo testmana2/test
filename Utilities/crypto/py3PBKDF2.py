@@ -23,6 +23,7 @@ Hashes = {
 
 Delimiter = "$"
 
+
 def pbkdf2(password, salt, iterations, digestMod):
     """
     Module function to hash a password according to the PBKDF2 specification.

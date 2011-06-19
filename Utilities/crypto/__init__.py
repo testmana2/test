@@ -7,10 +7,6 @@
 Package implementing cryptography related functionality.
 """
 
-##import os
-##import sys
-##sys.path.insert(1, os.path.join(os.path.dirname(__file__), "../.."))
-##
 import random
 import base64
 
@@ -21,8 +17,6 @@ from E5Gui import E5MessageBox
 
 from .py3AES import encryptData, decryptData
 from .py3PBKDF2 import verifyPassword, hashPasswordTuple, rehashPassword
-##from py3AES import encryptData, decryptData
-##from py3PBKDF2 import verifyPassword, hashPasswordTuple, rehashPassword
 
 import Preferences
 
@@ -64,51 +58,6 @@ def pwDecode(epw):
     return base64.b64decode(epw[3:].encode("ascii"))[32:-32].decode("utf-8")
 
 
-##def passwordHash(pw):
-##    """
-##    Module function to calculate the hash for the given password.
-##    
-##    This is done by hashing it 65.000 times with SHA1 in order to make brute force
-##    attacks a bit harder.
-##    
-##    @param pw password to be hashed (string)
-##    @return password hash (string)
-##    """
-##    hash = QCryptographicHash.hash(QByteArray(pw.encode("utf-8")),
-##                                   QCryptographicHash.Sha1)
-##    for i in range(65000):
-##        hash = QCryptographicHash.hash(hash, QCryptographicHash.Sha1)
-##    return base64.b64encode(bytes(hash)).decode("ascii")
-##
-##
-##def generateCryptoKey(pw, keyLength=32):
-##    """
-##    Module function to calculate a crypto key given a password.
-##    
-##    This is done by hashing the password 32.000 times MD5 and 32.000 times with MD4.
-##    These hashes are concatenated and and the first bytes are taken depending on the
-##    desired key length.
-##    
-##    @param pw password to be used (string)
-##    @param keyLength length of the desired key (16, 24 or 32) (default is
-##        32 bytes suitable for AES256 encryption)
-##    @return crypto key (bytes)
-##    """
-##    if keyLength not in [16, 24, 32]:
-##        raise ValueError(QCoreApplication.translate(
-##            "Crypto", "Illegal key length ({0}) given.").format(keyLength))
-##    
-##    hash1 = QCryptographicHash.hash(QByteArray(pw.encode("utf-8")),
-##                                    QCryptographicHash.Md5)
-##    hash2 = QCryptographicHash.hash(QByteArray(pw.encode("utf-8")),
-##                                    QCryptographicHash.Md4)
-##    for i in range(32000):
-##        hash1 = QCryptographicHash.hash(hash1, QCryptographicHash.Md5)
-##        hash2 = QCryptographicHash.hash(hash2, QCryptographicHash.Md4)
-##    hash = (hash1 + hash2)[:keyLength]
-##    return bytes(hash)
-
-
 def __getMasterPassword():
     """
     Private module function to get the password from the user.
@@ -129,12 +78,12 @@ def __getMasterPassword():
                 else:
                     E5MessageBox.warning(None,
                         QCoreApplication.translate("Crypto", "Master Password"),
-                        QCoreApplication.translate("Crypto", 
+                        QCoreApplication.translate("Crypto",
                             """The given password is incorrect."""))
             else:
                 E5MessageBox.critical(None,
                     QCoreApplication.translate("Crypto", "Master Password"),
-                    QCoreApplication.translate("Crypto", 
+                    QCoreApplication.translate("Crypto",
                         """There is no master password registered."""))
         except ValueError as why:
             E5MessageBox.warning(None,

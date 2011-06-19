@@ -101,7 +101,7 @@ class PasswordChecker(object):
             "penalty": -10,
         }
         
-        # number of lowercase letters, such as a-z 
+        # number of lowercase letters, such as a-z
         self.lowercaseLetters = {
             "count": 0,
             "minimum": 1,
@@ -284,7 +284,7 @@ class PasswordChecker(object):
         self.passwordLength["count"] = len(password)
         self.recommendedPasswordLength["count"] = len(password)
         
-        # Loop through password to check for Symbol, Numeric, Lowercase 
+        # Loop through password to check for Symbol, Numeric, Lowercase
         # and Uppercase pattern matches
         for index in range(len(password)):
             if self.uppercaseRe.match(password[index]):
@@ -311,7 +311,7 @@ class PasswordChecker(object):
                         found = True
                         break
                 if not found:
-                    uniqueCharacters.append(password[index1] )
+                    uniqueCharacters.append(password[index1])
             
             # calculate a redundancy number
             self.redundancy["value"] = len(password) / len(uniqueCharacters)
@@ -319,7 +319,7 @@ class PasswordChecker(object):
         # Check for sequential alpha string patterns (forward and reverse) but only,
         # if the string has already a length to check for, does not make sense to check
         # the password "ab" for the sequential data "abc"
-        lowercasedPassword = password.lower();
+        lowercasedPassword = password.lower()
         
         if self.passwordLength["count"] >= self.sequentialLetters["length"]:
             for index in range(len(self.sequentialLetters["data"]) - \
@@ -348,7 +348,7 @@ class PasswordChecker(object):
         patternsMatched = []
         if self.passwordLength["count"] >= self.keyboardPatterns["length"]:
             for pattern in self.keyboardPatterns["data"]:
-                for index in range(len(pattern)- self.keyboardPatterns["length"] + 1):
+                for index in range(len(pattern) - self.keyboardPatterns["length"] + 1):
                     fwd = pattern[index:index + self.keyboardPatterns["length"]]
                     rev = self.__strReverse(fwd)
                     if lowercasedPassword.find(fwd) != -1:
@@ -394,7 +394,7 @@ class PasswordChecker(object):
         self.score["count"] += self.passwordLength["rating"]
         
         # recommendedPasswordLength
-        # Credit reaching the recommended password length or put a 
+        # Credit reaching the recommended password length or put a
         # penalty on it
         if self.passwordLength["count"] >= self.recommendedPasswordLength["minimum"]:
             self.recommendedPasswordLength["rating"] = \

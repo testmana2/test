@@ -76,7 +76,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         if checked:
             dlg = MasterPasswordEntryDialog("", self)
             if dlg.exec_() == QDialog.Accepted:
-                Preferences.setUser("MasterPassword", 
+                Preferences.setUser("MasterPassword",
                     dlg.getMasterPassword())
                 self.masterPasswordButton.setEnabled(True)
                 self.__newPassword = dlg.getMasterPassword()
@@ -93,7 +93,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
         """
         dlg = MasterPasswordEntryDialog(Preferences.getUser("MasterPassword"), self)
         if dlg.exec_() == QDialog.Accepted:
-            Preferences.setUser("MasterPassword", 
+            Preferences.setUser("MasterPassword",
                 dlg.getMasterPassword())
             
             if self.__oldUseMasterPassword != self.masterPasswordCheckBox.isChecked():
@@ -103,6 +103,7 @@ class SecurityPage(ConfigurationPageBase, Ui_SecurityPage):
             else:
                 self.__configDlg.masterPasswordChanged.emit(
                     dlg.getCurrentPassword(), dlg.getMasterPassword())
+
 
 def create(dlg):
     """
