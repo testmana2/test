@@ -355,6 +355,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     del sourceImpl[-1]
             else:
                 appendAtIndex = cls.endlineno - 1
+                while not sourceImpl[appendAtIndex].strip():
+                    appendAtIndex -= 1
+                appendAtIndex += 1
             
             # determine indent string
             for line in sourceImpl[cls.lineno:cls.endlineno + 1]:
