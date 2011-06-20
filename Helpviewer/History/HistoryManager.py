@@ -122,7 +122,7 @@ class HistoryManager(QWebHistoryInterface):
         self.__historyFilterModel = HistoryFilterModel(self.__historyModel, self)
         self.__historyTreeModel = HistoryTreeModel(self.__historyFilterModel, self)
         
-        super().setDefaultInterface()
+        super().setDefaultInterface(self)
         self.__startFrequencyTimer()
     
     def close(self):
