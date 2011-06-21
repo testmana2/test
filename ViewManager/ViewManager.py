@@ -3976,7 +3976,26 @@ class ViewManager(QObject):
         """
         Private slot to handle the quickFindPrev toolbutton action.
         """
-        self.__quickSearchInEditor(True, True)
+        # first we have to check if quick search is active
+        # and try to activate it if not
+        if self.__quickSearchToolbarVisibility is None:
+            self.__quickSearchToolbarVisibility = self.__quickSearchToolbar.isVisible()
+        if not self.__quickSearchToolbar.isVisible():
+            self.__quickSearchToolbar.show()
+        if not self.quickFindtextCombo.lineEdit().hasFocus():
+            aw = self.activeWindow()
+            self.quickFindtextCombo.lastActive = aw
+            if aw:
+                self.quickFindtextCombo.lastCursorPos = aw.getCursorPosition()
+            else:
+                self.quickFindtextCombo.lastCursorPos = None
+            tff = self.textForFind(False)
+            if tff:
+                self.quickFindtextCombo.lineEdit().setText(tff)
+            self.quickFindtextCombo.lineEdit().setFocus()
+            self.quickFindtextCombo.lineEdit().selectAll()
+        else:
+            self.__quickSearchInEditor(True, True)
         
     def __quickSearchMarkOccurrences(self, txt):
         """
