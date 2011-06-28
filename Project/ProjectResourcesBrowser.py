@@ -560,7 +560,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                     else:
                         args.append("-py3")
             elif self.project.getProjectType() == "PySide":
-                self.rccCompiler = 'pyside-rcc4'
+                self.rccCompiler = 'pyside-rcc'
                 if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                     args.append("-py2")
                 else:
