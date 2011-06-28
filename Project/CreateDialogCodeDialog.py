@@ -175,17 +175,19 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         """
         mapped = bytes(type_).decode()
         
-        # 1. check for const
-        mapped = mapped.replace("const ", "")
-        
-        # 2. check fpr *
-        mapped = mapped.replace("*", "")
-        
-        # 3. replace QString and QStringList
-        mapped = mapped.replace("QStringList", "list").replace("QString", "str")
-        
-        # 4. replace double by float
-        mapped = mapped.replace("double", "float")
+        if self.project.getProjectLanguage() != "Python2" or \
+           self.project.getProjectType == "PySide":
+            # 1. check for const
+            mapped = mapped.replace("const ", "")
+            
+            # 2. check fpr *
+            mapped = mapped.replace("*", "")
+            
+            # 3. replace QString and QStringList
+            mapped = mapped.replace("QStringList", "list").replace("QString", "str")
+            
+            # 4. replace double by float
+            mapped = mapped.replace("double", "float")
         
         return mapped
         
@@ -302,7 +304,16 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         if self.__module is None:
             # new file
             try:
-                tmplName = os.path.join(getConfig('ericCodeTemplatesDir'), "impl.py.tmpl")
+                if self.project.getProjectLanguage() == "Python2":
+                    if self.project.getProjectType() == "PySide":
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyside.py2.tmpl")
+                    else:
+                        tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                                "impl_pyqt.py2.tmpl")
+                else:
+                    tmplName = os.path.join(getConfig('ericCodeTemplatesDir'),
+                                            "impl_pyqt.py.tmpl")
                 tmplFile = open(tmplName, 'r', encoding="utf-8")
                 template = tmplFile.read()
                 tmplFile.close()
@@ -366,6 +377,13 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                     break
         
         # do the coding stuff
+        if self.project.getProjectLanguage() == "Python2":
+            if self.project.getProjectType() == "PySide":
+                pyqtSignatureFormat = '@Slot({0})'
+            else:
+                pyqtSignatureFormat = '@pyqtSignature("{0}")'
+        else:
+            pyqtSignatureFormat = '@pyqtSlot({0})'
         for row in range(self.slotsModel.rowCount()):
             topItem = self.slotsModel.item(row)
             for childRow in range(topItem.rowCount()):
@@ -373,8 +391,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                 if child.checkState() and \
                    child.flags() & Qt.ItemFlags(Qt.ItemIsUserCheckable):
                     slotsCode.append('{0}\n'.format(indentStr))
-                    slotsCode.append('{0}@pyqtSlot({1})\n'.format(
-                        indentStr, child.data(pyqtSignatureRole)))
+                    slotsCode.append('{0}{1}\n'.format(
+                        indentStr, 
+                        pyqtSignatureFormat.format(child.data(pyqtSignatureRole))))
                     slotsCode.append('{0}def {1}:\n'.format(
                         indentStr, child.data(pythonSignatureRole)))
                     slotsCode.append('{0}"""\n'.format(indentStr * 2))
