@@ -281,7 +281,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         elif self.filenameEdit.text().endswith(".rb"):
             pass
         # second decide on project language
-        elif self.project.getProjectLanguage() in ["Python", "Python3"]:
+        elif self.project.getProjectLanguage() in ["Python2", "Python3"]:
             self.__generatePythonCode()
         elif self.project.getProjectLanguage() == "Ruby":
             pass
