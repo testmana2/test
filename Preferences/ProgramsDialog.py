@@ -122,7 +122,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             '--version', 'Python User', 4)
         # 3.c Resource Compiler PySide
         self.__createProgramEntry(self.trUtf8("Resource Compiler (Python, PySide)"), 
-            Utilities.isWindowsPlatform() and "pyside-rcc4.exe" or "pyside-rcc4", 
+            Utilities.isWindowsPlatform() and "pyside-rcc.exe" or "pyside-rcc", 
             '-version', 'Resource Compiler', -1)
         
         # 4. do the Ruby programs
