@@ -37,11 +37,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
         self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)
         
-        try:
-            import PySide
+        if Utilities.checkPyside():
             self.pysideGroup.setEnabled(True)
-            del PySide
-        except ImportError:
+        else:
             self.pysideGroup.setEnabled(False)
         
         # set initial values

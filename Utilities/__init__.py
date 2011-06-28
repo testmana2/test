@@ -1287,6 +1287,31 @@ def setConfigDir(d):
     global configDir
     configDir = os.path.expanduser(d)
 
+
+def checkPyside():
+    """
+    Module function to check the presence of PySide.
+    
+    @return flag indicating the presence of PySide (boolean)
+    """
+    interpreter = Preferences.getDebugger("PythonInterpreter")
+    if interpreter == "" or not isinpath(interpreter):
+        return False
+    
+    checker = os.path.join(getConfig('ericDir'),
+                           "UtilitiesPython2", "PySideImporter.py")
+    args = [checker]
+    proc = QProcess()
+    proc.setProcessChannelMode(QProcess.MergedChannels)
+    proc.start(interpreter, args)
+    finished = proc.waitForFinished(30000)
+    if finished:
+        if proc.exitCode() == 0:
+            return True
+    
+    return False
+
+
 ################################################################################
 # functions for environment handling
 ################################################################################

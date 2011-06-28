@@ -245,12 +245,10 @@ class Project(QObject):
         self.__projectTypes["E4Plugin"] = self.trUtf8("Eric Plugin")
         self.__projectTypes["Console"] = self.trUtf8("Console")
         self.__projectTypes["Other"] = self.trUtf8("Other")
-        try:
-            import PySide
+        if Utilities.checkPyside():
             self.__projectTypes["PySide"] = self.trUtf8("PySide GUI")
             self.__projectTypes["PySideC"] = self.trUtf8("PySide Console")
-            del PySide
-        except ImportError:
+        else:
             pass
         
     def getProjectTypes(self):

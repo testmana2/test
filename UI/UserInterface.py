@@ -2218,8 +2218,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to initialize the action to show the PySide documentation.
         """
-        try:
-            import PySide
+        if Utilities.checkPyside():
             self.pysideDocAct = E5Action(self.trUtf8('PySide Documentation'),
                 self.trUtf8('Py&Side Documentation'), 0, 0, self, 'pyside_documentation')
             self.pysideDocAct.setStatusTip(self.trUtf8('Open PySide Documentation'))
@@ -2231,8 +2230,7 @@ class UserInterface(QMainWindow):
             ))
             self.pysideDocAct.triggered[()].connect(self.__showPySideDoc)
             self.actions.append(self.pysideDocAct)
-            del PySide
-        except ImportError:
+        else:
             self.pysideDocAct = None
       
     def __initMenus(self):
