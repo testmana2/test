@@ -392,7 +392,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                    child.flags() & Qt.ItemFlags(Qt.ItemIsUserCheckable):
                     slotsCode.append('{0}\n'.format(indentStr))
                     slotsCode.append('{0}{1}\n'.format(
-                        indentStr, 
+                        indentStr,
                         pyqtSignatureFormat.format(child.data(pyqtSignatureRole))))
                     slotsCode.append('{0}def {1}:\n'.format(
                         indentStr, child.data(pythonSignatureRole)))
