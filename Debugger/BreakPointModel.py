@@ -7,7 +7,7 @@
 Module implementing the Breakpoint model.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex, QObject
+from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
 class BreakPointModel(QAbstractItemModel):

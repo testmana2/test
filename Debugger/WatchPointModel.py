@@ -7,7 +7,7 @@
 Module implementing the Watch expression model.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex, QObject
+from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
 class WatchPointModel(QAbstractItemModel):

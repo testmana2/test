@@ -10,8 +10,7 @@ Module implementing the browser model.
 import os
 import re
 
-from PyQt4.QtCore import QDir, QModelIndex, pyqtSignal, QAbstractItemModel, \
-    QFileSystemWatcher, Qt
+from PyQt4.QtCore import QDir, QModelIndex, pyqtSignal, QFileSystemWatcher, Qt
 from PyQt4.QtGui import QColor
 
 from UI.BrowserModel import BrowserModel, BrowserItem, BrowserDirectoryItem, \
