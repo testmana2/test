@@ -256,9 +256,8 @@ def maximum_line_length(physical_line):
     if length > MAX_LINE_LENGTH:
         try:
             # The line could contain multi-byte characters
-            if not hasattr(line, 'decode'):   # Python 3
-                line = line.encode('latin-1')
-            length = len(line.decode('utf-8'))
+            if hasattr(line, 'decode'):   # Python 2 only
+                length = len(line.decode('utf-8'))
         except UnicodeDecodeError:
             pass
     if length > MAX_LINE_LENGTH:
