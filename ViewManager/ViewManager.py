@@ -3935,6 +3935,7 @@ class ViewManager(QObject):
                 self.quickFindtextCombo.lineEdit().setText(tff)
             self.quickFindtextCombo.lineEdit().setFocus()
             self.quickFindtextCombo.lineEdit().selectAll()
+            self.__quickSearchSetEditColors(False)
         else:
             self.__quickSearchInEditor(True, False)
         
@@ -3998,6 +3999,7 @@ class ViewManager(QObject):
                 self.quickFindtextCombo.lineEdit().setText(tff)
             self.quickFindtextCombo.lineEdit().setFocus()
             self.quickFindtextCombo.lineEdit().selectAll()
+            self.__quickSearchSetEditColors(False)
         else:
             self.__quickSearchInEditor(True, True)
         
@@ -4038,7 +4040,8 @@ class ViewManager(QObject):
         
         text = self.quickFindtextCombo.lineEdit().text()
         if not text:
-            text = self.quickFindtextCombo.lastSearchText
+            if again:
+                text = self.quickFindtextCombo.lastSearchText
         if not text:
             if Preferences.getEditor("QuickSearchMarkersEnabled"):
                 aw.clearSearchIndicators()
@@ -4068,7 +4071,15 @@ class ViewManager(QObject):
         else:
             ok = aw.findFirst(text, False, False, False, True, not back,
                               lineFrom, indexFrom)
-        if not ok:
+        self.__quickSearchSetEditColors(not ok)
+    
+    def __quickSearchSetEditColors(self, error):
+        """
+        Private method to set the quick search edit colors.
+        
+        @param error flag indicating an error (boolean)
+        """
+        if error:
             palette = self.quickFindtextCombo.lineEdit().palette()
             palette.setColor(QPalette.Base, QColor("red"))
             palette.setColor(QPalette.Text, QColor("white"))
@@ -4080,7 +4091,7 @@ class ViewManager(QObject):
             palette.setColor(QPalette.Text,
                              self.quickFindtextCombo.palette().color(QPalette.Text))
             self.quickFindtextCombo.lineEdit().setPalette(palette)
-        
+    
     def __quickSearchExtend(self):
         """
         Private method to handle the quicksearch extend action.
