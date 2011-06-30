@@ -6639,6 +6639,7 @@ eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
 eric5.Utilities.checkBlacklistedVersions?4()
+eric5.Utilities.checkPyside?4()
 eric5.Utilities.codingBytes_regexps?7
 eric5.Utilities.coding_regexps?7
 eric5.Utilities.compactPath?4(path, width, measure=len)
