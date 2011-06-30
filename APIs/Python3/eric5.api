@@ -6858,7 +6858,7 @@ eric5.install.compile_ui?4(ui_dir, ui_file)
 eric5.install.configLength?7
 eric5.install.configName?7
 eric5.install.copyToFile?4(name, text)
-eric5.install.copyTree?4(src, dst, filters, excludeDirs=[])
+eric5.install.copyTree?4(src, dst, filters, excludeDirs=[], excludePatterns=[])
 eric5.install.createConfig?4()
 eric5.install.createGlobalPluginsDir?4()
 eric5.install.createInstallConfig?4()

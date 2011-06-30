@@ -173,7 +173,7 @@ the contents to copy to the file.
 <hr /><hr />
 <a NAME="copyTree" ID="copyTree"></a>
 <h2>copyTree</h2>
-<b>copyTree</b>(<i>src, dst, filters, excludeDirs=[]</i>)
+<b>copyTree</b>(<i>src, dst, filters, excludeDirs=[], excludePatterns=[]</i>)
 <p>
     Copy Python, translation, documentation, wizards configuration,
     designer template files and DTDs of a directory tree.
@@ -190,6 +190,9 @@ list of filter pattern determining the files to be copied
 </dd><dt><i>excludeDirs</i></dt>
 <dd>
 list of (sub)directories to exclude from copying
+</dd><dt><i>excludePatterns=</i></dt>
+<dd>
+list of filter pattern determining the files to be skipped
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
