@@ -4039,8 +4039,7 @@ class ViewManager(QObject):
             return
         
         text = self.quickFindtextCombo.lineEdit().text()
-        if not text:
-            if again:
+        if not text and again:
                 text = self.quickFindtextCombo.lastSearchText
         if not text:
             if Preferences.getEditor("QuickSearchMarkersEnabled"):
