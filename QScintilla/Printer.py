@@ -34,6 +34,13 @@ class Printer(QsciPrinter):
             self.setPageOrder(QPrinter.FirstPageFirst)
         else:
             self.setPageOrder(QPrinter.LastPageFirst)
+        self.setPageMargins(
+            Preferences.getPrinter("LeftMargin") * 10,
+            Preferences.getPrinter("TopMargin") * 10,
+            Preferences.getPrinter("RightMargin") * 10,
+            Preferences.getPrinter("BottomMargin") * 10,
+            QPrinter.Millimeter
+        )
         self.setPrinterName(Preferences.getPrinter("PrinterName"))
         self.time = QTime.currentTime().toString(Qt.LocalDate)
         self.date = QDate.currentDate().toString(Qt.LocalDate)
