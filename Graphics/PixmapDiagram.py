@@ -276,6 +276,13 @@ class PixmapDiagram(QMainWindow):
             printer.setPageOrder(QPrinter.FirstPageFirst)
         else:
             printer.setPageOrder(QPrinter.LastPageFirst)
+        printer.setPageMargins(
+            Preferences.getPrinter("LeftMargin") * 10,
+            Preferences.getPrinter("TopMargin") * 10,
+            Preferences.getPrinter("RightMargin") * 10,
+            Preferences.getPrinter("BottomMargin") * 10,
+            QPrinter.Millimeter
+        )
         printer.setPrinterName(Preferences.getPrinter("PrinterName"))
         
         preview = QPrintPreviewDialog(printer, self)
