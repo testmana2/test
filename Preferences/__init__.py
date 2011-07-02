@@ -22,7 +22,7 @@ import shutil
 
 from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
     QByteArray, QSize, QUrl, Qt
-from PyQt4.QtGui import QColor, QFont
+from PyQt4.QtGui import QColor, QFont, QInputDialog
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.Qsci import QsciScintilla
@@ -32,7 +32,7 @@ from E5Gui import E5FileDialog
 import QScintilla.Lexers
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, isLinuxPlatform
+    isWindowsPlatform, isLinuxPlatform, findPython2Interpreters
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -1050,6 +1050,28 @@ def getDebugger(key, prefClass=Prefs):
     elif key in ["AllowedHosts"]:
         return toList(
             prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key]))
+    elif key == "PythonInterpreter":
+        interpreter = \
+            prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
+        if not interpreter:
+            interpreters = findPython2Interpreters()
+            if interpreters:
+                if len(interpreters) == 1:
+                    interpreter = interpreters[0]
+                else:
+                    selection, ok = QInputDialog.getItem(
+                        None,
+                        QCoreApplication.translate("Preferences",
+                            "Select Python2 Interpreter"),
+                        QCoreApplication.translate("Preferences",
+                            "Select the Python2 interpreter to be used:"),
+                        interpreters,
+                        0, False)
+                    if ok and selection != "":
+                        interpreter = selection
+                if interpreter:
+                    setDebugger("PythonInterpreter", interpreter)
+        return interpreter
     else:
         return \
             prefClass.settings.value("Debugger/" + key, prefClass.debuggerDefaults[key])
