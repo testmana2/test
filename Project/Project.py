@@ -1720,9 +1720,13 @@ class Project(QObject):
         """
         try:
             os.remove(os.path.join(self.ppath, fn))
-            dummy, ext = os.path.splitext(fn)
+            path, ext = os.path.splitext(fn)
             if ext == '.ui':
                 fn2 = os.path.join(self.ppath, '{0}.h'.format(fn))
+                if os.path.isfile(fn2):
+                    os.remove(fn2)
+            for ext in ['.pyc', '.pyo']:
+                fn2 = path + ext
                 if os.path.isfile(fn2):
                     os.remove(fn2)
         except EnvironmentError:
