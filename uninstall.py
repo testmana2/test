@@ -103,11 +103,15 @@ def uninstallEric():
         e5cfile = os.path.join(pyModDir, name)
         if os.path.exists(e5cfile):
             os.remove(e5cfile)
+        e5cfile = os.path.join(pyModDir, "__pycache__", name)
+        path, ext = os.path.splitext(e5cfile)
+        for f in glob.glob("{0}.*{1}".format(path, ext)):
+            os.remove(f)
     
     # Cleanup the install directories
     for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                 'ericIconDir', 'ericPixDir', 'ericDir', 'ericTemplatesDir',
-                 'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir']:
+                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',
+                 'ericOthersDir', 'ericStylesDir', 'ericDir']:
         dirpath = getConfig(name)
         if os.path.exists(dirpath):
             shutil.rmtree(dirpath, True)
