@@ -1547,6 +1547,7 @@ eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase._write_unimplemented?5(value
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase.writeBasics?4(tag, pyobject)
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase.writeXML?4()
 eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase?1(device)
+eric5.Globals.findPython2Interpreters?4()
 eric5.Globals.isLinuxPlatform?4()
 eric5.Globals.isMacPlatform?4()
 eric5.Globals.isWindowsPlatform?4()
