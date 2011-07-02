@@ -1726,10 +1726,15 @@ class Project(QObject):
                 fn2 = os.path.join(self.ppath, '{0}.h'.format(fn))
                 if os.path.isfile(fn2):
                     os.remove(fn2)
+            head, tail = os.path.split(path)
             for ext in ['.pyc', '.pyo']:
-                fn2 = path + ext
+                fn2 = os.path.join(self.ppath, path + ext)
                 if os.path.isfile(fn2):
                     os.remove(fn2)
+                pat = os.path.join(
+                    self.ppath, head, "__pycache__", "{0}.*{1}".format(tail, ext))
+                for f in glob.glob(pat):
+                    os.remove(f)
         except EnvironmentError:
             E5MessageBox.critical(self.ui,
                 self.trUtf8("Delete file"),
