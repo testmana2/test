@@ -9,14 +9,13 @@ Module implementing the UI to the pyunit package.
 
 import unittest
 import sys
-import traceback
 import time
 import re
 import os
 
 from PyQt4.QtCore import pyqtSignal, QEvent, Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QColor, QDialog, QApplication, QDialogButtonBox, \
-    QMainWindow
+    QMainWindow, QListWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter
@@ -30,6 +29,7 @@ from DebugClients.Python3.coverage import coverage
 import UI.PixmapCache
 
 import Utilities
+import Preferences
 
 
 class UnittestDialog(QWidget, Ui_UnittestDialog):
@@ -95,8 +95,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if prog:
             self.insertProg(prog)
         
-        self.rx1 = self.trUtf8("^Failure: ")
-        self.rx2 = self.trUtf8("^Error: ")
+        self.rxPatterns = [
+            self.trUtf8("^Failure: "),
+            self.trUtf8("^Error: "),
+        ]
         
         # now connect the debug server signals if called from the eric5 IDE
         if self.dbs:
@@ -106,6 +108,9 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.dbs.utStopTest.connect(self.testFinished)
             self.dbs.utTestFailed.connect(self.testFailed)
             self.dbs.utTestErrored.connect(self.testErrored)
+            self.dbs.utTestSkipped.connect(self.testSkipped)
+            self.dbs.utTestFailedExpected.connect(self.testFailedExpected)
+            self.dbs.utTestSucceededUnexpected.connect(self.testSucceededUnexpected)
         
     def __setProgressColor(self, color):
         """
@@ -237,11 +242,20 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             project = e5App().getObject("Project")
             if project.isOpen() and project.isProjectSource(prog):
                 mainScript = project.getMainScript(True)
+                clientType = self.project.getProjectLanguage()
             else:
                 mainScript = os.path.abspath(prog)
+                flags = Utilities.extractFlagsFromFile(mainScript)
+                if mainScript.endswith(
+                    tuple(Preferences.getPython("PythonExtensions"))) or \
+                   ("FileType" in flags and
+                    flags["FileType"] in ["Python", "Python2"]):
+                    clientType = "Python2"
+                else:
+                    clientType = ""
             self.dbs.remoteUTPrepare(prog, self.testName, testFunctionName,
                 self.coverageCheckBox.isChecked(), mainScript,
-                self.coverageEraseCheckBox.isChecked())
+                self.coverageEraseCheckBox.isChecked(), clientType=clientType)
         else:
             # we are running as an application or in local mode
             sys.path = [os.path.dirname(os.path.abspath(prog))] + self.savedSysPath
@@ -340,8 +354,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param txt current text (string)
         """
         if text:
-            text = re.sub(self.rx1, "", text)
-            text = re.sub(self.rx2, "", text)
+            for pattern in self.rxPatterns:
+                text = re.sub(pattern, "", text)
             itm = self.testsListWidget.findItems(text, Qt.MatchFlags(Qt.MatchExactly))[0]
             self.testsListWidget.setCurrentItem(itm)
             self.testsListWidget.scrollToItem(itm)
@@ -356,14 +370,20 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.runCount = 0
         self.failCount = 0
         self.errorCount = 0
+        self.skippedCount = 0
+        self.expectedFailureCount = 0
+        self.unexpectedSuccessCount = 0
         self.remainingCount = self.totalTests
-        self.errorInfo = []
 
         # reset the GUI
         self.progressCounterRunCount.setText(str(self.runCount))
+        self.progressCounterRemCount.setText(str(self.remainingCount))
         self.progressCounterFailureCount.setText(str(self.failCount))
         self.progressCounterErrorCount.setText(str(self.errorCount))
-        self.progressCounterRemCount.setText(str(self.remainingCount))
+        self.progressCounterSkippedCount.setText(str(self.skippedCount))
+        self.progressCounterExpectedFailureCount.setText(str(self.expectedFailureCount))
+        self.progressCounterUnexpectedSuccessCount.setText(
+            str(self.unexpectedSuccessCount))
         self.errorsListWidget.clear()
         self.testsListWidget.clear()
         self.progressProgressBar.setRange(0, self.totalTests)
@@ -402,24 +422,65 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         Public method called if a test fails.
         
         @param test name of the failed test (string)
-        @param exc string representation of the exception (list of strings)
+        @param exc string representation of the exception (string)
         """
         self.failCount += 1
         self.progressCounterFailureCount.setText(str(self.failCount))
-        self.errorsListWidget.insertItem(0, self.trUtf8("Failure: {0}").format(test))
-        self.errorInfo.insert(0, (test, exc))
+        itm = QListWidgetItem(self.trUtf8("Failure: {0}").format(test))
+        itm.setData(Qt.UserRole, (test, exc))
+        self.errorsListWidget.insertItem(0, itm)
         
     def testErrored(self, test, exc):
         """
         Public method called if a test errors.
         
         @param test name of the failed test (string)
-        @param exc string representation of the exception (list of strings)
+        @param exc string representation of the exception (string)
         """
         self.errorCount += 1
         self.progressCounterErrorCount.setText(str(self.errorCount))
-        self.errorsListWidget.insertItem(0, self.trUtf8("Error: {0}").format(test))
-        self.errorInfo.insert(0, (test, exc))
+        itm = QListWidgetItem(self.trUtf8("Error: {0}").format(test))
+        itm.setData(Qt.UserRole, (test, exc))
+        self.errorsListWidget.insertItem(0, itm)
+        
+    def testSkipped(self, test, reason):
+        """
+        Public method called if a test was skipped.
+        
+        @param test name of the failed test (string)
+        @param reason reason for skipping the test (string)
+        """
+        self.skippedCount += 1
+        self.progressCounterSkippedCount.setText(str(self.skippedCount))
+        itm = QListWidgetItem(self.trUtf8("    Skipped: {0}").format(reason))
+        itm.setForeground(Qt.blue)
+        self.testsListWidget.insertItem(1, itm)
+        
+    def testFailedExpected(self, test, exc):
+        """
+        Public method called if a test fails expected.
+        
+        @param test name of the failed test (string)
+        @param exc string representation of the exception (string)
+        """
+        self.expectedFailureCount += 1
+        self.progressCounterExpectedFailureCount.setText(str(self.expectedFailureCount))
+        itm = QListWidgetItem(self.trUtf8("    Expected Failure"))
+        itm.setForeground(Qt.blue)
+        self.testsListWidget.insertItem(1, itm)
+        
+    def testSucceededUnexpected(self, test):
+        """
+        Public method called if a test succeeds unexpectedly.
+        
+        @param test name of the failed test (string)
+        """
+        self.unexpectedSuccessCount += 1
+        self.progressCounterUnexpectedSuccessCount.setText(
+            str(self.unexpectedSuccessCount))
+        itm = QListWidgetItem(self.trUtf8("    Unexpected Success"))
+        itm.setForeground(Qt.red)
+        self.testsListWidget.insertItem(1, itm)
         
     def testStarted(self, test, doc):
         """
@@ -466,15 +527,16 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         self.errListIndex = self.errorsListWidget.row(lbitem)
         text = lbitem.text()
+        self.on_errorsListWidget_currentTextChanged(text)
 
         # get the error info
-        test, tracebackLines = self.errorInfo[self.errListIndex]
-        tracebackText = "".join(tracebackLines)
+        test, tracebackText = lbitem.data(Qt.UserRole)
 
         # now build the dialog
         self.dlg = QDialog()
         ui = Ui_UnittestStacktraceDialog()
         ui.setupUi(self.dlg)
+        self.dlg.traceback = ui.traceback
         
         ui.showButton = ui.buttonBox.addButton(
             self.trUtf8("Show Source"), QDialogButtonBox.ActionRole)
@@ -502,7 +564,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             return
             
         # get the error info
-        test, tracebackLines = self.errorInfo[self.errListIndex]
+        tracebackLines = self.dlg.traceback.toPlainText().splitlines()
         # find the last entry matching the pattern
         for index in range(len(tracebackLines) - 1, -1, -1):
             fmatch = re.search(r'File "(.*?)", line (\d*?),.*', tracebackLines[index])
@@ -525,30 +587,60 @@ class QtTestResult(unittest.TestResult):
         
         @param parent The parent widget.
         """
-        unittest.TestResult.__init__(self)
+        super().__init__()
         self.parent = parent
         
     def addFailure(self, test, err):
         """
         Method called if a test failed.
         
-        @param test Reference to the test object
-        @param err The error traceback
+        @param test reference to the test object
+        @param err error traceback
         """
-        unittest.TestResult.addFailure(self, test, err)
-        tracebackLines = traceback.format_exception(*err + (10,))
+        super().addFailure(test, err)
+        tracebackLines = self._exc_info_to_string(err, test)
         self.parent.testFailed(str(test), tracebackLines)
         
     def addError(self, test, err):
         """
         Method called if a test errored.
         
-        @param test Reference to the test object
-        @param err The error traceback
+        @param test reference to the test object
+        @param err error traceback
         """
-        unittest.TestResult.addError(self, test, err)
-        tracebackLines = traceback.format_exception(*err + (10,))
+        super().addError(test, err)
+        tracebackLines = self._exc_info_to_string(err, test)
         self.parent.testErrored(str(test), tracebackLines)
+        
+    def addSkip(self, test, reason):
+        """
+        Method called if a test was skipped.
+        
+        @param test reference to the test object
+        @param reason reason for skipping the test (string)
+        """
+        super().addSkip(test, reason)
+        self.parent.testSkipped(str(test), reason)
+        
+    def addExpectedFailure(self, test, err):
+        """
+        Method called if a test failed expected.
+        
+        @param test reference to the test object
+        @param err error traceback
+        """
+        super().addExpectedFailure(test, err)
+        tracebackLines = self._exc_info_to_string(err, test)
+        self.parent.testFailedExpected(str(test), tracebackLines)
+        
+    def addUnexpectedSuccess(self, test):
+        """
+        Method called if a test succeeded expectedly.
+        
+        @param test reference to the test object
+        """
+        super().addUnexpectedSuccess(test)
+        self.parent.testSucceededUnexpected(str(test))
         
     def startTest(self, test):
         """
@@ -556,7 +648,7 @@ class QtTestResult(unittest.TestResult):
         
         @param test Reference to the test object
         """
-        unittest.TestResult.startTest(self, test)
+        super().startTest(test)
         self.parent.testStarted(str(test), test.shortDescription())
 
     def stopTest(self, test):
@@ -565,7 +657,7 @@ class QtTestResult(unittest.TestResult):
         
         @param test Reference to the test object
         """
-        unittest.TestResult.stopTest(self, test)
+        super().stopTest(test)
         self.parent.testFinished()
 
 

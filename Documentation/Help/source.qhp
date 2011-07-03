@@ -1256,7 +1256,10 @@
       <keyword name="UnittestWindow" id="UnittestWindow" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow" />
       <keyword name="QtTestResult (Constructor)" id="QtTestResult (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.__init__" />
       <keyword name="QtTestResult.addError" id="QtTestResult.addError" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.addError" />
+      <keyword name="QtTestResult.addExpectedFailure" id="QtTestResult.addExpectedFailure" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.addExpectedFailure" />
       <keyword name="QtTestResult.addFailure" id="QtTestResult.addFailure" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.addFailure" />
+      <keyword name="QtTestResult.addSkip" id="QtTestResult.addSkip" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.addSkip" />
+      <keyword name="QtTestResult.addUnexpectedSuccess" id="QtTestResult.addUnexpectedSuccess" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.addUnexpectedSuccess" />
       <keyword name="QtTestResult.startTest" id="QtTestResult.startTest" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.startTest" />
       <keyword name="QtTestResult.stopTest" id="QtTestResult.stopTest" ref="eric5.PyUnit.UnittestDialog.html#QtTestResult.stopTest" />
       <keyword name="UnittestDialog (Constructor)" id="UnittestDialog (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__init__" />
@@ -1276,8 +1279,11 @@
       <keyword name="UnittestDialog.on_testsuiteComboBox_editTextChanged" id="UnittestDialog.on_testsuiteComboBox_editTextChanged" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_testsuiteComboBox_editTextChanged" />
       <keyword name="UnittestDialog.testErrored" id="UnittestDialog.testErrored" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testErrored" />
       <keyword name="UnittestDialog.testFailed" id="UnittestDialog.testFailed" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testFailed" />
+      <keyword name="UnittestDialog.testFailedExpected" id="UnittestDialog.testFailedExpected" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testFailedExpected" />
       <keyword name="UnittestDialog.testFinished" id="UnittestDialog.testFinished" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testFinished" />
+      <keyword name="UnittestDialog.testSkipped" id="UnittestDialog.testSkipped" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testSkipped" />
       <keyword name="UnittestDialog.testStarted" id="UnittestDialog.testStarted" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testStarted" />
+      <keyword name="UnittestDialog.testSucceededUnexpected" id="UnittestDialog.testSucceededUnexpected" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.testSucceededUnexpected" />
       <keyword name="UnittestWindow (Constructor)" id="UnittestWindow (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.__init__" />
       <keyword name="UnittestWindow.eventFilter" id="UnittestWindow.eventFilter" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.eventFilter" />
       <keyword name="DataViews (Package)" id="DataViews (Package)" ref="index-eric5.DataViews.html" />
@@ -2078,6 +2084,9 @@
       <keyword name="DebugServer.clientUtStopTest" id="DebugServer.clientUtStopTest" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtStopTest" />
       <keyword name="DebugServer.clientUtTestErrored" id="DebugServer.clientUtTestErrored" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestErrored" />
       <keyword name="DebugServer.clientUtTestFailed" id="DebugServer.clientUtTestFailed" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestFailed" />
+      <keyword name="DebugServer.clientUtTestFailedExpected" id="DebugServer.clientUtTestFailedExpected" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestFailedExpected" />
+      <keyword name="DebugServer.clientUtTestSkipped" id="DebugServer.clientUtTestSkipped" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestSkipped" />
+      <keyword name="DebugServer.clientUtTestSucceededUnexpected" id="DebugServer.clientUtTestSucceededUnexpected" ref="eric5.Debugger.DebugServer.html#DebugServer.clientUtTestSucceededUnexpected" />
       <keyword name="DebugServer.getBreakPointModel" id="DebugServer.getBreakPointModel" ref="eric5.Debugger.DebugServer.html#DebugServer.getBreakPointModel" />
       <keyword name="DebugServer.getClientCapabilities" id="DebugServer.getClientCapabilities" ref="eric5.Debugger.DebugServer.html#DebugServer.getClientCapabilities" />
       <keyword name="DebugServer.getExtensions" id="DebugServer.getExtensions" ref="eric5.Debugger.DebugServer.html#DebugServer.getExtensions" />
@@ -2428,6 +2437,7 @@
       <keyword name="escape_entities" id="escape_entities" ref="eric5.Utilities.__init__.html#escape_entities" />
       <keyword name="escape_uentities" id="escape_uentities" ref="eric5.Utilities.__init__.html#escape_uentities" />
       <keyword name="extractFlags" id="extractFlags" ref="eric5.Utilities.__init__.html#extractFlags" />
+      <keyword name="extractFlagsFromFile" id="extractFlagsFromFile" ref="eric5.Utilities.__init__.html#extractFlagsFromFile" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
       <keyword name="generateDistroInfo" id="generateDistroInfo" ref="eric5.Utilities.__init__.html#generateDistroInfo" />
       <keyword name="generatePluginsVersionInfo" id="generatePluginsVersionInfo" ref="eric5.Utilities.__init__.html#generatePluginsVersionInfo" />
@@ -6576,7 +6586,10 @@
       <keyword name="DCTestResult" id="DCTestResult" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult" />
       <keyword name="DCTestResult (Constructor)" id="DCTestResult (Constructor)" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.__init__" />
       <keyword name="DCTestResult.addError" id="DCTestResult.addError" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.addError" />
+      <keyword name="DCTestResult.addExpectedFailure" id="DCTestResult.addExpectedFailure" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.addExpectedFailure" />
       <keyword name="DCTestResult.addFailure" id="DCTestResult.addFailure" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.addFailure" />
+      <keyword name="DCTestResult.addSkip" id="DCTestResult.addSkip" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.addSkip" />
+      <keyword name="DCTestResult.addUnexpectedSuccess" id="DCTestResult.addUnexpectedSuccess" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.addUnexpectedSuccess" />
       <keyword name="DCTestResult.startTest" id="DCTestResult.startTest" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.startTest" />
       <keyword name="DCTestResult.stopTest" id="DCTestResult.stopTest" ref="eric5.DebugClients.Python.DCTestResult.html#DCTestResult.stopTest" />
       <keyword name="AsyncFile (Module)" id="AsyncFile (Module)" ref="eric5.DebugClients.Python.AsyncFile.html" />
@@ -6744,7 +6757,10 @@
       <keyword name="DCTestResult" id="DCTestResult" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult" />
       <keyword name="DCTestResult (Constructor)" id="DCTestResult (Constructor)" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.__init__" />
       <keyword name="DCTestResult.addError" id="DCTestResult.addError" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.addError" />
+      <keyword name="DCTestResult.addExpectedFailure" id="DCTestResult.addExpectedFailure" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.addExpectedFailure" />
       <keyword name="DCTestResult.addFailure" id="DCTestResult.addFailure" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.addFailure" />
+      <keyword name="DCTestResult.addSkip" id="DCTestResult.addSkip" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.addSkip" />
+      <keyword name="DCTestResult.addUnexpectedSuccess" id="DCTestResult.addUnexpectedSuccess" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.addUnexpectedSuccess" />
       <keyword name="DCTestResult.startTest" id="DCTestResult.startTest" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.startTest" />
       <keyword name="DCTestResult.stopTest" id="DCTestResult.stopTest" ref="eric5.DebugClients.Python3.DCTestResult.html#DCTestResult.stopTest" />
       <keyword name="AsyncFile (Module)" id="AsyncFile (Module)" ref="eric5.DebugClients.Python3.AsyncFile.html" />

@@ -139,7 +139,10 @@ eric5.DebugClients.Python.AsyncIO.AsyncIO.write?4(s)
 eric5.DebugClients.Python.AsyncIO.AsyncIO.writeReady?4(fd)
 eric5.DebugClients.Python.AsyncIO.AsyncIO?1()
 eric5.DebugClients.Python.DCTestResult.DCTestResult.addError?4(test, err)
+eric5.DebugClients.Python.DCTestResult.DCTestResult.addExpectedFailure?4(test, err)
 eric5.DebugClients.Python.DCTestResult.DCTestResult.addFailure?4(test, err)
+eric5.DebugClients.Python.DCTestResult.DCTestResult.addSkip?4(test, reason)
+eric5.DebugClients.Python.DCTestResult.DCTestResult.addUnexpectedSuccess?4(test)
 eric5.DebugClients.Python.DCTestResult.DCTestResult.startTest?4(test)
 eric5.DebugClients.Python.DCTestResult.DCTestResult.stopTest?4(test)
 eric5.DebugClients.Python.DCTestResult.DCTestResult?1(parent)
@@ -284,6 +287,9 @@ eric5.DebugClients.Python.DebugProtocol.ResponseUTStartTest?7
 eric5.DebugClients.Python.DebugProtocol.ResponseUTStopTest?7
 eric5.DebugClients.Python.DebugProtocol.ResponseUTTestErrored?7
 eric5.DebugClients.Python.DebugProtocol.ResponseUTTestFailed?7
+eric5.DebugClients.Python.DebugProtocol.ResponseUTTestFailedExpected?7
+eric5.DebugClients.Python.DebugProtocol.ResponseUTTestSkipped?7
+eric5.DebugClients.Python.DebugProtocol.ResponseUTTestSucceededUnexpected?7
 eric5.DebugClients.Python.DebugProtocol.ResponseVariable?7
 eric5.DebugClients.Python.DebugProtocol.ResponseVariables?7
 eric5.DebugClients.Python.DebugProtocol.ResponseWPConditionError?7
@@ -344,7 +350,10 @@ eric5.DebugClients.Python3.AsyncIO.AsyncIO.write?4(s)
 eric5.DebugClients.Python3.AsyncIO.AsyncIO.writeReady?4(fd)
 eric5.DebugClients.Python3.AsyncIO.AsyncIO?1()
 eric5.DebugClients.Python3.DCTestResult.DCTestResult.addError?4(test, err)
+eric5.DebugClients.Python3.DCTestResult.DCTestResult.addExpectedFailure?4(test, err)
 eric5.DebugClients.Python3.DCTestResult.DCTestResult.addFailure?4(test, err)
+eric5.DebugClients.Python3.DCTestResult.DCTestResult.addSkip?4(test, reason)
+eric5.DebugClients.Python3.DCTestResult.DCTestResult.addUnexpectedSuccess?4(test)
 eric5.DebugClients.Python3.DCTestResult.DCTestResult.startTest?4(test)
 eric5.DebugClients.Python3.DCTestResult.DCTestResult.stopTest?4(test)
 eric5.DebugClients.Python3.DCTestResult.DCTestResult?1(parent)
@@ -487,6 +496,9 @@ eric5.DebugClients.Python3.DebugProtocol.ResponseUTStartTest?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseUTStopTest?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseUTTestErrored?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseUTTestFailed?7
+eric5.DebugClients.Python3.DebugProtocol.ResponseUTTestFailedExpected?7
+eric5.DebugClients.Python3.DebugProtocol.ResponseUTTestSkipped?7
+eric5.DebugClients.Python3.DebugProtocol.ResponseUTTestSucceededUnexpected?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseVariable?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseVariables?7
 eric5.DebugClients.Python3.DebugProtocol.ResponseWPConditionError?7
@@ -612,6 +624,9 @@ eric5.Debugger.DebugProtocol.ResponseUTStartTest?7
 eric5.Debugger.DebugProtocol.ResponseUTStopTest?7
 eric5.Debugger.DebugProtocol.ResponseUTTestErrored?7
 eric5.Debugger.DebugProtocol.ResponseUTTestFailed?7
+eric5.Debugger.DebugProtocol.ResponseUTTestFailedExpected?7
+eric5.Debugger.DebugProtocol.ResponseUTTestSkipped?7
+eric5.Debugger.DebugProtocol.ResponseUTTestSucceededUnexpected?7
 eric5.Debugger.DebugProtocol.ResponseVariable?7
 eric5.Debugger.DebugProtocol.ResponseVariables?7
 eric5.Debugger.DebugProtocol.ResponseWPConditionError?7
@@ -641,6 +656,9 @@ eric5.Debugger.DebugServer.DebugServer.clientUtStartTest?4(testname, doc)
 eric5.Debugger.DebugServer.DebugServer.clientUtStopTest?4()
 eric5.Debugger.DebugServer.DebugServer.clientUtTestErrored?4(testname, traceback)
 eric5.Debugger.DebugServer.DebugServer.clientUtTestFailed?4(testname, traceback)
+eric5.Debugger.DebugServer.DebugServer.clientUtTestFailedExpected?4(testname, traceback)
+eric5.Debugger.DebugServer.DebugServer.clientUtTestSkipped?4(testname, reason)
+eric5.Debugger.DebugServer.DebugServer.clientUtTestSucceededUnexpected?4(testname)
 eric5.Debugger.DebugServer.DebugServer.clientVariable?7
 eric5.Debugger.DebugServer.DebugServer.clientVariables?7
 eric5.Debugger.DebugServer.DebugServer.clientWatchConditionError?7
@@ -677,7 +695,7 @@ eric5.Debugger.DebugServer.DebugServer.remoteStepOut?4()
 eric5.Debugger.DebugServer.DebugServer.remoteStepOver?4()
 eric5.Debugger.DebugServer.DebugServer.remoteStepQuit?4()
 eric5.Debugger.DebugServer.DebugServer.remoteThreadList?4()
-eric5.Debugger.DebugServer.DebugServer.remoteUTPrepare?4(fn, tn, tfn, cov, covname, coverase)
+eric5.Debugger.DebugServer.DebugServer.remoteUTPrepare?4(fn, tn, tfn, cov, covname, coverase, clientType="")
 eric5.Debugger.DebugServer.DebugServer.remoteUTRun?4()
 eric5.Debugger.DebugServer.DebugServer.remoteUTStop?4()
 eric5.Debugger.DebugServer.DebugServer.shutdownServer?4()
@@ -707,6 +725,9 @@ eric5.Debugger.DebugServer.DebugServer.utStartTest?7
 eric5.Debugger.DebugServer.DebugServer.utStopTest?7
 eric5.Debugger.DebugServer.DebugServer.utTestErrored?7
 eric5.Debugger.DebugServer.DebugServer.utTestFailed?7
+eric5.Debugger.DebugServer.DebugServer.utTestFailedExpected?7
+eric5.Debugger.DebugServer.DebugServer.utTestSkipped?7
+eric5.Debugger.DebugServer.DebugServer.utTestSucceededUnexpected?7
 eric5.Debugger.DebugServer.DebugServer?1()
 eric5.Debugger.DebugServer.DebuggerInterfaces?7
 eric5.Debugger.DebugUI.DebugUI.appendStdout?7
@@ -5303,7 +5324,10 @@ eric5.Project.TranslationPropertiesDialog.TranslationPropertiesDialog?1(project,
 eric5.Project.UserPropertiesDialog.UserPropertiesDialog.storeData?4()
 eric5.Project.UserPropertiesDialog.UserPropertiesDialog?1(project, parent=None, name=None)
 eric5.PyUnit.UnittestDialog.QtTestResult.addError?4(test, err)
+eric5.PyUnit.UnittestDialog.QtTestResult.addExpectedFailure?4(test, err)
 eric5.PyUnit.UnittestDialog.QtTestResult.addFailure?4(test, err)
+eric5.PyUnit.UnittestDialog.QtTestResult.addSkip?4(test, reason)
+eric5.PyUnit.UnittestDialog.QtTestResult.addUnexpectedSuccess?4(test)
 eric5.PyUnit.UnittestDialog.QtTestResult.startTest?4(test)
 eric5.PyUnit.UnittestDialog.QtTestResult.stopTest?4(test)
 eric5.PyUnit.UnittestDialog.QtTestResult?1(parent)
@@ -5318,8 +5342,11 @@ eric5.PyUnit.UnittestDialog.UnittestDialog.on_stopButton_clicked?4()
 eric5.PyUnit.UnittestDialog.UnittestDialog.on_testsuiteComboBox_editTextChanged?4(txt)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testErrored?4(test, exc)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testFailed?4(test, exc)
+eric5.PyUnit.UnittestDialog.UnittestDialog.testFailedExpected?4(test, exc)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testFinished?4()
+eric5.PyUnit.UnittestDialog.UnittestDialog.testSkipped?4(test, reason)
 eric5.PyUnit.UnittestDialog.UnittestDialog.testStarted?4(test, doc)
+eric5.PyUnit.UnittestDialog.UnittestDialog.testSucceededUnexpected?4(test)
 eric5.PyUnit.UnittestDialog.UnittestDialog.unittestFile?7
 eric5.PyUnit.UnittestDialog.UnittestDialog?1(prog=None, dbs=None, ui=None, parent=None, name=None)
 eric5.PyUnit.UnittestDialog.UnittestWindow.eventFilter?4(obj, event)
@@ -6688,6 +6715,7 @@ eric5.Utilities.encode?4(text, orig_coding)
 eric5.Utilities.escape_entities?4(m, map=_escape_map)
 eric5.Utilities.escape_uentities?4(m)
 eric5.Utilities.extractFlags?4(text)
+eric5.Utilities.extractFlagsFromFile?4(filename)
 eric5.Utilities.fromNativeSeparators?4(path)
 eric5.Utilities.generateDistroInfo?4(linesep='\n')
 eric5.Utilities.generatePluginsVersionInfo?4(linesep='\n')

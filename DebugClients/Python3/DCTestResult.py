@@ -8,12 +8,12 @@ Module implementing a TestResult derivative for the eric5 debugger.
 """
 
 import select
-import traceback
 from unittest import TestResult
 
 
 from DebugProtocol import ResponseUTTestFailed, ResponseUTTestErrored, \
-    ResponseUTStartTest, ResponseUTStopTest
+    ResponseUTStartTest, ResponseUTStopTest, ResponseUTTestSkipped, \
+    ResponseUTTestFailedExpected, ResponseUTTestSucceededUnexpected
 
 
 class DCTestResult(TestResult):
@@ -39,7 +39,7 @@ class DCTestResult(TestResult):
         @param err The error traceback
         """
         TestResult.addFailure(self, test, err)
-        tracebackLines = traceback.format_exception(*(err + (10,)))
+        tracebackLines = self._exc_info_to_string(err, test)
         self.parent.write('{0}{1}\n'.format(ResponseUTTestFailed,
             str((str(test), tracebackLines))))
         
@@ -51,9 +51,41 @@ class DCTestResult(TestResult):
         @param err The error traceback
         """
         TestResult.addError(self, test, err)
-        tracebackLines = traceback.format_exception(*(err + (10,)))
+        tracebackLines = self._exc_info_to_string(err, test)
         self.parent.write('{0}{1}\n'.format(ResponseUTTestErrored,
             str((str(test), tracebackLines))))
+        
+    def addSkip(self, test, reason):
+        """
+        Method called if a test was skipped.
+        
+        @param test reference to the test object
+        @param reason reason for skipping the test (string)
+        """
+        TestResult.addSkip(self, test, reason)
+        self.parent.write('{0}{1}\n'.format(ResponseUTTestSkipped,
+            str((str(test), reason))))
+        
+    def addExpectedFailure(self, test, err):
+        """
+        Method called if a test failed expected.
+        
+        @param test reference to the test object
+        @param err error traceback
+        """
+        TestResult.addExpectedFailure(self, test, err)
+        tracebackLines = self._exc_info_to_string(err, test)
+        self.parent.write('{0}{1}\n'.format(ResponseUTTestFailedExpected,
+            str((str(test), tracebackLines))))
+        
+    def addUnexpectedSuccess(self, test):
+        """
+        Method called if a test succeeded expectedly.
+        
+        @param test reference to the test object
+        """
+        TestResult.addUnexpectedSuccess(self, test)
+        self.parent.write('{0}{1}\n'.format(ResponseUTTestSucceededUnexpected, str(test)))
         
     def startTest(self, test):
         """

@@ -16,6 +16,9 @@ Version 5.2-snapshot-2011mmdd:
 - added some more search engines to the web browser
 - added capability to encrypt saved passwords with a master password
   and rearranged some configuration parameters related to security
+- extended the unit test interface to support skipped tests, expected failures
+  and unexpected successes and to better cope with Python2 scripts when run
+  from the eric IDE
 
 Version 5.2-snapshot-20110501:
 - bug fixes

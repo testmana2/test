@@ -68,8 +68,17 @@ unittest.TestResult
 <td><a href="#QtTestResult.addError">addError</a></td>
 <td>Method called if a test errored.</td>
 </tr><tr>
+<td><a href="#QtTestResult.addExpectedFailure">addExpectedFailure</a></td>
+<td>Method called if a test failed expected.</td>
+</tr><tr>
 <td><a href="#QtTestResult.addFailure">addFailure</a></td>
 <td>Method called if a test failed.</td>
+</tr><tr>
+<td><a href="#QtTestResult.addSkip">addSkip</a></td>
+<td>Method called if a test was skipped.</td>
+</tr><tr>
+<td><a href="#QtTestResult.addUnexpectedSuccess">addUnexpectedSuccess</a></td>
+<td>Method called if a test succeeded expectedly.</td>
 </tr><tr>
 <td><a href="#QtTestResult.startTest">startTest</a></td>
 <td>Method called at the start of a test.</td>
@@ -96,10 +105,23 @@ The parent widget.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-Reference to the test object
+reference to the test object
 </dd><dt><i>err</i></dt>
 <dd>
-The error traceback
+error traceback
+</dd>
+</dl><a NAME="QtTestResult.addExpectedFailure" ID="QtTestResult.addExpectedFailure"></a>
+<h4>QtTestResult.addExpectedFailure</h4>
+<b>addExpectedFailure</b>(<i>test, err</i>)
+<p>
+        Method called if a test failed expected.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
+</dd><dt><i>err</i></dt>
+<dd>
+error traceback
 </dd>
 </dl><a NAME="QtTestResult.addFailure" ID="QtTestResult.addFailure"></a>
 <h4>QtTestResult.addFailure</h4>
@@ -109,10 +131,33 @@ The error traceback
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-Reference to the test object
+reference to the test object
 </dd><dt><i>err</i></dt>
 <dd>
-The error traceback
+error traceback
+</dd>
+</dl><a NAME="QtTestResult.addSkip" ID="QtTestResult.addSkip"></a>
+<h4>QtTestResult.addSkip</h4>
+<b>addSkip</b>(<i>test, reason</i>)
+<p>
+        Method called if a test was skipped.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
+</dd><dt><i>reason</i></dt>
+<dd>
+reason for skipping the test (string)
+</dd>
+</dl><a NAME="QtTestResult.addUnexpectedSuccess" ID="QtTestResult.addUnexpectedSuccess"></a>
+<h4>QtTestResult.addUnexpectedSuccess</h4>
+<b>addUnexpectedSuccess</b>(<i>test</i>)
+<p>
+        Method called if a test succeeded expectedly.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
 </dd>
 </dl><a NAME="QtTestResult.startTest" ID="QtTestResult.startTest"></a>
 <h4>QtTestResult.startTest</h4>
@@ -208,11 +253,20 @@ QWidget, Ui_UnittestDialog
 <td><a href="#UnittestDialog.testFailed">testFailed</a></td>
 <td>Public method called if a test fails.</td>
 </tr><tr>
+<td><a href="#UnittestDialog.testFailedExpected">testFailedExpected</a></td>
+<td>Public method called if a test fails expected.</td>
+</tr><tr>
 <td><a href="#UnittestDialog.testFinished">testFinished</a></td>
 <td>Public method called if a test has finished.</td>
 </tr><tr>
+<td><a href="#UnittestDialog.testSkipped">testSkipped</a></td>
+<td>Public method called if a test was skipped.</td>
+</tr><tr>
 <td><a href="#UnittestDialog.testStarted">testStarted</a></td>
 <td>Public method called if a test is about to be run.</td>
+</tr><tr>
+<td><a href="#UnittestDialog.testSucceededUnexpected">testSucceededUnexpected</a></td>
+<td>Public method called if a test succeeds unexpectedly.</td>
 </tr>
 </table>
 <a NAME="UnittestDialog.__init__" ID="UnittestDialog.__init__"></a>
@@ -373,7 +427,7 @@ name of the test file (string)
 name of the failed test (string)
 </dd><dt><i>exc</i></dt>
 <dd>
-string representation of the exception (list of strings)
+string representation of the exception (string)
 </dd>
 </dl><a NAME="UnittestDialog.testFailed" ID="UnittestDialog.testFailed"></a>
 <h4>UnittestDialog.testFailed</h4>
@@ -386,7 +440,20 @@ string representation of the exception (list of strings)
 name of the failed test (string)
 </dd><dt><i>exc</i></dt>
 <dd>
-string representation of the exception (list of strings)
+string representation of the exception (string)
+</dd>
+</dl><a NAME="UnittestDialog.testFailedExpected" ID="UnittestDialog.testFailedExpected"></a>
+<h4>UnittestDialog.testFailedExpected</h4>
+<b>testFailedExpected</b>(<i>test, exc</i>)
+<p>
+        Public method called if a test fails expected.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+name of the failed test (string)
+</dd><dt><i>exc</i></dt>
+<dd>
+string representation of the exception (string)
 </dd>
 </dl><a NAME="UnittestDialog.testFinished" ID="UnittestDialog.testFinished"></a>
 <h4>UnittestDialog.testFinished</h4>
@@ -395,7 +462,20 @@ string representation of the exception (list of strings)
         Public method called if a test has finished.
 </p><p>
         <b>Note</b>: It is also called if it has already failed or errored.
-</p><a NAME="UnittestDialog.testStarted" ID="UnittestDialog.testStarted"></a>
+</p><a NAME="UnittestDialog.testSkipped" ID="UnittestDialog.testSkipped"></a>
+<h4>UnittestDialog.testSkipped</h4>
+<b>testSkipped</b>(<i>test, reason</i>)
+<p>
+        Public method called if a test was skipped.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+name of the failed test (string)
+</dd><dt><i>reason</i></dt>
+<dd>
+reason for skipping the test (string)
+</dd>
+</dl><a NAME="UnittestDialog.testStarted" ID="UnittestDialog.testStarted"></a>
 <h4>UnittestDialog.testStarted</h4>
 <b>testStarted</b>(<i>test, doc</i>)
 <p>
@@ -407,6 +487,16 @@ name of the started test (string)
 </dd><dt><i>doc</i></dt>
 <dd>
 documentation of the started test (string)
+</dd>
+</dl><a NAME="UnittestDialog.testSucceededUnexpected" ID="UnittestDialog.testSucceededUnexpected"></a>
+<h4>UnittestDialog.testSucceededUnexpected</h4>
+<b>testSucceededUnexpected</b>(<i>test</i>)
+<p>
+        Public method called if a test succeeds unexpectedly.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+name of the failed test (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

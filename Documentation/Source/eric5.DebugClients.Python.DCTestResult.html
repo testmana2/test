@@ -62,8 +62,17 @@ TestResult
 <td><a href="#DCTestResult.addError">addError</a></td>
 <td>Method called if a test errored.</td>
 </tr><tr>
+<td><a href="#DCTestResult.addExpectedFailure">addExpectedFailure</a></td>
+<td>Method called if a test failed expected.</td>
+</tr><tr>
 <td><a href="#DCTestResult.addFailure">addFailure</a></td>
 <td>Method called if a test failed.</td>
+</tr><tr>
+<td><a href="#DCTestResult.addSkip">addSkip</a></td>
+<td>Method called if a test was skipped.</td>
+</tr><tr>
+<td><a href="#DCTestResult.addUnexpectedSuccess">addUnexpectedSuccess</a></td>
+<td>Method called if a test succeeded expectedly.</td>
 </tr><tr>
 <td><a href="#DCTestResult.startTest">startTest</a></td>
 <td>Method called at the start of a test.</td>
@@ -95,6 +104,19 @@ Reference to the test object
 <dd>
 The error traceback
 </dd>
+</dl><a NAME="DCTestResult.addExpectedFailure" ID="DCTestResult.addExpectedFailure"></a>
+<h4>DCTestResult.addExpectedFailure</h4>
+<b>addExpectedFailure</b>(<i>test, err</i>)
+<p>
+        Method called if a test failed expected.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
+</dd><dt><i>err</i></dt>
+<dd>
+error traceback
+</dd>
 </dl><a NAME="DCTestResult.addFailure" ID="DCTestResult.addFailure"></a>
 <h4>DCTestResult.addFailure</h4>
 <b>addFailure</b>(<i>test, err</i>)
@@ -107,6 +129,29 @@ Reference to the test object
 </dd><dt><i>err</i></dt>
 <dd>
 The error traceback
+</dd>
+</dl><a NAME="DCTestResult.addSkip" ID="DCTestResult.addSkip"></a>
+<h4>DCTestResult.addSkip</h4>
+<b>addSkip</b>(<i>test, reason</i>)
+<p>
+        Method called if a test was skipped.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
+</dd><dt><i>reason</i></dt>
+<dd>
+reason for skipping the test (string)
+</dd>
+</dl><a NAME="DCTestResult.addUnexpectedSuccess" ID="DCTestResult.addUnexpectedSuccess"></a>
+<h4>DCTestResult.addUnexpectedSuccess</h4>
+<b>addUnexpectedSuccess</b>(<i>test</i>)
+<p>
+        Method called if a test succeeded expectedly.
+</p><dl>
+<dt><i>test</i></dt>
+<dd>
+reference to the test object
 </dd>
 </dl><a NAME="DCTestResult.startTest" ID="DCTestResult.startTest"></a>
 <h4>DCTestResult.startTest</h4>

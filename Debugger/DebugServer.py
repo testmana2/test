@@ -89,6 +89,12 @@ class DebugServer(QTcpServer):
             a failed test
     @signal utTestErrored(testname, exc_info) emitted after the client reported
             an errored test
+    @signal utTestSkipped(testname, reason) emitted after the client reported
+            a skipped test
+    @signal utTestFailedExpected(testname, exc_info) emitted after the client reported
+            an expected test failure
+    @signal utTestSucceededUnexpected(testname) emitted after the client reported
+            an unexpected test success
     """
     clientClearBreak = pyqtSignal(str, int)
     clientClearWatch = pyqtSignal(str)
@@ -116,8 +122,11 @@ class DebugServer(QTcpServer):
     utPrepared = pyqtSignal(int, str, str)
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
-    utTestFailed = pyqtSignal(str, list)
-    utTestErrored = pyqtSignal(str, list)
+    utTestFailed = pyqtSignal(str, str)
+    utTestErrored = pyqtSignal(str, str)
+    utTestSkipped = pyqtSignal(str, str)
+    utTestFailedExpected = pyqtSignal(str, str)
+    utTestSucceededUnexpected = pyqtSignal(str)
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
     
@@ -981,7 +990,7 @@ class DebugServer(QTcpServer):
         """
         self.debuggerInterface.remoteCompletion(text)
 
-    def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase):
+    def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase, clientType=""):
         """
         Public method to prepare a new unittest run.
         
@@ -992,10 +1001,14 @@ class DebugServer(QTcpServer):
         @param covname filename to be used to assemble the coverage caches
                 filename (string)
         @param coverase flag indicating erasure of coverage data is requested (boolean)
+        @keyparam clientType client type to be used (string)
         """
         # Restart the client if there is already a program loaded.
         try:
-            self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
+            if clientType:
+                self.__setClientType(clientType)
+            else:
+                self.__setClientType(self.__clientAssociations[os.path.splitext(fn)[1]])
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False)
@@ -1240,6 +1253,32 @@ class DebugServer(QTcpServer):
         @param traceback lines of traceback info (list of strings)
         """
         self.utTestErrored.emit(testname, traceback)
+        
+    def clientUtTestSkipped(self, testname, reason):
+        """
+        Public method to process the client test skipped info.
+        
+        @param testname name of the test (string)
+        @param reason reason for skipping the test (string)
+        """
+        self.utTestSkipped.emit(testname, reason)
+        
+    def clientUtTestFailedExpected(self, testname, traceback):
+        """
+        Public method to process the client test failed expected info.
+        
+        @param testname name of the test (string)
+        @param traceback lines of traceback info (list of strings)
+        """
+        self.utTestFailedExpected.emit(testname, traceback)
+        
+    def clientUtTestSucceededUnexpected(self, testname):
+        """
+        Public method to process the client test succeeded unexpected info.
+        
+        @param testname name of the test (string)
+        """
+        self.utTestSucceededUnexpected.emit(testname)
         
     def clientUtFinished(self):
         """

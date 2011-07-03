@@ -4027,34 +4027,34 @@ pour afficher la page de configuration.</translation>
 <context>
     <name>DebugServer</name>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1257"/>
+        <location filename="Debugger/DebugServer.py" line="1296"/>
         <source>Passive debug connection received</source>
         <translation>Connexion ouverte avec le débogueur passif</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1271"/>
+        <location filename="Debugger/DebugServer.py" line="1310"/>
         <source>Passive debug connection closed</source>
         <translation>Connexion au débogueur passif fermée</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="134"/>
+        <location filename="Debugger/DebugServer.py" line="143"/>
         <source>created</source>
         <comment>must be same as in EditWatchpointDialog</comment>
         <translation>créée</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="136"/>
+        <location filename="Debugger/DebugServer.py" line="145"/>
         <source>changed</source>
         <comment>must be same as in EditWatchpointDialog</comment>
         <translation>modifiée</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="573"/>
+        <location filename="Debugger/DebugServer.py" line="582"/>
         <source>Connection from illegal host</source>
         <translation>Connexion en provenance d&apos;un hote illégal</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="1125"/>
+        <location filename="Debugger/DebugServer.py" line="1138"/>
         <source>
 Not connected
 </source>
@@ -4066,7 +4066,7 @@ Not connected
         <translation type="obsolete">&lt;p&gt;Connexion demandée par l&apos;hôte &lt;b&gt;%1&lt;/b&gt;. Acceptez-vous la connexion ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/DebugServer.py" line="573"/>
+        <location filename="Debugger/DebugServer.py" line="582"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46273,17 +46273,17 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="316"/>
+        <location filename="PyUnit/UnittestDialog.py" line="330"/>
         <source>Unittest</source>
         <translation>Tests unitaires</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="98"/>
+        <location filename="PyUnit/UnittestDialog.py" line="99"/>
         <source>^Failure: </source>
         <translation>^Echec: </translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="99"/>
+        <location filename="PyUnit/UnittestDialog.py" line="100"/>
         <source>^Error: </source>
         <translation>^Erreur:</translation>
     </message>
@@ -46293,17 +46293,17 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">Fichiers Python (*.py)</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="216"/>
+        <location filename="PyUnit/UnittestDialog.py" line="221"/>
         <source>You must enter a test suite file.</source>
         <translation>Vous devez entrer un fichier test correct.</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="223"/>
+        <location filename="PyUnit/UnittestDialog.py" line="228"/>
         <source>Preparing Testsuite</source>
         <translation>Préparation de Testsuite</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="375"/>
+        <location filename="PyUnit/UnittestDialog.py" line="395"/>
         <source>Running</source>
         <translation>En cours d&apos;execution</translation>
     </message>
@@ -46333,22 +46333,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Impossible de lancer le test &lt;b&gt;%1&lt;/b&gt;.&lt;br&gt;%2&lt;br&gt;%3&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="25"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="26"/>
         <source>Enter the test name. Leave empty to use the default name &quot;suite&quot;.</source>
         <translation>Entrer le nom du test. Laisser vide pour utiliser le nom &quot;suite&quot; par défaut.</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="28"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="29"/>
         <source>&lt;b&gt;Testname&lt;/b&gt;&lt;p&gt;Enter the name of the test to be performed. This name must follow the rules given by Python&apos;s unittest module. If this field is empty, the default name of &quot;suite&quot; will be used.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nom de test&lt;/b&gt;&lt;p&gt;Entrer le nom du test à effectuer. Ce nom doit résepecter les règles données par le module unittest Python. Si le champ est laissé vide, le nom par défaut &quot;suite&quot; sera utilisé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="44"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="45"/>
         <source>Enter name of file defining the testsuite</source>
         <translation>Entrer le nom du fichier definissant la suite de tests</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="47"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="48"/>
         <source>&lt;b&gt;Testsuite&lt;/b&gt;
 &lt;p&gt;Enter the name of the file defining the testsuite.
 It should have a method with a name given below. If no name is given, the suite() method will be tried. If no such method can be
@@ -46359,122 +46359,122 @@ cases.&lt;/p&gt;</source>
 Il doit posséder une méthode ayant le nom donné ci-dessous. Si aucun nom n&apos;est donné, la méthode suite() sera essayée. Si cette méthode n&apos;est pas trouvée, le module sera inspecté pour son test propre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="70"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="71"/>
         <source>Enter &amp;test name:</source>
         <translation>Entrer le nom du &amp;test:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="80"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="81"/>
         <source>Open a file selection dialog</source>
         <translation>Ouvre une boite de sélection de fichier</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="83"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="84"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="90"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="91"/>
         <source>Enter test &amp;filename:</source>
         <translation>Entrer le nom du &amp;fichier de test:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="109"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="110"/>
         <source>Select whether you want to run the test locally</source>
         <translation>Cocher pour effectuer le test localement</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="112"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="113"/>
         <source>Run &amp;local</source>
         <translation>Lancer &amp;localement</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="119"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="120"/>
         <source>Select whether coverage data should be collected</source>
         <translation>Cocher pour collecter les données issues du coverage de code</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="122"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="123"/>
         <source>C&amp;ollect coverage data</source>
         <translation>C&amp;ollecter les donnée du coverage</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="132"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="133"/>
         <source>Select whether old coverage data should be erased</source>
         <translation>Cocher pour effacer les anciennes données Coverage du code</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="135"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="136"/>
         <source>&amp;Erase coverage data</source>
         <translation>&amp;Supprimer les données de coverage</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="153"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="154"/>
         <source>Progress:</source>
         <translation>Etat de progression:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="190"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="191"/>
         <source>Run:</source>
         <translation>Execution:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="197"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="198"/>
         <source>Number of tests run</source>
         <translation>Nombre d&apos;executions tests</translation>
     </message>
     <message>
         <location filename="PyUnit/UnittestDialog.ui" line="251"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="obsolete">0</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="207"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="242"/>
         <source>Failures:</source>
         <translation>Echecs:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="214"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="249"/>
         <source>Number of test failures</source>
         <translation>Nombre d&apos;echecs</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="224"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="259"/>
         <source>Errors:</source>
         <translation>Erreurs:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="231"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="266"/>
         <source>Number of test errors</source>
         <translation>Nombre d&apos;erreurs</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="241"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="208"/>
         <source>Remaining:</source>
         <translation>Restants:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="248"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="215"/>
         <source>Number of tests to be run</source>
         <translation>Nombre de tests restants</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="279"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="348"/>
         <source>Tests performed:</source>
         <translation>Tests effectués:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="289"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="358"/>
         <source>Failures and errors:</source>
         <translation>Echecs et erreurs:</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="296"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="365"/>
         <source>Failures and Errors list</source>
         <translation>Liste des echecs et erreurs</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="299"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="368"/>
         <source>&lt;b&gt;Failures and Errors list&lt;/b&gt;
 &lt;p&gt;This list shows all failed and errored tests.
 Double clicking on an entry will show the respective traceback.&lt;/p&gt;</source>
@@ -46493,7 +46493,7 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
         <translation>Stoppe le test unitest en cours</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.ui" line="326"/>
+        <location filename="PyUnit/UnittestDialog.ui" line="395"/>
         <source>Idle</source>
         <translation>Idle</translation>
     </message>
@@ -46518,43 +46518,88 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
         <translation>&lt;b&gt;Stopper le test&lt;/b&gt;&lt;p&gt;Stoppe le test unittest en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="479"/>
+        <location filename="PyUnit/UnittestDialog.py" line="541"/>
         <source>Show Source</source>
         <translation>Afficher les sources</translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="164"/>
+        <location filename="PyUnit/UnittestDialog.py" line="169"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="160"/>
+        <location filename="PyUnit/UnittestDialog.py" line="165"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="316"/>
+        <location filename="PyUnit/UnittestDialog.py" line="330"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="393"/>
+        <location filename="PyUnit/UnittestDialog.py" line="413"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="396"/>
+        <location filename="PyUnit/UnittestDialog.py" line="416"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="409"/>
+        <location filename="PyUnit/UnittestDialog.py" line="429"/>
         <source>Failure: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="PyUnit/UnittestDialog.py" line="421"/>
+        <location filename="PyUnit/UnittestDialog.py" line="442"/>
         <source>Error: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="276"/>
+        <source>Skipped:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="283"/>
+        <source>Number of tests skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="293"/>
+        <source>Expected Failures:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="300"/>
+        <source>Number of tests with expected failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="310"/>
+        <source>Unexpected Successes:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.ui" line="317"/>
+        <source>Number of tests with unexpected success</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.py" line="455"/>
+        <source>    Skipped: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.py" line="468"/>
+        <source>    Expected Failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="PyUnit/UnittestDialog.py" line="481"/>
+        <source>    Unexpected Success</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -48945,17 +48990,17 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="Utilities/__init__.py" line="1022"/>
+        <location filename="Utilities/__init__.py" line="1037"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Vous pouvez utiliser la syntaxe &quot;%-code&quot; dans la chaine de caractères. Les codes supportés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;colonne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;répertoire de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nom de fichier de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;répertoire &apos;home&apos; de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;ligne du curseur de l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;chemin du projet courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texte sélectionné dans l&apos;éditeur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nom d&apos;utilisateur de l&apos;utilisateur courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;le signe pourcent&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1208"/>
+        <location filename="Utilities/__init__.py" line="1223"/>
         <source>Python2 interpreter not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Utilities/__init__.py" line="1254"/>
+        <location filename="Utilities/__init__.py" line="1269"/>
         <source>Python2 interpreter did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>

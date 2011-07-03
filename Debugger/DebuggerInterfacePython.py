@@ -938,6 +938,21 @@ class DebuggerInterfacePython(QObject):
                     self.debugServer.clientUtTestErrored(testname, traceback)
                     continue
                 
+                if resp == DebugProtocol.ResponseUTTestSkipped:
+                    testname, reason = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestSkipped(testname, reason)
+                    continue
+                
+                if resp == DebugProtocol.ResponseUTTestFailedExpected:
+                    testname, traceback = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestFailedExpected(testname, traceback)
+                    continue
+                
+                if resp == DebugProtocol.ResponseUTTestSucceededUnexpected:
+                    testname = line[eoc:-1]
+                    self.debugServer.clientUtTestSucceededUnexpected(testname)
+                    continue
+                
                 if resp == DebugProtocol.ResponseUTFinished:
                     self.debugServer.clientUtFinished()
                     continue

@@ -531,6 +531,21 @@ def extractFlags(text):
     return flags
 
 
+def extractFlagsFromFile(filename):
+    """
+    Function to extract eric specific flags out of the given file.
+    
+    @param filename name of the file to be scanned (string)
+    @return dictionary of string, boolean, complex, float and int
+    """
+    try:
+        source, encoding = readEncodedFile(filename)
+    except (UnicodeError, IOError):
+        return {}
+    
+    return extractFlags(source)
+
+
 def toNativeSeparators(path):
     """
     Function returning a path, that is using native separator characters.

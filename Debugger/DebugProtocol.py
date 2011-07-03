@@ -66,6 +66,9 @@ ResponseUTStartTest = '>UTStartTest<'
 ResponseUTStopTest = '>UTStopTest<'
 ResponseUTTestFailed = '>UTTestFailed<'
 ResponseUTTestErrored = '>UTTestErrored<'
+ResponseUTTestSkipped = '>UTTestSkipped<'
+ResponseUTTestFailedExpected = '>UTTestFailedExpected<'
+ResponseUTTestSucceededUnexpected = '>UTTestSucceededUnexpected<'
 ResponseUTFinished = '>UTFinished<'
 ResponseForkTo = RequestForkTo
 

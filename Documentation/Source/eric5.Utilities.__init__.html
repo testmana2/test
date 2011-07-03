@@ -83,6 +83,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#extractFlags">extractFlags</a></td>
 <td>Function to extract eric specific flags out of the given text.</td>
 </tr><tr>
+<td><a href="#extractFlagsFromFile">extractFlagsFromFile</a></td>
+<td>Function to extract eric specific flags out of the given file.</td>
+</tr><tr>
 <td><a href="#fromNativeSeparators">fromNativeSeparators</a></td>
 <td>Function returning a path, that is using "/" separator characters.</td>
 </tr><tr>
@@ -584,6 +587,24 @@ the converted text (string)
 <dt><i>text</i></dt>
 <dd>
 text to be scanned (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary of string, boolean, complex, float and int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="extractFlagsFromFile" ID="extractFlagsFromFile"></a>
+<h2>extractFlagsFromFile</h2>
+<b>extractFlagsFromFile</b>(<i>filename</i>)
+<p>
+    Function to extract eric specific flags out of the given file.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file to be scanned (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
