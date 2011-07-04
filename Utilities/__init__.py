@@ -1151,10 +1151,11 @@ def py2compile(file, checkFlakes = False):
     """
     interpreter = Preferences.getDebugger("PythonInterpreter")
     if interpreter == "" or not isinpath(interpreter):
-        return (True, file, "1", "", 
+        return (False, "", "", "", "", [(
+            "", "1",
             QCoreApplication.translate("Utilities", 
-                                       "Python2 interpreter not configured."), 
-            [])
+                                       "Python2 interpreter not configured.")
+            )])
     
     syntaxChecker = os.path.join(getConfig('ericDir'), 
                                  "UtilitiesPython2", "Py2SyntaxChecker.py")
