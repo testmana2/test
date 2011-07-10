@@ -31,6 +31,9 @@ Module implementing a web search widget for the web browser.
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#HelpWebSearchEdit">HelpWebSearchEdit</a></td>
+<td>Class implementing the web search line edit.</td>
+</tr><tr>
 <td><a href="#HelpWebSearchWidget">HelpWebSearchWidget</a></td>
 <td>Class implementing a web search widget for the web browser.</td>
 </tr>
@@ -39,6 +42,53 @@ Module implementing a web search widget for the web browser.
 <table>
 <tr><td>None</td></tr>
 </table>
+<hr /><hr />
+<a NAME="HelpWebSearchEdit" ID="HelpWebSearchEdit"></a>
+<h2>HelpWebSearchEdit</h2>
+<p>
+    Class implementing the web search line edit.
+</p>
+<h3>Derived from</h3>
+E5LineEdit
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HelpWebSearchEdit.__init__">HelpWebSearchEdit</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HelpWebSearchEdit.mousePressEvent">mousePressEvent</a></td>
+<td>Protected method called by a mouse press event.</td>
+</tr>
+</table>
+<a NAME="HelpWebSearchEdit.__init__" ID="HelpWebSearchEdit.__init__"></a>
+<h4>HelpWebSearchEdit (Constructor)</h4>
+<b>HelpWebSearchEdit</b>(<i>mainWindow, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>mainWindow</i></dt>
+<dd>
+reference to the main window (HelpWindow)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HelpWebSearchEdit.mousePressEvent" ID="HelpWebSearchEdit.mousePressEvent"></a>
+<h4>HelpWebSearchEdit.mousePressEvent</h4>
+<b>mousePressEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a mouse press event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the mouse event (QMouseEvent)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="HelpWebSearchWidget" ID="HelpWebSearchWidget"></a>
 <h2>HelpWebSearchWidget</h2>
@@ -111,6 +161,9 @@ QWidget
 <td><a href="#HelpWebSearchWidget.clear">clear</a></td>
 <td>Public method to clear all private data.</td>
 </tr><tr>
+<td><a href="#HelpWebSearchWidget.mousePressEvent">mousePressEvent</a></td>
+<td>Protected method called by a mouse press event.</td>
+</tr><tr>
 <td><a href="#HelpWebSearchWidget.openSearchManager">openSearchManager</a></td>
 <td>Public method to get a reference to the opensearch manager object.</td>
 </tr><tr>
@@ -127,10 +180,7 @@ QWidget
 <p>
         Constructor
 </p><dl>
-<dt><i>inactiveText</i></dt>
-<dd>
-text to be shown on inactivity (string)
-</dd><dt><i>parent</i></dt>
+<dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
@@ -239,7 +289,17 @@ search text (string)
 <b>clear</b>(<i></i>)
 <p>
         Public method to clear all private data.
-</p><a NAME="HelpWebSearchWidget.openSearchManager" ID="HelpWebSearchWidget.openSearchManager"></a>
+</p><a NAME="HelpWebSearchWidget.mousePressEvent" ID="HelpWebSearchWidget.mousePressEvent"></a>
+<h4>HelpWebSearchWidget.mousePressEvent</h4>
+<b>mousePressEvent</b>(<i>evt</i>)
+<p>
+        Protected method called by a mouse press event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the mouse event (QMouseEvent)
+</dd>
+</dl><a NAME="HelpWebSearchWidget.openSearchManager" ID="HelpWebSearchWidget.openSearchManager"></a>
 <h4>HelpWebSearchWidget.openSearchManager</h4>
 <b>openSearchManager</b>(<i></i>)
 <p>

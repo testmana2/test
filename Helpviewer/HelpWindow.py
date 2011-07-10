@@ -15,7 +15,7 @@ from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWid
     QDesktopServices, QKeySequence, qApp, QComboBox, QFont, QFontMetrics, QLabel, \
     QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
     QHBoxLayout, QProgressBar, QAction, QIcon
-from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
+from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
 from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
 
 from .SearchWidget import SearchWidget
@@ -1377,7 +1377,7 @@ class HelpWindow(QMainWindow):
         forwardButton.setPopupMode(QToolButton.MenuButtonPopup)
         
         bookmarksModel = self.bookmarksManager().bookmarksModel()
-        self.bookmarksToolBar = BookmarksToolBar(bookmarksModel)
+        self.bookmarksToolBar = BookmarksToolBar(self, bookmarksModel)
         self.bookmarksToolBar.setObjectName("BookmarksToolBar")
         self.bookmarksToolBar.setIconSize(UI.Config.ToolBarIconSize)
         self.bookmarksToolBar.openUrl.connect(self.openUrl)
@@ -2681,6 +2681,19 @@ class HelpWindow(QMainWindow):
         """
         self.__eventKeyboardModifiers = modifiers
     
+    def mousePressEvent(self, evt):
+        """
+        Protected method called by a mouse press event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        if evt.button() == Qt.XButton1:
+            self.currentBrowser().pageAction(QWebPage.Back).trigger()
+        elif evt.button() == Qt.XButton2:
+            self.currentBrowser().pageAction(QWebPage.Forward).trigger()
+        else:
+            super().mousePressEvent(evt)
+
     ###########################################################################
     ## Interface to VirusTotal below                                         ##
     ###########################################################################

@@ -2788,7 +2788,10 @@
       <keyword name="JavaScriptExternalObject.AddSearchProvider" id="JavaScriptExternalObject.AddSearchProvider" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.AddSearchProvider" />
       <keyword name="LinkedResource (Constructor)" id="LinkedResource (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#LinkedResource.__init__" />
       <keyword name="HelpWebSearchWidget (Module)" id="HelpWebSearchWidget (Module)" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
+      <keyword name="HelpWebSearchEdit" id="HelpWebSearchEdit" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit" />
       <keyword name="HelpWebSearchWidget" id="HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget" />
+      <keyword name="HelpWebSearchEdit (Constructor)" id="HelpWebSearchEdit (Constructor)" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.__init__" />
+      <keyword name="HelpWebSearchEdit.mousePressEvent" id="HelpWebSearchEdit.mousePressEvent" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.mousePressEvent" />
       <keyword name="HelpWebSearchWidget (Constructor)" id="HelpWebSearchWidget (Constructor)" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__init__" />
       <keyword name="HelpWebSearchWidget.__addEngineFromUrl" id="HelpWebSearchWidget.__addEngineFromUrl" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__addEngineFromUrl" />
       <keyword name="HelpWebSearchWidget.__changeCurrentEngine" id="HelpWebSearchWidget.__changeCurrentEngine" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__changeCurrentEngine" />
@@ -2806,6 +2809,7 @@
       <keyword name="HelpWebSearchWidget.__textChanged" id="HelpWebSearchWidget.__textChanged" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textChanged" />
       <keyword name="HelpWebSearchWidget.__textEdited" id="HelpWebSearchWidget.__textEdited" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.__textEdited" />
       <keyword name="HelpWebSearchWidget.clear" id="HelpWebSearchWidget.clear" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.clear" />
+      <keyword name="HelpWebSearchWidget.mousePressEvent" id="HelpWebSearchWidget.mousePressEvent" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.mousePressEvent" />
       <keyword name="HelpWebSearchWidget.openSearchManager" id="HelpWebSearchWidget.openSearchManager" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.openSearchManager" />
       <keyword name="HelpWebSearchWidget.preferencesChanged" id="HelpWebSearchWidget.preferencesChanged" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.preferencesChanged" />
       <keyword name="HelpWebSearchWidget.saveSearches" id="HelpWebSearchWidget.saveSearches" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchWidget.saveSearches" />
@@ -2921,6 +2925,7 @@
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
       <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
       <keyword name="HelpWindow.masterPasswordChanged" id="HelpWindow.masterPasswordChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.masterPasswordChanged" />
+      <keyword name="HelpWindow.mousePressEvent" id="HelpWindow.mousePressEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mousePressEvent" />
       <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
@@ -7716,6 +7721,7 @@
       <keyword name="UrlBar.focusOutEvent" id="UrlBar.focusOutEvent" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.focusOutEvent" />
       <keyword name="UrlBar.keyPressEvent" id="UrlBar.keyPressEvent" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.keyPressEvent" />
       <keyword name="UrlBar.mouseDoubleClickEvent" id="UrlBar.mouseDoubleClickEvent" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.mouseDoubleClickEvent" />
+      <keyword name="UrlBar.mousePressEvent" id="UrlBar.mousePressEvent" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.mousePressEvent" />
       <keyword name="UrlBar.paintEvent" id="UrlBar.paintEvent" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.paintEvent" />
       <keyword name="UrlBar.preferencesChanged" id="UrlBar.preferencesChanged" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.preferencesChanged" />
       <keyword name="UrlBar.setBrowser" id="UrlBar.setBrowser" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.setBrowser" />

@@ -13,7 +13,7 @@ try:
     from PyQt4.QtNetwork import QSslCertificate
 except ImportError:
     QSslCertificate = None      # __IGNORE_WARNING__
-from PyQt4.QtWebKit import QWebSettings
+from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton
@@ -272,6 +272,19 @@ class UrlBar(E5LineEdit):
         if self.text() == "" and self.__browser is not None:
             self.__browserUrlChanged(self.__browser.url())
         E5LineEdit.focusOutEvent(self, evt)
+    
+    def mousePressEvent(self, evt):
+        """
+        Protected method called by a mouse press event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        if evt.button() == Qt.XButton1:
+            self.__mw.currentBrowser().pageAction(QWebPage.Back).trigger()
+        elif evt.button() == Qt.XButton2:
+            self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
+        else:
+            super().mousePressEvent(evt)
     
     def mouseDoubleClickEvent(self, evt):
         """

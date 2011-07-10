@@ -7,10 +7,10 @@
 Module implementing a web search widget for the web browser.
 """
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer
+from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
 from PyQt4.QtGui import QWidget, QMenu, QHBoxLayout, QStandardItem, QStandardItemModel, \
     QCompleter, QFont, QIcon, QPixmap
-from PyQt4.QtWebKit import QWebSettings
+from PyQt4.QtWebKit import QWebSettings, QWebPage
 
 import UI.PixmapCache
 
@@ -21,6 +21,35 @@ from E5Gui.E5LineEditButton import E5LineEditButton
 
 from .OpenSearch.OpenSearchManager import OpenSearchManager
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
+
+
+class HelpWebSearchEdit(E5LineEdit):
+    """
+    Class implementing the web search line edit.
+    """
+    def __init__(self, mainWindow, parent=None):
+        """
+        Constructor
+        
+        @param mainWindow reference to the main window (HelpWindow)
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__(parent)
+        
+        self.__mw = mainWindow
+    
+    def mousePressEvent(self, evt):
+        """
+        Protected method called by a mouse press event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        if evt.button() == Qt.XButton1:
+            self.__mw.currentBrowser().pageAction(QWebPage.Back).trigger()
+        elif evt.button() == Qt.XButton2:
+            self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
+        else:
+            super().mousePressEvent(evt)
 
 
 class HelpWebSearchWidget(QWidget):
@@ -35,7 +64,6 @@ class HelpWebSearchWidget(QWidget):
         """
         Constructor
         
-        @param inactiveText text to be shown on inactivity (string)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -53,7 +81,7 @@ class HelpWebSearchWidget(QWidget):
         
         self.__enginesMenu = QMenu(self)
         
-        self.__searchEdit = E5LineEdit(parent=self)
+        self.__searchEdit = HelpWebSearchEdit(self.mw, parent=self)
         self.__layout.addWidget(self.__searchEdit)
         
         self.__engineButton = E5LineEditButton(self)
@@ -391,3 +419,16 @@ class HelpWebSearchWidget(QWidget):
         """
         self.__engineButton.setIcon(
             QIcon(QPixmap.fromImage(self.__openSearchManager.currentEngine().image())))
+    
+    def mousePressEvent(self, evt):
+        """
+        Protected method called by a mouse press event.
+        
+        @param evt reference to the mouse event (QMouseEvent)
+        """
+        if evt.button() == Qt.XButton1:
+            self.mw.currentBrowser().pageAction(QWebPage.Back).trigger()
+        elif evt.button() == Qt.XButton2:
+            self.mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
+        else:
+            super().mousePressEvent(evt)

@@ -9,6 +9,7 @@ Module implementing a tool bar showing bookmarks.
 
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl
 from PyQt4.QtGui import QMenu, QApplication, QCursor
+from PyQt4.QtWebKit import QWebPage
 
 from E5Gui.E5ModelToolBar import E5ModelToolBar
 
@@ -29,16 +30,18 @@ class BookmarksToolBar(E5ModelToolBar):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, model, parent=None):
+    def __init__(self, mainWindow, model, parent=None):
         """
         Constructor
         
+        @param mainWindow reference to the main window (HelpWindow)
         @param model reference to the bookmarks model (BookmarksModel)
         @param parent reference to the parent widget (QWidget)
         """
         E5ModelToolBar.__init__(self,
             QApplication.translate("BookmarksToolBar", "Bookmarks"), parent)
         
+        self.__mw = mainWindow
         self.__bookmarksModel = model
         
         self.setModel(model)
@@ -94,14 +97,19 @@ class BookmarksToolBar(E5ModelToolBar):
         """
         assert idx.isValid()
         
-        if self._keyboardModifiers & Qt.ControlModifier:
-            self.newUrl.emit(
-                idx.data(BookmarksModel.UrlRole),
-                idx.data(Qt.DisplayRole))
-        else:
-            self.openUrl.emit(
-                idx.data(BookmarksModel.UrlRole),
-                idx.data(Qt.DisplayRole))
+        if self._mouseButton == Qt.XButton1:
+            self.__mw.currentBrowser().pageAction(QWebPage.Back).trigger()
+        elif self._mouseButton == Qt.XButton2:
+            self.__mw.currentBrowser().pageAction(QWebPage.Forward).trigger()
+        elif self._mouseButton == Qt.LeftButton:
+            if self._keyboardModifiers & Qt.ControlModifier:
+                self.newUrl.emit(
+                    idx.data(BookmarksModel.UrlRole),
+                    idx.data(Qt.DisplayRole))
+            else:
+                self.openUrl.emit(
+                    idx.data(BookmarksModel.UrlRole),
+                    idx.data(Qt.DisplayRole))
     
     def __openToolBarBookmark(self):
         """
