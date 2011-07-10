@@ -82,6 +82,7 @@ class Editor(QsciScintillaCompat):
             is passed as a parameter.
     @signal encodingChanged(str) emitted when the editors encoding was set. The
             encoding name is passed as a parameter.
+    @signal lastEditPositionAvailable() emitted when a last edit position is available
     """
     modificationStatusChanged = pyqtSignal(bool, QsciScintillaCompat)
     undoAvailable = pyqtSignal(bool)
@@ -101,6 +102,7 @@ class Editor(QsciScintillaCompat):
     languageChanged = pyqtSignal(str)
     eolChanged = pyqtSignal(str)
     encodingChanged = pyqtSignal(str)
+    lastEditPositionAvailable = pyqtSignal()
     
     # Autocompletion icon definitions
     ClassID = 1
@@ -193,6 +195,8 @@ class Editor(QsciScintillaCompat):
         
         self.acAPI = False
         
+        self.__lastEditPosition = None
+        
         # list of clones
         self.__clones = []
         
@@ -222,6 +226,7 @@ class Editor(QsciScintillaCompat):
         self.__isShared = False
         self.__inRemoteSharedEdit = False
         
+        # connect signals before loading the text
         self.modificationChanged.connect(self.__modificationChanged)
         self.cursorPositionChanged.connect(self.__cursorPositionChanged)
         self.modificationAttempted.connect(self.__modificationReadOnly)
@@ -399,6 +404,9 @@ class Editor(QsciScintillaCompat):
         
         # register images to be shown in autocompletion lists
         self.__registerImages()
+        
+        # connect signals after loading the text
+        self.textChanged.connect(self.__textChanged)
     
     def __registerImages(self):
         """
@@ -3235,6 +3243,88 @@ class Editor(QsciScintillaCompat):
         """
         self.setCursorPosition(line - 1, pos - 1)
         self.ensureVisible(line)
+    
+    def __textChanged(self):
+        """
+        Private slot to handle a change of the editor text.
+        
+        This slot defers the handling to the next time the event loop
+        is run in order to ensure, that cursor position has been updated
+        by the underlying Scintilla editor.
+        """
+        QTimer.singleShot(0, self.__saveLastEditPosition)
+    
+    def __saveLastEditPosition(self):
+        """
+        Private slot to record the last edit position.
+        """
+        self.__lastEditPosition = self.getCursorPosition()
+        self.lastEditPositionAvailable.emit()
+    
+    def isLastEditPositionAvailable(self):
+        """
+        Public method to check, if a last edit position is available.
+        
+        @return flag indicating availability (boolean)
+        """
+        return self.__lastEditPosition is not None
+    
+    def gotoLastEditPosition(self):
+        """
+        Public method to move the cursor to the last edit position.
+        """
+        self.setCursorPosition(*self.__lastEditPosition)
+        self.ensureVisible(self.__lastEditPosition[0])
+    
+    def gotoMethodClass(self, goUp=False):
+        """
+        Public method to go to the next Python method or class definition.
+        """
+        if self.isPy3File() or self.isPy2File() or self.isRubyFile():
+            lineNo = self.getCursorPosition()[0]
+            line = self.text(lineNo)
+            if line.strip().startswith(("class ", "def ", "module ")):
+                if goUp:
+                    lineNo -= 1
+                else:
+                    lineNo += 1
+            while True:
+                if goUp and lineNo < 0:
+                    self.setCursorPosition(0, 0)
+                    self.ensureVisible(0)
+                    return
+                elif not goUp and lineNo == self.lines():
+                    lineNo = self.lines() - 1
+                    self.setCursorPosition(lineNo, self.lineLength(lineNo))
+                    self.ensureVisible(lineNo)
+                    return
+                
+                line = self.text(lineNo)
+                if line.strip().startswith(("class ", "def ", "module ")):
+                    # try 'def ' first because it occurs more often
+                    first = line.find("def ")
+                    if first > -1:
+                        first += 4
+                    else:
+                        first = line.find("class ")
+                        if first > -1:
+                            first += 6
+                        else:
+                            first = line.find("module ") + 7
+                    match = re.search("[:(]", line)
+                    if match:
+                        end = match.start()
+                    else:
+                        end = self.lineLength(lineNo) - 1
+                    self.setSelection(lineNo, first, lineNo, end)
+                    self.ensureVisible(lineNo)
+                    return
+                
+                if goUp:
+                    lineNo -= 1
+                else:
+                    lineNo += 1
+            
     
     ############################################################################
     ## Setup methods below

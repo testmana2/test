@@ -828,7 +828,7 @@ class ViewManager(QObject):
         
         self.deleteAct = E5Action(QApplication.translate('ViewManager', 'Clear'),
                 UI.PixmapCache.getIcon("editDelete.png"),
-                QApplication.translate('ViewManager', 'Cl&ear'),
+                QApplication.translate('ViewManager', 'Clear'),
                 QKeySequence(QApplication.translate('ViewManager',
                     "Alt+Shift+C", "Edit|Clear")),
                 0,
@@ -1867,6 +1867,9 @@ class ViewManager(QObject):
         menu.addSeparator()
         menu.addAction(self.gotoAct)
         menu.addAction(self.gotoBraceAct)
+        menu.addAction(self.gotoLastEditAct)
+        menu.addAction(self.gotoPreviousDefAct)
+        menu.addAction(self.gotoNextDefAct)
         menu.addSeparator()
         menu.addAction(self.selectBraceAct)
         menu.addAction(self.selectAllAct)
@@ -2092,6 +2095,59 @@ class ViewManager(QObject):
         self.gotoBraceAct.triggered[()].connect(self.__gotoBrace)
         self.searchActions.append(self.gotoBraceAct)
         
+        self.gotoLastEditAct = E5Action(
+                QApplication.translate('ViewManager', 'Goto Last Edit Location'),
+                UI.PixmapCache.getIcon("gotoLastEditPosition.png"),
+                QApplication.translate('ViewManager', 'Goto Last &Edit Location'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Shift+G", "Search|Goto Last Edit Location")),
+                0,
+                self.searchActGrp, 'vm_search_goto_last_edit_location')
+        self.gotoLastEditAct.setStatusTip(
+            QApplication.translate('ViewManager', 'Goto Last Edit Location'))
+        self.gotoLastEditAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Goto Last Edit Location</b>"""
+            """<p>Go to the location of the last edit in the current editor.</p>"""
+        ))
+        self.gotoLastEditAct.triggered[()].connect(self.__gotoLastEditPosition)
+        self.searchActions.append(self.gotoLastEditAct)
+        
+        self.gotoPreviousDefAct = E5Action(
+                QApplication.translate('ViewManager', 'Goto Previous Method or Class'),
+                QApplication.translate('ViewManager', 'Goto Previous Method or Class'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Shift+Up", "Search|Goto Previous Method or Class")),
+                0,
+                self.searchActGrp, 'vm_search_goto_previous_method_or_class')
+        self.gotoPreviousDefAct.setStatusTip(
+            QApplication.translate('ViewManager', 
+                                   'Go to the previous method or class definition'))
+        self.gotoPreviousDefAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Goto Previous Method or Class</b>"""
+            """<p>Goes to the line of the previous method or class definition"""
+            """ and highlights the name.</p>"""
+        ))
+        self.gotoPreviousDefAct.triggered[()].connect(self.__gotoPreviousMethodClass)
+        self.searchActions.append(self.gotoPreviousDefAct)
+        
+        self.gotoNextDefAct = E5Action(
+                QApplication.translate('ViewManager', 'Goto Next Method or Class'),
+                QApplication.translate('ViewManager', 'Goto Next Method or Class'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Shift+Down", "Search|Goto Next Method or Class")),
+                0,
+                self.searchActGrp, 'vm_search_goto_next_method_or_class')
+        self.gotoNextDefAct.setStatusTip(
+            QApplication.translate('ViewManager', 
+                                   'Go to the next method or class definition'))
+        self.gotoNextDefAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Goto Next Method or Class</b>"""
+            """<p>Goes to the line of the next method or class definition"""
+            """ and highlights the name.</p>"""
+        ))
+        self.gotoNextDefAct.triggered[()].connect(self.__gotoNextMethodClass)
+        self.searchActions.append(self.gotoNextDefAct)
+        
         self.searchActGrp.setEnabled(False)
         
         self.searchFilesAct = E5Action(QApplication.translate('ViewManager',
@@ -2208,6 +2264,8 @@ class ViewManager(QObject):
         tb.addAction(self.searchClearMarkersAct)
         tb.addSeparator()
         tb.addAction(self.searchFilesAct)
+        tb.addSeparator()
+        tb.addAction(self.gotoLastEditAct)
         
         tb.setAllowedAreas(Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea))
         
@@ -3156,6 +3214,7 @@ class ViewManager(QObject):
         editor.encodingChanged.connect(self.__editorConfigChanged)
         editor.selectionChanged.connect(self.searchDlg.selectionChanged)
         editor.selectionChanged.connect(self.replaceDlg.selectionChanged)
+        editor.lastEditPositionAvailable.connect(self.__lastEditPositionAvailable)
         
     def newEditorView(self, fn, caller, filetype=""):
         """
@@ -4150,6 +4209,30 @@ class ViewManager(QObject):
         """
         self.activeWindow().moveToMatchingBrace()
         
+    def __gotoLastEditPosition(self):
+        """
+        Private method to move the cursor to the last edit position.
+        """
+        self.activeWindow().gotoLastEditPosition()
+        
+    def __lastEditPositionAvailable(self):
+        """
+        Private slot to handle the lastEditPositionAvailable signal of an editor.
+        """
+        self.gotoLastEditAct.setEnabled(True)
+        
+    def __gotoNextMethodClass(self):
+        """
+        Private slot to go to the next Python/Ruby method or class definition.
+        """
+        self.activeWindow().gotoMethodClass(False)
+        
+    def __gotoPreviousMethodClass(self):
+        """
+        Private slot to go to the previous Python/Ruby method or class definition.
+        """
+        self.activeWindow().gotoMethodClass(True)
+        
     def __searchFiles(self):
         """
         Private method to handle the search in files action.
@@ -4650,6 +4733,7 @@ class ViewManager(QObject):
             
             self.undoAct.setEnabled(editor.isUndoAvailable())
             self.redoAct.setEnabled(editor.isRedoAvailable())
+            self.gotoLastEditAct.setEnabled(editor.isLastEditPositionAvailable())
             
             lex = editor.getLexer()
             if lex is not None:
@@ -4706,6 +4790,13 @@ class ViewManager(QObject):
                 self.autoCompleteFromAPIsAct.setEnabled(True)
             else:
                 self.autoCompleteFromAPIsAct.setEnabled(False)
+            
+            if editor.isPy3File() or editor.isPy2File() or editor.isRubyFile():
+                self.gotoPreviousDefAct.setEnabled(True)
+                self.gotoNextDefAct.setEnabled(True)
+            else:
+                self.gotoPreviousDefAct.setEnabled(False)
+                self.gotoNextDefAct.setEnabled(False)
             
             if setSb:
                 line, pos = editor.getCursorPosition()
@@ -4852,6 +4943,7 @@ class ViewManager(QObject):
         lang = editor.getLanguage()
         eol = editor.getEolIndicator()
         self.__setSbFile(fn, line + 1, pos, encoding=enc, language=lang, eol=eol)
+        self._checkActions(editor, False)
     
     ##################################################################
     ## Below are protected utility methods

@@ -90,6 +90,9 @@ emitted when the editors eol type was set. The eol string
 <dd>
 emitted when the editors language was set. The
             language is passed as a parameter.
+</dd><dt>lastEditPositionAvailable()</dt>
+<dd>
+emitted when a last edit position is available
 </dd><dt>modificationStatusChanged(bool, QsciScintillaCompat)</dt>
 <dd>
 emitted when the
@@ -400,6 +403,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__restoreBreakpoints">__restoreBreakpoints</a></td>
 <td>Private method to restore the breakpoints.</td>
 </tr><tr>
+<td><a href="#Editor.__saveLastEditPosition">__saveLastEditPosition</a></td>
+<td>Private slot to record the last edit position.</td>
+</tr><tr>
 <td><a href="#Editor.__selectAll">__selectAll</a></td>
 <td>Private slot handling the select all context menu action.</td>
 </tr><tr>
@@ -504,6 +510,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__styleNeeded">__styleNeeded</a></td>
 <td>Private slot to handle the need for more styling.</td>
+</tr><tr>
+<td><a href="#Editor.__textChanged">__textChanged</a></td>
+<td>Private slot to handle a change of the editor text.</td>
 </tr><tr>
 <td><a href="#Editor.__toggleAutoCompletionEnable">__toggleAutoCompletionEnable</a></td>
 <td>Private slot to handle the Enable Autocompletion context menu entry.</td>
@@ -700,8 +709,14 @@ QsciScintillaCompat
 <td><a href="#Editor.getWordRight">getWordRight</a></td>
 <td>Public method to get the word to the right of a position.</td>
 </tr><tr>
+<td><a href="#Editor.gotoLastEditPosition">gotoLastEditPosition</a></td>
+<td>Public method to move the cursor to the last edit position.</td>
+</tr><tr>
 <td><a href="#Editor.gotoLine">gotoLine</a></td>
 <td>Public slot to jump to the beginning of a line.</td>
+</tr><tr>
+<td><a href="#Editor.gotoMethodClass">gotoMethodClass</a></td>
+<td>Public method to go to the next Python method or class definition.</td>
 </tr><tr>
 <td><a href="#Editor.gotoSyntaxError">gotoSyntaxError</a></td>
 <td>Public slot to handle the 'Goto syntax error' context menu action.</td>
@@ -741,6 +756,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.indentLineOrSelection">indentLineOrSelection</a></td>
 <td>Public slot to indent the current line or current selection</td>
+</tr><tr>
+<td><a href="#Editor.isLastEditPositionAvailable">isLastEditPositionAvailable</a></td>
+<td>Public method to check, if a last edit position is available.</td>
 </tr><tr>
 <td><a href="#Editor.isPy2File">isPy2File</a></td>
 <td>Public method to return a flag indicating a Python file.</td>
@@ -1716,6 +1734,11 @@ flag indicating to propagate the change (boolean)
 <b>__restoreBreakpoints</b>(<i></i>)
 <p>
         Private method to restore the breakpoints.
+</p><a NAME="Editor.__saveLastEditPosition" ID="Editor.__saveLastEditPosition"></a>
+<h4>Editor.__saveLastEditPosition</h4>
+<b>__saveLastEditPosition</b>(<i></i>)
+<p>
+        Private slot to record the last edit position.
 </p><a NAME="Editor.__selectAll" ID="Editor.__selectAll"></a>
 <h4>Editor.__selectAll</h4>
 <b>__selectAll</b>(<i></i>)
@@ -1941,7 +1964,16 @@ value of the character entered (integer)
 <dd>
 end position, that needs styling (integer)
 </dd>
-</dl><a NAME="Editor.__toggleAutoCompletionEnable" ID="Editor.__toggleAutoCompletionEnable"></a>
+</dl><a NAME="Editor.__textChanged" ID="Editor.__textChanged"></a>
+<h4>Editor.__textChanged</h4>
+<b>__textChanged</b>(<i></i>)
+<p>
+        Private slot to handle a change of the editor text.
+</p><p>
+        This slot defers the handling to the next time the event loop
+        is run in order to ensure, that cursor position has been updated
+        by the underlying Scintilla editor.
+</p><a NAME="Editor.__toggleAutoCompletionEnable" ID="Editor.__toggleAutoCompletionEnable"></a>
 <h4>Editor.__toggleAutoCompletionEnable</h4>
 <b>__toggleAutoCompletionEnable</b>(<i></i>)
 <p>
@@ -2605,7 +2637,12 @@ position to look at (int)
 <dd>
 the word to the right of that position (string)
 </dd>
-</dl><a NAME="Editor.gotoLine" ID="Editor.gotoLine"></a>
+</dl><a NAME="Editor.gotoLastEditPosition" ID="Editor.gotoLastEditPosition"></a>
+<h4>Editor.gotoLastEditPosition</h4>
+<b>gotoLastEditPosition</b>(<i></i>)
+<p>
+        Public method to move the cursor to the last edit position.
+</p><a NAME="Editor.gotoLine" ID="Editor.gotoLine"></a>
 <h4>Editor.gotoLine</h4>
 <b>gotoLine</b>(<i>line, pos=1</i>)
 <p>
@@ -2618,7 +2655,12 @@ line number to go to (integer)
 <dd>
 position in line to go to (integer)
 </dd>
-</dl><a NAME="Editor.gotoSyntaxError" ID="Editor.gotoSyntaxError"></a>
+</dl><a NAME="Editor.gotoMethodClass" ID="Editor.gotoMethodClass"></a>
+<h4>Editor.gotoMethodClass</h4>
+<b>gotoMethodClass</b>(<i>goUp=False</i>)
+<p>
+        Public method to go to the next Python method or class definition.
+</p><a NAME="Editor.gotoSyntaxError" ID="Editor.gotoSyntaxError"></a>
 <h4>Editor.gotoSyntaxError</h4>
 <b>gotoSyntaxError</b>(<i></i>)
 <p>
@@ -2729,7 +2771,17 @@ flag indicating a syntax error (boolean)
 <b>indentLineOrSelection</b>(<i></i>)
 <p>
         Public slot to indent the current line or current selection
-</p><a NAME="Editor.isPy2File" ID="Editor.isPy2File"></a>
+</p><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
+<h4>Editor.isLastEditPositionAvailable</h4>
+<b>isLastEditPositionAvailable</b>(<i></i>)
+<p>
+        Public method to check, if a last edit position is available.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating availability (boolean)
+</dd>
+</dl><a NAME="Editor.isPy2File" ID="Editor.isPy2File"></a>
 <h4>Editor.isPy2File</h4>
 <b>isPy2File</b>(<i></i>)
 <p>

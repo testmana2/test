@@ -19,6 +19,8 @@ Version 5.2-snapshot-2011mmdd:
 - extended the unit test interface to support skipped tests, expected failures
   and unexpected successes and to better cope with Python2 scripts when run
   from the eric IDE
+- added editor actions to go to the last edit location and to the previous or
+  next Python or Ruby class or method definition
 
 Version 5.2-snapshot-20110501:
 - bug fixes

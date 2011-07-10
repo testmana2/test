@@ -311,6 +311,15 @@ QObject
 <td><a href="#ViewManager.__gotoBrace">__gotoBrace</a></td>
 <td>Private method to handle the goto brace action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__gotoLastEditPosition">__gotoLastEditPosition</a></td>
+<td>Private method to move the cursor to the last edit position.</td>
+</tr><tr>
+<td><a href="#ViewManager.__gotoNextMethodClass">__gotoNextMethodClass</a></td>
+<td>Private slot to go to the next Python/Ruby method or class definition.</td>
+</tr><tr>
+<td><a href="#ViewManager.__gotoPreviousMethodClass">__gotoPreviousMethodClass</a></td>
+<td>Private slot to go to the previous Python/Ruby method or class definition.</td>
+</tr><tr>
 <td><a href="#ViewManager.__gotoSyntaxError">__gotoSyntaxError</a></td>
 <td>Private method to handle the goto syntax error action.</td>
 </tr><tr>
@@ -337,6 +346,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__initViewActions">__initViewActions</a></td>
 <td>Private method defining the user interface actions for the view commands.</td>
+</tr><tr>
+<td><a href="#ViewManager.__lastEditPositionAvailable">__lastEditPositionAvailable</a></td>
+<td>Private slot to handle the lastEditPositionAvailable signal of an editor.</td>
 </tr><tr>
 <td><a href="#ViewManager.__lastEditorClosed">__lastEditorClosed</a></td>
 <td>Private slot to handle the lastEditorClosed signal.</td>
@@ -1109,6 +1121,21 @@ reference to the action that was triggered (QAction)
 <b>__gotoBrace</b>(<i></i>)
 <p>
         Private method to handle the goto brace action.
+</p><a NAME="ViewManager.__gotoLastEditPosition" ID="ViewManager.__gotoLastEditPosition"></a>
+<h4>ViewManager.__gotoLastEditPosition</h4>
+<b>__gotoLastEditPosition</b>(<i></i>)
+<p>
+        Private method to move the cursor to the last edit position.
+</p><a NAME="ViewManager.__gotoNextMethodClass" ID="ViewManager.__gotoNextMethodClass"></a>
+<h4>ViewManager.__gotoNextMethodClass</h4>
+<b>__gotoNextMethodClass</b>(<i></i>)
+<p>
+        Private slot to go to the next Python/Ruby method or class definition.
+</p><a NAME="ViewManager.__gotoPreviousMethodClass" ID="ViewManager.__gotoPreviousMethodClass"></a>
+<h4>ViewManager.__gotoPreviousMethodClass</h4>
+<b>__gotoPreviousMethodClass</b>(<i></i>)
+<p>
+        Private slot to go to the previous Python/Ruby method or class definition.
 </p><a NAME="ViewManager.__gotoSyntaxError" ID="ViewManager.__gotoSyntaxError"></a>
 <h4>ViewManager.__gotoSyntaxError</h4>
 <b>__gotoSyntaxError</b>(<i></i>)
@@ -1154,6 +1181,11 @@ reference to the action that was triggered (QAction)
 <b>__initViewActions</b>(<i></i>)
 <p>
         Private method defining the user interface actions for the view commands.
+</p><a NAME="ViewManager.__lastEditPositionAvailable" ID="ViewManager.__lastEditPositionAvailable"></a>
+<h4>ViewManager.__lastEditPositionAvailable</h4>
+<b>__lastEditPositionAvailable</b>(<i></i>)
+<p>
+        Private slot to handle the lastEditPositionAvailable signal of an editor.
 </p><a NAME="ViewManager.__lastEditorClosed" ID="ViewManager.__lastEditorClosed"></a>
 <h4>ViewManager.__lastEditorClosed</h4>
 <b>__lastEditorClosed</b>(<i></i>)

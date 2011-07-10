@@ -3522,6 +3522,9 @@
       <keyword name="ViewManager.__findFileName" id="ViewManager.__findFileName" ref="eric5.ViewManager.ViewManager.html#ViewManager.__findFileName" />
       <keyword name="ViewManager.__goto" id="ViewManager.__goto" ref="eric5.ViewManager.ViewManager.html#ViewManager.__goto" />
       <keyword name="ViewManager.__gotoBrace" id="ViewManager.__gotoBrace" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoBrace" />
+      <keyword name="ViewManager.__gotoLastEditPosition" id="ViewManager.__gotoLastEditPosition" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoLastEditPosition" />
+      <keyword name="ViewManager.__gotoNextMethodClass" id="ViewManager.__gotoNextMethodClass" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoNextMethodClass" />
+      <keyword name="ViewManager.__gotoPreviousMethodClass" id="ViewManager.__gotoPreviousMethodClass" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoPreviousMethodClass" />
       <keyword name="ViewManager.__gotoSyntaxError" id="ViewManager.__gotoSyntaxError" ref="eric5.ViewManager.ViewManager.html#ViewManager.__gotoSyntaxError" />
       <keyword name="ViewManager.__initBookmarkActions" id="ViewManager.__initBookmarkActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__initBookmarkActions" />
       <keyword name="ViewManager.__initContextMenuExporters" id="ViewManager.__initContextMenuExporters" ref="eric5.ViewManager.ViewManager.html#ViewManager.__initContextMenuExporters" />
@@ -3531,6 +3534,7 @@
       <keyword name="ViewManager.__initSearchActions" id="ViewManager.__initSearchActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__initSearchActions" />
       <keyword name="ViewManager.__initSpellingActions" id="ViewManager.__initSpellingActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__initSpellingActions" />
       <keyword name="ViewManager.__initViewActions" id="ViewManager.__initViewActions" ref="eric5.ViewManager.ViewManager.html#ViewManager.__initViewActions" />
+      <keyword name="ViewManager.__lastEditPositionAvailable" id="ViewManager.__lastEditPositionAvailable" ref="eric5.ViewManager.ViewManager.html#ViewManager.__lastEditPositionAvailable" />
       <keyword name="ViewManager.__lastEditorClosed" id="ViewManager.__lastEditorClosed" ref="eric5.ViewManager.ViewManager.html#ViewManager.__lastEditorClosed" />
       <keyword name="ViewManager.__loadRecent" id="ViewManager.__loadRecent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__loadRecent" />
       <keyword name="ViewManager.__macroDelete" id="ViewManager.__macroDelete" ref="eric5.ViewManager.ViewManager.html#ViewManager.__macroDelete" />
@@ -5985,6 +5989,7 @@
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
       <keyword name="Editor.__resetLanguage" id="Editor.__resetLanguage" ref="eric5.QScintilla.Editor.html#Editor.__resetLanguage" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
+      <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
       <keyword name="Editor.__selectAll" id="Editor.__selectAll" ref="eric5.QScintilla.Editor.html#Editor.__selectAll" />
       <keyword name="Editor.__selectPygmentsLexer" id="Editor.__selectPygmentsLexer" ref="eric5.QScintilla.Editor.html#Editor.__selectPygmentsLexer" />
       <keyword name="Editor.__send" id="Editor.__send" ref="eric5.QScintilla.Editor.html#Editor.__send" />
@@ -6020,6 +6025,7 @@
       <keyword name="Editor.__showSyntaxError" id="Editor.__showSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.__showSyntaxError" />
       <keyword name="Editor.__spellCharAdded" id="Editor.__spellCharAdded" ref="eric5.QScintilla.Editor.html#Editor.__spellCharAdded" />
       <keyword name="Editor.__styleNeeded" id="Editor.__styleNeeded" ref="eric5.QScintilla.Editor.html#Editor.__styleNeeded" />
+      <keyword name="Editor.__textChanged" id="Editor.__textChanged" ref="eric5.QScintilla.Editor.html#Editor.__textChanged" />
       <keyword name="Editor.__toggleAutoCompletionEnable" id="Editor.__toggleAutoCompletionEnable" ref="eric5.QScintilla.Editor.html#Editor.__toggleAutoCompletionEnable" />
       <keyword name="Editor.__toggleBreakpoint" id="Editor.__toggleBreakpoint" ref="eric5.QScintilla.Editor.html#Editor.__toggleBreakpoint" />
       <keyword name="Editor.__toggleBreakpointEnabled" id="Editor.__toggleBreakpointEnabled" ref="eric5.QScintilla.Editor.html#Editor.__toggleBreakpointEnabled" />
@@ -6085,7 +6091,9 @@
       <keyword name="Editor.getWordBoundaries" id="Editor.getWordBoundaries" ref="eric5.QScintilla.Editor.html#Editor.getWordBoundaries" />
       <keyword name="Editor.getWordLeft" id="Editor.getWordLeft" ref="eric5.QScintilla.Editor.html#Editor.getWordLeft" />
       <keyword name="Editor.getWordRight" id="Editor.getWordRight" ref="eric5.QScintilla.Editor.html#Editor.getWordRight" />
+      <keyword name="Editor.gotoLastEditPosition" id="Editor.gotoLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.gotoLastEditPosition" />
       <keyword name="Editor.gotoLine" id="Editor.gotoLine" ref="eric5.QScintilla.Editor.html#Editor.gotoLine" />
+      <keyword name="Editor.gotoMethodClass" id="Editor.gotoMethodClass" ref="eric5.QScintilla.Editor.html#Editor.gotoMethodClass" />
       <keyword name="Editor.gotoSyntaxError" id="Editor.gotoSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.gotoSyntaxError" />
       <keyword name="Editor.handleMonospacedEnable" id="Editor.handleMonospacedEnable" ref="eric5.QScintilla.Editor.html#Editor.handleMonospacedEnable" />
       <keyword name="Editor.handleRenamed" id="Editor.handleRenamed" ref="eric5.QScintilla.Editor.html#Editor.handleRenamed" />
@@ -6099,6 +6107,7 @@
       <keyword name="Editor.highlight" id="Editor.highlight" ref="eric5.QScintilla.Editor.html#Editor.highlight" />
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
+      <keyword name="Editor.isLastEditPositionAvailable" id="Editor.isLastEditPositionAvailable" ref="eric5.QScintilla.Editor.html#Editor.isLastEditPositionAvailable" />
       <keyword name="Editor.isPy2File" id="Editor.isPy2File" ref="eric5.QScintilla.Editor.html#Editor.isPy2File" />
       <keyword name="Editor.isPy3File" id="Editor.isPy3File" ref="eric5.QScintilla.Editor.html#Editor.isPy3File" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />
