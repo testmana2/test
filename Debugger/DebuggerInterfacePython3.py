@@ -85,6 +85,9 @@ class DebuggerInterfacePython3(QObject):
                 self.translate = self.__remoteTranslation
             else:
                 self.translate = self.__identityTranslation
+        
+        # attribute to remember the name of the executed script
+        self.__scriptName = ""
 
     def __identityTranslation(self, fn, remote2local=True):
         """
@@ -430,6 +433,7 @@ class DebuggerInterfacePython3(QObject):
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
         self.__autoContinue = autoContinue
+        self.__scriptName = os.path.abspath(fn)
         
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
@@ -449,6 +453,8 @@ class DebuggerInterfacePython3(QObject):
         @keyparam autoFork flag indicating the automatic fork mode (boolean)
         @keyparam forkChild flag indicating to debug the child after forking (boolean)
         """
+        self.__scriptName = os.path.abspath(fn)
+        
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}\n'.format(
@@ -466,6 +472,8 @@ class DebuggerInterfacePython3(QObject):
         @keyparam erase flag indicating that coverage info should be
             cleared first (boolean)
         """
+        self.__scriptName = os.path.abspath(fn)
+        
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}@@{2}@@{3}@@{4:d}\n'.format(
@@ -481,6 +489,8 @@ class DebuggerInterfacePython3(QObject):
         @param wd the working directory for the program (string)
         @keyparam erase flag indicating that timing info should be cleared first (boolean)
         """
+        self.__scriptName = os.path.abspath(fn)
+        
         wd = self.translate(wd, False)
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}\n'.format(
@@ -705,6 +715,8 @@ class DebuggerInterfacePython3(QObject):
                 filename
         @param coverase flag indicating erasure of coverage data is requested
         """
+        self.__scriptName = os.path.abspath(fn)
+        
         fn = self.translate(os.path.abspath(fn), False)
         self.__sendCommand('{0}{1}|{2}|{3}|{4:d}|{5}|{6:d}\n'.format(
             DebugProtocol.RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
@@ -831,7 +843,11 @@ class DebuggerInterfacePython3(QObject):
                         excmessage = exclist[1]
                         stack = exclist[2:]
                         if stack and stack[0] and stack[0][0] == "<string>":
-                            stack = []
+                            for stackEntry in stack:
+                                if stackEntry[0] == "<string>":
+                                    stackEntry[0] = self.__scriptName
+                                else:
+                                    break
                     except (IndexError, ValueError, SyntaxError):
                         exctype = None
                         excmessage = ''
@@ -857,6 +873,7 @@ class DebuggerInterfacePython3(QObject):
                     continue
                 
                 if resp == DebugProtocol.ResponseExit:
+                    self.__scriptName = ""
                     self.debugServer.signalClientExit(line[eoc:-1])
                     continue
                 
