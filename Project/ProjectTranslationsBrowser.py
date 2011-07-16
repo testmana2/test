@@ -901,12 +901,12 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         if self.project.getProjectType() in ["Qt4", "Qt4C", "E4Plugin"]:
             self.pylupdate = 'pylupdate4'
+            if Utilities.isWindowsPlatform():
+                self.pylupdate = self.pylupdate + '.exe'
         elif self.project.getProjectType() in ["PySide", "PySideC"]:
-            self.pylupdate = 'pyside-lupdate'
+            self.pylupdate = Utilities.generatePySideToolPath('pyside-lupdate')
         else:
             return
-        if Utilities.isWindowsPlatform():
-            self.pylupdate = self.pylupdate + '.exe'
         
         if noobsolete:
             args.append('-noobsolete')

@@ -554,13 +554,15 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2", "Python3"]:
             if self.project.getProjectType() in ["Qt4", "E4Plugin"]:
                 self.rccCompiler = 'pyrcc4'
+                if Utilities.isWindowsPlatform():
+                    self.rccCompiler += '.exe'
                 if PYQT_VERSION >= 0x040500:
                     if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                         args.append("-py2")
                     else:
                         args.append("-py3")
             elif self.project.getProjectType() == "PySide":
-                self.rccCompiler = 'pyside-rcc'
+                self.rccCompiler = Utilities.generatePySideToolPath('pyside-rcc')
                 if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                     args.append("-py2")
                 else:
@@ -570,14 +572,14 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             if self.project.getProjectType() == "Qt4":
                 self.rccCompiler = 'rbrcc'
+                if Utilities.isWindowsPlatform():
+                    self.rccCompiler += '.exe'
             else:
                 return None
         else:
             return None
         
         rcc = self.rccCompiler
-        if Utilities.isWindowsPlatform():
-            rcc = rcc + '.exe'
         
         ofn, ext = os.path.splitext(fn)
         fn = os.path.join(self.project.ppath, fn)

@@ -654,10 +654,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                     uic = self.uicompiler
             elif self.project.getProjectType() == "PySide":
                 self.uicompiler = 'pyside-uic'
-                if Utilities.isWindowsPlatform():
-                    uic = self.uicompiler + '.bat'
-                else:
-                    uic = self.uicompiler
+                uic = Utilities.generatePySideToolPath(self.uicompiler)
             else:
                 return None
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
