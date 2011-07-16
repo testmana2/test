@@ -1312,6 +1312,27 @@ def prepareQtMacBundle(toolname, version, args):
     return ("open", newArgs)
 
 ################################################################################
+# Qt utility functions below
+################################################################################
+
+def generatePySideToolPath(toolname):
+    """
+    Module function to generate the executable path for a PySide tool.
+    
+    @param toolname base name of the tool (string or QString)
+    @return the PySide tool path with extension (string)
+    """
+    if isWindowsPlatform():
+        prefix = os.path.dirname(Preferences.getDebugger("PythonInterpreter"))
+        if toolname == "pyside-uic":
+            return os.path.join(prefix, "Scripts", toolname + '.exe')
+        else:
+            return os.path.join(prefix, "Lib", "site-packages", "PySide",
+                                toolname + ".exe")
+    else:
+        return toolname
+
+################################################################################
 # Other utility functions below
 ################################################################################
 
