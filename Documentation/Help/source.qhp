@@ -2441,6 +2441,7 @@
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
       <keyword name="generateDistroInfo" id="generateDistroInfo" ref="eric5.Utilities.__init__.html#generateDistroInfo" />
       <keyword name="generatePluginsVersionInfo" id="generatePluginsVersionInfo" ref="eric5.Utilities.__init__.html#generatePluginsVersionInfo" />
+      <keyword name="generatePySideToolPath" id="generatePySideToolPath" ref="eric5.Utilities.__init__.html#generatePySideToolPath" />
       <keyword name="generateQtToolName" id="generateQtToolName" ref="eric5.Utilities.__init__.html#generateQtToolName" />
       <keyword name="generateVersionInfo" id="generateVersionInfo" ref="eric5.Utilities.__init__.html#generateVersionInfo" />
       <keyword name="getConfigDir" id="getConfigDir" ref="eric5.Utilities.__init__.html#getConfigDir" />

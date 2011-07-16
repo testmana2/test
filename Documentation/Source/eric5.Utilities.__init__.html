@@ -95,6 +95,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#generatePluginsVersionInfo">generatePluginsVersionInfo</a></td>
 <td>Module function to generate a string with plugins version infos.</td>
 </tr><tr>
+<td><a href="#generatePySideToolPath">generatePySideToolPath</a></td>
+<td>Module function to generate the executable path for a PySide tool.</td>
+</tr><tr>
 <td><a href="#generateQtToolName">generateQtToolName</a></td>
 <td>Module function to generate the executable name for a Qt tool like designer.</td>
 </tr><tr>
@@ -664,6 +667,24 @@ string to be used to separate lines (string)
 <dt>Returns:</dt>
 <dd>
 string with plugins version infos (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="generatePySideToolPath" ID="generatePySideToolPath"></a>
+<h2>generatePySideToolPath</h2>
+<b>generatePySideToolPath</b>(<i>toolname</i>)
+<p>
+    Module function to generate the executable path for a PySide tool.
+</p><dl>
+<dt><i>toolname</i></dt>
+<dd>
+base name of the tool (string or QString)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the PySide tool path with extension (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
