@@ -10,7 +10,7 @@ Module implementing the PEP 8 checker.
 import os
 import optparse
 
-from PyQt4.QtCore import QProcess
+from PyQt4.QtCore import QProcess, QCoreApplication
 
 from . import pep8
 
@@ -138,7 +138,8 @@ class Pep8Py2Checker(object):
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
             self.messages.append(filename, "1", "1",
-                self.trUtf8("Python2 interpreter not configured."))
+                QCoreApplication.translate("Pep8Py2Checker",
+                    "Python2 interpreter not configured."))
             return
         
         checker = os.path.join(getConfig('ericDir'), 
@@ -198,4 +199,5 @@ class Pep8Py2Checker(object):
                 index += 1
         else:
             self.messages.append(filename, "1", "1",
-                self.trUtf8("Python2 interpreter did not finish within 15s."))
+                QCoreApplication.translate("Pep8Py2Checker",
+                    "Python2 interpreter did not finish within 15s."))
