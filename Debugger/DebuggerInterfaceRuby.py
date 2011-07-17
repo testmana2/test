@@ -323,7 +323,7 @@ class DebuggerInterfaceRuby(QObject):
         """
         Public slot to handle a new connection.
         
-        @param sockreference to the socket object (QTcpSocket)
+        @param sock reference to the socket object (QTcpSocket)
         @return flag indicating success (boolean)
         """
         # If we already have a connection, refuse this one.  It will be closed

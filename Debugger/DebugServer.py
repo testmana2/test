@@ -10,7 +10,7 @@ Module implementing the debug server.
 import os
 
 from PyQt4.QtCore import pyqtSignal, QModelIndex
-from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo
+from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo, QNetworkInterface
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -150,13 +150,18 @@ class DebugServer(QTcpServer):
         elif self.networkInterface == "allv6":
             hostAddress = QHostAddress("::")  # QHostAddress.AnyIPv6)
         else:
-            hostAddress = QHostAddress(Preferences.getDebugger("NetworkInterface"))
+            hostAddress = QHostAddress(self.networkInterface)
+        self.networkInterfaceName, self.networkInterfaceIndex = \
+            self.__getNetworkInterfaceAndIndex(self.networkInterface)
+        
         if Preferences.getDebugger("PassiveDbgEnabled"):
-            socket = Preferences.getDebugger("PassiveDbgPort")  # default: 42424
-            self.listen(hostAddress, socket)
+            sock = Preferences.getDebugger("PassiveDbgPort")  # default: 42424
+            self.listen(hostAddress, sock)
             self.passive = True
             self.passiveClientExited = False
         else:
+            if hostAddress.toString().lower().startswith("fe80"):
+                hostAddress.setScopeId(self.networkInterfaceName)
             self.listen(hostAddress)
             self.passive = False
         
@@ -205,7 +210,25 @@ class DebugServer(QTcpServer):
             else:
                 return "{0}@@v6".format(QHostInfo.localHostName())
         else:
-            return self.networkInterface
+            return "{0}@@i{1}".format(self.networkInterface,
+                                      self.networkInterfaceIndex)
+        
+    def __getNetworkInterfaceAndIndex(self, address):
+        """
+        Private method to determine the network interface and the interface index.
+        
+        @param address address to determine the info for (string)
+        @return tuple of network interface name (string) and index (integer)
+        """
+        if address not in ["all", "allv6"]:
+            for networkInterface in QNetworkInterface.allInterfaces():
+                addressEntries = networkInterface.addressEntries()
+                if len(addressEntries) > 0:
+                    for addressEntry in addressEntries:
+                        if addressEntry.ip().toString().lower() == address.lower():
+                            return networkInterface.name(), networkInterface.index()
+        
+        return "", 0
         
     def preferencesChanged(self):
         """

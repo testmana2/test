@@ -690,6 +690,14 @@ being debugged redirects them itself.
         if remoteAddress == nil
             sock = TCPSocket.new(DebugAddress, port)
         else
+            if remoteAddress =~ /@@i/
+                remoteAddress, interface = remoteAddress.split("@@i")
+            else
+                interface = 0
+            end
+            if remoteAddress.downcase =~ /^fe80/
+                remoteAddress = "%s%%%s" % [remoteAddress, interface]
+            end
             sock = TCPSocket.new(remoteAddress, port)
         end
         

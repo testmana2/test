@@ -1061,12 +1061,22 @@ class DebugClientBase(object):
         if remoteAddress is None:                               # default: 127.0.0.1
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.connect((DebugProtocol.DebugAddress, port))
-        elif ":" in remoteAddress:                              # IPv6
-            sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
-            sock.connect((remoteAddress, port))
-        else:                                                   # IPv4
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((remoteAddress, port))
+        else:
+            if "@@i" in remoteAddress:
+                remoteAddress, index = remoteAddress.split("@@i")
+            else:
+                index = 0
+            if ":" in remoteAddress:                              # IPv6
+                printerr(type(remoteAddress))
+                printerr(type(port))
+                sockaddr = socket.getaddrinfo(
+                    remoteAddress, port, 0, 0, socket.SOL_TCP)[0][-1]
+                sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+                sockaddr = sockaddr[:-1] + (int(index),)
+                sock.connect(sockaddr)
+            else:                                                   # IPv4
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.connect((remoteAddress, port))
 
         self.readstream = AsyncFile(sock, sys.stdin.mode, sys.stdin.name)
         self.writestream = AsyncFile(sock, sys.stdout.mode, sys.stdout.name)
@@ -1825,7 +1835,7 @@ class DebugClientBase(object):
                     del args[0]
                     del args[0]
                 elif args[0] == '-p':
-                    port = long(args[1])
+                    port = int(args[1])
                     del args[0]
                     del args[0]
                 elif args[0] == '-w':
@@ -1872,7 +1882,7 @@ class DebugClientBase(object):
             if sys.argv[1] == '':
                 del sys.argv[1]
             try:
-                port = long(sys.argv[1])
+                port = int(sys.argv[1])
             except (ValueError, IndexError):
                 port = -1
             try:
