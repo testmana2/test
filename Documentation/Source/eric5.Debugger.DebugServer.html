@@ -222,6 +222,9 @@ QTcpServer
 <td><a href="#DebugServer.__deleteWatchPoints">__deleteWatchPoints</a></td>
 <td>Private slot to delete watch expressions.</td>
 </tr><tr>
+<td><a href="#DebugServer.__getNetworkInterfaceAndIndex">__getNetworkInterfaceAndIndex</a></td>
+<td>Private method to determine the network interface and the interface index.</td>
+</tr><tr>
 <td><a href="#DebugServer.__makeWatchCondition">__makeWatchCondition</a></td>
 <td>Private method to construct the condition string.</td>
 </tr><tr>
@@ -607,6 +610,21 @@ start row (integer)
 </dd><dt><i>end</i></dt>
 <dd>
 end row (integer)
+</dd>
+</dl><a NAME="DebugServer.__getNetworkInterfaceAndIndex" ID="DebugServer.__getNetworkInterfaceAndIndex"></a>
+<h4>DebugServer.__getNetworkInterfaceAndIndex</h4>
+<b>__getNetworkInterfaceAndIndex</b>(<i>address</i>)
+<p>
+        Private method to determine the network interface and the interface index.
+</p><dl>
+<dt><i>address</i></dt>
+<dd>
+address to determine the info for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of network interface name (string) and index (integer)
 </dd>
 </dl><a NAME="DebugServer.__makeWatchCondition" ID="DebugServer.__makeWatchCondition"></a>
 <h4>DebugServer.__makeWatchCondition</h4>

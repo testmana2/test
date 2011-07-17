@@ -2064,6 +2064,7 @@
       <keyword name="DebugServer.__createDebuggerInterface" id="DebugServer.__createDebuggerInterface" ref="eric5.Debugger.DebugServer.html#DebugServer.__createDebuggerInterface" />
       <keyword name="DebugServer.__deleteBreakPoints" id="DebugServer.__deleteBreakPoints" ref="eric5.Debugger.DebugServer.html#DebugServer.__deleteBreakPoints" />
       <keyword name="DebugServer.__deleteWatchPoints" id="DebugServer.__deleteWatchPoints" ref="eric5.Debugger.DebugServer.html#DebugServer.__deleteWatchPoints" />
+      <keyword name="DebugServer.__getNetworkInterfaceAndIndex" id="DebugServer.__getNetworkInterfaceAndIndex" ref="eric5.Debugger.DebugServer.html#DebugServer.__getNetworkInterfaceAndIndex" />
       <keyword name="DebugServer.__makeWatchCondition" id="DebugServer.__makeWatchCondition" ref="eric5.Debugger.DebugServer.html#DebugServer.__makeWatchCondition" />
       <keyword name="DebugServer.__newConnection" id="DebugServer.__newConnection" ref="eric5.Debugger.DebugServer.html#DebugServer.__newConnection" />
       <keyword name="DebugServer.__passiveShutDown" id="DebugServer.__passiveShutDown" ref="eric5.Debugger.DebugServer.html#DebugServer.__passiveShutDown" />

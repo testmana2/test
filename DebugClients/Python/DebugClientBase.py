@@ -1067,8 +1067,6 @@ class DebugClientBase(object):
             else:
                 index = 0
             if ":" in remoteAddress:                              # IPv6
-                printerr(type(remoteAddress))
-                printerr(type(port))
                 sockaddr = socket.getaddrinfo(
                     remoteAddress, port, 0, 0, socket.SOL_TCP)[0][-1]
                 sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
