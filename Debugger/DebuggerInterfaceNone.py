@@ -80,7 +80,7 @@ class DebuggerInterfaceNone(QObject):
         """
         Public slot to handle a new connection.
         
-        @param sockreference to the socket object (QTcpSocket)
+        @param sock reference to the socket object (QTcpSocket)
         @return flag indicating success (boolean)
         """
         return False
