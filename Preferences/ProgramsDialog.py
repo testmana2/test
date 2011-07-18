@@ -114,15 +114,15 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         # 3. do the PySide programs
         # 3a. Translation Extractor PySide
         self.__createProgramEntry(self.trUtf8("Translation Extractor (Python, PySide)"), 
-            Utilities.isWindowsPlatform() and "pyside-lupdate.exe" or "pyside-lupdate", 
+            Utilities.generatePySideToolPath("pyside-lupdate"),
             '-version', '', -1, versionRe = 'lupdate')
         # 3b. Forms Compiler PySide
         self.__createProgramEntry(self.trUtf8("Forms Compiler (Python, PySide)"), 
-            Utilities.isWindowsPlatform() and "pyside-uic.bat" or "pyside-uic", 
-            '--version', 'Python User', 4)
+            Utilities.generatePySideToolPath("pyside-uic"),
+            '--version', 'PySide User', 5, versionCleanup=(0, -1))
         # 3.c Resource Compiler PySide
         self.__createProgramEntry(self.trUtf8("Resource Compiler (Python, PySide)"), 
-            Utilities.isWindowsPlatform() and "pyside-rcc.exe" or "pyside-rcc", 
+            Utilities.generatePySideToolPath("pyside-rcc"),
             '-version', 'Resource Compiler', -1)
         
         # 4. do the Ruby programs
