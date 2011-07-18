@@ -226,7 +226,8 @@ class DebugServer(QTcpServer):
                 if len(addressEntries) > 0:
                     for addressEntry in addressEntries:
                         if addressEntry.ip().toString().lower() == address.lower():
-                            return networkInterface.name(), networkInterface.index()
+                            return networkInterface.humanReadableName(), \
+                                    networkInterface.index()
         
         return "", 0
         
