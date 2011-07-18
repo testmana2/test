@@ -65,7 +65,7 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
                     if ":" in addressEntry.ip().toString() and not socket.has_ipv6:
                         continue    # IPv6 not supported by Python
                     interfaces.append("{0} ({1})"\
-                                      .format(networkInterface.name(), 
+                                      .format(networkInterface.humanReadableName(), 
                                               addressEntry.ip().toString()))
         self.interfacesCombo.addItems(interfaces)
         interface = Preferences.getDebugger("NetworkInterface")
