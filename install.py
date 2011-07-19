@@ -35,7 +35,7 @@ configName = 'eric5config.py'
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
-    "sip": ["4.11"],
+    "sip": ["4.11", "4.12.3"],
     "PyQt4": ["4.7.5"],
     "QScintilla2": [],
 }
