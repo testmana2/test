@@ -2120,7 +2120,7 @@ class ViewManager(QObject):
                 0,
                 self.searchActGrp, 'vm_search_goto_previous_method_or_class')
         self.gotoPreviousDefAct.setStatusTip(
-            QApplication.translate('ViewManager', 
+            QApplication.translate('ViewManager',
                                    'Go to the previous method or class definition'))
         self.gotoPreviousDefAct.setWhatsThis(QApplication.translate('ViewManager',
             """<b>Goto Previous Method or Class</b>"""
@@ -2138,7 +2138,7 @@ class ViewManager(QObject):
                 0,
                 self.searchActGrp, 'vm_search_goto_next_method_or_class')
         self.gotoNextDefAct.setStatusTip(
-            QApplication.translate('ViewManager', 
+            QApplication.translate('ViewManager',
                                    'Go to the next method or class definition'))
         self.gotoNextDefAct.setWhatsThis(QApplication.translate('ViewManager',
             """<b>Goto Next Method or Class</b>"""
