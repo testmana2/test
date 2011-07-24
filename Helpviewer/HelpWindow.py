@@ -130,6 +130,7 @@ class HelpWindow(QMainWindow):
             self.tabWidget.currentChanged[int].connect(self.__currentChanged)
             self.tabWidget.titleChanged.connect(self.__titleChanged)
             self.tabWidget.showMessage.connect(self.statusBar().showMessage)
+            self.tabWidget.browserClosed.connect(self.__browserClosed)
             
             self.findDlg = SearchWidget(self, self)
             centralWidget = QWidget()
@@ -218,6 +219,8 @@ class HelpWindow(QMainWindow):
             self.__virusTotal.submitUrlError.connect(self.__virusTotalSubmitUrlError)
             self.__virusTotal.urlScanReport.connect(self.__virusTotalUrlScanReport)
             self.__virusTotal.fileScanReport.connect(self.__virusTotalFileScanReport)
+            
+            self.__previewer = None
             
             QTimer.singleShot(0, self.__lookForNewDocumentation)
             if self.__searchWord is not None:
@@ -1536,6 +1539,30 @@ class HelpWindow(QMainWindow):
             linkName = link
         h = HelpWindow(linkName, ".", self.parent(), "qbrowser", self.fromEric)
         h.show()
+    
+    def previewer(self):
+        """
+        Public method to get a reference to the previewer tab.
+        
+        @return reference to the previewer tab (HelpBrowserWV)
+        """
+        if self.__previewer is None:
+            if self.tabWidget.count() != 1 or \
+               self.currentBrowser().url().toString() not in [
+                    "", "pyrc:home", "about:blank"]:
+                self.newTab()
+            self.__previewer = self.currentBrowser()
+        self.tabWidget.setCurrentWidget(self.__previewer)
+        return self.__previewer
+    
+    def __browserClosed(self, browser):
+        """
+        Private slot handling the closure of a browser tab.
+        
+        @param browser reference to the browser window (QWidget)
+        """
+        if browser is self.__previewer:
+            self.__previewer = None
     
     def __openFile(self):
         """

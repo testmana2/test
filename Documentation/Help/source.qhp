@@ -2834,6 +2834,7 @@
       <keyword name="HelpWindow.__addBookmark" id="HelpWindow.__addBookmark" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__addBookmark" />
       <keyword name="HelpWindow.__addBookmarkFolder" id="HelpWindow.__addBookmarkFolder" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__addBookmarkFolder" />
       <keyword name="HelpWindow.__backward" id="HelpWindow.__backward" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__backward" />
+      <keyword name="HelpWindow.__browserClosed" id="HelpWindow.__browserClosed" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__browserClosed" />
       <keyword name="HelpWindow.__clearIconsDatabase" id="HelpWindow.__clearIconsDatabase" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearIconsDatabase" />
       <keyword name="HelpWindow.__clearPrivateData" id="HelpWindow.__clearPrivateData" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearPrivateData" />
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
@@ -2936,6 +2937,7 @@
       <keyword name="HelpWindow.openUrlNewTab" id="HelpWindow.openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrlNewTab" />
       <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
+      <keyword name="HelpWindow.previewer" id="HelpWindow.previewer" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.previewer" />
       <keyword name="HelpWindow.requestVirusTotalScan" id="HelpWindow.requestVirusTotalScan" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.requestVirusTotalScan" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
@@ -3556,6 +3558,7 @@
       <keyword name="ViewManager.__nextUncovered" id="ViewManager.__nextUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextUncovered" />
       <keyword name="ViewManager.__nextWarning" id="ViewManager.__nextWarning" ref="eric5.ViewManager.ViewManager.html#ViewManager.__nextWarning" />
       <keyword name="ViewManager.__openSourceFile" id="ViewManager.__openSourceFile" ref="eric5.ViewManager.ViewManager.html#ViewManager.__openSourceFile" />
+      <keyword name="ViewManager.__previewEditor" id="ViewManager.__previewEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previewEditor" />
       <keyword name="ViewManager.__previousBookmark" id="ViewManager.__previousBookmark" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousBookmark" />
       <keyword name="ViewManager.__previousTask" id="ViewManager.__previousTask" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousTask" />
       <keyword name="ViewManager.__previousUncovered" id="ViewManager.__previousUncovered" ref="eric5.ViewManager.ViewManager.html#ViewManager.__previousUncovered" />
@@ -4323,6 +4326,7 @@
       <keyword name="UserInterface.dragMoveEvent" id="UserInterface.dragMoveEvent" ref="eric5.UI.UserInterface.html#UserInterface.dragMoveEvent" />
       <keyword name="UserInterface.dropEvent" id="UserInterface.dropEvent" ref="eric5.UI.UserInterface.html#UserInterface.dropEvent" />
       <keyword name="UserInterface.getActions" id="UserInterface.getActions" ref="eric5.UI.UserInterface.html#UserInterface.getActions" />
+      <keyword name="UserInterface.getHelpViewer" id="UserInterface.getHelpViewer" ref="eric5.UI.UserInterface.html#UserInterface.getHelpViewer" />
       <keyword name="UserInterface.getLocale" id="UserInterface.getLocale" ref="eric5.UI.UserInterface.html#UserInterface.getLocale" />
       <keyword name="UserInterface.getMenu" id="UserInterface.getMenu" ref="eric5.UI.UserInterface.html#UserInterface.getMenu" />
       <keyword name="UserInterface.getMenuAction" id="UserInterface.getMenuAction" ref="eric5.UI.UserInterface.html#UserInterface.getMenuAction" />
@@ -6115,6 +6119,7 @@
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
       <keyword name="Editor.isLastEditPositionAvailable" id="Editor.isLastEditPositionAvailable" ref="eric5.QScintilla.Editor.html#Editor.isLastEditPositionAvailable" />
+      <keyword name="Editor.isPreviewable" id="Editor.isPreviewable" ref="eric5.QScintilla.Editor.html#Editor.isPreviewable" />
       <keyword name="Editor.isPy2File" id="Editor.isPy2File" ref="eric5.QScintilla.Editor.html#Editor.isPy2File" />
       <keyword name="Editor.isPy3File" id="Editor.isPy3File" ref="eric5.QScintilla.Editor.html#Editor.isPy3File" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />

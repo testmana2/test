@@ -4825,18 +4825,20 @@ class UserInterface(QMainWindow):
         else:
             self.__customViewer(home)
         
-    def launchHelpViewer(self, home, searchWord=None):
+    def launchHelpViewer(self, home, searchWord=None, useSingle=False):
         """
         Public slot to start the help viewer.
         
         @param home filename of file to be shown (string)
         @keyparam searchWord word to search for (string)
+        @keyparam useSingle flag indicating to use a single browser window (boolean)
         """
         if len(home) > 0:
             homeUrl = QUrl(home)
             if not homeUrl.scheme():
                 home = QUrl.fromLocalFile(home).toString()
-        if not Preferences.getHelp("SingleHelpWindow") or self.helpWindow is None:
+        if not (useSingle or Preferences.getHelp("SingleHelpWindow")) or \
+           self.helpWindow is None:
             help = HelpWindow(home, '.', None, 'help viewer', True,
                               searchWord=searchWord)
 
@@ -4846,7 +4848,7 @@ class UserInterface(QMainWindow):
             else:
                 help.showMaximized()
             
-            if Preferences.getHelp("SingleHelpWindow"):
+            if useSingle or Preferences.getHelp("SingleHelpWindow"):
                 self.helpWindow = help
                 self.helpWindow.helpClosed.connect(self.__helpClosed)
                 self.preferencesChanged.connect(self.helpWindow.preferencesChanged)
@@ -4889,6 +4891,18 @@ class UserInterface(QMainWindow):
                 self.trUtf8('Open Browser'),
                 self.trUtf8('Could not start a web browser'))
 
+    def getHelpViewer(self, preview=False):
+        """
+        Public method to get a reference to the help window instance.
+        
+        @keyparam preview flag indicating to get a help window for preview (boolean)
+        @return reference to the help window instance (HelpWindow)
+        """
+        if self.helpWindow is None:
+            self.launchHelpViewer("", useSingle=True)
+        self.helpWindow.raise_()
+        return self.helpWindow
+    
     def showPreferences(self, pageName=None):
         """
         Public slot to set the preferences.

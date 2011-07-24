@@ -392,6 +392,9 @@ QObject
 <td><a href="#ViewManager.__openSourceFile">__openSourceFile</a></td>
 <td>Private method to open a file from the list of recently opened files.</td>
 </tr><tr>
+<td><a href="#ViewManager.__previewEditor">__previewEditor</a></td>
+<td>Private method to preview the contents of the current editor in a web browser.</td>
+</tr><tr>
 <td><a href="#ViewManager.__previousBookmark">__previousBookmark</a></td>
 <td>Private method to handle the previous bookmark action.</td>
 </tr><tr>
@@ -812,15 +815,7 @@ QObject
 <b>ViewManager</b>(<i></i>)
 <p>
         Constructor
-</p><dl>
-<dt><i>ui</i></dt>
-<dd>
-reference to the main user interface
-</dd><dt><i>dbs</i></dt>
-<dd>
-reference to the debug server object
-</dd>
-</dl><a NAME="ViewManager.__addBookmarked" ID="ViewManager.__addBookmarked"></a>
+</p><a NAME="ViewManager.__addBookmarked" ID="ViewManager.__addBookmarked"></a>
 <h4>ViewManager.__addBookmarked</h4>
 <b>__addBookmarked</b>(<i></i>)
 <p>
@@ -1262,7 +1257,12 @@ reference to the action that was triggered (QAction)
 <dd>
 reference to the action that triggered (QAction)
 </dd>
-</dl><a NAME="ViewManager.__previousBookmark" ID="ViewManager.__previousBookmark"></a>
+</dl><a NAME="ViewManager.__previewEditor" ID="ViewManager.__previewEditor"></a>
+<h4>ViewManager.__previewEditor</h4>
+<b>__previewEditor</b>(<i></i>)
+<p>
+        Private method to preview the contents of the current editor in a web browser.
+</p><a NAME="ViewManager.__previousBookmark" ID="ViewManager.__previousBookmark"></a>
 <h4>ViewManager.__previousBookmark</h4>
 <b>__previousBookmark</b>(<i></i>)
 <p>

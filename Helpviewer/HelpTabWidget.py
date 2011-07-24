@@ -41,6 +41,7 @@ class HelpTabWidget(E5TabWidget):
     sourceChanged = pyqtSignal(QUrl)
     titleChanged = pyqtSignal(str)
     showMessage = pyqtSignal(str)
+    browserClosed = pyqtSignal(QWidget)
     
     def __init__(self, parent):
         """
@@ -345,6 +346,7 @@ class HelpTabWidget(E5TabWidget):
         
         browser = self.widget(index)
         self.removeTab(index)
+        self.browserClosed.emit(browser)
         del browser
         
         if self.count() == 0:

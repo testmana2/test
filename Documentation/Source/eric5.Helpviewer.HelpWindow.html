@@ -91,6 +91,9 @@ QMainWindow
 <td><a href="#HelpWindow.__backward">__backward</a></td>
 <td>Private slot called to handle the backward action.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__browserClosed">__browserClosed</a></td>
+<td>Private slot handling the closure of a browser tab.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__clearIconsDatabase">__clearIconsDatabase</a></td>
 <td>Private slot to clear the icons databse.</td>
 </tr><tr>
@@ -397,6 +400,9 @@ QMainWindow
 <td><a href="#HelpWindow.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
 </tr><tr>
+<td><a href="#HelpWindow.previewer">previewer</a></td>
+<td>Public method to get a reference to the previewer tab.</td>
+</tr><tr>
 <td><a href="#HelpWindow.requestVirusTotalScan">requestVirusTotalScan</a></td>
 <td>Public method to submit a request to scan an URL by VirusTotal.</td>
 </tr><tr>
@@ -499,7 +505,17 @@ reference to the widget to be activated (QWidget)
 <b>__backward</b>(<i></i>)
 <p>
         Private slot called to handle the backward action.
-</p><a NAME="HelpWindow.__clearIconsDatabase" ID="HelpWindow.__clearIconsDatabase"></a>
+</p><a NAME="HelpWindow.__browserClosed" ID="HelpWindow.__browserClosed"></a>
+<h4>HelpWindow.__browserClosed</h4>
+<b>__browserClosed</b>(<i>browser</i>)
+<p>
+        Private slot handling the closure of a browser tab.
+</p><dl>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser window (QWidget)
+</dd>
+</dl><a NAME="HelpWindow.__clearIconsDatabase" ID="HelpWindow.__clearIconsDatabase"></a>
 <h4>HelpWindow.__clearIconsDatabase</h4>
 <b>__clearIconsDatabase</b>(<i></i>)
 <p>
@@ -1265,7 +1281,17 @@ reference to the password manager (PasswordManager)
 <b>preferencesChanged</b>(<i></i>)
 <p>
         Public slot to handle a change of preferences.
-</p><a NAME="HelpWindow.requestVirusTotalScan" ID="HelpWindow.requestVirusTotalScan"></a>
+</p><a NAME="HelpWindow.previewer" ID="HelpWindow.previewer"></a>
+<h4>HelpWindow.previewer</h4>
+<b>previewer</b>(<i></i>)
+<p>
+        Public method to get a reference to the previewer tab.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the previewer tab (HelpBrowserWV)
+</dd>
+</dl><a NAME="HelpWindow.requestVirusTotalScan" ID="HelpWindow.requestVirusTotalScan"></a>
 <h4>HelpWindow.requestVirusTotalScan</h4>
 <b>requestVirusTotalScan</b>(<i>url</i>)
 <p>

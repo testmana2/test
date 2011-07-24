@@ -80,6 +80,9 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         elif eolMode == QsciScintilla.EolUnix:
             self.lfRadioButton.setChecked(True)
         
+        self.previewExtensionsEdit.setText(
+            " ".join(Preferences.getEditor("PreviewableFileNameExtensions")))
+        
     def save(self):
         """
         Public slot to save the Editor General configuration.
@@ -121,6 +124,9 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         self.__extractFileFilters()
         Preferences.setEditor("AdditionalOpenFilters", self.openFileFilters)
         Preferences.setEditor("AdditionalSaveFilters", self.saveFileFilters)
+        
+        Preferences.setEditor("PreviewableFileNameExtensions",
+            [ext.strip() for ext in self.previewExtensionsEdit.text().split()])
     
     def __setDefaultFiltersLists(self, keepSelection=False):
         """

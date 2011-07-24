@@ -10,7 +10,7 @@ Module implementing the viewmanager base class.
 import os
 
 from PyQt4.QtCore import QSignalMapper, QTimer, QFileInfo, pyqtSignal, QRegExp, \
-    QObject, Qt
+    QObject, Qt, QUrl
 from PyQt4.QtGui import QColor, QKeySequence, QLineEdit, QToolBar, QWidgetAction, \
     QDialog, QApplication, QMenu, QPalette, QComboBox
 from PyQt4.Qsci import QsciScintilla
@@ -128,9 +128,6 @@ class ViewManager(QObject):
     def __init__(self):
         """
         Constructor
-        
-        @param ui reference to the main user interface
-        @param dbs reference to the debug server object
         """
         super().__init__()
         
@@ -2465,6 +2462,21 @@ class ViewManager(QObject):
         self.prevSplitAct.triggered[()].connect(self.prevSplit)
         self.viewActions.append(self.prevSplitAct)
         
+        self.previewAct = E5Action(QApplication.translate('ViewManager',
+                                'Preview'),
+                            UI.PixmapCache.getIcon("previewer.png"),
+                            QApplication.translate('ViewManager', 'Preview'),
+                            0, 0, self, 'vm_preview')
+        self.previewAct.setStatusTip(QApplication.translate('ViewManager',
+            'Preview the current file in the web browser'))
+        self.previewAct.setWhatsThis(QApplication.translate('ViewManager',
+                """<b>Preview</b>"""
+                """<p>This opens the web browser with a preview of"""
+                """ the current file.</p>"""
+                ))
+        self.previewAct.triggered[()].connect(self.__previewEditor)
+        self.viewActions.append(self.previewAct)
+        
         self.viewActGrp.setEnabled(False)
         self.viewFoldActGrp.setEnabled(False)
         self.unhighlightAct.setEnabled(False)
@@ -2473,6 +2485,7 @@ class ViewManager(QObject):
         self.splitRemoveAct.setEnabled(False)
         self.nextSplitAct.setEnabled(False)
         self.prevSplitAct.setEnabled(False)
+        self.previewAct.setEnabled(False)
         
     def initViewMenu(self):
         """
@@ -2485,6 +2498,8 @@ class ViewManager(QObject):
         menu.addActions(self.viewActGrp.actions())
         menu.addSeparator()
         menu.addActions(self.viewFoldActGrp.actions())
+        menu.addSeparator()
+        menu.addAction(self.previewAct)
         menu.addSeparator()
         menu.addAction(self.unhighlightAct)
         if self.canSplit():
@@ -2510,6 +2525,8 @@ class ViewManager(QObject):
         tb.setToolTip(QApplication.translate('ViewManager', 'View'))
         
         tb.addActions(self.viewActGrp.actions())
+        tb.addSeparator()
+        tb.addAction(self.previewAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.unhighlightAct, tb.windowTitle())
@@ -4342,6 +4359,24 @@ class ViewManager(QObject):
             self.splitRemoveAct.setIcon(
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
     
+    def __previewEditor(self):
+        """
+        Private method to preview the contents of the current editor in a web browser.
+        """
+        aw = self.activeWindow()
+        if aw is not None and aw.isPreviewable():
+            fn = aw.getFileName()
+            if fn:
+                project = e5App().getObject("Project")
+                if project.isProjectFile(fn):
+                    baseUrl = QUrl.fromLocalFile(project.getProjectPath())
+                else:
+                    baseUrl = QUrl.fromLocalFile(fn)
+            else:
+                baseUrl = QUrl()
+            previewer = self.ui.getHelpViewer(preview=True).previewer()
+            previewer.setHtml(aw.text(), baseUrl)
+    
     ##################################################################
     ## Below are the action methods for the macro menu
     ##################################################################
@@ -4661,6 +4696,7 @@ class ViewManager(QObject):
         self.unhighlightAct.setEnabled(False)
         self.splitViewAct.setEnabled(False)
         self.splitOrientationAct.setEnabled(False)
+        self.previewAct.setEnabled(False)
         self.macroActGrp.setEnabled(False)
         self.bookmarkActGrp.setEnabled(False)
         self.__enableSpellingActions()
@@ -4734,6 +4770,8 @@ class ViewManager(QObject):
             self.undoAct.setEnabled(editor.isUndoAvailable())
             self.redoAct.setEnabled(editor.isRedoAvailable())
             self.gotoLastEditAct.setEnabled(editor.isLastEditPositionAvailable())
+            
+            self.previewAct.setEnabled(editor.isPreviewable())
             
             lex = editor.getLexer()
             if lex is not None:

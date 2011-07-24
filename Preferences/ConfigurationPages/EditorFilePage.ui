@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>904</height>
+    <height>950</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -449,6 +449,29 @@
          </size>
         </property>
        </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="title">
+      <string>File Preview</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Extensions of previewable files:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="previewExtensionsEdit">
+        <property name="toolTip">
+         <string>Enter the filename extensions of files that may be previewed in the web browser (separated by a space)</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

@@ -304,6 +304,8 @@ class Prefs(object):
         
         "ZoomFactor": 0,
         
+        "PreviewableFileNameExtensions": ["html", "htm", "svg", "asp", "kid"],
+        
         # All (most) lexers
         "AllFoldCompact": True,
         
@@ -1391,7 +1393,8 @@ def getEditor(key, prefClass=Prefs):
                  "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
-    elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters"]:
+    elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
+                 "PreviewableFileNameExtensions"]:
         return toList(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     else:

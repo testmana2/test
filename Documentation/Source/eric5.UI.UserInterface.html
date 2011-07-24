@@ -656,6 +656,9 @@ QMainWindow
 <td><a href="#UserInterface.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
+<td><a href="#UserInterface.getHelpViewer">getHelpViewer</a></td>
+<td>Public method to get a reference to the help window instance.</td>
+</tr><tr>
 <td><a href="#UserInterface.getLocale">getLocale</a></td>
 <td>Public method to get the locale of the IDE.</td>
 </tr><tr>
@@ -1908,6 +1911,21 @@ string denoting the action set to get.
 <dd>
 list of all actions (list of E5Action)
 </dd>
+</dl><a NAME="UserInterface.getHelpViewer" ID="UserInterface.getHelpViewer"></a>
+<h4>UserInterface.getHelpViewer</h4>
+<b>getHelpViewer</b>(<i>preview=False</i>)
+<p>
+        Public method to get a reference to the help window instance.
+</p><dl>
+<dt><i>preview=</i></dt>
+<dd>
+flag indicating to get a help window for preview (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the help window instance (HelpWindow)
+</dd>
 </dl><a NAME="UserInterface.getLocale" ID="UserInterface.getLocale"></a>
 <h4>UserInterface.getLocale</h4>
 <b>getLocale</b>(<i></i>)
@@ -1994,7 +2012,7 @@ the name of the current view profile (string)
 </dd>
 </dl><a NAME="UserInterface.launchHelpViewer" ID="UserInterface.launchHelpViewer"></a>
 <h4>UserInterface.launchHelpViewer</h4>
-<b>launchHelpViewer</b>(<i>home, searchWord=None</i>)
+<b>launchHelpViewer</b>(<i>home, searchWord=None, useSingle=False</i>)
 <p>
         Public slot to start the help viewer.
 </p><dl>
@@ -2004,6 +2022,9 @@ filename of file to be shown (string)
 </dd><dt><i>searchWord=</i></dt>
 <dd>
 word to search for (string)
+</dd><dt><i>useSingle=</i></dt>
+<dd>
+flag indicating to use a single browser window (boolean)
 </dd>
 </dl><a NAME="UserInterface.performVersionCheck" ID="UserInterface.performVersionCheck"></a>
 <h4>UserInterface.performVersionCheck</h4>
