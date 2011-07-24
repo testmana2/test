@@ -1,27 +1,32 @@
 Change Log
 ----------
-Version 5.2-snapshot-2011mmdd:
+Version 5.2-snapshot-20110724:
 - bug fixes
-- added support for the Mercurial bookmarks extension
-- added support for the Mercurial queues extension
-- added support for the Mercurial fetch extension
-- added support for the Mercurial purge extension
-- added support for the Mercurial gpg extension
-- added support for the Mercurial transplant extension
-- added support for the Mercurial rebase extension
-- enhanced the Mercurial log browser dialog
-- added function to test the login data to the Email config page
-- added a pause button to the web browser download
-- added some more user agent strings to the web browser
-- added some more search engines to the web browser
-- added capability to encrypt saved passwords with a master password
-  and rearranged some configuration parameters related to security
-- extended the unit test interface to support skipped tests, expected failures
-  and unexpected successes and to better cope with Python2 scripts when run
-  from the eric IDE
-- added editor actions to go to the last edit location and to the previous or
-  next Python or Ruby class or method definition
-- improved the handling of mouse XButton1 and XButton2 handling in the web browser
+- enhancements of the Mercurial interface
+  -- added support for the Mercurial bookmarks extension
+  -- added support for the Mercurial queues extension
+  -- added support for the Mercurial fetch extension
+  -- added support for the Mercurial purge extension
+  -- added support for the Mercurial gpg extension
+  -- added support for the Mercurial transplant extension
+  -- added support for the Mercurial rebase extension
+  -- enhanced the Mercurial log browser dialog
+- enhancements of the web browser
+  -- added a pause button to the web browser download
+  -- added some more user agent strings to the web browser
+  -- added some more search engines to the web browser
+  -- added capability to encrypt saved passwords with a master password
+     and rearranged some configuration parameters related to security
+  -- improved the handling of mouse XButton1 and XButton2 handling in the web browser
+- enhancements of the configuration dialog
+  -- added function to test the login data to the Email config page
+- enhancements of the Unit Test module
+  -- extended the unit test interface to support skipped tests, expected failures
+     and unexpected successes and to better cope with Python2 scripts when run
+     from the eric IDE
+- enhancements of the editor
+  -- added editor actions to go to the last edit location and to the previous or
+     next Python or Ruby class or method definition
 
 Version 5.2-snapshot-20110501:
 - bug fixes
