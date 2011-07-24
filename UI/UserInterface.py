@@ -4196,13 +4196,11 @@ class UserInterface(QMainWindow):
         """
         self.__assistant(version=4)
     
-    def __startWebBrowser(self, home=""):
+    def __startWebBrowser(self):
         """
         Private slot to start the eric5 web browser.
-        
-        @param home full pathname of a file to display (string)
         """
-        self.launchHelpViewer(home)
+        self.launchHelpViewer("")
         
     def __customViewer(self, home=None):
         """
@@ -4879,11 +4877,17 @@ class UserInterface(QMainWindow):
         
         self.launchHelpViewer("", searchWord=searchWord)
     
-    def __webBrowser(self):
+    def __webBrowser(self, home=""):
         """
         Private slot to start the eric5 web browser.
+        
+        @param home full pathname of a file to display (string)
         """
-        self.launchHelpViewer("")
+        started = QDesktopServices.openUrl(QUrl(home))
+        if not started:
+            E5MessageBox.critical(self,
+                self.trUtf8('Open Browser'),
+                self.trUtf8('Could not start a web browser'))
 
     def showPreferences(self, pageName=None):
         """

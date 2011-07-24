@@ -100,10 +100,10 @@
       <item row="0" column="2">
        <widget class="QRadioButton" name="webBrowserButton">
         <property name="toolTip">
-         <string>Select to use the configured web browser</string>
+         <string>Select to use the configured web browser of the system</string>
         </property>
         <property name="text">
-         <string>Web Browser</string>
+         <string>System Web Browser</string>
         </property>
        </widget>
       </item>
