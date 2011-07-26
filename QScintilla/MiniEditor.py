@@ -2149,10 +2149,10 @@ class MiniEditor(QMainWindow):
                 self.filetype = "Python3"
             elif "python2" in line0:
                 bindName = "dummy.py"
-                self.filetype = "Python"
+                self.filetype = "Python2"
             elif "python" in line0:
                 bindName = "dummy.py"
-                self.filetype = "Python"
+                self.filetype = "Python2"
             elif ("/bash" in line0 or "/sh" in line0):
                 bindName = "dummy.sh"
             elif "ruby" in line0:
