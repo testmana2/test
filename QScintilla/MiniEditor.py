@@ -2032,6 +2032,11 @@ class MiniEditor(QMainWindow):
         
         filename = os.path.basename(filename)
         language = Preferences.getEditorLexerAssoc(filename)
+        if language == "Python":
+            if self.__isPy2File():
+                language = "Python2"
+            else:
+                language = "Python3"
         if language.startswith("Pygments|"):
             pyname = language.split("|", 1)[1]
             language = ""
@@ -2062,6 +2067,36 @@ class MiniEditor(QMainWindow):
         # now set the lexer properties
         self.lexer_.initProperties()
         
+    def __isPy2File(self):
+        """
+        Private method to return a flag indicating a Python 2 file.
+        
+        @return flag indicating a Python 2 file (boolean)
+        """
+        if self.filetype in ["Python", "Python2"]:
+            return True
+        
+        if self.filetype == "":
+            line0 = self.__textEdit.text(0)
+            if line0.startswith("#!") and \
+               ("python2" in line0 or \
+                ("python" in line0 and not "python3" in line0)):
+                return True
+            
+            if self.__curFile is not None:
+                exts = []
+                for ext in Preferences.getDebugger("PythonExtensions").split():
+                    if ext.startswith("."):
+                        exts.append(ext)
+                    else:
+                        exts.append(".{0}".format(ext))
+                
+                ext = os.path.splitext(self.__curFile)[1]
+                if ext in exts:
+                    return True
+        
+        return False
+        
     def __styleNeeded(self, position):
         """
         Private slot to handle the need for more styling.
@@ -2083,7 +2118,7 @@ class MiniEditor(QMainWindow):
             bindName = "dummy.xml"
         
         # check filetype
-        if self.filetype in ["Python", "Python3"]:
+        if self.filetype in ["Python", "Python2", "Python3"]:
             bindName = "dummy.py"
         elif self.filetype == "Ruby":
             bindName = "dummy.rb"
