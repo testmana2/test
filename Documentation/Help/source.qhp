@@ -5776,6 +5776,7 @@
       <keyword name="MiniEditor.__getWord" id="MiniEditor.__getWord" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__getWord" />
       <keyword name="MiniEditor.__initContextMenu" id="MiniEditor.__initContextMenu" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__initContextMenu" />
       <keyword name="MiniEditor.__initContextMenuLanguages" id="MiniEditor.__initContextMenuLanguages" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__initContextMenuLanguages" />
+      <keyword name="MiniEditor.__isPy2File" id="MiniEditor.__isPy2File" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__isPy2File" />
       <keyword name="MiniEditor.__languageMenuTriggered" id="MiniEditor.__languageMenuTriggered" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__languageMenuTriggered" />
       <keyword name="MiniEditor.__loadFile" id="MiniEditor.__loadFile" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__loadFile" />
       <keyword name="MiniEditor.__markOccurrences" id="MiniEditor.__markOccurrences" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__markOccurrences" />
