@@ -181,7 +181,7 @@ class Pep8Fixer(QObject):
         @return flag indicating an applied fix (boolean) and a message for
             the fix (string)
         """
-        self.__source[line - 1] = re.sub(r'[\t ]*$', "",
+        self.__source[line - 1] = re.sub(r'[\t ]+(\r?)$', r"\1",
                                          self.__source[line - 1])
         return (True, self.trUtf8("Whitespace stripped from end of line."))
     
