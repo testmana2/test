@@ -2252,7 +2252,8 @@ class Hg(VersionControl):
                 return
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
-        self.__iniWatcher.addPath(cfgFile)
+        if os.path.exists(cfgFile):
+            self.__iniWatcher.addPath(cfgFile)
     
     def __getExtensionsInfo(self):
         """
