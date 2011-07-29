@@ -1709,6 +1709,7 @@ class Hg(VersionControl):
             try:
                 cfg = open(cfgFile, "w")
                 cfg.close()
+                self.__monitorRepoIniFile(repodir)
             except IOError:
                 pass
         self.repoEditor = MiniEditor(cfgFile, "Properties")
