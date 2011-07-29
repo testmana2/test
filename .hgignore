@@ -11,3 +11,4 @@ glob:**.rej
 glob:**~
 glob:cur
 glob:tmp
+glob:__pycache__
