@@ -119,7 +119,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         try:
             dlg = uic.loadUi(self.formFile)
             return dlg.objectName()
-        except AttributeError as err:
+        except (AttributeError, ImportError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
@@ -135,7 +135,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         try:
             dlg = uic.loadUi(self.formFile)
             return dlg.metaObject().className()
-        except AttributeError as err:
+        except (AttributeError, ImportError) as err:
             E5MessageBox.critical(self,
                 self.trUtf8("uic error"),
                 self.trUtf8("""<p>There was an error loading the form <b>{0}</b>.</p>"""
