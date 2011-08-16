@@ -6798,12 +6798,15 @@
       <keyword name="AsyncFile.pendingWrite" id="AsyncFile.pendingWrite" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.pendingWrite" />
       <keyword name="AsyncFile.read" id="AsyncFile.read" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.read" />
       <keyword name="AsyncFile.read_p" id="AsyncFile.read_p" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.read_p" />
+      <keyword name="AsyncFile.readable" id="AsyncFile.readable" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.readable" />
       <keyword name="AsyncFile.readline" id="AsyncFile.readline" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.readline" />
       <keyword name="AsyncFile.readline_p" id="AsyncFile.readline_p" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.readline_p" />
       <keyword name="AsyncFile.readlines" id="AsyncFile.readlines" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.readlines" />
       <keyword name="AsyncFile.seek" id="AsyncFile.seek" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.seek" />
+      <keyword name="AsyncFile.seekable" id="AsyncFile.seekable" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.seekable" />
       <keyword name="AsyncFile.tell" id="AsyncFile.tell" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.tell" />
       <keyword name="AsyncFile.truncate" id="AsyncFile.truncate" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.truncate" />
+      <keyword name="AsyncFile.writable" id="AsyncFile.writable" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.writable" />
       <keyword name="AsyncFile.write" id="AsyncFile.write" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.write" />
       <keyword name="AsyncFile.writelines" id="AsyncFile.writelines" ref="eric5.DebugClients.Python3.AsyncFile.html#AsyncFile.writelines" />
       <keyword name="DebugBase (Module)" id="DebugBase (Module)" ref="eric5.DebugClients.Python3.DebugBase.html" />
