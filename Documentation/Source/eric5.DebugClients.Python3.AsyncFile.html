@@ -87,6 +87,9 @@ object
 <td><a href="#AsyncFile.read_p">read_p</a></td>
 <td>Public method to read bytes from this file.</td>
 </tr><tr>
+<td><a href="#AsyncFile.readable">readable</a></td>
+<td>Public method to check, if the stream is readable.</td>
+</tr><tr>
 <td><a href="#AsyncFile.readline">readline</a></td>
 <td>Public method to read one line from this file.</td>
 </tr><tr>
@@ -99,11 +102,17 @@ object
 <td><a href="#AsyncFile.seek">seek</a></td>
 <td>Public method to move the filepointer.</td>
 </tr><tr>
+<td><a href="#AsyncFile.seekable">seekable</a></td>
+<td>Public method to check, if the stream is seekable.</td>
+</tr><tr>
 <td><a href="#AsyncFile.tell">tell</a></td>
 <td>Public method to get the filepointer position.</td>
 </tr><tr>
 <td><a href="#AsyncFile.truncate">truncate</a></td>
 <td>Public method to truncate the file.</td>
+</tr><tr>
+<td><a href="#AsyncFile.writable">writable</a></td>
+<td>Public method to check, if a stream is writable.</td>
 </tr><tr>
 <td><a href="#AsyncFile.write">write</a></td>
 <td>Public method to write a string to the file.</td>
@@ -226,6 +235,16 @@ maximum number of bytes to be read (int)
 <dd>
 the bytes read (any)
 </dd>
+</dl><a NAME="AsyncFile.readable" ID="AsyncFile.readable"></a>
+<h4>AsyncFile.readable</h4>
+<b>readable</b>(<i></i>)
+<p>
+        Public method to check, if the stream is readable.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a readable stream (boolean)
+</dd>
 </dl><a NAME="AsyncFile.readline" ID="AsyncFile.readline"></a>
 <h4>AsyncFile.readline</h4>
 <b>readline</b>(<i>sizehint = -1</i>)
@@ -293,6 +312,16 @@ position the offset relates to
 This method is not supported and always raises an
         IOError.
 </dd>
+</dl><a NAME="AsyncFile.seekable" ID="AsyncFile.seekable"></a>
+<h4>AsyncFile.seekable</h4>
+<b>seekable</b>(<i></i>)
+<p>
+        Public method to check, if the stream is seekable.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a seekable stream (boolean)
+</dd>
 </dl><a NAME="AsyncFile.tell" ID="AsyncFile.tell"></a>
 <h4>AsyncFile.tell</h4>
 <b>tell</b>(<i></i>)
@@ -319,6 +348,16 @@ size to truncaze to (integer)
 <dd>
 This method is not supported and always raises an
         IOError.
+</dd>
+</dl><a NAME="AsyncFile.writable" ID="AsyncFile.writable"></a>
+<h4>AsyncFile.writable</h4>
+<b>writable</b>(<i></i>)
+<p>
+        Public method to check, if a stream is writable.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a writable stream (boolean)
 </dd>
 </dl><a NAME="AsyncFile.write" ID="AsyncFile.write"></a>
 <h4>AsyncFile.write</h4>
