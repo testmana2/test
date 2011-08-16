@@ -43,11 +43,15 @@ class AsyncFile(object):
         @param name name of this file (string)
         """
         # Initialise the attributes.
-        self.__closed = False
+        self.closed = False
         self.sock = sock
         self.mode = mode
         self.name = name
         self.nWriteErrors = 0
+        
+        self.encoding = "utf-8"
+        self.line_buffering = True
+        self.errors = None
 
         self.wpending = ''
 
@@ -98,10 +102,10 @@ class AsyncFile(object):
         
         @param closeit flag to indicate a close ordered by the debugger code (boolean)
         """
-        if closeit and not self.__closed:
+        if closeit and not self.closed:
             self.flush()
             self.sock.close()
-            self.__closed = True
+            self.closed = True
 
     def flush(self):
         """
@@ -128,6 +132,14 @@ class AsyncFile(object):
         except socket.error:
             return -1
 
+    def readable(self):
+        """
+        Public method to check, if the stream is readable.
+        
+        @return flag indicating a readable stream (boolean)
+        """
+        return self.mode == "r"
+    
     def read_p(self, size=-1):
         """
         Public method to read bytes from this file.
@@ -230,6 +242,14 @@ class AsyncFile(object):
             line = line[:sizehint]
         return line
     
+    def seekable(self):
+        """
+        Public method to check, if the stream is seekable.
+        
+        @return flag indicating a seekable stream (boolean)
+        """
+        return False
+    
     def seek(self, offset, whence=0):
         """
         Public method to move the filepointer.
@@ -260,6 +280,14 @@ class AsyncFile(object):
         """
         raise IOError((29, '[Errno 29] Illegal seek'))
 
+    def writable(self):
+        """
+        Public method to check, if a stream is writable.
+        
+        @return flag indicating a writable stream (boolean)
+        """
+        return self.mode == "w"
+    
     def write(self, s):
         """
         Public method to write a string to the file.
