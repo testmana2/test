@@ -2249,7 +2249,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if not repodir or repodir == os.sep:
                 return
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
