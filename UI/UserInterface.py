@@ -5461,7 +5461,7 @@ class UserInterface(QMainWindow):
         """
         self.performVersionCheck(manual=True, showVersions=True)
         
-    def performVersionCheck(self, manual=True,  alternative=0, showVersions=False):
+    def performVersionCheck(self, manual=True, alternative=0, showVersions=False):
         """
         Public method to check the internet for an eric5 update.
         
@@ -5527,17 +5527,34 @@ class UserInterface(QMainWindow):
         reply = self.sender()
         if reply in self.__replies:
             self.__replies.remove(reply)
-        if reply.error() != QNetworkReply.NoError:
+        if reply.error() == QNetworkReply.NoError:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
+        if reply.error() != QNetworkReply.NoError or versions[0].startswith("<"):
+            # network error or an error page
             self.httpAlternative += 1
             if self.httpAlternative >= len(self.__httpAlternatives):
                 self.__inVersionCheck = False
                 if self.__versionCheckProgress is not None:
                     self.__versionCheckProgress.reset()
                     self.__versionCheckProgress = None
-                E5MessageBox.warning(self,
-                    self.trUtf8("Error getting versions information"),
-                    self.trUtf8("""The versions information could not be downloaded."""
-                                """ Please go online and try again."""))
+                firstFailure = Preferences.Prefs.settings.value(
+                    "Updates/FirstFailedCheckDate", QDate.currentDate())
+                failedDuration = firstFailure.daysTo(QDate.currentDate())
+                Preferences.Prefs.settings.setValue(
+                    "Updates/FirstFailedCheckDate", firstFailure)
+                if self.manualUpdatesCheck:
+                    E5MessageBox.warning(self,
+                        self.trUtf8("Error getting versions information"),
+                        self.trUtf8("""The versions information could not be"""
+                                    """ downloaded."""
+                                    """ Please go online and try again."""))
+                elif failedDuration > 7:
+                    E5MessageBox.warning(self,
+                        self.trUtf8("Error getting versions information"),
+                        self.trUtf8("""The versions information could not be"""
+                                    """ downloaded for the last 7 days."""
+                                    """ Please go online and try again."""))
                 return
             else:
                 self.performVersionCheck(self.manualUpdatesCheck, self.httpAlternative,
@@ -5548,12 +5565,11 @@ class UserInterface(QMainWindow):
         if self.__versionCheckProgress is not None:
             self.__versionCheckProgress.reset()
             self.__versionCheckProgress = None
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
         self.__updateVersionsUrls(versions)
         if self.showAvailableVersions:
             self.__showAvailableVersionInfos(versions)
         else:
+            Preferences.Prefs.settings.remove("Updates/FirstFailedCheckDate")
             Preferences.Prefs.settings.setValue(
                 "Updates/LastCheckDate", QDate.currentDate())
             self.__versionCheckResult(versions)
