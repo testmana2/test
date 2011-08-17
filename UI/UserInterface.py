@@ -5483,7 +5483,11 @@ class UserInterface(QMainWindow):
         reply = self.sender()
         if reply in self.__replies:
             self.__replies.remove(reply)
-        if reply.error() != QNetworkReply.NoError:
+        if reply.error() == QNetworkReply.NoError:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
+        if reply.error() != QNetworkReply.NoError or versions[0].startswith("<"):
+            # network error or an error page
             self.httpAlternative += 1
             if self.httpAlternative >= len(self.__httpAlternatives):
                 self.__inVersionCheck = False
@@ -5503,8 +5507,6 @@ class UserInterface(QMainWindow):
         if self.__versionCheckProgress is not None:
             self.__versionCheckProgress.reset()
             self.__versionCheckProgress = None
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
         self.__updateVersionsUrls(versions)
         if self.showAvailableVersions:
             self.__showAvailableVersionInfos(versions)
