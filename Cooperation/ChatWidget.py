@@ -241,17 +241,17 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         @return tuple with hostname and port (string, integer)
         """
         hostEntry = self.hostEdit.currentText()
-        if ":" in hostEntry:
-            host, port = hostEntry.split(":")
+        if "@" in hostEntry:
+            host, port = hostEntry.split("@")
             try:
                 port = int(port)
             except ValueError:
                 port = Preferences.getCooperation("ServerPort")
-                self.hostEdit.setEditText("{0}:{1}".format(host, port))
+                self.hostEdit.setEditText("{0}@{1}".format(host, port))
         else:
             host = hostEntry
             port = Preferences.getCooperation("ServerPort")
-            self.hostEdit.setEditText("{0}:{1}".format(host, port))
+            self.hostEdit.setEditText("{0}@{1}".format(host, port))
         return host, port
     
     @pyqtSlot()
@@ -262,9 +262,9 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         if not self.__connected:
             host, port = self.__getConnectionParameters()
             self.__setHostsHistory(self.hostEdit.currentText())
-            if not self.__client.server().isListening():
+            if not self.__client.isListening():
                 self.on_serverButton_clicked()
-            if self.__client.server().isListening():
+            if self.__client.isListening():
                 self.__client.connectToHost(host, port)
                 self.__setConnected(True)
         else:
@@ -283,15 +283,15 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         Private slot to start the server.
         """
-        if self.__client.server().isListening():
-            self.__client.server().close()
+        if self.__client.isListening():
+            self.__client.close()
             self.serverButton.setText(self.trUtf8("Start Server"))
             self.serverPortSpin.setEnabled(True)
             if self.serverPortSpin.value() != Preferences.getCooperation("ServerPort"):
                 self.serverPortSpin.setValue(Preferences.getCooperation("ServerPort"))
             self.serverLed.setColor(QColor(Qt.red))
         else:
-            res, port = self.__client.server().startListening(self.serverPortSpin.value())
+            res, port = self.__client.startListening(self.serverPortSpin.value())
             if res:
                 self.serverButton.setText(self.trUtf8("Stop Server"))
                 self.serverPortSpin.setValue(port)
@@ -300,7 +300,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
             else:
                 self.__showErrorMessage(
                     self.trUtf8("! Server Error: {0}\n").format(
-                    self.__client.server().errorString())
+                    self.__client.errorString())
                 )
     
     def __setConnected(self, connected):
@@ -354,7 +354,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         """
         Public slot to handle a change of preferences.
         """
-        if not self.__client.server().isListening():
+        if not self.__client.isListening():
             self.serverPortSpin.setValue(Preferences.getCooperation("ServerPort"))
             if Preferences.getCooperation("AutoStartServer"):
                 self.on_serverButton_clicked()

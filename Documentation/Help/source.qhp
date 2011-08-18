@@ -3356,6 +3356,7 @@
       <keyword name="Connection.sendMessage" id="Connection.sendMessage" ref="eric5.Cooperation.Connection.html#Connection.sendMessage" />
       <keyword name="Connection.sendParticipants" id="Connection.sendParticipants" ref="eric5.Cooperation.Connection.html#Connection.sendParticipants" />
       <keyword name="Connection.serverPort" id="Connection.serverPort" ref="eric5.Cooperation.Connection.html#Connection.serverPort" />
+      <keyword name="Connection.setClient" id="Connection.setClient" ref="eric5.Cooperation.Connection.html#Connection.setClient" />
       <keyword name="Connection.setGreetingMessage" id="Connection.setGreetingMessage" ref="eric5.Cooperation.Connection.html#Connection.setGreetingMessage" />
       <keyword name="Connection.timerEvent" id="Connection.timerEvent" ref="eric5.Cooperation.Connection.html#Connection.timerEvent" />
       <keyword name="CooperationServer (Module)" id="CooperationServer (Module)" ref="eric5.Cooperation.CooperationServer.html" />
@@ -3376,16 +3377,20 @@
       <keyword name="CooperationClient.__readyForUse" id="CooperationClient.__readyForUse" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.__readyForUse" />
       <keyword name="CooperationClient.banKickUser" id="CooperationClient.banKickUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.banKickUser" />
       <keyword name="CooperationClient.banUser" id="CooperationClient.banUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.banUser" />
+      <keyword name="CooperationClient.chatWidget" id="CooperationClient.chatWidget" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.chatWidget" />
+      <keyword name="CooperationClient.close" id="CooperationClient.close" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.close" />
       <keyword name="CooperationClient.connectToHost" id="CooperationClient.connectToHost" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.connectToHost" />
       <keyword name="CooperationClient.disconnectConnections" id="CooperationClient.disconnectConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.disconnectConnections" />
+      <keyword name="CooperationClient.errorString" id="CooperationClient.errorString" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.errorString" />
       <keyword name="CooperationClient.hasConnection" id="CooperationClient.hasConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnection" />
       <keyword name="CooperationClient.hasConnections" id="CooperationClient.hasConnections" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.hasConnections" />
+      <keyword name="CooperationClient.isListening" id="CooperationClient.isListening" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.isListening" />
       <keyword name="CooperationClient.kickUser" id="CooperationClient.kickUser" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.kickUser" />
       <keyword name="CooperationClient.nickName" id="CooperationClient.nickName" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.nickName" />
       <keyword name="CooperationClient.removeConnection" id="CooperationClient.removeConnection" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.removeConnection" />
       <keyword name="CooperationClient.sendEditorCommand" id="CooperationClient.sendEditorCommand" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendEditorCommand" />
       <keyword name="CooperationClient.sendMessage" id="CooperationClient.sendMessage" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.sendMessage" />
-      <keyword name="CooperationClient.server" id="CooperationClient.server" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.server" />
+      <keyword name="CooperationClient.startListening" id="CooperationClient.startListening" ref="eric5.Cooperation.CooperationClient.html#CooperationClient.startListening" />
       <keyword name="UtilitiesPython2 (Package)" id="UtilitiesPython2 (Package)" ref="index-eric5.UtilitiesPython2.html" />
       <keyword name="Tools (Module)" id="Tools (Module)" ref="eric5.UtilitiesPython2.Tools.html" />
       <keyword name="decode" id="decode" ref="eric5.UtilitiesPython2.Tools.html#decode" />
@@ -4168,7 +4173,6 @@
       <keyword name="UserInterface.__TRPreviewer" id="UserInterface.__TRPreviewer" ref="eric5.UI.UserInterface.html#UserInterface.__TRPreviewer" />
       <keyword name="UserInterface.__UIPreviewer" id="UserInterface.__UIPreviewer" ref="eric5.UI.UserInterface.html#UserInterface.__UIPreviewer" />
       <keyword name="UserInterface.__activateBrowser" id="UserInterface.__activateBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateBrowser" />
-      <keyword name="UserInterface.__activateCooperationViewer" id="UserInterface.__activateCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateCooperationViewer" />
       <keyword name="UserInterface.__activateDebugViewer" id="UserInterface.__activateDebugViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateDebugViewer" />
       <keyword name="UserInterface.__activateLogViewer" id="UserInterface.__activateLogViewer" ref="eric5.UI.UserInterface.html#UserInterface.__activateLogViewer" />
       <keyword name="UserInterface.__activateMultiProjectBrowser" id="UserInterface.__activateMultiProjectBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__activateMultiProjectBrowser" />
@@ -4315,6 +4319,7 @@
       <keyword name="UserInterface.__whatsThis" id="UserInterface.__whatsThis" ref="eric5.UI.UserInterface.html#UserInterface.__whatsThis" />
       <keyword name="UserInterface.__writeSession" id="UserInterface.__writeSession" ref="eric5.UI.UserInterface.html#UserInterface.__writeSession" />
       <keyword name="UserInterface.__writeTasks" id="UserInterface.__writeTasks" ref="eric5.UI.UserInterface.html#UserInterface.__writeTasks" />
+      <keyword name="UserInterface.activateCooperationViewer" id="UserInterface.activateCooperationViewer" ref="eric5.UI.UserInterface.html#UserInterface.activateCooperationViewer" />
       <keyword name="UserInterface.addE5Actions" id="UserInterface.addE5Actions" ref="eric5.UI.UserInterface.html#UserInterface.addE5Actions" />
       <keyword name="UserInterface.appendToStderr" id="UserInterface.appendToStderr" ref="eric5.UI.UserInterface.html#UserInterface.appendToStderr" />
       <keyword name="UserInterface.appendToStdout" id="UserInterface.appendToStdout" ref="eric5.UI.UserInterface.html#UserInterface.appendToStdout" />

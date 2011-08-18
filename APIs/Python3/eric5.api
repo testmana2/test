@@ -50,6 +50,7 @@ eric5.Cooperation.Connection.Connection.sendGetParticipants?4()
 eric5.Cooperation.Connection.Connection.sendMessage?4(message)
 eric5.Cooperation.Connection.Connection.sendParticipants?4(participants)
 eric5.Cooperation.Connection.Connection.serverPort?4()
+eric5.Cooperation.Connection.Connection.setClient?4(client)
 eric5.Cooperation.Connection.Connection.setGreetingMessage?4(message, serverPort)
 eric5.Cooperation.Connection.Connection.timerEvent?4(evt)
 eric5.Cooperation.Connection.Connection?1(parent=None)
@@ -61,12 +62,16 @@ eric5.Cooperation.Connection.TransferTimeout?7
 eric5.Cooperation.CooperationClient.CooperationClient.banKickUser?4(nick)
 eric5.Cooperation.CooperationClient.CooperationClient.banUser?4(nick)
 eric5.Cooperation.CooperationClient.CooperationClient.cannotConnect?7
+eric5.Cooperation.CooperationClient.CooperationClient.chatWidget?4()
+eric5.Cooperation.CooperationClient.CooperationClient.close?4()
 eric5.Cooperation.CooperationClient.CooperationClient.connectToHost?4(host, port)
 eric5.Cooperation.CooperationClient.CooperationClient.connectionError?7
 eric5.Cooperation.CooperationClient.CooperationClient.disconnectConnections?4()
 eric5.Cooperation.CooperationClient.CooperationClient.editorCommand?7
+eric5.Cooperation.CooperationClient.CooperationClient.errorString?4()
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnection?4(senderIp, senderPort=-1)
 eric5.Cooperation.CooperationClient.CooperationClient.hasConnections?4()
+eric5.Cooperation.CooperationClient.CooperationClient.isListening?4()
 eric5.Cooperation.CooperationClient.CooperationClient.kickUser?4(nick)
 eric5.Cooperation.CooperationClient.CooperationClient.newMessage?7
 eric5.Cooperation.CooperationClient.CooperationClient.newParticipant?7
@@ -75,12 +80,12 @@ eric5.Cooperation.CooperationClient.CooperationClient.participantLeft?7
 eric5.Cooperation.CooperationClient.CooperationClient.removeConnection?4(connection)
 eric5.Cooperation.CooperationClient.CooperationClient.sendEditorCommand?4(projectHash, filename, message)
 eric5.Cooperation.CooperationClient.CooperationClient.sendMessage?4(message)
-eric5.Cooperation.CooperationClient.CooperationClient.server?4()
+eric5.Cooperation.CooperationClient.CooperationClient.startListening?4(port=-1)
 eric5.Cooperation.CooperationClient.CooperationClient?1(parent=None)
 eric5.Cooperation.CooperationServer.CooperationServer.incomingConnection?4(socketDescriptor)
 eric5.Cooperation.CooperationServer.CooperationServer.newConnection?7
-eric5.Cooperation.CooperationServer.CooperationServer.startListening?4(port=-1)
-eric5.Cooperation.CooperationServer.CooperationServer?1(parent=None)
+eric5.Cooperation.CooperationServer.CooperationServer.startListening?4(port=-1, findFreePort=False)
+eric5.Cooperation.CooperationServer.CooperationServer?1(address, parent=None)
 eric5.DataViews.CodeMetrics.COMMENT?7
 eric5.DataViews.CodeMetrics.DEDENT?7
 eric5.DataViews.CodeMetrics.EMPTY?7
@@ -6494,6 +6499,7 @@ eric5.UI.UserInterface.Redirector.appendStdout?7
 eric5.UI.UserInterface.Redirector.flush?4()
 eric5.UI.UserInterface.Redirector.write?4(s)
 eric5.UI.UserInterface.Redirector?1(stderr)
+eric5.UI.UserInterface.UserInterface.activateCooperationViewer?4()
 eric5.UI.UserInterface.UserInterface.addE5Actions?4(actions, type)
 eric5.UI.UserInterface.UserInterface.appendStderr?7
 eric5.UI.UserInterface.UserInterface.appendStdout?7

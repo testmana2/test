@@ -1599,7 +1599,7 @@ class UserInterface(QMainWindow):
                 QKeySequence(self.trUtf8("Alt+Shift+O")),
                 0, self,
                 'cooperation_viewer_activate', True)
-        self.cooperationViewerActivateAct.triggered[()].connect(self.__activateCooperationViewer)
+        self.cooperationViewerActivateAct.triggered[()].connect(self.activateCooperationViewer)
         self.actions.append(self.cooperationViewerActivateAct)
         self.addAction(self.cooperationViewerActivateAct)
 
@@ -3842,14 +3842,14 @@ class UserInterface(QMainWindow):
         else:
             shown = self.__toggleWindow(self.cooperation)
         if shown:
-            self.__activateCooperationViewer()
+            self.activateCooperationViewer()
         else:
             if hasFocus:
                 self.__activateViewmanager()
         
-    def __activateCooperationViewer(self):
+    def activateCooperationViewer(self):
         """
-        Private slot to handle the activation of the cooperation window.
+        Public slot to handle the activation of the cooperation window.
         """
         if self.layout in ["DockWindows", "Toolboxes", "Sidebars"]:
             self.cooperationDock.show()

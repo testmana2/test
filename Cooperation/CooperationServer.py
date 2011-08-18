@@ -8,7 +8,7 @@ Module implementing the cooperation server.
 """
 
 from PyQt4.QtCore import pyqtSignal
-from PyQt4.QtNetwork import QTcpServer, QHostAddress
+from PyQt4.QtNetwork import QTcpServer
 
 from .Connection import Connection
 
@@ -24,13 +24,16 @@ class CooperationServer(QTcpServer):
     """
     newConnection = pyqtSignal(Connection)
     
-    def __init__(self, parent=None):
+    def __init__(self, address, parent=None):
         """
         Constructor
         
+        @param address address the server should listen on (QHostAddress)
         @param parent reference to the parent object (QObject)
         """
         super().__init__(parent)
+        
+        self.__address = address
     
     def incomingConnection(self, socketDescriptor):
         """
@@ -42,18 +45,20 @@ class CooperationServer(QTcpServer):
         connection.setSocketDescriptor(socketDescriptor)
         self.newConnection.emit(connection)
     
-    def startListening(self, port=-1):
+    def startListening(self, port=-1, findFreePort=False):
         """
         Public method to start listening for new connections.
         
         @param port port to listen on (integer)
+        @param findFreePort flag indicating to search for a free port depending on
+            the configuration (boolean)
         @return tuple giving a flag indicating success (boolean) and
             the port the server listens on
         """
-        res = self.listen(QHostAddress.Any, port)
-        if Preferences.getCooperation("TryOtherPorts"):
+        res = self.listen(self.__address, port)
+        if findFreePort and Preferences.getCooperation("TryOtherPorts"):
             endPort = port + Preferences.getCooperation("MaxPortsToTry")
             while not res and port < endPort:
                 port += 1
-                res = self.listen(QHostAddress.Any, port)
+                res = self.listen(self.__address, port)
         return res, port

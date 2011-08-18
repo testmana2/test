@@ -11,6 +11,7 @@ from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
 from PyQt4.QtNetwork import QTcpSocket
 
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 import Preferences
 
@@ -80,6 +81,7 @@ class Connection(QTcpSocket):
         self.__pingTimer.setInterval(PingInterval)
         self.__pongTime = QTime()
         self.__buffer = QByteArray()
+        self.__client = None
         
         self.readyRead.connect(self.__processReadyRead)
         self.disconnected.connect(self.__disconnected)
@@ -101,6 +103,14 @@ class Connection(QTcpSocket):
         @return server port (integer)
         """
         return self.__serverPort
+    
+    def setClient(self, client):
+        """
+        Public method to set the reference to the cooperation client.
+        
+        @param client reference to the cooperation client (CooperationClient)
+        """
+        self.__client = client
     
     def setGreetingMessage(self, message, serverPort):
         """
@@ -164,7 +174,7 @@ class Connection(QTcpSocket):
                 return
             self.__serverPort = int(serverPort)
             
-            self.__username = "{0}@{1}:{2}".format(
+            self.__username = "{0}@{1}@{2}".format(
                 user,
                 self.peerAddress().toString(),
                 self.peerPort()
@@ -203,6 +213,11 @@ class Connection(QTcpSocket):
                     self.abort()
                     return
 
+            if self.__client is not None:
+                chatWidget = self.__client.chatWidget()
+                if chatWidget is not None and not chatWidget.isVisible():
+                    e5App().getObject("UserInterface").activateCooperationViewer()
+            
             if not self.__isGreetingMessageSent:
                 self.__sendGreetingMessage()
             

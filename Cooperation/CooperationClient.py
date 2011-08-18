@@ -10,7 +10,7 @@ Module implementing the client of the cooperation package.
 import collections
 
 from PyQt4.QtCore import QObject, pyqtSignal, QProcess, QRegExp
-from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket
+from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket, QNetworkInterface
 
 from .CooperationServer import CooperationServer
 from .Connection import Connection
@@ -46,7 +46,19 @@ class CooperationClient(QObject):
         """
         super().__init__(parent)
         
-        self.__server = CooperationServer(self)
+        self.__chatWidget = parent
+        
+        self.__servers = []
+        for networkInterface in QNetworkInterface.allInterfaces():
+            for addressEntry in networkInterface.addressEntries():
+                address = addressEntry.ip()
+                # fix scope of link local addresses
+                if address.toString().lower().startswith("fe80"):
+                    address.setScopeId(networkInterface.humanReadableName())
+                server = CooperationServer(address, self)
+                server.newConnection.connect(self.__newConnection)
+                self.__servers.append(server)
+        
         self.__peers = collections.defaultdict(list)
         
         self.__initialConnection = None
@@ -70,15 +82,16 @@ class CooperationClient(QObject):
         if self.__username == "":
             self.__username = self.trUtf8("unknown")
         
-        self.__server.newConnection.connect(self.__newConnection)
+        self.__listening = False
+        self.__serversErrorString = ""
     
-    def server(self):
+    def chatWidget(self):
         """
-        Public method to get a reference to the server.
+        Public method to get a reference to the chat widget.
         
-        @return reference to the server object (CooperationServer)
+        @return reference to the chat widget (ChatWidget)
         """
-        return self.__server
+        return self.__chatWidget
     
     def sendMessage(self, message):
         """
@@ -99,10 +112,10 @@ class CooperationClient(QObject):
         
         @return nick name (string)
         """
-        return "{0}@{1}:{2}".format(
+        return "{0}@{1}@{2}".format(
             self.__username,
             QHostInfo.localHostName(),
-            self.__server.serverPort()
+            self.__servers[0].serverPort()
         )
     
     def hasConnection(self, senderIp, senderPort=-1):
@@ -168,8 +181,9 @@ class CooperationClient(QObject):
         @param connection reference to the new connection (Connection)
         """
         connection.setParent(self)
+        connection.setClient(self)
         connection.setGreetingMessage(self.__username,
-                                      self.__server.serverPort())
+                                      self.__servers[0].serverPort())
         
         connection.error.connect(self.__connectionError)
         connection.disconnected.connect(self.__disconnected)
@@ -254,7 +268,7 @@ class CooperationClient(QObject):
         for connectionList in self.__peers.values():
             for connection in connectionList:
                 if connection != reqConnection:
-                    participants.append("{0}:{1}".format(
+                    participants.append("{0}@{1}".format(
                         connection.peerAddress().toString(), connection.serverPort()))
         reqConnection.sendParticipants(participants)
     
@@ -265,11 +279,11 @@ class CooperationClient(QObject):
         @param participants list of participants (list of strings of "host:port")
         """
         for participant in participants:
-            host, port = participant.split(":")
+            host, port = participant.split("@")
             port = int(port)
             
             if port == 0:
-                msg = self.trUtf8("Illegal address: {0}:{1}\n").format(host, port)
+                msg = self.trUtf8("Illegal address: {0}@{1}\n").format(host, port)
                 self.connectionError.emit(msg)
             else:
                 if not self.hasConnection(QHostAddress(host), port):
@@ -297,11 +311,11 @@ class CooperationClient(QObject):
         @param nick nick name in the format of self.nickName() (string)
         @return list of references to the connection objects (list of Connection)
         """
-        if "@" not in nick or ":" not in nick:
+        if "@" not in nick:
             # nick given in wrong format
             return []
         
-        user, host = nick.split(":")[0].split("@")
+        user, host, port = nick.split("@")
         senderIp = QHostAddress(host)
         
         if senderIp not in self.__peers:
@@ -325,7 +339,7 @@ class CooperationClient(QObject):
         @param nick nick name in the format of self.nickName() (string)
         """
         Preferences.syncPreferences()
-        user = nick.split(":")[0]
+        user = nick.split("@")[0]
         bannedUsers = Preferences.getCooperation("BannedUsers")[:]
         if user not in bannedUsers:
             bannedUsers.append(user)
@@ -339,3 +353,54 @@ class CooperationClient(QObject):
         """
         self.banUser(nick)
         self.kickUser(nick)
+    
+    def startListening(self, port=-1):
+        """
+        Public method to start listening for new connections.
+        
+        @param port port to listen on (integer)
+        @return tuple giving a flag indicating success (boolean) and
+            the port the server listens on
+        """
+        if self.__servers:
+            # do first server and determine free port
+            res, port = self.__servers[0].startListening(port, True)
+            if res and len(self.__servers) > 1:
+                for server in self.__servers[1:]:
+                    res, port = server.startListening(port, False)
+                    if not res:
+                        self.__serversErrorString = server.errorString()
+            else:
+                self.__serversErrorString = self.__servers[0].errorString()
+        else:
+            res = False
+            self.__serversErrorString = self.trUtf8("No servers present.")
+        
+        if res:
+            self.__serversErrorString = ""
+        self.__listening = res
+        return res, port
+    
+    def isListening(self):
+        """
+        Public method to check, if the client is listening for connections.
+        
+        @return flag indicating the listening state (boolean)
+        """
+        return self.__listening
+    
+    def close(self):
+        """
+        Public method to close all connections and stop listening.
+        """
+        for server in self.__servers:
+            server.close()
+        self.__listening = False
+    
+    def errorString(self):
+        """
+        Public method to get a human readable error message about the last server error.
+        
+        @return human readable error message about the last server error (string)
+        """
+        return self.__serversErrorString
