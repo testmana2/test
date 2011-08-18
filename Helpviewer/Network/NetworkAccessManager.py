@@ -14,7 +14,7 @@ from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
     from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \
-        QSslError
+        QSslError, QSsl
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -81,6 +81,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                         caList.append(cert)
             sslCfg = QSslConfiguration.defaultConfiguration()
             sslCfg.setCaCertificates(caList)
+            sslCfg.setProtocol(QSsl.AnyProtocol)
             QSslConfiguration.setDefaultConfiguration(sslCfg)
             
             self.sslErrors.connect(self.__sslErrors)
@@ -251,6 +252,7 @@ class NetworkAccessManager(QNetworkAccessManager):
                     for cert in caNew:
                         caList.append(cert)
                     sslCfg.setCaCertificates(caList)
+                    sslCfg.setProtocol(QSsl.AnyProtocol)
                     QSslConfiguration.setDefaultConfiguration(sslCfg)
                     reply.setSslConfiguration(sslCfg)
                     
