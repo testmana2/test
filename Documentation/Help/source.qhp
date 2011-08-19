@@ -10664,7 +10664,8 @@
       <keyword name="CompleterPython.__inTripleDoubleQuotedString" id="CompleterPython.__inTripleDoubleQuotedString" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__inTripleDoubleQuotedString" />
       <keyword name="CompleterPython.__inTripleSingleQuotedString" id="CompleterPython.__inTripleSingleQuotedString" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__inTripleSingleQuotedString" />
       <keyword name="CompleterPython.__isClassMethod" id="CompleterPython.__isClassMethod" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassMethod" />
-      <keyword name="CompleterPython.__isClassmethodDef" id="CompleterPython.__isClassmethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassmethodDef" />
+      <keyword name="CompleterPython.__isClassMethodDef" id="CompleterPython.__isClassMethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassMethodDef" />
+      <keyword name="CompleterPython.__isStaticMethodDef" id="CompleterPython.__isStaticMethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isStaticMethodDef" />
       <keyword name="CompleterPython.charAdded" id="CompleterPython.charAdded" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.charAdded" />
       <keyword name="CompleterPython.readSettings" id="CompleterPython.readSettings" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.readSettings" />
       <keyword name="CompleterRuby (Module)" id="CompleterRuby (Module)" ref="eric5.QScintilla.TypingCompleters.CompleterRuby.html" />
