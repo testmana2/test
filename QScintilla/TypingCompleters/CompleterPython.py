@@ -35,6 +35,7 @@ class CompleterPython(CompleterBase):
         self.__classRX = QRegExp(r"""^[ \t]*class \w+\(""")
         self.__importRX = QRegExp(r"""^[ \t]*from [\w.]+ """)
         self.__classmethodRX = QRegExp(r"""^[ \t]*@classmethod""")
+        self.__staticmethodRX = QRegExp(r"""^[ \t]*@staticmethod""")
         
         self.__defOnlyRX = QRegExp(r"""^[ \t]*def """)
         
@@ -107,9 +108,12 @@ class CompleterPython(CompleterBase):
             txt = self.editor.text(line)[:col]
             if self.__insertSelf and \
                self.__defRX.exactMatch(txt):
-                if self.__isClassmethodDef():
+                if self.__isClassMethodDef():
                     self.editor.insert('cls')
                     self.editor.setCursorPosition(line, col + 3)
+                elif self.__isStaticMethodDef():
+                    # nothing to insert
+                    pass
                 elif self.__isClassMethod():
                     self.editor.insert('self')
                     self.editor.setCursorPosition(line, col + 4)
@@ -364,17 +368,32 @@ class CompleterPython(CompleterBase):
             curLine -= 1
         return False
     
-    def __isClassmethodDef(self):
+    def __isClassMethodDef(self):
         """
-        Private method to check, if the user is defing a classmethod 
-        (@classmethod) method.
+        Private method to check, if the user is defing a class method
+        (@classmethod).
         
-        @return flag indicating the definition of a classmethod method (boolean)
+        @return flag indicating the definition of a class method (boolean)
         """
         line, col = self.editor.getCursorPosition()
         indentation = self.editor.indentation(line)
         curLine = line - 1
         if self.__classmethodRX.indexIn(self.editor.text(curLine)) == 0 and \
+           self.editor.indentation(curLine) == indentation:
+            return True
+        return False
+    
+    def __isStaticMethodDef(self):
+        """
+        Private method to check, if the user is defing a static method
+        (@staticmethod) method.
+        
+        @return flag indicating the definition of a static method (boolean)
+        """
+        line, col = self.editor.getCursorPosition()
+        indentation = self.editor.indentation(line)
+        curLine = line - 1
+        if self.__staticmethodRX.indexIn(self.editor.text(curLine)) == 0 and \
            self.editor.indentation(curLine) == indentation:
             return True
         return False
