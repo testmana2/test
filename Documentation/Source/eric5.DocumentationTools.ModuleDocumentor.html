@@ -58,12 +58,13 @@ object
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#ModuleDocument.__init__">ModuleDocument</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#ModuleDocument.__checkDeprecated">__checkDeprecated</a></td>
 <td>Private method to check, if the object to be documented contains a deprecated flag.</td>
 </tr><tr>
@@ -148,6 +149,10 @@ object
 <td><a href="#ModuleDocument.shortDescription">shortDescription</a></td>
 <td>Public method used to get the short description of the module.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="ModuleDocument.__init__" ID="ModuleDocument.__init__"></a>
 <h4>ModuleDocument (Constructor)</h4>
@@ -318,45 +323,51 @@ The list section. (string)
 </dd>
 </dl><a NAME="ModuleDocument.__genMethodSection" ID="ModuleDocument.__genMethodSection"></a>
 <h4>ModuleDocument.__genMethodSection</h4>
-<b>__genMethodSection</b>(<i>obj, className</i>)
+<b>__genMethodSection</b>(<i>obj, className, filter</i>)
 <p>
         Private method to generate the method details section.
 </p><dl>
 <dt><i>obj</i></dt>
 <dd>
-Reference to the object being formatted.
+reference to the object being formatted
 </dd><dt><i>className</i></dt>
 <dd>
-Name of the class containing the method. (string)
+name of the class containing the method (string)
+</dd><dt><i>filter</i></dt>
+<dd>
+filter value designating the method types
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-The method list and method details section. (tuple of two string)
+method list and method details section (tuple of two string)
 </dd>
 </dl><a NAME="ModuleDocument.__genMethodsListSection" ID="ModuleDocument.__genMethodsListSection"></a>
 <h4>ModuleDocument.__genMethodsListSection</h4>
-<b>__genMethodsListSection</b>(<i>names, dict, className, clsName</i>)
+<b>__genMethodsListSection</b>(<i>names, dict, className, clsName, includeInit=True</i>)
 <p>
         Private method to generate the methods list section of a class.
 </p><dl>
 <dt><i>names</i></dt>
 <dd>
-The names to appear in the list. (list of strings)
+names to appear in the list (list of strings)
 </dd><dt><i>dict</i></dt>
 <dd>
-A dictionary containing all relevant information.
+dictionary containing all relevant information
 </dd><dt><i>className</i></dt>
 <dd>
-The class name containing the names.
+class name containing the names
 </dd><dt><i>clsName</i></dt>
 <dd>
-The visible class name containing the names.
+visible class name containing the names
+</dd><dt><i>includeInit</i></dt>
+<dd>
+flag indicating to include the __init__ method (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-The list section. (string)
+methods list section (string)
 </dd>
 </dl><a NAME="ModuleDocument.__genModuleSection" ID="ModuleDocument.__genModuleSection"></a>
 <h4>ModuleDocument.__genModuleSection</h4>
@@ -596,7 +607,15 @@ Exception
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
 <table>
 <tr><td>None</td></tr>
 </table>

@@ -78,12 +78,13 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserClassAttributeItem.__init__">BrowserClassAttributeItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserClassAttributeItem.attributeObject">attributeObject</a></td>
 <td>Public method returning the class object.</td>
 </tr><tr>
@@ -100,9 +101,13 @@ BrowserItem
 <td>Public method returning the line number defining this object.</td>
 </tr>
 </table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <a NAME="BrowserClassAttributeItem.__init__" ID="BrowserClassAttributeItem.__init__"></a>
 <h4>BrowserClassAttributeItem (Constructor)</h4>
-<b>BrowserClassAttributeItem</b>(<i>parent, attribute</i>)
+<b>BrowserClassAttributeItem</b>(<i>parent, attribute, isClass=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -112,6 +117,9 @@ parent item
 </dd><dt><i>attribute</i></dt>
 <dd>
 reference to the attribute object
+</dd><dt><i>isClass</i></dt>
+<dd>
+flag indicating a class attribute (boolean)
 </dd>
 </dl><a NAME="BrowserClassAttributeItem.attributeObject" ID="BrowserClassAttributeItem.attributeObject"></a>
 <h4>BrowserClassAttributeItem.attributeObject</h4>
@@ -185,22 +193,30 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserClassAttributesItem.__init__">BrowserClassAttributesItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserClassAttributesItem.attributes">attributes</a></td>
 <td>Public method returning the attribute list.</td>
+</tr><tr>
+<td><a href="#BrowserClassAttributesItem.isClassAttributes">isClassAttributes</a></td>
+<td>Public method returning the attributes type.</td>
 </tr><tr>
 <td><a href="#BrowserClassAttributesItem.lessThan">lessThan</a></td>
 <td>Public method to check, if the item is less than the other one.</td>
 </tr>
 </table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <a NAME="BrowserClassAttributesItem.__init__" ID="BrowserClassAttributesItem.__init__"></a>
 <h4>BrowserClassAttributesItem (Constructor)</h4>
-<b>BrowserClassAttributesItem</b>(<i>parent, attributes, text</i>)
+<b>BrowserClassAttributesItem</b>(<i>parent, attributes, text, isClass=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -213,6 +229,9 @@ list of attributes
 </dd><dt><i>text</i></dt>
 <dd>
 text to be shown by this item (string)
+</dd><dt><i>isClass</i></dt>
+<dd>
+flag indicating class attributes (boolean)
 </dd>
 </dl><a NAME="BrowserClassAttributesItem.attributes" ID="BrowserClassAttributesItem.attributes"></a>
 <h4>BrowserClassAttributesItem.attributes</h4>
@@ -223,6 +242,16 @@ text to be shown by this item (string)
 <dt>Returns:</dt>
 <dd>
 reference to the list of attributes
+</dd>
+</dl><a NAME="BrowserClassAttributesItem.isClassAttributes" ID="BrowserClassAttributesItem.isClassAttributes"></a>
+<h4>BrowserClassAttributesItem.isClassAttributes</h4>
+<b>isClassAttributes</b>(<i></i>)
+<p>
+        Public method returning the attributes type.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating class attributes (boolean)
 </dd>
 </dl><a NAME="BrowserClassAttributesItem.lessThan" ID="BrowserClassAttributesItem.lessThan"></a>
 <h4>BrowserClassAttributesItem.lessThan</h4>
@@ -259,12 +288,13 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserClassItem.__init__">BrowserClassItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserClassItem.classObject">classObject</a></td>
 <td>Public method returning the class object.</td>
 </tr><tr>
@@ -280,6 +310,10 @@ BrowserItem
 <td><a href="#BrowserClassItem.lineno">lineno</a></td>
 <td>Public method returning the line number defining this object.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserClassItem.__init__" ID="BrowserClassItem.__init__"></a>
 <h4>BrowserClassItem (Constructor)</h4>
@@ -369,15 +403,20 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserCodingItem.__init__">BrowserCodingItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserCodingItem.lessThan">lessThan</a></td>
 <td>Public method to check, if the item is less than the other one.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserCodingItem.__init__" ID="BrowserCodingItem.__init__"></a>
 <h4>BrowserCodingItem (Constructor)</h4>
@@ -427,12 +466,13 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserDirectoryItem.__init__">BrowserDirectoryItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserDirectoryItem.dirName">dirName</a></td>
 <td>Public method returning the directory name.</td>
 </tr><tr>
@@ -445,6 +485,10 @@ BrowserItem
 <td><a href="#BrowserDirectoryItem.setName">setName</a></td>
 <td>Public method to set the directory name.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserDirectoryItem.__init__" ID="BrowserDirectoryItem.__init__"></a>
 <h4>BrowserDirectoryItem (Constructor)</h4>
@@ -530,12 +574,13 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserFileItem.__init__">BrowserFileItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserFileItem.dirName">dirName</a></td>
 <td>Public method returning the directory name.</td>
 </tr><tr>
@@ -593,6 +638,10 @@ BrowserItem
 <td><a href="#BrowserFileItem.setName">setName</a></td>
 <td>Public method to set the directory name.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserFileItem.__init__" ID="BrowserFileItem.__init__"></a>
 <h4>BrowserFileItem (Constructor)</h4>
@@ -831,12 +880,13 @@ object
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserItem.__init__">BrowserItem</a></td>
-<td>Constructor.</td>
-</tr><tr>
 <td><a href="#BrowserItem.appendChild">appendChild</a></td>
 <td>Public method to add a child to this item.</td>
 </tr><tr>
@@ -888,6 +938,10 @@ object
 <td><a href="#BrowserItem.type">type</a></td>
 <td>Public method to get the item type.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserItem.__init__" ID="BrowserItem.__init__"></a>
 <h4>BrowserItem (Constructor)</h4>
@@ -1098,12 +1152,13 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserMethodItem.__init__">BrowserMethodItem</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserMethodItem.fileName">fileName</a></td>
 <td>Public method returning the filename.</td>
 </tr><tr>
@@ -1119,6 +1174,10 @@ BrowserItem
 <td><a href="#BrowserMethodItem.lineno">lineno</a></td>
 <td>Public method returning the line number defining this object.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserMethodItem.__init__" ID="BrowserMethodItem.__init__"></a>
 <h4>BrowserMethodItem (Constructor)</h4>
@@ -1208,12 +1267,13 @@ QAbstractItemModel
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#BrowserModel.__init__">BrowserModel</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#BrowserModel.__populateModel">__populateModel</a></td>
 <td>Private method to populate the browser model.</td>
 </tr><tr>
@@ -1295,6 +1355,10 @@ QAbstractItemModel
 <td><a href="#BrowserModel.saveToplevelDirs">saveToplevelDirs</a></td>
 <td>Public slot to save the toplevel directories.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserModel.__init__" ID="BrowserModel.__init__"></a>
 <h4>BrowserModel (Constructor)</h4>
@@ -1665,12 +1729,17 @@ BrowserItem
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#BrowserSysPathItem.__init__">BrowserSysPathItem</a></td>
-<td>Constructor</td>
-</tr>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="BrowserSysPathItem.__init__" ID="BrowserSysPathItem.__init__"></a>
 <h4>BrowserSysPathItem (Constructor)</h4>

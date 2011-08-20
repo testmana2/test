@@ -90,12 +90,17 @@ VisibilityBase
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#Attribute.__init__">Attribute</a></td>
-<td>Constructor</td>
-</tr>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="Attribute.__init__" ID="Attribute.__init__"></a>
 <h4>Attribute (Constructor)</h4>
@@ -133,12 +138,13 @@ VisibilityBase
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#Class.__init__">Class</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#Class.addAttribute">addAttribute</a></td>
 <td>Public method to add information about attributes.</td>
 </tr><tr>
@@ -160,6 +166,10 @@ VisibilityBase
 <td><a href="#Class.setEndLine">setEndLine</a></td>
 <td>Public method to record the number of the last line of a class.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="Class.__init__" ID="Class.__init__"></a>
 <h4>Class (Constructor)</h4>
@@ -285,21 +295,26 @@ number of the last line (integer)
 VisibilityBase
 <h3>Class Attributes</h3>
 <table>
+<tr><td>Class</td></tr><tr><td>General</td></tr><tr><td>Static</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
 <tr><td>None</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#Function.__init__">Function</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#Function.addDescription">addDescription</a></td>
 <td>Public method to store the functions docstring.</td>
 </tr>
 </table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <a NAME="Function.__init__" ID="Function.__init__"></a>
 <h4>Function (Constructor)</h4>
-<b>Function</b>(<i>module, name, file, lineno, signature='', pyqtSignature=None</i>)
+<b>Function</b>(<i>module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General</i>)
 <p>
         Constructor
 </p><dl>
@@ -321,6 +336,9 @@ the functions call signature (string)
 </dd><dt><i>pyqtSignature</i></dt>
 <dd>
 the functions PyQt signature (string)
+</dd><dt><i>modifierType</i></dt>
+<dd>
+type of the function
 </dd>
 </dl><a NAME="Function.addDescription" ID="Function.addDescription"></a>
 <h4>Function.addDescription</h4>
@@ -346,12 +364,13 @@ object
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#Module.__init__">Module</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#Module.__py_scan">__py_scan</a></td>
 <td>Private method to scan the source text of a Python module and retrieve the relevant information.</td>
 </tr><tr>
@@ -397,6 +416,10 @@ object
 <td><a href="#Module.scan">scan</a></td>
 <td>Public method to scan the source text and retrieve the relevant information.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="Module.__init__" ID="Module.__init__"></a>
 <h4>Module (Constructor)</h4>
@@ -614,15 +637,20 @@ Class
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#RbModule.__init__">RbModule</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#RbModule.addClass">addClass</a></td>
 <td>Public method to add information about a class.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="RbModule.__init__" ID="RbModule.__init__"></a>
 <h4>RbModule (Constructor)</h4>
@@ -670,6 +698,10 @@ object
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
@@ -691,6 +723,10 @@ object
 <td><a href="#VisibilityBase.setPublic">setPublic</a></td>
 <td>Public method to set the visibility to Public.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="VisibilityBase.isPrivate" ID="VisibilityBase.isPrivate"></a>
 <h4>VisibilityBase.isPrivate</h4>

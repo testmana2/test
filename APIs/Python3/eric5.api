@@ -6248,10 +6248,11 @@ eric5.UI.BrowserModel.BrowserClassAttributeItem.fileName?4()
 eric5.UI.BrowserModel.BrowserClassAttributeItem.isPublic?4()
 eric5.UI.BrowserModel.BrowserClassAttributeItem.lessThan?4(other, column, order)
 eric5.UI.BrowserModel.BrowserClassAttributeItem.lineno?4()
-eric5.UI.BrowserModel.BrowserClassAttributeItem?1(parent, attribute)
+eric5.UI.BrowserModel.BrowserClassAttributeItem?1(parent, attribute, isClass=False)
 eric5.UI.BrowserModel.BrowserClassAttributesItem.attributes?4()
+eric5.UI.BrowserModel.BrowserClassAttributesItem.isClassAttributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.lessThan?4(other, column, order)
-eric5.UI.BrowserModel.BrowserClassAttributesItem?1(parent, attributes, text)
+eric5.UI.BrowserModel.BrowserClassAttributesItem?1(parent, attributes, text, isClass=False)
 eric5.UI.BrowserModel.BrowserClassItem.classObject?4()
 eric5.UI.BrowserModel.BrowserClassItem.fileName?4()
 eric5.UI.BrowserModel.BrowserClassItem.isPublic?4()
@@ -6565,7 +6566,10 @@ eric5.Utilities.ClassBrowsers.ClbrBaseClasses.ClbrVisibilityMixinBase.setPrivate
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.ClbrVisibilityMixinBase.setProtected?4()
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.ClbrVisibilityMixinBase.setPublic?4()
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Coding?1(module, file, lineno, coding)
-eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ')
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Class?7
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.General?7
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static?7
+eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=General)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Module?1(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase?2(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.IDL_SOURCE?7
@@ -6587,7 +6591,7 @@ eric5.Utilities.ClassBrowsers.idlclbr._normalize?8
 eric5.Utilities.ClassBrowsers.idlclbr.readmodule_ex?4(module, path=[])
 eric5.Utilities.ClassBrowsers.pyclbr.Attribute?1(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.pyclbr.Class?1(module, name, super, file, lineno)
-eric5.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ')
+eric5.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=ClbrBaseClasses.Function.General)
 eric5.Utilities.ClassBrowsers.pyclbr.Publics?1(module, file, lineno, idents)
 eric5.Utilities.ClassBrowsers.pyclbr.SUPPORTED_TYPES?7
 eric5.Utilities.ClassBrowsers.pyclbr.TABWIDTH?7
@@ -6618,8 +6622,11 @@ eric5.Utilities.ModuleParser.Class.getAttribute?4(name)
 eric5.Utilities.ModuleParser.Class.getMethod?4(name)
 eric5.Utilities.ModuleParser.Class.setEndLine?4(endLineNo)
 eric5.Utilities.ModuleParser.Class?1(module, name, super, file, lineno)
+eric5.Utilities.ModuleParser.Function.Class?7
+eric5.Utilities.ModuleParser.Function.General?7
+eric5.Utilities.ModuleParser.Function.Static?7
 eric5.Utilities.ModuleParser.Function.addDescription?4(description)
-eric5.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None)
+eric5.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General)
 eric5.Utilities.ModuleParser.Module.addClass?4(name, _class)
 eric5.Utilities.ModuleParser.Module.addDescription?4(description)
 eric5.Utilities.ModuleParser.Module.addFunction?4(name, function)

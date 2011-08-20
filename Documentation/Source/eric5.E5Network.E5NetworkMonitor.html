@@ -57,12 +57,19 @@ QDialog, Ui_E5NetworkMonitor
 <table>
 <tr><td>_monitor</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr>
+<td><a href="#E5NetworkMonitor.closeMonitor">closeMonitor</a></td>
+<td>Class method to close the monitor dialog.</td>
+</tr><tr>
+<td><a href="#E5NetworkMonitor.instance">instance</a></td>
+<td>Class method to get a reference to our singleton.</td>
+</tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#E5NetworkMonitor.__init__">E5NetworkMonitor</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#E5NetworkMonitor.__currentChanged">__currentChanged</a></td>
 <td>Private slot to handle a change of the current index.</td>
 </tr><tr>
@@ -72,17 +79,31 @@ QDialog, Ui_E5NetworkMonitor
 <td><a href="#E5NetworkMonitor.closeEvent">closeEvent</a></td>
 <td>Protected method called upon closing the dialog.</td>
 </tr><tr>
-<td><a href="#E5NetworkMonitor.closeMonitor">closeMonitor</a></td>
-<td>Class method to close the monitor dialog.</td>
-</tr><tr>
-<td><a href="#E5NetworkMonitor.instance">instance</a></td>
-<td>Class method to get a reference to our singleton.</td>
-</tr><tr>
 <td><a href="#E5NetworkMonitor.reject">reject</a></td>
 <td>Public slot to close the dialog with a Reject status.</td>
 </tr>
 </table>
-<a NAME="E5NetworkMonitor.__init__" ID="E5NetworkMonitor.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5NetworkMonitor.closeMonitor" ID="E5NetworkMonitor.closeMonitor"></a>
+<h4>E5NetworkMonitor.closeMonitor (class method)</h4>
+<b>closeMonitor</b>(<i></i>)
+<p>
+        Class method to close the monitor dialog.
+</p><a NAME="E5NetworkMonitor.instance" ID="E5NetworkMonitor.instance"></a>
+<h4>E5NetworkMonitor.instance (class method)</h4>
+<b>instance</b>(<i>networkAccessManager</i>)
+<p>
+        Class method to get a reference to our singleton.
+</p><dl>
+<dt><i>networkAccessManager</i></dt>
+<dd>
+reference to the network access manager
+            (QNetworkAccessManager)
+</dd>
+</dl><a NAME="E5NetworkMonitor.__init__" ID="E5NetworkMonitor.__init__"></a>
 <h4>E5NetworkMonitor (Constructor)</h4>
 <b>E5NetworkMonitor</b>(<i>networkAccessManager, parent=None</i>)
 <p>
@@ -129,22 +150,6 @@ index of the entry to show (QModelIndex)
 <dd>
 reference to the close event object (QCloseEvent)
 </dd>
-</dl><a NAME="E5NetworkMonitor.closeMonitor" ID="E5NetworkMonitor.closeMonitor"></a>
-<h4>E5NetworkMonitor.closeMonitor</h4>
-<b>closeMonitor</b>(<i></i>)
-<p>
-        Class method to close the monitor dialog.
-</p><a NAME="E5NetworkMonitor.instance" ID="E5NetworkMonitor.instance"></a>
-<h4>E5NetworkMonitor.instance</h4>
-<b>instance</b>(<i>networkAccessManager</i>)
-<p>
-        Class method to get a reference to our singleton.
-</p><dl>
-<dt><i>networkAccessManager</i></dt>
-<dd>
-reference to the network access manager
-            (QNetworkAccessManager)
-</dd>
 </dl><a NAME="E5NetworkMonitor.reject" ID="E5NetworkMonitor.reject"></a>
 <h4>E5NetworkMonitor.reject</h4>
 <b>reject</b>(<i></i>)
@@ -164,12 +169,17 @@ object
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
-<tr>
-<td><a href="#E5NetworkRequest.__init__">E5NetworkRequest</a></td>
-<td>Constructor</td>
-</tr>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="E5NetworkRequest.__init__" ID="E5NetworkRequest.__init__"></a>
 <h4>E5NetworkRequest (Constructor)</h4>
@@ -190,12 +200,13 @@ QAbstractTableModel
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#E5RequestModel.__init__">E5RequestModel</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#E5RequestModel.__addReply">__addReply</a></td>
 <td>Private slot to add the reply data to the model.</td>
 </tr><tr>
@@ -220,6 +231,10 @@ QAbstractTableModel
 <td><a href="#E5RequestModel.rowCount">rowCount</a></td>
 <td>Public method to get the number of rows of the model.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="E5RequestModel.__init__" ID="E5RequestModel.__init__"></a>
 <h4>E5RequestModel (Constructor)</h4>

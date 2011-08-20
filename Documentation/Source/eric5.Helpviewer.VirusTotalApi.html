@@ -44,7 +44,7 @@ Module implementing the <a href="http://www.virustotal.com">VirusTotal</a> API c
 <h2>VirusTotalAPI</h2>
 <p>
     Class implementing the <a href="http://www.virustotal.com">VirusTotal</a> API.
-</p><h4>Signals</h4>
+</p><h3>Signals</h3>
 <dl>
 <dt>checkServiceKeyFinished(bool, str)</dt>
 <dd>
@@ -69,12 +69,16 @@ QObject
 <table>
 <tr><td>GetFileReportPattern</td></tr><tr><td>GetUrlReportPattern</td></tr><tr><td>ReportFileScanPagePattern</td></tr><tr><td>ReportUrlScanPagePattern</td></tr><tr><td>ScanUrlPattern</td></tr><tr><td>SearchUrl</td></tr><tr><td>ServiceResult_InvalidServiceKey</td></tr><tr><td>ServiceResult_ItemNotPresent</td></tr><tr><td>ServiceResult_ItemPresent</td></tr><tr><td>ServiceResult_RequestLimitReached</td></tr><tr><td>TestServiceKeyScanID</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr>
+<td><a href="#VirusTotalAPI.getSearchRequestData">getSearchRequestData</a></td>
+<td>Class method to assemble the search request data structure.</td>
+</tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#VirusTotalAPI.__init__">VirusTotalAPI</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#VirusTotalAPI.__checkServiceKeyValidityFinished">__checkServiceKeyValidityFinished</a></td>
 <td>Private slot to determine the result of the service key validity check.</td>
 </tr><tr>
@@ -93,9 +97,6 @@ QObject
 <td><a href="#VirusTotalAPI.checkServiceKeyValidity">checkServiceKeyValidity</a></td>
 <td>Public method to check the validity of the given service key.</td>
 </tr><tr>
-<td><a href="#VirusTotalAPI.getSearchRequestData">getSearchRequestData</a></td>
-<td>Class method to assemble the search request data structure.</td>
-</tr><tr>
 <td><a href="#VirusTotalAPI.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
 </tr><tr>
@@ -103,7 +104,27 @@ QObject
 <td>Public method to submit an URL to be scanned.</td>
 </tr>
 </table>
-<a NAME="VirusTotalAPI.__init__" ID="VirusTotalAPI.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="VirusTotalAPI.getSearchRequestData" ID="VirusTotalAPI.getSearchRequestData"></a>
+<h4>VirusTotalAPI.getSearchRequestData (class method)</h4>
+<b>getSearchRequestData</b>(<i>term</i>)
+<p>
+        Class method to assemble the search request data structure.
+</p><dl>
+<dt><i>term</i></dt>
+<dd>
+search term (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of network request object, operation and parameters
+            (QNetworkRequest, QNetworkAccessManager.Operation, QByteArray)
+</dd>
+</dl><a NAME="VirusTotalAPI.__init__" ID="VirusTotalAPI.__init__"></a>
 <h4>VirusTotalAPI (Constructor)</h4>
 <b>VirusTotalAPI</b>(<i>parent=None</i>)
 <p>
@@ -166,22 +187,6 @@ protocol used to access VirusTotal (string)
 <dd>
 flag indicating validity (boolean) and an error message in
             case of a network error (string)
-</dd>
-</dl><a NAME="VirusTotalAPI.getSearchRequestData" ID="VirusTotalAPI.getSearchRequestData"></a>
-<h4>VirusTotalAPI.getSearchRequestData</h4>
-<b>getSearchRequestData</b>(<i>term</i>)
-<p>
-        Class method to assemble the search request data structure.
-</p><dl>
-<dt><i>term</i></dt>
-<dd>
-search term (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-tuple of network request object, operation and parameters
-            (QNetworkRequest, QNetworkAccessManager.Operation, QByteArray)
 </dd>
 </dl><a NAME="VirusTotalAPI.preferencesChanged" ID="VirusTotalAPI.preferencesChanged"></a>
 <h4>VirusTotalAPI.preferencesChanged</h4>

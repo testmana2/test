@@ -53,12 +53,25 @@ QObject
 <table>
 <tr><td>_spelling_dict</td></tr><tr><td>_spelling_lang</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr>
+<td><a href="#SpellChecker._getDict">_getDict</a></td>
+<td>Protected classmethod to get a new dictionary.</td>
+</tr><tr>
+<td><a href="#SpellChecker.getAvailableLanguages">getAvailableLanguages</a></td>
+<td>Public classmethod to get all available languages.</td>
+</tr><tr>
+<td><a href="#SpellChecker.isAvailable">isAvailable</a></td>
+<td>Public classmethod to check, if spellchecking is available.</td>
+</tr><tr>
+<td><a href="#SpellChecker.setDefaultLanguage">setDefaultLanguage</a></td>
+<td>Public classmethod to set the default language.</td>
+</tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
-<td><a href="#SpellChecker.__init__">SpellChecker</a></td>
-<td>Constructor</td>
-</tr><tr>
 <td><a href="#SpellChecker.__checkDocumentPart">__checkDocumentPart</a></td>
 <td>Private method to check some part of the document.</td>
 </tr><tr>
@@ -73,9 +86,6 @@ QObject
 </tr><tr>
 <td><a href="#SpellChecker.__next__">__next__</a></td>
 <td>Public method to advance to the next error.</td>
-</tr><tr>
-<td><a href="#SpellChecker._getDict">_getDict</a></td>
-<td>Protected classmethod to get a new dictionary.</td>
 </tr><tr>
 <td><a href="#SpellChecker.add">add</a></td>
 <td>Public method to add a word to the personal word list.</td>
@@ -101,9 +111,6 @@ QObject
 <td><a href="#SpellChecker.clearAll">clearAll</a></td>
 <td>Public method to clear all spelling markers.</td>
 </tr><tr>
-<td><a href="#SpellChecker.getAvailableLanguages">getAvailableLanguages</a></td>
-<td>Public classmethod to get all available languages.</td>
-</tr><tr>
 <td><a href="#SpellChecker.getContext">getContext</a></td>
 <td>Public method to get the context of a faulty word.</td>
 </tr><tr>
@@ -122,9 +129,6 @@ QObject
 <td><a href="#SpellChecker.initCheck">initCheck</a></td>
 <td>Public method to initialize a spell check.</td>
 </tr><tr>
-<td><a href="#SpellChecker.isAvailable">isAvailable</a></td>
-<td>Public classmethod to check, if spellchecking is available.</td>
-</tr><tr>
 <td><a href="#SpellChecker.remove">remove</a></td>
 <td>Public method to add a word to the personal exclude list.</td>
 </tr><tr>
@@ -133,9 +137,6 @@ QObject
 </tr><tr>
 <td><a href="#SpellChecker.replaceAlways">replaceAlways</a></td>
 <td>Public method to tell the checker to always replace the current word with the replacement string.</td>
-</tr><tr>
-<td><a href="#SpellChecker.setDefaultLanguage">setDefaultLanguage</a></td>
-<td>Public classmethod to set the default language.</td>
 </tr><tr>
 <td><a href="#SpellChecker.setLanguage">setLanguage</a></td>
 <td>Public method to set the current language.</td>
@@ -147,7 +148,64 @@ QObject
 <td>Public method to stop an incremental check.</td>
 </tr>
 </table>
-<a NAME="SpellChecker.__init__" ID="SpellChecker.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="SpellChecker._getDict" ID="SpellChecker._getDict"></a>
+<h4>SpellChecker._getDict (class method)</h4>
+<b>_getDict</b>(<i>lang, pwl="", pel=""</i>)
+<p>
+        Protected classmethod to get a new dictionary.
+</p><dl>
+<dt><i>lang</i></dt>
+<dd>
+the language to be used as the default (string).
+            The string should be in language locale format (e.g. en_US, de).
+</dd><dt><i>pwl=</i></dt>
+<dd>
+name of the personal/project word list (string)
+</dd><dt><i>pel=</i></dt>
+<dd>
+name of the personal/project exclude list (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the dictionary (enchant.Dict)
+</dd>
+</dl><a NAME="SpellChecker.getAvailableLanguages" ID="SpellChecker.getAvailableLanguages"></a>
+<h4>SpellChecker.getAvailableLanguages (class method)</h4>
+<b>getAvailableLanguages</b>(<i></i>)
+<p>
+        Public classmethod to get all available languages.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of available languages (list of strings)
+</dd>
+</dl><a NAME="SpellChecker.isAvailable" ID="SpellChecker.isAvailable"></a>
+<h4>SpellChecker.isAvailable (class method)</h4>
+<b>isAvailable</b>(<i></i>)
+<p>
+        Public classmethod to check, if spellchecking is available.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating availability (boolean)
+</dd>
+</dl><a NAME="SpellChecker.setDefaultLanguage" ID="SpellChecker.setDefaultLanguage"></a>
+<h4>SpellChecker.setDefaultLanguage (class method)</h4>
+<b>setDefaultLanguage</b>(<i>language</i>)
+<p>
+        Public classmethod to set the default language.
+</p><dl>
+<dt><i>language</i></dt>
+<dd>
+the language to be used as the default (string).
+            The string should be in language locale format (e.g. en_US, de).
+</dd>
+</dl><a NAME="SpellChecker.__init__" ID="SpellChecker.__init__"></a>
 <h4>SpellChecker (Constructor)</h4>
 <b>SpellChecker</b>(<i>editor, indicator, defaultLanguage=None, checkRegion=None</i>)
 <p>
@@ -219,28 +277,6 @@ tuple of three values (the extracted word (string),
 <dd>
 self
 </dd>
-</dl><a NAME="SpellChecker._getDict" ID="SpellChecker._getDict"></a>
-<h4>SpellChecker._getDict</h4>
-<b>_getDict</b>(<i>lang, pwl="", pel=""</i>)
-<p>
-        Protected classmethod to get a new dictionary.
-</p><dl>
-<dt><i>lang</i></dt>
-<dd>
-the language to be used as the default (string).
-            The string should be in language locale format (e.g. en_US, de).
-</dd><dt><i>pwl=</i></dt>
-<dd>
-name of the personal/project word list (string)
-</dd><dt><i>pel=</i></dt>
-<dd>
-name of the personal/project exclude list (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the dictionary (enchant.Dict)
-</dd>
 </dl><a NAME="SpellChecker.add" ID="SpellChecker.add"></a>
 <h4>SpellChecker.add</h4>
 <b>add</b>(<i>word=None</i>)
@@ -303,17 +339,7 @@ flag indicating the position is at the end of the word
 <b>clearAll</b>(<i></i>)
 <p>
         Public method to clear all spelling markers.
-</p><a NAME="SpellChecker.getAvailableLanguages" ID="SpellChecker.getAvailableLanguages"></a>
-<h4>SpellChecker.getAvailableLanguages</h4>
-<b>getAvailableLanguages</b>(<i></i>)
-<p>
-        Public classmethod to get all available languages.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-list of available languages (list of strings)
-</dd>
-</dl><a NAME="SpellChecker.getContext" ID="SpellChecker.getContext"></a>
+</p><a NAME="SpellChecker.getContext" ID="SpellChecker.getContext"></a>
 <h4>SpellChecker.getContext</h4>
 <b>getContext</b>(<i>wordStart, wordEnd</i>)
 <p>
@@ -396,16 +422,6 @@ position to end at (integer)
 <dd>
 flag indicating successful initialization (boolean)
 </dd>
-</dl><a NAME="SpellChecker.isAvailable" ID="SpellChecker.isAvailable"></a>
-<h4>SpellChecker.isAvailable</h4>
-<b>isAvailable</b>(<i></i>)
-<p>
-        Public classmethod to check, if spellchecking is available.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating availability (boolean)
-</dd>
 </dl><a NAME="SpellChecker.remove" ID="SpellChecker.remove"></a>
 <h4>SpellChecker.remove</h4>
 <b>remove</b>(<i>word</i>)
@@ -437,17 +453,6 @@ replacement string (string)
 <dt><i>replacement</i></dt>
 <dd>
 replacement string (string)
-</dd>
-</dl><a NAME="SpellChecker.setDefaultLanguage" ID="SpellChecker.setDefaultLanguage"></a>
-<h4>SpellChecker.setDefaultLanguage</h4>
-<b>setDefaultLanguage</b>(<i>language</i>)
-<p>
-        Public classmethod to set the default language.
-</p><dl>
-<dt><i>language</i></dt>
-<dd>
-the language to be used as the default (string).
-            The string should be in language locale format (e.g. en_US, de).
 </dd>
 </dl><a NAME="SpellChecker.setLanguage" ID="SpellChecker.setLanguage"></a>
 <h4>SpellChecker.setLanguage</h4>

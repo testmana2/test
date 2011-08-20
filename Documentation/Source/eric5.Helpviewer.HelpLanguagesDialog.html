@@ -51,18 +51,9 @@ QDialog, Ui_HelpLanguagesDialog
 <table>
 <tr><td>None</td></tr>
 </table>
-<h3>Methods</h3>
+<h3>Class Methods</h3>
 <table>
 <tr>
-<td><a href="#HelpLanguagesDialog.__init__">HelpLanguagesDialog</a></td>
-<td>Constructor</td>
-</tr><tr>
-<td><a href="#HelpLanguagesDialog.__currentChanged">__currentChanged</a></td>
-<td>Private slot to handle a change of the current selection.</td>
-</tr><tr>
-<td><a href="#HelpLanguagesDialog.accept">accept</a></td>
-<td>Public method to accept the data entered.</td>
-</tr><tr>
 <td><a href="#HelpLanguagesDialog.defaultAcceptLanguages">defaultAcceptLanguages</a></td>
 <td>Class method to get the list of default accept languages.</td>
 </tr><tr>
@@ -71,6 +62,16 @@ QDialog, Ui_HelpLanguagesDialog
 </tr><tr>
 <td><a href="#HelpLanguagesDialog.httpString">httpString</a></td>
 <td>Class method to convert a list of acceptable languages into a byte array that can be sent along with the Accept-Language http header (see RFC 2616).</td>
+</tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HelpLanguagesDialog.__currentChanged">__currentChanged</a></td>
+<td>Private slot to handle a change of the current selection.</td>
+</tr><tr>
+<td><a href="#HelpLanguagesDialog.accept">accept</a></td>
+<td>Public method to accept the data entered.</td>
 </tr><tr>
 <td><a href="#HelpLanguagesDialog.on_addButton_clicked">on_addButton_clicked</a></td>
 <td>Private slot to add a language to the list of acceptable languages.</td>
@@ -85,7 +86,52 @@ QDialog, Ui_HelpLanguagesDialog
 <td>Private slot to move a language up.</td>
 </tr>
 </table>
-<a NAME="HelpLanguagesDialog.__init__" ID="HelpLanguagesDialog.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HelpLanguagesDialog.defaultAcceptLanguages" ID="HelpLanguagesDialog.defaultAcceptLanguages"></a>
+<h4>HelpLanguagesDialog.defaultAcceptLanguages (class method)</h4>
+<b>defaultAcceptLanguages</b>(<i></i>)
+<p>
+        Class method to get the list of default accept languages.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of acceptable languages (list of strings)
+</dd>
+</dl><a NAME="HelpLanguagesDialog.expand" ID="HelpLanguagesDialog.expand"></a>
+<h4>HelpLanguagesDialog.expand (class method)</h4>
+<b>expand</b>(<i>language</i>)
+<p>
+        Class method to expand a language enum to a readable languages list.
+</p><dl>
+<dt><i>language</i></dt>
+<dd>
+language number (QLocale.Language)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of expanded language names (list of strings)
+</dd>
+</dl><a NAME="HelpLanguagesDialog.httpString" ID="HelpLanguagesDialog.httpString"></a>
+<h4>HelpLanguagesDialog.httpString (class method)</h4>
+<b>httpString</b>(<i>languages</i>)
+<p>
+        Class method to convert a list of acceptable languages into a byte array that
+        can be sent along with the Accept-Language http header (see RFC 2616).
+</p><dl>
+<dt><i>languages</i></dt>
+<dd>
+list of acceptable languages (list of strings)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+converted list (QByteArray)
+</dd>
+</dl><a NAME="HelpLanguagesDialog.__init__" ID="HelpLanguagesDialog.__init__"></a>
 <h4>HelpLanguagesDialog (Constructor)</h4>
 <b>HelpLanguagesDialog</b>(<i>parent=None</i>)
 <p>
@@ -113,48 +159,7 @@ index of the previously selected item (QModelIndex)
 <b>accept</b>(<i></i>)
 <p>
         Public method to accept the data entered.
-</p><a NAME="HelpLanguagesDialog.defaultAcceptLanguages" ID="HelpLanguagesDialog.defaultAcceptLanguages"></a>
-<h4>HelpLanguagesDialog.defaultAcceptLanguages</h4>
-<b>defaultAcceptLanguages</b>(<i></i>)
-<p>
-        Class method to get the list of default accept languages.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-list of acceptable languages (list of strings)
-</dd>
-</dl><a NAME="HelpLanguagesDialog.expand" ID="HelpLanguagesDialog.expand"></a>
-<h4>HelpLanguagesDialog.expand</h4>
-<b>expand</b>(<i>language</i>)
-<p>
-        Class method to expand a language enum to a readable languages list.
-</p><dl>
-<dt><i>language</i></dt>
-<dd>
-language number (QLocale.Language)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-list of expanded language names (list of strings)
-</dd>
-</dl><a NAME="HelpLanguagesDialog.httpString" ID="HelpLanguagesDialog.httpString"></a>
-<h4>HelpLanguagesDialog.httpString</h4>
-<b>httpString</b>(<i>languages</i>)
-<p>
-        Class method to convert a list of acceptable languages into a byte array that
-        can be sent along with the Accept-Language http header (see RFC 2616).
-</p><dl>
-<dt><i>languages</i></dt>
-<dd>
-list of acceptable languages (list of strings)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-converted list (QByteArray)
-</dd>
-</dl><a NAME="HelpLanguagesDialog.on_addButton_clicked" ID="HelpLanguagesDialog.on_addButton_clicked"></a>
+</p><a NAME="HelpLanguagesDialog.on_addButton_clicked" ID="HelpLanguagesDialog.on_addButton_clicked"></a>
 <h4>HelpLanguagesDialog.on_addButton_clicked</h4>
 <b>on_addButton_clicked</b>(<i></i>)
 <p>
