@@ -62,15 +62,19 @@ classTemplate = \
 {{ClassSuper}}
 <h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Class Attributes</h3>
 {{GlobalsList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Class Methods</h3>
+{{ClassMethodList}}
 <h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Methods</h3>
 {{MethodList}}
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">Static Methods</h3>
+{{StaticMethodList}}
 {{MethodDetails}}
 <div align="right"><a style="color:{LinkColor}" href="#top">Up</a></div>
 <hr />'''
 
 methodTemplate = \
 '''<a NAME="{{Anchor}}.{{Method}}" ID="{{Anchor}}.{{Method}}"></a>
-<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}}.{{Method}}</h3>
+<h3 style="background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}">{{Class}}.{{Method}}{{MethodClassifier}}</h3>
 <b>{{Method}}</b>(<i>{{Params}}</i>)
 {{MethodDescription}}'''
 

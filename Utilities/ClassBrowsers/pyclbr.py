@@ -52,6 +52,12 @@ _getnext = re.compile(r"""
         \]
     )
 
+|   (?P<MethodModifier>
+        ^
+        (?P<MethodModifierIndent> [ \t]* )
+        (?P<MethodModifierType> @classmethod | @staticmethod )
+    )
+
 |   (?P<Method>
         ^
         (?P<MethodIndent> [ \t]* )
@@ -142,7 +148,8 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
     """
     Class to represent a Python function.
     """
-    def __init__(self, module, name, file, lineno, signature='', separator=','):
+    def __init__(self, module, name, file, lineno, signature='', separator=',',
+                 modifierType=ClbrBaseClasses.Function.General):
         """
         Constructor
         
@@ -152,9 +159,10 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
         @param lineno linenumber of the class definition
         @param signature parameterlist of the method
         @param separator string separating the parameters
+        @param modifierType type of the function
         """
         ClbrBaseClasses.Function.__init__(self, module, name, file, lineno,
-                                          signature, separator)
+                                          signature, separator, modifierType)
         VisibilityMixin.__init__(self)
 
 
@@ -264,13 +272,18 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
 
     lineno, last_lineno_pos = 1, 0
     i = 0
+    modifierType = ClbrBaseClasses.Function.General
+    modifierIndent = -1
     while True:
         m = _getnext(src, i)
         if not m:
             break
         start, i = m.span()
 
-        if m.start("Method") >= 0:
+        if m.start("MethodModifier") >= 0:
+            modifierIndent = _indent(m.group("MethodModifierIndent"))
+            modifierType = m.group("MethodModifierType")
+        elif m.start("Method") >= 0:
             # found a method definition or function
             thisindent = _indent(m.group("MethodIndent"))
             meth_name = m.group("MethodName")
@@ -279,6 +292,15 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             meth_sig = _commentsub('', meth_sig)
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
+            if modifierType and modifierIndent == thisindent:
+                if modifierType == "@staticmethod":
+                    modifier = ClbrBaseClasses.Function.Static
+                elif modifierType == "@classmethod":
+                    modifier = ClbrBaseClasses.Function.Class
+                else:
+                    modifier = ClbrBaseClasses.Function.General
+            else:
+                modifier = ClbrBaseClasses.Function.General
             # modify indentation level for conditional defines
             if conditionalsstack:
                 if thisindent > conditionalsstack[-1]:
@@ -304,12 +326,12 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                 if cur_class:
                     # it's a method/nested def
                     f = Function(None, meth_name,
-                                 file, lineno, meth_sig)
+                                 file, lineno, meth_sig, modifierType=modifier)
                     cur_class._addmethod(meth_name, f)
             else:
                 # it's a function
                 f = Function(module, meth_name,
-                             file, lineno, meth_sig)
+                             file, lineno, meth_sig, modifierType=modifier)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
                     meth_name = "{0}_{1:d}".format(meth_name, dict_counts[meth_name])
@@ -317,6 +339,10 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                     dict_counts[meth_name] = 0
                 dict[meth_name] = f
             classstack.append((f, thisindent))  # Marker for nested fns
+            
+            # reset the modifier settings
+            modifierType = ClbrBaseClasses.Function.General
+            modifierIndent = -1
 
         elif m.start("String") >= 0:
             pass

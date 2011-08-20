@@ -612,7 +612,8 @@ class BrowserModel(QAbstractItemModel):
         if len(cl.globals):
             node = BrowserClassAttributesItem(
                 parentItem, cl.globals,
-                QApplication.translate("BrowserModel", "Attributes (global)"))
+                QApplication.translate("BrowserModel", "Class Attributes"),
+                True)
             if repopulate:
                 self.addItem(node,
                     self.createIndex(parentItem.row(), 0, parentItem))
@@ -659,6 +660,7 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the class attributes item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
+        classAttributes = parentItem.isClassAttributes()
         attributes = parentItem.attributes()
         if not attributes:
             return
@@ -669,7 +671,8 @@ class BrowserModel(QAbstractItemModel):
                 self.beginInsertRows(self.createIndex(parentItem.row(), 0, parentItem),
                     0, len(keys) - 1)
             for key in keys:
-                node = BrowserClassAttributeItem(parentItem, attributes[key])
+                node = BrowserClassAttributeItem(parentItem, attributes[key],
+                                                 classAttributes)
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
@@ -1328,7 +1331,13 @@ class BrowserMethodItem(BrowserItem):
         self.name = name
         self._functionObject = fn
         self._filename = filename
-        if self._functionObject.isPrivate():
+        if self._functionObject.modifier == \
+           Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static:
+            self.icon = UI.PixmapCache.getIcon("method_static.png")
+        elif self._functionObject.modifier == \
+           Utilities.ClassBrowsers.ClbrBaseClasses.Function.Class:
+            self.icon = UI.PixmapCache.getIcon("method_class.png")
+        elif self._functionObject.isPrivate():
             self.icon = UI.PixmapCache.getIcon("method_private.png")
         elif self._functionObject.isProtected():
             self.icon = UI.PixmapCache.getIcon("method_protected.png")
@@ -1406,13 +1415,14 @@ class BrowserClassAttributesItem(BrowserItem):
     """
     Class implementing the data structure for browser class attributes items.
     """
-    def __init__(self, parent, attributes, text):
+    def __init__(self, parent, attributes, text, isClass=False):
         """
         Constructor
         
         @param parent parent item
         @param attributes list of attributes
         @param text text to be shown by this item (string)
+        @param isClass flag indicating class attributes (boolean)
         """
         BrowserItem.__init__(self, parent, text)
         
@@ -1420,7 +1430,11 @@ class BrowserClassAttributesItem(BrowserItem):
         self._attributes = attributes.copy()
         self._populated = False
         self._lazyPopulation = True
-        self.icon = UI.PixmapCache.getIcon("attributes.png")
+        if isClass:
+            self.icon = UI.PixmapCache.getIcon("attributes_class.png")
+        else:
+            self.icon = UI.PixmapCache.getIcon("attributes.png")
+        self.__isClass = isClass
     
     def attributes(self):
         """
@@ -1429,6 +1443,14 @@ class BrowserClassAttributesItem(BrowserItem):
         @return reference to the list of attributes
         """
         return self._attributes
+    
+    def isClassAttributes(self):
+        """
+        Public method returning the attributes type.
+        
+        @return flag indicating class attributes (boolean)
+        """
+        return self.__isClass
     
     def lessThan(self, other, column, order):
         """
@@ -1452,19 +1474,22 @@ class BrowserClassAttributeItem(BrowserItem):
     """
     Class implementing the data structure for browser class attribute items.
     """
-    def __init__(self, parent, attribute):
+    def __init__(self, parent, attribute, isClass=False):
         """
         Constructor
         
         @param parent parent item
         @param attribute reference to the attribute object
+        @param isClass flag indicating a class attribute (boolean)
         """
         BrowserItem.__init__(self, parent, attribute.name)
         
         self.type_ = BrowserItemAttribute
         self._attributeObject = attribute
         self.__public = attribute.isPublic()
-        if attribute.isPrivate():
+        if isClass:
+            self.icon = UI.PixmapCache.getIcon("attribute_class.png")
+        elif attribute.isPrivate():
             self.icon = UI.PixmapCache.getIcon("attribute_private.png")
         elif attribute.isProtected():
             self.icon = UI.PixmapCache.getIcon("attribute_protected.png")

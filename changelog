@@ -8,6 +8,10 @@ Version 5.2-snapshot-2011mmdd:
      Editor->Filehandling page
 - enhancements of the cooperation functions
   -- added code to the cooperation functions to support IPv6
+- enhancements to the source browser
+  -- show class attributes, class methods and static methods with different icons
+- enhancements to the source documentor
+  -- introduced separate sections for class methods and static methods
 
 Version 5.2-snapshot-20110724:
 - bug fixes

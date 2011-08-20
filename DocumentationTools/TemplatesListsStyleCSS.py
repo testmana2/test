@@ -65,15 +65,19 @@ classTemplate = \
 {ClassSuper}
 <h3>Class Attributes</h3>
 {GlobalsList}
+<h3>Class Methods</h3>
+{ClassMethodList}
 <h3>Methods</h3>
 {MethodList}
+<h3>Static Methods</h3>
+{StaticMethodList}
 {MethodDetails}
 <div align="right"><a href="#top">Up</a></div>
 <hr />'''
 
 methodTemplate = \
 '''<a NAME="{Anchor}.{Method}" ID="{Anchor}.{Method}"></a>
-<h4>{Class}.{Method}</h4>
+<h4>{Class}.{Method}{MethodClassifier}</h4>
 <b>{Method}</b>(<i>{Params}</i>)
 {MethodDescription}'''
 
@@ -177,7 +181,7 @@ exceptionsListEntryTemplate = \
 </dd>'''
 
 signalsListTemplate = \
-'''<h4>Signals</h4>
+'''<h3>Signals</h3>
 <dl>
 {Signals}
 </dl>'''
@@ -189,7 +193,7 @@ signalsListEntryTemplate = \
 </dd>'''
 
 eventsListTemplate = \
-'''<h4>Events</h4>
+'''<h3>Events</h3>
 <dl>
 {Events}
 </dl>'''

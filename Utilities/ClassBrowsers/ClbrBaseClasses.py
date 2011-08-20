@@ -222,7 +222,12 @@ class Function(ClbrBase):
     """
     Class to represent a function or method.
     """
-    def __init__(self, module, name, file, lineno, signature='', separator=','):
+    General = 0
+    Static = 1
+    Class = 2
+    
+    def __init__(self, module, name, file, lineno, signature='', separator=',',
+                 modifierType=General):
         """
         Constructor
         
@@ -232,9 +237,11 @@ class Function(ClbrBase):
         @param lineno linenumber of the class definition
         @param signature parameterlist of the method
         @param separator string separating the parameters
+        @param modifierType type of the function
         """
         ClbrBase.__init__(self, module, name, file, lineno)
         self.parameters = [e.strip() for e in signature.split(separator)]
+        self.modifier = modifierType
 
 
 class Coding(ClbrBase):

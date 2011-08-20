@@ -94,6 +94,12 @@ _py_getnext = re.compile(r"""
         \#\#\#
     )
 
+|   (?P<MethodModifier>
+        ^
+        (?P<MethodModifierIndent> [ \t]* )
+        (?P<MethodModifierType> @classmethod | @staticmethod )
+    )
+
 |   (?P<Method>
         (^ [ \t]* @ (?: PyQt4 \. )? (?: QtCore \. )? (?: pyqtSignature | pyqtSlot )
             [ \t]* \(
@@ -479,13 +485,18 @@ class Module(object):
         i = 0
         modulelevel = 1
         cur_obj = self
+        modifierType = Function.General
+        modifierIndent = -1
         while True:
             m = self._getnext(src, i)
             if not m:
                 break
             start, i = m.span()
             
-            if m.start("Method") >= 0:
+            if m.start("MethodModifier") >= 0:
+                modifierIndent = _indent(m.group("MethodModifierIndent"))
+                modifierType = m.group("MethodModifierType")
+            elif m.start("Method") >= 0:
                 # found a method definition or function
                 thisindent = _indent(m.group("MethodIndent"))
                 meth_name = m.group("MethodName")
@@ -501,6 +512,15 @@ class Module(object):
                     meth_pyqtSig = None
                 lineno = lineno + src.count('\n', last_lineno_pos, start)
                 last_lineno_pos = start
+                if modifierType and modifierIndent == thisindent:
+                    if modifierType == "@staticmethod":
+                        modifier = Function.Static
+                    elif modifierType == "@classmethod":
+                        modifier = Function.Class
+                    else:
+                        modifier = Function.General
+                else:
+                    modifier = Function.General
                 # modify indentation level for conditional defines
                 if conditionalsstack:
                     if thisindent > conditionalsstack[-1]:
@@ -538,24 +558,28 @@ class Module(object):
                         if isinstance(cur_class, Class):
                             # it's a class method
                             f = Function(None, meth_name, None, lineno,
-                                         meth_sig, meth_pyqtSig)
+                                         meth_sig, meth_pyqtSig, modifierType=modifier)
                             self.__py_setVisibility(f)
                             cur_class.addMethod(meth_name, f)
                             break
                     else:
                         # it's a nested function of a module function
                         f = Function(self.name, meth_name, self.file, lineno,
-                                     meth_sig, meth_pyqtSig)
+                                     meth_sig, meth_pyqtSig, modifierType=modifier)
                         self.__py_setVisibility(f)
                         self.addFunction(meth_name, f)
                 else:
                     # it's a module function
                     f = Function(self.name, meth_name, self.file, lineno,
-                                 meth_sig, meth_pyqtSig)
+                                 meth_sig, meth_pyqtSig, modifierType=modifier)
                     self.__py_setVisibility(f)
                     self.addFunction(meth_name, f)
                 cur_obj = f
                 classstack.append((None, thisindent))  # Marker for nested fns
+                
+                # reset the modifier settings
+                modifierType = Function.General
+                modifierIndent = -1
             
             elif m.start("Docstring") >= 0:
                 contents = m.group("DocstringContents3")
@@ -1216,7 +1240,12 @@ class Function(VisibilityBase):
     '''
     Class to represent a Python function or method.
     '''
-    def __init__(self, module, name, file, lineno, signature='', pyqtSignature=None):
+    General = 0
+    Static = 1
+    Class = 2
+    
+    def __init__(self, module, name, file, lineno, signature='', pyqtSignature=None,
+                 modifierType=General):
         """
         Constructor
         
@@ -1226,6 +1255,7 @@ class Function(VisibilityBase):
         @param lineno linenumber of the function definition (integer)
         @param signature the functions call signature (string)
         @param pyqtSignature the functions PyQt signature (string)
+        @param modifierType type of the function
         """
         self.module = module
         self.name = name
@@ -1235,6 +1265,7 @@ class Function(VisibilityBase):
         self.parameters = [e.strip() for e in signature.split(',')]
         self.description = ""
         self.pyqtSignature = pyqtSignature
+        self.modifier = modifierType
         self.setPublic()
     
     def addDescription(self, description):

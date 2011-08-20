@@ -18,7 +18,7 @@ from . import TemplatesListsStyle
 from . import TemplatesListsStyleCSS
 
 from Utilities import html_uencode
-from Utilities.ModuleParser import RB_SOURCE
+from Utilities.ModuleParser import RB_SOURCE, Function
 
 _signal = re.compile(r"""
     ^@signal [ \t]+
@@ -376,7 +376,12 @@ class ModuleDocument(object):
                 supers = 'None'
             
             globalsList = self.__genGlobalsListSection(_class)
-            methList, methBodies = self.__genMethodSection(_class, className)
+            classMethList, classMethBodies = \
+                self.__genMethodSection(_class, className, Function.Class)
+            methList, methBodies = \
+                self.__genMethodSection(_class, className, Function.General)
+            staticMethList, staticMethBodies = \
+                self.__genMethodSection(_class, className, Function.Static)
             
             try:
                 clsBody = self.classTemplate.format(**{ \
@@ -385,8 +390,10 @@ class ModuleDocument(object):
                     'ClassSuper': supers,
                     'ClassDescription': self.__formatDescription(_class.description),
                     'GlobalsList': globalsList,
+                    'ClassMethodList': classMethList,
                     'MethodList': methList,
-                    'MethodDetails': methBodies,
+                    'StaticMethodList': staticMethList,
+                    'MethodDetails': classMethBodies + methBodies + staticMethBodies,
                 })
             except TagError as e:
                 sys.stderr.write("Error in tags of description of class {0}.\n".format(
@@ -398,30 +405,33 @@ class ModuleDocument(object):
             
         return ''.join(classes)
         
-    def __genMethodsListSection(self, names, dict, className, clsName):
+    def __genMethodsListSection(self, names, dict, className, clsName,
+                                includeInit=True):
         """
         Private method to generate the methods list section of a class.
         
-        @param names The names to appear in the list. (list of strings)
-        @param dict A dictionary containing all relevant information.
-        @param className The class name containing the names.
-        @param clsName The visible class name containing the names.
-        @return The list section. (string)
+        @param names names to appear in the list (list of strings)
+        @param dict dictionary containing all relevant information
+        @param className class name containing the names
+        @param clsName visible class name containing the names
+        @param includeInit flag indicating to include the __init__ method (boolean)
+        @return methods list section (string)
         """
         lst = []
-        try:
-            lst.append(self.listEntryTemplate.format(**{ \
-                'Link': "{0}.{1}".format(className, '__init__'),
-                'Name': clsName,
-                'Description': self.__getShortDescription(dict['__init__'].description),
-                'Deprecated': self.__checkDeprecated(dict['__init__'].description) and \
-                               self.listEntryDeprecatedTemplate or "",
-            }))
-            self.keywords.append(("{0} (Constructor)".format(className),
-                                  "#{0}.{1}".format(className, '__init__')))
-        except KeyError:
-            pass
-            
+        if includeInit:
+            try:
+                lst.append(self.listEntryTemplate.format(**{ \
+                    'Link': "{0}.{1}".format(className, '__init__'),
+                    'Name': clsName,
+                    'Description': self.__getShortDescription(dict['__init__'].description),
+                    'Deprecated': self.__checkDeprecated(dict['__init__'].description) and \
+                                   self.listEntryDeprecatedTemplate or "",
+                }))
+                self.keywords.append(("{0} (Constructor)".format(className),
+                                      "#{0}.{1}".format(className, '__init__')))
+            except KeyError:
+                pass
+        
         for name in names:
             lst.append(self.listEntryTemplate.format(**{ \
                 'Link': "{0}.{1}".format(className, name),
@@ -434,17 +444,19 @@ class ModuleDocument(object):
                                   "#{0}.{1}".format(className, name)))
         return ''.join(lst)
         
-    def __genMethodSection(self, obj, className):
+    def __genMethodSection(self, obj, className, filter):
         """
         Private method to generate the method details section.
         
-        @param obj Reference to the object being formatted.
-        @param className Name of the class containing the method. (string)
-        @return The method list and method details section. (tuple of two string)
+        @param obj reference to the object being formatted
+        @param className name of the class containing the method (string)
+        @param filter filter value designating the method types
+        @return method list and method details section (tuple of two string)
         """
         methList = []
         methBodies = []
-        methods = sorted(list(obj.methods.keys()))
+        methods = sorted([k for k in obj.methods.keys()
+                          if obj.methods[k].modifier == filter])
         if '__init__' in methods:
             methods.remove('__init__')
             try:
@@ -463,13 +475,20 @@ class ModuleDocument(object):
                 sys.stderr.write("{0}\n".format(e))
                 methBody = ""
             methBodies.append(methBody)
-            
+        
+        if filter == Function.Class:
+            methodClassifier = " (class method)"
+        elif filter == Function.Static:
+            methodClassifier = " (static)"
+        else:
+            methodClassifier = ""
         for method in methods:
             try:
                 methBody = self.methodTemplate.format(**{ \
                     'Anchor': className,
                     'Class': obj.name,
                     'Method': obj.methods[method].name,
+                    'MethodClassifier': methodClassifier,
                     'MethodDescription': \
                         self.__formatDescription(obj.methods[method].description),
                     'Params': ', '.join(obj.methods[method].parameters[1:]),
@@ -482,7 +501,8 @@ class ModuleDocument(object):
                 methBody = ""
             methBodies.append(methBody)
             
-        methList = self.__genMethodsListSection(methods, obj.methods, className, obj.name)
+        methList = self.__genMethodsListSection(methods, obj.methods, className,
+            obj.name, includeInit='__init__' in methods)
         
         if not methList:
             methList = self.listEntryNoneTemplate
@@ -501,7 +521,8 @@ class ModuleDocument(object):
         for rbModuleName in rbModulesNames:
             rbModule = self.module.modules[rbModuleName]
             globalsList = self.__genGlobalsListSection(rbModule)
-            methList, methBodies = self.__genMethodSection(rbModule, rbModuleName)
+            methList, methBodies = \
+                self.__genMethodSection(rbModule, rbModuleName, Function.General)
             classList, classBodies = \
                 self.__genRbModulesClassesSection(rbModule, rbModuleName)
             
@@ -545,7 +566,8 @@ class ModuleDocument(object):
             else:
                 supers = 'None'
             
-            methList, methBodies = self.__genMethodSection(_class, className)
+            methList, methBodies = \
+                self.__genMethodSection(_class, className, Function.General)
             
             try:
                 clsBody = self.rbModulesClassTemplate.format(**{ \
