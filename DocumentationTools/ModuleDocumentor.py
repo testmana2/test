@@ -423,9 +423,11 @@ class ModuleDocument(object):
                 lst.append(self.listEntryTemplate.format(**{ \
                     'Link': "{0}.{1}".format(className, '__init__'),
                     'Name': clsName,
-                    'Description': self.__getShortDescription(dict['__init__'].description),
-                    'Deprecated': self.__checkDeprecated(dict['__init__'].description) and \
-                                   self.listEntryDeprecatedTemplate or "",
+                    'Description': self.__getShortDescription(
+                                        dict['__init__'].description),
+                    'Deprecated': self.__checkDeprecated(
+                                    dict['__init__'].description) and \
+                                  self.listEntryDeprecatedTemplate or "",
                 }))
                 self.keywords.append(("{0} (Constructor)".format(className),
                                       "#{0}.{1}".format(className, '__init__')))
@@ -502,7 +504,7 @@ class ModuleDocument(object):
             methBodies.append(methBody)
             
         methList = self.__genMethodsListSection(methods, obj.methods, className,
-            obj.name, includeInit='__init__' in methods)
+            obj.name, includeInit=filter == Function.General)
         
         if not methList:
             methList = self.listEntryNoneTemplate

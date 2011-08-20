@@ -283,6 +283,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
         if m.start("MethodModifier") >= 0:
             modifierIndent = _indent(m.group("MethodModifierIndent"))
             modifierType = m.group("MethodModifierType")
+        
         elif m.start("Method") >= 0:
             # found a method definition or function
             thisindent = _indent(m.group("MethodIndent"))
