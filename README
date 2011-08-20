@@ -16,20 +16,25 @@ README for the eric5 IDE
         If the required packages (Qt4, QScintilla2, sip and PyQt4) are not installed, 
         please get them and install them in the following order (order is important).
         
-            1. Install Qt4
+            1. Install Qt4 (from Nokia)
             
-            2. Build and install sip
+            2. Build and install QScintilla2 (from Riverbank Computing)
             
-            3. Build and install QScintilla2
+            3. Build and install sip (from Riverbank Computing)
             
-            4. Build and install PyQt4
+            4. Build and install PyQt4 (from Riverbank Computing)
             
             5. Build and install QScintilla2 Python bindings
+               (part of the QScintilla2 package)
             
             6. Install eric5
         
         If you want to use the interfaces to other supported software packages, you may
         install them in any order and at any time.
+        
+        Please note, that the QScintilla2 Python bindings have to be rebuild, if
+        the PyQt4 package gets updated. If this step is omitted, a bunch of strange
+        errors will occur.
     
     Installation of translations
     
@@ -130,9 +135,12 @@ README for the eric5 IDE
             Qt-Assistant 
                 This is part of the Qt distribution and may be used to display help files.
             
+            Mercurial
+                This is a distributed version control system available from
+                <mercurial.selenic.com>. It is the one used by eric5 itself.
+            
             Subversion 
-                This is another version control system available from 
-                <subversion.tigris.org>. It is meant to be the successor of CVS.
+                This is a version control system available from <subversion.apache.org>.
                 eric5 supports two different Subversion interfaces. One is using
                 the svn command line tool, the other is using the PySvn Python
                 interface <pysvn.tigris.org>. The selection is done automatically
@@ -161,9 +169,6 @@ README for the eric5 IDE
     
         Some of the interfaces provided as plugins are as follows.
         
-            CVS 
-                This is a version control system available from <www.cvshome.org>.
-            
             pylint
                 This is a tool to check the source code according to various rules.
                 It is available from <http://www.logilab.org/projects/pylint>.
