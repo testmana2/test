@@ -12,7 +12,7 @@ import os
 import imp
 import shutil
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtCore import pyqtSlot, pyqtSignal
 from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout, QMainWindow
 
 from E5Gui import E5MessageBox
@@ -25,6 +25,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
     """
     Class implementing a dialog for plugin deinstallation.
     """
+    accepted = pyqtSignal()
+    
     def __init__(self, pluginManager, parent=None):
         """
         Constructor
