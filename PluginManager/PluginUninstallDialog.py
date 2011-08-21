@@ -24,6 +24,8 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
     """
     Class implementing a dialog for plugin deinstallation.
     """
+    accepted = pyqtSignal()
+    
     def __init__(self, pluginManager, parent = None):
         """
         Constructor
