@@ -42999,12 +42999,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="44"/>
         <source>Enter the location here.</source>
-        <translation>Задайте адрес.</translation>
+        <translation type="obsolete">Задайте адрес.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="158"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="159"/>
         <source>Unknown</source>
         <translation>Неизвестный</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="45"/>
+        <source>Enter the URL here.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

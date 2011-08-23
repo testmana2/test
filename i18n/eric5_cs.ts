@@ -43287,14 +43287,14 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>UrlBar</name>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="44"/>
-        <source>Enter the location here.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="158"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="159"/>
         <source>Unknown</source>
         <translation type="unfinished">Neznámý</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="45"/>
+        <source>Enter the URL here.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

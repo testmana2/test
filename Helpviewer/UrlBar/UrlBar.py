@@ -41,7 +41,8 @@ class UrlBar(E5LineEdit):
         @param parent reference to the parent widget (HelpBrowser)
         """
         E5LineEdit.__init__(self, parent)
-        self.setInactiveText(self.trUtf8("Enter the location here."))
+        self.setInactiveText(self.trUtf8("Enter the URL here."))
+        self.setWhatsThis(self.trUtf8("Enter the URL here."))
         
         self.__mw = mainWindow
         self.__browser = None

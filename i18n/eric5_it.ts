@@ -42819,12 +42819,17 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="44"/>
         <source>Enter the location here.</source>
-        <translation>Inserisci l&apos;indirizzo qui.</translation>
+        <translation type="obsolete">Inserisci l&apos;indirizzo qui.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="158"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="159"/>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="45"/>
+        <source>Enter the URL here.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -42696,14 +42696,14 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>UrlBar</name>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="44"/>
-        <source>Enter the location here.</source>
-        <translation>Geben sie den Pfad hier ein.</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="158"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="159"/>
         <source>Unknown</source>
         <translation>Unbekannt</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="45"/>
+        <source>Enter the URL here.</source>
+        <translation>Geben sie die URL hier ein.</translation>
     </message>
 </context>
 <context>
