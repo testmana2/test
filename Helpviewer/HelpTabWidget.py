@@ -423,7 +423,7 @@ class HelpTabWidget(E5TabWidget):
                 frame.print_(printer)
             except AttributeError:
                 E5MessageBox.critical(self,
-                    self.trUtf8("Eric Web Browser"),
+                    self.trUtf8("eric5 Web Browser"),
                     self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                                 """Please upgrade.</p>"""))
                 return
@@ -464,7 +464,7 @@ class HelpTabWidget(E5TabWidget):
                 frame.print_(printer)
             except AttributeError:
                 E5MessageBox.critical(self,
-                    self.trUtf8("Eric Web Browser"),
+                    self.trUtf8("eric5 Web Browser"),
                     self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                                 """Please upgrade.</p>"""))
                 return
@@ -513,7 +513,7 @@ class HelpTabWidget(E5TabWidget):
             self.__printPreviewBrowser.print_(printer)
         except AttributeError:
             E5MessageBox.critical(self,
-                self.trUtf8("Eric Web Browser"),
+                self.trUtf8("eric5 Web Browser"),
                 self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
                             """Please upgrade.</p>"""))
             return

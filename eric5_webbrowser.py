@@ -69,7 +69,7 @@ def main():
         ("--search=word", "search for the given word")
     ]
     appinfo = Startup.makeAppInfo(sys.argv,
-                                  "Eric5 web browser",
+                                  "eric5 Web Browser",
                                   "file",
                                   "web browser",
                                   options)

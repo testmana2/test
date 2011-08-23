@@ -2060,12 +2060,17 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="UI/BrowserModel.py" line="613"/>
         <source>Attributes (global)</source>
-        <translation>Atributy (globální)</translation>
+        <translation type="obsolete">Atributy (globální)</translation>
     </message>
     <message>
         <location filename="UI/BrowserModel.py" line="557"/>
         <source>Coding: {0}</source>
         <translation>Kódování: {0}</translation>
+    </message>
+    <message>
+        <location filename="UI/BrowserModel.py" line="613"/>
+        <source>Class Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3096,7 +3101,7 @@ to display the configuration page.</source>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="327"/>
         <source>Eric Web Browser</source>
-        <translation>Eric web prohlížeč</translation>
+        <translation type="obsolete">Eric web prohlížeč</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="473"/>
@@ -3137,6 +3142,11 @@ to display the configuration page.</source>
         <location filename="Preferences/ConfigurationDialog.py" line="307"/>
         <source>Security</source>
         <translation type="unfinished">Bezpečnost</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
 </context>
 <context>
@@ -12840,7 +12850,7 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
         <source>Web Browser</source>
-        <translation>Web prohlížeč</translation>
+        <translation type="obsolete">Web prohlížeč</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="830"/>
@@ -12961,6 +12971,11 @@ se zobrazenými položkami.&lt;/p&gt;
         <location filename="Helpviewer/HelpBrowserWV.py" line="834"/>
         <source>Scan Image with VirusTotal</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
 </context>
 <context>
@@ -13376,7 +13391,7 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
         <source>Eric Web Browser</source>
-        <translation type="unfinished">Eric web prohlížeč</translation>
+        <translation type="obsolete">Eric web prohlížeč</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
@@ -13427,6 +13442,11 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpTabWidget.py" line="654"/>
         <source>C&amp;lose Current Tab</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
 </context>
 <context>
@@ -15337,22 +15357,22 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1628"/>
         <source>Eric Web Browser</source>
-        <translation>Eric web prohlížeč</translation>
+        <translation type="obsolete">Eric web prohlížeč</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1619"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;O Eric web prohlížeči&lt;/h3&gt;&lt;p&gt;Eric web prohlížeč je kombinace souboru nápovědy a HTML prohlížeče.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;h3&gt;O Eric web prohlížeči&lt;/h3&gt;&lt;p&gt;Eric web prohlížeč je kombinace souboru nápovědy a HTML prohlížeče.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="516"/>
         <source>Quit the web browser</source>
-        <translation>Ukončit web prohlížeč</translation>
+        <translation type="obsolete">Ukončit web prohlížeč</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="517"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Ukončit&lt;/b&gt;&lt;p&gt;Ukončit web prohlížeč.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Ukončit&lt;/b&gt;&lt;p&gt;Ukončit web prohlížeč.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1045"/>
@@ -15578,6 +15598,21 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="2771"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <source>Quit the eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="517"/>
+        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1619"/>
+        <source>&lt;h3&gt;About eric5 Web Browser&lt;/h3&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22517,12 +22552,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
         <source>Welcome to Eric Web Browser!</source>
-        <translation>Vítejte v Eric web prohlížeči!</translation>
+        <translation type="obsolete">Vítejte v Eric web prohlížeči!</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
         <source>Eric Web Browser</source>
-        <translation>Eric web prohlížeč</translation>
+        <translation type="obsolete">Eric web prohlížeč</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="97"/>
@@ -22532,12 +22567,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
         <source>About Eric</source>
-        <translation>O Erikovi</translation>
+        <translation type="obsolete">O Erikovi</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="136"/>
         <source>Search results provided by {0}</source>
         <translation>Výsledek vyhledávání dodaný od {0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
+        <source>Welcome to eric5 Web Browser!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
+        <source>About eric5</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27065,37 +27115,37 @@ Vyberte Obnovit.</translation>
 <context>
     <name>PluginUninstallWidget</name>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="46"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="48"/>
         <source>User plugins directory</source>
         <translation>Uživatelský adresář s pluginy</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="51"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="53"/>
         <source>Global plugins directory</source>
         <translation>Globální adresář s pluginy</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>Plugin Uninstallation</source>
         <translation>Odinstalace pluginu</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="93"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="95"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; could not be unloaded. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin &lt;b&gt;{0}&lt;/b&gt; nemůže být nenačten. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="103"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="105"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; has no &apos;packageName&apos; attribute. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pluginu &lt;b&gt;{0}&lt;/b&gt; chybí atribut &apos;packageName&apos;. Zrušeno...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="141"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="143"/>
         <source>&lt;p&gt;The plugin package &lt;b&gt;{0}&lt;/b&gt; could not be removed. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin balíček &lt;b&gt;{0}&lt;/b&gt; nelze odebrat. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; was uninstalled successfully from {1}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Plugin &lt;b&gt;{0}&lt;/b&gt; byl úspěšně odinstalován z {1}.&lt;/p&gt;</translation>
     </message>
@@ -33221,6 +33271,65 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <source>Find Prev</source>
         <translation>Najít předchozí</translation>
     </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="51"/>
+        <source>
+&lt;b&gt;Find and Replace&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text and replace it with another text.
+By checking the various checkboxes, the search can be made more specific. The search
+string might be a regular expression. In a regular expression, special characters
+interpreted are:&lt;/p&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="61"/>
+        <source>
+&lt;b&gt;Find&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text. By checking the various checkboxes, the search
+can be made more specific. The search string might be a regular expression. In a regular
+expression, special characters interpreted are:&lt;/p&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="72"/>
+        <source>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Matches any character&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the start of a region for tagging a match.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the end of a tagged region.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where &lt;code&gt;n&lt;/code&gt; is 1 through 9 refers to the first through ninth tagged region
+when replacing. For example, if the search string was &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; and
+the replace string was &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, when applied to &lt;code&gt;Fred2XXX&lt;/code&gt; this
+would generate &lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a word using Scintilla&apos;s definitions of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the end of a word using Scintilla&apos;s definition of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This allows you to use a character x that would otherwise have a special meaning. For
+example, \[ would be interpreted as [ and not as the start of a character set.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This indicates a set of characters, for example, [abc] means any of the characters a,
+b or c. You can also use ranges, for example [a-z] for any lower case character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The complement of the characters in the set. For example, [^A-Za-z] means any
+character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a line (unless used inside a set, see above).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;This matches the end of a line.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 0 or more times. For example, &lt;code&gt;Sa*m&lt;/code&gt; matches &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 1 or more times. For example, &lt;code&gt;Sa+m&lt;/code&gt; matches
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchWidget</name>
@@ -33830,7 +33939,7 @@ Not connected</source>
         <translation>Okno</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>Edit shortcuts</source>
         <translation>Editovat kláv.zkratky</translation>
     </message>
@@ -33882,22 +33991,27 @@ Not connected</source>
     <message>
         <location filename="Preferences/ShortcutsDialog.py" line="180"/>
         <source>Web Browser</source>
-        <translation>Web prohlížeč</translation>
+        <translation type="obsolete">Web prohlížeč</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="296"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="297"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has already been allocated to the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; byla již spojena s akcí &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="315"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="316"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; hides the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; skrývá akci &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is hidden by the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; je skrytá v akci &lt;b&gt;{1}&lt;/b&gt;. Odebrat toto spojení?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ShortcutsDialog.py" line="180"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
 </context>
 <context>
@@ -42316,7 +42430,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>Web Browser</source>
-        <translation>Web prohlížeč</translation>
+        <translation type="obsolete">Web prohlížeč</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="70"/>
@@ -42347,6 +42461,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="101"/>
         <source>Icon Editor</source>
         <translation type="unfinished">Editor ikon</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="87"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
     </message>
 </context>
 <context>
@@ -44737,12 +44856,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/UserInterface.py" line="1902"/>
         <source>Web Browser</source>
-        <translation>Web prohlížeč</translation>
+        <translation type="obsolete">Web prohlížeč</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1902"/>
         <source>&amp;Web Browser...</source>
-        <translation>&amp;Web prohlížeč...</translation>
+        <translation type="obsolete">&amp;Web prohlížeč...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1914"/>
@@ -44827,7 +44946,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/UserInterface.py" line="1907"/>
         <source>&lt;b&gt;Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Web prohlížeč&lt;/b&gt;&lt;p&gt;Procházet internet pomocí eric5 web prohlížeče.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Web prohlížeč&lt;/b&gt;&lt;p&gt;Procházet internet pomocí eric5 web prohlížeče.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1918"/>
@@ -45171,6 +45290,21 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/UserInterface.py" line="5553"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">eric5 web prohlížeč</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 &amp;Web Browser...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1907"/>
+        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1899,13 +1899,13 @@ class UserInterface(QMainWindow):
         self.miniEditorAct.triggered[()].connect(self.__openMiniEditor)
         self.actions.append(self.miniEditorAct)
 
-        self.webBrowserAct = E5Action(self.trUtf8('Web Browser'),
+        self.webBrowserAct = E5Action(self.trUtf8('eric5 Web Browser'),
                 UI.PixmapCache.getIcon("ericWeb.png"),
-                self.trUtf8('&Web Browser...'),
+                self.trUtf8('eric5 &Web Browser...'),
                 0, 0, self, 'web_browser')
         self.webBrowserAct.setStatusTip(self.trUtf8('Start the eric5 Web Browser'))
         self.webBrowserAct.setWhatsThis(self.trUtf8(
-            """<b>Web Browser</b>"""
+            """<b>eric5 Web Browser</b>"""
             """<p>Browse the Internet with the eric5 Web Browser.</p>"""
         ))
         self.webBrowserAct.triggered[()].connect(self.__startWebBrowser)

@@ -513,10 +513,10 @@ class HelpWindow(QMainWindow):
             self.trUtf8('&Quit'),
             QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")),
             0, self, 'help_file_quit')
-        self.exitAct.setStatusTip(self.trUtf8('Quit the web browser'))
+        self.exitAct.setStatusTip(self.trUtf8('Quit the eric5 Web Browser'))
         self.exitAct.setWhatsThis(self.trUtf8(
                 """<b>Quit</b>"""
-                """<p>Quit the web browser.</p>"""
+                """<p>Quit the eric5 Web Browser.</p>"""
         ))
         if not self.initShortcutsOnly:
             if self.fromEric:
@@ -1616,16 +1616,16 @@ class HelpWindow(QMainWindow):
         """
         Private slot to show the about information.
         """
-        E5MessageBox.about(self, self.trUtf8("Eric Web Browser"), self.trUtf8(
-            """<h3>About Eric Web Browser</h3>"""
-            """<p>The Eric Web Browser is a combined help file and HTML browser.</p>"""
+        E5MessageBox.about(self, self.trUtf8("eric5 Web Browser"), self.trUtf8(
+            """<h3>About eric5 Web Browser</h3>"""
+            """<p>The eric5 Web Browser is a combined help file and HTML browser.</p>"""
         ))
         
     def __aboutQt(self):
         """
         Private slot to show info about Qt.
         """
-        E5MessageBox.aboutQt(self, self.trUtf8("Eric Web Browser"))
+        E5MessageBox.aboutQt(self, self.trUtf8("eric5 Web Browser"))
 
     def setBackwardAvailable(self, b):
         """

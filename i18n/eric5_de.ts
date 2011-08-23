@@ -2066,8 +2066,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/BrowserModel.py" line="613"/>
-        <source>Attributes (global)</source>
-        <translation>Globale Attribute</translation>
+        <source>Class Attributes</source>
+        <translation>Klassenattribute</translation>
     </message>
 </context>
 <context>
@@ -3095,11 +3095,6 @@ um die Konfigurationsseite anzuzeigen.</translation>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
-        <source>Eric Web Browser</source>
-        <translation>Eric Web-Browser</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationDialog.py" line="240"/>
         <source>Keywords</source>
         <translation>Schlüsselwörter</translation>
@@ -3128,6 +3123,11 @@ um die Konfigurationsseite anzuzeigen.</translation>
         <location filename="Preferences/ConfigurationDialog.py" line="307"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
     </message>
 </context>
 <context>
@@ -12662,11 +12662,6 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Bildadresse in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
-        <source>Web Browser</source>
-        <translation>Web-Browser</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="830"/>
         <source>Block Image</source>
         <translation>Bild blockieren</translation>
@@ -12760,6 +12755,11 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Helpviewer/HelpBrowserWV.py" line="834"/>
         <source>Scan Image with VirusTotal</source>
         <translation>Bild mit VirusTotal überprüfen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
     </message>
 </context>
 <context>
@@ -13149,11 +13149,6 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
-        <source>Eric Web Browser</source>
-        <translation>Eric Web-Browser</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Drucken ist wegen eine Fehlers in PyQt4 nicht verfügbar. Bitte aktualisieren.&lt;/p&gt;</translation>
     </message>
@@ -13202,6 +13197,11 @@ Es sind %n Unterfenster offen.</numerusform>
         <location filename="Helpviewer/HelpTabWidget.py" line="654"/>
         <source>C&amp;lose Current Tab</source>
         <translation>A&amp;ktuelles Unterfenster schließen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
     </message>
 </context>
 <context>
@@ -15035,26 +15035,6 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Speichern unter&lt;/b&gt;&lt;p&gt;Dies speichert die aktuelle Seite in eine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1628"/>
-        <source>Eric Web Browser</source>
-        <translation>Eric Web-Browser</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1619"/>
-        <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Über Eric Web-Browser&lt;/h3&gt;&lt;p&gt;Der Eric-Web-Browser ist eine kombinierte Anzeige für Hilfe- und HTML-Dateien.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="516"/>
-        <source>Quit the web browser</source>
-        <translation>Beendet den Web-Browser</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpWindow.py" line="517"/>
-        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Beenden&lt;/b&gt;&lt;p&gt;Beendet den Web-Browser.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpWindow.py" line="1045"/>
         <source>Configure Search Engines</source>
         <translation>Suchmaschinen verwalten</translation>
@@ -15270,6 +15250,21 @@ Es sind %n Unterfenster offen.</numerusform>
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die VirusTotal Prüfung konnte nicht beauftragt werden.&lt;p&gt;
 &lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <source>Quit the eric5 Web Browser</source>
+        <translation>Beendet den eric5 Web-Browser</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="517"/>
+        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Beenden&lt;/b&gt;&lt;p&gt;Beendet den eric5 Web-Browser.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1619"/>
+        <source>&lt;h3&gt;About eric5 Web Browser&lt;/h3&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Über eric5 Web-Browser&lt;/h3&gt;&lt;p&gt;Der eric5-Web-Browser ist eine kombinierte Anzeige für Hilfe- und HTML-Dateien.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22168,24 +22163,24 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Suchergenisse durch {0} zur Verfügung gestellt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
-        <source>Welcome to Eric Web Browser!</source>
-        <translation>Willkommen bei Eric Web Browser!</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
-        <source>Eric Web Browser</source>
-        <translation>Eric Web-Browser</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="97"/>
         <source>Search!</source>
         <translation>Suchen!</translation>
     </message>
     <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
+        <source>Welcome to eric5 Web Browser!</source>
+        <translation>Willkommen beim eric5 Web Browser!</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
+    </message>
+    <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
-        <source>About Eric</source>
-        <translation>Über Eric</translation>
+        <source>About eric5</source>
+        <translation>Über eric5</translation>
     </message>
 </context>
 <context>
@@ -26546,37 +26541,37 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>PluginUninstallWidget</name>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="46"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="48"/>
         <source>User plugins directory</source>
         <translation>Nutzer Plugin Verzeichnis</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="51"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="53"/>
         <source>Global plugins directory</source>
         <translation>Globales Plugin Verzeichnis</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>Plugin Uninstallation</source>
         <translation>Plugin Deinstallation</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="93"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="95"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; could not be unloaded. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Plugin &lt;b&gt;{0}&lt;/b&gt; konnte nicht entladen werden. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="103"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="105"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; has no &apos;packageName&apos; attribute. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Plugin &lt;b&gt;{0}&lt;/b&gt; hat kein Attribut &apos;packageName&apos;. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="141"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="143"/>
         <source>&lt;p&gt;The plugin package &lt;b&gt;{0}&lt;/b&gt; could not be removed. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Plugin Packet &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelöscht werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; was uninstalled successfully from {1}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Plugin &lt;b&gt;{0}&lt;/b&gt; wurde erfolgreich von {1} deinstalliert.&lt;/p&gt;</translation>
     </message>
@@ -32634,6 +32629,103 @@ innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur w
         <source>Find Prev</source>
         <translation>Rückwärtssuchen</translation>
     </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="51"/>
+        <source>
+&lt;b&gt;Find and Replace&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text and replace it with another text.
+By checking the various checkboxes, the search can be made more specific. The search
+string might be a regular expression. In a regular expression, special characters
+interpreted are:&lt;/p&gt;
+</source>
+        <translation>&lt;b&gt;Suchen und Ersetzen&lt;/b&gt;
+&lt;p&gt;Dieser Dialog erlaubt es, nach einem Text zu suchen und ihn durch einen anderen zu ersetzen. 
+Durch Anwählen der verschiedenen Auswahlfelder kann die Suche eingegrenzt werden. Die Suchzeichenkette 
+kann ein regulärer Ausdruck sein. In einem regulären Ausdruck können folgende Spezialzeichen verwendet werden:&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="61"/>
+        <source>
+&lt;b&gt;Find&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text. By checking the various checkboxes, the search
+can be made more specific. The search string might be a regular expression. In a regular
+expression, special characters interpreted are:&lt;/p&gt;
+</source>
+        <translation>&lt;b&gt;Suchen&lt;/b&gt;
+&lt;p&gt;Dieser Dialog erlaubt es, nach einem Text zu suchen. 
+Durch Anwählen der verschiedenen Auswahlfelder kann die Suche eingegrenzt werden. Die Suchzeichenkette 
+kann ein regulärer Ausdruck sein. In einem regulären Ausdruck können folgende Spezialzeichen verwendet werden:&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="72"/>
+        <source>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Matches any character&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the start of a region for tagging a match.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the end of a tagged region.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where &lt;code&gt;n&lt;/code&gt; is 1 through 9 refers to the first through ninth tagged region
+when replacing. For example, if the search string was &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; and
+the replace string was &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, when applied to &lt;code&gt;Fred2XXX&lt;/code&gt; this
+would generate &lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a word using Scintilla&apos;s definitions of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the end of a word using Scintilla&apos;s definition of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This allows you to use a character x that would otherwise have a special meaning. For
+example, \[ would be interpreted as [ and not as the start of a character set.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This indicates a set of characters, for example, [abc] means any of the characters a,
+b or c. You can also use ranges, for example [a-z] for any lower case character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The complement of the characters in the set. For example, [^A-Za-z] means any
+character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a line (unless used inside a set, see above).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;This matches the end of a line.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 0 or more times. For example, &lt;code&gt;Sa*m&lt;/code&gt; matches &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 1 or more times. For example, &lt;code&gt;Sa+m&lt;/code&gt; matches
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</source>
+        <translation>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Findet jedes beliebige Zeichen&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Dies markiert den Start eines Bereiches, um eine Übereinstimmung zu benennen.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Dies markiert das Ende eines benannten Bereiches.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Mit &lt;code&gt;n&lt;/code&gt; zwischen 1 und 9 wird der erste bis neunte markierte Bereich bei Ersetzungen referenziert. Wenn die 
+Suchzeichenkette z.B. &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; und die Ersetzungszeichenkette &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt; war, so erzeugt dies 
+&lt;code&gt;Sam2YYY&lt;/code&gt;, wenn es auf &lt;code&gt;Fred2XXX&lt;/code&gt; angewendet wird.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies findet den Wortanfang gemäß der Scintilla Definition von Wort.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies findet das Wortende gemäß der Scintilla Definition von Wort.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies ermöglicht die Verwendung des Zeichens x, das andernfalls eine besondere Bedeutung hätte. So 
+würde z.B. \[ als [ interpretiert werden und nicht als der Begin eines Satzes an Zeichen.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies zeigt einen Satz an Zeichen an. So bedeutet z.B. [abc] eines der Zeichen a, b oder c. Es können auch 
+Bereiche angegeben werden, z.B. [a-z] für einen beliebigen klein geschriebenen Buchstaben.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Das Gegenteil der Zeichen im Satz. So bedeutet z.B. [^A-Za-z] ein beliebiges Zeichen mit Ausnahme 
+eines Buchstabens.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies findet den Zeilenanfang (sofern es nicht in einem Satz an zeichen verwendet wurde, siehe oben).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Dies findet das Zeilenende.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies findet 0 oder mehrmals. Z.B. findet &lt;code&gt;Sa*m&lt;/code&gt; &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; usw.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Dies findet 1 oder mehrmals. Z.B. findet &lt;code&gt;Sa+m&lt;/code&gt; &lt;code&gt;Sam&lt;/code&gt;, 
+&lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; usw.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</translation>
+    </message>
 </context>
 <context>
     <name>SearchWidget</name>
@@ -33193,7 +33285,7 @@ nicht verbunden</translation>
         <translation>Fenster</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>Edit shortcuts</source>
         <translation>Kurzbefehle bearbeiten</translation>
     </message>
@@ -33208,17 +33300,17 @@ nicht verbunden</translation>
         <translation>Lesezeichen</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="296"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="297"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has already been allocated to the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; wurde bereits der Aktion &lt;b&gt;{1}&lt;/b&gt; zugewiesen. Diese Bindung löschen?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="315"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="316"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; hides the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; verdeckt die Aktion &lt;b&gt;{1}&lt;/b&gt;. Diese Bindung löschen?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is hidden by the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; wird durch die Aktion &lt;b&gt;{1}&lt;/b&gt; verdeckt. Diese Bindung löschen?&lt;/p&gt;</translation>
     </message>
@@ -33301,8 +33393,8 @@ nicht verbunden</translation>
     </message>
     <message>
         <location filename="Preferences/ShortcutsDialog.py" line="180"/>
-        <source>Web Browser</source>
-        <translation>Web-Browser</translation>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
     </message>
 </context>
 <context>
@@ -41757,11 +41849,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>SQL Browser</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="87"/>
-        <source>Web Browser</source>
-        <translation>Web-Browser</translation>
-    </message>
-    <message>
         <location filename="Tools/TrayStarter.py" line="70"/>
         <source>Eric5 tray starter</source>
         <translation>Eric5 Systemstarter</translation>
@@ -41785,6 +41872,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="101"/>
         <source>Icon Editor</source>
         <translation>Icon Editor</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="87"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
     </message>
 </context>
 <context>
@@ -44275,16 +44367,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Ignorieren aber Behalten</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
-        <source>Web Browser</source>
-        <translation>Web-Browser</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1902"/>
-        <source>&amp;Web Browser...</source>
-        <translation>&amp;Web-Browser...</translation>
-    </message>
-    <message>
         <location filename="UI/UserInterface.py" line="1914"/>
         <source>Icon Editor</source>
         <translation>Icon Editor</translation>
@@ -44344,11 +44426,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <location filename="UI/UserInterface.py" line="1906"/>
         <source>Start the eric5 Web Browser</source>
         <translation>Startet den eric5 Web-Browser</translation>
-    </message>
-    <message>
-        <location filename="UI/UserInterface.py" line="1907"/>
-        <source>&lt;b&gt;Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Web-Browser&lt;/b&gt;&lt;p&gt;Durchforste das Internet mit dem eric5 Web-Browser.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1918"/>
@@ -44554,6 +44631,21 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <location filename="UI/UserInterface.py" line="5553"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>Die Versionsinformationen konnten seit 7 Tagen nicht heruntergeladen werden. Bitte gehen sie online und versuchen sie es erneut.</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 Web Browser</source>
+        <translation>eric5 Web-Browser</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 &amp;Web Browser...</source>
+        <translation>eric5 &amp;Web-Browser...</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1907"/>
+        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;eric5 Web-Browser&lt;/b&gt;&lt;p&gt;Durchforste das Internet mit dem eric5 Web-Browser.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

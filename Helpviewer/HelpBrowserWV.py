@@ -92,10 +92,10 @@ class JavaScriptEricObject(QObject):
     """
     # these must be in line with the strings used by the javascript part of the start page
     translations = [
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Welcome to Eric Web Browser!"),
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Eric Web Browser"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "Welcome to eric5 Web Browser!"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "eric5 Web Browser"),
         QT_TRANSLATE_NOOP("JavaScriptEricObject", "Search!"),
-        QT_TRANSLATE_NOOP("JavaScriptEricObject", "About Eric"),
+        QT_TRANSLATE_NOOP("JavaScriptEricObject", "About eric5"),
     ]
     
     def __init__(self, mw, parent=None):
@@ -579,7 +579,7 @@ class HelpBrowser(QWebView):
             
             if not QFileInfo(name.toLocalFile()).exists():
                 E5MessageBox.critical(self,
-                    self.trUtf8("Web Browser"),
+                    self.trUtf8("eric5 Web Browser"),
                     self.trUtf8("""<p>The file <b>{0}</b> does not exist.</p>""")\
                         .format(name.toLocalFile()))
                 return
@@ -591,7 +591,7 @@ class HelpBrowser(QWebView):
                 started = QDesktopServices.openUrl(name)
                 if not started:
                     E5MessageBox.critical(self,
-                        self.trUtf8("Web Browser"),
+                        self.trUtf8("eric5 Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
                 return
@@ -599,7 +599,7 @@ class HelpBrowser(QWebView):
             started = QDesktopServices.openUrl(name)
             if not started:
                 E5MessageBox.critical(self,
-                    self.trUtf8("Web Browser"),
+                    self.trUtf8("eric5 Web Browser"),
                     self.trUtf8("""<p>Could not start an application"""
                     """ for URL <b>{0}</b>.</p>""").format(name.toString()))
             return
@@ -616,7 +616,7 @@ class HelpBrowser(QWebView):
                 started = QDesktopServices.openUrl(name)
                 if not started:
                     E5MessageBox.critical(self,
-                        self.trUtf8("Web Browser"),
+                        self.trUtf8("eric5 Web Browser"),
                         self.trUtf8("""<p>Could not start a viewer"""
                         """ for file <b>{0}</b>.</p>""").format(name.path()))
                 return

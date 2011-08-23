@@ -260,7 +260,7 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("VirusTotal Interface"), "virustotal.png",
                     "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage": \
-                    [self.trUtf8("Eric Web Browser"), "ericWeb.png",
+                    [self.trUtf8("eric5 Web Browser"), "ericWeb.png",
                     "HelpWebBrowserPage", "0helpPage", None],
                 
                 "0projectPage": \
@@ -324,7 +324,7 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("VirusTotal Interface"), "virustotal.png",
                     "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage": \
-                    [self.trUtf8("Eric Web Browser"), "ericWeb.png",
+                    [self.trUtf8("eric5 Web Browser"), "ericWeb.png",
                     "HelpWebBrowserPage", "0helpPage", None],
             }
         elif displayMode == ConfigurationWidget.TrayStarterMode:

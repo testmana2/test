@@ -2064,7 +2064,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="UI/BrowserModel.py" line="613"/>
         <source>Attributes (global)</source>
-        <translation>Nitelikler (Küresel)</translation>
+        <translation type="obsolete">Nitelikler (Küresel)</translation>
+    </message>
+    <message>
+        <location filename="UI/BrowserModel.py" line="613"/>
+        <source>Class Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3069,7 +3074,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="327"/>
         <source>Eric Web Browser</source>
-        <translation>Eric Web Gözatıcısı</translation>
+        <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="273"/>
@@ -3137,6 +3142,11 @@ göstermek için gelen listeyi seçiniz.</translation>
         <location filename="Preferences/ConfigurationDialog.py" line="307"/>
         <source>Security</source>
         <translation type="unfinished">Güvenlik</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationDialog.py" line="327"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
 </context>
 <context>
@@ -12787,7 +12797,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
         <source>Web Browser</source>
-        <translation>Web Gözatıcısı</translation>
+        <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="581"/>
@@ -12973,6 +12983,11 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <location filename="Helpviewer/HelpBrowserWV.py" line="834"/>
         <source>Scan Image with VirusTotal</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
 </context>
 <context>
@@ -13383,7 +13398,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
         <source>Eric Web Browser</source>
-        <translation>Eric Web Gözatıcısı</translation>
+        <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
@@ -13433,6 +13448,11 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpTabWidget.py" line="654"/>
         <source>C&amp;lose Current Tab</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
 </context>
 <context>
@@ -14369,12 +14389,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="516"/>
         <source>Quit the web browser</source>
-        <translation>Web Gözatıcısından Çık</translation>
+        <translation type="obsolete">Web Gözatıcısından Çık</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="517"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the web browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Çık&lt;/b&gt;&lt;p&gt;Web gözatıcısından çık.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Çık&lt;/b&gt;&lt;p&gt;Web gözatıcısından çık.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="528"/>
@@ -15368,7 +15388,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1628"/>
         <source>Eric Web Browser</source>
-        <translation>Eric Web Gözatıcısı</translation>
+        <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1661"/>
@@ -15378,7 +15398,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1619"/>
         <source>&lt;h3&gt;About Eric Web Browser&lt;/h3&gt;&lt;p&gt;The Eric Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Eric Web Gözatıcısı Hakkındar&lt;/h3&gt;&lt;p&gt;Eric Web Gözatıcısı Yardım dosyası ve HTML gözatıcısının birleştirilmiş halidir.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;h3&gt;Eric Web Gözatıcısı Hakkındar&lt;/h3&gt;&lt;p&gt;Eric Web Gözatıcısı Yardım dosyası ve HTML gözatıcısının birleştirilmiş halidir.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1698"/>
@@ -15579,6 +15599,21 @@ You have %n tab(s) open.</source>
         <location filename="Helpviewer/HelpWindow.py" line="2771"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="516"/>
+        <source>Quit the eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="517"/>
+        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1619"/>
+        <source>&lt;h3&gt;About eric5 Web Browser&lt;/h3&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22472,12 +22507,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
         <source>Welcome to Eric Web Browser!</source>
-        <translation>Eric Web Gözatıcısına Hoşgeldiniz!</translation>
+        <translation type="obsolete">Eric Web Gözatıcısına Hoşgeldiniz!</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
         <source>Eric Web Browser</source>
-        <translation>Eric Web Gözatıcısı</translation>
+        <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="97"/>
@@ -22487,12 +22522,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
         <source>About Eric</source>
-        <translation>Eric Hakkında</translation>
+        <translation type="obsolete">Eric Hakkında</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="136"/>
         <source>Search results provided by {0}</source>
         <translation>Arama souçları {0} tarafından sağlanıyor</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
+        <source>Welcome to eric5 Web Browser!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
+        <source>About eric5</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -26994,37 +27044,37 @@ Select Update.</source>
 <context>
     <name>PluginUninstallWidget</name>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="46"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="48"/>
         <source>User plugins directory</source>
         <translation>Kullanıcı eklentiler dizini</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="51"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="53"/>
         <source>Global plugins directory</source>
         <translation>Evrensel eklentiler dizini</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>Plugin Uninstallation</source>
         <translation>Eklenti Kaldırımı</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="93"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="95"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; could not be unloaded. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eklenti &lt;b&gt;{0}&lt;/b&gt; kaldırılamıyor. İptal ediliyor...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="103"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="105"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; has no &apos;packageName&apos; attribute. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;eklenti &lt;b&gt;{0}&lt;/b&gt; &apos;packageName&apos; özniteliğine sahip değil. İptal ediliyor...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="141"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="143"/>
         <source>&lt;p&gt;The plugin package &lt;b&gt;{0}&lt;/b&gt; could not be removed. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eklenti paketi &lt;b&gt;{0}&lt;/b&gt; kaldırılamadı. İptal ediliyor...&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginUninstallDialog.py" line="148"/>
+        <location filename="PluginManager/PluginUninstallDialog.py" line="150"/>
         <source>&lt;p&gt;The plugin &lt;b&gt;{0}&lt;/b&gt; was uninstalled successfully from {1}.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eklenti &lt;b&gt;{0}&lt;/b&gt; {1}den tam olarak kaldırıldı.&lt;/p&gt;</translation>
     </message>
@@ -33055,6 +33105,65 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="51"/>
+        <source>
+&lt;b&gt;Find and Replace&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text and replace it with another text.
+By checking the various checkboxes, the search can be made more specific. The search
+string might be a regular expression. In a regular expression, special characters
+interpreted are:&lt;/p&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="61"/>
+        <source>
+&lt;b&gt;Find&lt;/b&gt;
+&lt;p&gt;This dialog is used to find some text. By checking the various checkboxes, the search
+can be made more specific. The search string might be a regular expression. In a regular
+expression, special characters interpreted are:&lt;/p&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="72"/>
+        <source>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Matches any character&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the start of a region for tagging a match.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;This marks the end of a tagged region.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where &lt;code&gt;n&lt;/code&gt; is 1 through 9 refers to the first through ninth tagged region
+when replacing. For example, if the search string was &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; and
+the replace string was &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, when applied to &lt;code&gt;Fred2XXX&lt;/code&gt; this
+would generate &lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a word using Scintilla&apos;s definitions of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the end of a word using Scintilla&apos;s definition of words.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This allows you to use a character x that would otherwise have a special meaning. For
+example, \[ would be interpreted as [ and not as the start of a character set.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This indicates a set of characters, for example, [abc] means any of the characters a,
+b or c. You can also use ranges, for example [a-z] for any lower case character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;The complement of the characters in the set. For example, [^A-Za-z] means any
+character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches the start of a line (unless used inside a set, see above).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;This matches the end of a line.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 0 or more times. For example, &lt;code&gt;Sa*m&lt;/code&gt; matches &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This matches 1 or more times. For example, &lt;code&gt;Sa+m&lt;/code&gt; matches
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SearchWidget</name>
@@ -33703,27 +33812,32 @@ Bağlantı yok</translation>
     <message>
         <location filename="Preferences/ShortcutsDialog.py" line="180"/>
         <source>Web Browser</source>
-        <translation>Web Gözatıcısı</translation>
+        <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>Edit shortcuts</source>
         <translation>Kısayolları düzenle</translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="296"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="297"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; has already been allocated to the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="315"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="316"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; hides the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ShortcutsDialog.py" line="330"/>
+        <location filename="Preferences/ShortcutsDialog.py" line="331"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is hidden by the &lt;b&gt;{1}&lt;/b&gt; action. Remove this binding?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ShortcutsDialog.py" line="180"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
 </context>
 <context>
@@ -42078,7 +42192,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>Web Browser</source>
-        <translation>Web Gözatıcısı</translation>
+        <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="91"/>
@@ -42154,6 +42268,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="101"/>
         <source>Icon Editor</source>
         <translation type="unfinished">İkon Düzenleyici</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="87"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
 </context>
 <context>
@@ -43925,12 +44044,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1902"/>
         <source>Web Browser</source>
-        <translation>Web Gözatıcısı</translation>
+        <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1902"/>
         <source>&amp;Web Browser...</source>
-        <translation>&amp;Web Gözatıcısı...</translation>
+        <translation type="obsolete">&amp;Web Gözatıcısı...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1906"/>
@@ -43940,7 +44059,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1907"/>
         <source>&lt;b&gt;Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Web Gözatıcısı&lt;/b&gt;&lt;p&gt;İnternete eric5 Web Gözatıcısını kullanarak gözatınız.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Web Gözatıcısı&lt;/b&gt;&lt;p&gt;İnternete eric5 Web Gözatıcısını kullanarak gözatınız.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1914"/>
@@ -44952,6 +45071,21 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="5553"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1902"/>
+        <source>eric5 &amp;Web Browser...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1907"/>
+        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

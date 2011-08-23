@@ -150,12 +150,12 @@ body {
     <script type="text/javascript">
         function update()
         {
-            document.title = window.eric.translate('Welcome to Eric Web Browser!');
-            document.getElementById('headerTitle').innerHTML = window.eric.translate('Eric Web Browser');
+            document.title = window.eric.translate('Welcome to eric5 Web Browser!');
+            document.getElementById('headerTitle').innerHTML = window.eric.translate('eric5 Web Browser');
             document.getElementById('searchButton').value = window.eric.translate('Search!');
             document.getElementById('footer').innerHTML = window.eric.providerString()
                                                           + ' | ' + '<a href="http://eric-ide.python-projects.org/">'
-                                                          + window.eric.translate('About Eric') + '</a>';
+                                                          + window.eric.translate('About eric5') + '</a>';
             document.getElementById('lineEdit').placeholder = window.eric.providerString();
 
             // Try to change the direction of the page:

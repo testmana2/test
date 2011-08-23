@@ -177,7 +177,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                                                 objectType=objectType)
                 self.pluginCategoryItems.append(categoryItem)
         
-        self.helpViewerItem = self.__generateCategoryItem(self.trUtf8("Web Browser"))
+        self.helpViewerItem = self.__generateCategoryItem(
+            self.trUtf8("eric5 Web Browser"))
         for act in e5App().getObject("DummyHelpViewer").getActions():
             self.__generateShortcutItem(self.helpViewerItem, act, True)
         

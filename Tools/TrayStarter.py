@@ -85,7 +85,7 @@ class TrayStarter(QSystemTrayIcon):
         self.__menu.addAction(UI.PixmapCache.getIcon("unittest.png"),
             self.trUtf8("Unittest"), self.__startUnittest)
         self.__menu.addAction(UI.PixmapCache.getIcon("ericWeb.png"),
-            self.trUtf8("Web Browser"), self.__startHelpViewer)
+            self.trUtf8("eric5 Web Browser"), self.__startHelpViewer)
         self.__menu.addSeparator()
         
         self.__menu.addAction(UI.PixmapCache.getIcon("diffFiles.png"),
