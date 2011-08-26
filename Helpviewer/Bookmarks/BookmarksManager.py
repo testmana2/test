@@ -333,7 +333,7 @@ class BookmarksManager(QObject):
         """
         supportedFormats = [
             self.trUtf8("XBEL bookmarks") + " (*.xbel *.xml)",
-            self.trUtf8("HTML Netscape bookmarks") + " (*.html)"
+            self.trUtf8("HTML Netscape bookmarks") + " (*.html *.htm)"
         ]
         
         fileName = E5FileDialog.getOpenFileName(
