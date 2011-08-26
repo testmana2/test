@@ -1667,12 +1667,18 @@ class Hg(VersionControl):
         """
         status = False
         ignorePatterns = [
-            "glob:.eric5project", 
-            "glob:.ropeproject", 
-            "glob:.directory", 
-            "glob:**.pyc", 
-            "glob:**.orig", 
-            "glob:**.bak", 
+            "glob:.eric5project",
+            "glob:_eric5project",
+            "glob:.ropeproject",
+            "glob:_ropeproject",
+            "glob:.directory",
+            "glob:**.pyc",
+            "glob:**.pyo",
+            "glob:**.orig",
+            "glob:**.bak",
+            "glob:**.rej",
+            "glob:**~",
+            "glob:__pycache__",
         ]
         
         ignoreName = os.path.join(name, ".hgignore")
