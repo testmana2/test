@@ -198,7 +198,7 @@ class Project(QObject):
             "Python2": Preferences.getPython("PythonExtensions"),
             "Python3": Preferences.getPython("Python3Extensions"),
             "Ruby": ['.rb'],
-            "Mixed": ['.py', '.ptl', '.rb']
+            "Mixed": Preferences.getPython("Python3Extensions") + ['.rb'],
         }
         
         self.dbgFilters = {
@@ -2680,7 +2680,12 @@ class Project(QObject):
         @return default extension (including the dot) (string)
         """
         if self.pdata["PROGLANGUAGE"]:
-            return self.sourceExtensions[self.pdata["PROGLANGUAGE"][0]][0]
+            lang = self.pdata["PROGLANGUAGE"][0]
+            if lang == "":
+                lang = "Python3"
+            elif lang == "Python":
+                lang = "Python2"
+            return self.sourceExtensions[lang][0]
         else:
             return ""
         
