@@ -38,8 +38,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = vcs.getClient()
         
         self.annotateList.headerItem().setText(self.annotateList.columnCount(), "")
         font = QFont(self.annotateList.font())
@@ -51,9 +51,13 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
     
     def closeEvent(self, e):
         """
@@ -99,23 +103,35 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         args.append('--quiet')
         args.append(fn)
         
-        self.process.kill()
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -193,13 +209,21 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         while self.process.canReadLine():
             s = str(self.process.readLine(), self.__ioEncoding, 'replace').strip()
-            try:
-                info, text = s.split(": ", 1)
-            except ValueError:
-                info = s[:-2]
-                text = ""
-            author, rev, changeset, date, file = info.split()
-            self.__generateItem(rev, changeset, author, date, text)
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        try:
+            info, text = line.split(": ", 1)
+        except ValueError:
+            info = line[:-2]
+            text = ""
+        author, rev, changeset, date, file = info.split()
+        self.__generateItem(rev, changeset, author, date, text)
     
     def __readStderr(self):
         """
@@ -213,8 +237,17 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

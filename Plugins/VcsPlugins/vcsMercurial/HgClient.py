@@ -36,6 +36,7 @@ class HgClient(QObject):
         super().__init__(parent)
         
         self.__server = QProcess()
+        self.__server.setWorkingDirectory(repoPath)
         self.__started = False
         self.__version = None
         self.__encoding = Preferences.getSystem("IOEncoding")

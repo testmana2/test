@@ -53,6 +53,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
+        self.__hgClient = self.vcs.getClient()
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn, Qt.AscendingOrder)
@@ -180,13 +181,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.statusFilterCombo.clear()
         self.__statusFilters = []
         
-        if self.process:
-            self.process.kill()
-        else:
-            self.process = QProcess()
-            self.process.finished.connect(self.__procFinished)
-            self.process.readyReadStandardOutput.connect(self.__readStdout)
-            self.process.readyReadStandardError.connect(self.__readStderr)
+        self.setWindowTitle(self.trUtf8('Mercurial Status'))
         
         args = []
         args.append('status')
@@ -207,24 +202,42 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             if repodir == os.sep:
                 return
         
-        self.process.setWorkingDirectory(repodir)
-        
-        self.setWindowTitle(self.trUtf8('Mercurial Status'))
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            if self.process:
+                self.process.kill()
+            else:
+                self.process = QProcess()
+                self.process.finished.connect(self.__procFinished)
+                self.process.readyReadStandardOutput.connect(self.__readStdout)
+                self.process.readyReadStandardError.connect(self.__readStderr)
+            
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -297,9 +310,17 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 line = str(self.process.readLine(),
                         Preferences.getSystem("IOEncoding"),
                         'replace')
-                if line[0] in "ACIMR?!" and line[1] == " ":
-                    status, path = line.strip().split(" ", 1)
-                    self.__generateItem(status, path)
+                self.__processOutputLine(line)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        if line[0] in "ACIMR?!" and line[1] == " ":
+            status, path = line.strip().split(" ", 1)
+            self.__generateItem(status, path)
     
     def __readStderr(self):
         """
@@ -313,8 +334,17 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

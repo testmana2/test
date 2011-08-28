@@ -80,6 +80,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         else:
             self.commandMode = "log"
         self.bundle = bundle
+        self.__hgClient = vcs.getClient()
         
         self.__initData()
         
@@ -106,10 +107,13 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__edgesRole = Qt.UserRole + 2
         self.__parentsRole = Qt.UserRole + 3
         
-        self.process = QProcess()
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.flags = {
             'A': self.trUtf8('Added'),
@@ -360,7 +364,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         errMsg = ""
         parents = [-1]
         
-        process = QProcess()
         args = []
         args.append("parents")
         if self.commandMode == "incoming":
@@ -377,28 +380,35 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if not self.projectMode:
             args.append(self.filename)
         
-        process.setWorkingDirectory(self.repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
-                parents = [int(p) for p in output.strip().splitlines()]
-            else:
-                if not finished:
-                    errMsg = self.trUtf8(
-                        "The hg process did not finish within 30s.")
+        output = ""
+        if self.__hgClient:
+            output, errMsg = self.__hgClient.runcommand(args)
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            process = QProcess()
+            process.setWorkingDirectory(self.repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+                else:
+                    if not finished:
+                        errMsg = self.trUtf8(
+                            "The hg process did not finish within 30s.")
+            else:
+                errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
+        
+        if output:
+            parents = [int(p) for p in output.strip().splitlines()]
         
         return parents
     
@@ -408,35 +418,41 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         errMsg = ""
         
-        process = QProcess()
         args = []
         args.append("identify")
         args.append("-n")
         
-        process.setWorkingDirectory(self.repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
-                self.__projectRevision = output.strip()
-                if self.__projectRevision.endswith("+"):
-                    self.__projectRevision = self.__projectRevision[:-1]
-            else:
-                if not finished:
-                    errMsg = self.trUtf8(
-                        "The hg process did not finish within 30s.")
+        output = ""
+        if self.__hgClient:
+            output, errMsg = self.__hgClient.runcommand(args)
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            process = QProcess()
+            process.setWorkingDirectory(self.repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+                else:
+                    if not finished:
+                        errMsg = self.trUtf8(
+                            "The hg process did not finish within 30s.")
+            else:
+                errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
+        
+        if output:
+            self.__projectRevision = output.strip()
+            if self.__projectRevision.endswith("+"):
+                self.__projectRevision = self.__projectRevision[:-1]
     
     def __getClosedBranches(self):
         """
@@ -445,37 +461,43 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__closedBranchesRevs = []
         errMsg = ""
         
-        process = QProcess()
         args = []
         args.append("branches")
         args.append("--closed")
         
-        process.setWorkingDirectory(self.repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
-                for line in output.splitlines():
-                    if line.strip().endswith("(closed)"):
-                        parts = line.split()
-                        self.__closedBranchesRevs.append(
-                            parts[-2].split(":", 1)[0])
-            else:
-                if not finished:
-                    errMsg = self.trUtf8(
-                        "The hg process did not finish within 30s.")
+        output = ""
+        if self.__hgClient:
+            output, errMsg = self.__hgClient.runcommand(args)
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            process = QProcess()
+            process.setWorkingDirectory(self.repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+                else:
+                    if not finished:
+                        errMsg = self.trUtf8(
+                            "The hg process did not finish within 30s.")
+            else:
+                errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
+        
+        if output:
+            for line in output.splitlines():
+                if line.strip().endswith("(closed)"):
+                    parts = line.split()
+                    self.__closedBranchesRevs.append(
+                        parts[-2].split(":", 1)[0])
     
     def __generateLogItem(self, author, date, message, revision, changedPaths,
                           parents, branches, tags, bookmarks=None):
@@ -585,15 +607,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
         
-        self.intercept = False
-        self.process.kill()
-        
         self.buf = []
         self.cancelled = False
         self.errors.clear()
-        
-        self.inputGroup.setEnabled(True)
-        self.inputGroup.show()
         
         args = []
         args.append(self.commandMode)
@@ -633,18 +649,32 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if not self.projectMode:
             args.append(self.filename)
         
-        self.process.setWorkingDirectory(self.repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
-            self.inputGroup.setEnabled(False)
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+        if self.__hgClient:
+            out, err = self.__hgClient.runcommand(args)
+            self.buf = out.splitlines(True)
+            if err:
+                self.__showError(err)
+            self.__processBuffer()
+            self.__finish()
+        else:
+            self.intercept = False
+            self.process.kill()
+            
+            self.process.setWorkingDirectory(self.repodir)
+            
+            self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
     
     def start(self, fn):
         """
@@ -871,8 +901,17 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             s = str(self.process.readAllStandardError(),
                      Preferences.getSystem("IOEncoding"),
                      'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def __diffRevisions(self, rev1, rev2):
         """
