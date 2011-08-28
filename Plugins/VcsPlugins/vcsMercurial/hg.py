@@ -45,6 +45,7 @@ from .HgBundleDialog import HgBundleDialog
 from .HgBackoutDialog import HgBackoutDialog
 from .HgServeDialog import HgServeDialog
 from .HgUtilities import getConfigPath
+from .HgClient import HgClient
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -142,6 +143,8 @@ class Hg(VersionControl):
         self.__iniWatcher.fileChanged.connect(self.__iniFileChanged)
         self.__iniWatcher.addPath(getConfigPath())
         
+        self.__client = None
+        
         # instantiate the extensions
         self.__extensions = {
             "bookmarks": Bookmarks(self),
@@ -189,6 +192,17 @@ class Hg(VersionControl):
         # shut down the extensions
         for extension in self.__extensions.values():
             extension.shutdown()
+        
+        # shut down the client
+        self.__client and self.__client.stopServer()
+    
+    def getClient(self):
+        """
+        Public method to get a reference to the command server interface.
+        
+        @return reference to the client (HgClient)
+        """
+        return self.__client
     
     def vcsExists(self):
         """
@@ -272,6 +286,7 @@ class Hg(VersionControl):
         args = []
         args.append('init')
         args.append(projectDir)
+        # init is not possible with the command server
         dia = HgDialog(self.trUtf8('Creating Mercurial repository'))
         res = dia.startProcess(args)
         if res:
@@ -287,7 +302,8 @@ class Hg(VersionControl):
                 args.append('--addremove')
                 args.append('--message')
                 args.append(msg)
-                dia = HgDialog(self.trUtf8('Initial commit to Mercurial repository'))
+                dia = HgDialog(self.trUtf8('Initial commit to Mercurial repository'),
+                               self)
                 res = dia.startProcess(args, projectDir)
                 if res:
                     dia.exec_()
@@ -326,9 +342,14 @@ class Hg(VersionControl):
         args.append(projectDir)
         
         if noDialog:
-            return self.startSynchronizedProcess(QProcess(), 'hg', args)
+            if self.__client is None:
+                return self.startSynchronizedProcess(QProcess(), 'hg', args)
+            else:
+                out, err = self.__client.runcommand(args)
+                return err == ""
         else:
-            dia = HgDialog(self.trUtf8('Cloning project from a Mercurial repository'))
+            dia = HgDialog(self.trUtf8('Cloning project from a Mercurial repository'),
+                           self)
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -424,7 +445,8 @@ class Hg(VersionControl):
         if noDialog:
             self.startSynchronizedProcess(QProcess(), "hg", args, dname)
         else:
-            dia = HgDialog(self.trUtf8('Commiting changes to Mercurial repository'))
+            dia = HgDialog(self.trUtf8('Committing changes to Mercurial repository'),
+                           self)
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
@@ -469,10 +491,14 @@ class Hg(VersionControl):
                 return False
         
         if noDialog:
-            self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
+            if self.__client is None:
+                self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+            else:
+                out, err = self.__client.runcommand(args)
             res = False
         else:
-            dia = HgDialog(self.trUtf8('Synchronizing with the Mercurial repository'))
+            dia = HgDialog(self.trUtf8('Synchronizing with the Mercurial repository'),
+                           self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -518,10 +544,13 @@ class Hg(VersionControl):
             args.append(name)
         
         if noDialog:
-            self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
+            if self.__client is None:
+                self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+            else:
+                out, err = self.__client.runcommand(args)
         else:
             dia = HgDialog(
-                self.trUtf8('Adding files/directories to the Mercurial repository'))
+                self.trUtf8('Adding files/directories to the Mercurial repository'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -578,10 +607,15 @@ class Hg(VersionControl):
                 return False
         
         if noDialog:
-            res = self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
+            if self.__client is None:
+                res = self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+            else:
+                out, err = self.__client.runcommand(args)
+                res = err == ""
         else:
             dia = HgDialog(
-                self.trUtf8('Removing files/directories from the Mercurial repository'))
+                self.trUtf8('Removing files/directories from the Mercurial repository'),
+                self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -637,8 +671,13 @@ class Hg(VersionControl):
             
             if noDialog:
                 res = self.startSynchronizedProcess(QProcess(), "hg", args, repodir)
+                if self.__client is None:
+                    res = self.startSynchronizedProcess(QProcess(), 'hg', args, repodir)
+                else:
+                    out, err = self.__client.runcommand(args)
+                    res = err == ""
             else:
-                dia = HgDialog(self.trUtf8('Renaming {0}').format(name))
+                dia = HgDialog(self.trUtf8('Renaming {0}').format(name), self)
                 res = dia.startProcess(args, repodir)
                 if res:
                     dia.exec_()
@@ -743,7 +782,7 @@ class Hg(VersionControl):
             args.append("Removed tag <{0}>.".format(tag))
         args.append(tag)
         
-        dia = HgDialog(self.trUtf8('Taging in the Mercurial repository'))
+        dia = HgDialog(self.trUtf8('Taging in the Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -773,7 +812,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Reverting changes'))
+        dia = HgDialog(self.trUtf8('Reverting changes'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -821,7 +860,7 @@ class Hg(VersionControl):
             args.append("--rev")
             args.append(rev)
         
-        dia = HgDialog(self.trUtf8('Merging').format(name))
+        dia = HgDialog(self.trUtf8('Merging').format(name), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -883,32 +922,40 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return 0
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append('status')
         args.append('--all')
         args.append('--noninteractive')
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for line in output.splitlines():
-                    flag, path = line.split(" ", 1)
-                    absname = os.path.join(repodir, os.path.normcase(path))
-                    if flag not in "?I":
-                        if fname == '.':
-                            if absname.startswith(dname + os.path.sep):
-                                return self.canBeCommitted
-                            if absname == dname:
-                                return self.canBeCommitted
-                        else:
-                            if absname == name:
-                                return self.canBeCommitted
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            for line in output.splitlines():
+                flag, path = line.split(" ", 1)
+                absname = os.path.join(repodir, os.path.normcase(path))
+                if flag not in "?I":
+                    if fname == '.':
+                        if absname.startswith(dname + os.path.sep):
+                            return self.canBeCommitted
+                        if absname == dname:
+                            return self.canBeCommitted
+                    else:
+                        if absname == name:
+                            return self.canBeCommitted
         
         return self.canBeAdded
     
@@ -944,44 +991,52 @@ class Hg(VersionControl):
                 if repodir == os.sep:
                     return names
         
-            ioEncoding = Preferences.getSystem("IOEncoding")
-            process = QProcess()
             args = []
             args.append('status')
             args.append('--all')
             args.append('--noninteractive')
-            process.setWorkingDirectory(dname)
-            process.start('hg', args)
-            procStarted = process.waitForStarted()
-            if procStarted:
-                finished = process.waitForFinished(30000)
-                if finished and process.exitCode() == 0:
-                    dirs = [x for x in names.keys() if os.path.isdir(x)]
-                    output = \
-                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                    for line in output.splitlines():
-                        flag, path = line.split(" ", 1)
-                        name = os.path.normcase(os.path.join(repodir, path))
-                        dirName = os.path.dirname(name)
-                        if name.startswith(dname):
-                            if flag not in "?I":
-                                if name in names:
-                                    names[name] = self.canBeCommitted
-                                if dirName in names:
-                                    names[dirName] = self.canBeCommitted
-                                if dirs:
-                                    for d in dirs:
-                                        if name.startswith(d):
-                                            names[d] = self.canBeCommitted
-                                            dirs.remove(d)
-                                            break
+            
+            output = ""
+            if self.__client is None:
+                process = QProcess()
+                process.setWorkingDirectory(dname)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished and process.exitCode() == 0:
+                        output = \
+                            str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+            else:
+                output, error = self.__client.runcommand(args)
+            
+            if output:
+                dirs = [x for x in names.keys() if os.path.isdir(x)]
+                for line in output.splitlines():
+                    flag, path = line.split(" ", 1)
+                    name = os.path.normcase(os.path.join(repodir, path))
+                    dirName = os.path.dirname(name)
+                    if name.startswith(dname):
                         if flag not in "?I":
-                            self.statusCache[name] = self.canBeCommitted
-                            self.statusCache[dirName] = self.canBeCommitted
-                        else:
-                            self.statusCache[name] = self.canBeAdded
-                            if dirName not in self.statusCache:
-                                self.statusCache[dirName] = self.canBeAdded
+                            if name in names:
+                                names[name] = self.canBeCommitted
+                            if dirName in names:
+                                names[dirName] = self.canBeCommitted
+                            if dirs:
+                                for d in dirs:
+                                    if name.startswith(d):
+                                        names[d] = self.canBeCommitted
+                                        dirs.remove(d)
+                                        break
+                    if flag not in "?I":
+                        self.statusCache[name] = self.canBeCommitted
+                        self.statusCache[dirName] = self.canBeCommitted
+                    else:
+                        self.statusCache[name] = self.canBeAdded
+                        if dirName not in self.statusCache:
+                            self.statusCache[dirName] = self.canBeAdded
         
         return names
     
@@ -1044,7 +1099,7 @@ class Hg(VersionControl):
                 if repodir == os.sep:
                     return
             
-            dia = HgDialog(self.trUtf8('Mercurial command'))
+            dia = HgDialog(self.trUtf8('Mercurial command'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1077,65 +1132,78 @@ class Hg(VersionControl):
         """
         info = []
         
-        process = QProcess()
         args = []
         args.append('parents')
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{bookmarks}\n')
-        process.setWorkingDirectory(ppath)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = str(process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"), 'replace')
-                index = 0
-                for line in output.splitlines():
-                    index += 1
-                    changeset, tags, author, date, branches, bookmarks = line.split("@@@")
-                    cdate, ctime = date.split()[:2]
-                    info.append("""<p><table>""")
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            process.setWorkingDirectory(ppath)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            index = 0
+            for line in output.splitlines():
+                index += 1
+                changeset, tags, author, date, branches, bookmarks = line.split("@@@")
+                cdate, ctime = date.split()[:2]
+                info.append("""<p><table>""")
+                info.append(QApplication.translate("mercurial",
+                    """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
+                    """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
+                    .format(index, changeset))
+                if tags:
                     info.append(QApplication.translate("mercurial",
-                        """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
-                        """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")\
-                        .format(index, changeset))
-                    if tags:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(tags.split())))
-                    if bookmarks:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(bookmarks.split())))
-                    if branches:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(branches.split())))
+                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(tags.split())))
+                if bookmarks:
                     info.append(QApplication.translate("mercurial",
-                        """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
-                        """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
-                        """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
-                        .format(author, cdate, ctime))
-                    info.append("""</table></p>""")
+                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(bookmarks.split())))
+                if branches:
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(branches.split())))
+                info.append(QApplication.translate("mercurial",
+                    """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
+                    """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
+                    """<tr><td><b>Committed time</b></td><td>{2}</td></tr>""")\
+                    .format(author, cdate, ctime))
+                info.append("""</table></p>""")
         
         url = ""
         args = []
         args.append('showconfig')
         args.append('paths.default')
-        process.setWorkingDirectory(ppath)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = str(process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"), 'replace')
-                if output:
-                    url = output.splitlines()[0].strip()
-                else:
-                    url = ""
+        
+        output = ""
+        if self.__client is None:
+            process.setWorkingDirectory(ppath)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            url = output.splitlines()[0].strip()
+        else:
+            url = ""
         
         return QApplication.translate('mercurial',
             """<h3>Repository information</h3>\n"""
@@ -1222,7 +1290,7 @@ class Hg(VersionControl):
                     return False
             
             dia = HgDialog(self.trUtf8('Copying {0}')
-                .format(name))
+                .format(name), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1242,30 +1310,38 @@ class Hg(VersionControl):
         @param repodir directory name of the repository (string)
         @return list of tags (list of string)
         """
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append('tags')
         args.append('--verbose')
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                self.tagsList = []
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for line in output.splitlines():
-                    l = line.strip().split()
-                    if l[-1][0] in "1234567890":
-                        # last element is a rev:changeset
-                        del l[-1]
-                    else:
-                        del l[-2:]
-                    name = " ".join(l)
-                    if name not in ["tip", "default"]:
-                        self.tagsList.append(name)
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            self.tagsList = []
+            for line in output.splitlines():
+                l = line.strip().split()
+                if l[-1][0] in "1234567890":
+                    # last element is a rev:changeset
+                    del l[-1]
+                else:
+                    del l[-2:]
+                name = " ".join(l)
+                if name not in ["tip", "default"]:
+                    self.tagsList.append(name)
         
         return self.tagsList[:]
     
@@ -1276,30 +1352,38 @@ class Hg(VersionControl):
         @param repodir directory name of the repository (string)
         @return list of branches (list of string)
         """
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append('branches')
         args.append('--closed')
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                self.branchesList = []
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for line in output.splitlines():
-                    l = line.strip().split()
-                    if l[-1][0] in "1234567890":
-                        # last element is a rev:changeset
-                        del l[-1]
-                    else:
-                        del l[-2:]
-                    name = " ".join(l)
-                    if name not in ["tip", "default"]:
-                        self.branchesList.append(name)
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            self.branchesList = []
+            for line in output.splitlines():
+                l = line.strip().split()
+                if l[-1][0] in "1234567890":
+                    # last element is a rev:changeset
+                    del l[-1]
+                else:
+                    del l[-2:]
+                name = " ".join(l)
+                if name not in ["tip", "default"]:
+                    self.branchesList.append(name)
         
         return self.branchesList[:]
     
@@ -1474,7 +1558,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Pulling from a remote Mercurial repository'))
+        dia = HgDialog(self.trUtf8('Pulling from a remote Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1506,7 +1590,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Pushing to a remote Mercurial repository'))
+        dia = HgDialog(self.trUtf8('Pushing to a remote Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1525,75 +1609,80 @@ class Hg(VersionControl):
         
         info = []
         
-        # find the root of the repo
-        repodir = self.splitPath(ppath)[0]
-        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
-                return
-        
-        process = QProcess()
         args = []
         args.append(mode)
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{parents}@@@{bookmarks}\n')
         
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = str(process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"), 'replace')
-                index = 0
-                for line in output.splitlines():
-                    index += 1
-                    changeset, tags, author, date, branches, parents, bookmarks = \
-                        line.split("@@@")
-                    cdate, ctime = date.split()[:2]
-                    info.append("""<p><table>""")
-                    if mode == "heads":
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Head #{0}</b></td><td></td></tr>\n"""
-                            .format(index, changeset)))
-                    elif mode == "parents":
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
-                            .format(index, changeset)))
-                    elif mode == "tip":
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Tip</b></td><td></td></tr>\n"""))
+        output = ""
+        if self.__client is None:
+            # find the root of the repo
+            repodir = self.splitPath(ppath)[0]
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if repodir == os.sep:
+                    return
+            
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            index = 0
+            for line in output.splitlines():
+                index += 1
+                changeset, tags, author, date, branches, parents, bookmarks = \
+                    line.split("@@@")
+                cdate, ctime = date.split()[:2]
+                info.append("""<p><table>""")
+                if mode == "heads":
                     info.append(QApplication.translate("mercurial",
-                        """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")\
-                        .format(changeset))
-                    if tags:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(tags.split())))
-                    if bookmarks:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(bookmarks.split())))
-                    if branches:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(branches.split())))
-                    if parents:
-                        info.append(QApplication.translate("mercurial",
-                            """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")\
-                            .format('<br/>'.join(parents.split())))
+                        """<tr><td><b>Head #{0}</b></td><td></td></tr>\n"""
+                        .format(index, changeset)))
+                elif mode == "parents":
                     info.append(QApplication.translate("mercurial",
-                        """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
-                        """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
-                        """<tr><td><b>Committed time</b></td><td>{2}</td></tr>\n"""
-                        """</table></p>""")\
-                        .format(author, cdate, ctime))
-                
-                dlg = VcsRepositoryInfoDialog(None, "\n".join(info))
-                dlg.exec_()
-    
+                        """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
+                        .format(index, changeset)))
+                elif mode == "tip":
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Tip</b></td><td></td></tr>\n"""))
+                info.append(QApplication.translate("mercurial",
+                    """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")\
+                    .format(changeset))
+                if tags:
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(tags.split())))
+                if bookmarks:
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(bookmarks.split())))
+                if branches:
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(branches.split())))
+                if parents:
+                    info.append(QApplication.translate("mercurial",
+                        """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")\
+                        .format('<br/>'.join(parents.split())))
+                info.append(QApplication.translate("mercurial",
+                    """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
+                    """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
+                    """<tr><td><b>Committed time</b></td><td>{2}</td></tr>\n"""
+                    """</table></p>""")\
+                    .format(author, cdate, ctime))
+            
+            dlg = VcsRepositoryInfoDialog(None, "\n".join(info))
+            dlg.exec_()
 
     def hgResolve(self, name):
         """
@@ -1620,8 +1709,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return False
         
-        dia = HgDialog(
-            self.trUtf8('Resolving files/directories'))
+        dia = HgDialog(self.trUtf8('Resolving files/directories'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1653,7 +1741,8 @@ class Hg(VersionControl):
             args.append('branch')
             args.append(name.strip().replace(" ", "_"))
             
-            dia = HgDialog(self.trUtf8('Creating branch in the Mercurial repository'))
+            dia = HgDialog(self.trUtf8('Creating branch in the Mercurial repository'),
+                           self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1676,7 +1765,7 @@ class Hg(VersionControl):
         args = []
         args.append("branch")
         
-        dia = HgDialog(self.trUtf8('Showing current branch'))
+        dia = HgDialog(self.trUtf8('Showing current branch'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -1733,7 +1822,8 @@ class Hg(VersionControl):
         args = []
         args.append('verify')
         
-        dia = HgDialog(self.trUtf8('Verifying the integrity of the Mercurial repository'))
+        dia = HgDialog(self.trUtf8('Verifying the integrity of the Mercurial repository'),
+                       self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1757,7 +1847,7 @@ class Hg(VersionControl):
         args.append('showconfig')
         args.append("--untrusted")
         
-        dia = HgDialog(self.trUtf8('Showing the combined configuration settings'))
+        dia = HgDialog(self.trUtf8('Showing the combined configuration settings'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -1780,7 +1870,7 @@ class Hg(VersionControl):
         args = []
         args.append('paths')
         
-        dia = HgDialog(self.trUtf8('Showing aliases for remote repositories'))
+        dia = HgDialog(self.trUtf8('Showing aliases for remote repositories'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -1803,7 +1893,7 @@ class Hg(VersionControl):
         args = []
         args.append('recover')
         
-        dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'))
+        dia = HgDialog(self.trUtf8('Recovering from interrupted transaction'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -1826,7 +1916,7 @@ class Hg(VersionControl):
         args = []
         args.append('identify')
         
-        dia = HgDialog(self.trUtf8('Identifying project directory'))
+        dia = HgDialog(self.trUtf8('Identifying project directory'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -1947,7 +2037,7 @@ class Hg(VersionControl):
                 args.append(compression)
             args.append(fname)
             
-            dia = HgDialog(self.trUtf8('Create changegroup'))
+            dia = HgDialog(self.trUtf8('Create changegroup'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2009,7 +2099,7 @@ class Hg(VersionControl):
             args.append('identify')
             args.append(file)
             
-            dia = HgDialog(self.trUtf8('Identifying changegroup file'))
+            dia = HgDialog(self.trUtf8('Identifying changegroup file'), self)
             res = dia.startProcess(args, repodir, False)
             if res:
                 dia.exec_()
@@ -2046,7 +2136,7 @@ class Hg(VersionControl):
                 args.append("--update")
             args.extend(files)
             
-            dia = HgDialog(self.trUtf8('Apply changegroups'))
+            dia = HgDialog(self.trUtf8('Apply changegroups'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2094,7 +2184,7 @@ class Hg(VersionControl):
         if rev:
             args.append(rev)
         
-        dia = HgDialog(self.trUtf8('Mercurial Bisect ({0})').format(subcommand))
+        dia = HgDialog(self.trUtf8('Mercurial Bisect ({0})').format(subcommand), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2127,7 +2217,7 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Removing files from the Mercurial repository only'))
+            self.trUtf8('Removing files from the Mercurial repository only'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2182,7 +2272,7 @@ class Hg(VersionControl):
             args.append(message)
             args.append(rev)
             
-            dia = HgDialog(self.trUtf8('Backing out changeset'))
+            dia = HgDialog(self.trUtf8('Backing out changeset'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2207,7 +2297,7 @@ class Hg(VersionControl):
             self.trUtf8("""Are you sure you want to rollback the last transaction?"""),
             icon=E5MessageBox.Warning)
         if res:
-            dia = HgDialog(self.trUtf8('Rollback last transaction'))
+            dia = HgDialog(self.trUtf8('Rollback last transaction'), self)
             res = dia.startProcess(["rollback"], repodir)
             if res:
                 dia.exec_()
@@ -2241,6 +2331,15 @@ class Hg(VersionControl):
         @param path name of the changed file (string)
         """
         self.__getExtensionsInfo()
+        
+        if self.__client:
+            ok, err = self.__client.restartServer()
+            if not ok:
+                E5MessageBox.warning(None,
+                    self.trUtf8("Mercurial Command Server"),
+                    self.trUtf8("""<p>The Mercurial Command Server could not be"""
+                                """ restarted.</p><p>Reason: {0}</p>""").format(err))
+                self.__client = None
     
     def __monitorRepoIniFile(self, name):
         """
@@ -2269,20 +2368,26 @@ class Hg(VersionControl):
         activeExtensions = sorted(self.__activeExtensions)
         self.__activeExtensions = []
         
-        process = QProcess()
         args = []
         args.append('showconfig')
         args.append('extensions')
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = str(process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"), 'replace')
-                for line in output.splitlines():
-                    extensionName = line.split("=", 1)[0].strip().split(".")[-1].strip()
-                    self.__activeExtensions.append(extensionName)
+        
+        if self.__client is None:
+            process = QProcess()
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                        Preferences.getSystem("IOEncoding"), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        if output:
+            for line in output.splitlines():
+                extensionName = line.split("=", 1)[0].strip().split(".")[-1].strip()
+                self.__activeExtensions.append(extensionName)
         
         if self.versionStr >= "1.8":
             if "bookmarks" not in self.__activeExtensions:
@@ -2334,7 +2439,19 @@ class Hg(VersionControl):
         """
         self.__projectHelper = self.__plugin.getProjectHelper()
         self.__projectHelper.setObjects(self, project)
-        self.__monitorRepoIniFile(project.ppath)
+        self.__monitorRepoIniFile(project.getProjectPath())
+        
+        if self.versionStr >= "1.9":
+            client = HgClient(project.getProjectPath(), "utf-8", self)
+            ok, err = client.startServer()
+            if ok:
+               self.__client = client
+            else:
+                E5MessageBox.warning(None,
+                    self.trUtf8("Mercurial Command Server"),
+                    self.trUtf8("""<p>The Mercurial Command Server could not be"""
+                                """ started.</p><p>Reason: {0}</p>""").format(err))
+        
         return self.__projectHelper
 
     ############################################################################

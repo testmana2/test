@@ -927,6 +927,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Utilities/crypto/py3PBKDF2.py</Source>
     <Source>Preferences/ConfigurationPages/SecurityPage.py</Source>
     <Source>UtilitiesPython2/PySideImporter.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgClient.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

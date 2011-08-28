@@ -27,11 +27,12 @@ class HgDialog(QDialog, Ui_HgDialog):
     shows the output of the process. The dialog is modal,
     which causes a synchronized execution of the process.
     """
-    def __init__(self, text, parent=None):
+    def __init__(self, text, hg=None, parent=None):
         """
         Constructor
         
         @param text text to be shown by the label (string)
+        @param hg reference to the Mercurial interface object (Hg)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
@@ -43,6 +44,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.proc = None
         self.username = ''
         self.password = ''
+        self.__hgClient = hg.getClient()
         
         self.outputGroup.setTitle(text)
     
@@ -114,33 +116,47 @@ class HgDialog(QDialog, Ui_HgDialog):
         else:
             self.__updateCommand = False
         
-        self.proc = QProcess()
-        
         if showArgs:
             self.resultbox.append(' '.join(args))
             self.resultbox.append('')
         
-        self.proc.finished.connect(self.__procFinished)
-        self.proc.readyReadStandardOutput.connect(self.__readStdout)
-        self.proc.readyReadStandardError.connect(self.__readStderr)
-        
-        if workingDir:
-            self.proc.setWorkingDirectory(workingDir)
-        self.proc.start('hg', args)
-        procStarted = self.proc.waitForStarted()
-        if not procStarted:
-            self.buttonBox.setFocus()
-            self.inputGroup.setEnabled(False)
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+        if self.__hgClient is None:
+            self.proc = QProcess()
+            
+            self.proc.finished.connect(self.__procFinished)
+            self.proc.readyReadStandardOutput.connect(self.__readStdout)
+            self.proc.readyReadStandardError.connect(self.__readStderr)
+            
+            if workingDir:
+                self.proc.setWorkingDirectory(workingDir)
+            self.proc.start('hg', args)
+            procStarted = self.proc.waitForStarted()
+            if not procStarted:
+                self.buttonBox.setFocus()
+                self.inputGroup.setEnabled(False)
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
+            return procStarted
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
-        return procStarted
+            out, err = self.__hgClient.runcommand(args)
+            
+            if out:
+                self.__showOutput(out)
+            if err:
+                self.__showError(err)
+            
+            self.normal = True
+            
+            self.__finish()
+            
+            return True
     
     def normalExit(self):
         """
@@ -170,15 +186,23 @@ class HgDialog(QDialog, Ui_HgDialog):
             s = str(self.proc.readAllStandardOutput(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.resultbox.insertPlainText(s)
-            self.resultbox.ensureCursorVisible()
-            
-            # check for a changed project file
-            if self.__updateCommand:
-                for line in s.splitlines():
-                    if '.e4p' in line:
-                        self.__hasAddOrDelete = True
-                        break
+            self.__showOutput(s)
+    
+    def __showOutput(self, out):
+        """
+        Private slot to show some output.
+        
+        @param out output to be shown (string)
+        """
+        self.resultbox.insertPlainText(out)
+        self.resultbox.ensureCursorVisible()
+        
+        # check for a changed project file
+        if self.__updateCommand:
+            for line in out.splitlines():
+                if '.e4p' in line:
+                    self.__hasAddOrDelete = True
+                    break
         
         QCoreApplication.processEvents()
     
@@ -190,12 +214,20 @@ class HgDialog(QDialog, Ui_HgDialog):
         error pane.
         """
         if self.proc is not None:
-            self.errorGroup.show()
             s = str(self.proc.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
         
         QCoreApplication.processEvents()
     
