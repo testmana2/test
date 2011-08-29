@@ -51,6 +51,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         else:
             self.mode = "log"
         self.bundle = bundle
+        self.__hgClient = self.vcs.getClient()
         
         self.contents.setHtml(
             self.trUtf8('<b>Processing your request, please wait...</b>'))
@@ -79,11 +80,14 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         @param e close event (QCloseEvent)
         """
-        if self.process is not None and \
-           self.process.state() != QProcess.NotRunning:
-            self.process.terminate()
-            QTimer.singleShot(2000, self.process.kill)
-            self.process.waitForFinished(3000)
+        if self.__hgClient:
+            self.__hgClient.cancel()
+        else:
+            if self.process is not None and \
+               self.process.state() != QProcess.NotRunning:
+                self.process.terminate()
+                QTimer.singleShot(2000, self.process.kill)
+                self.process.waitForFinished(3000)
         
         e.accept()
     
@@ -109,8 +113,6 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 return
         
         self.projectMode = (self.fname == "." and self.dname == self.repodir)
-        
-        self.process.kill()
         
         self.activateWindow()
         self.raise_()
@@ -145,18 +147,35 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if not self.projectMode:
             args.append(self.filename)
         
-        self.process.setWorkingDirectory(self.repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            self.inputGroup.hide()
+            
+            out, err = self.__hgClient.runcommand(args)
+            
+            if out:
+                for line in out.splitlines(True):
+                    self.__processOutputLine(line)
+            
+            if err:
+                self.__showError(err)
+            
+            self.__finish()
+        else:
+            self.process.kill()
+            
+            self.process.setWorkingDirectory(self.repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
     
     def __getParents(self, rev):
         """
@@ -168,7 +187,6 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         errMsg = ""
         parents = []
         
-        process = QProcess()
         args = []
         args.append("parents")
         if self.mode == "incoming":
@@ -185,27 +203,34 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if not self.projectMode:
             args.append(self.filename)
         
-        process.setWorkingDirectory(self.repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"),
-                        'replace')
-                parents = [p for p in output.strip().splitlines()]
-            else:
-                if not finished:
-                    errMsg = self.trUtf8("The hg process did not finish within 30s.")
+        output = ""
+        if self.__hgClient:
+            output, errMsg = self.__hgClient.runcommand(args)
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            process = QProcess()
+            process.setWorkingDirectory(self.repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            Preferences.getSystem("IOEncoding"),
+                            'replace')
+                else:
+                    if not finished:
+                        errMsg = self.trUtf8("The hg process did not finish within 30s.")
+            else:
+                errMsg = self.trUtf8("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(self,
                 self.trUtf8("Mercurial Error"),
                 errMsg)
+        
+        if output:
+            parents = [p for p in output.strip().splitlines()]
         
         return parents
     
@@ -215,6 +240,12 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         @param exitCode exit code of the process (integer)
         @param exitStatus exit status of the process (QProcess.ExitStatus)
+        """
+        self.__finish()
+    
+    def __finish(self):
+        """
+        Private slot called when the process finished or the user pressed the button.
         """
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
@@ -324,30 +355,37 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             s = str(self.process.readLine(),
                         Preferences.getSystem("IOEncoding"),
                         'replace')
-            
-            if s == "@@@\n":
-                self.logEntries.append(self.lastLogEntry)
-                self.lastLogEntry = {}
-                self.fileCopies = {}
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        if line == "@@@\n":
+            self.logEntries.append(self.lastLogEntry)
+            self.lastLogEntry = {}
+            self.fileCopies = {}
+        else:
+            try:
+                key, value = line.split("|", 1)
+            except ValueError:
+                key = ""
+                value = line
+            if key == "change":
+                self.endInitialText = True
+            if key in ("change", "branches", "tags", "parents", "user",
+                        "date", "file_copies", "file_adds", "files_mods",
+                        "file_dels", "bookmarks"):
+                self.lastLogEntry[key] = value.strip()
+            elif key == "description":
+                self.lastLogEntry[key] = [value.strip()]
             else:
-                try:
-                    key, value = s.split("|", 1)
-                except ValueError:
-                    key = ""
-                    value = s
-                if key == "change":
-                    self.endInitialText = True
-                if key in ("change", "branches", "tags", "parents", "user",
-                            "date", "file_copies", "file_adds", "files_mods",
-                            "file_dels", "bookmarks"):
-                    self.lastLogEntry[key] = value.strip()
-                elif key == "description":
-                    self.lastLogEntry[key] = [value.strip()]
+                if self.endInitialText:
+                    self.lastLogEntry["description"].append(value.strip())
                 else:
-                    if self.endInitialText:
-                        self.lastLogEntry["description"].append(value.strip())
-                    else:
-                        self.initialText.append(value)
+                    self.initialText.append(value)
     
     def __readStderr(self):
         """
@@ -357,12 +395,20 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         error pane.
         """
         if self.process is not None:
-            self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
                      Preferences.getSystem("IOEncoding"),
                      'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def __sourceChanged(self, url):
         """

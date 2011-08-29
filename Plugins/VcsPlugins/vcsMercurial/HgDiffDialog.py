@@ -40,6 +40,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = self.vcs.getClient()
         
         if Utilities.isWindowsPlatform():
             self.contents.setFontFamily("Lucida Console")
@@ -64,11 +65,14 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         @param e close event (QCloseEvent)
         """
-        if self.process is not None and \
-           self.process.state() != QProcess.NotRunning:
-            self.process.terminate()
-            QTimer.singleShot(2000, self.process.kill)
-            self.process.waitForFinished(3000)
+        if self.__hgClient:
+            self.__hgClient.cancel()
+        else:
+            if self.process is not None and \
+               self.process.state() != QProcess.NotRunning:
+                self.process.terminate()
+                QTimer.singleShot(2000, self.process.kill)
+                self.process.waitForFinished(3000)
         
         e.accept()
     
@@ -97,8 +101,6 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.inputGroup.show()
         self.intercept = False
         self.filename = fn
-        
-        self.process.kill()
         
         self.contents.clear()
         self.paras = 0
@@ -144,25 +146,42 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             dname, fname = self.vcs.splitPath(fn)
             args.append(fn)
         
-        # find the root of the repo
-        repodir = dname
-        while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
-                return
-        
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            self.inputGroup.hide()
+            
+            out, err = self.__hgClient.runcommand(args)
+            
+            if out:
+                for line in out.splitlines(True):
+                    self.__processOutputLine(line)
+            
+            if err:
+                self.__showError(err)
+            
+            self.__finish()
+        else:
+            # find the root of the repo
+            repodir = dname
+            while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if repodir == os.sep:
+                    return
+            
+            self.process.kill()
+            
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -170,6 +189,12 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         @param exitCode exit code of the process (integer)
         @param exitStatus exit status of the process (QProcess.ExitStatus)
+        """
+        self.__finish()
+    
+    def __finish(self):
+        """
+        Private slot called when the process finished or the user pressed the button.
         """
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
@@ -201,6 +226,23 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(txt)
     
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        if line.startswith('+'):
+            format = self.cAddedFormat
+        elif line.startswith('-'):
+            format = self.cRemovedFormat
+        elif line.startswith('@@'):
+            format = self.cLineNoFormat
+        else:
+            format = self.cNormalFormat
+        self.__appendText(line, format)
+        self.paras += 1
+    
     def __readStdout(self):
         """
         Private slot to handle the readyReadStandardOutput signal.
@@ -214,16 +256,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             line = str(self.process.readLine(),
                         Preferences.getSystem("IOEncoding"),
                         'replace')
-            if line.startswith('+'):
-                format = self.cAddedFormat
-            elif line.startswith('-'):
-                format = self.cRemovedFormat
-            elif line.startswith('@@'):
-                format = self.cLineNoFormat
-            else:
-                format = self.cNormalFormat
-            self.__appendText(line, format)
-            self.paras += 1
+            self.__processOutputLine(line)
     
     def __readStderr(self):
         """
@@ -233,12 +266,20 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         error pane.
         """
         if self.process is not None:
-            self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_buttonBox_clicked(self, button):
         """
