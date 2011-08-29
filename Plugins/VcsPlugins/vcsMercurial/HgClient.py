@@ -87,7 +87,12 @@ class HgClient(QObject):
         Public method to stop the command server.
         """
         self.__server.closeWriteChannel()
-        self.__server.waitForFinished()
+        res = self.__server.waitForFinished(10000)
+        if not res:
+            self.__server.terminate()
+            res = self.__server.waitForFinished(5000)
+            if not res:
+                self.__server.kill()
     
     def restartServer(self):
         """
@@ -150,7 +155,8 @@ class HgClient(QObject):
         """
         Private method to read data from the command server.
         
-        @return tuple of channel designator and channel data (string, integer or string)
+        @return tuple of channel designator and channel data
+            (string, integer or string or bytes)
         """
         if self.__server.bytesAvailable() > 0 or \
            self.__server.waitForReadyRead(10000):
@@ -163,8 +169,11 @@ class HgClient(QObject):
             if channel in "IL":
                 return channel, length
             else:
-                return (channel,
-                        str(self.__server.read(length), self.__encoding, "replace"))
+                data = self.__server.read(length)
+                if channel == "r":
+                    return (channel, data)
+                else:
+                    return (channel, str(data, self.__encoding, "replace"))
         else:
             return "", ""
     
@@ -191,10 +200,10 @@ class HgClient(QObject):
         @param outputChannels dictionary of output channels. The dictionary must
             have the keys 'o' and 'e' and each entry must be a function receiving
             the data.
-        @return result code of the command or -1, if the command was canceled (integer)
+        @return result code of the command or -10, if the command was canceled (integer)
         """
         if not self.__started:
-            return -1
+            return -10
         
         self.__server.write(QByteArray(b'runcommand\n'))
         self.__writeDataBlock('\0'.join(args))
@@ -219,8 +228,7 @@ class HgClient(QObject):
             
             # result channel, command is finished
             elif channel == "r":
-                return struct.unpack(HgClient.ReturnFormat, 
-                                     data.encode(self.__encoding))[0]
+                return struct.unpack(HgClient.ReturnFormat, data)[0]
             
             # unexpected but required channel
             elif channel.isupper():
@@ -271,3 +279,4 @@ class HgClient(QObject):
         Public method to cancel the running command.
         """
         self.__cancel = True
+        self.restartServer()
