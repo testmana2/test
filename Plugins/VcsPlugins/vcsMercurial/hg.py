@@ -436,11 +436,17 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        if isinstance(name, list):
-            self.addArguments(args, fnames)
+        if self.__client:
+            if isinstance(name, list):
+                self.addArguments(args, name)
+            else:
+                args.append(name)
         else:
-            if dname != repodir or fname != ".":
-                args.append(fname)
+            if isinstance(name, list):
+                self.addArguments(args, fnames)
+            else:
+                if dname != repodir or fname != ".":
+                    args.append(fname)
         
         if noDialog:
             self.startSynchronizedProcess(QProcess(), "hg", args, dname)
