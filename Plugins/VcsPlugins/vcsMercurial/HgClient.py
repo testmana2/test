@@ -40,6 +40,7 @@ class HgClient(QObject):
         self.__started = False
         self.__version = None
         self.__encoding = Preferences.getSystem("IOEncoding")
+        self.__cancel = False
         
         # connect signals
         self.__server.finished.connect(self.__serverFinished)
@@ -190,6 +191,7 @@ class HgClient(QObject):
         @param outputChannels dictionary of output channels. The dictionary must
             have the keys 'o' and 'e' and each entry must be a function receiving
             the data.
+        @return result code of the command or -1, if the command was canceled (integer)
         """
         if not self.__started:
             return -1
@@ -199,6 +201,10 @@ class HgClient(QObject):
         
         while True:
             QCoreApplication.processEvents()
+            
+            if self.__cancel:
+                return -1
+            
             if self.__server.bytesAvailable() == 0:
                 continue
             channel, data = self.__readChannel()
@@ -253,9 +259,15 @@ class HgClient(QObject):
         if input is not None:
             inputChannels["I"] = input
         
+        self.__cancel = False
         self.__runcommand(args, inputChannels, outputChannels)
         out = output.getvalue()
         err = error.getvalue()
         
         return out, err
-        
+    
+    def cancel(self):
+        """
+        Public method to cancel the running command.
+        """
+        self.__cancel = True

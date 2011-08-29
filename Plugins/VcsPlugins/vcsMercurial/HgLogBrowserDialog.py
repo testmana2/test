@@ -650,6 +650,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append(self.filename)
         
         if self.__hgClient:
+            self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
+            
             out, err = self.__hgClient.runcommand(args)
             self.buf = out.splitlines(True)
             if err:
@@ -937,7 +940,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.cancelled = True
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
         elif button == self.refreshButton:
             self.on_refreshButton_clicked()
     

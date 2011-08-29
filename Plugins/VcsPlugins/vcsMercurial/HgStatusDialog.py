@@ -283,7 +283,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
         elif button == self.refreshButton:
             self.on_refreshButton_clicked()
     

@@ -82,7 +82,10 @@ class HgDialog(QDialog, Ui_HgDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -117,6 +120,9 @@ class HgDialog(QDialog, Ui_HgDialog):
             self.__updateCommand = False
         
         if showArgs:
+            self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
+            
             self.resultbox.append(' '.join(args))
             self.resultbox.append('')
         
