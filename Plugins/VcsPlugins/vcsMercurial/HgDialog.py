@@ -120,9 +120,6 @@ class HgDialog(QDialog, Ui_HgDialog):
             self.__updateCommand = False
         
         if showArgs:
-            self.inputGroup.setEnabled(False)
-            self.inputGroup.hide()
-            
             self.resultbox.append(' '.join(args))
             self.resultbox.append('')
         
@@ -151,6 +148,9 @@ class HgDialog(QDialog, Ui_HgDialog):
                 self.inputGroup.show()
             return procStarted
         else:
+            self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
+            
             out, err = self.__hgClient.runcommand(args)
             
             if out:
