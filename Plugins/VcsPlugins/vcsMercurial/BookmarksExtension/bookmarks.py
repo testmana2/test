@@ -71,6 +71,7 @@ class Bookmarks(HgExtension):
         args.append('bookmarks')
         
         client = self.vcs.getClient()
+        output = ""
         if client:
             output = client.runcommand(args)[0]
         else:
@@ -261,6 +262,7 @@ class Bookmarks(HgExtension):
         args.append('--bookmarks')
         
         client = self.vcs.getClient()
+        output = ""
         if client:
             output = client.runcommand(args)[0]
         else:
