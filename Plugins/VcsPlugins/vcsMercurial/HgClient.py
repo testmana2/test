@@ -200,10 +200,11 @@ class HgClient(QObject):
         @param outputChannels dictionary of output channels. The dictionary must
             have the keys 'o' and 'e' and each entry must be a function receiving
             the data.
-        @return result code of the command or -10, if the command was canceled (integer)
+        @return result code of the command, -1 if the command server wasn't started or
+            -10, if the command was canceled (integer)
         """
         if not self.__started:
-            return -10
+            return -1
         
         self.__server.write(QByteArray(b'runcommand\n'))
         self.__writeDataBlock('\0'.join(args))
@@ -212,7 +213,7 @@ class HgClient(QObject):
             QCoreApplication.processEvents()
             
             if self.__cancel:
-                return -1
+                return -10
             
             if self.__server.bytesAvailable() == 0:
                 continue
