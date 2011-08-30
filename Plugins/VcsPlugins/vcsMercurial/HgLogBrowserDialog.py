@@ -901,7 +901,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         error pane.
         """
         if self.process is not None:
-            self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
                      Preferences.getSystem("IOEncoding"),
                      'replace')
