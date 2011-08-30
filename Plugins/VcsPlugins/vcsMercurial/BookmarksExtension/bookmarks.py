@@ -67,28 +67,34 @@ class Bookmarks(HgExtension):
         @param repodir directory name of the repository (string)
         @return list of bookmarks (list of string)
         """
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append('bookmarks')
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                self.bookmarksList = []
-                for line in output.splitlines():
-                    l = line.strip().split()
-                    if l[-1][0] in "1234567890":
-                        # last element is a rev:changeset
-                        del l[-1]
-                        if l[0] == "*":
-                            del l[0]
-                        name = " ".join(l)
-                        self.bookmarksList.append(name)
+        
+        client = self.vcs.getClient()
+        if client:
+            output = client.runcommand(args)[0]
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+        
+        self.bookmarksList = []
+        for line in output.splitlines():
+            l = line.strip().split()
+            if l[-1][0] in "1234567890":
+                # last element is a rev:changeset
+                del l[-1]
+                if l[0] == "*":
+                    del l[0]
+                name = " ".join(l)
+                self.bookmarksList.append(name)
         
         return self.bookmarksList[:]
     
@@ -119,7 +125,7 @@ class Bookmarks(HgExtension):
                 args.append(rev)
             args.append(bookmark)
             
-            dia = HgDialog(self.trUtf8('Mercurial Bookmark'))
+            dia = HgDialog(self.trUtf8('Mercurial Bookmark'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -149,7 +155,7 @@ class Bookmarks(HgExtension):
             args.append("--delete")
             args.append(bookmark)
             
-            dia = HgDialog(self.trUtf8('Delete Mercurial Bookmark'))
+            dia = HgDialog(self.trUtf8('Delete Mercurial Bookmark'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -177,7 +183,7 @@ class Bookmarks(HgExtension):
             args.append(oldName)
             args.append(newName)
             
-            dia = HgDialog(self.trUtf8('Rename Mercurial Bookmark'))
+            dia = HgDialog(self.trUtf8('Rename Mercurial Bookmark'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -210,7 +216,7 @@ class Bookmarks(HgExtension):
                 args.append(rev)
             args.append(bookmark)
             
-            dia = HgDialog(self.trUtf8('Move Mercurial Bookmark'))
+            dia = HgDialog(self.trUtf8('Move Mercurial Bookmark'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -247,28 +253,34 @@ class Bookmarks(HgExtension):
         """
         bookmarksList = []
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         if incoming:
             args.append('incoming')
         else:
             args.append('outgoing')
         args.append('--bookmarks')
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for line in output.splitlines():
-                    if line.startswith(" "):
-                        l = line.strip().split()
-                        del l[-1]
-                        name = " ".join(l)
-                        bookmarksList.append(name)
+        
+        client = self.vcs.getClient()
+        if client:
+            output = client.runcommand(args)[0]
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+        
+        for line in output.splitlines():
+            if line.startswith(" "):
+                l = line.strip().split()
+                del l[-1]
+                name = " ".join(l)
+                bookmarksList.append(name)
         
         return bookmarksList
     
@@ -298,11 +310,12 @@ class Bookmarks(HgExtension):
             args.append('pull')
             args.append('--bookmark')
             args.append(bookmark)
-        
-        dia = HgDialog(self.trUtf8('Pulling bookmark from a remote Mercurial repository'))
-        res = dia.startProcess(args, repodir)
-        if res:
-            dia.exec_()
+            
+            dia = HgDialog(self.trUtf8('Pulling bookmark from a remote Mercurial repository'),
+                           self.vcs)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
     
     def hgBookmarkPush(self, name):
         """
@@ -330,8 +343,9 @@ class Bookmarks(HgExtension):
             args.append('push')
             args.append('--bookmark')
             args.append(bookmark)
-        
-        dia = HgDialog(self.trUtf8('Pushing bookmark to a remote Mercurial repository'))
-        res = dia.startProcess(args, repodir)
-        if res:
-            dia.exec_()
+            
+            dia = HgDialog(self.trUtf8('Pushing bookmark to a remote Mercurial repository'),
+                           self.vcs)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()

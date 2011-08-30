@@ -40,6 +40,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         self.process = QProcess()
         self.vcs = vcs
         self.__bookmarksList = None
+        self.__hgClient = vcs.getClient()
         
         self.bookmarksList.headerItem().setText(self.bookmarksList.columnCount(), "")
         self.bookmarksList.header().setSortIndicator(3, Qt.AscendingOrder)
@@ -88,23 +89,35 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         args = []
         args.append('bookmarks')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -142,7 +155,10 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -198,20 +214,28 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
             s = str(self.process.readLine(),
                     Preferences.getSystem("IOEncoding"),
                     'replace').strip()
-            l = s.split()
-            if l[-1][0] in "1234567890":
-                # last element is a rev:changeset
-                rev, changeset = l[-1].split(":", 1)
-                del l[-1]
-                if l[0] == "*":
-                    status = "current"
-                    del l[0]
-                else:
-                    status = ""
-                name = " ".join(l)
-                self.__generateItem(rev, changeset, status, name)
-                if self.__bookmarksList is not None:
-                    self.__bookmarksList.append(name)
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        l = line.split()
+        if l[-1][0] in "1234567890":
+            # last element is a rev:changeset
+            rev, changeset = l[-1].split(":", 1)
+            del l[-1]
+            if l[0] == "*":
+                status = "current"
+                del l[0]
+            else:
+                status = ""
+            name = " ".join(l)
+            self.__generateItem(rev, changeset, status, name)
+            if self.__bookmarksList is not None:
+                self.__bookmarksList.append(name)
     
     def __readStderr(self):
         """
@@ -221,12 +245,20 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         error pane.
         """
         if self.process is not None:
-            self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """
