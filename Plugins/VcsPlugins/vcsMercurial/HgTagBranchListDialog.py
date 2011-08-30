@@ -41,6 +41,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.vcs = vcs
         self.tagsList = None
         self.allTagsList = None
+        self.__hgClient = vcs.getClient()
         
         self.tagList.headerItem().setText(self.tagList.columnCount(), "")
         self.tagList.header().setSortIndicator(3, Qt.AscendingOrder)
@@ -101,23 +102,35 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             args.append('branches')
             args.append('--closed')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -152,7 +165,10 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -208,29 +224,37 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             s = str(self.process.readLine(),
                     Preferences.getSystem("IOEncoding"),
                     'replace').strip()
-            l = s.split()
-            if l[-1][0] in "1234567890":
-                # last element is a rev:changeset
-                if self.tagsMode:
-                    status = ""
-                else:
-                    status = self.trUtf8("active")
-                rev, changeset = l[-1].split(":", 1)
-                del l[-1]
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        l = line.split()
+        if l[-1][0] in "1234567890":
+            # last element is a rev:changeset
+            if self.tagsMode:
+                status = ""
             else:
-                if self.tagsMode:
-                    status = self.trUtf8("yes")
-                else:
-                    status = l[-1][1:-1]
-                rev, changeset = l[-2].split(":", 1)
-                del l[-2:]
-            name = " ".join(l)
-            self.__generateItem(rev, changeset, status, name)
-            if name not in ["tip", "default"]:
-                if self.tagsList is not None:
-                    self.tagsList.append(name)
-                if self.allTagsList is not None:
-                    self.allTagsList.append(name)
+                status = self.trUtf8("active")
+            rev, changeset = l[-1].split(":", 1)
+            del l[-1]
+        else:
+            if self.tagsMode:
+                status = self.trUtf8("yes")
+            else:
+                status = l[-1][1:-1]
+            rev, changeset = l[-2].split(":", 1)
+            del l[-2:]
+        name = " ".join(l)
+        self.__generateItem(rev, changeset, status, name)
+        if name not in ["tip", "default"]:
+            if self.tagsList is not None:
+                self.tagsList.append(name)
+            if self.allTagsList is not None:
+                self.allTagsList.append(name)
     
     def __readStderr(self):
         """
@@ -244,8 +268,17 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

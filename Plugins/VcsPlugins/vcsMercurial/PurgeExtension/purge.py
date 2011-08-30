@@ -53,23 +53,29 @@ class Purge(HgExtension):
         """
         purgeEntries = []
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append("purge")
         args.append("--print")
         if all:
             args.append("--all")
         
-        process.setWorkingDirectory(repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                purgeEntries = str(
-                    process.readAllStandardOutput(),
-                    ioEncoding, 'replace').strip().split()
+        client = self.vcs.getClient()
+        if client:
+            out, err = client.runcommand(args)
+            if out:
+                purgeEntries = out.strip().split()
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    purgeEntries = str(
+                        process.readAllStandardOutput(),
+                        ioEncoding, 'replace').strip().split()
         
         return purgeEntries
     
@@ -104,7 +110,7 @@ class Purge(HgExtension):
                 args.append("--all")
             args.append("-v")
             
-            dia = HgDialog(title)
+            dia = HgDialog(title, self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()

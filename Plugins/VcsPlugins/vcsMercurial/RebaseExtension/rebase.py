@@ -77,7 +77,7 @@ class Rebase(HgExtension):
                 args.append("--detach")
             args.append("--verbose")
             
-            dia = HgDialog(self.trUtf8('Rebase Changesets'))
+            dia = HgDialog(self.trUtf8('Rebase Changesets'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -104,7 +104,7 @@ class Rebase(HgExtension):
         args.append("--continue")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Rebase Changesets (Continue)'))
+        dia = HgDialog(self.trUtf8('Rebase Changesets (Continue)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -131,7 +131,7 @@ class Rebase(HgExtension):
         args.append("--abort")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Rebase Changesets (Abort)'))
+        dia = HgDialog(self.trUtf8('Rebase Changesets (Abort)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

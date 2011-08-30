@@ -42,6 +42,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = vcs.getClient()
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -85,23 +86,35 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         args = []
         args.append('sigs')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -139,7 +152,10 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -202,13 +218,21 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             s = str(self.process.readLine(),
                     Preferences.getSystem("IOEncoding"),
                     'replace').strip()
-            l = s.split()
-            if l[-1][0] in "1234567890":
-                # last element is a rev:changeset
-                rev, changeset = l[-1].split(":", 1)
-                del l[-1]
-                signature = " ".join(l)
-                self.__generateItem(rev, changeset, signature)
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        l = line.split()
+        if l[-1][0] in "1234567890":
+            # last element is a rev:changeset
+            rev, changeset = l[-1].split(":", 1)
+            del l[-1]
+            signature = " ".join(l)
+            self.__generateItem(rev, changeset, signature)
     
     def __readStderr(self):
         """
@@ -222,8 +246,17 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     @pyqtSlot()
     def on_signaturesList_itemSelectionChanged(self):
