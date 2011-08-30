@@ -2378,6 +2378,7 @@ class Hg(VersionControl):
         args.append('showconfig')
         args.append('extensions')
         
+        output = ""
         if self.__client is None:
             process = QProcess()
             process.start('hg', args)
