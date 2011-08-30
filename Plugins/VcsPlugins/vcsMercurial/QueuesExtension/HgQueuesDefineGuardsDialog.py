@@ -36,9 +36,10 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.process = QProcess()
+        self.process = None
         self.vcs = vcs
         self.extension = extension
+        self.__hgClient = vcs.getClient()
         
         self.__patches = patchesList[:]
         self.patchSelector.addItems([""] + self.__patches)
@@ -124,38 +125,43 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         self.guardCombo.addItems(guardsList)
         self.guardCombo.setEditText("")
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append("qguard")
         if patch:
             args.append(patch)
         
-        process.setWorkingDirectory(self.__repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace').strip()
-                if output:
-                    patchName, guards = output.split(":", 1)
-                    self.patchNameLabel.setText(patchName)
-                    guardsList = guards.strip().split()
-                    for guard in guardsList:
-                        if guard.startswith("+"):
-                            icon = UI.PixmapCache.getIcon("plus.png")
-                            guard = guard[1:]
-                            sign = "+"
-                        elif guard.startswith("-"):
-                            icon = UI.PixmapCache.getIcon("minus.png")
-                            guard = guard[1:]
-                            sign = "-"
-                        else:
-                            continue
-                        itm = QListWidgetItem(icon, guard, self.guardsList)
-                        itm.setData(Qt.UserRole, sign)
+        output = ""
+        if self.__hgClient:
+            output = self.__hgClient.runcommand(args)[0]
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(self.__repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(), ioEncoding, 'replace').strip()
+        
+        if output:
+            patchName, guards = output.split(":", 1)
+            self.patchNameLabel.setText(patchName)
+            guardsList = guards.strip().split()
+            for guard in guardsList:
+                if guard.startswith("+"):
+                    icon = UI.PixmapCache.getIcon("plus.png")
+                    guard = guard[1:]
+                    sign = "+"
+                elif guard.startswith("-"):
+                    icon = UI.PixmapCache.getIcon("minus.png")
+                    guard = guard[1:]
+                    sign = "-"
+                else:
+                    continue
+                itm = QListWidgetItem(icon, guard, self.guardsList)
+                itm.setData(Qt.UserRole, sign)
         
         self.on_guardsList_itemSelectionChanged()
     
@@ -255,8 +261,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                 guard = itm.data(Qt.UserRole) + itm.text()
                 guardsList.append(guard)
             
-            ioEncoding = Preferences.getSystem("IOEncoding")
-            process = QProcess()
             args = []
             args.append("qguard")
             args.append(self.patchNameLabel.text())
@@ -266,24 +270,33 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
             else:
                 args.append("--none")
             
-            process.setWorkingDirectory(self.__repodir)
-            process.start('hg', args)
-            procStarted = process.waitForStarted()
-            if procStarted:
-                finished = process.waitForFinished(30000)
-                if finished:
-                    if process.exitCode() == 0:
-                        self.__dirtyList = False
-                        self.on_patchSelector_activated(self.patchNameLabel.text())
+            error = ""
+            if self.__hgClient:
+                error = self.__hgClient.runcommand(args)[1]
+            else:
+                ioEncoding = Preferences.getSystem("IOEncoding")
+                process = QProcess()
+                process.setWorkingDirectory(self.__repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted()
+                if procStarted:
+                    finished = process.waitForFinished(30000)
+                    if finished:
+                        if process.exitCode() != 0:
+                            error = \
+                                str(process.readAllStandardError(), ioEncoding, 'replace')
                     else:
-                        error = \
-                            str(process.readAllStandardError(), ioEncoding, 'replace')
                         E5MessageBox.warning(self,
                             self.trUtf8("Apply Guard Definitions"),
-                            self.trUtf8("""<p>The defined guards could not be"""
-                                        """ applied.</p><p>Reason: {0}</p>""")\
-                                .format(error))
-                else:
-                    E5MessageBox.warning(self,
-                        self.trUtf8("Apply Guard Definitions"),
-                        self.trUtf8("""The Mercurial process did not finish in time."""))
+                            self.trUtf8("""The Mercurial process did not finish"""
+                                        """ in time."""))
+            
+            if error:
+                E5MessageBox.warning(self,
+                    self.trUtf8("Apply Guard Definitions"),
+                    self.trUtf8("""<p>The defined guards could not be"""
+                                """ applied.</p><p>Reason: {0}</p>""")\
+                        .format(error))
+            else:
+                            self.__dirtyList = False
+                            self.on_patchSelector_activated(self.patchNameLabel.text())

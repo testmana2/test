@@ -38,6 +38,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = vcs.getClient()
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -77,18 +78,29 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         args = []
         args.append('qheader')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+        if self.__hgClient:
+            self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                self.__showOutPut(out)
+            self.__finish()
+        else:
+            self.process.kill()
+            self.process.setWorkingDirectory(repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
     
     def __finish(self):
         """
@@ -116,7 +128,10 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -138,7 +153,15 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             s = str(self.process.readAllStandardOutput(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.messageEdit.appendPlainText(s)
+            self.__showOutput(s)
+    
+    def __showOutput(self, out):
+        """
+        Private slot to show some output.
+        
+        @param out output to be shown (string)
+        """
+        self.messageEdit.appendPlainText(out)
     
     def __readStderr(self):
         """
@@ -151,5 +174,13 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.messageEdit.appendPlainText(self.trUtf8("Error: "))
-            self.messageEdit.appendPlainText(s)
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.messageEdit.appendPlainText(self.trUtf8("Error: "))
+        self.messageEdit.appendPlainText(out)
