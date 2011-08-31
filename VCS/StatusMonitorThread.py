@@ -94,6 +94,7 @@ class VcsStatusMonitorThread(QThread):
                 self.monitorCondition.wait(self.monitorMutex, self.interval * 1000)
             self.monitorMutex.unlock()
         
+        self._shutdown()
         self.exit()
     
     def setInterval(self, interval):
@@ -185,3 +186,11 @@ class VcsStatusMonitorThread(QThread):
             a status message in case of non successful operation (string)
         """
         raise RuntimeError('Not implemented')
+    
+    def _shutdown(self):
+        """
+        Protected method performing shutdown actions.
+        
+        The default implementation does nothing.
+        """
+        pass

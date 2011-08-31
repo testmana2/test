@@ -24,7 +24,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
     NAME_INPUT = 1
     QUEUE_INPUT = 2
     
-    def __init__(self, mode, title, suppressActive, repodir, parent=None):
+    def __init__(self, mode, title, suppressActive, repodir, vcs, parent=None):
         """
         Constructor
         
@@ -35,6 +35,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         @param suppressActive flag indicating to not show the name of the active
             queue (boolean)
         @param repodir name of the repository directory (string)
+        @param vcs reference to the vcs object
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(parent)
@@ -48,6 +49,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         self.__mode = mode
         self.__repodir = repodir
         self.__suppressActive = suppressActive
+        self.__hgClient = vcs.getClient()
         
         self.inputFrame.setHidden(mode != HgQueuesQueueManagementDialog.NAME_INPUT)
         self.selectLabel.setHidden(mode != HgQueuesQueueManagementDialog.QUEUE_INPUT)
@@ -81,26 +83,31 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         queuesList = []
         activeQueue = ""
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append("qqueue")
         args.append("--list")
         
-        process.setWorkingDirectory(self.__repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
-                for queue in output.splitlines():
-                    queue = queue.strip()
-                    if queue.endswith(")"):
-                        queue = queue.rsplit(None, 1)[0]
-                        activeQueue = queue
-                    queuesList.append(queue)
+        output = ""
+        if self.__hgClient:
+            output = self.__hgClient.runcommand(args)[0]
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(self.__repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(), ioEncoding, 'replace')
+        
+        for queue in output.splitlines():
+            queue = queue.strip()
+            if queue.endswith(")"):
+                queue = queue.rsplit(None, 1)[0]
+                activeQueue = queue
+            queuesList.append(queue)
         
         if self.__suppressActive:
             if activeQueue in queuesList:

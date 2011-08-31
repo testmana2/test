@@ -35,6 +35,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = vcs.getClient()
         
         self.patchSelector.addItems([""] + patchesList)
     
@@ -80,35 +81,41 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         self.guardsList.clear()
         self.patchNameLabel.setText("")
         
-        ioEncoding = Preferences.getSystem("IOEncoding")
-        process = QProcess()
         args = []
         args.append("qguard")
         if patch:
             args.append(patch)
         
-        process.setWorkingDirectory(self.__repodir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(30000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace').strip()
-                if output:
-                    patchName, guards = output.split(":", 1)
-                    self.patchNameLabel.setText(patchName)
-                    guardsList = guards.strip().split()
-                    for guard in guardsList:
-                        if guard.startswith("+"):
-                            icon = UI.PixmapCache.getIcon("plus.png")
-                            guard = guard[1:]
-                        elif guard.startswith("-"):
-                            icon = UI.PixmapCache.getIcon("minus.png")
-                            guard = guard[1:]
-                        else:
-                            icon = None
-                            guard = self.trUtf8("Unguarded")
-                        itm = QListWidgetItem(guard, self.guardsList)
-                        if icon:
-                            itm.setIcon(icon)
+        output = ""
+        if self.__hgClient:
+            output = self.__hgClient.runcommand(args)[0].strip()
+        else:
+            ioEncoding = Preferences.getSystem("IOEncoding")
+            process = QProcess()
+            process.setWorkingDirectory(self.__repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(),
+                            ioEncoding, 'replace').strip()
+        
+        if output:
+            patchName, guards = output.split(":", 1)
+            self.patchNameLabel.setText(patchName)
+            guardsList = guards.strip().split()
+            for guard in guardsList:
+                if guard.startswith("+"):
+                    icon = UI.PixmapCache.getIcon("plus.png")
+                    guard = guard[1:]
+                elif guard.startswith("-"):
+                    icon = UI.PixmapCache.getIcon("minus.png")
+                    guard = guard[1:]
+                else:
+                    icon = None
+                    guard = self.trUtf8("Unguarded")
+                itm = QListWidgetItem(guard, self.guardsList)
+                if icon:
+                    itm.setIcon(icon)

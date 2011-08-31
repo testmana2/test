@@ -754,7 +754,7 @@ class Queues(HgExtension):
         else:
             title = self.trUtf8("Rename Active Queue")
         dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.NAME_INPUT,
-            title, False, repodir)
+            title, False, repodir, self.vcs)
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
             if queueName:
@@ -825,7 +825,7 @@ class Queues(HgExtension):
             raise ValueError("illegal value for operation")
         
         dlg = HgQueuesQueueManagementDialog(HgQueuesQueueManagementDialog.QUEUE_INPUT,
-            title, True, repodir)
+            title, True, repodir, self.vcs)
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
             if queueName:
@@ -887,5 +887,5 @@ class Queues(HgExtension):
         self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(
             HgQueuesQueueManagementDialog.NO_INPUT,
             self.trUtf8("Available Queues"),
-            False, repodir)
+            False, repodir, self.vcs)
         self.queuesListQueuesDialog.show()

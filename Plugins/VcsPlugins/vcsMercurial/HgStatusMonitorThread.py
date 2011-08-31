@@ -10,6 +10,7 @@ Module implementing the VCS status monitor thread class for Mercurial.
 from PyQt4.QtCore import QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread
+from .HgClient import HgClient
 
 import Preferences
 
@@ -30,6 +31,9 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         VcsStatusMonitorThread.__init__(self, interval, project, vcs, parent)
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
+        
+        self.__client = None
+        self.__useCommandLine = False
     
     def _performMonitor(self):
         """
@@ -54,66 +58,103 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         """
         self.shouldUpdate = False
         
-        process = QProcess()
+        if self.__client is None and not self.__useCommandLine:
+            if self.vcs.versionStr >= "1.9":
+                client = HgClient(self.projectDir, "utf-8")
+                ok, err = client.startServer()
+                if ok:
+                   self.__client = client
+                else:
+                    self.__useCommandLine = True
+            else:
+                self.__useCommandLine = True
+        
+        # step 1: get overall status
         args = []
         args.append('status')
         args.append('--noninteractive')
         args.append('--all')
-        process.setWorkingDirectory(self.projectDir)
-        process.start('hg', args)
-        procStarted = process.waitForStarted()
-        if procStarted:
-            finished = process.waitForFinished(300000)
-            if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
-                states = {}
-                for line in output.splitlines():
-                    if not line.startswith("  "):
-                        flag, name = line.split(" ", 1)
-                        if flag in "AMR":
-                            if flag == "R":
-                                status = "O"
-                            else:
-                                status = flag
-                            states[name] = status
-                
-                args = []
-                args.append('resolve')
-                args.append('--list')
-                process.setWorkingDirectory(self.projectDir)
-                process.start('hg', args)
-                procStarted = process.waitForStarted()
-                if procStarted:
-                    finished = process.waitForFinished(300000)
-                    if finished and process.exitCode() == 0:
-                        output = str(
-                            process.readAllStandardOutput(), self.__ioEncoding, 'replace')
-                        for line in output.splitlines():
-                            flag, name = line.split(" ", 1)
-                            if flag == "U":
-                                states[name] = "Z"  # conflict
-                
-                for name in states:
-                    try:
-                        if self.reportedStates[name] != states[name]:
-                            self.statusList.append("{0} {1}".format(states[name], name))
-                    except KeyError:
-                        self.statusList.append("{0} {1}".format(states[name], name))
-                for name in self.reportedStates.keys():
-                    if name not in states:
-                        self.statusList.append("  {0}".format(name))
-                self.reportedStates = states
-                return True, \
-                       self.trUtf8("Mercurial status checked successfully")
+        
+        output = ""
+        error = ""
+        if self.__client:
+            output, error = self.__client.runcommand(args)
+        else:
+            process = QProcess()
+            process.setWorkingDirectory(self.projectDir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(300000)
+                if finished and process.exitCode() == 0:
+                    output = \
+                        str(process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+                else:
+                    process.kill()
+                    process.waitForFinished()
+                    error = \
+                        str(process.readAllStandardError(), self.__ioEncoding, 'replace')
             else:
                 process.kill()
                 process.waitForFinished()
-                return False, \
-                       str(process.readAllStandardError(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                error = self.trUtf8("Could not start the Mercurial process.")
+        
+        if error:
+            return False, error
+        
+        states = {}
+        for line in output.splitlines():
+            if not line.startswith("  "):
+                flag, name = line.split(" ", 1)
+                if flag in "AMR":
+                    if flag == "R":
+                        status = "O"
+                    else:
+                        status = flag
+                    states[name] = status
+        
+        # step 2: get conflicting changes
+        args = []
+        args.append('resolve')
+        args.append('--list')
+        
+        output = ""
+        error = ""
+        if self.__client:
+            output, error = self.__client.runcommand(args)
         else:
-            process.kill()
-            process.waitForFinished()
-            return False, self.trUtf8("Could not start the Mercurial process.")
+            process.setWorkingDirectory(self.projectDir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted()
+            if procStarted:
+                finished = process.waitForFinished(300000)
+                if finished and process.exitCode() == 0:
+                    output = str(
+                        process.readAllStandardOutput(), self.__ioEncoding, 'replace')
+        
+        for line in output.splitlines():
+            flag, name = line.split(" ", 1)
+            if flag == "U":
+                states[name] = "Z"  # conflict
+        
+        # step 3: collect the status to be reported back
+        for name in states:
+            try:
+                if self.reportedStates[name] != states[name]:
+                    self.statusList.append("{0} {1}".format(states[name], name))
+            except KeyError:
+                self.statusList.append("{0} {1}".format(states[name], name))
+        for name in self.reportedStates.keys():
+            if name not in states:
+                self.statusList.append("  {0}".format(name))
+        self.reportedStates = states
+        
+        return True, \
+               self.trUtf8("Mercurial status checked successfully")
+    
+    def _shutdown(self):
+        """
+        Protected method performing shutdown actions.
+        """
+        if self.__client:
+            self.__client.stopServer()

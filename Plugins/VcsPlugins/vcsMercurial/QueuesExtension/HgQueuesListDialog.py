@@ -39,6 +39,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         
         self.process = QProcess()
         self.vcs = vcs
+        self.__hgClient = vcs.getClient()
         
         self.patchesList.header().setSortIndicator(0, Qt.AscendingOrder)
         
@@ -110,23 +111,40 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         if missing:
             args.append('--missing')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(self.__repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            if self.__mode == "qseries":
+                self.__getSeries(True)
+            elif self.__mode == "missing":
+                self.__getTop()
+            else:
+                self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(self.__repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __getTop(self):
         """
@@ -137,23 +155,35 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         args = []
         args.append('qtop')
         
-        self.process.kill()
-        self.process.setWorkingDirectory(self.__repodir)
-        
-        self.process.start('hg', args)
-        procStarted = self.process.waitForStarted()
-        if not procStarted:
+        if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
-            E5MessageBox.critical(self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
-                    'The process {0} could not be started. '
-                    'Ensure, that it is in the search path.'
-                ).format('hg'))
+            
+            out, err = self.__hgClient.runcommand(args)
+            if err:
+                self.__showError(err)
+            if out:
+                for line in out.splitlines():
+                    self.__processOutputLine(line)
+            self.__finish()
         else:
-            self.inputGroup.setEnabled(True)
-            self.inputGroup.show()
+            self.process.kill()
+            self.process.setWorkingDirectory(self.__repodir)
+            
+            self.process.start('hg', args)
+            procStarted = self.process.waitForStarted()
+            if not procStarted:
+                self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
+                E5MessageBox.critical(self,
+                    self.trUtf8('Process Generation Error'),
+                    self.trUtf8(
+                        'The process {0} could not be started. '
+                        'Ensure, that it is in the search path.'
+                    ).format('hg'))
+            else:
+                self.inputGroup.setEnabled(True)
+                self.inputGroup.show()
     
     def __finish(self):
         """
@@ -191,7 +221,11 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            self.__mode = ""
+            if self.__hgClient:
+                self.__hgClient.cancel()
+            else:
+                self.__finish()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -292,23 +326,31 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             s = str(self.process.readLine(),
                     Preferences.getSystem("IOEncoding"),
                     'replace').strip()
-            if self.__mode == "qtop":
-                self.__markTopItem(s)
+            self.__processOutputLine(s)
+    
+    def __processOutputLine(self, line):
+        """
+        Private method to process the lines of output.
+        
+        @param line output line to be processed (string)
+        """
+        if self.__mode == "qtop":
+            self.__markTopItem(line)
+        else:
+            l = line.split(": ", 1)
+            if len(l) == 1:
+                data, summary = l[0][:-1], ""
             else:
-                l = s.split(": ", 1)
-                if len(l) == 1:
-                    data, summary = l[0][:-1], ""
-                else:
-                    data, summary = l[0], l[1]
-                l = data.split(None, 2)
-                if len(l) == 2:
-                    # missing entry
-                    index, status, name = -1, l[0], l[1]
-                elif len(l) == 3:
-                    index, status, name = l[:3]
-                else:
-                    continue
-                self.__generateItem(index, status, name, summary)
+                data, summary = l[0], l[1]
+            l = data.split(None, 2)
+            if len(l) == 2:
+                # missing entry
+                index, status, name = -1, l[0], l[1]
+            elif len(l) == 3:
+                index, status, name = l[:3]
+            else:
+                return
+            self.__generateItem(index, status, name, summary)
     
     def __readStderr(self):
         """
@@ -318,12 +360,20 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         error pane.
         """
         if self.process is not None:
-            self.errorGroup.show()
             s = str(self.process.readAllStandardError(),
                     Preferences.getSystem("IOEncoding"),
                     'replace')
-            self.errors.insertPlainText(s)
-            self.errors.ensureCursorVisible()
+            self.__showError(s)
+    
+    def __showError(self, out):
+        """
+        Private slot to show some error.
+        
+        @param out error to be shown (string)
+        """
+        self.errorGroup.show()
+        self.errors.insertPlainText(out)
+        self.errors.ensureCursorVisible()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """
