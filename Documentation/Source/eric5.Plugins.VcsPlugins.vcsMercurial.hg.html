@@ -92,6 +92,9 @@ VersionControl
 <td><a href="#Hg.clearStatusCache">clearStatusCache</a></td>
 <td>Public method to clear the status cache.</td>
 </tr><tr>
+<td><a href="#Hg.getClient">getClient</a></td>
+<td>Public method to get a reference to the command server interface.</td>
+</tr><tr>
 <td><a href="#Hg.getExtensionObject">getExtensionObject</a></td>
 <td>Public method to get a reference to an extension object.</td>
 </tr><tr>
@@ -386,7 +389,17 @@ reference to the monitor thread (QThread)
 <b>clearStatusCache</b>(<i></i>)
 <p>
         Public method to clear the status cache.
-</p><a NAME="Hg.getExtensionObject" ID="Hg.getExtensionObject"></a>
+</p><a NAME="Hg.getClient" ID="Hg.getClient"></a>
+<h4>Hg.getClient</h4>
+<b>getClient</b>(<i></i>)
+<p>
+        Public method to get a reference to the command server interface.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the client (HgClient)
+</dd>
+</dl><a NAME="Hg.getExtensionObject" ID="Hg.getExtensionObject"></a>
 <h4>Hg.getExtensionObject</h4>
 <b>getExtensionObject</b>(<i>extensionName</i>)
 <p>

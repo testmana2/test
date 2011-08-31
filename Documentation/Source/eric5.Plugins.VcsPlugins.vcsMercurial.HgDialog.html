@@ -77,6 +77,12 @@ QDialog, Ui_HgDialog
 <td><a href="#HgDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
 </tr><tr>
+<td><a href="#HgDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
+</tr><tr>
+<td><a href="#HgDialog.__showOutput">__showOutput</a></td>
+<td>Private slot to show some output.</td>
+</tr><tr>
 <td><a href="#HgDialog.hasAddOrDelete">hasAddOrDelete</a></td>
 <td>Public method to check, if the last action contained an add or delete.</td>
 </tr><tr>
@@ -111,13 +117,16 @@ QDialog, Ui_HgDialog
 </table>
 <a NAME="HgDialog.__init__" ID="HgDialog.__init__"></a>
 <h4>HgDialog (Constructor)</h4>
-<b>HgDialog</b>(<i>text, parent=None</i>)
+<b>HgDialog</b>(<i>text, hg=None, parent=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
 text to be shown by the label (string)
+</dd><dt><i>hg</i></dt>
+<dd>
+reference to the Mercurial interface object (Hg)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -156,7 +165,27 @@ exit status of the process (QProcess.ExitStatus)
 </p><p>
         It reads the output of the process, formats it and inserts it into
         the contents pane.
-</p><a NAME="HgDialog.hasAddOrDelete" ID="HgDialog.hasAddOrDelete"></a>
+</p><a NAME="HgDialog.__showError" ID="HgDialog.__showError"></a>
+<h4>HgDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
+</dd>
+</dl><a NAME="HgDialog.__showOutput" ID="HgDialog.__showOutput"></a>
+<h4>HgDialog.__showOutput</h4>
+<b>__showOutput</b>(<i>out</i>)
+<p>
+        Private slot to show some output.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+output to be shown (string)
+</dd>
+</dl><a NAME="HgDialog.hasAddOrDelete" ID="HgDialog.hasAddOrDelete"></a>
 <h4>HgDialog.hasAddOrDelete</h4>
 <b>hasAddOrDelete</b>(<i></i>)
 <p>

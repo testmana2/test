@@ -79,6 +79,9 @@ QDialog, Ui_HgQueuesListDialog
 <td><a href="#HgQueuesListDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
+<td><a href="#HgQueuesListDialog.__processOutputLine">__processOutputLine</a></td>
+<td>Private method to process the lines of output.</td>
+</tr><tr>
 <td><a href="#HgQueuesListDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStderr signal.</td>
 </tr><tr>
@@ -90,6 +93,9 @@ QDialog, Ui_HgQueuesListDialog
 </tr><tr>
 <td><a href="#HgQueuesListDialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
+</tr><tr>
+<td><a href="#HgQueuesListDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
 </tr><tr>
 <td><a href="#HgQueuesListDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
@@ -197,6 +203,16 @@ exit code of the process (integer)
 <dd>
 exit status of the process (QProcess.ExitStatus)
 </dd>
+</dl><a NAME="HgQueuesListDialog.__processOutputLine" ID="HgQueuesListDialog.__processOutputLine"></a>
+<h4>HgQueuesListDialog.__processOutputLine</h4>
+<b>__processOutputLine</b>(<i>line</i>)
+<p>
+        Private method to process the lines of output.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+output line to be processed (string)
+</dd>
 </dl><a NAME="HgQueuesListDialog.__readStderr" ID="HgQueuesListDialog.__readStderr"></a>
 <h4>HgQueuesListDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
@@ -223,7 +239,17 @@ exit status of the process (QProcess.ExitStatus)
 <b>__resort</b>(<i></i>)
 <p>
         Private method to resort the tree.
-</p><a NAME="HgQueuesListDialog.closeEvent" ID="HgQueuesListDialog.closeEvent"></a>
+</p><a NAME="HgQueuesListDialog.__showError" ID="HgQueuesListDialog.__showError"></a>
+<h4>HgQueuesListDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
+</dd>
+</dl><a NAME="HgQueuesListDialog.closeEvent" ID="HgQueuesListDialog.closeEvent"></a>
 <h4>HgQueuesListDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>

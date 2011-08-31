@@ -74,6 +74,9 @@ QThread
 <td><a href="#VcsStatusMonitorThread._performMonitor">_performMonitor</a></td>
 <td>Protected method implementing the real monitoring action.</td>
 </tr><tr>
+<td><a href="#VcsStatusMonitorThread._shutdown">_shutdown</a></td>
+<td>Protected method performing shutdown actions.</td>
+</tr><tr>
 <td><a href="#VcsStatusMonitorThread.checkStatus">checkStatus</a></td>
 <td>Public method to wake up the status monitor thread.</td>
 </tr><tr>
@@ -147,7 +150,14 @@ reference to the parent object (QObject)
 tuple of flag indicating successful operation (boolean) and
             a status message in case of non successful operation (string)
 </dd>
-</dl><a NAME="VcsStatusMonitorThread.checkStatus" ID="VcsStatusMonitorThread.checkStatus"></a>
+</dl><a NAME="VcsStatusMonitorThread._shutdown" ID="VcsStatusMonitorThread._shutdown"></a>
+<h4>VcsStatusMonitorThread._shutdown</h4>
+<b>_shutdown</b>(<i></i>)
+<p>
+        Protected method performing shutdown actions.
+</p><p>
+        The default implementation does nothing.
+</p><a NAME="VcsStatusMonitorThread.checkStatus" ID="VcsStatusMonitorThread.checkStatus"></a>
 <h4>VcsStatusMonitorThread.checkStatus</h4>
 <b>checkStatus</b>(<i></i>)
 <p>

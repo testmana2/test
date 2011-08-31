@@ -70,6 +70,9 @@ QDialog, Ui_HgAnnotateDialog
 <td><a href="#HgAnnotateDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
+<td><a href="#HgAnnotateDialog.__processOutputLine">__processOutputLine</a></td>
+<td>Private method to process the lines of output.</td>
+</tr><tr>
 <td><a href="#HgAnnotateDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStderr signal.</td>
 </tr><tr>
@@ -78,6 +81,9 @@ QDialog, Ui_HgAnnotateDialog
 </tr><tr>
 <td><a href="#HgAnnotateDialog.__resizeColumns">__resizeColumns</a></td>
 <td>Private method to resize the list columns.</td>
+</tr><tr>
+<td><a href="#HgAnnotateDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
 </tr><tr>
 <td><a href="#HgAnnotateDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
@@ -158,6 +164,16 @@ exit code of the process (integer)
 <dd>
 exit status of the process (QProcess.ExitStatus)
 </dd>
+</dl><a NAME="HgAnnotateDialog.__processOutputLine" ID="HgAnnotateDialog.__processOutputLine"></a>
+<h4>HgAnnotateDialog.__processOutputLine</h4>
+<b>__processOutputLine</b>(<i>line</i>)
+<p>
+        Private method to process the lines of output.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+output line to be processed (string)
+</dd>
 </dl><a NAME="HgAnnotateDialog.__readStderr" ID="HgAnnotateDialog.__readStderr"></a>
 <h4>HgAnnotateDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
@@ -179,7 +195,17 @@ exit status of the process (QProcess.ExitStatus)
 <b>__resizeColumns</b>(<i></i>)
 <p>
         Private method to resize the list columns.
-</p><a NAME="HgAnnotateDialog.closeEvent" ID="HgAnnotateDialog.closeEvent"></a>
+</p><a NAME="HgAnnotateDialog.__showError" ID="HgAnnotateDialog.__showError"></a>
+<h4>HgAnnotateDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
+</dd>
+</dl><a NAME="HgAnnotateDialog.closeEvent" ID="HgAnnotateDialog.closeEvent"></a>
 <h4>HgAnnotateDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>

@@ -97,6 +97,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__processOutputLine">__processOutputLine</a></td>
+<td>Private method to process the lines of output.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStandardError signal.</td>
 </tr><tr>
@@ -117,6 +120,9 @@ QWidget, Ui_HgStatusDialog
 </tr><tr>
 <td><a href="#HgStatusDialog.__showContextMenu">__showContextMenu</a></td>
 <td>Protected slot to show the context menu of the status list.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__updateButtons">__updateButtons</a></td>
 <td>Private method to update the VCS buttons status.</td>
@@ -289,6 +295,16 @@ exit code of the process (integer)
 <dd>
 exit status of the process (QProcess.ExitStatus)
 </dd>
+</dl><a NAME="HgStatusDialog.__processOutputLine" ID="HgStatusDialog.__processOutputLine"></a>
+<h4>HgStatusDialog.__processOutputLine</h4>
+<b>__processOutputLine</b>(<i>line</i>)
+<p>
+        Private method to process the lines of output.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+output line to be processed (string)
+</dd>
 </dl><a NAME="HgStatusDialog.__readStderr" ID="HgStatusDialog.__readStderr"></a>
 <h4>HgStatusDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
@@ -334,6 +350,16 @@ exit status of the process (QProcess.ExitStatus)
 <dt><i>coord</i></dt>
 <dd>
 the position of the mouse pointer (QPoint)
+</dd>
+</dl><a NAME="HgStatusDialog.__showError" ID="HgStatusDialog.__showError"></a>
+<h4>HgStatusDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
 </dd>
 </dl><a NAME="HgStatusDialog.__updateButtons" ID="HgStatusDialog.__updateButtons"></a>
 <h4>HgStatusDialog.__updateButtons</h4>

@@ -86,7 +86,7 @@ QDialog, Ui_HgQueuesQueueManagementDialog
 </table>
 <a NAME="HgQueuesQueueManagementDialog.__init__" ID="HgQueuesQueueManagementDialog.__init__"></a>
 <h4>HgQueuesQueueManagementDialog (Constructor)</h4>
-<b>HgQueuesQueueManagementDialog</b>(<i>mode, title, suppressActive, repodir, parent=None</i>)
+<b>HgQueuesQueueManagementDialog</b>(<i>mode, title, suppressActive, repodir, vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -105,6 +105,9 @@ flag indicating to not show the name of the active
 </dd><dt><i>repodir</i></dt>
 <dd>
 name of the repository directory (string)
+</dd><dt><i>vcs</i></dt>
+<dd>
+reference to the vcs object
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)

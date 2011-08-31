@@ -64,17 +64,26 @@ QWidget, Ui_HgDiffDialog
 <td><a href="#HgDiffDialog.__appendText">__appendText</a></td>
 <td>Private method to append text to the end of the contents pane.</td>
 </tr><tr>
+<td><a href="#HgDiffDialog.__finish">__finish</a></td>
+<td>Private slot called when the process finished or the user pressed the button.</td>
+</tr><tr>
 <td><a href="#HgDiffDialog.__getVersionArg">__getVersionArg</a></td>
 <td>Private method to get a hg revision argument for the given revision.</td>
 </tr><tr>
 <td><a href="#HgDiffDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
+<td><a href="#HgDiffDialog.__processOutputLine">__processOutputLine</a></td>
+<td>Private method to process the lines of output.</td>
+</tr><tr>
 <td><a href="#HgDiffDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStandardError signal.</td>
 </tr><tr>
 <td><a href="#HgDiffDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr><tr>
+<td><a href="#HgDiffDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
 </tr><tr>
 <td><a href="#HgDiffDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
@@ -131,7 +140,12 @@ text to insert (string)
 <dd>
 text format to be used (QTextCharFormat)
 </dd>
-</dl><a NAME="HgDiffDialog.__getVersionArg" ID="HgDiffDialog.__getVersionArg"></a>
+</dl><a NAME="HgDiffDialog.__finish" ID="HgDiffDialog.__finish"></a>
+<h4>HgDiffDialog.__finish</h4>
+<b>__finish</b>(<i></i>)
+<p>
+        Private slot called when the process finished or the user pressed the button.
+</p><a NAME="HgDiffDialog.__getVersionArg" ID="HgDiffDialog.__getVersionArg"></a>
 <h4>HgDiffDialog.__getVersionArg</h4>
 <b>__getVersionArg</b>(<i>version</i>)
 <p>
@@ -159,6 +173,16 @@ exit code of the process (integer)
 <dd>
 exit status of the process (QProcess.ExitStatus)
 </dd>
+</dl><a NAME="HgDiffDialog.__processOutputLine" ID="HgDiffDialog.__processOutputLine"></a>
+<h4>HgDiffDialog.__processOutputLine</h4>
+<b>__processOutputLine</b>(<i>line</i>)
+<p>
+        Private method to process the lines of output.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+output line to be processed (string)
+</dd>
 </dl><a NAME="HgDiffDialog.__readStderr" ID="HgDiffDialog.__readStderr"></a>
 <h4>HgDiffDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
@@ -175,7 +199,17 @@ exit status of the process (QProcess.ExitStatus)
 </p><p>
         It reads the output of the process, formats it and inserts it into
         the contents pane.
-</p><a NAME="HgDiffDialog.closeEvent" ID="HgDiffDialog.closeEvent"></a>
+</p><a NAME="HgDiffDialog.__showError" ID="HgDiffDialog.__showError"></a>
+<h4>HgDiffDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
+</dd>
+</dl><a NAME="HgDiffDialog.closeEvent" ID="HgDiffDialog.closeEvent"></a>
 <h4>HgDiffDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>

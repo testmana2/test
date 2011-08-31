@@ -73,6 +73,12 @@ QDialog, Ui_HgQueuesHeaderDialog
 <td><a href="#HgQueuesHeaderDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStdout signal.</td>
 </tr><tr>
+<td><a href="#HgQueuesHeaderDialog.__showError">__showError</a></td>
+<td>Private slot to show some error.</td>
+</tr><tr>
+<td><a href="#HgQueuesHeaderDialog.__showOutput">__showOutput</a></td>
+<td>Private slot to show some output.</td>
+</tr><tr>
 <td><a href="#HgQueuesHeaderDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
 </tr><tr>
@@ -134,7 +140,27 @@ exit status of the process (QProcess.ExitStatus)
 </p><p>
         It reads the output of the process, formats it and inserts it into
         the contents pane.
-</p><a NAME="HgQueuesHeaderDialog.closeEvent" ID="HgQueuesHeaderDialog.closeEvent"></a>
+</p><a NAME="HgQueuesHeaderDialog.__showError" ID="HgQueuesHeaderDialog.__showError"></a>
+<h4>HgQueuesHeaderDialog.__showError</h4>
+<b>__showError</b>(<i>out</i>)
+<p>
+        Private slot to show some error.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+error to be shown (string)
+</dd>
+</dl><a NAME="HgQueuesHeaderDialog.__showOutput" ID="HgQueuesHeaderDialog.__showOutput"></a>
+<h4>HgQueuesHeaderDialog.__showOutput</h4>
+<b>__showOutput</b>(<i>out</i>)
+<p>
+        Private slot to show some output.
+</p><dl>
+<dt><i>out</i></dt>
+<dd>
+output to be shown (string)
+</dd>
+</dl><a NAME="HgQueuesHeaderDialog.closeEvent" ID="HgQueuesHeaderDialog.closeEvent"></a>
 <h4>HgQueuesHeaderDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
