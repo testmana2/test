@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1186,12 +1187,12 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/AuthenticationDialog.ui" line="69"/>
         <source>Password:</source>
-        <translation>Passwort:</translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="UI/AuthenticationDialog.ui" line="76"/>
         <source>Enter password</source>
-        <translation>Gib das Passwort ein</translation>
+        <translation>Gib das Kennwort ein</translation>
     </message>
     <message>
         <location filename="UI/AuthenticationDialog.ui" line="86"/>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -3745,22 +3746,22 @@ um die Konfigurationsseite anzuzeigen.</translation>
     <message>
         <location filename="Utilities/crypto/__init__.py" line="89"/>
         <source>Master Password</source>
-        <translation>Master-Passwort</translation>
+        <translation>Master-Kennwort</translation>
     </message>
     <message>
         <location filename="Utilities/crypto/__init__.py" line="67"/>
         <source>Enter the master password:</source>
-        <translation>Gib das Master-Passwort ein:</translation>
+        <translation>Gib das Master-Kennwort ein:</translation>
     </message>
     <message>
         <location filename="Utilities/crypto/__init__.py" line="79"/>
         <source>The given password is incorrect.</source>
-        <translation>Das eingegebene Passwort ist falsch.</translation>
+        <translation>Das eingegebene Kennwort ist falsch.</translation>
     </message>
     <message>
         <location filename="Utilities/crypto/__init__.py" line="84"/>
         <source>There is no master password registered.</source>
-        <translation>Es wurde kein Master-Passwort registriert.</translation>
+        <translation>Es wurde kein Master-Kennwort registriert.</translation>
     </message>
 </context>
 <context>
@@ -10415,12 +10416,12 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="UI/EmailDialog.py" line="279"/>
         <source>Mail Server Password</source>
-        <translation>Mail Server Passwort</translation>
+        <translation>Mail Server Kennwort</translation>
     </message>
     <message>
         <location filename="UI/EmailDialog.py" line="279"/>
         <source>Enter your mail server password</source>
-        <translation>Geben sie ihr Mail Server Passwort ein</translation>
+        <translation>Geben sie ihr Mail Server Kennwort ein</translation>
     </message>
     <message>
         <location filename="UI/EmailDialog.py" line="297"/>
@@ -10523,7 +10524,7 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="183"/>
         <source>Enter your password for accessing the mail server</source>
-        <translation>Geben sie das Passwort zum Zugriff auf den Mail Server ein</translation>
+        <translation>Geben sie das Kennwort zum Zugriff auf den Mail Server ein</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="163"/>
@@ -10573,7 +10574,7 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="173"/>
         <source>Password:</source>
-        <translation>Passwort:</translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EmailPage.ui" line="17"/>
@@ -12573,7 +12574,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="802"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -15595,12 +15596,12 @@ Es sind %n Unterfenster offen.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.ui" line="146"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.ui" line="149"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.ui" line="152"/>
@@ -15964,12 +15965,12 @@ Es sind %n Unterfenster offen.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.ui" line="132"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.ui" line="135"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.ui" line="138"/>
@@ -16076,12 +16077,12 @@ Es sind %n Unterfenster offen.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui" line="146"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui" line="149"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui" line="152"/>
@@ -16460,12 +16461,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.ui" line="121"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.ui" line="124"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.ui" line="127"/>
@@ -16533,12 +16534,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="127"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="130"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="133"/>
@@ -16842,12 +16843,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="211"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="214"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="217"/>
@@ -17015,12 +17016,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="425"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="428"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="431"/>
@@ -17198,12 +17199,12 @@ Mercurial Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="121"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="124"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="127"/>
@@ -18981,12 +18982,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="146"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="149"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="152"/>
@@ -19750,12 +19751,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="252"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="255"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="258"/>
@@ -20060,12 +20061,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.ui" line="146"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.ui" line="149"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.ui" line="152"/>
@@ -21786,7 +21787,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="112"/>
         <source>Password</source>
-        <translation>Passwort</translation>
+        <translation>Kennwort</translation>
     </message>
     <message>
         <location filename="Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="267"/>
@@ -23146,47 +23147,47 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="14"/>
         <source>Master Password</source>
-        <translation>Master-Passwort</translation>
+        <translation>Master-Kennwort</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="23"/>
         <source>&lt;p&gt;Enter your master password below. This password will be used to encrypt sensitive data. You will be asked once per session for this password when the data needs to be accessed for the first time.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Note: If you forget the master password, the encrypted data cannot be recovered!&lt;/b&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Geben sie ihr Master-Passwort unten ein. Dieses Passwort wird zur Verschlüsseleung sensitiver Daten verwendet. Sie werden einmal pro Sitzung wenn die Daten zum ersten Mal benötigt werden nach dem Passwort gefragt.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Hinweis: Wenn sie das Master-Passwort vergessen, können die verschlüsselten Daten nicht mehr wiederhergestellt werden!&lt;/b&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Geben sie ihr Master-Kennwort unten ein. Dieses Kennwort wird zur Verschlüsseleung sensitiver Daten verwendet. Sie werden einmal pro Sitzung wenn die Daten zum ersten Mal benötigt werden nach dem Kennwort gefragt.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Hinweis: Wenn sie das Master-Kennwort vergessen, können die verschlüsselten Daten nicht mehr wiederhergestellt werden!&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="48"/>
         <source>Current Password:</source>
-        <translation>Aktuelles Passwort:</translation>
+        <translation>Aktuelles Kennwort:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="55"/>
         <source>Enter the current password</source>
-        <translation>Gib das aktuelle Passwort ein</translation>
+        <translation>Gib das aktuelle Kennwort ein</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="65"/>
         <source>New Password:</source>
-        <translation>Neues Passwort:</translation>
+        <translation>Neues Kennwort:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="72"/>
         <source>Enter the new password</source>
-        <translation>Gib das neue Passwort ein</translation>
+        <translation>Gib das neue Kennwort ein</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="82"/>
         <source>New Password (again):</source>
-        <translation>Neues Passwort (Wiederholung):</translation>
+        <translation>Neues Kennwort (Wiederholung):</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="89"/>
         <source>Repeat the new password</source>
-        <translation>Wiederhole das neue Passwort</translation>
+        <translation>Wiederhole das neue Kennwort</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui" line="101"/>
         <source>Shows an indication for the password strength</source>
-        <translation>Zeigt eine Indikation für die Passwortstärke an</translation>
+        <translation>Zeigt eine Indikation für die Kennwortstärke an</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="36"/>
@@ -23196,22 +23197,22 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="51"/>
         <source>Wrong password entered.</source>
-        <translation>Falsches Passwort eingegeben.</translation>
+        <translation>Falsches Kennwort eingegeben.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="55"/>
         <source>New password must not be empty.</source>
-        <translation>Neues Passwort darf nicht leer sein.</translation>
+        <translation>Neues Kennwort darf nicht leer sein.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="60"/>
         <source>Repeated password is wrong.</source>
-        <translation>Wiederholtes Passwort ist falsch.</translation>
+        <translation>Wiederholtes Kennwort ist falsch.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/MasterPasswordEntryDialog.py" line="65"/>
         <source>Old and new password must not be the same.</source>
-        <translation>Altes und neues Passwort dürfen nicht gleich sein.</translation>
+        <translation>Altes und neues Kennwort dürfen nicht gleich sein.</translation>
     </message>
 </context>
 <context>
@@ -24625,12 +24626,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="170"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Gib Nutzernamen und Passwort für &apos;{0}&apos; ein&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="173"/>
         <source>&lt;b&gt;Enter username and password for &apos;{0}&apos;, realm &apos;{1}&apos;&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Gib Nutzernamen und Passwort für &apos;{0}&apos; und Realm &apos;{1}&apos; ein&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Gib Nutzernamen und Kennwort für &apos;{0}&apos; und Realm &apos;{1}&apos; ein&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/NetworkAccessManager.py" line="227"/>
@@ -24853,12 +24854,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="309"/>
         <source>Press to clear the saved proxy passwords</source>
-        <translation>Drücken, um die gespeicherten Passworte zu löschen</translation>
+        <translation>Drücken, um die gespeicherten Kennworte zu löschen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/NetworkPage.ui" line="312"/>
         <source>Clear Proxy Passwords</source>
-        <translation>Proxy Passworte löschen</translation>
+        <translation>Proxy Kennworte löschen</translation>
     </message>
 </context>
 <context>
@@ -25404,7 +25405,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
-        <translation>&lt;b&gt;Wollen sie das Passwort speichern?&lt;/b&gt;&lt;br/&gt;Um die gespeicherten Passwörte anzusehen und zu löschen, verwenden sie den Passwortmanagement Dialog aus dem Einstellungen Menü.</translation>
+        <translation>&lt;b&gt;Wollen sie das Kennwort speichern?&lt;/b&gt;&lt;br/&gt;Um die gespeicherten Kennworte anzusehen und zu löschen, verwenden sie den Kennwortmanagement Dialog aus dem Einstellungen Menü.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="389"/>
@@ -25419,12 +25420,12 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>Save password</source>
-        <translation>Passwort speichern</translation>
+        <translation>Kennwort speichern</translation>
     </message>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="586"/>
         <source>Re-encoding saved passwords...</source>
-        <translation>Kodieren gespeicherte Passworte neu...</translation>
+        <translation>Kodieren gespeicherte Kennworte neu...</translation>
     </message>
 </context>
 <context>
@@ -25442,7 +25443,7 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Passwords/PasswordModel.py" line="32"/>
         <source>Password</source>
-        <translation>Passwort</translation>
+        <translation>Kennwort</translation>
     </message>
 </context>
 <context>
@@ -32848,37 +32849,37 @@ eines Buchstabens.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="37"/>
         <source>Passwords</source>
-        <translation>Passworte</translation>
+        <translation>Kennworte</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="43"/>
         <source>Select to save passwords</source>
-        <translation>Auswählen, um Passworte zu speichern</translation>
+        <translation>Auswählen, um Kennworte zu speichern</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="46"/>
         <source>Save passwords</source>
-        <translation>Passworte speichern</translation>
+        <translation>Kennworte speichern</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="55"/>
         <source>Select to use a master password</source>
-        <translation>Auswählen, um ein master-Passwort zu verwenden</translation>
+        <translation>Auswählen, um ein Master-Kennwort zu verwenden</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="58"/>
         <source>Use Master Password</source>
-        <translation>Master-Passwort verwenden</translation>
+        <translation>Master-Kennwort verwenden</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="81"/>
         <source>Press to change the master password</source>
-        <translation>Drücken, um das Master-Passwort zu ändern</translation>
+        <translation>Drücken, um das Master-Kennwort zu ändern</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="84"/>
         <source>Change Master Password...</source>
-        <translation>Master-Passwort ändern...</translation>
+        <translation>Master-Kennwort ändern...</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/SecurityPage.ui" line="96"/>
@@ -33883,7 +33884,7 @@ nicht verbunden</translation>
     <message>
         <location filename="SqlBrowser/SqlConnectionDialog.ui" line="102"/>
         <source>&amp;Password:</source>
-        <translation>&amp;Passwort:</translation>
+        <translation>&amp;Kennwort:</translation>
     </message>
     <message>
         <location filename="SqlBrowser/SqlConnectionDialog.ui" line="119"/>
@@ -35509,12 +35510,12 @@ nicht verbunden</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="136"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="139"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="142"/>
@@ -35811,12 +35812,12 @@ svn Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="120"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="123"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="126"/>
@@ -35946,12 +35947,12 @@ svn Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="126"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="129"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="132"/>
@@ -36269,12 +36270,12 @@ svn Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="358"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="361"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="364"/>
@@ -36412,12 +36413,12 @@ svn Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="117"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="120"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="123"/>
@@ -36479,12 +36480,12 @@ svn Programms darf nicht eingegeben werden.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLoginDialog.ui" line="34"/>
         <source>Enter password</source>
-        <translation>Gib das Passwort ein</translation>
+        <translation>Gib das Kennwort ein</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLoginDialog.ui" line="44"/>
         <source>Password:</source>
-        <translation>Passwort:</translation>
+        <translation>Kennwort:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLoginDialog.ui" line="51"/>
@@ -37832,12 +37833,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.ui" line="165"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.ui" line="168"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.ui" line="171"/>
@@ -38220,12 +38221,12 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="292"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="295"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="298"/>
@@ -38591,12 +38592,12 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="145"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Anwählen, um den Passwort Modus für das Eingabefeld auszuwählen</translation>
+        <translation>Anwählen, um den Kennwort Modus für das Eingabefeld auszuwählen</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="148"/>
         <source>&amp;Password Mode</source>
-        <translation>&amp;Passwort Modus</translation>
+        <translation>&amp;Kennwort Modus</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="151"/>
