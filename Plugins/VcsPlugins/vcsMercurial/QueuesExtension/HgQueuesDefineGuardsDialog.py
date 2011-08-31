@@ -56,11 +56,15 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         
         @param e close event (QCloseEvent)
         """
-        if self.process is not None and \
-           self.process.state() != QProcess.NotRunning:
-            self.process.terminate()
-            QTimer.singleShot(2000, self.process.kill)
-            self.process.waitForFinished(3000)
+        if self.__hgClient:
+            if self.__hgClient.isExecuting():
+                self.__hgClient.cancel()
+        else:
+            if self.process is not None and \
+               self.process.state() != QProcess.NotRunning:
+                self.process.terminate()
+                QTimer.singleShot(2000, self.process.kill)
+                self.process.waitForFinished(3000)
         
         if self.__dirtyList:
             res = E5MessageBox.question(self,

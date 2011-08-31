@@ -41,6 +41,7 @@ class HgClient(QObject):
         self.__version = None
         self.__encoding = Preferences.getSystem("IOEncoding")
         self.__cancel = False
+        self.__commandRunning = False
         
         # connect signals
         self.__server.finished.connect(self.__serverFinished)
@@ -87,10 +88,10 @@ class HgClient(QObject):
         Public method to stop the command server.
         """
         self.__server.closeWriteChannel()
-        res = self.__server.waitForFinished(10000)
+        res = self.__server.waitForFinished(5000)
         if not res:
             self.__server.terminate()
-            res = self.__server.waitForFinished(5000)
+            res = self.__server.waitForFinished(3000)
             if not res:
                 self.__server.kill()
     
@@ -252,6 +253,8 @@ class HgClient(QObject):
             It receives the max number of bytes to return.
         @return output and errors of the command server (string)
         """
+        self.__commandRunning = True
+        
         output = io.StringIO()
         error = io.StringIO()
         outputChannels = {
@@ -273,6 +276,8 @@ class HgClient(QObject):
         out = output.getvalue()
         err = error.getvalue()
         
+        self.__commandRunning = False
+        
         return out, err
     
     def cancel(self):
@@ -281,3 +286,16 @@ class HgClient(QObject):
         """
         self.__cancel = True
         self.restartServer()
+    
+    def wasCanceled(self):
+        """
+        Public method to check, if the last command was canceled.
+        """
+        return self.__cancel
+    
+    def isExecuting(self):
+        """
+        Public method to check, if the server is executing a command.
+        
+        @return flag indicating the execution of a command (boolean)
+        """

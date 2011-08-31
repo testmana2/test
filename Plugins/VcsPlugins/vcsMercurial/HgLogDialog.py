@@ -81,7 +81,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         @param e close event (QCloseEvent)
         """
         if self.__hgClient:
-            self.__hgClient.cancel()
+            if self.__hgClient.isExecuting():
+                self.__hgClient.cancel()
         else:
             if self.process is not None and \
                self.process.state() != QProcess.NotRunning:
@@ -153,9 +154,11 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             
             out, err = self.__hgClient.runcommand(args)
             
-            if out:
+            if out and self.isVisible():
                 for line in out.splitlines(True):
                     self.__processOutputLine(line)
+                    if self.__hgClient.wasCanceled():
+                        break
             
             if err:
                 self.__showError(err)
