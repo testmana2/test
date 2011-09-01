@@ -35,16 +35,13 @@ class HgClient(QObject):
         """
         super().__init__(parent)
         
-        self.__server = QProcess()
-        self.__server.setWorkingDirectory(repoPath)
+        self.__server = None
         self.__started = False
         self.__version = None
         self.__encoding = Preferences.getSystem("IOEncoding")
         self.__cancel = False
         self.__commandRunning = False
-        
-        # connect signals
-        self.__server.finished.connect(self.__serverFinished)
+        self.__repoPath = repoPath
         
         # generate command line and environment
         self.__serverArgs = []
@@ -58,9 +55,6 @@ class HgClient(QObject):
             self.__serverArgs.append(repoPath)
         
         if encoding:
-            env = QProcessEnvironment.systemEnvironment()
-            env.insert("HGENCODING", encoding)
-            self.__server.setProcessEnvironment(env)
             self.__encoding = encoding
     
     def startServer(self):
@@ -70,6 +64,18 @@ class HgClient(QObject):
         @return tuple of flag indicating a successful start (boolean) and
             an error message (string) in case of failure
         """
+        self.__server = QProcess()
+        self.__server.setWorkingDirectory(self.__repoPath)
+        
+        # connect signals
+        self.__server.finished.connect(self.__serverFinished)
+        
+        # set the encoding for the server
+        if self.__encoding:
+            env = QProcessEnvironment.systemEnvironment()
+            env.insert("HGENCODING", self.__encoding)
+            self.__server.setProcessEnvironment(env)
+        
         self.__server.start('hg', self.__serverArgs)
         serverStarted = self.__server.waitForStarted()
         if not serverStarted:
@@ -95,6 +101,10 @@ class HgClient(QObject):
             if not res:
                 self.__server.kill()
                 self.__server.waitForFinished(3000)
+        
+        self.__started = False
+        self.__server.finished.disconnect(self.__serverFinished)
+        self.__server = None
     
     def restartServer(self):
         """
