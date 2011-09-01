@@ -934,7 +934,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsTagAct)
         menu.addAction(self.hgTagListAct)
         menu.addAction(self.hgBranchAct)
-        if self.vcs.versionStr >= '1.6.0':
+        if self.vcs.version >= (1, 6):
             menu.addAction(self.hgPushBranchAct)
         menu.addAction(self.hgCloseBranchAct)
         menu.addAction(self.hgBranchListAct)

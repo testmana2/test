@@ -9,6 +9,7 @@ Module implementing the version control systems interface to Mercurial.
 
 import os
 import shutil
+import re
 import urllib.request
 import urllib.parse
 import urllib.error
@@ -223,6 +224,16 @@ class Hg(VersionControl):
                 output = \
                     str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 self.versionStr = output.splitlines()[0].split()[-1][0:-1]
+                v = list(re.match(r'.*?(\d+)\.(\d+)\.?(\d+)?(\+[0-9a-f-]+)?',
+                                  self.versionStr).groups())
+                for i in range(3):
+                    try:
+                        v[i] = int(v[i])
+                    except TypeError:
+                        v[i] = 0
+                    except IndexError:
+                        v.append(0)
+                self.version = tuple(v)
                 self.__getExtensionsInfo()
                 return True, errMsg
             else:
@@ -2396,7 +2407,7 @@ class Hg(VersionControl):
                 extensionName = line.split("=", 1)[0].strip().split(".")[-1].strip()
                 self.__activeExtensions.append(extensionName)
         
-        if self.versionStr >= "1.8":
+        if self.version >= (1, 8):
             if "bookmarks" not in self.__activeExtensions:
                 self.__activeExtensions.append("bookmarks")
         
@@ -2448,7 +2459,7 @@ class Hg(VersionControl):
         self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.getProjectPath())
         
-        if self.versionStr >= "1.9":
+        if self.version >= (1, 9):
             client = HgClient(project.getProjectPath(), "utf-8", self)
             ok, err = client.startServer()
             if ok:

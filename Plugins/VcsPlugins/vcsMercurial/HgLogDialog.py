@@ -130,7 +130,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if self.mode == "log":
             args.append('--copies')
         args.append('--style')
-        if self.vcs.versionStr >= "1.8":
+        if self.vcs.version >= (1, 8):
             args.append(os.path.join(os.path.dirname(__file__),
                                      "styles", "logDialogBookmark.style"))
         else:

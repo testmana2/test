@@ -126,7 +126,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.logTree.setIconSize(
             QSize(100 * self.__rowHeight, self.__rowHeight))
-        if self.vcs.versionStr >= "1.8":
+        if self.vcs.version >= (1, 8):
             self.logTree.headerItem().setText(self.logTree.columnCount(),
                 self.trUtf8("Bookmarks"))
     
@@ -635,7 +635,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.commandMode == "log":
             args.append('--copies')
         args.append('--style')
-        if self.vcs.versionStr >= "1.8":
+        if self.vcs.version >= (1, 8):
             args.append(os.path.join(os.path.dirname(__file__),
                                      "styles", "logBrowserBookmark.style"))
         else:
