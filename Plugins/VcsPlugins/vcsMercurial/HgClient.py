@@ -94,6 +94,7 @@ class HgClient(QObject):
             res = self.__server.waitForFinished(3000)
             if not res:
                 self.__server.kill()
+                self.__server.waitForFinished(3000)
     
     def restartServer(self):
         """

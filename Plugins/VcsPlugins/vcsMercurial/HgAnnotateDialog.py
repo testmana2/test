@@ -9,7 +9,7 @@ Module implementing a dialog to show the output of the hg annotate command.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QFont, QHeaderView, \
     QTreeWidgetItem, QLineEdit
 
@@ -58,6 +58,9 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
             self.process.finished.connect(self.__procFinished)
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def closeEvent(self, e):
         """

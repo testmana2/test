@@ -9,7 +9,7 @@ Module implementing a dialog to show a list of applied and unapplied patches.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer
+from PyQt4.QtCore import pyqtSlot, QProcess, Qt, QTimer, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QTreeWidgetItem, \
     QLineEdit
 
@@ -53,6 +53,9 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             "G": self.trUtf8("guarded"),
             "D": self.trUtf8("missing"),
         }
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def closeEvent(self, e):
         """

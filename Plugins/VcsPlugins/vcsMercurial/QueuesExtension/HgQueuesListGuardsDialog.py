@@ -9,7 +9,7 @@ Module implementing a dialog to show the guards of a selected patch.
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QTimer
+from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QCoreApplication
 from PyQt4.QtGui import QDialog, QListWidgetItem
 
 from .Ui_HgQueuesListGuardsDialog import Ui_HgQueuesListGuardsDialog
@@ -38,6 +38,9 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         self.__hgClient = vcs.getClient()
         
         self.patchSelector.addItems([""] + patchesList)
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def closeEvent(self, e):
         """

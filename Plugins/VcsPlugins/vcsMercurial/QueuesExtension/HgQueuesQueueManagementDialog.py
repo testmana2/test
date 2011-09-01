@@ -7,7 +7,7 @@
 Module implementing a dialog used by the queue management functions.
 """
 
-from PyQt4.QtCore import pyqtSlot, QProcess
+from PyQt4.QtCore import pyqtSlot, QProcess, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, QListWidgetItem, \
     QAbstractButton
 
@@ -70,6 +70,9 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             self.refreshButton = None
         
         self.setWindowTitle(title)
+        
+        self.show()
+        QCoreApplication.processEvents()
         
         self.refresh()
     

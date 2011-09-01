@@ -47,6 +47,9 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.__hgClient = hg.getClient()
         
         self.outputGroup.setTitle(text)
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def __finish(self):
         """

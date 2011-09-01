@@ -9,7 +9,7 @@ Module implementing a dialog to show all guards for all patches.
 
 import os
 
-from PyQt4.QtCore import QProcess
+from PyQt4.QtCore import QProcess, QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from .Ui_HgQueuesListAllGuardsDialog import Ui_HgQueuesListAllGuardsDialog
@@ -33,6 +33,9 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
         
         self.vcs = vcs
         self.__hgClient = vcs.getClient()
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def start(self, path):
         """

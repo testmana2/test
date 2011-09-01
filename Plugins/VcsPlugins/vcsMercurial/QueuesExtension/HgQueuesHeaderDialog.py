@@ -9,7 +9,7 @@ Module implementing a dialog to show the commit message of the current patch.
 
 import os
 
-from PyQt4.QtCore import QProcess, QTimer, Qt
+from PyQt4.QtCore import QProcess, QTimer, Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
@@ -43,6 +43,9 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
+        
+        self.show()
+        QCoreApplication.processEvents()
     
     def closeEvent(self, e):
         """
