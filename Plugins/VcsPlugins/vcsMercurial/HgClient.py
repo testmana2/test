@@ -252,31 +252,43 @@ class HgClient(QObject):
             else:
                 pass
     
-    def runcommand(self, args, prompt=None, input=None):
+    def runcommand(self, args, prompt=None, input=None, output=None, error=None):
         """
         Public method to execute a command via the command server.
         
         @param args list of arguments for the command (list of string)
-        @param prompt function to reply to prompts by the server. It
+        @keyparam prompt function to reply to prompts by the server. It
             receives the max number of bytes to return and the contents
             of the output channel received so far.
-        @param input function to reply to bulk data requests by the server.
+        @keyparam input function to reply to bulk data requests by the server.
             It receives the max number of bytes to return.
-        @return output and errors of the command server (string)
+        @keyparam output function receiving the data from the server (string).
+            If a prompt function is given, this parameter will be ignored.
+        @keyparam error function receiving error messages from the server (string)
+        @return output and errors of the command server (string). In case output
+            and/or error functions were given, the respective return value will
+            be an empty string.
         """
         self.__commandRunning = True
+        outputChannels = {}
+        outputBuffer = None
+        errorBuffer = None
         
-        output = io.StringIO()
-        error = io.StringIO()
-        outputChannels = {
-            "o": output.write,
-            "e": error.write
-        }
+        if prompt is not None or output is None:
+            outputBuffer = io.StringIO()
+            outputChannels["o"] = outputBuffer.write
+        else:
+            outputChannels["o"] = output
+        if error:
+            outputChannels["e"] = error
+        else:
+            errorBuffer = io.StringIO()
+            outputChannels["e"] = errorBuffer.write
         
         inputChannels = {}
         if prompt is not None:
             def func(size):
-                reply = prompt(size, output.getvalue())
+                reply = prompt(size, outputBuffer.getvalue())
                 return reply
             inputChannels["L"] = func
         if input is not None:
@@ -284,8 +296,14 @@ class HgClient(QObject):
         
         self.__cancel = False
         self.__runcommand(args, inputChannels, outputChannels)
-        out = output.getvalue()
-        err = error.getvalue()
+        if outputBuffer:
+            out = outputBuffer.getvalue()
+        else:
+            out = ""
+        if errorBuffer:
+            err = errorBuffer.getvalue()
+        else:
+            err = ""
         
         self.__commandRunning = False
         
