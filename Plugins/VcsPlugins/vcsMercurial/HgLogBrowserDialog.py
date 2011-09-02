@@ -77,6 +77,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
             self.commandMode = mode
+            self.initialCommandMode = mode
         else:
             self.commandMode = "log"
         self.bundle = bundle
@@ -1190,6 +1191,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         self.__initData()
         
+        self.commandMode = self.initialCommandMode
         self.start(self.filename)
     
     def on_passwordCheckBox_toggled(self, isOn):
