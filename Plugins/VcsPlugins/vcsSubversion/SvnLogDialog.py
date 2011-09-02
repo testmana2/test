@@ -266,9 +266,8 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
             return
         self.contents.scrollToAnchor(ver)
         
-        if self.diff:
-            del self.diff
-        self.diff = SvnDiffDialog(self.vcs)
+        if self.diff is None:
+            self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(filename, [v1, v2])
         

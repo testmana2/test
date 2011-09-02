@@ -928,10 +928,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param rev1 first revision number (integer)
         @param rev2 second revision number (integer)
         """
-        if self.diff:
-            self.diff.close()
-            del self.diff
-        self.diff = HgDiffDialog(self.vcs)
+        if self.diff is None:
+            self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(self.filename, [rev1, rev2], self.bundle)
     

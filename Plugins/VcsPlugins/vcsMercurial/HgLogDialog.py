@@ -429,9 +429,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             return
         self.contents.scrollToAnchor(ver)
         
-        if self.diff:
-            del self.diff
-        self.diff = HgDiffDialog(self.vcs)
+        if self.diff is None:
+            self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(filename, [v1, v2], self.bundle)
     
