@@ -410,10 +410,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         @param rev1 first revision number (integer)
         @param rev2 second revision number (integer)
         """
-        if self.diff:
-            self.diff.close()
-            del self.diff
-        self.diff = SvnDiffDialog(self.vcs)
+        if self.diff is None:
+            self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         self.diff.start(self.filename, [rev1, rev2])
     
