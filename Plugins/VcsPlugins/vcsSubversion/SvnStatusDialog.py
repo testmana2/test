@@ -68,7 +68,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn,
                                                   Qt.AscendingOrder)
-        if self.vcs.versionStr < '1.5.0':
+        if self.vcs.version < (1, 5, 0):
             self.statusList.header().hideSection(self.__changelistColumn)
         
         self.menuactions = []
@@ -84,14 +84,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
             self.trUtf8("Revert changes"), self.__revert))
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Restore missing"), self.__restoreMissing))
-        if self.vcs.versionStr >= '1.5.0':
+        if self.vcs.version >= (1, 5, 0):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Add to Changelist"), self.__addToChangelist))
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Remove from Changelist"),
                 self.__removeFromChangelist))
-        if self.vcs.versionStr >= '1.2.0':
+        if self.vcs.version >= (1, 2, 0):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(self.trUtf8("Lock"),
                 self.__lock))

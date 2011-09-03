@@ -229,7 +229,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Move in repository'), self.__SVNMove)
         self.vcsMenuActions.append(act)
-        if self.vcs.versionStr >= '1.5.0':
+        if self.vcs.version >= (1, 5, 0):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"),
                 self.__SVNAddToChangelist)
@@ -272,7 +272,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
-        if self.vcs.versionStr >= '1.2.0':
+        if self.vcs.version >= (1, 2, 0):
             menu.addSeparator()
             act = menu.addAction(UI.PixmapCache.getIcon("vcsLock.png"),
                 self.trUtf8('Lock'), self.__SVNLock)
@@ -350,7 +350,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsMultiMenuActions.append(act)
-        if self.vcs.versionStr >= '1.5.0':
+        if self.vcs.version >= (1, 5, 0):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"),
                 self.__SVNAddToChangelist)
@@ -380,7 +380,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__SVNResolve)
         self.vcsMultiMenuActions.append(act)
-        if self.vcs.versionStr >= '1.2.0':
+        if self.vcs.version >= (1, 2, 0):
             menu.addSeparator()
             act = menu.addAction(UI.PixmapCache.getIcon("vcsLock.png"),
                 self.trUtf8('Lock'), self.__SVNLock)
@@ -492,7 +492,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Move in repository'), self.__SVNMove)
         self.vcsDirMenuActions.append(act)
-        if self.vcs.versionStr >= '1.5.0':
+        if self.vcs.version >= (1, 5, 0):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"),
                 self.__SVNAddToChangelist)
@@ -593,7 +593,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Remove from repository (and disk)'),
             self._VCSRemove)
         self.vcsDirMultiMenuActions.append(act)
-        if self.vcs.versionStr >= '1.5.0':
+        if self.vcs.version >= (1, 5, 0):
             menu.addSeparator()
             act = menu.addAction(self.trUtf8("Add to Changelist"),
                 self.__SVNAddToChangelist)
