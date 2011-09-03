@@ -615,6 +615,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.buf = []
         self.cancelled = False
         self.errors.clear()
+        self.intercept = False
         
         args = []
         args.append(self.commandMode)
@@ -665,7 +666,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__processBuffer()
             self.__finish()
         else:
-            self.intercept = False
             self.process.kill()
             
             self.process.setWorkingDirectory(self.repodir)
