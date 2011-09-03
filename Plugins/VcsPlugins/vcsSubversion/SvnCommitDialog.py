@@ -34,7 +34,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         QWidget.__init__(self, parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
         
-        if vcs.versionStr < '1.5.0':
+        if vcs.version < (1, 5, 0):
             self.changeListsGroup.hide()
         
     def showEvent(self, evt):

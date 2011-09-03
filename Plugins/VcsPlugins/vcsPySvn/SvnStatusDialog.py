@@ -85,7 +85,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             self.menuactions.append(self.menu.addAction(
                 self.trUtf8("Remove from Changelist"),
                 self.__removeFromChangelist))
-        if self.vcs.versionStr >= '1.2.0':
+        if self.vcs.version >= (1, 2, 0):
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(self.trUtf8("Lock"),
                 self.__lock))

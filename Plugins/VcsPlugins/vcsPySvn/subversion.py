@@ -187,6 +187,7 @@ class Subversion(VersionControl):
         @return flag indicating the existance (boolean) and an error message (string)
         """
         self.versionStr = ".".join([str(v) for v in pysvn.svn_version[:-1]])
+        self.version = pysvn.svn_version[:-1]
         return True, ""
         
     def vcsInit(self, vcsDir, noDialog = False):

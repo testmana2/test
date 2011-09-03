@@ -8,6 +8,7 @@ Module implementing the version control systems interface to Subversion.
 """
 
 import os
+import re
 import shutil
 import urllib.request, urllib.parse, urllib.error
 
@@ -169,6 +170,15 @@ class Subversion(VersionControl):
                 output = \
                     str(process.readAllStandardOutput(), ioEncoding, 'replace')
                 self.versionStr = output.split()[2]
+                v = list(re.match(r'.*?(\d+)\.(\d+)\.?(\d+)?', self.versionStr).groups())
+                for i in range(3):
+                    try:
+                        v[i] = int(v[i])
+                    except TypeError:
+                        v[i] = 0
+                    except IndexError:
+                        v.append(0)
+                self.version = tuple(v)
                 return True, errMsg
             else:
                 if finished:
@@ -507,7 +517,7 @@ class Subversion(VersionControl):
         args.append('update')
         self.addArguments(args, self.options['global'])
         self.addArguments(args, self.options['update'])
-        if self.versionStr >= '1.5.0':
+        if self.version >= (1, 5, 0):
             args.append('--accept')
             args.append('postpone')
         if isinstance(name, list):
@@ -949,7 +959,7 @@ class Subversion(VersionControl):
         
         args = []
         args.append('switch')
-        if self.versionStr >= '1.5.0':
+        if self.version >= (1, 5, 0):
             args.append('--accept')
             args.append('postpone')
         args.append(url)
@@ -994,7 +1004,7 @@ class Subversion(VersionControl):
         args = []
         args.append('merge')
         self.addArguments(args, opts)
-        if self.versionStr >= '1.5.0':
+        if self.version >= (1, 5, 0):
             args.append('--accept')
             args.append('postpone')
         if force:
@@ -1304,7 +1314,7 @@ class Subversion(VersionControl):
         @param name file/directory name to be resolved (string)
         """
         args = []
-        if self.versionStr >= '1.5.0':
+        if self.version >= (1, 5, 0):
             args.append('resolve')
             args.append('--accept')
             args.append('working')

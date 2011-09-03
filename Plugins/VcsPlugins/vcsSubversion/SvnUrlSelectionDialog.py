@@ -35,7 +35,7 @@ class SvnUrlSelectionDialog(QDialog, Ui_SvnUrlSelectionDialog):
         QDialog.__init__(self, parent)
         self.setupUi(self)
         
-        if vcs.versionStr < "1.4.0":
+        if vcs.version < (1, 4, 0):
             self.summaryCheckBox.setEnabled(False)
             self.summaryCheckBox.setChecked(False)
         
