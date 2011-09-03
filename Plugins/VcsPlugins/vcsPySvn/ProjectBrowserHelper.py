@@ -244,9 +244,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show log'), self._VCSLog)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show limited log'), self.__SVNLogLimited)
-        self.vcsMenuActions.append(act)
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
             self.trUtf8('Show log browser'), self.__SVNLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
@@ -511,9 +508,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show log'), self._VCSLog)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show limited log'), self.__SVNLogLimited)
-        self.vcsDirMenuActions.append(act)
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
             self.trUtf8('Show log browser'), self.__SVNLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -772,17 +766,6 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             except AttributeError:
                 names.append(itm.dirName())
         self.vcs.svnUrlDiff(names)
-        
-    def __SVNLogLimited(self):
-        """
-        Private slot called by the context menu to show the limited log of a file.
-        """
-        itm = self.browser.currentItem()
-        try:
-            fn = itm.fileName()
-        except AttributeError:
-            fn = itm.dirName()
-        self.vcs.svnLogLimited(fn)
         
     def __SVNLogBrowser(self):
         """

@@ -261,21 +261,6 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsLogAct.triggered[()].connect(self._vcsLog)
         self.actions.append(self.vcsLogAct)
         
-        self.hgLogLimitedAct = E5Action(self.trUtf8('Show limited log'),
-                UI.PixmapCache.getIcon("vcsLog.png"),
-                self.trUtf8('Show limited log'),
-                0, 0, self, 'mercurial_log_limited')
-        self.hgLogLimitedAct.setStatusTip(self.trUtf8(
-            'Show a limited log of the local project'
-        ))
-        self.hgLogLimitedAct.setWhatsThis(self.trUtf8(
-            """<b>Show limited log</b>"""
-            """<p>This shows the log of the local project limited to a selectable"""
-            """ number of entries.</p>"""
-        ))
-        self.hgLogLimitedAct.triggered[()].connect(self.__hgLogLimited)
-        self.actions.append(self.hgLogLimitedAct)
-        
         self.hgLogBrowserAct = E5Action(self.trUtf8('Show log browser'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show log browser'),
@@ -940,7 +925,6 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgBranchListAct)
         menu.addSeparator()
         menu.addAction(self.vcsLogAct)
-        menu.addAction(self.hgLogLimitedAct)
         menu.addAction(self.hgLogBrowserAct)
         menu.addSeparator()
         menu.addAction(self.vcsStatusAct)
@@ -1004,12 +988,6 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to perform a hg diff with the selection of revisions.
         """
         self.vcs.hgExtendedDiff(self.project.ppath)
-    
-    def __hgLogLimited(self):
-        """
-        Private slot used to perform a hg log --limit.
-        """
-        self.vcs.hgLogLimited(self.project.ppath)
     
     def __hgLogBrowser(self):
         """

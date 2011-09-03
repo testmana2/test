@@ -756,9 +756,15 @@ class Subversion(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        self.log = SvnLogDialog(self)
-        self.log.show()
-        self.log.start(name)
+        noEntries, ok = QInputDialog.getInteger(
+            None,
+            self.trUtf8("Subversion Log"),
+            self.trUtf8("Select number of entries to show."),
+            self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
+        if ok:
+            self.log = SvnLogDialog(self)
+            self.log.show()
+            self.log.start(name, noEntries)
         
     def vcsDiff(self, name):
         """
@@ -1565,23 +1571,6 @@ class Subversion(VersionControl):
             self.diff.show()
             QApplication.processEvents()
             self.diff.start(name, urls=urls, summary=summary)
-        
-    def svnLogLimited(self, name):
-        """
-        Public method used to view the (limited) log of a file/directory from the
-        Subversion repository.
-        
-        @param name file/directory name to show the log of (string)
-        """
-        noEntries, ok = QInputDialog.getInteger(
-            None,
-            self.trUtf8("Subversion Log"),
-            self.trUtf8("Select number of entries to show."),
-            self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
-        if ok:
-            self.log = SvnLogDialog(self)
-            self.log.show()
-            self.log.start(name, noEntries)
         
     def svnLogBrowser(self, path):
         """

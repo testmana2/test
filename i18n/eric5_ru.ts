@@ -15487,42 +15487,42 @@ You have %n tab(s) open.</source>
 <context>
     <name>Hg</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="231"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="242"/>
         <source>The hg process finished with the exit code {0}</source>
         <translation>Процесс hg завершился с кодом возврата {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="245"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Процесс hg не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="236"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="247"/>
         <source>Could not start the hg executable.</source>
         <translation>Невозможно запустить исполняемый файл hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="273"/>
         <source>Create project repository</source>
         <translation>Создать репозиторий проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="273"/>
         <source>The project repository could not be created.</source>
         <translation>Не могу создать репозиторий проекта.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="290"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="301"/>
         <source>Creating Mercurial repository</source>
         <translation>Создание репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="305"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="316"/>
         <source>Initial commit to Mercurial repository</source>
         <translation>Первичная подача в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="351"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="362"/>
         <source>Cloning project from a Mercurial repository</source>
         <translation>Создание копии репозитория</translation>
     </message>
@@ -15532,42 +15532,42 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Подача изменений в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="506"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="517"/>
         <source>Synchronizing with the Mercurial repository</source>
         <translation>Синхронизация с репозиторием</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="558"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="569"/>
         <source>Adding files/directories to the Mercurial repository</source>
         <translation>Добавление файлов/каталогов в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="622"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="633"/>
         <source>Removing files/directories from the Mercurial repository</source>
         <translation>Удаление файлов/каталогов из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="686"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="697"/>
         <source>Renaming {0}</source>
         <translation>Переименование {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="869"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="886"/>
         <source>Merging</source>
         <translation>Слияние</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1298"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1315"/>
         <source>Copying {0}</source>
         <translation>Копирование {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1492"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="722"/>
         <source>Mercurial Log</source>
         <translation>лог</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1492"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="722"/>
         <source>Select number of entries to show.</source>
         <translation>Задайте количество элементов для отображения.</translation>
     </message>
@@ -15587,17 +15587,17 @@ You have %n tab(s) open.</source>
         <translation>Разрешение конфликтов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="791"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="808"/>
         <source>Taging in the Mercurial repository</source>
         <translation>Создание меток в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="821"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="838"/>
         <source>Reverting changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1108"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1125"/>
         <source>Mercurial command</source>
         <translation>Mercurial команда</translation>
     </message>
@@ -15732,7 +15732,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="454"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="465"/>
         <source>Committing changes to Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15830,12 +15830,12 @@ You have %n tab(s) open.</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="135"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="135"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -16208,17 +16208,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="136"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="136"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="165"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py" line="168"/>
         <source>no bookmarks found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16308,17 +16308,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="118"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="121"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="118"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="121"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py" line="153"/>
         <source>no bookmarks defined</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16439,37 +16439,37 @@ You have %n tab(s) open.</source>
 <context>
     <name>HgClient</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="76"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="82"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="117"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="128"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="130"/>
         <source>Received data on unexpected channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="124"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="135"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="128"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="136"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="147"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="140"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="151"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16691,12 +16691,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Alt+П</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="140"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="143"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="140"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDialog.py" line="143"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -16998,7 +16998,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="310"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="313"/>
         <source>Revision</source>
         <translation type="unfinished">Версия (ревизия)</translation>
     </message>
@@ -17073,17 +17073,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="115"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="118"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="115"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="118"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="147"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="150"/>
         <source>no signatures found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17121,17 +17121,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Задайте поле, по которому фильтровать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1131"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1130"/>
         <source>Revision</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1128"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1127"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="94"/>
         <source>Message</source>
         <translation>Сообщение</translation>
     </message>
@@ -17247,27 +17247,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Alt+П</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
         <source>Added</source>
         <translation>Добавлено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="121"/>
         <source>Deleted</source>
         <translation>Удалено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="121"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="122"/>
         <source>Modified</source>
         <translation>Изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="680"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="681"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="680"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="681"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -17282,17 +17282,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Метки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="489"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="490"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Процесс hg не завершился в течение 30 секунд.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="492"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="493"/>
         <source>Could not start the hg executable.</source>
         <translation>Невозможно запустить исполняемый файл hg.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="495"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="496"/>
         <source>Mercurial Error</source>
         <translation>Ошибка Mercurial</translation>
     </message>
@@ -17332,7 +17332,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Задайте ветвь, по которой фильтровать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="87"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="88"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
@@ -17347,7 +17347,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>лог (исходящий)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="130"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="131"/>
         <source>Bookmarks</source>
         <translation type="unfinished">Закладки</translation>
     </message>
@@ -17784,112 +17784,112 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgProjectBrowserHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="460"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="454"/>
         <source>Version Control</source>
         <translation>Контроль версий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="471"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="465"/>
         <source>Commit changes to repository...</source>
         <translation>Зафиксировать изменения в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="476"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="470"/>
         <source>Add to repository</source>
         <translation>Добавить в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="473"/>
         <source>Remove from repository (and disk)</source>
         <translation>Удаление из репозитория (и с диска)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="401"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="398"/>
         <source>Copy in repository</source>
         <translation>Копировать в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="403"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="400"/>
         <source>Move in repository</source>
         <translation>Переместить в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="406"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="403"/>
         <source>Show log</source>
         <translation>Показать журнал</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="409"/>
         <source>Show limited log</source>
-        <translation>Показать ограниченный журнал</translation>
+        <translation type="obsolete">Показать ограниченный журнал</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="412"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="406"/>
         <source>Show log browser</source>
         <translation>Показать проводник журналов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="488"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="482"/>
         <source>Show difference</source>
         <translation>Показать различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="491"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="485"/>
         <source>Show difference (extended)</source>
         <translation>Показать различие (расширенно)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="493"/>
         <source>Resolve conflict</source>
         <translation>Разрешить конфликт</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="496"/>
         <source>Select all local file entries</source>
         <translation>Выделить все локальные файлы</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="504"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="498"/>
         <source>Select all versioned file entries</source>
         <translation>Выделить все файлы с версиями (VCS)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="506"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="500"/>
         <source>Select all local directory entries</source>
         <translation>Выделить все локальные каталоги</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="508"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="502"/>
         <source>Select all versioned directory entries</source>
         <translation>Выделить все каталоги с версиями (VCS)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="484"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="478"/>
         <source>Show status</source>
         <translation>Показать статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="240"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="237"/>
         <source>Show annotated file</source>
         <translation>Показать файл, снабжённый комментариями</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="496"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="490"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="626"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="609"/>
         <source>Remove from repository only</source>
         <translation>Удалить только из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="615"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="598"/>
         <source>Do you really want to remove these translation files from the repository?</source>
         <translation>Вы правда хотите удалить эти файлы переводов и из репозитория?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="626"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="609"/>
         <source>Do you really want to remove these files from the repository?</source>
         <translation>Вы правда хотите удалить эти файлы переводов и из репозитория?</translation>
     </message>
@@ -18099,385 +18099,385 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="264"/>
         <source>Show limited log</source>
-        <translation>Показать ограниченный журнал</translation>
+        <translation type="obsolete">Показать ограниченный журнал</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="268"/>
         <source>Show a limited log of the local project</source>
-        <translation>Показать ограниченный журнал изменений локального проекта</translation>
+        <translation type="obsolete">Показать ограниченный журнал изменений локального проекта</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="271"/>
         <source>&lt;b&gt;Show limited log&lt;/b&gt;&lt;p&gt;This shows the log of the local project limited to a selectable number of entries.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Показать ограниченный журнал&lt;/b&gt;&lt;p&gt;Отображает журнал с заданным количеством элементов.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Показать ограниченный журнал&lt;/b&gt;&lt;p&gt;Отображает журнал с заданным количеством элементов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="279"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="264"/>
         <source>Show log browser</source>
         <translation>Показать проводник журналов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="283"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="268"/>
         <source>Show a dialog to browse the log of the local project</source>
         <translation>Показать диалог для навигации по файлу журнала для локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="286"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="271"/>
         <source>&lt;b&gt;Show log browser&lt;/b&gt;&lt;p&gt;This shows a dialog to browse the log of the local project. A limited number of entries is shown first. More can be retrieved later on.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать проводник журнала&lt;/b&gt;&lt;p&gt;Показывает диалог для навигации по файлу журнала локального проекта. Изначально показывается ограниченное количество записей. Дальнейшие записи могут быть получены позже.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="295"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show difference</source>
         <translation>Показать различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="295"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show &amp;difference</source>
         <translation>Показать &amp;различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="299"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="284"/>
         <source>Show the difference of the local project to the repository</source>
         <translation>Показать изменения между репозиторием и локальной копией</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="302"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="287"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать различие&lt;/b&gt;&lt;p&gt;Показать различие между локальным проектом и репозиторием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="309"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="294"/>
         <source>Show difference (extended)</source>
         <translation>Показать различие (расширенно)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="313"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="298"/>
         <source>Show the difference of revisions of the project to the repository</source>
         <translation>Показать разницу версий между репозиторием и локальной копией</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="316"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="301"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать разницу (насширенно)&lt;/b&gt;&lt;p&gt;Отображает различие выбираемых ревизий проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="337"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="322"/>
         <source>Show heads</source>
         <translation>Показать текущие версии</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="340"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="325"/>
         <source>Show the heads of the repository</source>
         <translation>Показать текущие версии в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="343"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="328"/>
         <source>&lt;b&gt;Show heads&lt;/b&gt;&lt;p&gt;This shows the heads of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать текущие версии&lt;/b&gt;&lt;p&gt;Показать текущие версии в репозитории.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="350"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="335"/>
         <source>Show parents</source>
         <translation>Показать предков</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="353"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="338"/>
         <source>Show the parents of the repository</source>
         <translation>Показать предков репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="356"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="341"/>
         <source>&lt;b&gt;Show parents&lt;/b&gt;&lt;p&gt;This shows the parents of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать предков&lt;/b&gt;&lt;p&gt;Показать предков репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="363"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="348"/>
         <source>Show tip</source>
         <translation>Показать tip</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="366"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="351"/>
         <source>Show the tip of the repository</source>
         <translation>Показать tip репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="369"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="354"/>
         <source>&lt;b&gt;Show tip&lt;/b&gt;&lt;p&gt;This shows the tip of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать tip&lt;/b&gt;&lt;p&gt;Показать tip репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="390"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
         <source>Merge</source>
         <translation>Слить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="390"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="375"/>
         <source>Mer&amp;ge changes...</source>
         <translation>С&amp;лить изменения...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="394"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="379"/>
         <source>Merge changes of a revision into the local project</source>
         <translation>Слить изменения из ревизии с локальным проектом</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="397"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="382"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Слить&lt;/b&gt;&lt;p&gt;Слить изменения из ревизии с локальным проектом.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
         <source>Resolve conflicts</source>
         <translation>Разрешить конфликты</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="404"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="389"/>
         <source>Resolve con&amp;flicts</source>
         <translation>Разрешить кон&amp;фликты</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="407"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="392"/>
         <source>Resolve all conflicts of the local project</source>
         <translation>Разрешить все конфликты, возникшие в локальном проекте</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="410"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="395"/>
         <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разрешить конфликты&lt;/b&gt;&lt;p&gt;Разрешить все конфликты в локальном проекте.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="308"/>
         <source>Show status</source>
         <translation>Показать статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="308"/>
         <source>Show &amp;status</source>
         <translation>Показать &amp;статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="327"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="312"/>
         <source>Show the status of the local project</source>
         <translation>Показать статус локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="330"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="315"/>
         <source>&lt;b&gt;Show status&lt;/b&gt;&lt;p&gt;This shows the status of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать статус&lt;/b&gt;&lt;p&gt;Показать статус локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="376"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="361"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="376"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="361"/>
         <source>Re&amp;vert changes</source>
         <translation>От&amp;мена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="380"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="365"/>
         <source>Revert all changes made to the local project</source>
         <translation>Отменить все изменения в локальном проекте</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="383"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="368"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отмена изменений&lt;/b&gt;&lt;p&gt;Все изменения в локальном проекте будут отменены.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
         <source>Tag in repository</source>
         <translation>Создать метку в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="417"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="402"/>
         <source>&amp;Tag in repository...</source>
         <translation>Создать &amp;метку в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="421"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="406"/>
         <source>Tag the local project in the repository</source>
         <translation>Создать в репозитории метку для проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="424"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="409"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать метку&lt;/b&gt;&lt;p&gt;Создаёт метку для локального проекта в репозитории.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="431"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>List tags</source>
         <translation>Список меток</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="431"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>List tags...</source>
         <translation>Список меток...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="434"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="419"/>
         <source>List tags of the project</source>
         <translation>Список меток текущего проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="437"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="422"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Список меток&lt;/b&gt;&lt;p&gt;Отображает список меток текущего проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="444"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="429"/>
         <source>List branches</source>
         <translation>Список ветвей</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="444"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="429"/>
         <source>List branches...</source>
         <translation>Список ветвей...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="447"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="432"/>
         <source>List branches of the project</source>
         <translation>Список ветвей текущего проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="450"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="435"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Список ветвей&lt;/b&gt;&lt;p&gt;Отображает список ветвей текущего проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="442"/>
         <source>Create branch</source>
         <translation>Создать ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="442"/>
         <source>Create &amp;branch...</source>
         <translation>Создать &amp;ветвь...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="461"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="446"/>
         <source>Create a new branch for the local project in the repository</source>
         <translation>Создать новую ветвь в репозитории для локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="464"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="449"/>
         <source>&lt;b&gt;Create branch&lt;/b&gt;&lt;p&gt;This creates a new branch for the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать ветвь&lt;/b&gt;&lt;p&gt;Создать новую ветвь в репозитории для локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="486"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="471"/>
         <source>Close branch</source>
         <translation>Закрыть ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="489"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="474"/>
         <source>Close the current branch of the local project</source>
         <translation>Закрыть ветвь локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="492"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="477"/>
         <source>&lt;b&gt;Close branch&lt;/b&gt;&lt;p&gt;This closes the current branch of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Закрыть ветвь&lt;/b&gt;&lt;p&gt;Закрыть ветвь в репозитории для локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="512"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>Switch</source>
         <translation>Переключиться</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="512"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="497"/>
         <source>S&amp;witch...</source>
         <translation>Пе&amp;реключиться...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="516"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="501"/>
         <source>Switch the working directory to another revision</source>
         <translation>Переключить рабочий каталог на другую ревизию</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="519"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="504"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the working directory to another revision.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переключить&lt;/b&gt;&lt;p&gt;Переключить рабочий каталог на другую ревизию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="526"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="511"/>
         <source>Cleanup</source>
         <translation>Очистка</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="526"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="511"/>
         <source>Cleanu&amp;p</source>
         <translation>О&amp;чистка</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="529"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="514"/>
         <source>Cleanup the local project</source>
         <translation>Очистить локальный проект</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="532"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="517"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистка&lt;/b&gt;&lt;p&gt;Очистить локальный проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="539"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="524"/>
         <source>Execute command</source>
         <translation>Выполнить команду</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="539"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="524"/>
         <source>E&amp;xecute command...</source>
         <translation>В&amp;ыполнить команду...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="542"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="527"/>
         <source>Execute an arbitrary Mercurial command</source>
         <translation>Выполнить произвольную команду Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="545"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="530"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary Mercurial command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить команду&lt;/b&gt;&lt;p&gt;Открыть диалог для ввода произвольной команды Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="537"/>
         <source>Command options</source>
         <translation>Опции командной строки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="537"/>
         <source>Command &amp;options...</source>
         <translation>&amp;Опции командной строки...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="555"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="540"/>
         <source>Show the Mercurial command options</source>
         <translation>Показать опции командной строки Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="556"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="541"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the Mercurial command options.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Опции командной строки...&lt;/b&gt;&lt;p&gt;Показать диалог для редактирования опций командной строки Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="563"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="548"/>
         <source>Configure</source>
         <translation>Настроить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="563"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="548"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="566"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="551"/>
         <source>Show the configuration dialog with the Mercurial page selected</source>
         <translation>Показать диалог настроек с выбранной страницей настроек Mercurial</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="569"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="554"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Mercurial page selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Настроить&lt;/b&gt;&lt;p&gt;Показать диалог настроек с выбранной страницей настроек Mercurial.&lt;/p&gt;</translation>
     </message>
@@ -18522,292 +18522,292 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;b&gt;Показ комбинированных настроек&lt;/b&gt;&lt;p&gt;Показ комбинированных настроек из всех конфигурационных файлов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="617"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="602"/>
         <source>Show paths</source>
         <translation>Показать пути</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="617"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="602"/>
         <source>Show paths...</source>
         <translation>Показать пути...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="620"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="605"/>
         <source>Show the aliases for remote repositories</source>
         <translation>Алиасы для удалённых репозиториев</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="623"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="608"/>
         <source>&lt;b&gt;Show paths&lt;/b&gt;&lt;p&gt;This shows the aliases for remote repositories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать пути&lt;/b&gt;&lt;p&gt;Показать алиасы для удалённых репозиториев.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="630"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="615"/>
         <source>Verify repository</source>
         <translation>Проверить репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="630"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="615"/>
         <source>Verify repository...</source>
         <translation>Проверить репозиторий...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="633"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="618"/>
         <source>Verify the integrity of the repository</source>
         <translation>Проверить целостность репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="636"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="621"/>
         <source>&lt;b&gt;Verify repository&lt;/b&gt;&lt;p&gt;This verifies the integrity of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Проверить целостность репозитория&lt;/b&gt;&lt;p&gt;Проверить целостность репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="643"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="628"/>
         <source>Recover</source>
         <translation>Восстановить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="643"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="628"/>
         <source>Recover...</source>
         <translation>Восстановить...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="646"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="631"/>
         <source>Recover from an interrupted transaction</source>
         <translation>Восстановить после прерванной транзакции</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="649"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="634"/>
         <source>&lt;b&gt;Recover&lt;/b&gt;&lt;p&gt;This recovers from an interrupted transaction.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Восстановить&lt;/b&gt;&lt;p&gt;Восстановить после прерванной транзакции.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="851"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="836"/>
         <source>Repository Administration</source>
         <translation>Администрирование репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="669"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="654"/>
         <source>Create .hgignore</source>
         <translation>Создать файл .hgignore</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="672"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="657"/>
         <source>Create a .hgignore file with default values</source>
         <translation>Создать файл .hgignore со значениями по умолчанию</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="675"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="660"/>
         <source>&lt;b&gt;Create .hgignore&lt;/b&gt;&lt;p&gt;This creates a .hgignore file with default values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать файл .hgignore&lt;/b&gt;&lt;p&gt;Создать файл .hgignore со значениями по умолчанию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="667"/>
         <source>Create changegroup</source>
         <translation>Создать группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="667"/>
         <source>Create changegroup...</source>
         <translation>Создать группу изменений...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="685"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="670"/>
         <source>Create changegroup file collecting changesets</source>
         <translation>Создать файл коллекции изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="724"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="724"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
         <source>Apply changegroups...</source>
         <translation>Применить группу изменений...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="727"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="712"/>
         <source>Apply one or several changegroup files</source>
         <translation>Применить файл(ы) группы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="881"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="866"/>
         <source>Changegroup Management</source>
         <translation>Менеджмент группы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="688"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="673"/>
         <source>&lt;b&gt;Create changegroup&lt;/b&gt;&lt;p&gt;This creates a changegroup file collecting selected changesets (hg bundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать группу изменений&lt;/b&gt;&lt;p&gt;Создать группу изменений собрав выбранные изменения (hg bundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="730"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="715"/>
         <source>&lt;b&gt;Apply changegroups&lt;/b&gt;&lt;p&gt;This applies one or several changegroup files generated by the &apos;Create changegroup&apos; action (hg unbundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Применить группы изменений&lt;/b&gt;&lt;p&gt;Применить одну или несколько групп изменений созданную командой &apos;Создать группу изменений&apos; (hg unbundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="484"/>
         <source>Show current branch</source>
         <translation>Показать текущую ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="502"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="487"/>
         <source>Show the current branch of the project</source>
         <translation>Показать текущую ветвь проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="505"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="490"/>
         <source>&lt;b&gt;Show current branch&lt;/b&gt;&lt;p&gt;This shows the current branch of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать текущую ветвь&lt;/b&gt;&lt;p&gt;Показать текущую ветвь проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="738"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="723"/>
         <source>Mark as &quot;good&quot;</source>
         <translation>Пометить как &quot;хороший&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="741"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="726"/>
         <source>Mark a selectable changeset as good</source>
         <translation>Пометить выбранные изменения как &quot;хорошие&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="744"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="729"/>
         <source>&lt;b&gt;Mark as good&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as good.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Пометить как &quot;хорошие&quot;&lt;/b&gt;&lt;p&gt;Пометить выбранные изменения как &quot;хорошие&quot;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="736"/>
         <source>Mark as &quot;bad&quot;</source>
         <translation>Пометить как &quot;плохой&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="754"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="739"/>
         <source>Mark a selectable changeset as bad</source>
         <translation>Пометить выбранные изменения как &quot;плохие&quot;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="757"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="742"/>
         <source>&lt;b&gt;Mark as bad&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as bad.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Пометить как &quot;плохие&quot;&lt;/b&gt;&lt;p&gt;Пометить выбранные изменения как &quot;плохие&quot;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="764"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="749"/>
         <source>Skip</source>
         <translation>Пропустить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="752"/>
         <source>Skip the current changeset</source>
         <translation>Пропустить текущие изменения</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="770"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="755"/>
         <source>&lt;b&gt;Skip&lt;/b&gt;&lt;p&gt;This skips the current changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Пропустить&lt;/b&gt;&lt;p&gt;Пропустить текущие изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="777"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="762"/>
         <source>Reset</source>
         <translation>Сбросить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="780"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="765"/>
         <source>Reset the bisect search data</source>
         <translation>Сбросить данные двоичного поиска</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="783"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="768"/>
         <source>&lt;b&gt;Reset&lt;/b&gt;&lt;p&gt;This resets the bisect search data.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Сбросить&lt;/b&gt;&lt;p&gt;Сбросить данные двоичного поиска.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="889"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="874"/>
         <source>Bisect</source>
         <translation>Двоичный поиск</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="738"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="723"/>
         <source>Mark as &quot;good&quot;...</source>
         <translation>Пометить как &quot;хороший&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="736"/>
         <source>Mark as &quot;bad&quot;...</source>
         <translation>Пометить как &quot;плохой&quot;...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="696"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="681"/>
         <source>Preview changegroup</source>
         <translation>Предпросмотр группы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="696"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="681"/>
         <source>Preview changegroup...</source>
         <translation>Предпросмотр группы изменений...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="656"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="641"/>
         <source>Identify</source>
         <translation>Идентифицировать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="656"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="641"/>
         <source>Identify...</source>
         <translation>Идентифицировать...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="659"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="644"/>
         <source>Identify the project directory</source>
         <translation>Задайте каталог проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="662"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="647"/>
         <source>&lt;b&gt;Identify&lt;/b&gt;&lt;p&gt;This identifies the project directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Каталог проекта&lt;/b&gt;&lt;p&gt;Задайте каталог проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="699"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="684"/>
         <source>Preview a changegroup file containing a collection of changesets</source>
         <translation>Предпросмотр файла содержащего коллекцию групп изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="702"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="687"/>
         <source>&lt;b&gt;Preview changegroup&lt;/b&gt;&lt;p&gt;This previews a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предпросмотр групп изменений&lt;/b&gt;&lt;p&gt;Предпросмотр файла содержащего коллекцию групп изменений.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="710"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="695"/>
         <source>Identify changegroup</source>
         <translation>Выбрать группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="710"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="695"/>
         <source>Identify changegroup...</source>
         <translation>Выбрать группу изменений...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="713"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="698"/>
         <source>Identify a changegroup file containing a collection of changesets</source>
         <translation>Выбрать файл содержащий коллекцию групп изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="716"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="701"/>
         <source>&lt;b&gt;Identify changegroup&lt;/b&gt;&lt;p&gt;This identifies a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выбрать изменения&lt;/b&gt;&lt;p&gt;Выбрать файл содержащий коллекцию групп изменений.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="790"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="775"/>
         <source>Back out changeset</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="793"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="778"/>
         <source>Back out changes of an earlier changeset</source>
         <translation>Отмена предыдущих изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="796"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="781"/>
         <source>&lt;b&gt;Back out changeset&lt;/b&gt;&lt;p&gt;This backs out changes of an earlier changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отмена изменений&lt;/b&gt;&lt;p&gt;Отмена предыдущих изменений.&lt;/p&gt;</translation>
     </message>
@@ -18827,132 +18827,132 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Послать изменения (принудительно)&lt;/b&gt;&lt;p&gt;Послать изменения в удалённый репозиторий (принудительно).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="874"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="859"/>
         <source>Specials</source>
         <translation>Специфический</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="828"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="813"/>
         <source>Serve project repository</source>
         <translation>Запустить сервер для репозитория проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="828"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="813"/>
         <source>Serve project repository...</source>
         <translation>Запустить сервер для репозитория проекта...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="831"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="816"/>
         <source>Serve the project repository</source>
         <translation>Запустить сервер для репозитория проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="834"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="819"/>
         <source>&lt;b&gt;Serve project repository&lt;/b&gt;&lt;p&gt;This serves the project repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Запустить сервер для репозитория проекта&lt;/b&gt;&lt;p&gt;Запустить сервер для репозитория проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1038"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1016"/>
         <source>Pull</source>
         <translation>Загрузить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1038"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1016"/>
         <source>The project should be reread. Do this now?</source>
         <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="472"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="457"/>
         <source>Push new branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="475"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="460"/>
         <source>Push the current branch of the local project as a new named branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="478"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="463"/>
         <source>&lt;b&gt;Push new branch&lt;/b&gt;&lt;p&gt;This pushes the current branch of the local project as a new named branch.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="803"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="788"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="806"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="791"/>
         <source>Rollback the last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="809"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="794"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care.&lt;/strong&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="897"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="882"/>
         <source>Extensions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="576"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="561"/>
         <source>Edit user configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="576"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="561"/>
         <source>Edit user configuration...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="579"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="564"/>
         <source>Show an editor to edit the user configuration file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="582"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="567"/>
         <source>&lt;b&gt;Edit user configuration&lt;/b&gt;&lt;p&gt;Show an editor to edit the user configuration file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="589"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="574"/>
         <source>Edit repository configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="589"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="574"/>
         <source>Edit repository configuration...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="592"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="577"/>
         <source>Show an editor to edit the repository configuration file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="595"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="580"/>
         <source>&lt;b&gt;Edit repository configuration&lt;/b&gt;&lt;p&gt;Show an editor to edit the repository configuration file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="602"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="587"/>
         <source>Show combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="602"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="587"/>
         <source>Show combined configuration settings...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="606"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="591"/>
         <source>Show the combined configuration settings from all configuration files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="609"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="594"/>
         <source>&lt;b&gt;Show combined configuration settings&lt;/b&gt;&lt;p&gt;This shows the combined configuration settings from all configuration files.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19033,37 +19033,37 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">Удалить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="111"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="114"/>
         <source>Unsaved Changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="111"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="114"/>
         <source>The guards list has been changed. Shall the changes be applied?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="233"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="236"/>
         <source>Remove Guards</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="233"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="236"/>
         <source>Do you really want to remove the selected guards?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="299"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="302"/>
         <source>Apply Guard Definitions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="299"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="302"/>
         <source>&lt;p&gt;The defined guards could not be applied.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="293"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="296"/>
         <source>The Mercurial process did not finish in time.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19137,17 +19137,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">Commit сообщение</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="105"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="105"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="189"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="192"/>
         <source>Error: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -19165,12 +19165,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="92"/>
         <source>Unguarded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="94"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListAllGuardsDialog.py" line="97"/>
         <source>no patches found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19255,17 +19255,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="187"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="190"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="187"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="190"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="219"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="222"/>
         <source>no patches found</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19285,7 +19285,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="292"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="295"/>
         <source>unknown</source>
         <translation type="unfinished">неизвестный</translation>
     </message>
@@ -19328,7 +19328,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListGuardsDialog.py" line="122"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListGuardsDialog.py" line="125"/>
         <source>Unguarded</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20247,12 +20247,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgStatusMonitorThread</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusMonitorThread.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusMonitorThread.py" line="155"/>
         <source>Mercurial status checked successfully</source>
         <translation>Статус Mercurial успешно проверен</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusMonitorThread.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusMonitorThread.py" line="102"/>
         <source>Could not start the Mercurial process.</source>
         <translation>Невозможно запустить процесс Mercurial.</translation>
     </message>
@@ -20344,32 +20344,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Alt+П</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="86"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="89"/>
         <source>Mercurial Branches List</source>
         <translation>Список ветвей</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="87"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="90"/>
         <source>Status</source>
         <translation>Статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="131"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="134"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="131"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="134"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="247"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="250"/>
         <source>active</source>
         <translation>активный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="252"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="255"/>
         <source>yes</source>
         <translation>да</translation>
     </message>
@@ -35203,57 +35203,57 @@ Not connected</source>
         <translation>Экспорт файлов из репозитория Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1063"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1069"/>
         <source>Subversion Error</source>
         <translation>Ошибка Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="924"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="930"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>URL репозитория проекта недоступен из рабочей копии. Операция кстановки тега будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="948"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="954"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>Неверный формат URL репозитория. Операция установки тега будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="983"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="989"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Изменение тегов &apos;{0}&apos; в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1039"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1045"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>URL репозитория проекта недоступен из рабочей копии. Операция переключения будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1063"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1069"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>Неверный формат URL репозитория. Операция переключения будет отменена</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1085"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1091"/>
         <source>Switching to {0}</source>
         <translation>Преключение на &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1187"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1193"/>
         <source>Merging {0}</source>
         <translation>Слияние с &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1307"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1313"/>
         <source>Cleaning up {0}</source>
         <translation>Очистка {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1343"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1349"/>
         <source>Subversion command</source>
         <translation>Команда Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1489"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1495"/>
         <source>Copying {0}</source>
         <translation>Копирование &apos;{0}&apos;</translation>
     </message>
@@ -35263,22 +35263,22 @@ Not connected</source>
         <translation>Перемещение {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1556"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1562"/>
         <source>Subversion Set Property</source>
         <translation>Установить свойство Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1589"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1595"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Необходимо задать имя свойства. Прервано.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1607"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1613"/>
         <source>Subversion Delete Property</source>
         <translation>Удалить свойство Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1427"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1433"/>
         <source>Enter property name</source>
         <translation>Задайте имя свойства</translation>
     </message>
@@ -35308,12 +35308,12 @@ Not connected</source>
         <translation>Удаляю файлы/каталоги из репозитория Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1012"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1018"/>
         <source>Reverting changes</source>
         <translation>Отменяю изменения</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1450"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1456"/>
         <source>Resolving conficts</source>
         <translation>Разрешаю конфликт</translation>
     </message>
@@ -35338,22 +35338,22 @@ Not connected</source>
         <translation>Невозможно загрузить проект из репозитория. &lt;br /&gt;Восстанавливаю предыдущее содержимое.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1740"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="866"/>
         <source>Subversion Log</source>
         <translation>Журнал Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1740"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="866"/>
         <source>Select number of entries to show.</source>
         <translation>Задайте количество элементов для отображения.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1791"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1779"/>
         <source>Locking in the Subversion repository</source>
         <translation>Захватываю файл/каталог в репозитории Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1829"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1817"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Освобождаю файл/каталог в репозитории Subversion</translation>
     </message>
@@ -35363,33 +35363,33 @@ Not connected</source>
         <translation>Сохранена ревизия {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1092"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1098"/>
         <source>Revision {0}.
 </source>
         <translation>Ревизия {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1572"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1578"/>
         <source>Property set.</source>
         <translation>Свойство установлено.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1622"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1628"/>
         <source>Property deleted.</source>
         <translation>Свойство удалено.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1771"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1759"/>
         <source>Subversion Lock</source>
         <translation>Запереть</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1771"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1759"/>
         <source>Enter lock comment</source>
         <translation>Задайте комментарий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1874"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1862"/>
         <source>Relocating</source>
         <translation>Перемещаю</translation>
     </message>
@@ -35565,27 +35565,27 @@ Not connected</source>
         <translation>Невозможно запустить исполняемый файл svn.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1900"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1888"/>
         <source>Repository Browser</source>
         <translation>Проводник репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1900"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1888"/>
         <source>Enter the repository URL.</source>
         <translation>Задайте URL репозитория.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1924"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1912"/>
         <source>Remove from changelist</source>
         <translation>Удалить из списка изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1960"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1948"/>
         <source>Add to changelist</source>
         <translation>Добавить к списку изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1950"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1938"/>
         <source>Enter name of the changelist:</source>
         <translation>Введите имя списка изменений:</translation>
     </message>
@@ -36402,12 +36402,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Журнал Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="554"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="552"/>
         <source>Revision</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="551"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="549"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
@@ -37049,172 +37049,172 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>SvnProjectBrowserHelper</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="593"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="587"/>
         <source>Update from repository</source>
         <translation>Загрузить из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="596"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="590"/>
         <source>Commit changes to repository...</source>
         <translation>Зафиксировать изменения в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="601"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="595"/>
         <source>Add to repository</source>
         <translation>Добавить в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="353"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="350"/>
         <source>Add tree to repository</source>
         <translation>Добавить дерево в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="604"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="598"/>
         <source>Remove from repository (and disk)</source>
         <translation>Удаление из репозитория (и с диска)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="497"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="494"/>
         <source>Copy in repository</source>
         <translation>Копировать в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="499"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="496"/>
         <source>Move in repository</source>
         <translation>Переместить в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="510"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="507"/>
         <source>Show log</source>
         <translation>Показать журнал</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="617"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="611"/>
         <source>Show status</source>
         <translation>Показать статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="621"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="615"/>
         <source>Show difference</source>
         <translation>Показать различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="618"/>
         <source>Show difference (extended)</source>
         <translation>Показать различие (расширенно)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="633"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="627"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="636"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="630"/>
         <source>Merge changes</source>
         <translation>Слияние изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="639"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="633"/>
         <source>Resolve conflict</source>
         <translation>Разрешить конфликт</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="636"/>
         <source>Set Property</source>
         <translation>Установить свойство</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="638"/>
         <source>List Properties</source>
         <translation>Список свойств</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="646"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="640"/>
         <source>Delete Property</source>
         <translation>Удалить свойство</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="649"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="643"/>
         <source>Select all local file entries</source>
         <translation>Выделить все локальные файлы</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="651"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="645"/>
         <source>Select all versioned file entries</source>
         <translation>Выделить все файлы с версиями (VCS)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="653"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="647"/>
         <source>Select all local directory entries</source>
         <translation>Выделить все локальные каталоги</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="655"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="649"/>
         <source>Select all versioned directory entries</source>
         <translation>Выделить все каталоги с версиями (VCS)</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="513"/>
         <source>Show limited log</source>
-        <translation>Показать ограниченный журнал</translation>
+        <translation type="obsolete">Показать ограниченный журнал</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="391"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="388"/>
         <source>Lock</source>
         <translation>Захватить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="394"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="391"/>
         <source>Unlock</source>
         <translation>Освободить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="397"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="394"/>
         <source>Break Lock</source>
         <translation>Нарушить захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="400"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="397"/>
         <source>Steal Lock</source>
         <translation>Украсть захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="582"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="576"/>
         <source>Version Control</source>
         <translation>Контроль версий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="271"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="268"/>
         <source>Show annotated file</source>
         <translation>Показать файл, снабжённый комментариями</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="523"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="517"/>
         <source>Show repository info</source>
         <translation>Показать информацию о репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="628"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="622"/>
         <source>Show difference (URLs)</source>
         <translation>Показать разницу (URL)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="516"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="510"/>
         <source>Show log browser</source>
         <translation>Показать проводник журналов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="658"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="652"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="610"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="604"/>
         <source>Add to Changelist</source>
         <translation>Добавить к списку изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="613"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="607"/>
         <source>Remove from Changelist</source>
         <translation>Удалить из списка изменений</translation>
     </message>
@@ -37342,359 +37342,359 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать журнал&lt;/b&gt;&lt;p&gt;Показать журнал изменений локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="162"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="147"/>
         <source>Show difference</source>
         <translation>Показать различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="162"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="147"/>
         <source>Show &amp;difference</source>
         <translation>Показать &amp;различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="166"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="151"/>
         <source>Show the difference of the local project to the repository</source>
         <translation>Показать изменения между репозиторием и локальной копией</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="169"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="154"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать различие&lt;/b&gt;
 &lt;p&gt;Показать различие между локальным проектом и репозиторием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="176"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="161"/>
         <source>Show difference (extended)</source>
         <translation>Показать различие (расширенно)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="180"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="165"/>
         <source>Show the difference of revisions of the project to the repository</source>
         <translation>Показать разницу версий между репозиторием и локальной копией</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="183"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать разницу (насширенно)&lt;/b&gt;&lt;p&gt;Отображает различие выбираемых ревизий проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="205"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="190"/>
         <source>Show status</source>
         <translation>Показать статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="205"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="190"/>
         <source>Show &amp;status</source>
         <translation>Показать &amp;статус</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="209"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="194"/>
         <source>Show the status of the local project</source>
         <translation>Показать статус локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="212"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="197"/>
         <source>&lt;b&gt;Show status&lt;/b&gt;&lt;p&gt;This shows the status of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать статус&lt;/b&gt;&lt;p&gt;Показать статус локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="219"/>
         <source>Tag in repository</source>
         <translation>Создать тег в репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="234"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="219"/>
         <source>&amp;Tag in repository...</source>
         <translation>&amp;Создать тег в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="223"/>
         <source>Tag the local project in the repository</source>
         <translation>Создать в репозитории тег для проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="241"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="226"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Создать тег&lt;/b&gt;&lt;p&gt;Создаёт тег для локального проекта в репозитории.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="248"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="233"/>
         <source>Export from repository</source>
         <translation>Экспорт из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="248"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="233"/>
         <source>&amp;Export from repository...</source>
         <translation>&amp;Экспорт из репозитория...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="252"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="237"/>
         <source>Export a project from the repository</source>
         <translation>Экспортировать проект из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="255"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="240"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспорт из репозитория&lt;/b&gt;&lt;p&gt;Экспортировать проект из репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="247"/>
         <source>Command options</source>
         <translation>Опции командной строки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="262"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="247"/>
         <source>Command &amp;options...</source>
         <translation>&amp;Опции командной строки...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="265"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="250"/>
         <source>Show the VCS command options</source>
         <translation>Показать опции командной строки VCS</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="266"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="251"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the VCS command options.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Опции командной строки...&lt;/b&gt;&lt;p&gt;Показать диалог для редактирования опций командной строки VCS.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="273"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="258"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="273"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="258"/>
         <source>Re&amp;vert changes</source>
         <translation>От&amp;мена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="277"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="262"/>
         <source>Revert all changes made to the local project</source>
         <translation>Отменить все изменения в локальном проекте</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="280"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="265"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отмена изменений&lt;/b&gt;&lt;p&gt;Все изменения в локальном проекте будут отменены.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="272"/>
         <source>Merge</source>
         <translation>Слить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="287"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="272"/>
         <source>Mer&amp;ge changes...</source>
         <translation>С&amp;лить изменения...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="291"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="276"/>
         <source>Merge changes of a tag/revision into the local project</source>
         <translation>Слить изменения тега/ревизии с локальным проектом</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="279"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a tag/revision into the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Слить&lt;/b&gt;&lt;p&gt;Слить изменения тега/ревизии с локальным проектом.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="301"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="286"/>
         <source>Switch</source>
         <translation>Переключиться</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="301"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="286"/>
         <source>S&amp;witch...</source>
         <translation>Пе&amp;реключиться...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="305"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="290"/>
         <source>Switch the local copy to another tag/branch</source>
         <translation>Переключить локальную копию на другой тег/ветвь</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="308"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="293"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the local copy to another tag/branch.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переключиться&lt;/b&gt;&lt;p&gt;Переключить локальную копию на другой тег/ветвь.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
         <source>Resolve conflicts</source>
         <translation>Разрешение конфликтов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
         <source>Resolve con&amp;flicts</source>
         <translation>Разрешение кон&amp;фликтов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="318"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="303"/>
         <source>Resolve all conflicts of the local project</source>
         <translation>Разрешить все конфликты, возникшие в локальном проекте</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="321"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="306"/>
         <source>&lt;b&gt;Resolve conflicts&lt;/b&gt;&lt;p&gt;This resolves all conflicts of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разрешение конфликтов&lt;/b&gt;&lt;p&gt;Разрешает конфликты, возникшие при обновлении локальной копии с репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="328"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="313"/>
         <source>Cleanup</source>
         <translation>Очистка</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="328"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="313"/>
         <source>Cleanu&amp;p</source>
         <translation>О&amp;чистка</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="331"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="316"/>
         <source>Cleanup the local project</source>
         <translation>Очистить локальный проект</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="334"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="319"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Очистка&lt;/b&gt;&lt;p&gt;Очистить локальный проект.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="341"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="326"/>
         <source>Execute command</source>
         <translation>Выполнить команду</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="341"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="326"/>
         <source>E&amp;xecute command...</source>
         <translation>В&amp;ыполнить команду...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="344"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="329"/>
         <source>Execute an arbitrary VCS command</source>
         <translation>Выполнить произвольную команду VCS</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="347"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="332"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary VCS command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Выполнить команду&lt;/b&gt;&lt;p&gt;Открыть диалог для ввода произвольной команды VCS.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="354"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="339"/>
         <source>List tags</source>
         <translation>Список тегов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="354"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="339"/>
         <source>List tags...</source>
         <translation>Список тегов...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="357"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="342"/>
         <source>List tags of the project</source>
         <translation>Список тегов текущего проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="360"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="345"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Список тегов&lt;/b&gt;&lt;p&gt;Отображает список тегов текущего проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="367"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="352"/>
         <source>List branches</source>
         <translation>Список ветвей</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="367"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="352"/>
         <source>List branches...</source>
         <translation>Список ветвей...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="370"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="355"/>
         <source>List branches of the project</source>
         <translation>Список ветвей текущего проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="373"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="358"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Список ветвей&lt;/b&gt;
 &lt;p&gt;Отображает список ветвей текущего проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="380"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="365"/>
         <source>List repository contents</source>
         <translation>Просмотреть содержимое репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="380"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="365"/>
         <source>List repository contents...</source>
         <translation>Просмотреть содержимое репозитория...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="383"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="368"/>
         <source>Lists the contents of the repository</source>
         <translation>Просмотреть содержимое репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="386"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="371"/>
         <source>&lt;b&gt;List repository contents&lt;/b&gt;&lt;p&gt;This lists the contents of the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Просмотреть содержимое репозитория&lt;b&gt;&lt;p&gt;Просмотреть содержимое репозитория системы контроля версий.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="393"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="378"/>
         <source>Set Property</source>
         <translation>Установить свойство</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="393"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="378"/>
         <source>Set Property...</source>
         <translation>Установить свойство...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="396"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="381"/>
         <source>Set a property for the project files</source>
         <translation>Установить свойство файлов проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="399"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="384"/>
         <source>&lt;b&gt;Set Property&lt;/b&gt;&lt;p&gt;This sets a property for the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Установить свойство&lt;/b&gt;&lt;p&gt;Устанавливает свойство файлов проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="406"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="391"/>
         <source>List Properties</source>
         <translation>Список свойств</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="406"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="391"/>
         <source>List Properties...</source>
         <translation>Список свойств...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="409"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="394"/>
         <source>List properties of the project files</source>
         <translation>Список свойств файлов проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="412"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="397"/>
         <source>&lt;b&gt;List Properties&lt;/b&gt;&lt;p&gt;This lists the properties of the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Список свойств&lt;/b&gt;&lt;p&gt;Отображает список свойств файлов проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="419"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="404"/>
         <source>Delete Property</source>
         <translation>Удалить свойство</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="419"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="404"/>
         <source>Delete Property...</source>
         <translation>Удалить свойство...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="422"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="407"/>
         <source>Delete a property for the project files</source>
         <translation>Удалить свойство для файлов проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="425"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="410"/>
         <source>&lt;b&gt;Delete Property&lt;/b&gt;&lt;p&gt;This deletes a property for the project files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Удалить свойство&lt;/b&gt;
 &lt;p&gt;Удаляет свойство для файлов проекта.&lt;/p&gt;</translation>
@@ -37702,120 +37702,120 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="131"/>
         <source>Show limited log</source>
-        <translation>Показать ограниченный журнал</translation>
+        <translation type="obsolete">Показать ограниченный журнал</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="135"/>
         <source>Show a limited log of the local project</source>
-        <translation>Показать ограниченный журнал изменений локального проекта</translation>
+        <translation type="obsolete">Показать ограниченный журнал изменений локального проекта</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="138"/>
         <source>&lt;b&gt;Show limited log&lt;/b&gt;&lt;p&gt;This shows the log of the local project limited to a selectable number of entries.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Показать ограниченный журнал&lt;/b&gt;&lt;p&gt;Отображает журнал с заданным количеством элементов.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Показать ограниченный журнал&lt;/b&gt;&lt;p&gt;Отображает журнал с заданным количеством элементов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="219"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="204"/>
         <source>Show repository info</source>
         <translation>Показать информацию о репозитории</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="223"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="208"/>
         <source>Show some repository related information for the local project</source>
         <translation>Отобразить информацию о репозизтории локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="432"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="417"/>
         <source>Relocate</source>
         <translation>Переместить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="432"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="417"/>
         <source>Relocate...</source>
         <translation>Переместить...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="436"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="421"/>
         <source>Relocate the working copy to a new repository URL</source>
         <translation>Переместить рабочую копию в репозиторий с новым URL</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="439"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="424"/>
         <source>&lt;b&gt;Relocate&lt;/b&gt;&lt;p&gt;This relocates the working copy to a new repository URL.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Переместить&lt;/b&gt;&lt;p&gt;Переместить рабочую копию в репозиторий с новым URL.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="226"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="211"/>
         <source>&lt;b&gt;Show repository info&lt;/b&gt;&lt;p&gt;This shows some repository related information for the local project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Информация о репозитории&lt;/b&gt;&lt;p&gt;Отобразить информацию о репозитории локального проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="190"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="175"/>
         <source>Show difference (URLs)</source>
         <translation>Показать разницу (URL)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="194"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="179"/>
         <source>Show the difference of the project between two repository URLs</source>
         <translation>Показать разницу между двумя репозиториями</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="197"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="182"/>
         <source>&lt;b&gt;Show difference (URLs)&lt;/b&gt;&lt;p&gt;This shows the difference of the project between two repository URLs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать разницу (URL)&lt;/b&gt;&lt;p&gt;Показывает разницу между репозиториями, заданными двумя URL.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="446"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="431"/>
         <source>Repository Browser</source>
         <translation>Проводник репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="446"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="431"/>
         <source>Repository Browser...</source>
         <translation>Проводник репозитория...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="450"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="435"/>
         <source>Show the Repository Browser dialog</source>
         <translation>Показать диалог проводника репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="453"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="438"/>
         <source>&lt;b&gt;Repository Browser&lt;/b&gt;&lt;p&gt;This shows the Repository Browser dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Проводник репозитория&lt;/b&gt;&lt;p&gt;Показывает проводник репозитория.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="146"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="131"/>
         <source>Show log browser</source>
         <translation>Показать проводник журналов</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="135"/>
         <source>Show a dialog to browse the log of the local project</source>
         <translation>Показать диалог для навигации по файлу журнала для локального проекта</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="138"/>
         <source>&lt;b&gt;Show log browser&lt;/b&gt;&lt;p&gt;This shows a dialog to browse the log of the local project. A limited number of entries is shown first. More can be retrieved later on.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать проводник журнала&lt;/b&gt;&lt;p&gt;Показывает диалог для навигации по файлу журнала локального проекта. Изначально показывается ограниченное количество записей. Дальнейшие записи могут быть получены позже.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="460"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="445"/>
         <source>Configure</source>
         <translation>Настроить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="460"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="445"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="463"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="448"/>
         <source>Show the configuration dialog with the Subversion page selected</source>
         <translation>Показать диалог настроек с выбранной страницей настроек Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="466"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="451"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Subversion page selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Настроить&lt;/b&gt;&lt;p&gt;Показать диалог настроек с выбранной страницей настроек Subversion.&lt;/p&gt;</translation>
     </message>
@@ -49120,14 +49120,14 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Предки&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1168"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1185"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Предок #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Изменения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1184"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1201"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
@@ -49137,7 +49137,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 &lt;/table&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1214"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="1231"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
@@ -49398,17 +49398,17 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1384"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1390"/>
         <source>unknown</source>
         <translation>неизвестный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1253"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1259"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Информация о репозитории&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Версия Subversion:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Текущая ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Зафиксированная ревизия (committed)&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Дата сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Время сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Последний автор&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1385"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1391"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Информация о репозитории&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Текущая ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Зафиксированная ревизия&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Дата сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Время сохранения&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Автор последней ревизии&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>

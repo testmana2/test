@@ -128,21 +128,6 @@ class SvnProjectHelper(VcsProjectHelper):
         self.vcsLogAct.triggered[()].connect(self._vcsLog)
         self.actions.append(self.vcsLogAct)
         
-        self.svnLogLimitedAct = E5Action(self.trUtf8('Show limited log'),
-                UI.PixmapCache.getIcon("vcsLog.png"),
-                self.trUtf8('Show limited log'),
-                0, 0, self, 'subversion_log_limited')
-        self.svnLogLimitedAct.setStatusTip(self.trUtf8(
-            'Show a limited log of the local project'
-        ))
-        self.svnLogLimitedAct.setWhatsThis(self.trUtf8(
-            """<b>Show limited log</b>"""
-            """<p>This shows the log of the local project limited to a selectable"""
-            """ number of entries.</p>"""
-        ))
-        self.svnLogLimitedAct.triggered[()].connect(self.__svnLogLimited)
-        self.actions.append(self.svnLogLimitedAct)
-        
         self.svnLogBrowserAct = E5Action(self.trUtf8('Show log browser'),
                 UI.PixmapCache.getIcon("vcsLog.png"),
                 self.trUtf8('Show log browser'),
@@ -504,7 +489,6 @@ class SvnProjectHelper(VcsProjectHelper):
             menu.addAction(self.svnListAct)
         menu.addSeparator()
         menu.addAction(self.vcsLogAct)
-        menu.addAction(self.svnLogLimitedAct)
         menu.addAction(self.svnLogBrowserAct)
         menu.addSeparator()
         menu.addAction(self.vcsStatusAct)
@@ -581,12 +565,6 @@ class SvnProjectHelper(VcsProjectHelper):
         Private slot used to perform a svn diff with the selection of repository URLs.
         """
         self.vcs.svnUrlDiff(self.project.ppath)
-        
-    def __svnLogLimited(self):
-        """
-        Private slot used to perform a svn log --limit.
-        """
-        self.vcs.svnLogLimited(self.project.ppath)
         
     def __svnLogBrowser(self):
         """

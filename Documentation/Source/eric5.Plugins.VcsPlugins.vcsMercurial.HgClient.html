@@ -223,27 +223,36 @@ tuple of flag indicating a successful start (boolean) and
 </dd>
 </dl><a NAME="HgClient.runcommand" ID="HgClient.runcommand"></a>
 <h4>HgClient.runcommand</h4>
-<b>runcommand</b>(<i>args, prompt=None, input=None</i>)
+<b>runcommand</b>(<i>args, prompt=None, input=None, output=None, error=None</i>)
 <p>
         Public method to execute a command via the command server.
 </p><dl>
 <dt><i>args</i></dt>
 <dd>
 list of arguments for the command (list of string)
-</dd><dt><i>prompt</i></dt>
+</dd><dt><i>prompt=</i></dt>
 <dd>
 function to reply to prompts by the server. It
             receives the max number of bytes to return and the contents
             of the output channel received so far.
-</dd><dt><i>input</i></dt>
+</dd><dt><i>input=</i></dt>
 <dd>
 function to reply to bulk data requests by the server.
             It receives the max number of bytes to return.
+</dd><dt><i>output=</i></dt>
+<dd>
+function receiving the data from the server (string).
+            If a prompt function is given, this parameter will be ignored.
+</dd><dt><i>error=</i></dt>
+<dd>
+function receiving error messages from the server (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-output and errors of the command server (string)
+output and errors of the command server (string). In case output
+            and/or error functions were given, the respective return value will
+            be an empty string.
 </dd>
 </dl><a NAME="HgClient.startServer" ID="HgClient.startServer"></a>
 <h4>HgClient.startServer</h4>

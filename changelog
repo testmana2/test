@@ -12,6 +12,11 @@ Version 5.2-snapshot-2011mmdd:
   -- show class attributes, class methods and static methods with different icons
 - enhancements to the source documentor
   -- introduced separate sections for class methods and static methods
+- enhancements to the version control system interfaces
+  -- all
+     --- made "Show Log" behave like "Show Limited Log" and removed the later
+  -- Mercurial
+     --- added interface for the Mercurial command server (as of Mercurial 1.9)
 
 Version 5.2-snapshot-20110724:
 - bug fixes

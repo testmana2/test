@@ -719,9 +719,15 @@ class Hg(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        self.log = HgLogDialog(self)
-        self.log.show()
-        self.log.start(name)
+        noEntries, ok = QInputDialog.getInteger(
+            None,
+            self.trUtf8("Mercurial Log"),
+            self.trUtf8("Select number of entries to show."),
+            self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
+        if ok:
+            self.log = HgLogDialog(self)
+            self.log.show()
+            self.log.start(name, noEntries)
     
     def vcsDiff(self, name):
         """
@@ -1492,23 +1498,6 @@ class Hg(VersionControl):
             self.diff = HgDiffDialog(self)
             self.diff.show()
             self.diff.start(name, revisions)
-    
-    def hgLogLimited(self, name):
-        """
-        Public method used to view the (limited) log of a file/directory from the
-        Mercurial repository.
-        
-        @param name file/directory name to show the log of (string)
-        """
-        noEntries, ok = QInputDialog.getInteger(
-            None,
-            self.trUtf8("Mercurial Log"),
-            self.trUtf8("Select number of entries to show."),
-            self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
-        if ok:
-            self.log = HgLogDialog(self)
-            self.log.show()
-            self.log.start(name, noEntries)
     
     def hgLogBrowser(self, path):
         """

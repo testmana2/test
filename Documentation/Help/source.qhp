@@ -8570,7 +8570,6 @@
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
       <keyword name="Hg.hgListTagBranch" id="Hg.hgListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListTagBranch" />
       <keyword name="Hg.hgLogBrowser" id="Hg.hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgLogBrowser" />
-      <keyword name="Hg.hgLogLimited" id="Hg.hgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgLogLimited" />
       <keyword name="Hg.hgNormalizeURL" id="Hg.hgNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgNormalizeURL" />
       <keyword name="Hg.hgOutgoing" id="Hg.hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgOutgoing" />
       <keyword name="Hg.hgPreviewBundle" id="Hg.hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPreviewBundle" />
@@ -8671,7 +8670,6 @@
       <keyword name="HgProjectHelper.__hgIdentifyBundle" id="HgProjectHelper.__hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentifyBundle" />
       <keyword name="HgProjectHelper.__hgIncoming" id="HgProjectHelper.__hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIncoming" />
       <keyword name="HgProjectHelper.__hgLogBrowser" id="HgProjectHelper.__hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogBrowser" />
-      <keyword name="HgProjectHelper.__hgLogLimited" id="HgProjectHelper.__hgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogLimited" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />
       <keyword name="HgProjectHelper.__hgParents" id="HgProjectHelper.__hgParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgParents" />
       <keyword name="HgProjectHelper.__hgPreviewBundle" id="HgProjectHelper.__hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPreviewBundle" />
@@ -8756,7 +8754,6 @@
       <keyword name="HgProjectBrowserHelper.__HgExtendedDiff" id="HgProjectBrowserHelper.__HgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgExtendedDiff" />
       <keyword name="HgProjectBrowserHelper.__HgForget" id="HgProjectBrowserHelper.__HgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgForget" />
       <keyword name="HgProjectBrowserHelper.__HgLogBrowser" id="HgProjectBrowserHelper.__HgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogBrowser" />
-      <keyword name="HgProjectBrowserHelper.__HgLogLimited" id="HgProjectBrowserHelper.__HgLogLimited" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogLimited" />
       <keyword name="HgProjectBrowserHelper.__HgMove" id="HgProjectBrowserHelper.__HgMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgMove" />
       <keyword name="HgProjectBrowserHelper.__HgResolve" id="HgProjectBrowserHelper.__HgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgResolve" />
       <keyword name="HgProjectBrowserHelper._addVCSMenu" id="HgProjectBrowserHelper._addVCSMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenu" />
@@ -9086,7 +9083,6 @@
       <keyword name="Subversion.svnListTagBranch" id="Subversion.svnListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnListTagBranch" />
       <keyword name="Subversion.svnLock" id="Subversion.svnLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnLock" />
       <keyword name="Subversion.svnLogBrowser" id="Subversion.svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnLogBrowser" />
-      <keyword name="Subversion.svnLogLimited" id="Subversion.svnLogLimited" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnLogLimited" />
       <keyword name="Subversion.svnNormalizeURL" id="Subversion.svnNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnNormalizeURL" />
       <keyword name="Subversion.svnRelocate" id="Subversion.svnRelocate" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnRelocate" />
       <keyword name="Subversion.svnRemoveFromChangelist" id="Subversion.svnRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.svnRemoveFromChangelist" />
@@ -9133,7 +9129,6 @@
       <keyword name="SvnProjectHelper.__svnConfigure" id="SvnProjectHelper.__svnConfigure" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnConfigure" />
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
       <keyword name="SvnProjectHelper.__svnLogBrowser" id="SvnProjectHelper.__svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnLogBrowser" />
-      <keyword name="SvnProjectHelper.__svnLogLimited" id="SvnProjectHelper.__svnLogLimited" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnLogLimited" />
       <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
       <keyword name="SvnProjectHelper.__svnPropList" id="SvnProjectHelper.__svnPropList" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropList" />
       <keyword name="SvnProjectHelper.__svnPropSet" id="SvnProjectHelper.__svnPropSet" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropSet" />
@@ -9209,7 +9204,6 @@
       <keyword name="SvnProjectBrowserHelper.__SVNListProps" id="SvnProjectBrowserHelper.__SVNListProps" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNListProps" />
       <keyword name="SvnProjectBrowserHelper.__SVNLock" id="SvnProjectBrowserHelper.__SVNLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLock" />
       <keyword name="SvnProjectBrowserHelper.__SVNLogBrowser" id="SvnProjectBrowserHelper.__SVNLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogBrowser" />
-      <keyword name="SvnProjectBrowserHelper.__SVNLogLimited" id="SvnProjectBrowserHelper.__SVNLogLimited" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogLimited" />
       <keyword name="SvnProjectBrowserHelper.__SVNMove" id="SvnProjectBrowserHelper.__SVNMove" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNMove" />
       <keyword name="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" id="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNRemoveFromChangelist" />
       <keyword name="SvnProjectBrowserHelper.__SVNResolve" id="SvnProjectBrowserHelper.__SVNResolve" ref="eric5.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNResolve" />
@@ -9470,7 +9464,6 @@
       <keyword name="Subversion.svnListTagBranch" id="Subversion.svnListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnListTagBranch" />
       <keyword name="Subversion.svnLock" id="Subversion.svnLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnLock" />
       <keyword name="Subversion.svnLogBrowser" id="Subversion.svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnLogBrowser" />
-      <keyword name="Subversion.svnLogLimited" id="Subversion.svnLogLimited" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnLogLimited" />
       <keyword name="Subversion.svnNormalizeURL" id="Subversion.svnNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnNormalizeURL" />
       <keyword name="Subversion.svnRelocate" id="Subversion.svnRelocate" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnRelocate" />
       <keyword name="Subversion.svnRemoveFromChangelist" id="Subversion.svnRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.svnRemoveFromChangelist" />
@@ -9518,7 +9511,6 @@
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
       <keyword name="SvnProjectHelper.__svnInfo" id="SvnProjectHelper.__svnInfo" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnInfo" />
       <keyword name="SvnProjectHelper.__svnLogBrowser" id="SvnProjectHelper.__svnLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnLogBrowser" />
-      <keyword name="SvnProjectHelper.__svnLogLimited" id="SvnProjectHelper.__svnLogLimited" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnLogLimited" />
       <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
       <keyword name="SvnProjectHelper.__svnPropList" id="SvnProjectHelper.__svnPropList" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropList" />
       <keyword name="SvnProjectHelper.__svnPropSet" id="SvnProjectHelper.__svnPropSet" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropSet" />
@@ -9587,7 +9579,6 @@
       <keyword name="SvnProjectBrowserHelper.__SVNListProps" id="SvnProjectBrowserHelper.__SVNListProps" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNListProps" />
       <keyword name="SvnProjectBrowserHelper.__SVNLock" id="SvnProjectBrowserHelper.__SVNLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLock" />
       <keyword name="SvnProjectBrowserHelper.__SVNLogBrowser" id="SvnProjectBrowserHelper.__SVNLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogBrowser" />
-      <keyword name="SvnProjectBrowserHelper.__SVNLogLimited" id="SvnProjectBrowserHelper.__SVNLogLimited" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNLogLimited" />
       <keyword name="SvnProjectBrowserHelper.__SVNMove" id="SvnProjectBrowserHelper.__SVNMove" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNMove" />
       <keyword name="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" id="SvnProjectBrowserHelper.__SVNRemoveFromChangelist" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNRemoveFromChangelist" />
       <keyword name="SvnProjectBrowserHelper.__SVNResolve" id="SvnProjectBrowserHelper.__SVNResolve" ref="eric5.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__SVNResolve" />

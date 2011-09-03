@@ -220,9 +220,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show log'), self._VCSLog)
         self.vcsMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show limited log'), self.__HgLogLimited)
-        self.vcsMenuActions.append(act)
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
             self.trUtf8('Show log browser'), self.__HgLogBrowser)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
@@ -407,9 +404,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.trUtf8('Show log'), self._VCSLog)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
-            self.trUtf8('Show limited log'), self.__HgLogLimited)
-        self.vcsDirMenuActions.append(act)
-        act = menu.addAction(UI.PixmapCache.getIcon("vcsLog.png"),
             self.trUtf8('Show log browser'), self.__HgLogBrowser)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -568,17 +562,6 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         itm = self.browser.currentItem()
         fn = itm.fileName()
         self.vcs.hgAnnotate(fn)
-    
-    def __HgLogLimited(self):
-        """
-        Private slot called by the context menu to show the limited log of a file.
-        """
-        itm = self.browser.currentItem()
-        try:
-            fn = itm.fileName()
-        except AttributeError:
-            fn = itm.dirName()
-        self.vcs.hgLogLimited(fn)
     
     def __HgLogBrowser(self):
         """
