@@ -65,7 +65,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 client = HgClient(self.projectDir, "utf-8")
                 ok, err = client.startServer()
                 if ok:
-                   self.__client = client
+                    self.__client = client
                 else:
                     self.__useCommandLine = True
             else:

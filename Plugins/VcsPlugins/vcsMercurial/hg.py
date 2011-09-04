@@ -2474,7 +2474,7 @@ class Hg(VersionControl):
             client = HgClient(project.getProjectPath(), "utf-8", self)
             ok, err = client.startServer()
             if ok:
-               self.__client = client
+                self.__client = client
             else:
                 E5MessageBox.warning(None,
                     self.trUtf8("Mercurial Command Server"),
