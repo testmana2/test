@@ -556,15 +556,19 @@ class UserInterface(QMainWindow):
         self.toolbarManager.restoreState(Preferences.getUI("ToolbarManagerState"))
         
         # now activate the initial view profile
+        splash.showMessage(self.trUtf8("Setting View Profile..."))
         self.__setEditProfile()
         
         # now read the saved tasks
+        splash.showMessage(self.trUtf8("Reading Tasks..."))
         self.__readTasks()
         
         # now read the saved templates
+        splash.showMessage(self.trUtf8("Reading Templates..."))
         self.templateViewer.readTemplates()
         
         # now start the debug client
+        splash.showMessage(self.trUtf8("Starting Debugger..."))
         debugServer.startClient(False)
         
         # attributes for the network objects
