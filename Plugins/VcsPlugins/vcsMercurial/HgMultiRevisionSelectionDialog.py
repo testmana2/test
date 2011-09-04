@@ -1,37 +1,42 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2010 - 2011 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2011 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
-Module implementing a dialog to enter the data for a bundle operation.
+Module implementing a dialog to select revisions.
 """
 
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
-from .Ui_HgBundleDialog import Ui_HgBundleDialog
+from .Ui_HgMultiRevisionSelectionDialog import Ui_HgMultiRevisionSelectionDialog
 
 
-class HgBundleDialog(QDialog, Ui_HgBundleDialog):
+class HgMultiRevisionSelectionDialog(QDialog, Ui_HgMultiRevisionSelectionDialog):
     """
-    Class implementing a dialog to enter the data for a bundle operation.
+    Class implementing a dialog to select revisions.
     """
-    def __init__(self, tagsList, branchesList, bookmarksList=None, parent=None):
+    def __init__(self, tagsList, branchesList, bookmarksList=None, emptyRevsOk=False,
+                 showLimit=False, limitDefault=100, parent=None):
         """
         Constructor
         
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
         @param bookmarksList list of bookmarks (list of strings)
+        @param emptyRevsOk flag indicating that it is ok to not enter revisions (boolean)
+        @param showLimit flag indicating to show the limit entry (boolean)
+        @param limitDefault default value for the limit (integer)
         @param parent parent widget (QWidget)
         """
         super().__init__(parent)
         self.setupUi(self)
-        
+       
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
-        self.compressionCombo.addItems(["", "bzip2", "gzip", "none"])
+        self.__emptyRevsOk = emptyRevsOk
+        
         self.tagCombo.addItems(sorted(tagsList))
         self.branchCombo.addItems(["default"] + sorted(branchesList))
         if bookmarksList is not None:
@@ -39,27 +44,32 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         else:
             self.bookmarkButton.setHidden(True)
             self.bookmarkCombo.setHidden(True)
+        
+        self.limitSpinBox.setValue(limitDefault)
+        self.limitGroup.setVisible(showLimit)
     
     def __updateOK(self):
         """
         Private slot to update the OK button.
         """
         enabled = True
-        if self.multipleButton.isChecked():
-            enabled = self.multipleEdit.toPlainText() != ""
+        if self.changesetsButton.isChecked():
+            enabled = self.changesetsEdit.toPlainText() != ""
         elif self.tagButton.isChecked():
             enabled = self.tagCombo.currentText() != ""
         elif self.branchButton.isChecked():
             enabled = self.branchCombo.currentText() != ""
         elif self.bookmarkButton.isChecked():
             enabled = self.bookmarkCombo.currentText() != ""
+        if not enabled and self.__emptyRevsOk:
+            enabled = self.limitGroup.isChecked()
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enabled)
     
     @pyqtSlot(bool)
-    def on_multipleButton_toggled(self, checked):
+    def on_changesetsButton_toggled(self, checked):
         """
-        Private slot to handle changes of the Multiple select button.
+        Private slot to handle changes of the Changesets select button.
         
         @param checked state of the button (boolean)
         """
@@ -93,9 +103,11 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         self.__updateOK()
     
     @pyqtSlot()
-    def on_multipleEdit_textChanged(self):
+    def on_changesetsEdit_textChanged(self):
         """
-        Private slot to handle changes of the Multiple edit.
+        Private slot to handle changes of the Changesets edit.
+        
+        @param txt text of the edit (string)
         """
         self.__updateOK()
     
@@ -126,15 +138,24 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         """
         self.__updateOK()
     
-    def getParameters(self):
+    @pyqtSlot(bool)
+    def on_limitGroup_toggled(self, checked):
         """
-        Public method to retrieve the bundle data.
+        Private slot to handle changes of the Limit Results group status.
         
-        @return tuple naming the revisions, base revisions, the compression type and
-            a flag indicating to bundle all changesets (string, string, boolean)
+        @param checked state of the group (boolean)
         """
-        if self.multipleButton.isChecked():
-            revs = self.multipleEdit.toPlainText().strip().splitlines()
+        self.__updateOK()
+    
+    def getRevisions(self):
+        """
+        Public method to retrieve the selected revisions.
+        
+        @return tuple of selected revisions (list of strings) and number
+            of entries to be shown (integer)
+        """
+        if self.changesetsButton.isChecked():
+            revs = self.changesetsEdit.toPlainText().strip().splitlines()
         elif self.tagButton.isChecked():
             revs = [self.tagCombo.currentText()]
         elif self.branchButton.isChecked():
@@ -144,7 +165,9 @@ class HgBundleDialog(QDialog, Ui_HgBundleDialog):
         else:
             revs = []
         
-        baseRevs = self.baseRevisionsEdit.toPlainText().strip().splitlines()
+        if self.limitGroup.isChecked():
+            limit = self.limitSpinBox.value()
+        else:
+            limit = 0
         
-        return (revs, baseRevs, self.compressionCombo.currentText(),
-            self.allCheckBox.isChecked())
+        return revs, limit

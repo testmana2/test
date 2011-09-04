@@ -79,11 +79,11 @@ QDialog, Ui_HgBundleDialog
 <td><a href="#HgBundleDialog.on_branchCombo_editTextChanged">on_branchCombo_editTextChanged</a></td>
 <td>Private slot to handle changes of the Branch combo.</td>
 </tr><tr>
-<td><a href="#HgBundleDialog.on_idButton_toggled">on_idButton_toggled</a></td>
-<td>Private slot to handle changes of the ID select button.</td>
+<td><a href="#HgBundleDialog.on_multipleButton_toggled">on_multipleButton_toggled</a></td>
+<td>Private slot to handle changes of the Multiple select button.</td>
 </tr><tr>
-<td><a href="#HgBundleDialog.on_idEdit_textChanged">on_idEdit_textChanged</a></td>
-<td>Private slot to handle changes of the ID edit.</td>
+<td><a href="#HgBundleDialog.on_multipleEdit_textChanged">on_multipleEdit_textChanged</a></td>
+<td>Private slot to handle changes of the Multiple edit.</td>
 </tr><tr>
 <td><a href="#HgBundleDialog.on_tagButton_toggled">on_tagButton_toggled</a></td>
 <td>Private slot to handle changes of the Tag select button.</td>
@@ -128,8 +128,8 @@ parent widget (QWidget)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-tuple naming the revision, the compression type and a flag indicating
-            to bundle all changesets (string, string, boolean)
+tuple naming the revisions, base revisions, the compression type and
+            a flag indicating to bundle all changesets (string, string, boolean)
 </dd>
 </dl><a NAME="HgBundleDialog.on_bookmarkButton_toggled" ID="HgBundleDialog.on_bookmarkButton_toggled"></a>
 <h4>HgBundleDialog.on_bookmarkButton_toggled</h4>
@@ -171,27 +171,22 @@ state of the button (boolean)
 <dd>
 text of the combo (string)
 </dd>
-</dl><a NAME="HgBundleDialog.on_idButton_toggled" ID="HgBundleDialog.on_idButton_toggled"></a>
-<h4>HgBundleDialog.on_idButton_toggled</h4>
-<b>on_idButton_toggled</b>(<i>checked</i>)
+</dl><a NAME="HgBundleDialog.on_multipleButton_toggled" ID="HgBundleDialog.on_multipleButton_toggled"></a>
+<h4>HgBundleDialog.on_multipleButton_toggled</h4>
+<b>on_multipleButton_toggled</b>(<i>checked</i>)
 <p>
-        Private slot to handle changes of the ID select button.
+        Private slot to handle changes of the Multiple select button.
 </p><dl>
 <dt><i>checked</i></dt>
 <dd>
 state of the button (boolean)
 </dd>
-</dl><a NAME="HgBundleDialog.on_idEdit_textChanged" ID="HgBundleDialog.on_idEdit_textChanged"></a>
-<h4>HgBundleDialog.on_idEdit_textChanged</h4>
-<b>on_idEdit_textChanged</b>(<i>txt</i>)
+</dl><a NAME="HgBundleDialog.on_multipleEdit_textChanged" ID="HgBundleDialog.on_multipleEdit_textChanged"></a>
+<h4>HgBundleDialog.on_multipleEdit_textChanged</h4>
+<b>on_multipleEdit_textChanged</b>(<i></i>)
 <p>
-        Private slot to handle changes of the ID edit.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-text of the edit (string)
-</dd>
-</dl><a NAME="HgBundleDialog.on_tagButton_toggled" ID="HgBundleDialog.on_tagButton_toggled"></a>
+        Private slot to handle changes of the Multiple edit.
+</p><a NAME="HgBundleDialog.on_tagButton_toggled" ID="HgBundleDialog.on_tagButton_toggled"></a>
 <h4>HgBundleDialog.on_tagButton_toggled</h4>
 <b>on_tagButton_toggled</b>(<i>checked</i>)
 <p>

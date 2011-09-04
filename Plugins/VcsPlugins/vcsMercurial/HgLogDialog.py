@@ -92,12 +92,13 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         
         e.accept()
     
-    def start(self, fn, noEntries=0):
+    def start(self, fn, noEntries=0, revisions=None):
         """
         Public slot to start the hg log command.
         
         @param fn filename to show the log for (string)
         @param noEntries number of entries to show (integer)
+        @param revisions revisions to show log for (list of strings)
         """
         self.errorGroup.hide()
         QApplication.processEvents()
@@ -145,6 +146,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                     project.getProjectManagementDir(), "hg-bundle.hg")
                 args.append('--bundle')
                 args.append(self.vcs.bundleFile)
+        if revisions:
+            for rev in revisions:
+                args.append("--rev")
+                args.append(rev)
         if not self.projectMode:
             args.append(self.filename)
         

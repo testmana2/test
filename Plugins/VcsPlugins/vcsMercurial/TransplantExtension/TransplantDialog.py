@@ -83,11 +83,7 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         
         self.branchesCombo.addItems(["", "default"] + sorted(branchesList))
         
-        self.__revisionsValidator = RevisionsValidator(True, self)
-        self.__pruneRevisionsValidator = RevisionsValidator(False, self)
         self.__mergeRevisionsValidator = RevisionsValidator(False, self)
-        self.revisionsEdit.setValidator(self.__revisionsValidator)
-        self.pruneEdit.setValidator(self.__pruneRevisionsValidator)
         self.mergeEdit.setValidator(self.__mergeRevisionsValidator)
        
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
@@ -97,14 +93,12 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
         Private slot to update the state of the OK button.
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
-            self.revisionsEdit.text() != "" or self.allCheckBox.isChecked())
+            self.revisionsEdit.toPlainText() != "" or self.allCheckBox.isChecked())
     
-    @pyqtSlot(str)
-    def on_revisionsEdit_textChanged(self, txt):
+    @pyqtSlot()
+    def on_revisionsEdit_textChanged(self):
         """
         Private slot to react upon changes of revisions.
-        
-        @param txt contents of the revisions edit (string)
         """
         self.__updateOk()
     
@@ -137,11 +131,11 @@ class TransplantDialog(QDialog, Ui_TransplantDialog):
             list of strings, boolean)
         """
         return (
-            self.revisionsEdit.text().strip().split(),
+            self.revisionsEdit.toPlainText().strip().splitlines(),
             self.repoEdit.text().strip(),
             self.branchesCombo.currentText().strip(),
             self.allCheckBox.isChecked(),
-            self.pruneEdit.text().strip().split(),
+            self.pruneEdit.toPlainText().strip().splitlines(),
             self.mergeEdit.text().strip().split(),
             self.logCheckBox.isChecked()
         )

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>213</height>
+    <width>450</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,9 +28,15 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="revisionsEdit">
+    <widget class="QPlainTextEdit" name="revisionsEdit">
      <property name="toolTip">
-      <string>Enter the revisions or revision ranges to be transplanted separated by a space character</string>
+      <string>Enter changesets by number, id, range or revset expression one per line</string>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QPlainTextEdit::NoWrap</enum>
      </property>
     </widget>
    </item>
@@ -95,9 +101,15 @@
     </widget>
    </item>
    <item row="4" column="1">
-    <widget class="QLineEdit" name="pruneEdit">
+    <widget class="QPlainTextEdit" name="pruneEdit">
      <property name="toolTip">
-      <string>Enter revisions to be skipped separated by a space character</string>
+      <string>Enter changesets by number, id, range or revset expression one per line</string>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QPlainTextEdit::NoWrap</enum>
      </property>
     </widget>
    </item>
@@ -162,8 +174,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>222</x>
-     <y>198</y>
+     <x>231</x>
+     <y>372</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -178,8 +190,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>290</x>
-     <y>204</y>
+     <x>299</x>
+     <y>372</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

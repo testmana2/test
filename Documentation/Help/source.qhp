@@ -427,6 +427,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
@@ -8741,6 +8742,20 @@
       <keyword name="HgMergeDialog.on_idEdit_textChanged" id="HgMergeDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html#HgMergeDialog.on_idEdit_textChanged" />
       <keyword name="HgMergeDialog.on_tagButton_toggled" id="HgMergeDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html#HgMergeDialog.on_tagButton_toggled" />
       <keyword name="HgMergeDialog.on_tagCombo_editTextChanged" id="HgMergeDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html#HgMergeDialog.on_tagCombo_editTextChanged" />
+      <keyword name="HgMultiRevisionSelectionDialog (Module)" id="HgMultiRevisionSelectionDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html" />
+      <keyword name="HgMultiRevisionSelectionDialog" id="HgMultiRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog" />
+      <keyword name="HgMultiRevisionSelectionDialog (Constructor)" id="HgMultiRevisionSelectionDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.__init__" />
+      <keyword name="HgMultiRevisionSelectionDialog.__updateOK" id="HgMultiRevisionSelectionDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.__updateOK" />
+      <keyword name="HgMultiRevisionSelectionDialog.getRevisions" id="HgMultiRevisionSelectionDialog.getRevisions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.getRevisions" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled" id="HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged" id="HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_branchButton_toggled" id="HgMultiRevisionSelectionDialog.on_branchButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_branchButton_toggled" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged" id="HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_changesetsButton_toggled" id="HgMultiRevisionSelectionDialog.on_changesetsButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_changesetsButton_toggled" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged" id="HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_limitGroup_toggled" id="HgMultiRevisionSelectionDialog.on_limitGroup_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_limitGroup_toggled" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_tagButton_toggled" id="HgMultiRevisionSelectionDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_tagButton_toggled" />
+      <keyword name="HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged" id="HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html#HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged" />
       <keyword name="HgCommandDialog (Module)" id="HgCommandDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html" />
       <keyword name="HgCommandDialog" id="HgCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html#HgCommandDialog" />
       <keyword name="HgCommandDialog (Constructor)" id="HgCommandDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html#HgCommandDialog.__init__" />
@@ -8925,8 +8940,8 @@
       <keyword name="HgBundleDialog.on_bookmarkCombo_editTextChanged" id="HgBundleDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_bookmarkCombo_editTextChanged" />
       <keyword name="HgBundleDialog.on_branchButton_toggled" id="HgBundleDialog.on_branchButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_branchButton_toggled" />
       <keyword name="HgBundleDialog.on_branchCombo_editTextChanged" id="HgBundleDialog.on_branchCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_branchCombo_editTextChanged" />
-      <keyword name="HgBundleDialog.on_idButton_toggled" id="HgBundleDialog.on_idButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_idButton_toggled" />
-      <keyword name="HgBundleDialog.on_idEdit_textChanged" id="HgBundleDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_idEdit_textChanged" />
+      <keyword name="HgBundleDialog.on_multipleButton_toggled" id="HgBundleDialog.on_multipleButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_multipleButton_toggled" />
+      <keyword name="HgBundleDialog.on_multipleEdit_textChanged" id="HgBundleDialog.on_multipleEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_multipleEdit_textChanged" />
       <keyword name="HgBundleDialog.on_tagButton_toggled" id="HgBundleDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_tagButton_toggled" />
       <keyword name="HgBundleDialog.on_tagCombo_editTextChanged" id="HgBundleDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html#HgBundleDialog.on_tagCombo_editTextChanged" />
       <keyword name="HgTagBranchListDialog (Module)" id="HgTagBranchListDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgTagBranchListDialog.html" />
@@ -11371,6 +11386,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html</file>

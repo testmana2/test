@@ -17,6 +17,7 @@ Version 5.2-snapshot-2011mmdd:
      --- made "Show Log" behave like "Show Limited Log" and removed the later
   -- Mercurial
      --- added interface for the Mercurial command server (as of Mercurial 1.9)
+     --- added code to support multiple revisions where appropriate
 
 Version 5.2-snapshot-20110724:
 - bug fixes

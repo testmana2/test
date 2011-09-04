@@ -250,7 +250,7 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the hg process.
 </p><a NAME="HgLogDialog.start" ID="HgLogDialog.start"></a>
 <h4>HgLogDialog.start</h4>
-<b>start</b>(<i>fn, noEntries=0</i>)
+<b>start</b>(<i>fn, noEntries=0, revisions=None</i>)
 <p>
         Public slot to start the hg log command.
 </p><dl>
@@ -260,6 +260,9 @@ filename to show the log for (string)
 </dd><dt><i>noEntries</i></dt>
 <dd>
 number of entries to show (integer)
+</dd><dt><i>revisions</i></dt>
+<dd>
+revisions to show log for (list of strings)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

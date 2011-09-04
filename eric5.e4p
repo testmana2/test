@@ -928,6 +928,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Preferences/ConfigurationPages/SecurityPage.py</Source>
     <Source>UtilitiesPython2/PySideImporter.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClient.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1189,6 +1190,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/SecurityPage.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

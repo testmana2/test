@@ -747,14 +747,14 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgBisectBadAct)
         
         self.hgBisectSkipAct = E5Action(self.trUtf8('Skip'),
-                self.trUtf8('Skip'),
+                self.trUtf8('Skip...'),
                 0, 0, self, 'mercurial_bisect_skip')
         self.hgBisectSkipAct.setStatusTip(self.trUtf8(
-            'Skip the current changeset'
+            'Skip a selectable changeset'
         ))
         self.hgBisectSkipAct.setWhatsThis(self.trUtf8(
             """<b>Skip</b>"""
-            """<p>This skips the current changeset.</p>"""
+            """<p>This skips a selectable changeset.</p>"""
         ))
         self.hgBisectSkipAct.triggered[()].connect(self.__hgBisectSkip)
         self.actions.append(self.hgBisectSkipAct)

@@ -35,6 +35,7 @@ from .HgLogBrowserDialog import HgLogBrowserDialog
 from .HgDiffDialog import HgDiffDialog
 from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
 from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
+from .HgMultiRevisionSelectionDialog import HgMultiRevisionSelectionDialog
 from .HgMergeDialog import HgMergeDialog
 from .HgStatusMonitorThread import HgStatusMonitorThread
 from .HgStatusDialog import HgStatusDialog
@@ -719,15 +720,33 @@ class Hg(VersionControl):
         
         @param name file/directory name to show the log of (string)
         """
-        noEntries, ok = QInputDialog.getInteger(
-            None,
-            self.trUtf8("Mercurial Log"),
-            self.trUtf8("Select number of entries to show."),
-            self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
-        if ok:
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        if self.isExtensionActive("bookmarks"):
+            bookmarksList = \
+                self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
+        else:
+            bookmarksList = None
+        
+        dlg = HgMultiRevisionSelectionDialog(
+                self.hgGetTagsList(repodir),
+                self.hgGetBranchesList(repodir),
+                bookmarksList,
+                emptyRevsOk=True,
+                showLimit=True,
+                limitDefault=self.getPlugin().getPreferences("LogLimit"))
+        if dlg.exec_() == QDialog.Accepted:
+            revs, noEntries = dlg.getRevisions()
             self.log = HgLogDialog(self)
             self.log.show()
-            self.log.start(name, noEntries)
+            self.log.start(name, noEntries=noEntries, revisions=revs)
     
     def vcsDiff(self, name):
         """
@@ -2002,7 +2021,7 @@ class Hg(VersionControl):
                              self.hgGetBranchesList(repodir),
                              bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
-            rev, compression, all = dlg.getParameters()
+            revs, baseRevs, compression, all = dlg.getParameters()
             
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
@@ -2035,9 +2054,12 @@ class Hg(VersionControl):
             args.append('bundle')
             if all:
                 args.append("--all")
-            if rev:
+            for rev in revs:
                 args.append("--rev")
                 args.append(rev)
+            for baseRev in baseRevs:
+                args.append("--base")
+                args.append(baseRev)
             if compression:
                 args.append("--type")
                 args.append(compression)
@@ -2169,7 +2191,7 @@ class Hg(VersionControl):
                 return
         
         rev = ""
-        if subcommand in ("good", "bad"):
+        if subcommand in ("good", "bad", "skip"):
             if self.isExtensionActive("bookmarks"):
                 bookmarksList = \
                     self.getExtensionObject("bookmarks").hgGetBookmarksList(repodir)
