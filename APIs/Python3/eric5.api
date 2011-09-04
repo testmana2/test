@@ -5014,6 +5014,7 @@ eric5.Project.AddFoundFilesDialog.AddFoundFilesDialog.on_buttonBox_clicked?4(but
 eric5.Project.AddFoundFilesDialog.AddFoundFilesDialog?1(files, parent=None, name=None)
 eric5.Project.AddLanguageDialog.AddLanguageDialog.getSelectedLanguage?4()
 eric5.Project.AddLanguageDialog.AddLanguageDialog?1(parent=None, name=None)
+eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.DialogClasses?7
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.initError?4()
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_buttonBox_clicked?4(button)
 eric5.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_classNameCombo_activated?4(index)
