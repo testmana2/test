@@ -28,9 +28,6 @@
      <layout class="QVBoxLayout">
       <item>
        <widget class="QTextEdit" name="contents">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
         <property name="whatsThis">
          <string>&lt;b&gt;Mercurial Diff&lt;/b&gt;&lt;p&gt;This shows the output of the hg diff command.&lt;/p&gt;</string>
         </property>
