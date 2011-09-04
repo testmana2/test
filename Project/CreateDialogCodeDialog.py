@@ -33,6 +33,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
     """
     Class implementing a dialog to generate code for a Qt4 dialog.
     """
+    DialogClasses = {"QDialog", "QWidget", "QMainWindow", "QWizard"}
+    
     def __init__(self, formName, project, parent = None):
         """
         Constructor
@@ -83,7 +85,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             
             classesList = []
             for cls in list(self.__module.classes.values()):
-                classesList.append(cls.name)
+                if not set(cls.super).isdisjoint(CreateDialogCodeDialog.DialogClasses):
+                    classesList.append(cls.name)
             classesList.sort()
             self.classNameCombo.addItems(classesList)
         
