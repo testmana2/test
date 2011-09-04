@@ -1684,12 +1684,12 @@
       <keyword name="E5NetworkMonitor" id="E5NetworkMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor" />
       <keyword name="E5NetworkRequest" id="E5NetworkRequest" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkRequest" />
       <keyword name="E5RequestModel" id="E5RequestModel" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel" />
+      <keyword name="E5NetworkMonitor.closeMonitor" id="E5NetworkMonitor.closeMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.closeMonitor" />
+      <keyword name="E5NetworkMonitor.instance" id="E5NetworkMonitor.instance" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.instance" />
       <keyword name="E5NetworkMonitor (Constructor)" id="E5NetworkMonitor (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__init__" />
       <keyword name="E5NetworkMonitor.__currentChanged" id="E5NetworkMonitor.__currentChanged" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__currentChanged" />
       <keyword name="E5NetworkMonitor.__showHeaderDetails" id="E5NetworkMonitor.__showHeaderDetails" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.__showHeaderDetails" />
       <keyword name="E5NetworkMonitor.closeEvent" id="E5NetworkMonitor.closeEvent" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.closeEvent" />
-      <keyword name="E5NetworkMonitor.closeMonitor" id="E5NetworkMonitor.closeMonitor" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.closeMonitor" />
-      <keyword name="E5NetworkMonitor.instance" id="E5NetworkMonitor.instance" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.instance" />
       <keyword name="E5NetworkMonitor.reject" id="E5NetworkMonitor.reject" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkMonitor.reject" />
       <keyword name="E5NetworkRequest (Constructor)" id="E5NetworkRequest (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5NetworkRequest.__init__" />
       <keyword name="E5RequestModel (Constructor)" id="E5RequestModel (Constructor)" ref="eric5.E5Network.E5NetworkMonitor.html#E5RequestModel.__init__" />
@@ -2715,6 +2715,16 @@
       <keyword name="HelpDocsInstaller.stop" id="HelpDocsInstaller.stop" ref="eric5.Helpviewer.HelpDocsInstaller.html#HelpDocsInstaller.stop" />
       <keyword name="HelpWindow (Module)" id="HelpWindow (Module)" ref="eric5.Helpviewer.HelpWindow.html" />
       <keyword name="HelpWindow" id="HelpWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow" />
+      <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
+      <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
+      <keyword name="HelpWindow.cookieJar" id="HelpWindow.cookieJar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.cookieJar" />
+      <keyword name="HelpWindow.downloadManager" id="HelpWindow.downloadManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.downloadManager" />
+      <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
+      <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
+      <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
+      <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
+      <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
+      <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow (Constructor)" id="HelpWindow (Constructor)" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__init__" />
       <keyword name="HelpWindow.__about" id="HelpWindow.__about" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__about" />
       <keyword name="HelpWindow.__aboutQt" id="HelpWindow.__aboutQt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__aboutQt" />
@@ -2733,7 +2743,6 @@
       <keyword name="HelpWindow.__filterQtHelpDocumentation" id="HelpWindow.__filterQtHelpDocumentation" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__filterQtHelpDocumentation" />
       <keyword name="HelpWindow.__find" id="HelpWindow.__find" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__find" />
       <keyword name="HelpWindow.__forward" id="HelpWindow.__forward" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__forward" />
-      <keyword name="HelpWindow.__getWebIcon" id="HelpWindow.__getWebIcon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__getWebIcon" />
       <keyword name="HelpWindow.__hideIndexWindow" id="HelpWindow.__hideIndexWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__hideIndexWindow" />
       <keyword name="HelpWindow.__hideSearchWindow" id="HelpWindow.__hideSearchWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__hideSearchWindow" />
       <keyword name="HelpWindow.__hideTocWindow" id="HelpWindow.__hideTocWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__hideTocWindow" />
@@ -2793,28 +2802,18 @@
       <keyword name="HelpWindow.__zoomOut" id="HelpWindow.__zoomOut" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomOut" />
       <keyword name="HelpWindow.__zoomReset" id="HelpWindow.__zoomReset" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomReset" />
       <keyword name="HelpWindow.__zoomTextOnly" id="HelpWindow.__zoomTextOnly" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__zoomTextOnly" />
-      <keyword name="HelpWindow.adblockManager" id="HelpWindow.adblockManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.adblockManager" />
       <keyword name="HelpWindow.bookmarkAll" id="HelpWindow.bookmarkAll" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarkAll" />
-      <keyword name="HelpWindow.bookmarksManager" id="HelpWindow.bookmarksManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.bookmarksManager" />
       <keyword name="HelpWindow.browserAt" id="HelpWindow.browserAt" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browserAt" />
       <keyword name="HelpWindow.browsers" id="HelpWindow.browsers" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.browsers" />
       <keyword name="HelpWindow.closeEvent" id="HelpWindow.closeEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.closeEvent" />
-      <keyword name="HelpWindow.cookieJar" id="HelpWindow.cookieJar" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.cookieJar" />
       <keyword name="HelpWindow.currentBrowser" id="HelpWindow.currentBrowser" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.currentBrowser" />
-      <keyword name="HelpWindow.downloadManager" id="HelpWindow.downloadManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.downloadManager" />
       <keyword name="HelpWindow.getActions" id="HelpWindow.getActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getActions" />
       <keyword name="HelpWindow.getSourceFileList" id="HelpWindow.getSourceFileList" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.getSourceFileList" />
-      <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
-      <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
-      <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
-      <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
-      <keyword name="HelpWindow.networkAccessManager" id="HelpWindow.networkAccessManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.networkAccessManager" />
       <keyword name="HelpWindow.newTab" id="HelpWindow.newTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newTab" />
       <keyword name="HelpWindow.newWindow" id="HelpWindow.newWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.newWindow" />
       <keyword name="HelpWindow.openSearchManager" id="HelpWindow.openSearchManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openSearchManager" />
       <keyword name="HelpWindow.openUrl" id="HelpWindow.openUrl" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrl" />
       <keyword name="HelpWindow.openUrlNewTab" id="HelpWindow.openUrlNewTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.openUrlNewTab" />
-      <keyword name="HelpWindow.passwordManager" id="HelpWindow.passwordManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.passwordManager" />
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
@@ -2822,6 +2821,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.__getWebIcon" id="HelpWindow.__getWebIcon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__getWebIcon" />
       <keyword name="HelpClearPrivateDataDialog (Module)" id="HelpClearPrivateDataDialog (Module)" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
       <keyword name="HelpClearPrivateDataDialog" id="HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog" />
       <keyword name="HelpClearPrivateDataDialog (Constructor)" id="HelpClearPrivateDataDialog (Constructor)" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html#HelpClearPrivateDataDialog.__init__" />
@@ -2874,12 +2874,12 @@
       <keyword name="HelpIndexWidget.focusInEvent" id="HelpIndexWidget.focusInEvent" ref="eric5.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.focusInEvent" />
       <keyword name="HelpLanguagesDialog (Module)" id="HelpLanguagesDialog (Module)" ref="eric5.Helpviewer.HelpLanguagesDialog.html" />
       <keyword name="HelpLanguagesDialog" id="HelpLanguagesDialog" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog" />
-      <keyword name="HelpLanguagesDialog (Constructor)" id="HelpLanguagesDialog (Constructor)" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__init__" />
-      <keyword name="HelpLanguagesDialog.__currentChanged" id="HelpLanguagesDialog.__currentChanged" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__currentChanged" />
-      <keyword name="HelpLanguagesDialog.accept" id="HelpLanguagesDialog.accept" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.accept" />
       <keyword name="HelpLanguagesDialog.defaultAcceptLanguages" id="HelpLanguagesDialog.defaultAcceptLanguages" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.defaultAcceptLanguages" />
       <keyword name="HelpLanguagesDialog.expand" id="HelpLanguagesDialog.expand" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.expand" />
       <keyword name="HelpLanguagesDialog.httpString" id="HelpLanguagesDialog.httpString" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.httpString" />
+      <keyword name="HelpLanguagesDialog (Constructor)" id="HelpLanguagesDialog (Constructor)" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__init__" />
+      <keyword name="HelpLanguagesDialog.__currentChanged" id="HelpLanguagesDialog.__currentChanged" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__currentChanged" />
+      <keyword name="HelpLanguagesDialog.accept" id="HelpLanguagesDialog.accept" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.accept" />
       <keyword name="HelpLanguagesDialog.on_addButton_clicked" id="HelpLanguagesDialog.on_addButton_clicked" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.on_addButton_clicked" />
       <keyword name="HelpLanguagesDialog.on_downButton_clicked" id="HelpLanguagesDialog.on_downButton_clicked" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.on_downButton_clicked" />
       <keyword name="HelpLanguagesDialog.on_removeButton_clicked" id="HelpLanguagesDialog.on_removeButton_clicked" ref="eric5.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.on_removeButton_clicked" />
@@ -6168,13 +6168,16 @@
       <keyword name="GotoDialog.getLinenumber" id="GotoDialog.getLinenumber" ref="eric5.QScintilla.GotoDialog.html#GotoDialog.getLinenumber" />
       <keyword name="SpellChecker (Module)" id="SpellChecker (Module)" ref="eric5.QScintilla.SpellChecker.html" />
       <keyword name="SpellChecker" id="SpellChecker" ref="eric5.QScintilla.SpellChecker.html#SpellChecker" />
+      <keyword name="SpellChecker._getDict" id="SpellChecker._getDict" ref="eric5.QScintilla.SpellChecker.html#SpellChecker._getDict" />
+      <keyword name="SpellChecker.getAvailableLanguages" id="SpellChecker.getAvailableLanguages" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getAvailableLanguages" />
+      <keyword name="SpellChecker.isAvailable" id="SpellChecker.isAvailable" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.isAvailable" />
+      <keyword name="SpellChecker.setDefaultLanguage" id="SpellChecker.setDefaultLanguage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.setDefaultLanguage" />
       <keyword name="SpellChecker (Constructor)" id="SpellChecker (Constructor)" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__init__" />
       <keyword name="SpellChecker.__checkDocumentPart" id="SpellChecker.__checkDocumentPart" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__checkDocumentPart" />
       <keyword name="SpellChecker.__getNextWord" id="SpellChecker.__getNextWord" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__getNextWord" />
       <keyword name="SpellChecker.__incrementalCheck" id="SpellChecker.__incrementalCheck" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__incrementalCheck" />
       <keyword name="SpellChecker.__iter__" id="SpellChecker.__iter__" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__iter__" />
       <keyword name="SpellChecker.__next__" id="SpellChecker.__next__" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__next__" />
-      <keyword name="SpellChecker._getDict" id="SpellChecker._getDict" ref="eric5.QScintilla.SpellChecker.html#SpellChecker._getDict" />
       <keyword name="SpellChecker.add" id="SpellChecker.add" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.add" />
       <keyword name="SpellChecker.checkCurrentPage" id="SpellChecker.checkCurrentPage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.checkCurrentPage" />
       <keyword name="SpellChecker.checkDocument" id="SpellChecker.checkDocument" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.checkDocument" />
@@ -6183,18 +6186,15 @@
       <keyword name="SpellChecker.checkSelection" id="SpellChecker.checkSelection" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.checkSelection" />
       <keyword name="SpellChecker.checkWord" id="SpellChecker.checkWord" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.checkWord" />
       <keyword name="SpellChecker.clearAll" id="SpellChecker.clearAll" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.clearAll" />
-      <keyword name="SpellChecker.getAvailableLanguages" id="SpellChecker.getAvailableLanguages" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getAvailableLanguages" />
       <keyword name="SpellChecker.getContext" id="SpellChecker.getContext" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getContext" />
       <keyword name="SpellChecker.getError" id="SpellChecker.getError" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getError" />
       <keyword name="SpellChecker.getLanguage" id="SpellChecker.getLanguage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getLanguage" />
       <keyword name="SpellChecker.getSuggestions" id="SpellChecker.getSuggestions" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.getSuggestions" />
       <keyword name="SpellChecker.ignoreAlways" id="SpellChecker.ignoreAlways" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.ignoreAlways" />
       <keyword name="SpellChecker.initCheck" id="SpellChecker.initCheck" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.initCheck" />
-      <keyword name="SpellChecker.isAvailable" id="SpellChecker.isAvailable" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.isAvailable" />
       <keyword name="SpellChecker.remove" id="SpellChecker.remove" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.remove" />
       <keyword name="SpellChecker.replace" id="SpellChecker.replace" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.replace" />
       <keyword name="SpellChecker.replaceAlways" id="SpellChecker.replaceAlways" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.replaceAlways" />
-      <keyword name="SpellChecker.setDefaultLanguage" id="SpellChecker.setDefaultLanguage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.setDefaultLanguage" />
       <keyword name="SpellChecker.setLanguage" id="SpellChecker.setLanguage" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.setLanguage" />
       <keyword name="SpellChecker.setMinimumWordSize" id="SpellChecker.setMinimumWordSize" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.setMinimumWordSize" />
       <keyword name="SpellChecker.stopIncrementalCheck" id="SpellChecker.stopIncrementalCheck" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.stopIncrementalCheck" />
@@ -7700,6 +7700,7 @@
       <keyword name="OpenSearchDialog.on_restoreButton_clicked" id="OpenSearchDialog.on_restoreButton_clicked" ref="eric5.Helpviewer.OpenSearch.OpenSearchDialog.html#OpenSearchDialog.on_restoreButton_clicked" />
       <keyword name="OpenSearchEngine (Module)" id="OpenSearchEngine (Module)" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html" />
       <keyword name="OpenSearchEngine" id="OpenSearchEngine" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine" />
+      <keyword name="OpenSearchEngine.parseTemplate" id="OpenSearchEngine.parseTemplate" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.parseTemplate" />
       <keyword name="OpenSearchEngine (Constructor)" id="OpenSearchEngine (Constructor)" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.__init__" />
       <keyword name="OpenSearchEngine.__eq__" id="OpenSearchEngine.__eq__" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.__eq__" />
       <keyword name="OpenSearchEngine.__imageObtained" id="OpenSearchEngine.__imageObtained" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.__imageObtained" />
@@ -7712,7 +7713,6 @@
       <keyword name="OpenSearchEngine.loadImage" id="OpenSearchEngine.loadImage" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.loadImage" />
       <keyword name="OpenSearchEngine.name" id="OpenSearchEngine.name" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.name" />
       <keyword name="OpenSearchEngine.networkAccessManager" id="OpenSearchEngine.networkAccessManager" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.networkAccessManager" />
-      <keyword name="OpenSearchEngine.parseTemplate" id="OpenSearchEngine.parseTemplate" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.parseTemplate" />
       <keyword name="OpenSearchEngine.providesSuggestions" id="OpenSearchEngine.providesSuggestions" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.providesSuggestions" />
       <keyword name="OpenSearchEngine.requestSuggestions" id="OpenSearchEngine.requestSuggestions" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.requestSuggestions" />
       <keyword name="OpenSearchEngine.searchMethod" id="OpenSearchEngine.searchMethod" ref="eric5.Helpviewer.OpenSearch.OpenSearchEngine.html#OpenSearchEngine.searchMethod" />
@@ -9873,7 +9873,8 @@
       <keyword name="CompleterPython.__inTripleDoubleQuotedString" id="CompleterPython.__inTripleDoubleQuotedString" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__inTripleDoubleQuotedString" />
       <keyword name="CompleterPython.__inTripleSingleQuotedString" id="CompleterPython.__inTripleSingleQuotedString" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__inTripleSingleQuotedString" />
       <keyword name="CompleterPython.__isClassMethod" id="CompleterPython.__isClassMethod" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassMethod" />
-      <keyword name="CompleterPython.__isClassmethodDef" id="CompleterPython.__isClassmethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassmethodDef" />
+      <keyword name="CompleterPython.__isClassMethodDef" id="CompleterPython.__isClassMethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isClassMethodDef" />
+      <keyword name="CompleterPython.__isStaticMethodDef" id="CompleterPython.__isStaticMethodDef" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.__isStaticMethodDef" />
       <keyword name="CompleterPython.charAdded" id="CompleterPython.charAdded" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.charAdded" />
       <keyword name="CompleterPython.readSettings" id="CompleterPython.readSettings" ref="eric5.QScintilla.TypingCompleters.CompleterPython.html#CompleterPython.readSettings" />
       <keyword name="CompleterRuby (Module)" id="CompleterRuby (Module)" ref="eric5.QScintilla.TypingCompleters.CompleterRuby.html" />

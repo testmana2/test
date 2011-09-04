@@ -44,7 +44,7 @@ Module implementing the open search engine.
 <h2>OpenSearchEngine</h2>
 <p>
     Class implementing the open search engine.
-</p><h4>Signals</h4>
+</p><h3>Signals</h3>
 <dl>
 <dt>imageChanged()</dt>
 <dd>
@@ -60,6 +60,13 @@ QObject
 <h3>Class Attributes</h3>
 <table>
 <tr><td>_language</td></tr><tr><td>loc</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr>
+<td><a href="#OpenSearchEngine.parseTemplate">parseTemplate</a></td>
+<td>Class method to parse a search template.</td>
+</tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -99,9 +106,6 @@ QObject
 </tr><tr>
 <td><a href="#OpenSearchEngine.networkAccessManager">networkAccessManager</a></td>
 <td>Public method to get a reference to the network access manager object.</td>
-</tr><tr>
-<td><a href="#OpenSearchEngine.parseTemplate">parseTemplate</a></td>
-<td>Class method to parse a search template.</td>
 </tr><tr>
 <td><a href="#OpenSearchEngine.providesSuggestions">providesSuggestions</a></td>
 <td>Public method to check, if the engine provides suggestions.</td>
@@ -170,7 +174,29 @@ QObject
 <td>Public method to get the search URL template of the engine.</td>
 </tr>
 </table>
-<a NAME="OpenSearchEngine.__init__" ID="OpenSearchEngine.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="OpenSearchEngine.parseTemplate" ID="OpenSearchEngine.parseTemplate"></a>
+<h4>OpenSearchEngine.parseTemplate (class method)</h4>
+<b>parseTemplate</b>(<i>searchTerm, searchTemplate</i>)
+<p>
+        Class method to parse a search template.
+</p><dl>
+<dt><i>searchTerm</i></dt>
+<dd>
+term to search for (string)
+</dd><dt><i>searchTemplate</i></dt>
+<dd>
+template to be parsed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+parsed template (string)
+</dd>
+</dl><a NAME="OpenSearchEngine.__init__" ID="OpenSearchEngine.__init__"></a>
 <h4>OpenSearchEngine (Constructor)</h4>
 <b>OpenSearchEngine</b>(<i>parent = None</i>)
 <p>
@@ -284,24 +310,6 @@ name of the engine (string)
 <dt>Returns:</dt>
 <dd>
 reference to the network access manager object (QNetworkAccessManager)
-</dd>
-</dl><a NAME="OpenSearchEngine.parseTemplate" ID="OpenSearchEngine.parseTemplate"></a>
-<h4>OpenSearchEngine.parseTemplate</h4>
-<b>parseTemplate</b>(<i>searchTerm, searchTemplate</i>)
-<p>
-        Class method to parse a search template.
-</p><dl>
-<dt><i>searchTerm</i></dt>
-<dd>
-term to search for (string)
-</dd><dt><i>searchTemplate</i></dt>
-<dd>
-template to be parsed (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-parsed template (string)
 </dd>
 </dl><a NAME="OpenSearchEngine.providesSuggestions" ID="OpenSearchEngine.providesSuggestions"></a>
 <h4>OpenSearchEngine.providesSuggestions</h4>

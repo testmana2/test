@@ -44,7 +44,7 @@ Module implementing the helpviewer main window.
 <h2>HelpWindow</h2>
 <p>
     Class implementing the web browser main window.
-</p><h4>Signals</h4>
+</p><h3>Signals</h3>
 <dl>
 <dt>helpClosed()</dt>
 <dd>
@@ -60,6 +60,40 @@ QMainWindow
 <h3>Class Attributes</h3>
 <table>
 <tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr>
+<td><a href="#HelpWindow.adblockManager">adblockManager</a></td>
+<td>Class method to get a reference to the AdBlock manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.bookmarksManager">bookmarksManager</a></td>
+<td>Class method to get a reference to the bookmarks manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.cookieJar">cookieJar</a></td>
+<td>Class method to get a reference to the cookie jar.</td>
+</tr><tr>
+<td><a href="#HelpWindow.downloadManager">downloadManager</a></td>
+<td>Class method to get a reference to the download manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.helpEngine">helpEngine</a></td>
+<td>Class method to get a reference to the help engine.</td>
+</tr><tr>
+<td><a href="#HelpWindow.historyManager">historyManager</a></td>
+<td>Class method to get a reference to the history manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.icon">icon</a></td>
+<td>Class method to get the icon for an URL.</td>
+</tr><tr>
+<td><a href="#HelpWindow.mainWindow">mainWindow</a></td>
+<td>Class method to get a reference to the main window.</td>
+</tr><tr>
+<td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
+<td>Class method to get a reference to the network access manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
+<td>Class method to get a reference to the password manager.</td>
+</tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -117,9 +151,6 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__forward">__forward</a></td>
 <td>Private slot called to handle the forward action.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__getWebIcon">__getWebIcon</a></td>
-<td>Private static method to fetch the icon for a URL.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__hideIndexWindow">__hideIndexWindow</a></td>
 <td>Private method to hide the index window.</td>
@@ -298,14 +329,8 @@ QMainWindow
 <td><a href="#HelpWindow.__zoomTextOnly">__zoomTextOnly</a></td>
 <td>Private slot called to handle the zoom text only action.</td>
 </tr><tr>
-<td><a href="#HelpWindow.adblockManager">adblockManager</a></td>
-<td>Class method to get a reference to the AdBlock manager.</td>
-</tr><tr>
 <td><a href="#HelpWindow.bookmarkAll">bookmarkAll</a></td>
 <td>Public slot to bookmark all open tabs.</td>
-</tr><tr>
-<td><a href="#HelpWindow.bookmarksManager">bookmarksManager</a></td>
-<td>Class method to get a reference to the bookmarks manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.browserAt">browserAt</a></td>
 <td>Public method to get a reference to the help browser with the given index.</td>
@@ -316,35 +341,14 @@ QMainWindow
 <td><a href="#HelpWindow.closeEvent">closeEvent</a></td>
 <td>Private event handler for the close event.</td>
 </tr><tr>
-<td><a href="#HelpWindow.cookieJar">cookieJar</a></td>
-<td>Class method to get a reference to the cookie jar.</td>
-</tr><tr>
 <td><a href="#HelpWindow.currentBrowser">currentBrowser</a></td>
 <td>Public method to get a reference to the current help browser.</td>
-</tr><tr>
-<td><a href="#HelpWindow.downloadManager">downloadManager</a></td>
-<td>Class method to get a reference to the download manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.getActions">getActions</a></td>
 <td>Public method to get a list of all actions.</td>
 </tr><tr>
 <td><a href="#HelpWindow.getSourceFileList">getSourceFileList</a></td>
 <td>Public method to get a list of all opened source files.</td>
-</tr><tr>
-<td><a href="#HelpWindow.helpEngine">helpEngine</a></td>
-<td>Class method to get a reference to the help engine.</td>
-</tr><tr>
-<td><a href="#HelpWindow.historyManager">historyManager</a></td>
-<td>Class method to get a reference to the history manager.</td>
-</tr><tr>
-<td><a href="#HelpWindow.icon">icon</a></td>
-<td>Class method to get the icon for an URL.</td>
-</tr><tr>
-<td><a href="#HelpWindow.mainWindow">mainWindow</a></td>
-<td>Class method to get a reference to the main window.</td>
-</tr><tr>
-<td><a href="#HelpWindow.networkAccessManager">networkAccessManager</a></td>
-<td>Class method to get a reference to the network access manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.newTab">newTab</a></td>
 <td>Public slot called to open a new help window tab.</td>
@@ -360,9 +364,6 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.openUrlNewTab">openUrlNewTab</a></td>
 <td>Public slot to load a URL from the bookmarks menu or bookmarks toolbar in a new tab.</td>
-</tr><tr>
-<td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
-<td>Class method to get a reference to the password manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
@@ -386,7 +387,119 @@ QMainWindow
 <td>Public method to set the privacy mode.</td>
 </tr>
 </table>
-<a NAME="HelpWindow.__init__" ID="HelpWindow.__init__"></a>
+<h3>Static Methods</h3>
+<table>
+<tr>
+<td><a href="#HelpWindow.__getWebIcon">__getWebIcon</a></td>
+<td>Private static method to fetch the icon for a URL.</td>
+</tr>
+</table>
+<a NAME="HelpWindow.adblockManager" ID="HelpWindow.adblockManager"></a>
+<h4>HelpWindow.adblockManager (class method)</h4>
+<b>adblockManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the AdBlock manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the AdBlock manager (AdBlockManager)
+</dd>
+</dl><a NAME="HelpWindow.bookmarksManager" ID="HelpWindow.bookmarksManager"></a>
+<h4>HelpWindow.bookmarksManager (class method)</h4>
+<b>bookmarksManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the bookmarks manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the bookmarks manager (BookmarksManager)
+</dd>
+</dl><a NAME="HelpWindow.cookieJar" ID="HelpWindow.cookieJar"></a>
+<h4>HelpWindow.cookieJar (class method)</h4>
+<b>cookieJar</b>(<i></i>)
+<p>
+        Class method to get a reference to the cookie jar.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the cookie jar (CookieJar)
+</dd>
+</dl><a NAME="HelpWindow.downloadManager" ID="HelpWindow.downloadManager"></a>
+<h4>HelpWindow.downloadManager (class method)</h4>
+<b>downloadManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the download manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the password manager (DownloadManager)
+</dd>
+</dl><a NAME="HelpWindow.helpEngine" ID="HelpWindow.helpEngine"></a>
+<h4>HelpWindow.helpEngine (class method)</h4>
+<b>helpEngine</b>(<i></i>)
+<p>
+        Class method to get a reference to the help engine.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the help engine (QHelpEngine)
+</dd>
+</dl><a NAME="HelpWindow.historyManager" ID="HelpWindow.historyManager"></a>
+<h4>HelpWindow.historyManager (class method)</h4>
+<b>historyManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the history manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the history manager (HistoryManager)
+</dd>
+</dl><a NAME="HelpWindow.icon" ID="HelpWindow.icon"></a>
+<h4>HelpWindow.icon (class method)</h4>
+<b>icon</b>(<i>url</i>)
+<p>
+        Class method to get the icon for an URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to get icon for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the URL (QIcon)
+</dd>
+</dl><a NAME="HelpWindow.mainWindow" ID="HelpWindow.mainWindow"></a>
+<h4>HelpWindow.mainWindow (class method)</h4>
+<b>mainWindow</b>(<i></i>)
+<p>
+        Class method to get a reference to the main window.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the main window (HelpWindow)
+</dd>
+</dl><a NAME="HelpWindow.networkAccessManager" ID="HelpWindow.networkAccessManager"></a>
+<h4>HelpWindow.networkAccessManager (class method)</h4>
+<b>networkAccessManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the network access manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the network access manager (NetworkAccessManager)
+</dd>
+</dl><a NAME="HelpWindow.passwordManager" ID="HelpWindow.passwordManager"></a>
+<h4>HelpWindow.passwordManager (class method)</h4>
+<b>passwordManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the password manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the password manager (PasswordManager)
+</dd>
+</dl><a NAME="HelpWindow.__init__" ID="HelpWindow.__init__"></a>
 <h4>HelpWindow (Constructor)</h4>
 <b>HelpWindow</b>(<i>home, path, parent, name, fromEric = False, initShortcutsOnly = False, searchWord = None</i>)
 <p>
@@ -523,22 +636,7 @@ name of filter to be applied (string)
 <b>__forward</b>(<i></i>)
 <p>
         Private slot called to handle the forward action.
-</p><a NAME="HelpWindow.__getWebIcon" ID="HelpWindow.__getWebIcon"></a>
-<h4>HelpWindow.__getWebIcon</h4>
-<b>__getWebIcon</b>(<i></i>)
-<p>
-        Private static method to fetch the icon for a URL.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL to get icon for (QUrl)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-icon for the URL (QIcon)
-</dd>
-</dl><a NAME="HelpWindow.__hideIndexWindow" ID="HelpWindow.__hideIndexWindow"></a>
+</p><a NAME="HelpWindow.__hideIndexWindow" ID="HelpWindow.__hideIndexWindow"></a>
 <h4>HelpWindow.__hideIndexWindow</h4>
 <b>__hideIndexWindow</b>(<i></i>)
 <p>
@@ -889,32 +987,12 @@ message sent by the help  engine (string)
 <dd>
 flag indicating to zoom text only (boolean)
 </dd>
-</dl><a NAME="HelpWindow.adblockManager" ID="HelpWindow.adblockManager"></a>
-<h4>HelpWindow.adblockManager</h4>
-<b>adblockManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the AdBlock manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the AdBlock manager (AdBlockManager)
-</dd>
 </dl><a NAME="HelpWindow.bookmarkAll" ID="HelpWindow.bookmarkAll"></a>
 <h4>HelpWindow.bookmarkAll</h4>
 <b>bookmarkAll</b>(<i></i>)
 <p>
         Public slot to bookmark all open tabs.
-</p><a NAME="HelpWindow.bookmarksManager" ID="HelpWindow.bookmarksManager"></a>
-<h4>HelpWindow.bookmarksManager</h4>
-<b>bookmarksManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the bookmarks manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the bookmarks manager (BookmarksManager)
-</dd>
-</dl><a NAME="HelpWindow.browserAt" ID="HelpWindow.browserAt"></a>
+</p><a NAME="HelpWindow.browserAt" ID="HelpWindow.browserAt"></a>
 <h4>HelpWindow.browserAt</h4>
 <b>browserAt</b>(<i>index</i>)
 <p>
@@ -951,16 +1029,6 @@ the close event (QCloseEvent)
                 <br />This event is simply accepted after the history has been
                 saved and all window references have been deleted.
 </dd>
-</dl><a NAME="HelpWindow.cookieJar" ID="HelpWindow.cookieJar"></a>
-<h4>HelpWindow.cookieJar</h4>
-<b>cookieJar</b>(<i></i>)
-<p>
-        Class method to get a reference to the cookie jar.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the cookie jar (CookieJar)
-</dd>
 </dl><a NAME="HelpWindow.currentBrowser" ID="HelpWindow.currentBrowser"></a>
 <h4>HelpWindow.currentBrowser</h4>
 <b>currentBrowser</b>(<i></i>)
@@ -970,16 +1038,6 @@ reference to the cookie jar (CookieJar)
 <dt>Returns:</dt>
 <dd>
 reference to the current help browser (HelpBrowser)
-</dd>
-</dl><a NAME="HelpWindow.downloadManager" ID="HelpWindow.downloadManager"></a>
-<h4>HelpWindow.downloadManager</h4>
-<b>downloadManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the download manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the password manager (DownloadManager)
 </dd>
 </dl><a NAME="HelpWindow.getActions" ID="HelpWindow.getActions"></a>
 <h4>HelpWindow.getActions</h4>
@@ -1000,61 +1058,6 @@ list of all actions (list of E5Action)
 <dt>Returns:</dt>
 <dd>
 dictionary with tab id as key and host/namespace as value
-</dd>
-</dl><a NAME="HelpWindow.helpEngine" ID="HelpWindow.helpEngine"></a>
-<h4>HelpWindow.helpEngine</h4>
-<b>helpEngine</b>(<i></i>)
-<p>
-        Class method to get a reference to the help engine.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the help engine (QHelpEngine)
-</dd>
-</dl><a NAME="HelpWindow.historyManager" ID="HelpWindow.historyManager"></a>
-<h4>HelpWindow.historyManager</h4>
-<b>historyManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the history manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the history manager (HistoryManager)
-</dd>
-</dl><a NAME="HelpWindow.icon" ID="HelpWindow.icon"></a>
-<h4>HelpWindow.icon</h4>
-<b>icon</b>(<i>url</i>)
-<p>
-        Class method to get the icon for an URL.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL to get icon for (QUrl)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-icon for the URL (QIcon)
-</dd>
-</dl><a NAME="HelpWindow.mainWindow" ID="HelpWindow.mainWindow"></a>
-<h4>HelpWindow.mainWindow</h4>
-<b>mainWindow</b>(<i></i>)
-<p>
-        Class method to get a reference to the main window.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the main window (HelpWindow)
-</dd>
-</dl><a NAME="HelpWindow.networkAccessManager" ID="HelpWindow.networkAccessManager"></a>
-<h4>HelpWindow.networkAccessManager</h4>
-<b>networkAccessManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the network access manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the network access manager (NetworkAccessManager)
 </dd>
 </dl><a NAME="HelpWindow.newTab" ID="HelpWindow.newTab"></a>
 <h4>HelpWindow.newTab</h4>
@@ -1113,16 +1116,6 @@ url to be opened (QUrl)
 </dd><dt><i>title</i></dt>
 <dd>
 title of the bookmark (string)
-</dd>
-</dl><a NAME="HelpWindow.passwordManager" ID="HelpWindow.passwordManager"></a>
-<h4>HelpWindow.passwordManager</h4>
-<b>passwordManager</b>(<i></i>)
-<p>
-        Class method to get a reference to the password manager.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-reference to the password manager (PasswordManager)
 </dd>
 </dl><a NAME="HelpWindow.preferencesChanged" ID="HelpWindow.preferencesChanged"></a>
 <h4>HelpWindow.preferencesChanged</h4>
@@ -1188,6 +1181,21 @@ flag indicating the loading state to consider (boolean)
 <dt><i>on</i></dt>
 <dd>
 flag indicating the privacy state (boolean)
+</dd>
+</dl><a NAME="HelpWindow.__getWebIcon" ID="HelpWindow.__getWebIcon"></a>
+<h4>HelpWindow.__getWebIcon (static)</h4>
+<b>__getWebIcon</b>(<i></i>)
+<p>
+        Private static method to fetch the icon for a URL.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to get icon for (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+icon for the URL (QIcon)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

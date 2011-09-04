@@ -51,6 +51,10 @@ CompleterBase
 <table>
 <tr><td>None</td></tr>
 </table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
 <h3>Methods</h3>
 <table>
 <tr>
@@ -90,8 +94,11 @@ CompleterBase
 <td><a href="#CompleterPython.__isClassMethod">__isClassMethod</a></td>
 <td>Private method to check, if the user is defining a class method.</td>
 </tr><tr>
-<td><a href="#CompleterPython.__isClassmethodDef">__isClassmethodDef</a></td>
-<td>Private method to check, if the user is defing a classmethod (@classmethod) method.</td>
+<td><a href="#CompleterPython.__isClassMethodDef">__isClassMethodDef</a></td>
+<td>Private method to check, if the user is defing a class method (@classmethod).</td>
+</tr><tr>
+<td><a href="#CompleterPython.__isStaticMethodDef">__isStaticMethodDef</a></td>
+<td>Private method to check, if the user is defing a static method (@staticmethod) method.</td>
 </tr><tr>
 <td><a href="#CompleterPython.charAdded">charAdded</a></td>
 <td>Public slot called to handle the user entering a character.</td>
@@ -99,6 +106,10 @@ CompleterBase
 <td><a href="#CompleterPython.readSettings">readSettings</a></td>
 <td>Public slot called to reread the configuration parameters.</td>
 </tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
 </table>
 <a NAME="CompleterPython.__init__" ID="CompleterPython.__init__"></a>
 <h4>CompleterPython (Constructor)</h4>
@@ -220,16 +231,27 @@ flag indicating, if the cursor is inside a triple single
 <dd>
 flag indicating the definition of a class method (boolean)
 </dd>
-</dl><a NAME="CompleterPython.__isClassmethodDef" ID="CompleterPython.__isClassmethodDef"></a>
-<h4>CompleterPython.__isClassmethodDef</h4>
-<b>__isClassmethodDef</b>(<i></i>)
+</dl><a NAME="CompleterPython.__isClassMethodDef" ID="CompleterPython.__isClassMethodDef"></a>
+<h4>CompleterPython.__isClassMethodDef</h4>
+<b>__isClassMethodDef</b>(<i></i>)
 <p>
-        Private method to check, if the user is defing a classmethod 
-        (@classmethod) method.
+        Private method to check, if the user is defing a class method
+        (@classmethod).
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating the definition of a classmethod method (boolean)
+flag indicating the definition of a class method (boolean)
+</dd>
+</dl><a NAME="CompleterPython.__isStaticMethodDef" ID="CompleterPython.__isStaticMethodDef"></a>
+<h4>CompleterPython.__isStaticMethodDef</h4>
+<b>__isStaticMethodDef</b>(<i></i>)
+<p>
+        Private method to check, if the user is defing a static method
+        (@staticmethod) method.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the definition of a static method (boolean)
 </dd>
 </dl><a NAME="CompleterPython.charAdded" ID="CompleterPython.charAdded"></a>
 <h4>CompleterPython.charAdded</h4>
