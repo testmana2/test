@@ -8501,6 +8501,9 @@
       <keyword name="HgStatusDialog (Constructor)" id="HgStatusDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__init__" />
       <keyword name="HgStatusDialog.__add" id="HgStatusDialog.__add" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__add" />
       <keyword name="HgStatusDialog.__commit" id="HgStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commit" />
+      <keyword name="HgStatusDialog.__commitDeselectAll" id="HgStatusDialog.__commitDeselectAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commitDeselectAll" />
+      <keyword name="HgStatusDialog.__commitSelect" id="HgStatusDialog.__commitSelect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commitSelect" />
+      <keyword name="HgStatusDialog.__commitSelectAll" id="HgStatusDialog.__commitSelectAll" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__commitSelectAll" />
       <keyword name="HgStatusDialog.__committed" id="HgStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__committed" />
       <keyword name="HgStatusDialog.__diff" id="HgStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__diff" />
       <keyword name="HgStatusDialog.__finish" id="HgStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__finish" />
@@ -9039,6 +9042,9 @@
       <keyword name="SvnStatusDialog.__addToChangelist" id="SvnStatusDialog.__addToChangelist" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__addToChangelist" />
       <keyword name="SvnStatusDialog.__breakLock" id="SvnStatusDialog.__breakLock" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__breakLock" />
       <keyword name="SvnStatusDialog.__commit" id="SvnStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__commit" />
+      <keyword name="SvnStatusDialog.__commitDeselectAll" id="SvnStatusDialog.__commitDeselectAll" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__commitDeselectAll" />
+      <keyword name="SvnStatusDialog.__commitSelect" id="SvnStatusDialog.__commitSelect" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__commitSelect" />
+      <keyword name="SvnStatusDialog.__commitSelectAll" id="SvnStatusDialog.__commitSelectAll" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__commitSelectAll" />
       <keyword name="SvnStatusDialog.__committed" id="SvnStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__committed" />
       <keyword name="SvnStatusDialog.__diff" id="SvnStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__diff" />
       <keyword name="SvnStatusDialog.__finish" id="SvnStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsSubversion.SvnStatusDialog.html#SvnStatusDialog.__finish" />
@@ -9416,6 +9422,9 @@
       <keyword name="SvnStatusDialog.__addToChangelist" id="SvnStatusDialog.__addToChangelist" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__addToChangelist" />
       <keyword name="SvnStatusDialog.__breakLock" id="SvnStatusDialog.__breakLock" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__breakLock" />
       <keyword name="SvnStatusDialog.__commit" id="SvnStatusDialog.__commit" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__commit" />
+      <keyword name="SvnStatusDialog.__commitDeselectAll" id="SvnStatusDialog.__commitDeselectAll" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__commitDeselectAll" />
+      <keyword name="SvnStatusDialog.__commitSelect" id="SvnStatusDialog.__commitSelect" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__commitSelect" />
+      <keyword name="SvnStatusDialog.__commitSelectAll" id="SvnStatusDialog.__commitSelectAll" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__commitSelectAll" />
       <keyword name="SvnStatusDialog.__committed" id="SvnStatusDialog.__committed" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__committed" />
       <keyword name="SvnStatusDialog.__diff" id="SvnStatusDialog.__diff" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__diff" />
       <keyword name="SvnStatusDialog.__finish" id="SvnStatusDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnStatusDialog.html#SvnStatusDialog.__finish" />

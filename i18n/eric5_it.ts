@@ -5527,67 +5527,67 @@ Not connected
         <translation>Seleziona file da confrontare</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="13"/>
+        <location filename="UI/DiffDialog.ui" line="14"/>
         <source>File Differences</source>
         <translation>File differenze</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="21"/>
+        <location filename="UI/DiffDialog.ui" line="22"/>
         <source>File &amp;1:</source>
         <translation>File &amp;1:</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="31"/>
+        <location filename="UI/DiffDialog.ui" line="32"/>
         <source>Enter the name of the first file</source>
         <translation>Inserisci il nome del primo file</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="69"/>
+        <location filename="UI/DiffDialog.ui" line="70"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Premi per selezionare il file con un dialogo</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="72"/>
+        <location filename="UI/DiffDialog.ui" line="73"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="52"/>
+        <location filename="UI/DiffDialog.ui" line="53"/>
         <source>File &amp;2:</source>
         <translation>File &amp;2:</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="62"/>
+        <location filename="UI/DiffDialog.ui" line="63"/>
         <source>Enter the name of the second file</source>
         <translation>Inserisci il nome del secondo file</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="87"/>
+        <location filename="UI/DiffDialog.ui" line="88"/>
         <source>Select to generate a unified diff</source>
         <translation>Seleziona per generare una unified diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="90"/>
+        <location filename="UI/DiffDialog.ui" line="91"/>
         <source>&amp;Unified Diff</source>
         <translation>&amp;Unified Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="93"/>
+        <location filename="UI/DiffDialog.ui" line="94"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="103"/>
+        <location filename="UI/DiffDialog.ui" line="104"/>
         <source>Select to generate a context diff</source>
         <translation>Seleziona per generare una contexr diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="106"/>
+        <location filename="UI/DiffDialog.ui" line="107"/>
         <source>Co&amp;ntext Diff</source>
         <translation>Co&amp;ntext Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="109"/>
+        <location filename="UI/DiffDialog.ui" line="110"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -15530,7 +15530,7 @@ Hai %n schede aperta.</numerusform>
         <translation>Recupero da una transazione interrotta</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2156"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2159"/>
         <source>Shall the working directory be updated?</source>
         <translation>Le directory di lavoro devono essere aggiornate ?</translation>
     </message>
@@ -15545,17 +15545,17 @@ Hai %n schede aperta.</numerusform>
         <translation>Crea changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2167"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2171"/>
         <source>Apply changegroups</source>
         <translation>Applica changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2181"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2188"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Sottocomando Bisect ({0}) non valido.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2215"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2222"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
@@ -15580,7 +15580,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2254"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Rimozione di file dal solo repository Mercurial</translation>
     </message>
@@ -15590,7 +15590,7 @@ Hai %n schede aperta.</numerusform>
         <translation>Mercurial Changegroup Files (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2150"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2153"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial Changegroup Files (*.hg);;All Files (*)</translation>
     </message>
@@ -15600,12 +15600,12 @@ Hai %n schede aperta.</numerusform>
         <translation>Identifica i file changegroup</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2303"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2310"/>
         <source>Backing out changeset</source>
         <translation>Ritiro changeset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2283"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2290"/>
         <source>No revision given. Aborting...</source>
         <translation>Nessuna revisione fornita. Termino...</translation>
     </message>
@@ -15615,12 +15615,12 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;p&gt;Il file changegroup di Mercurial&lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2328"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2335"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2330"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15630,17 +15630,17 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2486"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2366"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2373"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2486"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16502,41 +16502,41 @@ dell&apos;eseguibile client di Mercurial (es. hg).&lt;/p&gt;</translation>
         <translation>Sorgente:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
         <source>Shows the name of the source</source>
         <translation>Mostra il nome della sorgente</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="52"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome sorgente&lt;/b&gt;
 &lt;p&gt;Questo campo mostra il nome della sorgente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Inserisci il nome del target</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="66"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome target&lt;/b&gt;
 &lt;p&gt;Inserisci il nuovo nome in questo campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="74"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
         <source>Target:</source>
         <translation>Target:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
         <source>Select to force the operation</source>
         <translation>Seleziona per forzae l&apos;operazione</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="86"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
         <source>Enforce operation</source>
         <translation>Forza operazione</translation>
     </message>
@@ -16632,52 +16632,52 @@ dell&apos;eseguibile client di Mercurial (es. hg).&lt;/p&gt;</translation>
         <translation>Difference</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="35"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="32"/>
         <source>&lt;b&gt;Mercurial Diff&lt;/b&gt;&lt;p&gt;This shows the output of the hg diff command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mercurial Diff&lt;/b&gt;&lt;p&gt;Mostra l&apos;output del comando  hg diff.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="63"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="60"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="82"/>
         <source>Input</source>
         <translation>Input</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="104"/>
         <source>Press to send the input to the hg process</source>
         <translation>Premi per spedire l&apos;input al processo hg</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="110"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="107"/>
         <source>&amp;Send</source>
         <translation>&amp;Spedisci</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="113"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="110"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="117"/>
         <source>Enter data to be sent to the hg process</source>
         <translation>Inserisci i dati da inviare al processo hg</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="127"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="124"/>
         <source>Select to switch the input field to password mode</source>
         <translation>Seleziona per impostare il campo di input in modalità password</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="130"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="127"/>
         <source>&amp;Password Mode</source>
         <translation>Modo &amp;Password</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="130"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -18613,7 +18613,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Crea un file changegroup che colleziona i changeset</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1178"/>
         <source>Apply changegroups</source>
         <translation>Applica changegroups</translation>
     </message>
@@ -18853,7 +18853,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Pull</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1016"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1178"/>
         <source>The project should be reread. Do this now?</source>
         <translation>Il progetto deve essere riletto. Farlo ora ?</translation>
     </message>
@@ -19968,7 +19968,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>HgStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="188"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="195"/>
         <source>Mercurial Status</source>
         <translation>Mercurial Status</translation>
     </message>
@@ -20050,102 +20050,102 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Committa le modifica nel repository...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="66"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="70"/>
         <source>Add to repository</source>
         <translation>Aggiungi al repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="72"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="76"/>
         <source>Revert changes</source>
         <translation>Annulla modifiche</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="77"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="81"/>
         <source>Adjust column sizes</source>
         <translation>Adatta dimensione colonne</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="104"/>
         <source>added</source>
         <translation>aggiunto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="103"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="107"/>
         <source>modified</source>
         <translation>modificato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="104"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="108"/>
         <source>removed</source>
         <translation>rimosso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="105"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="109"/>
         <source>not tracked</source>
         <translation>non tracciato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="101"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="105"/>
         <source>normal</source>
         <translation>normale</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
         <source>ignored</source>
         <translation>ignorato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="110"/>
         <source>missing</source>
         <translation>mancante</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="245"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="245"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="540"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Non ci sono modifiche disponibili/selezionate da committare.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="567"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
         <source>Add</source>
         <translation>Aggiungi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="567"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Non ci sono elementi non sotto controllo disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
         <source>Revert</source>
         <translation>Inverti</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="70"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="74"/>
         <source>Remove from repository</source>
         <translation>Rimuovi dal repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="588"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="607"/>
         <source>Remove</source>
         <translation>Rimuovi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
         <source>There are no missing entries available/selected.</source>
         <translation>Non ci sono elementi mancati disponibili/selezionati.</translation>
     </message>
@@ -20220,28 +20220,38 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="72"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="74"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="78"/>
         <source>Restore missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="452"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="459"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="540"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
         <source>Differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="65"/>
+        <source>Select all for commit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="67"/>
+        <source>Deselect all from commit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35925,73 +35935,73 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Seleziona target</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="13"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="14"/>
         <source>Subversion Copy</source>
         <translation>Subversion Copy</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="27"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="28"/>
         <source>Press to open a selection dialog</source>
         <translation>Premi per aprire un dialogo di selezione</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="30"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="31"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Seleziona il nome per il target per l&apos;operazione con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="34"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="35"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="41"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="42"/>
         <source>Source:</source>
         <translation>Sorgente:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="51"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
         <source>Shows the name of the source</source>
         <translation>Mostra il nome della sorgente</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="54"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="52"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome sorgente&lt;/b&gt;
 &lt;p&gt;Questo campo mostra il nome della sorgente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="65"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
         <source>Enter the target name</source>
         <translation>Inserisci il nome del target</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="66"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome target&lt;/b&gt;
 &lt;p&gt;Inserisci il nuovo nome in questo campo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="76"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="74"/>
         <source>Target:</source>
         <translation>Target:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="83"/>
         <source>Select to force the operation</source>
         <translation>Seleziona per forzae l&apos;operazione</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="88"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="86"/>
         <source>Enforce operation</source>
         <translation>Forza operazione</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="30"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="31"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome target&lt;/b&gt;
@@ -36136,57 +36146,57 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Salva Diff</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="25"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="26"/>
         <source>Difference</source>
         <translation>Difference</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="34"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="32"/>
         <source>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;This shows the output of the svn diff command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;Mostra l&apos;output del comando  svn diff.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="62"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="60"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="84"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="82"/>
         <source>Input</source>
         <translation>Input</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="106"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="104"/>
         <source>Press to send the input to the subversion process</source>
         <translation>Premi per mandare l&apos;input al processo subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="109"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="107"/>
         <source>&amp;Send</source>
         <translation>&amp;Spedisci</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="112"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="110"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="117"/>
         <source>Enter data to be sent to the subversion process</source>
         <translation>Inserisci i dati da mandare al processo subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="124"/>
         <source>Select to switch the input field to password mode</source>
         <translation>Seleziona per impostare il campo di input in modalità password</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="127"/>
         <source>&amp;Password Mode</source>
         <translation>Modo &amp;Password</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="130"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -38212,67 +38222,67 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="159"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="163"/>
         <source>normal</source>
         <translation>normale</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="147"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="151"/>
         <source>added</source>
         <translation>aggiunto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="148"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="152"/>
         <source>deleted</source>
         <translation>cancellato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="160"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="164"/>
         <source>modified</source>
         <translation>modificato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="161"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="165"/>
         <source>conflict</source>
         <translation>conflitto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="154"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="158"/>
         <source>unversioned</source>
         <translation>non versionato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="155"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="159"/>
         <source>missing</source>
         <translation>mancante</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="156"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="160"/>
         <source>type error</source>
         <translation>errore tipo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="157"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="161"/>
         <source>no</source>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="158"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="162"/>
         <source>yes</source>
         <translation>si</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="152"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="156"/>
         <source>external</source>
         <translation>esterno</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="157"/>
         <source>ignored</source>
         <translation>ignorato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="272"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="279"/>
         <source>Subversion Status</source>
         <translation>Stato Subversion</translation>
     </message>
@@ -38282,82 +38292,82 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Committa modifiche nel repository...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Non ci sono modifiche disponibili/selezionate da committare.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
         <source>Lock</source>
         <translation>Lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="699"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="718"/>
         <source>Unlock</source>
         <translation>Unlock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="104"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="108"/>
         <source>Break lock</source>
         <translation>Spezza lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="111"/>
         <source>Steal lock</source>
         <translation>Ruba lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="151"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="155"/>
         <source>locked</source>
         <translation>bloccato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="152"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="156"/>
         <source>other lock</source>
         <translation>altro lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="157"/>
         <source>stolen lock</source>
         <translation>lock rubato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="154"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="158"/>
         <source>broken lock</source>
         <translation>lock rotto</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="154"/>
         <source>not locked</source>
         <translation>non bloccato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="154"/>
         <source>replaced</source>
         <translation>sostituito</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>Non ci sono file sbloccati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
         <source>There are no locked files available/selected.</source>
         <translation>Non ci sono file bloccati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="716"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="735"/>
         <source>Break Lock</source>
         <translation>Spezza lock</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
         <source>Steal Lock</source>
         <translation>Ruba lock</translation>
     </message>
@@ -38474,12 +38484,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Premi per aggiornare lo stato</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="111"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="115"/>
         <source>Adjust column sizes</source>
         <translation>Adatta dimensione colonne</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
@@ -38489,27 +38499,27 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="83"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="87"/>
         <source>Add to repository</source>
         <translation>Aggiungi al repository</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="87"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="91"/>
         <source>Revert changes</source>
         <translation>Inverti modifiche</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="605"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
         <source>Add</source>
         <translation>Aggiungi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="605"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Non ci sono elementi non sotto controllo disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
         <source>Revert</source>
         <translation>Inverti</translation>
     </message>
@@ -38519,27 +38529,27 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Changelist</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="97"/>
         <source>Add to Changelist</source>
         <translation>Aggiungi alla Changelist</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
         <source>Remove from Changelist</source>
         <translation>Rimuovi dalla Changelist</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="749"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="768"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>Non ci sono file disponibili/selezionati che non appartengono ad una changelist.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>Non ci sono file disponibili/selezionati che appartengono ad una changelist.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
@@ -38604,33 +38614,43 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="89"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
         <source>Restore missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="497"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="504"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished">Non ci sono elementi mancati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
         <source>Differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="82"/>
+        <source>Select all for commit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
+        <source>Deselect all from commit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

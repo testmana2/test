@@ -75,6 +75,15 @@ QWidget, SvnDialogMixin, Ui_SvnStatusDialog
 <td><a href="#SvnStatusDialog.__commit">__commit</a></td>
 <td>Private slot to handle the Commit context menu entry.</td>
 </tr><tr>
+<td><a href="#SvnStatusDialog.__commitDeselectAll">__commitDeselectAll</a></td>
+<td>Private slot to deselect all entries from commit.</td>
+</tr><tr>
+<td><a href="#SvnStatusDialog.__commitSelect">__commitSelect</a></td>
+<td>Private slot to select or deselect all entries.</td>
+</tr><tr>
+<td><a href="#SvnStatusDialog.__commitSelectAll">__commitSelectAll</a></td>
+<td>Private slot to select all entries for commit.</td>
+</tr><tr>
 <td><a href="#SvnStatusDialog.__committed">__committed</a></td>
 <td>Private slot called after the commit has finished.</td>
 </tr><tr>
@@ -215,6 +224,26 @@ parent widget (QWidget)
 <b>__commit</b>(<i></i>)
 <p>
         Private slot to handle the Commit context menu entry.
+</p><a NAME="SvnStatusDialog.__commitDeselectAll" ID="SvnStatusDialog.__commitDeselectAll"></a>
+<h4>SvnStatusDialog.__commitDeselectAll</h4>
+<b>__commitDeselectAll</b>(<i></i>)
+<p>
+        Private slot to deselect all entries from commit.
+</p><a NAME="SvnStatusDialog.__commitSelect" ID="SvnStatusDialog.__commitSelect"></a>
+<h4>SvnStatusDialog.__commitSelect</h4>
+<b>__commitSelect</b>(<i>selected</i>)
+<p>
+        Private slot to select or deselect all entries.
+</p><dl>
+<dt><i>selected</i></dt>
+<dd>
+commit selection state to be set (boolean)
+</dd>
+</dl><a NAME="SvnStatusDialog.__commitSelectAll" ID="SvnStatusDialog.__commitSelectAll"></a>
+<h4>SvnStatusDialog.__commitSelectAll</h4>
+<b>__commitSelectAll</b>(<i></i>)
+<p>
+        Private slot to select all entries for commit.
 </p><a NAME="SvnStatusDialog.__committed" ID="SvnStatusDialog.__committed"></a>
 <h4>SvnStatusDialog.__committed</h4>
 <b>__committed</b>(<i></i>)

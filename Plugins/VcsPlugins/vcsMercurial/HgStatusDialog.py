@@ -62,6 +62,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.menu = QMenu()
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Commit changes to repository..."), self.__commit))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Select all for commit"), self.__commitSelectAll))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
@@ -138,7 +142,10 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         itm.setTextAlignment(2, Qt.AlignLeft)
     
         if status in "AMR":
+            itm.setFlags(itm.flags() | Qt.ItemIsUserCheckable)
             itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
+        else:
+            itm.setFlags(itm.flags() & ~Qt.ItemIsUserCheckable)
         
         if statusText not in self.__statusFilters:
             self.__statusFilters.append(statusText)
@@ -557,6 +564,18 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.on_refreshButton_clicked()
             self.vcs.checkVCSStatus()
     
+    def __commitSelectAll(self):
+        """
+        Private slot to select all entries for commit.
+        """
+        self.__commitSelect(True)
+    
+    def __commitDeselectAll(self):
+        """
+        Private slot to deselect all entries from commit.
+        """
+        self.__commitSelect(False)
+    
     def __add(self):
         """
         Private slot to handle the Add context menu entry.
@@ -698,3 +717,17 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             if itm.text(self.__statusColumn) in self.missingIndicators:
                 missingItems.append(itm)
         return missingItems
+    
+    def __commitSelect(self, selected):
+        """
+        Private slot to select or deselect all entries.
+        
+        @param selected commit selection state to be set (boolean)
+        """
+        for index in range(self.statusList.topLevelItemCount()):
+            itm = self.statusList.topLevelItem(index)
+            if itm.flags() & Qt.ItemIsUserCheckable:
+                if selected:
+                    itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
+                else:
+                    itm.setCheckState(self.__toBeCommittedColumn, Qt.Unchecked)

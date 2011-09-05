@@ -5564,67 +5564,67 @@ Not connected
         <translation>&lt;p&gt;Невозможно прочитать файл: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="13"/>
+        <location filename="UI/DiffDialog.ui" line="14"/>
         <source>File Differences</source>
         <translation>Различия файлов</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="21"/>
+        <location filename="UI/DiffDialog.ui" line="22"/>
         <source>File &amp;1:</source>
         <translation>Файл: &amp;1:</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="31"/>
+        <location filename="UI/DiffDialog.ui" line="32"/>
         <source>Enter the name of the first file</source>
         <translation>Задайте имя первого файла</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="69"/>
+        <location filename="UI/DiffDialog.ui" line="70"/>
         <source>Press to select the file via a file selection dialog</source>
         <translation>Выберите файл с помощью файлового диалога</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="72"/>
+        <location filename="UI/DiffDialog.ui" line="73"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="52"/>
+        <location filename="UI/DiffDialog.ui" line="53"/>
         <source>File &amp;2:</source>
         <translation>Файл: &amp;2:</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="62"/>
+        <location filename="UI/DiffDialog.ui" line="63"/>
         <source>Enter the name of the second file</source>
         <translation>Задайте имя второго файла</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="87"/>
+        <location filename="UI/DiffDialog.ui" line="88"/>
         <source>Select to generate a unified diff</source>
         <translation>Генерировать универсальный вывод (Unified Diff)</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="90"/>
+        <location filename="UI/DiffDialog.ui" line="91"/>
         <source>&amp;Unified Diff</source>
         <translation>&amp;Unified Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="93"/>
+        <location filename="UI/DiffDialog.ui" line="94"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="103"/>
+        <location filename="UI/DiffDialog.ui" line="104"/>
         <source>Select to generate a context diff</source>
         <translation>Генерировать контекстный вывод (Context Diff)</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="106"/>
+        <location filename="UI/DiffDialog.ui" line="107"/>
         <source>Co&amp;ntext Diff</source>
         <translation>Co&amp;ntext Diff</translation>
     </message>
     <message>
-        <location filename="UI/DiffDialog.ui" line="109"/>
+        <location filename="UI/DiffDialog.ui" line="110"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -15637,7 +15637,7 @@ You have %n tab(s) open.</source>
         <translation>Восстановление после прерванной транзакции</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2156"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2159"/>
         <source>Shall the working directory be updated?</source>
         <translation>Обновить рабочий каталог?</translation>
     </message>
@@ -15652,17 +15652,17 @@ You have %n tab(s) open.</source>
         <translation>Создать группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2167"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2171"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2181"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2188"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Неправильная подкоманда ({0}) для Bisect.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2215"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2222"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
@@ -15687,7 +15687,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже существует. Перезаписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2254"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Удаление файлов только из репозитория</translation>
     </message>
@@ -15697,7 +15697,7 @@ You have %n tab(s) open.</source>
         <translation>Mercurial файлы изменений (*.hg)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2150"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2153"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Mercurial файлы изменений (*.hg);;Все файлы (*)</translation>
     </message>
@@ -15707,12 +15707,12 @@ You have %n tab(s) open.</source>
         <translation>Файлы изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2303"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2310"/>
         <source>Backing out changeset</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2283"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2290"/>
         <source>No revision given. Aborting...</source>
         <translation>Не задана ревизия. Отмена...</translation>
     </message>
@@ -15722,12 +15722,12 @@ You have %n tab(s) open.</source>
         <translation>&lt;p&gt;Файл группы изменений&lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2328"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2335"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2323"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2330"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15737,17 +15737,17 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2486"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2366"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2373"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2479"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2486"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16604,41 +16604,41 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Откуда:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
         <source>Shows the name of the source</source>
         <translation>Имя источника</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="52"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Откуда&lt;/b&gt;
 &lt;p&gt;Это поле показывает имя источника.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Задайте имя приёмника</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="66"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Куда&lt;/b&gt;
 &lt;p&gt;В этом поле задайте новое мия.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="74"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
         <source>Target:</source>
         <translation>Куда:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
         <source>Select to force the operation</source>
         <translation>Выполнить операцию принудительно</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="86"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="83"/>
         <source>Enforce operation</source>
         <translation>Выполнить принудительно</translation>
     </message>
@@ -16734,52 +16734,52 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="35"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="32"/>
         <source>&lt;b&gt;Mercurial Diff&lt;/b&gt;&lt;p&gt;This shows the output of the hg diff command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mercurial Diff (различие)&lt;/b&gt;&lt;p&gt;Отображает вывод команды hg diff.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="63"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="60"/>
         <source>Errors</source>
         <translation>Ошибки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="82"/>
         <source>Input</source>
         <translation>Ввод</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="104"/>
         <source>Press to send the input to the hg process</source>
         <translation>Отправить данные процессу hg</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="110"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="107"/>
         <source>&amp;Send</source>
         <translation>&amp;Отправить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="113"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="110"/>
         <source>Alt+S</source>
         <translation>Alt+О</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="117"/>
         <source>Enter data to be sent to the hg process</source>
         <translation>Задайте данные, которые будут посланы процессу hg</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="127"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="124"/>
         <source>Select to switch the input field to password mode</source>
         <translation>Задать режим ввода пароля для поля ввода пароля</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="130"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="127"/>
         <source>&amp;Password Mode</source>
         <translation>&amp;Парольный режим</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="130"/>
         <source>Alt+P</source>
         <translation>Alt+П</translation>
     </message>
@@ -18720,7 +18720,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Создать файл коллекции изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="709"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1178"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
@@ -18960,7 +18960,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Загрузить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1016"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1178"/>
         <source>The project should be reread. Do this now?</source>
         <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
@@ -20080,7 +20080,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="188"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="195"/>
         <source>Mercurial Status</source>
         <translation>Mercurial Status</translation>
     </message>
@@ -20162,102 +20162,102 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Зафиксировать изменения в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="66"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="70"/>
         <source>Add to repository</source>
         <translation>Добавить в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="72"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="76"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="77"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="81"/>
         <source>Adjust column sizes</source>
         <translation>Подстроить размеры колонок</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="100"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="104"/>
         <source>added</source>
         <translation>добавлено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="103"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="107"/>
         <source>modified</source>
         <translation>изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="104"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="108"/>
         <source>removed</source>
         <translation>удалено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="105"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="109"/>
         <source>not tracked</source>
         <translation>не отслеживается</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="101"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="105"/>
         <source>normal</source>
         <translation>нормальный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="102"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
         <source>ignored</source>
         <translation>игнорировано</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="110"/>
         <source>missing</source>
         <translation>отсутствует</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="245"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="245"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="540"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
         <source>Commit</source>
         <translation>Зафиксировать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Нет доступных/выбранных неотправленных изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="567"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="567"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Нет/не выбраны неверсионные элементы.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
         <source>Revert</source>
         <translation>Откатить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="70"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="74"/>
         <source>Remove from repository</source>
         <translation>Удалить из репозитория</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="588"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="607"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="625"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
         <source>There are no missing entries available/selected.</source>
         <translation>Нет/не выбраны пропущенных элементы.</translation>
     </message>
@@ -20332,17 +20332,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="72"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="74"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="78"/>
         <source>Restore missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="452"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="459"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20352,13 +20352,23 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="642"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="540"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
         <source>There are no entries selected to be committed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="65"/>
+        <source>Select all for commit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="67"/>
+        <source>Deselect all from commit</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -36073,73 +36083,73 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Выберите цель</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="13"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="14"/>
         <source>Subversion Copy</source>
         <translation>Копия Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="27"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="28"/>
         <source>Press to open a selection dialog</source>
         <translation>Нажмите, чтобы открыть диалог выбора</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="30"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="31"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
 &lt;p&gt;Выберите имя каталога назначения с помощью диалога выбора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="34"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="35"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="41"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="42"/>
         <source>Source:</source>
         <translation>Откуда:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="51"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
         <source>Shows the name of the source</source>
         <translation>Имя источника</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="54"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="52"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Откуда&lt;/b&gt;
 &lt;p&gt;Это поле показывает имя источника.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="65"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="63"/>
         <source>Enter the target name</source>
         <translation>Задайте имя приёмника</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="68"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="66"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Куда&lt;/b&gt;
 &lt;p&gt;В этом поле задайте новое мия.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="76"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="74"/>
         <source>Target:</source>
         <translation>Куда:</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="83"/>
         <source>Select to force the operation</source>
         <translation>Выполнить операцию принудительно</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="88"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="86"/>
         <source>Enforce operation</source>
         <translation>Выполнить принудительно</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="30"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="31"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Назначение&lt;/b&gt;&lt;p&gt;Выберите имя назначения с помощью диалога выбора.&lt;/p&gt;</translation>
@@ -36287,57 +36297,57 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл заплатки &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="25"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="26"/>
         <source>Difference</source>
         <translation>Различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="34"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="32"/>
         <source>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;This shows the output of the svn diff command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Subversion Diff (различие)&lt;/b&gt;&lt;p&gt;Отображает вывод команды svn diff.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="62"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="60"/>
         <source>Errors</source>
         <translation>Ошибки</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="84"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="82"/>
         <source>Input</source>
         <translation>Ввод</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="106"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="104"/>
         <source>Press to send the input to the subversion process</source>
         <translation>Отправить данные процессу subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="109"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="107"/>
         <source>&amp;Send</source>
         <translation>&amp;Отправить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="112"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="110"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="117"/>
         <source>Enter data to be sent to the subversion process</source>
         <translation>Задайте данные, которые будут посланы процессу subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="126"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="124"/>
         <source>Select to switch the input field to password mode</source>
         <translation>Задать режим ввода пароля для поля ввода пароля</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="129"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="127"/>
         <source>&amp;Password Mode</source>
         <translation>&amp;Парольный режим</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="132"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="130"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -38377,67 +38387,67 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>SvnStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="159"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="163"/>
         <source>normal</source>
         <translation>Нормальный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="147"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="151"/>
         <source>added</source>
         <translation>Добавлено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="148"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="152"/>
         <source>deleted</source>
         <translation>Удалено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="160"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="164"/>
         <source>modified</source>
         <translation>Изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="161"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="165"/>
         <source>conflict</source>
         <translation>Конфликт</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="154"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="158"/>
         <source>unversioned</source>
         <translation>нет версий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="155"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="159"/>
         <source>missing</source>
         <translation>Отсутствует</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="156"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="160"/>
         <source>type error</source>
         <translation>ошибка типа</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="157"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="161"/>
         <source>no</source>
         <translation>нет</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="158"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="162"/>
         <source>yes</source>
         <translation>да</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="152"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="156"/>
         <source>external</source>
         <translation>внешний</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="157"/>
         <source>ignored</source>
         <translation>игнорированный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="272"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="279"/>
         <source>Subversion Status</source>
         <translation>Статус Subversion</translation>
     </message>
@@ -38447,82 +38457,82 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Зафиксировать изменения в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
         <source>Commit</source>
         <translation>Зафиксировать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Нет доступных/выбранных неотправленных изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
         <source>Lock</source>
         <translation>Захватить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="699"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="718"/>
         <source>Unlock</source>
         <translation>Освободить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="104"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="108"/>
         <source>Break lock</source>
         <translation>Нарушить захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="107"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="111"/>
         <source>Steal lock</source>
         <translation>Украсть захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="151"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="155"/>
         <source>locked</source>
         <translation>захвачено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="152"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="156"/>
         <source>other lock</source>
         <translation>другой захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="153"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="157"/>
         <source>stolen lock</source>
         <translation>захват украден</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="154"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="158"/>
         <source>broken lock</source>
         <translation>захват нарушен</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="154"/>
         <source>not locked</source>
         <translation>не захвачено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="154"/>
         <source>replaced</source>
         <translation>заменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>Нет доступных/выбранных незахваченных файлов.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
         <source>There are no locked files available/selected.</source>
         <translation>Нет доступных/выбранных захваченных файлов.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="716"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="735"/>
         <source>Break Lock</source>
         <translation>Нарушить захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
         <source>Steal Lock</source>
         <translation>Украсть захват</translation>
     </message>
@@ -38639,12 +38649,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Нажмите, чтобы обновить отображение статуса</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="111"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="115"/>
         <source>Adjust column sizes</source>
         <translation>Подстроить размеры колонок</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
@@ -38654,32 +38664,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="83"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="87"/>
         <source>Add to repository</source>
         <translation>Добавить в репозиторий</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="87"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="91"/>
         <source>Revert changes</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="605"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="605"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Нет/не выбраны неверсионные элементы.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
         <source>Revert</source>
         <translation>Откатить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="368"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -38689,22 +38699,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Список изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="97"/>
         <source>Add to Changelist</source>
         <translation>Добавить к списку изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
         <source>Remove from Changelist</source>
         <translation>Удалить из списка изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="749"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="768"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>Среди выбранных нет файлов не включенных в список изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>Среди выбранных нет файлов включенных в список изменений.</translation>
     </message>
@@ -38769,17 +38779,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="85"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="89"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="89"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
         <source>Restore missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="497"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="504"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -38789,19 +38799,29 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="578"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished">Нет/не выбраны пропущенных элементы.</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="82"/>
+        <source>Select all for commit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
+        <source>Deselect all from commit</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

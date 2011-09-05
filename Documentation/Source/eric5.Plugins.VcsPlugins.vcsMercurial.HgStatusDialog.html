@@ -67,6 +67,15 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__commit">__commit</a></td>
 <td>Private slot to handle the Commit context menu entry.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__commitDeselectAll">__commitDeselectAll</a></td>
+<td>Private slot to deselect all entries from commit.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__commitSelect">__commitSelect</a></td>
+<td>Private slot to select or deselect all entries.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__commitSelectAll">__commitSelectAll</a></td>
+<td>Private slot to select all entries for commit.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__committed">__committed</a></td>
 <td>Private slot called after the commit has finished.</td>
 </tr><tr>
@@ -209,6 +218,26 @@ parent widget (QWidget)
 <b>__commit</b>(<i></i>)
 <p>
         Private slot to handle the Commit context menu entry.
+</p><a NAME="HgStatusDialog.__commitDeselectAll" ID="HgStatusDialog.__commitDeselectAll"></a>
+<h4>HgStatusDialog.__commitDeselectAll</h4>
+<b>__commitDeselectAll</b>(<i></i>)
+<p>
+        Private slot to deselect all entries from commit.
+</p><a NAME="HgStatusDialog.__commitSelect" ID="HgStatusDialog.__commitSelect"></a>
+<h4>HgStatusDialog.__commitSelect</h4>
+<b>__commitSelect</b>(<i>selected</i>)
+<p>
+        Private slot to select or deselect all entries.
+</p><dl>
+<dt><i>selected</i></dt>
+<dd>
+commit selection state to be set (boolean)
+</dd>
+</dl><a NAME="HgStatusDialog.__commitSelectAll" ID="HgStatusDialog.__commitSelectAll"></a>
+<h4>HgStatusDialog.__commitSelectAll</h4>
+<b>__commitSelectAll</b>(<i></i>)
+<p>
+        Private slot to select all entries for commit.
 </p><a NAME="HgStatusDialog.__committed" ID="HgStatusDialog.__committed"></a>
 <h4>HgStatusDialog.__committed</h4>
 <b>__committed</b>(<i></i>)

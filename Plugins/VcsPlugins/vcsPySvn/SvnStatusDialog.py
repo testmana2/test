@@ -79,6 +79,10 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         self.menu = QMenu()
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Commit changes to repository..."), self.__commit))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Select all for commit"), self.__commitSelectAll))
+        self.menuactions.append(self.menu.addAction(
+            self.trUtf8("Deselect all from commit"), self.__commitDeselectAll))
         self.menu.addSeparator()
         self.menuactions.append(self.menu.addAction(
             self.trUtf8("Add to repository"), self.__add))
@@ -238,7 +242,10 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
            propStatus in [pysvn.wc_status_kind.added,
                           pysvn.wc_status_kind.deleted,
                           pysvn.wc_status_kind.modified]:
+            itm.setFlags(itm.flags() | Qt.ItemIsUserCheckable)
             itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
+        else:
+            itm.setFlags(itm.flags() & ~Qt.ItemIsUserCheckable)
         
         if statusText not in self.__statusFilters:
             self.__statusFilters.append(statusText)
@@ -595,6 +602,18 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             self.on_refreshButton_clicked()
             self.vcs.checkVCSStatus()
         
+    def __commitSelectAll(self):
+        """
+        Private slot to select all entries for commit.
+        """
+        self.__commitSelect(True)
+    
+    def __commitDeselectAll(self):
+        """
+        Private slot to deselect all entries from commit.
+        """
+        self.__commitSelect(False)
+    
     def __add(self):
         """
         Private slot to handle the Add context menu entry.
@@ -863,3 +882,17 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             if not itm.text(self.__changelistColumn):
                 clitems.append(itm)
         return clitems
+    
+    def __commitSelect(self, selected):
+        """
+        Private slot to select or deselect all entries.
+        
+        @param selected commit selection state to be set (boolean)
+        """
+        for index in range(self.statusList.topLevelItemCount()):
+            itm = self.statusList.topLevelItem(index)
+            if itm.flags() & Qt.ItemIsUserCheckable:
+                if selected:
+                    itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
+                else:
+                    itm.setCheckState(self.__toBeCommittedColumn, Qt.Unchecked)
