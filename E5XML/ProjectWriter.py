@@ -161,7 +161,7 @@ class ProjectWriter(XMLStreamWriterBase):
         
         # do the filetype associations
         self.writeStartElement("FiletypeAssociations")
-        for pattern, filetype in list(self.pdata["FILETYPES"].items()):
+        for pattern, filetype in sorted(self.pdata["FILETYPES"].items()):
             self.writeEmptyElement("FiletypeAssociation")
             self.writeAttribute("pattern", pattern)
             self.writeAttribute("type", filetype)
@@ -170,7 +170,7 @@ class ProjectWriter(XMLStreamWriterBase):
         # do the lexer associations
         if self.pdata["LEXERASSOCS"]:
             self.writeStartElement("LexerAssociations")
-            for pattern, lexer in list(self.pdata["LEXERASSOCS"].items()):
+            for pattern, lexer in sorted(self.pdata["LEXERASSOCS"].items()):
                 self.writeEmptyElement("LexerAssociation")
                 self.writeAttribute("pattern", pattern)
                 self.writeAttribute("lexer", lexer)
