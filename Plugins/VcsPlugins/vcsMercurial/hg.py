@@ -2137,6 +2137,8 @@ class Hg(VersionControl):
         Public method to apply changegroup files.
         
         @param name directory name (string)
+        @return flag indicating, that the update contained an add
+            or delete (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -2147,6 +2149,7 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
+        res = False
         files = E5FileDialog.getOpenFileNames(
             None,
             self.trUtf8("Apply changegroups"),
@@ -2162,12 +2165,16 @@ class Hg(VersionControl):
             args.append('unbundle')
             if update:
                 args.append("--update")
+                args.append("--verbose")
             args.extend(files)
             
             dia = HgDialog(self.trUtf8('Apply changegroups'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+                res = dia.hasAddOrDelete()
+            self.checkVCSStatus()
+        return res
     
     def hgBisect(self, name, subcommand):
         """

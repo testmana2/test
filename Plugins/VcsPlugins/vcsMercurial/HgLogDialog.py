@@ -123,7 +123,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         args.append(self.mode)
         self.vcs.addArguments(args, self.vcs.options['global'])
         self.vcs.addArguments(args, self.vcs.options['log'])
-        if noEntries:
+        if noEntries and self.mode == "log":
             args.append('--limit')
             args.append(str(noEntries))
         if self.mode in ("incoming", "outgoing"):
