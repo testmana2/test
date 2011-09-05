@@ -73,7 +73,7 @@ expression, special characters interpreted are:</p>
 <tr><td><code>.</code></td><td>Matches any character</td></tr>
 <tr><td><code>\(</code></td><td>This marks the start of a region for tagging a match.</td></tr>
 <tr><td><code>\)</code></td><td>This marks the end of a tagged region.</td></tr>
-<tr><td><code>\n</code></td>
+<tr><td><code>\\n</code></td>
 <td>Where <code>n</code> is 1 through 9 refers to the first through ninth tagged region
 when replacing. For example, if the search string was <code>Fred\([1-9]\)XXX</code> and
 the replace string was <code>Sam\1YYY</code>, when applied to <code>Fred2XXX</code> this
@@ -82,9 +82,9 @@ would generate <code>Sam2YYY</code>.</td></tr>
 <td>This matches the start of a word using Scintilla's definitions of words.</td></tr>
 <tr><td><code>\&gt;</code></td>
 <td>This matches the end of a word using Scintilla's definition of words.</td></tr>
-<tr><td><code>\x</code></td>
+<tr><td><code>\\x</code></td>
 <td>This allows you to use a character x that would otherwise have a special meaning. For
-example, \[ would be interpreted as [ and not as the start of a character set.</td></tr>
+example, \\[ would be interpreted as [ and not as the start of a character set.</td></tr>
 <tr><td><code>[...]</code></td>
 <td>This indicates a set of characters, for example, [abc] means any of the characters a,
 b or c. You can also use ranges, for example [a-z] for any lower case character.</td></tr>
