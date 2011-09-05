@@ -1176,7 +1176,7 @@ class HgProjectHelper(VcsProjectHelper):
         shouldReopen = self.vcs.hgUnbundle(self.project.ppath)
         if shouldReopen:
             res = E5MessageBox.yesNo(self.parent(),
-                self.trUtf8("Pull"),
+                self.trUtf8("Apply changegroups"),
                 self.trUtf8("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
