@@ -1035,7 +1035,14 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Protected slot used to apply changegroup files.
         """
-        self.vcs.hgUnbundle(self.project.ppath)
+        shouldReopen = self.vcs.hgUnbundle(self.project.ppath)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(self.parent(),
+                self.trUtf8("Unbundle"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
     
     def __hgBisectGood(self):
         """
