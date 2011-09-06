@@ -1113,7 +1113,8 @@ class Editor(QsciScintillaCompat):
         from pygments.lexers import get_all_lexers
         lexerList = sorted([l[0] for l in get_all_lexers()])
         try:
-            lexerSel = lexerList.index(self.getLanguage(normalized = False))
+            lexerSel = lexerList.index(
+                self.getLanguage(normalized=False, forPygments=True))
         except ValueError:
             lexerSel = 0
         lexerName, ok = QInputDialog.getItem(
@@ -1345,19 +1346,19 @@ class Editor(QsciScintillaCompat):
             language = self.project.getEditorLexerAssoc(os.path.basename(filename))
         if not language:
             ext = os.path.splitext(filename)[1]
-            if ext in [".py", ".pyw"]  and \
-               Preferences.getProject("DeterminePyFromProject")and \
-               self.project.isOpen() and \
-               self.fileName is not None and \
-               self.project.isProjectFile(self.fileName):
-                if self.project.getProjectLanguage() in ["Python", "Python2"]:
+            if ext in [".py", ".pyw"]:
+                if self.isPy2File():
                     language = "Python2"
+                elif self.isPy3File():
+                    language = "Python3"
                 else:
+                    # default is Python 3
                     language = "Python3"
             else:
                 filename = os.path.basename(filename)
                 language = Preferences.getEditorLexerAssoc(filename)
                 if language == "Python":
+                    # correction for Python
                     if self.isPy2File():
                         language = "Python2"
                     else:
@@ -1422,12 +1423,14 @@ class Editor(QsciScintillaCompat):
         """
         return self.lexer_
         
-    def getLanguage(self, normalized = True):
+    def getLanguage(self, normalized=True, forPygments=False):
         """
         Public method to retrieve the language of the editor.
         
         @keyparam normalized flag indicating to normalize some Pygments 
             lexer names (boolean)
+        @keyparam forPygments flag indicating to normalize some lexer
+            names for Pygments (boolean)
         @return language of the editor (string)
         """
         if self.apiLanguage == "Guessed" or self.apiLanguage.startswith("Pygments|"):
@@ -1438,9 +1441,15 @@ class Editor(QsciScintillaCompat):
                     lang = "Python2"
                 elif lang == "Python 3":
                     lang = "Python3"
-            return lang
         else:
-            return self.apiLanguage
+            lang = self.apiLanguage
+            if forPygments:
+                # adjust some names to Pygments lexer names
+                if lang == "Python2":
+                    lang = "Python"
+                elif lang == "Python3":
+                    lang = "Python 3"
+        return lang
         
     def __bindCompleter(self, filename):
         """
