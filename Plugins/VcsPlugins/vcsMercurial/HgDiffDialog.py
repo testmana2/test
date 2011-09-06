@@ -14,6 +14,7 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QBrush, QColor, \
     QTextCursor, QLineEdit
 
 from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui.E5Application import e5App
 
 from .Ui_HgDiffDialog import Ui_HgDiffDialog
 
@@ -339,9 +340,10 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                 return
         fname = Utilities.toNativeSeparators(fname)
         
+        eol = e5App().getObject("Project").getEolString()
         try:
             f = open(fname, "w", encoding="utf-8")
-            f.write(self.contents.toPlainText())
+            f.write(eol.join(self.contents.toPlainText().splitlines()))
             f.close()
         except IOError as why:
             E5MessageBox.critical(self, self.trUtf8('Save Diff'),
