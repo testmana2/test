@@ -299,9 +299,10 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                 return
         fname = Utilities.toNativeSeparators(fname)
         
+        eol = e5App().getObject("Project").getEolString()
         try:
             f = open(fname, "w", encoding = "utf-8")
-            f.write(self.contents.toPlainText())
+            f.write(eol.join(self.contents.toPlainText().splitlines()))
             f.close()
         except IOError as why:
             E5MessageBox.critical(self, self.trUtf8('Save Diff'),
