@@ -245,6 +245,10 @@ class TabWidget(E5TabWidget):
         self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAll.png"),
             self.trUtf8('Save All'), self.__contextMenuSaveAll)
         self.__menu.addSeparator()
+        self.openRejectionsMenuAct = \
+            self.__menu.addAction(self.trUtf8("Open 'rejection' file"),
+            self.__contextMenuOpenRejections)
+        self.__menu.addSeparator()
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
         self.__menu.addSeparator()
@@ -262,7 +266,13 @@ class TabWidget(E5TabWidget):
             self.contextMenuEditor = self.widget(index)
             if self.contextMenuEditor:
                 self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
-                self.copyPathAct.setEnabled(bool(self.contextMenuEditor.getFileName()))
+                fileName = self.contextMenuEditor.getFileName()
+                self.copyPathAct.setEnabled(bool(fileName))
+                if fileName:
+                    rej = "{0}.rej".format(fileName)
+                    self.openRejectionsMenuAct.setEnabled(os.path.exists(rej))
+                else:
+                    self.openRejectionsMenuAct.setEnabled(False)
             
             self.contextMenuIndex = index
             self.leftMenuAct.setEnabled(index > 0)
@@ -506,7 +516,8 @@ class TabWidget(E5TabWidget):
         Private method to close the other tabs.
         """
         index = self.contextMenuIndex
-        for i in list(range(self.count() - 1, index, -1)) + list(range(index - 1, -1, -1)):
+        for i in list(range(self.count() - 1, index, -1)) + \
+                 list(range(index - 1, -1, -1)):
             editor = self.widget(i)
             self.vm.closeEditorWindow(editor)
         
@@ -538,6 +549,17 @@ class TabWidget(E5TabWidget):
         """
         self.vm.saveEditorsList(self.editors)
         
+    def __contextMenuOpenRejections(self):
+        """
+        Private slot to open a rejections file associated with the selected tab.
+        """
+        if self.contextMenuEditor:
+            fileName = self.contextMenuEditor.getFileName()
+            if fileName:
+                rej = "{0}.rej".format(fileName)
+                if os.path.exists(rej):
+                    self.vm.openSourceFile(rej)
+        
     def __contextMenuPrintFile(self):
         """
         Private method to print the selected tab.
@@ -547,7 +569,7 @@ class TabWidget(E5TabWidget):
     
     def __contextMenuCopyPathToClipboard(self):
         """
-        Private method to copy the file name of the editor to the clipboard.
+        Private method to copy the file name of the selected tab to the clipboard.
         """
         if self.contextMenuEditor:
             fn = self.contextMenuEditor.getFileName()

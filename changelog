@@ -6,6 +6,9 @@ Version 5.2-snapshot-2011mmdd:
   -- added an action to preview the file in the eric web browser. File name
      extension to support this feature can be configured on the
      Editor->Filehandling page
+  -- added an action to the editor context menu and to the tabview and listview
+     view managers to open an associated 'rejections' file (i.e. same file name
+     with '.rej' appended)
 - enhancements of the cooperation functions
   -- added code to the cooperation functions to support IPv6
 - enhancements to the source browser

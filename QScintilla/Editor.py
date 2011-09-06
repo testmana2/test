@@ -683,10 +683,16 @@ class Editor(QsciScintillaCompat):
         if not self.miniMenu:
             self.menu.addMenu(self.exportersMenu)
             self.menu.addSeparator()
+            self.menuActs["OpenRejections"] = \
+                self.menu.addAction(self.trUtf8("Open 'rejection' file"),
+                                    self.__contextOpenRejections)
+            self.menu.addSeparator()
             self.menu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
             self.trUtf8("Print Preview"), self.printPreviewFile)
             self.menu.addAction(UI.PixmapCache.getIcon("print.png"),
                 self.trUtf8('Print'), self.printFile)
+        else:
+            self.menuActs["OpenRejections"] = None
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         
@@ -4113,6 +4119,13 @@ class Editor(QsciScintillaCompat):
         self.menuActs["SpellCheckRemove"].setEnabled(
             spellingAvailable and self.spellingMenuPos >= 0)
         
+        if self.menuActs["OpenRejections"]:
+            if self.fileName:
+                rej = "{0}.rej".format(self.fileName)
+                self.menuActs["OpenRejections"].setEnabled(os.path.exists(rej))
+            else:
+                self.menuActs["OpenRejections"].setEnabled(False)
+        
         self.showMenu.emit("Main", self.menu,  self)
         
     def __showContextMenuAutocompletion(self):
@@ -4300,6 +4313,15 @@ class Editor(QsciScintillaCompat):
         Private slot handling the close context menu entry.
         """
         self.vm.closeEditor(self)
+    
+    def __contextOpenRejections(self):
+        """
+        Private slot handling the open rejections file context menu entry.
+        """
+        if self.fileName:
+            rej = "{0}.rej".format(self.fileName)
+            if os.path.exists(rej):
+                self.vm.openSourceFile(rej)
     
     def __newView(self):
         """

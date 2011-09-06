@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
 from PyQt4.QtGui import QStackedWidget, QSplitter, QListWidget, QListWidgetItem, \
-    QSizePolicy, QMenu
+    QSizePolicy, QMenu, QApplication
 
 from ViewManager.ViewManager import ViewManager
 
@@ -207,8 +207,15 @@ class Listspace(QSplitter, ViewManager):
         self.__menu.addAction(UI.PixmapCache.getIcon("fileSaveAll.png"),
             self.trUtf8('Save All'), self.__contextMenuSaveAll)
         self.__menu.addSeparator()
+        self.openRejectionsMenuAct = \
+            self.__menu.addAction(self.trUtf8("Open 'rejection' file"),
+            self.__contextMenuOpenRejections)
+        self.__menu.addSeparator()
         self.__menu.addAction(UI.PixmapCache.getIcon("print.png"),
             self.trUtf8('Print'), self.__contextMenuPrintFile)
+        self.__menu.addSeparator()
+        self.copyPathAct = self.__menu.addAction(self.trUtf8("Copy Path to Clipboard"),
+            self.__contextMenuCopyPathToClipboard)
         
     def __showMenu(self, point):
         """
@@ -221,6 +228,13 @@ class Listspace(QSplitter, ViewManager):
                 self.contextMenuEditor = self.editors[row]
                 if self.contextMenuEditor:
                     self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
+                    fileName = self.contextMenuEditor.getFileName()
+                    self.copyPathAct.setEnabled(bool(fileName))
+                    if fileName:
+                        rej = "{0}.rej".format(fileName)
+                        self.openRejectionsMenuAct.setEnabled(os.path.exists(rej))
+                    else:
+                        self.openRejectionsMenuAct.setEnabled(False)
                     self.__menu.popup(self.viewlist.mapToGlobal(point))
         
     def canCascade(self):
@@ -563,14 +577,14 @@ class Listspace(QSplitter, ViewManager):
         
     def __contextMenuClose(self):
         """
-        Private method to close the selected tab.
+        Private method to close the selected editor.
         """
         if self.contextMenuEditor:
             self.closeEditorWindow(self.contextMenuEditor)
         
     def __contextMenuCloseAll(self):
         """
-        Private method to close all tabs.
+        Private method to close all editors.
         """
         savedEditors = self.editors[:]
         for editor in savedEditors:
@@ -578,30 +592,51 @@ class Listspace(QSplitter, ViewManager):
         
     def __contextMenuSave(self):
         """
-        Private method to save the selected tab.
+        Private method to save the selected editor.
         """
         if self.contextMenuEditor:
             self.saveEditorEd(self.contextMenuEditor)
         
     def __contextMenuSaveAs(self):
         """
-        Private method to save the selected tab to a new file.
+        Private method to save the selected editor to a new file.
         """
         if self.contextMenuEditor:
             self.saveAsEditorEd(self.contextMenuEditor)
         
     def __contextMenuSaveAll(self):
         """
-        Private method to save all tabs.
+        Private method to save all editors.
         """
         self.saveEditorsList(self.editors)
         
+    def __contextMenuOpenRejections(self):
+        """
+        Private slot to open a rejections file associated with the selected editor.
+        """
+        if self.contextMenuEditor:
+            fileName = self.contextMenuEditor.getFileName()
+            if fileName:
+                rej = "{0}.rej".format(fileName)
+                if os.path.exists(rej):
+                    self.openSourceFile(rej)
+        
     def __contextMenuPrintFile(self):
         """
-        Private method to print the selected tab.
+        Private method to print the selected editor.
         """
         if self.contextMenuEditor:
             self.printEditor(self.contextMenuEditor)
+        
+    def __contextMenuCopyPathToClipboard(self):
+        """
+        Private method to copy the file name of the selected editor to the clipboard.
+        """
+        if self.contextMenuEditor:
+            fn = self.contextMenuEditor.getFileName()
+            if fn:
+                cb = QApplication.clipboard()
+                cb.setText(fn)
         
     def __currentChanged(self, index):
         """

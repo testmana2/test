@@ -5950,6 +5950,7 @@
       <keyword name="Editor.__completionListSelected" id="Editor.__completionListSelected" ref="eric5.QScintilla.Editor.html#Editor.__completionListSelected" />
       <keyword name="Editor.__contextClose" id="Editor.__contextClose" ref="eric5.QScintilla.Editor.html#Editor.__contextClose" />
       <keyword name="Editor.__contextMenuSpellingTriggered" id="Editor.__contextMenuSpellingTriggered" ref="eric5.QScintilla.Editor.html#Editor.__contextMenuSpellingTriggered" />
+      <keyword name="Editor.__contextOpenRejections" id="Editor.__contextOpenRejections" ref="eric5.QScintilla.Editor.html#Editor.__contextOpenRejections" />
       <keyword name="Editor.__contextSave" id="Editor.__contextSave" ref="eric5.QScintilla.Editor.html#Editor.__contextSave" />
       <keyword name="Editor.__contextSaveAs" id="Editor.__contextSaveAs" ref="eric5.QScintilla.Editor.html#Editor.__contextSaveAs" />
       <keyword name="Editor.__cursorPositionChanged" id="Editor.__cursorPositionChanged" ref="eric5.QScintilla.Editor.html#Editor.__cursorPositionChanged" />
@@ -10349,6 +10350,8 @@
       <keyword name="Listspace.__captionChange" id="Listspace.__captionChange" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__captionChange" />
       <keyword name="Listspace.__contextMenuClose" id="Listspace.__contextMenuClose" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuClose" />
       <keyword name="Listspace.__contextMenuCloseAll" id="Listspace.__contextMenuCloseAll" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuCloseAll" />
+      <keyword name="Listspace.__contextMenuCopyPathToClipboard" id="Listspace.__contextMenuCopyPathToClipboard" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuCopyPathToClipboard" />
+      <keyword name="Listspace.__contextMenuOpenRejections" id="Listspace.__contextMenuOpenRejections" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuOpenRejections" />
       <keyword name="Listspace.__contextMenuPrintFile" id="Listspace.__contextMenuPrintFile" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuPrintFile" />
       <keyword name="Listspace.__contextMenuSave" id="Listspace.__contextMenuSave" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSave" />
       <keyword name="Listspace.__contextMenuSaveAll" id="Listspace.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuSaveAll" />
@@ -10409,6 +10412,7 @@
       <keyword name="TabWidget.__contextMenuMoveLast" id="TabWidget.__contextMenuMoveLast" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveLast" />
       <keyword name="TabWidget.__contextMenuMoveLeft" id="TabWidget.__contextMenuMoveLeft" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveLeft" />
       <keyword name="TabWidget.__contextMenuMoveRight" id="TabWidget.__contextMenuMoveRight" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuMoveRight" />
+      <keyword name="TabWidget.__contextMenuOpenRejections" id="TabWidget.__contextMenuOpenRejections" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuOpenRejections" />
       <keyword name="TabWidget.__contextMenuPrintFile" id="TabWidget.__contextMenuPrintFile" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuPrintFile" />
       <keyword name="TabWidget.__contextMenuSave" id="TabWidget.__contextMenuSave" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSave" />
       <keyword name="TabWidget.__contextMenuSaveAll" id="TabWidget.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAll" />

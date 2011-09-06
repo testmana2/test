@@ -227,6 +227,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__contextMenuSpellingTriggered">__contextMenuSpellingTriggered</a></td>
 <td>Private slot to handle the selection of a suggestion of the spelling context menu.</td>
 </tr><tr>
+<td><a href="#Editor.__contextOpenRejections">__contextOpenRejections</a></td>
+<td>Private slot handling the open rejections file context menu entry.</td>
+</tr><tr>
 <td><a href="#Editor.__contextSave">__contextSave</a></td>
 <td>Private slot handling the save context menu entry.</td>
 </tr><tr>
@@ -1271,7 +1274,12 @@ the selected text (string)
 <dd>
 reference to the action that was selected (QAction)
 </dd>
-</dl><a NAME="Editor.__contextSave" ID="Editor.__contextSave"></a>
+</dl><a NAME="Editor.__contextOpenRejections" ID="Editor.__contextOpenRejections"></a>
+<h4>Editor.__contextOpenRejections</h4>
+<b>__contextOpenRejections</b>(<i></i>)
+<p>
+        Private slot handling the open rejections file context menu entry.
+</p><a NAME="Editor.__contextSave" ID="Editor.__contextSave"></a>
 <h4>Editor.__contextSave</h4>
 <b>__contextSave</b>(<i></i>)
 <p>
@@ -2474,7 +2482,7 @@ line number of the highlight bar (integer)
 </dd>
 </dl><a NAME="Editor.getLanguage" ID="Editor.getLanguage"></a>
 <h4>Editor.getLanguage</h4>
-<b>getLanguage</b>(<i>normalized=True</i>)
+<b>getLanguage</b>(<i>normalized=True, forPygments=False</i>)
 <p>
         Public method to retrieve the language of the editor.
 </p><dl>
@@ -2482,6 +2490,10 @@ line number of the highlight bar (integer)
 <dd>
 flag indicating to normalize some Pygments
             lexer names (boolean)
+</dd><dt><i>forPygments=</i></dt>
+<dd>
+flag indicating to normalize some lexer
+            names for Pygments (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
