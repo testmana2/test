@@ -2526,6 +2526,7 @@
       <keyword name="resetParsedModule" id="resetParsedModule" ref="eric5.Utilities.ModuleParser.html#resetParsedModule" />
       <keyword name="resetParsedModules" id="resetParsedModules" ref="eric5.Utilities.ModuleParser.html#resetParsedModules" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ModuleParser.html#Attribute.__init__" />
+      <keyword name="Attribute.addAssignment" id="Attribute.addAssignment" ref="eric5.Utilities.ModuleParser.html#Attribute.addAssignment" />
       <keyword name="Class (Constructor)" id="Class (Constructor)" ref="eric5.Utilities.ModuleParser.html#Class.__init__" />
       <keyword name="Class.addAttribute" id="Class.addAttribute" ref="eric5.Utilities.ModuleParser.html#Class.addAttribute" />
       <keyword name="Class.addDescription" id="Class.addDescription" ref="eric5.Utilities.ModuleParser.html#Class.addDescription" />

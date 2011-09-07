@@ -99,6 +99,9 @@ VisibilityBase
 <tr>
 <td><a href="#Attribute.__init__">Attribute</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#Attribute.addAssignment">addAssignment</a></td>
+<td>Public method to add another assignment line number.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -122,10 +125,20 @@ name of the function (string)
 name of file containing this function (string)
 </dd><dt><i>lineno</i></dt>
 <dd>
-linenumber of the function definition (integer)
+linenumber of the first attribute assignment (integer)
 </dd><dt><i>isSignal=</i></dt>
 <dd>
 flag indicating a signal definition (boolean)
+</dd>
+</dl><a NAME="Attribute.addAssignment" ID="Attribute.addAssignment"></a>
+<h4>Attribute.addAssignment</h4>
+<b>addAssignment</b>(<i>lineno</i>)
+<p>
+        Public method to add another assignment line number.
+</p><dl>
+<dt><i>lineno</i></dt>
+<dd>
+linenumber of the additional attribute assignment (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

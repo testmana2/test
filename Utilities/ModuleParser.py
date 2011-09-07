@@ -436,6 +436,8 @@ class Module(object):
         """
         if not name in self.globals:
             self.globals[name] = attr
+        else:
+            self.globals[name].addAssignment(attr.lineno)
     
     def addDescription(self, description):
         """
@@ -1171,6 +1173,8 @@ class Class(VisibilityBase):
         """
         if not name in self.attributes:
             self.attributes[name] = attr
+        else:
+            self.attributes[name].addAssignment(attr.lineno)
     
     def getAttribute(self, name):
         """
@@ -1193,6 +1197,8 @@ class Class(VisibilityBase):
         """
         if not name in self.globals:
             self.globals[name] = attr
+        else:
+            self.globals[name].addAssignment(attr.lineno)
     
     def addDescription(self, description):
         """
@@ -1289,7 +1295,7 @@ class Attribute(VisibilityBase):
         @param module name of module containing this function (string)
         @param name name of the function (string)
         @param file name of file containing this function (string)
-        @param lineno linenumber of the function definition (integer)
+        @param lineno linenumber of the first attribute assignment (integer)
         @keyparam isSignal flag indicating a signal definition (boolean)
         """
         self.module = module
@@ -1298,6 +1304,16 @@ class Attribute(VisibilityBase):
         self.lineno = lineno
         self.isSignal = isSignal
         self.setPublic()
+        self.linenos = [lineno]
+    
+    def addAssignment(self, lineno):
+        """
+        Public method to add another assignment line number.
+        
+        @param lineno linenumber of the additional attribute assignment (integer)
+        """
+        if lineno not in self.linenos:
+            self.linenos.append(lineno)
 
 
 def readModule(module, path=[], inpackage=False, basename="",
