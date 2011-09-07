@@ -1990,7 +1990,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Spustit unittest...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Nový adresář toplevel...</translation>
     </message>
@@ -2010,7 +2010,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Hledat v tomto adresáři</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Nový toplevel adresář</translation>
     </message>
@@ -2020,7 +2020,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Najít &amp;&amp; nahradit v tomto adresáři</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
@@ -2038,6 +2038,11 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation>Obnovit složku</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Jít na</translation>
     </message>
 </context>
 <context>

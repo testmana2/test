@@ -1999,12 +1999,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation>İcon Düzenleyicide Aç</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Yeni enüstseviye dizini...</translation>
     </message>
@@ -2034,9 +2034,14 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Bul&amp;&amp;Değiştir bu dizin içinde</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Yeni enüstseviye dizini</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Buraya git</translation>
     </message>
 </context>
 <context>

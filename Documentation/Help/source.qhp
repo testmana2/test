@@ -3903,10 +3903,12 @@
       <keyword name="Browser._contextMenuRequested" id="Browser._contextMenuRequested" ref="eric5.UI.Browser.html#Browser._contextMenuRequested" />
       <keyword name="Browser._copyToClipboard" id="Browser._copyToClipboard" ref="eric5.UI.Browser.html#Browser._copyToClipboard" />
       <keyword name="Browser._editPixmap" id="Browser._editPixmap" ref="eric5.UI.Browser.html#Browser._editPixmap" />
+      <keyword name="Browser._gotoAttribute" id="Browser._gotoAttribute" ref="eric5.UI.Browser.html#Browser._gotoAttribute" />
       <keyword name="Browser._init" id="Browser._init" ref="eric5.UI.Browser.html#Browser._init" />
       <keyword name="Browser._openItem" id="Browser._openItem" ref="eric5.UI.Browser.html#Browser._openItem" />
       <keyword name="Browser._resizeColumns" id="Browser._resizeColumns" ref="eric5.UI.Browser.html#Browser._resizeColumns" />
       <keyword name="Browser._resort" id="Browser._resort" ref="eric5.UI.Browser.html#Browser._resort" />
+      <keyword name="Browser._showGotoMenu" id="Browser._showGotoMenu" ref="eric5.UI.Browser.html#Browser._showGotoMenu" />
       <keyword name="Browser.getSelectedItems" id="Browser.getSelectedItems" ref="eric5.UI.Browser.html#Browser.getSelectedItems" />
       <keyword name="Browser.getSelectedItemsCount" id="Browser.getSelectedItemsCount" ref="eric5.UI.Browser.html#Browser.getSelectedItemsCount" />
       <keyword name="Browser.getSelectedItemsCountCategorized" id="Browser.getSelectedItemsCountCategorized" ref="eric5.UI.Browser.html#Browser.getSelectedItemsCountCategorized" />
@@ -4056,6 +4058,7 @@
       <keyword name="BrowserClassAttributeItem.isPublic" id="BrowserClassAttributeItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserClassAttributeItem.isPublic" />
       <keyword name="BrowserClassAttributeItem.lessThan" id="BrowserClassAttributeItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserClassAttributeItem.lessThan" />
       <keyword name="BrowserClassAttributeItem.lineno" id="BrowserClassAttributeItem.lineno" ref="eric5.UI.BrowserModel.html#BrowserClassAttributeItem.lineno" />
+      <keyword name="BrowserClassAttributeItem.linenos" id="BrowserClassAttributeItem.linenos" ref="eric5.UI.BrowserModel.html#BrowserClassAttributeItem.linenos" />
       <keyword name="BrowserClassAttributesItem (Constructor)" id="BrowserClassAttributesItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.__init__" />
       <keyword name="BrowserClassAttributesItem.attributes" id="BrowserClassAttributesItem.attributes" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.attributes" />
       <keyword name="BrowserClassAttributesItem.isClassAttributes" id="BrowserClassAttributesItem.isClassAttributes" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.isClassAttributes" />
@@ -6959,6 +6962,7 @@
       <keyword name="Module" id="Module" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Module" />
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="Attribute (Constructor)" id="Attribute (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Attribute.__init__" />
+      <keyword name="Attribute.addAssignment" id="Attribute.addAssignment" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Attribute.addAssignment" />
       <keyword name="Class (Constructor)" id="Class (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Class.__init__" />
       <keyword name="ClbrBase (Constructor)" id="ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase.__init__" />
       <keyword name="ClbrBase._addattribute" id="ClbrBase._addattribute" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase._addattribute" />

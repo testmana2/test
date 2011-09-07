@@ -1996,7 +1996,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Просмотрщик файлов</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Новый каталог верхнего уровня...</translation>
     </message>
@@ -2011,7 +2011,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Добавить как каталог верхнего уровня</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Новый каталог верхнего уровня</translation>
     </message>
@@ -2026,7 +2026,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Найти и изменить в этом каталоге</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
@@ -2044,6 +2044,11 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation>Обновить каталог</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Перейти</translation>
     </message>
 </context>
 <context>

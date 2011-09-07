@@ -2178,7 +2178,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Navigateur de fichiers</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Nouveau répertoire racine...</translation>
     </message>
@@ -2193,7 +2193,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Ajouter en tant que répertoire racine</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Nouveau répertoire racine</translation>
     </message>
@@ -2203,7 +2203,7 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation>Trouver dans ce répertoire</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Configuration...</translation>
     </message>
@@ -2226,6 +2226,11 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Aller à</translation>
     </message>
 </context>
 <context>

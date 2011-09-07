@@ -1993,7 +1993,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Datei-Browser</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Neuer übergeordneter Ordner...</translation>
     </message>
@@ -2008,7 +2008,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Als übergeordneten Ordner hinzufügen</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Neuer übergeordneter Ordner</translation>
     </message>
@@ -2023,7 +2023,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>In diesem Verzeichnis suchen&amp;&amp;ersetzen</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
@@ -2041,6 +2041,11 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation>Verzeichnis aktualisieren</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation>Gehe zu</translation>
     </message>
 </context>
 <context>

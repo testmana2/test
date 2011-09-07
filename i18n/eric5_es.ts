@@ -1989,7 +1989,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Ejecutar test unitario...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Nuevo directorio raíz...</translation>
     </message>
@@ -2009,7 +2009,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Buscar en este directorio</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Nuevo directorio raíz</translation>
     </message>
@@ -2019,7 +2019,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Buscar&amp;&amp;Reemplazar en este directorio</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
@@ -2037,6 +2037,11 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation>Actualizar directorio</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Ir a</translation>
     </message>
 </context>
 <context>

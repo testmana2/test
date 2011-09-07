@@ -2171,12 +2171,12 @@ the button to the right.&lt;/p&gt;</source>
         <translation>运行单元测试……</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>新顶层文件夹……</translation>
     </message>
@@ -2201,7 +2201,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>在该文件夹中查找和替换(&amp;R)</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>新建顶层文件夹</translation>
     </message>
@@ -2219,6 +2219,11 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">跳转</translation>
     </message>
 </context>
 <context>

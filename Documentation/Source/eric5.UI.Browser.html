@@ -132,6 +132,9 @@ QTreeView
 <td><a href="#Browser._editPixmap">_editPixmap</a></td>
 <td>Protected slot to handle the open in icon editor popup menu entry.</td>
 </tr><tr>
+<td><a href="#Browser._gotoAttribute">_gotoAttribute</a></td>
+<td>Protected slot to handle the selection of the goto menu.</td>
+</tr><tr>
 <td><a href="#Browser._init">_init</a></td>
 <td>Protected method to perform initialization tasks common to this base class and all derived classes.</td>
 </tr><tr>
@@ -143,6 +146,9 @@ QTreeView
 </tr><tr>
 <td><a href="#Browser._resort">_resort</a></td>
 <td>Protected slot to resort the tree.</td>
+</tr><tr>
+<td><a href="#Browser._showGotoMenu">_showGotoMenu</a></td>
+<td>Protected slot to prepare the goto submenu of the attribute menu.</td>
 </tr><tr>
 <td><a href="#Browser.getSelectedItems">getSelectedItems</a></td>
 <td>Public method to get the selected items.</td>
@@ -249,6 +255,11 @@ the position of the mouse pointer (QPoint)
 <b>_editPixmap</b>(<i></i>)
 <p>
         Protected slot to handle the open in icon editor popup menu entry.
+</p><a NAME="Browser._gotoAttribute" ID="Browser._gotoAttribute"></a>
+<h4>Browser._gotoAttribute</h4>
+<b>_gotoAttribute</b>(<i>act</i>)
+<p>
+        Protected slot to handle the selection of the goto menu.
 </p><a NAME="Browser._init" ID="Browser._init"></a>
 <h4>Browser._init</h4>
 <b>_init</b>(<i></i>)
@@ -275,6 +286,11 @@ index of item (QModelIndex)
 <b>_resort</b>(<i></i>)
 <p>
         Protected slot to resort the tree.
+</p><a NAME="Browser._showGotoMenu" ID="Browser._showGotoMenu"></a>
+<h4>Browser._showGotoMenu</h4>
+<b>_showGotoMenu</b>(<i></i>)
+<p>
+        Protected slot to prepare the goto submenu of the attribute menu.
 </p><a NAME="Browser.getSelectedItems" ID="Browser.getSelectedItems"></a>
 <h4>Browser.getSelectedItems</h4>
 <b>getSelectedItems</b>(<i>filter=None</i>)

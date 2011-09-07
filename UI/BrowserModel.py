@@ -1528,6 +1528,14 @@ class BrowserClassAttributeItem(BrowserItem):
         """
         return self._attributeObject.lineno
     
+    def linenos(self):
+        """
+        Public method returning the line numbers this object is assigned to.
+        
+        return line number the object is assigned to (list of integers)
+        """
+        return self._attributeObject.linenos[:]
+    
     def lessThan(self, other, column, order):
         """
         Public method to check, if the item is less than the other one.

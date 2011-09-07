@@ -1991,7 +1991,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Browser dei file</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="242"/>
+        <location filename="UI/Browser.py" line="259"/>
         <source>New toplevel directory...</source>
         <translation>Nuova directory principale...</translation>
     </message>
@@ -2006,7 +2006,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Aggiungi come directory principale</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="419"/>
+        <location filename="UI/Browser.py" line="459"/>
         <source>New toplevel directory</source>
         <translation>Nuova directory principale</translation>
     </message>
@@ -2016,7 +2016,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Trova in questa directory</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="247"/>
+        <location filename="UI/Browser.py" line="264"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
@@ -2039,6 +2039,11 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="UI/Browser.py" line="222"/>
         <source>Refresh directory</source>
         <translation>Rileggi directory</translation>
+    </message>
+    <message>
+        <location filename="UI/Browser.py" line="241"/>
+        <source>Goto</source>
+        <translation type="unfinished">Vai a</translation>
     </message>
 </context>
 <context>

@@ -237,6 +237,23 @@ class Browser(QTreeView):
             self.dirMenu.addAction(QApplication.translate('Browser', 'Configure...'),
                                    self.__configure)
         
+        # create the attribute menu
+        self.gotoMenu = QMenu(self.trUtf8("Goto"), self)
+        self.gotoMenu.aboutToShow.connect(self._showGotoMenu)
+        self.gotoMenu.triggered.connect(self._gotoAttribute)
+        
+        self.attributeMenu = QMenu(self)
+        self.attributeMenu.addAction(QApplication.translate('Browser',
+            'New toplevel directory...'),
+            self.__newToplevelDir)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addMenu(self.gotoMenu)
+        if self.__embeddedBrowser in [1, 2]:
+            self.attributeMenu.addSeparator()
+            self.attributeMenu.addAction(
+                QApplication.translate('Browser', 'Configure...'),
+                self.__configure)
+        
         # create the background menu
         self.backMenu = QMenu(self)
         self.backMenu.addAction(QApplication.translate('Browser',
@@ -297,6 +314,8 @@ class Browser(QTreeView):
                 elif isinstance(itm, BrowserClassItem) or \
                         isinstance(itm, BrowserMethodItem):
                     self.menu.popup(coord)
+                elif isinstance(itm, BrowserClassAttributeItem):
+                    self.attributeMenu.popup(coord)
                 elif isinstance(itm, BrowserDirectoryItem):
                     if not index.parent().isValid():
                         self.removeFromToplevelAct.setEnabled(True)
@@ -309,6 +328,27 @@ class Browser(QTreeView):
                     self.backMenu.popup(coord)
             else:
                 self.backMenu.popup(self.mapToGlobal(coord))
+        
+    def _showGotoMenu(self):
+        """
+        Protected slot to prepare the goto submenu of the attribute menu.
+        """
+        self.gotoMenu.clear()
+        
+        itm = self.model().item(self.currentIndex())
+        linenos = itm.linenos()
+        fileName = itm.fileName()
+        
+        for lineno in sorted(linenos):
+            act = self.gotoMenu.addAction(str(lineno))
+            act.setData([fileName, lineno])
+        
+    def _gotoAttribute(self, act):
+        """
+        Protected slot to handle the selection of the goto menu.
+        """
+        fileName, lineno = act.data()
+        self.sourceFile[str, int].emit(fileName, lineno)
         
     def handlePreferencesChanged(self):
         """

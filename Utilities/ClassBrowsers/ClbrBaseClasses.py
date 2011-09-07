@@ -75,6 +75,8 @@ class ClbrBase(_ClbrBase):
         """
         if attr.name not in self.globals:
             self.globals[attr.name] = attr
+        else:
+            self.globals[attr.name].addAssignment(attr.lineno)
         
     def _getglobal(self, name):
         """
@@ -96,6 +98,8 @@ class ClbrBase(_ClbrBase):
         """
         if attr.name not in self.attributes:
             self.attributes[attr.name] = attr
+        else:
+            self.attributes[attr.name].addAssignment(attr.lineno)
         
     def _getattribute(self, name):
         """
@@ -180,6 +184,17 @@ class Attribute(_ClbrBase):
         @param lineno linenumber of the class definition
         """
         _ClbrBase.__init__(self, module, name, file, lineno)
+        
+        self.linenos = [lineno]
+    
+    def addAssignment(self, lineno):
+        """
+        Public method to add another assignment line number.
+        
+        @param lineno linenumber of the additional attribute assignment (integer)
+        """
+        if lineno not in self.linenos:
+            self.linenos.append(lineno)
 
 
 class Class(ClbrBase):
