@@ -341,7 +341,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         eol = e5App().getObject("Project").getEolString()
         try:
-            f = open(fname, "w", encoding = "utf-8")
+            f = open(fname, "w", encoding = "utf-8", newline = "")
             f.write(eol.join(self.contents.toPlainText().splitlines()))
             f.close()
         except IOError as why:
