@@ -1332,6 +1332,10 @@ class DebugClientBase(object):
                             mdict = loc["mdict"]
                             obj = loc["obj"]
                             ndict.update(mdict)
+                            loc = {"dict": dict}
+                            exec('mcdict = dict{0!s}.__class__.__dict__'\
+                                 .format(access), globals(), loc)
+                            ndict.update(loc["mcdict"])
                             if mdict and not "sipThis" in mdict.keys():
                                 del rvar[0:2]
                                 access = ""
@@ -1357,6 +1361,7 @@ class DebugClientBase(object):
                     else:
                         try:
                             ndict.update(dict[var[i]].__dict__)
+                            ndict.update(dict[var[i]].__class__.__dict__)
                             del rvar[0]
                             obj = dict[var[i]]
                         except:
