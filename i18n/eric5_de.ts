@@ -2047,6 +2047,11 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <source>Goto</source>
         <translation>Gehe zu</translation>
     </message>
+    <message>
+        <location filename="UI/Browser.py" line="343"/>
+        <source>Line {0}</source>
+        <translation>Zeile {0}</translation>
+    </message>
 </context>
 <context>
     <name>BrowserModel</name>
@@ -29029,12 +29034,12 @@ Bitte Aktualisieren.</translation>
         <translation>&lt;b&gt;Projekt Quelldateien Browser&lt;/b&gt;&lt;p&gt;Dies bietet eine Übersicht aller im Projekt enthaltenen Quelldateien an. Verschieden Aktionen können über das Kontextmenü ausgeführt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="336"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="380"/>
         <source>Remove from project</source>
         <translation>Aus dem Projekt entfernen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="325"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="369"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
@@ -29064,22 +29069,22 @@ Bitte Aktualisieren.</translation>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="353"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
         <source>Expand all directories</source>
         <translation>Alle Verzeichnisse aufklappen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="355"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="399"/>
         <source>Collapse all directories</source>
         <translation>Alle Verzeichnisse einklappen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="265"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="287"/>
         <source>Class Diagram...</source>
         <translation>Klassendiagramm...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="264"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
         <source>Diagrams</source>
         <translation>Diagramme</translation>
     </message>
@@ -29089,47 +29094,47 @@ Bitte Aktualisieren.</translation>
         <translation>Imports-Diagramm...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="269"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="291"/>
         <source>Application Diagram...</source>
         <translation>Applikations-Diagramm...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="267"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
         <source>Package Diagram...</source>
         <translation>Package Diagramm...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen sie eine Datei mit Profildaten</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="273"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="295"/>
         <source>Rename file</source>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Delete files</source>
         <translation>Dateien löschen</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Wollen Sie wirklich diese Dateien aus dem Projekt löschen?</translation>
     </message>
@@ -29139,79 +29144,84 @@ Bitte Aktualisieren.</translation>
         <translation>Modultest...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="340"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="384"/>
         <source>Add source directory...</source>
         <translation>Quelltextverzeichnis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="809"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="858"/>
         <source>Class Diagram</source>
         <translation>Klassendiagramm</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Include class attributes?</source>
         <translation>Klassenattribute anzeigen?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Package Diagram</source>
         <translation>Package-Diagramm</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="339"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="383"/>
         <source>Add source files...</source>
         <translation>Quelldateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="226"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>New package...</source>
         <translation>Neues Package...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>Add new Python package</source>
         <translation>Füge neues Python Package hinzu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="579"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="628"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Package Verzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht angelegt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Package Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht erzeugt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Imports Diagram</source>
         <translation>Imports Diagramm</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Include imports from external modules?</source>
         <translation>Imports externer Module anzeigen?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="358"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="402"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="235"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="257"/>
         <source>Copy Path to Clipboard</source>
         <translation>Pfad in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
+        <source>Goto</source>
+        <translation>Gehe zu</translation>
     </message>
 </context>
 <context>

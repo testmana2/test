@@ -2044,6 +2044,11 @@ the button to the right.&lt;/p&gt;</source>
         <source>Goto</source>
         <translation type="unfinished">Jít na</translation>
     </message>
+    <message>
+        <location filename="UI/Browser.py" line="343"/>
+        <source>Line {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BrowserModel</name>
@@ -29803,17 +29808,17 @@ Vyberte Obnovit.</translation>
         <translation>Profilovat data...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="264"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
         <source>Diagrams</source>
         <translation>Diagramy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="265"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="287"/>
         <source>Class Diagram...</source>
         <translation>Diagram třídy...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="267"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
         <source>Package Diagram...</source>
         <translation>Diagram balíčku...</translation>
     </message>
@@ -29823,7 +29828,7 @@ Vyberte Obnovit.</translation>
         <translation>Diagram importů...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="269"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="291"/>
         <source>Application Diagram...</source>
         <translation>Diagram aplikace...</translation>
     </message>
@@ -29833,134 +29838,139 @@ Vyberte Obnovit.</translation>
         <translation>Spustit unittest...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="273"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="295"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="336"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="380"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="325"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="369"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="339"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="383"/>
         <source>Add source files...</source>
         <translation>Přidat zdrojové soubory...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="340"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="384"/>
         <source>Add source directory...</source>
         <translation>Přidat adresář se zdrojovými soubory...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="353"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="355"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="399"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Delete files</source>
         <translation>Smazat soubory</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Opravdu chcete odebrat tyto soubory z projektu?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Code Coverage</source>
         <translation>Pokrytí kódu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Please select a coverage file</source>
         <translation>Prosím, vyberte soubor s pokrytím kódu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Profile Data</source>
         <translation>Profilovat data</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Please select a profile file</source>
         <translation>Prosím, vyberte soubor s profilem</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="809"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="858"/>
         <source>Class Diagram</source>
         <translation>Diagram třídy</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Include class attributes?</source>
         <translation>Včetně atributů třídy?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Package Diagram</source>
         <translation>Diagram balíčku</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Application Diagram</source>
         <translation>Diagram aplikace</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Include module names?</source>
         <translation>Včetně jmen modulů?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="226"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>New package...</source>
         <translation>Nový balíček...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>Add new Python package</source>
         <translation>Přidat nový Python balíček</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Imports Diagram</source>
         <translation>Importovat diagram</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Include imports from external modules?</source>
         <translation>Zahrnout importy z externích modulů?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="358"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="402"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="235"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="257"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="579"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="628"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář balíčku &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor balíčku &lt;b&gt;{0}&lt;/b&gt; nelze vytvořit. Zrušeno...&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
+        <source>Goto</source>
+        <translation type="unfinished">Jít na</translation>
     </message>
 </context>
 <context>

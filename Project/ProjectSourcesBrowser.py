@@ -189,6 +189,28 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
+        # create the attribute menu
+        self.gotoMenu = QMenu(self.trUtf8("Goto"), self)
+        self.gotoMenu.aboutToShow.connect(self._showGotoMenu)
+        self.gotoMenu.triggered.connect(self._gotoAttribute)
+        
+        self.attributeMenu = QMenu(self)
+        self.attributeMenu.addMenu(self.gotoMenu)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('New package...'),
+            self.__addNewPackage)
+        self.attributeMenu.addAction(self.trUtf8('Add source files...'),
+            self.project.addSourceFiles)
+        self.attributeMenu.addAction(self.trUtf8('Add source directory...'),
+            self.project.addSourceDir)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('Expand all directories'),
+            self._expandAllDirs)
+        self.attributeMenu.addAction(self.trUtf8('Collapse all directories'),
+            self._collapseAllDirs)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        
         self.backMenu = QMenu(self)
         self.backMenu.addAction(self.trUtf8('New package...'),
             self.__addNewPackage)
@@ -304,6 +326,28 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.menu.addSeparator()
         self.menu.addAction(self.trUtf8('Configure...'), self._configure)
 
+        # create the attribute menu
+        self.gotoMenu = QMenu(self.trUtf8("Goto"), self)
+        self.gotoMenu.aboutToShow.connect(self._showGotoMenu)
+        self.gotoMenu.triggered.connect(self._gotoAttribute)
+        
+        self.attributeMenu = QMenu(self)
+        self.attributeMenu.addMenu(self.gotoMenu)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('New package...'),
+            self.__addNewPackage)
+        self.attributeMenu.addAction(self.trUtf8('Add source files...'),
+            self.project.addSourceFiles)
+        self.attributeMenu.addAction(self.trUtf8('Add source directory...'),
+            self.project.addSourceDir)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('Expand all directories'),
+            self._expandAllDirs)
+        self.attributeMenu.addAction(self.trUtf8('Collapse all directories'),
+            self._collapseAllDirs)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        
         self.backMenu = QMenu(self)
         self.backMenu.addAction(self.trUtf8('Add source files...'),
             self.project.addSourceFiles)
@@ -376,7 +420,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         try:
             categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, BrowserClassItem,
-                 BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
+                 BrowserMethodItem, ProjectBrowserSimpleDirectoryItem,
+                 BrowserClassAttributeItem])
             cnt = categories["sum"]
             if cnt <= 1:
                 index = self.indexAt(coord)
@@ -384,12 +429,14 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     self._selectSingleItem(index)
                     categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, BrowserClassItem,
-                         BrowserMethodItem, ProjectBrowserSimpleDirectoryItem])
+                         BrowserMethodItem, ProjectBrowserSimpleDirectoryItem,
+                         BrowserClassAttributeItem])
                     cnt = categories["sum"]
             
             bfcnt = categories[str(ProjectBrowserFileItem)]
             cmcnt = categories[str(BrowserClassItem)] + \
-                    categories[str(BrowserMethodItem)]
+                    categories[str(BrowserMethodItem)] + \
+                    categories[str(BrowserClassAttributeItem)]
             sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
@@ -429,6 +476,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         elif isinstance(itm, BrowserClassItem) or \
                                 isinstance(itm, BrowserMethodItem):
                             self.menu.popup(self.mapToGlobal(coord))
+                        elif isinstance(itm, BrowserClassAttributeItem):
+                            self.attributeMenu.popup(self.mapToGlobal(coord))
                         else:
                             self.backMenu.popup(self.mapToGlobal(coord))
                     elif sdcnt == 1:

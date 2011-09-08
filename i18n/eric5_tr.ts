@@ -2043,6 +2043,11 @@ the button to the right.&lt;/p&gt;</source>
         <source>Goto</source>
         <translation type="unfinished">Buraya git</translation>
     </message>
+    <message>
+        <location filename="UI/Browser.py" line="343"/>
+        <source>Line {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BrowserModel</name>
@@ -29656,17 +29661,17 @@ Select Update.</source>
         <translation>Veri kesiti...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="264"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="286"/>
         <source>Diagrams</source>
         <translation>Şema</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="265"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="287"/>
         <source>Class Diagram...</source>
         <translation>Sınıf Şeması...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="267"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="289"/>
         <source>Package Diagram...</source>
         <translation>Paket Şeması...</translation>
     </message>
@@ -29676,7 +29681,7 @@ Select Update.</source>
         <translation>Şemayı İçe aktar...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="269"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="291"/>
         <source>Application Diagram...</source>
         <translation>Uygulama Şeması...</translation>
     </message>
@@ -29686,134 +29691,139 @@ Select Update.</source>
         <translation>Test Arabirimini çalıştır...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="273"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="295"/>
         <source>Rename file</source>
         <translation>Dosya adını değiştir</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="336"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="380"/>
         <source>Remove from project</source>
         <translation>Projeden çıkar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="325"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="369"/>
         <source>Delete</source>
         <translation>Sil</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="226"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="337"/>
         <source>New package...</source>
         <translation>Yeni paket...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="339"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="383"/>
         <source>Add source files...</source>
         <translation>Kaynak dosyalarını ekle...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="340"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="384"/>
         <source>Add source directory...</source>
         <translation>Kaynak dizini ekle...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="235"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="257"/>
         <source>Copy Path to Clipboard</source>
         <translation>Yolu Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="353"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="397"/>
         <source>Expand all directories</source>
         <translation>Tüm dizinleri genişlet</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="355"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="399"/>
         <source>Collapse all directories</source>
         <translation>Tüm dizinleri daralt</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="358"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="402"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>Add new Python package</source>
         <translation>Yeni Python paketini ekle</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="579"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="628"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; Paket dizini oluşturulamadı. İptal edildi...&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="592"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="641"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; Paket dosyası oluşturulamadı. İptal ediliyor...&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Delete files</source>
         <translation>Dosyaları sil</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="649"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="698"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Bu dosyayı projeden silmek istediğinizden gerçekten emin misiniz?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="720"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="769"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="773"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="822"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="809"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="858"/>
         <source>Class Diagram</source>
         <translation>Sınıf Şeması</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Include class attributes?</source>
         <translation>Sınıf nitelikleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Imports Diagram</source>
         <translation>Şemayı İçe Aktar</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="826"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="875"/>
         <source>Include imports from external modules?</source>
         <translation>Harici modüllerdan içe aktarım dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="843"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="892"/>
         <source>Package Diagram</source>
         <translation>Paket Şeması</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="Project/ProjectSourcesBrowser.py" line="854"/>
+        <location filename="Project/ProjectSourcesBrowser.py" line="903"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
+    </message>
+    <message>
+        <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
+        <source>Goto</source>
+        <translation type="unfinished">Buraya git</translation>
     </message>
 </context>
 <context>

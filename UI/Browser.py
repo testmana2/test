@@ -340,7 +340,7 @@ class Browser(QTreeView):
         fileName = itm.fileName()
         
         for lineno in sorted(linenos):
-            act = self.gotoMenu.addAction(str(lineno))
+            act = self.gotoMenu.addAction(self.trUtf8("Line {0}".format(lineno)))
             act.setData([fileName, lineno])
         
     def _gotoAttribute(self, act):
