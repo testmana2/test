@@ -108,7 +108,7 @@ def extractLineFlags(line, startComment="#", endComment=""):
     """
     flags = []
     
-    pos = line.rindex(startComment)
+    pos = line.rfind(startComment)
     if pos >= 0:
         comment = line[pos + len(startComment):].strip()
         if endComment:
