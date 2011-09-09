@@ -146,6 +146,9 @@ VersionControl
 <td><a href="#Hg.hgIdentifyBundle">hgIdentifyBundle</a></td>
 <td>Public method used to identify a changegroup file.</td>
 </tr><tr>
+<td><a href="#Hg.hgImport">hgImport</a></td>
+<td>Public method to import a patch file.</td>
+</tr><tr>
 <td><a href="#Hg.hgIncoming">hgIncoming</a></td>
 <td>Public method used to view the log of incoming changes from the Mercurial repository.</td>
 </tr><tr>
@@ -178,6 +181,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgResolve">hgResolve</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
+</tr><tr>
+<td><a href="#Hg.hgRevert">hgRevert</a></td>
+<td>Public method used to revert changes made to a file/directory.</td>
 </tr><tr>
 <td><a href="#Hg.hgRollback">hgRollback</a></td>
 <td>Public method used to rollback the last transaction.</td>
@@ -277,9 +283,6 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.vcsRepositoryInfos">vcsRepositoryInfos</a></td>
 <td>Public method to retrieve information about the repository.</td>
-</tr><tr>
-<td><a href="#Hg.vcsRevert">vcsRevert</a></td>
-<td>Public method used to revert changes made to a file/directory.</td>
 </tr><tr>
 <td><a href="#Hg.vcsShutdown">vcsShutdown</a></td>
 <td>Public method used to shutdown the Mercurial interface.</td>
@@ -605,6 +608,22 @@ file/directory name (string)
 <dd>
 directory name on which to base the changegroup (string)
 </dd>
+</dl><a NAME="Hg.hgImport" ID="Hg.hgImport"></a>
+<h4>Hg.hgImport</h4>
+<b>hgImport</b>(<i>name</i>)
+<p>
+        Public method to import a patch file.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name of the project to import into (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, that the import contained an add, a delete
+            or a change to the project file (boolean)
+</dd>
 </dl><a NAME="Hg.hgIncoming" ID="Hg.hgIncoming"></a>
 <h4>Hg.hgIncoming</h4>
 <b>hgIncoming</b>(<i>name</i>)
@@ -742,6 +761,22 @@ file/directory name (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd>
+</dl><a NAME="Hg.hgRevert" ID="Hg.hgRevert"></a>
+<h4>Hg.hgRevert</h4>
+<b>hgRevert</b>(<i>name</i>)
+<p>
+        Public method used to revert changes made to a file/directory.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to be reverted (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, that the update contained an add
+            or delete (boolean)
 </dd>
 </dl><a NAME="Hg.hgRollback" ID="Hg.hgRollback"></a>
 <h4>Hg.hgRollback</h4>
@@ -1233,16 +1268,6 @@ local path to get the repository infos (string)
 <dt>Returns:</dt>
 <dd>
 string with ready formated info for display (string)
-</dd>
-</dl><a NAME="Hg.vcsRevert" ID="Hg.vcsRevert"></a>
-<h4>Hg.vcsRevert</h4>
-<b>vcsRevert</b>(<i>name</i>)
-<p>
-        Public method used to revert changes made to a file/directory.
-</p><dl>
-<dt><i>name</i></dt>
-<dd>
-file/directory name to be reverted (string)
 </dd>
 </dl><a NAME="Hg.vcsShutdown" ID="Hg.vcsShutdown"></a>
 <h4>Hg.vcsShutdown</h4>

@@ -48,6 +48,7 @@ from .HgBackoutDialog import HgBackoutDialog
 from .HgServeDialog import HgServeDialog
 from .HgUtilities import getConfigPath
 from .HgClient import HgClient
+from .HgImportDialog import HgImportDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -829,11 +830,13 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
     
-    def vcsRevert(self, name):
+    def hgRevert(self, name):
         """
         Public method used to revert changes made to a file/directory.
         
         @param name file/directory name to be reverted (string)
+        @return flag indicating, that the update contained an add
+            or delete (boolean)
         """
         args = []
         args.append('revert')
@@ -852,13 +855,15 @@ class Hg(VersionControl):
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return
+                return False
         
         dia = HgDialog(self.trUtf8('Reverting changes'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+            res = dia.hasAddOrDelete()
         self.checkVCSStatus()
+        return res
     
     def vcsMerge(self, name):
         """
@@ -1592,7 +1597,7 @@ class Hg(VersionControl):
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
             if repodir == os.sep:
-                return
+                return False
         
         dia = HgDialog(title, self)
         res = dia.startProcess(args, repodir)
@@ -2368,6 +2373,61 @@ class Hg(VersionControl):
         
         self.serveDlg = HgServeDialog(self, repodir)
         self.serveDlg.show()
+    
+    def hgImport(self, name):
+        """
+        Public method to import a patch file.
+        
+        @param name directory name of the project to import into (string)
+        @return flag indicating, that the import contained an add, a delete
+            or a change to the project file (boolean)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        dlg = HgImportDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            patchFile, noCommit, message, date, user, stripCount, force = \
+                dlg.getParameters()
+            
+            args = []
+            args.append("import")
+            args.append("--verbose")
+            if noCommit:
+                args.append("--no-commit")
+            else:
+                if message:
+                    args.append('--message')
+                    args.append(message)
+                if date:
+                    args.append('--date')
+                    args.append(date)
+                if user:
+                    args.append('--user')
+                    args.append(user)
+            if stripCount != 1:
+                args.append("--strip")
+                args.append(str(stripCount))
+            if force:
+                args.append("--force")
+            args.append(patchFile)
+            
+            dia = HgDialog(self.trUtf8("Import Patch"), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+                res = dia.hasAddOrDelete()
+            self.checkVCSStatus()
+        else:
+            res = False
+        
+        return res
     
     ############################################################################
     ## Methods to handle extensions are below.

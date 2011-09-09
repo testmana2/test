@@ -30,6 +30,7 @@ Version 5.2-snapshot-2011mmdd:
      --- added code to support multiple revisions where appropriate
      --- modified pull such, that it will try to apply an existing changegroups
          file first (created by an hg incoming)
+     --- added support for importing patches
 
 Version 5.2-snapshot-20110724:
 - bug fixes

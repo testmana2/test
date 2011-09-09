@@ -239,7 +239,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMenuActions.append(self.annotateAct)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
         self.vcsMenuActions.append(act)
@@ -309,7 +309,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
         self.vcsMultiMenuActions.append(act)
@@ -420,7 +420,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
         self.vcsDirMenuActions.append(act)
@@ -488,7 +488,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(UI.PixmapCache.getIcon("vcsRevert.png"),
-            self.trUtf8('Revert changes'), self._VCSRevert)
+            self.trUtf8('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(self.trUtf8('Resolve conflict'), self.__HgResolve)
         self.vcsDirMultiMenuActions.append(act)
@@ -510,6 +510,19 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     ############################################################################
     # Menu handling methods below
     ############################################################################
+    
+    def __HgRevert(self):
+        """
+        Protected slot called by the context menu to revert changes made.
+        """
+        names = []
+        for itm in self.browser.getSelectedItems():
+            try:
+                name = itm.fileName()
+            except AttributeError:
+                name = itm.dirName()
+            names.append(name)
+        self.vcs.hgRevert(names)
     
     def __HgCopy(self):
         """

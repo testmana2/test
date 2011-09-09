@@ -424,6 +424,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html" />
@@ -8550,6 +8551,13 @@
       <keyword name="HgStatusDialog.on_statusList_itemChanged" id="HgStatusDialog.on_statusList_itemChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemChanged" />
       <keyword name="HgStatusDialog.on_statusList_itemSelectionChanged" id="HgStatusDialog.on_statusList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemSelectionChanged" />
       <keyword name="HgStatusDialog.start" id="HgStatusDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.start" />
+      <keyword name="HgImportDialog (Module)" id="HgImportDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
+      <keyword name="HgImportDialog" id="HgImportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog" />
+      <keyword name="HgImportDialog (Constructor)" id="HgImportDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.__init__" />
+      <keyword name="HgImportDialog.__updateOK" id="HgImportDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.__updateOK" />
+      <keyword name="HgImportDialog.getParameters" id="HgImportDialog.getParameters" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.getParameters" />
+      <keyword name="HgImportDialog.on_patchFileButton_clicked" id="HgImportDialog.on_patchFileButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.on_patchFileButton_clicked" />
+      <keyword name="HgImportDialog.on_patchFileEdit_textChanged" id="HgImportDialog.on_patchFileEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.on_patchFileEdit_textChanged" />
       <keyword name="hg (Module)" id="hg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
@@ -8578,6 +8586,7 @@
       <keyword name="Hg.hgGetTagsList" id="Hg.hgGetTagsList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetTagsList" />
       <keyword name="Hg.hgIdentify" id="Hg.hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentify" />
       <keyword name="Hg.hgIdentifyBundle" id="Hg.hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentifyBundle" />
+      <keyword name="Hg.hgImport" id="Hg.hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgImport" />
       <keyword name="Hg.hgIncoming" id="Hg.hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIncoming" />
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
       <keyword name="Hg.hgListTagBranch" id="Hg.hgListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListTagBranch" />
@@ -8589,6 +8598,7 @@
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
       <keyword name="Hg.hgRecover" id="Hg.hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRecover" />
       <keyword name="Hg.hgResolve" id="Hg.hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgResolve" />
+      <keyword name="Hg.hgRevert" id="Hg.hgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRevert" />
       <keyword name="Hg.hgRollback" id="Hg.hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgRollback" />
       <keyword name="Hg.hgServe" id="Hg.hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgServe" />
       <keyword name="Hg.hgShowBranch" id="Hg.hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgShowBranch" />
@@ -8622,7 +8632,6 @@
       <keyword name="Hg.vcsRegisteredState" id="Hg.vcsRegisteredState" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRegisteredState" />
       <keyword name="Hg.vcsRemove" id="Hg.vcsRemove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRemove" />
       <keyword name="Hg.vcsRepositoryInfos" id="Hg.vcsRepositoryInfos" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRepositoryInfos" />
-      <keyword name="Hg.vcsRevert" id="Hg.vcsRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsRevert" />
       <keyword name="Hg.vcsShutdown" id="Hg.vcsShutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsShutdown" />
       <keyword name="Hg.vcsStatus" id="Hg.vcsStatus" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsStatus" />
       <keyword name="Hg.vcsSwitch" id="Hg.vcsSwitch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.vcsSwitch" />
@@ -8680,6 +8689,7 @@
       <keyword name="HgProjectHelper.__hgHeads" id="HgProjectHelper.__hgHeads" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgHeads" />
       <keyword name="HgProjectHelper.__hgIdentify" id="HgProjectHelper.__hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentify" />
       <keyword name="HgProjectHelper.__hgIdentifyBundle" id="HgProjectHelper.__hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentifyBundle" />
+      <keyword name="HgProjectHelper.__hgImport" id="HgProjectHelper.__hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgImport" />
       <keyword name="HgProjectHelper.__hgIncoming" id="HgProjectHelper.__hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIncoming" />
       <keyword name="HgProjectHelper.__hgLogBrowser" id="HgProjectHelper.__hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogBrowser" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />
@@ -8691,6 +8701,7 @@
       <keyword name="HgProjectHelper.__hgPushNewBranch" id="HgProjectHelper.__hgPushNewBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPushNewBranch" />
       <keyword name="HgProjectHelper.__hgRecover" id="HgProjectHelper.__hgRecover" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRecover" />
       <keyword name="HgProjectHelper.__hgResolve" id="HgProjectHelper.__hgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgResolve" />
+      <keyword name="HgProjectHelper.__hgRevert" id="HgProjectHelper.__hgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRevert" />
       <keyword name="HgProjectHelper.__hgRollback" id="HgProjectHelper.__hgRollback" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgRollback" />
       <keyword name="HgProjectHelper.__hgServe" id="HgProjectHelper.__hgServe" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgServe" />
       <keyword name="HgProjectHelper.__hgShowBranch" id="HgProjectHelper.__hgShowBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgShowBranch" />
@@ -8782,6 +8793,7 @@
       <keyword name="HgProjectBrowserHelper.__HgLogBrowser" id="HgProjectBrowserHelper.__HgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgLogBrowser" />
       <keyword name="HgProjectBrowserHelper.__HgMove" id="HgProjectBrowserHelper.__HgMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgMove" />
       <keyword name="HgProjectBrowserHelper.__HgResolve" id="HgProjectBrowserHelper.__HgResolve" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgResolve" />
+      <keyword name="HgProjectBrowserHelper.__HgRevert" id="HgProjectBrowserHelper.__HgRevert" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgRevert" />
       <keyword name="HgProjectBrowserHelper._addVCSMenu" id="HgProjectBrowserHelper._addVCSMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenu" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuBack" id="HgProjectBrowserHelper._addVCSMenuBack" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuBack" />
       <keyword name="HgProjectBrowserHelper._addVCSMenuDir" id="HgProjectBrowserHelper._addVCSMenuDir" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper._addVCSMenuDir" />
@@ -11403,6 +11415,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog.html</file>

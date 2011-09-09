@@ -626,7 +626,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.vcsRevert(names)
+        self.vcs.hgRevert(names)
         self.on_refreshButton_clicked()
         
         project = e5App().getObject("Project")
@@ -647,7 +647,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                             """ available/selected."""))
             return
         
-        self.vcs.vcsRevert(names)
+        self.vcs.hgRevert(names)
         self.on_refreshButton_clicked()
         self.vcs.checkVCSStatus()
         

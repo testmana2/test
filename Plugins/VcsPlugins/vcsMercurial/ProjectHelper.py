@@ -369,7 +369,7 @@ class HgProjectHelper(VcsProjectHelper):
             """<b>Revert changes</b>"""
             """<p>This reverts all changes made to the local project.</p>"""
         ))
-        self.vcsRevertAct.triggered[()].connect(self._vcsRevert)
+        self.vcsRevertAct.triggered[()].connect(self.__hgRevert)
         self.actions.append(self.vcsRevertAct)
         
         self.vcsMergeAct = E5Action(self.trUtf8('Merge'),
@@ -822,6 +822,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgServeAct.triggered[()].connect(self.__hgServe)
         self.actions.append(self.hgServeAct)
+        
+        self.hgImportAct = E5Action(self.trUtf8('Import Patch'),
+                self.trUtf8('Import Patch...'),
+                0, 0, self, 'mercurial_import')
+        self.hgImportAct.setStatusTip(self.trUtf8(
+            'Import a patch from a patch file'
+        ))
+        self.hgImportAct.setWhatsThis(self.trUtf8(
+            """<b>Import Patch</b>"""
+            """<p>This imports a patch from a patch file into the project.</p>"""
+        ))
+        self.hgImportAct.triggered[()].connect(self.__hgImport)
+        self.actions.append(self.hgImportAct)
     
     def initMenu(self, menu):
         """
@@ -871,6 +884,11 @@ class HgProjectHelper(VcsProjectHelper):
         bundleMenu.addAction(self.hgUnbundleAct)
         self.subMenus.append(bundleMenu)
         
+        patchMenu = QMenu(self.trUtf8("Patch Management"), menu)
+        patchMenu.setTearOffEnabled(True)
+        patchMenu.addAction(self.hgImportAct)
+        self.subMenus.append(patchMenu)
+        
         bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
         bisectMenu.setTearOffEnabled(True)
         bisectMenu.addAction(self.hgBisectGoodAct)
@@ -907,6 +925,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgPushAct)
         menu.addSeparator()
         menu.addMenu(bundleMenu)
+        menu.addMenu(patchMenu)
         menu.addSeparator()
         menu.addMenu(self.__extensionsMenu)
         menu.addSeparator()
@@ -1223,3 +1242,29 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to serve the project.
         """
         self.vcs.hgServe(self.project.ppath)
+    
+    def __hgImport(self):
+        """
+        Private slot used to import a patch file.
+        """
+        shouldReopen = self.vcs.hgImport(self.project.ppath)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(self.parent(),
+                self.trUtf8("Import Patch"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
+    
+    def __hgRevert(self):
+        """
+        Private slot used to revert changes made to the local project.
+        """
+        shouldReopen = self.vcs.hgRevert(self.project.ppath)
+        if shouldReopen:
+            res = E5MessageBox.yesNo(self.parent(),
+                self.trUtf8("Revert Changes"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
