@@ -17,7 +17,7 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, QTreeWidgetI
     QDialog, QVBoxLayout, QMainWindow
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 try:
-    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False

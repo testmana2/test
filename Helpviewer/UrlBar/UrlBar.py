@@ -10,7 +10,7 @@ Module implementing the URL bar widget.
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl
 from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon
 try:
-    from PyQt4.QtNetwork import QSslCertificate
+    from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
 except ImportError:
     QSslCertificate = None      # __IGNORE_WARNING__
 from PyQt4.QtWebKit import QWebSettings, QWebPage

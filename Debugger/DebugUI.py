@@ -1016,37 +1016,49 @@ class DebugUI(QObject):
             (not len(self.excList) or \
             (len(self.excList) and exceptionType in self.excList)))\
            or exceptionType.startswith('unhandled'):
+            res = None
             if stackTrace:
-                self.viewmanager.setFileLine(stackTrace[0][0], stackTrace[0][1], True)
-            if Preferences.getDebugger("BreakAlways"):
-                res = E5MessageBox.Yes
-            else:
-                if stackTrace:
-                    if exceptionType.startswith('unhandled'):
-                        buttons = E5MessageBox.StandardButtons(
-                            E5MessageBox.No | \
-                            E5MessageBox.Yes)
-                    else:
-                        buttons = E5MessageBox.StandardButtons(
-                            E5MessageBox.No | \
-                            E5MessageBox.Yes | \
-                            E5MessageBox.Ignore)
-                    res = E5MessageBox.critical(self.ui, Program,
-                        self.trUtf8('<p>The debugged program raised the exception'
-                                    ' <b>{0}</b><br>"<b>{1}</b>"<br>File: <b>{2}</b>,'
-                                    ' Line: <b>{3}</b></p><p>Break here?</p>')
-                            .format(exceptionType,
-                                    Utilities.html_encode(exceptionMessage),
-                                    stackTrace[0][0],
-                                    stackTrace[0][1]),
-                        buttons,
-                        E5MessageBox.No)
+                try:
+                    file, line = stackTrace[0]
+                    source, encoding = Utilities.readEncodedFile(file)
+                    source = source.splitlines(True)
+                    if "__IGNORE_EXCEPTION__" in Utilities.extractLineFlags(
+                            source[line - 1]):
+                        res = E5MessageBox.No
+                except (UnicodeError, IOError):
+                    pass
+                if res != E5MessageBox.No:
+                    self.viewmanager.setFileLine(stackTrace[0][0], stackTrace[0][1], True)
+            if res != E5MessageBox.No:
+                if Preferences.getDebugger("BreakAlways"):
+                    res = E5MessageBox.Yes
                 else:
-                    res = E5MessageBox.critical(self.ui, Program,
-                        self.trUtf8('<p>The debugged program raised the exception'
-                                    ' <b>{0}</b><br>"<b>{1}</b>"</p>')
-                            .format(exceptionType,
-                                    Utilities.html_encode(exceptionMessage)))
+                    if stackTrace:
+                        if exceptionType.startswith('unhandled'):
+                            buttons = E5MessageBox.StandardButtons(
+                                E5MessageBox.No | \
+                                E5MessageBox.Yes)
+                        else:
+                            buttons = E5MessageBox.StandardButtons(
+                                E5MessageBox.No | \
+                                E5MessageBox.Yes | \
+                                E5MessageBox.Ignore)
+                        res = E5MessageBox.critical(self.ui, Program,
+                            self.trUtf8('<p>The debugged program raised the exception'
+                                        ' <b>{0}</b><br>"<b>{1}</b>"<br>File: <b>{2}</b>,'
+                                        ' Line: <b>{3}</b></p><p>Break here?</p>')
+                                .format(exceptionType,
+                                        Utilities.html_encode(exceptionMessage),
+                                        stackTrace[0][0],
+                                        stackTrace[0][1]),
+                            buttons,
+                            E5MessageBox.No)
+                    else:
+                        res = E5MessageBox.critical(self.ui, Program,
+                            self.trUtf8('<p>The debugged program raised the exception'
+                                        ' <b>{0}</b><br>"<b>{1}</b>"</p>')
+                                .format(exceptionType,
+                                        Utilities.html_encode(exceptionMessage)))
             if res == E5MessageBox.Yes:
                 self.exceptionInterrupt.emit()
                 stack = []

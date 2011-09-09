@@ -11,7 +11,7 @@ import sys
 
 if __name__ == "__main__":
     try:
-        import PySide       # __IGNORE_WARNING__
+        import PySide       # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
         ret = 0
     except ImportError:
         ret = 1

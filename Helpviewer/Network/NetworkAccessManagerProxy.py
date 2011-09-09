@@ -9,7 +9,7 @@ Module implementing a network access manager proxy for web pages.
 
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
 try:
-    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False

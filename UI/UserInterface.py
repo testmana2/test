@@ -20,7 +20,7 @@ from PyQt4.Qsci import QSCINTILLA_VERSION_STR
 from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
 try:
-    from PyQt4.QtNetwork import QSslError   # __IGNORE_WARNING__
+    from PyQt4.QtNetwork import QSslError   # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
