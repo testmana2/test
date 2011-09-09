@@ -39,6 +39,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         self.preferUnbundleCheckBox.setChecked(
             self.__plugin.getPreferences("PreferUnbundle"))
         self.cleanupPatternEdit.setText(self.__plugin.getPreferences("CleanupPatterns"))
+        self.backupCheckBox.setChecked(self.__plugin.getPreferences("CreateBackup"))
     
     def save(self):
         """
@@ -51,6 +52,7 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         self.__plugin.setPreferences("PreferUnbundle",
             self.preferUnbundleCheckBox.isChecked())
         self.__plugin.setPreferences("CleanupPatterns", self.cleanupPatternEdit.text())
+        self.__plugin.setPreferences("CreateBackup", self.backupCheckBox.isChecked())
     
     @pyqtSlot()
     def on_configButton_clicked(self):

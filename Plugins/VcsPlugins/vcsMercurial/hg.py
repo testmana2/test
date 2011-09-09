@@ -841,7 +841,8 @@ class Hg(VersionControl):
         args = []
         args.append('revert')
         self.addArguments(args, self.options['global'])
-        args.append("--no-backup")
+        if not self.getPlugin().getPreferences("CreateBackup"):
+            args.append("--no-backup")
         args.append("-v")
         if isinstance(name, list):
             dname, fnames = self.splitPathList(name)

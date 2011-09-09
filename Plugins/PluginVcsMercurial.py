@@ -160,6 +160,7 @@ class VcsMercurialPlugin(QObject):
             "ServerPort": 8000,
             "ServerStyle": "",
             "CleanupPatterns": "*.orig *.rej *~",
+            "CreateBackup": False,
         }
         
         from VcsPlugins.vcsMercurial.ProjectHelper import HgProjectHelper
@@ -203,7 +204,8 @@ class VcsMercurialPlugin(QObject):
         @param key the key of the value to get
         @return the requested setting
         """
-        if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate", "PreferUnbundle"]:
+        if key in ["StopLogOnCopy", "UseLogBrowser", "PullUpdate", "PreferUnbundle",
+                   "CreateBackup"]:
             return Preferences.toBool(Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["LogLimit", "CommitMessages", "ServerPort"]:

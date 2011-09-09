@@ -10,7 +10,7 @@
     <height>582</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -171,6 +171,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="title">
+      <string>Revert</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="backupCheckBox">
+        <property name="toolTip">
+         <string>Select to create a backup file (.orig) before reverting changes</string>
+        </property>
+        <property name="text">
+         <string>Create Backup Files</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_5">
      <property name="title">
       <string>Cleanup</string>
@@ -224,6 +243,7 @@
   <tabstop>logBrowserCheckBox</tabstop>
   <tabstop>pullUpdateCheckBox</tabstop>
   <tabstop>preferUnbundleCheckBox</tabstop>
+  <tabstop>backupCheckBox</tabstop>
   <tabstop>cleanupPatternEdit</tabstop>
   <tabstop>configButton</tabstop>
  </tabstops>
