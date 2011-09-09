@@ -2441,6 +2441,7 @@
       <keyword name="escape_uentities" id="escape_uentities" ref="eric5.Utilities.__init__.html#escape_uentities" />
       <keyword name="extractFlags" id="extractFlags" ref="eric5.Utilities.__init__.html#extractFlags" />
       <keyword name="extractFlagsFromFile" id="extractFlagsFromFile" ref="eric5.Utilities.__init__.html#extractFlagsFromFile" />
+      <keyword name="extractLineFlags" id="extractLineFlags" ref="eric5.Utilities.__init__.html#extractLineFlags" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric5.Utilities.__init__.html#fromNativeSeparators" />
       <keyword name="generateDistroInfo" id="generateDistroInfo" ref="eric5.Utilities.__init__.html#generateDistroInfo" />
       <keyword name="generatePluginsVersionInfo" id="generatePluginsVersionInfo" ref="eric5.Utilities.__init__.html#generatePluginsVersionInfo" />
@@ -3397,6 +3398,7 @@
       <keyword name="UtilitiesPython2 (Package)" id="UtilitiesPython2 (Package)" ref="index-eric5.UtilitiesPython2.html" />
       <keyword name="Tools (Module)" id="Tools (Module)" ref="eric5.UtilitiesPython2.Tools.html" />
       <keyword name="decode" id="decode" ref="eric5.UtilitiesPython2.Tools.html#decode" />
+      <keyword name="extractLineFlags" id="extractLineFlags" ref="eric5.UtilitiesPython2.Tools.html#extractLineFlags" />
       <keyword name="get_coding" id="get_coding" ref="eric5.UtilitiesPython2.Tools.html#get_coding" />
       <keyword name="normalizeCode" id="normalizeCode" ref="eric5.UtilitiesPython2.Tools.html#normalizeCode" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.UtilitiesPython2.Tools.html#readEncodedFile" />

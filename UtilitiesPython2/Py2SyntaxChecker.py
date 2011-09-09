@@ -12,7 +12,7 @@ import sys
 import re
 import traceback
 
-from Tools import readEncodedFile, normalizeCode
+from Tools import readEncodedFile, normalizeCode, extractLineFlags
 
 from py2flakes.checker import Checker
 from py2flakes.messages import ImportStarUsed
@@ -117,8 +117,7 @@ def flakesCheck(fileName, codestring, ignoreStarImportWarnings):
                 continue
             
             _fn, lineno, message = warning.getMessageData()
-            if not lines[lineno - 1].strip()\
-               .endswith("__IGNORE_WARNING__"):
+            if "__IGNORE_WARNING__" not in extractLineFlags(lines[lineno - 1].strip()):
                 strings.extend(["FLAKES_WARNING", _fn, lineno, message])
     except SyntaxError as err:
         if err.text.strip():

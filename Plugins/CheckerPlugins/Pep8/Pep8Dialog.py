@@ -325,8 +325,8 @@ class Pep8Dialog(QDialog, Ui_Pep8Dialog):
                     checker.messages.sort(key=lambda a: a[1])
                     for message in checker.messages:
                         fname, lineno, position, text = message
-                        if not source[lineno - 1].strip()\
-                           .endswith("__IGNORE_WARNING__"):
+                        if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
+                                source[lineno - 1].strip()):
                             self.noResults = False
                             fixed = False
                             if fixer:

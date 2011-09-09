@@ -231,8 +231,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                                         continue
                                     fname, lineno, message = \
                                         warning.getMessageData()
-                                    if not sourceLines[lineno - 1].strip()\
-                                       .endswith("__IGNORE_WARNING__"):
+                                    if "__IGNORE_WARNING__" not in \
+                                        Utilities.extractLineFlags(
+                                            sourceLines[lineno - 1].strip()):
                                         self.noResults = False
                                         self.__createResultItem(
                                             fname, lineno, 0, message, "",

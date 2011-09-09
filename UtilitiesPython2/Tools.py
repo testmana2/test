@@ -95,6 +95,27 @@ def normalizeCode(codestring):
         codestring = codestring + '\n'
     
     return codestring
+
+
+def extractLineFlags(line, startComment="#", endComment=""):
+    """
+    Function to extract flags starting and ending with '__' from a line comment.
     
+    @param line line to extract flags from (string)
+    @keyparam startComment string identifying the start of the comment (string)
+    @keyparam endComment string identifying the end of a comment (string)
+    @return list containing the extracted flags (list of strings)
+    """
+    flags = []
+    
+    pos = line.rindex(startComment)
+    if pos >= 0:
+        comment = line[pos + len(startComment):].strip()
+        if endComment:
+            comment = comment.replace("endComment", "")
+        flags = [f.strip() for f in comment.split()
+                 if (f.startswith("__") and f.endswith("__"))]
+    return flags
+
 #
 # eflag: FileType = Python2

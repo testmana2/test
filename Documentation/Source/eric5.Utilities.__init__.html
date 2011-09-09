@@ -86,6 +86,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#extractFlagsFromFile">extractFlagsFromFile</a></td>
 <td>Function to extract eric specific flags out of the given file.</td>
 </tr><tr>
+<td><a href="#extractLineFlags">extractLineFlags</a></td>
+<td>Function to extract flags starting and ending with '__' from a line comment.</td>
+</tr><tr>
 <td><a href="#fromNativeSeparators">fromNativeSeparators</a></td>
 <td>Function returning a path, that is using "/" separator characters.</td>
 </tr><tr>
@@ -621,6 +624,30 @@ name of the file to be scanned (string)
 <dt>Returns:</dt>
 <dd>
 dictionary of string, boolean, complex, float and int
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="extractLineFlags" ID="extractLineFlags"></a>
+<h2>extractLineFlags</h2>
+<b>extractLineFlags</b>(<i>line, startComment="</i>)
+<p>
+    Function to extract flags starting and ending with '__' from a line comment.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to extract flags from (string)
+</dd><dt><i>startComment=</i></dt>
+<dd>
+string identifying the start of the comment (string)
+</dd><dt><i>endComment=</i></dt>
+<dd>
+string identifying the end of a comment (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list containing the extracted flags (list of strings)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -4440,8 +4440,8 @@ class Editor(QsciScintillaCompat):
                                     continue
                                 
                                 _fn, lineno, message = warning.getMessageData()
-                                if not self.text(lineno - 1).strip()\
-                                   .endswith("__IGNORE_WARNING__"):
+                                if "__IGNORE_WARNING__" not in Utilities.extractLineFlags(
+                                        self.text(lineno - 1).strip()):
                                     self.toggleFlakesWarning(
                                         lineno, True, message)
                         except SyntaxError as err:
