@@ -1569,12 +1569,23 @@ class Hg(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
+        if self.getPlugin().getPreferences("PreferUnbundle") and \
+           self.bundleFile and \
+           os.path.exists(self.bundleFile):
+            command = "unbundle"
+            title = self.trUtf8('Apply changegroups')
+        else:
+            command = "pull"
+            title = self.trUtf8('Pulling from a remote Mercurial repository')
+        
         args = []
-        args.append('pull')
+        args.append(command)
         self.addArguments(args, self.options['global'])
         args.append('-v')
         if self.getPlugin().getPreferences("PullUpdate"):
             args.append('--update')
+        if command == "unbundle":
+            args.append(self.bundleFile)
         
         # find the root of the repo
         repodir = self.splitPath(name)[0]
@@ -1583,11 +1594,14 @@ class Hg(VersionControl):
             if repodir == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Pulling from a remote Mercurial repository'), self)
+        dia = HgDialog(title, self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
             res = dia.hasAddOrDelete()
+        if command == "unbundle":
+            os.remove(self.bundleFile)
+            self.bundleFile = None
         self.checkVCSStatus()
         return res
     

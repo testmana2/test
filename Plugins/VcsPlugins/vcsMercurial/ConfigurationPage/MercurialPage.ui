@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>406</width>
-    <height>491</height>
+    <height>582</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -153,6 +153,20 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QCheckBox" name="preferUnbundleCheckBox">
+        <property name="toolTip">
+         <string>Select to prefer unbundle over pull</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Prefer Unbundle&lt;/b&gt;
+&lt;p&gt;If this option is selected, it will be checked, if a Mercurial changegroups file from a previous &quot;Show Incoming&quot; request exists. In this case it will be applied and deleted. Otherwise a pull request will be sent.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Prefer Unbundle</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -209,6 +223,7 @@
   <tabstop>commitSpinBox</tabstop>
   <tabstop>logBrowserCheckBox</tabstop>
   <tabstop>pullUpdateCheckBox</tabstop>
+  <tabstop>preferUnbundleCheckBox</tabstop>
   <tabstop>cleanupPatternEdit</tabstop>
   <tabstop>configButton</tabstop>
  </tabstops>

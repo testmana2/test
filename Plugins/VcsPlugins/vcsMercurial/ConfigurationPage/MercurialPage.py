@@ -36,6 +36,8 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         self.commitSpinBox.setValue(self.__plugin.getPreferences("CommitMessages"))
         self.logBrowserCheckBox.setChecked(self.__plugin.getPreferences("UseLogBrowser"))
         self.pullUpdateCheckBox.setChecked(self.__plugin.getPreferences("PullUpdate"))
+        self.preferUnbundleCheckBox.setChecked(
+            self.__plugin.getPreferences("PreferUnbundle"))
         self.cleanupPatternEdit.setText(self.__plugin.getPreferences("CleanupPatterns"))
     
     def save(self):
@@ -46,6 +48,8 @@ class MercurialPage(ConfigurationPageBase, Ui_MercurialPage):
         self.__plugin.setPreferences("CommitMessages", self.commitSpinBox.value())
         self.__plugin.setPreferences("UseLogBrowser", self.logBrowserCheckBox.isChecked())
         self.__plugin.setPreferences("PullUpdate", self.pullUpdateCheckBox.isChecked())
+        self.__plugin.setPreferences("PreferUnbundle",
+            self.preferUnbundleCheckBox.isChecked())
         self.__plugin.setPreferences("CleanupPatterns", self.cleanupPatternEdit.text())
     
     @pyqtSlot()
