@@ -929,6 +929,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>UtilitiesPython2/PySideImporter.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClient.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1191,6 +1192,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Preferences/ConfigurationPages/MasterPasswordEntryDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/SecurityPage.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
@@ -1369,15 +1371,15 @@ bindings and the QScintilla2 editor widget.</Description>
     </VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
     <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
-    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
-    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
-    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
-    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
     <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
   </FiletypeAssociations>
   <Documentation>
     <DocumentationParams>
