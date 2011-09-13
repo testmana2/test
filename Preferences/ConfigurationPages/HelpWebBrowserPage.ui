@@ -10,7 +10,7 @@
     <height>1021</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -206,7 +206,7 @@
       <string>Privacy</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
+      <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="javaCheckBox">
         <property name="toolTip">
          <string>Select to enable Java</string>
@@ -216,7 +216,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="1" column="0" colspan="2">
        <widget class="QCheckBox" name="javaScriptCheckBox">
         <property name="toolTip">
          <string>Select to enable JavaScript</string>
@@ -246,13 +246,30 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="3" column="0" colspan="2">
        <widget class="QCheckBox" name="pluginsCheckBox">
         <property name="toolTip">
          <string>Select to enable plugins in web pages</string>
         </property>
         <property name="text">
          <string>Enable Plugins</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QCheckBox" name="doNotTrackCheckBox">
+        <property name="toolTip">
+         <string>Select to enabled the &quot;Do Not Track&quot; feature</string>
+        </property>
+        <property name="text">
+         <string>Tell web sites I do not want to be tracked</string>
         </property>
        </widget>
       </item>
@@ -506,6 +523,7 @@
   <tabstop>jsOpenWindowsCheckBox</tabstop>
   <tabstop>jsClipboardCheckBox</tabstop>
   <tabstop>pluginsCheckBox</tabstop>
+  <tabstop>doNotTrackCheckBox</tabstop>
   <tabstop>expireHistory</tabstop>
   <tabstop>diskCacheCheckBox</tabstop>
   <tabstop>cacheKeepButton</tabstop>

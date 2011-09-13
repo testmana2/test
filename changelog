@@ -32,6 +32,8 @@ Version 5.2-snapshot-2011mmdd:
          file first (created by an hg incoming)
      --- added support for importing patches
      --- added configuration option to create backup files when reverting changes
+- enhancements to the web browser
+  -- added the "Do Not Track" feature
 
 Version 5.2-snapshot-20110724:
 - bug fixes

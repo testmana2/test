@@ -65,6 +65,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("JavaScriptCanAccessClipboard"))
         self.pluginsCheckBox.setChecked(
             Preferences.getHelp("PluginsEnabled"))
+        self.doNotTrackCheckBox.setChecked(
+            Preferences.getHelp("DoNotTrack"))
         
         self.diskCacheCheckBox.setChecked(
             Preferences.getHelp("DiskCacheEnabled"))
@@ -145,6 +147,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.jsClipboardCheckBox.isChecked())
         Preferences.setHelp("PluginsEnabled",
             self.pluginsCheckBox.isChecked())
+        Preferences.setHelp("DoNotTrack",
+            self.doNotTrackCheckBox.isChecked())
         
         Preferences.setHelp("DiskCacheEnabled",
             self.diskCacheCheckBox.isChecked())

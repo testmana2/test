@@ -638,6 +638,7 @@ class Prefs(object):
         "VirusTotalServiceKey": "",
         "VirusTotalSecure": False,
         "SearchLanguage": QLocale().language(),
+        "DoNotTrack": False,
     }
     
     websettings = QWebSettings.globalSettings()
@@ -1975,7 +1976,7 @@ def getHelp(key, prefClass=Prefs):
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
                  "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled",
-                 "VirusTotalEnabled", "VirusTotalSecure"]:
+                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack"]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

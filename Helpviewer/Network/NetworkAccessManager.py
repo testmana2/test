@@ -90,6 +90,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.proxyAuthenticationRequired.connect(proxyAuthenticationRequired)
         self.authenticationRequired.connect(self.__authenticationRequired)
         
+        self.__doNotTrack = Preferences.getHelp("DoNotTrack")
+        
         # register scheme handlers
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
         self.setSchemeHandler("pyrc", PyrcAccessHandler(self))
@@ -151,6 +153,10 @@ class NetworkAccessManager(QNetworkAccessManager):
             if reply is not None:
                 reply.setParent(self)
                 return reply
+        
+        # Do Not Track feature
+        if self.__doNotTrack:
+            req.setRawHeader("DNT", "1")
         
         reply = QNetworkAccessManager.createRequest(self, op, req, outgoingData)
         self.requestCreated.emit(op, req, reply)
@@ -320,6 +326,8 @@ class NetworkAccessManager(QNetworkAccessManager):
         Public slot to signal a change of preferences.
         """
         self.__setDiskCache()
+        
+        self.__doNotTrack = Preferences.getHelp("DoNotTrack")
     
     def languagesChanged(self):
         """
