@@ -49,6 +49,7 @@ from .HgServeDialog import HgServeDialog
 from .HgUtilities import getConfigPath
 from .HgClient import HgClient
 from .HgImportDialog import HgImportDialog
+from .HgExportDialog import HgExportDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -2429,6 +2430,47 @@ class Hg(VersionControl):
             res = False
         
         return res
+    
+    def hgExport(self, name):
+        """
+        Public method to export patches to files.
+        
+        @param name directory name of the project to export from (string)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if repodir == os.sep:
+                return
+        
+        dlg = HgExportDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            filePattern, revisions, switchParent, allText, noDates, git = \
+                dlg.getParameters()
+            
+            args = []
+            args.append("export")
+            args.append("--output")
+            args.append(filePattern)
+            args.append("--verbose")
+            if switchParent:
+                args.append("--switch-parent")
+            if allText:
+                args.append("--text")
+            if noDates:
+                args.append("--nodates")
+            if git:
+                args.append("--git")
+            for rev in revisions:
+                args.append(rev)
+            
+            dia = HgDialog(self.trUtf8("Export Patches"), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
     
     ############################################################################
     ## Methods to handle extensions are below.

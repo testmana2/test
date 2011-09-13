@@ -128,6 +128,9 @@ VersionControl
 <td><a href="#Hg.hgEditUserConfig">hgEditUserConfig</a></td>
 <td>Public method used to edit the user configuration file.</td>
 </tr><tr>
+<td><a href="#Hg.hgExport">hgExport</a></td>
+<td>Public method to export patches to files.</td>
+</tr><tr>
 <td><a href="#Hg.hgExtendedDiff">hgExtendedDiff</a></td>
 <td>Public method used to view the difference of a file/directory to the Mercurial repository.</td>
 </tr><tr>
@@ -529,7 +532,17 @@ file/directory name (string)
 <b>hgEditUserConfig</b>(<i></i>)
 <p>
         Public method used to edit the user configuration file.
-</p><a NAME="Hg.hgExtendedDiff" ID="Hg.hgExtendedDiff"></a>
+</p><a NAME="Hg.hgExport" ID="Hg.hgExport"></a>
+<h4>Hg.hgExport</h4>
+<b>hgExport</b>(<i>name</i>)
+<p>
+        Public method to export patches to files.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name of the project to export from (string)
+</dd>
+</dl><a NAME="Hg.hgExtendedDiff" ID="Hg.hgExtendedDiff"></a>
 <h4>Hg.hgExtendedDiff</h4>
 <b>hgExtendedDiff</b>(<i>name</i>)
 <p>

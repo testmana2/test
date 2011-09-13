@@ -835,6 +835,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgImportAct.triggered[()].connect(self.__hgImport)
         self.actions.append(self.hgImportAct)
+        
+        self.hgExportAct = E5Action(self.trUtf8('Export Patches'),
+                self.trUtf8('Export Patches...'),
+                0, 0, self, 'mercurial_import')
+        self.hgExportAct.setStatusTip(self.trUtf8(
+            'Export revisions to patch files'
+        ))
+        self.hgExportAct.setWhatsThis(self.trUtf8(
+            """<b>Export Patches</b>"""
+            """<p>This exports revisions of the project to patch files.</p>"""
+        ))
+        self.hgExportAct.triggered[()].connect(self.__hgExport)
+        self.actions.append(self.hgExportAct)
     
     def initMenu(self, menu):
         """
@@ -887,6 +900,7 @@ class HgProjectHelper(VcsProjectHelper):
         patchMenu = QMenu(self.trUtf8("Patch Management"), menu)
         patchMenu.setTearOffEnabled(True)
         patchMenu.addAction(self.hgImportAct)
+        patchMenu.addAction(self.hgExportAct)
         self.subMenus.append(patchMenu)
         
         bisectMenu = QMenu(self.trUtf8("Bisect"), menu)
@@ -1255,6 +1269,12 @@ class HgProjectHelper(VcsProjectHelper):
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
+    
+    def __hgExport(self):
+        """
+        Private slot used to export revisions to patch files.
+        """
+        self.vcs.hgExport(self.project.ppath)
     
     def __hgRevert(self):
         """
