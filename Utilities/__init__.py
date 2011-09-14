@@ -1186,7 +1186,7 @@ def py2compile(file, checkFlakes = False):
         else:
             index = 5
             warnings = []
-            while index < len(output):
+            while len(output) - index > 3:
                 if output[index] == "FLAKES_ERROR":
                     return (True, output[index + 1], output[index + 2], "", 
                             output[index + 3], [])
