@@ -246,7 +246,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgQueuesNewPatchDialog(HgQueuesNewPatchDialog.NEW_MODE)
@@ -291,7 +291,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -367,7 +367,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
         args = []
@@ -437,7 +437,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -460,7 +460,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -491,7 +491,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -526,7 +526,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -566,7 +566,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         patchnames = sorted(
@@ -600,7 +600,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         patchnames = sorted(
@@ -625,7 +625,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         patchnames = sorted(
@@ -670,7 +670,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         guardsList = self.getGuardsList(repodir)
@@ -705,7 +705,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -727,7 +727,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         guardsList = self.getGuardsList(repodir, all=False)
@@ -746,7 +746,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         if isCreate:
@@ -812,7 +812,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         if operation == Queues.QUEUE_PURGE:
@@ -881,7 +881,7 @@ class Queues(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(

@@ -109,7 +109,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgBookmarkDialog(HgBookmarkDialog.DEFINE_MODE,
@@ -141,7 +141,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         bookmark, ok = QInputDialog.getItem(
@@ -171,7 +171,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgBookmarkRenameDialog(self.hgGetBookmarksList(repodir))
@@ -199,7 +199,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgBookmarkDialog(HgBookmarkDialog.MOVE_MODE,
@@ -296,7 +296,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         bookmarks = self.__getInOutBookmarks(repodir, True)
@@ -329,7 +329,7 @@ class Bookmarks(HgExtension):
         repodir = self.vcs.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         bookmarks = self.__getInOutBookmarks(repodir, False)

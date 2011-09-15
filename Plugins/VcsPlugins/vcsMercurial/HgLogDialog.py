@@ -111,7 +111,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.repodir = self.dname
         while not os.path.isdir(os.path.join(self.repodir, self.vcs.adminDir)):
             self.repodir = os.path.dirname(self.repodir)
-            if self.repodir == os.sep:
+            if self.os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         self.projectMode = (self.fname == "." and self.dname == self.repodir)

@@ -40,7 +40,7 @@ class Transplant(HgExtension):
         repodir = self.vcs.splitPath(path)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
         res = False
@@ -88,7 +88,7 @@ class Transplant(HgExtension):
         repodir = self.vcs.splitPath(path)[0]
         while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []

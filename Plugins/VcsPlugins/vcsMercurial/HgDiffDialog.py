@@ -169,7 +169,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             repodir = dname
             while not os.path.isdir(os.path.join(repodir, self.vcs.adminDir)):
                 repodir = os.path.dirname(repodir)
-                if repodir == os.sep:
+                if os.path.splitdrive(repodir)[1] == os.sep:
                     return
             
             self.process.kill()

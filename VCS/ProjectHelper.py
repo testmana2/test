@@ -332,7 +332,7 @@ class VcsProjectHelper(QObject):
                 self.project.vcs.vcsSetDataFromDict(vcsDataDict)
                 self.project.saveProject()
                 isVcsControlled = \
-                    self.project.vcs.vcsImport(vcsDataDict, self.project.ppath)[1]
+                    self.project.vcs.vcsImport(vcsDataDict, self.project.ppath)[0]
                 if isVcsControlled:
                     # reopen the project
                     self.project.openProject(self.project.pfile)
