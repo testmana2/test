@@ -368,7 +368,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         if isinstance(name, list):
@@ -421,7 +421,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
         if noDialog:
@@ -465,7 +465,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         if isinstance(name, list):
@@ -530,7 +530,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
         if noDialog:
@@ -588,7 +588,7 @@ class Hg(VersionControl):
             repodir = dname
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
                 repodir = os.path.dirname(repodir)
-                if repodir == os.sep:
+                if os.path.splitdrive(repodir)[1] == os.sep:
                     return False
             
             if noDialog:
@@ -676,7 +676,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgTagDialog(self.tagsList)
@@ -729,7 +729,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dia = HgDialog(self.trUtf8('Reverting changes'))
@@ -761,7 +761,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -812,7 +812,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return 0
         
         ioEncoding = Preferences.getSystem("IOEncoding")
@@ -873,7 +873,7 @@ class Hg(VersionControl):
             repodir = dname
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
                 repodir = os.path.dirname(repodir)
-                if repodir == os.sep:
+                if os.path.splitdrive(repodir)[1] == os.sep:
                     return names
         
             ioEncoding = Preferences.getSystem("IOEncoding")
@@ -973,7 +973,7 @@ class Hg(VersionControl):
             repodir = name
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
                 repodir = os.path.dirname(repodir)
-                if repodir == os.sep:
+                if os.path.splitdrive(repodir)[1] == os.sep:
                     return
             
             dia = HgDialog(self.trUtf8('Mercurial command'))
@@ -1146,7 +1146,7 @@ class Hg(VersionControl):
             repodir = dname
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
                 repodir = os.path.dirname(repodir)
-                if repodir == os.sep:
+                if os.path.splitdrive(repodir)[1] == os.sep:
                     return False
             
             dia = HgDialog(self.trUtf8('Copying {0}')
@@ -1314,7 +1314,7 @@ class Hg(VersionControl):
         repodir = self.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dia = HgDialog(self.trUtf8('Pulling from a remote Mercurial repository'))
@@ -1343,7 +1343,7 @@ class Hg(VersionControl):
         repodir = self.splitPath(name)[0]
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dia = HgDialog(self.trUtf8('Pushing to a remote Mercurial repository'))
@@ -1369,7 +1369,7 @@ class Hg(VersionControl):
         repodir = self.splitPath(ppath)[0]
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         process = QProcess()
@@ -1452,7 +1452,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
         dia = HgDialog(
@@ -1474,7 +1474,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         name, ok = QInputDialog.getItem(
@@ -1505,7 +1505,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1528,7 +1528,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
@@ -1553,7 +1553,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1576,7 +1576,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1600,7 +1600,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1623,7 +1623,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1646,7 +1646,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         args = []
@@ -1720,7 +1720,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgBundleDialog(self.tagsList, self.branchesList)
@@ -1784,7 +1784,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         file = E5FileDialog.getOpenFileName(
@@ -1815,7 +1815,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         file = E5FileDialog.getOpenFileName(
@@ -1847,7 +1847,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         res = False
@@ -1895,7 +1895,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         rev = ""
@@ -1942,7 +1942,7 @@ class Hg(VersionControl):
         repodir = dname
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dia = HgDialog(
@@ -1967,7 +1967,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         dlg = HgBackoutDialog(self.tagsList, self.branchesList)
@@ -2011,7 +2011,7 @@ class Hg(VersionControl):
         repodir = str(dname)
         while not os.path.isdir(os.path.join(repodir, self.adminDir)):
             repodir = os.path.dirname(repodir)
-            if repodir == os.sep:
+            if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
         self.serveDlg = HgServeDialog(self, repodir)

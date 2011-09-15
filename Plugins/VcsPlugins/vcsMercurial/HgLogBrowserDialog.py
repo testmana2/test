@@ -574,7 +574,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.repodir = self.dname
         while not os.path.isdir(os.path.join(self.repodir, self.vcs.adminDir)):
             self.repodir = os.path.dirname(self.repodir)
-            if self.repodir == os.sep:
+            if os.path.splitdrive(self.repodir)[1] == os.sep:
                 return
         
         self.projectMode = (self.fname == "." and self.dname == self.repodir)
