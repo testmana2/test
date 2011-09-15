@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -12588,7 +12589,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="802"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -15530,7 +15531,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Pflege Änderungen in das Mercurial Repository ein</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2603"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2611"/>
         <source>Mercurial Command Server</source>
         <translation>Mercurial Befehlsserver</translation>
     </message>
@@ -15540,7 +15541,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht wiedergestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2603"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2611"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Mercurial Befehlsserver konnte nicht gestartet werden.&lt;/p&gt;&lt;p&gt;Ursache: {0}&lt;/p&gt;</translation>
     </message>
@@ -16240,39 +16241,67 @@ Es sind %n Unterfenster offen.</numerusform>
 <context>
     <name>HgClient</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="82"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="85"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Der Prozess {0} konnte nicht gestartet werden. Stellen Sie sicher, dass er sich im Suchpfad befindet.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="128"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="131"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation>&apos;Hallo&apos; Nachricht konnte nicht empfangen werden.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="130"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="133"/>
         <source>Received data on unexpected channel.</source>
         <translation>Daten auf unerwartetem Kanal empfangen.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="138"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation>Ungültige &apos;Hallo&apos; Nachricht; Erwartete &apos;capabilities: &apos;, empfing jedoch &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="142"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation>&apos;capabilities&apos; Nachricht enthielt keine Fähigkeiten.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="147"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="150"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation>Ungültige &apos;Hallo&apos; Nachricht; Erwartete &apos;encoding: &apos;, empfing jedoch &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="151"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="154"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation>&apos;encoding&apos; Nachricht enthielt keine Kodierung.</translation>
+    </message>
+</context>
+<context>
+    <name>HgClientPromptDialog</name>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="14"/>
+        <source>Mercurial Client Input</source>
+        <translation>Mercurial Client Eingabe</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="23"/>
+        <source>Message:</source>
+        <translation>Nachricht:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="30"/>
+        <source>Shows the message sent by the Mercurial server</source>
+        <translation>Zeig die vom Server geschickte Nachricht</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="43"/>
+        <source>Input:</source>
+        <translation>Eingabe:</translation>
+    </message>
+    <message>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="50"/>
+        <source>Enter the response to be sent to the Mercurial server</source>
+        <translation>Gib die an den Server zu schickende Antwort ein</translation>
     </message>
 </context>
 <context>

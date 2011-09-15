@@ -61,6 +61,9 @@ QObject
 <td><a href="#HgClient.__init__">HgClient</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgClient.__prompt">__prompt</a></td>
+<td>Private method to prompt the user for some input.</td>
+</tr><tr>
 <td><a href="#HgClient.__readChannel">__readChannel</a></td>
 <td>Private method to read data from the command server.</td>
 </tr><tr>
@@ -84,6 +87,9 @@ QObject
 </tr><tr>
 <td><a href="#HgClient.isExecuting">isExecuting</a></td>
 <td>Public method to check, if the server is executing a command.</td>
+</tr><tr>
+<td><a href="#HgClient.myprompt">myprompt</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#HgClient.restartServer">restartServer</a></td>
 <td>Public method to restart the command server.</td>
@@ -120,6 +126,19 @@ encoding to be used by the command server (string)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent object (QObject)
+</dd>
+</dl><a NAME="HgClient.__prompt" ID="HgClient.__prompt"></a>
+<h4>HgClient.__prompt</h4>
+<b>__prompt</b>(<i>size, message</i>)
+<p>
+        Private method to prompt the user for some input.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+maximum length of the requested input (integer)
+</dd><dt><i>message</i></dt>
+<dd>
+message sent by the server (string)
 </dd>
 </dl><a NAME="HgClient.__readChannel" ID="HgClient.__readChannel"></a>
 <h4>HgClient.__readChannel</h4>
@@ -210,7 +229,10 @@ data to be sent (string)
 <dd>
 flag indicating the execution of a command (boolean)
 </dd>
-</dl><a NAME="HgClient.restartServer" ID="HgClient.restartServer"></a>
+</dl><a NAME="HgClient.myprompt" ID="HgClient.myprompt"></a>
+<h4>HgClient.myprompt</h4>
+<b>myprompt</b>(<i></i>)
+<a NAME="HgClient.restartServer" ID="HgClient.restartServer"></a>
 <h4>HgClient.restartServer</h4>
 <b>restartServer</b>(<i></i>)
 <p>

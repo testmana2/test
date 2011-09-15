@@ -12,6 +12,9 @@ import io
 
 from PyQt4.QtCore import QProcess, QProcessEnvironment, QObject, QByteArray, \
     QCoreApplication
+from PyQt4.QtGui import QDialog
+
+from .HgClientPromptDialog import HgClientPromptDialog
 
 import Preferences
 
@@ -176,6 +179,9 @@ class HgClient(QObject):
             if not data:
                 return "", ""
             
+            if data.startswith(b" L") and self.__server.bytesAvailable() > 0:
+                # workaround for an issue in the Mercurial command server
+                data = data[1:] + bytes(self.__server.read(1))
             channel, length = struct.unpack(HgClient.OutputFormat, data)
             channel = channel.decode(self.__encoding)
             if channel in "IL":
@@ -233,7 +239,11 @@ class HgClient(QObject):
             
             # input channels
             if channel in inputChannels:
-                self.__writeDataBlock(inputChannels[channel](data))
+                input = inputChannels[channel](data)
+                if channel == "L":
+                    # echo the input to the output if it was a prompt
+                    outputChannels["o"](input)
+                self.__writeDataBlock(input)
             
             # output channels
             elif channel in outputChannels:
@@ -251,6 +261,19 @@ class HgClient(QObject):
             # optional channels
             else:
                 pass
+    
+    def __prompt(self, size, message):
+        """
+        Private method to prompt the user for some input.
+        
+        @param size maximum length of the requested input (integer)
+        @param message message sent by the server (string)
+        """
+        input = ""
+        dlg = HgClientPromptDialog(size, message)
+        if dlg.exec_() == QDialog.Accepted:
+            input = dlg.getInput() + '\n'
+        return input
     
     def runcommand(self, args, prompt=None, input=None, output=None, error=None):
         """
@@ -291,6 +314,11 @@ class HgClient(QObject):
                 reply = prompt(size, outputBuffer.getvalue())
                 return reply
             inputChannels["L"] = func
+        else:
+            def myprompt(size):
+                reply = self.__prompt(size, outputBuffer.getvalue())
+                return reply
+            inputChannels["L"] = myprompt
         if input is not None:
             inputChannels["I"] = input
         

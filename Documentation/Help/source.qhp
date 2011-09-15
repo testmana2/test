@@ -417,6 +417,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
@@ -8732,6 +8733,7 @@
       <keyword name="HgClient (Module)" id="HgClient (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html" />
       <keyword name="HgClient" id="HgClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient" />
       <keyword name="HgClient (Constructor)" id="HgClient (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.__init__" />
+      <keyword name="HgClient.__prompt" id="HgClient.__prompt" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.__prompt" />
       <keyword name="HgClient.__readChannel" id="HgClient.__readChannel" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.__readChannel" />
       <keyword name="HgClient.__readHello" id="HgClient.__readHello" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.__readHello" />
       <keyword name="HgClient.__runcommand" id="HgClient.__runcommand" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.__runcommand" />
@@ -8740,6 +8742,7 @@
       <keyword name="HgClient.cancel" id="HgClient.cancel" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.cancel" />
       <keyword name="HgClient.func" id="HgClient.func" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.func" />
       <keyword name="HgClient.isExecuting" id="HgClient.isExecuting" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.isExecuting" />
+      <keyword name="HgClient.myprompt" id="HgClient.myprompt" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.myprompt" />
       <keyword name="HgClient.restartServer" id="HgClient.restartServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.restartServer" />
       <keyword name="HgClient.runcommand" id="HgClient.runcommand" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.runcommand" />
       <keyword name="HgClient.startServer" id="HgClient.startServer" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html#HgClient.startServer" />
@@ -8864,6 +8867,11 @@
       <keyword name="HgLogDialog.on_passwordCheckBox_toggled" id="HgLogDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgLogDialog.on_sendButton_clicked" id="HgLogDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.on_sendButton_clicked" />
       <keyword name="HgLogDialog.start" id="HgLogDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html#HgLogDialog.start" />
+      <keyword name="HgClientPromptDialog (Module)" id="HgClientPromptDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html" />
+      <keyword name="HgClientPromptDialog" id="HgClientPromptDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog" />
+      <keyword name="HgClientPromptDialog (Constructor)" id="HgClientPromptDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.__init__" />
+      <keyword name="HgClientPromptDialog.getInput" id="HgClientPromptDialog.getInput" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.getInput" />
+      <keyword name="HgClientPromptDialog.on_inputEdit_textChanged" id="HgClientPromptDialog.on_inputEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.on_inputEdit_textChanged" />
       <keyword name="HgOptionsDialog (Module)" id="HgOptionsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
       <keyword name="HgOptionsDialog" id="HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog" />
       <keyword name="HgOptionsDialog (Constructor)" id="HgOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.__init__" />
@@ -11420,6 +11428,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html</file>
