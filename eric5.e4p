@@ -1284,15 +1284,15 @@ bindings and the QScintilla2 editor widget.</Description>
     </VcsOtherData>
   </Vcs>
   <FiletypeAssociations>
-    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
     <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
-    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
-    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
-    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
-    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
-    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
     <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="Ui_*.py" type="__IGNORE__"/>
   </FiletypeAssociations>
   <Documentation>
     <DocumentationParams>
@@ -1569,7 +1569,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/coverage/*, */ThirdParty/*</string>
+              <string>*/coverage/*, */ThirdParty/*, */Examples/*</string>
             </value>
           </dict>
         </value>
