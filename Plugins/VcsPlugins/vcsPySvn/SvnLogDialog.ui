@@ -1,0 +1,86 @@
+<ui version="4.0" >
+ <class>SvnLogDialog</class>
+ <widget class="QWidget" name="SvnLogDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>751</width>
+    <height>649</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Subversion Log</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QGroupBox" name="contentsGroup" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>4</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Log</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QTextBrowser" name="contents" >
+        <property name="focusPolicy" >
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="whatsThis" >
+         <string>&lt;b>Subversion Log&lt;/b>&lt;p>This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p></string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="errorGroup" >
+     <property name="sizePolicy" >
+      <sizepolicy vsizetype="Expanding" hsizetype="Preferred" >
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title" >
+      <string>Errors</string>
+     </property>
+     <layout class="QVBoxLayout" >
+      <item>
+       <widget class="QTextEdit" name="errors" >
+        <property name="focusPolicy" >
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="whatsThis" >
+         <string>&lt;b>Subversion log errors&lt;/b>&lt;p>This shows possible error messages of the svn log command.&lt;/p></string>
+        </property>
+        <property name="readOnly" >
+         <bool>true</bool>
+        </property>
+        <property name="acceptRichText" >
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
