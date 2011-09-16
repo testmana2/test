@@ -673,6 +673,9 @@ def isinpath(file):
     if os.path.isabs(file):
         return os.access(file, os.X_OK)
     
+    if os.path.exists(os.path.join(os.curdir, file)):
+        return os.access(os.path.join(os.curdir, file), os.X_OK)
+    
     path = getEnvironmentEntry('PATH')
     
     # environment variable not defined
@@ -702,6 +705,11 @@ def getExecutablePath(file):
         else:
             return ""
         
+    cur_path = os.path.join(os.curdir, file)
+    if os.path.exists(cur_path):
+        if os.access(cur_path, os.X_OK):
+            return cur_path        
+
     path = os.getenv('PATH')
     
     # environment variable not defined
