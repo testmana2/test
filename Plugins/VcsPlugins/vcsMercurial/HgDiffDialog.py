@@ -154,14 +154,13 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             
             out, err = self.__hgClient.runcommand(args)
             
+            if err:
+                self.__showError(err)
             if out:
                 for line in out.splitlines(True):
                     self.__processOutputLine(line)
                     if self.__hgClient.wasCanceled():
                         break
-            
-            if err:
-                self.__showError(err)
             
             self.__finish()
         else:

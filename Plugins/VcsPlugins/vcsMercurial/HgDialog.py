@@ -156,10 +156,10 @@ class HgDialog(QDialog, Ui_HgDialog):
             
             out, err = self.__hgClient.runcommand(args)
             
-            if out:
-                self.__showOutput(out)
             if err:
                 self.__showError(err)
+            if out:
+                self.__showOutput(out)
             
             self.normal = True
             
