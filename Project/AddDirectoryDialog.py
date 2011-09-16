@@ -139,6 +139,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         """
         filetype = \
             self.filterComboBox.itemData(self.filterComboBox.currentIndex())
-        return (filetype, self.sourceDirEdit.text(), 
-            self.targetDirEdit.text(),
+        return (filetype,
+            Utilities.toNativeSeparators(self.sourceDirEdit.text()),
+            Utilities.toNativeSeparators(self.targetDirEdit.text()),
             self.recursiveCheckBox.isChecked())
