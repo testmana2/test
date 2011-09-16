@@ -45,6 +45,9 @@
       </item>
       <item>
        <widget class="QPlainTextEdit" name="messageEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="toolTip">
          <string>Enter the commit message or leave empty to use the default one</string>
         </property>
@@ -64,6 +67,9 @@
         </item>
         <item row="0" column="1">
          <widget class="QDateTimeEdit" name="dateEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="toolTip">
            <string>Enter optional date for the commit</string>
           </property>
@@ -97,6 +103,9 @@
         </item>
         <item row="1" column="1" colspan="2">
          <widget class="QLineEdit" name="userEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="toolTip">
            <string>Enter optional user for the commit</string>
           </property>
@@ -217,8 +226,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>257</x>
+     <y>364</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -233,12 +242,60 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>325</x>
+     <y>364</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>noCommitCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>messageEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>noCommitCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dateEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>134</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>noCommitCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>userEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>228</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>229</y>
     </hint>
    </hints>
   </connection>
