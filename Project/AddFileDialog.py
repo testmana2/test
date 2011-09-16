@@ -182,5 +182,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             source files, the target directory and a flag telling, whether
             the files shall be added as source code
         """
-        return (self.sourceFileEdit.text().split(os.pathsep),
-            self.targetDirEdit.text(), self.sourcecodeCheckBox.isChecked())
+        return (
+            Utilities.toNativeSeparators(self.sourceFileEdit.text().split(os.pathsep)),
+            Utilities.toNativeSeparators(self.targetDirEdit.text()),
+            self.sourcecodeCheckBox.isChecked())
