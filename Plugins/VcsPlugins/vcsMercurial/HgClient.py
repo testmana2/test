@@ -28,6 +28,8 @@ class HgClient(QObject):
     OutputFormatSize = struct.calcsize(OutputFormat)
     ReturnFormat = ">i"
     
+    Channels = (b"I", b"L", b"o", b"e", b"r", b"d")
+    
     def __init__(self, repoPath, encoding, parent=None):
         """
         Constructor
@@ -173,15 +175,19 @@ class HgClient(QObject):
         @return tuple of channel designator and channel data
             (string, integer or string or bytes)
         """
+        additionalData = b""
+        
         if self.__server.bytesAvailable() > 0 or \
            self.__server.waitForReadyRead(10000):
+            while bytes(self.__server.peek(1)) not in HgClient.Channels:
+                additionalData += bytes(self.__server.read(1))
+            if additionalData:
+                return ("o", str(additionalData, self.__encoding, "replace"))
+            
             data = bytes(self.__server.read(HgClient.OutputFormatSize))
             if not data:
                 return "", ""
             
-            if data.startswith(b" L") and self.__server.bytesAvailable() > 0:
-                # workaround for an issue in the Mercurial command server
-                data = data[1:] + bytes(self.__server.read(1))
             channel, length = struct.unpack(HgClient.OutputFormat, data)
             channel = channel.decode(self.__encoding)
             if channel in "IL":
