@@ -183,6 +183,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             the files shall be added as source code
         """
         return (
-            Utilities.toNativeSeparators(self.sourceFileEdit.text().split(os.pathsep)),
+            [Utilities.toNativeSeparators(f) for f in
+                self.sourceFileEdit.text().split(os.pathsep)],
             Utilities.toNativeSeparators(self.targetDirEdit.text()),
             self.sourcecodeCheckBox.isChecked())
