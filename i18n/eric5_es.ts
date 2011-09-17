@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1574,8 +1575,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
@@ -1625,8 +1626,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="72"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -11878,7 +11879,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="782"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -29072,7 +29073,13 @@ By checking the various checkboxes, the search can be made more specific. The se
 string might be a regular expression. In a regular expression, special characters 
 interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;b&gt;Buscar y Reemplazar&lt;/b&gt;
+&lt;p&gt;Este diálogo es utilizado para buscar un texto y reemplazarlo por otro. 
+Utilizando las distintas checkboxes, la búsqueda se puede hacer más específica. La cadena de búsqueda
+puede ser una expresión regular. En una expresión regular, los caracteres especiales
+interpretables son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="QScintilla/SearchReplaceWidget.py" line="60"/>
@@ -29082,7 +29089,12 @@ interpreted are:&lt;/p&gt;
 can be made more specific. The search string might be a regular expression. In a regular 
 expression, special characters interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;b&gt;Buscar&lt;/b&gt;
+&lt;p&gt;Este diálogo es utilizado para buscar un texto. Utilizando las distintas checkboxes, la búsqueda 
+se puede hacer más específica. La cadena de búsqueda puede ser una expresión regular. En una expresión regular, 
+los caracteres especiales interpretables son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="QScintilla/SearchReplaceWidget.py" line="71"/>
@@ -29120,7 +29132,40 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
 &lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Concuerda con cualquier carácter&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el comienzo de una región para etiquetar una concordancia.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el final de una región etiquetada.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Donde &lt;code&gt;n&lt;/code&gt; es 1 a 9, se refiere a la primera hasta novena región etiquetada 
+al reemplazar. Por ejemplo, si la cadena de búsqueda fuera &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; y
+la cadena de substitución fuera &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, al aplicarse a &lt;code&gt;Fred2XXX&lt;/code&gt; 
+generaría &lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Concuerda con un principio de palabra utilizando las definiciones de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Concuerda con un final de palabra utilizando las definiciones de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Esto le permite utilizar un carácter x que de otro modo tendría significado especial. Por
+ejemplo, \[ se interpretaría como [ y no como el comienzo de un conjunto de caracteres.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Indica un conjunto de caracteres, por ejemplo [abc] indica cualquiera de los caracteres a,
+b o c. Es posible también utilizar rangos, por ejemplo [a-z] concuerda con cualquier carácter en minúscula.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;El complementario de los caracteres en el conjunto. Por ejemplo, [^A-Za-z] concordaría con cualquier carácter excepto 
+un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Concuerda con un principio de línea (excepto en el caso de que se utilice dentro de un conjunto de caracteres, ver arriba).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Concuerda con un final de línea.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Concuerda 0 ó más veces. Por ejemplo, &lt;code&gt;Sa*m&lt;/code&gt; concuerda con &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; etcétera.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Concuerda 1 ó más veces. Por ejemplo, &lt;code&gt;Sa+m&lt;/code&gt; concuerda con
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; etcétera.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
 </context>
 <context>
@@ -40654,12 +40699,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="4877"/>
         <source>Open Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir Navegador</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4877"/>
         <source>Could not start a web browser</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha podido Iniciar el navegador web</translation>
     </message>
 </context>
 <context>
