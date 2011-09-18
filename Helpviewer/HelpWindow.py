@@ -316,6 +316,25 @@ class HelpWindow(QMainWindow):
             settings.setDefaultTextEncoding(
                 Preferences.getHelp("DefaultTextEncoding"))
         
+        if hasattr(QWebSettings, "SpatialNavigationEnabled"):
+            settings.setAttribute(QWebSettings.SpatialNavigationEnabled,
+                Preferences.getHelp("SpatialNavigationEnabled"))
+        if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
+            settings.setAttribute(QWebSettings.LinksIncludedInFocusChain,
+                Preferences.getHelp("LinksIncludedInFocusChain"))
+        if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
+            settings.setAttribute(QWebSettings.LocalContentCanAccessRemoteUrls,
+                Preferences.getHelp("LocalContentCanAccessRemoteUrls"))
+        if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
+            settings.setAttribute(QWebSettings.LocalContentCanAccessFileUrls,
+                Preferences.getHelp("LocalContentCanAccessFileUrls"))
+        if hasattr(QWebSettings, "XSSAuditingEnabled"):
+            settings.setAttribute(QWebSettings.XSSAuditingEnabled,
+                Preferences.getHelp("XSSAuditingEnabled"))
+        if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
+            settings.setAttribute(QWebSettings.SiteSpecificQuirksEnabled,
+                Preferences.getHelp("SiteSpecificQuirksEnabled"))
+    
     def __initActions(self):
         """
         Private method to define the user interface actions.

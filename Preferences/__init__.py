@@ -681,6 +681,24 @@ class Prefs(object):
     if hasattr(QWebSettings, "defaultTextEncoding"):
         helpDefaults["DefaultTextEncoding"] = \
             websettings.defaultTextEncoding()
+    if hasattr(QWebSettings, "SpatialNavigationEnabled"):
+        helpDefaults["SpatialNavigationEnabled"] = \
+            websettings.testAttribute(QWebSettings.SpatialNavigationEnabled)
+    if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
+        helpDefaults["LinksIncludedInFocusChain"] = \
+            websettings.testAttribute(QWebSettings.LinksIncludedInFocusChain)
+    if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
+        helpDefaults["LocalContentCanAccessRemoteUrls"] = \
+            websettings.testAttribute(QWebSettings.LocalContentCanAccessRemoteUrls)
+    if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
+        helpDefaults["LocalContentCanAccessFileUrls"] = \
+            websettings.testAttribute(QWebSettings.LocalContentCanAccessFileUrls)
+    if hasattr(QWebSettings, "XSSAuditingEnabled"):
+        helpDefaults["XSSAuditingEnabled"] = \
+            websettings.testAttribute(QWebSettings.XSSAuditingEnabled)
+    if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
+        helpDefaults["SiteSpecificQuirksEnabled"] = \
+            websettings.testAttribute(QWebSettings.SiteSpecificQuirksEnabled)
 
     # defaults for system settings
     sysDefaults = {
@@ -1976,7 +1994,10 @@ def getHelp(key, prefClass=Prefs):
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
                  "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled",
-                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack"]:
+                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack", 
+                 "SpatialNavigationEnabled", "LinksIncludedInFocusChain",
+                 "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
+                 "XSSAuditingEnabled", "SiteSpecificQuirksEnabled"]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:

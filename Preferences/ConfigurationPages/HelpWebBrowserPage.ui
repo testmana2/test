@@ -73,16 +73,6 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="accessKeysCheckBox">
-       <property name="toolTip">
-        <string>Select to enable support for access keys</string>
-       </property>
-       <property name="text">
-        <string>Enable access keys</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>
@@ -493,6 +483,53 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Navigation</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="spatialCheckBox">
+        <property name="toolTip">
+         <string>Select to enable the spatial navigation feature</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
+&lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Enable Spatial Navigation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="linksInFocusChainCheckBox">
+        <property name="toolTip">
+         <string>Select to include links in focus chain</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
+&lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Include Links in Focus Chain</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="accessKeysCheckBox">
+        <property name="toolTip">
+         <string>Select to enable support for access keys</string>
+        </property>
+        <property name="text">
+         <string>Enable access keys</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <spacer>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -512,7 +549,6 @@
   <tabstop>webSuggestionsCheckBox</tabstop>
   <tabstop>saveGeometryCheckBox</tabstop>
   <tabstop>showTabPreviews</tabstop>
-  <tabstop>accessKeysCheckBox</tabstop>
   <tabstop>startupCombo</tabstop>
   <tabstop>homePageEdit</tabstop>
   <tabstop>setCurrentPageButton</tabstop>
@@ -532,6 +568,9 @@
   <tabstop>cacheSizeSpinBox</tabstop>
   <tabstop>languageCombo</tabstop>
   <tabstop>printBackgroundsCheckBox</tabstop>
+  <tabstop>spatialCheckBox</tabstop>
+  <tabstop>linksInFocusChainCheckBox</tabstop>
+  <tabstop>accessKeysCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

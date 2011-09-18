@@ -48,6 +48,18 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
                 Preferences.getHelp("LocalStorageEnabled"))
         else:
             self.localStorageGroup.setEnabled(False)
+        
+        if hasattr(QWebSettings, "LocalContentCanAccessRemoteUrls"):
+            self.localRemoteUrlsCheckBox.setChecked(
+                Preferences.getHelp("LocalContentCanAccessRemoteUrls"))
+        else:
+            self.localRemoteUrlsCheckBox.setVisible(False)
+        
+        if hasattr(QWebSettings, "LocalContentCanAccessFileUrls"):
+            self.localFileUrlsCheckBox.setChecked(
+                Preferences.getHelp("LocalContentCanAccessFileUrls"))
+        else:
+            self.localFileUrlsCheckBox.setVisible(False)
     
     def storeData(self):
         """
@@ -67,6 +79,12 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
         if self.localStorageGroup.isEnabled():
             Preferences.setHelp("LocalStorageEnabled",
                 self.localStorageEnabledCheckBox.isChecked())
+            if self.localRemoteUrlsCheckBox.isVisible():
+                Preferences.setHelp("LocalContentCanAccessRemoteUrls",
+                    self.localRemoteUrlsCheckBox.isChecked())
+            if self.localFileUrlsCheckBox.isVisible():
+                Preferences.setHelp("LocalContentCanAccessFileUrls",
+                    self.localFileUrlsCheckBox.isChecked())
     
     @pyqtSlot()
     def on_showDatabasesButton_clicked(self):

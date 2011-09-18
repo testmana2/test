@@ -9,6 +9,7 @@ Module implementing the Help web browser configuration page.
 
 from PyQt4.QtCore import pyqtSlot, QLocale
 from PyQt4.QtNetwork import QNetworkRequest
+from PyQt4.QtWebKit import QWebSettings
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
@@ -121,6 +122,17 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         index = self.languageCombo.findData(Preferences.getHelp("SearchLanguage"))
         if index > -1:
             self.languageCombo.setCurrentIndex(index)
+        
+        if hasattr(QWebSettings, "SpatialNavigationEnabled"):
+            self.spatialCheckBox.setChecked(
+                Preferences.getHelp("SpatialNavigationEnabled"))
+        else:
+            self.spatialCheckBox.setEnabled(False)
+        if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
+            self.linksInFocusChainCheckBox.setChecked(
+                Preferences.getHelp("LinksIncludedInFocusChain"))
+        else:
+            self.linksInFocusChainCheckBox.setEnabled(False)
     
     def save(self):
         """
@@ -199,6 +211,13 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             # fall back to system default
             language = QLocale.system().language()
         Preferences.setHelp("SearchLanguage", language)
+        
+        if hasattr(QWebSettings, "SpatialNavigationEnabled"):
+            Preferences.setHelp("SpatialNavigationEnabled",
+                self.spatialCheckBox.isChecked())
+        if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
+            Preferences.setHelp("LinksIncludedInFocusChain",
+                self.linksInFocusChainCheckBox.isChecked())
     
     @pyqtSlot()
     def on_setCurrentPageButton_clicked(self):
