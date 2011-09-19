@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>613</width>
-    <height>1021</height>
+    <height>1049</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -70,6 +70,16 @@
        </property>
        <property name="text">
         <string>Show preview when hovering tab</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QCheckBox" name="quirksCheckBox">
+       <property name="toolTip">
+        <string>Select to enable the browser's workaround for broken sites</string>
+       </property>
+       <property name="text">
+        <string>Enable workaround for broken sites</string>
        </property>
       </widget>
      </item>
@@ -260,6 +270,29 @@
         </property>
         <property name="text">
          <string>Tell web sites I do not want to be tracked</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="title">
+      <string>Security</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="xssAuditingCheckBox">
+        <property name="toolTip">
+         <string>Select to enable XSS auditing</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
+&lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector's JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Enable XSS Auditing</string>
         </property>
        </widget>
       </item>
@@ -549,6 +582,7 @@
   <tabstop>webSuggestionsCheckBox</tabstop>
   <tabstop>saveGeometryCheckBox</tabstop>
   <tabstop>showTabPreviews</tabstop>
+  <tabstop>quirksCheckBox</tabstop>
   <tabstop>startupCombo</tabstop>
   <tabstop>homePageEdit</tabstop>
   <tabstop>setCurrentPageButton</tabstop>
@@ -560,6 +594,7 @@
   <tabstop>jsClipboardCheckBox</tabstop>
   <tabstop>pluginsCheckBox</tabstop>
   <tabstop>doNotTrackCheckBox</tabstop>
+  <tabstop>xssAuditingCheckBox</tabstop>
   <tabstop>expireHistory</tabstop>
   <tabstop>diskCacheCheckBox</tabstop>
   <tabstop>cacheKeepButton</tabstop>

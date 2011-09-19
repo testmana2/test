@@ -133,6 +133,16 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
                 Preferences.getHelp("LinksIncludedInFocusChain"))
         else:
             self.linksInFocusChainCheckBox.setEnabled(False)
+        if hasattr(QWebSettings, "XSSAuditingEnabled"):
+            self.xssAuditingCheckBox.setChecked(
+                Preferences.getHelp("XSSAuditingEnabled"))
+        else:
+            self.xssAuditingCheckBox.setEnabled(False)
+        if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
+            self.quirksCheckBox.setChecked(
+                Preferences.getHelp("SiteSpecificQuirksEnabled"))
+        else:
+            self.quirksCheckBox.setEnabled(False)
     
     def save(self):
         """
@@ -218,6 +228,12 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         if hasattr(QWebSettings, "LinksIncludedInFocusChain"):
             Preferences.setHelp("LinksIncludedInFocusChain",
                 self.linksInFocusChainCheckBox.isChecked())
+        if hasattr(QWebSettings, "XSSAuditingEnabled"):
+            Preferences.setHelp("XSSAuditingEnabled",
+                self.xssAuditingCheckBox.isChecked())
+        if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
+            Preferences.setHelp("SiteSpecificQuirksEnabled",
+                self.quirksCheckBox.isChecked())
     
     @pyqtSlot()
     def on_setCurrentPageButton_clicked(self):
