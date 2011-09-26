@@ -137,9 +137,9 @@ class Pep8Py2Checker(object):
         
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "" or not Utilities.isExecutable(interpreter):
-            self.messages.append(filename, "1", "1",
+            self.messages.append((filename, 1, 1,
                 QCoreApplication.translate("Pep8Py2Checker",
-                    "Python2 interpreter not configured."))
+                    "Python2 interpreter not configured.")))
             return
         
         checker = os.path.join(getConfig('ericDir'), 
@@ -167,7 +167,7 @@ class Pep8Py2Checker(object):
                         Preferences.getSystem("IOEncoding"), 
                         'replace').splitlines()
             if output[0] == "ERROR":
-                self.messages.append(filename, "1", "1", output[2])
+                self.messages.append((filename, 1, 1, output[2]))
                 return
             
             if output[0] == "NO_PEP8":
@@ -198,6 +198,6 @@ class Pep8Py2Checker(object):
                 self.statistics[code] = int(countStr)
                 index += 1
         else:
-            self.messages.append(filename, "1", "1",
+            self.messages.append((filename, 1, 1,
                 QCoreApplication.translate("Pep8Py2Checker",
-                    "Python2 interpreter did not finish within 15s."))
+                    "Python2 interpreter did not finish within 15s.")))
