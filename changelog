@@ -35,6 +35,8 @@ Version 5.2-snapshot-2011mmdd:
      --- added configuration option to create backup files when reverting changes
 - enhancements to the web browser
   -- added the "Do Not Track" feature
+  -- added code to indicate invalid SSL certificates in the URL entry and the SSL
+     info dialog
 
 Version 5.2-snapshot-20110724:
 - bug fixes

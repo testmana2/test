@@ -17,6 +17,9 @@ class SslLabel(QLabel):
     """
     clicked = pyqtSignal()
     
+    okStyle = "QLabel { color : white; background-color : green; }"
+    nokStyle = "QLabel { color : white; background-color : red; }"
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -49,3 +52,14 @@ class SslLabel(QLabel):
             self.clicked.emit()
         else:
             super().mouseDoubleClickEvent(evt)
+    
+    def setValidity(self, valid):
+        """
+        Public method to set the validity indication.
+        
+        @param valid flag indicating the certificate validity (boolean)
+        """
+        if valid:
+            self.setStyleSheet(SslLabel.okStyle)
+        else:
+            self.setStyleSheet(SslLabel.nokStyle)

@@ -34763,69 +34763,79 @@ Non connesso</translation>
         <translation>Informazioni certificato SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="28"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="32"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
         <translation>&lt;b&gt;Emesso per&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="122"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="126"/>
         <source>Common Name (CN)</source>
         <translation>Nome Comune (CN)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="142"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="146"/>
         <source>Organization (O)</source>
         <translation>Organizzazione (O)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="162"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="166"/>
         <source>Organizational Unit (OU)</source>
         <translation>Organizational Unit (OU)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="95"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="99"/>
         <source>Serialnumber</source>
         <translation>Numero seriale</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="115"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="119"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
         <translation>&lt;b&gt;Emesso da&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="182"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="186"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
         <translation>&lt;B&gt;Validità&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="189"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="193"/>
         <source>Issued on</source>
         <translation>Emesso il</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="209"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="213"/>
         <source>Expires on</source>
         <translation>Scade il</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="229"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="240"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
         <translation>&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="236"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="247"/>
         <source>SHA1-Fingerprint</source>
         <translation>SHA1-Fingerprint</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.ui" line="256"/>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="267"/>
         <source>MD5-Fingerprint</source>
         <translation>MD5-Fingerprint</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SslInfoDialog.py" line="74"/>
+        <location filename="Helpviewer/SslInfoDialog.py" line="88"/>
         <source>&lt;not part of the certificate&gt;</source>
         <translation>&lt;non parte del certificato&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="25"/>
+        <source>This certificated has been blacklisted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SslInfoDialog.ui" line="233"/>
+        <source>This certificate is not valid yet or has expired.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -43439,7 +43449,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">Inserisci l&apos;indirizzo qui.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UrlBar/UrlBar.py" line="159"/>
+        <location filename="Helpviewer/UrlBar/UrlBar.py" line="157"/>
         <source>Unknown</source>
         <translation>Sconosciuto</translation>
     </message>

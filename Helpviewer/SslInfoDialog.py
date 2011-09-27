@@ -7,7 +7,7 @@
 Module implementing a dialog to show SSL certificate infos.
 """
 
-from PyQt4.QtCore import QCryptographicHash
+from PyQt4.QtCore import QCryptographicHash, QDateTime
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QSslCertificate
 
@@ -30,6 +30,13 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.blacklistedLabel.setVisible(False)
+        self.blacklistedLabel.setStyleSheet(
+            "QLabel { color : white; background-color : red; }")
+        self.expiredLabel.setVisible(False)
+        self.expiredLabel.setStyleSheet(
+            "QLabel { color : white; background-color : red; }")
+        
         self.subjectCommonNameLabel.setText(self.__certificateString(
             certificate.subjectInfo(QSslCertificate.CommonName)))
         self.subjectOrganizationLabel.setText(self.__certificateString(
@@ -49,6 +56,13 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
             str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding="ascii")))
         self.md5Label.setText(self.__formatHexString(
             str(certificate.digest(QCryptographicHash.Md5).toHex(), encoding="ascii")))
+        
+        if not certificate.isValid():
+            # something is wrong; indicate it to the user
+            if self.__hasExpired(certificate.effectiveDate(), certificate.expiryDate()):
+                self.expiredLabel.setVisible(True)
+            else:
+                self.blacklistedLabel.setVisible(True)
     
     def __certificateString(self, txt):
         """
@@ -78,7 +92,7 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         else:
             hexString = hex(int(serial))[2:]
             return self.__formatHexString(hexString)
-        
+    
     def __formatHexString(self, hexString):
         """
         Private method to format a hex string for display.
@@ -97,3 +111,15 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
             hexString = hexString[2:]
         
         return ':'.join(hexList)
+    
+    def __hasExpired(self, effectiveDate, expiryDate):
+        """
+        Private method to check for a certificate expiration.
+        
+        @param effectiveDate date the certificate becomes effective (QDateTime)
+        @param expiryDate date the certificate expires (QDateTime)
+        @return flag indicating the expiration status (boolean)
+        """
+        now = QDateTime.currentDateTime()
+        
+        return now < effectiveDate or now >= expiryDate

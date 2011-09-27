@@ -56,8 +56,6 @@ class UrlBar(E5LineEdit):
         self.addWidget(self.__favicon, E5LineEdit.LeftSide)
         
         self.__sslLabel = SslLabel(self)
-        self.__sslLabel.setStyleSheet(
-            "QLabel { color : white; background-color : green; }")
         self.addWidget(self.__sslLabel, E5LineEdit.LeftSide)
         self.__sslLabel.setVisible(False)
         
@@ -159,6 +157,7 @@ class UrlBar(E5LineEdit):
                             org = self.trUtf8("Unknown")
                     self.__sslLabel.setText(" {0} ".format(org))
                     self.__sslLabel.setVisible(True)
+                    self.__sslLabel.setValidity(sslInfo.isValid())
                     return
             
             self.__sslLabel.setVisible(False)
