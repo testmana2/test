@@ -340,6 +340,8 @@ def cleanUp():
                 apiname = os.path.join(apidir, progLanguage, name)
                 if os.path.exists(apiname):
                     os.remove(apiname)
+            for apiName in glob.glob(os.path.join(apidir, progLanguage, "*.bas")):
+                os.remove(apiname)
     except AttributeError:
         pass
 
@@ -474,9 +476,19 @@ def installEric():
                 shutil.copy(apiName, apidir)
             except EnvironmentError:
                 print("Could not install '{0}'.".format(apiName))
+        for apiName in glob.glob(os.path.join(sourceDir, "APIs", progLanguage, "*.bas")):
+            try:
+                shutil.copy(apiName, apidir)
+            except EnvironmentError:
+                print("Could not install '{0}'.".format(apiName))
         if progLanguage == "Python":
             # copy Python3 API files to the same destination
             for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+                try:
+                    shutil.copy(apiName, apidir)
+                except EnvironmentError:
+                    print("Could not install '{0}'.".format(apiName))
+            for apiName in glob.glob(os.path.join(sourceDir, "APIs", "Python3", "*.bas")):
                 try:
                     shutil.copy(apiName, apidir)
                 except EnvironmentError:

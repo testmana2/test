@@ -15,12 +15,12 @@ Version 5.2-snapshot-2011mmdd:
      with '.rej' appended)
 - enhancements of the cooperation functions
   -- added code to the cooperation functions to support IPv6
-- enhancements to the source browser
+- enhancements of the source browser
   -- show class attributes, class methods and static methods with different icons
   -- added context menu for attributes
-- enhancements to the source documentor
+- enhancements of the source documentor
   -- introduced separate sections for class methods and static methods
-- enhancements to the version control system interfaces
+- enhancements of the version control system interfaces
   -- all
      --- made "Show Log" behave like "Show Limited Log" and removed the later
      --- added context menu actions to select/deselect all commitable items
@@ -33,10 +33,14 @@ Version 5.2-snapshot-2011mmdd:
      --- added support for importing patches
      --- added support for exporting patches
      --- added configuration option to create backup files when reverting changes
-- enhancements to the web browser
+- enhancements of the web browser
   -- added the "Do Not Track" feature
   -- added code to indicate invalid SSL certificates in the URL entry and the SSL
      info dialog
+- enhancements of the tools
+  -- API files generator
+     --- added code to write base class information to be used by the
+         eric assistant plug-in
 
 Version 5.2-snapshot-20110724:
 - bug fixes

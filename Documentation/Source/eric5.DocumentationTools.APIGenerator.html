@@ -80,7 +80,10 @@ object
 <td>Private method to check, if an object is considered private.</td>
 </tr><tr>
 <td><a href="#APIGenerator.genAPI">genAPI</a></td>
-<td>Method to generate the source code documentation.</td>
+<td>Public method to generate the API information.</td>
+</tr><tr>
+<td><a href="#APIGenerator.genBases">genBases</a></td>
+<td>Public method to generate the base classes information.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -151,7 +154,7 @@ flag indicating, that object is considered private (boolean)
 <h4>APIGenerator.genAPI</h4>
 <b>genAPI</b>(<i>newStyle, basePackage, includePrivate</i>)
 <p>
-        Method to generate the source code documentation.
+        Public method to generate the API information.
 </p><dl>
 <dt><i>newStyle</i></dt>
 <dd>
@@ -168,7 +171,22 @@ flag indicating to include
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-The API information. (string)
+API information (list of strings)
+</dd>
+</dl><a NAME="APIGenerator.genBases" ID="APIGenerator.genBases"></a>
+<h4>APIGenerator.genBases</h4>
+<b>genBases</b>(<i>includePrivate</i>)
+<p>
+        Public method to generate the base classes information.
+</p><dl>
+<dt><i>includePrivate</i></dt>
+<dd>
+flag indicating to include private classes (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+base classes information (dictionary of list of strings)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

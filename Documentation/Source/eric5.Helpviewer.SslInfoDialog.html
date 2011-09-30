@@ -67,6 +67,9 @@ QDialog, Ui_SslInfoDialog
 <td><a href="#SslInfoDialog.__formatHexString">__formatHexString</a></td>
 <td>Private method to format a hex string for display.</td>
 </tr><tr>
+<td><a href="#SslInfoDialog.__hasExpired">__hasExpired</a></td>
+<td>Private method to check for a certificate expiration.</td>
+</tr><tr>
 <td><a href="#SslInfoDialog.__serialNumber">__serialNumber</a></td>
 <td>Private slot to format the certificate serial number.</td>
 </tr>
@@ -117,6 +120,24 @@ hex string to be formatted (string)
 <dt>Returns:</dt>
 <dd>
 formatted string (string)
+</dd>
+</dl><a NAME="SslInfoDialog.__hasExpired" ID="SslInfoDialog.__hasExpired"></a>
+<h4>SslInfoDialog.__hasExpired</h4>
+<b>__hasExpired</b>(<i>effectiveDate, expiryDate</i>)
+<p>
+        Private method to check for a certificate expiration.
+</p><dl>
+<dt><i>effectiveDate</i></dt>
+<dd>
+date the certificate becomes effective (QDateTime)
+</dd><dt><i>expiryDate</i></dt>
+<dd>
+date the certificate expires (QDateTime)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the expiration status (boolean)
 </dd>
 </dl><a NAME="SslInfoDialog.__serialNumber" ID="SslInfoDialog.__serialNumber"></a>
 <h4>SslInfoDialog.__serialNumber</h4>

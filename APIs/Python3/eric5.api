@@ -1018,6 +1018,7 @@ eric5.Debugger.WatchPointModel.WatchPointModel?1(parent=None)
 eric5.Debugger.WatchPointViewer.WatchPointViewer.setModel?4(model)
 eric5.Debugger.WatchPointViewer.WatchPointViewer?1(parent=None)
 eric5.DocumentationTools.APIGenerator.APIGenerator.genAPI?4(newStyle, basePackage, includePrivate)
+eric5.DocumentationTools.APIGenerator.APIGenerator.genBases?4(includePrivate)
 eric5.DocumentationTools.APIGenerator.APIGenerator?1(module)
 eric5.DocumentationTools.Config.eric5docColorParameterNames?7
 eric5.DocumentationTools.Config.eric5docDefaultColors?7
@@ -2466,6 +2467,9 @@ eric5.Helpviewer.UrlBar.FavIconLabel.FavIconLabel?1(parent=None)
 eric5.Helpviewer.UrlBar.SslLabel.SslLabel.clicked?7
 eric5.Helpviewer.UrlBar.SslLabel.SslLabel.mouseDoubleClickEvent?4(evt)
 eric5.Helpviewer.UrlBar.SslLabel.SslLabel.mouseReleaseEvent?4(evt)
+eric5.Helpviewer.UrlBar.SslLabel.SslLabel.nokStyle?7
+eric5.Helpviewer.UrlBar.SslLabel.SslLabel.okStyle?7
+eric5.Helpviewer.UrlBar.SslLabel.SslLabel.setValidity?4(valid)
 eric5.Helpviewer.UrlBar.SslLabel.SslLabel?1(parent=None)
 eric5.Helpviewer.UrlBar.StackedUrlBar.StackedUrlBar.currentUrlBar?4()
 eric5.Helpviewer.UrlBar.StackedUrlBar.StackedUrlBar.moveBar?4(from_, to_)
@@ -3350,6 +3354,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.on_multipleE
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.on_tagButton_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog.on_tagCombo_editTextChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.HgBundleDialog?1(tagsList, branchesList, bookmarksList=None, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.Channels?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.InputFormat?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.OutputFormat?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.OutputFormatSize?7

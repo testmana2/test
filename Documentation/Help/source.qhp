@@ -2679,6 +2679,7 @@
       <keyword name="SslInfoDialog (Constructor)" id="SslInfoDialog (Constructor)" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__init__" />
       <keyword name="SslInfoDialog.__certificateString" id="SslInfoDialog.__certificateString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__certificateString" />
       <keyword name="SslInfoDialog.__formatHexString" id="SslInfoDialog.__formatHexString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__formatHexString" />
+      <keyword name="SslInfoDialog.__hasExpired" id="SslInfoDialog.__hasExpired" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__hasExpired" />
       <keyword name="SslInfoDialog.__serialNumber" id="SslInfoDialog.__serialNumber" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__serialNumber" />
       <keyword name="SslCertificatesDialog (Module)" id="SslCertificatesDialog (Module)" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
       <keyword name="SslCertificatesDialog" id="SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html#SslCertificatesDialog" />
@@ -6431,6 +6432,7 @@
       <keyword name="APIGenerator.__addMethodsAPI" id="APIGenerator.__addMethodsAPI" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.__addMethodsAPI" />
       <keyword name="APIGenerator.__isPrivate" id="APIGenerator.__isPrivate" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.__isPrivate" />
       <keyword name="APIGenerator.genAPI" id="APIGenerator.genAPI" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.genAPI" />
+      <keyword name="APIGenerator.genBases" id="APIGenerator.genBases" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.genBases" />
       <keyword name="cursors (Package)" id="cursors (Package)" ref="index-eric5.IconEditor.cursors.html" />
       <keyword name="cursors_rc (Module)" id="cursors_rc (Module)" ref="eric5.IconEditor.cursors.cursors_rc.html" />
       <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qCleanupResources" />
@@ -7736,6 +7738,7 @@
       <keyword name="SslLabel (Constructor)" id="SslLabel (Constructor)" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.__init__" />
       <keyword name="SslLabel.mouseDoubleClickEvent" id="SslLabel.mouseDoubleClickEvent" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.mouseDoubleClickEvent" />
       <keyword name="SslLabel.mouseReleaseEvent" id="SslLabel.mouseReleaseEvent" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.mouseReleaseEvent" />
+      <keyword name="SslLabel.setValidity" id="SslLabel.setValidity" ref="eric5.Helpviewer.UrlBar.SslLabel.html#SslLabel.setValidity" />
       <keyword name="UrlBar (Module)" id="UrlBar (Module)" ref="eric5.Helpviewer.UrlBar.UrlBar.html" />
       <keyword name="UrlBar" id="UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar" />
       <keyword name="UrlBar (Constructor)" id="UrlBar (Constructor)" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__init__" />
