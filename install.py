@@ -338,7 +338,7 @@ def cleanUp():
                 apiname = os.path.join(apidir, progLanguage.lower(), name)
                 if os.path.exists(apiname):
                     os.remove(apiname)
-            for apiName in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
+            for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
                 os.remove(apiname)
     except AttributeError:
         pass
