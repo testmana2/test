@@ -20,6 +20,7 @@ from eric5config import getConfig
 # Define the globals.
 progName = None
 pyModDir = None
+progLanguages = ["Python", "Ruby"]
 
 
 def usage(rcode=2):
@@ -123,9 +124,12 @@ def uninstallEric():
     
     # Cleanup API files
     apidir = getConfig('apidir')
-    for name in getConfig('apis'):
-        apiname = os.path.join(apidir, name)
-        if os.path.exists(apiname):
+    for progLanguage in progLanguages:
+        for name in getConfig('apis'):
+            apiname = os.path.join(apidir, progLanguage.lower(), name)
+            if os.path.exists(apiname):
+                os.remove(apiname)
+        for apiName in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
             os.remove(apiname)
     
 
