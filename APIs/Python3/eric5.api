@@ -992,6 +992,7 @@ eric5.Debugger.WatchPointModel.WatchPointModel?1(parent = None)
 eric5.Debugger.WatchPointViewer.WatchPointViewer.setModel?4(model)
 eric5.Debugger.WatchPointViewer.WatchPointViewer?1(parent = None)
 eric5.DocumentationTools.APIGenerator.APIGenerator.genAPI?4(newStyle, basePackage, includePrivate)
+eric5.DocumentationTools.APIGenerator.APIGenerator.genBases?4(includePrivate)
 eric5.DocumentationTools.APIGenerator.APIGenerator?1(module)
 eric5.DocumentationTools.Config.eric5docColorParameterNames?7
 eric5.DocumentationTools.Config.eric5docDefaultColors?7
@@ -5019,7 +5020,7 @@ eric5.QScintilla.Editor.Editor.getFileTypeByFlag?4()
 eric5.QScintilla.Editor.Editor.getFlakesWarnings?4()
 eric5.QScintilla.Editor.Editor.getFolds?4()
 eric5.QScintilla.Editor.Editor.getHighlightPosition?4()
-eric5.QScintilla.Editor.Editor.getLanguage?4(normalized = True)
+eric5.QScintilla.Editor.Editor.getLanguage?4(normalized=True, forPygments=False)
 eric5.QScintilla.Editor.Editor.getLexer?4()
 eric5.QScintilla.Editor.Editor.getMenu?4(menuName)
 eric5.QScintilla.Editor.Editor.getNoName?4()
@@ -6893,6 +6894,7 @@ eric5.patch_modpython.progName?7
 eric5.patch_modpython.usage?4(rcode = 2)
 eric5.uninstall.initGlobals?4()
 eric5.uninstall.main?4(argv)
+eric5.uninstall.progLanguages?7
 eric5.uninstall.progName?7
 eric5.uninstall.pyModDir?7
 eric5.uninstall.uninstallEric?4()

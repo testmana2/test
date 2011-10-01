@@ -1,5 +1,9 @@
 Change Log
 ----------
+Version 5.1.6:
+- bug fixes
+- enhancement to the API generator to support the latest eric assistant plug-in
+
 Version 5.1.5:
 - bug fixes
 

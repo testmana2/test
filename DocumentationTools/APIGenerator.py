@@ -24,14 +24,14 @@ class APIGenerator(object):
         
     def genAPI(self, newStyle, basePackage, includePrivate):
         """
-        Method to generate the source code documentation.
+        Public method to generate the API information.
         
         @param newStyle flag indicating the api generation for QScintilla 1.7 and 
             newer (boolean) (ignored)
         @param basePackage name of the base package (string)
         @param includePrivate flag indicating to include 
             private methods/functions (boolean)
-        @return The API information. (string)
+        @return API information (list of strings)
         """
         self.includePrivate = includePrivate
         modulePath = self.module.name.split('.')
@@ -45,6 +45,24 @@ class APIGenerator(object):
         self.__addClassesAPI()
         self.__addFunctionsAPI()
         return self.api
+        
+    def genBases(self, includePrivate):
+        """
+        Public method to generate the base classes information.
+        
+        @param includePrivate flag indicating to include private classes (boolean)
+        @return base classes information (dictionary of list of strings)
+        """
+        bases = {}
+        self.includePrivate = includePrivate
+        classNames = sorted(list(self.module.classes.keys()))
+        for className in classNames:
+            if not self.__isPrivate(self.module.classes[className]):
+                if className not in bases:
+                    bases[className] = [
+                        b for b in self.module.classes[className].super
+                        if b != "object"]
+        return bases
         
     def __isPrivate(self, obj):
         """

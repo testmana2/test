@@ -6257,6 +6257,7 @@
       <keyword name="APIGenerator.__addMethodsAPI" id="APIGenerator.__addMethodsAPI" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.__addMethodsAPI" />
       <keyword name="APIGenerator.__isPrivate" id="APIGenerator.__isPrivate" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.__isPrivate" />
       <keyword name="APIGenerator.genAPI" id="APIGenerator.genAPI" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.genAPI" />
+      <keyword name="APIGenerator.genBases" id="APIGenerator.genBases" ref="eric5.DocumentationTools.APIGenerator.html#APIGenerator.genBases" />
       <keyword name="cursors (Package)" id="cursors (Package)" ref="index-eric5.IconEditor.cursors.html" />
       <keyword name="cursors_rc (Module)" id="cursors_rc (Module)" ref="eric5.IconEditor.cursors.cursors_rc.html" />
       <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qCleanupResources" />

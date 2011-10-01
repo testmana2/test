@@ -168,6 +168,7 @@ def main():
     for progLanguage in sorted(progLanguages):
         basename = ""
         apis = []
+        basesDict = {}
 
         supportedExtensions = \
             DocumentationTools.supportedExtensionsDictForApis[progLanguage]
@@ -180,6 +181,7 @@ def main():
             else:
                 root, ext = os.path.splitext(outputFileName)
                 outputFile = "{0}-{1}{2}".format(root, progLanguage.lower(), ext)
+        basesFile = os.path.splitext(outputFile)[0] + '.bas'
         
         for arg in args:
             if os.path.isdir(arg):
@@ -240,6 +242,7 @@ def main():
                             basename = basename, inpackage = inpackage)
                         apiGenerator = APIGenerator(module)
                         api = apiGenerator.genAPI(True, basePackage, includePrivate)
+                        bases = apiGenerator.genBases(includePrivate)
                     except IOError as v:
                         sys.stderr.write("{0} error: {1}\n".format(file, v[1]))
                         continue
@@ -250,6 +253,9 @@ def main():
                     for apiEntry in api:
                         if not apiEntry in apis:
                             apis.append(apiEntry)
+                    for basesEntry in bases:
+                        if bases[basesEntry]:
+                            basesDict[basesEntry] = bases[basesEntry][:]
                     sys.stdout.write("-- {0} -- {1} ok\n".format(progLanguage, file))
 
         outdir = os.path.dirname(outputFile)
@@ -261,6 +267,15 @@ def main():
             out.close()
         except IOError as v:
             sys.stderr.write("{0} error: {1}\n".format(outputFile, v[1]))
+            sys.exit(3)
+        try:
+            out = open(basesFile, "w", encoding="utf-8", newline=newline)
+            for baseEntry in sorted(basesDict.keys()):
+                out.write("{0} {1}\n".format(
+                    baseEntry, " ".join(sorted(basesDict[baseEntry]))))
+            out.close()
+        except IOError as v:
+            sys.stderr.write("{0} error: {1}\n".format(basesFile, v[1]))
             sys.exit(3)
     
     sys.stdout.write('\nDone.\n')
