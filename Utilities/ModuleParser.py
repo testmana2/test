@@ -137,20 +137,20 @@ _py_getnext = re.compile(r"""
 
 |   (?P<Import>
         ^ (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
-        (?P<ImportList> [^#;\n]+ )
+        (?P<ImportList> (?: [^#;\\\n]+ (?: \\\n )* )* )
     )
 
 |   (?P<ImportFrom>
         ^ from [ \t]+
         (?P<ImportFromPath>
-            \w+
+            \.* \w+
             (?:
                 [ \t]* \. [ \t]* \w+
             )*
         )
         [ \t]+
         import [ \t]+
-        (?P<ImportFromList> [^#;\n]+ )
+        (?P<ImportFromList> (?: [^#;\\\n]+ (?: \\\n )* )* )
     )
 
 |   (?P<ConditionalDefine>
@@ -677,20 +677,20 @@ class Module(object):
 
             elif m.start("Import") >= 0:
                 # import module
-                for name in m.group("ImportList").split(','):
-                    name = name.strip()
+                names = [n.strip() for n in "".join(
+                    m.group("ImportList").splitlines()).replace("\\", "").split(',')]
+                for name in names:
                     if not name in self.imports:
                         self.imports.append(name)
             
             elif m.start("ImportFrom") >= 0:
                 # from module import stuff
                 mod = m.group("ImportFromPath")
-                names = m.group("ImportFromList").split(',')
+                names = [n.strip() for n in "".join(
+                    m.group("ImportFromList").splitlines()).replace("\\", "").split(',')]
                 if mod not in self.from_imports:
                     self.from_imports[mod] = []
-                for n in names:
-                    n = n.strip()
-                    self.from_imports[mod].append(n)
+                self.from_imports[mod].extend(names)
             
             elif m.start("ConditionalDefine") >= 0:
                 # a conditional function/method definition
