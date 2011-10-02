@@ -1204,6 +1204,7 @@ def compile(file, codestring=""):
         else:
             fn = detail.filename
             line = detail.lineno and detail.lineno or 1
+            index = "0"
             code = ""
             error = detail.msg
         return (True, fn, line, index, code, error)
