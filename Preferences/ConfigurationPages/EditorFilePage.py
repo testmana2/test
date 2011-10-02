@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the Editor General configuration page.
+Module implementing the Editor File Handling configuration page.
 """
 
 from PyQt4.QtCore import pyqtSlot
@@ -24,7 +24,7 @@ import Preferences
 
 class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
     """
-    Class implementing the Editor File configuration page.
+    Class implementing the Editor File Handling configuration page.
     """
     def __init__(self):
         """
@@ -48,8 +48,6 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             Preferences.getEditor("AutosaveInterval"))
         self.createBackupFileCheckBox.setChecked(
             Preferences.getEditor("CreateBackupFile"))
-        self.automaticSyntaxCheckCheckBox.setChecked(
-            Preferences.getEditor("AutoCheckSyntax"))
         self.defaultEncodingComboBox.setCurrentIndex(
             self.defaultEncodingComboBox.findText(
                 Preferences.getEditor("DefaultEncoding")))
@@ -85,14 +83,12 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
         
     def save(self):
         """
-        Public slot to save the Editor General configuration.
+        Public slot to save the Editor File Handling configuration.
         """
         Preferences.setEditor("AutosaveInterval",
             self.autosaveSlider.value())
         Preferences.setEditor("CreateBackupFile",
             self.createBackupFileCheckBox.isChecked())
-        Preferences.setEditor("AutoCheckSyntax",
-            self.automaticSyntaxCheckCheckBox.isChecked())
         enc = self.defaultEncodingComboBox.currentText()
         if not enc:
             enc = "utf-8"

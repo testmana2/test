@@ -407,6 +407,9 @@ class Editor(QsciScintillaCompat):
         
         # connect signals after loading the text
         self.textChanged.connect(self.__textChanged)
+        
+        # create the online syntax check timer
+        self.__initOnlineSyntaxCheck()
     
     def __registerImages(self):
         """
@@ -3416,6 +3419,13 @@ class Editor(QsciScintillaCompat):
             self.__markOccurrencesTimer.stop()
             self.clearSearchIndicators()
         
+        if Preferences.getEditor("OnlineSyntaxCheck"):
+            self.__onlineSyntaxCheckTimer.setInterval(
+                Preferences.getEditor("OnlineSyntaxCheckInterval") * 1000)
+        else:
+            self.__onlineSyntaxCheckTimer.stop()
+
+        
         # refresh the annotations display
         self.__refreshAnnotations()
     
@@ -4462,6 +4472,25 @@ class Editor(QsciScintillaCompat):
                     for warning in warnings:
                         self.toggleFlakesWarning(
                             int(warning[1]), True, warning[2])
+        
+    def __initOnlineSyntaxCheck(self):
+        """
+        Private slot to initialize the online syntax check.
+        """
+        self.__onlineSyntaxCheckTimer = QTimer(self)
+        self.__onlineSyntaxCheckTimer.setSingleShot(True)
+        self.__onlineSyntaxCheckTimer.setInterval(
+            Preferences.getEditor("OnlineSyntaxCheckInterval") * 1000)
+        self.__onlineSyntaxCheckTimer.timeout.connect(self.__autoSyntaxCheck)
+        self.textChanged.connect(self.__resetOnlineSyntaxCheckTimer)
+        
+    def __resetOnlineSyntaxCheckTimer(self):
+        """
+        Private method to reset the online syntax check timer.
+        """
+        if Preferences.getEditor("OnlineSyntaxCheck"):
+            self.__onlineSyntaxCheckTimer.stop()
+            self.__onlineSyntaxCheckTimer.start()
         
     def __showCodeMetrics(self):
         """

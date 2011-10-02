@@ -932,6 +932,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.py</Source>
+    <Source>Preferences/ConfigurationPages/EditorSyntaxPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1197,6 +1198,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui</Form>
+    <Form>Preferences/ConfigurationPages/EditorSyntaxPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

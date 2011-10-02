@@ -275,6 +275,9 @@ class Prefs(object):
         # show QScintilla calltips, if plugin fails
         
         "AutoCheckSyntax": True,
+        "OnlineSyntaxCheck": True,
+        "OnlineSyntaxCheckInterval": 5,
+        
         "AutoReopen": False,
         
         "AnnotationsEnabled": True,
@@ -1409,7 +1412,8 @@ def getEditor(key, prefClass=Prefs):
                  "CaretWidth", "AutoCompletionSource", "AutoCompletionThreshold",
                  "CallTipsVisible", "CallTipsStyle", "MarkOccurrencesTimeout",
                  "AutoSpellCheckChunkSize", "SpellCheckingMinWordSize",
-                 "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize"]:
+                 "PostScriptLevel", "EOLMode", "ZoomFactor", "WhitespaceSize",
+                 "OnlineSyntaxCheckInterval"]:
         return int(prefClass.settings.value("Editor/" + key,
             prefClass.editorDefaults[key]))
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",

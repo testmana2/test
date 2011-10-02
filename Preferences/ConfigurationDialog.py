@@ -218,6 +218,9 @@ class ConfigurationWidget(QWidget):
                 "editorStylesPage": \
                     [self.trUtf8("Style"), "preferences-styles.png",
                     "EditorStylesPage", "0editorPage", None],
+                "editorSyntaxPage": \
+                    [self.trUtf8("Syntax Checker"), "preferences-debugger.png",
+                    "EditorSyntaxPage", "0editorPage", None],
                 "editorTypingPage": \
                     [self.trUtf8("Typing"), "preferences-typing.png",
                     "EditorTypingPage", "0editorPage", None],

@@ -4656,6 +4656,9 @@ eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.polishPag
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage.save?4()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.EditorStylesPage?1()
 eric5.Preferences.ConfigurationPages.EditorStylesPage.create?4(dlg)
+eric5.Preferences.ConfigurationPages.EditorSyntaxPage.EditorSyntaxPage.save?4()
+eric5.Preferences.ConfigurationPages.EditorSyntaxPage.EditorSyntaxPage?1(parent=None)
+eric5.Preferences.ConfigurationPages.EditorSyntaxPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.EditorTypingPage.EditorTypingPage.on_languageCombo_activated?4(language)
 eric5.Preferences.ConfigurationPages.EditorTypingPage.EditorTypingPage.save?4()
 eric5.Preferences.ConfigurationPages.EditorTypingPage.EditorTypingPage?1()
@@ -7454,6 +7457,7 @@ eric5.patch_modpython.progName?7
 eric5.patch_modpython.usage?4(rcode=2)
 eric5.uninstall.initGlobals?4()
 eric5.uninstall.main?4(argv)
+eric5.uninstall.progLanguages?7
 eric5.uninstall.progName?7
 eric5.uninstall.pyModDir?7
 eric5.uninstall.uninstallEric?4()

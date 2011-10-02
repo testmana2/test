@@ -602,6 +602,7 @@
               <section title="eric5.Preferences.ConfigurationPages.EditorSearchPage" ref="eric5.Preferences.ConfigurationPages.EditorSearchPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage" ref="eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.EditorStylesPage" ref="eric5.Preferences.ConfigurationPages.EditorStylesPage.html" />
+              <section title="eric5.Preferences.ConfigurationPages.EditorSyntaxPage" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.EditorTypingPage" ref="eric5.Preferences.ConfigurationPages.EditorTypingPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.EmailPage" ref="eric5.Preferences.ConfigurationPages.EmailPage.html" />
               <section title="eric5.Preferences.ConfigurationPages.GraphicsPage" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html" />
@@ -5991,6 +5992,7 @@
       <keyword name="Editor.__initContextMenuSeparateMargins" id="Editor.__initContextMenuSeparateMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuSeparateMargins" />
       <keyword name="Editor.__initContextMenuShow" id="Editor.__initContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuShow" />
       <keyword name="Editor.__initContextMenuUnifiedMargins" id="Editor.__initContextMenuUnifiedMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuUnifiedMargins" />
+      <keyword name="Editor.__initOnlineSyntaxCheck" id="Editor.__initOnlineSyntaxCheck" ref="eric5.QScintilla.Editor.html#Editor.__initOnlineSyntaxCheck" />
       <keyword name="Editor.__isStartChar" id="Editor.__isStartChar" ref="eric5.QScintilla.Editor.html#Editor.__isStartChar" />
       <keyword name="Editor.__languageChanged" id="Editor.__languageChanged" ref="eric5.QScintilla.Editor.html#Editor.__languageChanged" />
       <keyword name="Editor.__languageMenuTriggered" id="Editor.__languageMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__languageMenuTriggered" />
@@ -6020,6 +6022,7 @@
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
       <keyword name="Editor.__resetLanguage" id="Editor.__resetLanguage" ref="eric5.QScintilla.Editor.html#Editor.__resetLanguage" />
+      <keyword name="Editor.__resetOnlineSyntaxCheckTimer" id="Editor.__resetOnlineSyntaxCheckTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineSyntaxCheckTimer" />
       <keyword name="Editor.__restoreBreakpoints" id="Editor.__restoreBreakpoints" ref="eric5.QScintilla.Editor.html#Editor.__restoreBreakpoints" />
       <keyword name="Editor.__saveLastEditPosition" id="Editor.__saveLastEditPosition" ref="eric5.QScintilla.Editor.html#Editor.__saveLastEditPosition" />
       <keyword name="Editor.__selectAll" id="Editor.__selectAll" ref="eric5.QScintilla.Editor.html#Editor.__selectAll" />
@@ -8219,6 +8222,11 @@
       <keyword name="PrinterPage.on_printheaderFontButton_clicked" id="PrinterPage.on_printheaderFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html#PrinterPage.on_printheaderFontButton_clicked" />
       <keyword name="PrinterPage.polishPage" id="PrinterPage.polishPage" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html#PrinterPage.polishPage" />
       <keyword name="PrinterPage.save" id="PrinterPage.save" ref="eric5.Preferences.ConfigurationPages.PrinterPage.html#PrinterPage.save" />
+      <keyword name="EditorSyntaxPage (Module)" id="EditorSyntaxPage (Module)" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html" />
+      <keyword name="EditorSyntaxPage" id="EditorSyntaxPage" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html#EditorSyntaxPage" />
+      <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html#create" />
+      <keyword name="EditorSyntaxPage (Constructor)" id="EditorSyntaxPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html#EditorSyntaxPage.__init__" />
+      <keyword name="EditorSyntaxPage.save" id="EditorSyntaxPage.save" ref="eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html#EditorSyntaxPage.save" />
       <keyword name="GraphicsPage (Module)" id="GraphicsPage (Module)" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html" />
       <keyword name="GraphicsPage" id="GraphicsPage" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html#GraphicsPage" />
       <keyword name="create" id="create" ref="eric5.Preferences.ConfigurationPages.GraphicsPage.html#create" />
@@ -11579,6 +11587,7 @@
       <file>eric5.Preferences.ConfigurationPages.EditorSearchPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.EditorSpellCheckingPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.EditorStylesPage.html</file>
+      <file>eric5.Preferences.ConfigurationPages.EditorSyntaxPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.EditorTypingPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.EmailPage.html</file>
       <file>eric5.Preferences.ConfigurationPages.GraphicsPage.html</file>

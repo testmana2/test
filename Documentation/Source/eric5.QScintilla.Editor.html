@@ -320,6 +320,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__initContextMenuUnifiedMargins">__initContextMenuUnifiedMargins</a></td>
 <td>Private method used to setup the context menu for the unified margins</td>
 </tr><tr>
+<td><a href="#Editor.__initOnlineSyntaxCheck">__initOnlineSyntaxCheck</a></td>
+<td>Private slot to initialize the online syntax check.</td>
+</tr><tr>
 <td><a href="#Editor.__isStartChar">__isStartChar</a></td>
 <td>Private method to check, if a character is an autocompletion start character.</td>
 </tr><tr>
@@ -406,6 +409,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__resetLanguage">__resetLanguage</a></td>
 <td>Private method used to reset the language selection.</td>
+</tr><tr>
+<td><a href="#Editor.__resetOnlineSyntaxCheckTimer">__resetOnlineSyntaxCheckTimer</a></td>
+<td>Private method to reset the online syntax check timer.</td>
 </tr><tr>
 <td><a href="#Editor.__restoreBreakpoints">__restoreBreakpoints</a></td>
 <td>Private method to restore the breakpoints.</td>
@@ -1513,6 +1519,11 @@ flag indicating an indent operation (boolean)
 <b>__initContextMenuUnifiedMargins</b>(<i></i>)
 <p>
         Private method used to setup the context menu for the unified margins
+</p><a NAME="Editor.__initOnlineSyntaxCheck" ID="Editor.__initOnlineSyntaxCheck"></a>
+<h4>Editor.__initOnlineSyntaxCheck</h4>
+<b>__initOnlineSyntaxCheck</b>(<i></i>)
+<p>
+        Private slot to initialize the online syntax check.
 </p><a NAME="Editor.__isStartChar" ID="Editor.__isStartChar"></a>
 <h4>Editor.__isStartChar</h4>
 <b>__isStartChar</b>(<i>ch</i>)
@@ -1748,7 +1759,12 @@ string containing the command parameters (string)
 <dd>
 flag indicating to propagate the change (boolean)
 </dd>
-</dl><a NAME="Editor.__restoreBreakpoints" ID="Editor.__restoreBreakpoints"></a>
+</dl><a NAME="Editor.__resetOnlineSyntaxCheckTimer" ID="Editor.__resetOnlineSyntaxCheckTimer"></a>
+<h4>Editor.__resetOnlineSyntaxCheckTimer</h4>
+<b>__resetOnlineSyntaxCheckTimer</b>(<i></i>)
+<p>
+        Private method to reset the online syntax check timer.
+</p><a NAME="Editor.__restoreBreakpoints" ID="Editor.__restoreBreakpoints"></a>
 <h4>Editor.__restoreBreakpoints</h4>
 <b>__restoreBreakpoints</b>(<i></i>)
 <p>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>950</height>
+    <height>975</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -173,40 +173,26 @@
      <property name="title">
       <string>Save</string>
      </property>
-     <layout class="QVBoxLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
-       <layout class="QGridLayout">
-        <item row="0" column="0">
-         <widget class="QCheckBox" name="automaticSyntaxCheckCheckBox">
-          <property name="toolTip">
-           <string>Select, whether Python files should be checked automatically for syntax errors</string>
-          </property>
-          <property name="text">
-           <string>Automatic Syntax Check</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="stripWhitespaceCheckBox">
-          <property name="toolTip">
-           <string>Select, whether trailing whitespace should be removed upon save</string>
-          </property>
-          <property name="text">
-           <string>Strip trailing whitespace upon save</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QCheckBox" name="createBackupFileCheckBox">
-          <property name="toolTip">
-           <string>Select, whether a backup file shall be generated upon save</string>
-          </property>
-          <property name="text">
-           <string>Create backup file upon save</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QCheckBox" name="stripWhitespaceCheckBox">
+        <property name="toolTip">
+         <string>Select, whether trailing whitespace should be removed upon save</string>
+        </property>
+        <property name="text">
+         <string>Strip trailing whitespace upon save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="createBackupFileCheckBox">
+        <property name="toolTip">
+         <string>Select, whether a backup file shall be generated upon save</string>
+        </property>
+        <property name="text">
+         <string>Create backup file upon save</string>
+        </property>
+       </widget>
       </item>
       <item>
        <layout class="QHBoxLayout">
@@ -499,7 +485,6 @@
   <tabstop>crRadioButton</tabstop>
   <tabstop>crlfRadioButton</tabstop>
   <tabstop>automaticEolConversionCheckBox</tabstop>
-  <tabstop>automaticSyntaxCheckCheckBox</tabstop>
   <tabstop>createBackupFileCheckBox</tabstop>
   <tabstop>stripWhitespaceCheckBox</tabstop>
   <tabstop>autosaveSlider</tabstop>
