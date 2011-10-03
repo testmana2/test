@@ -304,7 +304,6 @@ LexerXML Lexer QsciLexerXML
 LexerYAML Lexer QsciLexerYAML
 Listspace QSplitter ViewManager
 LogViewer QTextEdit
-MdiArea QMdiArea ViewManager
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
@@ -564,7 +563,6 @@ ViewProfileDialog QDialog
 ViewmanagerPage ConfigurationPageBase Ui_ViewmanagerPage
 VisibilityMixin ClbrBaseClasses.ClbrVisibilityMixinBase
 VmListspacePlugin QObject
-VmMdiAreaPlugin QObject
 VmTabviewPlugin QObject
 WatchPointModel QAbstractItemModel
 WatchPointViewer QTreeView

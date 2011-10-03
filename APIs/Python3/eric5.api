@@ -3003,24 +3003,6 @@ eric5.Plugins.PluginVmListspace.previewPix?4()
 eric5.Plugins.PluginVmListspace.pyqtApi?7
 eric5.Plugins.PluginVmListspace.shortDescription?7
 eric5.Plugins.PluginVmListspace.version?7
-eric5.Plugins.PluginVmMdiArea.VmMdiAreaPlugin.activate?4()
-eric5.Plugins.PluginVmMdiArea.VmMdiAreaPlugin.deactivate?4()
-eric5.Plugins.PluginVmMdiArea.VmMdiAreaPlugin?1(ui)
-eric5.Plugins.PluginVmMdiArea.author?7
-eric5.Plugins.PluginVmMdiArea.autoactivate?7
-eric5.Plugins.PluginVmMdiArea.className?7
-eric5.Plugins.PluginVmMdiArea.deactivateable?7
-eric5.Plugins.PluginVmMdiArea.displayString?7
-eric5.Plugins.PluginVmMdiArea.error?7
-eric5.Plugins.PluginVmMdiArea.longDescription?7
-eric5.Plugins.PluginVmMdiArea.name?7
-eric5.Plugins.PluginVmMdiArea.packageName?7
-eric5.Plugins.PluginVmMdiArea.pluginType?7
-eric5.Plugins.PluginVmMdiArea.pluginTypename?7
-eric5.Plugins.PluginVmMdiArea.previewPix?4()
-eric5.Plugins.PluginVmMdiArea.pyqtApi?7
-eric5.Plugins.PluginVmMdiArea.shortDescription?7
-eric5.Plugins.PluginVmMdiArea.version?7
 eric5.Plugins.PluginVmTabview.VmTabviewPlugin.activate?4()
 eric5.Plugins.PluginVmTabview.VmTabviewPlugin.deactivate?4()
 eric5.Plugins.PluginVmTabview.VmTabviewPlugin?1(ui)
@@ -3814,36 +3796,6 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.removeWidget?
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.setCurrentIndex?4(index)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.setCurrentWidget?4(widget)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget?1(parent)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._addView?5(win, fn = None, noName = "")
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._initWindowActions?5()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._modificationStatusChanged?5(m, editor)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._removeAllViews?5()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._removeView?5(win)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._showView?5(win, fn = None)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea._syntaxErrorToggled?5(editor)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.activeWindow?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.bookmarkToggled?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.breakpointToggled?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canCascade?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canSplit?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.canTile?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cascade?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.changeCaption?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.checkActions?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.cursorChanged?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorChanged?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorClosed?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorClosedEd?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorOpened?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorOpenedEd?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.editorSaved?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.eventFilter?4(watched, event)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.lastEditorClosed?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.setEditorName?4(editor, newName)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.showWindowMenu?4(windowMenu)
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.syntaxerrorToggled?7
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea.tile?4()
-eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.MdiArea?1(parent)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.dragEnterEvent?4(event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.dropEvent?4(event)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.mouseMoveEvent?4(event)

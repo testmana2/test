@@ -461,9 +461,6 @@
               <section title="eric5.Plugins.ViewManagerPlugins.Listspace" ref="index-eric5.Plugins.ViewManagerPlugins.Listspace.html">
                 <section title="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html" />
               </section>
-              <section title="eric5.Plugins.ViewManagerPlugins.MdiArea" ref="index-eric5.Plugins.ViewManagerPlugins.MdiArea.html">
-                <section title="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html" />
-              </section>
               <section title="eric5.Plugins.ViewManagerPlugins.Tabview" ref="index-eric5.Plugins.ViewManagerPlugins.Tabview.html">
                 <section title="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html" />
               </section>
@@ -508,7 +505,6 @@
             <section title="eric5.Plugins.PluginVcsPySvn" ref="eric5.Plugins.PluginVcsPySvn.html" />
             <section title="eric5.Plugins.PluginVcsSubversion" ref="eric5.Plugins.PluginVcsSubversion.html" />
             <section title="eric5.Plugins.PluginVmListspace" ref="eric5.Plugins.PluginVmListspace.html" />
-            <section title="eric5.Plugins.PluginVmMdiArea" ref="eric5.Plugins.PluginVmMdiArea.html" />
             <section title="eric5.Plugins.PluginVmTabview" ref="eric5.Plugins.PluginVmTabview.html" />
             <section title="eric5.Plugins.PluginWizardE5MessageBox" ref="eric5.Plugins.PluginWizardE5MessageBox.html" />
             <section title="eric5.Plugins.PluginWizardPyRegExp" ref="eric5.Plugins.PluginWizardPyRegExp.html" />
@@ -5149,12 +5145,6 @@
       <keyword name="EricdocPlugin.__projectShowMenu" id="EricdocPlugin.__projectShowMenu" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.__projectShowMenu" />
       <keyword name="EricdocPlugin.activate" id="EricdocPlugin.activate" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.activate" />
       <keyword name="EricdocPlugin.deactivate" id="EricdocPlugin.deactivate" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.deactivate" />
-      <keyword name="PluginVmMdiArea (Module)" id="PluginVmMdiArea (Module)" ref="eric5.Plugins.PluginVmMdiArea.html" />
-      <keyword name="VmMdiAreaPlugin" id="VmMdiAreaPlugin" ref="eric5.Plugins.PluginVmMdiArea.html#VmMdiAreaPlugin" />
-      <keyword name="previewPix" id="previewPix" ref="eric5.Plugins.PluginVmMdiArea.html#previewPix" />
-      <keyword name="VmMdiAreaPlugin (Constructor)" id="VmMdiAreaPlugin (Constructor)" ref="eric5.Plugins.PluginVmMdiArea.html#VmMdiAreaPlugin.__init__" />
-      <keyword name="VmMdiAreaPlugin.activate" id="VmMdiAreaPlugin.activate" ref="eric5.Plugins.PluginVmMdiArea.html#VmMdiAreaPlugin.activate" />
-      <keyword name="VmMdiAreaPlugin.deactivate" id="VmMdiAreaPlugin.deactivate" ref="eric5.Plugins.PluginVmMdiArea.html#VmMdiAreaPlugin.deactivate" />
       <keyword name="PluginVcsMercurial (Module)" id="PluginVcsMercurial (Module)" ref="eric5.Plugins.PluginVcsMercurial.html" />
       <keyword name="VcsMercurialPlugin" id="VcsMercurialPlugin" ref="eric5.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin" />
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric5.Plugins.PluginVcsMercurial.html#createConfigurationPage" />
@@ -9604,31 +9594,6 @@
       <keyword name="Tabview.setSplitOrientation" id="Tabview.setSplitOrientation" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.setSplitOrientation" />
       <keyword name="Tabview.showWindowMenu" id="Tabview.showWindowMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.showWindowMenu" />
       <keyword name="Tabview.tile" id="Tabview.tile" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.tile" />
-      <keyword name="MdiArea (Package)" id="MdiArea (Package)" ref="index-eric5.Plugins.ViewManagerPlugins.MdiArea.html" />
-      <keyword name="MdiArea (Module)" id="MdiArea (Module)" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html" />
-      <keyword name="MdiArea" id="MdiArea" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea" />
-      <keyword name="MdiArea (Constructor)" id="MdiArea (Constructor)" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__init__" />
-      <keyword name="MdiArea.__iconizeAllWindows" id="MdiArea.__iconizeAllWindows" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__iconizeAllWindows" />
-      <keyword name="MdiArea.__mapped" id="MdiArea.__mapped" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__mapped" />
-      <keyword name="MdiArea.__restoreAllWindows" id="MdiArea.__restoreAllWindows" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__restoreAllWindows" />
-      <keyword name="MdiArea.__setSubWindowIcon" id="MdiArea.__setSubWindowIcon" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__setSubWindowIcon" />
-      <keyword name="MdiArea.__subWindowActivated" id="MdiArea.__subWindowActivated" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.__subWindowActivated" />
-      <keyword name="MdiArea._addView" id="MdiArea._addView" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._addView" />
-      <keyword name="MdiArea._initWindowActions" id="MdiArea._initWindowActions" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._initWindowActions" />
-      <keyword name="MdiArea._modificationStatusChanged" id="MdiArea._modificationStatusChanged" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._modificationStatusChanged" />
-      <keyword name="MdiArea._removeAllViews" id="MdiArea._removeAllViews" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._removeAllViews" />
-      <keyword name="MdiArea._removeView" id="MdiArea._removeView" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._removeView" />
-      <keyword name="MdiArea._showView" id="MdiArea._showView" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._showView" />
-      <keyword name="MdiArea._syntaxErrorToggled" id="MdiArea._syntaxErrorToggled" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea._syntaxErrorToggled" />
-      <keyword name="MdiArea.activeWindow" id="MdiArea.activeWindow" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.activeWindow" />
-      <keyword name="MdiArea.canCascade" id="MdiArea.canCascade" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.canCascade" />
-      <keyword name="MdiArea.canSplit" id="MdiArea.canSplit" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.canSplit" />
-      <keyword name="MdiArea.canTile" id="MdiArea.canTile" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.canTile" />
-      <keyword name="MdiArea.cascade" id="MdiArea.cascade" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.cascade" />
-      <keyword name="MdiArea.eventFilter" id="MdiArea.eventFilter" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.eventFilter" />
-      <keyword name="MdiArea.setEditorName" id="MdiArea.setEditorName" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.setEditorName" />
-      <keyword name="MdiArea.showWindowMenu" id="MdiArea.showWindowMenu" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.showWindowMenu" />
-      <keyword name="MdiArea.tile" id="MdiArea.tile" ref="eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html#MdiArea.tile" />
       <keyword name="QRegExpWizard (Package)" id="QRegExpWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.QRegExpWizard.html" />
       <keyword name="QRegExpWizardCharactersDialog (Module)" id="QRegExpWizardCharactersDialog (Module)" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.html" />
       <keyword name="QRegExpWizardCharactersDialog" id="QRegExpWizardCharactersDialog" ref="eric5.Plugins.WizardPlugins.QRegExpWizard.QRegExpWizardCharactersDialog.html#QRegExpWizardCharactersDialog" />
@@ -10489,7 +10454,6 @@
       <file>eric5.Plugins.PluginVcsPySvn.html</file>
       <file>eric5.Plugins.PluginVcsSubversion.html</file>
       <file>eric5.Plugins.PluginVmListspace.html</file>
-      <file>eric5.Plugins.PluginVmMdiArea.html</file>
       <file>eric5.Plugins.PluginVmTabview.html</file>
       <file>eric5.Plugins.PluginWizardE5MessageBox.html</file>
       <file>eric5.Plugins.PluginWizardPyRegExp.html</file>
@@ -10587,7 +10551,6 @@
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html</file>
       <file>eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html</file>
-      <file>eric5.Plugins.ViewManagerPlugins.MdiArea.MdiArea.html</file>
       <file>eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html</file>
       <file>eric5.Plugins.WizardPlugins.ColorDialogWizard.ColorDialogWizardDialog.html</file>
       <file>eric5.Plugins.WizardPlugins.E5MessageBoxWizard.E5MessageBoxWizardDialog.html</file>
@@ -10880,7 +10843,6 @@
       <file>index-eric5.Plugins.VcsPlugins.vcsSubversion.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsSubversion.html</file>
       <file>index-eric5.Plugins.ViewManagerPlugins.Listspace.html</file>
-      <file>index-eric5.Plugins.ViewManagerPlugins.MdiArea.html</file>
       <file>index-eric5.Plugins.ViewManagerPlugins.Tabview.html</file>
       <file>index-eric5.Plugins.ViewManagerPlugins.html</file>
       <file>index-eric5.Plugins.WizardPlugins.ColorDialogWizard.html</file>
