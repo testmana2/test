@@ -25,7 +25,8 @@ import Utilities
 from functools import reduce
 import Preferences
 
-__all__ = ["Module", "Class", "Function", "RbModule", "readModule"]
+__all__ = ["Module", "Class", "Function", "Attribute", "RbModule", "readModule",
+           "getTypeFromTypeName"]
 
 TABWIDTH = 4
 
@@ -33,6 +34,27 @@ PTL_SOURCE = 128
 RB_SOURCE = 129
 
 SUPPORTED_TYPES = [imp.PY_SOURCE, PTL_SOURCE, RB_SOURCE]
+PARSEABLE_TYPES = ["Python", "Python2", "Python3", "Ruby"]
+TYPE_MAPPING = {
+    "Python": imp.PY_SOURCE,
+    "Python2": imp.PY_SOURCE,
+    "Python3": imp.PY_SOURCE,
+    "Ruby": RB_SOURCE,
+}
+
+
+def getTypeFromTypeName(name):
+    """
+    Module function to determine the module type given the module type name.
+    
+    @param name module type name (string)
+    @return module type or -1 for failure (integer)
+    """
+    if name in TYPE_MAPPING:
+        return TYPE_MAPPING[name]
+    else:
+        return -1
+
 
 _py_getnext = re.compile(r"""
     (?P<String>

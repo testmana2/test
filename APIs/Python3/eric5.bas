@@ -155,6 +155,7 @@ EditBreakpointDialog QDialog Ui_EditBreakpointDialog
 EditWatchpointDialog QDialog Ui_EditWatchpointDialog
 Editor QsciScintillaCompat
 EditorAPIsPage ConfigurationPageBase Ui_EditorAPIsPage
+EditorAssembly QWidget
 EditorAutocompletionPage ConfigurationPageBase Ui_EditorAutocompletionPage
 EditorAutocompletionQScintillaPage ConfigurationPageBase Ui_EditorAutocompletionQScintillaPage
 EditorCalltipsPage ConfigurationPageBase Ui_EditorCalltipsPage
@@ -344,7 +345,6 @@ LexerYAML Lexer QsciLexerYAML
 Listspace QSplitter ViewManager
 LogViewer QTextEdit
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
-MdiArea QMdiArea ViewManager
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
@@ -616,7 +616,6 @@ ViewmanagerPage ConfigurationPageBase Ui_ViewmanagerPage
 VirusTotalAPI QObject
 VisibilityMixin ClbrBaseClasses.ClbrVisibilityMixinBase
 VmListspacePlugin QObject
-VmMdiAreaPlugin QObject
 VmTabviewPlugin QObject
 WatchPointModel QAbstractItemModel
 WatchPointViewer QTreeView

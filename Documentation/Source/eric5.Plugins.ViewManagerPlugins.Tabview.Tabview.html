@@ -257,6 +257,9 @@ E5TabWidget
 <td><a href="#TabWidget.hasEditors">hasEditors</a></td>
 <td>Public method to test, if any editor is managed.</td>
 </tr><tr>
+<td><a href="#TabWidget.indexOf">indexOf</a></td>
+<td>Public method to get the tab index of the given editor.</td>
+</tr><tr>
 <td><a href="#TabWidget.insertWidget">insertWidget</a></td>
 <td>Overwritten method to insert a new tab.</td>
 </tr><tr>
@@ -268,6 +271,9 @@ E5TabWidget
 </tr><tr>
 <td><a href="#TabWidget.removeWidget">removeWidget</a></td>
 <td>Public method to remove a widget.</td>
+</tr><tr>
+<td><a href="#TabWidget.setCurrentWidget">setCurrentWidget</a></td>
+<td>Public method to set the current tab by the given editor.</td>
 </tr><tr>
 <td><a href="#TabWidget.showIndicator">showIndicator</a></td>
 <td>Public slot to set the indicator on or off.</td>
@@ -465,7 +471,7 @@ index position to place it to (integer)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-reference to the current page (QWidget)
+reference to the current page (Editor)
 </dd>
 </dl><a NAME="TabWidget.hasEditor" ID="TabWidget.hasEditor"></a>
 <h4>TabWidget.hasEditor</h4>
@@ -492,6 +498,21 @@ flag indicating, whether the editor to be checked belongs
 <dt>Returns:</dt>
 <dd>
 flag indicating editors are managed
+</dd>
+</dl><a NAME="TabWidget.indexOf" ID="TabWidget.indexOf"></a>
+<h4>TabWidget.indexOf</h4>
+<b>indexOf</b>(<i>object</i>)
+<p>
+        Public method to get the tab index of the given editor.
+</p><dl>
+<dt><i>object</i></dt>
+<dd>
+object to get the index for (QLabel or Editor)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tab index of the editor (integer)
 </dd>
 </dl><a NAME="TabWidget.insertWidget" ID="TabWidget.insertWidget"></a>
 <h4>TabWidget.insertWidget</h4>
@@ -549,6 +570,16 @@ index position to place it to (integer)
 <dt><i>object</i></dt>
 <dd>
 object to be removed (QWidget)
+</dd>
+</dl><a NAME="TabWidget.setCurrentWidget" ID="TabWidget.setCurrentWidget"></a>
+<h4>TabWidget.setCurrentWidget</h4>
+<b>setCurrentWidget</b>(<i>editor</i>)
+<p>
+        Public method to set the current tab by the given editor.
+</p><dl>
+<dt><i>editor</i></dt>
+<dd>
+editor to determine current tab from (Editor)
 </dd>
 </dl><a NAME="TabWidget.showIndicator" ID="TabWidget.showIndicator"></a>
 <h4>TabWidget.showIndicator</h4>

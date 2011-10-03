@@ -35,7 +35,7 @@ This module is based on pyclbr.py as of Python 2.2.2
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>PTL_SOURCE</td></tr><tr><td>RB_SOURCE</td></tr><tr><td>SUPPORTED_TYPES</td></tr><tr><td>TABWIDTH</td></tr><tr><td>__all__</td></tr><tr><td>_commentsub</td></tr><tr><td>_hashsub</td></tr><tr><td>_modules</td></tr><tr><td>_py_getnext</td></tr><tr><td>_rb_getnext</td></tr>
+<tr><td>PARSEABLE_TYPES</td></tr><tr><td>PTL_SOURCE</td></tr><tr><td>RB_SOURCE</td></tr><tr><td>SUPPORTED_TYPES</td></tr><tr><td>TABWIDTH</td></tr><tr><td>TYPE_MAPPING</td></tr><tr><td>__all__</td></tr><tr><td>_commentsub</td></tr><tr><td>_hashsub</td></tr><tr><td>_modules</td></tr><tr><td>_py_getnext</td></tr><tr><td>_rb_getnext</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -67,6 +67,9 @@ This module is based on pyclbr.py as of Python 2.2.2
 </tr><tr>
 <td><a href="#find_module">find_module</a></td>
 <td>Module function to extend the Python module finding mechanism.</td>
+</tr><tr>
+<td><a href="#getTypeFromTypeName">getTypeFromTypeName</a></td>
+<td>Module function to determine the module type given the module type name.</td>
 </tr><tr>
 <td><a href="#readModule">readModule</a></td>
 <td>Function to read a module file and parse it.</td>
@@ -854,6 +857,24 @@ tuple of the open file, pathname and description. Description
 <dt>Raises <b>ImportError</b>:</dt>
 <dd>
 The file or module wasn't found.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getTypeFromTypeName" ID="getTypeFromTypeName"></a>
+<h2>getTypeFromTypeName</h2>
+<b>getTypeFromTypeName</b>(<i>name</i>)
+<p>
+    Module function to determine the module type given the module type name.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+module type name (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+module type or -1 for failure (integer)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

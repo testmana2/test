@@ -42,7 +42,7 @@ class StackedWidget(QStackedWidget):
         
         @param editor the editor object to be added (QScintilla.Editor.Editor)
         """
-        super().addWidget(editor)
+        super().addWidget(editor.parent())
         if not editor in self.editors:
             self.editors.append(editor)
         
@@ -52,9 +52,21 @@ class StackedWidget(QStackedWidget):
         
         @param widget widget to be removed (QWidget)
         """
-        super().removeWidget(widget)
         if isinstance(widget, QScintilla.Editor.Editor):
             self.editors.remove(widget)
+            widget = widget.parent()
+        super().removeWidget(widget)
+        
+    def currentWidget(self):
+        """
+        Public method to get a reference to the current editor.
+        
+        @return reference to the current editor (Editor)
+        """
+        widget = super().currentWidget()
+        if widget is not None:
+            widget = widget.getEditor()
+        return widget
         
     def setCurrentWidget(self, widget):
         """
@@ -65,6 +77,7 @@ class StackedWidget(QStackedWidget):
         if isinstance(widget, QScintilla.Editor.Editor):
             self.editors.remove(widget)
             self.editors.insert(0, widget)
+            widget = widget.parent()
         super().setCurrentWidget(widget)
         
     def setCurrentIndex(self, index):

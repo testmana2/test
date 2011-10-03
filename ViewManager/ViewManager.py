@@ -25,6 +25,7 @@ import Preferences
 from .BookmarkedFilesDialog import BookmarkedFilesDialog
 
 from QScintilla.Editor import Editor
+from QScintilla.EditorAssembly import EditorAssembly
 from QScintilla.GotoDialog import GotoDialog
 from QScintilla.SearchReplaceWidget import SearchReplaceWidget
 from QScintilla.ZoomDialog import ZoomDialog
@@ -3256,8 +3257,9 @@ class ViewManager(QObject):
         @param fn filename of this view
         @return reference to the new editor object (Editor.Editor)
         """
-        editor = Editor(self.dbs, fn, self, filetype=filetype, editor=caller,
-                        tv=e5App().getObject("TaskViewer"))
+        assembly = EditorAssembly(self.dbs, fn, self, filetype=filetype, editor=caller,
+                                  tv=e5App().getObject("TaskViewer"))
+        editor = assembly.getEditor()
         self.editors.append(editor)
         self.__connectEditor(editor)
         self.__editorOpened()
@@ -3409,8 +3411,9 @@ class ViewManager(QObject):
                 if Utilities.samepath(fn, editor.getFileName()):
                     break
             else:
-                editor = Editor(self.dbs, fn, self, filetype=filetype,
-                                tv=e5App().getObject("TaskViewer"))
+                assembly = EditorAssembly(self.dbs, fn, self, filetype=filetype,
+                                          tv=e5App().getObject("TaskViewer"))
+                editor = assembly.getEditor()
                 self.editors.append(editor)
                 self.__connectEditor(editor)
                 self.__editorOpened()
@@ -3583,7 +3586,9 @@ class ViewManager(QObject):
         """
         Public slot to generate a new empty editor.
         """
-        editor = Editor(self.dbs, None, self, tv=e5App().getObject("TaskViewer"))
+        assembly = EditorAssembly(self.dbs, None, self,
+                                  tv=e5App().getObject("TaskViewer"))
+        editor = assembly.getEditor()
         self.editors.append(editor)
         self.__connectEditor(editor)
         self._addView(editor, None)
