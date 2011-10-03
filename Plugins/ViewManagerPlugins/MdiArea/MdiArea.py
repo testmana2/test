@@ -359,6 +359,8 @@ class MdiArea(QMdiArea, ViewManager):
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("syntaxError.png"))
         elif editor.hasFlakesWarnings():
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("warning.png"))
+        elif editor.isModified():
+            self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("fileModified.png"))
         else:
             self.__setSubWindowIcon(editor, UI.PixmapCache.getIcon("empty.png"))
         

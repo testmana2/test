@@ -928,6 +928,8 @@ class Tabview(QSplitter, ViewManager):
             tw.setTabIcon(index, UI.PixmapCache.getIcon("syntaxError.png"))
         elif editor.hasFlakesWarnings():
             tw.setTabIcon(index, UI.PixmapCache.getIcon("warning.png"))
+        elif editor.isModified():
+            tw.setTabIcon(index, UI.PixmapCache.getIcon("fileModified.png"))
         else:
             tw.setTabIcon(index, UI.PixmapCache.getIcon("empty.png"))
         

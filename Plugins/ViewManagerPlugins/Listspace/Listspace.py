@@ -473,6 +473,8 @@ class Listspace(QSplitter, ViewManager):
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("syntaxError.png"))
         elif editor.hasFlakesWarnings():
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("warning.png"))
+        elif editor.isModified():
+            self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("fileModified.png"))
         else:
             self.viewlist.item(index).setIcon(UI.PixmapCache.getIcon("empty.png"))
         self.viewlist.setCurrentRow(currentRow)
