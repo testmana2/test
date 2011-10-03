@@ -401,9 +401,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>MultiProject/AddProjectDialog.py</Source>
     <Source>MultiProject/MultiProjectBrowser.py</Source>
     <Source>Preferences/ConfigurationPages/MultiProjectPage.py</Source>
-    <Source>Plugins/ViewManagerPlugins/MdiArea/__init__.py</Source>
-    <Source>Plugins/ViewManagerPlugins/MdiArea/MdiArea.py</Source>
-    <Source>Plugins/PluginVmMdiArea.py</Source>
     <Source>QScintilla/Lexers/LexerTCL.py</Source>
     <Source>Graphics/SvgDiagram.py</Source>
     <Source>Project/ProjectBrowserFlags.py</Source>
@@ -1153,7 +1150,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>CodeTemplates</Other>
     <Other>Plugins/ViewManagerPlugins/Listspace/preview.png</Other>
     <Other>Plugins/ViewManagerPlugins/Tabview/preview.png</Other>
-    <Other>Plugins/ViewManagerPlugins/MdiArea/preview.png</Other>
     <Other>Plugins/VcsPlugins/vcsPySvn/icons/pysvn.png</Other>
     <Other>Plugins/VcsPlugins/vcsSubversion/icons/subversion.png</Other>
     <Other>Plugins/VcsPlugins/vcsPySvn/icons/preferences-subversion.png</Other>
