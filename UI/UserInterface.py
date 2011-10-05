@@ -5534,7 +5534,9 @@ class UserInterface(QMainWindow):
         if reply.error() == QNetworkReply.NoError:
             ioEncoding = Preferences.getSystem("IOEncoding")
             versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
-        if reply.error() != QNetworkReply.NoError or versions[0].startswith("<"):
+        if reply.error() != QNetworkReply.NoError or \
+           len(versions) == 0 or \
+           versions[0].startswith("<"):
             # network error or an error page
             self.httpAlternative += 1
             if self.httpAlternative >= len(self.__httpAlternatives):
