@@ -84,8 +84,7 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
            Preferences.getUI("UseProxy"):
             if Preferences.getUI("UseSystemProxy"):
                 proxyList = QNetworkProxyFactory.systemProxyForQuery(query)
-                if (not Globals.isWindowsPlatform() and \
-                    not Globals.isMacPlatform()) and \
+                if not Globals.isWindowsPlatform() and \
                    len(proxyList) == 1 and \
                    proxyList[0].type() == QNetworkProxy.NoProxy:
                     # try it the Python way
