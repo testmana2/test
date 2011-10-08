@@ -76,11 +76,8 @@ def findPython2Interpreters():
                 interpreter = os.path.join(path, exe)
                 if os.path.isfile(interpreter):
                     interpreters.append(interpreter)
-##    elif isMacPlatform():
-##        # don't know how to do this due to lack of a Mac
-##        pass
     else:
-        # search interpreters on Posix platforms
+        # search interpreters on Posix and Mac platforms
         for path in posixPathList:
             for version in posixVersionsList:
                 interpreter = os.path.join(path, "python{0}".format(version))
