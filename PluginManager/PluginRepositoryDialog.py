@@ -65,6 +65,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadButton = \
             self.buttonBox.addButton(self.trUtf8("Download"), QDialogButtonBox.ActionRole)
         self.__downloadButton.setEnabled(False)
+        self.__downloadInstallButton = \
+            self.buttonBox.addButton(self.trUtf8("Download && Install"),
+            QDialogButtonBox.ActionRole)
+        self.__downloadInstallButton.setEnabled(False)
         self.__downloadCancelButton = \
             self.buttonBox.addButton(self.trUtf8("Cancel"), QDialogButtonBox.ActionRole)
         self.__installButton = \
@@ -91,6 +95,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__inDownload = False
         self.__pluginsToDownload = []
         self.__pluginsDownloaded = []
+        self.__isDownloadInstall = False
+        self.__allDownloadedOk = False
         
         self.__populateList()
     
@@ -102,6 +108,11 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         if button == self.__updateButton:
             self.__updateList()
         elif button == self.__downloadButton:
+            self.__isDownloadInstall = False
+            self.__downloadPlugins()
+        elif button == self.__downloadInstallButton:
+            self.__isDownloadInstall = True
+            self.__allDownloadedOk = True
             self.__downloadPlugins()
         elif button == self.__downloadCancelButton:
             self.__downloadCancel()
@@ -167,6 +178,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         Private slot to handle a change of the selection.
         """
         self.__downloadButton.setEnabled(len(self.__selectedItems()))
+        self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
     
     def __updateList(self):
         """
@@ -190,11 +202,13 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private method called, when the download of a plugin is finished.
         
-        @param status flaging indicating a successful download (boolean)
+        @param status flag indicating a successful download (boolean)
         @param filename full path of the downloaded file (string)
         """
         if status:
             self.__pluginsDownloaded.append(filename)
+        if self.__isDownloadInstall:
+            self.__allDownloadedOk &= status
         
         del self.__pluginsToDownload[0]
         if len(self.__pluginsToDownload):
@@ -217,6 +231,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__pluginsDownloaded = []
         self.__pluginsToDownload = []
         self.__downloadButton.setEnabled(False)
+        self.__downloadInstallButton.setEnabled(False)
         self.__installButton.setEnabled(False)
         for itm in self.repositoryList.selectedItems():
             if itm not in [self.__stableItem, self.__unstableItem, self.__unknownItem]:
@@ -232,15 +247,19 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         Private method called, when the download of the plugins is finished.
         """
         self.__downloadButton.setEnabled(len(self.__selectedItems()))
+        self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
         self.__installButton.setEnabled(True)
         self.__doneMethod = None
-        E5MessageBox.information(self,
-            self.trUtf8("Download Plugin Files"),
-            self.trUtf8("""The requested plugins were downloaded."""))
-        self.downloadProgress.setValue(0)
-        
-        # repopulate the list to update the refresh icons
-        self.__populateList()
+        if self.__isDownloadInstall:
+            self.closeAndInstall.emit()
+        else:
+            E5MessageBox.information(self,
+                self.trUtf8("Download Plugin Files"),
+                self.trUtf8("""The requested plugins were downloaded."""))
+            self.downloadProgress.setValue(0)
+            
+            # repopulate the list to update the refresh icons
+            self.__populateList()
     
     def __resortRepositoryList(self):
         """
@@ -295,6 +314,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         self.__updateButton.setEnabled(False)
         self.__downloadButton.setEnabled(False)
+        self.__downloadInstallButton.setEnabled(False)
         self.__downloadCancelButton.setEnabled(True)
         
         self.statusLabel.setText(url)
@@ -343,6 +363,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                         self.repositoryList.topLevelItem(0))
                 else:
                     self.__downloadButton.setEnabled(len(self.__selectedItems()))
+                    self.__downloadInstallButton.setEnabled(len(self.__selectedItems()))
             return
         
         self.__downloadIODevice.open(QIODevice.WriteOnly)

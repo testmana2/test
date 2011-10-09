@@ -43,6 +43,8 @@ Version 5.2-snapshot-2011mmdd:
   -- API files generator
      --- added code to write base class information to be used by the
          eric assistant plug-in
+- enhancements of the plug-in manager tools
+  -- added code to download and install plug-ins
 
 Version 5.2-snapshot-20110724:
 - bug fixes
