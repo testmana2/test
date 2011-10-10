@@ -11,7 +11,7 @@ import struct
 import io
 
 from PyQt4.QtCore import QProcess, QProcessEnvironment, QObject, QByteArray, \
-    QCoreApplication
+    QCoreApplication, QThread
 from PyQt4.QtGui import QDialog
 
 from .HgClientPromptDialog import HgClientPromptDialog
@@ -240,6 +240,7 @@ class HgClient(QObject):
                 return -10
             
             if self.__server.bytesAvailable() == 0:
+                QThread.msleep(50)
                 continue
             channel, data = self.__readChannel()
             
