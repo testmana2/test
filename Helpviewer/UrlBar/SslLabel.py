@@ -30,6 +30,7 @@ class SslLabel(QLabel):
         
         self.setFocusPolicy(Qt.NoFocus)
         self.setCursor(Qt.ArrowCursor)
+        self.setTextFormat(Qt.PlainText)
     
     def mouseReleaseEvent(self, evt):
         """

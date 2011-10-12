@@ -101,7 +101,8 @@ class E5MessageBox(QMessageBox):
 
 
 def __messageBox(parent, title, text, icon,
-                 buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton):
+                 buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton,
+                 textFormat=Qt.AutoText):
     """
     Private module function to show a modal message box.
     
@@ -113,6 +114,7 @@ def __messageBox(parent, title, text, icon,
         (QMessageBox.StandardButtons)
     @param defaultButton flag indicating the default button
         (QMessageBox.StandardButton)
+    @param textFormat format of the text (Qt.TextFormat)
     @return button pressed by the user (QMessageBox.StandardButton)
     """
     messageBox = QMessageBox(parent)
@@ -125,6 +127,7 @@ def __messageBox(parent, title, text, icon,
     else:
         messageBox.setWindowTitle("{0} - {1}".format(
             QApplication.applicationName(), title))
+    messageBox.setTextFormat(textFormat)
     messageBox.setText(text)
     messageBox.setStandardButtons(buttons)
     messageBox.setDefaultButton(defaultButton)
@@ -216,7 +219,7 @@ def warning(parent, title, text,
 ################################################################################
 
 
-def yesNo(parent, title, text, icon=Question, yesDefault=False):
+def yesNo(parent, title, text, icon=Question, yesDefault=False, textFormat=Qt.AutoText):
     """
     Function to show a model yes/no message box.
     
@@ -226,17 +229,19 @@ def yesNo(parent, title, text, icon=Question, yesDefault=False):
     @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
     @keyparam yesDefault flag indicating that the Yes button should be the default
         button (boolean)
+    @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating the selection of the Yes button (boolean)
     """
     assert icon in [Critical, Information, Question, Warning]
     
     res = __messageBox(parent, title, text, icon,
-                       QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No),
-                       yesDefault and QMessageBox.Yes or QMessageBox.No)
+            QMessageBox.StandardButtons(QMessageBox.Yes | QMessageBox.No),
+            yesDefault and QMessageBox.Yes or QMessageBox.No,
+            textFormat)
     return res == QMessageBox.Yes
 
 
-def retryAbort(parent, title, text, icon=Question):
+def retryAbort(parent, title, text, icon=Question, textFormat=Qt.AutoText):
     """
     Function to show a model abort/retry message box.
     
@@ -244,17 +249,19 @@ def retryAbort(parent, title, text, icon=Question):
     @param title caption of the message box (string)
     @param text text to be shown by the message box (string)
     @keyparam icon icon for the dialog (Critical, Information, Question or Warning)
+    @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating the selection of the Retry button (boolean)
     """
     assert icon in [Critical, Information, Question, Warning]
     
     res = __messageBox(parent, title, text, icon,
-                    QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort),
-                    QMessageBox.Retry)
+            QMessageBox.StandardButtons(QMessageBox.Retry | QMessageBox.Abort),
+            QMessageBox.Retry,
+            textFormat)
     return res == QMessageBox.Retry
 
 
-def okToClearData(parent, title, text, saveFunc):
+def okToClearData(parent, title, text, saveFunc, textFormat=Qt.AutoText):
     """
     Function to show a model message box to ask for clearing the data.
     
@@ -263,12 +270,14 @@ def okToClearData(parent, title, text, saveFunc):
     @param text text to be shown by the message box (string)
     @param saveFunc reference to a function performing the save action. It
         must be a parameterless function returning a flag indicating success.
+    @param textFormat format of the text (Qt.TextFormat)
     @return flag indicating that it is ok to clear the data (boolean)
     """
     res = __messageBox(parent, title, text, QMessageBox.Warning,
-        QMessageBox.StandardButtons(
-            QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save),
-        QMessageBox.Save)
+            QMessageBox.StandardButtons(
+                QMessageBox.Abort | QMessageBox.Discard | QMessageBox.Save),
+            QMessageBox.Save,
+            textFormat)
     if res == QMessageBox.Abort:
         return False
     if res == QMessageBox.Save:

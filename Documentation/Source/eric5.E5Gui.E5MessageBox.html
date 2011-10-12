@@ -120,7 +120,7 @@ parent widget of the message box (QWidget)
 <hr /><hr />
 <a NAME="__messageBox" ID="__messageBox"></a>
 <h2>__messageBox</h2>
-<b>__messageBox</b>(<i>parent, title, text, icon, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton</i>)
+<b>__messageBox</b>(<i>parent, title, text, icon, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton, textFormat=Qt.AutoText</i>)
 <p>
     Private module function to show a modal message box.
 </p><dl>
@@ -144,6 +144,9 @@ flags indicating which buttons to show
 <dd>
 flag indicating the default button
         (QMessageBox.StandardButton)
+</dd><dt><i>textFormat</i></dt>
+<dd>
+format of the text (Qt.TextFormat)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -219,7 +222,7 @@ button pressed by the user (QMessageBox.StandardButton)
 <hr /><hr />
 <a NAME="okToClearData" ID="okToClearData"></a>
 <h2>okToClearData</h2>
-<b>okToClearData</b>(<i>parent, title, text, saveFunc</i>)
+<b>okToClearData</b>(<i>parent, title, text, saveFunc, textFormat=Qt.AutoText</i>)
 <p>
     Function to show a model message box to ask for clearing the data.
 </p><dl>
@@ -236,6 +239,9 @@ text to be shown by the message box (string)
 <dd>
 reference to a function performing the save action. It
         must be a parameterless function returning a flag indicating success.
+</dd><dt><i>textFormat</i></dt>
+<dd>
+format of the text (Qt.TextFormat)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -279,7 +285,7 @@ button pressed by the user (QMessageBox.StandardButton)
 <hr /><hr />
 <a NAME="retryAbort" ID="retryAbort"></a>
 <h2>retryAbort</h2>
-<b>retryAbort</b>(<i>parent, title, text, icon=Question</i>)
+<b>retryAbort</b>(<i>parent, title, text, icon=Question, textFormat=Qt.AutoText</i>)
 <p>
     Function to show a model abort/retry message box.
 </p><dl>
@@ -295,6 +301,9 @@ text to be shown by the message box (string)
 </dd><dt><i>icon=</i></dt>
 <dd>
 icon for the dialog (Critical, Information, Question or Warning)
+</dd><dt><i>textFormat</i></dt>
+<dd>
+format of the text (Qt.TextFormat)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -338,7 +347,7 @@ button pressed by the user (QMessageBox.StandardButton)
 <hr /><hr />
 <a NAME="yesNo" ID="yesNo"></a>
 <h2>yesNo</h2>
-<b>yesNo</b>(<i>parent, title, text, icon=Question, yesDefault=False</i>)
+<b>yesNo</b>(<i>parent, title, text, icon=Question, yesDefault=False, textFormat=Qt.AutoText</i>)
 <p>
     Function to show a model yes/no message box.
 </p><dl>
@@ -358,6 +367,9 @@ icon for the dialog (Critical, Information, Question or Warning)
 <dd>
 flag indicating that the Yes button should be the default
         button (boolean)
+</dd><dt><i>textFormat</i></dt>
+<dd>
+format of the text (Qt.TextFormat)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

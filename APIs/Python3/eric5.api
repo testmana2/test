@@ -1256,11 +1256,11 @@ eric5.E5Gui.E5MessageBox.about?7
 eric5.E5Gui.E5MessageBox.aboutQt?7
 eric5.E5Gui.E5MessageBox.critical?4(parent, title, text, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton)
 eric5.E5Gui.E5MessageBox.information?4(parent, title, text, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton)
-eric5.E5Gui.E5MessageBox.okToClearData?4(parent, title, text, saveFunc)
+eric5.E5Gui.E5MessageBox.okToClearData?4(parent, title, text, saveFunc, textFormat=Qt.AutoText)
 eric5.E5Gui.E5MessageBox.question?4(parent, title, text, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton)
-eric5.E5Gui.E5MessageBox.retryAbort?4(parent, title, text, icon=Question)
+eric5.E5Gui.E5MessageBox.retryAbort?4(parent, title, text, icon=Question, textFormat=Qt.AutoText)
 eric5.E5Gui.E5MessageBox.warning?4(parent, title, text, buttons=QMessageBox.Ok, defaultButton=QMessageBox.NoButton)
-eric5.E5Gui.E5MessageBox.yesNo?4(parent, title, text, icon=Question, yesDefault=False)
+eric5.E5Gui.E5MessageBox.yesNo?4(parent, title, text, icon=Question, yesDefault=False, textFormat=Qt.AutoText)
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.activated?7
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createBaseMenu?4()
 eric5.E5Gui.E5ModelMenu.E5ModelMenu.createMenu?4(parent, max_, parentMenu=None, menu=None)
