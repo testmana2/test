@@ -67,15 +67,15 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.Organization))
+        organisation = Qt.escape(Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.Organization)))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.CommonName))
+        commonName = Qt.escape(Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.CommonName)))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
-        expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
+        expiryDate = Qt.escape(cert.expiryDate().toString("yyyy-MM-dd"))
         
         # step 2: create the entry
         items = self.serversCertificatesTree.findItems(organisation,
@@ -249,15 +249,15 @@ class SslCertificatesDialog(QDialog, Ui_SslCertificatesDialog):
         @param cert certificate to insert (QSslCertificate)
         """
         # step 1: extract the info to be shown
-        organisation = Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.Organization))
+        organisation = Qt.escape(Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.Organization)))
         if organisation is None or organisation == "":
             organisation = self.trUtf8("(Unknown)")
-        commonName = Utilities.decodeString(
-            cert.subjectInfo(QSslCertificate.CommonName))
+        commonName = Qt.escape(Utilities.decodeString(
+            cert.subjectInfo(QSslCertificate.CommonName)))
         if commonName is None or commonName == "":
             commonName = self.trUtf8("(Unknown common name)")
-        expiryDate = cert.expiryDate().toString("yyyy-MM-dd")
+        expiryDate = Qt.escape(cert.expiryDate().toString("yyyy-MM-dd"))
         
         # step 2: create the entry
         items = self.caCertificatesTree.findItems(organisation,

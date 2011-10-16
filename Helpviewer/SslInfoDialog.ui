@@ -24,9 +24,6 @@
        <property name="text">
         <string>This certificated has been blacklisted.</string>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="1" column="0" colspan="2">
@@ -54,9 +51,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="3" column="0">
@@ -76,9 +70,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
        </property>
       </widget>
      </item>
@@ -100,9 +91,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="5" column="0">
@@ -122,9 +110,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
        </property>
       </widget>
      </item>
@@ -153,9 +138,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="8" column="0">
@@ -176,9 +158,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="9" column="0">
@@ -198,9 +177,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
        </property>
       </widget>
      </item>
@@ -229,9 +205,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="12" column="0">
@@ -252,18 +225,12 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="13" column="0" colspan="2">
       <widget class="QLabel" name="expiredLabel">
        <property name="text">
         <string>This certificate is not valid yet or has expired.</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
        </property>
       </widget>
      </item>
@@ -292,9 +259,6 @@
        <property name="text">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
-       </property>
       </widget>
      </item>
      <item row="16" column="0">
@@ -314,9 +278,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::PlainText</enum>
        </property>
       </widget>
      </item>

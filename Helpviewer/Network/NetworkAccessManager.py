@@ -245,10 +245,9 @@ class NetworkAccessManager(QNetworkAccessManager):
                     certinfos.append(self.__certToString(cert))
                 ret = E5MessageBox.yesNo(None,
                     self.trUtf8("Certificates"),
-                    self.trUtf8("""Certificates:\n\n{0}\n\n"""
-                                """Do you want to accept all these certificates?""")\
-                        .format("\n\n".join(certinfos)),
-                        textFormat=Qt.PlainText)
+                    self.trUtf8("""<p>Certificates:<br/>{0}<br/>"""
+                                """Do you want to accept all these certificates?</p>""")\
+                        .format("".join(certinfos)))
                 if ret:
                     if server not in caMerge:
                         caMerge[server] = []
@@ -288,23 +287,25 @@ class NetworkAccessManager(QNetworkAccessManager):
         @param cert certificate to convert (QSslCertificate)
         @return formatted string (string)
         """
-        result = ""
+        result = "<p>"
         
         result += self.trUtf8("Name: {0}")\
-            .format(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.CommonName)))
+            .format(Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.CommonName))))
         
-        result += self.trUtf8("\nOrganization: {0}")\
-            .format(Utilities.decodeString(
-                cert.subjectInfo(QSslCertificate.Organization)))
+        result += self.trUtf8("<br/>Organization: {0}")\
+            .format(Qt.escape(Utilities.decodeString(
+                cert.subjectInfo(QSslCertificate.Organization))))
         
-        result += self.trUtf8("\nIssuer: {0}")\
-            .format(Utilities.decodeString(
-                cert.issuerInfo(QSslCertificate.CommonName)))
+        result += self.trUtf8("<br/>Issuer: {0}")\
+            .format(Qt.escape(Utilities.decodeString(
+                cert.issuerInfo(QSslCertificate.CommonName))))
         
-        result += self.trUtf8("\nNot valid before: {0}\nValid Until: {1}")\
-            .format(cert.effectiveDate().toString("yyyy-MM-dd"),
-                    cert.expiryDate().toString("yyyy-MM-dd"))
+        result += self.trUtf8("<br/>Not valid before: {0}<br/>Valid Until: {1}")\
+            .format(Qt.escape(cert.effectiveDate().toString("yyyy-MM-dd")),
+                    Qt.escape(cert.expiryDate().toString("yyyy-MM-dd")))
+        
+        result += "</p>"
         
         return result
     
