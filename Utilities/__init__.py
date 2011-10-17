@@ -1311,11 +1311,15 @@ def prepareQtMacBundle(toolname, version, args):
     
     fullBundle = os.path.join(qtDir, 'bin',
         generateQtToolName(toolname)) + ".app"
+    if not os.path.exists(fullBundle):
+        fullBundle = os.path.join(qtDir, generateQtToolName(toolname)) + ".app"
 
     newArgs = []
     newArgs.append("-a")
     newArgs.append(fullBundle)
-    newArgs += args
+    if args:
+        newArgs.append("--args")
+        newArgs += args
 
     return ("open", newArgs)
 
