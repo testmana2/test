@@ -137,6 +137,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#getPythonVersion">getPythonVersion</a></td>
 <td>Function to get the Python version (major, minor) as an integer value.</td>
 </tr><tr>
+<td><a href="#getQtMacBundle">getQtMacBundle</a></td>
+<td>Module function to determine the correct Mac OS X bundle name for Qt tools.</td>
+</tr><tr>
 <td><a href="#getTestFileName">getTestFileName</a></td>
 <td>Function to build the filename of a unittest file.</td>
 </tr><tr>
@@ -916,6 +919,24 @@ path to the Python modules directory (string)
 <dt>Returns:</dt>
 <dd>
 An integer representing major and minor version number (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getQtMacBundle" ID="getQtMacBundle"></a>
+<h2>getQtMacBundle</h2>
+<b>getQtMacBundle</b>(<i>toolname</i>)
+<p>
+    Module function to determine the correct Mac OS X bundle name for Qt tools.
+</p><dl>
+<dt><i>toolname</i></dt>
+<dd>
+plain name of the tool (e.g. "designer") (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+bundle name of the Qt tool (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

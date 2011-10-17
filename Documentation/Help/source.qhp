@@ -2459,6 +2459,7 @@
       <keyword name="getPythonLibPath" id="getPythonLibPath" ref="eric5.Utilities.__init__.html#getPythonLibPath" />
       <keyword name="getPythonModulesDirectory" id="getPythonModulesDirectory" ref="eric5.Utilities.__init__.html#getPythonModulesDirectory" />
       <keyword name="getPythonVersion" id="getPythonVersion" ref="eric5.Utilities.__init__.html#getPythonVersion" />
+      <keyword name="getQtMacBundle" id="getQtMacBundle" ref="eric5.Utilities.__init__.html#getQtMacBundle" />
       <keyword name="getTestFileName" id="getTestFileName" ref="eric5.Utilities.__init__.html#getTestFileName" />
       <keyword name="getUserName" id="getUserName" ref="eric5.Utilities.__init__.html#getUserName" />
       <keyword name="get_coding" id="get_coding" ref="eric5.Utilities.__init__.html#get_coding" />
