@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1637,8 +1638,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1856,8 +1857,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -2041,12 +2042,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/Browser.py" line="241"/>
         <source>Goto</source>
-        <translation type="unfinished">Ir a</translation>
+        <translation>Ir a</translation>
     </message>
     <message>
         <location filename="UI/Browser.py" line="343"/>
         <source>Line {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Línea {0}</translation>
     </message>
 </context>
 <context>
@@ -2079,7 +2080,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="UI/BrowserModel.py" line="613"/>
         <source>Class Attributes</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Atributos de Clase</translatorcomment>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3147,12 +3149,12 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="330"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="222"/>
         <source>Syntax Checker</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificador sintaxis</translation>
     </message>
 </context>
 <context>
@@ -3539,12 +3541,13 @@ para visualizar la página de configuración.</translation>
         <location filename="Cooperation/CooperationClient.py" line="286"/>
         <source>Illegal address: {0}@{1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección ilegal: {0}@{1}
+</translation>
     </message>
     <message>
         <location filename="Cooperation/CooperationClient.py" line="377"/>
         <source>No servers present.</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay servidores presentes.</translation>
     </message>
 </context>
 <context>
@@ -7670,7 +7673,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="QScintilla/Editor.py" line="690"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
 </context>
 <context>
@@ -8488,17 +8491,17 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="445"/>
         <source>File Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Previsualizar Archivo</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="451"/>
         <source>Extensions of previewable files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extensiones de archivos previsualizables:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorFilePage.ui" line="458"/>
         <source>Enter the filename extensions of files that may be previewed in the web browser (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir las extensiones de nombre de archivo de archivos que pueden ser previsualizados en el navegador web (separados por un espacio)</translation>
     </message>
 </context>
 <context>
@@ -10310,57 +10313,57 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="20"/>
         <source>&lt;b&gt;Configure Syntax Checker settings&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar Ajustes de Revisión de Sintaxis&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="40"/>
         <source>Select to enable the online syntax checker</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar la revisión de sintaxis online</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="43"/>
         <source>&lt;b&gt;Online Syntax Check&lt;/b&gt;&lt;p&gt;Select this to enable syntax checks while typing. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Revisión de sintaxis Online&lt;/b&gt;&lt;p&gt;Seleccionar para habilitar la revisión de sintaxis al teclear. La revisión se lleva a cabo, si el tecleo se interrumple durante un intervalo configurado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="46"/>
         <source>Online Syntax Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Revisión de Sintaxis Online</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="55"/>
         <source>Timeout Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalo de tiempo:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="62"/>
         <source>Enter the timeout for the online syntax checker</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el intervalo de tiempo para la revisión sintáctica online</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="65"/>
         <source>&lt;b&gt;Timeout Interval&lt;/b&gt;&lt;p&gt;Enter the timeout interval for the online syntax check. The check is performed, if typing is interrupted for the configured timeout period.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Intervalo de Tiempo&lt;/b&gt;&lt;p&gt;Introducir el periodo de tiempo para el chequeo sintáctico online. La revisión se lleva a cabo, si el tecleo se interrumple durante un intervalo configurado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="109"/>
         <source>Automatic Syntax Check</source>
-        <translation type="unfinished">Chequeo automático de sintaxis</translation>
+        <translation>Chequeo Automático de Sintaxis</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="103"/>
         <source>Select, whether source files should be checked automatically for syntax errors</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar si los códigos fuente deben ser revisados automaticamente para detectar errores sintácticos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="106"/>
         <source>&lt;b&gt;Automatic Syntax Check&lt;/b&gt;&lt;p&gt;Select to enable the automatic syntax checker. The syntax is checked, when a file is loaded or saved or the programming language of the editor is selected.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Revisión de Sintaxis Automática&lt;/b&gt;&lt;p&gt;Seleccionar para habilitar la revisión de sintaxis automática. Se revisa la sintaxis cuando un archivo se carga o se guarda, o al seleccionar el lenguaje de programación del editor.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="74"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation> s</translation>
     </message>
 </context>
 <context>
@@ -12752,7 +12755,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="802"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -12948,7 +12951,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="618"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
 </context>
 <context>
@@ -13395,7 +13398,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpTabWidget.py" line="515"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
 </context>
 <context>
@@ -13519,12 +13522,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
         <source>Select to use the configured web browser of the system</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para utilizar el navegador web configurado en el sistema</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpViewersPage.ui" line="106"/>
         <source>System Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegador Web del Sistema</translation>
     </message>
 </context>
 <context>
@@ -13850,7 +13853,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="282"/>
         <source>Security</source>
-        <translation type="unfinished">Seguridad</translation>
+        <translation>Seguridad</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="271"/>
@@ -13945,75 +13948,78 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="269"/>
         <source>Select to enabled the &quot;Do Not Track&quot; feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar la característica &quot;No Hacer Seguimiento&quot;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="272"/>
         <source>Tell web sites I do not want to be tracked</source>
-        <translation type="unfinished"></translation>
+        <translation>Decir a los sitios web que no deseo que se me haga seguimiento</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="79"/>
         <source>Select to enable the browser&apos;s workaround for broken sites</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir al navegador utilizar su solución provisional para sitios rotos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="82"/>
         <source>Enable workaround for broken sites</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar solución provisional para sitios rotos</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="288"/>
         <source>Select to enable XSS auditing</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar auditoría de XSS</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="295"/>
         <source>Enable XSS Auditing</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Auditoría de XSS</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="521"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegación</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="527"/>
         <source>Select to enable the spatial navigation feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para habilitar la característica de navegación especial</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="530"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Habilitar Navegación Espacial&lt;/b&gt;
+&lt;p&gt;Habilita o deshabilita la característica de Navegación Espacial, que consiste en la capacidad de navegación entre elementos susceptibles de aceptar el foco en una página web, tal como hiperenlaces y controles de formulario, utilizando las teclas flecha Izquierda, Derecha, Arriba y Abajo. Por ejemplo, si un usuario pulsa la tecla Derecha, se determina heurísticamente si hay un elemento que el usuario podría estar intentando alcanzar hacia la derecha, y qué elemento es el que probablemente desea.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="534"/>
         <source>Enable Spatial Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Navegación Espacial</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="541"/>
         <source>Select to include links in focus chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para incluir enlaces en la cadena de foco</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="544"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Incluir Enlaces en la Cadena de Foco&lt;/b&gt;
+&lt;p&gt;Selecciona si los hiperenlaces deben ser incluidos en la cadena de foco del teclado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="548"/>
         <source>Include Links in Focus Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Incluir Enlaces en la Cadena de Foco</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="291"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Habilitar Auditoría de XSS&lt;/b&gt;
+&lt;p&gt;Selecciona si las solicitudes de carga deben ser monitorizadas en busca de intentos de cross-site-scripting. Los scripts sospechosos se bloquearán. Estos bloqueos se reportarán en la consola de Javascript del Inspector Web&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15576,17 +15582,17 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="535"/>
         <source>Quit the eric5 Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Salir del Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="536"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Salir&lt;/b&gt;&lt;p&gt;Salir del Navegador Web de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1638"/>
         <source>&lt;h3&gt;About eric5 Web Browser&lt;/h3&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Acerca del Navegador Web de eric5&lt;/h3&gt;&lt;p&gt;El Navegador Web de eric5 es una combinación de navegador Web y navegador de archivos de ayuda.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15839,32 +15845,32 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="468"/>
         <source>Committing changes to Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Haciendo commit de cambios al repositorio Mercurial</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2611"/>
         <source>Mercurial Command Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Servidor de Comandos de Mercurial</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2490"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El Servidor de Comandos de Mercurial no ha podido reiniciarse.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2611"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El Servidor de Comandos de Mercurial no ha podido iniciarse.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2423"/>
         <source>Import Patch</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar Patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/hg.py" line="2470"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Patches</translation>
     </message>
 </context>
 <context>
@@ -16556,27 +16562,27 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="29"/>
         <source>Select to specify multiple revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para especificar múltiples revisiones</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="32"/>
         <source>Multiple</source>
-        <translation type="unfinished"></translation>
+        <translation>Múltiple</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="155"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="148"/>
         <source>Base Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revisiones Base:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="172"/>
         <source>Compression:</source>
-        <translation type="unfinished"></translation>
+        <translation>Compresión:</translation>
     </message>
 </context>
 <context>
@@ -16584,37 +16590,37 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="87"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+        <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="133"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha recibido el mensaje &apos;hello&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="135"/>
         <source>Received data on unexpected channel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos recibidos en canal no esperado.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="140"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensaje &apos;hello&apos; erróneo, se esperaba &apos;capabilities&apos; pero se obtuvo &apos;{0}&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="144"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
-        <translation type="unfinished"></translation>
+        <translation>El mensaje &apos;capabilities&apos; no contiene ninguna capacidad.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="152"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mensaje &apos;hello&apos; erróneo, se esperaba &apos;encoding&apos; pero se obtuvo &apos;{0}&apos;.</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="156"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
-        <translation type="unfinished"></translation>
+        <translation>El mensaje &apos;encoding&apos; no contiene ninguna codificación.</translation>
     </message>
 </context>
 <context>
@@ -16622,27 +16628,27 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="14"/>
         <source>Mercurial Client Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Input de Cliente de Mercurial</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="23"/>
         <source>Message:</source>
-        <translation type="unfinished">Mensaje:</translation>
+        <translation>Mensaje:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="30"/>
         <source>Shows the message sent by the Mercurial server</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra el mensaje enviado por el servidor Mercurial</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="43"/>
         <source>Input:</source>
-        <translation type="unfinished"></translation>
+        <translation>Input:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="50"/>
         <source>Enter the response to be sent to the Mercurial server</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la respuesta a enviar al servidor Mercurial</translation>
     </message>
 </context>
 <context>
@@ -16981,27 +16987,27 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="73"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Patches</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="25"/>
         <source>Export Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Directorio:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
         <source>Press to select the export directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para seleccionar el directorio de exportación a través de un diálogo de selección de directorios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
         <source>File Name Pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrón de Nombres de Archivo:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="52"/>
         <source>Enter the file name pattern for the export files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el patrón de nombres de archivo para los archivos de exportación</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="55"/>
@@ -17019,37 +17025,50 @@ here. Valid recognized patterns are:&lt;/p&gt;
 &lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;zero-padded changeset revision number&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;    
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Patrón de Nombres de Archivo&lt;/b&gt;
+&lt;p&gt;Introducir aquí el patrón de nombres de archivo a utilizar para generar los archivos de exportación
+here. Los patrones válidos que se reconocen son:&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;literal &quot;%&quot; carácter&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;hash de changeset (40 dígitos hexadecimales)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%N&lt;/td&gt;&lt;td&gt;número de patches que se generan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%R&lt;/td&gt;&lt;td&gt;número de revisión de changeset&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%b&lt;/td&gt;&lt;td&gt;basename del repositorio de exportación&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;hash corto de changeset hash (12 dígitos hexadecimales)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;número de secuencia rellenado con ceros, comenzando con el 1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;número de revisión de changeset rellenado con ceros&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;    
+</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="75"/>
         <source>Changesets:</source>
-        <translation type="unfinished"></translation>
+        <translation>Changesets:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="82"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="100"/>
         <source>Compare Against Second Parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Comparar Contra el Segundo Parent</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="110"/>
         <source>Treat all Files as Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tratar todos los Archivos como Texto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="117"/>
         <source>Omit Dates</source>
-        <translation type="unfinished"></translation>
+        <translation>Omitir Fechas</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="124"/>
         <source>Use Git extended Diff-Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilizar Formato de Diff extendido de Git</translation>
     </message>
 </context>
 <context>
@@ -17341,57 +17360,57 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="14"/>
         <source>Import Patch</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar Patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="23"/>
         <source>Commit data</source>
-        <translation type="unfinished">Hacer commit de los datos</translation>
+        <translation>Hacer Commit de datos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="29"/>
         <source>Select to not commit the imported patch</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para no hacer commit del patch importado</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="32"/>
         <source>Do not commit</source>
-        <translation type="unfinished"></translation>
+        <translation>No hacer commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="42"/>
         <source>Commit message:</source>
-        <translation type="unfinished">Mensaje de commit:</translation>
+        <translation>Mensaje de commit:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="52"/>
         <source>Enter the commit message or leave empty to use the default one</source>
-        <translation type="unfinished">Introduzca el mensaje de commit o deje en blanco para utilizar el mensaje por defecto</translation>
+        <translation>Introduzca el mensaje de commit o deje en blanco para utilizar el mensaje por defecto</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="64"/>
         <source>Commit Date:</source>
-        <translation type="unfinished">Fecha de Commit:</translation>
+        <translation>Fecha de Commit:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="74"/>
         <source>Enter optional date for the commit</source>
-        <translation type="unfinished">Introduzca opcionalmente fecha para el commit</translation>
+        <translation>Introduzca fecha opcional para el commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="100"/>
         <source>Commit User:</source>
-        <translation type="unfinished">Usuario de Commit:</translation>
+        <translation>Usuario de Commit:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="110"/>
         <source>Enter optional user for the commit</source>
-        <translation type="unfinished">Introduzca opcionalmente usuario para el commit</translation>
+        <translation>Introduzca opcionalmente usuario para el commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="122"/>
         <source>Strip Count:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Conteo de Strip:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="131"/>
@@ -42432,7 +42451,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Project/TranslationPropertiesDialog.ui" line="74"/>
         <source>Enter the path pattern for the translation files</source>
-        <translation>Introduzcir el patrón de la ruta para los archivos de traducciones</translation>
+        <translation>Introducir el patrón de la ruta para los archivos de traducciones</translation>
     </message>
     <message>
         <location filename="Project/TranslationPropertiesDialog.py" line="95"/>
@@ -45673,7 +45692,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Debugger/Config.py" line="15"/>
         <source>Hidden Attributes</source>
-        <translation>AtributosOcultos</translation>
+        <translation>Atributos Ocultos</translation>
     </message>
     <message>
         <location filename="Debugger/Config.py" line="16"/>
@@ -48973,17 +48992,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="2466"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista Previa</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2471"/>
         <source>Preview the current file in the web browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista previa del archivo actual en el navegador web</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2473"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This opens the web browser with a preview of the current file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Vista Previa&lt;/b&gt;&lt;p&gt;Abre el navegador web con una vista previa del archivo actual.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
