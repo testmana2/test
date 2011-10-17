@@ -1799,9 +1799,12 @@ class UserInterface(QMainWindow):
         self.actions.append(self.utProjectAct)
         
         # check for Qt4 designer and linguist
-        designerExe = Utilities.isWindowsPlatform() and \
-            "{0}.exe".format(Utilities.generateQtToolName("designer")) or \
-            Utilities.generateQtToolName("designer")
+        if Utilities.isWindowsPlatform():
+            designerExe = "{0}.exe".format(Utilities.generateQtToolName("designer"))
+        elif Utilities.isMacPlatform():
+            designerExe = Utilities.getQtMacBundle("designer")
+        else:
+            designerExe = Utilities.generateQtToolName("designer")
         if Utilities.isinpath(designerExe):
             self.designer4Act = E5Action(self.trUtf8('Qt-Designer 4'),
                     UI.PixmapCache.getIcon("designer4.png"),
@@ -1816,9 +1819,12 @@ class UserInterface(QMainWindow):
         else:
             self.designer4Act = None
         
-        linguistExe = Utilities.isWindowsPlatform() and \
-            "{0}.exe".format(Utilities.generateQtToolName("linguist")) or \
-            Utilities.generateQtToolName("linguist")
+        if Utilities.isWindowsPlatform():
+            linguistExe = "{0}.exe".format(Utilities.generateQtToolName("linguist"))
+        elif Utilities.isMacPlatform():
+            linguistExe = Utilities.getQtMacBundle("linguist")
+        else:
+            linguistExe = Utilities.generateQtToolName("linguist")
         if Utilities.isinpath(linguistExe):
             self.linguist4Act = E5Action(self.trUtf8('Qt-Linguist 4'),
                     UI.PixmapCache.getIcon("linguist4.png"),
@@ -4651,6 +4657,8 @@ class UserInterface(QMainWindow):
         qt4DocDir = Preferences.getHelp("Qt4DocDir")
         if not qt4DocDir:
             qt4DocDir = Utilities.getEnvironmentEntry("QT4DOCDIR", "")
+            if not qt4DocDir:
+                qt4DocDir = os.path.join(Preferences.getQt4DocDir(), "html")
         
         if qt4DocDir.startswith("qthelp://"):
             if not os.path.splitext(qt4DocDir)[1]:
@@ -4913,7 +4921,7 @@ class UserInterface(QMainWindow):
         
         @param pageName name of the configuration page to show (string)
         """
-        dlg = ConfigurationDialog(self, 'Configuration', True)
+        dlg = ConfigurationDialog(self, 'Configuration') ##, True)
         dlg.preferencesChanged.connect(self.__preferencesChanged)
         dlg.masterPasswordChanged.connect(self.__masterPasswordChanged)
         dlg.show()

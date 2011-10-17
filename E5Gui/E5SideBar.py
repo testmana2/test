@@ -88,6 +88,9 @@ class E5SideBar(QWidget):
         """
         self.splitter = splitter
         self.splitter.splitterMoved.connect(self.__splitterMoved)
+        self.splitter.setChildrenCollapsible(False)
+        index = self.splitter.indexOf(self)
+        self.splitter.setCollapsible(index, False)
     
     def __splitterMoved(self, pos, index):
         """

@@ -1418,6 +1418,26 @@ def generateQtToolName(toolname):
                              )
 
 
+def getQtMacBundle(toolname):
+    """
+    Module function to determine the correct Mac OS X bundle name for Qt tools.
+    
+    @param toolname  plain name of the tool (e.g. "designer") (string)
+    @return bundle name of the Qt tool (string)
+    """
+    qtDir = Preferences.getQt("Qt4Dir")
+    bundles = [
+        os.path.join(qtDir, 'bin', generateQtToolName(toolname.capitalize())) + ".app",
+        os.path.join(qtDir, 'bin', generateQtToolName(toolname)) + ".app",
+        os.path.join(qtDir, generateQtToolName(toolname.capitalize())) + ".app",
+        os.path.join(qtDir, generateQtToolName(toolname)) + ".app",
+    ]
+    for bundle in bundles:
+        if os.path.exists(bundle):
+            return bundle
+    return ""
+
+
 def prepareQtMacBundle(toolname, version, args):
     """
     Module function for starting Qt tools that are Mac OS X bundles.
@@ -1427,18 +1447,19 @@ def prepareQtMacBundle(toolname, version, args):
     @param args    name of input file for tool, if any (list of strings)
     @return command-name and args for QProcess (tuple)
     """
-    if version == 4:
-        qtDir = Preferences.getQt("Qt4Dir")
-    else:
+    if version != 4:
         return ("", [])
     
-    fullBundle = os.path.join(qtDir, 'bin',
-        generateQtToolName(toolname)) + ".app"
+    fullBundle = getQtMacBundle(toolname)
+    if fullBundle == "":
+        return ("", [])
 
     newArgs = []
     newArgs.append("-a")
     newArgs.append(fullBundle)
-    newArgs += args
+    if args:
+        newArgs.append("--args")
+        newArgs += args
 
     return ("open", newArgs)
 

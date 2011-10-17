@@ -82,19 +82,28 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         version = self.__createProgramEntry(self.trUtf8("Translation Converter (Qt4)"),
                     exe, '-version', 'lrelease', -1)
         # 1b. Qt4 Designer
-        exe = Utilities.isWindowsPlatform() and \
-            "{0}.exe".format(Utilities.generateQtToolName("designer")) or \
-            Utilities.generateQtToolName("designer")
+        if Utilities.isWindowsPlatform():
+            exe = "{0}.exe".format(Utilities.generateQtToolName("designer"))
+        elif Utilities.isMacPlatform():
+            exe = Utilities.getQtMacBundle("designer")
+        else:
+            exe = Utilities.generateQtToolName("designer")
         self.__createProgramEntry(self.trUtf8("Qt4 Designer"), exe, version=version)
         # 1c. Qt4 Linguist
-        exe = Utilities.isWindowsPlatform() and \
-            "{0}.exe".format(Utilities.generateQtToolName("linguist")) or \
-            Utilities.generateQtToolName("linguist")
+        if Utilities.isWindowsPlatform():
+            exe = "{0}.exe".format(Utilities.generateQtToolName("linguist"))
+        elif Utilities.isMacPlatform():
+            exe = Utilities.getQtMacBundle("linguist")
+        else:
+            exe = Utilities.generateQtToolName("linguist")
         self.__createProgramEntry(self.trUtf8("Qt4 Linguist"), exe, version=version)
         # 1d. Qt4 Assistant
-        exe = Utilities.isWindowsPlatform() and \
-            "{0}.exe".format(Utilities.generateQtToolName("assistant")) or \
-            Utilities.generateQtToolName("assistant")
+        if Utilities.isWindowsPlatform():
+            exe = "{0}.exe".format(Utilities.generateQtToolName("assistant"))
+        elif Utilities.isMacPlatform():
+            exe = Utilities.getQtMacBundle("assistant")
+        else:
+            exe = Utilities.generateQtToolName("assistant")
         self.__createProgramEntry(self.trUtf8("Qt4 Assistant"), exe, version=version)
         
         # 2. do the PyQt programs

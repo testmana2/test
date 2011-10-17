@@ -21,7 +21,7 @@ import fnmatch
 import shutil
 
 from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
-    QByteArray, QSize, QUrl, Qt
+    QByteArray, QSize, QUrl, Qt, QLibraryInfo
 from PyQt4.QtGui import QColor, QFont, QInputDialog
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
@@ -1934,10 +1934,11 @@ def getQt4DocDir(prefClass=Prefs):
     s = prefClass.settings.value("Help/Qt4DocDir",
         prefClass.helpDefaults["Qt4DocDir"])
     if s == "":
-        return os.getenv("QT4DOCDIR", "")
-    else:
-        return s
-    
+        s = os.getenv("QT4DOCDIR", "")
+    if s == "":
+        s = QLibraryInfo.location(QLibraryInfo.DocumentationPath)
+    return s
+
 
 def getHelp(key, prefClass=Prefs):
     """
@@ -2090,6 +2091,8 @@ def getQt4TranslationsDir(prefClass=Prefs):
         prefClass.qtDefaults["Qt4TranslationsDir"])
     if s == "":
         s = os.getenv("QT4TRANSLATIONSDIR", "")
+    if s == "":
+        s = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     if s == "" and isWindowsPlatform():
         from PyQt4 import pyqtconfig
         transPath = os.path.join(pyqtconfig._pkg_config["pyqt_mod_dir"], "translations")
@@ -2108,6 +2111,11 @@ def getQt(key, prefClass=Prefs):
     """
     if key == "Qt4TranslationsDir":
         return getQt4TranslationsDir(prefClass)
+    elif key == "Qt4Dir":
+        p = prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
+        if p == "":
+            p = QLibraryInfo.location(QLibraryInfo.BinariesPath)
+        return p
     else:
         return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
     
