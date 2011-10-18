@@ -146,11 +146,11 @@ class UrlBar(E5LineEdit):
                QSslCertificate is not None:
                 sslInfo = self.__browser.page().getSslInfo()
                 if sslInfo is not None:
-                    org = Utilities.decodeString(
-                        sslInfo.subjectInfo(QSslCertificate.Organization))
+                    org = Qt.escape(Utilities.decodeString(
+                        sslInfo.subjectInfo(QSslCertificate.Organization)))
                     if org == "":
-                        cn = Utilities.decodeString(
-                            sslInfo.subjectInfo(QSslCertificate.CommonName))
+                        cn = Qt.escape(Utilities.decodeString(
+                            sslInfo.subjectInfo(QSslCertificate.CommonName)))
                         if cn != "":
                             org = cn.split(".", 1)[1]
                         if org == "":

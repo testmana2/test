@@ -7,7 +7,7 @@
 Module implementing a dialog to show SSL certificate infos.
 """
 
-from PyQt4.QtCore import QCryptographicHash
+from PyQt4.QtCore import QCryptographicHash, Qt
 from PyQt4.QtGui import QDialog
 from PyQt4.QtNetwork import QSslCertificate
 
@@ -42,8 +42,10 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
             certificate.issuerInfo(QSslCertificate.Organization)))
         self.issuerOrganizationalUnitLabel.setText(self.__certificateString(
             certificate.issuerInfo(QSslCertificate.OrganizationalUnitName)))
-        self.effectiveLabel.setText(certificate.effectiveDate().toString("yyyy-MM-dd"))
-        self.expiresLabel.setText(certificate.expiryDate().toString("yyyy-MM-dd"))
+        self.effectiveLabel.setText(Qt.escape(
+            certificate.effectiveDate().toString("yyyy-MM-dd")))
+        self.expiresLabel.setText(Qt.escape(
+            certificate.expiryDate().toString("yyyy-MM-dd")))
         self.sha1Label.setText(self.__formatHexString(
             str(certificate.digest(QCryptographicHash.Sha1).toHex(), encoding = "ascii")))
         self.md5Label.setText(self.__formatHexString(
@@ -59,7 +61,7 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
         if txt is None or txt == "":
             return self.trUtf8("<not part of the certificate>")
         
-        return Utilities.decodeString(txt)
+        return Qt.escape(Utilities.decodeString(txt))
     
     def __serialNumber(self, cert):
         """
@@ -95,4 +97,4 @@ class SslInfoDialog(QDialog, Ui_SslInfoDialog):
             hexList.append(hexString[:2])
             hexString = hexString[2:]
         
-        return ':'.join(hexList)
+        return Qt.escape(':'.join(hexList))
