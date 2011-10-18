@@ -17410,47 +17410,47 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="122"/>
         <source>Strip Count:</source>
-        <translation type="unfinished">Conteo de Strip:</translation>
+        <translation>Número de Strip:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="131"/>
         <source>Enter number of leading directories to strip off (default 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir número de directorios al principio para quitar (por defecto 1)</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="162"/>
         <source>Patch File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo Patch:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="171"/>
         <source>Enter the name of the patch file</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre de archivo patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="178"/>
         <source>Press to select the patch file via a file selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para seleccionar el archivo de patch a través de un diálogo de selección de archivos</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
         <source>Select to enforce the import</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer cumplir el import</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="193"/>
         <source>Enforce Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Cumplir el Import</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
         <source>Select patch file</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar archivo de patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="65"/>
         <source>Patch Files (*.diff *.patch);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos de Patch (*.diff *.patch);;Todos los Archivos (*)</translation>
     </message>
 </context>
 <context>
@@ -18022,82 +18022,82 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="14"/>
         <source>Mercurial Revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Revisiones de Mercurial</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="23"/>
         <source>Revision</source>
-        <translation type="unfinished">Revisión</translation>
+        <translation>Revisión</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="29"/>
         <source>Select to specify a list of changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para especificar una lista de changesets</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="32"/>
         <source>Changesets:</source>
-        <translation type="unfinished"></translation>
+        <translation>Changesets:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="42"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="55"/>
         <source>Select to specify a revision by a tag</source>
-        <translation type="unfinished">Seleccionar para especificar una revisión por tag</translation>
+        <translation>Seleccionar para especificar una revisión por tag</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="58"/>
         <source>Tag:</source>
-        <translation type="unfinished">Tag:</translation>
+        <translation>Tag:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="74"/>
         <source>Enter a tag name</source>
-        <translation type="unfinished">Introduzca un nombre de tag</translation>
+        <translation>Introduzca un nombre de tag</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="84"/>
         <source>Select to specify a revision by a branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para especificar una revisión por branch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="87"/>
         <source>Branch:</source>
-        <translation type="unfinished">Branch:</translation>
+        <translation>Branch:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="103"/>
         <source>Enter a branch name</source>
-        <translation type="unfinished">Introducir un nombre de branch</translation>
+        <translation>Introducir un nombre de branch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="113"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para especificar una revisión por un marcador</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="116"/>
         <source>Bookmark:</source>
-        <translation type="unfinished">Marcador:</translation>
+        <translation>Marcador:</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="132"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Introduzca un nombre de marcador</translation>
+        <translation>Introduzca un nombre de marcador</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="145"/>
         <source>Limit Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Limitar Resultados</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="157"/>
         <source>Enter number of entries to show:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir número de entradas a mostrar:</translation>
     </message>
 </context>
 <context>
@@ -19403,67 +19403,67 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="749"/>
         <source>Skip...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="752"/>
         <source>Skip a selectable changeset</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorar un changeset seleccionable</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="755"/>
         <source>&lt;b&gt;Skip&lt;/b&gt;&lt;p&gt;This skips a selectable changeset.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ignorar&lt;/b&gt;&lt;p&gt;Ignora un changeset seleccionable.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1266"/>
         <source>Import Patch</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar Patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="826"/>
         <source>Import Patch...</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar Patch...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="829"/>
         <source>Import a patch from a patch file</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar un patch desde un archivo de patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="832"/>
         <source>&lt;b&gt;Import Patch&lt;/b&gt;&lt;p&gt;This imports a patch from a patch file into the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Importar Patch&lt;/b&gt;&lt;p&gt;Importa un patch desde un archivo de patch al proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="900"/>
         <source>Patch Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestión de Patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1285"/>
         <source>Revert Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Revertir cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="839"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Patches</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="839"/>
         <source>Export Patches...</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Patches...</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="842"/>
         <source>Export revisions to patch files</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar revisiones a archivos de patch</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="845"/>
         <source>&lt;b&gt;Export Patches&lt;/b&gt;&lt;p&gt;This exports revisions of the project to patch files.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Exportar Patches&lt;/b&gt;&lt;p&gt;Exporta revisiones del proyecto a archivos de patch.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -20757,12 +20757,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="65"/>
         <source>Select all for commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar todo para hacer commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="67"/>
         <source>Deselect all from commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Deshacer selección de todo en el commit</translation>
     </message>
 </context>
 <context>
@@ -23030,17 +23030,17 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
         <source>Welcome to eric5 Web Browser!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Bienvenido al Navegador Web de eric5!</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
         <source>About eric5</source>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de eric5</translation>
     </message>
 </context>
 <context>
@@ -23932,12 +23932,12 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="224"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="230"/>
         <source>Copy Path to Clipboard</source>
-        <translation type="unfinished">Copiar Ruta al Portapapeles</translation>
+        <translation>Copiar Ruta al Portapapeles</translation>
     </message>
 </context>
 <context>
@@ -24279,33 +24279,34 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="159"/>
         <source>Select to prefer unbundle over pull</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para preferir unbundle en lugar de pull</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="162"/>
         <source>&lt;b&gt;Prefer Unbundle&lt;/b&gt;
 &lt;p&gt;If this option is selected, it will be checked, if a Mercurial changegroups file from a previous &quot;Show Incoming&quot; request exists. In this case it will be applied and deleted. Otherwise a pull request will be sent.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Preferir Unbundle&lt;/b&gt;
+&lt;p&gt;Si se selecciona esta opción, se comprobará si existe un archivo de changegroups de Mercurial de alguna solicitud &quot;Show Incoming&quot; anterior. De ser así, éste será aplicado y borrado. En cualquier otro caso, se enviará una solicitud de pull.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="166"/>
         <source>Prefer Unbundle</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferir Unbundle</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="176"/>
         <source>Revert</source>
-        <translation type="unfinished">Revertir</translation>
+        <translation>Revertir</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="182"/>
         <source>Select to create a backup file (.orig) before reverting changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para crear un archivo de backup (.orig) antes de revertir cambios</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="185"/>
         <source>Create Backup Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear Archivos de Backup</translation>
     </message>
 </context>
 <context>
@@ -26041,22 +26042,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="201"/>
         <source>Select to allow local content to access remote URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir al contenido local acceder a URLs remotas</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="204"/>
         <source>Local Content can access Remote URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>Contenido local puede acceder URLs Remotas</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="220"/>
         <source>Select to allow local content to access local files</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir al contenido local acceder a archivos locales</translation>
     </message>
     <message>
         <location filename="Helpviewer/OfflineStorage/OfflineStorageConfigDialog.ui" line="223"/>
         <source>Local Content can access Local Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Contenido local puede acceder a Archivos Locales</translation>
     </message>
 </context>
 <context>
@@ -27427,7 +27428,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="PluginManager/PluginRepositoryDialog.py" line="69"/>
         <source>Download &amp;&amp; Install</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargar &amp;&amp; Instalar</translation>
     </message>
 </context>
 <context>
@@ -30027,7 +30028,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="Project/ProjectSourcesBrowser.py" line="330"/>
         <source>Goto</source>
-        <translation type="unfinished">Ir a</translation>
+        <translation>Ir a</translation>
     </message>
 </context>
 <context>
@@ -33562,7 +33563,13 @@ By checking the various checkboxes, the search can be made more specific. The se
 string might be a regular expression. In a regular expression, special characters
 interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;b&gt;Buscar y Reemplazar&lt;/b&gt;
+&lt;p&gt;Este diálogo se utiliza para encontrar un determinado texto y replazarlo con otro.
+Utilizando las distintas checkboxes, la búsqueda se puede hacer más específica. La cadena de
+búsqueda puede ser una expresión regular. En una expresión regular, los caracteres especiales que se pueden
+interpretar son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="QScintilla/SearchReplaceWidget.py" line="61"/>
@@ -33572,7 +33579,12 @@ interpreted are:&lt;/p&gt;
 can be made more specific. The search string might be a regular expression. In a regular
 expression, special characters interpreted are:&lt;/p&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;b&gt;Buscar&lt;/b&gt;
+&lt;p&gt;Este diálogo se utiliza para encontrar un determinado texto. Utilizando las distintas checkboxes, la búsqueda 
+se puede hacer más específica. La cadena de búsqueda puede ser una expresión regular. En una expresión 
+regular, los caracteres especiales que se pueden interpretar son:&lt;/p&gt;
+</translation>
     </message>
     <message>
         <location filename="QScintilla/SearchReplaceWidget.py" line="72"/>
@@ -33610,7 +33622,40 @@ character except an alphabetic character.&lt;/td&gt;&lt;/tr&gt;
 &lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>
+&lt;table border=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Coincide con cualquier caracter&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;(&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el principio de una región para etiquetar una coincidencia.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;)&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Marca el fin de una región etiquetada.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Donde &lt;code&gt;n&lt;/code&gt; de 1 a 9 se refiere a la primera a novena región con etiqueta
+al reemplazar. Por example, si la cadena de búsqueda era &lt;code&gt;Fred([1-9])XXX&lt;/code&gt; y
+la cadena de reemplazo era &lt;code&gt;Sam<byte value="x1"/>YYY&lt;/code&gt;, al ser aplicado a &lt;code&gt;Fred2XXX&lt;/code&gt; 
+generaría&lt;code&gt;Sam2YYY&lt;/code&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el comienzo de una palabra utilizando la definición de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el final de una palabra utilizando la definición de palabra de Scintilla.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;\x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Permite utilizar un carácter x que de otro modo tiene especial significado. Por
+ejemplo, \[ se interpretaría como [ y no como el principio de un conjunto de caracteres.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Indica un conjunto de caracteres, por ejemplo, [abc] significa cualquiera de los caracteres a,
+b o c. Es posible también utilizar rangos, por ejemplo [a-z] para cualquier carácter en minúscula.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;[^...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;El complemento de los caracteres en el conjunto. Por ejemplo, [^A-Za-z] significa cualquier
+carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide el principio de una línea (a no ser que se utilice en un conjunto, ver más arriba).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt; &lt;td&gt;Coincide el final de una línea.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide 0 o más veces. Por ejemplo, &lt;code&gt;Sa*m&lt;/code&gt; coincide &lt;code&gt;Sm&lt;/code&gt;,
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; etc.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coincide 1 o más veces. For example, &lt;code&gt;Sa+m&lt;/code&gt; coincide
+&lt;code&gt;Sam&lt;/code&gt;, &lt;code&gt;Saam&lt;/code&gt;, &lt;code&gt;Saaam&lt;/code&gt; and so on.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</translation>
     </message>
 </context>
 <context>
@@ -34284,7 +34329,7 @@ Not connected</source>
     <message>
         <location filename="Preferences/ShortcutsDialog.py" line="180"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
 </context>
 <context>
@@ -35004,12 +35049,12 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="25"/>
         <source>This certificated has been blacklisted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este certificado está en una lista negra.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoDialog.ui" line="233"/>
         <source>This certificate is not valid yet or has expired.</source>
-        <translation type="unfinished"></translation>
+        <translation>Este certificado no es válido aún o ha expirado.</translation>
     </message>
 </context>
 <context>
@@ -39242,12 +39287,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="82"/>
         <source>Select all for commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar todo para hacer commit</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
         <source>Deselect all from commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Deshacer selección de todo en el commit</translation>
     </message>
 </context>
 <context>
@@ -40631,7 +40676,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="249"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
 </context>
 <context>
@@ -42609,7 +42654,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui" line="106"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
 </context>
 <context>
@@ -42795,7 +42840,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
 </context>
 <context>
@@ -43631,7 +43676,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/UrlBar/UrlBar.py" line="45"/>
         <source>Enter the URL here.</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir aquí la URL.</translation>
     </message>
 </context>
 <context>
@@ -45571,52 +45616,52 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="4894"/>
         <source>Open Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir Navegador</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4894"/>
         <source>Could not start a web browser</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha podido iniciar el navegador web</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="5559"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1906"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1906"/>
         <source>eric5 &amp;Web Browser...</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegador &amp;Web de eric5...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1911"/>
         <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Navegador Web de eric5&lt;/b&gt;&lt;p&gt;Navegar por Internet con el Navegador Web de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="559"/>
         <source>Setting View Profile...</source>
-        <translation type="unfinished"></translation>
+        <translation>Estableciendo Perfil de Vista...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="563"/>
         <source>Reading Tasks...</source>
-        <translation type="unfinished"></translation>
+        <translation>Leyendo tareas...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="567"/>
         <source>Reading Templates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Leyendo Plantillas...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="571"/>
         <source>Starting Debugger...</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciando Depurador...</translation>
     </message>
 </context>
 <context>
