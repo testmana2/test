@@ -50,6 +50,8 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.alternateButton.installEventFilter(self)
         self.primaryClearButton.installEventFilter(self)
         self.alternateClearButton.installEventFilter(self)
+        self.keyEdit.installEventFilter(self)
+        self.alternateKeyEdit.installEventFilter(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).installEventFilter(self)
         self.buttonBox.button(QDialogButtonBox.Cancel).installEventFilter(self)
@@ -66,8 +68,8 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         """
         self.keyIndex = 0
         self.keys = [0, 0, 0, 0]
-        self.keyLabel.setText(key.toString())
-        self.alternateKeyLabel.setText(alternateKey.toString())
+        self.keyEdit.setText(key.toString())
+        self.alternateKeyEdit.setText(alternateKey.toString())
         self.primaryButton.setChecked(True)
         self.noCheck = noCheck
         self.objectType = objectType
@@ -78,8 +80,8 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         """
         self.hide()
         self.shortcutChanged.emit(
-                  QKeySequence(self.keyLabel.text()),
-                  QKeySequence(self.alternateKeyLabel.text()), 
+                  QKeySequence(self.keyEdit.text()),
+                  QKeySequence(self.alternateKeyEdit.text()), 
                   self.noCheck, self.objectType)
 
     def __clear(self):
@@ -88,7 +90,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         """
         self.keyIndex = 0
         self.keys = [0, 0, 0, 0]
-        self.__setKeyLabelText("")
+        self.__setKeyEditText("")
         
     def __typeChanged(self):
         """
@@ -97,16 +99,16 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.keyIndex = 0
         self.keys = [0, 0, 0, 0]
         
-    def __setKeyLabelText(self, txt):
+    def __setKeyEditText(self, txt):
         """
         Private method to set the text of a key label.
         
         @param txt text to be set (string)
         """
         if self.primaryButton.isChecked():
-            self.keyLabel.setText(txt)
+            self.keyEdit.setText(txt)
         else:
-            self.alternateKeyLabel.setText(txt)
+            self.alternateKeyEdit.setText(txt)
         
     def eventFilter(self, watched, event):
         """
@@ -160,12 +162,12 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.keyIndex += 1
         
         if self.keyIndex == 1:
-            self.__setKeyLabelText(QKeySequence(self.keys[0]).toString())
+            self.__setKeyEditText(QKeySequence(self.keys[0]).toString())
         elif self.keyIndex == 2:
-            self.__setKeyLabelText(QKeySequence(self.keys[0], self.keys[1]).toString())
+            self.__setKeyEditText(QKeySequence(self.keys[0], self.keys[1]).toString())
         elif self.keyIndex == 3:
-            self.__setKeyLabelText(QKeySequence(self.keys[0], self.keys[1],
+            self.__setKeyEditText(QKeySequence(self.keys[0], self.keys[1],
                 self.keys[2]).toString())
         elif self.keyIndex == 4:
-            self.__setKeyLabelText(QKeySequence(self.keys[0], self.keys[1],
+            self.__setKeyEditText(QKeySequence(self.keys[0], self.keys[1],
                 self.keys[2], self.keys[3]).toString())
