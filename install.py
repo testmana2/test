@@ -305,45 +305,55 @@ def cleanUp():
         "eric5_pluginrepository", "eric5_sqlbrowser",
         "eric5_webbrowser", "eric5_iconeditor",
     ]
-    for rem_wname in rem_wnames:
-        rwname = wrapperName(getConfig('bindir'), rem_wname)
-        if os.path.exists(rwname):
-            os.remove(rwname)
     
-    # Cleanup our config file(s)
-    for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
-        e5cfile = os.path.join(pyModDir, name)
-        if os.path.exists(e5cfile):
-            os.remove(e5cfile)
-        e5cfile = os.path.join(pyModDir, "__pycache__", name)
-        path, ext = os.path.splitext(e5cfile)
-        for f in glob.glob("{0}.*{1}".format(path, ext)):
-            os.remove(f)
-        
-    # Cleanup the install directories
-    for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',
-                 'ericOthersDir', 'ericStylesDir', 'ericDir']:
-        if os.path.exists(getConfig(name)):
-            shutil.rmtree(getConfig(name), True)
-    
-    # Cleanup translations
-    for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
-        if os.path.exists(name):
-            os.remove(name)
-    
-    # Cleanup API files
     try:
-        apidir = getConfig('apidir')
-        for progLanguage in progLanguages:
-            for name in getConfig('apis'):
-                apiname = os.path.join(apidir, progLanguage.lower(), name)
-                if os.path.exists(apiname):
+        for rem_wname in rem_wnames:
+            rwname = wrapperName(getConfig('bindir'), rem_wname)
+            if os.path.exists(rwname):
+                os.remove(rwname)
+        
+        # Cleanup our config file(s)
+        for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+            e5cfile = os.path.join(pyModDir, name)
+            if os.path.exists(e5cfile):
+                os.remove(e5cfile)
+            e5cfile = os.path.join(pyModDir, "__pycache__", name)
+            path, ext = os.path.splitext(e5cfile)
+            for f in glob.glob("{0}.*{1}".format(path, ext)):
+                os.remove(f)
+            
+        # Cleanup the install directories
+        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
+                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',
+                     'ericOthersDir', 'ericStylesDir', 'ericDir']:
+            if os.path.exists(getConfig(name)):
+                shutil.rmtree(getConfig(name), True)
+        
+        # Cleanup translations
+        for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+            if os.path.exists(name):
+                os.remove(name)
+        
+        # Cleanup API files
+        try:
+            apidir = getConfig('apidir')
+            for progLanguage in progLanguages:
+                for name in getConfig('apis'):
+                    apiname = os.path.join(apidir, progLanguage.lower(), name)
+                    if os.path.exists(apiname):
+                        os.remove(apiname)
+                for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
                     os.remove(apiname)
-            for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
-                os.remove(apiname)
-    except AttributeError:
-        pass
+        except AttributeError:
+            pass
+        
+    except IOError as msg:
+        sys.stderr.write('IOError: %s\nTry install with admin rights.\n' % msg)
+        sys.exit(7)
+        
+    except OSError as msg:
+        sys.stderr.write('OSError: %s\nTry install with admin rights.\n' % msg)
+        sys.exit(7)
 
 
 def installEric():
@@ -440,7 +450,7 @@ def installEric():
         createGlobalPluginsDir()
         
     except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry install as root.\n'.format(msg))
+        sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
         exit(7)
         
     except OSError as msg:
