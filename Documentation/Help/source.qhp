@@ -3253,7 +3253,7 @@
       <keyword name="ShortcutDialog" id="ShortcutDialog" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog" />
       <keyword name="ShortcutDialog (Constructor)" id="ShortcutDialog (Constructor)" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__init__" />
       <keyword name="ShortcutDialog.__clear" id="ShortcutDialog.__clear" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__clear" />
-      <keyword name="ShortcutDialog.__setKeyLabelText" id="ShortcutDialog.__setKeyLabelText" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__setKeyLabelText" />
+      <keyword name="ShortcutDialog.__setKeyEditText" id="ShortcutDialog.__setKeyEditText" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__setKeyEditText" />
       <keyword name="ShortcutDialog.__typeChanged" id="ShortcutDialog.__typeChanged" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.__typeChanged" />
       <keyword name="ShortcutDialog.eventFilter" id="ShortcutDialog.eventFilter" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.eventFilter" />
       <keyword name="ShortcutDialog.keyPressEvent" id="ShortcutDialog.keyPressEvent" ref="eric5.Preferences.ShortcutDialog.html#ShortcutDialog.keyPressEvent" />
