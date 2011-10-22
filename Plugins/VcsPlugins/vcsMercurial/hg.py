@@ -454,7 +454,8 @@ class Hg(VersionControl):
             if isinstance(name, list):
                 self.addArguments(args, name)
             else:
-                args.append(name)
+                if dname != repodir or fname != ".":
+                    args.append(name)
         else:
             if isinstance(name, list):
                 self.addArguments(args, fnames)
