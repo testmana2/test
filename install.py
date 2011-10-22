@@ -348,12 +348,12 @@ def cleanUp():
             pass
         
     except IOError as msg:
-        sys.stderr.write('IOError: %s\nTry install with admin rights.\n' % msg)
-        sys.exit(7)
+        sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
+        exit(7)
         
     except OSError as msg:
-        sys.stderr.write('OSError: %s\nTry install with admin rights.\n' % msg)
-        sys.exit(7)
+        sys.stderr.write('OSError: {0}\nTry install with admin rights.\n'.format(msg))
+        exit(7)
 
 
 def installEric():
