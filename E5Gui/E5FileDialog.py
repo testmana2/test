@@ -31,7 +31,7 @@ def __reorderFilter(filter, initialFilter = ""):
     @param initialFilter initial filter (string)
     @return the rearranged Qt file filter (string)
     """
-    if initialFilter:
+    if initialFilter and not Globals.isMacPlatform():
         fileFilters = filter.split(';;')
         if len(fileFilters) < 10 and initialFilter in fileFilters:
             fileFilters.remove(initialFilter)
