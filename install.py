@@ -528,13 +528,17 @@ def installEric():
             shutil.copy(os.path.join(sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
     
+    # Create a Mac application bundle
     if sys.platform == "darwin":
-        createMacAppBundle()
+        createMacAppBundle(cfg['ericDir'])
 
 
-def createMacAppBundle():
+def createMacAppBundle(pydir):
     """
     Create a Mac application bundle.
+
+    @param pydir the name of the directory where the Python script will eventually
+        be installed (string)
     """
     global cfg, sourceDir
     
@@ -544,11 +548,34 @@ def createMacAppBundle():
     os.makedirs(dirs["contents"])
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
-    shutil.copy(os.path.join(cfg['bindir'], "eric5"), dirs["exe"])
+    
+    wname = os.path.join(dirs["exe"], "eric5")
+    path = os.getenv("PATH", "")
+    if path:
+        pybin = os.path.join(sys.exec_prefix, "bin")
+        pathlist = path.split(os.pathsep)
+        if pybin not in pathlist:
+            pathlist.insert(0, pybin)
+        path = os.pathsep.join(pathlist)
+        wrapper = \
+'''#!/bin/sh
+
+PATH={0}
+exec "{1}/bin/pythonw3" "{2}/{3}.py" "$@"
+'''.format(path, sys.exec_prefix, pydir, "eric5")
+    else:
+        wrapper = \
+'''#!/bin/sh
+
+exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
+'''.format(sys.exec_prefix, pydir, "eric5")
+    copyToFile(wname, wrapper)
+    os.chmod(wname, 0o755)
+    
     shutil.copy(os.path.join(sourceDir, "pixmaps", "eric_2.icns"),
                 os.path.join(dirs["icns"], "eric.icns"))
-    f = open(os.path.join(dirs["contents"], "Info.plist"), "w", encoding="utf-8")
-    f.write(\
+    
+    copyToFile(os.path.join(dirs["contents"], "Info.plist"),
 '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
           "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -572,7 +599,6 @@ def createMacAppBundle():
 </plist>
 '''        
     )
-    f.close()
 
 
 def createInstallConfig():
