@@ -953,6 +953,7 @@
       <keyword name="createConfig" id="createConfig" ref="eric5.install.html#createConfig" />
       <keyword name="createGlobalPluginsDir" id="createGlobalPluginsDir" ref="eric5.install.html#createGlobalPluginsDir" />
       <keyword name="createInstallConfig" id="createInstallConfig" ref="eric5.install.html#createInstallConfig" />
+      <keyword name="createMacAppBundle" id="createMacAppBundle" ref="eric5.install.html#createMacAppBundle" />
       <keyword name="createPyWrapper" id="createPyWrapper" ref="eric5.install.html#createPyWrapper" />
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
       <keyword name="exit" id="exit" ref="eric5.install.html#exit" />

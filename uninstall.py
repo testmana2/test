@@ -132,6 +132,11 @@ def uninstallEric():
         for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
             os.remove(apiname)
     
+    if sys.platform == "darwin":
+        # delete the Mac app bundle
+        if os.path.exists("/Developer/Applications/Eric5"):
+            shutil.rmtree("/Developer/Applications/Eric5")
+    
 
 def main(argv):
     """The main function of the script.
@@ -160,7 +165,9 @@ def main(argv):
     try:
         uninstallEric()
     except IOError as msg:
-        sys.stderr.write('IOError: {0}\nTry uninstall as root.\n'.format(msg))
+        sys.stderr.write('IOError: {0}\nTry uninstall with admin rights.\n'.format(msg))
+    except OSError as msg:
+        sys.stderr.write('OSError: {0}\nTry uninstall with admin rights.\n'.format(msg))
     
     
 if __name__ == "__main__":
