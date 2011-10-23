@@ -547,7 +547,7 @@ def createMacAppBundle():
     shutil.copy(os.path.join(cfg['bindir'], "eric5"), dirs["exe"])
     shutil.copy(os.path.join(sourceDir, "pixmaps", "eric_1.icns"),
                 os.path.join(dirs["icns"], "eric.icns"))
-    f = open(os.path.join(dirs["contents"], "Info.plist"), "wb")
+    f = open(os.path.join(dirs["contents"], "Info.plist"), "w", encoding="utf-8")
     f.write(\
 '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
