@@ -1195,6 +1195,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/stopServer.png</Other>
     <Other>CSSs/blue.css</Other>
     <Other>CSSs/default.css</Other>
+    <Other>README-MacOSX.txt</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

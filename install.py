@@ -322,13 +322,14 @@ def cleanUp():
             
         # Cleanup the install directories
         for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',
-                     'ericOthersDir', 'ericStylesDir', 'ericDir']:
+                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
+                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir', 'ericDir']:
             if os.path.exists(getConfig(name)):
                 shutil.rmtree(getConfig(name), True)
         
         # Cleanup translations
-        for name in glob.glob(os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+        for name in glob.glob(
+                os.path.join(getConfig('ericTranslationsDir'),'eric5_*.qm')):
             if os.path.exists(name):
                 os.remove(name)
         
@@ -340,10 +341,16 @@ def cleanUp():
                     apiname = os.path.join(apidir, progLanguage.lower(), name)
                     if os.path.exists(apiname):
                         os.remove(apiname)
-                for apiname in glob.glob(os.path.join(apidir, progLanguage.lower(), "*.bas")):
+                for apiname in glob.glob(
+                        os.path.join(apidir, progLanguage.lower(), "*.bas")):
                     os.remove(apiname)
         except AttributeError:
             pass
+        
+        if sys.platform == "darwin":
+            # delete the Mac app bundle
+            if os.path.exists("/Developer/Applications/Eric5"):
+                shutil.rmtree("/Developer/Applications/Eric5")
     
     except IOError as msg:
         sys.stderr.write('IOError: {0}\nTry install with admin rights.\n'.format(msg))
@@ -518,6 +525,78 @@ def installEric():
                 "/usr/share/pixmaps")
             shutil.copy(os.path.join(sourceDir, "eric5.desktop"), 
                 "/usr/share/applications")
+    
+    # Create a Mac application bundle
+    if sys.platform == "darwin":
+        createMacAppBundle(cfg['ericDir'])
+
+
+def createMacAppBundle(pydir):
+    """
+    Create a Mac application bundle.
+
+    @param pydir the name of the directory where the Python script will eventually
+        be installed (string)
+    """
+    global cfg, sourceDir
+    
+    dirs = {"contents": "/Developer/Applications/Eric5/eric5.app/Contents/",
+            "exe": "/Developer/Applications/Eric5/eric5.app/Contents/MacOS",
+            "icns": "/Developer/Applications/Eric5/eric5.app/Contents/Resources"}
+    os.makedirs(dirs["contents"])
+    os.mkdir(dirs["exe"])
+    os.mkdir(dirs["icns"])
+    
+    wname = os.path.join(dirs["exe"], "eric5")
+    path = os.getenv("PATH", "")
+    if path:
+        pybin = os.path.join(sys.exec_prefix, "bin")
+        pathlist = path.split(os.pathsep)
+        if pybin not in pathlist:
+            pathlist.insert(0, pybin)
+        path = os.pathsep.join(pathlist)
+        wrapper = \
+'''#!/bin/sh
+
+PATH={0}
+exec "{1}/bin/pythonw3" "{2}/{3}.py" "$@"
+'''.format(path, sys.exec_prefix, pydir, "eric5")
+    else:
+        wrapper = \
+'''#!/bin/sh
+
+exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
+'''.format(sys.exec_prefix, pydir, "eric5")
+    copyToFile(wname, wrapper)
+    os.chmod(wname, 0o755)
+    
+    shutil.copy(os.path.join(sourceDir, "pixmaps", "eric_2.icns"),
+                os.path.join(dirs["icns"], "eric.icns"))
+    
+    copyToFile(os.path.join(dirs["contents"], "Info.plist"),
+'''<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+          "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>eric5</string>
+    <key>CFBundleIconFile</key>
+    <string>eric.icns</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>1.0</string>
+    <key>CFBundleName</key>
+    <string>eric5</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+</dict>
+</plist>
+'''        
+    )
 
 
 def createInstallConfig():
