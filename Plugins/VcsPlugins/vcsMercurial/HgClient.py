@@ -239,6 +239,9 @@ class HgClient(QObject):
             if self.__cancel:
                 return -10
             
+            if self.__server is None:
+                return -1
+            
             if self.__server.bytesAvailable() == 0:
                 QThread.msleep(50)
                 continue
