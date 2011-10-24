@@ -59,6 +59,7 @@ class E5SideBar(QWidget):
         self.setLayout(self.layout)
         
         self.__minimized = False
+        self.__minimum = 50
         self.__minSize = 0
         self.__maxSize = 0
         self.__bigSize = QSize()
@@ -109,10 +110,10 @@ class E5SideBar(QWidget):
         self.__minimized = True
         self.__bigSize = self.size()
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
-            self.__minSize = self.minimumHeight()
+            self.__minSize = max(self.minimumHeight(), self.__minimum)
             self.__maxSize = self.maximumHeight()
         else:
-            self.__minSize = self.minimumWidth()
+            self.__minSize = max(self.minimumWidth(), self.__minimum)
             self.__maxSize = self.maximumWidth()
         if self.splitter:
             self.splitterSizes = self.splitter.sizes()
@@ -132,10 +133,10 @@ class E5SideBar(QWidget):
         self.__stackedWidget.show()
         self.resize(self.__bigSize)
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
-            self.setMinimumHeight(self.__minSize)
+            self.setMinimumHeight(max(self.__minSize, self.__minimum))
             self.setMaximumHeight(self.__maxSize)
         else:
-            self.setMinimumWidth(self.__minSize)
+            self.setMinimumWidth(max(self.__minSize, self.__minimum))
             self.setMaximumWidth(self.__maxSize)
         if self.splitter:
             self.splitter.setSizes(self.splitterSizes)
