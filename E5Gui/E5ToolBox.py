@@ -22,26 +22,6 @@ class E5VerticalToolBox(QToolBox):
         @param parent reference to the parent widget (QWidget)
         """
         QToolBox.__init__(self, parent)
-    
-    def wheelEvent(self, event):
-        """
-        Protected slot to support wheel events.
-        
-        @param reference to the wheel event (QWheelEvent)
-        """
-        index = self.currentIndex()
-        if event.delta() > 0:
-            index -= 1
-        else:
-            index += 1
-        if index < 0:
-            index = self.count() - 1
-        elif index == self.count():
-            index = 0
-        
-        self.setCurrentIndex(index)
-        
-        event.accept()
 
 class E5HorizontalToolBox(E5TabWidget):
     """
