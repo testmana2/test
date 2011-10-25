@@ -169,15 +169,15 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         wname = wfile + ".bat"
         if isGuiScript:
             wrapper = \
-                '''@echo off\r\n''' \
-                '''set PYDIR=%~dp0\r\n''' \
+                '''@echo off\n''' \
+                '''set PYDIR=%~dp0\n''' \
                 '''start "" "%PYDIR%\\pythonw.exe"''' \
                 ''' "{0}\\{1}.pyw"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(pydir, wfile)
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(pydir, wfile)
         else:
             wrapper = \
                 '''@"{0}\\python" "{1}\\{2}.py"''' \
-                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\r\n'''.format(
+                ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
                     platBinDir, pydir, wfile)
 
     # Mac OS X
