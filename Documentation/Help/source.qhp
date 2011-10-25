@@ -4472,7 +4472,6 @@
       <keyword name="E5HorizontalToolBox.setItemEnabled" id="E5HorizontalToolBox.setItemEnabled" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemEnabled" />
       <keyword name="E5HorizontalToolBox.setItemToolTip" id="E5HorizontalToolBox.setItemToolTip" ref="eric5.E5Gui.E5ToolBox.html#E5HorizontalToolBox.setItemToolTip" />
       <keyword name="E5VerticalToolBox (Constructor)" id="E5VerticalToolBox (Constructor)" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.__init__" />
-      <keyword name="E5VerticalToolBox.wheelEvent" id="E5VerticalToolBox.wheelEvent" ref="eric5.E5Gui.E5ToolBox.html#E5VerticalToolBox.wheelEvent" />
       <keyword name="E5SideBar (Module)" id="E5SideBar (Module)" ref="eric5.E5Gui.E5SideBar.html" />
       <keyword name="E5SideBar" id="E5SideBar" ref="eric5.E5Gui.E5SideBar.html#E5SideBar" />
       <keyword name="E5SideBar (Constructor)" id="E5SideBar (Constructor)" ref="eric5.E5Gui.E5SideBar.html#E5SideBar.__init__" />

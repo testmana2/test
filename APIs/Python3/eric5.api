@@ -1463,7 +1463,6 @@ eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.insertItem?4(index, widget, icon, text
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.setItemEnabled?4(index, enabled)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox.setItemToolTip?4(index, toolTip)
 eric5.E5Gui.E5ToolBox.E5HorizontalToolBox?1(parent=None)
-eric5.E5Gui.E5ToolBox.E5VerticalToolBox.wheelEvent?4(event)
 eric5.E5Gui.E5ToolBox.E5VerticalToolBox?1(parent=None)
 eric5.E5Gui.E5TreeSortFilterProxyModel.E5TreeSortFilterProxyModel.filterAcceptsRow?4(sourceRow, sourceParent)
 eric5.E5Gui.E5TreeSortFilterProxyModel.E5TreeSortFilterProxyModel.hasChildren?4(parent=QModelIndex())
