@@ -5240,7 +5240,8 @@ class Editor(QsciScintillaCompat):
             self.project.projectPropertiesChanged.disconnect(
                 self.__projectPropertiesChanged)
         
-        self.taskViewer.clearFileTasks(self.fileName, True)
+        if self.fileName:
+            self.taskViewer.clearFileTasks(self.fileName, True)
         
         super().close()
         
