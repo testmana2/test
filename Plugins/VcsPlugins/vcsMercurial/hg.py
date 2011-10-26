@@ -2595,7 +2595,7 @@ class Hg(VersionControl):
         self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.getProjectPath())
         
-        if not Utilities.isMacPlatform and self.version >= (1, 9):
+        if not Utilities.isMacPlatform() and self.version >= (1, 9):
             # find the root of the repo
             repodir = project.getProjectPath()
             while not os.path.isdir(os.path.join(repodir, self.adminDir)):
