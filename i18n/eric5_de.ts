@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -3075,7 +3076,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="436"/>
         <source>Preferences</source>
-        <translation>Optionen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationDialog.py" line="441"/>
@@ -12641,7 +12642,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="802"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -14604,12 +14605,12 @@ Es sind %n Unterfenster offen.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="890"/>
         <source>Preferences</source>
-        <translation>Optionen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="890"/>
         <source>&amp;Preferences...</source>
-        <translation>&amp;Optionen...</translation>
+        <translation>&amp;Einstellungen...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="893"/>
@@ -14619,7 +14620,7 @@ Es sind %n Unterfenster offen.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="894"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Optionen&lt;/b&gt;&lt;p&gt;Konfiguriert die einstellbaren Parameter der Applikation nach ihren Wünschen.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Einstellungen&lt;/b&gt;&lt;p&gt;Konfiguriert die einstellbaren Parameter der Applikation nach ihren Wünschen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="149"/>
@@ -27050,12 +27051,12 @@ Bitte Aktualisieren.</translation>
     <message>
         <location filename="Preferences/__init__.py" line="967"/>
         <source>Export Preferences</source>
-        <translation>Konfiguration exportieren</translation>
+        <translation>Einstellungen exportieren</translation>
     </message>
     <message>
         <location filename="Preferences/__init__.py" line="994"/>
         <source>Import Preferences</source>
-        <translation>Konfiguration importieren</translation>
+        <translation>Einstellungen importieren</translation>
     </message>
     <message>
         <location filename="Preferences/__init__.py" line="994"/>
@@ -42290,7 +42291,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Tools/TrayStarter.py" line="113"/>
         <source>Preferences</source>
-        <translation>Optionen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="134"/>
@@ -42355,7 +42356,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="Tools/TrayStarter.py" line="121"/>
         <source>Preferences (tray starter)</source>
-        <translation>Optionen (Systemstarter)</translation>
+        <translation>Einstellungen (Systemstarter)</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="101"/>
@@ -43303,12 +43304,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1936"/>
         <source>Preferences</source>
-        <translation>Optionen</translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1936"/>
         <source>&amp;Preferences...</source>
-        <translation>&amp;Optionen...</translation>
+        <translation>&amp;Einstellungen...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1939"/>
@@ -43318,7 +43319,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1940"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Optionen&lt;/b&gt;&lt;p&gt;Konfiguriert die einstellbaren Parameter der Applikation nach ihren Wünschen.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Einstellungen&lt;/b&gt;&lt;p&gt;Konfiguriert die einstellbaren Parameter der Applikation nach ihren Wünschen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1315"/>
@@ -43898,7 +43899,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="4223"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
-        <translation>Momentan ist kein Betrachter angegeben. Bitte benutzen sie den Optionen Dialog, um einen festzulegen.</translation>
+        <translation>Momentan ist kein Betrachter angegeben. Bitte benutzen sie den Einstellungen Dialog, um einen festzulegen.</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="4235"/>
@@ -44698,12 +44699,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1948"/>
         <source>Export Preferences</source>
-        <translation>Konfiguration exportieren</translation>
+        <translation>Einstellungen exportieren</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1948"/>
         <source>E&amp;xport Preferences...</source>
-        <translation>Konfiguration e&amp;xportieren...</translation>
+        <translation>Einstellungen e&amp;xportieren...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1951"/>
@@ -44713,17 +44714,17 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1952"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Konfiguration exportieren&lt;/b&gt;&lt;p&gt;Exportiert die aktuelle Konfiguration in eine Datei.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Einstellungen exportieren&lt;/b&gt;&lt;p&gt;Exportiert die aktuelle Konfiguration in eine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1959"/>
         <source>Import Preferences</source>
-        <translation>Konfiguration importieren</translation>
+        <translation>Einstellungen importieren</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1959"/>
         <source>I&amp;mport Preferences...</source>
-        <translation>Konfiguration i&amp;mportieren...</translation>
+        <translation>Einstellungen i&amp;mportieren...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1962"/>
@@ -44733,7 +44734,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="UI/UserInterface.py" line="1964"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Konfiguration importieren&lt;/b&gt;&lt;p&gt;Importiert eine zuvor exportierte Konfiguration.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Einstellungen importieren&lt;/b&gt;&lt;p&gt;Importiert eine zuvor exportierte Konfiguration.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="2064"/>
