@@ -110,10 +110,10 @@ class E5SideBar(QWidget):
         self.__minimized = True
         self.__bigSize = self.size()
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
-            self.__minSize = max(self.minimumHeight(), self.__minimum)
+            self.__minSize = self.minimumSizeHint().height()
             self.__maxSize = self.maximumHeight()
         else:
-            self.__minSize = max(self.minimumWidth(), self.__minimum)
+            self.__minSize = self.minimumSizeHint().width()
             self.__maxSize = self.maximumWidth()
         if self.splitter:
             self.splitterSizes = self.splitter.sizes()
@@ -204,6 +204,10 @@ class E5SideBar(QWidget):
         else:
             self.__tabBar.addTab(iconOrLabel)
         self.__stackedWidget.addWidget(widget)
+        if self.__orientation in [E5SideBar.North, E5SideBar.South]:
+            self.__minSize = self.minimumSizeHint().height()
+        else:
+            self.__minSize = self.minimumSizeHint().width()
     
     def insertTab(self, index, widget, iconOrLabel, label=None):
         """
@@ -221,6 +225,10 @@ class E5SideBar(QWidget):
         else:
             self.__tabBar.insertTab(index, iconOrLabel)
         self.__stackedWidget.insertWidget(index, widget)
+        if self.__orientation in [E5SideBar.North, E5SideBar.South]:
+            self.__minSize = self.minimumSizeHint().height()
+        else:
+            self.__minSize = self.minimumSizeHint().width()
     
     def removeTab(self, index):
         """
@@ -230,6 +238,10 @@ class E5SideBar(QWidget):
         """
         self.__stackedWidget.removeWidget(self.__stackedWidget.widget(index))
         self.__tabBar.removeTab(index)
+        if self.__orientation in [E5SideBar.North, E5SideBar.South]:
+            self.__minSize = self.minimumSizeHint().height()
+        else:
+            self.__minSize = self.minimumSizeHint().width()
     
     def clear(self):
         """
@@ -460,10 +472,10 @@ class E5SideBar(QWidget):
                 self.splitterSizes = self.splitter.sizes()
             self.__bigSize = self.size()
             if self.__orientation in [E5SideBar.North, E5SideBar.South]:
-                self.__minSize = self.minimumHeight()
+                self.__minSize = self.minimumSizeHint().height()
                 self.__maxSize = self.maximumHeight()
             else:
-                self.__minSize = self.minimumWidth()
+                self.__minSize = self.minimumSizeHint().width()
                 self.__maxSize = self.maximumWidth()
         
         data = QByteArray()
