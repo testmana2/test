@@ -738,8 +738,8 @@ def doDependancyChecks():
     # check version of Qt
     qtMajor = int(qVersion().split('.')[0])
     qtMinor = int(qVersion().split('.')[1])
-    if qtMajor < 4 or (qtMajor == 4 and qtMinor < 5):
-        print('Sorry, you must have Qt version 4.5.0 or higher.')
+    if qtMajor < 4 or (qtMajor == 4 and qtMinor < 6):
+        print('Sorry, you must have Qt version 4.6.0 or higher.')
         exit(2)
     print("Qt Version: {0}".format(qVersion()))
     
