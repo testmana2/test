@@ -58,7 +58,6 @@ class E5SideBar(QWidget):
         self.setLayout(self.layout)
         
         self.__minimized = False
-        self.__minimum = 50
         self.__minSize = 0
         self.__maxSize = 0
         self.__bigSize = QSize()
@@ -132,12 +131,16 @@ class E5SideBar(QWidget):
         self.__stackedWidget.show()
         self.resize(self.__bigSize)
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
-            self.setMinimumHeight(max(self.__minSize, self.__minimum))
+            minSize = max(self.__minSize, self.minimumSizeHint().height())
+            self.setMinimumHeight(minSize)
             self.setMaximumHeight(self.__maxSize)
         else:
-            self.setMinimumWidth(max(self.__minSize, self.__minimum))
+            minSize = max(self.__minSize, self.minimumSizeHint().width())
+            self.setMinimumWidth(minSize)
             self.setMaximumWidth(self.__maxSize)
         if self.splitter:
+            index = self.splitter.indexOf(self)
+            self.splitterSizes[index] = max(self.splitterSizes[index], minSize+10)
             self.splitter.setSizes(self.splitterSizes)
     
     def isMinimized(self):
@@ -199,7 +202,8 @@ class E5SideBar(QWidget):
             used, if the second parameter is a QIcon)
         """
         if label:
-            self.__tabBar.addTab(iconOrLabel, label)
+            index = self.__tabBar.addTab(iconOrLabel, "")
+            self.__tabBar.setTabToolTip(index, label)
         else:
             self.__tabBar.addTab(iconOrLabel)
         self.__stackedWidget.addWidget(widget)
@@ -220,7 +224,8 @@ class E5SideBar(QWidget):
             used, if the second parameter is a QIcon)
         """
         if label:
-            self.__tabBar.insertTab(index, iconOrLabel, label)
+            self.__tabBar.insertTab(index, iconOrLabel, "")
+            self.__tabBar.setTabToolTip(index, label)
         else:
             self.__tabBar.insertTab(index, iconOrLabel)
         self.__stackedWidget.insertWidget(index, widget)
@@ -502,6 +507,11 @@ class E5SideBar(QWidget):
         if state.isEmpty():
             return False
         
+        if self.__orientation in [E5SideBar.North, E5SideBar.South]:
+            minSize = self.layout.minimumSize().height()
+        else:
+            minSize = self.layout.minimumSize().width()
+        
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
         stream.readUInt16() # version
@@ -511,12 +521,15 @@ class E5SideBar(QWidget):
             self.shrink()
         
         stream >> self.__bigSize
-        self.__minSize = stream.readUInt16()
+        self.__minSize = max(stream.readUInt16(), minSize)
         self.__maxSize = stream.readUInt16()
         count = stream.readUInt16()
         self.splitterSizes = []
         for i in range(count):
             self.splitterSizes.append(stream.readUInt16())
+        if self.splitter:
+            index = self.splitter.indexOf(self)
+            self.splitterSizes[index] = max(self.splitterSizes[index], minSize) 
         
         self.__autoHide = stream.readBool()
         self.__autoHideButton.setChecked(not self.__autoHide)
