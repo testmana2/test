@@ -931,6 +931,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.py</Source>
     <Source>Preferences/ConfigurationPages/EditorSyntaxPage.py</Source>
     <Source>QScintilla/EditorAssembly.py</Source>
+    <Source>Helpviewer/Feeds/FeedsDialog.py</Source>
+    <Source>Helpviewer/Feeds/__init__.py</Source>
+    <Source>Helpviewer/Feeds/FeedsManager.py</Source>
+    <Source>Helpviewer/Feeds/FeedEditDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1197,6 +1201,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSyntaxPage.ui</Form>
+    <Form>Helpviewer/Feeds/FeedsDialog.ui</Form>
+    <Form>Helpviewer/Feeds/FeedsManager.ui</Form>
+    <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

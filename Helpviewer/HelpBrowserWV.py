@@ -458,6 +458,8 @@ class HelpBrowser(QWebView):
             
             self.page().loadStarted.connect(self.__hideAccessKeys)
             self.page().scrollRequested.connect(self.__hideAccessKeys)
+        
+        self.__rss = []
     
     def __addExternalBinding(self, frame=None):
         """
@@ -1615,6 +1617,52 @@ class HelpBrowser(QWebView):
                 self.__hideAccessKeys()
         
         self.reload()
+    
+    ############################################################################
+    ## RSS related methods below
+    ############################################################################
+    
+    def checkRSS(self):
+        """
+        Public method to check, if the loaded page contains feed links.
+        
+        @return flag indicating the existence of feed links (boolean)
+        """
+        self.__rss = []
+        
+        frame =self.page().mainFrame()
+        linkElementsList = frame.findAllElements("link").toList()
+        
+        for linkElement in linkElementsList:
+            # only atom+xml and rss+xml will be processed
+            if linkElement.attribute("rel") != "alternate" or \
+               (linkElement.attribute("type") != "application/rss+xml" and \
+                linkElement.attribute("type") != "application/atom+xml"):
+                continue
+            
+            title = linkElement.attribute("title")
+            href = linkElement.attribute("href")
+            if href == "" or title == "":
+                continue
+            self.__rss.append((title, href))
+        
+        return len(self.__rss) > 0
+    
+    def getRSS(self):
+        """
+        Public method to get the extracted RSS feeds.
+        
+        @return list of RSS feeds (list of tuples of two strings)
+        """
+        return self.__rss
+    
+    def hasRSS(self):
+        """
+        Public method to check, if the loaded page has RSS links.
+        
+        @return flag indicating the presence of RSS links (boolean)
+        """
+        return len(self.__rss) > 0
 
 
 def contentSniff(data):

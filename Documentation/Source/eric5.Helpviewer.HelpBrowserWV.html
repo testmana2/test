@@ -196,6 +196,9 @@ QWebView
 <td><a href="#HelpBrowser.backward">backward</a></td>
 <td>Public slot to move backwards in history.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.checkRSS">checkRSS</a></td>
+<td>Public method to check, if the loaded page contains feed links.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.clearHistory">clearHistory</a></td>
 <td>Public slot to clear the history.</td>
 </tr><tr>
@@ -228,6 +231,12 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.forward">forward</a></td>
 <td>Public slot to move forward in history.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.getRSS">getRSS</a></td>
+<td>Public method to get the extracted RSS feeds.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.hasRSS">hasRSS</a></td>
+<td>Public method to check, if the loaded page has RSS links.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.hasSelection">hasSelection</a></td>
 <td>Public method to determine, if there is some text selected.</td>
@@ -582,7 +591,17 @@ the new url (QUrl)
 <b>backward</b>(<i></i>)
 <p>
         Public slot to move backwards in history.
-</p><a NAME="HelpBrowser.clearHistory" ID="HelpBrowser.clearHistory"></a>
+</p><a NAME="HelpBrowser.checkRSS" ID="HelpBrowser.checkRSS"></a>
+<h4>HelpBrowser.checkRSS</h4>
+<b>checkRSS</b>(<i></i>)
+<p>
+        Public method to check, if the loaded page contains feed links.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the existence of feed links (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.clearHistory" ID="HelpBrowser.clearHistory"></a>
 <h4>HelpBrowser.clearHistory</h4>
 <b>clearHistory</b>(<i></i>)
 <p>
@@ -691,7 +710,27 @@ reference to the focus event (QFocusEvent)
 <b>forward</b>(<i></i>)
 <p>
         Public slot to move forward in history.
-</p><a NAME="HelpBrowser.hasSelection" ID="HelpBrowser.hasSelection"></a>
+</p><a NAME="HelpBrowser.getRSS" ID="HelpBrowser.getRSS"></a>
+<h4>HelpBrowser.getRSS</h4>
+<b>getRSS</b>(<i></i>)
+<p>
+        Public method to get the extracted RSS feeds.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of RSS feeds (list of tuples of two strings)
+</dd>
+</dl><a NAME="HelpBrowser.hasRSS" ID="HelpBrowser.hasRSS"></a>
+<h4>HelpBrowser.hasRSS</h4>
+<b>hasRSS</b>(<i></i>)
+<p>
+        Public method to check, if the loaded page has RSS links.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of RSS links (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.hasSelection" ID="HelpBrowser.hasSelection"></a>
 <h4>HelpBrowser.hasSelection</h4>
 <b>hasSelection</b>(<i></i>)
 <p>

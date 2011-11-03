@@ -54,7 +54,7 @@ BrowserSortFilterProxyModel QSortFilterProxyModel
 BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
@@ -190,6 +190,9 @@ ExporterPDF ExporterBase
 ExporterRTF ExporterBase
 ExporterTEX ExporterBase
 FavIconLabel QLabel
+FeedEditDialog QDialog Ui_FeedEditDialog
+FeedsDialog QDialog Ui_FeedsDialog
+FeedsManager QDialog Ui_FeedsManager
 Fetch HgExtension
 FetchProjectHelper HgExtensionProjectHelper
 FileDialogWizard QObject

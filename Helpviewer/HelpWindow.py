@@ -47,6 +47,7 @@ from .UserAgent.UserAgentMenu import UserAgentMenu
 from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
 from .VirusTotalApi import VirusTotalAPI
+from .Feeds.FeedsManager import FeedsManager
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
@@ -87,6 +88,7 @@ class HelpWindow(QMainWindow):
     _passwordManager = None
     _adblockManager = None
     _downloadManager = None
+    _feedsManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -1145,6 +1147,22 @@ class HelpWindow(QMainWindow):
             self.showDownloadManagerAct.triggered[()].connect(self.__showDownloadsWindow)
         self.__actions.append(self.showDownloadManagerAct)
         
+        self.feedsManagerAct = E5Action(self.trUtf8('RSS Feeds Dialog'),
+            UI.PixmapCache.getIcon("rss22.png"),
+            self.trUtf8('&RSS Feeds Dialog...'),
+            QKeySequence(self.trUtf8("Ctrl+Shift+F", "Help|RSS Feeds Dialog")),
+            0, self, 'help_rss_feeds')
+        self.feedsManagerAct.setStatusTip(self.trUtf8(
+                'Open a dialog showing the configured RSS feeds.'))
+        self.feedsManagerAct.setWhatsThis(self.trUtf8(
+                """<b>RSS Feeds Dialog...</b>"""
+                """<p>Open a dialog to show the configured RSS feeds."""
+                """ It can be used to mange the feeds and to show their contents.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.feedsManagerAct.triggered[()].connect(self.__showFeedsManager)
+        self.__actions.append(self.feedsManagerAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1271,6 +1289,8 @@ class HelpWindow(QMainWindow):
         
         menu = mb.addMenu(self.trUtf8("&Tools"))
         menu.setTearOffEnabled(True)
+        menu.addAction(self.feedsManagerAct)
+        menu.addSeparator()
         menu.addAction(self.toolsMonitorAct)
         
         menu = mb.addMenu(self.trUtf8("&Window"))
@@ -2740,6 +2760,34 @@ class HelpWindow(QMainWindow):
         else:
             super().mousePressEvent(evt)
 
+    @classmethod
+    def feedsManager(cls):
+        """
+        Class method to get a reference to the RSS feeds manager.
+        
+        @return reference to the RSS feeds manager (FeedsManager)
+        """
+        if cls._feedsManager is None:
+            cls._feedsManager = FeedsManager()
+        
+        return cls._feedsManager
+    
+    def __showFeedsManager(self):
+        """
+        Private slot to show the feeds manager dialog.
+        """
+        feedsManager = self.feedsManager()
+        feedsManager.openUrl.connect(self.openUrl)
+        feedsManager.newUrl.connect(self.openUrlNewTab)
+        feedsManager.rejected.connect(self.__feedsManagerClosed)
+        feedsManager.show()
+    
+    def __feedsManagerClosed(self):
+        feedsManager = self.sender()
+        feedsManager.openUrl.disconnect(self.openUrl)
+        feedsManager.newUrl.disconnect(self.openUrlNewTab)
+        feedsManager.rejected.disconnect(self.__feedsManagerClosed)
+    
     ###########################################################################
     ## Interface to VirusTotal below                                         ##
     ###########################################################################

@@ -1968,11 +1968,29 @@ eric5.Helpviewer.Download.DownloadModel.DownloadModel.rowCount?4(parent=QModelIn
 eric5.Helpviewer.Download.DownloadModel.DownloadModel?1(manager, parent=None)
 eric5.Helpviewer.Download.DownloadUtilities.dataString?4(size)
 eric5.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
+eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.getData?4()
+eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_titleEdit_textChanged?4(txt)
+eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(p0)
+eric5.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog?1(urlString, title, parent=None)
+eric5.Helpviewer.Feeds.FeedsDialog.FeedsDialog?1(availableFeeds, browser, parent=None)
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.ErrorDataRole?7
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.UrlStringRole?7
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.addFeed?4(urlString, title, icon)
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.newUrl?7
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_deleteButton_clicked?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_editButton_clicked?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_feedsTree_itemSelectionChanged?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadAllButton_clicked?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadButton_clicked?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.openUrl?7
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.show?4()
+eric5.Helpviewer.Feeds.FeedsManager.FeedsManager?1(parent=None)
 eric5.Helpviewer.HTMLResources.notFoundPage_html?7
 eric5.Helpviewer.HTMLResources.startPage_html?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.checkRSS?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.clearHistory?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.contextMenuEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.copy?4()
@@ -1985,6 +2003,8 @@ eric5.Helpviewer.HelpBrowserWV.HelpBrowser.findNextPrev?4(txt, case, backwards, 
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.focusOutEvent?4(evt)
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.forward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.forwardAvailable?7
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.getRSS?4()
+eric5.Helpviewer.HelpBrowserWV.HelpBrowser.hasRSS?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.hasSelection?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.highlighted?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.home?4()
@@ -2109,6 +2129,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._adblockManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
 eric5.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._feedsManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
@@ -2124,6 +2145,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.currentBrowser?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.downloadManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.eventKeyboardModifiers?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.eventMouseButtons?4()
+eric5.Helpviewer.HelpWindow.HelpWindow.feedsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpClosed?7

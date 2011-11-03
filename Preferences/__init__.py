@@ -642,6 +642,7 @@ class Prefs(object):
         "VirusTotalSecure": False,
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
+        "RssFeeds": [],
     }
     
     websettings = QWebSettings.globalSettings()
@@ -1972,7 +1973,7 @@ def getHelp(key, prefClass=Prefs):
         prefClass.settings.endArray()
         return keywords
     elif key in ["DownloadManagerDownloads"]:
-        # return a list of tuples of (URL, save location, done flag)
+        # return a list of tuples of (URL, save location, done flag, page url)
         downloads = []
         length = prefClass.settings.beginReadArray("Help/" + key)
         for index in range(length):
@@ -1986,6 +1987,18 @@ def getHelp(key, prefClass=Prefs):
             downloads.append((url, location, done, pageUrl))
         prefClass.settings.endArray()
         return downloads
+    elif key == "RssFeeds":
+        # return a list of tuples of (URL, title, icon)
+        feeds = []
+        length = prefClass.settings.beginReadArray("Help/" + key)
+        for index in range(length):
+            prefClass.settings.setArrayIndex(index)
+            url = prefClass.settings.value("URL")
+            title = prefClass.settings.value("Title")
+            icon = prefClass.settings.value("Icon")
+            feeds.append((url, title, icon))
+        prefClass.settings.endArray()
+        return feeds
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
@@ -2047,6 +2060,18 @@ def setHelp(key, value, prefClass=Prefs):
             prefClass.settings.setValue("Location", v[1])
             prefClass.settings.setValue("Done", v[2])
             prefClass.settings.setValue("PageURL", v[3])
+            index += 1
+        prefClass.settings.endArray()
+    elif key == "RssFeeds":
+        # value is list of tuples of (URL, title, icon)
+        prefClass.settings.remove("Help/" + key)
+        prefClass.settings.beginWriteArray("Help/" + key, len(value))
+        index = 0
+        for v in value:
+            prefClass.settings.setArrayIndex(index)
+            prefClass.settings.setValue("URL", v[0])
+            prefClass.settings.setValue("Title", v[1])
+            prefClass.settings.setValue("Icon", v[2])
             index += 1
         prefClass.settings.endArray()
     else:

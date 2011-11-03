@@ -24,6 +24,8 @@ from .FavIconLabel import FavIconLabel
 from .SslLabel import SslLabel
 from .BookmarkInfoDialog import BookmarkInfoDialog
 
+from Helpviewer.Feeds.FeedsDialog import FeedsDialog
+
 import UI.PixmapCache
 import Preferences
 import Utilities
@@ -64,6 +66,11 @@ class UrlBar(E5LineEdit):
         self.addWidget(self.__privacyButton, E5LineEdit.RightSide)
         self.__privacyButton.setVisible(self.__privateMode)
         
+        self.__rssButton = E5LineEditButton(self)
+        self.__rssButton.setIcon(UI.PixmapCache.getIcon("rss16.png"))
+        self.addWidget(self.__rssButton, E5LineEdit.RightSide)
+        self.__rssButton.setVisible(False)
+        
         self.__bookmarkButton = E5LineEditButton(self)
         self.addWidget(self.__bookmarkButton, E5LineEdit.RightSide)
         self.__bookmarkButton.setVisible(False)
@@ -75,6 +82,7 @@ class UrlBar(E5LineEdit):
         
         self.__bookmarkButton.clicked[()].connect(self.__showBookmarkInfo)
         self.__privacyButton.clicked[()].connect(self.__privacyClicked)
+        self.__rssButton.clicked[()].connect(self.__rssClicked)
         self.__clearButton.clicked[()].connect(self.clear)
         self.__mw.privacyChanged.connect(self.__privacyButton.setVisible)
         self.textChanged.connect(self.__textChanged)
@@ -140,6 +148,9 @@ class UrlBar(E5LineEdit):
                 else:
                     self.__bookmarkButton.setIcon(self.__bmActiveIcon)
                 self.__bookmarkButton.setVisible(True)
+            
+            if ok:
+                self.__rssButton.setVisible(self.__browser.checkRSS())
             
             if ok and \
                self.__browser.url().scheme() == "https" and \
@@ -364,3 +375,11 @@ class UrlBar(E5LineEdit):
         self.selectAll()
         
         evt.acceptProposedAction()
+    
+    def __rssClicked(self):
+        """
+        Private slot to handle clicking the RSS icon.
+        """
+        feeds = self.__browser.getRSS()
+        dlg = FeedsDialog(feeds, self.__browser)
+        dlg.exec_()

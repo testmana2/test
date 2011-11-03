@@ -39,6 +39,7 @@ Version 5.2-snapshot-2011mmdd:
   -- added the "Do Not Track" feature
   -- added code to indicate invalid SSL certificates in the URL entry and the SSL
      info dialog
+  -- added a dialog to show RSS feeds
 - enhancements of the tools
   -- API files generator
      --- added code to write base class information to be used by the
