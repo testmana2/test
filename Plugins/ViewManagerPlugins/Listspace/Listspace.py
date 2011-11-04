@@ -151,6 +151,7 @@ class Listspace(QSplitter, ViewManager):
             window has changed
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
+    @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled.
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -186,8 +187,7 @@ class Listspace(QSplitter, ViewManager):
         self.viewlist.setSizePolicy(policy)
         self.addWidget(self.viewlist)
         self.viewlist.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.viewlist.itemActivated.connect(self.__showSelectedView)
-        self.viewlist.itemClicked.connect(self.__showSelectedView)
+        self.viewlist.currentRowChanged.connect(self.__showSelectedView)
         self.viewlist.customContextMenuRequested.connect(self.__showMenu)
         
         self.stackArea = QSplitter(self)
@@ -199,19 +199,24 @@ class Listspace(QSplitter, ViewManager):
         self.currentStack = stack
         stack.currentChanged.connect(self.__currentChanged)
         stack.installEventFilter(self)
-        self.setSizes([int(self.width() * 0.2), int(self.width() * 0.8)])  # 20% for viewlist
+        self.setSizes([int(self.width() * 0.2), int(self.width() * 0.8)])
+        # 20% for viewlist, 80% for the editors
         self.__inRemoveView = False
         
         self.__initMenu()
         self.contextMenuEditor = None
+        self.contextMenuIndex = -1
         
     def __initMenu(self):
         """
         Private method to initialize the viewlist context menu.
         """
         self.__menu = QMenu(self)
-        self.__menu.addAction(UI.PixmapCache.getIcon("close.png"),
+        self.__menu.addAction(UI.PixmapCache.getIcon("tabClose.png"),
             self.trUtf8('Close'), self.__contextMenuClose)
+        self.closeOthersMenuAct = self.__menu.addAction(
+            UI.PixmapCache.getIcon("tabCloseOther.png"), self.trUtf8("Close Others"),
+            self.__contextMenuCloseOthers)
         self.__menu.addAction(self.trUtf8('Close All'), self.__contextMenuCloseAll)
         self.__menu.addSeparator()
         self.saveMenuAct = \
@@ -241,6 +246,7 @@ class Listspace(QSplitter, ViewManager):
             if itm is not None:
                 row = self.viewlist.row(itm)
                 self.contextMenuEditor = self.editors[row]
+                self.contextMenuIndex = row
                 if self.contextMenuEditor:
                     self.saveMenuAct.setEnabled(self.contextMenuEditor.isModified())
                     fileName = self.contextMenuEditor.getFileName()
@@ -250,6 +256,9 @@ class Listspace(QSplitter, ViewManager):
                         self.openRejectionsMenuAct.setEnabled(os.path.exists(rej))
                     else:
                         self.openRejectionsMenuAct.setEnabled(False)
+                    
+                    self.closeOthersMenuAct.setEnabled(self.viewlist.count() > 1)
+                    
                     self.__menu.popup(self.viewlist.mapToGlobal(point))
         
     def canCascade(self):
@@ -325,7 +334,7 @@ class Listspace(QSplitter, ViewManager):
             else:
                 return
         stack.setCurrentWidget(stack.firstEditor())
-        self._showView(self.editors[ind])
+        self._showView(self.editors[ind].parent())
         
         aw = self.activeWindow()
         fn = aw and aw.getFileName() or None
@@ -359,9 +368,9 @@ class Listspace(QSplitter, ViewManager):
             self.viewlist.addItem(itm)
         self.currentStack.addWidget(win)
         self.currentStack.setCurrentWidget(win)
-        win.captionChanged.connect(self.__captionChange)
+        editor.captionChanged.connect(self.__captionChange)
         
-        index = self.editors.index(win)
+        index = self.editors.index(editor)
         self.viewlist.setCurrentRow(index)
         editor.setFocus()
         if fn:
@@ -387,33 +396,33 @@ class Listspace(QSplitter, ViewManager):
         """
         Protected method to show a view (i.e. window)
         
-        @param win editor window to be shown
+        @param win editor assembly to be shown
         @param fn filename of this editor (string)
         """
+        editor = win.getEditor()
         for stack in self.stacks:
-            if stack.hasEditor(win):
+            if stack.hasEditor(editor):
                 stack.setCurrentWidget(win)
                 self.currentStack = stack
                 break
-        index = self.editors.index(win)
+        index = self.editors.index(editor)
         self.viewlist.setCurrentRow(index)
-        win.setFocus()
-        fn = win.getFileName()
+        editor.setFocus()
+        fn = editor.getFileName()
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
         
-    def __showSelectedView(self, itm):
+    def __showSelectedView(self, row):
         """
-        Private slot called to show a view selected in the list by a mouse click.
+        Private slot called to show a view selected in the list.
         
-        @param itm item clicked on (QListWidgetItem)
+        @param row row number of the item clicked on (integer)
         """
-        if itm:
-            row = self.viewlist.row(itm)
-            self._showView(self.editors[row])
+        if row != -1:
+            self._showView(self.editors[row].parent())
             self._checkActions(self.editors[row])
         
     def activeWindow(self):
@@ -599,6 +608,16 @@ class Listspace(QSplitter, ViewManager):
         """
         if self.contextMenuEditor:
             self.closeEditorWindow(self.contextMenuEditor)
+        
+    def __contextMenuCloseOthers(self):
+        """
+        Private method to close the other editors.
+        """
+        index = self.contextMenuIndex
+        for i in list(range(self.viewlist.count() - 1, index, -1)) + \
+                 list(range(index - 1, -1, -1)):
+            editor = self.editors[i]
+            self.closeEditorWindow(editor)
         
     def __contextMenuCloseAll(self):
         """

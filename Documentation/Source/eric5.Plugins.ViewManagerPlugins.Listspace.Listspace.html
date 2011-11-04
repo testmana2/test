@@ -87,6 +87,9 @@ emitted after an editor window was saved
 </dd><dt>lastEditorClosed()</dt>
 <dd>
 emitted after the last editor window was closed
+</dd><dt>syntaxerrorToggled(Editor)</dt>
+<dd>
+emitted when a syntax error is toggled.
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -113,6 +116,9 @@ QSplitter, ViewManager
 </tr><tr>
 <td><a href="#Listspace.__contextMenuCloseAll">__contextMenuCloseAll</a></td>
 <td>Private method to close all editors.</td>
+</tr><tr>
+<td><a href="#Listspace.__contextMenuCloseOthers">__contextMenuCloseOthers</a></td>
+<td>Private method to close the other editors.</td>
 </tr><tr>
 <td><a href="#Listspace.__contextMenuCopyPathToClipboard">__contextMenuCopyPathToClipboard</a></td>
 <td>Private method to copy the file name of the selected editor to the clipboard.</td>
@@ -142,7 +148,7 @@ QSplitter, ViewManager
 <td>Private slot to handle the customContextMenuRequested signal of the viewlist.</td>
 </tr><tr>
 <td><a href="#Listspace.__showSelectedView">__showSelectedView</a></td>
-<td>Private slot called to show a view selected in the list by a mouse click.</td>
+<td>Private slot called to show a view selected in the list.</td>
 </tr><tr>
 <td><a href="#Listspace._addView">_addView</a></td>
 <td>Protected method to add a view (i.e.</td>
@@ -253,6 +259,11 @@ Editor to update the caption for
 <b>__contextMenuCloseAll</b>(<i></i>)
 <p>
         Private method to close all editors.
+</p><a NAME="Listspace.__contextMenuCloseOthers" ID="Listspace.__contextMenuCloseOthers"></a>
+<h4>Listspace.__contextMenuCloseOthers</h4>
+<b>__contextMenuCloseOthers</b>(<i></i>)
+<p>
+        Private method to close the other editors.
 </p><a NAME="Listspace.__contextMenuCopyPathToClipboard" ID="Listspace.__contextMenuCopyPathToClipboard"></a>
 <h4>Listspace.__contextMenuCopyPathToClipboard</h4>
 <b>__contextMenuCopyPathToClipboard</b>(<i></i>)
@@ -305,13 +316,13 @@ index of the current editor
         Private slot to handle the customContextMenuRequested signal of the viewlist.
 </p><a NAME="Listspace.__showSelectedView" ID="Listspace.__showSelectedView"></a>
 <h4>Listspace.__showSelectedView</h4>
-<b>__showSelectedView</b>(<i>itm</i>)
+<b>__showSelectedView</b>(<i>row</i>)
 <p>
-        Private slot called to show a view selected in the list by a mouse click.
+        Private slot called to show a view selected in the list.
 </p><dl>
-<dt><i>itm</i></dt>
+<dt><i>row</i></dt>
 <dd>
-item clicked on (QListWidgetItem)
+row number of the item clicked on (integer)
 </dd>
 </dl><a NAME="Listspace._addView" ID="Listspace._addView"></a>
 <h4>Listspace._addView</h4>
@@ -370,7 +381,7 @@ editor window to be removed
 </p><dl>
 <dt><i>win</i></dt>
 <dd>
-editor window to be shown
+editor assembly to be shown
 </dd><dt><i>fn</i></dt>
 <dd>
 filename of this editor (string)

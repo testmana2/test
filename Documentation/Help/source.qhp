@@ -9781,6 +9781,7 @@
       <keyword name="Listspace.__captionChange" id="Listspace.__captionChange" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__captionChange" />
       <keyword name="Listspace.__contextMenuClose" id="Listspace.__contextMenuClose" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuClose" />
       <keyword name="Listspace.__contextMenuCloseAll" id="Listspace.__contextMenuCloseAll" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuCloseAll" />
+      <keyword name="Listspace.__contextMenuCloseOthers" id="Listspace.__contextMenuCloseOthers" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuCloseOthers" />
       <keyword name="Listspace.__contextMenuCopyPathToClipboard" id="Listspace.__contextMenuCopyPathToClipboard" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuCopyPathToClipboard" />
       <keyword name="Listspace.__contextMenuOpenRejections" id="Listspace.__contextMenuOpenRejections" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuOpenRejections" />
       <keyword name="Listspace.__contextMenuPrintFile" id="Listspace.__contextMenuPrintFile" ref="eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.html#Listspace.__contextMenuPrintFile" />

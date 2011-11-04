@@ -489,18 +489,16 @@ class TabWidget(E5TabWidget):
         if not self.editors:
             return None
         else:
-            try:
-                return super().currentWidget().getEditor()
-            except AttributeError:
-                return super().currentWidget()
+            return super().currentWidget()
         
-    def setCurrentWidget(self, editor):
+    def setCurrentWidget(self, assembly):
         """
-        Public method to set the current tab by the given editor.
+        Public method to set the current tab by the given editor assembly.
         
-        @param editor editor to determine current tab from (Editor)
+        @param assembly editor assembly to determine current tab from
+            (EditorAssembly.EditorAssembly)
         """
-        super().setCurrentWidget(editor.parent())
+        super().setCurrentWidget(assembly)
         
     def indexOf(self, object):
         """
@@ -670,6 +668,7 @@ class Tabview(QSplitter, ViewManager):
             window has changed
     @signal breakpointToggled(Editor) emitted when a breakpoint is toggled.
     @signal bookmarkToggled(Editor) emitted when a bookmark is toggled.
+    @signal syntaxerrorToggled(Editor) emitted when a syntax error is toggled.
     """
     changeCaption = pyqtSignal(str)
     editorChanged = pyqtSignal(str)
@@ -868,18 +867,19 @@ class Tabview(QSplitter, ViewManager):
         """
         Protected method to show a view (i.e. window)
         
-        @param win editor window to be shown
+        @param win editor assembly to be shown
         @param fn filename of this editor (string)
         """
         win.show()
+        editor = win.getEditor()
         for tw in self.tabWidgets:
-            if tw.hasEditor(win):
+            if tw.hasEditor(editor):
                 tw.setCurrentWidget(win)
                 self.currentTabWidget.showIndicator(False)
                 self.currentTabWidget = tw
                 self.currentTabWidget.showIndicator(True)
                 break
-        win.setFocus()
+        editor.setFocus()
         
     def activeWindow(self):
         """
@@ -887,7 +887,11 @@ class Tabview(QSplitter, ViewManager):
         
         @return reference to the active editor
         """
-        return self.currentTabWidget.currentWidget()
+        cw = self.currentTabWidget.currentWidget()
+        if cw:
+            return cw.getEditor()
+        else:
+            return None
         
     def showWindowMenu(self, windowMenu):
         """

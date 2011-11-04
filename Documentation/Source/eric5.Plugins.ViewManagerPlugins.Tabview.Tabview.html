@@ -273,7 +273,7 @@ E5TabWidget
 <td>Public method to remove a widget.</td>
 </tr><tr>
 <td><a href="#TabWidget.setCurrentWidget">setCurrentWidget</a></td>
-<td>Public method to set the current tab by the given editor.</td>
+<td>Public method to set the current tab by the given editor assembly.</td>
 </tr><tr>
 <td><a href="#TabWidget.showIndicator">showIndicator</a></td>
 <td>Public slot to set the indicator on or off.</td>
@@ -575,13 +575,14 @@ object to be removed (QWidget)
 </dd>
 </dl><a NAME="TabWidget.setCurrentWidget" ID="TabWidget.setCurrentWidget"></a>
 <h4>TabWidget.setCurrentWidget</h4>
-<b>setCurrentWidget</b>(<i>editor</i>)
+<b>setCurrentWidget</b>(<i>assembly</i>)
 <p>
-        Public method to set the current tab by the given editor.
+        Public method to set the current tab by the given editor assembly.
 </p><dl>
-<dt><i>editor</i></dt>
+<dt><i>assembly</i></dt>
 <dd>
-editor to determine current tab from (Editor)
+editor assembly to determine current tab from
+            (EditorAssembly.EditorAssembly)
 </dd>
 </dl><a NAME="TabWidget.showIndicator" ID="TabWidget.showIndicator"></a>
 <h4>TabWidget.showIndicator</h4>
@@ -640,6 +641,9 @@ emitted after an editor window was saved
 </dd><dt>lastEditorClosed()</dt>
 <dd>
 emitted after the last editor window was closed
+</dd><dt>syntaxerrorToggled(Editor)</dt>
+<dd>
+emitted when a syntax error is toggled.
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -821,7 +825,7 @@ editor window to be removed
 </p><dl>
 <dt><i>win</i></dt>
 <dd>
-editor window to be shown
+editor assembly to be shown
 </dd><dt><i>fn</i></dt>
 <dd>
 filename of this editor (string)

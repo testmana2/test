@@ -313,7 +313,7 @@ class ViewManager(QObject):
         """
         Protected method to show a view (i.e. window)
         
-        @param win editor window to be shown
+        @param win editor assembly to be shown
         @param fn filename of this editor
         @exception RuntimeError Not implemented
         """
@@ -3425,7 +3425,7 @@ class ViewManager(QObject):
         if newWin:
             self._addView(assembly, fn)
         else:
-            self._showView(editor, fn)
+            self._showView(editor.parent(), fn)
         
         return (newWin, editor)
         
