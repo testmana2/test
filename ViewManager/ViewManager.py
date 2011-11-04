@@ -3098,6 +3098,7 @@ class ViewManager(QObject):
         fn = editor.getFileName()
         
         # remove the window
+        editor.parent().shutdownTimer()
         self._removeView(editor)
         self.editors.remove(editor)
         

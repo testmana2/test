@@ -62,6 +62,14 @@ class EditorAssembly(QWidget):
         
         QTimer.singleShot(0, self.__parseEditor)
     
+    def shutdownTimer(self):
+        """
+        Public method to stop and disconnect the timer.
+        """
+        self.__parseTimer.stop()
+        self.__parseTimer.timeout.disconnect(self.__parseEditor)
+        self.__editor.textChanged.disconnect(self.__resetParseTimer)
+    
     def getEditor(self):
         """
         Public method to get the reference to the editor widget.

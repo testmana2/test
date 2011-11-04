@@ -4597,6 +4597,7 @@
       <keyword name="EditorAssembly.__parseEditor" id="EditorAssembly.__parseEditor" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__parseEditor" />
       <keyword name="EditorAssembly.__resetParseTimer" id="EditorAssembly.__resetParseTimer" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.__resetParseTimer" />
       <keyword name="EditorAssembly.getEditor" id="EditorAssembly.getEditor" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.getEditor" />
+      <keyword name="EditorAssembly.shutdownTimer" id="EditorAssembly.shutdownTimer" ref="eric5.QScintilla.EditorAssembly.html#EditorAssembly.shutdownTimer" />
       <keyword name="GotoDialog (Module)" id="GotoDialog (Module)" ref="eric5.QScintilla.GotoDialog.html" />
       <keyword name="GotoDialog" id="GotoDialog" ref="eric5.QScintilla.GotoDialog.html#GotoDialog" />
       <keyword name="GotoDialog (Constructor)" id="GotoDialog (Constructor)" ref="eric5.QScintilla.GotoDialog.html#GotoDialog.__init__" />

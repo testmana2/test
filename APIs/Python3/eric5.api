@@ -5589,6 +5589,7 @@ eric5.QScintilla.Editor.Editor?1(dbs, fn=None, vm=None, filetype="", editor=None
 eric5.QScintilla.Editor.EditorAutoCompletionListID?7
 eric5.QScintilla.Editor.TemplateCompletionListID?7
 eric5.QScintilla.EditorAssembly.EditorAssembly.getEditor?4()
+eric5.QScintilla.EditorAssembly.EditorAssembly.shutdownTimer?4()
 eric5.QScintilla.EditorAssembly.EditorAssembly?1(dbs, fn=None, vm=None, filetype="", editor=None, tv=None)
 eric5.QScintilla.Exporters.ExporterBase.ExporterBase._getFileName?5(filter)
 eric5.QScintilla.Exporters.ExporterBase.ExporterBase.exportSource?4()
