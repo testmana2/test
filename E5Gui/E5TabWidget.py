@@ -83,7 +83,7 @@ class E5DnDTabBar(E5WheelTabBar):
             index = self.tabAt(event.pos())
             mimeData.setText(self.tabText(index))
             mimeData.setData("action", "tab-reordering")
-            mimeData.setData("tabbar-id", QByteArray.number(id(self)))
+            mimeData.setData("tabbar-id", str(id(self)))
             drag.setMimeData(mimeData)
             drag.exec_()
         E5WheelTabBar.mouseMoveEvent(self, event)
@@ -99,7 +99,7 @@ class E5DnDTabBar(E5WheelTabBar):
         if "action" in formats and \
            mimeData.data("action") == "tab-reordering" and \
            "tabbar-id" in formats and \
-           mimeData.data("tabbar-id") == id(self):
+           int(mimeData.data("tabbar-id")) == id(self):
             event.acceptProposedAction()
         E5WheelTabBar.dragEnterEvent(self, event)
     

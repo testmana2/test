@@ -34,19 +34,18 @@ class TabBar(E5WheelTabBar):
     
     @signal tabMoveRequested(int, int) emitted to signal a tab move request giving
         the old and new index position
-    @signal tabRelocateRequested(long, int, int) emitted to signal a tab relocation
-        request giving the id of the old tab widget, the index in the old tab widget
-        and the new index position
-    @signal tabCopyRequested(long, int, int) emitted to signal a clone request
-        giving the id of the source tab widget, the index in the source tab widget
-        and the new index position
+    @signal tabRelocateRequested(str, int, int) emitted to signal a tab relocation
+        request giving the string encoded id of the old tab widget, the index in
+        the old tab widget and the new index position
+    @signal tabCopyRequested(str, int, int) emitted to signal a clone request
+        giving the string encoded id of the source tab widget, the index in the
+        source tab widget and the new index position
     @signal tabCopyRequested(int, int) emitted to signal a clone request giving
         the old and new index position
     """
     tabMoveRequested = pyqtSignal(int, int)
     tabRelocateRequested = pyqtSignal(int, int, int)
-    tabCopyRequested = pyqtSignal(int, int, int)
-    tabCopyRequested = pyqtSignal(int, int)
+    tabCopyRequested = pyqtSignal((str, int, int), (int, int))
     
     def __init__(self, parent = None):
         """
@@ -83,10 +82,10 @@ class TabBar(E5WheelTabBar):
             index = self.tabAt(event.pos())
             mimeData.setText(self.tabText(index))
             mimeData.setData("action", "tab-reordering")
-            mimeData.setData("tabbar-id", QByteArray.number(id(self)))
-            mimeData.setData("source-index", 
+            mimeData.setData("tabbar-id", str(id(self)))
+            mimeData.setData("source-index",
                              QByteArray.number(self.tabAt(self.__dragStartPos)))
-            mimeData.setData("tabwidget-id", QByteArray.number(id(self.parentWidget())))
+            mimeData.setData("tabwidget-id", str(id(self.parentWidget())))
             drag.setMimeData(mimeData)
             if event.modifiers() == Qt.KeyboardModifiers(Qt.ShiftModifier):
                 drag.exec_(Qt.DropActions(Qt.CopyAction))
@@ -117,16 +116,17 @@ class TabBar(E5WheelTabBar):
         @param event reference to the drop event (QDropEvent)
         """
         mimeData = event.mimeData()
-        oldID = mimeData.data("tabbar-id").toLong()[0]
+        oldID = int(mimeData.data("tabbar-id"))
         fromIndex = mimeData.data("source-index").toInt()[0]
         toIndex = self.tabAt(event.pos())
         if oldID != id(self):
-            parentID = mimeData.data("tabwidget-id").toLong()[0]
+            parentID = int(mimeData.data("tabwidget-id"))
             if event.proposedAction() == Qt.MoveAction:
-                self.tabRelocateRequested.emit(parentID, fromIndex, toIndex)
+                self.tabRelocateRequested.emit(str(parentID), fromIndex, toIndex)
                 event.acceptProposedAction()
             elif event.proposedAction() == Qt.CopyAction:
-                self.tabCopyRequested.emit(parentID, fromIndex, toIndex)
+                self.tabCopyRequested[str, int, int].emit(
+                    str(parentID), fromIndex, toIndex)
                 event.acceptProposedAction()
         else:
             if fromIndex != toIndex:
@@ -134,7 +134,7 @@ class TabBar(E5WheelTabBar):
                     self.tabMoveRequested.emit(fromIndex, toIndex)
                     event.acceptProposedAction()
                 elif event.proposedAction() == Qt.CopyAction:
-                    self.tabCopyRequested.emit(fromIndex, toIndex)
+                    self.tabCopyRequested[int, int].emit(fromIndex, toIndex)
                     event.acceptProposedAction()
         E5WheelTabBar.dropEvent(self, event)
 
@@ -155,9 +155,9 @@ class TabWidget(E5TabWidget):
         self.setTabBar(self.__tabBar)
         
         self.__tabBar.tabMoveRequested.connect(self.moveTab)
-        self.__tabBar.tabRelocateRequested.connect(self.relocateTab)
-        self.__tabBar.tabCopyRequested.connect(self.copyTabOther)
-        self.__tabBar.tabCopyRequested.connect(self.copyTab)
+        self.__tabBar.tabRelocateRequested.connect(self.__relocateTab)
+        self.__tabBar.tabCopyRequested[str, int, int].connect(self.__copyTabOther)
+        self.__tabBar.tabCopyRequested[int, int].connect(self.__copyTab)
         
         self.vm = vm
         self.editors = []
@@ -404,15 +404,15 @@ class TabWidget(E5TabWidget):
                 self.setTabsClosable(False)
             self.navigationButton.setEnabled(False)
         
-    def relocateTab(self, sourceId, sourceIndex, targetIndex):
+    def __relocateTab(self, sourceId, sourceIndex, targetIndex):
         """
-        Public method to relocate an editor from another TabWidget.
+        Private method to relocate an editor from another TabWidget.
         
-        @param sourceId id of the TabWidget to get the editor from (long)
+        @param sourceId id of the TabWidget to get the editor from (string)
         @param sourceIndex index of the tab in the old tab widget (integer)
         @param targetIndex index position to place it to (integer)
         """
-        tw = self.vm.getTabWidgetById(sourceId)
+        tw = self.vm.getTabWidgetById(int(sourceId))
         if tw is not None:
             # step 1: get data of the tab of the source
             toolTip = tw.tabToolTip(sourceIndex)
@@ -433,15 +433,15 @@ class TabWidget(E5TabWidget):
             # step 4: set current widget
             self.setCurrentIndex(targetIndex)
         
-    def copyTabOther(self, sourceId, sourceIndex, targetIndex):
+    def __copyTabOther(self, sourceId, sourceIndex, targetIndex):
         """
-        Public method to copy an editor from another TabWidget.
+        Private method to copy an editor from another TabWidget.
         
-        @param sourceId id of the TabWidget to get the editor from (long)
+        @param sourceId id of the TabWidget to get the editor from (string)
         @param sourceIndex index of the tab in the old tab widget (integer)
         @param targetIndex index position to place it to (integer)
         """
-        tw = self.vm.getTabWidgetById(sourceId)
+        tw = self.vm.getTabWidgetById(int(sourceId))
         if tw is not None:
             editor = tw.widget(sourceIndex)
             newEditor = self.vm.cloneEditor(editor, editor.getFileType(), 
@@ -449,9 +449,9 @@ class TabWidget(E5TabWidget):
             self.vm.insertView(newEditor, self, targetIndex, 
                                editor.getFileName(), editor.getNoName())
         
-    def copyTab(self, sourceIndex, targetIndex):
+    def __copyTab(self, sourceIndex, targetIndex):
         """
-        Public method to copy an editor.
+        Private method to copy an editor.
         
         @param sourceIndex index of the tab (integer)
         @param targetIndex index position to place it to (integer)
