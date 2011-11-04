@@ -56,20 +56,20 @@ Module implementing a tabbed viewmanager class.
 <dd>
 emitted to signal a clone request giving
         the old and new index position
-</dd><dt>tabCopyRequested(long, int, int)</dt>
+</dd><dt>tabCopyRequested(str, int, int)</dt>
 <dd>
 emitted to signal a clone request
-        giving the id of the source tab widget, the index in the source tab widget
-        and the new index position
+        giving the string encoded id of the source tab widget, the index in the
+        source tab widget and the new index position
 </dd><dt>tabMoveRequested(int, int)</dt>
 <dd>
 emitted to signal a tab move request giving
         the old and new index position
-</dd><dt>tabRelocateRequested(long, int, int)</dt>
+</dd><dt>tabRelocateRequested(str, int, int)</dt>
 <dd>
 emitted to signal a tab relocation
-        request giving the id of the old tab widget, the index in the old tab widget
-        and the new index position
+        request giving the string encoded id of the old tab widget, the index in
+        the old tab widget and the new index position
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -224,11 +224,20 @@ E5TabWidget
 <td><a href="#TabWidget.__contextMenuSaveAs">__contextMenuSaveAs</a></td>
 <td>Private method to save the selected tab to a new file.</td>
 </tr><tr>
+<td><a href="#TabWidget.__copyTab">__copyTab</a></td>
+<td>Private method to copy an editor.</td>
+</tr><tr>
+<td><a href="#TabWidget.__copyTabOther">__copyTabOther</a></td>
+<td>Private method to copy an editor from another TabWidget.</td>
+</tr><tr>
 <td><a href="#TabWidget.__initMenu">__initMenu</a></td>
 <td>Private method to initialize the tab context menu.</td>
 </tr><tr>
 <td><a href="#TabWidget.__navigationMenuTriggered">__navigationMenuTriggered</a></td>
 <td>Private slot called to handle the navigation button menu selection.</td>
+</tr><tr>
+<td><a href="#TabWidget.__relocateTab">__relocateTab</a></td>
+<td>Private method to relocate an editor from another TabWidget.</td>
 </tr><tr>
 <td><a href="#TabWidget.__showContextMenu">__showContextMenu</a></td>
 <td>Private slot to show the tab context menu.</td>
@@ -238,12 +247,6 @@ E5TabWidget
 </tr><tr>
 <td><a href="#TabWidget.addTab">addTab</a></td>
 <td>Overwritten method to add a new tab.</td>
-</tr><tr>
-<td><a href="#TabWidget.copyTab">copyTab</a></td>
-<td>Public method to copy an editor.</td>
-</tr><tr>
-<td><a href="#TabWidget.copyTabOther">copyTabOther</a></td>
-<td>Public method to copy an editor from another TabWidget.</td>
 </tr><tr>
 <td><a href="#TabWidget.currentWidget">currentWidget</a></td>
 <td>Overridden method to return a reference to the current page.</td>
@@ -259,9 +262,6 @@ E5TabWidget
 </tr><tr>
 <td><a href="#TabWidget.mouseDoubleClickEvent">mouseDoubleClickEvent</a></td>
 <td>Protected method handling double click events.</td>
-</tr><tr>
-<td><a href="#TabWidget.relocateTab">relocateTab</a></td>
-<td>Public method to relocate an editor from another TabWidget.</td>
 </tr><tr>
 <td><a href="#TabWidget.removeWidget">removeWidget</a></td>
 <td>Public method to remove a widget.</td>
@@ -374,7 +374,36 @@ index of the tab (integer)
 <b>__contextMenuSaveAs</b>(<i></i>)
 <p>
         Private method to save the selected tab to a new file.
-</p><a NAME="TabWidget.__initMenu" ID="TabWidget.__initMenu"></a>
+</p><a NAME="TabWidget.__copyTab" ID="TabWidget.__copyTab"></a>
+<h4>TabWidget.__copyTab</h4>
+<b>__copyTab</b>(<i>sourceIndex, targetIndex</i>)
+<p>
+        Private method to copy an editor.
+</p><dl>
+<dt><i>sourceIndex</i></dt>
+<dd>
+index of the tab (integer)
+</dd><dt><i>targetIndex</i></dt>
+<dd>
+index position to place it to (integer)
+</dd>
+</dl><a NAME="TabWidget.__copyTabOther" ID="TabWidget.__copyTabOther"></a>
+<h4>TabWidget.__copyTabOther</h4>
+<b>__copyTabOther</b>(<i>sourceId, sourceIndex, targetIndex</i>)
+<p>
+        Private method to copy an editor from another TabWidget.
+</p><dl>
+<dt><i>sourceId</i></dt>
+<dd>
+id of the TabWidget to get the editor from (string)
+</dd><dt><i>sourceIndex</i></dt>
+<dd>
+index of the tab in the old tab widget (integer)
+</dd><dt><i>targetIndex</i></dt>
+<dd>
+index position to place it to (integer)
+</dd>
+</dl><a NAME="TabWidget.__initMenu" ID="TabWidget.__initMenu"></a>
 <h4>TabWidget.__initMenu</h4>
 <b>__initMenu</b>(<i></i>)
 <p>
@@ -388,6 +417,22 @@ index of the tab (integer)
 <dt><i>act</i></dt>
 <dd>
 reference to the selected action (QAction)
+</dd>
+</dl><a NAME="TabWidget.__relocateTab" ID="TabWidget.__relocateTab"></a>
+<h4>TabWidget.__relocateTab</h4>
+<b>__relocateTab</b>(<i>sourceId, sourceIndex, targetIndex</i>)
+<p>
+        Private method to relocate an editor from another TabWidget.
+</p><dl>
+<dt><i>sourceId</i></dt>
+<dd>
+id of the TabWidget to get the editor from (string)
+</dd><dt><i>sourceIndex</i></dt>
+<dd>
+index of the tab in the old tab widget (integer)
+</dd><dt><i>targetIndex</i></dt>
+<dd>
+index position to place it to (integer)
 </dd>
 </dl><a NAME="TabWidget.__showContextMenu" ID="TabWidget.__showContextMenu"></a>
 <h4>TabWidget.__showContextMenu</h4>
@@ -419,35 +464,6 @@ the editor object to be added (QScintilla.Editor.Editor)
 </dd><dt><i>title</i></dt>
 <dd>
 title for the new tab (string)
-</dd>
-</dl><a NAME="TabWidget.copyTab" ID="TabWidget.copyTab"></a>
-<h4>TabWidget.copyTab</h4>
-<b>copyTab</b>(<i>sourceIndex, targetIndex</i>)
-<p>
-        Public method to copy an editor.
-</p><dl>
-<dt><i>sourceIndex</i></dt>
-<dd>
-index of the tab (integer)
-</dd><dt><i>targetIndex</i></dt>
-<dd>
-index position to place it to (integer)
-</dd>
-</dl><a NAME="TabWidget.copyTabOther" ID="TabWidget.copyTabOther"></a>
-<h4>TabWidget.copyTabOther</h4>
-<b>copyTabOther</b>(<i>sourceId, sourceIndex, targetIndex</i>)
-<p>
-        Public method to copy an editor from another TabWidget.
-</p><dl>
-<dt><i>sourceId</i></dt>
-<dd>
-id of the TabWidget to get the editor from (long)
-</dd><dt><i>sourceIndex</i></dt>
-<dd>
-index of the tab in the old tab widget (integer)
-</dd><dt><i>targetIndex</i></dt>
-<dd>
-index position to place it to (integer)
 </dd>
 </dl><a NAME="TabWidget.currentWidget" ID="TabWidget.currentWidget"></a>
 <h4>TabWidget.currentWidget</h4>
@@ -515,22 +531,6 @@ index of the inserted tab (integer)
 <dt><i>event</i></dt>
 <dd>
 reference to the event object (QMouseEvent)
-</dd>
-</dl><a NAME="TabWidget.relocateTab" ID="TabWidget.relocateTab"></a>
-<h4>TabWidget.relocateTab</h4>
-<b>relocateTab</b>(<i>sourceId, sourceIndex, targetIndex</i>)
-<p>
-        Public method to relocate an editor from another TabWidget.
-</p><dl>
-<dt><i>sourceId</i></dt>
-<dd>
-id of the TabWidget to get the editor from (long)
-</dd><dt><i>sourceIndex</i></dt>
-<dd>
-index of the tab in the old tab widget (integer)
-</dd><dt><i>targetIndex</i></dt>
-<dd>
-index position to place it to (integer)
 </dd>
 </dl><a NAME="TabWidget.removeWidget" ID="TabWidget.removeWidget"></a>
 <h4>TabWidget.removeWidget</h4>
