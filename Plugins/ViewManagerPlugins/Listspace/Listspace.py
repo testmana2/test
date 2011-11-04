@@ -36,13 +36,15 @@ class StackedWidget(QStackedWidget):
         
         self.editors = []
         
-    def addWidget(self, editor):
+    def addWidget(self, assembly):
         """
         Overwritten method to add a new widget.
         
-        @param editor the editor object to be added (QScintilla.Editor.Editor)
+        @param assembly editor assembly object to be added
+            (QScintilla.EditorAssembly.EditorAssembly)
         """
-        super().addWidget(editor.parent())
+        editor = assembly.getEditor()
+        super().addWidget(assembly)
         if not editor in self.editors:
             self.editors.append(editor)
         
@@ -337,16 +339,17 @@ class Listspace(QSplitter, ViewManager):
         """
         Protected method to add a view (i.e. window)
         
-        @param win editor window to be added
+        @param win editor assembly to be added
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
         """
+        editor = win.getEditor()
         if fn is None:
             if not noName:
                 self.untitledCount += 1
                 noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
             self.viewlist.addItem(noName)
-            win.setNoName(noName)
+            editor.setNoName(noName)
         else:
             txt = os.path.basename(fn)
             if not QFileInfo(fn).isWritable():
@@ -360,7 +363,7 @@ class Listspace(QSplitter, ViewManager):
         
         index = self.editors.index(win)
         self.viewlist.setCurrentRow(index)
-        win.setFocus()
+        editor.setFocus()
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)

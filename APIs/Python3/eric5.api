@@ -4254,7 +4254,7 @@ eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.showWindowMenu?4(
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.syntaxerrorToggled?7
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.tile?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace?1(parent)
-eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.addWidget?4(editor)
+eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.addWidget?4(assembly)
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.currentWidget?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.firstEditor?4()
 eric5.Plugins.ViewManagerPlugins.Listspace.Listspace.StackedWidget.hasEditor?4(editor)
@@ -4272,16 +4272,13 @@ eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabCopyRequested?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabMoveRequested?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar.tabRelocateRequested?7
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabBar?1(parent=None)
-eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.addTab?4(editor, title)
-eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.copyTab?4(sourceIndex, targetIndex)
-eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.copyTabOther?4(sourceId, sourceIndex, targetIndex)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.addTab?4(assembly, title)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.currentWidget?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.hasEditor?4(editor)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.hasEditors?4()
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.indexOf?4(object)
-eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.insertWidget?4(index, editor, title)
+eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.insertWidget?4(index, assembly, title)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.mouseDoubleClickEvent?4(event)
-eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.relocateTab?4(sourceId, sourceIndex, targetIndex)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.removeWidget?4(object)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.setCurrentWidget?4(editor)
 eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.TabWidget.showIndicator?4(on)

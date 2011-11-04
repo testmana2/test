@@ -9849,20 +9849,20 @@
       <keyword name="TabWidget.__contextMenuSave" id="TabWidget.__contextMenuSave" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSave" />
       <keyword name="TabWidget.__contextMenuSaveAll" id="TabWidget.__contextMenuSaveAll" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAll" />
       <keyword name="TabWidget.__contextMenuSaveAs" id="TabWidget.__contextMenuSaveAs" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__contextMenuSaveAs" />
+      <keyword name="TabWidget.__copyTab" id="TabWidget.__copyTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__copyTab" />
+      <keyword name="TabWidget.__copyTabOther" id="TabWidget.__copyTabOther" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__copyTabOther" />
       <keyword name="TabWidget.__initMenu" id="TabWidget.__initMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__initMenu" />
       <keyword name="TabWidget.__navigationMenuTriggered" id="TabWidget.__navigationMenuTriggered" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__navigationMenuTriggered" />
+      <keyword name="TabWidget.__relocateTab" id="TabWidget.__relocateTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__relocateTab" />
       <keyword name="TabWidget.__showContextMenu" id="TabWidget.__showContextMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__showContextMenu" />
       <keyword name="TabWidget.__showNavigationMenu" id="TabWidget.__showNavigationMenu" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.__showNavigationMenu" />
       <keyword name="TabWidget.addTab" id="TabWidget.addTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.addTab" />
-      <keyword name="TabWidget.copyTab" id="TabWidget.copyTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.copyTab" />
-      <keyword name="TabWidget.copyTabOther" id="TabWidget.copyTabOther" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.copyTabOther" />
       <keyword name="TabWidget.currentWidget" id="TabWidget.currentWidget" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.currentWidget" />
       <keyword name="TabWidget.hasEditor" id="TabWidget.hasEditor" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.hasEditor" />
       <keyword name="TabWidget.hasEditors" id="TabWidget.hasEditors" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.hasEditors" />
       <keyword name="TabWidget.indexOf" id="TabWidget.indexOf" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.indexOf" />
       <keyword name="TabWidget.insertWidget" id="TabWidget.insertWidget" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.insertWidget" />
       <keyword name="TabWidget.mouseDoubleClickEvent" id="TabWidget.mouseDoubleClickEvent" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.mouseDoubleClickEvent" />
-      <keyword name="TabWidget.relocateTab" id="TabWidget.relocateTab" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.relocateTab" />
       <keyword name="TabWidget.removeWidget" id="TabWidget.removeWidget" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.removeWidget" />
       <keyword name="TabWidget.setCurrentWidget" id="TabWidget.setCurrentWidget" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.setCurrentWidget" />
       <keyword name="TabWidget.showIndicator" id="TabWidget.showIndicator" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#TabWidget.showIndicator" />

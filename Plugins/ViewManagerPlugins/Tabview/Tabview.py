@@ -36,19 +36,18 @@ class TabBar(E5WheelTabBar):
     
     @signal tabMoveRequested(int, int) emitted to signal a tab move request giving
         the old and new index position
-    @signal tabRelocateRequested(long, int, int) emitted to signal a tab relocation
-        request giving the id of the old tab widget, the index in the old tab widget
-        and the new index position
-    @signal tabCopyRequested(long, int, int) emitted to signal a clone request
-        giving the id of the source tab widget, the index in the source tab widget
-        and the new index position
+    @signal tabRelocateRequested(str, int, int) emitted to signal a tab relocation
+        request giving the string encoded id of the old tab widget, the index in
+        the old tab widget and the new index position
+    @signal tabCopyRequested(str, int, int) emitted to signal a clone request
+        giving the string encoded id of the source tab widget, the index in the
+        source tab widget and the new index position
     @signal tabCopyRequested(int, int) emitted to signal a clone request giving
         the old and new index position
     """
     tabMoveRequested = pyqtSignal(int, int)
-    tabRelocateRequested = pyqtSignal(int, int, int)
-    tabCopyRequested = pyqtSignal(int, int, int)
-    tabCopyRequested = pyqtSignal(int, int)
+    tabRelocateRequested = pyqtSignal(str, int, int)
+    tabCopyRequested = pyqtSignal((str, int, int), (int, int))
     
     def __init__(self, parent=None):
         """
@@ -85,10 +84,10 @@ class TabBar(E5WheelTabBar):
             index = self.tabAt(event.pos())
             mimeData.setText(self.tabText(index))
             mimeData.setData("action", "tab-reordering")
-            mimeData.setData("tabbar-id", QByteArray.number(id(self)))
+            mimeData.setData("tabbar-id", str(id(self)))
             mimeData.setData("source-index",
                              QByteArray.number(self.tabAt(self.__dragStartPos)))
-            mimeData.setData("tabwidget-id", QByteArray.number(id(self.parentWidget())))
+            mimeData.setData("tabwidget-id", str(id(self.parentWidget())))
             drag.setMimeData(mimeData)
             if event.modifiers() == Qt.KeyboardModifiers(Qt.ShiftModifier):
                 drag.exec_(Qt.DropActions(Qt.CopyAction))
@@ -119,16 +118,17 @@ class TabBar(E5WheelTabBar):
         @param event reference to the drop event (QDropEvent)
         """
         mimeData = event.mimeData()
-        oldID = mimeData.data("tabbar-id").toLong()[0]
+        oldID = int(mimeData.data("tabbar-id"))
         fromIndex = mimeData.data("source-index").toInt()[0]
         toIndex = self.tabAt(event.pos())
         if oldID != id(self):
-            parentID = mimeData.data("tabwidget-id").toLong()[0]
+            parentID = int(mimeData.data("tabwidget-id"))
             if event.proposedAction() == Qt.MoveAction:
-                self.tabRelocateRequested.emit(parentID, fromIndex, toIndex)
+                self.tabRelocateRequested.emit(str(parentID), fromIndex, toIndex)
                 event.acceptProposedAction()
             elif event.proposedAction() == Qt.CopyAction:
-                self.tabCopyRequested.emit(parentID, fromIndex, toIndex)
+                self.tabCopyRequested[str, int, int].emit(
+                    str(parentID), fromIndex, toIndex)
                 event.acceptProposedAction()
         else:
             if fromIndex != toIndex:
@@ -136,7 +136,7 @@ class TabBar(E5WheelTabBar):
                     self.tabMoveRequested.emit(fromIndex, toIndex)
                     event.acceptProposedAction()
                 elif event.proposedAction() == Qt.CopyAction:
-                    self.tabCopyRequested.emit(fromIndex, toIndex)
+                    self.tabCopyRequested[int, int].emit(fromIndex, toIndex)
                     event.acceptProposedAction()
         super().dropEvent(event)
 
@@ -158,9 +158,9 @@ class TabWidget(E5TabWidget):
         self.setTabBar(self.__tabBar)
         
         self.__tabBar.tabMoveRequested.connect(self.moveTab)
-        self.__tabBar.tabRelocateRequested.connect(self.relocateTab)
-        self.__tabBar.tabCopyRequested.connect(self.copyTabOther)
-        self.__tabBar.tabCopyRequested.connect(self.copyTab)
+        self.__tabBar.tabRelocateRequested.connect(self.__relocateTab)
+        self.__tabBar.tabCopyRequested[str, int, int].connect(self.__copyTabOther)
+        self.__tabBar.tabCopyRequested[int, int].connect(self.__copyTab)
         
         self.vm = vm
         self.editors = []
@@ -316,14 +316,15 @@ class TabWidget(E5TabWidget):
         else:
             self.indicator.setColor(QColor("red"))
         
-    def addTab(self, editor, title):
+    def addTab(self, assembly, title):
         """
         Overwritten method to add a new tab.
         
-        @param editor the editor object to be added (QScintilla.Editor.Editor)
+        @param assembly editor assembly object to be added
+            (QScintilla.EditorAssembly.EditorAssembly)
         @param title title for the new tab (string)
         """
-        assembly = editor.parent()
+        editor = assembly.getEditor()
         super().addTab(assembly, UI.PixmapCache.getIcon("empty.png"), title)
         if self.closeButton:
             self.closeButton.setEnabled(True)
@@ -339,16 +340,17 @@ class TabWidget(E5TabWidget):
         if emptyIndex > -1:
             self.removeTab(emptyIndex)
         
-    def insertWidget(self, index, editor, title):
+    def insertWidget(self, index, assembly, title):
         """
         Overwritten method to insert a new tab.
         
         @param index index position for the new tab (integer)
-        @param editor the editor object to be added (QScintilla.Editor.Editor)
+        @param assembly editor assembly object to be added
+            (QScintilla.EditorAssembly.EditorAssembly)
         @param title title for the new tab (string)
         @return index of the inserted tab (integer)
         """
-        assembly = editor.parent()
+        editor = assembly.getEditor()
         newIndex = super().insertTab(index, assembly,
                                      UI.PixmapCache.getIcon("empty.png"),
                                      title)
@@ -420,26 +422,26 @@ class TabWidget(E5TabWidget):
                 self.setTabsClosable(False)
             self.navigationButton.setEnabled(False)
         
-    def relocateTab(self, sourceId, sourceIndex, targetIndex):
+    def __relocateTab(self, sourceId, sourceIndex, targetIndex):
         """
-        Public method to relocate an editor from another TabWidget.
+        Private method to relocate an editor from another TabWidget.
         
-        @param sourceId id of the TabWidget to get the editor from (long)
+        @param sourceId id of the TabWidget to get the editor from (string)
         @param sourceIndex index of the tab in the old tab widget (integer)
         @param targetIndex index position to place it to (integer)
         """
-        tw = self.vm.getTabWidgetById(sourceId)
+        tw = self.vm.getTabWidgetById(int(sourceId))
         if tw is not None:
             # step 1: get data of the tab of the source
             toolTip = tw.tabToolTip(sourceIndex)
             text = tw.tabText(sourceIndex)
             icon = tw.tabIcon(sourceIndex)
             whatsThis = tw.tabWhatsThis(sourceIndex)
-            editor = tw.widget(sourceIndex).getEditor()
+            assembly = tw.widget(sourceIndex)
             
             # step 2: relocate the tab
-            tw.removeWidget(editor)
-            self.insertWidget(targetIndex, editor, text)
+            tw.removeWidget(assembly.getEditor())
+            self.insertWidget(targetIndex, assembly, text)
             
             # step 3: set the tab data again
             self.setTabIcon(targetIndex, icon)
@@ -449,33 +451,33 @@ class TabWidget(E5TabWidget):
             # step 4: set current widget
             self.setCurrentIndex(targetIndex)
         
-    def copyTabOther(self, sourceId, sourceIndex, targetIndex):
+    def __copyTabOther(self, sourceId, sourceIndex, targetIndex):
         """
-        Public method to copy an editor from another TabWidget.
+        Private method to copy an editor from another TabWidget.
         
-        @param sourceId id of the TabWidget to get the editor from (long)
+        @param sourceId id of the TabWidget to get the editor from (string)
         @param sourceIndex index of the tab in the old tab widget (integer)
         @param targetIndex index position to place it to (integer)
         """
-        tw = self.vm.getTabWidgetById(sourceId)
+        tw = self.vm.getTabWidgetById(int(sourceId))
         if tw is not None:
             editor = tw.widget(sourceIndex).getEditor()
-            newEditor = self.vm.cloneEditor(editor, editor.getFileType(),
+            newEditor, assembly = self.vm.cloneEditor(editor, editor.getFileType(),
                                             editor.getFileName())
-            self.vm.insertView(newEditor, self, targetIndex,
+            self.vm.insertView(assembly, self, targetIndex,
                                editor.getFileName(), editor.getNoName())
         
-    def copyTab(self, sourceIndex, targetIndex):
+    def __copyTab(self, sourceIndex, targetIndex):
         """
-        Public method to copy an editor.
+        Private method to copy an editor.
         
         @param sourceIndex index of the tab (integer)
         @param targetIndex index position to place it to (integer)
         """
         editor = self.widget(sourceIndex).getEditor()
-        newEditor = self.vm.cloneEditor(editor, editor.getFileType(),
+        newEditor, assembly = self.vm.cloneEditor(editor, editor.getFileType(),
                                         editor.getFileName())
-        self.vm.insertView(newEditor, self, targetIndex,
+        self.vm.insertView(assembly, self, targetIndex,
                            editor.getFileName(), editor.getNoName())
         
     def currentWidget(self):
@@ -790,16 +792,17 @@ class Tabview(QSplitter, ViewManager):
         """
         Protected method to add a view (i.e. window)
         
-        @param win editor window to be added
+        @param win editor assembly to be added
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
         """
+        editor = win.getEditor()
         if fn is None:
             if not noName:
                 self.untitledCount += 1
                 noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
             self.currentTabWidget.addTab(win, noName)
-            win.setNoName(noName)
+            editor.setNoName(noName)
         else:
             if self.filenameOnly:
                 txt = os.path.basename(fn)
@@ -814,7 +817,7 @@ class Tabview(QSplitter, ViewManager):
             self.currentTabWidget.setTabToolTip(index, fn)
         self.currentTabWidget.setCurrentWidget(win)
         win.show()
-        win.setFocus()
+        editor.setFocus()
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
@@ -825,18 +828,19 @@ class Tabview(QSplitter, ViewManager):
         """
         Protected method to add a view (i.e. window)
         
-        @param win editor window to be added
+        @param win editor assembly to be inserted
         @param tabWidget reference to the tab widget to insert the editor into (TabWidget)
         @param index index position to insert at (integer)
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
         """
+        editor = win.getEditor()
         if fn is None:
             if not noName:
                 self.untitledCount += 1
                 noName = self.trUtf8("Untitled {0}").format(self.untitledCount)
             tabWidget.insertWidget(index, win, noName)
-            win.setNoName(noName)
+            editor.setNoName(noName)
         else:
             if self.filenameOnly:
                 txt = os.path.basename(fn)
@@ -850,15 +854,15 @@ class Tabview(QSplitter, ViewManager):
             tabWidget.setTabToolTip(nindex, fn)
         tabWidget.setCurrentWidget(win)
         win.show()
-        win.setFocus()
+        editor.setFocus()
         if fn:
             self.changeCaption.emit(fn)
             self.editorChanged.emit(fn)
         else:
             self.changeCaption.emit("")
         
-        self._modificationStatusChanged(win.isModified(), win)
-        self._checkActions(win)
+        self._modificationStatusChanged(editor.isModified(), editor)
+        self._checkActions(editor)
         
     def _showView(self, win, fn=None):
         """

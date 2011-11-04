@@ -302,7 +302,7 @@ class ViewManager(QObject):
         """
         Protected method to add a view (i.e. window)
         
-        @param win editor window to be added
+        @param win editor assembly to be added
         @param fn filename of this editor
         @param noName name to be used for an unnamed editor (string)
         @exception RuntimeError Not implemented
@@ -3242,9 +3242,9 @@ class ViewManager(QObject):
         @param caller reference to the editor calling this method
         @param filetype type of the source file (string)
         """
-        editor = self.cloneEditor(caller, filetype, fn)
+        editor, assembly = self.cloneEditor(caller, filetype, fn)
         
-        self._addView(editor, fn, caller.getNoName())
+        self._addView(assembly, fn, caller.getNoName())
         self._modificationStatusChanged(editor.isModified(), editor)
         self._checkActions(editor)
 
@@ -3255,7 +3255,8 @@ class ViewManager(QObject):
         @param caller reference to the editor calling this method
         @param filetype type of the source file (string)
         @param fn filename of this view
-        @return reference to the new editor object (Editor.Editor)
+        @return reference to the new editor object (Editor.Editor) and the new
+            edito assembly object (EditorAssembly.EditorAssembly)
         """
         assembly = EditorAssembly(self.dbs, fn, self, filetype=filetype, editor=caller,
                                   tv=e5App().getObject("TaskViewer"))
@@ -3266,7 +3267,7 @@ class ViewManager(QObject):
         self.editorOpened.emit(fn)
         self.editorOpenedEd.emit(editor)
 
-        return editor
+        return editor, assembly
         
     def addToRecentList(self, fn):
         """
@@ -3422,7 +3423,7 @@ class ViewManager(QObject):
                 newWin = True
         
         if newWin:
-            self._addView(editor, fn)
+            self._addView(assembly, fn)
         else:
             self._showView(editor, fn)
         
@@ -3591,7 +3592,7 @@ class ViewManager(QObject):
         editor = assembly.getEditor()
         self.editors.append(editor)
         self.__connectEditor(editor)
-        self._addView(editor, None)
+        self._addView(assembly, None)
         self.__editorOpened()
         self._checkActions(editor)
         self.editorOpened.emit("")
