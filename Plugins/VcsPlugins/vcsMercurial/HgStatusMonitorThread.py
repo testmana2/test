@@ -59,9 +59,9 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         self.shouldUpdate = False
         
         if self.__client is None and not self.__useCommandLine:
-            if self.vcs.version >= (1, 9, 5):
+            if self.vcs.version >= (2, 9, 9):
                 # versions below that have a bug causing a second
-                # to not recognize changes to the status
+                # instance to not recognize changes to the status
                 client = HgClient(self.projectDir, "utf-8")
                 ok, err = client.startServer()
                 if ok:
