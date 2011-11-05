@@ -32,7 +32,7 @@ from E5Gui import E5FileDialog
 import QScintilla.Lexers
 
 from Globals import settingsNameOrganization, settingsNameGlobal, settingsNameRecent, \
-    isWindowsPlatform, isLinuxPlatform, isMacPlatform, findPython2Interpreters
+    isWindowsPlatform, isLinuxPlatform, findPython2Interpreters
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -206,8 +206,6 @@ class Prefs(object):
         "LogStdErrColour": QColor(Qt.red),
     }
     viewProfilesLength = len(uiDefaults["ViewProfiles"]["edit"][2])
-    if isMacPlatform():
-        uiDefaults["ViewManager"] = "listspace"
     
     iconsDefaults = {
         "Path": [],
