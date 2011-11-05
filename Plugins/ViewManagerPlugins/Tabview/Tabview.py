@@ -154,6 +154,10 @@ class TabWidget(E5TabWidget):
         self.__tabBar = TabBar(self)
         self.setTabBar(self.__tabBar)
         
+        self.setUsesScrollButtons(True)
+        self.setDocumentMode(True)
+        self.setElideMode(Qt.ElideNone)
+        
         self.__tabBar.tabMoveRequested.connect(self.moveTab)
         self.__tabBar.tabRelocateRequested.connect(self.__relocateTab)
         self.__tabBar.tabCopyRequested[str, int, int].connect(self.__copyTabOther)

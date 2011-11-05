@@ -57,6 +57,8 @@ class ProjectBrowser(E5TabWidget):
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
+        self.setUsesScrollButtons(True)
+        
         self.vcsStatusIndicator = E5Led(self)
         self.setCornerWidget(self.vcsStatusIndicator, Qt.TopLeftCorner)
         self.vcsStatusColorNames = {
