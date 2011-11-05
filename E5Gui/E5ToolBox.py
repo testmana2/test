@@ -37,6 +37,7 @@ class E5HorizontalToolBox(E5TabWidget):
         """
         E5TabWidget.__init__(self, parent)
         self.setTabPosition(QTabWidget.West)
+        self.setUsesScrollButtons(True)
     
     def addItem(self, widget, icon, text):
         """

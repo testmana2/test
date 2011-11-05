@@ -55,6 +55,10 @@ class HelpTabWidget(E5TabWidget):
         
         self.__mainWindow = parent
         
+        self.setUsesScrollButtons(True)
+        self.setDocumentMode(True)
+        self.setElideMode(Qt.ElideNone)
+        
         self.__stackedUrlBar = StackedUrlBar(self)
         self.__tabBar.tabMoved.connect(self.__stackedUrlBar.moveBar)
         
