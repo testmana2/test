@@ -60,18 +60,6 @@ QDialog, Ui_SslInfoDialog
 <tr>
 <td><a href="#SslInfoDialog.__init__">SslInfoDialog</a></td>
 <td>Constructor</td>
-</tr><tr>
-<td><a href="#SslInfoDialog.__certificateString">__certificateString</a></td>
-<td>Private method to prepare some text for display.</td>
-</tr><tr>
-<td><a href="#SslInfoDialog.__formatHexString">__formatHexString</a></td>
-<td>Private method to format a hex string for display.</td>
-</tr><tr>
-<td><a href="#SslInfoDialog.__hasExpired">__hasExpired</a></td>
-<td>Private method to check for a certificate expiration.</td>
-</tr><tr>
-<td><a href="#SslInfoDialog.__serialNumber">__serialNumber</a></td>
-<td>Private slot to format the certificate serial number.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -90,69 +78,6 @@ reference to the SSL certificate (QSslCertificate)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
-</dd>
-</dl><a NAME="SslInfoDialog.__certificateString" ID="SslInfoDialog.__certificateString"></a>
-<h4>SslInfoDialog.__certificateString</h4>
-<b>__certificateString</b>(<i>txt</i>)
-<p>
-        Private method to prepare some text for display.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-text to be displayed (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-prepared text (string)
-</dd>
-</dl><a NAME="SslInfoDialog.__formatHexString" ID="SslInfoDialog.__formatHexString"></a>
-<h4>SslInfoDialog.__formatHexString</h4>
-<b>__formatHexString</b>(<i>hexString</i>)
-<p>
-        Private method to format a hex string for display.
-</p><dl>
-<dt><i>hexString</i></dt>
-<dd>
-hex string to be formatted (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-formatted string (string)
-</dd>
-</dl><a NAME="SslInfoDialog.__hasExpired" ID="SslInfoDialog.__hasExpired"></a>
-<h4>SslInfoDialog.__hasExpired</h4>
-<b>__hasExpired</b>(<i>effectiveDate, expiryDate</i>)
-<p>
-        Private method to check for a certificate expiration.
-</p><dl>
-<dt><i>effectiveDate</i></dt>
-<dd>
-date the certificate becomes effective (QDateTime)
-</dd><dt><i>expiryDate</i></dt>
-<dd>
-date the certificate expires (QDateTime)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating the expiration status (boolean)
-</dd>
-</dl><a NAME="SslInfoDialog.__serialNumber" ID="SslInfoDialog.__serialNumber"></a>
-<h4>SslInfoDialog.__serialNumber</h4>
-<b>__serialNumber</b>(<i>cert</i>)
-<p>
-        Private slot to format the certificate serial number.
-</p><dl>
-<dt><i>cert</i></dt>
-<dd>
-reference to the SSL certificate (QSslCertificate)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-formated serial number (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

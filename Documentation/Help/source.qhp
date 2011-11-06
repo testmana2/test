@@ -275,6 +275,9 @@
               <section title="eric5.Helpviewer.Passwords.PasswordModel" ref="eric5.Helpviewer.Passwords.PasswordModel.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordsDialog" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.SiteInfo" ref="index-eric5.Helpviewer.SiteInfo.html">
+              <section title="eric5.Helpviewer.SiteInfo.SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
+            </section>
             <section title="eric5.Helpviewer.UrlBar" ref="index-eric5.Helpviewer.UrlBar.html">
               <section title="eric5.Helpviewer.UrlBar.BookmarkInfoDialog" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html" />
               <section title="eric5.Helpviewer.UrlBar.FavIconLabel" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html" />
@@ -306,6 +309,7 @@
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
             <section title="eric5.Helpviewer.SslCertificatesDialog" ref="eric5.Helpviewer.SslCertificatesDialog.html" />
             <section title="eric5.Helpviewer.SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html" />
+            <section title="eric5.Helpviewer.SslInfoWidget" ref="eric5.Helpviewer.SslInfoWidget.html" />
             <section title="eric5.Helpviewer.VirusTotalApi" ref="eric5.Helpviewer.VirusTotalApi.html" />
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
@@ -2824,6 +2828,7 @@
       <keyword name="HelpWindow.__showPasswordsDialog" id="HelpWindow.__showPasswordsDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPasswordsDialog" />
       <keyword name="HelpWindow.__showPreferences" id="HelpWindow.__showPreferences" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPreferences" />
       <keyword name="HelpWindow.__showSearchWindow" id="HelpWindow.__showSearchWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSearchWindow" />
+      <keyword name="HelpWindow.__showSiteinfoDialog" id="HelpWindow.__showSiteinfoDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSiteinfoDialog" />
       <keyword name="HelpWindow.__showTocWindow" id="HelpWindow.__showTocWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showTocWindow" />
       <keyword name="HelpWindow.__stopLoading" id="HelpWindow.__stopLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__stopLoading" />
       <keyword name="HelpWindow.__switchTab" id="HelpWindow.__switchTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__switchTab" />
@@ -2928,10 +2933,14 @@
       <keyword name="SslInfoDialog (Module)" id="SslInfoDialog (Module)" ref="eric5.Helpviewer.SslInfoDialog.html" />
       <keyword name="SslInfoDialog" id="SslInfoDialog" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog" />
       <keyword name="SslInfoDialog (Constructor)" id="SslInfoDialog (Constructor)" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__init__" />
-      <keyword name="SslInfoDialog.__certificateString" id="SslInfoDialog.__certificateString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__certificateString" />
-      <keyword name="SslInfoDialog.__formatHexString" id="SslInfoDialog.__formatHexString" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__formatHexString" />
-      <keyword name="SslInfoDialog.__hasExpired" id="SslInfoDialog.__hasExpired" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__hasExpired" />
-      <keyword name="SslInfoDialog.__serialNumber" id="SslInfoDialog.__serialNumber" ref="eric5.Helpviewer.SslInfoDialog.html#SslInfoDialog.__serialNumber" />
+      <keyword name="SslInfoWidget (Module)" id="SslInfoWidget (Module)" ref="eric5.Helpviewer.SslInfoWidget.html" />
+      <keyword name="SslInfoWidget" id="SslInfoWidget" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget" />
+      <keyword name="SslInfoWidget (Constructor)" id="SslInfoWidget (Constructor)" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__init__" />
+      <keyword name="SslInfoWidget.__certificateString" id="SslInfoWidget.__certificateString" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__certificateString" />
+      <keyword name="SslInfoWidget.__formatHexString" id="SslInfoWidget.__formatHexString" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__formatHexString" />
+      <keyword name="SslInfoWidget.__hasExpired" id="SslInfoWidget.__hasExpired" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__hasExpired" />
+      <keyword name="SslInfoWidget.__serialNumber" id="SslInfoWidget.__serialNumber" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.__serialNumber" />
+      <keyword name="SslInfoWidget.showCertificate" id="SslInfoWidget.showCertificate" ref="eric5.Helpviewer.SslInfoWidget.html#SslInfoWidget.showCertificate" />
       <keyword name="VirusTotalApi (Module)" id="VirusTotalApi (Module)" ref="eric5.Helpviewer.VirusTotalApi.html" />
       <keyword name="VirusTotalAPI" id="VirusTotalAPI" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI" />
       <keyword name="VirusTotalAPI.getSearchRequestData" id="VirusTotalAPI.getSearchRequestData" ref="eric5.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getSearchRequestData" />
@@ -7762,6 +7771,15 @@
       <keyword name="PasswordsDialog (Constructor)" id="PasswordsDialog (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__init__" />
       <keyword name="PasswordsDialog.__calculateHeaderSizes" id="PasswordsDialog.__calculateHeaderSizes" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__calculateHeaderSizes" />
       <keyword name="PasswordsDialog.on_passwordsButton_clicked" id="PasswordsDialog.on_passwordsButton_clicked" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.on_passwordsButton_clicked" />
+      <keyword name="SiteInfo (Package)" id="SiteInfo (Package)" ref="index-eric5.Helpviewer.SiteInfo.html" />
+      <keyword name="SiteInfoDialog (Module)" id="SiteInfoDialog (Module)" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
+      <keyword name="SiteInfoDialog" id="SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog" />
+      <keyword name="SiteInfoDialog (Constructor)" id="SiteInfoDialog (Constructor)" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__init__" />
+      <keyword name="SiteInfoDialog.__copyAction" id="SiteInfoDialog.__copyAction" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__copyAction" />
+      <keyword name="SiteInfoDialog.__imagesTreeContextMenuRequested" id="SiteInfoDialog.__imagesTreeContextMenuRequested" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__imagesTreeContextMenuRequested" />
+      <keyword name="SiteInfoDialog.__saveImage" id="SiteInfoDialog.__saveImage" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__saveImage" />
+      <keyword name="SiteInfoDialog.on_imagesTree_currentItemChanged" id="SiteInfoDialog.on_imagesTree_currentItemChanged" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_imagesTree_currentItemChanged" />
+      <keyword name="SiteInfoDialog.on_securityDetailsButton_clicked" id="SiteInfoDialog.on_securityDetailsButton_clicked" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_securityDetailsButton_clicked" />
       <keyword name="UrlBar (Package)" id="UrlBar (Package)" ref="index-eric5.Helpviewer.UrlBar.html" />
       <keyword name="BookmarkInfoDialog (Module)" id="BookmarkInfoDialog (Module)" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html" />
       <keyword name="BookmarkInfoDialog" id="BookmarkInfoDialog" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog" />
@@ -11390,8 +11408,10 @@
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
+      <file>eric5.Helpviewer.SiteInfo.SiteInfoDialog.html</file>
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
+      <file>eric5.Helpviewer.SslInfoWidget.html</file>
       <file>eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.FavIconLabel.html</file>
       <file>eric5.Helpviewer.UrlBar.SslLabel.html</file>
@@ -11861,6 +11881,7 @@
       <file>index-eric5.Helpviewer.OfflineStorage.html</file>
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
+      <file>index-eric5.Helpviewer.SiteInfo.html</file>
       <file>index-eric5.Helpviewer.UrlBar.html</file>
       <file>index-eric5.Helpviewer.UserAgent.html</file>
       <file>index-eric5.Helpviewer.html</file>

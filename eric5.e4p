@@ -935,6 +935,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Feeds/__init__.py</Source>
     <Source>Helpviewer/Feeds/FeedsManager.py</Source>
     <Source>Helpviewer/Feeds/FeedEditDialog.py</Source>
+    <Source>Helpviewer/SiteInfo/__init__.py</Source>
+    <Source>Helpviewer/SiteInfo/SiteInfoDialog.py</Source>
+    <Source>Helpviewer/SslInfoWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1204,6 +1207,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Feeds/FeedsDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedsManager.ui</Form>
     <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
+    <Form>Helpviewer/SiteInfo/SiteInfoDialog.ui</Form>
+    <Form>Helpviewer/SslInfoWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

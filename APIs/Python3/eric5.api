@@ -2465,6 +2465,11 @@ eric5.Helpviewer.SearchWidget.SearchWidget.on_findtextCombo_editTextChanged?4(tx
 eric5.Helpviewer.SearchWidget.SearchWidget.on_highlightAllCheckBox_toggled?4(checked)
 eric5.Helpviewer.SearchWidget.SearchWidget.showFind?4()
 eric5.Helpviewer.SearchWidget.SearchWidget?1(mainWindow, parent=None)
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.nokStyle?7
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.okStyle?7
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_imagesTree_currentItemChanged?4(current, previous)
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_securityDetailsButton_clicked?4()
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog?1(browser, parent=None)
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.CertRole?7
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caCertificatesTree_currentItemChanged?4(current, previous)
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caDeleteButton_clicked?4()
@@ -2478,6 +2483,8 @@ eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_serversImportBut
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_serversViewButton_clicked?4()
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog?1(parent=None)
 eric5.Helpviewer.SslInfoDialog.SslInfoDialog?1(certificate, parent=None)
+eric5.Helpviewer.SslInfoWidget.SslInfoWidget.showCertificate?4(certificate)
+eric5.Helpviewer.SslInfoWidget.SslInfoWidget?1(parent=None)
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.accept?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.on_removeButton_clicked?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog?1(bookmark, parent=None)

@@ -48,6 +48,7 @@ from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
 from .VirusTotalApi import VirusTotalAPI
 from .Feeds.FeedsManager import FeedsManager
+from .SiteInfo.SiteInfoDialog import SiteInfoDialog
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
@@ -1163,6 +1164,22 @@ class HelpWindow(QMainWindow):
             self.feedsManagerAct.triggered[()].connect(self.__showFeedsManager)
         self.__actions.append(self.feedsManagerAct)
         
+        self.siteInfoAct = E5Action(self.trUtf8('Siteinfo Dialog'),
+            UI.PixmapCache.getIcon("helpAbout.png"),
+            self.trUtf8('&Siteinfo Dialog...'),
+            QKeySequence(self.trUtf8("Ctrl+Shift+I", "Help|Siteinfo Dialog")),
+            0, self, 'help_siteinfo')
+        self.siteInfoAct.setStatusTip(self.trUtf8(
+                'Open a dialog showing some information about the current site.'))
+        self.siteInfoAct.setWhatsThis(self.trUtf8(
+                """<b>Siteinfo Dialog...</b>"""
+                """<p>Opens a dialog showing some information about the current"""
+                """ site.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.siteInfoAct.triggered[()].connect(self.__showSiteinfoDialog)
+        self.__actions.append(self.siteInfoAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1290,6 +1307,7 @@ class HelpWindow(QMainWindow):
         menu = mb.addMenu(self.trUtf8("&Tools"))
         menu.setTearOffEnabled(True)
         menu.addAction(self.feedsManagerAct)
+        menu.addAction(self.siteInfoAct)
         menu.addSeparator()
         menu.addAction(self.toolsMonitorAct)
         
@@ -1370,6 +1388,12 @@ class HelpWindow(QMainWindow):
         settingstb.addAction(self.acceptedLanguagesAct)
         settingstb.addAction(self.cookiesAct)
         settingstb.addAction(self.offlineStorageAct)
+        
+        toolstb = self.addToolBar(self.trUtf8("Tools"))
+        toolstb.setObjectName("ToolsToolBar")
+        toolstb.setIconSize(UI.Config.ToolBarIconSize)
+        toolstb.addAction(self.feedsManagerAct)
+        toolstb.addAction(self.siteInfoAct)
         
         helptb = self.addToolBar(self.trUtf8("Help"))
         helptb.setObjectName("HelpToolBar")
@@ -2783,10 +2807,21 @@ class HelpWindow(QMainWindow):
         feedsManager.show()
     
     def __feedsManagerClosed(self):
+        """
+        Private slot to handle closing the feeds manager dialog.
+        """
         feedsManager = self.sender()
         feedsManager.openUrl.disconnect(self.openUrl)
         feedsManager.newUrl.disconnect(self.openUrlNewTab)
         feedsManager.rejected.disconnect(self.__feedsManagerClosed)
+    
+    def __showSiteinfoDialog(self):
+        """
+        Private slot to show the site info dialog.
+        """
+        self.__siteinfoDialog = SiteInfoDialog(self.currentBrowser(), self)
+        self.__siteinfoDialog.setAttribute(Qt.WA_DeleteOnClose)
+        self.__siteinfoDialog.show()
     
     ###########################################################################
     ## Interface to VirusTotal below                                         ##

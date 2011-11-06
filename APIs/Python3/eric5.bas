@@ -493,6 +493,7 @@ ShortcutsReader XMLStreamReaderBase
 ShortcutsWriter XMLStreamWriterBase
 SideWidget QWidget
 SingleApplicationServer QLocalServer
+SiteInfoDialog QDialog Ui_SiteInfoDialog
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpellChecker QObject
@@ -505,6 +506,7 @@ SqlConnectionDialog QDialog Ui_SqlConnectionDialog
 SqlConnectionWidget QWidget
 SslCertificatesDialog QDialog Ui_SslCertificatesDialog
 SslInfoDialog QDialog Ui_SslInfoDialog
+SslInfoWidget QWidget Ui_SslInfoWidget
 SslLabel QLabel
 StackedUrlBar QStackedWidget
 StackedWidget QStackedWidget
