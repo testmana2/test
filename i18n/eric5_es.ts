@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1637,8 +1638,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1856,8 +1857,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -11719,32 +11720,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="14"/>
         <source>Edit Feed Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Datos de Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="25"/>
         <source>Fill title and URL of a feed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rellenar título y URL de un feed:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="32"/>
         <source>Feed title:</source>
-        <translation type="unfinished"></translation>
+        <translation>Título de Feed:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="39"/>
         <source>Enter the title of the feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el título del feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="46"/>
         <source>Feed URL:</source>
-        <translation type="unfinished"></translation>
+        <translation>URL del Feed:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedEditDialog.ui" line="53"/>
         <source>Enter the URL of the feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca la URL del feed</translation>
     </message>
 </context>
 <context>
@@ -11752,32 +11753,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.ui" line="14"/>
         <source>Add Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.ui" line="38"/>
         <source>Add Feeds from this site</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir Feeds de este sitio</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="45"/>
         <source>Add</source>
-        <translation type="unfinished">Añadir</translation>
+        <translation>Añadir</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="84"/>
         <source>Add RSS Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir RSS Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="80"/>
         <source>The feed was added successfully.</source>
-        <translation type="unfinished"></translation>
+        <translation>El feed ha sido añadido.</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsDialog.py" line="84"/>
         <source>The feed was already added before.</source>
-        <translation type="unfinished"></translation>
+        <translation>El feed ya se había añadido con anterioridad.</translation>
     </message>
 </context>
 <context>
@@ -11785,102 +11786,102 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="14"/>
         <source>Feeds Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestor de Feeds</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="36"/>
         <source>News</source>
-        <translation type="unfinished"></translation>
+        <translation>Noticias</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="46"/>
         <source>Press to reload all feeds</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para recargar todos los feeds</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="49"/>
         <source>Reload &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>Recarg&amp;ar Todo</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="59"/>
         <source>Press to reload the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para recargar el feed seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="62"/>
         <source>&amp;Reload</source>
-        <translation type="unfinished">&amp;Recargar</translation>
+        <translation>&amp;Recargar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="72"/>
         <source>Press to edit the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para editar el feed seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="75"/>
         <source>&amp;Edit Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Editar Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="85"/>
         <source>Press to delete the selected feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para borrar el feed seleccionado</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.ui" line="88"/>
         <source>&amp;Delete Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Borrar Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="176"/>
         <source>Duplicate Feed URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Duplicar URL del Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="176"/>
         <source>A feed with the URL {0} exists already. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Un feed con la URL {0} ya existe. Abortando...</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="196"/>
         <source>Delete Feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar Feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="196"/>
         <source>&lt;p&gt;Do you really want to delete the feed &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;¿Desea realmente borrar el feed &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="302"/>
         <source>Error fetching feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al enlazar el feed</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="331"/>
         <source>&amp;Open</source>
-        <translation type="unfinished">&amp;Abrir</translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="332"/>
         <source>Open in New &amp;Tab</source>
-        <translation type="unfinished">Abrir en Nueva Pes&amp;taña</translation>
+        <translation>Abrir en Nueva Pes&amp;taña</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="334"/>
         <source>&amp;Copy URL to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar URL al Portapapeles</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="341"/>
         <source>&amp;Show error data</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar dato&amp;s de error</translation>
     </message>
     <message>
         <location filename="Helpviewer/Feeds/FeedsManager.py" line="417"/>
         <source>Error loading feed</source>
-        <translation type="unfinished"></translation>
+        <translation>Error cargando feed</translation>
     </message>
 </context>
 <context>
@@ -12922,7 +12923,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="804"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -15764,59 +15765,60 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>RSS Feeds Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Diálogo de RSS Feeds</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>&amp;RSS Feeds Dialog...</source>
-        <translation type="unfinished"></translation>
+        <translation>Diálogo de &amp;RSS Feeds...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>Ctrl+Shift+F</source>
         <comment>Help|RSS Feeds Dialog</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ayuda|Diálogo de RSS Feeds</translatorcomment>
+        <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1156"/>
         <source>Open a dialog showing the configured RSS feeds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir un diálogo mostrando los RSS feeds configurados.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1158"/>
         <source>&lt;b&gt;RSS Feeds Dialog...&lt;/b&gt;&lt;p&gt;Open a dialog to show the configured RSS feeds. It can be used to mange the feeds and to show their contents.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Diálogo de RSS Feeds ...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para mostrar todos los RSS feeds configurados. Puede utilizarse para gestionar los feeds y cómo mostrar sus contenidos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1167"/>
         <source>Siteinfo Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Diálogo Siteinfo</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1167"/>
         <source>&amp;Siteinfo Dialog...</source>
-        <translation type="unfinished"></translation>
+        <translation>Diálogo &amp;Siteinfo...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1167"/>
         <source>Ctrl+Shift+I</source>
         <comment>Help|Siteinfo Dialog</comment>
-        <translation type="unfinished">Ctrl+Shift+I</translation>
+        <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1172"/>
         <source>Open a dialog showing some information about the current site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir un diálogo para mostrar información acerca del site actual.</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1174"/>
         <source>&lt;b&gt;Siteinfo Dialog...&lt;/b&gt;&lt;p&gt;Opens a dialog showing some information about the current site.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Diálogo Siteinfo...&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra información acerca del site actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1392"/>
         <source>Tools</source>
-        <translation type="unfinished">Herramientas</translation>
+        <translation>Herramientas</translation>
     </message>
 </context>
 <context>
@@ -24166,7 +24168,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
     <message>
         <location filename="Plugins/ViewManagerPlugins/Listspace/Listspace.py" line="217"/>
         <source>Close Others</source>
-        <translation type="unfinished">Cerrar Otras</translation>
+        <translation>Cerrar Otras</translation>
     </message>
 </context>
 <context>
@@ -34566,112 +34568,112 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="14"/>
         <source>Site Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Información del Site</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="37"/>
         <source>General</source>
-        <translation type="unfinished">General</translation>
+        <translation>General</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="45"/>
         <source>Site Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección del Site:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="62"/>
         <source>Encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation>Codificación:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="79"/>
         <source>Size:</source>
-        <translation type="unfinished">Tamaño:</translation>
+        <translation>Tamaño:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="98"/>
         <source>Meta tags of site:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metaetiquetas del site:</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="118"/>
         <source>Tag</source>
-        <translation type="unfinished">Marca</translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="123"/>
         <source>Value</source>
-        <translation type="unfinished">Valor</translation>
+        <translation>Valor</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="139"/>
         <source>&lt;b&gt;Security information&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Información de Seguridad&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="188"/>
         <source>Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Detalles</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="201"/>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="217"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Imagen</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="222"/>
         <source>Image Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección de la Imagen</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="230"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Vista preliminar&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
         <source>Security</source>
-        <translation type="unfinished">Seguridad</translation>
+        <translation>Seguridad</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="156"/>
         <source>Preview not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista preliminar no disponible.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="172"/>
         <source>Copy Image Location to Clipboard</source>
-        <translation type="unfinished">Copiar Ubicación de la Imagen al Portapapeles</translation>
+        <translation>Copiar Ubicación de la Imagen al Portapapeles</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="175"/>
         <source>Copy Image Name to Clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar Nombre de la Imagen al Portapapeles</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="228"/>
         <source>Save Image</source>
-        <translation type="unfinished">Guardar imagen</translation>
+        <translation>Guardar imagen</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="208"/>
         <source>This image is not available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esta imagen no está disponible.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="216"/>
         <source>All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Todos los archivos (*)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="228"/>
         <source>&lt;p&gt;Cannot write to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;No es posible escribir en el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -35404,77 +35406,77 @@ Not connected</source>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="17"/>
         <source>This certificated has been blacklisted.</source>
-        <translation type="unfinished">Este certificado está en una lista negra.</translation>
+        <translation>Este certificado está en una lista negra.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="24"/>
         <source>&lt;b&gt;Issued for&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Emitido para&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Emitido para&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="118"/>
         <source>Common Name (CN)</source>
-        <translation type="unfinished">Nombre Común (CN)</translation>
+        <translation>Nombre Común (CN)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="138"/>
         <source>Organization (O)</source>
-        <translation type="unfinished">Organización (O)</translation>
+        <translation>Organización (O)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="158"/>
         <source>Organizational Unit (OU)</source>
-        <translation type="unfinished">Unidad Organizacional (OU)</translation>
+        <translation>Unidad Organizacional (OU)</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="91"/>
         <source>Serialnumber</source>
-        <translation type="unfinished">Número de serie</translation>
+        <translation>Número de serie</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="111"/>
         <source>&lt;b&gt;Issued by&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Emitido por&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Emitido por&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="178"/>
         <source>&lt;b&gt;Validity&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Validez&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Validez&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="185"/>
         <source>Issued on</source>
-        <translation type="unfinished">Emitido a</translation>
+        <translation>Emitido a</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="205"/>
         <source>Expires on</source>
-        <translation type="unfinished">Expira en</translation>
+        <translation>Expira en</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="225"/>
         <source>This certificate is not valid yet or has expired.</source>
-        <translation type="unfinished">Este certificado no es válido aún o ha expirado.</translation>
+        <translation>Este certificado no es válido aún o ha expirado.</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="232"/>
         <source>&lt;b&gt;Fingerprints&lt;/b&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Fingerprints&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="239"/>
         <source>SHA1-Fingerprint</source>
-        <translation type="unfinished">SHA1-Fingerprint</translation>
+        <translation>SHA1-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.ui" line="259"/>
         <source>MD5-Fingerprint</source>
-        <translation type="unfinished">MD5-Fingerprint</translation>
+        <translation>MD5-Fingerprint</translation>
     </message>
     <message>
         <location filename="Helpviewer/SslInfoWidget.py" line="95"/>
         <source>&lt;not part of the certificate&gt;</source>
-        <translation type="unfinished">&lt;not part of the certificate&gt;</translation>
+        <translation>&lt;no es parte del certificado&gt;</translation>
     </message>
 </context>
 <context>
@@ -41688,17 +41690,17 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="Preferences/ConfigurationPages/TasksPage.ui" line="191"/>
         <source>Tasks Handling</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestión de Tareas</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TasksPage.ui" line="197"/>
         <source>Select to clear global file tasks when the file is closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para eliminar tareas de archivo globales al cerrar el archivo</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/TasksPage.ui" line="200"/>
         <source>Clear global file task when file is closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar tareas de archivo globales al cerrar el archivo</translation>
     </message>
 </context>
 <context>
