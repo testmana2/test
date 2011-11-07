@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1638,8 +1637,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1857,8 +1856,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -6548,7 +6547,7 @@ selección completa.&lt;/li&gt;
 <context>
     <name>E5SideBar</name>
     <message>
-        <location filename="E5Gui/E5SideBar.py" line="48"/>
+        <location filename="E5Gui/E5SideBar.py" line="49"/>
         <source>Deselect to activate automatic collapsing</source>
         <translation>Quitar selección para activar ocultación automática</translation>
     </message>
@@ -12923,7 +12922,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="804"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -15776,7 +15775,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="1151"/>
         <source>Ctrl+Shift+F</source>
         <comment>Help|RSS Feeds Dialog</comment>
-        <translatorcomment>Ayuda|Diálogo de RSS Feeds</translatorcomment>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
@@ -41021,82 +41019,82 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
 <context>
     <name>TabWidget</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="196"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="198"/>
         <source>Close the current editor</source>
         <translation>Cierra la ventana actual</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="225"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="227"/>
         <source>Move Left</source>
         <translation>Mover a la Izquierda</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="228"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="230"/>
         <source>Move Right</source>
         <translation>Mover a la Derecha</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="237"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
         <source>Close All</source>
         <translation>Cerrar todo</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="249"/>
         <source>Save As...</source>
         <translation>Guardar como...</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="249"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="251"/>
         <source>Save All</source>
         <translation>Guardar todo</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="256"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="258"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="231"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="233"/>
         <source>Move First</source>
         <translation>Mover al Primero</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="234"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="236"/>
         <source>Move Last</source>
         <translation>Mover al Último</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="186"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="188"/>
         <source>Show a navigation menu</source>
         <translation>Mostrar un menú de navegación</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Close Others</source>
         <translation>Cerrar Otras</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="397"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="399"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="259"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="261"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="253"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Abrir archivo &apos;de rechazo&apos;</translation>
     </message>
@@ -41214,12 +41212,12 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="844"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="846"/>
         <source>Untitled {0}</source>
         <translation>Sin título {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1161"/>
+        <location filename="Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1163"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
