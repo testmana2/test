@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtPage</class>
+ <widget class="QWidget" name="QtPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>642</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>&lt;b&gt;Configure Qt&lt;/b&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line12">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="qt4Group">
+     <property name="title">
+      <string>Qt4 Directory</string>
+     </property>
+     <layout class="QGridLayout" name="_2">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="TextLabel1_2_2_4">
+        <property name="text">
+         <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="qt4Edit">
+        <property name="toolTip">
+         <string>Enter the path of the Qt4 directory.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="qt4Button">
+        <property name="toolTip">
+         <string>Press to select the Qt4 directory via a directory selection dialog</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Qt4 Translations Directory</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="qt4TransButton">
+        <property name="toolTip">
+         <string>Press to select the Qt4 translations directory via a directory selection dialog</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="qt4TransEdit">
+        <property name="toolTip">
+         <string>Enter the path of the Qt4 translations directory.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="TextLabel1_2_2_5">
+        <property name="text">
+         <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLabel" name="textLabel1_2_4">
+        <property name="text">
+         <string>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt4 library.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Qt Tools</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="0" column="0" colspan="5">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Qt4-Prefix:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="qt4PrefixEdit">
+        <property name="toolTip">
+         <string>Enter the prefix for the Qt4 tools name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Qt4-Postfix:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="qt4PostfixEdit">
+        <property name="toolTip">
+         <string>Enter the postfix for the Qt4 tools name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="qt4SampleLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>This gives an example of the complete tool name</string>
+        </property>
+        <property name="text">
+         <string>designer</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>496</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>qt4Edit</tabstop>
+  <tabstop>qt4Button</tabstop>
+  <tabstop>qt4TransEdit</tabstop>
+  <tabstop>qt4TransButton</tabstop>
+  <tabstop>qt4PrefixEdit</tabstop>
+  <tabstop>qt4PostfixEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
