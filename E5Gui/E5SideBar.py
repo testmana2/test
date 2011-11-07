@@ -38,6 +38,7 @@ class E5SideBar(QWidget):
         self.__tabBar = QTabBar()
         self.__tabBar.setDrawBase(True)
         self.__tabBar.setShape(QTabBar.RoundedNorth)
+        self.__tabBar.setUsesScrollButtons(False)
         self.__stackedWidget = QStackedWidget(self)
         self.__stackedWidget.setContentsMargins(0, 0, 0, 0)
         self.__autoHideButton = QToolButton()

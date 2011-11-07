@@ -25,6 +25,7 @@ from E5Gui.E5TabWidget import E5TabWidget, E5WheelTabBar
 from E5Gui.E5Led import E5Led
 
 import Preferences
+from Globals import isMacPlatform
 
 from eric5config import getConfig
 
@@ -155,8 +156,9 @@ class TabWidget(E5TabWidget):
         self.setTabBar(self.__tabBar)
         
         self.setUsesScrollButtons(True)
-        self.setDocumentMode(True)
         self.setElideMode(Qt.ElideNone)
+        if isMacPlatform():
+            self.setDocumentMode(True)
         
         self.__tabBar.tabMoveRequested.connect(self.moveTab)
         self.__tabBar.tabRelocateRequested.connect(self.__relocateTab)
