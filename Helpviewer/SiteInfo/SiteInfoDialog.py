@@ -142,7 +142,10 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             imageUrl.setScheme(QUrl(self.siteAddressLabel.text()).scheme())
         
         cache = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().cache()
-        cacheData = cache.data(imageUrl)
+        if cache:
+            cacheData = cache.data(imageUrl)
+        else:
+            cacheData = None
         pixmap = QPixmap()
         invalidPixmap = False
         scene = QGraphicsScene(self.imagePreview)
@@ -203,7 +206,10 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             imageUrl.setScheme(QUrl(self.siteAddressLabel.text()).scheme())
         
         cache = Helpviewer.HelpWindow.HelpWindow.networkAccessManager().cache()
-        cacheData = cache.data(imageUrl)
+        if cache:
+            cacheData = cache.data(imageUrl)
+        else:
+            cacheData = None
         if not cacheData:
             E5MessageBox.critical(self,
                 self.trUtf8("Save Image"),
