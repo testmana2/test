@@ -305,8 +305,10 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         The directory in the ignore directories
         line edit is moved to the listbox above and the edit is cleared.
         """
-        self.ignoreDirsList.addItem(os.path.basename(self.ignoreDirEdit.text()))
-        self.ignoreDirEdit.clear()
+        basename = os.path.basename(self.ignoreDirEdit.text())
+        if basename:
+            self.ignoreDirsList.addItem()
+            self.ignoreDirEdit.clear()
 
     @pyqtSlot()
     def on_deleteButton_clicked(self):
