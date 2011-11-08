@@ -308,7 +308,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         basename = os.path.basename(self.ignoreDirEdit.text())
         if basename:
-            self.ignoreDirsList.addItem()
+            self.ignoreDirsList.addItem(basename)
             self.ignoreDirEdit.clear()
 
     @pyqtSlot()
