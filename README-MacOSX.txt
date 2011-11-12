@@ -8,6 +8,7 @@ and compilation is a bit tricky because of the dependencies, these packages
 should be installed via a packaging system. The recommended one is MacPorts
 because of it's completeness. This is the way described below.
 
+
 1. Install Xcode 3 (for Snow Leopard)
 ------------------
 The installation of various packages require the Xcode package that is
@@ -30,6 +31,7 @@ you don't have an AppleID yet, follow the link next to the "Log in" button.
 After you have been logged in follow the download link for Xcode 3. After you
 downloaded the package install it as described above. 
 
+
 1. Install Xcode 4 (for Lion)
 ------------------
 Open the Mac App Store and enter "xcode" into the search entry at the top
@@ -39,6 +41,7 @@ package. Follow the usual procedure to start the download. Once the download
 has finished open the applications folder and select the "Install Xcode" entry.
 In contrast to the Xcode 3 procedure described above, the installer does not
 ask for a selection of sub-packages.
+
 
 2. Install Python 3.2
 ---------------------
@@ -54,6 +57,7 @@ Note: The Python documentation can be found in these locations
 
 /Library/Frameworks/Python.framework/Versions/3.2/Resources/English.lproj/Documentation/index.html
 /Applications/Python 3.2/Python Documentation.html
+
 
 3. Install Qt4
 --------------
@@ -75,6 +79,7 @@ The translation files can be found in this location
 
 /Developer/Applications/Qt/translations
 
+
 4. Install QScintilla2
 ----------------------
 Download the QScintilla2 source code package from
@@ -90,6 +95,7 @@ qmake qscintilla.pro -spec macx-g++
 make
 sudo make install
 
+
 5. Install sip
 --------------
 Download the sip source code package from
@@ -103,6 +109,7 @@ the extracted folder and enter these commands in a terminal window
 python3 configure.py
 make
 sudo make install
+
 
 6. Install PyQt4
 ----------------
@@ -118,6 +125,7 @@ python3 configure.py -c -j 8 (number of cores including hyper threaded ones)
 make -j
 sudo make install
 
+
 7. Install QScintilla2 Python bindings
 --------------------------------------
 Change back to the extracted QScintilla2 directory and in there change to the
@@ -126,6 +134,7 @@ Python subdirectory. Enter these commands in a terminal window
 python3 configure.py -c -j 8 (number of cores including hyper threaded ones)
 make -j
 sudo make install
+
 
 8. Install MacPorts
 -------------------
@@ -139,6 +148,7 @@ http://www.macports.org/install.php
 and install it with the usual procedure. You may read about it's usage via
 
 http://guide.macports.org/#using.port
+
 
 9. Install aspell and dictionaries
 -----------------------------------
@@ -158,6 +168,7 @@ port search aspell-dict
 Then install them with a command like this
 
 sudo port install aspell-dict-de aspell-dict-en
+
 
 10. Install hunspell and dictionaries
 -------------------------------------
@@ -179,6 +190,7 @@ Then install them with a command like this
 In order to install enchant and penchant via MacPorts enter these commands
 
 sudo port install enchant
+
 
 12. Install pyenchant
 ---------------------
@@ -206,6 +218,7 @@ these commands
 If you get an error (ImportError for the first command or no dictionaries
 are show for the second command) please recheck the installation checks.
 
+
 13. Install pysvn
 -----------------
 Mac OS X already provides subversion. However, best performance for eric5 is
@@ -229,6 +242,7 @@ commands
 This should print the pysvn version as a tuple like '(1, 7, 5, 0)'. If you get
 an error please check your installation.
 
+
 14. Install Mercurial
 ---------------------
 Get Mercurial from
@@ -236,6 +250,7 @@ Get Mercurial from
 http://mercurial.selenic.com/
 
 Extract the downloaded package and install it.
+
 
 15. Install eric5
 -----------------
@@ -259,6 +274,7 @@ The eric5 installer created an application bundle in the location
 
 You may drag it to the dock to have it ready.
 
+
 16. First start of eric5
 ------------------------
 When eric5 is started for the first time it will recognize that it hasn't been
@@ -271,11 +287,13 @@ It is recommended to configure at least the path to the Qt tools on the Qt page
 and the paths to the various help pages on the Help Documentation page. The
 values to be entered are given above in the Python and Qt installation sections.
 
+
 17. Install optional packages for eric5 (for plug-ins)
 ------------------------------------------------------
 eric5 provides an extension mechanism via plug-ins. Some of them require the
 installation of additional python packages. The plug-ins themselves are
 available via the Plugin Repository from within eric5.
+
 
 17.1 Installation of pylint
 ---------------------------
@@ -304,6 +322,7 @@ sudo python3 setup.py install
 Note: You may receive some errors during the above steps. However, they just
 relate to the tests included in the packages. Nevertheless, the installation
 will be fine.
+
 
 17.2 Installation of cx_freeze
 ------------------------------
