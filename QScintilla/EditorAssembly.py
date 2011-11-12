@@ -87,54 +87,55 @@ class EditorAssembly(QWidget):
         """
         # step 1: go to the line of the selected entry
         lineno = self.__globalsCombo.itemData(index)
-        txt = self.__editor.text(lineno - 1).rstrip()
-        pos = len(txt.replace(txt.strip(), ""))
-        self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
-        self.__editor.setFocus()
-        
-        # step 2: populate the members combo, if the entry is a class
-        self.__membersCombo.clear()
-        entryName = self.__globalsCombo.itemText(index)
-        if self.__module and entryName in self.__module.classes:
-            cl = self.__module.classes[entryName]
+        if lineno is not None:
+            txt = self.__editor.text(lineno - 1).rstrip()
+            pos = len(txt.replace(txt.strip(), ""))
+            self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
+            self.__editor.setFocus()
             
-            # step 2.1: add class methods
-            items = []
-            for meth in cl.methods.values():
-                if meth.modifier == Function.Static:
-                    icon = UI.PixmapCache.getIcon("method_static.png")
-                elif meth.modifier == Function.Class:
-                    icon = UI.PixmapCache.getIcon("method_class.png")
-                elif meth.isPrivate():
-                    icon = UI.PixmapCache.getIcon("method_private.png")
-                elif meth.isProtected():
-                    icon = UI.PixmapCache.getIcon("method_protected.png")
-                else:
-                    icon = UI.PixmapCache.getIcon("method.png")
-                items.append((meth.name, icon, meth.lineno))
-            for itm in sorted(items):
-                self.__membersCombo.addItem(itm[1], itm[0], itm[2])
-            
-            # step 2.2: add class instance attributes
-            items = []
-            for attr in cl.attributes.values():
-                if attr.isPrivate():
-                    icon = UI.PixmapCache.getIcon("attribute_private.png")
-                elif attr.isProtected():
-                    icon = UI.PixmapCache.getIcon("attribute_protected.png")
-                else:
-                    icon = UI.PixmapCache.getIcon("attribute.png")
-                items.append((attr.name, icon, attr.lineno))
-            for itm in sorted(items):
-                self.__membersCombo.addItem(itm[1], itm[0], itm[2])
-            
-            # step 2.3: add class attributes
-            items = []
-            icon = UI.PixmapCache.getIcon("attribute_class.png")
-            for glob in cl.globals.values():
-                items.append((glob.name, icon, glob.lineno))
-            for itm in sorted(items):
-                self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+            # step 2: populate the members combo, if the entry is a class
+            self.__membersCombo.clear()
+            entryName = self.__globalsCombo.itemText(index)
+            if self.__module and entryName in self.__module.classes:
+                cl = self.__module.classes[entryName]
+                
+                # step 2.1: add class methods
+                items = []
+                for meth in cl.methods.values():
+                    if meth.modifier == Function.Static:
+                        icon = UI.PixmapCache.getIcon("method_static.png")
+                    elif meth.modifier == Function.Class:
+                        icon = UI.PixmapCache.getIcon("method_class.png")
+                    elif meth.isPrivate():
+                        icon = UI.PixmapCache.getIcon("method_private.png")
+                    elif meth.isProtected():
+                        icon = UI.PixmapCache.getIcon("method_protected.png")
+                    else:
+                        icon = UI.PixmapCache.getIcon("method.png")
+                    items.append((meth.name, icon, meth.lineno))
+                for itm in sorted(items):
+                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                
+                # step 2.2: add class instance attributes
+                items = []
+                for attr in cl.attributes.values():
+                    if attr.isPrivate():
+                        icon = UI.PixmapCache.getIcon("attribute_private.png")
+                    elif attr.isProtected():
+                        icon = UI.PixmapCache.getIcon("attribute_protected.png")
+                    else:
+                        icon = UI.PixmapCache.getIcon("attribute.png")
+                    items.append((attr.name, icon, attr.lineno))
+                for itm in sorted(items):
+                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                
+                # step 2.3: add class attributes
+                items = []
+                icon = UI.PixmapCache.getIcon("attribute_class.png")
+                for glob in cl.globals.values():
+                    items.append((glob.name, icon, glob.lineno))
+                for itm in sorted(items):
+                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
     
     def __membersActivated(self, index):
         """
@@ -143,10 +144,11 @@ class EditorAssembly(QWidget):
         @param index index of the selected entry (integer)
         """
         lineno = self.__membersCombo.itemData(index)
-        txt = self.__editor.text(lineno - 1).rstrip()
-        pos = len(txt.replace(txt.strip(), ""))
-        self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
-        self.__editor.setFocus()
+        if lineno is not None:
+            txt = self.__editor.text(lineno - 1).rstrip()
+            pos = len(txt.replace(txt.strip(), ""))
+            self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
+            self.__editor.setFocus()
     
     def __resetParseTimer(self):
         """
