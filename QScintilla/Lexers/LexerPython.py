@@ -65,6 +65,11 @@ class LexerPython(QsciLexerPython, Lexer):
                 Preferences.getEditor("PythonStringsOverNewLineAllowed"))
         except AttributeError:
             pass
+        try:
+            self.setHighlightSubidentifiers(
+                Preferences.getEditor("PythonHighlightSubidentifier"))
+        except AttributeError:
+            pass
         
     def getIndentationDifference(self, line, editor):
         """

@@ -59,6 +59,11 @@ class LexerCPP(QsciLexerCPP, Lexer):
             self.setStylePreprocessor(Preferences.getEditor("CppStylePreprocessor"))
         except AttributeError:
             pass
+        try:
+            self.setHighlightTripleQuotedStrings(
+                Preferences.getEditor("CppHighlightTripleQuotedStrings"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

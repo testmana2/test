@@ -15,6 +15,7 @@ Version 5.2-snapshot-2011mmdd:
      with '.rej' appended)
   -- added a syntax check while typing function
   -- added source navigation function for Python 2, Python 3 and Ruby sources
+  -- added support for QScintilla 2.6 (and newer)
 - enhancements of the cooperation functions
   -- added code to the cooperation functions to support IPv6
 - enhancements of the source browser

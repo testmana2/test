@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>558</width>
-    <height>2000</height>
+    <height>2042</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -152,6 +152,16 @@
         </property>
         <property name="text">
          <string>Style preprocessor lines</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QCheckBox" name="cppHighlightTripleQuotedCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight triple quoted strings</string>
+        </property>
+        <property name="text">
+         <string>Highlight triple quoted strings</string>
         </property>
        </widget>
       </item>
@@ -408,6 +418,16 @@
         </property>
        </widget>
       </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="foldPerlAtElseCheckBox">
+        <property name="toolTip">
+         <string>Select whether folding at else statement should be possible</string>
+        </property>
+        <property name="text">
+         <string>Fold at else</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -578,6 +598,16 @@
        </widget>
       </item>
       <item row="2" column="1">
+       <widget class="QCheckBox" name="pythonHighlightSubidentifierCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight sub-identifiers</string>
+        </property>
+        <property name="text">
+         <string>Highlight sub-identifiers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
        <widget class="QCheckBox" name="pythonAutoindentCheckBox">
         <property name="toolTip">
          <string>Select whether text should be autoindented after a ':'</string>
@@ -587,7 +617,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="2">
+      <item row="4" column="0">
        <widget class="QCheckBox" name="pythonStringsOverNewlineCheckBox">
         <property name="toolTip">
          <string>Select to allow strings to span newline characters</string>
@@ -597,7 +627,7 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QCheckBox" name="pythonV2UnicodeAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</string>
@@ -607,7 +637,7 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="6" column="0">
        <widget class="QCheckBox" name="pythonV3BinaryAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</string>
@@ -617,7 +647,7 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
+      <item row="6" column="1">
        <widget class="QCheckBox" name="pythonV3BytesAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</string>
@@ -880,6 +910,7 @@
   <tabstop>cppCaseInsensitiveCheckBox</tabstop>
   <tabstop>cppDollarAllowedCheckBox</tabstop>
   <tabstop>cppStylePreprocessorCheckBox</tabstop>
+  <tabstop>cppHighlightTripleQuotedCheckBox</tabstop>
   <tabstop>cmakeFoldAtElseCheckBox</tabstop>
   <tabstop>foldCssCommentCheckBox</tabstop>
   <tabstop>foldDCommentCheckBox</tabstop>
@@ -899,6 +930,7 @@
   <tabstop>foldPerlCommentCheckBox</tabstop>
   <tabstop>foldPerlPackagesCheckBox</tabstop>
   <tabstop>foldPerlPODBlocksCheckBox</tabstop>
+  <tabstop>foldPerlAtElseCheckBox</tabstop>
   <tabstop>psFoldAtElseCheckBox</tabstop>
   <tabstop>psMarkTokensCheckBox</tabstop>
   <tabstop>psLevelSpinBox</tabstop>
@@ -909,6 +941,7 @@
   <tabstop>foldPythonStringCheckBox</tabstop>
   <tabstop>foldPythonQuotesCheckBox</tabstop>
   <tabstop>pythonBadIndentationCheckBox</tabstop>
+  <tabstop>pythonHighlightSubidentifierCheckBox</tabstop>
   <tabstop>pythonAutoindentCheckBox</tabstop>
   <tabstop>pythonStringsOverNewlineCheckBox</tabstop>
   <tabstop>pythonV2UnicodeAllowedCheckBox</tabstop>

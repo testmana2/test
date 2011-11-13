@@ -327,6 +327,7 @@ class Prefs(object):
         "CppIndentClosingBrace": False,
         "CppDollarsAllowed": True,
         "CppStylePreprocessor": False,
+        "CppHighlightTripleQuotedStrings": False,
         
         # CSS specifics
         "CssFoldComment": True,
@@ -354,6 +355,7 @@ class Prefs(object):
         "PerlFoldComment": True,
         "PerlFoldPackages": True,
         "PerlFoldPODBlocks": True,
+        "PerlFoldAtElse": False,
         
         # PostScript specifics
         "PostScriptTokenize": False,
@@ -377,6 +379,7 @@ class Prefs(object):
         "PythonAllowV3Bytes": True,
         "PythonFoldQuotes": False,
         "PythonStringsOverNewLineAllowed": False,
+        "PythonHighlightSubidentifier": True,
         
         # Ruby specifics
         "RubyFoldComment": False,

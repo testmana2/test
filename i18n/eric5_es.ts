@@ -8957,12 +8957,12 @@ selección completa.&lt;/li&gt;
         <translation>Analizador léxico de Bash</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="847"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="877"/>
         <source>Select whether folding of comments shall be possible</source>
         <translation>Seleccionar si el plegado de comentarios será posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="850"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="880"/>
         <source>Fold comments</source>
         <translation>Plegado de comentarios</translation>
     </message>
@@ -8982,202 +8982,202 @@ selección completa.&lt;/li&gt;
         <translation>Palabras clave no sensibles a mayúsculas/minúsculas (solo C/C++)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="218"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="228"/>
         <source>Select, whether the line containing the opening brace should be indented</source>
         <translation>Seleccionar si la línea que contiene la llave (&apos;{&apos;) de apertura debe indentarse</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="231"/>
         <source>Indent opening brace</source>
         <translation>Indentar al abrir llave (&apos;{&apos;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="818"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="848"/>
         <source>Select whether folding at else statement should be possible</source>
         <translation>Seleccionar si el plegado en las sentencias else debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="821"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="851"/>
         <source>Fold at else</source>
         <translation>Plegado en los else</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="355"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="365"/>
         <source>Select whether folding of preprocessor directives shall be possible</source>
         <translation>Seleccionar si el plegado de directivas de preprocesamiento debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="358"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="368"/>
         <source>Fold preprocessor directives</source>
         <translation>Plegado en directivas de preprocesamiento</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="208"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="218"/>
         <source>Select, whether the line containing the closing brace should be indented</source>
         <translation>Seleccionar si la línea que contiene la llave de cierre (&apos;}&apos;) debe estar indentada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="211"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="221"/>
         <source>Indent closing brace</source>
         <translation>Indentar al cerrar llave (&apos;}&apos;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="164"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="174"/>
         <source>CMake Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de CMake</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="183"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="193"/>
         <source>CSS Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de CSS</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="202"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="212"/>
         <source>D Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de D</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="251"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="261"/>
         <source>HTML Lexer Properties</source>
         <translation>Propiedades del Analizador léxico de HTML</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="287"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="297"/>
         <source>Select whether HTML tags should be case sensitive</source>
         <translation>Seleccionar si las etiquetas HTML deben ser sensibles a mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="290"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="300"/>
         <source>Case sensitive tags</source>
         <translation>Etiquetas sensibles a mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="378"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="388"/>
         <source>Perl Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Perl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="489"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="509"/>
         <source>Povray Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Povray</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="495"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="515"/>
         <source>Select whether folding of directives shall be possible</source>
         <translation>Selecciona si el plegado de directivas será posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="498"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="518"/>
         <source>Fold directives</source>
         <translation>Plegado en directivas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="537"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="557"/>
         <source>Python Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Python</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="573"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="593"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation>Seleccionar si la indentación errónea debe ser resaltada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="576"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="596"/>
         <source>Highlight bad indentation</source>
         <translation>Resaltar indentación errónea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="583"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="613"/>
         <source>Select whether text should be autoindented after a &apos;:&apos;</source>
         <translation>Seleccionar si el texto se debe autoindentar despues de un &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="586"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
         <source>Auto indentation after &apos;:&apos;</source>
         <translation>Autoindentación despues de &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="553"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="573"/>
         <source>Select whether folding of strings shall be possible</source>
         <translation>Seleccionar si el plegado de cadenas debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="556"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="576"/>
         <source>Fold strings</source>
         <translation>Plegado de cadenas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="655"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="685"/>
         <source>SQL Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de SQL</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
         <source>Select to enable Backslash Escapes</source>
         <translation>Seleccionar hara habilitar secuencias de Escape con Backslash</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
         <source>Backslash Escapes</source>
         <translation>Secuencias de Escape con Backslash</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="792"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="822"/>
         <source>VHDL Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de VHDL</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="798"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="828"/>
         <source>Select whether folding of blocks at a parenthesis shall be possible</source>
         <translation>Seleccionar si el plegado de bloques en los paréntesis debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="801"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="831"/>
         <source>Fold at parenthesis</source>
         <translation>Plegar en los paréntesis</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="808"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="838"/>
         <source>Select whether folding of begin blocks shall be possible</source>
         <translation>Selecciona si el plegado de bloques begin debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="811"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="841"/>
         <source>Fold at begin</source>
         <translation>Plegar en begin</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="339"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="349"/>
         <source>Pascal Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Pascal</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="417"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="437"/>
         <source>PostScript Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de PostScript</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="433"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="453"/>
         <source>Select to mark tokens</source>
         <translation>Seleccione para marcar token</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="436"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="456"/>
         <source>Mark Tokens</source>
         <translation>Marcar Tokens</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="445"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="465"/>
         <source>PostScript Level:</source>
         <translation>Nivel de PostScript:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="452"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="472"/>
         <source>Select the PostScript level</source>
         <translation>Seleccione el nivel de PostScript</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="841"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="871"/>
         <source>YAML Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de YAML</translation>
     </message>
@@ -9192,97 +9192,97 @@ selección completa.&lt;/li&gt;
         <translation>Permitir &apos;$&apos; en nombres de identificador</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="267"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="277"/>
         <source>Select to enable folding of script comments</source>
         <translation>Seleccionar para permitir plegado de comentarios de script</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="270"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="280"/>
         <source>Fold script comments</source>
         <translation>Plegado de comentarios de script</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="277"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="287"/>
         <source>Select to enable folding of script heredocs</source>
         <translation>Seleccionar para permitir plegado de &apos;here documents&apos; de script</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="280"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="290"/>
         <source>Fold script heredocs</source>
         <translation>Plegado de &apos;here documents&apos; de script</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="317"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="327"/>
         <source>XML Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de XML</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="323"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="333"/>
         <source>Select to enable styling of scripts</source>
         <translation>Seleccionar para permitir estilos en los scripts</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="326"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="336"/>
         <source>Style scripts</source>
         <translation>Estilos en los scripts</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="365"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="375"/>
         <source>Select to enable smart highlighting of keywords</source>
         <translation>Seleccionar para permitir resaltado inteligente de palabras clave</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="368"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="378"/>
         <source>Smart Highlighting</source>
         <translation>Resaltado inteligente</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="394"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="404"/>
         <source>Select to enable folding of Perl packages</source>
         <translation>Seleccionar para permitir plegado de paquetes Perl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="397"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="407"/>
         <source>Fold packages</source>
         <translation>Plegado de paquetes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="404"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="414"/>
         <source>Select to enable folding of Perl POD blocks</source>
         <translation>Seleccionar para permitir plegado de bloques POD de Perl</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="407"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="417"/>
         <source>Fold POD blocks</source>
         <translation>Plegado de bloques POD</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="633"/>
         <source>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</source>
         <translation>Seleccionar para permitir literales de cadena unicode Python v2 (p. e. u&quot;utf8&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
         <source>Allow v2 unicode string literals</source>
         <translation>Permitir literales de cadena unicode v2</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="613"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="643"/>
         <source>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</source>
         <translation>Seleccionar para permitir literales binarios y octales Python v3 (p. e. 0b1011, 0o712)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="646"/>
         <source>Allow v3 binary and octal literals</source>
         <translation>Permitir literales binarios y octales v3</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="653"/>
         <source>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</source>
         <translation>Seleccionar para permitir literales de cadena de bytes Python v3 (p. e. b&quot;bytes&quot;)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="656"/>
         <source>Allow v3 bytes string literals</source>
         <translation>Permitir literales de cadena de bytes v3</translation>
     </message>
@@ -9297,134 +9297,154 @@ selección completa.&lt;/li&gt;
         <translation>Estilo a las líneas de preprocesador</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="297"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="307"/>
         <source>Select to enable support for Django templates</source>
         <translation>Seleccionar para habilitar soporte para plantillas Django</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="300"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="310"/>
         <source>Enable Django templates</source>
         <translation>Habilitar plantillas Django</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="307"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="317"/>
         <source>Select to enable support for Mako templates</source>
         <translation>Seleccionar para habilitar soporte para plantillas Mako</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="310"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="320"/>
         <source>Enable Mako templates</source>
         <translation>Habilitar plantillas Mako</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="518"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="538"/>
         <source>Properties Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Propiedades</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="524"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="544"/>
         <source>Select to allow initial spaces in a line</source>
         <translation>Seleccionar para permitir espacios al inicio en una línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="527"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="547"/>
         <source>Allow initial spaces</source>
         <translation>Permitir espacios al inicio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="563"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="583"/>
         <source>Select whether folding of triple quoted strings shall be possible</source>
         <translation>Seleccionar si el plegado de cadenas con triple comilla debe ser posible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="566"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="586"/>
         <source>Fold triple quoted strings</source>
         <translation>Plegado de cadenas de triple comilla</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="593"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
         <source>Select to allow strings to span newline characters</source>
         <translation>Seleccionar para permitir a las cadenas generar caracteres de nueva línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="596"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
         <source>Strings may span newline characters</source>
         <translation>Las cadenas pueden generar caracteres de nueva línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="666"/>
         <source>Ruby Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de Ruby</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="681"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
         <source>Select whether only BEGIN blocks can be folded</source>
         <translation>Selecciona si solamente los bloques BEGIN pueden ser plegados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="684"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
         <source>Only BEGIN blocks can be folded</source>
         <translation>Solamente los bloques BEGIN pueden ser plegados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
         <source>Select if words may contain dots</source>
         <translation>Seleccionar si las palabras pueden contener puntos</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
         <source>Words may contain dots</source>
         <translation>Las palabras pueden contener puntos</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
         <translation>Seleccionar para permitir &apos;#&apos; como carácter de comentario</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
         <source>Allow &apos;#&apos; as comment character</source>
         <translation>Permitir &apos;#&apos; como carácter de comentario</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
         <source>Select to enable quoted identifiers</source>
         <translation>Seleccionar para habilitar identificadores entre comillas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
         <source>Enable quoted identifiers</source>
         <translation>Habilitar identificadores entre comillas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
         <source>TCL Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de TCL</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="783"/>
         <source>TeX Lexer Properties</source>
         <translation>Propiedades del Analizador Léxico de TeX</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="769"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="799"/>
         <source>Select to treat comments as TeX source</source>
         <translation>Seleccionar para tratar comentarios como fuente TeX</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="772"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="802"/>
         <source>Treat comments as TeX source</source>
         <translation>Tratar comentarios como fuente TeX</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="779"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="809"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
         <translation>Seleccionar para tratar \if&lt;unknown&gt; como un comando</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="782"/>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="812"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
         <translation>Tratar \if&lt;unknown&gt; como comando</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="164"/>
+        <source>Highlight triple quoted strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
+        <source>Select to highlight sub-identifiers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
+        <source>Highlight sub-identifiers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="161"/>
+        <source>Select to highlight triple quoted strings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11275,12 +11295,12 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar directorios a excluir</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="325"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="327"/>
         <source>Select CSS style sheet</source>
         <translation>Seleccionar hoja de estilos CSS</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="325"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="327"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Hojas de estilos (*.css);; Todos los archivos (*)</translation>
     </message>
@@ -11355,7 +11375,7 @@ selección completa.&lt;/li&gt;
         <translation>Generar colección de archivos de QtHelp</translation>
     </message>
     <message>
-        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="473"/>
+        <location filename="Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="475"/>
         <source>Select output directory for QtHelp files</source>
         <translation>Seleccionar directorio de salida para los archivos de QtHelp</translation>
     </message>
@@ -27747,27 +27767,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="968"/>
+        <location filename="Preferences/__init__.py" line="971"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="995"/>
+        <location filename="Preferences/__init__.py" line="998"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="995"/>
+        <location filename="Preferences/__init__.py" line="998"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1088"/>
+        <location filename="Preferences/__init__.py" line="1091"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1088"/>
+        <location filename="Preferences/__init__.py" line="1091"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -34639,37 +34659,37 @@ Not connected</source>
         <translation>Seguridad</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="156"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="159"/>
         <source>Preview not available.</source>
         <translation>Vista preliminar no disponible.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="172"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="175"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copiar Ubicación de la Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="175"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="178"/>
         <source>Copy Image Name to Clipboard</source>
         <translation>Copiar Nombre de la Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="228"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
         <source>Save Image</source>
         <translation>Guardar imagen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="208"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="214"/>
         <source>This image is not available.</source>
         <translation>Esta imagen no está disponible.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="216"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="222"/>
         <source>All Files (*)</source>
         <translation>Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="228"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
         <source>&lt;p&gt;Cannot write to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No es posible escribir en el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>

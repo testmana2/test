@@ -39,6 +39,10 @@ class LexerPerl(QsciLexerPerl, Lexer):
             self.setFoldPODBlocks(Preferences.getEditor("PerlFoldPODBlocks"))
         except AttributeError:
             pass
+        try:
+            self.setFoldAtElse(Preferences.getEditor("PerlFoldAtElse"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

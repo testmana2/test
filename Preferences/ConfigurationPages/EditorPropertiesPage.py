@@ -64,6 +64,12 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 Preferences.getEditor("CppStylePreprocessor"))
         else:
             self.cppStylePreprocessorCheckBox.setEnabled(False)
+        if QSCINTILLA_VERSION() >= 0x020600:
+            self.cppHighlightTripleQuotedCheckBox.setChecked(
+                Preferences.getEditor("CppHighlightTripleQuotedStrings"))
+        else:
+            self.cppHighlightTripleQuotedCheckBox.setEnabled(False)
+        
         
         # CSS
         self.foldCssCommentCheckBox.setChecked(
@@ -119,6 +125,11 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.getEditor("PerlFoldPackages"))
         self.foldPerlPODBlocksCheckBox.setChecked(
             Preferences.getEditor("PerlFoldPODBlocks"))
+        if QSCINTILLA_VERSION() >= 0x020600:
+            self.foldPerlAtElseCheckBox.setChecked(
+                Preferences.getEditor("PerlFoldAtElse"))
+        else:
+            self.foldPerlAtElseCheckBox.setEnabled(False)
         
         # PostScript
         if "PostScript" in self.languages:
@@ -168,6 +179,11 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         else:
             self.foldPythonQuotesCheckBox.setEnabled(False)
             self.pythonStringsOverNewlineCheckBox.setEnabled(False)
+        if QSCINTILLA_VERSION() >= 0x020600:
+            self.pythonHighlightSubidentifierCheckBox.setChecked(
+                Preferences.getEditor("PythonHighlightSubidentifier"))
+        else:
+            self.pythonHighlightSubidentifierCheckBox.setEnabled(False)
         
         # Ruby
         if QSCINTILLA_VERSION() >= 0x020500:
@@ -275,6 +291,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         if QSCINTILLA_VERSION() >= 0x020500:
             Preferences.setEditor("CppStylePreprocessor",
                 self.cppStylePreprocessorCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020600:
+            Preferences.setEditor("CppHighlightTripleQuotedStrings",
+                self.cppHighlightTripleQuotedCheckBox.isChecked())
         
         # CSS
         Preferences.setEditor("CssFoldComment",
@@ -321,6 +340,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.foldPerlPackagesCheckBox.isChecked())
         Preferences.setEditor("PerlFoldPODBlocks",
             self.foldPerlPODBlocksCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020600:
+            Preferences.setEditor("PerlFoldAtElse",
+                self.foldPerlAtElseCheckBox.isChecked())
         
         # PostScript
         if "PostScript" in self.languages:
@@ -362,6 +384,9 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 self.foldPythonQuotesCheckBox.isChecked())
             Preferences.setEditor("PythonStringsOverNewLineAllowed",
                 self.pythonStringsOverNewlineCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020600:
+            Preferences.setEditor("PythonHighlightSubidentifier",
+                self.pythonHighlightSubidentifierCheckBox.isChecked())
         
         # Ruby
         if QSCINTILLA_VERSION() >= 0x020500:
