@@ -140,8 +140,6 @@ class E5SideBar(QWidget):
             self.setMinimumWidth(minSize)
             self.setMaximumWidth(self.__maxSize)
         if self.splitter:
-            index = self.splitter.indexOf(self)
-            self.splitterSizes[index] = max(self.splitterSizes[index], minSize+10)
             self.splitter.setSizes(self.splitterSizes)
     
     def isMinimized(self):
@@ -510,8 +508,10 @@ class E5SideBar(QWidget):
         
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
             minSize = self.layout.minimumSize().height()
+            maxSize = self.maximumHeight()
         else:
             minSize = self.layout.minimumSize().width()
+            maxSize = self.maximumWidth()
         
         data = QByteArray(state)
         stream = QDataStream(data, QIODevice.ReadOnly)
@@ -523,14 +523,11 @@ class E5SideBar(QWidget):
         
         stream >> self.__bigSize
         self.__minSize = max(stream.readUInt16(), minSize)
-        self.__maxSize = stream.readUInt16()
+        self.__maxSize = max(stream.readUInt16(), maxSize)
         count = stream.readUInt16()
         self.splitterSizes = []
         for i in range(count):
             self.splitterSizes.append(stream.readUInt16())
-        if self.splitter:
-            index = self.splitter.indexOf(self)
-            self.splitterSizes[index] = max(self.splitterSizes[index], minSize) 
         
         self.__autoHide = stream.readBool()
         self.__autoHideButton.setChecked(not self.__autoHide)
