@@ -10,7 +10,8 @@ Module implementing a compatability interface class to QsciScintilla.
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QApplication, QPalette, QColor
 from PyQt4.Qsci import QsciScintilla, \
-    QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR
+    QSCINTILLA_VERSION as QsciQSCINTILLA_VERSION, QSCINTILLA_VERSION_STR, \
+    QsciScintillaBase
 
 
 ###############################################################################
@@ -979,12 +980,23 @@ class QsciScintillaCompat(QsciScintilla):
         """
         Public method called when the editor loses focus.
         
-        @param event the event object (QFocusEvent)
+        @param event event object (QFocusEvent)
         """
         if self.isListActive():
             self.cancelList()
         
         super().focusOutEvent(event)
+    
+    def event(self, evt):
+        """
+        Public method to handle events.
+        
+        Note: We are not interested in the standard QsciScintilla event handling
+        because we do it our self.
+        
+        @param evt event object to handle (QEvent)
+        """
+        return QsciScintillaBase.event(self, evt)
 
     ###########################################################################
     # interface methods to the mini editor
