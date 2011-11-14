@@ -9363,11 +9363,6 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zeichenketten in dreifachen Anführungszeichen hervorheben</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
-        <source>Select to highlight sub-identifiers</source>
-        <translation>Auswählen, um Unteridentifizierer hervorzuheben</translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
         <source>Highlight sub-identifiers</source>
         <translation>Unteridentifizierer hervorheben</translation>
@@ -9376,6 +9371,11 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="161"/>
         <source>Select to highlight triple quoted strings</source>
         <translation>Auswählen, um Zeichenketten in dreifachen Anführungszeichen hervorzuheben</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
+        <source>Select to highlight sub-identifiers defined in keyword set 2</source>
+        <translation>Auswählen, um in Schlüsselwortgruppe 2 definierte Unteridentifizierer hervorzuheben</translation>
     </message>
 </context>
 <context>

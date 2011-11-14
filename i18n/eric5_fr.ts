@@ -10265,11 +10265,6 @@ avec l&apos;autocomplétion</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
-        <source>Select to highlight sub-identifiers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
         <source>Highlight sub-identifiers</source>
         <translation type="unfinished"></translation>
@@ -10277,6 +10272,11 @@ avec l&apos;autocomplétion</translation>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="161"/>
         <source>Select to highlight triple quoted strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
+        <source>Select to highlight sub-identifiers defined in keyword set 2</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

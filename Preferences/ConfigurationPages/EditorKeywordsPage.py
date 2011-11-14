@@ -83,6 +83,8 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
             if self.__keywords[language][kwSet] != "":
                 first = min(first, kwSet)
                 last = max(last, kwSet)
+        if language in ["Python2", "Python3"] and last < 2:
+            last = 2    # support for keyword set 2 as of QScintilla 2.6.0
         self.setSpinBox.setEnabled(language != "" and first < 10)
         self.keywordsEdit.setEnabled(language != "" and first < 10)
         if first < 10:
@@ -108,7 +110,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.__keywords[self.currentLanguage][self.currentSet] = \
             self.keywordsEdit.toPlainText()
         
-        self.currentApiLanguage = language
+        self.currentLanguage = language
         self.currentSet = kwSet
         self.keywordsEdit.setPlainText(self.__keywords[language][kwSet])
 

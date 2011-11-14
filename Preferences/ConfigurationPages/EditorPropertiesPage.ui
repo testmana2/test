@@ -600,7 +600,7 @@
       <item row="2" column="1">
        <widget class="QCheckBox" name="pythonHighlightSubidentifierCheckBox">
         <property name="toolTip">
-         <string>Select to highlight sub-identifiers</string>
+         <string>Select to highlight sub-identifiers defined in keyword set 2</string>
         </property>
         <property name="text">
          <string>Highlight sub-identifiers</string>
