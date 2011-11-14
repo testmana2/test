@@ -107,7 +107,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.__keywords[self.currentLanguage][self.currentSet] = \
             self.keywordsEdit.toPlainText()
         
-        self.currentApiLanguage = language
+        self.currentLanguage = language
         self.currentSet = kwSet
         self.keywordsEdit.setPlainText(self.__keywords[language][kwSet])
 
