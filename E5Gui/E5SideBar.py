@@ -8,7 +8,7 @@ Module implementing a sidebar class.
 """
 
 from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice
-from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton
+from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, QSizePolicy
 
 from E5Gui.E5Application import e5App
 
@@ -39,7 +39,8 @@ class E5SideBar(QWidget):
         self.__tabBar = QTabBar()
         self.__tabBar.setDrawBase(True)
         self.__tabBar.setShape(QTabBar.RoundedNorth)
-        self.__tabBar.setUsesScrollButtons(False)
+        self.__tabBar.setUsesScrollButtons(True)
+        self.__tabBar.setDrawBase(False)
         self.__stackedWidget = QStackedWidget(self)
         self.__stackedWidget.setContentsMargins(0, 0, 0, 0)
         self.__autoHideButton = QToolButton()
@@ -202,8 +203,7 @@ class E5SideBar(QWidget):
             used, if the second parameter is a QIcon)
         """
         if label:
-            index = self.__tabBar.addTab(iconOrLabel, "")
-            self.__tabBar.setTabToolTip(index, label)
+            self.__tabBar.addTab(iconOrLabel, label)
         else:
             self.__tabBar.addTab(iconOrLabel)
         self.__stackedWidget.addWidget(widget)
@@ -224,8 +224,7 @@ class E5SideBar(QWidget):
             used, if the second parameter is a QIcon)
         """
         if label:
-            self.__tabBar.insertTab(index, iconOrLabel, "")
-            self.__tabBar.setTabToolTip(index, label)
+            self.__tabBar.insertTab(index, iconOrLabel, label)
         else:
             self.__tabBar.insertTab(index, iconOrLabel)
         self.__stackedWidget.insertWidget(index, widget)
@@ -364,21 +363,25 @@ class E5SideBar(QWidget):
         """
         if orient == E5SideBar.North:
             self.__tabBar.setShape(QTabBar.RoundedNorth)
+            self.__tabBar.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
             self.barLayout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setAlignment(self.barLayout, Qt.AlignLeft)
         elif orient == E5SideBar.East:
             self.__tabBar.setShape(QTabBar.RoundedEast)
+            self.__tabBar.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
             self.barLayout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setDirection(QBoxLayout.RightToLeft)
             self.layout.setAlignment(self.barLayout, Qt.AlignTop)
         elif orient == E5SideBar.South:
             self.__tabBar.setShape(QTabBar.RoundedSouth)
+            self.__tabBar.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
             self.barLayout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setDirection(QBoxLayout.BottomToTop)
             self.layout.setAlignment(self.barLayout, Qt.AlignLeft)
         elif orient == E5SideBar.West:
             self.__tabBar.setShape(QTabBar.RoundedWest)
+            self.__tabBar.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
             self.barLayout.setDirection(QBoxLayout.TopToBottom)
             self.layout.setDirection(QBoxLayout.LeftToRight)
             self.layout.setAlignment(self.barLayout, Qt.AlignTop)
