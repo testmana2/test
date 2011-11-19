@@ -1905,7 +1905,7 @@ class ViewManager(QObject):
                       QApplication.translate('ViewManager',
                         'Extend rectangular selection up one page'),
                       QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Ctrl+PgUp')),
+                        'Alt+Shift+PgUp')),
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPRECTEXTEND)

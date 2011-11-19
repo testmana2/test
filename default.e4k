@@ -1191,7 +1191,7 @@
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_extend_rect_selection_up_page</Name>
-    <Accel>Ctrl+Alt+PgUp</Accel>
+    <Accel>Alt+Shift+PgUp</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Edit">

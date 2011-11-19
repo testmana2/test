@@ -1088,16 +1088,6 @@ class MiniEditor(QMainWindow):
         act.triggered[()].connect(self.esm.map)
         self.editActions.append(act)
         
-        act = E5Action(QApplication.translate('ViewManager',
-                                              'Insert new line below current line'),
-                      QApplication.translate('ViewManager',
-                                             'Insert new line below current line'),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Return')),
-                      QKeySequence(QApplication.translate('ViewManager', 'Shift+Enter')),
-                      self.editorActGrp, 'vm_edit_insert_line_below')
-        act.triggered[()].connect(self.__newLineBelow)
-        self.editActions.append(act)
-        
         act = E5Action(QApplication.translate('ViewManager', 'Delete current line'),
                       QApplication.translate('ViewManager', 'Delete current line'),
                       QKeySequence(QApplication.translate('ViewManager', 'Ctrl+Shift+L')),
@@ -1314,7 +1304,7 @@ class MiniEditor(QMainWindow):
                       QApplication.translate('ViewManager',
                         'Extend rectangular selection up one page'),
                       QKeySequence(QApplication.translate('ViewManager',
-                        'Alt+Ctrl+PgUp')),
+                        'Alt+Shift+PgUp')),
                       0,
                       self.editorActGrp, 'vm_edit_extend_rect_selection_up_page')
         self.esm.setMapping(act, QsciScintilla.SCI_PAGEUPRECTEXTEND)
