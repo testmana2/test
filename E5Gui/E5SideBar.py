@@ -8,7 +8,8 @@ Module implementing a sidebar class.
 """
 
 from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, QIODevice
-from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, QSizePolicy
+from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, QToolButton, \
+    QSizePolicy
 
 from E5Gui.E5Application import e5App
 
@@ -197,15 +198,17 @@ class E5SideBar(QWidget):
         Public method to add a tab to the sidebar.
         
         @param widget reference to the widget to add (QWidget)
-        @param iconOrLabel reference to the icon or the labeltext of the tab
+        @param iconOrLabel reference to the icon or the label text of the tab
             (QIcon, string)
         @param label the labeltext of the tab (string) (only to be
             used, if the second parameter is a QIcon)
         """
         if label:
-            self.__tabBar.addTab(iconOrLabel, label)
+            index = self.__tabBar.addTab(iconOrLabel, label)
+            self.__tabBar.setTabToolTip(index, label)
         else:
-            self.__tabBar.addTab(iconOrLabel)
+            index = self.__tabBar.addTab(iconOrLabel)
+            self.__tabBar.setTabToolTip(index, iconOrLabel)
         self.__stackedWidget.addWidget(widget)
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
             self.__minSize = self.minimumSizeHint().height()
@@ -224,9 +227,11 @@ class E5SideBar(QWidget):
             used, if the second parameter is a QIcon)
         """
         if label:
-            self.__tabBar.insertTab(index, iconOrLabel, label)
+            index = self.__tabBar.insertTab(index, iconOrLabel, label)
+            self.__tabBar.setTabToolTip(index, label)
         else:
-            self.__tabBar.insertTab(index, iconOrLabel)
+            index = self.__tabBar.insertTab(index, iconOrLabel)
+            self.__tabBar.setTabToolTip(index, iconOrLabel)
         self.__stackedWidget.insertWidget(index, widget)
         if self.__orientation in [E5SideBar.North, E5SideBar.South]:
             self.__minSize = self.minimumSizeHint().height()
