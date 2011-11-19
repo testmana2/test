@@ -51,6 +51,8 @@ Version 5.2-snapshot-2011mmdd:
 - enhancements of the tasks manager
   -- made tasks manager forget about global file tasks when file is closed
      (configurable via configuration dialog)
+- other enhancements
+  -- added an action to launch another instantiation of eric5
 
 Version 5.2-snapshot-20110724:
 - bug fixes

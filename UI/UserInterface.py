@@ -1322,6 +1322,20 @@ class UserInterface(QMainWindow):
         self.exitAct.triggered[()].connect(self.__quit)
         self.actions.append(self.exitAct)
 
+        self.newWindowAct = E5Action(self.trUtf8('New Window'),
+                UI.PixmapCache.getIcon("newWindow.png"),
+                self.trUtf8('New &Window'),
+                QKeySequence(self.trUtf8("Ctrl+Shift+N", "File|New Window")),
+                0, self, 'new_window')
+        self.newWindowAct.setStatusTip(self.trUtf8('Open a new eric5 instance'))
+        self.newWindowAct.setWhatsThis(self.trUtf8(
+            """<b>New Window</b>"""
+            """<p>This opens a new instance of the eric5 IDE.</p>"""
+        ))
+        self.newWindowAct.triggered[()].connect(self.__newWindow)
+        self.actions.append(self.newWindowAct)
+        self.newWindowAct.setEnabled(not Preferences.getUI("SingleApplicationMode"))
+        
         self.viewProfileActGrp = createActionGroup(self, "viewprofiles", True)
         
         self.setEditProfileAct = E5Action(self.trUtf8('Edit Profile'),
@@ -2255,6 +2269,9 @@ class UserInterface(QMainWindow):
         self.__menus["file"].addSeparator()
         self.__menus["file"].addAction(self.exitAct)
         self.__menus["file"].aboutToShow.connect(self.__showFileMenu)
+        act = self.__menus["file"].actions()[0]
+        sep = self.__menus["file"].insertSeparator(act)
+        self.__menus["file"].insertAction(sep, self.newWindowAct)
         
         self.__menus["edit"] = self.viewmanager.initEditMenu()
         mb.addMenu(self.__menus["edit"])
@@ -2427,6 +2444,9 @@ class UserInterface(QMainWindow):
         filetb.addSeparator()
         filetb.addAction(self.exitAct)
         self.toolbarManager.addToolBar(filetb, filetb.windowTitle())
+        act = self.__menus["file"].actions()[0]
+        sep = filetb.insertSeparator(act)
+        filetb.insertAction(sep, self.newWindowAct)
         
         # setup the unittest toolbar
         unittesttb.addAction(self.utDialogAct)
@@ -3078,6 +3098,17 @@ class UserInterface(QMainWindow):
             args = [eric5]
             args.append("--start-session")
             args.extend(self.__restartArgs)
+            QProcess.startDetached(program, args)
+        
+    def __newWindow(self):
+        """
+        Private slot to start a new instance of eric5.
+        """
+        if not Preferences.getUI("SingleApplicationMode"):
+            # start eric5 without any arguments
+            program = sys.executable
+            eric5 = os.path.join(getConfig("ericDir"), "eric5.py")
+            args = [eric5]
             QProcess.startDetached(program, args)
         
     def __showToolsMenu(self):
@@ -4965,6 +4996,7 @@ class UserInterface(QMainWindow):
             if self.SAServer is not None:
                 self.SAServer.shutdown()
                 self.SAServer = None
+        self.newWindowAct.setEnabled(not Preferences.getUI("SingleApplicationMode"))
         
         self.maxEditorPathLen = Preferences.getUI("CaptionFilenameLength")
         self.captionShowsFilename = Preferences.getUI("CaptionShowsFilename")
