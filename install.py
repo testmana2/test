@@ -477,7 +477,7 @@ def installEric():
             print("Could not install '{1}'.".format(name))
    
     # copy some more stuff
-    for name in ['default.e4k']:
+    for name in ['default.e4k', 'default_Mac.e4k']:
         try:
             shutil.copy('{2}{0}{1}'.format(os.sep, name, sourceDir), cfg['ericOthersDir'])
         except EnvironmentError:
