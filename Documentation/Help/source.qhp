@@ -9874,6 +9874,7 @@
       <keyword name="LexerContainer" id="LexerContainer" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer" />
       <keyword name="LexerContainer (Constructor)" id="LexerContainer (Constructor)" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.__init__" />
       <keyword name="LexerContainer.description" id="LexerContainer.description" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.description" />
+      <keyword name="LexerContainer.keywords" id="LexerContainer.keywords" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.keywords" />
       <keyword name="LexerContainer.language" id="LexerContainer.language" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.language" />
       <keyword name="LexerContainer.lexer" id="LexerContainer.lexer" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.lexer" />
       <keyword name="LexerContainer.styleBitsNeeded" id="LexerContainer.styleBitsNeeded" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.styleBitsNeeded" />
