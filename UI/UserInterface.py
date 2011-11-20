@@ -2268,10 +2268,10 @@ class UserInterface(QMainWindow):
         mb.addMenu(self.__menus["file"])
         self.__menus["file"].addSeparator()
         self.__menus["file"].addAction(self.exitAct)
-        self.__menus["file"].aboutToShow.connect(self.__showFileMenu)
         act = self.__menus["file"].actions()[0]
         sep = self.__menus["file"].insertSeparator(act)
         self.__menus["file"].insertAction(sep, self.newWindowAct)
+        self.__menus["file"].aboutToShow.connect(self.__showFileMenu)
         
         self.__menus["edit"] = self.viewmanager.initEditMenu()
         mb.addMenu(self.__menus["edit"])
@@ -2443,10 +2443,10 @@ class UserInterface(QMainWindow):
         
         filetb.addSeparator()
         filetb.addAction(self.exitAct)
-        self.toolbarManager.addToolBar(filetb, filetb.windowTitle())
-        act = self.__menus["file"].actions()[0]
+        act = filetb.actions()[0]
         sep = filetb.insertSeparator(act)
         filetb.insertAction(sep, self.newWindowAct)
+        self.toolbarManager.addToolBar(filetb, filetb.windowTitle())
         
         # setup the unittest toolbar
         unittesttb.addAction(self.utDialogAct)
