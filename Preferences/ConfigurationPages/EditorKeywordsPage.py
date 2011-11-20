@@ -13,6 +13,7 @@ from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorKeywordsPage import Ui_EditorKeywordsPage
 
 import QScintilla.Lexers
+from QScintilla.Lexers.LexerContainer import LexerContainer
 
 import Preferences
 
@@ -35,20 +36,20 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         languages = sorted([''] + \
                     list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in languages:
-            if lang != "Guessed":
-                self.languageCombo.addItem(lang)
-        
-        for lang in languages[1:]:
-            keywords = Preferences.getEditorKeywords(lang)[:]
-            if not keywords:
-                keywords = [""]
+            if lang:
                 lex = QScintilla.Lexers.getLexer(lang)
-                for kwSet in range(1, 10):
-                    kw = lex.keywords(kwSet)
-                    if kw is None:
-                        kw = ""
-                    keywords.append(kw)
-            self.__keywords[lang] = keywords
+                if isinstance(lex, LexerContainer):
+                    continue
+                keywords = Preferences.getEditorKeywords(lang)[:]
+                if not keywords:
+                    keywords = [""]
+                    for kwSet in range(1, 10):
+                        kw = lex.keywords(kwSet)
+                        if kw is None:
+                            kw = ""
+                        keywords.append(kw)
+                self.__keywords[lang] = keywords
+            self.languageCombo.addItem(lang)
         
         self.currentLanguage = ''
         self.currentSet = 1
