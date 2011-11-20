@@ -4266,6 +4266,7 @@
       <keyword name="UserInterface.__linguist4" id="UserInterface.__linguist4" ref="eric5.UI.UserInterface.html#UserInterface.__linguist4" />
       <keyword name="UserInterface.__masterPasswordChanged" id="UserInterface.__masterPasswordChanged" ref="eric5.UI.UserInterface.html#UserInterface.__masterPasswordChanged" />
       <keyword name="UserInterface.__newProject" id="UserInterface.__newProject" ref="eric5.UI.UserInterface.html#UserInterface.__newProject" />
+      <keyword name="UserInterface.__newWindow" id="UserInterface.__newWindow" ref="eric5.UI.UserInterface.html#UserInterface.__newWindow" />
       <keyword name="UserInterface.__openMiniEditor" id="UserInterface.__openMiniEditor" ref="eric5.UI.UserInterface.html#UserInterface.__openMiniEditor" />
       <keyword name="UserInterface.__openOnStartup" id="UserInterface.__openOnStartup" ref="eric5.UI.UserInterface.html#UserInterface.__openOnStartup" />
       <keyword name="UserInterface.__pluginsConfigure" id="UserInterface.__pluginsConfigure" ref="eric5.UI.UserInterface.html#UserInterface.__pluginsConfigure" />
@@ -10859,6 +10860,7 @@
       <keyword name="LexerContainer" id="LexerContainer" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer" />
       <keyword name="LexerContainer (Constructor)" id="LexerContainer (Constructor)" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.__init__" />
       <keyword name="LexerContainer.description" id="LexerContainer.description" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.description" />
+      <keyword name="LexerContainer.keywords" id="LexerContainer.keywords" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.keywords" />
       <keyword name="LexerContainer.language" id="LexerContainer.language" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.language" />
       <keyword name="LexerContainer.lexer" id="LexerContainer.lexer" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.lexer" />
       <keyword name="LexerContainer.styleBitsNeeded" id="LexerContainer.styleBitsNeeded" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.styleBitsNeeded" />
