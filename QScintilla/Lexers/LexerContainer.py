@@ -75,3 +75,12 @@ class LexerContainer(QsciLexer, Lexer):
         """
         self.editor.startStyling(start, 0x1f)
         self.editor.setStyling(end - start + 1, 0)
+    
+    def keywords(self, kwSet):
+        """
+        Public method to get the keywords.
+        
+        @param kwSet number of the keyword set (integer)
+        @return string giving the keywords (string) or None
+        """
+        return Lexer.keywords(self, kwSet)
