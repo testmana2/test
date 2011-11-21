@@ -886,7 +886,7 @@
   </Shortcut>
   <Shortcut category="Edit">
     <Name>vm_edit_move_right_word</Name>
-    <Accel>Alt+Right</Accel>
+    <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Edit">

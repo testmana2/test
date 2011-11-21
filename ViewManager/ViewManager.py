@@ -1219,10 +1219,7 @@ class ViewManager(QObject):
                       QApplication.translate('ViewManager', 'Move right one word'),
                       0, 0,
                       self.editorActGrp, 'vm_edit_move_right_word')
-        if isMacPlatform():
-            act.setShortcut(QKeySequence(
-                QApplication.translate('ViewManager', 'Alt+Right')))
-        else:
+        if not isMacPlatform():
             act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Ctrl+Right')))
         self.esm.setMapping(act, QsciScintilla.SCI_WORDRIGHT)
