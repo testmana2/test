@@ -87,7 +87,7 @@ the Qt4 directory within the extracted folder and enter these commands in a
 terminal window
 
 qmake qscintilla.pro -spec macx-g++
-make
+make -j
 sudo make install
 
 5. Install sip
@@ -101,7 +101,7 @@ archive in the Downloads folder (or any other folder of your choice). Change to
 the extracted folder and enter these commands in a terminal window
 
 python3 configure.py
-make
+make -j
 sudo make install
 
 6. Install PyQt4
@@ -301,9 +301,10 @@ In the pylint-<version> directory do
 
 sudo python3 setup.py install
 
-Note: You may receive some errors during the above steps. However, they just
-relate to the tests included in the packages. Nevertheless, the installation
-will be fine.
+Note: You may receive some errors during the above steps. They just relate to
+the tests included in the packages. If this occurs, please delete the faulty
+test file and retry. As of pylint 0.25.0 this file was 
+"test/input/func_unknown_encoding.py".
 
 17.2 Installation of cx_freeze
 ------------------------------
