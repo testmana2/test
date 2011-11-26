@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1637,8 +1638,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1856,8 +1857,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -9429,22 +9430,22 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="164"/>
         <source>Highlight triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar cadenas de triple comilla</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
         <source>Highlight sub-identifiers</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar sub-identificadores</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="161"/>
         <source>Select to highlight triple quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para resaltar cadenas de triple comilla</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para resaltar sub-identificadores definidos en el conjunto de palabras clave 2</translation>
     </message>
 </context>
 <context>
@@ -12942,7 +12943,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="804"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -46121,28 +46122,28 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1325"/>
         <source>New Window</source>
-        <translation type="unfinished">Nueva Ventana</translation>
+        <translation>Nueva Ventana</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1325"/>
         <source>New &amp;Window</source>
-        <translation type="unfinished">Nueva &amp;Ventana</translation>
+        <translation>Nueva &amp;Ventana</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1325"/>
         <source>Ctrl+Shift+N</source>
         <comment>File|New Window</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+N</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1330"/>
         <source>Open a new eric5 instance</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre una nueva instancia de eric5</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1331"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nueva Ventana&lt;/b&gt;&lt;p&gt;Abre una nueva instancia del IDE eric5.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -49533,347 +49534,347 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="QScintilla/MiniEditor.py" line="553"/>
         <source>Meta+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+B</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="563"/>
         <source>Meta+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+F</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="574"/>
         <source>Meta+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+P</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="585"/>
         <source>Meta+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+N</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="641"/>
         <source>Move to first visible character in document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="654"/>
         <source>Move to start of display line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al principio de la línea mostrada</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="670"/>
         <source>Move to end of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final de la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="677"/>
         <source>Meta+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+E</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="731"/>
         <source>Meta+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+V</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="737"/>
         <source>Move to start of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al principio del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="751"/>
         <source>Move to end of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="789"/>
         <source>Meta+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+B</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="803"/>
         <source>Meta+Shift+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+F</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="816"/>
         <source>Meta+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+P</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="830"/>
         <source>Meta+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+N</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="894"/>
         <source>Extend selection to first visible character in document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="907"/>
         <source>Extend selection to end of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección hasta el final de la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="914"/>
         <source>Meta+Shift+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+E</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="965"/>
         <source>Meta+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Shift+V</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="971"/>
         <source>Extend selection to start of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al principio del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="978"/>
         <source>Ctrl+Shift+Up</source>
-        <translation type="unfinished">Ctrl+Shift+Up</translation>
+        <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="987"/>
         <source>Extend selection to end of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al final del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="994"/>
         <source>Ctrl+Shift+Down</source>
-        <translation type="unfinished">Ctrl+Shift+Down</translation>
+        <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1010"/>
         <source>Meta+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+H</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1019"/>
         <source>Delete previous character if not at start of line</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar carácter anterior si no se está al principio de la línea</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1034"/>
         <source>Meta+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+D</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1073"/>
         <source>Meta+K</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+K</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1166"/>
         <source>Move to end of display line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final de la línea mostrada</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1182"/>
         <source>Extend selection to end of display line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección hasta el final de la línea mostrada</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1220"/>
         <source>Meta+Alt+Shift+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+N</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1234"/>
         <source>Meta+Alt+Shift+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+P</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1249"/>
         <source>Meta+Alt+Shift+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+B</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1264"/>
         <source>Meta+Alt+Shift+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+F</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1270"/>
         <source>Extend rectangular selection to first visible character in document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección rectangular al primer carácter visible en la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1286"/>
         <source>Extend rectangular selection to end of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección rectangular hasta el final de la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1293"/>
         <source>Meta+Alt+Shift+E</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+E</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1296"/>
         <source>Alt+Shift+End</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+End</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1314"/>
         <source>Alt+Shift+PgDown</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+PgDown</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1323"/>
         <source>Meta+Alt+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+V</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1341"/>
         <source>Scroll to start of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplazamiento hasta el principio del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1355"/>
         <source>Scroll to end of document</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplazamiento hasta el final del documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1369"/>
         <source>Scroll vertically to center current line</source>
-        <translation type="unfinished"></translation>
+        <translation>Desplazamiento vertical para centrar la línea actual</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1376"/>
         <source>Meta+L</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+L</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1383"/>
         <source>Move to end of next word</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final de la palabra siguiente</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1397"/>
         <source>Extend selection to end of next word</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al final de la siguiente palabra</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1411"/>
         <source>Move to end of previous word</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final de la palabra anterior</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1422"/>
         <source>Extend selection to end of previous word</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al final de la palabra anterior</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1433"/>
         <source>Move to start of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al principio de la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1440"/>
         <source>Meta+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+A</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1447"/>
         <source>Extend selection to start of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección hasta el inicio de la línea documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1454"/>
         <source>Meta+Shift+A</source>
-        <translation type="unfinished"></translation>
+        <translation>/media/110106_1117</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1461"/>
         <source>Extend rectangular selection to start of document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección rectangular hasta el principio de la línea de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1468"/>
         <source>Meta+Alt+Shift+A</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta+Alt+Shift+A</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1475"/>
         <source>Extend selection to start of display line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección hasta el principio de la línea mostrada</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1489"/>
         <source>Move to start of display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al principio de línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1500"/>
         <source>Extend selection to start of display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección hasta el inicio de la línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1512"/>
         <source>Move to first visible character in display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al primer carácter visible en la línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1526"/>
         <source>Extend selection to first visible character in display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al primer carácter visible en la línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1540"/>
         <source>Move to end of display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover al final de la línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1551"/>
         <source>Extend selection to end of display or document line</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender selección al final de la línea mostrada o de documento</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1563"/>
         <source>Stuttered move up one page</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover entrecortadamente arriba una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1574"/>
         <source>Stuttered extend selection up one page</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender entrecortadamente la selección arriba una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1585"/>
         <source>Stuttered move down one page</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover entrecortadamente abajo una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1596"/>
         <source>Stuttered extend selection down one page</source>
-        <translation type="unfinished"></translation>
+        <translation>Extender entrecortadamente la selección abajo una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1607"/>
         <source>Delete right to end of next word</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar a la derecha hasta el final de la siguiente palabra</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1614"/>
         <source>Alt+Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Del</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1621"/>
         <source>Move selected lines up one line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover las líneas seleccionadas arriba una línea</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1632"/>
         <source>Move selected lines down one line</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover las líneas seleccionadas abajo una línea</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1302"/>
         <source>Alt+Shift+PgUp</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+PgUp</translation>
     </message>
 </context>
 <context>
