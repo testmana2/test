@@ -49834,7 +49834,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1563"/>
         <source>Stuttered move up one page</source>
-        <translation>Mover progresivamente arriba una página</translation>
+        <translation>Mover progresivamente hacia arriba una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1574"/>
@@ -49844,7 +49844,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1585"/>
         <source>Stuttered move down one page</source>
-        <translation>Mover progresivamente abajo una página</translation>
+        <translation>Mover progresivamente hacia abajo una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1596"/>
