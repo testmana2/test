@@ -49834,22 +49834,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1563"/>
         <source>Stuttered move up one page</source>
-        <translation>Mover entrecortadamente arriba una página</translation>
+        <translation>Mover progresivamente arriba una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1574"/>
         <source>Stuttered extend selection up one page</source>
-        <translation>Extender entrecortadamente la selección arriba una página</translation>
+        <translation>Extender progresivamente la selección arriba una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1585"/>
         <source>Stuttered move down one page</source>
-        <translation>Mover entrecortadamente abajo una página</translation>
+        <translation>Mover progresivamente abajo una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1596"/>
         <source>Stuttered extend selection down one page</source>
-        <translation>Extender entrecortadamente la selección abajo una página</translation>
+        <translation>Extender progresivamente la selección abajo una página</translation>
     </message>
     <message>
         <location filename="QScintilla/MiniEditor.py" line="1607"/>
