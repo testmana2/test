@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Helpviewer.AdBlock.AdBlockDialog</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Helpviewer.AdBlock.AdBlockDialog</h1>
+<p>
+Module implementing the AdBlock configuration dialog.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#AdBlockDialog">AdBlockDialog</a></td>
+<td>Class implementing the AdBlock configuration dialog.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="AdBlockDialog" ID="AdBlockDialog"></a>
+<h2>AdBlockDialog</h2>
+<p>
+    Class implementing the AdBlock configuration dialog.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_AdBlockDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#AdBlockDialog.__init__">AdBlockDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.__aboutToShowActionMenu">__aboutToShowActionMenu</a></td>
+<td>Private slot to show the actions menu.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.__browseSubscriptions">__browseSubscriptions</a></td>
+<td>Private slot to browse the list of available AdBlock subscriptions.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.__learnAboutWritingFilters">__learnAboutWritingFilters</a></td>
+<td>Private slot to show the web page about how to write filters.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.__removeSubscription">__removeSubscription</a></td>
+<td>Private slot to remove the selected subscription.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.__updateSubscription">__updateSubscription</a></td>
+<td>Private slot to update the selected subscription.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.addCustomRule">addCustomRule</a></td>
+<td>Public slot to add a custom AdBlock rule.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.model">model</a></td>
+<td>Public method to return a reference to the subscriptions tree model.</td>
+</tr><tr>
+<td><a href="#AdBlockDialog.setCurrentIndex">setCurrentIndex</a></td>
+<td>Private slot to set the current index of the subscriptions tree.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="AdBlockDialog.__init__" ID="AdBlockDialog.__init__"></a>
+<h4>AdBlockDialog (Constructor)</h4>
+<b>AdBlockDialog</b>(<i>parent = None</i>)
+<p>
+        Constructor
+</p><a NAME="AdBlockDialog.__aboutToShowActionMenu" ID="AdBlockDialog.__aboutToShowActionMenu"></a>
+<h4>AdBlockDialog.__aboutToShowActionMenu</h4>
+<b>__aboutToShowActionMenu</b>(<i></i>)
+<p>
+        Private slot to show the actions menu.
+</p><a NAME="AdBlockDialog.__browseSubscriptions" ID="AdBlockDialog.__browseSubscriptions"></a>
+<h4>AdBlockDialog.__browseSubscriptions</h4>
+<b>__browseSubscriptions</b>(<i></i>)
+<p>
+        Private slot to browse the list of available AdBlock subscriptions.
+</p><a NAME="AdBlockDialog.__learnAboutWritingFilters" ID="AdBlockDialog.__learnAboutWritingFilters"></a>
+<h4>AdBlockDialog.__learnAboutWritingFilters</h4>
+<b>__learnAboutWritingFilters</b>(<i></i>)
+<p>
+        Private slot to show the web page about how to write filters.
+</p><a NAME="AdBlockDialog.__removeSubscription" ID="AdBlockDialog.__removeSubscription"></a>
+<h4>AdBlockDialog.__removeSubscription</h4>
+<b>__removeSubscription</b>(<i></i>)
+<p>
+        Private slot to remove the selected subscription.
+</p><a NAME="AdBlockDialog.__updateSubscription" ID="AdBlockDialog.__updateSubscription"></a>
+<h4>AdBlockDialog.__updateSubscription</h4>
+<b>__updateSubscription</b>(<i></i>)
+<p>
+        Private slot to update the selected subscription.
+</p><a NAME="AdBlockDialog.addCustomRule" ID="AdBlockDialog.addCustomRule"></a>
+<h4>AdBlockDialog.addCustomRule</h4>
+<b>addCustomRule</b>(<i>rule = ""</i>)
+<p>
+        Public slot to add a custom AdBlock rule.
+</p><dl>
+<dt><i>rule</i></dt>
+<dd>
+string defining the rule to be added (string)
+</dd>
+</dl><a NAME="AdBlockDialog.model" ID="AdBlockDialog.model"></a>
+<h4>AdBlockDialog.model</h4>
+<b>model</b>(<i></i>)
+<p>
+        Public method to return a reference to the subscriptions tree model.
+</p><a NAME="AdBlockDialog.setCurrentIndex" ID="AdBlockDialog.setCurrentIndex"></a>
+<h4>AdBlockDialog.setCurrentIndex</h4>
+<b>setCurrentIndex</b>(<i>index</i>)
+<p>
+        Private slot to set the current index of the subscriptions tree.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+index to be set (QModelIndex)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

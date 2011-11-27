@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog</h1>
+<p>
+Module implementing a dialog to select a revision.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgRevisionSelectionDialog">HgRevisionSelectionDialog</a></td>
+<td>Class implementing a dialog to select a revision.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgRevisionSelectionDialog" ID="HgRevisionSelectionDialog"></a>
+<h2>HgRevisionSelectionDialog</h2>
+<p>
+    Class implementing a dialog to select a revision.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgRevisionSelectionDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgRevisionSelectionDialog.__init__">HgRevisionSelectionDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgRevisionSelectionDialog.getRevision">getRevision</a></td>
+<td>Public method to retrieve the selected revision.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HgRevisionSelectionDialog.__init__" ID="HgRevisionSelectionDialog.__init__"></a>
+<h4>HgRevisionSelectionDialog (Constructor)</h4>
+<b>HgRevisionSelectionDialog</b>(<i>tagsList, branchesList, showNone = False, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd><dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>showNone</i></dt>
+<dd>
+flag influencing the label of the 'None' selection (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="HgRevisionSelectionDialog.getRevision" ID="HgRevisionSelectionDialog.getRevision"></a>
+<h4>HgRevisionSelectionDialog.getRevision</h4>
+<b>getRevision</b>(<i></i>)
+<p>
+        Public method to retrieve the selected revision.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple naming the revision and a flag indicating a
+            forced merge (string, boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
