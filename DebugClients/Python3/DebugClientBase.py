@@ -1404,23 +1404,42 @@ class DebugClientBase(object):
                 else:
                     vlist = []
             else:
-                # format the dictionary found
-                if dictkeys is None:
-                    dictkeys = dict.keys()
-                else:
-                    # treatment for sequences and dictionaries
+                qtVariable = False
+                if len(udict) > 0:
                     if access:
-                        loc = {"dict": dict}
-                        exec("dict = dict{0!s}".format(access), globals(), loc)
-                        dict = loc["dict"]
+                        loc = {"udict" : udict}
+                        exec('qvar = udict{0!s}'.format(access), globals(), loc)
+                        qvar = loc["qvar"]
+                    # this has to be in line with VariablesViewer.indicators
+                    elif rvar and rvar[0][-2:] in ["[]", "()", "{}"]:
+                        loc = {"udict" : udict}
+                        exec('qvar = udict["{0!s}"][{1!s}]'.format(rvar[0][:-2], rvar[1]), 
+                             globals(), loc)
+                        qvar = loc["qvar"]
                     else:
-                        dict = dict[dictkeys[0]]
-                    if isDict:
+                        qvar = udict[var[-1]]
+                    qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
+                    if qvtype.startswith("PyQt4"):
+                        qtVariable = True
+                
+                if qtVariable:
+                    vlist = self.__formatQt4Variable(qvar, qvtype)
+                else:
+                    # format the dictionary found
+                    if dictkeys is None:
                         dictkeys = dict.keys()
                     else:
-                        dictkeys = range(len(dict))
-                vlist = self.__formatVariablesList(dictkeys, dict, scope, filter,
-                                                   formatSequences)
+                        # treatment for sequences and dictionaries
+                        if access:
+                            exec "dict = dict%s" % access
+                        else:
+                            dict = dict[dictkeys[0]]
+                        if isDict:
+                            dictkeys = dict.keys()
+                        else:
+                            dictkeys = range(len(dict))
+                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter, 
+                                                     formatSequences)
             varlist.extend(vlist)
         
             if obj is not None and not formatSequences:
@@ -1621,7 +1640,11 @@ class DebugClientBase(object):
                         if valtype == "classobj":
                             if ConfigVarTypeStrings.index('instance') in filter:
                                 continue
-                        elif ConfigVarTypeStrings.index('other') in filter:
+                        elif valtype == "sip.methoddescriptor":
+                            if ConfigVarTypeStrings.index('instance method') in filter:
+                                continue
+                        elif not valtype.startswith("PySide") and \
+                             ConfigVarTypeStrings.index('other') in filter:
                             continue
                 
                 try:
