@@ -708,7 +708,7 @@ def getExecutablePath(file):
     cur_path = os.path.join(os.curdir, file)
     if os.path.exists(cur_path):
         if os.access(cur_path, os.X_OK):
-            return cur_path        
+            return cur_path
 
     path = os.getenv('PATH')
     

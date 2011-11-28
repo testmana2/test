@@ -70,7 +70,6 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         else:
             self.cppHighlightTripleQuotedCheckBox.setEnabled(False)
         
-        
         # CSS
         self.foldCssCommentCheckBox.setChecked(
             Preferences.getEditor("CssFoldComment"))

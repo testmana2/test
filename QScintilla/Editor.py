@@ -3424,7 +3424,6 @@ class Editor(QsciScintillaCompat):
                 Preferences.getEditor("OnlineSyntaxCheckInterval") * 1000)
         else:
             self.__onlineSyntaxCheckTimer.stop()
-
         
         # refresh the annotations display
         self.__refreshAnnotations()

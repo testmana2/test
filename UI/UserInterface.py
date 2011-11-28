@@ -4952,7 +4952,7 @@ class UserInterface(QMainWindow):
         
         @param pageName name of the configuration page to show (string)
         """
-        dlg = ConfigurationDialog(self, 'Configuration') ##, True)
+        dlg = ConfigurationDialog(self, 'Configuration')
         dlg.preferencesChanged.connect(self.__preferencesChanged)
         dlg.masterPasswordChanged.connect(self.__masterPasswordChanged)
         dlg.show()

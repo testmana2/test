@@ -1630,7 +1630,7 @@ class HelpBrowser(QWebView):
         """
         self.__rss = []
         
-        frame =self.page().mainFrame()
+        frame = self.page().mainFrame()
         linkElementsList = frame.findAllElements("link").toList()
         
         for linkElement in linkElementsList:

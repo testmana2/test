@@ -90,7 +90,7 @@ class EditorAssembly(QWidget):
         if lineno is not None:
             txt = self.__editor.text(lineno - 1).rstrip()
             pos = len(txt.replace(txt.strip(), ""))
-            self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
+            self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1)
             self.__editor.setFocus()
             
             # step 2: populate the members combo, if the entry is a class
@@ -147,7 +147,7 @@ class EditorAssembly(QWidget):
         if lineno is not None:
             txt = self.__editor.text(lineno - 1).rstrip()
             pos = len(txt.replace(txt.strip(), ""))
-            self.__editor.gotoLine(lineno, pos if pos == 0 else pos +1)
+            self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1)
             self.__editor.setFocus()
     
     def __resetParseTimer(self):

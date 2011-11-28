@@ -2016,7 +2016,7 @@ def getHelp(key, prefClass=Prefs):
                  "JavaScriptCanAccessClipboard", "PluginsEnabled", "DnsPrefetchEnabled",
                  "OfflineStorageDatabaseEnabled", "OfflineWebApplicationCacheEnabled",
                  "LocalStorageEnabled", "ShowPreview", "AccessKeysEnabled",
-                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack", 
+                 "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack",
                  "SpatialNavigationEnabled", "LinksIncludedInFocusChain",
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
                  "XSSAuditingEnabled", "SiteSpecificQuirksEnabled"]:

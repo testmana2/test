@@ -1407,12 +1407,12 @@ class DebugClientBase(object):
                 qtVariable = False
                 if len(udict) > 0:
                     if access:
-                        loc = {"udict" : udict}
+                        loc = {"udict": udict}
                         exec('qvar = udict{0!s}'.format(access), globals(), loc)
                         qvar = loc["qvar"]
                     # this has to be in line with VariablesViewer.indicators
                     elif rvar and rvar[0][-2:] in ["[]", "()", "{}"]:
-                        loc = {"udict" : udict}
+                        loc = {"udict": udict}
                         exec('qvar = udict["{0!s}"][{1!s}]'.format(rvar[0][:-2], rvar[1]),
                              globals(), loc)
                         qvar = loc["qvar"]
@@ -1431,7 +1431,7 @@ class DebugClientBase(object):
                     else:
                         # treatment for sequences and dictionaries
                         if access:
-                            loc = {"dict" : dict}
+                            loc = {"dict": dict}
                             exec("dict = dict{0!s}".format(access), globals(), loc)
                             dict = loc["dict"]
                         else:
@@ -1440,7 +1440,7 @@ class DebugClientBase(object):
                             dictkeys = dict.keys()
                         else:
                             dictkeys = range(len(dict))
-                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter, 
+                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter,
                                                      formatSequences)
             varlist.extend(vlist)
         

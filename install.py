@@ -597,7 +597,7 @@ exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
     <string>1.0</string>
 </dict>
 </plist>
-'''        
+'''
     )
 
 

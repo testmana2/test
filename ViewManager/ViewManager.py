@@ -1233,7 +1233,7 @@ class ViewManager(QObject):
                       0, 0,
                       self.editorActGrp, 'vm_edit_move_first_visible_char')
         if not isMacPlatform():
-           act.setShortcut(QKeySequence(
+            act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOME)
         act.triggered[()].connect(self.esm.map)
@@ -1875,7 +1875,7 @@ class ViewManager(QObject):
                       self.editorActGrp,
                       'vm_edit_extend_rect_selection_first_visible_char')
         if not isMacPlatform():
-           act.setShortcut(QKeySequence(
+            act.setShortcut(QKeySequence(
                 QApplication.translate('ViewManager', 'Alt+Shift+Home')))
         self.esm.setMapping(act, QsciScintilla.SCI_VCHOMERECTEXTEND)
         act.triggered[()].connect(self.esm.map)
