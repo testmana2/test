@@ -591,6 +591,14 @@ class DebugBase(bdb.Bdb):
         exctype, excval, exctb = excinfo
         if exctype in [SystemExit, bdb.BdbQuit]:
             atexit._run_exitfuncs()
+            if excval is None:
+                excval = 0
+            elif isinstance(excval, str):
+                self._dbgClient.write(excval)
+                excval = 1
+            elif isinstance(excval, bytes):
+                self._dbgClient.write(excval.decode())
+                excval = 1
             if isinstance(excval, int):
                 self._dbgClient.progTerminated(excval)
             else:
