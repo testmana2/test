@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.VcsPlugins.vcsMercurial.HgMergeDialog</h1>
+<p>
+Module implementing a dialog to enter the data for a merge operation.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgMergeDialog">HgMergeDialog</a></td>
+<td>Class implementing a dialog to enter the data for a merge operation.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgMergeDialog" ID="HgMergeDialog"></a>
+<h2>HgMergeDialog</h2>
+<p>
+    Class implementing a dialog to enter the data for a merge operation.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgMergeDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgMergeDialog.__init__">HgMergeDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgMergeDialog.getParameters">getParameters</a></td>
+<td>Public method to retrieve the merge data.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HgMergeDialog.__init__" ID="HgMergeDialog.__init__"></a>
+<h4>HgMergeDialog (Constructor)</h4>
+<b>HgMergeDialog</b>(<i>force, tagsList, branchesList, parent = None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>force</i></dt>
+<dd>
+flag indicating a forced merge (boolean)
+</dd><dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd><dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="HgMergeDialog.getParameters" ID="HgMergeDialog.getParameters"></a>
+<h4>HgMergeDialog.getParameters</h4>
+<b>getParameters</b>(<i></i>)
+<p>
+        Public method to retrieve the merge data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple naming the revision and a flag indicating a
+            forced merge (string, boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
