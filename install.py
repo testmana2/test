@@ -547,6 +547,11 @@ def createMacAppBundle(pydir):
     os.mkdir(dirs["exe"])
     os.mkdir(dirs["icns"])
     
+    starter = os.path.join(dirs["exe"], "eric")
+    os.symlink(
+        "{0}/Resources/Python.app/Contents/MacOS/Python".format(sys.exec_prefix),
+        starter)
+    
     wname = os.path.join(dirs["exe"], "eric5")
     path = os.getenv("PATH", "")
     if path:
@@ -559,14 +564,14 @@ def createMacAppBundle(pydir):
 '''#!/bin/sh
 
 PATH={0}
-exec "{1}/bin/pythonw3" "{2}/{3}.py" "$@"
-'''.format(path, sys.exec_prefix, pydir, "eric5")
+exec "{1}" "{2}/{3}.py" "$@"
+'''.format(path, starter, pydir, "eric5")
     else:
         wrapper = \
 '''#!/bin/sh
 
-exec "{0}/bin/pythonw3" "{1}/{2}.py" "$@"
-'''.format(sys.exec_prefix, pydir, "eric5")
+exec "{0}" "{1}/{2}.py" "$@"
+'''.format(starter, pydir, "eric5")
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
