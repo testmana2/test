@@ -1283,6 +1283,7 @@
       <keyword name="UnittestDialog.__showSource" id="UnittestDialog.__showSource" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__showSource" />
       <keyword name="UnittestDialog.insertProg" id="UnittestDialog.insertProg" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertProg" />
       <keyword name="UnittestDialog.insertTestName" id="UnittestDialog.insertTestName" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertTestName" />
+      <keyword name="UnittestDialog.keyPressEvent" id="UnittestDialog.keyPressEvent" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.keyPressEvent" />
       <keyword name="UnittestDialog.on_buttonBox_clicked" id="UnittestDialog.on_buttonBox_clicked" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_buttonBox_clicked" />
       <keyword name="UnittestDialog.on_errorsListWidget_currentTextChanged" id="UnittestDialog.on_errorsListWidget_currentTextChanged" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_currentTextChanged" />
       <keyword name="UnittestDialog.on_errorsListWidget_itemDoubleClicked" id="UnittestDialog.on_errorsListWidget_itemDoubleClicked" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_itemDoubleClicked" />

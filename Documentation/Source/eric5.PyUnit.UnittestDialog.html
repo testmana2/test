@@ -238,6 +238,9 @@ QWidget, Ui_UnittestDialog
 <td><a href="#UnittestDialog.insertTestName">insertTestName</a></td>
 <td>Public slot to insert a test name into the testComboBox object.</td>
 </tr><tr>
+<td><a href="#UnittestDialog.keyPressEvent">keyPressEvent</a></td>
+<td>Protected slot to handle key press events.</td>
+</tr><tr>
 <td><a href="#UnittestDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
 </tr><tr>
@@ -287,7 +290,7 @@ QWidget, Ui_UnittestDialog
 </table>
 <a NAME="UnittestDialog.__init__" ID="UnittestDialog.__init__"></a>
 <h4>UnittestDialog (Constructor)</h4>
-<b>UnittestDialog</b>(<i>prog=None, dbs=None, ui=None, parent=None, name=None</i>)
+<b>UnittestDialog</b>(<i>prog=None, dbs=None, ui=None, fromEric=False, parent=None, name=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -297,10 +300,14 @@ filename of the program to open
 </dd><dt><i>dbs</i></dt>
 <dd>
 reference to the debug server object. It is an indication
-                whether we were called from within the eric5 IDE
+            whether we were called from within the eric5 IDE
 </dd><dt><i>ui</i></dt>
 <dd>
 reference to the UI object
+</dd><dt><i>fromEric</i></dt>
+<dd>
+flag indicating an instantiation from within the
+            eric IDE (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this dialog (QWidget)
@@ -371,6 +378,16 @@ filename to be inserted (string)
 <dt><i>testName</i></dt>
 <dd>
 name of the test to be inserted (string)
+</dd>
+</dl><a NAME="UnittestDialog.keyPressEvent" ID="UnittestDialog.keyPressEvent"></a>
+<h4>UnittestDialog.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>evt</i>)
+<p>
+        Protected slot to handle key press events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+key press event to handle (QKeyEvent)
 </dd>
 </dl><a NAME="UnittestDialog.on_buttonBox_clicked" ID="UnittestDialog.on_buttonBox_clicked"></a>
 <h4>UnittestDialog.on_buttonBox_clicked</h4>
