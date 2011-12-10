@@ -40,14 +40,17 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     """
     unittestFile = pyqtSignal(str, int, int)
     
-    def __init__(self, prog=None, dbs=None, ui=None, parent=None, name=None):
+    def __init__(self, prog=None, dbs=None, ui=None, fromEric=False, parent=None,
+                 name=None):
         """
         Constructor
         
         @param prog filename of the program to open
         @param dbs reference to the debug server object. It is an indication
-                whether we were called from within the eric5 IDE
+            whether we were called from within the eric5 IDE
         @param ui reference to the UI object
+        @param fromEric flag indicating an instantiation from within the
+            eric IDE (boolean)
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
@@ -72,6 +75,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.startButton.setDefault(True)
         
         self.dbs = dbs
+        self.__fromEric = fromEric
         
         self.setWindowFlags(
             self.windowFlags() | Qt.WindowFlags(Qt.WindowContextHelpButtonHint))
@@ -111,7 +115,16 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.dbs.utTestSkipped.connect(self.testSkipped)
             self.dbs.utTestFailedExpected.connect(self.testFailedExpected)
             self.dbs.utTestSucceededUnexpected.connect(self.testSucceededUnexpected)
+    
+    def keyPressEvent(self, evt):
+        """
+        Protected slot to handle key press events.
         
+        @param evt key press event to handle (QKeyEvent)
+        """
+        if evt.key() == Qt.Key_Escape and self.__fromEric:
+            self.close()
+    
     def __setProgressColor(self, color):
         """
         Private methode to set the color of the progress color label.
