@@ -8,6 +8,7 @@ Module implementing the About plugin.
 """
 
 from PyQt4.QtCore import QObject
+from PyQt4.QtGui import QAction
 
 from UI.Info import *
 import UI.PixmapCache
@@ -83,6 +84,7 @@ class AboutPlugin(QObject):
             """<p>Display some information about this software.</p>"""
                              ).format(Program))
         self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.setMenuRole(QAction.AboutRole)
         acts.append(self.aboutAct)
         
         self.aboutQtAct = E5Action(self.trUtf8('About Qt'),
@@ -95,6 +97,7 @@ class AboutPlugin(QObject):
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
         self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.setMenuRole(QAction.AboutQtRole)
         acts.append(self.aboutQtAct)
         
         self.__ui.addE5Actions(acts, 'ui')
