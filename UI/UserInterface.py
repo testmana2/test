@@ -1321,6 +1321,7 @@ class UserInterface(QMainWindow):
             """ preferences will be written to disc.</p>"""
         ))
         self.exitAct.triggered[()].connect(self.__quit)
+        self.exitAct.setMenuRole(QAction.QuitRole)
         self.actions.append(self.exitAct)
 
         self.newWindowAct = E5Action(self.trUtf8('New Window'),
@@ -1958,6 +1959,7 @@ class UserInterface(QMainWindow):
             """ with your prefered values.</p>"""
         ))
         self.prefAct.triggered[()].connect(self.showPreferences)
+        self.prefAct.setMenuRole(QAction.PreferencesRole)
         self.actions.append(self.prefAct)
 
         self.prefExportAct = E5Action(self.trUtf8('Export Preferences'),
