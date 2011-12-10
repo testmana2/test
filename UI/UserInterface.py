@@ -441,7 +441,8 @@ class UserInterface(QMainWindow):
         self.numbersViewer.insertNumber.connect(self.viewmanager.insertNumber)
         
         # Generate the unittest dialog
-        self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self)
+        self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self,
+                                             fromEric=True)
         self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
         
         # Generate the find in project files dialog
