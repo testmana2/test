@@ -4237,6 +4237,7 @@
       <keyword name="UserInterface.__createLayout" id="UserInterface.__createLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createLayout" />
       <keyword name="UserInterface.__createSidebarsLayout" id="UserInterface.__createSidebarsLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createSidebarsLayout" />
       <keyword name="UserInterface.__createToolboxesLayout" id="UserInterface.__createToolboxesLayout" ref="eric5.UI.UserInterface.html#UserInterface.__createToolboxesLayout" />
+      <keyword name="UserInterface.__createUnitTestDialog" id="UserInterface.__createUnitTestDialog" ref="eric5.UI.UserInterface.html#UserInterface.__createUnitTestDialog" />
       <keyword name="UserInterface.__customViewer" id="UserInterface.__customViewer" ref="eric5.UI.UserInterface.html#UserInterface.__customViewer" />
       <keyword name="UserInterface.__debuggingStarted" id="UserInterface.__debuggingStarted" ref="eric5.UI.UserInterface.html#UserInterface.__debuggingStarted" />
       <keyword name="UserInterface.__deinstallPlugin" id="UserInterface.__deinstallPlugin" ref="eric5.UI.UserInterface.html#UserInterface.__deinstallPlugin" />
@@ -4385,8 +4386,11 @@
       <keyword name="UserInterface.setDebugProfile" id="UserInterface.setDebugProfile" ref="eric5.UI.UserInterface.html#UserInterface.setDebugProfile" />
       <keyword name="UserInterface.showAvailableVersionsInfo" id="UserInterface.showAvailableVersionsInfo" ref="eric5.UI.UserInterface.html#UserInterface.showAvailableVersionsInfo" />
       <keyword name="UserInterface.showEvent" id="UserInterface.showEvent" ref="eric5.UI.UserInterface.html#UserInterface.showEvent" />
+      <keyword name="UserInterface.showFindFileByNameDialog" id="UserInterface.showFindFileByNameDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFileByNameDialog" />
+      <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
       <keyword name="UserInterface.showLogTab" id="UserInterface.showLogTab" ref="eric5.UI.UserInterface.html#UserInterface.showLogTab" />
       <keyword name="UserInterface.showPreferences" id="UserInterface.showPreferences" ref="eric5.UI.UserInterface.html#UserInterface.showPreferences" />
+      <keyword name="UserInterface.showReplaceFilesDialog" id="UserInterface.showReplaceFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showReplaceFilesDialog" />
       <keyword name="UserInterface.unregisterToolbar" id="UserInterface.unregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.unregisterToolbar" />
       <keyword name="UserInterface.versionIsNewer" id="UserInterface.versionIsNewer" ref="eric5.UI.UserInterface.html#UserInterface.versionIsNewer" />
       <keyword name="DiffDialog (Module)" id="DiffDialog (Module)" ref="eric5.UI.DiffDialog.html" />

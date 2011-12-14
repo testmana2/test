@@ -496,11 +496,7 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        findFilesDialog = e5App().getObject("FindFilesDialog")
-        findFilesDialog.setSearchDirectory(searchDir)
-        findFilesDialog.show()
-        findFilesDialog.raise_()
-        findFilesDialog.activateWindow()
+        e5App().getObject("UserInterface").showFindFilesDialog(searchDir=searchDir)
         
     def __replaceInDirectory(self):
         """
@@ -509,11 +505,7 @@ class Browser(QTreeView):
         index = self.currentIndex()
         searchDir = self.model().item(index).dirName()
         
-        replaceFilesDialog = e5App().getObject("ReplaceFilesDialog")
-        replaceFilesDialog.setSearchDirectory(searchDir)
-        replaceFilesDialog.show()
-        replaceFilesDialog.raise_()
-        replaceFilesDialog.activateWindow()
+        e5App().getObject("UserInterface").showReplaceFilesDialog(searchDir=searchDir)
         
     def handleProgramChange(self, fn):
         """

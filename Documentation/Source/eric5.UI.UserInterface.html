@@ -278,6 +278,9 @@ QMainWindow
 <td><a href="#UserInterface.__createToolboxesLayout">__createToolboxesLayout</a></td>
 <td>Private method to create the Toolboxes layout.</td>
 </tr><tr>
+<td><a href="#UserInterface.__createUnitTestDialog">__createUnitTestDialog</a></td>
+<td>Private slot to generate the unit test dialog on demand.</td>
+</tr><tr>
 <td><a href="#UserInterface.__customViewer">__customViewer</a></td>
 <td>Private slot to start a custom viewer.</td>
 </tr><tr>
@@ -722,11 +725,20 @@ QMainWindow
 <td><a href="#UserInterface.showEvent">showEvent</a></td>
 <td>Protected method to handle the show event.</td>
 </tr><tr>
+<td><a href="#UserInterface.showFindFileByNameDialog">showFindFileByNameDialog</a></td>
+<td>Public slot to show the Find File by Name dialog.</td>
+</tr><tr>
+<td><a href="#UserInterface.showFindFilesDialog">showFindFilesDialog</a></td>
+<td>Public slot to show the Find In Files dialog.</td>
+</tr><tr>
 <td><a href="#UserInterface.showLogTab">showLogTab</a></td>
 <td>Public method to show a particular Log-Viewer tab.</td>
 </tr><tr>
 <td><a href="#UserInterface.showPreferences">showPreferences</a></td>
 <td>Public slot to set the preferences.</td>
+</tr><tr>
+<td><a href="#UserInterface.showReplaceFilesDialog">showReplaceFilesDialog</a></td>
+<td>Public slot to show the Find & Replace In Files dialog.</td>
 </tr><tr>
 <td><a href="#UserInterface.unregisterToolbar">unregisterToolbar</a></td>
 <td>Public method to unregister a toolbar.</td>
@@ -1007,7 +1019,12 @@ reference to the debug server object
 <dd>
 reference to the debug server object
 </dd>
-</dl><a NAME="UserInterface.__customViewer" ID="UserInterface.__customViewer"></a>
+</dl><a NAME="UserInterface.__createUnitTestDialog" ID="UserInterface.__createUnitTestDialog"></a>
+<h4>UserInterface.__createUnitTestDialog</h4>
+<b>__createUnitTestDialog</b>(<i></i>)
+<p>
+        Private slot to generate the unit test dialog on demand.
+</p><a NAME="UserInterface.__customViewer" ID="UserInterface.__customViewer"></a>
 <h4>UserInterface.__customViewer</h4>
 <b>__customViewer</b>(<i>home=None</i>)
 <p>
@@ -2161,6 +2178,24 @@ flag indicating that the current profile should
 <dd>
 reference to the show event (QShowEvent)
 </dd>
+</dl><a NAME="UserInterface.showFindFileByNameDialog" ID="UserInterface.showFindFileByNameDialog"></a>
+<h4>UserInterface.showFindFileByNameDialog</h4>
+<b>showFindFileByNameDialog</b>(<i></i>)
+<p>
+        Public slot to show the Find File by Name dialog.
+</p><a NAME="UserInterface.showFindFilesDialog" ID="UserInterface.showFindFilesDialog"></a>
+<h4>UserInterface.showFindFilesDialog</h4>
+<b>showFindFilesDialog</b>(<i>txt="", searchDir=""</i>)
+<p>
+        Public slot to show the Find In Files dialog.
+</p><dl>
+<dt><i>txt=</i></dt>
+<dd>
+text to search for (string)
+</dd><dt><i>searchDir=</i></dt>
+<dd>
+directory to search in (string)
+</dd>
 </dl><a NAME="UserInterface.showLogTab" ID="UserInterface.showLogTab"></a>
 <h4>UserInterface.showLogTab</h4>
 <b>showLogTab</b>(<i>tabname</i>)
@@ -2180,6 +2215,19 @@ string naming the tab to be shown (string)
 <dt><i>pageName</i></dt>
 <dd>
 name of the configuration page to show (string)
+</dd>
+</dl><a NAME="UserInterface.showReplaceFilesDialog" ID="UserInterface.showReplaceFilesDialog"></a>
+<h4>UserInterface.showReplaceFilesDialog</h4>
+<b>showReplaceFilesDialog</b>(<i>txt="", searchDir=""</i>)
+<p>
+        Public slot to show the Find & Replace In Files dialog.
+</p><dl>
+<dt><i>txt=</i></dt>
+<dd>
+text to search for (string)
+</dd><dt><i>searchDir=</i></dt>
+<dd>
+directory to search in (string)
 </dd>
 </dl><a NAME="UserInterface.unregisterToolbar" ID="UserInterface.unregisterToolbar"></a>
 <h4>UserInterface.unregisterToolbar</h4>

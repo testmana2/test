@@ -4192,9 +4192,7 @@ class ViewManager(QObject):
         """
         Private method to handle the search for file action.
         """
-        self.ui.findFileNameDialog.show()
-        self.ui.findFileNameDialog.raise_()
-        self.ui.findFileNameDialog.activateWindow()
+        self.ui.showFindFileByNameDialog()
     
     def appFocusChanged(self, old, now):
         """
@@ -4692,17 +4690,13 @@ class ViewManager(QObject):
         """
         Private method to handle the search in files action.
         """
-        self.ui.findFilesDialog.show(self.textForFind())
-        self.ui.findFilesDialog.raise_()
-        self.ui.findFilesDialog.activateWindow()
+        self.ui.showFindFilesDialog(self.textForFind())
         
     def __replaceFiles(self):
         """
         Private method to handle the replace in files action.
         """
-        self.ui.replaceFilesDialog.show(self.textForFind())
-        self.ui.replaceFilesDialog.raise_()
-        self.ui.replaceFilesDialog.activateWindow()
+        self.ui.showReplaceFilesDialog(self.textForFind())
     
     ##################################################################
     ## Below are the action methods for the view menu

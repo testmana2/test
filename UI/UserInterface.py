@@ -275,13 +275,15 @@ class UserInterface(QMainWindow):
         self.stdout = Redirector(False)
         self.stderr = Redirector(True)
         
-        # Genrae the programs dialog
-        logging.debug("Creating Programs Dialog...")
-        self.programsDialog = ProgramsDialog(self)
-        
-        # Generate the shortcuts configuration dialog
-        logging.debug("Creating Shortcuts Dialog...")
-        self.shortcutsDialog = ShortcutsDialog(self, 'Shortcuts')
+        # set a few dialog members for dialogs created on demand
+        self.programsDialog = None
+        self.shortcutsDialog = None
+        self.unittestDialog = None
+        self.findFileNameDialog = None
+        self.diffDlg = None
+        self.compareDlg = None
+        self.findFilesDialog = None
+        self.replaceFilesDialog = None
         
         # now setup the connections
         splash.showMessage(self.trUtf8("Setting up connections..."))
@@ -448,30 +450,6 @@ class UserInterface(QMainWindow):
         
         self.numbersViewer.insertNumber.connect(self.viewmanager.insertNumber)
         
-        # Generate the unittest dialog
-        self.unittestDialog = UnittestDialog(None, self.debuggerUI.debugServer, self,
-                                             fromEric=True)
-        self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
-        
-        # Generate the find in project files dialog
-        self.findFilesDialog = FindFileDialog(self.project)
-        self.findFilesDialog.sourceFile.connect(
-            self.viewmanager.openSourceFile)
-        self.findFilesDialog.designerFile.connect(self.__designer)
-        self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
-        self.replaceFilesDialog.sourceFile.connect(
-            self.viewmanager.openSourceFile)
-        self.replaceFilesDialog.designerFile.connect(self.__designer)
-        
-        # generate the find file dialog
-        self.findFileNameDialog = FindFileNameDialog(self.project)
-        self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
-        self.findFileNameDialog.designerFile.connect(self.__designer)
-        
-        # generate the diff dialogs
-        self.diffDlg = DiffDialog()
-        self.compareDlg = CompareDialog()
-        
         # create the toolbar manager object
         self.toolbarManager = E5ToolBarManager(self, self)
         self.toolbarManager.setMainWindow(self)
@@ -497,8 +475,6 @@ class UserInterface(QMainWindow):
         e5App().registerObject("TaskViewer", self.taskViewer)
         e5App().registerObject("TemplateViewer", self.templateViewer)
         e5App().registerObject("Shell", self.shell)
-        e5App().registerObject("FindFilesDialog", self.findFilesDialog)
-        e5App().registerObject("ReplaceFilesDialog", self.replaceFilesDialog)
         e5App().registerObject("DummyHelpViewer", self.dummyHelpViewer)
         e5App().registerObject("PluginManager", self.pluginManager)
         e5App().registerObject("ToolbarManager", self.toolbarManager)
@@ -2914,6 +2890,8 @@ class UserInterface(QMainWindow):
         """
         aw = self.viewmanager.activeWindow()
         fn = aw and aw.getFileName() or None
+        if self.diffDlg is None:
+            self.diffDlg = DiffDialog()
         self.diffDlg.show(fn)
         
     def __compareFilesSbs(self):
@@ -2922,6 +2900,8 @@ class UserInterface(QMainWindow):
         """
         aw = self.viewmanager.activeWindow()
         fn = aw and aw.getFileName() or None
+        if self.compareDlg is None:
+            self.compareDlg = CompareDialog()
         self.compareDlg.show(fn)
         
     def __openMiniEditor(self):
@@ -4005,10 +3985,20 @@ class UserInterface(QMainWindow):
         if dlg.exec_() == QDialog.Accepted:
             self.toolGroups, self.currentToolGroup = dlg.getToolGroups()
         
+    def __createUnitTestDialog(self):
+        """
+        Private slot to generate the unit test dialog on demand.
+        """
+        if self.unittestDialog is None:
+            self.unittestDialog = UnittestDialog(
+                None, self.debuggerUI.debugServer, self, fromEric=True)
+            self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
+    
     def __unittest(self):
         """
         Private slot for displaying the unittest dialog.
         """
+        self.__createUnitTestDialog()
         self.unittestDialog.show()
         self.unittestDialog.raise_()
 
@@ -4027,6 +4017,7 @@ class UserInterface(QMainWindow):
             else:
                 prog = fn
         
+        self.__createUnitTestDialog()
         self.unittestDialog.insertProg(prog)
         self.unittestDialog.show()
         self.unittestDialog.raise_()
@@ -4050,6 +4041,7 @@ class UserInterface(QMainWindow):
                     " current project. Aborting"))
             return
         
+        self.__createUnitTestDialog()
         self.unittestDialog.insertProg(prog)
         self.unittestDialog.show()
         self.unittestDialog.raise_()
@@ -4059,6 +4051,7 @@ class UserInterface(QMainWindow):
         """
         Private slot to display the unittest dialog and rerun the last test.
         """
+        self.__createUnitTestDialog()
         self.unittestDialog.show()
         self.unittestDialog.raise_()
         self.unittestDialog.on_startButton_clicked()
@@ -5048,6 +5041,8 @@ class UserInterface(QMainWindow):
         """
         Private slot to display a dialog show a list of external tools used by eric5.
         """
+        if self.programsDialog is None:
+            self.programsDialog = ProgramsDialog(self)
         self.programsDialog.show()
         
     def __configViewProfiles(self):
@@ -5076,6 +5071,8 @@ class UserInterface(QMainWindow):
         """
         Private slot to configure the keyboard shortcuts.
         """
+        if self.shortcutsDialog is None:
+            self.shortcutsDialog = ShortcutsDialog(self, 'Shortcuts')
         self.shortcutsDialog.populate()
         self.shortcutsDialog.show()
         
@@ -5289,6 +5286,54 @@ class UserInterface(QMainWindow):
                 self.trUtf8("Read session"),
                 self.trUtf8("<p>The session file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
+    
+    def showFindFileByNameDialog(self):
+        """
+        Public slot to show the Find File by Name dialog.
+        """
+        if self.findFileNameDialog is None:
+            self.findFileNameDialog = FindFileNameDialog(self.project)
+            self.findFileNameDialog.sourceFile.connect(self.viewmanager.openSourceFile)
+            self.findFileNameDialog.designerFile.connect(self.__designer)
+        self.findFileNameDialog.show()
+        self.findFileNameDialog.raise_()
+        self.findFileNameDialog.activateWindow()
+    
+    def showFindFilesDialog(self, txt="", searchDir=""):
+        """
+        Public slot to show the Find In Files dialog.
+        
+        @keyparam txt text to search for (string)
+        @keyparam searchDir directory to search in (string)
+        """
+        if self.findFilesDialog is None:
+            self.findFilesDialog = FindFileDialog(self.project)
+            self.findFilesDialog.sourceFile.connect(
+                self.viewmanager.openSourceFile)
+            self.findFilesDialog.designerFile.connect(self.__designer)
+        if searchDir:
+            self.findFilesDialog.setSearchDirectory(searchDir)
+        self.findFilesDialog.show(txt)
+        self.findFilesDialog.raise_()
+        self.findFilesDialog.activateWindow()
+    
+    def showReplaceFilesDialog(self, txt="", searchDir=""):
+        """
+        Public slot to show the Find & Replace In Files dialog.
+        
+        @keyparam txt text to search for (string)
+        @keyparam searchDir directory to search in (string)
+        """
+        if self.replaceFilesDialog is None:
+            self.replaceFilesDialog = FindFileDialog(self.project, replaceMode=True)
+            self.replaceFilesDialog.sourceFile.connect(
+                self.viewmanager.openSourceFile)
+            self.replaceFilesDialog.designerFile.connect(self.__designer)
+        if searchDir:
+            self.replaceFilesDialog.setSearchDirectory(searchDir)
+        self.replaceFilesDialog.show(txt)
+        self.replaceFilesDialog.raise_()
+        self.replaceFilesDialog.activateWindow()
     
     ##########################################################
     ## Below are slots to handle StdOut and StdErr
