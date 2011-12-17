@@ -37,8 +37,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     Class implementing the UI to the pyunit package.
     
     @signal unittestFile(str, int, int) emitted to show the source of a unittest file
+    @signal unittestStopped() emitted after a unit test was run
     """
     unittestFile = pyqtSignal(str, int, int)
+    unittestStopped = pyqtSignal()
     
     def __init__(self, prog=None, dbs=None, ui=None, fromEric=False, parent=None,
                  name=None):
@@ -65,6 +67,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.startButton.setWhatsThis(self.trUtf8(
             """<b>Start Test</b>"""
             """<p>This button starts the selected testsuite.</p>"""))
+        self.startFailedButton = self.buttonBox.addButton(
+            self.trUtf8("Rerun Failed"), QDialogButtonBox.ActionRole)
+        self.startFailedButton.setToolTip(
+            self.trUtf8("Reruns failed tests of the selected testsuite"))
+        self.startFailedButton.setWhatsThis(self.trUtf8(
+            """<b>Rerun Failed</b>"""
+            """<p>This button reruns all failed tests of the selected testsuite.</p>"""))
         self.stopButton = self.buttonBox.addButton(
             self.trUtf8("Stop"), QDialogButtonBox.ActionRole)
         self.stopButton.setToolTip(self.trUtf8("Stop the running unittest"))
@@ -73,6 +82,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             """<p>This button stops a running unittest.</p>"""))
         self.stopButton.setEnabled(False)
         self.startButton.setDefault(True)
+        self.startFailedButton.setEnabled(False)
         
         self.dbs = dbs
         self.__fromEric = fromEric
@@ -103,6 +113,8 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.trUtf8("^Failure: "),
             self.trUtf8("^Error: "),
         ]
+        
+        self.__failedTests = []
         
         # now connect the debug server signals if called from the eric5 IDE
         if self.dbs:
@@ -200,7 +212,10 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         """
         if self.dbs:
             exts = self.dbs.getExtensions("Python2")
-            if txt.endswith(exts):
+            flags = Utilities.extractFlagsFromFile(txt)
+            if txt.endswith(exts) or \
+               ("FileType" in flags and
+                flags["FileType"] in ["Python", "Python2"]):
                 self.coverageCheckBox.setChecked(False)
                 self.coverageCheckBox.setEnabled(False)
                 self.localCheckBox.setChecked(False)
@@ -220,11 +235,15 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.on_startButton_clicked()
         elif button == self.stopButton:
             self.on_stopButton_clicked()
+        elif button == self.startFailedButton:
+            self.on_startButton_clicked(failedOnly=True)
         
     @pyqtSlot()
-    def on_startButton_clicked(self):
+    def on_startButton_clicked(self, failedOnly=False):
         """
         Public slot to start the test.
+        
+        @keyparam failedOnly flag indicating to run only failed tests (boolean)
         """
         if self.running:
             return
@@ -266,7 +285,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                     clientType = "Python2"
                 else:
                     clientType = ""
+            if failedOnly and self.__failedTests:
+                failed = [t.split(".", 1)[1] for t in self.__failedTests]
+            else:
+                failed = []
+            self.__failedTests = []
             self.dbs.remoteUTPrepare(prog, self.testName, testFunctionName,
+                failed,
                 self.coverageCheckBox.isChecked(), mainScript,
                 self.coverageEraseCheckBox.isChecked(), clientType=clientType)
         else:
@@ -285,8 +310,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             try:
                 module = __import__(self.testName)
                 try:
-                    test = unittest.defaultTestLoader.loadTestsFromName(
-                        testFunctionName, module)
+                    if failedOnly and self.__failedTests:
+                        test = unittest.defaultTestLoader.loadTestsFromNames(
+                            [t.split(".", 1)[1] for t in self.__failedTests],
+                            module)
+                    else:
+                        test = unittest.defaultTestLoader.loadTestsFromName(
+                            testFunctionName, module)
                 except AttributeError:
                     test = unittest.defaultTestLoader.loadTestsFromModule(module)
             except:
@@ -318,6 +348,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             
             self.testResult = QtTestResult(self)
             self.totalTests = test.countTestCases()
+            self.__failedTests = []
             self.__setRunningMode()
             if cover:
                 cover.start()
@@ -420,8 +451,14 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.running = False
         
         self.startButton.setEnabled(True)
+        self.startFailedButton.setEnabled(bool(self.__failedTests))
         self.stopButton.setEnabled(False)
-        self.startButton.setDefault(True)
+        if self.__failedTests:
+            self.startFailedButton.setDefault(True)
+            self.startButton.setDefault(False)
+        else:
+            self.startFailedButton.setDefault(False)
+            self.startButton.setDefault(True)
         if self.runCount == 1:
             self.sbLabel.setText(self.trUtf8("Ran {0} test in {1:.3f}s")
                 .format(self.runCount, self.timeTaken))
@@ -429,39 +466,46 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.sbLabel.setText(self.trUtf8("Ran {0} tests in {1:.3f}s")
                 .format(self.runCount, self.timeTaken))
         self.progressLed.off()
+        
+        self.unittestStopped.emit()
 
-    def testFailed(self, test, exc):
+    def testFailed(self, test, exc, id):
         """
         Public method called if a test fails.
         
-        @param test name of the failed test (string)
+        @param test name of the test (string)
         @param exc string representation of the exception (string)
+        @param id id of the test (string)
         """
         self.failCount += 1
         self.progressCounterFailureCount.setText(str(self.failCount))
         itm = QListWidgetItem(self.trUtf8("Failure: {0}").format(test))
         itm.setData(Qt.UserRole, (test, exc))
         self.errorsListWidget.insertItem(0, itm)
+        self.__failedTests.append(id)
         
-    def testErrored(self, test, exc):
+    def testErrored(self, test, exc, id):
         """
         Public method called if a test errors.
         
-        @param test name of the failed test (string)
+        @param test name of the test (string)
         @param exc string representation of the exception (string)
+        @param id id of the test (string)
         """
         self.errorCount += 1
         self.progressCounterErrorCount.setText(str(self.errorCount))
         itm = QListWidgetItem(self.trUtf8("Error: {0}").format(test))
         itm.setData(Qt.UserRole, (test, exc))
         self.errorsListWidget.insertItem(0, itm)
+        self.__failedTests.append(id)
         
-    def testSkipped(self, test, reason):
+    def testSkipped(self, test, reason, id):
         """
         Public method called if a test was skipped.
         
-        @param test name of the failed test (string)
+        @param test name of the test (string)
         @param reason reason for skipping the test (string)
+        @param id id of the test (string)
         """
         self.skippedCount += 1
         self.progressCounterSkippedCount.setText(str(self.skippedCount))
@@ -469,12 +513,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         itm.setForeground(Qt.blue)
         self.testsListWidget.insertItem(1, itm)
         
-    def testFailedExpected(self, test, exc):
+    def testFailedExpected(self, test, exc, id):
         """
-        Public method called if a test fails expected.
+        Public method called if a test fails expectedly.
         
-        @param test name of the failed test (string)
+        @param test name of the test (string)
         @param exc string representation of the exception (string)
+        @param id id of the test (string)
         """
         self.expectedFailureCount += 1
         self.progressCounterExpectedFailureCount.setText(str(self.expectedFailureCount))
@@ -482,11 +527,12 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         itm.setForeground(Qt.blue)
         self.testsListWidget.insertItem(1, itm)
         
-    def testSucceededUnexpected(self, test):
+    def testSucceededUnexpected(self, test, id):
         """
         Public method called if a test succeeds unexpectedly.
         
-        @param test name of the failed test (string)
+        @param test name of the test (string)
+        @param id id of the test (string)
         """
         self.unexpectedSuccessCount += 1
         self.progressCounterUnexpectedSuccessCount.setText(
@@ -586,6 +632,14 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if fmatch:
             fn, ln = fmatch.group(1, 2)
             self.unittestFile.emit(fn, int(ln), 1)
+    
+    def hasFailedTests(self):
+        """
+        Public method to check, if there are failed tests from the last run.
+        
+        @return flag indicating the presence of failed tests (boolean)
+        """
+        return bool(self.__failedTests)
 
 
 class QtTestResult(unittest.TestResult):
@@ -612,7 +666,7 @@ class QtTestResult(unittest.TestResult):
         """
         super().addFailure(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.testFailed(str(test), tracebackLines)
+        self.parent.testFailed(str(test), tracebackLines, test.id())
         
     def addError(self, test, err):
         """
@@ -623,7 +677,7 @@ class QtTestResult(unittest.TestResult):
         """
         super().addError(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.testErrored(str(test), tracebackLines)
+        self.parent.testErrored(str(test), tracebackLines, test.id())
         
     def addSkip(self, test, reason):
         """
@@ -633,7 +687,7 @@ class QtTestResult(unittest.TestResult):
         @param reason reason for skipping the test (string)
         """
         super().addSkip(test, reason)
-        self.parent.testSkipped(str(test), reason)
+        self.parent.testSkipped(str(test), reason, test.id())
         
     def addExpectedFailure(self, test, err):
         """
@@ -644,7 +698,7 @@ class QtTestResult(unittest.TestResult):
         """
         super().addExpectedFailure(test, err)
         tracebackLines = self._exc_info_to_string(err, test)
-        self.parent.testFailedExpected(str(test), tracebackLines)
+        self.parent.testFailedExpected(str(test), tracebackLines, test.id())
         
     def addUnexpectedSuccess(self, test):
         """
@@ -653,7 +707,7 @@ class QtTestResult(unittest.TestResult):
         @param test reference to the test object
         """
         super().addUnexpectedSuccess(test)
-        self.parent.testSucceededUnexpected(str(test))
+        self.parent.testSucceededUnexpected(str(test), test.id())
         
     def startTest(self, test):
         """

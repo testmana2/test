@@ -152,23 +152,23 @@ emitted after the client has started
 </dd><dt>utStopTest()</dt>
 <dd>
 emitted after the client has finished a test
-</dd><dt>utTestErrored(testname, exc_info)</dt>
+</dd><dt>utTestErrored(testname, exc_info, id)</dt>
 <dd>
 emitted after the client reported
             an errored test
-</dd><dt>utTestFailed(testname, exc_info)</dt>
+</dd><dt>utTestFailed(testname, exc_info, id)</dt>
 <dd>
 emitted after the client reported
             a failed test
-</dd><dt>utTestFailedExpected(testname, exc_info)</dt>
+</dd><dt>utTestFailedExpected(testname, exc_info, id)</dt>
 <dd>
 emitted after the client reported
             an expected test failure
-</dd><dt>utTestSkipped(testname, reason)</dt>
+</dd><dt>utTestSkipped(testname, reason, id)</dt>
 <dd>
 emitted after the client reported
             a skipped test
-</dd><dt>utTestSucceededUnexpected(testname)</dt>
+</dd><dt>utTestSucceededUnexpected(testname, id)</dt>
 <dd>
 emitted after the client reported
             an unexpected test success
@@ -831,7 +831,7 @@ short description of the test (string)
         Public method to process the client stop test info.
 </p><a NAME="DebugServer.clientUtTestErrored" ID="DebugServer.clientUtTestErrored"></a>
 <h4>DebugServer.clientUtTestErrored</h4>
-<b>clientUtTestErrored</b>(<i>testname, traceback</i>)
+<b>clientUtTestErrored</b>(<i>testname, traceback, id</i>)
 <p>
         Public method to process the client test errored info.
 </p><dl>
@@ -841,10 +841,13 @@ name of the test (string)
 </dd><dt><i>traceback</i></dt>
 <dd>
 lines of traceback info (list of strings)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="DebugServer.clientUtTestFailed" ID="DebugServer.clientUtTestFailed"></a>
 <h4>DebugServer.clientUtTestFailed</h4>
-<b>clientUtTestFailed</b>(<i>testname, traceback</i>)
+<b>clientUtTestFailed</b>(<i>testname, traceback, id</i>)
 <p>
         Public method to process the client test failed info.
 </p><dl>
@@ -854,10 +857,13 @@ name of the test (string)
 </dd><dt><i>traceback</i></dt>
 <dd>
 lines of traceback info (list of strings)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="DebugServer.clientUtTestFailedExpected" ID="DebugServer.clientUtTestFailedExpected"></a>
 <h4>DebugServer.clientUtTestFailedExpected</h4>
-<b>clientUtTestFailedExpected</b>(<i>testname, traceback</i>)
+<b>clientUtTestFailedExpected</b>(<i>testname, traceback, id</i>)
 <p>
         Public method to process the client test failed expected info.
 </p><dl>
@@ -867,10 +873,13 @@ name of the test (string)
 </dd><dt><i>traceback</i></dt>
 <dd>
 lines of traceback info (list of strings)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="DebugServer.clientUtTestSkipped" ID="DebugServer.clientUtTestSkipped"></a>
 <h4>DebugServer.clientUtTestSkipped</h4>
-<b>clientUtTestSkipped</b>(<i>testname, reason</i>)
+<b>clientUtTestSkipped</b>(<i>testname, reason, id</i>)
 <p>
         Public method to process the client test skipped info.
 </p><dl>
@@ -880,16 +889,22 @@ name of the test (string)
 </dd><dt><i>reason</i></dt>
 <dd>
 reason for skipping the test (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="DebugServer.clientUtTestSucceededUnexpected" ID="DebugServer.clientUtTestSucceededUnexpected"></a>
 <h4>DebugServer.clientUtTestSucceededUnexpected</h4>
-<b>clientUtTestSucceededUnexpected</b>(<i>testname</i>)
+<b>clientUtTestSucceededUnexpected</b>(<i>testname, id</i>)
 <p>
         Public method to process the client test succeeded unexpected info.
 </p><dl>
 <dt><i>testname</i></dt>
 <dd>
 name of the test (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="DebugServer.getBreakPointModel" ID="DebugServer.getBreakPointModel"></a>
 <h4>DebugServer.getBreakPointModel</h4>
@@ -1348,7 +1363,7 @@ the Python statement to execute (string). It
         Public method to request the list of threads from the client.
 </p><a NAME="DebugServer.remoteUTPrepare" ID="DebugServer.remoteUTPrepare"></a>
 <h4>DebugServer.remoteUTPrepare</h4>
-<b>remoteUTPrepare</b>(<i>fn, tn, tfn, cov, covname, coverase, clientType=""</i>)
+<b>remoteUTPrepare</b>(<i>fn, tn, tfn, failed, cov, covname, coverase, clientType=""</i>)
 <p>
         Public method to prepare a new unittest run.
 </p><dl>
@@ -1361,9 +1376,13 @@ the testname to load (string)
 </dd><dt><i>tfn</i></dt>
 <dd>
 the test function name to load tests from (string)
+</dd><dt><i>failed</i></dt>
+<dd>
+list of failed test, if only failed test should be run
+                (list of strings)
 </dd><dt><i>cov</i></dt>
 <dd>
-flag indicating collection of coverage data is requested
+flag indicating collection of coverage data is requested (boolean)
 </dd><dt><i>covname</i></dt>
 <dd>
 filename to be used to assemble the coverage caches

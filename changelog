@@ -2,11 +2,11 @@ Change Log
 ----------
 Version 5.2-snapshot-2011mmdd:
 - bug fixes
-- enhancements of the debugger
+- Debugger
   -- extended debugger to show class variables
   -- extended debugger to ignore exceptions occuring in lines having a
      '__IGNORE_EXCEPTION__' line flag set
-- enhancements of the editor
+- Editor
   -- added an action to preview the file in the eric web browser. File name
      extension to support this feature can be configured on the
      Editor->Filehandling page
@@ -16,14 +16,14 @@ Version 5.2-snapshot-2011mmdd:
   -- added a syntax check while typing function
   -- added source navigation function for Python 2, Python 3 and Ruby sources
   -- added support for QScintilla 2.6 (and newer)
-- enhancements of the cooperation functions
+- Cooperation Functions
   -- added code to the cooperation functions to support IPv6
-- enhancements of the source browser
+- Source Browser
   -- show class attributes, class methods and static methods with different icons
   -- added context menu for attributes
-- enhancements of the source documentor
+- Source Documentor
   -- introduced separate sections for class methods and static methods
-- enhancements of the version control system interfaces
+- Version Control System Interfaces
   -- all
      --- made "Show Log" behave like "Show Limited Log" and removed the later
      --- added context menu actions to select/deselect all commitable items
@@ -36,21 +36,23 @@ Version 5.2-snapshot-2011mmdd:
      --- added support for importing patches
      --- added support for exporting patches
      --- added configuration option to create backup files when reverting changes
-- enhancements of the web browser
+- Web Browser
   -- added the "Do Not Track" feature
   -- added code to indicate invalid SSL certificates in the URL entry and the SSL
      info dialog
   -- added a dialog to show RSS feeds
   -- added a dialog to show some information about the current site
-- enhancements of the tools
+- Tools
   -- API files generator
      --- added code to write base class information to be used by the
          eric assistant plug-in
-- enhancements of the plug-in manager tools
+- Plug-in Manager Tools
   -- added code to download and install plug-ins
-- enhancements of the tasks manager
+- Tasks Manager
   -- made tasks manager forget about global file tasks when file is closed
      (configurable via configuration dialog)
+- Unit Test
+  -- extended the unit test module to allow to rerun only failed tests of the last
 - other enhancements
   -- added an action to launch another instantiation of eric5
 

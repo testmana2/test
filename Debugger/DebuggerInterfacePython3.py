@@ -703,23 +703,26 @@ class DebuggerInterfacePython3(QObject):
         """
         self.__sendCommand("{0}{1}\n".format(DebugProtocol.RequestCompletion, text))
     
-    def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase):
+    def remoteUTPrepare(self, fn, tn, tfn, failed, cov, covname, coverase):
         """
         Public method to prepare a new unittest run.
         
         @param fn the filename to load (string)
         @param tn the testname to load (string)
         @param tfn the test function name to load tests from (string)
-        @param cov flag indicating collection of coverage data is requested
+        @param failed list of failed test, if only failed test should be run
+                (list of strings)
+        @param cov flag indicating collection of coverage data is requested (boolean)
         @param covname filename to be used to assemble the coverage caches
-                filename
-        @param coverase flag indicating erasure of coverage data is requested
+                filename (string)
+        @param coverase flag indicating erasure of coverage data is requested (boolean)
         """
         self.__scriptName = os.path.abspath(fn)
         
         fn = self.translate(os.path.abspath(fn), False)
-        self.__sendCommand('{0}{1}|{2}|{3}|{4:d}|{5}|{6:d}\n'.format(
-            DebugProtocol.RequestUTPrepare, fn, tn, tfn, cov, covname, coverase))
+        self.__sendCommand('{0}{1}|{2}|{3}|{4}|{5:d}|{6}|{7:d}\n'.format(
+            DebugProtocol.RequestUTPrepare, fn, tn, tfn, str(failed),
+            cov, covname, coverase))
     
     def remoteUTRun(self):
         """
@@ -945,28 +948,28 @@ class DebuggerInterfacePython3(QObject):
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestFailed:
-                    testname, traceback = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestFailed(testname, traceback)
+                    testname, traceback, id = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestFailed(testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestErrored:
-                    testname, traceback = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestErrored(testname, traceback)
+                    testname, traceback, id = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestErrored(testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestSkipped:
-                    testname, reason = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestSkipped(testname, reason)
+                    testname, reason, id = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestSkipped(testname, reason, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestFailedExpected:
-                    testname, traceback = eval(line[eoc:-1])
-                    self.debugServer.clientUtTestFailedExpected(testname, traceback)
+                    testname, traceback, id = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestFailedExpected(testname, traceback, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTTestSucceededUnexpected:
-                    testname = line[eoc:-1]
-                    self.debugServer.clientUtTestSucceededUnexpected(testname)
+                    testname, id = eval(line[eoc:-1])
+                    self.debugServer.clientUtTestSucceededUnexpected(testname, id)
                     continue
                 
                 if resp == DebugProtocol.ResponseUTFinished:

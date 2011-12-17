@@ -779,9 +779,10 @@ class DebugClientBase(object):
                 return
             
             if cmd == DebugProtocol.RequestUTPrepare:
-                fn, tn, tfn, cov, covname, erase = arg.split('|')
+                fn, tn, tfn, failed, cov, covname, erase = arg.split('|')
                 sys.path.insert(0, os.path.dirname(os.path.abspath(fn)))
                 os.chdir(sys.path[0])
+                failed = eval(failed)
 
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
@@ -791,8 +792,12 @@ class DebugClientBase(object):
                     import unittest
                     utModule = imp.load_source(tn, fn)
                     try:
-                        self.test = unittest.defaultTestLoader\
-                                    .loadTestsFromName(tfn, utModule)
+                        if failed:
+                            self.test = unittest.defaultTestLoader\
+                                        .loadTestsFromNames(failed, utModule)
+                        else:
+                            self.test = unittest.defaultTestLoader\
+                                        .loadTestsFromName(tfn, utModule)
                     except AttributeError:
                         self.test = unittest.defaultTestLoader\
                                     .loadTestsFromModule(utModule)

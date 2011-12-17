@@ -1281,6 +1281,7 @@
       <keyword name="UnittestDialog.__setRunningMode" id="UnittestDialog.__setRunningMode" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__setRunningMode" />
       <keyword name="UnittestDialog.__setStoppedMode" id="UnittestDialog.__setStoppedMode" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__setStoppedMode" />
       <keyword name="UnittestDialog.__showSource" id="UnittestDialog.__showSource" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__showSource" />
+      <keyword name="UnittestDialog.hasFailedTests" id="UnittestDialog.hasFailedTests" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.hasFailedTests" />
       <keyword name="UnittestDialog.insertProg" id="UnittestDialog.insertProg" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertProg" />
       <keyword name="UnittestDialog.insertTestName" id="UnittestDialog.insertTestName" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertTestName" />
       <keyword name="UnittestDialog.keyPressEvent" id="UnittestDialog.keyPressEvent" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.keyPressEvent" />
@@ -4346,8 +4347,10 @@
       <keyword name="UserInterface.__toolsConfiguration" id="UserInterface.__toolsConfiguration" ref="eric5.UI.UserInterface.html#UserInterface.__toolsConfiguration" />
       <keyword name="UserInterface.__unittest" id="UserInterface.__unittest" ref="eric5.UI.UserInterface.html#UserInterface.__unittest" />
       <keyword name="UserInterface.__unittestProject" id="UserInterface.__unittestProject" ref="eric5.UI.UserInterface.html#UserInterface.__unittestProject" />
+      <keyword name="UserInterface.__unittestRerunFailed" id="UserInterface.__unittestRerunFailed" ref="eric5.UI.UserInterface.html#UserInterface.__unittestRerunFailed" />
       <keyword name="UserInterface.__unittestRestart" id="UserInterface.__unittestRestart" ref="eric5.UI.UserInterface.html#UserInterface.__unittestRestart" />
       <keyword name="UserInterface.__unittestScript" id="UserInterface.__unittestScript" ref="eric5.UI.UserInterface.html#UserInterface.__unittestScript" />
+      <keyword name="UserInterface.__unittestStopped" id="UserInterface.__unittestStopped" ref="eric5.UI.UserInterface.html#UserInterface.__unittestStopped" />
       <keyword name="UserInterface.__updateExternalToolsActions" id="UserInterface.__updateExternalToolsActions" ref="eric5.UI.UserInterface.html#UserInterface.__updateExternalToolsActions" />
       <keyword name="UserInterface.__updateVersionsUrls" id="UserInterface.__updateVersionsUrls" ref="eric5.UI.UserInterface.html#UserInterface.__updateVersionsUrls" />
       <keyword name="UserInterface.__versionCheckResult" id="UserInterface.__versionCheckResult" ref="eric5.UI.UserInterface.html#UserInterface.__versionCheckResult" />

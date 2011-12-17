@@ -605,11 +605,17 @@ QMainWindow
 <td><a href="#UserInterface.__unittestProject">__unittestProject</a></td>
 <td>Private slot for displaying the unittest dialog and run the current project.</td>
 </tr><tr>
+<td><a href="#UserInterface.__unittestRerunFailed">__unittestRerunFailed</a></td>
+<td>Private slot to display the unittest dialog and rerun all failed tests of the last run.</td>
+</tr><tr>
 <td><a href="#UserInterface.__unittestRestart">__unittestRestart</a></td>
-<td>Private slot to display the unittest dialog and rerun the last test.</td>
+<td>Private slot to display the unittest dialog and rerun the last unit test.</td>
 </tr><tr>
 <td><a href="#UserInterface.__unittestScript">__unittestScript</a></td>
 <td>Private slot for displaying the unittest dialog and run the current script.</td>
+</tr><tr>
+<td><a href="#UserInterface.__unittestStopped">__unittestStopped</a></td>
+<td>Private slot to handle the end of a unit test run.</td>
 </tr><tr>
 <td><a href="#UserInterface.__updateExternalToolsActions">__updateExternalToolsActions</a></td>
 <td>Private method to update the external tools actions for the current tool group.</td>
@@ -1757,11 +1763,17 @@ reference to the action that was triggered (QAction)
 <b>__unittestProject</b>(<i></i>)
 <p>
         Private slot for displaying the unittest dialog and run the current project.
+</p><a NAME="UserInterface.__unittestRerunFailed" ID="UserInterface.__unittestRerunFailed"></a>
+<h4>UserInterface.__unittestRerunFailed</h4>
+<b>__unittestRerunFailed</b>(<i></i>)
+<p>
+        Private slot to display the unittest dialog and rerun all failed tests
+        of the last run.
 </p><a NAME="UserInterface.__unittestRestart" ID="UserInterface.__unittestRestart"></a>
 <h4>UserInterface.__unittestRestart</h4>
 <b>__unittestRestart</b>(<i></i>)
 <p>
-        Private slot to display the unittest dialog and rerun the last test.
+        Private slot to display the unittest dialog and rerun the last unit test.
 </p><a NAME="UserInterface.__unittestScript" ID="UserInterface.__unittestScript"></a>
 <h4>UserInterface.__unittestScript</h4>
 <b>__unittestScript</b>(<i>prog=None</i>)
@@ -1772,7 +1784,12 @@ reference to the action that was triggered (QAction)
 <dd>
 the python program to be opened
 </dd>
-</dl><a NAME="UserInterface.__updateExternalToolsActions" ID="UserInterface.__updateExternalToolsActions"></a>
+</dl><a NAME="UserInterface.__unittestStopped" ID="UserInterface.__unittestStopped"></a>
+<h4>UserInterface.__unittestStopped</h4>
+<b>__unittestStopped</b>(<i></i>)
+<p>
+        Private slot to handle the end of a unit test run.
+</p><a NAME="UserInterface.__updateExternalToolsActions" ID="UserInterface.__updateExternalToolsActions"></a>
 <h4>UserInterface.__updateExternalToolsActions</h4>
 <b>__updateExternalToolsActions</b>(<i></i>)
 <p>

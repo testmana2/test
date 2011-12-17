@@ -199,6 +199,9 @@ Reference to the test object
 <dt>unittestFile(str, int, int)</dt>
 <dd>
 emitted to show the source of a unittest file
+</dd><dt>unittestStopped()</dt>
+<dd>
+emitted after a unit test was run
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -231,6 +234,9 @@ QWidget, Ui_UnittestDialog
 </tr><tr>
 <td><a href="#UnittestDialog.__showSource">__showSource</a></td>
 <td>Private slot to show the source of a traceback in an eric5 editor.</td>
+</tr><tr>
+<td><a href="#UnittestDialog.hasFailedTests">hasFailedTests</a></td>
+<td>Public method to check, if there are failed tests from the last run.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.insertProg">insertProg</a></td>
 <td>Public slot to insert the filename prog into the testsuiteComboBox object.</td>
@@ -269,7 +275,7 @@ QWidget, Ui_UnittestDialog
 <td>Public method called if a test fails.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.testFailedExpected">testFailedExpected</a></td>
-<td>Public method called if a test fails expected.</td>
+<td>Public method called if a test fails expectedly.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.testFinished">testFinished</a></td>
 <td>Public method called if a test has finished.</td>
@@ -359,7 +365,17 @@ colour to be shown (string)
 <b>__showSource</b>(<i></i>)
 <p>
         Private slot to show the source of a traceback in an eric5 editor.
-</p><a NAME="UnittestDialog.insertProg" ID="UnittestDialog.insertProg"></a>
+</p><a NAME="UnittestDialog.hasFailedTests" ID="UnittestDialog.hasFailedTests"></a>
+<h4>UnittestDialog.hasFailedTests</h4>
+<b>hasFailedTests</b>(<i></i>)
+<p>
+        Public method to check, if there are failed tests from the last run.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the presence of failed tests (boolean)
+</dd>
+</dl><a NAME="UnittestDialog.insertProg" ID="UnittestDialog.insertProg"></a>
 <h4>UnittestDialog.insertProg</h4>
 <b>insertProg</b>(<i>prog</i>)
 <p>
@@ -431,10 +447,15 @@ the listbox item that was double clicked
         Private slot to open a file dialog.
 </p><a NAME="UnittestDialog.on_startButton_clicked" ID="UnittestDialog.on_startButton_clicked"></a>
 <h4>UnittestDialog.on_startButton_clicked</h4>
-<b>on_startButton_clicked</b>(<i></i>)
+<b>on_startButton_clicked</b>(<i>failedOnly=False</i>)
 <p>
         Public slot to start the test.
-</p><a NAME="UnittestDialog.on_stopButton_clicked" ID="UnittestDialog.on_stopButton_clicked"></a>
+</p><dl>
+<dt><i>failedOnly=</i></dt>
+<dd>
+flag indicating to run only failed tests (boolean)
+</dd>
+</dl><a NAME="UnittestDialog.on_stopButton_clicked" ID="UnittestDialog.on_stopButton_clicked"></a>
 <h4>UnittestDialog.on_stopButton_clicked</h4>
 <b>on_stopButton_clicked</b>(<i></i>)
 <p>
@@ -451,42 +472,51 @@ name of the test file (string)
 </dd>
 </dl><a NAME="UnittestDialog.testErrored" ID="UnittestDialog.testErrored"></a>
 <h4>UnittestDialog.testErrored</h4>
-<b>testErrored</b>(<i>test, exc</i>)
+<b>testErrored</b>(<i>test, exc, id</i>)
 <p>
         Public method called if a test errors.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-name of the failed test (string)
+name of the test (string)
 </dd><dt><i>exc</i></dt>
 <dd>
 string representation of the exception (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="UnittestDialog.testFailed" ID="UnittestDialog.testFailed"></a>
 <h4>UnittestDialog.testFailed</h4>
-<b>testFailed</b>(<i>test, exc</i>)
+<b>testFailed</b>(<i>test, exc, id</i>)
 <p>
         Public method called if a test fails.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-name of the failed test (string)
+name of the test (string)
 </dd><dt><i>exc</i></dt>
 <dd>
 string representation of the exception (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="UnittestDialog.testFailedExpected" ID="UnittestDialog.testFailedExpected"></a>
 <h4>UnittestDialog.testFailedExpected</h4>
-<b>testFailedExpected</b>(<i>test, exc</i>)
+<b>testFailedExpected</b>(<i>test, exc, id</i>)
 <p>
-        Public method called if a test fails expected.
+        Public method called if a test fails expectedly.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-name of the failed test (string)
+name of the test (string)
 </dd><dt><i>exc</i></dt>
 <dd>
 string representation of the exception (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="UnittestDialog.testFinished" ID="UnittestDialog.testFinished"></a>
 <h4>UnittestDialog.testFinished</h4>
@@ -497,16 +527,19 @@ string representation of the exception (string)
         <b>Note</b>: It is also called if it has already failed or errored.
 </p><a NAME="UnittestDialog.testSkipped" ID="UnittestDialog.testSkipped"></a>
 <h4>UnittestDialog.testSkipped</h4>
-<b>testSkipped</b>(<i>test, reason</i>)
+<b>testSkipped</b>(<i>test, reason, id</i>)
 <p>
         Public method called if a test was skipped.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-name of the failed test (string)
+name of the test (string)
 </dd><dt><i>reason</i></dt>
 <dd>
 reason for skipping the test (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl><a NAME="UnittestDialog.testStarted" ID="UnittestDialog.testStarted"></a>
 <h4>UnittestDialog.testStarted</h4>
@@ -523,13 +556,16 @@ documentation of the started test (string)
 </dd>
 </dl><a NAME="UnittestDialog.testSucceededUnexpected" ID="UnittestDialog.testSucceededUnexpected"></a>
 <h4>UnittestDialog.testSucceededUnexpected</h4>
-<b>testSucceededUnexpected</b>(<i>test</i>)
+<b>testSucceededUnexpected</b>(<i>test, id</i>)
 <p>
         Public method called if a test succeeds unexpectedly.
 </p><dl>
 <dt><i>test</i></dt>
 <dd>
-name of the failed test (string)
+name of the test (string)
+</dd><dt><i>id</i></dt>
+<dd>
+id of the test (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

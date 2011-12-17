@@ -1764,6 +1764,20 @@ class UserInterface(QMainWindow):
         self.utRestartAct.setEnabled(False)
         self.actions.append(self.utRestartAct)
         
+        self.utRerunFailedAct = E5Action(self.trUtf8('Unittest Rerun Failed'),
+            UI.PixmapCache.getIcon("unittestRerunFailed.png"),
+            self.trUtf8('Rerun Failed Tests...'),
+            0, 0, self.utActGrp, 'unittest_rerun_failed')
+        self.utRerunFailedAct.setStatusTip(self.trUtf8(
+            'Rerun failed tests of the last run'))
+        self.utRerunFailedAct.setWhatsThis(self.trUtf8(
+            """<b>Rerun Failed Tests</b>"""
+            """<p>Rerun all tests that failed during the last unittest run.</p>"""
+        ))
+        self.utRerunFailedAct.triggered[()].connect(self.__unittestRerunFailed)
+        self.utRerunFailedAct.setEnabled(False)
+        self.actions.append(self.utRerunFailedAct)
+        
         self.utScriptAct = E5Action(self.trUtf8('Unittest Script'),
             UI.PixmapCache.getIcon("unittestScript.png"),
             self.trUtf8('Unittest &Script...'),
@@ -2268,6 +2282,8 @@ class UserInterface(QMainWindow):
         self.__menus["unittest"].addAction(self.utDialogAct)
         self.__menus["unittest"].addSeparator()
         self.__menus["unittest"].addAction(self.utRestartAct)
+        self.__menus["unittest"].addAction(self.utRerunFailedAct)
+        self.__menus["unittest"].addSeparator()
         self.__menus["unittest"].addAction(self.utScriptAct)
         self.__menus["unittest"].addAction(self.utProjectAct)
         
@@ -2431,6 +2447,8 @@ class UserInterface(QMainWindow):
         unittesttb.addAction(self.utDialogAct)
         unittesttb.addSeparator()
         unittesttb.addAction(self.utRestartAct)
+        unittesttb.addAction(self.utRerunFailedAct)
+        unittesttb.addSeparator()
         unittesttb.addAction(self.utScriptAct)
         unittesttb.addAction(self.utProjectAct)
         self.toolbarManager.addToolBar(unittesttb, unittesttb.windowTitle())
@@ -3993,6 +4011,14 @@ class UserInterface(QMainWindow):
             self.unittestDialog = UnittestDialog(
                 None, self.debuggerUI.debugServer, self, fromEric=True)
             self.unittestDialog.unittestFile.connect(self.viewmanager.setFileLine)
+            self.unittestDialog.unittestStopped.connect(self.__unittestStopped)
+    
+    def __unittestStopped(self):
+        """
+        Private slot to handle the end of a unit test run.
+        """
+        self.utRerunFailedAct.setEnabled(self.unittestDialog.hasFailedTests())
+        self.utRestartAct.setEnabled(True)
     
     def __unittest(self):
         """
@@ -4021,7 +4047,8 @@ class UserInterface(QMainWindow):
         self.unittestDialog.insertProg(prog)
         self.unittestDialog.show()
         self.unittestDialog.raise_()
-        self.utRestartAct.setEnabled(True)
+        self.utRestartAct.setEnabled(False)
+        self.utRerunFailedAct.setEnabled(False)
         
     def __unittestProject(self):
         """
@@ -4045,16 +4072,27 @@ class UserInterface(QMainWindow):
         self.unittestDialog.insertProg(prog)
         self.unittestDialog.show()
         self.unittestDialog.raise_()
-        self.utRestartAct.setEnabled(True)
+        self.utRestartAct.setEnabled(False)
+        self.utRerunFailedAct.setEnabled(False)
         
     def __unittestRestart(self):
         """
-        Private slot to display the unittest dialog and rerun the last test.
+        Private slot to display the unittest dialog and rerun the last unit test.
         """
         self.__createUnitTestDialog()
         self.unittestDialog.show()
         self.unittestDialog.raise_()
         self.unittestDialog.on_startButton_clicked()
+        
+    def __unittestRerunFailed(self):
+        """
+        Private slot to display the unittest dialog and rerun all failed tests
+        of the last run.
+        """
+        self.__createUnitTestDialog()
+        self.unittestDialog.show()
+        self.unittestDialog.raise_()
+        self.unittestDialog.on_startButton_clicked(failedOnly=True)
         
     def __designer(self, fn=None, version=0):
         """
@@ -5136,6 +5174,7 @@ class UserInterface(QMainWindow):
         self.utProjectAct.setEnabled(False)
         if not self.utEditorOpen:
             self.utRestartAct.setEnabled(False)
+            self.utRerunFailedAct.setEnabled(False)
         self.utProjectOpen = False
         
     def __programChange(self, fn):
@@ -5161,6 +5200,7 @@ class UserInterface(QMainWindow):
         self.utEditorOpen = False
         if not self.utProjectOpen:
             self.utRestartAct.setEnabled(False)
+            self.utRerunFailedAct.setEnabled(False)
         self.__setWindowCaption(editor="")
         
     def __editorOpened(self, fn):

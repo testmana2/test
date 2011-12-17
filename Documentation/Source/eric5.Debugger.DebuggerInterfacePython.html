@@ -645,7 +645,7 @@ the Python statement to execute (string). It
         Public method to request the list of threads from the client.
 </p><a NAME="DebuggerInterfacePython.remoteUTPrepare" ID="DebuggerInterfacePython.remoteUTPrepare"></a>
 <h4>DebuggerInterfacePython.remoteUTPrepare</h4>
-<b>remoteUTPrepare</b>(<i>fn, tn, tfn, cov, covname, coverase</i>)
+<b>remoteUTPrepare</b>(<i>fn, tn, tfn, failed, cov, covname, coverase</i>)
 <p>
         Public method to prepare a new unittest run.
 </p><dl>
@@ -658,16 +658,20 @@ the testname to load (string)
 </dd><dt><i>tfn</i></dt>
 <dd>
 the test function name to load tests from (string)
+</dd><dt><i>failed</i></dt>
+<dd>
+list of failed test, if only failed test should be run
+                (list of strings)
 </dd><dt><i>cov</i></dt>
 <dd>
-flag indicating collection of coverage data is requested
+flag indicating collection of coverage data is requested (boolean)
 </dd><dt><i>covname</i></dt>
 <dd>
 filename to be used to assemble the coverage caches
-                filename
+                filename (string)
 </dd><dt><i>coverase</i></dt>
 <dd>
-flag indicating erasure of coverage data is requested
+flag indicating erasure of coverage data is requested (boolean)
 </dd>
 </dl><a NAME="DebuggerInterfacePython.remoteUTRun" ID="DebuggerInterfacePython.remoteUTRun"></a>
 <h4>DebuggerInterfacePython.remoteUTRun</h4>

@@ -85,15 +85,15 @@ class DebugServer(QTcpServer):
     @signal utStartTest(testname, testdocu) emitted after the client has started
             a test
     @signal utStopTest() emitted after the client has finished a test
-    @signal utTestFailed(testname, exc_info) emitted after the client reported
+    @signal utTestFailed(testname, exc_info, id) emitted after the client reported
             a failed test
-    @signal utTestErrored(testname, exc_info) emitted after the client reported
+    @signal utTestErrored(testname, exc_info, id) emitted after the client reported
             an errored test
-    @signal utTestSkipped(testname, reason) emitted after the client reported
+    @signal utTestSkipped(testname, reason, id) emitted after the client reported
             a skipped test
-    @signal utTestFailedExpected(testname, exc_info) emitted after the client reported
+    @signal utTestFailedExpected(testname, exc_info, id) emitted after the client reported
             an expected test failure
-    @signal utTestSucceededUnexpected(testname) emitted after the client reported
+    @signal utTestSucceededUnexpected(testname, id) emitted after the client reported
             an unexpected test success
     """
     clientClearBreak = pyqtSignal(str, int)
@@ -122,11 +122,11 @@ class DebugServer(QTcpServer):
     utPrepared = pyqtSignal(int, str, str)
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
-    utTestFailed = pyqtSignal(str, str)
-    utTestErrored = pyqtSignal(str, str)
-    utTestSkipped = pyqtSignal(str, str)
-    utTestFailedExpected = pyqtSignal(str, str)
-    utTestSucceededUnexpected = pyqtSignal(str)
+    utTestFailed = pyqtSignal(str, str, str)
+    utTestErrored = pyqtSignal(str, str, str)
+    utTestSkipped = pyqtSignal(str, str, str)
+    utTestFailedExpected = pyqtSignal(str, str, str)
+    utTestSucceededUnexpected = pyqtSignal(str, str)
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
     
@@ -1014,14 +1014,16 @@ class DebugServer(QTcpServer):
         """
         self.debuggerInterface.remoteCompletion(text)
 
-    def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase, clientType=""):
+    def remoteUTPrepare(self, fn, tn, tfn, failed, cov, covname, coverase, clientType=""):
         """
         Public method to prepare a new unittest run.
         
         @param fn the filename to load (string)
         @param tn the testname to load (string)
         @param tfn the test function name to load tests from (string)
-        @param cov flag indicating collection of coverage data is requested
+        @param failed list of failed test, if only failed test should be run
+                (list of strings)
+        @param cov flag indicating collection of coverage data is requested (boolean)
         @param covname filename to be used to assemble the coverage caches
                 filename (string)
         @param coverase flag indicating erasure of coverage data is requested (boolean)
@@ -1037,7 +1039,8 @@ class DebugServer(QTcpServer):
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False)
         
-        self.debuggerInterface.remoteUTPrepare(fn, tn, tfn, cov, covname, coverase)
+        self.debuggerInterface.remoteUTPrepare(
+            fn, tn, tfn, failed, cov, covname, coverase)
         self.debugging = False
         self.running = True
         
@@ -1260,49 +1263,54 @@ class DebugServer(QTcpServer):
         """
         self.utStopTest.emit()
         
-    def clientUtTestFailed(self, testname, traceback):
+    def clientUtTestFailed(self, testname, traceback, id):
         """
         Public method to process the client test failed info.
         
         @param testname name of the test (string)
         @param traceback lines of traceback info (list of strings)
+        @param id id of the test (string)
         """
-        self.utTestFailed.emit(testname, traceback)
+        self.utTestFailed.emit(testname, traceback, id)
         
-    def clientUtTestErrored(self, testname, traceback):
+    def clientUtTestErrored(self, testname, traceback, id):
         """
         Public method to process the client test errored info.
         
         @param testname name of the test (string)
         @param traceback lines of traceback info (list of strings)
+        @param id id of the test (string)
         """
-        self.utTestErrored.emit(testname, traceback)
+        self.utTestErrored.emit(testname, traceback, id)
         
-    def clientUtTestSkipped(self, testname, reason):
+    def clientUtTestSkipped(self, testname, reason, id):
         """
         Public method to process the client test skipped info.
         
         @param testname name of the test (string)
         @param reason reason for skipping the test (string)
+        @param id id of the test (string)
         """
-        self.utTestSkipped.emit(testname, reason)
+        self.utTestSkipped.emit(testname, reason, id)
         
-    def clientUtTestFailedExpected(self, testname, traceback):
+    def clientUtTestFailedExpected(self, testname, traceback, id):
         """
         Public method to process the client test failed expected info.
         
         @param testname name of the test (string)
         @param traceback lines of traceback info (list of strings)
+        @param id id of the test (string)
         """
-        self.utTestFailedExpected.emit(testname, traceback)
+        self.utTestFailedExpected.emit(testname, traceback, id)
         
-    def clientUtTestSucceededUnexpected(self, testname):
+    def clientUtTestSucceededUnexpected(self, testname, id):
         """
         Public method to process the client test succeeded unexpected info.
         
         @param testname name of the test (string)
+        @param id id of the test (string)
         """
-        self.utTestSucceededUnexpected.emit(testname)
+        self.utTestSucceededUnexpected.emit(testname, id)
         
     def clientUtFinished(self):
         """

@@ -363,17 +363,19 @@ class DebuggerInterfaceNone(QObject):
         """
         return
         
-    def remoteUTPrepare(self, fn, tn, tfn, cov, covname, coverase):
+    def remoteUTPrepare(self, fn, tn, tfn, failed, cov, covname, coverase):
         """
         Public method to prepare a new unittest run.
         
         @param fn the filename to load (string)
         @param tn the testname to load (string)
         @param tfn the test function name to load tests from (string)
-        @param cov flag indicating collection of coverage data is requested
+        @param failed list of failed test, if only failed test should be run
+                (list of strings)
+        @param cov flag indicating collection of coverage data is requested (boolean)
         @param covname filename to be used to assemble the coverage caches
-                filename
-        @param coverase flag indicating erasure of coverage data is requested
+                filename (string)
+        @param coverase flag indicating erasure of coverage data is requested (boolean)
         """
         return
         
