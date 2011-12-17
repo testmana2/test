@@ -4166,9 +4166,10 @@ class Editor(QsciScintillaCompat):
                 prEnable = prEnable or \
                     os.path.isfile("{0}.profile".format(basename)) or \
                     os.path.isfile("{0}.profile".format(tbasename))
-                coEnable = coEnable or \
+                coEnable = (coEnable or \
                     os.path.isfile("{0}.coverage".format(basename)) or \
-                    os.path.isfile("{0}.coverage".format(tbasename))
+                    os.path.isfile("{0}.coverage".format(tbasename))) and \
+                    self.project.isPy3Project()
         
         # now check ourself
         fn = self.getFileName()
@@ -4179,9 +4180,10 @@ class Editor(QsciScintillaCompat):
             prEnable = prEnable or \
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename))
-            coEnable = coEnable or \
+            coEnable = (coEnable or \
                 os.path.isfile("{0}.coverage".format(basename)) or \
-                os.path.isfile("{0}.coverage".format(tbasename))
+                os.path.isfile("{0}.coverage".format(tbasename))) and \
+                self.isPy3File()
         
         # now check for syntax errors
         if self.hasSyntaxErrors():

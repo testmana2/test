@@ -2647,6 +2647,30 @@ class Project(QObject):
         """
         return self.pdata["PROGLANGUAGE"][0]
         
+    def isPy3Project(self):
+        """
+        Public method to check, if this project is a Python3 project.
+        
+        @return flag indicating a Python3 project (boolean)
+        """
+        return self.pdata["PROGLANGUAGE"][0] == "Python3"
+        
+    def isPy2Project(self):
+        """
+        Public method to check, if this project is a Python2 project.
+        
+        @return flag indicating a Python2 project (boolean)
+        """
+        return self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]
+        
+    def isRubyProject(self):
+        """
+        Public method to check, if this project is a Ruby project.
+        
+        @return flag indicating a Ruby project (boolean)
+        """
+        return self.pdata["PROGLANGUAGE"][0] == "Ruby"
+        
     def getProjectSpellLanguage(self):
         """
         Public method to get the project's programming language.
@@ -3871,7 +3895,7 @@ class Project(QObject):
                 os.path.isfile("{0}.profile".format(basename)) or \
                 os.path.isfile("{0}.profile".format(tbasename)))
             self.codeCoverageAct.setEnabled(
-                self.pdata["PROGLANGUAGE"][0] == "Python3" and \
+                self.isPy3Project() and \
                 (os.path.isfile("{0}.coverage".format(basename)) or \
                  os.path.isfile("{0}.coverage".format(tbasename))))
         else:
