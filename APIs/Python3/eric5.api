@@ -5131,6 +5131,9 @@ eric5.Project.Project.Project.isProjectForm?4(fn)
 eric5.Project.Project.Project.isProjectInterface?4(fn)
 eric5.Project.Project.Project.isProjectResource?4(fn)
 eric5.Project.Project.Project.isProjectSource?4(fn)
+eric5.Project.Project.Project.isPy2Project?4()
+eric5.Project.Project.Project.isPy3Project?4()
+eric5.Project.Project.Project.isRubyProject?4()
 eric5.Project.Project.Project.keynames?7
 eric5.Project.Project.Project.lexerAssociationsChanged?7
 eric5.Project.Project.Project.moveDirectory?4(olddn, newdn)

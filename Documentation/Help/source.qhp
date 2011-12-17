@@ -4957,6 +4957,9 @@
       <keyword name="Project.isProjectInterface" id="Project.isProjectInterface" ref="eric5.Project.Project.html#Project.isProjectInterface" />
       <keyword name="Project.isProjectResource" id="Project.isProjectResource" ref="eric5.Project.Project.html#Project.isProjectResource" />
       <keyword name="Project.isProjectSource" id="Project.isProjectSource" ref="eric5.Project.Project.html#Project.isProjectSource" />
+      <keyword name="Project.isPy2Project" id="Project.isPy2Project" ref="eric5.Project.Project.html#Project.isPy2Project" />
+      <keyword name="Project.isPy3Project" id="Project.isPy3Project" ref="eric5.Project.Project.html#Project.isPy3Project" />
+      <keyword name="Project.isRubyProject" id="Project.isRubyProject" ref="eric5.Project.Project.html#Project.isRubyProject" />
       <keyword name="Project.moveDirectory" id="Project.moveDirectory" ref="eric5.Project.Project.html#Project.moveDirectory" />
       <keyword name="Project.newProjectAddFiles" id="Project.newProjectAddFiles" ref="eric5.Project.Project.html#Project.newProjectAddFiles" />
       <keyword name="Project.openProject" id="Project.openProject" ref="eric5.Project.Project.html#Project.openProject" />
