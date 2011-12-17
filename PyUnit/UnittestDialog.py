@@ -192,7 +192,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         @param txt name of the test file (string)
         """
         if self.dbs:
-            exts = self.dbs.getExtensions("Python3")
+            exts = self.dbs.getExtensions("Python2")
             if txt.endswith(exts):
                 self.coverageCheckBox.setChecked(False)
                 self.coverageCheckBox.setEnabled(False)
