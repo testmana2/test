@@ -1199,6 +1199,7 @@
       <keyword name="UnittestDialog.__showSource" id="UnittestDialog.__showSource" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__showSource" />
       <keyword name="UnittestDialog.insertProg" id="UnittestDialog.insertProg" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertProg" />
       <keyword name="UnittestDialog.insertTestName" id="UnittestDialog.insertTestName" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.insertTestName" />
+      <keyword name="UnittestDialog.keyPressEvent" id="UnittestDialog.keyPressEvent" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.keyPressEvent" />
       <keyword name="UnittestDialog.on_buttonBox_clicked" id="UnittestDialog.on_buttonBox_clicked" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_buttonBox_clicked" />
       <keyword name="UnittestDialog.on_errorsListWidget_currentTextChanged" id="UnittestDialog.on_errorsListWidget_currentTextChanged" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_currentTextChanged" />
       <keyword name="UnittestDialog.on_errorsListWidget_itemDoubleClicked" id="UnittestDialog.on_errorsListWidget_itemDoubleClicked" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_itemDoubleClicked" />
@@ -4763,6 +4764,9 @@
       <keyword name="Project.isProjectInterface" id="Project.isProjectInterface" ref="eric5.Project.Project.html#Project.isProjectInterface" />
       <keyword name="Project.isProjectResource" id="Project.isProjectResource" ref="eric5.Project.Project.html#Project.isProjectResource" />
       <keyword name="Project.isProjectSource" id="Project.isProjectSource" ref="eric5.Project.Project.html#Project.isProjectSource" />
+      <keyword name="Project.isPy2Project" id="Project.isPy2Project" ref="eric5.Project.Project.html#Project.isPy2Project" />
+      <keyword name="Project.isPy3Project" id="Project.isPy3Project" ref="eric5.Project.Project.html#Project.isPy3Project" />
+      <keyword name="Project.isRubyProject" id="Project.isRubyProject" ref="eric5.Project.Project.html#Project.isRubyProject" />
       <keyword name="Project.moveDirectory" id="Project.moveDirectory" ref="eric5.Project.Project.html#Project.moveDirectory" />
       <keyword name="Project.newProjectAddFiles" id="Project.newProjectAddFiles" ref="eric5.Project.Project.html#Project.newProjectAddFiles" />
       <keyword name="Project.openProject" id="Project.openProject" ref="eric5.Project.Project.html#Project.openProject" />
