@@ -2909,6 +2909,44 @@ class Editor(QsciScintillaCompat):
     ## Comment handling methods below
     ############################################################################
 
+    def toggleCommentBlock(self):
+        """
+        Public slot to toggle the comment of a block.
+        
+        If the line of the cursor or the selection is not commented, it will
+        be commented. If it is commented, the comment block will be removed.
+        The later works independent of the current selection.
+        """
+        if self.lexer_ is None or not self.lexer_.canBlockComment():
+            return
+        
+        commentStr = self.lexer_.commentStr()
+        line, index = self.getCursorPosition()
+        
+        # check if line starts with our comment string (i.e. was commented
+        # by our comment...() slots
+        if not self.text(line).strip().startswith(commentStr):
+            # it doesn't, so comment the line or selection
+            self.commentLineOrSelection()
+        else:
+            # determine the start of the comment block
+            begline = line
+            while begline > 0 and \
+                  self.text(begline - 1).strip().startswith(commentStr):
+                begline -=  1
+            # determine the end of the comment block
+            endline = line
+            lines = self.lines()
+            while endline < lines and \
+                  self.text(endline + 1).strip().startswith(commentStr):
+                endline +=  1
+            
+            self.setSelection(begline, 0, endline, self.lineLength(endline))
+            self.uncommentLineOrSelection()
+            
+            # reset the cursor
+            self.setCursorPosition(line, index - len(commentStr))
+        
     def commentLine(self):
         """
         Public slot to comment the current line.

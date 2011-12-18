@@ -3555,6 +3555,7 @@
       <keyword name="ViewManager.__editShowCallTips" id="ViewManager.__editShowCallTips" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editShowCallTips" />
       <keyword name="ViewManager.__editSmartIndent" id="ViewManager.__editSmartIndent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editSmartIndent" />
       <keyword name="ViewManager.__editStreamComment" id="ViewManager.__editStreamComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editStreamComment" />
+      <keyword name="ViewManager.__editToggleComment" id="ViewManager.__editToggleComment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editToggleComment" />
       <keyword name="ViewManager.__editUncomment" id="ViewManager.__editUncomment" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUncomment" />
       <keyword name="ViewManager.__editUndo" id="ViewManager.__editUndo" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUndo" />
       <keyword name="ViewManager.__editUnindent" id="ViewManager.__editUnindent" ref="eric5.ViewManager.ViewManager.html#ViewManager.__editUnindent" />
@@ -6231,6 +6232,7 @@
       <keyword name="Editor.streamCommentLineOrSelection" id="Editor.streamCommentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentLineOrSelection" />
       <keyword name="Editor.streamCommentSelection" id="Editor.streamCommentSelection" ref="eric5.QScintilla.Editor.html#Editor.streamCommentSelection" />
       <keyword name="Editor.toggleBookmark" id="Editor.toggleBookmark" ref="eric5.QScintilla.Editor.html#Editor.toggleBookmark" />
+      <keyword name="Editor.toggleCommentBlock" id="Editor.toggleCommentBlock" ref="eric5.QScintilla.Editor.html#Editor.toggleCommentBlock" />
       <keyword name="Editor.toggleFlakesWarning" id="Editor.toggleFlakesWarning" ref="eric5.QScintilla.Editor.html#Editor.toggleFlakesWarning" />
       <keyword name="Editor.toggleSyntaxError" id="Editor.toggleSyntaxError" ref="eric5.QScintilla.Editor.html#Editor.toggleSyntaxError" />
       <keyword name="Editor.uncommentLine" id="Editor.uncommentLine" ref="eric5.QScintilla.Editor.html#Editor.uncommentLine" />

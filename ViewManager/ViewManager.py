@@ -940,6 +940,25 @@ class ViewManager(QObject):
         self.uncommentAct.triggered[()].connect(self.__editUncomment)
         self.editActions.append(self.uncommentAct)
         
+        self.toggleCommentAct = E5Action(
+                QApplication.translate('ViewManager', 'Toggle Comment'),
+                UI.PixmapCache.getIcon("editToggleComment.png"),
+                QApplication.translate('ViewManager', 'Toggle Comment'),
+                QKeySequence(QApplication.translate('ViewManager',
+                    "Ctrl+Shift+M", "Edit|Toggle Comment")),
+                0,
+                self.editActGrp, 'vm_edit_toggle_comment')
+        self.toggleCommentAct.setStatusTip(QApplication.translate('ViewManager',
+            'Toggle the comment of the current line, selection or comment block'))
+        self.toggleCommentAct.setWhatsThis(QApplication.translate('ViewManager',
+            """<b>Toggle Comment</b>"""
+            """<p>If the current line does not start with a block comment,"""
+            """ the current line or selection is commented. If it is already"""
+            """ commented, this comment block is uncommented. </p>"""
+        ))
+        self.toggleCommentAct.triggered[()].connect(self.__editToggleComment)
+        self.editActions.append(self.toggleCommentAct)
+        
         self.streamCommentAct = E5Action(QApplication.translate('ViewManager',
                     'Stream Comment'),
                 QApplication.translate('ViewManager', 'Stream Comment'),
@@ -2287,6 +2306,7 @@ class ViewManager(QObject):
         menu.addSeparator()
         menu.addAction(self.commentAct)
         menu.addAction(self.uncommentAct)
+        menu.addAction(self.toggleCommentAct)
         menu.addAction(self.streamCommentAct)
         menu.addAction(self.boxCommentAct)
         menu.addSeparator()
@@ -2334,6 +2354,7 @@ class ViewManager(QObject):
         tb.addSeparator()
         tb.addAction(self.commentAct)
         tb.addAction(self.uncommentAct)
+        tb.addAction(self.toggleCommentAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.smartIndentAct, tb.windowTitle())
@@ -4305,6 +4326,12 @@ class ViewManager(QObject):
         Private method to handle the smart indent action
         """
         self.activeWindow().smartIndentLineOrSelection()
+        
+    def __editToggleComment(self):
+        """
+        Private method to handle the toggle comment action.
+        """
+        self.activeWindow().toggleCommentBlock()
         
     def __editComment(self):
         """

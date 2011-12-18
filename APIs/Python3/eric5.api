@@ -5587,6 +5587,7 @@ eric5.QScintilla.Editor.Editor.streamCommentSelection?4()
 eric5.QScintilla.Editor.Editor.syntaxerrorToggled?7
 eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
+eric5.QScintilla.Editor.Editor.toggleCommentBlock?4()
 eric5.QScintilla.Editor.Editor.toggleFlakesWarning?4(line, warning, msg="")
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, index, error, msg="", show=False)
 eric5.QScintilla.Editor.Editor.uncommentLine?4()

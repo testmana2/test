@@ -959,6 +959,9 @@ QsciScintillaCompat
 <td><a href="#Editor.toggleBookmark">toggleBookmark</a></td>
 <td>Public method to toggle a bookmark.</td>
 </tr><tr>
+<td><a href="#Editor.toggleCommentBlock">toggleCommentBlock</a></td>
+<td>Public slot to toggle the comment of a block.</td>
+</tr><tr>
 <td><a href="#Editor.toggleFlakesWarning">toggleFlakesWarning</a></td>
 <td>Public method to toggle a flakes warning indicator.</td>
 </tr><tr>
@@ -3316,7 +3319,16 @@ flag indicating this editor should be saved (boolean)
 <dd>
 line number of the bookmark (integer)
 </dd>
-</dl><a NAME="Editor.toggleFlakesWarning" ID="Editor.toggleFlakesWarning"></a>
+</dl><a NAME="Editor.toggleCommentBlock" ID="Editor.toggleCommentBlock"></a>
+<h4>Editor.toggleCommentBlock</h4>
+<b>toggleCommentBlock</b>(<i></i>)
+<p>
+        Public slot to toggle the comment of a block.
+</p><p>
+        If the line of the cursor or the selection is not commented, it will
+        be commented. If it is commented, the comment block will be removed.
+        The later works independent of the current selection.
+</p><a NAME="Editor.toggleFlakesWarning" ID="Editor.toggleFlakesWarning"></a>
 <h4>Editor.toggleFlakesWarning</h4>
 <b>toggleFlakesWarning</b>(<i>line, warning, msg=""</i>)
 <p>
