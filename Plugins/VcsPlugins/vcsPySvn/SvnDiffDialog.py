@@ -136,6 +136,12 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.contents.clear()
         self.paras = 0
         
+        self.filesCombo.clear()
+        
+        self.__oldFile = ""
+        self.__oldFileLine = -1
+        self.__fileSeparators = []
+        
         if Utilities.hasEnvironmentEntry('TEMP'):
             tmpdir = Utilities.getEnvironmentEntry('TEMP')
         elif Utilities.hasEnvironmentEntry('TMPDIR'):
@@ -221,6 +227,10 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             revision1=rev1, revision2=rev2, recurse=recurse)
                 counter = 0
                 for line in diffText.splitlines():
+                    if line.startswith("---") or \
+                       line.startswith("+++"):
+                        self.__processFileLine(line)
+                    
                     self.__appendText("{0}{1}".format(line, os.linesep))
                     counter += 1
                     if counter == 30:
@@ -265,6 +275,30 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.contents.insertPlainText(line)
         self.paras += 1
         
+    def __extractFileName(self, line):
+        """
+        Private method to extract the file name out of a file separator line.
+        
+        @param line line to be processed (string)
+        @return extracted file name (string)
+        """
+        f = line.split(None, 1)[1]
+        f = f.rsplit(None, 2)[0]
+        return f
+    
+    def __processFileLine(self, line):
+        """
+        Private slot to process a line giving the old/new file.
+        
+        @param line line to be processed (string)
+        """
+        if line.startswith('---'):
+            self.__oldFileLine = self.paras
+            self.__oldFile = self.__extractFileName(line)
+        else:
+            self.__fileSeparators.append(
+                (self.__oldFile, self.__extractFileName(line), self.__oldFileLine))
+    
     def __finish(self):
         """
         Private slot called when the user pressed the button.
@@ -279,6 +313,14 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         tc.movePosition(QTextCursor.Start)
         self.contents.setTextCursor(tc)
         self.contents.ensureCursorVisible()
+        
+        self.filesCombo.addItem(self.trUtf8("<Start>"), 0)
+        self.filesCombo.addItem(self.trUtf8("<End>"), -1)
+        for oldFile, newFile, pos in sorted(self.__fileSeparators):
+            if oldFile != newFile:
+                self.filesCombo.addItem("{0}\n{1}".format(oldFile, newFile), pos)
+            else:
+                self.filesCombo.addItem(oldFile, pos)
         
         self._cancel()
         
@@ -295,6 +337,39 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         elif button == self.buttonBox.button(QDialogButtonBox.Save):
             self.on_saveButton_clicked()
         
+    @pyqtSlot(int)
+    def on_filesCombo_activated(self, index):
+        """
+        Private slot to handle the selection of a file.
+        
+        @param index activated row (integer)
+        """
+        para = self.filesCombo.itemData(index)
+        
+        if para == 0:
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.Start)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+        elif para == -1:
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.End)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+        else:
+            # step 1: move cursor to end
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.End)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+            
+            # step 2: move cursor to desired line
+            tc = self.contents.textCursor()
+            delta = tc.blockNumber() - para
+            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor, delta)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+    
     @pyqtSlot()
     def on_saveButton_clicked(self):
         """

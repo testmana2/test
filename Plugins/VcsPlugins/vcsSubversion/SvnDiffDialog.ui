@@ -25,7 +25,10 @@
      <property name="title">
       <string>Difference</string>
      </property>
-     <layout class="QVBoxLayout">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QComboBox" name="filesCombo"/>
+      </item>
       <item>
        <widget class="QTextEdit" name="contents">
         <property name="whatsThis">
@@ -146,6 +149,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>filesCombo</tabstop>
+  <tabstop>contents</tabstop>
+  <tabstop>input</tabstop>
+  <tabstop>passwordCheckBox</tabstop>
+  <tabstop>sendButton</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

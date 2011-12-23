@@ -64,6 +64,9 @@ QWidget, SvnDialogMixin, Ui_SvnDiffDialog
 <td><a href="#SvnDiffDialog.__appendText">__appendText</a></td>
 <td>Private method to append text to the end of the contents pane.</td>
 </tr><tr>
+<td><a href="#SvnDiffDialog.__extractFileName">__extractFileName</a></td>
+<td>Private method to extract the file name out of a file separator line.</td>
+</tr><tr>
 <td><a href="#SvnDiffDialog.__finish">__finish</a></td>
 <td>Private slot called when the user pressed the button.</td>
 </tr><tr>
@@ -73,11 +76,17 @@ QWidget, SvnDialogMixin, Ui_SvnDiffDialog
 <td><a href="#SvnDiffDialog.__getVersionArg">__getVersionArg</a></td>
 <td>Private method to get a pysvn revision object for the given version number.</td>
 </tr><tr>
+<td><a href="#SvnDiffDialog.__processFileLine">__processFileLine</a></td>
+<td>Private slot to process a line giving the old/new file.</td>
+</tr><tr>
 <td><a href="#SvnDiffDialog.__showError">__showError</a></td>
 <td>Private slot to show an error message.</td>
 </tr><tr>
 <td><a href="#SvnDiffDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
+</tr><tr>
+<td><a href="#SvnDiffDialog.on_filesCombo_activated">on_filesCombo_activated</a></td>
+<td>Private slot to handle the selection of a file.</td>
 </tr><tr>
 <td><a href="#SvnDiffDialog.on_saveButton_clicked">on_saveButton_clicked</a></td>
 <td>Private slot to handle the Save button press.</td>
@@ -112,6 +121,21 @@ parent widget (QWidget)
 <dt><i>line</i></dt>
 <dd>
 line of text to insert (string)
+</dd>
+</dl><a NAME="SvnDiffDialog.__extractFileName" ID="SvnDiffDialog.__extractFileName"></a>
+<h4>SvnDiffDialog.__extractFileName</h4>
+<b>__extractFileName</b>(<i>line</i>)
+<p>
+        Private method to extract the file name out of a file separator line.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to be processed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+extracted file name (string)
 </dd>
 </dl><a NAME="SvnDiffDialog.__finish" ID="SvnDiffDialog.__finish"></a>
 <h4>SvnDiffDialog.__finish</h4>
@@ -148,6 +172,16 @@ revision (integer or string)
 <dd>
 revision object (pysvn.Revision)
 </dd>
+</dl><a NAME="SvnDiffDialog.__processFileLine" ID="SvnDiffDialog.__processFileLine"></a>
+<h4>SvnDiffDialog.__processFileLine</h4>
+<b>__processFileLine</b>(<i>line</i>)
+<p>
+        Private slot to process a line giving the old/new file.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to be processed (string)
+</dd>
 </dl><a NAME="SvnDiffDialog.__showError" ID="SvnDiffDialog.__showError"></a>
 <h4>SvnDiffDialog.__showError</h4>
 <b>__showError</b>(<i>msg</i>)
@@ -167,6 +201,16 @@ error message to show (string)
 <dt><i>button</i></dt>
 <dd>
 button that was clicked (QAbstractButton)
+</dd>
+</dl><a NAME="SvnDiffDialog.on_filesCombo_activated" ID="SvnDiffDialog.on_filesCombo_activated"></a>
+<h4>SvnDiffDialog.on_filesCombo_activated</h4>
+<b>on_filesCombo_activated</b>(<i>index</i>)
+<p>
+        Private slot to handle the selection of a file.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+activated row (integer)
 </dd>
 </dl><a NAME="SvnDiffDialog.on_saveButton_clicked" ID="SvnDiffDialog.on_saveButton_clicked"></a>
 <h4>SvnDiffDialog.on_saveButton_clicked</h4>

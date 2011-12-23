@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo, Qt
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QBrush, QColor, \
-    QTextCursor, QLineEdit
+    QTextCursor, QLineEdit, QApplication, QCursor
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
@@ -107,6 +107,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.contents.clear()
         self.paras = 0
         
+        self.filesCombo.clear()
+        
         args = []
         if qdiff:
             args.append('qdiff')
@@ -148,6 +150,11 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             dname, fname = self.vcs.splitPath(fn)
             args.append(fn)
         
+        self.__oldFile = ""
+        self.__oldFileLine = -1
+        self.__fileSeparators = []
+        
+        QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
@@ -178,6 +185,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.process.start('hg', args)
             procStarted = self.process.waitForStarted()
             if not procStarted:
+                QApplication.restoreOverrideCursor()
                 self.inputGroup.setEnabled(False)
                 E5MessageBox.critical(self,
                     self.trUtf8('Process Generation Error'),
@@ -199,6 +207,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         Private slot called when the process finished or the user pressed the button.
         """
+        QApplication.restoreOverrideCursor()
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
         
@@ -215,6 +224,14 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         tc.movePosition(QTextCursor.Start)
         self.contents.setTextCursor(tc)
         self.contents.ensureCursorVisible()
+        
+        self.filesCombo.addItem(self.trUtf8("<Start>"), 0)
+        self.filesCombo.addItem(self.trUtf8("<End>"), -1)
+        for oldFile, newFile, pos in sorted(self.__fileSeparators):
+            if oldFile != newFile:
+                self.filesCombo.addItem("{0}\n{1}".format(oldFile, newFile), pos)
+            else:
+                self.filesCombo.addItem(oldFile, pos)
     
     def __appendText(self, txt, format):
         """
@@ -229,12 +246,41 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(txt)
     
+    def __extractFileName(self, line):
+        """
+        Private method to extract the file name out of a file separator line.
+        
+        @param line line to be processed (string)
+        @return extracted file name (string)
+        """
+        f = line.split(None, 1)[1]
+        f = f.rsplit(None, 6)[0]
+        f = f.split("/", 1)[1]
+        return f
+    
+    def __processFileLine(self, line):
+        """
+        Private slot to process a line giving the old/new file.
+        
+        @param line line to be processed (string)
+        """
+        if line.startswith('---'):
+            self.__oldFileLine = self.paras
+            self.__oldFile = self.__extractFileName(line)
+        else:
+            self.__fileSeparators.append(
+                (self.__oldFile, self.__extractFileName(line), self.__oldFileLine))
+    
     def __processOutputLine(self, line):
         """
         Private method to process the lines of output.
         
         @param line output line to be processed (string)
         """
+        if line.startswith("---") or \
+           line.startswith("+++"):
+            self.__processFileLine(line)
+        
         if line.startswith('+'):
             format = self.cAddedFormat
         elif line.startswith('-'):
@@ -292,6 +338,39 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         if button == self.buttonBox.button(QDialogButtonBox.Save):
             self.on_saveButton_clicked()
+    
+    @pyqtSlot(int)
+    def on_filesCombo_activated(self, index):
+        """
+        Private slot to handle the selection of a file.
+        
+        @param index activated row (integer)
+        """
+        para = self.filesCombo.itemData(index)
+        
+        if para == 0:
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.Start)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+        elif para == -1:
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.End)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+        else:
+            # step 1: move cursor to end
+            tc = self.contents.textCursor()
+            tc.movePosition(QTextCursor.End)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
+            
+            # step 2: move cursor to desired line
+            tc = self.contents.textCursor()
+            delta = tc.blockNumber() - para
+            tc.movePosition(QTextCursor.PreviousBlock, QTextCursor.MoveAnchor, delta)
+            self.contents.setTextCursor(tc)
+            self.contents.ensureCursorVisible()
     
     @pyqtSlot()
     def on_saveButton_clicked(self):

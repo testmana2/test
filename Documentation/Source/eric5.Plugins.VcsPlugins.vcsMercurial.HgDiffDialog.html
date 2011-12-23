@@ -64,6 +64,9 @@ QWidget, Ui_HgDiffDialog
 <td><a href="#HgDiffDialog.__appendText">__appendText</a></td>
 <td>Private method to append text to the end of the contents pane.</td>
 </tr><tr>
+<td><a href="#HgDiffDialog.__extractFileName">__extractFileName</a></td>
+<td>Private method to extract the file name out of a file separator line.</td>
+</tr><tr>
 <td><a href="#HgDiffDialog.__finish">__finish</a></td>
 <td>Private slot called when the process finished or the user pressed the button.</td>
 </tr><tr>
@@ -72,6 +75,9 @@ QWidget, Ui_HgDiffDialog
 </tr><tr>
 <td><a href="#HgDiffDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
+</tr><tr>
+<td><a href="#HgDiffDialog.__processFileLine">__processFileLine</a></td>
+<td>Private slot to process a line giving the old/new file.</td>
 </tr><tr>
 <td><a href="#HgDiffDialog.__processOutputLine">__processOutputLine</a></td>
 <td>Private method to process the lines of output.</td>
@@ -93,6 +99,9 @@ QWidget, Ui_HgDiffDialog
 </tr><tr>
 <td><a href="#HgDiffDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
+</tr><tr>
+<td><a href="#HgDiffDialog.on_filesCombo_activated">on_filesCombo_activated</a></td>
+<td>Private slot to handle the selection of a file.</td>
 </tr><tr>
 <td><a href="#HgDiffDialog.on_input_returnPressed">on_input_returnPressed</a></td>
 <td>Private slot to handle the press of the return key in the input field.</td>
@@ -140,6 +149,21 @@ text to insert (string)
 <dd>
 text format to be used (QTextCharFormat)
 </dd>
+</dl><a NAME="HgDiffDialog.__extractFileName" ID="HgDiffDialog.__extractFileName"></a>
+<h4>HgDiffDialog.__extractFileName</h4>
+<b>__extractFileName</b>(<i>line</i>)
+<p>
+        Private method to extract the file name out of a file separator line.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to be processed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+extracted file name (string)
+</dd>
 </dl><a NAME="HgDiffDialog.__finish" ID="HgDiffDialog.__finish"></a>
 <h4>HgDiffDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
@@ -172,6 +196,16 @@ exit code of the process (integer)
 </dd><dt><i>exitStatus</i></dt>
 <dd>
 exit status of the process (QProcess.ExitStatus)
+</dd>
+</dl><a NAME="HgDiffDialog.__processFileLine" ID="HgDiffDialog.__processFileLine"></a>
+<h4>HgDiffDialog.__processFileLine</h4>
+<b>__processFileLine</b>(<i>line</i>)
+<p>
+        Private slot to process a line giving the old/new file.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+line to be processed (string)
 </dd>
 </dl><a NAME="HgDiffDialog.__processOutputLine" ID="HgDiffDialog.__processOutputLine"></a>
 <h4>HgDiffDialog.__processOutputLine</h4>
@@ -238,6 +272,16 @@ the key press event (QKeyEvent)
 <dt><i>button</i></dt>
 <dd>
 button that was clicked (QAbstractButton)
+</dd>
+</dl><a NAME="HgDiffDialog.on_filesCombo_activated" ID="HgDiffDialog.on_filesCombo_activated"></a>
+<h4>HgDiffDialog.on_filesCombo_activated</h4>
+<b>on_filesCombo_activated</b>(<i>index</i>)
+<p>
+        Private slot to handle the selection of a file.
+</p><dl>
+<dt><i>index</i></dt>
+<dd>
+activated row (integer)
 </dd>
 </dl><a NAME="HgDiffDialog.on_input_returnPressed" ID="HgDiffDialog.on_input_returnPressed"></a>
 <h4>HgDiffDialog.on_input_returnPressed</h4>

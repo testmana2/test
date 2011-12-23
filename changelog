@@ -29,6 +29,8 @@ Version 5.2-snapshot-2011mmdd:
      --- made "Show Log" behave like "Show Limited Log" and removed the later
      --- added context menu actions to select/deselect all commitable items
          of the status dialogs
+     --- added a file selector to the top of the diff dialogs to quickly jump
+         to the diff for the selected file
   -- Mercurial
      --- added interface for the Mercurial command server (as of Mercurial 1.9)
      --- added code to support multiple revisions where appropriate
