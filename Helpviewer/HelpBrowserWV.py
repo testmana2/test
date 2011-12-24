@@ -754,6 +754,14 @@ class HelpBrowser(QWebView):
             evt.accept()
             return
         
+        if evt.modifiers() & Qt.ShiftModifier:
+            if evt.delta() < 0:
+                self.backward()
+            else:
+                self.forward()
+            evt.accept()
+            return
+        
         super().wheelEvent(evt)
     
     def hasSelection(self):
