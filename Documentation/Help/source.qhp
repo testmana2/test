@@ -3636,6 +3636,7 @@
       <keyword name="ViewManager.__zoom" id="ViewManager.__zoom" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoom" />
       <keyword name="ViewManager.__zoomIn" id="ViewManager.__zoomIn" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomIn" />
       <keyword name="ViewManager.__zoomOut" id="ViewManager.__zoomOut" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomOut" />
+      <keyword name="ViewManager.__zoomReset" id="ViewManager.__zoomReset" ref="eric5.ViewManager.ViewManager.html#ViewManager.__zoomReset" />
       <keyword name="ViewManager._addView" id="ViewManager._addView" ref="eric5.ViewManager.ViewManager.html#ViewManager._addView" />
       <keyword name="ViewManager._checkActions" id="ViewManager._checkActions" ref="eric5.ViewManager.ViewManager.html#ViewManager._checkActions" />
       <keyword name="ViewManager._getOpenFileFilter" id="ViewManager._getOpenFileFilter" ref="eric5.ViewManager.ViewManager.html#ViewManager._getOpenFileFilter" />
