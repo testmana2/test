@@ -2769,6 +2769,23 @@ class ViewManager(QObject):
         self.zoomOutAct.triggered[()].connect(self.__zoomOut)
         self.viewActions.append(self.zoomOutAct)
         
+        self.zoomResetAct = E5Action(QApplication.translate('ViewManager', 'Zoom reset'),
+                            UI.PixmapCache.getIcon("zoomReset.png"),
+                            QApplication.translate('ViewManager', 'Zoom &reset'),
+                            QKeySequence(QApplication.translate('ViewManager',
+                                "Ctrl+0", "View|Zoom reset")),
+                            0,
+                            self.viewActGrp, 'vm_view_zoom_reset')
+        self.zoomResetAct.setStatusTip(QApplication.translate('ViewManager',
+            'Reset the zoom of the text'))
+        self.zoomResetAct.setWhatsThis(QApplication.translate('ViewManager',
+                """<b>Zoom reset</b>"""
+                """<p>Reset the zoom of the text. """
+                """This sets the zoom factor to 100%.</p>"""
+                ))
+        self.zoomResetAct.triggered[()].connect(self.__zoomReset)
+        self.viewActions.append(self.zoomResetAct)
+        
         self.zoomToAct = E5Action(QApplication.translate('ViewManager', 'Zoom'),
                             UI.PixmapCache.getIcon("zoomTo.png"),
                             QApplication.translate('ViewManager', '&Zoom'),
@@ -4754,6 +4771,19 @@ class ViewManager(QObject):
             aw = self.activeWindow()
             if aw:
                 aw.zoomOut()
+        
+    def __zoomReset(self):
+        """
+        Private method to reset the zoom factor.
+        """
+        if QApplication.focusWidget() == e5App().getObject("Shell"):
+            e5App().getObject("Shell").zoomTo(0)
+        elif QApplication.focusWidget() == e5App().getObject("Terminal"):
+            e5App().getObject("Terminal").zoomTo(0)
+        else:
+            aw = self.activeWindow()
+            if aw:
+                aw.zoomTo(0)
         
     def __zoom(self):
         """
