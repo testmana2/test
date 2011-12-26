@@ -1096,6 +1096,7 @@
       <keyword name="IconEditorWindow.__zoomOut" id="IconEditorWindow.__zoomOut" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomOut" />
       <keyword name="IconEditorWindow.__zoomReset" id="IconEditorWindow.__zoomReset" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.__zoomReset" />
       <keyword name="IconEditorWindow.closeEvent" id="IconEditorWindow.closeEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.closeEvent" />
+      <keyword name="IconEditorWindow.wheelEvent" id="IconEditorWindow.wheelEvent" ref="eric5.IconEditor.IconEditorWindow.html#IconEditorWindow.wheelEvent" />
       <keyword name="E5XML (Package)" id="E5XML (Package)" ref="index-eric5.E5XML.html" />
       <keyword name="XMLStreamReaderBase (Module)" id="XMLStreamReaderBase (Module)" ref="eric5.E5XML.XMLStreamReaderBase.html" />
       <keyword name="XMLStreamReaderBase" id="XMLStreamReaderBase" ref="eric5.E5XML.XMLStreamReaderBase.html#XMLStreamReaderBase" />
@@ -1626,6 +1627,7 @@
       <keyword name="SvgDiagram.__zoomOut" id="SvgDiagram.__zoomOut" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__zoomOut" />
       <keyword name="SvgDiagram.__zoomReset" id="SvgDiagram.__zoomReset" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.__zoomReset" />
       <keyword name="SvgDiagram.getDiagramName" id="SvgDiagram.getDiagramName" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.getDiagramName" />
+      <keyword name="SvgDiagram.wheelEvent" id="SvgDiagram.wheelEvent" ref="eric5.Graphics.SvgDiagram.html#SvgDiagram.wheelEvent" />
       <keyword name="PixmapDiagram (Module)" id="PixmapDiagram (Module)" ref="eric5.Graphics.PixmapDiagram.html" />
       <keyword name="PixmapDiagram" id="PixmapDiagram" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram" />
       <keyword name="PixmapDiagram (Constructor)" id="PixmapDiagram (Constructor)" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__init__" />
@@ -1645,6 +1647,7 @@
       <keyword name="PixmapDiagram.__zoomReset" id="PixmapDiagram.__zoomReset" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.__zoomReset" />
       <keyword name="PixmapDiagram.getDiagramName" id="PixmapDiagram.getDiagramName" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.getDiagramName" />
       <keyword name="PixmapDiagram.getStatus" id="PixmapDiagram.getStatus" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.getStatus" />
+      <keyword name="PixmapDiagram.wheelEvent" id="PixmapDiagram.wheelEvent" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.wheelEvent" />
       <keyword name="UMLItem (Module)" id="UMLItem (Module)" ref="eric5.Graphics.UMLItem.html" />
       <keyword name="UMLItem" id="UMLItem" ref="eric5.Graphics.UMLItem.html#UMLItem" />
       <keyword name="UMLItem (Constructor)" id="UMLItem (Constructor)" ref="eric5.Graphics.UMLItem.html#UMLItem.__init__" />
@@ -1755,6 +1758,7 @@
       <keyword name="UMLGraphicsView.selectItem" id="UMLGraphicsView.selectItem" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItem" />
       <keyword name="UMLGraphicsView.selectItems" id="UMLGraphicsView.selectItems" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.selectItems" />
       <keyword name="UMLGraphicsView.setDiagramName" id="UMLGraphicsView.setDiagramName" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.setDiagramName" />
+      <keyword name="UMLGraphicsView.wheelEvent" id="UMLGraphicsView.wheelEvent" ref="eric5.Graphics.UMLGraphicsView.html#UMLGraphicsView.wheelEvent" />
       <keyword name="E5Network (Package)" id="E5Network (Package)" ref="index-eric5.E5Network.html" />
       <keyword name="E5NetworkHeaderDetailsDialog (Module)" id="E5NetworkHeaderDetailsDialog (Module)" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html" />
       <keyword name="E5NetworkHeaderDetailsDialog" id="E5NetworkHeaderDetailsDialog" ref="eric5.E5Network.E5NetworkHeaderDetailsDialog.html#E5NetworkHeaderDetailsDialog" />
@@ -5955,6 +5959,7 @@
       <keyword name="Terminal.mousePressEvent" id="Terminal.mousePressEvent" ref="eric5.QScintilla.Terminal.html#Terminal.mousePressEvent" />
       <keyword name="Terminal.reloadHistory" id="Terminal.reloadHistory" ref="eric5.QScintilla.Terminal.html#Terminal.reloadHistory" />
       <keyword name="Terminal.saveHistory" id="Terminal.saveHistory" ref="eric5.QScintilla.Terminal.html#Terminal.saveHistory" />
+      <keyword name="Terminal.wheelEvent" id="Terminal.wheelEvent" ref="eric5.QScintilla.Terminal.html#Terminal.wheelEvent" />
       <keyword name="Editor (Module)" id="Editor (Module)" ref="eric5.QScintilla.Editor.html" />
       <keyword name="Editor" id="Editor" ref="eric5.QScintilla.Editor.html#Editor" />
       <keyword name="Editor (Constructor)" id="Editor (Constructor)" ref="eric5.QScintilla.Editor.html#Editor.__init__" />
@@ -6243,6 +6248,7 @@
       <keyword name="Editor.unindentLineOrSelection" id="Editor.unindentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.unindentLineOrSelection" />
       <keyword name="Editor.unsetAutoCompletionHook" id="Editor.unsetAutoCompletionHook" ref="eric5.QScintilla.Editor.html#Editor.unsetAutoCompletionHook" />
       <keyword name="Editor.unsetCallTipHook" id="Editor.unsetCallTipHook" ref="eric5.QScintilla.Editor.html#Editor.unsetCallTipHook" />
+      <keyword name="Editor.wheelEvent" id="Editor.wheelEvent" ref="eric5.QScintilla.Editor.html#Editor.wheelEvent" />
       <keyword name="Editor.writeFile" id="Editor.writeFile" ref="eric5.QScintilla.Editor.html#Editor.writeFile" />
       <keyword name="SearchReplaceWidget (Module)" id="SearchReplaceWidget (Module)" ref="eric5.QScintilla.SearchReplaceWidget.html" />
       <keyword name="SearchReplaceWidget" id="SearchReplaceWidget" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget" />
@@ -6351,6 +6357,7 @@
       <keyword name="Shell.reloadHistory" id="Shell.reloadHistory" ref="eric5.QScintilla.Shell.html#Shell.reloadHistory" />
       <keyword name="Shell.saveHistory" id="Shell.saveHistory" ref="eric5.QScintilla.Shell.html#Shell.saveHistory" />
       <keyword name="Shell.setDebuggerUI" id="Shell.setDebuggerUI" ref="eric5.QScintilla.Shell.html#Shell.setDebuggerUI" />
+      <keyword name="Shell.wheelEvent" id="Shell.wheelEvent" ref="eric5.QScintilla.Shell.html#Shell.wheelEvent" />
       <keyword name="Printer (Module)" id="Printer (Module)" ref="eric5.QScintilla.Printer.html" />
       <keyword name="Printer" id="Printer" ref="eric5.QScintilla.Printer.html#Printer" />
       <keyword name="Printer (Constructor)" id="Printer (Constructor)" ref="eric5.QScintilla.Printer.html#Printer.__init__" />

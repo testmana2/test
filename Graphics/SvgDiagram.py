@@ -156,6 +156,22 @@ class SvgDiagram(QMainWindow):
         """
         return self.svgFile
     
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            if evt.delta()< 0:
+                self.__zoomOut()
+            else:
+                self.__zoomIn()
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)
+    
     ############################################################################
     ## Private menu handling methods below.
     ############################################################################

@@ -5396,6 +5396,30 @@ class Editor(QsciScintillaCompat):
         self.vm.eventFilter(self, event)
         super().mousePressEvent(event)
         
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            if evt.delta()< 0:
+                self.zoomOut()
+            else:
+                self.zoomIn()
+            evt.accept()
+            return
+        
+        if evt.modifiers() & Qt.ShiftModifier:
+            if evt.delta() < 0:
+                self.gotoMethodClass(False)
+            else:
+                self.gotoMethodClass(True)
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)
+    
     def __updateReadOnly(self, bForce=True):
         """
         Private method to update the readOnly information for this editor.

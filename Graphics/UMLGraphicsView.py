@@ -502,3 +502,19 @@ class UMLGraphicsView(E5GraphicsView):
             item.moveBy(xOffset, yOffset)
         
         self.scene().update()
+    
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            if evt.delta()< 0:
+                self.zoomOut()
+            else:
+                self.zoomIn()
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)

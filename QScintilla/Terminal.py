@@ -11,7 +11,7 @@ import sys
 import os
 import re
 
-from PyQt4.QtCore import QSignalMapper, QTimer, QByteArray, QProcess
+from PyQt4.QtCore import QSignalMapper, QTimer, QByteArray, QProcess, Qt
 from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
 from PyQt4.Qsci import QsciScintilla
 
@@ -483,6 +483,22 @@ class Terminal(QsciScintillaCompat):
         self.setFocus()
         super().mousePressEvent(event)
         
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            if evt.delta()< 0:
+                self.zoomOut()
+            else:
+                self.zoomIn()
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)
+    
     def editorCommand(self, cmd):
         """
         Public method to perform an editor command.

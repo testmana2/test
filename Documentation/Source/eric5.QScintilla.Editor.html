@@ -989,6 +989,9 @@ QsciScintillaCompat
 <td><a href="#Editor.unsetCallTipHook">unsetCallTipHook</a></td>
 <td>Public method to unset a calltip hook.</td>
 </tr><tr>
+<td><a href="#Editor.wheelEvent">wheelEvent</a></td>
+<td>Protected method to handle wheel events.</td>
+</tr><tr>
 <td><a href="#Editor.writeFile">writeFile</a></td>
 <td>Public slot to write the text to a file.</td>
 </tr>
@@ -3406,7 +3409,17 @@ flag indicating to set the cursor to the error position
 <b>unsetCallTipHook</b>(<i></i>)
 <p>
         Public method to unset a calltip hook.
-</p><a NAME="Editor.writeFile" ID="Editor.writeFile"></a>
+</p><a NAME="Editor.wheelEvent" ID="Editor.wheelEvent"></a>
+<h4>Editor.wheelEvent</h4>
+<b>wheelEvent</b>(<i>evt</i>)
+<p>
+        Protected method to handle wheel events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the wheel event (QWheelEvent)
+</dd>
+</dl><a NAME="Editor.writeFile" ID="Editor.writeFile"></a>
 <h4>Editor.writeFile</h4>
 <b>writeFile</b>(<i>fn</i>)
 <p>

@@ -724,6 +724,22 @@ class Shell(QsciScintillaCompat):
         else:
             super().mousePressEvent(event)
         
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            if evt.delta()< 0:
+                self.zoomOut()
+            else:
+                self.zoomIn()
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)
+    
     def editorCommand(self, cmd):
         """
         Public method to perform an editor command.

@@ -19,6 +19,8 @@ Version 5.2-snapshot-2011mmdd:
   -- added a syntax check while typing function
   -- added source navigation function for Python 2, Python 3 and Ruby sources
   -- added support for QScintilla 2.6 (and newer)
+  -- added capability to zoom by Ctrl + Mouse Wheel
+  -- added capability to go to method and class definitions by Shift + Mouse Wheel
 - Plug-in Manager Tools
   -- added code to download and install plug-ins
 - Source Browser
@@ -58,9 +60,10 @@ Version 5.2-snapshot-2011mmdd:
      info dialog
   -- added a dialog to show RSS feeds
   -- added a dialog to show some information about the current site
-  -- added the capability to go through the history via Shift+Mouse Wheel
+  -- added the capability to go through the history via Shift + Mouse Wheel
 - other enhancements
   -- added an action to launch another instantiation of eric5
+  -- added capability to zoom by Ctrl + Mouse Wheel to various graphics related windows
 
 Version 5.2-snapshot-20110724:
 - bug fixes
