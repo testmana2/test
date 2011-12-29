@@ -35319,7 +35319,7 @@ nicht verbunden</translation>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="273"/>
         <source>Debug Child Process</source>
-        <translation></translation>
+        <translation>Kindprozess debuggen</translation>
     </message>
     <message>
         <location filename="Debugger/StartDebugDialog.ui" line="269"/>
