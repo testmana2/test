@@ -7354,82 +7354,82 @@ selección completa.&lt;/li&gt;
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5535"/>
+        <location filename="QScintilla/Editor.py" line="5559"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5553"/>
+        <location filename="QScintilla/Editor.py" line="5577"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5555"/>
+        <location filename="QScintilla/Editor.py" line="5579"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5557"/>
+        <location filename="QScintilla/Editor.py" line="5581"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5559"/>
+        <location filename="QScintilla/Editor.py" line="5583"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5561"/>
+        <location filename="QScintilla/Editor.py" line="5585"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5564"/>
+        <location filename="QScintilla/Editor.py" line="5588"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5582"/>
+        <location filename="QScintilla/Editor.py" line="5606"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5598"/>
+        <location filename="QScintilla/Editor.py" line="5622"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5625"/>
+        <location filename="QScintilla/Editor.py" line="5649"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5686"/>
+        <location filename="QScintilla/Editor.py" line="5710"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5686"/>
+        <location filename="QScintilla/Editor.py" line="5710"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5703"/>
+        <location filename="QScintilla/Editor.py" line="5727"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5703"/>
+        <location filename="QScintilla/Editor.py" line="5727"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5715"/>
+        <location filename="QScintilla/Editor.py" line="5739"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5715"/>
+        <location filename="QScintilla/Editor.py" line="5739"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
@@ -7504,7 +7504,7 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5953"/>
+        <location filename="QScintilla/Editor.py" line="5977"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
@@ -7514,12 +7514,12 @@ selección completa.&lt;/li&gt;
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5955"/>
+        <location filename="QScintilla/Editor.py" line="5979"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5957"/>
+        <location filename="QScintilla/Editor.py" line="5981"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
@@ -7579,17 +7579,17 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5418"/>
+        <location filename="QScintilla/Editor.py" line="5442"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5535"/>
+        <location filename="QScintilla/Editor.py" line="5559"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5625"/>
+        <location filename="QScintilla/Editor.py" line="5649"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -12941,7 +12941,7 @@ selección completa.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="804"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="812"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
@@ -12951,62 +12951,62 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Ventana de Ayuda&lt;/b&gt;&lt;p&gt;Esta ventana muestra la información de ayuda seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="883"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="891"/>
         <source>Web Inspector...</source>
         <translation>Inspector Web...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1363"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1363"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1363"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="847"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="855"/>
         <source>Bookmark this Page</source>
         <translation>Marcador a esta Página</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="808"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="816"/>
         <source>Save Lin&amp;k</source>
         <translation>Guardar &amp;Enlace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="809"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="817"/>
         <source>Bookmark this Link</source>
         <translation>Marcador a este Enlace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="812"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="820"/>
         <source>Copy Link to Clipboard</source>
         <translation>Copiar Enlace al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="822"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="830"/>
         <source>Open Image in New Tab</source>
         <translation>Abrir Imagen en Nueva Pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="826"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="834"/>
         <source>Save Image</source>
         <translation>Guardar imagen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="827"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="835"/>
         <source>Copy Image to Clipboard</source>
         <translation>Copiar Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="828"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="836"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copiar Ubicación de la Imagen al Portapapeles</translation>
     </message>
@@ -13016,12 +13016,12 @@ selección completa.&lt;/li&gt;
         <translation type="obsolete">Navegador Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="832"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="840"/>
         <source>Block Image</source>
         <translation>Bloquear Imagen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="861"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="869"/>
         <source>Search with...</source>
         <translation>Buscar con...</translation>
     </message>
@@ -13041,97 +13041,97 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;No se pudo ejecutar una aplicación para la URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1354"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1362"/>
         <source>Error loading page: {0}</source>
         <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1363"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>When connecting to: {0}.</source>
         <translation>Al conectar con: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1403"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1411"/>
         <source>Web Database Quota</source>
         <translation>Cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1403"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1411"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La cuota de base de datos de &lt;strong&gt;{0}&lt;/strong&gt; se ha superado mientras se accedía a la base de datos &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;¿Debe ser cambiada?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1411"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1419"/>
         <source>New Web Database Quota</source>
         <translation>Nueva cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1431"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1439"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1434"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1442"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1437"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1445"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1411"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1419"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Introducir la nueva cuota en MB (actual = {0}, usados = {1}; tamaño de paso = 5MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="878"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="886"/>
         <source>Add to web search toolbar</source>
         <translation>Añadir a la barra de búsqueda web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="998"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1006"/>
         <source>Method not supported</source>
         <translation>Método no soportado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="998"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1006"/>
         <source>{0} method is not supported.</source>
         <translation>El método {0} no está soportado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1048"/>
         <source>Search engine</source>
         <translation>Motor de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1040"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1048"/>
         <source>Choose the desired search engine</source>
         <translation>Elegir el motor de búsqueda deseado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1057"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1065"/>
         <source>Engine name</source>
         <translation>Nombre de motor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1057"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1065"/>
         <source>Enter a name for the engine</source>
         <translation>Introducir el nombre para el motor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1363"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1371"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="815"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="823"/>
         <source>Scan Link with VirusTotal</source>
         <translation>Analizar enlace con VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="836"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="844"/>
         <source>Scan Image with VirusTotal</source>
         <translation>Analizar Imagen con VirusTotal</translation>
     </message>
@@ -17228,12 +17228,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="228"/>
         <source>&lt;Start&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Inicio&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="229"/>
         <source>&lt;End&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Fin&gt;</translation>
     </message>
 </context>
 <context>
@@ -27114,7 +27114,7 @@ y se posicionará el cursor en la línea y posición adecuadas.&lt;/p&gt;</trans
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser mostrado. El formato no esta soportado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Graphics/PixmapDiagram.py" line="321"/>
+        <location filename="Graphics/PixmapDiagram.py" line="337"/>
         <source>Diagram: {0}</source>
         <translation>Diagrama: {0}</translation>
     </message>
@@ -34101,7 +34101,7 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>No.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1375"/>
+        <location filename="QScintilla/Shell.py" line="1391"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
@@ -34162,14 +34162,14 @@ Not connected</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1105"/>
+        <location filename="QScintilla/Shell.py" line="1121"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Lenguaje de Shell  &quot;{0}&quot; no soportado.
 </translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1375"/>
+        <location filename="QScintilla/Shell.py" line="1391"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
@@ -36789,7 +36789,7 @@ Not connected</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="Graphics/SvgDiagram.py" line="292"/>
+        <location filename="Graphics/SvgDiagram.py" line="308"/>
         <source>Diagram: {0}</source>
         <translation>Diagrama: {0}</translation>
     </message>
@@ -37324,12 +37324,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="317"/>
         <source>&lt;Start&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Inicio&gt;</translation>
     </message>
     <message>
         <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="318"/>
         <source>&lt;End&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Fin&gt;</translation>
     </message>
 </context>
 <context>
@@ -42184,7 +42184,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Terminal.py" line="856"/>
+        <location filename="QScintilla/Terminal.py" line="872"/>
         <source>No shell has been configured.</source>
         <translation>No se ha configurado la shell.</translation>
     </message>
@@ -44138,17 +44138,17 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="PyUnit/UnittestDialog.py" line="70"/>
         <source>Rerun Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-ejecución Fallida</translation>
     </message>
     <message>
         <location filename="PyUnit/UnittestDialog.py" line="72"/>
         <source>Reruns failed tests of the selected testsuite</source>
-        <translation type="unfinished"></translation>
+        <translation>La re-ejecución ha fallado tests del testsuite seleccionado</translation>
     </message>
     <message>
         <location filename="PyUnit/UnittestDialog.py" line="74"/>
         <source>&lt;b&gt;Rerun Failed&lt;/b&gt;&lt;p&gt;This button reruns all failed tests of the selected testsuite.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Re-ejecución Fallida&lt;/b&gt;&lt;p&gt;Este botón re-ejecuta todos los tests fallidos del testsuite seleccionado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -46182,22 +46182,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="UI/UserInterface.py" line="1767"/>
         <source>Unittest Rerun Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-ejecución de Test Unitatio Fallida</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1767"/>
         <source>Rerun Failed Tests...</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-ejecutar Tests Fallidos...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1771"/>
         <source>Rerun failed tests of the last run</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-ejecutar tests fallidos de la última ejecución</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1773"/>
         <source>&lt;b&gt;Rerun Failed Tests&lt;/b&gt;&lt;p&gt;Rerun all tests that failed during the last unittest run.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Re-ejecución Tests Fallidos&lt;/b&gt;&lt;p&gt;Re-ejecutar todos los tests que fallaron durante la última ejecución de test unitario.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -49933,49 +49933,49 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="ViewManager/ViewManager.py" line="943"/>
         <source>Toggle Comment</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternar Comentario</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="943"/>
         <source>Ctrl+Shift+M</source>
         <comment>Edit|Toggle Comment</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+M</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="951"/>
         <source>Toggle the comment of the current line, selection or comment block</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternar el comentario de la línea actual, selección o bloque de comentario</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="953"/>
         <source>&lt;b&gt;Toggle Comment&lt;/b&gt;&lt;p&gt;If the current line does not start with a block comment, the current line or selection is commented. If it is already commented, this comment block is uncommented. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Alternar Comentario&lt;/b&gt;&lt;p&gt;Si la línea actual no empieza con un bloque de comentario, la línea actual o la selección se comenta. Si ya está comentada, este bloque de comentario se descomenta.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2772"/>
         <source>Zoom reset</source>
-        <translation type="unfinished">Restablecer zoom</translation>
+        <translation>Restablecer zoom</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2772"/>
         <source>Zoom &amp;reset</source>
-        <translation type="unfinished">&amp;Restablecer zoom</translation>
+        <translation>&amp;Restablecer zoom</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2772"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
-        <translation type="unfinished">Ctrl+0</translation>
+        <translation>Ctrl+0</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2779"/>
         <source>Reset the zoom of the text</source>
-        <translation type="unfinished">Restablecer el zoom aplicado al texto</translation>
+        <translation>Restablecer el zoom aplicado al texto</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2781"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Restablecer zoom&lt;/b&gt;&lt;p&gt;Restablece el zoom aplicado al texto. Establece el factor de zoom a 100%.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Restablecer zoom&lt;/b&gt;&lt;p&gt;Restablece el zoom aplicado al texto. Establece el factor de zoom a 100%.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
