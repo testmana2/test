@@ -216,11 +216,11 @@ class QtHelpGenerator(object):
         filesList = sorted([e for e in os.listdir(self.htmlDir) if e.endswith('.html')])
         files = "\n".join(["      <file>{0}</file>".format(f) for f in filesList])
         filterAttribs = "\n".join(["    <filterAttribute>{0}</filterAttribute>".format(a) \
-                                  for a in self.filterAttributes])
+                                  for a in sorted(self.filterAttributes)])
         keywords = "\n".join(
             ['      <keyword name="{0}" id="{1}" ref="{2}" />'.format(
              html_encode(kw[0]), html_encode(kw[0]), html_encode(kw[1])) \
-             for kw in self.keywords])
+             for kw in sorted(self.keywords)])
         
         helpAttribs = {
             "namespace": self.namespace,
