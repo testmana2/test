@@ -223,6 +223,9 @@ QWebView
 <td><a href="#HelpBrowser.dropEvent">dropEvent</a></td>
 <td>Protected method called by a drop event.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.findNextPrev">findNextPrev</a></td>
 <td>Public slot to find the next occurrence of a text.</td>
 </tr><tr>
@@ -231,6 +234,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.forward">forward</a></td>
 <td>Public slot to move forward in history.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.getRSS">getRSS</a></td>
 <td>Public method to get the extracted RSS feeds.</td>
@@ -673,6 +679,21 @@ reference to the drag move event (QDragMoveEvent)
 <dd>
 reference to the drop event (QDropEvent)
 </dd>
+</dl><a NAME="HelpBrowser.event" ID="HelpBrowser.event"></a>
+<h4>HelpBrowser.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
 </dl><a NAME="HelpBrowser.findNextPrev" ID="HelpBrowser.findNextPrev"></a>
 <h4>HelpBrowser.findNextPrev</h4>
 <b>findNextPrev</b>(<i>txt, case, backwards, wrap, highlightAll</i>)
@@ -710,7 +731,17 @@ reference to the focus event (QFocusEvent)
 <b>forward</b>(<i></i>)
 <p>
         Public slot to move forward in history.
-</p><a NAME="HelpBrowser.getRSS" ID="HelpBrowser.getRSS"></a>
+</p><a NAME="HelpBrowser.gestureEvent" ID="HelpBrowser.gestureEvent"></a>
+<h4>HelpBrowser.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="HelpBrowser.getRSS" ID="HelpBrowser.getRSS"></a>
 <h4>HelpBrowser.getRSS</h4>
 <b>getRSS</b>(<i></i>)
 <p>

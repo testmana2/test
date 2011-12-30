@@ -647,6 +647,9 @@ QsciScintillaCompat
 <td><a href="#Editor.ensureVisibleTop">ensureVisibleTop</a></td>
 <td>Public slot to ensure, that the specified line is visible at the top of the editor.</td>
 </tr><tr>
+<td><a href="#Editor.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
 <td><a href="#Editor.exportFile">exportFile</a></td>
 <td>Public method to export the file.</td>
 </tr><tr>
@@ -661,6 +664,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.focusOutEvent">focusOutEvent</a></td>
 <td>Public method called when the editor loses focus.</td>
+</tr><tr>
+<td><a href="#Editor.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#Editor.getBookmarks">getBookmarks</a></td>
 <td>Public method to retrieve the bookmarks.</td>
@@ -2360,6 +2366,21 @@ line number to make visible
 <dd>
 line number to make visible
 </dd>
+</dl><a NAME="Editor.event" ID="Editor.event"></a>
+<h4>Editor.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
 </dl><a NAME="Editor.exportFile" ID="Editor.exportFile"></a>
 <h4>Editor.exportFile</h4>
 <b>exportFile</b>(<i>exporterFormat</i>)
@@ -2408,6 +2429,16 @@ the event object (QFocusEvent)
 <dt><i>event</i></dt>
 <dd>
 the event object (QFocusEvent)
+</dd>
+</dl><a NAME="Editor.gestureEvent" ID="Editor.gestureEvent"></a>
+<h4>Editor.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
 </dd>
 </dl><a NAME="Editor.getBookmarks" ID="Editor.getBookmarks"></a>
 <h4>Editor.getBookmarks</h4>

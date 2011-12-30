@@ -219,11 +219,17 @@ QsciScintillaCompat
 <td><a href="#Terminal.editorCommand">editorCommand</a></td>
 <td>Public method to perform an editor command.</td>
 </tr><tr>
+<td><a href="#Terminal.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
 <td><a href="#Terminal.focusInEvent">focusInEvent</a></td>
 <td>Public method called when the shell receives focus.</td>
 </tr><tr>
 <td><a href="#Terminal.focusOutEvent">focusOutEvent</a></td>
 <td>Public method called when the shell loses focus.</td>
+</tr><tr>
+<td><a href="#Terminal.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#Terminal.getHistory">getHistory</a></td>
 <td>Public method to get the history.</td>
@@ -651,6 +657,21 @@ context menu event (QContextMenuEvent)
 <dd>
 the scintilla command to be performed
 </dd>
+</dl><a NAME="Terminal.event" ID="Terminal.event"></a>
+<h4>Terminal.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
 </dl><a NAME="Terminal.focusInEvent" ID="Terminal.focusInEvent"></a>
 <h4>Terminal.focusInEvent</h4>
 <b>focusInEvent</b>(<i>event</i>)
@@ -670,6 +691,16 @@ the event object (QFocusEvent)
 <dt><i>event</i></dt>
 <dd>
 the event object (QFocusEvent)
+</dd>
+</dl><a NAME="Terminal.gestureEvent" ID="Terminal.gestureEvent"></a>
+<h4>Terminal.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
 </dd>
 </dl><a NAME="Terminal.getHistory" ID="Terminal.getHistory"></a>
 <h4>Terminal.getHistory</h4>

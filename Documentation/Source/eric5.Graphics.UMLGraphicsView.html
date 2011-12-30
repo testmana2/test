@@ -113,8 +113,14 @@ E5GraphicsView
 <td><a href="#UMLGraphicsView.__zoom">__zoom</a></td>
 <td>Private method to handle the zoom context menu action.</td>
 </tr><tr>
+<td><a href="#UMLGraphicsView.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
 <td><a href="#UMLGraphicsView.filteredItems">filteredItems</a></td>
 <td>Public method to filter a list of items.</td>
+</tr><tr>
+<td><a href="#UMLGraphicsView.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#UMLGraphicsView.initToolBar">initToolBar</a></td>
 <td>Public method to populate a toolbar with our actions.</td>
@@ -240,7 +246,22 @@ list of rectangles that contain changes (list of QRectF)
 <b>__zoom</b>(<i></i>)
 <p>
         Private method to handle the zoom context menu action.
-</p><a NAME="UMLGraphicsView.filteredItems" ID="UMLGraphicsView.filteredItems"></a>
+</p><a NAME="UMLGraphicsView.event" ID="UMLGraphicsView.event"></a>
+<h4>UMLGraphicsView.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="UMLGraphicsView.filteredItems" ID="UMLGraphicsView.filteredItems"></a>
 <h4>UMLGraphicsView.filteredItems</h4>
 <b>filteredItems</b>(<i>items</i>)
 <p>
@@ -255,6 +276,16 @@ list of items as returned by the scene object
 <dt>Returns:</dt>
 <dd>
 list of interesting collision items (QGraphicsItem)
+</dd>
+</dl><a NAME="UMLGraphicsView.gestureEvent" ID="UMLGraphicsView.gestureEvent"></a>
+<h4>UMLGraphicsView.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
 </dd>
 </dl><a NAME="UMLGraphicsView.initToolBar" ID="UMLGraphicsView.initToolBar"></a>
 <h4>UMLGraphicsView.initToolBar</h4>

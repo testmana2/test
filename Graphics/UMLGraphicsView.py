@@ -7,7 +7,7 @@
 Module implementing a subclass of E5GraphicsView for our diagrams.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo
+from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent
 from PyQt4.QtGui import QAction, QToolBar, QDialog, QPrinter, QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
@@ -54,6 +54,8 @@ class UMLGraphicsView(E5GraphicsView):
         self.__initActions()
         
         scene.changed.connect(self.__sceneChanged)
+        
+        self.grabGesture(Qt.PinchGesture)
         
     def __initActions(self):
         """
@@ -518,3 +520,30 @@ class UMLGraphicsView(E5GraphicsView):
             return
         
         super().wheelEvent(evt)
+    
+    def event(self, evt):
+        """
+        Protected method handling events.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Gesture:
+            self.gestureEvent(evt)
+            return True
+        
+        return super().event(evt)
+    
+    def gestureEvent(self, evt):
+        """
+        Protected method handling gesture events.
+        
+        @param evt reference to the gesture event (QGestureEvent
+        """
+        pinch = evt.gesture(Qt.PinchGesture)
+        if pinch:
+            if pinch.state() == Qt.GestureStarted:
+                pinch.setScaleFactor(self.zoom())
+            else:
+                self.setZoom(pinch.scaleFactor())
+            evt.accept()

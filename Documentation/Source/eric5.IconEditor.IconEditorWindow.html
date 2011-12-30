@@ -172,6 +172,12 @@ QMainWindow
 <td><a href="#IconEditorWindow.closeEvent">closeEvent</a></td>
 <td>Private event handler for the close event.</td>
 </tr><tr>
+<td><a href="#IconEditorWindow.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
+<td><a href="#IconEditorWindow.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
+</tr><tr>
 <td><a href="#IconEditorWindow.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
 </tr>
@@ -438,6 +444,31 @@ height of the icon (integer)
 the close event (QCloseEvent)
                 <br />This event is simply accepted after the history has been
                 saved and all window references have been deleted.
+</dd>
+</dl><a NAME="IconEditorWindow.event" ID="IconEditorWindow.event"></a>
+<h4>IconEditorWindow.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="IconEditorWindow.gestureEvent" ID="IconEditorWindow.gestureEvent"></a>
+<h4>IconEditorWindow.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
 </dd>
 </dl><a NAME="IconEditorWindow.wheelEvent" ID="IconEditorWindow.wheelEvent"></a>
 <h4>IconEditorWindow.wheelEvent</h4>

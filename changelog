@@ -20,6 +20,7 @@ Version 5.2-snapshot-2011mmdd:
   -- added source navigation function for Python 2, Python 3 and Ruby sources
   -- added support for QScintilla 2.6 (and newer)
   -- added capability to zoom by Ctrl + Mouse Wheel (same for the shell and terminal)
+  -- added capability to zoom by a pinch gesture (same for the shell and terminal)
   -- added capability to go to method and class definitions by Shift + Mouse Wheel
 - Plug-in Manager Tools
   -- added code to download and install plug-ins
@@ -61,9 +62,11 @@ Version 5.2-snapshot-2011mmdd:
   -- added a dialog to show RSS feeds
   -- added a dialog to show some information about the current site
   -- added the capability to go through the history via Shift + Mouse Wheel
+  -- added capability to zoom by a pinch gesture
 - other enhancements
   -- added an action to launch another instantiation of eric5
   -- added capability to zoom by Ctrl + Mouse Wheel to various graphics related windows
+  -- added capability to zoom by a pinch gesture to various graphics related windows
 
 Version 5.2-snapshot-20110724:
 - bug fixes

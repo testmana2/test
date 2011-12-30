@@ -460,6 +460,8 @@ class HelpBrowser(QWebView):
             self.page().scrollRequested.connect(self.__hideAccessKeys)
         
         self.__rss = []
+        
+        self.grabGesture(Qt.PinchGesture)
     
     def __addExternalBinding(self, frame=None):
         """
@@ -739,30 +741,6 @@ class HelpBrowser(QWebView):
         """
         self.__currentZoom = 100
         self.__applyZoom()
-    
-    def wheelEvent(self, evt):
-        """
-        Protected method to handle wheel events.
-        
-        @param evt reference to the wheel event (QWheelEvent)
-        """
-        if evt.modifiers() & Qt.ControlModifier:
-            degrees = evt.delta() // 8
-            steps = degrees // 15
-            self.__currentZoom += steps * 10
-            self.__applyZoom()
-            evt.accept()
-            return
-        
-        if evt.modifiers() & Qt.ShiftModifier:
-            if evt.delta() < 0:
-                self.backward()
-            else:
-                self.forward()
-            evt.accept()
-            return
-        
-        super().wheelEvent(evt)
     
     def hasSelection(self):
         """
@@ -1174,6 +1152,30 @@ class HelpBrowser(QWebView):
                 self.setSource(url)
         evt.setAccepted(accepted)
     
+    def wheelEvent(self, evt):
+        """
+        Protected method to handle wheel events.
+        
+        @param evt reference to the wheel event (QWheelEvent)
+        """
+        if evt.modifiers() & Qt.ControlModifier:
+            degrees = evt.delta() // 8
+            steps = degrees // 15
+            self.__currentZoom += steps * 10
+            self.__applyZoom()
+            evt.accept()
+            return
+        
+        if evt.modifiers() & Qt.ShiftModifier:
+            if evt.delta() < 0:
+                self.backward()
+            else:
+                self.forward()
+            evt.accept()
+            return
+        
+        super().wheelEvent(evt)
+    
     def keyPressEvent(self, evt):
         """
         Protected method called by a key press.
@@ -1222,6 +1224,35 @@ class HelpBrowser(QWebView):
                 self.__accessKeysPressed = False
         
         super().focusOutEvent(evt)
+    
+    def event(self, evt):
+        """
+        Protected method handling events.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Gesture:
+            self.gestureEvent(evt)
+            return True
+        
+        return super().event(evt)
+    
+    def gestureEvent(self, evt):
+        """
+        Protected method handling gesture events.
+        
+        @param evt reference to the gesture event (QGestureEvent
+        """
+        pinch = evt.gesture(Qt.PinchGesture)
+        if pinch:
+            if pinch.state() == Qt.GestureStarted:
+                pinch.setScaleFactor(self.__currentZoom / 100.0)
+            else:
+                scaleFactor = pinch.scaleFactor()
+                self.__currentZoom = int(scaleFactor * 100)
+                self.__applyZoom()
+            evt.accept()
     
     def clearHistory(self):
         """

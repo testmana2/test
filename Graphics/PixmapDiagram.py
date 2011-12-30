@@ -7,7 +7,7 @@
 Module implementing a dialog showing a pixmap.
 """
 
-from PyQt4.QtCore import Qt, QSize
+from PyQt4.QtCore import Qt, QSize, QEvent
 from PyQt4.QtGui import QMainWindow, QLabel, QPalette, QSizePolicy, QScrollArea, \
     QAction, QMenu, QToolBar, QImage, QPixmap, QDialog, QPrinter, QPrintDialog, \
     QPainter, QFont, QColor
@@ -64,6 +64,8 @@ class PixmapDiagram(QMainWindow):
         self.__initContextMenu()
         self.__initToolBars()
         
+        self.grabGesture(Qt.PinchGesture)
+    
     def __initActions(self):
         """
         Private method to initialize the view actions.
@@ -200,6 +202,33 @@ class PixmapDiagram(QMainWindow):
             return
         
         super().wheelEvent(evt)
+    
+    def event(self, evt):
+        """
+        Protected method handling events.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Gesture:
+            self.gestureEvent(evt)
+            return True
+        
+        return super().event(evt)
+    
+    def gestureEvent(self, evt):
+        """
+        Protected method handling gesture events.
+        
+        @param evt reference to the gesture event (QGestureEvent
+        """
+        pinch = evt.gesture(Qt.PinchGesture)
+        if pinch:
+            if pinch.state() == Qt.GestureStarted:
+                pinch.setScaleFactor(self.zoom)
+            else:
+                self.__doZoom(pinch.scaleFactor() / self.zoom)
+            evt.accept()
     
     ############################################################################
     ## Private menu handling methods below.

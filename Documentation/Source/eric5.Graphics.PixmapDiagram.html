@@ -103,6 +103,12 @@ QMainWindow
 <td><a href="#PixmapDiagram.__zoomReset">__zoomReset</a></td>
 <td>Private method to handle the reset zoom context menu entry.</td>
 </tr><tr>
+<td><a href="#PixmapDiagram.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
+<td><a href="#PixmapDiagram.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
+</tr><tr>
 <td><a href="#PixmapDiagram.getDiagramName">getDiagramName</a></td>
 <td>Method to retrieve a name for the diagram.</td>
 </tr><tr>
@@ -236,7 +242,32 @@ flag indicating success (boolean)
 <b>__zoomReset</b>(<i></i>)
 <p>
         Private method to handle the reset zoom context menu entry.
-</p><a NAME="PixmapDiagram.getDiagramName" ID="PixmapDiagram.getDiagramName"></a>
+</p><a NAME="PixmapDiagram.event" ID="PixmapDiagram.event"></a>
+<h4>PixmapDiagram.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="PixmapDiagram.gestureEvent" ID="PixmapDiagram.gestureEvent"></a>
+<h4>PixmapDiagram.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="PixmapDiagram.getDiagramName" ID="PixmapDiagram.getDiagramName"></a>
 <h4>PixmapDiagram.getDiagramName</h4>
 <b>getDiagramName</b>(<i></i>)
 <p>

@@ -271,6 +271,9 @@ QsciScintillaCompat
 <td><a href="#Shell.editorCommand">editorCommand</a></td>
 <td>Public method to perform an editor command.</td>
 </tr><tr>
+<td><a href="#Shell.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
 <td><a href="#Shell.executeLines">executeLines</a></td>
 <td>Public method to execute a set of lines as multiple commands.</td>
 </tr><tr>
@@ -282,6 +285,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Shell.focusOutEvent">focusOutEvent</a></td>
 <td>Public method called when the shell loses focus.</td>
+</tr><tr>
+<td><a href="#Shell.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#Shell.getClientType">getClientType</a></td>
 <td>Public slot to get the clients type.</td>
@@ -916,6 +922,21 @@ the drop event (QDropEvent)
 <dd>
 the scintilla command to be performed
 </dd>
+</dl><a NAME="Shell.event" ID="Shell.event"></a>
+<h4>Shell.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
 </dl><a NAME="Shell.executeLines" ID="Shell.executeLines"></a>
 <h4>Shell.executeLines</h4>
 <b>executeLines</b>(<i>lines</i>)
@@ -964,6 +985,16 @@ flag indicating the movement
 <dt><i>event</i></dt>
 <dd>
 the event object (QFocusEvent)
+</dd>
+</dl><a NAME="Shell.gestureEvent" ID="Shell.gestureEvent"></a>
+<h4>Shell.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
 </dd>
 </dl><a NAME="Shell.getClientType" ID="Shell.getClientType"></a>
 <h4>Shell.getClientType</h4>

@@ -7,7 +7,8 @@
 Module implementing the icon editor main window.
 """
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile
+from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, QFile, \
+    QEvent
 from PyQt4.QtGui import QMainWindow, QScrollArea, QPalette, QImage, QImageReader, \
     QImageWriter, QKeySequence, qApp, QLabel, QDockWidget, QDialog, QWhatsThis
 
@@ -100,6 +101,8 @@ class IconEditorWindow(QMainWindow):
                 self.__loadIconFile(fileName)
             
             self.__checkActions()
+            
+            self.grabGesture(Qt.PinchGesture)
     
     def __initFileFilters(self):
         """
@@ -1226,7 +1229,7 @@ class IconEditorWindow(QMainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta()< 0:
+            if evt.delta() < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()
@@ -1234,3 +1237,31 @@ class IconEditorWindow(QMainWindow):
             return
         
         super().wheelEvent(evt)
+    
+    def event(self, evt):
+        """
+        Protected method handling events.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Gesture:
+            self.gestureEvent(evt)
+            return True
+        
+        return super().event(evt)
+    
+    def gestureEvent(self, evt):
+        """
+        Protected method handling gesture events.
+        
+        @param evt reference to the gesture event (QGestureEvent
+        """
+        pinch = evt.gesture(Qt.PinchGesture)
+        if pinch:
+            if pinch.state() == Qt.GestureStarted:
+                pinch.setScaleFactor(self.__editor.zoomFactor() / 100.0)
+            else:
+                self.__editor.setZoomFactor(int(pinch.scaleFactor() * 100))
+                self.__updateZoom()
+            evt.accept()

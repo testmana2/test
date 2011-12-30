@@ -989,7 +989,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def event(self, evt):
         """
-        Public method to handle events.
+        Protected method to handle events.
         
         Note: We are not interested in the standard QsciScintilla event handling
         because we do it our self.

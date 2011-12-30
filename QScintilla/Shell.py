@@ -10,7 +10,7 @@ Module implementing a graphical Python shell.
 import sys
 import re
 
-from PyQt4.QtCore import QFileInfo, Qt
+from PyQt4.QtCore import QFileInfo, Qt, QEvent
 from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QClipboard, QMenu, \
     QPalette, QFont
 from PyQt4.Qsci import QsciScintilla
@@ -214,6 +214,8 @@ class Shell(QsciScintillaCompat):
             QsciScintilla.SCI_VCHOMEEXTEND: self.__QScintillaVCHomeExtend,
             QsciScintilla.SCI_LINEENDEXTEND: self.extendSelectionToEOL,
         }
+        
+        self.grabGesture(Qt.PinchGesture)
         
     def closeShell(self):
         """
@@ -739,6 +741,41 @@ class Shell(QsciScintillaCompat):
             return
         
         super().wheelEvent(evt)
+    
+    def event(self, evt):
+        """
+        Protected method handling events.
+        
+        @param evt reference to the event (QEvent)
+        @return flag indicating, if the event was handled (boolean)
+        """
+        if evt.type() == QEvent.Gesture:
+            self.gestureEvent(evt)
+            return True
+        
+        return super().event(evt)
+    
+    def gestureEvent(self, evt):
+        """
+        Protected method handling gesture events.
+        
+        @param evt reference to the gesture event (QGestureEvent
+        """
+        pinch = evt.gesture(Qt.PinchGesture)
+        if pinch:
+            if pinch.state() == Qt.GestureStarted:
+                zoom = (self.getZoom() + 10) / 10.0
+                pinch.setScaleFactor(zoom)
+            else:
+                zoom = int(pinch.scaleFactor() * 10) - 10
+                if zoom <= -9:
+                    zoom = -9
+                    pinch.setScaleFactor(0.1)
+                elif zoom >= 20:
+                    zoom = 20
+                    pinch.setScaleFactor(3.0)
+                self.zoomTo(zoom)
+            evt.accept()
     
     def editorCommand(self, cmd):
         """

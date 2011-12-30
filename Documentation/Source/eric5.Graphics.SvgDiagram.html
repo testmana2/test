@@ -100,6 +100,12 @@ QMainWindow
 <td><a href="#SvgDiagram.__zoomReset">__zoomReset</a></td>
 <td>Private method to handle the reset zoom context menu entry.</td>
 </tr><tr>
+<td><a href="#SvgDiagram.event">event</a></td>
+<td>Protected method handling events.</td>
+</tr><tr>
+<td><a href="#SvgDiagram.gestureEvent">gestureEvent</a></td>
+<td>Protected method handling gesture events.</td>
+</tr><tr>
 <td><a href="#SvgDiagram.getDiagramName">getDiagramName</a></td>
 <td>Method to retrieve a name for the diagram.</td>
 </tr><tr>
@@ -215,7 +221,32 @@ the position of the mouse pointer (QPoint)
 <b>__zoomReset</b>(<i></i>)
 <p>
         Private method to handle the reset zoom context menu entry.
-</p><a NAME="SvgDiagram.getDiagramName" ID="SvgDiagram.getDiagramName"></a>
+</p><a NAME="SvgDiagram.event" ID="SvgDiagram.event"></a>
+<h4>SvgDiagram.event</h4>
+<b>event</b>(<i>evt</i>)
+<p>
+        Protected method handling events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, if the event was handled (boolean)
+</dd>
+</dl><a NAME="SvgDiagram.gestureEvent" ID="SvgDiagram.gestureEvent"></a>
+<h4>SvgDiagram.gestureEvent</h4>
+<b>gestureEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling gesture events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the gesture event (QGestureEvent
+</dd>
+</dl><a NAME="SvgDiagram.getDiagramName" ID="SvgDiagram.getDiagramName"></a>
 <h4>SvgDiagram.getDiagramName</h4>
 <b>getDiagramName</b>(<i></i>)
 <p>
