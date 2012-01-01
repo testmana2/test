@@ -2742,7 +2742,8 @@ class ViewManager(QObject):
                             QApplication.translate('ViewManager', 'Zoom &in'),
                             QKeySequence(QApplication.translate('ViewManager',
                                 "Ctrl++", "View|Zoom in")),
-                            0,
+                            QKeySequence(QApplication.translate('ViewManager',
+                                "Zoom In", "View|Zoom in")),
                             self.viewActGrp, 'vm_view_zoom_in')
         self.zoomInAct.setStatusTip(QApplication.translate('ViewManager',
             'Zoom in on the text'))
@@ -2758,7 +2759,8 @@ class ViewManager(QObject):
                             QApplication.translate('ViewManager', 'Zoom &out'),
                             QKeySequence(QApplication.translate('ViewManager',
                                 "Ctrl+-", "View|Zoom out")),
-                            0,
+                            QKeySequence(QApplication.translate('ViewManager',
+                                "Zoom Out", "View|Zoom out")),
                             self.viewActGrp, 'vm_view_zoom_out')
         self.zoomOutAct.setStatusTip(QApplication.translate('ViewManager',
             'Zoom out on the text'))

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Shortcuts SYSTEM "Shortcuts-3.6.dtd">
 <!-- Eric5 keyboard shortcuts -->
-<!-- Saved: 2011-11-19, 15:14:41-->
+<!-- Saved: 2012-01-01, 15:38:59-->
 <!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
 <Shortcuts version="3.6">
   <Shortcut category="Project">
@@ -165,16 +165,6 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Project">
-    <Name>project_check_pylint</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Project">
-    <Name>project_check_pylintshow</Name>
-    <Accel></Accel>
-    <AltAccel></AltAccel>
-  </Shortcut>
-  <Shortcut category="Project">
     <Name>project_check_syntax</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
@@ -187,6 +177,11 @@
   <Shortcut category="General">
     <Name>quit</Name>
     <Accel>Ctrl+Q</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>new_window</Name>
+    <Accel>Ctrl+Shift+N</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="General">
@@ -411,6 +406,11 @@
   </Shortcut>
   <Shortcut category="General">
     <Name>unittest_restart</Name>
+    <Accel></Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="General">
+    <Name>unittest_rerun_failed</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
@@ -807,6 +807,11 @@
   <Shortcut category="Edit">
     <Name>vm_edit_uncomment</Name>
     <Accel>Ctrl+Alt+M</Accel>
+    <AltAccel></AltAccel>
+  </Shortcut>
+  <Shortcut category="Edit">
+    <Name>vm_edit_toggle_comment</Name>
+    <Accel>Ctrl+Shift+M</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Edit">
@@ -1452,11 +1457,16 @@
   <Shortcut category="View">
     <Name>vm_view_zoom_in</Name>
     <Accel>Ctrl++</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>Zoom In</AltAccel>
   </Shortcut>
   <Shortcut category="View">
     <Name>vm_view_zoom_out</Name>
     <Accel>Ctrl+-</Accel>
+    <AltAccel>Zoom Out</AltAccel>
+  </Shortcut>
+  <Shortcut category="View">
+    <Name>vm_view_zoom_reset</Name>
+    <Accel>Ctrl+0</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="View">
@@ -1552,7 +1562,7 @@
   <Shortcut category="Bookmarks">
     <Name>vm_bookmark_next</Name>
     <Accel>Ctrl+PgDown</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>Ctrl+Shift+,</AltAccel>
   </Shortcut>
   <Shortcut category="Bookmarks">
     <Name>vm_bookmark_previous</Name>
@@ -1626,12 +1636,12 @@
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_update</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+U</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_commit</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+O</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
@@ -1651,12 +1661,12 @@
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_log_browser</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+G</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_diff</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+D</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
@@ -1671,7 +1681,7 @@
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_status</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+S</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
@@ -1696,7 +1706,7 @@
   </Shortcut>
   <Shortcut category="Subversion">
     <Name>subversion_merge</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+M</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Subversion">
@@ -1961,12 +1971,12 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_update</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+U</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_commit</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+O</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -1986,12 +1996,12 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_log_browser</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+G</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_diff</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+D</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -2006,7 +2016,7 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_status</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+S</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -2036,7 +2046,7 @@
   </Shortcut>
   <Shortcut category="PySvn">
     <Name>subversion_merge</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+M</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="PySvn">
@@ -2111,22 +2121,22 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_incoming</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+I</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_pull</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+P</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_update</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+U</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_commit</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+O</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2136,7 +2146,7 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_push</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+H</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2166,12 +2176,12 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_log_browser</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+G</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_diff</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+D</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2181,7 +2191,7 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_status</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+S</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2206,7 +2216,7 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_merge</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+M</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2661,12 +2671,12 @@
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_fetch</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+F</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
     <Name>mercurial_transplant</Name>
-    <Accel></Accel>
+    <Accel>Meta+Alt+T</Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Mercurial">
@@ -2827,12 +2837,12 @@
   <Shortcut category="HelpViewer">
     <Name>help_view_zoom_in</Name>
     <Accel>Ctrl++</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>Zoom In</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_view_zoom_out</Name>
     <Accel>Ctrl+-</Accel>
-    <AltAccel></AltAccel>
+    <AltAccel>Zoom Out</AltAccel>
   </Shortcut>
   <Shortcut category="HelpViewer">
     <Name>help_view_zoom_reset</Name>

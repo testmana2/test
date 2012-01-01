@@ -783,7 +783,8 @@ class HelpWindow(QMainWindow):
             UI.PixmapCache.getIcon("zoomIn.png"),
             self.trUtf8('Zoom &in'),
             QKeySequence(self.trUtf8("Ctrl++", "View|Zoom in")),
-            0, self, 'help_view_zoom_in')
+            QKeySequence(self.trUtf8("Zoom In", "View|Zoom in")),
+            self, 'help_view_zoom_in')
         self.zoomInAct.setStatusTip(self.trUtf8('Zoom in on the text'))
         self.zoomInAct.setWhatsThis(self.trUtf8(
                 """<b>Zoom in</b>"""
@@ -797,7 +798,8 @@ class HelpWindow(QMainWindow):
             UI.PixmapCache.getIcon("zoomOut.png"),
             self.trUtf8('Zoom &out'),
             QKeySequence(self.trUtf8("Ctrl+-", "View|Zoom out")),
-            0, self, 'help_view_zoom_out')
+            QKeySequence(self.trUtf8("Zoom Out", "View|Zoom out")),
+            self, 'help_view_zoom_out')
         self.zoomOutAct.setStatusTip(self.trUtf8('Zoom out on the text'))
         self.zoomOutAct.setWhatsThis(self.trUtf8(
                 """<b>Zoom out</b>"""
