@@ -105,11 +105,13 @@ class E5Action(QAction):
         
         self.__ammendToolTip()
         
-    def setAlternateShortcut(self, shortcut):
+    def setAlternateShortcut(self, shortcut, removeEmpty=False):
         """
         Public slot to set the alternative keyboard shortcut.
         
         @param shortcut the alternative accelerator (QKeySequence)
+        @param removeEmpty flag indicating to remove the alternate shortcut,
+            if it is empty (boolean)
         """
         if not shortcut.isEmpty():
             shortcuts = self.shortcuts()
@@ -118,6 +120,11 @@ class E5Action(QAction):
                     shortcuts.append(shortcut)
                 else:
                     shortcuts[1] = shortcut
+                self.setShortcuts(shortcuts)
+        elif removeEmpty:
+            shortcuts = self.shortcuts()
+            if len(shortcuts) == 2:
+                del shortcuts[1]
                 self.setShortcuts(shortcuts)
         
     def alternateShortcut(self):

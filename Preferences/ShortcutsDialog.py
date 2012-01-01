@@ -357,7 +357,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             for act in actions:
                 if txt == act.objectName():
                     act.setShortcut(QKeySequence(itm.text(1)))
-                    act.setAlternateShortcut(QKeySequence(itm.text(2)))
+                    act.setAlternateShortcut(QKeySequence(itm.text(2)), removeEmpty=True)
                     break
         
     def on_buttonBox_accepted(self):
