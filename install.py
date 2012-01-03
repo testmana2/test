@@ -717,6 +717,13 @@ def doDependancyChecks():
     print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     
     try:
+        import xml.etree            # __IGNORE_WARNING__
+    except ImportError as msg:
+        print('Your Python3 installation is missing the XML module.')
+        print('Please install it and try again.')
+        exit(5)
+    
+    try:
         from PyQt4.QtCore import qVersion
     except ImportError as msg:
         print('Sorry, please install PyQt4.')
