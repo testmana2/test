@@ -110,8 +110,12 @@ character except an alphabetic character.</td></tr>
         self.ui.findNextButton.setIcon(UI.PixmapCache.getIcon("1rightarrow.png"))
         
         if replace:
-            self.ui.replaceButton.setIcon(UI.PixmapCache.getIcon("editReplace.png"))
-            self.ui.replaceAllButton.setIcon(UI.PixmapCache.getIcon("editReplaceAll.png"))
+            self.ui.replaceButton.setIcon(
+                UI.PixmapCache.getIcon("editReplace.png"))
+            self.ui.replaceSearchButton.setIcon(
+                UI.PixmapCache.getIcon("editReplaceSearch.png"))
+            self.ui.replaceAllButton.setIcon(
+                UI.PixmapCache.getIcon("editReplaceAll.png"))
         
         self.ui.findtextCombo.lineEdit().returnPressed.connect(self.__findByReturnPressed)
         if replace:
@@ -149,6 +153,7 @@ character except an alphabetic character.</td></tr>
             self.findPrevAct.setEnabled(False)
             if self.replace:
                 self.ui.replaceButton.setEnabled(False)
+                self.ui.replaceSearchButton.setEnabled(False)
                 self.ui.replaceAllButton.setEnabled(False)
         else:
             self.ui.findNextButton.setEnabled(True)
@@ -157,6 +162,7 @@ character except an alphabetic character.</td></tr>
             self.findPrevAct.setEnabled(True)
             if self.replace:
                 self.ui.replaceButton.setEnabled(False)
+                self.ui.replaceSearchButton.setEnabled(False)
                 self.ui.replaceAllButton.setEnabled(True)
 
     @pyqtSlot()
@@ -190,6 +196,7 @@ character except an alphabetic character.</td></tr>
         if ok:
             if self.replace:
                 self.ui.replaceButton.setEnabled(True)
+                self.ui.replaceSearchButton.setEnabled(True)
         else:
             E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
@@ -225,6 +232,7 @@ character except an alphabetic character.</td></tr>
         if ok:
             if self.replace:
                 self.ui.replaceButton.setEnabled(True)
+                self.ui.replaceSearchButton.setEnabled(True)
         else:
             E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(txt))
@@ -399,6 +407,7 @@ character except an alphabetic character.</td></tr>
         self.ui.findtextCombo.setEditText(text)
         self.ui.findtextCombo.lineEdit().selectAll()
         self.ui.findtextCombo.setFocus()
+        self.on_findtextCombo_editTextChanged(text)
         
         self.ui.caseCheckBox.setChecked(False)
         self.ui.wordCheckBox.setChecked(False)
@@ -452,10 +461,26 @@ character except an alphabetic character.</td></tr>
         """
         Private slot to replace one occurrence of text.
         """
+        self.__doReplace(False)
+    
+    @pyqtSlot()
+    def on_replaceSearchButton_clicked(self):
+        """
+        Private slot to replace one occurrence of text and search for the next one.
+        """
+        self.__doReplace(True)
+    
+    def __doReplace(self, searchNext):
+        """
+        Private method to replace one occurrence of text.
+        
+        @param searchNext flag indicating to search for the next occurrence.
+        """
         self.__finding = True
         
         # Check enabled status due to dual purpose usage of this method
-        if not self.ui.replaceButton.isEnabled():
+        if not self.ui.replaceButton.isEnabled() and \
+           not self.ui.replaceSearchButton.isEnabled():
             return
         
         ftxt = self.ui.findtextCombo.currentText()
@@ -471,15 +496,21 @@ character except an alphabetic character.</td></tr>
         
         aw = self.viewmanager.activeWindow()
         aw.replace(rtxt)
-        ok = self.__findNextPrev(ftxt, self.__findBackwards)
         
-        if not ok:
-            self.ui.replaceButton.setEnabled(False)
-            E5MessageBox.information(self, self.windowTitle(),
+        if searchNext:
+            ok = self.__findNextPrev(ftxt, self.__findBackwards)
+            
+            if not ok:
+                self.ui.replaceButton.setEnabled(False)
+                self.ui.replaceSearchButton.setEnabled(False)
+                E5MessageBox.information(self, self.windowTitle(),
                 self.trUtf8("'{0}' was not found.").format(ftxt))
+        else:
+            self.ui.replaceButton.setEnabled(False)
+            self.ui.replaceSearchButton.setEnabled(False)
         
         self.__finding = False
-        
+    
     @pyqtSlot()
     def on_replaceAllButton_clicked(self):
         """
@@ -545,6 +576,7 @@ character except an alphabetic character.</td></tr>
         if wordWrap:
             self.ui.wrapCheckBox.setChecked(True)
         self.ui.replaceButton.setEnabled(False)
+        self.ui.replaceSearchButton.setEnabled(False)
         
         if found:
             E5MessageBox.information(self, self.windowTitle(),
@@ -573,6 +605,7 @@ character except an alphabetic character.</td></tr>
         self.ui.findtextCombo.setEditText(text)
         self.ui.findtextCombo.lineEdit().selectAll()
         self.ui.findtextCombo.setFocus()
+        self.on_findtextCombo_editTextChanged(text)
         
         self.ui.replacetextCombo.clear()
         self.ui.replacetextCombo.addItems(self.replaceHistory)

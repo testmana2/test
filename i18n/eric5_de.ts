@@ -33290,90 +33290,95 @@ innerhalb der Klammern bedeutet, dass die gefundene Übereinstimmung nicht zur w
         <translation>Suchen und Ersetzen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="33"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="42"/>
         <source>Find:</source>
         <translation>Suchen:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="62"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="71"/>
         <source>Press to find the previous occurrence</source>
         <translation>Drücken, um das vorherige Vorkommen zu suchen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="69"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="78"/>
         <source>Press to find the next occurrence</source>
         <translation>Drücken, um das nächste Vorkommen zu suchen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="76"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="85"/>
         <source>Match case</source>
         <translation>Groß-/Kleinschreibung</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="83"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="92"/>
         <source>Whole word</source>
         <translation>Ganzes Wort</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="97"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="106"/>
         <source>Replace:</source>
         <translation>Ersetzen:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="126"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="135"/>
         <source>Press to replace the selection</source>
         <translation>Drücken, um die Auswahl zu ersetzen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="149"/>
         <source>Press to replace all occurrences</source>
         <translation>Drücken, um alle Vorkommen zu ersetzen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="23"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="32"/>
         <source>Press to close the window</source>
         <translation>Drücken, um das Fenster zu schließen</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="90"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="99"/>
         <source>Regexp</source>
         <translation>Regexp</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="140"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="156"/>
         <source>Wrap around</source>
         <translation>Am Anfang/Ende weiter</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="147"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="163"/>
         <source>Selection only</source>
         <translation>nur Auswahl</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/ReplaceWidget.ui" line="142"/>
+        <source>Press to replace the selection and search for the next occurence</source>
+        <translation>Drücken, um die Auswahl zu ersetzen und das nächste Vorkommen zu suchen</translation>
     </message>
 </context>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="478"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="506"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; wurde nicht gefunden.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="550"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="582"/>
         <source>Replaced {0} occurrences.</source>
         <translation>{0} Vorkommen ersetzt.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="554"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="586"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Es wurde nichts ersetzt, da &apos;{0}&apos; nicht gefunden wurde.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="121"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="125"/>
         <source>Find Next</source>
         <translation>Weitersuchen</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="128"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="132"/>
         <source>Find Prev</source>
         <translation>Rückwärtssuchen</translation>
     </message>

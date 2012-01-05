@@ -67,6 +67,9 @@ QWidget
 <td><a href="#SearchReplaceWidget.__init__">SearchReplaceWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#SearchReplaceWidget.__doReplace">__doReplace</a></td>
+<td>Private method to replace one occurrence of text.</td>
+</tr><tr>
 <td><a href="#SearchReplaceWidget.__findByReturnPressed">__findByReturnPressed</a></td>
 <td>Private slot to handle the returnPressed signal of the findtext combobox.</td>
 </tr><tr>
@@ -109,6 +112,9 @@ QWidget
 <td><a href="#SearchReplaceWidget.on_replaceButton_clicked">on_replaceButton_clicked</a></td>
 <td>Private slot to replace one occurrence of text.</td>
 </tr><tr>
+<td><a href="#SearchReplaceWidget.on_replaceSearchButton_clicked">on_replaceSearchButton_clicked</a></td>
+<td>Private slot to replace one occurrence of text and search for the next one.</td>
+</tr><tr>
 <td><a href="#SearchReplaceWidget.selectionChanged">selectionChanged</a></td>
 <td>Public slot tracking changes of selected text.</td>
 </tr><tr>
@@ -138,6 +144,16 @@ reference to the viewmanager object
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget of this widget (QWidget)
+</dd>
+</dl><a NAME="SearchReplaceWidget.__doReplace" ID="SearchReplaceWidget.__doReplace"></a>
+<h4>SearchReplaceWidget.__doReplace</h4>
+<b>__doReplace</b>(<i>searchNext</i>)
+<p>
+        Private method to replace one occurrence of text.
+</p><dl>
+<dt><i>searchNext</i></dt>
+<dd>
+flag indicating to search for the next occurrence.
 </dd>
 </dl><a NAME="SearchReplaceWidget.__findByReturnPressed" ID="SearchReplaceWidget.__findByReturnPressed"></a>
 <h4>SearchReplaceWidget.__findByReturnPressed</h4>
@@ -242,6 +258,11 @@ reference to the key press event (QKeyEvent)
 <b>on_replaceButton_clicked</b>(<i></i>)
 <p>
         Private slot to replace one occurrence of text.
+</p><a NAME="SearchReplaceWidget.on_replaceSearchButton_clicked" ID="SearchReplaceWidget.on_replaceSearchButton_clicked"></a>
+<h4>SearchReplaceWidget.on_replaceSearchButton_clicked</h4>
+<b>on_replaceSearchButton_clicked</b>(<i></i>)
+<p>
+        Private slot to replace one occurrence of text and search for the next one.
 </p><a NAME="SearchReplaceWidget.selectionChanged" ID="SearchReplaceWidget.selectionChanged"></a>
 <h4>SearchReplaceWidget.selectionChanged</h4>
 <b>selectionChanged</b>(<i></i>)

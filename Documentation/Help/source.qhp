@@ -7840,6 +7840,7 @@
       <keyword name="SearchReplaceWidget" id="SearchReplaceWidget" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget" />
       <keyword name="SearchReplaceWidget (Constructor)" id="SearchReplaceWidget (Constructor)" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__init__" />
       <keyword name="SearchReplaceWidget (Module)" id="SearchReplaceWidget (Module)" ref="eric5.QScintilla.SearchReplaceWidget.html" />
+      <keyword name="SearchReplaceWidget.__doReplace" id="SearchReplaceWidget.__doReplace" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__doReplace" />
       <keyword name="SearchReplaceWidget.__findByReturnPressed" id="SearchReplaceWidget.__findByReturnPressed" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findByReturnPressed" />
       <keyword name="SearchReplaceWidget.__findNextPrev" id="SearchReplaceWidget.__findNextPrev" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__findNextPrev" />
       <keyword name="SearchReplaceWidget.__markOccurrences" id="SearchReplaceWidget.__markOccurrences" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__markOccurrences" />
@@ -7854,6 +7855,7 @@
       <keyword name="SearchReplaceWidget.on_findtextCombo_editTextChanged" id="SearchReplaceWidget.on_findtextCombo_editTextChanged" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.on_findtextCombo_editTextChanged" />
       <keyword name="SearchReplaceWidget.on_replaceAllButton_clicked" id="SearchReplaceWidget.on_replaceAllButton_clicked" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.on_replaceAllButton_clicked" />
       <keyword name="SearchReplaceWidget.on_replaceButton_clicked" id="SearchReplaceWidget.on_replaceButton_clicked" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.on_replaceButton_clicked" />
+      <keyword name="SearchReplaceWidget.on_replaceSearchButton_clicked" id="SearchReplaceWidget.on_replaceSearchButton_clicked" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.on_replaceSearchButton_clicked" />
       <keyword name="SearchReplaceWidget.selectionChanged" id="SearchReplaceWidget.selectionChanged" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.selectionChanged" />
       <keyword name="SearchReplaceWidget.show" id="SearchReplaceWidget.show" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.show" />
       <keyword name="SearchReplaceWidget.updateSelectionCheckBox" id="SearchReplaceWidget.updateSelectionCheckBox" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.updateSelectionCheckBox" />

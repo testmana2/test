@@ -33779,90 +33779,95 @@ means that the content of the match (called the backreference) is not stored for
         <translation>Найти и заменить</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="33"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="42"/>
         <source>Find:</source>
         <translation>Найти:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="62"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="71"/>
         <source>Press to find the previous occurrence</source>
         <translation>Перейти к предыдущему вхождению</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="69"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="78"/>
         <source>Press to find the next occurrence</source>
         <translation>Перейти к следующему вхождению</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="76"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="85"/>
         <source>Match case</source>
         <translation>Учитывать регистр</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="83"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="92"/>
         <source>Whole word</source>
         <translation>Целое слово</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="97"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="106"/>
         <source>Replace:</source>
         <translation>Замена:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="126"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="135"/>
         <source>Press to replace the selection</source>
         <translation>Заменить выделенный текст</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="149"/>
         <source>Press to replace all occurrences</source>
         <translation>Заменить всё</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="23"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="32"/>
         <source>Press to close the window</source>
         <translation>Закрыть окно</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="90"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="99"/>
         <source>Regexp</source>
         <translation>Регулярное выражение</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="140"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="156"/>
         <source>Wrap around</source>
         <translation>Циклический поиск</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="147"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="163"/>
         <source>Selection only</source>
         <translation>Выделенный</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/ReplaceWidget.ui" line="142"/>
+        <source>Press to replace the selection and search for the next occurence</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="478"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="506"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; не найдено.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="550"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="582"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Заменено в {0} местах.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="554"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="586"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Ничего не заменено, потому что &apos;{0}&apos; не найдено.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="121"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="125"/>
         <source>Find Next</source>
         <translation>Найти далее</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="128"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="132"/>
         <source>Find Prev</source>
         <translation>Найти предыдущее</translation>
     </message>

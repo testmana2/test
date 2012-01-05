@@ -6015,6 +6015,7 @@ eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_findPrevButton_click
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_findtextCombo_editTextChanged?4(txt)
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_replaceAllButton_clicked?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_replaceButton_clicked?4()
+eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.on_replaceSearchButton_clicked?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.searchListChanged?7
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.selectionChanged?4()
 eric5.QScintilla.SearchReplaceWidget.SearchReplaceWidget.show?4(text='')

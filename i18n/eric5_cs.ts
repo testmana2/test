@@ -34132,90 +34132,95 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>Najít a nahradit</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="33"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="42"/>
         <source>Find:</source>
         <translation>Hledat:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="62"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="71"/>
         <source>Press to find the previous occurrence</source>
         <translation>Stisknout pro vyhledání předchozího výskytu</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="69"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="78"/>
         <source>Press to find the next occurrence</source>
         <translation>Stisknout pro vyhledání následujícího výskytu</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="76"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="85"/>
         <source>Match case</source>
         <translation>Rozlišit velké a malé znaky</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="83"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="92"/>
         <source>Whole word</source>
         <translation>Celé slovo</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="97"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="106"/>
         <source>Replace:</source>
         <translation>Nahradit:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="126"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="135"/>
         <source>Press to replace the selection</source>
         <translation>Stisknout pro nahrazení výběru</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="149"/>
         <source>Press to replace all occurrences</source>
         <translation>Stisknout pro nahrazení všech výskytů</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="23"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="32"/>
         <source>Press to close the window</source>
         <translation>Stisknutím zavřít okno</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="90"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="99"/>
         <source>Regexp</source>
         <translation>Regexp</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="140"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="156"/>
         <source>Wrap around</source>
         <translation>Zabalit</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="147"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="163"/>
         <source>Selection only</source>
         <translation>Jen výběr</translation>
+    </message>
+    <message>
+        <location filename="QScintilla/ReplaceWidget.ui" line="142"/>
+        <source>Press to replace the selection and search for the next occurence</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="478"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="506"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; nebyl nalezen.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="550"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="582"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Nahrazeno {0} výskytů.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="554"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="586"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Nebylo nic nahrazeno, protože &apos;{0}&apos; nebyl nalezen.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="121"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="125"/>
         <source>Find Next</source>
         <translation>Najít další</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="128"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="132"/>
         <source>Find Prev</source>
         <translation>Najít předchozí</translation>
     </message>
