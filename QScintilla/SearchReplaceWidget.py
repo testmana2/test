@@ -398,6 +398,7 @@ character except an alphabetic character.</td></tr>
         self.ui.findtextCombo.setEditText(text)
         self.ui.findtextCombo.lineEdit().selectAll()
         self.ui.findtextCombo.setFocus()
+        self.on_findtextCombo_editTextChanged(text)
         
         self.ui.caseCheckBox.setChecked(False)
         self.ui.wordCheckBox.setChecked(False)
@@ -572,6 +573,7 @@ character except an alphabetic character.</td></tr>
         self.ui.findtextCombo.setEditText(text)
         self.ui.findtextCombo.lineEdit().selectAll()
         self.ui.findtextCombo.setFocus()
+        self.on_findtextCombo_editTextChanged(text)
         
         self.ui.replacetextCombo.clear()
         self.ui.replacetextCombo.addItems(self.replaceHistory)
