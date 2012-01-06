@@ -6,25 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>722</width>
-    <height>77</height>
+    <width>724</width>
+    <height>69</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Find and Replace</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="leftMargin">
+   <property name="margin">
     <number>0</number>
-   </property>
-   <property name="topMargin">
-    <number>0</number>
-   </property>
-   <property name="rightMargin">
-    <number>0</number>
-   </property>
-   <property name="bottomMargin">
-    <number>12</number>
    </property>
    <item row="0" column="0">
     <widget class="QToolButton" name="closeButton">
