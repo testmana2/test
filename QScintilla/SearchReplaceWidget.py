@@ -292,8 +292,13 @@ character except an alphabetic character.</td></tr>
                 line = self.__selection[2]
                 index = self.__selection[3]
             else:
-                line = lineFrom
-                index = indexFrom - 1
+                if (lineFrom, indexFrom) == (-1, -1):
+                    # no selection present
+                    line = cline
+                    index = cindex
+                else:
+                    line = lineFrom
+                    index = indexFrom - 1
             if self.ui.selectionCheckBox.isChecked() and \
                line == self.__selection[0] and \
                index >= 0 and \
