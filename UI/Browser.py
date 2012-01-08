@@ -148,7 +148,6 @@ class Browser(QTreeView):
         """
         Public slot to perform a layout operation.
         """
-        self.doItemsLayout()
         self._resizeColumns(QModelIndex())
         self._resort()
         

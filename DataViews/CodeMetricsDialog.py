@@ -81,7 +81,6 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         """
         Private method to resize the list columns.
         """
-        self.summaryList.doItemsLayout()
         self.summaryList.header().resizeSections(QHeaderView.ResizeToContents)
         self.summaryList.header().setStretchLastSection(True)
         

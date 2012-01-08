@@ -846,7 +846,6 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     changedPaths = []
                     fileCopies = {}
         
-        self.logTree.doItemsLayout()
         self.__resizeColumnsLog()
         
         if self.__started:

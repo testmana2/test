@@ -354,7 +354,6 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
                 else:
                     log["message"].append(s)
         
-        self.logTree.doItemsLayout()
         self.__resizeColumnsLog()
         self.__resortLog()
         

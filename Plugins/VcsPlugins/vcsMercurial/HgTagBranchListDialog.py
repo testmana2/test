@@ -161,7 +161,6 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         
         self.process = None
         
-        self.tagList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
     

@@ -148,7 +148,6 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         if self.signaturesList.topLevelItemCount() == 0:
             # no patches present
             self.__generateItem("", "", self.trUtf8("no signatures found"))
-        self.signaturesList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
     

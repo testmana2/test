@@ -81,7 +81,6 @@ class BreakPointViewer(QTreeView):
         """
         Private slot to perform a layout operation.
         """
-        self.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
         

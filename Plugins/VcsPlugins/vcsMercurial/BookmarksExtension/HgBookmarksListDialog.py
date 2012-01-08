@@ -151,7 +151,6 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
             self.__generateItem(self.trUtf8("no bookmarks defined"), "", "", "")
-        self.bookmarksList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
     

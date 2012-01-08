@@ -174,7 +174,6 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         self.process = None
         
-        self.tagList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
         

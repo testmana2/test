@@ -344,7 +344,6 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         
         self.inputGroup.setEnabled(False)
         
-        self.repoTree.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
         QApplication.restoreOverrideCursor()

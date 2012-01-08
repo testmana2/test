@@ -122,7 +122,6 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
         self.process = None
         
-        self.blameList.doItemsLayout()
         self.__resizeColumns()
         
     def on_buttonBox_clicked(self, button):

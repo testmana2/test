@@ -90,7 +90,6 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
-        self.blameList.doItemsLayout()
         self.__resizeColumns()
         
         self._cancel()
