@@ -374,7 +374,6 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         for act in self.menuactions:
             act.setEnabled(True)
         
-        self.statusList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
         

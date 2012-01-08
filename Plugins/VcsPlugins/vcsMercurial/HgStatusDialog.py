@@ -220,7 +220,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.process = None
         
-        self.statusList.doItemsLayout()
         self.__resort()
         self.__resizeColumns()
     

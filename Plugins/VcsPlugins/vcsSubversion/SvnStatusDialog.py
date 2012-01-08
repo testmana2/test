@@ -363,7 +363,6 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.process = None
         
-        self.statusList.doItemsLayout()
         self.__resort()
         self.__resizeColumns()
         

@@ -154,7 +154,6 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
-        self.tagList.doItemsLayout()
         self.__resizeColumns()
         self.__resort()
         

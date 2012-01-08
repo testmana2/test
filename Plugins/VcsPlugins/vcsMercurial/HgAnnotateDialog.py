@@ -136,7 +136,6 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.process = None
         
-        self.annotateList.doItemsLayout()
         self.__resizeColumns()
     
     def on_buttonBox_clicked(self, button):

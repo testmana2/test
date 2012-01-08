@@ -81,8 +81,6 @@ class SqlConnectionWidget(QWidget):
         if not foundActiveDb and connectionNames:
             self.__activeDb = connectionNames[0]
             self.__setActive(self.__connectionTree.topLevelItem(0))
-        
-        self.__connectionTree.doItemsLayout()
     
     def showSchema(self):
         """
