@@ -2,10 +2,10 @@
 
 # Copyright (c) 2010 - 2012 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# Original (c) 2005-2008 Divmod, Inc.
+# Original (c) 2005-2010 Divmod, Inc.
 #
 # This module is based on pyflakes for Python2 but was heavily hacked to
-# work with Python3
+# work with Python3 and eric5
 
 import builtins
 import os.path
@@ -472,7 +472,7 @@ class Checker(object):
                 "Got impossible expression context: {0:r}".format(node.ctx,))
 
     def FUNCTIONDEF(self, node):
-        if getattr(node, "decorator_list", None) is not None:
+        if hasattr(node, "decorator_list"):
             for decorator in node.decorator_list:
                 self.handleNode(decorator, node)
         self.addBinding(node.lineno, FunctionDefinition(node.name, node))
@@ -529,9 +529,8 @@ class Checker(object):
         classes, and the body of its definition.  Additionally, add its name to
         the current scope.
         """
-        if getattr(node, "decorator_list", None) is not None:
-            for decorator in node.decorator_list:
-                self.handleNode(decorator, node)
+        for decorator in getattr(node, "decorator_list", []):
+            self.handleNode(decorator, node)
         for baseNode in node.bases:
             self.handleNode(baseNode, node)
         self.addBinding(node.lineno, Binding(node.name, node))
