@@ -1655,22 +1655,23 @@
       <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.__init__" />
       <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSIGN" />
       <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.ASSIGN" />
-      <keyword name="Checker.ASSNAME" id="Checker.ASSNAME" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.ASSNAME" />
       <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.AUGASSIGN" />
-      <keyword name="Checker.CLASS" id="Checker.CLASS" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.CLASS" />
+      <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.AUGASSIGN" />
       <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.CLASSDEF" />
+      <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.CLASSDEF" />
       <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICTCOMP" />
+      <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.DICTCOMP" />
       <keyword name="Checker.EXCEPTHANDLER" id="Checker.EXCEPTHANDLER" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXCEPTHANDLER" />
       <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.Utilities.py3flakes.checker.html#Checker.FOR" />
       <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FOR" />
-      <keyword name="Checker.FROM" id="Checker.FROM" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FROM" />
-      <keyword name="Checker.FUNCTION" id="Checker.FUNCTION" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FUNCTION" />
       <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.FUNCTIONDEF" />
+      <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FUNCTIONDEF" />
       <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.Utilities.py3flakes.checker.html#Checker.GLOBAL" />
       <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.GLOBAL" />
       <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORT" />
       <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.IMPORT" />
       <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORTFROM" />
+      <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.IMPORTFROM" />
       <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.Utilities.py3flakes.checker.html#Checker.LAMBDA" />
       <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.LAMBDA" />
       <keyword name="Checker.LISTCOMP" id="Checker.LISTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.LISTCOMP" />
@@ -1678,7 +1679,6 @@
       <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.Utilities.py3flakes.checker.html#Checker.NAME" />
       <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.NAME" />
       <keyword name="Checker.STARRED" id="Checker.STARRED" ref="eric5.Utilities.py3flakes.checker.html#Checker.STARRED" />
-      <keyword name="Checker.WITH" id="Checker.WITH" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.WITH" />
       <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.Utilities.py3flakes.checker.html#Checker._runDeferred" />
       <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker._runDeferred" />
       <keyword name="Checker.addArgs" id="Checker.addArgs" ref="eric5.Utilities.py3flakes.checker.html#Checker.addArgs" />
@@ -1712,6 +1712,7 @@
       <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.Utilities.py3flakes.checker.html#Checker.ignore" />
       <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.ignore" />
       <keyword name="Checker.isDocstring" id="Checker.isDocstring" ref="eric5.Utilities.py3flakes.checker.html#Checker.isDocstring" />
+      <keyword name="Checker.isDocstring" id="Checker.isDocstring" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.isDocstring" />
       <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.popScope" />
       <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.popScope" />
       <keyword name="Checker.pushClassScope" id="Checker.pushClassScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushClassScope" />
@@ -3993,6 +3994,7 @@
       <keyword name="FavIconLabel (Constructor)" id="FavIconLabel (Constructor)" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.__init__" />
       <keyword name="FavIconLabel (Module)" id="FavIconLabel (Module)" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html" />
       <keyword name="FavIconLabel.__browserIconChanged" id="FavIconLabel.__browserIconChanged" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.__browserIconChanged" />
+      <keyword name="FavIconLabel.__clearIcon" id="FavIconLabel.__clearIcon" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.__clearIcon" />
       <keyword name="FavIconLabel.mouseMoveEvent" id="FavIconLabel.mouseMoveEvent" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.mouseMoveEvent" />
       <keyword name="FavIconLabel.mousePressEvent" id="FavIconLabel.mousePressEvent" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.mousePressEvent" />
       <keyword name="FavIconLabel.setBrowser" id="FavIconLabel.setBrowser" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.setBrowser" />
@@ -10958,6 +10960,7 @@
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric5.Utilities.__init__.html#isinpath" />
+      <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
       <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric5.Utilities.Startup.html#loadTranslatorForLocale" />
