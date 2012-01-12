@@ -6428,28 +6428,30 @@ eric5.UtilitiesPython2.pep8.whitespace_around_operator?4(logical_line)
 eric5.UtilitiesPython2.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
 eric5.UtilitiesPython2.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.UtilitiesPython2.py2flakes.checker.Binding?1(name, source)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.AND?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.ASSIGN?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.ASSLIST?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.ASSNAME?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.AUGASSIGN?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.CLASS?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.CONST?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.FLOORDIV?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.AUGASSIGN?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.BITOR?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.BOOLOP?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.CALL?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.CLASSDEF?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.COMPREHENSION?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.CONTINUE?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.DICTCOMP?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.EQ?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.FOR?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.FROM?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.FUNCTION?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.GENEXPRINNER?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.FUNCTIONDEF?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.GENERATOREXP?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.GLOBAL?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.IFEXP?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.IMPORT?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.IMPORTFROM?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.LAMBDA?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.LISTCOMP?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.LOAD?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.NAME?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.NUM?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.RETURN?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.RIGHTSHIFT?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.STMT?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.SUBSCRIPT?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.WITH?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.SLICE?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker._runDeferred?5(deferred)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.addArgs?4()
 eric5.UtilitiesPython2.py2flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
@@ -6461,6 +6463,7 @@ eric5.UtilitiesPython2.py2flakes.checker.Checker.deferFunction?4(callable)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.handleChildren?4(tree)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.handleNode?4(node, parent)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.ignore?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.isDocstring?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.nodeDepth?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.popScope?4()
 eric5.UtilitiesPython2.py2flakes.checker.Checker.pushClassScope?4()
@@ -6477,6 +6480,7 @@ eric5.UtilitiesPython2.py2flakes.checker.Importation?1(name, source)
 eric5.UtilitiesPython2.py2flakes.checker.Scope.importStarred?7
 eric5.UtilitiesPython2.py2flakes.checker.Scope?1()
 eric5.UtilitiesPython2.py2flakes.checker._MAGIC_GLOBALS?8
+eric5.UtilitiesPython2.py2flakes.checker.iter_child_nodes?4(node, astcls=_ast.AST)
 eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument.message?7
 eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument?1(filename, lineno, name)
 eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar.message?7
