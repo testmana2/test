@@ -433,7 +433,7 @@ def installEric():
         copyTree('{1}{0}icons'.format(os.sep, sourceDir), cfg['ericIconDir'], 
             ['*.png', 'LICENSE*.*'])
         copyTree('{1}{0}pixmaps'.format(os.sep, sourceDir), cfg['ericPixDir'], 
-            ['*.png', '*.xpm', '*.ico'])
+            ['*.png', '*.xpm', '*.ico', '*.gif'])
         copyTree('{1}{0}DesignerTemplates'.format(os.sep, sourceDir), 
             cfg['ericTemplatesDir'], 
             ['*.tmpl'])
