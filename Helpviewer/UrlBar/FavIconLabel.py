@@ -8,7 +8,7 @@ Module implementing the label to show the web site icon.
 """
 
 from PyQt4.QtCore import Qt, QPoint, QUrl, QMimeData
-from PyQt4.QtGui import QLabel, QApplication, QDrag
+from PyQt4.QtGui import QLabel, QApplication, QDrag, QPixmap
 
 import Helpviewer.HelpWindow
 
@@ -46,6 +46,12 @@ class FavIconLabel(QLabel):
         except RuntimeError:
             pass
     
+    def __clearIcon(self):
+        """
+        Private slot to clear the icon.
+        """
+        self.setPixmap(QPixmap())
+    
     def setBrowser(self, browser):
         """
         Public method to set the browser connection.
@@ -55,6 +61,7 @@ class FavIconLabel(QLabel):
         self.__browser = browser
         self.__browser.loadFinished.connect(self.__browserIconChanged)
         self.__browser.iconChanged.connect(self.__browserIconChanged)
+        self.__browser.loadStarted.connect(self.__clearIcon)
     
     def mousePressEvent(self, evt):
         """
