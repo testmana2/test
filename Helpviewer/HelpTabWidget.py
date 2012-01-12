@@ -588,6 +588,10 @@ class HelpTabWidget(E5TabWidget):
             if not anim:
                 loading = QIcon(os.path.join(getConfig("ericPixDir"), "loading.gif"))
                 self.setTabIcon(index, loading)
+            else:
+                self.setTabIcon(index, QIcon())
+            self.setTabText(index, self.trUtf8("Loading..."))
+            self.setTabToolTip(index, self.trUtf8("Loading..."))
             self.showMessage.emit(self.trUtf8("Loading..."))
             
             self.__mainWindow.setLoadingActions(True)
