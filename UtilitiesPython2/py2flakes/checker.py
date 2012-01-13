@@ -208,7 +208,7 @@ class Checker(object):
 
     def _runDeferred(self, deferred):
         """
-        Run the callables in C{deferred} using their associated scope stack.
+        Run the callables in deferred using their associated scope stack.
         """
         for handler, scope in deferred:
             self.scopeStack = scope
