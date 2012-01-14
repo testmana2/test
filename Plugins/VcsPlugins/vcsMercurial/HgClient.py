@@ -98,18 +98,19 @@ class HgClient(QObject):
         """
         Public method to stop the command server.
         """
-        self.__server.closeWriteChannel()
-        res = self.__server.waitForFinished(5000)
-        if not res:
-            self.__server.terminate()
-            res = self.__server.waitForFinished(3000)
+        if self.__server is not None:
+            self.__server.closeWriteChannel()
+            res = self.__server.waitForFinished(5000)
             if not res:
-                self.__server.kill()
-                self.__server.waitForFinished(3000)
-        
-        self.__started = False
-        self.__server.finished.disconnect(self.__serverFinished)
-        self.__server = None
+                self.__server.terminate()
+                res = self.__server.waitForFinished(3000)
+                if not res:
+                    self.__server.kill()
+                    self.__server.waitForFinished(3000)
+            
+            self.__started = False
+            self.__server.finished.disconnect(self.__serverFinished)
+            self.__server = None
     
     def restartServer(self):
         """
