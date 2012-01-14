@@ -3099,7 +3099,7 @@ class ViewManager(QObject):
             
         self.__setSbFile()
         
-    def openSourceFile(self, fn, lineno = None, filetype = "", 
+    def openSourceFile(self, fn, lineno = -1, filetype = "", 
                        selStart = 0, selEnd = 0, pos = 0):
         """
         Public slot to display a file in an editor.
@@ -3119,12 +3119,12 @@ class ViewManager(QObject):
             self._modificationStatusChanged(editor.isModified(), editor)
         self._checkActions(editor)
         
-        if lineno is not None and lineno >= 0:
+        if lineno >= 0:
             editor.ensureVisibleTop(lineno)
             editor.gotoLine(lineno, pos)
-        
-        if selStart != selEnd:
-            editor.setSelection(lineno - 1, selStart, lineno - 1, selEnd)
+            
+            if selStart != selEnd:
+                editor.setSelection(lineno - 1, selStart, lineno - 1, selEnd)
         
         # insert filename into list of recently opened files
         self.addToRecentList(fn)
