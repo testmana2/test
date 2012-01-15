@@ -32,6 +32,7 @@ from .JavaScriptResources import fetchLinks_js
 from .HTMLResources import notFoundPage_html
 try:
     from .SslInfoDialog import SslInfoDialog
+    from PyQt4.QtNetwork import QSslCertificate
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -172,7 +173,7 @@ class HelpWebPage(QWebPage):
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
         self.setNetworkAccessManager(self.__proxy)
         
-        self.__sslInfo = None
+        self.__sslConfiguration = None
         self.__proxy.finished.connect(self.__managerFinished)
     
     def acceptNavigationRequest(self, frame, request, type_):
@@ -336,17 +337,17 @@ class HelpWebPage(QWebPage):
         mainFrameRequest = frame == self.mainFrame()
         
         if mainFrameRequest and \
-           self.__sslInfo is not None and \
+           self.__sslConfiguration is not None and \
            reply.url() == self.mainFrame().url():
-            self.__sslInfo = None
+            self.__sslConfiguration = None
         
         if reply.error() == QNetworkReply.NoError and \
            mainFrameRequest and \
-           self.__sslInfo is None and \
+           self.__sslConfiguration is None and \
            reply.url().scheme().lower() == "https" and \
            reply.url() == self.mainFrame().url():
-            self.__sslInfo = reply.sslConfiguration().peerCertificate()
-            self.__sslInfo.url = QUrl(reply.url())
+            self.__sslConfiguration = reply.sslConfiguration()
+            self.__sslConfiguration.url = QUrl(reply.url())
     
     def getSslInfo(self):
         """
@@ -354,19 +355,48 @@ class HelpWebPage(QWebPage):
         
         @return reference to the SSL info (QSslCertificate)
         """
-        return self.__sslInfo
+        sslInfo = self.__sslConfiguration.peerCertificate()
+        sslInfo.url = QUrl(self.__sslConfiguration.url)
+        return sslInfo
     
     def showSslInfo(self):
         """
         Public slot to show some SSL information for the loaded page.
         """
-        if SSL_AVAILABLE and self.__sslInfo is not None:
-            dlg = SslInfoDialog(self.__sslInfo, self.view())
+        if SSL_AVAILABLE and self.__sslConfiguration is not None:
+            dlg = SslInfoDialog(self.getSslInfo(), self.view())
             dlg.exec_()
         else:
             E5MessageBox.warning(self.view(),
                 self.trUtf8("SSL Certificate Info"),
                 self.trUtf8("""There is no SSL Certificate Info available."""))
+    
+    def hasValidSslInfo(self):
+        """
+        Public method to check, if the page has a valid SSL certificate.
+        
+        @return flag indicating a valid SSL certificate (boolean)
+        """
+        if self.__sslConfiguration is None:
+            return False
+        
+        certList = self.__sslConfiguration.peerCertificateChain()
+        if not certList:
+            return False
+        
+        certificateDict = Preferences.toDict(
+                Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
+        for server in certificateDict:
+            localCAList = QSslCertificate.fromData(certificateDict[server])
+            for cert in certList:
+                if cert in localCAList:
+                    return True
+        
+        for cert in certList:
+            if not cert.isValid():
+                return False
+        
+        return True
 
 ##########################################################################################
 

@@ -1,6 +1,12 @@
 Change Log
 ----------
-Version 5.2-snapshot-2011mmdd:
+Version 5.3.0:
+- bug fixes
+- Web Browser
+  -- extended the check for acceptable SSL certificates for indication via the
+     URL entry field
+
+Version 5.2.0:
 - bug fixes
 - Cooperation Functions
   -- added code to the cooperation functions to support IPv6
