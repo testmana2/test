@@ -456,9 +456,12 @@ class PasswordManager(QObject):
             formElementTypes = {}
             deadElements = set()
             for elementMap in elements:
-                name = elementMap["name"]
-                value = elementMap["value"]
-                type_ = elementMap["type"]
+                try:
+                    name = elementMap["name"]
+                    value = elementMap["value"]
+                    type_ = elementMap["type"]
+                except KeyError:
+                    continue
                 if type_ == "password":
                     formHasPasswords = True
                 t = (name, value)
