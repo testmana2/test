@@ -243,14 +243,22 @@ class UrlBar(E5LineEdit):
         if self.__browser is not None:
             p = self.palette()
             progress = self.__browser.progress()
-            if progress == 0:
+            if progress == 0 or progress == 100:
                 if self.__browser.url().scheme() == "https":
-                    backgroundColor = Preferences.getHelp("SaveUrlColor")
+                    if QSslCertificate is not None:
+                        if self.__browser.page().hasValidSslInfo():
+                            backgroundColor = Preferences.getHelp("SaveUrlColor")
+                    else:
+                        backgroundColor = Preferences.getHelp("SaveUrlColor")
                 p.setBrush(QPalette.Base, backgroundColor)
                 p.setBrush(QPalette.Text, foregroundColor)
             else:
                 if self.__browser.url().scheme() == "https":
-                    backgroundColor = Preferences.getHelp("SaveUrlColor")
+                    if QSslCertificate is not None:
+                        if self.__browser.page().hasValidSslInfo():
+                            backgroundColor = Preferences.getHelp("SaveUrlColor")
+                    else:
+                        backgroundColor = Preferences.getHelp("SaveUrlColor")
                 highlight = QApplication.palette().color(QPalette.Highlight)
                 r = (highlight.red() + 2 * backgroundColor.red()) // 3
                 g = (highlight.green() + 2 * backgroundColor.green()) // 3
