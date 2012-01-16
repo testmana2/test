@@ -508,9 +508,8 @@ class UserInterface(QMainWindow):
         self.inCloseEevent = False
 
         # now redirect stdout and stderr
-        # TODO: release - reenable redirection
-##        sys.stdout = self.stdout
-##        sys.stderr = self.stderr
+        sys.stdout = self.stdout
+        sys.stderr = self.stderr
 
         # now fire up the single application server
         if Preferences.getUI("SingleApplicationMode"):
