@@ -355,6 +355,9 @@ class HelpWebPage(QWebPage):
         
         @return reference to the SSL info (QSslCertificate)
         """
+        if self.__sslConfiguration is None:
+            return None
+        
         sslInfo = self.__sslConfiguration.peerCertificate()
         sslInfo.url = QUrl(self.__sslConfiguration.url)
         return sslInfo
