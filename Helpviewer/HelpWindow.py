@@ -1124,13 +1124,13 @@ class HelpWindow(QMainWindow):
                 self.certificatesAct.triggered[()].connect(self.__showCertificatesDialog)
             self.__actions.append(self.certificatesAct)
         
-        self.toolsMonitorAct = E5Action(self.trUtf8('Show Network Monitor'),
-                      self.trUtf8('Show &Network Monitor'),
+        self.toolsMonitorAct = E5Action(self.trUtf8('Network Monitor'),
+                      self.trUtf8('&Network Monitor...'),
                       0, 0,
                       self, 'help_tools_network_monitor')
         self.toolsMonitorAct.setStatusTip(self.trUtf8('Show the network monitor dialog'))
         self.toolsMonitorAct.setWhatsThis(self.trUtf8(
-                """<b>Show Network Monitor</b>"""
+                """<b>Network Monitor...</b>"""
                 """<p>Shows the network monitor dialog.</p>"""
         ))
         if not self.initShortcutsOnly:
