@@ -425,6 +425,13 @@ class LexerPygments(LexerContainer):
         self.__lexer = self.__guessLexer(text)
         
         cpos = 0
+        # adjust start position because pygments ignores empty line at start of text
+        for c in text:
+            if c == "\n":
+                cpos += 1
+            else:
+                break
+        
         self.editor.startStyling(cpos, 0x3f)
         if self.__lexer is None:
             self.editor.setStyling(len(text), PYGMENTS_DEFAULT)
