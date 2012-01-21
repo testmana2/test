@@ -2824,29 +2824,38 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating membership (boolean)
         """
+        for group in ["SOURCES", "FORMS", "INTERFACES",
+                      "RESOURCES", "TRANSLATIONS", "OTHERS"]:
+            if self.__checkProjectFileGroup(fn, group):
+                return True
+        
+        return False
+        
+    def __checkProjectFileGroup(self, fn, group):
+        """
+        Private method to check, if a file is in a specific file group of the project.
+        
+        @param fn filename to be checked (string)
+        @param group group to check (string)
+        @return flag indicating membership (boolean)
+        """
         newfn = os.path.abspath(fn)
         newfn = self.getRelativePath(newfn)
-        if newfn in self.pdata["SOURCES"] or \
-           newfn in self.pdata["FORMS"] or \
-           newfn in self.pdata["INTERFACES"] or \
-           newfn in self.pdata["RESOURCES"] or \
-           newfn in self.pdata["TRANSLATIONS"] or \
-           newfn in self.pdata["OTHERS"]:
+        if newfn in self.pdata[group]:
             return True
-        else:
-            for entry in self.pdata["OTHERS"]:
+        elif group == "OTHERS":
+            for entry in self.pdata[group]:
                 if newfn.startswith(entry):
                     return True
         
         if Utilities.isWindowsPlatform():
             # try the above case-insensitive
             newfn = newfn.lower()
-            for group in ["SOURCES", "FORMS", "INTERFACES",
-                          "RESOURCES", "TRANSLATIONS", "OTHERS"]:
-                for entry in self.pdata[group]:
-                    if entry.lower() == newfn:
-                        return True
-            for entry in self.pdata["OTHERS"]:
+            for entry in self.pdata[group]:
+                if entry.lower() == newfn:
+                    return True
+        elif group == "OTHERS":
+            for entry in self.pdata[group]:
                 if newfn.startswith(entry.lower()):
                     return True
         
@@ -2860,9 +2869,7 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating membership (boolean)
         """
-        newfn = os.path.abspath(fn)
-        newfn = self.getRelativePath(newfn)
-        return newfn in self.pdata["SOURCES"]
+        return self.__checkProjectFileGroup(fn, "SOURCES")
         
     def isProjectForm(self, fn):
         """
@@ -2872,9 +2879,7 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating membership (boolean)
         """
-        newfn = os.path.abspath(fn)
-        newfn = self.getRelativePath(newfn)
-        return newfn in self.pdata["FORMS"]
+        return self.__checkProjectFileGroup(fn, "FORMS")
         
     def isProjectInterface(self, fn):
         """
@@ -2884,9 +2889,7 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating membership (boolean)
         """
-        newfn = os.path.abspath(fn)
-        newfn = self.getRelativePath(newfn)
-        return newfn in self.pdata["INTERFACES"]
+        return self.__checkProjectFileGroup(fn, "INTERFACES")
         
     def isProjectResource(self, fn):
         """
@@ -2896,9 +2899,7 @@ class Project(QObject):
         @param fn filename to be checked (string)
         @return flag indicating membership (boolean)
         """
-        newfn = os.path.abspath(fn)
-        newfn = self.getRelativePath(newfn)
-        return newfn in self.pdata["RESOURCES"]
+        return self.__checkProjectFileGroup(fn, "RESOURCES")
         
     def initActions(self):
         """
