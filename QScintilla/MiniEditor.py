@@ -2519,6 +2519,9 @@ class MiniEditor(QMainWindow):
         # now set the lexer properties
         self.lexer_.initProperties()
         
+        self.lexer_.setDefaultColor(self.lexer_.color(0))
+        self.lexer_.setDefaultPaper(self.lexer_.paper(0))
+        
     def __isPy2File(self):
         """
         Private method to return a flag indicating a Python 2 file.
