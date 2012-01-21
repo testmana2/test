@@ -6912,6 +6912,7 @@
       <keyword name="Project.__addSingleDirectory" id="Project.__addSingleDirectory" ref="eric5.Project.Project.html#Project.__addSingleDirectory" />
       <keyword name="Project.__binaryTranslationFile" id="Project.__binaryTranslationFile" ref="eric5.Project.Project.html#Project.__binaryTranslationFile" />
       <keyword name="Project.__checkFilesExist" id="Project.__checkFilesExist" ref="eric5.Project.Project.html#Project.__checkFilesExist" />
+      <keyword name="Project.__checkProjectFileGroup" id="Project.__checkProjectFileGroup" ref="eric5.Project.Project.html#Project.__checkProjectFileGroup" />
       <keyword name="Project.__clearRecent" id="Project.__clearRecent" ref="eric5.Project.Project.html#Project.__clearRecent" />
       <keyword name="Project.__closeAllWindows" id="Project.__closeAllWindows" ref="eric5.Project.Project.html#Project.__closeAllWindows" />
       <keyword name="Project.__createSnapshotSource" id="Project.__createSnapshotSource" ref="eric5.Project.Project.html#Project.__createSnapshotSource" />
