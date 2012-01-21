@@ -183,6 +183,9 @@ QObject
 <td><a href="#Project.__checkFilesExist">__checkFilesExist</a></td>
 <td>Private method to check, if the files in a list exist.</td>
 </tr><tr>
+<td><a href="#Project.__checkProjectFileGroup">__checkProjectFileGroup</a></td>
+<td>Private method to check, if a file is in a specific file group of the project.</td>
+</tr><tr>
 <td><a href="#Project.__clearRecent">__clearRecent</a></td>
 <td>Private method to clear the recent projects menu.</td>
 </tr><tr>
@@ -715,6 +718,24 @@ name of the binary translations file (string)
 <dt><i>index</i></dt>
 <dd>
 key of the list to be checked (string)
+</dd>
+</dl><a NAME="Project.__checkProjectFileGroup" ID="Project.__checkProjectFileGroup"></a>
+<h4>Project.__checkProjectFileGroup</h4>
+<b>__checkProjectFileGroup</b>(<i>fn, group</i>)
+<p>
+        Private method to check, if a file is in a specific file group of the project.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename to be checked (string)
+</dd><dt><i>group</i></dt>
+<dd>
+group to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating membership (boolean)
 </dd>
 </dl><a NAME="Project.__clearRecent" ID="Project.__clearRecent"></a>
 <h4>Project.__clearRecent</h4>
