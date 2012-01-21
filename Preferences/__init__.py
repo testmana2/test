@@ -22,7 +22,7 @@ import shutil
 
 from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, QCoreApplication, \
     QByteArray, QSize, QUrl, Qt, QLibraryInfo
-from PyQt4.QtGui import QColor, QFont, QInputDialog
+from PyQt4.QtGui import QColor, QFont, QInputDialog, QApplication, QPalette
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings
 from PyQt4.Qsci import QsciScintilla
@@ -245,6 +245,7 @@ class Prefs(object):
         "ClearBreaksOnClose": True,
         "StripTrailingWhitespace": False,
         "CommentColumn0": True,
+        "OverrideEditAreaColours": False,
         
         "EdgeMode": QsciScintilla.EdgeNone,
         "EdgeColumn": 80,
@@ -445,6 +446,10 @@ class Prefs(object):
         "AnnotationsErrorBackground": QColor("#ffd0d0"),
         "WhitespaceForeground": QColor(Qt.darkGray),
         "WhitespaceBackground": QColor(Qt.white),
+        "EditAreaForeground": 
+            QApplication.palette().color(QPalette.Active, QPalette.Base),
+        "EditAreaBackground":
+            QApplication.palette().color(QPalette.Active, QPalette.Text),
     }
     
     editorOtherFontsDefaults = {

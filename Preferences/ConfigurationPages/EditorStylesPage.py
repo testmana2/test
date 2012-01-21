@@ -177,6 +177,15 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.enableAnnotationsCheckBox.setChecked(
             Preferences.getEditor("AnnotationsEnabled"))
         
+        self.editAreaOverrideCheckBox.setChecked(
+            Preferences.getEditor("OverrideEditAreaColours"))
+        self.editorColours["EditAreaForeground"] = \
+            self.initColour("EditAreaForeground", self.editAreaForegroundButton,
+                Preferences.getEditorColour)
+        self.editorColours["EditAreaBackground"] = \
+            self.initColour("EditAreaBackground", self.editAreaBackgroundButton,
+                Preferences.getEditorColour)
+    
     def save(self):
         """
         Public slot to save the Editor Styles configuration.
@@ -235,6 +244,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         
         Preferences.setEditor("AnnotationsEnabled",
             self.enableAnnotationsCheckBox.isChecked())
+        
+        Preferences.setEditor("OverrideEditAreaColours",
+            self.editAreaOverrideCheckBox.isChecked())
         
         for key in list(self.editorColours.keys()):
             Preferences.setEditorColour(key, self.editorColours[key])
@@ -493,6 +505,24 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.editorColours["WhitespaceBackground"] = \
             self.selectColour(self.whitespaceBackgroundButton,
                 self.editorColours["WhitespaceBackground"])
+    
+    @pyqtSlot()
+    def on_editAreaForegroundButton_clicked(self):
+        """
+        Private slot to set the foreground colour of the edit area.
+        """
+        self.editorColours["EditAreaForeground"] = \
+            self.selectColour(self.editAreaForegroundButton,
+                self.editorColours["EditAreaForeground"])
+        
+    @pyqtSlot()
+    def on_editAreaBackgroundButton_clicked(self):
+        """
+        Private slot to set the background colour of the edit area.
+        """
+        self.editorColours["EditAreaBackground"] = \
+            self.selectColour(self.editAreaBackgroundButton,
+                self.editorColours["EditAreaBackground"])
 
 
 def create(dlg):

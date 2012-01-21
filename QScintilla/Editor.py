@@ -1428,6 +1428,9 @@ class Editor(QsciScintillaCompat):
         
         self.__setAnnotationStyles()
         
+        self.lexer_.setDefaultColor(self.lexer_.color(0))
+        self.lexer_.setDefaultPaper(self.lexer_.paper(0))
+        
     def __styleNeeded(self, position):
         """
         Private slot to handle the need for more styling.
@@ -3412,6 +3415,9 @@ class Editor(QsciScintillaCompat):
         if self.lexer_ is not None:
             self.lexer_.readSettings(Preferences.Prefs.settings, "Scintilla")
             self.lexer_.initProperties()
+            
+            self.lexer_.setDefaultColor(self.lexer_.color(0))
+            self.lexer_.setDefaultPaper(self.lexer_.paper(0))
         
         # read the typing completer settings
         if self.completer is not None:
@@ -3683,6 +3689,10 @@ class Editor(QsciScintillaCompat):
         except AttributeError:
             pass
         self.__setAnnotationStyles()
+        
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
     
     def __setEolMode(self):
         """

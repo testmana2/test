@@ -258,6 +258,9 @@ class Shell(QsciScintillaCompat):
             if api is not None:
                 self.lexer_.setAPIs(api)
         
+        self.lexer_.setDefaultColor(self.lexer_.color(0))
+        self.lexer_.setDefaultPaper(self.lexer_.paper(0))
+        
     def __setMargin0(self):
         """
         Private method to configure margin 0.
@@ -341,6 +344,10 @@ class Shell(QsciScintillaCompat):
         self.__setMonospaced(self.useMonospaced)
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
+        
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.setPaper(Preferences.getEditorColour("EditAreaBackground"))
         
     def __setMonospaced(self, on):
         """

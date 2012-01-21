@@ -2205,6 +2205,10 @@ class MiniEditor(QMainWindow):
             Preferences.getEditorColour("SearchMarkers"))
         
         self.__textEdit.setCursorFlashTime(QApplication.cursorFlashTime())
+        
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
     
     def __setEolMode(self):
         """
@@ -2427,6 +2431,10 @@ class MiniEditor(QMainWindow):
         self.__textEdit.setLexer()
         self.__setMonospaced(self.useMonospaced)
         
+        if Preferences.getEditor("OverrideEditAreaColours"):
+            self.__textEdit.setColor(Preferences.getEditorColour("EditAreaForeground"))
+            self.__textEdit.setPaper(Preferences.getEditorColour("EditAreaBackground"))
+        
     def setLanguage(self, filename, initTextDisplay=True, pyname=""):
         """
         Public method to set a lexer language.
@@ -2518,6 +2526,9 @@ class MiniEditor(QMainWindow):
         
         # now set the lexer properties
         self.lexer_.initProperties()
+        
+        self.lexer_.setDefaultColor(self.lexer_.color(0))
+        self.lexer_.setDefaultPaper(self.lexer_.paper(0))
         
     def __isPy2File(self):
         """
