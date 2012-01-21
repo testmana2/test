@@ -2837,6 +2837,19 @@ class Project(QObject):
             for entry in self.pdata["OTHERS"]:
                 if newfn.startswith(entry):
                     return True
+        
+        if Utilities.isWindowsPlatform():
+            # try the above case-insensitive
+            newfn = newfn.lower()
+            for group in ["SOURCES", "FORMS", "INTERFACES",
+                          "RESOURCES", "TRANSLATIONS", "OTHERS"]:
+                for entry in self.pdata[group]:
+                    if entry.lower() == newfn:
+                        return True
+            for entry in self.pdata["OTHERS"]:
+                if newfn.startswith(entry.lower()):
+                    return True
+        
         return False
         
     def isProjectSource(self, fn):
