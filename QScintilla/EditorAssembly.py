@@ -60,6 +60,9 @@ class EditorAssembly(QWidget):
         self.__parseTimer.timeout.connect(self.__parseEditor)
         self.__editor.textChanged.connect(self.__resetParseTimer)
         
+        self.__selectedGlobal = ""
+        self.__selectedMember = ""
+        
         QTimer.singleShot(0, self.__parseEditor)
     
     def shutdownTimer(self):
@@ -78,20 +81,22 @@ class EditorAssembly(QWidget):
         """
         return self.__editor
     
-    def __globalsActivated(self, index):
+    def __globalsActivated(self, index, moveCursor=True):
         """
         Private method to jump to the line of the selected global entry and to populate
         the members combo box.
         
         @param index index of the selected entry (integer)
+        @keyparam moveCursor flag indicating to move the editor cursor (boolean)
         """
         # step 1: go to the line of the selected entry
         lineno = self.__globalsCombo.itemData(index)
         if lineno is not None:
-            txt = self.__editor.text(lineno - 1).rstrip()
-            pos = len(txt.replace(txt.strip(), ""))
-            self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1)
-            self.__editor.setFocus()
+            if moveCursor:
+                txt = self.__editor.text(lineno - 1).rstrip()
+                pos = len(txt.replace(txt.strip(), ""))
+                self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1)
+                self.__editor.setFocus()
             
             # step 2: populate the members combo, if the entry is a class
             self.__membersCombo.clear()
@@ -137,14 +142,15 @@ class EditorAssembly(QWidget):
                 for itm in sorted(items):
                     self.__membersCombo.addItem(itm[1], itm[0], itm[2])
     
-    def __membersActivated(self, index):
+    def __membersActivated(self, index, moveCursor=True):
         """
         Private method to jump to the line of the selected members entry.
         
         @param index index of the selected entry (integer)
+        @keyparam moveCursor flag indicating to move the editor cursor (boolean)
         """
         lineno = self.__membersCombo.itemData(index)
-        if lineno is not None:
+        if lineno is not None and moveCursor:
             txt = self.__editor.text(lineno - 1).rstrip()
             pos = len(txt.replace(txt.strip(), ""))
             self.__editor.gotoLine(lineno, pos if pos == 0 else pos + 1)
@@ -171,6 +177,10 @@ class EditorAssembly(QWidget):
                     fn = ""
                 self.__module = Module("", fn, sourceType)
                 self.__module.scan(src)
+                
+                # remember the current selections
+                self.__selectedGlobal = self.__globalsCombo.currentText()
+                self.__selectedMember = self.__membersCombo.currentText()
                 
                 self.__globalsCombo.clear()
                 self.__membersCombo.clear()
@@ -215,3 +225,13 @@ class EditorAssembly(QWidget):
                     items.append((glob.name, icon, glob.lineno))
                 for itm in sorted(items):
                     self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                
+                # reset the currently selected entries without moving the text cursor
+                index = self.__globalsCombo.findText(self.__selectedGlobal)
+                if index != -1:
+                    self.__globalsCombo.setCurrentIndex(index)
+                    self.__globalsActivated(index, moveCursor=False)
+                index = self.__membersCombo.findText(self.__selectedMember)
+                if index != -1:
+                    self.__membersCombo.setCurrentIndex(index)
+                    self.__membersActivated(index, moveCursor=False)
