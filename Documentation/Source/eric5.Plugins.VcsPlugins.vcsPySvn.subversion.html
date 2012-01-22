@@ -70,8 +70,20 @@ VersionControl
 <td><a href="#Subversion.__svnURL">__svnURL</a></td>
 <td>Private method to format a url for subversion.</td>
 </tr><tr>
+<td><a href="#Subversion.__vcsAllRegisteredStates_wc">__vcsAllRegisteredStates_wc</a></td>
+<td>Private method used to get the registered states of a number of files in the vcs.</td>
+</tr><tr>
+<td><a href="#Subversion.__vcsAllRegisteredStates_wcng">__vcsAllRegisteredStates_wcng</a></td>
+<td>Private method used to get the registered states of a number of files in the vcs.</td>
+</tr><tr>
 <td><a href="#Subversion.__vcsCommit_Step2">__vcsCommit_Step2</a></td>
 <td>Private slot performing the second step of the commit action.</td>
+</tr><tr>
+<td><a href="#Subversion.__vcsRegisteredState_wc">__vcsRegisteredState_wc</a></td>
+<td>Private method used to get the registered state of a file in the vcs.</td>
+</tr><tr>
+<td><a href="#Subversion.__vcsRegisteredState_wcng">__vcsRegisteredState_wcng</a></td>
+<td>Private method used to get the registered state of a file in the vcs.</td>
 </tr><tr>
 <td><a href="#Subversion._createStatusMonitorThread">_createStatusMonitorThread</a></td>
 <td>Protected method to create an instance of the VCS status monitor thread.</td>
@@ -271,12 +283,106 @@ unformatted url string (string)
 <dd>
 properly formated url for subversion (string)
 </dd>
+</dl><a NAME="Subversion.__vcsAllRegisteredStates_wc" ID="Subversion.__vcsAllRegisteredStates_wc"></a>
+<h4>Subversion.__vcsAllRegisteredStates_wc</h4>
+<b>__vcsAllRegisteredStates_wc</b>(<i>names, dname, shortcut = True</i>)
+<p>
+        Private method used to get the registered states of a number of files in the vcs.
+</p><p>
+        This is the variant for subversion installations using the old working copy
+        meta-data format.
+</p><p>
+        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
+        directory has been scanned already. If so, it is assumed, that the states for
+        all files has been populated by the previous run.
+</p><dl>
+<dt><i>names</i></dt>
+<dd>
+dictionary with all filenames to be checked as keys
+</dd><dt><i>dname</i></dt>
+<dd>
+directory to check in (string)
+</dd><dt><i>shortcut</i></dt>
+<dd>
+flag indicating a shortcut should be taken (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the received dictionary completed with a combination of
+            canBeCommited and canBeAdded or None in order to signal an error
+</dd>
+</dl><a NAME="Subversion.__vcsAllRegisteredStates_wcng" ID="Subversion.__vcsAllRegisteredStates_wcng"></a>
+<h4>Subversion.__vcsAllRegisteredStates_wcng</h4>
+<b>__vcsAllRegisteredStates_wcng</b>(<i>names, dname, shortcut = True</i>)
+<p>
+        Private method used to get the registered states of a number of files in the vcs.
+</p><p>
+        This is the variant for subversion installations using the new working copy
+        meta-data format.
+</p><p>
+        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
+        directory has been scanned already. If so, it is assumed, that the states for
+        all files has been populated by the previous run.
+</p><dl>
+<dt><i>names</i></dt>
+<dd>
+dictionary with all filenames to be checked as keys
+</dd><dt><i>dname</i></dt>
+<dd>
+directory to check in (string)
+</dd><dt><i>shortcut</i></dt>
+<dd>
+flag indicating a shortcut should be taken (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the received dictionary completed with a combination of
+            canBeCommited and canBeAdded or None in order to signal an error
+</dd>
 </dl><a NAME="Subversion.__vcsCommit_Step2" ID="Subversion.__vcsCommit_Step2"></a>
 <h4>Subversion.__vcsCommit_Step2</h4>
 <b>__vcsCommit_Step2</b>(<i></i>)
 <p>
         Private slot performing the second step of the commit action.
-</p><a NAME="Subversion._createStatusMonitorThread" ID="Subversion._createStatusMonitorThread"></a>
+</p><a NAME="Subversion.__vcsRegisteredState_wc" ID="Subversion.__vcsRegisteredState_wc"></a>
+<h4>Subversion.__vcsRegisteredState_wc</h4>
+<b>__vcsRegisteredState_wc</b>(<i>name</i>)
+<p>
+        Private method used to get the registered state of a file in the vcs.
+</p><p>
+        This is the variant for subversion installations using the old working copy
+        meta-data format.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+filename to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+a combination of canBeCommited and canBeAdded
+</dd>
+</dl><a NAME="Subversion.__vcsRegisteredState_wcng" ID="Subversion.__vcsRegisteredState_wcng"></a>
+<h4>Subversion.__vcsRegisteredState_wcng</h4>
+<b>__vcsRegisteredState_wcng</b>(<i>name</i>)
+<p>
+        Private method used to get the registered state of a file in the vcs.
+</p><p>
+        This is the variant for subversion installations using the new working copy
+        meta-data format.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+filename to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+a combination of canBeCommited and canBeAdded
+</dd>
+</dl><a NAME="Subversion._createStatusMonitorThread" ID="Subversion._createStatusMonitorThread"></a>
 <h4>Subversion._createStatusMonitorThread</h4>
 <b>_createStatusMonitorThread</b>(<i>interval, project</i>)
 <p>

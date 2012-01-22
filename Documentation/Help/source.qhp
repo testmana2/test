@@ -8280,8 +8280,16 @@
       <keyword name="Subversion (Constructor)" id="Subversion (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__init__" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__svnURL" />
       <keyword name="Subversion.__svnURL" id="Subversion.__svnURL" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__svnURL" />
+      <keyword name="Subversion.__vcsAllRegisteredStates_wc" id="Subversion.__vcsAllRegisteredStates_wc" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsAllRegisteredStates_wc" />
+      <keyword name="Subversion.__vcsAllRegisteredStates_wc" id="Subversion.__vcsAllRegisteredStates_wc" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__vcsAllRegisteredStates_wc" />
+      <keyword name="Subversion.__vcsAllRegisteredStates_wcng" id="Subversion.__vcsAllRegisteredStates_wcng" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsAllRegisteredStates_wcng" />
+      <keyword name="Subversion.__vcsAllRegisteredStates_wcng" id="Subversion.__vcsAllRegisteredStates_wcng" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__vcsAllRegisteredStates_wcng" />
       <keyword name="Subversion.__vcsCommit_Step2" id="Subversion.__vcsCommit_Step2" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsCommit_Step2" />
       <keyword name="Subversion.__vcsCommit_Step2" id="Subversion.__vcsCommit_Step2" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__vcsCommit_Step2" />
+      <keyword name="Subversion.__vcsRegisteredState_wc" id="Subversion.__vcsRegisteredState_wc" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsRegisteredState_wc" />
+      <keyword name="Subversion.__vcsRegisteredState_wc" id="Subversion.__vcsRegisteredState_wc" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__vcsRegisteredState_wc" />
+      <keyword name="Subversion.__vcsRegisteredState_wcng" id="Subversion.__vcsRegisteredState_wcng" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.__vcsRegisteredState_wcng" />
+      <keyword name="Subversion.__vcsRegisteredState_wcng" id="Subversion.__vcsRegisteredState_wcng" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion.__vcsRegisteredState_wcng" />
       <keyword name="Subversion._createStatusMonitorThread" id="Subversion._createStatusMonitorThread" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion._createStatusMonitorThread" />
       <keyword name="Subversion._createStatusMonitorThread" id="Subversion._createStatusMonitorThread" ref="eric5.Plugins.VcsPlugins.vcsSubversion.subversion.html#Subversion._createStatusMonitorThread" />
       <keyword name="Subversion.clearStatusCache" id="Subversion.clearStatusCache" ref="eric5.Plugins.VcsPlugins.vcsPySvn.subversion.html#Subversion.clearStatusCache" />

@@ -54,6 +54,9 @@ Version 5.2-snapshot-2011mmdd:
      --- added support for importing patches
      --- added support for exporting patches
      --- added configuration option to create backup files when reverting changes
+  -- Subversion
+     --- changed code to make the subversion plug-ins compatible with the new
+         generation working copy meta-data format
 - View Manager
   -- added an action to reset the zoom factor
 - Web Browser
