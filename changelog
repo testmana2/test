@@ -8,6 +8,10 @@ Version 5.3.0:
 - Editor
   -- added capability to change the colours of the edit area independant from
      the colours of the system style
+- Version Control System Interfaces
+  -- Subversion
+     --- changed code to make the subversion plug-ins compatible with the new
+         generation working copy meta-data format
 
 Version 5.2.0:
 - bug fixes

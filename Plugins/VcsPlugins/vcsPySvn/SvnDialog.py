@@ -75,6 +75,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         if eventDict["action"] == pysvn.wc_notify_action.update_completed:
             msg = self.trUtf8("Revision {0}.\n").format(eventDict["revision"].number)
         elif eventDict["path"] != "" and \
+             eventDict["action"] in svnNotifyActionMap and \
              svnNotifyActionMap[eventDict["action"]] is not None:
             mime = eventDict["mime_type"] == "application/octet-stream" and \
                 self.trUtf8(" (binary)") or ""

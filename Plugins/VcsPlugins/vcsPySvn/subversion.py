@@ -129,6 +129,8 @@ class Subversion(VersionControl):
         
         self.__commitData = {}
         self.__commitDialog = None
+        
+        self.__wcng = True      # assume new generation working copy metadata format
     
     def getPlugin(self):
         """
@@ -622,22 +624,49 @@ class Subversion(VersionControl):
         names = []
         tree = []
         wdir = dname
-        while not os.path.exists(os.path.join(dname, self.adminDir)):
-            # add directories recursively, if they aren't in the repository already
-            tree.insert(-1, dname)
-            dname = os.path.split(dname)[0]
-            wdir = dname
+        if self.__wcng:
+            repodir = dname
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return  # oops, project is not version controlled
+            while os.path.normcase(dname) != os.path.normcase(repodir) and \
+                  (os.path.normcase(dname) not in self.statusCache or \
+                   self.statusCache[os.path.normcase(dname)] == self.canBeAdded):
+                # add directories recursively, if they aren't in the repository already
+                tree.insert(-1, dname)
+                dname = os.path.dirname(dname)
+                wdir = dname
+        else:
+            while not os.path.exists(os.path.join(dname, self.adminDir)):
+                # add directories recursively, if they aren't in the repository already
+                tree.insert(-1, dname)
+                dname = os.path.dirname(dname)
+                wdir = dname
         names.extend(tree)
         
         if isinstance(name, list):
             tree2 = []
             for n in name:
-                d = os.path.split(n)[0]
-                while not os.path.exists(os.path.join(d, self.adminDir)):
-                    if d in tree2 + tree:
-                        break
-                    tree2.append(d)
-                    d = os.path.split(d)[0]
+                d = os.path.dirname(n)
+                if self.__wcng:
+                    repodir = d
+                    while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                        repodir = os.path.dirname(repodir)
+                        if os.path.splitdrive(repodir)[1] == os.sep:
+                            return  # oops, project is not version controlled
+                    while os.path.normcase(d) != os.path.normcase(repodir) and \
+                          (d not in tree2 + tree) and \
+                          (os.path.normcase(d) not in self.statusCache or \
+                           self.statusCache[os.path.normcase(d)] == self.canBeAdded):
+                        tree2.append(d)
+                        d = os.path.dirname(d)
+                else:
+                    while not os.path.exists(os.path.join(d, self.adminDir)):
+                        if d in tree2 + tree:
+                            break
+                        tree2.append(d)
+                        d = os.path.dirname(d)
             tree2.reverse()
             names.extend(tree2)
             names.extend(name)
@@ -693,22 +722,48 @@ class Subversion(VersionControl):
         if isinstance(path, list):
             dname, fnames = self.splitPathList(path)
             for n in path:
-                d = os.path.split(n)[0]
-                while not os.path.exists(os.path.join(d, self.adminDir)):
-                    # add directories recursively,
-                    # if they aren't in the repository already
-                    if d in tree:
-                        break
-                    tree.append(d)
-                    d = os.path.split(d)[0]
+                d = os.path.dirname(n)
+                if self.__wcng:
+                    repodir = d
+                    while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                        repodir = os.path.dirname(repodir)
+                        if os.path.splitdrive(repodir)[1] == os.sep:
+                            return  # oops, project is not version controlled
+                    while os.path.normcase(d) != os.path.normcase(repodir) and \
+                          (d not in tree) and \
+                          (os.path.normcase(d) not in self.statusCache or \
+                           self.statusCache[os.path.normcase(d)] == self.canBeAdded):
+                        tree.append(d)
+                        d = os.path.dirname(d)
+                else:
+                    while not os.path.exists(os.path.join(d, self.adminDir)):
+                        # add directories recursively, 
+                        # if they aren't in the repository already
+                        if d in tree:
+                            break
+                        tree.append(d)
+                        d = os.path.dirname(d)
             tree.reverse()
         else:
             dname, fname = os.path.split(path)
-            while not os.path.exists(os.path.join(dname, self.adminDir)):
-                # add directories recursively,
-                # if they aren't in the repository already
-                tree.insert(-1, dname)
-                dname = os.path.split(dname)[0]
+            if self.__wcng:
+                repodir = dname
+                while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                    repodir = os.path.dirname(repodir)
+                    if os.path.splitdrive(repodir)[1] == os.sep:
+                        return  # oops, project is not version controlled
+                while os.path.normcase(dname) != os.path.normcase(repodir) and \
+                      (os.path.normcase(dname) not in self.statusCache or \
+                       self.statusCache[os.path.normcase(dname)] == self.canBeAdded):
+                    # add directories recursively, if they aren't in the repository already
+                    tree.insert(-1, dname)
+                    dname = os.path.dirname(dname)
+            else:
+                while not os.path.exists(os.path.join(dname, self.adminDir)):
+                    # add directories recursively,
+                    # if they aren't in the repository already
+                    tree.insert(-1, dname)
+                    dname = os.path.dirname(dname)
         if tree:
             self.vcsAdd(tree, True)
         
@@ -1218,6 +1273,50 @@ class Subversion(VersionControl):
         @param name filename to check (string)
         @return a combination of canBeCommited and canBeAdded
         """
+        if self.__wcng:
+            return self.__vcsRegisteredState_wcng(name)
+        else:
+            return self.__vcsRegisteredState_wc(name)
+        
+    def __vcsRegisteredState_wcng(self, name):
+        """
+        Private method used to get the registered state of a file in the vcs.
+        
+        This is the variant for subversion installations using the new working copy
+        meta-data format.
+        
+        @param name filename to check (string)
+        @return a combination of canBeCommited and canBeAdded
+        """
+        if name.endswith(os.sep):
+            name = name[:-1]
+        name = os.path.normcase(name)
+        dname, fname = self.splitPath(name)
+        
+        if fname == '.' and os.path.isdir(os.path.join(dname, self.adminDir)):
+            return self.canBeCommitted
+        
+        if name in self.statusCache:
+            return self.statusCache[name]
+        
+        name = os.path.normcase(name)
+        states = { name : 0 }
+        states = self.vcsAllRegisteredStates(states, dname, False)
+        if states[name] == self.canBeCommitted:
+            return self.canBeCommitted
+        else:
+            return self.canBeAdded
+        
+    def __vcsRegisteredState_wc(self, name):
+        """
+        Private method used to get the registered state of a file in the vcs.
+        
+        This is the variant for subversion installations using the old working copy
+        meta-data format.
+        
+        @param name filename to check (string)
+        @return a combination of canBeCommited and canBeAdded
+        """
         dname, fname = self.splitPath(name)
         
         if fname == '.':
@@ -1246,6 +1345,105 @@ class Subversion(VersionControl):
         @param dname directory to check in (string)
         @param shortcut flag indicating a shortcut should be taken (boolean)
         @return the received dictionary completed with a combination of
+            canBeCommited and canBeAdded or None in order to signal an error
+        """
+        if self.__wcng:
+            return self.__vcsAllRegisteredStates_wcng(names, dname, shortcut)
+        else:
+            return self.__vcsAllRegisteredStates_wc(names, dname, shortcut)
+        
+    def __vcsAllRegisteredStates_wcng(self, names, dname, shortcut = True):
+        """
+        Private method used to get the registered states of a number of files in the vcs.
+        
+        This is the variant for subversion installations using the new working copy
+        meta-data format.
+        
+        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
+        directory has been scanned already. If so, it is assumed, that the states for
+        all files has been populated by the previous run.
+        
+        @param names dictionary with all filenames to be checked as keys
+        @param dname directory to check in (string)
+        @param shortcut flag indicating a shortcut should be taken (boolean)
+        @return the received dictionary completed with a combination of 
+            canBeCommited and canBeAdded or None in order to signal an error
+        """
+        if dname.endswith(os.sep):
+            dname = dname[:-1]
+        dname = os.path.normcase(dname)
+        
+        found = False
+        for name in self.statusCache.keys():
+            if name in names:
+                found = True
+                names[name] = self.statusCache[name]
+        
+        if not found:
+            # find the root of the repo
+            repodir = dname
+            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+                repodir = os.path.dirname(repodir)
+                if os.path.splitdrive(repodir)[1] == os.sep:
+                    return names
+            
+            from .SvnDialogMixin import SvnDialogMixin
+            mixin = SvnDialogMixin()
+            client = self.getClient()
+            client.callback_get_login = \
+                mixin._clientLoginCallback
+            client.callback_ssl_server_trust_prompt = \
+                mixin._clientSslServerTrustPromptCallback
+            
+            try:
+                locker = QMutexLocker(self.vcsExecutionMutex)
+                allFiles = client.status(dname, recurse = True, get_all = True, 
+                                              ignore = True, update = False)
+                locker.unlock()
+                dirs = [x for x in names.keys() if os.path.isdir(x)]
+                for file in allFiles:
+                    name = os.path.normcase(file.path)
+                    if file.is_versioned:
+                        if name in names:
+                            names[name] = self.canBeCommitted
+                            dn = name
+                            while os.path.splitdrive(dn)[1] != os.sep and \
+                                  dn != repodir:
+                                dn = os.path.dirname(dn)
+                                if dn in self.statusCache and \
+                                   self.statusCache[dn] == self.canBeCommitted:
+                                    break
+                                self.statusCache[dn] = self.canBeCommitted
+                        self.statusCache[name] = self.canBeCommitted
+                        if dirs:
+                            for d in dirs:
+                                if name.startswith(d):
+                                    names[d] = self.canBeCommitted
+                                    self.statusCache[d] = self.canBeCommitted
+                                    dirs.remove(d)
+                                    break
+                    else:
+                        self.statusCache[name] = self.canBeAdded
+            except pysvn.ClientError:
+                locker.unlock()    # ignore pysvn errors
+        
+        return names
+        
+    def __vcsAllRegisteredStates_wc(self, names, dname, shortcut = True):
+        """
+        Private method used to get the registered states of a number of files in the vcs.
+        
+        This is the variant for subversion installations using the old working copy
+        meta-data format.
+        
+        <b>Note:</b> If a shortcut is to be taken, the code will only check, if the named
+        directory has been scanned already. If so, it is assumed, that the states for
+        all files has been populated by the previous run.
+        
+        @param names dictionary with all filenames to be checked as keys
+        @param dname directory to check in (string)
+        @param shortcut flag indicating a shortcut should be taken (boolean)
+        @return the received dictionary completed with a combination of 
             canBeCommited and canBeAdded or None in order to signal an error
         """
         if not os.path.isdir(os.path.join(dname, self.adminDir)):
@@ -2028,6 +2226,9 @@ class Subversion(VersionControl):
         """
         helper = self.__plugin.getProjectHelper()
         helper.setObjects(self, project)
+        self.__wcng = \
+            os.path.exists(os.path.join(project.getProjectPath(), ".svn", "format")) or \
+            os.path.exists(os.path.join(project.getProjectPath(), "_svn", "format"))
         return helper
 
     ############################################################################
