@@ -2966,6 +2966,7 @@
       <keyword name="E5Action.__ammendToolTip" id="E5Action.__ammendToolTip" ref="eric5.E5Gui.E5Action.html#E5Action.__ammendToolTip" />
       <keyword name="E5Action.alternateShortcut" id="E5Action.alternateShortcut" ref="eric5.E5Gui.E5Action.html#E5Action.alternateShortcut" />
       <keyword name="E5Action.setAlternateShortcut" id="E5Action.setAlternateShortcut" ref="eric5.E5Gui.E5Action.html#E5Action.setAlternateShortcut" />
+      <keyword name="E5Action.setIconText" id="E5Action.setIconText" ref="eric5.E5Gui.E5Action.html#E5Action.setIconText" />
       <keyword name="E5Action.setShortcut" id="E5Action.setShortcut" ref="eric5.E5Gui.E5Action.html#E5Action.setShortcut" />
       <keyword name="E5Action.setShortcuts" id="E5Action.setShortcuts" ref="eric5.E5Gui.E5Action.html#E5Action.setShortcuts" />
       <keyword name="E5Application" id="E5Application" ref="eric5.E5Gui.E5Application.html#E5Application" />
