@@ -159,6 +159,15 @@ class E5Action(QAction):
         super().setShortcuts(shortcuts)
         self.__ammendToolTip()
         
+    def setIconText(self, text):
+        """
+        Public slot to set the icon text of the action.
+        
+        @param text new icon text (string)
+        """
+        super().setIconText(text)
+        self.__ammendToolTip()
+        
     def __ammendToolTip(self):
         """
         Private slot to add the primary keyboard accelerator to the tooltip.

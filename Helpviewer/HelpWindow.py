@@ -63,6 +63,7 @@ import Utilities
 
 import UI.PixmapCache
 import UI.Config
+from UI.Info import Version
 
 
 class HelpWindow(QMainWindow):
@@ -112,7 +113,7 @@ class HelpWindow(QMainWindow):
         
         self.fromEric = fromEric
         self.initShortcutsOnly = initShortcutsOnly
-        self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
+        self.setWindowIcon(UI.PixmapCache.getIcon("ericWeb.png"))
 
         self.mHistory = []
         self.__lastConfigurationPageName = ""
@@ -1682,9 +1683,10 @@ class HelpWindow(QMainWindow):
         Private slot to show the about information.
         """
         E5MessageBox.about(self, self.trUtf8("eric5 Web Browser"), self.trUtf8(
-            """<h3>About eric5 Web Browser</h3>"""
-            """<p>The eric5 Web Browser is a combined help file and HTML browser.</p>"""
-        ))
+            """<b>eric5 Web Browser - {0}</b>"""
+            """<p>The eric5 Web Browser is a combined help file and HTML browser."""
+            """ It is part of the eric5 development toolset.</p>"""
+        ).format(Version))
         
     def __aboutQt(self):
         """
@@ -1909,11 +1911,13 @@ class HelpWindow(QMainWindow):
             self.setWindowState(self.windowState() & ~Qt.WindowFullScreen)
             self.menuBar().show()
             self.fullScreenAct.setIcon(UI.PixmapCache.getIcon("windowFullscreen.png"))
+            self.fullScreenAct.setIconText(self.trUtf8('Full Screen'))
         else:
             # switch to full screen
             self.setWindowState(self.windowState() | Qt.WindowFullScreen)
             self.menuBar().hide()
             self.fullScreenAct.setIcon(UI.PixmapCache.getIcon("windowRestore.png"))
+            self.fullScreenAct.setIconText(self.trUtf8('Restore Window'))
     
     def __isFullScreen(self):
         """
