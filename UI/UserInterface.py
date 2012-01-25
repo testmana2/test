@@ -5639,7 +5639,10 @@ class UserInterface(QMainWindow):
             self.__versionCheckProgress.setLabelText(
                 self.trUtf8("Trying host {0}").format(url.host()))
             self.__versionCheckProgress.setValue(alternative)
-        reply = self.__networkManager.get(QNetworkRequest(url))
+        request = QNetworkRequest(url)
+        request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                             QNetworkRequest.AlwaysNetwork)
+        reply = self.__networkManager.get(request)
         reply.finished[()].connect(self.__versionsDownloadDone)
         self.__replies.append(reply)
         

@@ -325,7 +325,10 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadIODevice = QFile(self.__downloadFileName + ".tmp")
         self.__downloadCancelled = False
         
-        reply = self.__networkManager.get(QNetworkRequest(QUrl(url)))
+        request = QNetworkRequest(QUrl(url))
+        request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
+                             QNetworkRequest.AlwaysNetwork)
+        reply = self.__networkManager.get(request)
         reply.finished[()].connect(self.__downloadFileDone)
         reply.downloadProgress.connect(self.__downloadProgress)
         self.__replies.append(reply)
