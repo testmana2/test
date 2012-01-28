@@ -482,6 +482,8 @@ class HelpBrowser(QWebView):
         if frame is None:
             # called from QWebFrame.javaScriptWindowObjectCleared
             frame = self.sender()
+            if isinstance(frame, HelpWebPage):
+                frame = frame.mainFrame()
             if frame.url().scheme() == "pyrc" and frame.url().path() == "home":
                 if self.__javaScriptEricObject is None:
                     self.__javaScriptEricObject = JavaScriptEricObject(self.mw, self)
