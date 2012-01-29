@@ -983,7 +983,8 @@ class HelpBrowser(QWebView):
                                self.__addSearchEngine).setData(element)
                 menu.addSeparator()
         
-        menu.addAction(self.trUtf8("Web Inspector..."), self.__webInspector)
+        menu.addAction(UI.PixmapCache.getIcon("webInspector.png"),
+            self.trUtf8("Web Inspector..."), self.__webInspector)
         
         menu.exec_(evt.globalPos())
     
