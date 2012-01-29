@@ -145,14 +145,23 @@ QWebView
 <td><a href="#HelpBrowser.__downloadRequested">__downloadRequested</a></td>
 <td>Private slot to handle a download request.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__generatePrintPreviewClickedFrame">__generatePrintPreviewClickedFrame</a></td>
+<td>Private slot to generate a print preview of the clicked frame.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__hideAccessKeys">__hideAccessKeys</a></td>
 <td>Private slot to hide the access key labels.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__isUrlValid">__isUrlValid</a></td>
+<td>Private method to check a URL for validity.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__levelForZoom">__levelForZoom</a></td>
 <td>Private method determining the zoom level index given a zoom factor.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__linkHovered">__linkHovered</a></td>
 <td>Private slot to handle the linkHovered signal.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__loadClickedFrame">__loadClickedFrame</a></td>
+<td>Private slot to load the selected frame only.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__loadFinished">__loadFinished</a></td>
 <td>Private method to handle the loadFinished signal.</td>
@@ -169,11 +178,26 @@ QWebView
 <td><a href="#HelpBrowser.__openLinkInNewTab">__openLinkInNewTab</a></td>
 <td>Private method called by the context menu to open a link in a new window.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__printClickedFrame">__printClickedFrame</a></td>
+<td>Private slot to print the selected frame.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__printPdfClickedFrame">__printPdfClickedFrame</a></td>
+<td>Private slot to print the selected frame to PDF.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__printPreviewClickedFrame">__printPreviewClickedFrame</a></td>
+<td>Private slot to show a print preview of the clicked frame.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__searchRequested">__searchRequested</a></td>
 <td>Private slot to search for some text with a selected search engine.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__sendLink">__sendLink</a></td>
+<td>Private slot to send a link via email.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__showAccessKeys">__showAccessKeys</a></td>
 <td>Private method to show the access key labels.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__showClickedFrameSource">__showClickedFrameSource</a></td>
+<td>Private slot to show the source of the clicked frame.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__statusBarMessage">__statusBarMessage</a></td>
 <td>Private slot to handle the statusBarMessage signal.</td>
@@ -189,6 +213,15 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.__webInspector">__webInspector</a></td>
 <td>Private slot to show the web inspector window.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__zoomInClickedFrame">__zoomInClickedFrame</a></td>
+<td>Private slot to zoom into the clicked frame.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__zoomOutClickedFrame">__zoomOutClickedFrame</a></td>
+<td>Private slot to zoom out of the clicked frame.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__zoomResetClickedFrame">__zoomResetClickedFrame</a></td>
+<td>Private slot to reset the zoom factor of the clicked frame.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.addBookmark">addBookmark</a></td>
 <td>Public slot to bookmark the current page.</td>
@@ -444,12 +477,37 @@ name of the web database (string)
 <dd>
 reference to the request object (QNetworkRequest)
 </dd>
+</dl><a NAME="HelpBrowser.__generatePrintPreviewClickedFrame" ID="HelpBrowser.__generatePrintPreviewClickedFrame"></a>
+<h4>HelpBrowser.__generatePrintPreviewClickedFrame</h4>
+<b>__generatePrintPreviewClickedFrame</b>(<i>printer</i>)
+<p>
+        Private slot to generate a print preview of the clicked frame.
+</p><dl>
+<dt><i>printer</i></dt>
+<dd>
+reference to the printer object (QPrinter)
+</dd>
 </dl><a NAME="HelpBrowser.__hideAccessKeys" ID="HelpBrowser.__hideAccessKeys"></a>
 <h4>HelpBrowser.__hideAccessKeys</h4>
 <b>__hideAccessKeys</b>(<i></i>)
 <p>
         Private slot to hide the access key labels.
-</p><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
+</p><a NAME="HelpBrowser.__isUrlValid" ID="HelpBrowser.__isUrlValid"></a>
+<h4>HelpBrowser.__isUrlValid</h4>
+<b>__isUrlValid</b>(<i>url</i>)
+<p>
+        Private method to check a URL for validity.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+URL to be checked (QUrl)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a valid URL (boolean)
+</dd>
+</dl><a NAME="HelpBrowser.__levelForZoom" ID="HelpBrowser.__levelForZoom"></a>
 <h4>HelpBrowser.__levelForZoom</h4>
 <b>__levelForZoom</b>(<i>zoom</i>)
 <p>
@@ -480,7 +538,12 @@ the link title (string)
 <dd>
 text content of the link (string)
 </dd>
-</dl><a NAME="HelpBrowser.__loadFinished" ID="HelpBrowser.__loadFinished"></a>
+</dl><a NAME="HelpBrowser.__loadClickedFrame" ID="HelpBrowser.__loadClickedFrame"></a>
+<h4>HelpBrowser.__loadClickedFrame</h4>
+<b>__loadClickedFrame</b>(<i></i>)
+<p>
+        Private slot to load the selected frame only.
+</p><a NAME="HelpBrowser.__loadFinished" ID="HelpBrowser.__loadFinished"></a>
 <h4>HelpBrowser.__loadFinished</h4>
 <b>__loadFinished</b>(<i>ok</i>)
 <p>
@@ -524,6 +587,21 @@ reference to the web element to create the label for
 <b>__openLinkInNewTab</b>(<i></i>)
 <p>
         Private method called by the context menu to open a link in a new window.
+</p><a NAME="HelpBrowser.__printClickedFrame" ID="HelpBrowser.__printClickedFrame"></a>
+<h4>HelpBrowser.__printClickedFrame</h4>
+<b>__printClickedFrame</b>(<i></i>)
+<p>
+        Private slot to print the selected frame.
+</p><a NAME="HelpBrowser.__printPdfClickedFrame" ID="HelpBrowser.__printPdfClickedFrame"></a>
+<h4>HelpBrowser.__printPdfClickedFrame</h4>
+<b>__printPdfClickedFrame</b>(<i></i>)
+<p>
+        Private slot to print the selected frame to PDF.
+</p><a NAME="HelpBrowser.__printPreviewClickedFrame" ID="HelpBrowser.__printPreviewClickedFrame"></a>
+<h4>HelpBrowser.__printPreviewClickedFrame</h4>
+<b>__printPreviewClickedFrame</b>(<i></i>)
+<p>
+        Private slot to show a print preview of the clicked frame.
 </p><a NAME="HelpBrowser.__searchRequested" ID="HelpBrowser.__searchRequested"></a>
 <h4>HelpBrowser.__searchRequested</h4>
 <b>__searchRequested</b>(<i>act</i>)
@@ -534,11 +612,21 @@ reference to the web element to create the label for
 <dd>
 reference to the action that triggered this slot (QAction)
 </dd>
-</dl><a NAME="HelpBrowser.__showAccessKeys" ID="HelpBrowser.__showAccessKeys"></a>
+</dl><a NAME="HelpBrowser.__sendLink" ID="HelpBrowser.__sendLink"></a>
+<h4>HelpBrowser.__sendLink</h4>
+<b>__sendLink</b>(<i></i>)
+<p>
+        Private slot to send a link via email.
+</p><a NAME="HelpBrowser.__showAccessKeys" ID="HelpBrowser.__showAccessKeys"></a>
 <h4>HelpBrowser.__showAccessKeys</h4>
 <b>__showAccessKeys</b>(<i></i>)
 <p>
         Private method to show the access key labels.
+</p><a NAME="HelpBrowser.__showClickedFrameSource" ID="HelpBrowser.__showClickedFrameSource"></a>
+<h4>HelpBrowser.__showClickedFrameSource</h4>
+<b>__showClickedFrameSource</b>(<i></i>)
+<p>
+        Private slot to show the source of the clicked frame.
 </p><a NAME="HelpBrowser.__statusBarMessage" ID="HelpBrowser.__statusBarMessage"></a>
 <h4>HelpBrowser.__statusBarMessage</h4>
 <b>__statusBarMessage</b>(<i>text</i>)
@@ -587,6 +675,21 @@ the new url (QUrl)
 <b>__webInspector</b>(<i></i>)
 <p>
         Private slot to show the web inspector window.
+</p><a NAME="HelpBrowser.__zoomInClickedFrame" ID="HelpBrowser.__zoomInClickedFrame"></a>
+<h4>HelpBrowser.__zoomInClickedFrame</h4>
+<b>__zoomInClickedFrame</b>(<i></i>)
+<p>
+        Private slot to zoom into the clicked frame.
+</p><a NAME="HelpBrowser.__zoomOutClickedFrame" ID="HelpBrowser.__zoomOutClickedFrame"></a>
+<h4>HelpBrowser.__zoomOutClickedFrame</h4>
+<b>__zoomOutClickedFrame</b>(<i></i>)
+<p>
+        Private slot to zoom out of the clicked frame.
+</p><a NAME="HelpBrowser.__zoomResetClickedFrame" ID="HelpBrowser.__zoomResetClickedFrame"></a>
+<h4>HelpBrowser.__zoomResetClickedFrame</h4>
+<b>__zoomResetClickedFrame</b>(<i></i>)
+<p>
+        Private slot to reset the zoom factor of the clicked frame.
 </p><a NAME="HelpBrowser.addBookmark" ID="HelpBrowser.addBookmark"></a>
 <h4>HelpBrowser.addBookmark</h4>
 <b>addBookmark</b>(<i></i>)

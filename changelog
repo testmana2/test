@@ -2,9 +2,6 @@ Change Log
 ----------
 Version 5.3.0:
 - bug fixes
-- Web Browser
-  -- extended the check for acceptable SSL certificates for indication via the
-     URL entry field
 - Editor
   -- added capability to change the colours of the edit area independant from
      the colours of the system style
@@ -12,6 +9,12 @@ Version 5.3.0:
   -- Subversion
      --- changed code to make the subversion plug-ins compatible with the new
          generation working copy meta-data format
+- Web Browser
+  -- extended the check for acceptable SSL certificates for indication via the
+     URL entry field
+  -- extended the web page context menu by several entries to send links or the
+     selected text, handling the clicked frame, translate the selected text with
+     Google Translate and search it in Wictionary
 
 Version 5.2.0:
 - bug fixes

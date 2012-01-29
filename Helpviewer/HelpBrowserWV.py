@@ -12,7 +12,7 @@ from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl,
     QBuffer, QIODevice, QByteArray, QFileInfo, Qt, QTimer, QEvent, QRect
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
-    QPalette, QFrame
+    QPalette, QFrame, QPrinter, QPrintDialog, QDialog
 from PyQt4 import QtWebKit
 from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
 try:
@@ -37,6 +37,7 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 import Helpviewer.HelpWindow
+from .HelpLanguagesDialog import HelpLanguagesDialog
 
 from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
 
@@ -494,6 +495,8 @@ class HelpBrowser(QWebView):
         
         self.__rss = []
         
+        self.__clickedFrame = None
+        
         self.grabGesture(Qt.PinchGesture)
     
     def __addExternalBinding(self, frame=None):
@@ -820,43 +823,60 @@ class HelpBrowser(QWebView):
         """
         menu = QMenu(self)
         
+        frameAtPos = self.page().frameAt(evt.pos())
         hit = self.page().mainFrame().hitTestContent(evt.pos())
         if not hit.linkUrl().isEmpty():
-            act = menu.addAction(self.trUtf8("Open Link in New Tab\tCtrl+LMB"),
-                self.__openLinkInNewTab)
-            act.setData(hit.linkUrl())
+            menu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+                self.trUtf8("Open Link in New Tab\tCtrl+LMB"),
+                self.__openLinkInNewTab).setData(hit.linkUrl())
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Save Lin&k"), self.__downloadLink)
-            act = menu.addAction(self.trUtf8("Bookmark this Link"), self.__bookmarkLink)
-            act.setData(hit.linkUrl())
+            menu.addAction(UI.PixmapCache.getIcon("download.png"),
+                self.trUtf8("Save Lin&k"), self.__downloadLink)
+            menu.addAction(UI.PixmapCache.getIcon("bookmark22.png"),
+                self.trUtf8("Bookmark this Link"), self.__bookmarkLink)\
+                .setData(hit.linkUrl())
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
+            menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy Link to Clipboard"), self.__copyLink)
+            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Link"), self.__sendLink).setData(hit.linkUrl())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Link with VirusTotal"), self.__virusTotal)
-                act.setData(hit.linkUrl())
+                menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
+                    self.trUtf8("Scan Link with VirusTotal"), self.__virusTotal)\
+                    .setData(hit.linkUrl())
         
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
                 menu.addSeparator()
-            act = menu.addAction(self.trUtf8("Open Image in New Tab"),
-                self.__openLinkInNewTab)
-            act.setData(hit.imageUrl())
+            menu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+                self.trUtf8("Open Image in New Tab"),
+                self.__openLinkInNewTab).setData(hit.imageUrl())
             menu.addSeparator()
-            menu.addAction(self.trUtf8("Save Image"), self.__downloadImage)
+            menu.addAction(UI.PixmapCache.getIcon("download.png"),
+                self.trUtf8("Save Image"), self.__downloadImage)
             menu.addAction(self.trUtf8("Copy Image to Clipboard"), self.__copyImage)
-            act = menu.addAction(self.trUtf8("Copy Image Location to Clipboard"),
-                self.__copyImageLocation)
-            act.setData(hit.imageUrl().toString())
+            menu.addAction(UI.PixmapCache.getIcon("editCopy.png"),
+                self.trUtf8("Copy Image Location to Clipboard"),
+                self.__copyImageLocation).setData(hit.imageUrl().toString())
+            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Image Link"), self.__sendLink).setData(hit.imageUrl())
             menu.addSeparator()
-            act = menu.addAction(self.trUtf8("Block Image"), self.__blockImage)
-            act.setData(hit.imageUrl().toString())
+            menu.addAction(UI.PixmapCache.getIcon("adBlockPlus.png"),
+                self.trUtf8("Block Image"), self.__blockImage)\
+                .setData(hit.imageUrl().toString())
             if Preferences.getHelp("VirusTotalEnabled") and \
                Preferences.getHelp("VirusTotalServiceKey") != "":
-                act = menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
-                    self.trUtf8("Scan Image with VirusTotal"), self.__virusTotal)
-                act.setData(hit.imageUrl())
+                menu.addAction(UI.PixmapCache.getIcon("virustotal.png"),
+                    self.trUtf8("Scan Image with VirusTotal"), self.__virusTotal)\
+                    .setData(hit.imageUrl())
+        
+        element = hit.element()
+        if not element.isNull() and \
+           element.tagName().lower() in ["input", "textarea", "video", "audio"]:
+            if menu.isEmpty():
+                self.page().createStandardContextMenu().exec_(evt.globalPos())
+                return
         
         if not menu.isEmpty():
             menu.addSeparator()
@@ -865,17 +885,55 @@ class HelpBrowser(QWebView):
         menu.addSeparator()
         menu.addAction(self.mw.saveAsAct)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Bookmark this Page"), self.addBookmark)
+        
+        if frameAtPos and self.page().mainFrame() != frameAtPos:
+            self.__clickedFrame = frameAtPos
+            fmenu = QMenu(self.trUtf8("This Frame"))
+            frameUrl = self.__clickedFrame.url()
+            if frameUrl.isValid():
+                fmenu.addAction(self.trUtf8("Show &only this frame"),
+                    self.__loadClickedFrame)
+                fmenu.addAction(UI.PixmapCache.getIcon("openNewTab.png"),
+                    self.trUtf8("Show in new &tab"),
+                    self.__openLinkInNewTab).setData(self.__clickedFrame.url())
+                fmenu.addSeparator()
+            fmenu.addAction(UI.PixmapCache.getIcon("print.png"),
+                self.trUtf8("&Print"), self.__printClickedFrame)
+            fmenu.addAction(UI.PixmapCache.getIcon("printPreview.png"),
+                self.trUtf8("Print Preview"), self.__printPreviewClickedFrame)
+            fmenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
+                self.trUtf8("Print as PDF"), self.__printPdfClickedFrame)
+            fmenu.addSeparator()
+            fmenu.addAction(UI.PixmapCache.getIcon("zoomIn.png"),
+                self.trUtf8("Zoom &in"), self.__zoomInClickedFrame)
+            fmenu.addAction(UI.PixmapCache.getIcon("zoomReset.png"),
+                self.trUtf8("Zoom &reset"), self.__zoomResetClickedFrame)
+            fmenu.addAction(UI.PixmapCache.getIcon("zoomOut.png"),
+                self.trUtf8("Zoom &out"), self.__zoomOutClickedFrame)
+            fmenu.addSeparator()
+            fmenu.addAction(self.trUtf8("Show frame so&urce"),
+                self.__showClickedFrameSource)
+            
+            menu.addMenu(fmenu)
+            menu.addSeparator()
+        
+        menu.addAction(UI.PixmapCache.getIcon("bookmark22.png"),
+            self.trUtf8("Bookmark this Page"), self.addBookmark)
+        menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+            self.trUtf8("Send Page Link"), self.__sendLink).setData(self.url())
         menu.addSeparator()
         menu.addAction(self.mw.backAct)
         menu.addAction(self.mw.forwardAct)
         menu.addAction(self.mw.homeAct)
         menu.addSeparator()
         menu.addAction(self.mw.zoomInAct)
+        menu.addAction(self.mw.zoomResetAct)
         menu.addAction(self.mw.zoomOutAct)
         menu.addSeparator()
         if self.selectedText():
             menu.addAction(self.mw.copyAct)
+            menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
+                self.trUtf8("Send Text"), self.__sendLink).setData(self.selectedText())
         menu.addAction(self.mw.findAct)
         menu.addSeparator()
         if self.selectedText():
@@ -884,26 +942,62 @@ class HelpBrowser(QWebView):
             engineNames = self.mw.openSearchManager().allEnginesNames()
             for engineName in engineNames:
                 engine = self.mw.openSearchManager().engine(engineName)
-                act = OpenSearchEngineAction(engine, self.__searchMenu)
-                self.__searchMenu.addAction(act)
-                act.setData(engineName)
+                self.__searchMenu.addAction(
+                    OpenSearchEngineAction(engine, self.__searchMenu).setData(engineName))
             self.__searchMenu.triggered.connect(self.__searchRequested)
             
             menu.addSeparator()
+            
+            languages = Preferences.toList(
+                Preferences.Prefs.settings.value("Help/AcceptLanguages",
+                    HelpLanguagesDialog.defaultAcceptLanguages()))
+            if languages:
+                language = languages[0]
+                langCode = language.split("[")[1][:2]
+                googleTranslatorUrl = QUrl(
+                    "http://translate.google.com/#auto|{0}|{1}".format(
+                        langCode,self.selectedText()))
+                menu.addAction(UI.PixmapCache.getIcon("translate.png"),
+                    self.trUtf8("Google Translate"), self.__openLinkInNewTab)\
+                    .setData(googleTranslatorUrl)
+                wiktionaryUrl = QUrl(
+                    "http://{0}.wiktionary.org/wiki/Special:Search?search={1}".format(
+                        langCode, self.selectedText()))
+                menu.addAction(UI.PixmapCache.getIcon("wikipedia.png"),
+                    self.trUtf8("Dictionary"), self.__openLinkInNewTab)\
+                    .setData(wiktionaryUrl)
+                menu.addSeparator()
+            
+            guessedUrl = QUrl.fromUserInput(self.selectedText().strip())
+            if self.__isUrlValid(guessedUrl):
+                menu.addAction(self.trUtf8("Go to web address"), self.__openLinkInNewTab)\
+                    .setData(guessedUrl)
+                menu.addSeparator()
         
         if hasattr(QtWebKit, 'QWebElement'):
             element = hit.element()
             if not element.isNull() and \
                element.tagName().lower() == "input" and \
                element.attribute("type", "text") == "text":
-                act = menu.addAction(self.trUtf8("Add to web search toolbar"),
-                                     self.__addSearchEngine)
-                act.setData(element)
+                menu.addAction(self.trUtf8("Add to web search toolbar"),
+                               self.__addSearchEngine).setData(element)
                 menu.addSeparator()
         
         menu.addAction(self.trUtf8("Web Inspector..."), self.__webInspector)
         
         menu.exec_(evt.globalPos())
+    
+    def __isUrlValid(self, url):
+        """
+        Private method to check a URL for validity.
+        
+        @param url URL to be checked (QUrl)
+        @return flag indicating a valid URL (boolean)
+        """
+        return url.isValid() and \
+               bool(url.host()) and \
+               bool(url.scheme()) and \
+               "." in url.host()
     
     def __openLinkInNewTab(self):
         """
@@ -930,6 +1024,19 @@ class HelpBrowser(QWebView):
         dlg = AddBookmarkDialog()
         dlg.setUrl(bytes(url.toEncoded()).decode())
         dlg.exec_()
+    
+    def __sendLink(self):
+        """
+        Private slot to send a link via email.
+        """
+        act = self.sender()
+        data = act.data()
+        if isinstance(data, QUrl) and data.isEmpty():
+            return
+        
+        if isinstance(data, QUrl):
+            data = data.toString()
+        QDesktopServices.openUrl(QUrl("mailto:?body=" + data))
     
     def __downloadLink(self):
         """
@@ -1737,6 +1844,152 @@ class HelpBrowser(QWebView):
         @return flag indicating the presence of RSS links (boolean)
         """
         return len(self.__rss) > 0
+    
+    ############################################################################
+    ## Clicked Frame slots
+    ############################################################################
+    
+    def __loadClickedFrame(self):
+        """
+        Private slot to load the selected frame only.
+        """
+        self.setSource(self.__clickedFrame.url())
+    
+    def __printClickedFrame(self):
+        """
+        Private slot to print the selected frame.
+        """
+        printer = QPrinter(mode=QPrinter.HighResolution)
+        if Preferences.getPrinter("ColorMode"):
+            printer.setColorMode(QPrinter.Color)
+        else:
+            printer.setColorMode(QPrinter.GrayScale)
+        if Preferences.getPrinter("FirstPageFirst"):
+            printer.setPageOrder(QPrinter.FirstPageFirst)
+        else:
+            printer.setPageOrder(QPrinter.LastPageFirst)
+        printer.setPageMargins(
+            Preferences.getPrinter("LeftMargin") * 10,
+            Preferences.getPrinter("TopMargin") * 10,
+            Preferences.getPrinter("RightMargin") * 10,
+            Preferences.getPrinter("BottomMargin") * 10,
+            QPrinter.Millimeter
+        )
+        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        
+        printDialog = QPrintDialog(printer, self)
+        if printDialog.exec_() == QDialog.Accepted:
+            try:
+                self.__clickedFrame.print_(printer)
+            except AttributeError:
+                E5MessageBox.critical(self,
+                    self.trUtf8("eric5 Web Browser"),
+                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
+                                """Please upgrade.</p>"""))
+    
+    def __printPreviewClickedFrame(self):
+        """
+        Private slot to show a print preview of the clicked frame.
+        """
+        from PyQt4.QtGui import QPrintPreviewDialog
+        
+        printer = QPrinter(mode=QPrinter.HighResolution)
+        if Preferences.getPrinter("ColorMode"):
+            printer.setColorMode(QPrinter.Color)
+        else:
+            printer.setColorMode(QPrinter.GrayScale)
+        if Preferences.getPrinter("FirstPageFirst"):
+            printer.setPageOrder(QPrinter.FirstPageFirst)
+        else:
+            printer.setPageOrder(QPrinter.LastPageFirst)
+        printer.setPageMargins(
+            Preferences.getPrinter("LeftMargin") * 10,
+            Preferences.getPrinter("TopMargin") * 10,
+            Preferences.getPrinter("RightMargin") * 10,
+            Preferences.getPrinter("BottomMargin") * 10,
+            QPrinter.Millimeter
+        )
+        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        
+        preview = QPrintPreviewDialog(printer, self)
+        preview.paintRequested.connect(self.__generatePrintPreviewClickedFrame)
+        preview.exec_()
+    
+    def __generatePrintPreviewClickedFrame(self, printer):
+        """
+        Private slot to generate a print preview of the clicked frame.
+        
+        @param printer reference to the printer object (QPrinter)
+        """
+        try:
+            self.__clickedFrame.print_(printer)
+        except AttributeError:
+            E5MessageBox.critical(self,
+                self.trUtf8("eric5 Web Browser"),
+                self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
+                            """Please upgrade.</p>"""))
+            return
+    
+    def __printPdfClickedFrame(self):
+        """
+        Private slot to print the selected frame to PDF.
+        """
+        printer = QPrinter(mode=QPrinter.HighResolution)
+        if Preferences.getPrinter("ColorMode"):
+            printer.setColorMode(QPrinter.Color)
+        else:
+            printer.setColorMode(QPrinter.GrayScale)
+        printer.setPrinterName(Preferences.getPrinter("PrinterName"))
+        printer.setOutputFormat(QPrinter.PdfFormat)
+        name = self.__clickedFrame.url().path().rsplit('/', 1)[-1]
+        if name:
+            name = name.rsplit('.', 1)[0]
+            name += '.pdf'
+            printer.setOutputFileName(name)
+        
+        printDialog = QPrintDialog(printer, self)
+        if printDialog.exec_() == QDialog.Accepted:
+            try:
+                self.__clickedFrame.print_(printer)
+            except AttributeError:
+                E5MessageBox.critical(self,
+                    self.trUtf8("eric5 Web Browser"),
+                    self.trUtf8("""<p>Printing is not available due to a bug in PyQt4."""
+                                """Please upgrade.</p>"""))
+                return
+    
+    def __zoomInClickedFrame(self):
+        """
+        Private slot to zoom into the clicked frame.
+        """
+        index = self.__levelForZoom(int(self.__clickedFrame.zoomFactor() * 100))
+        if index < len(self.__zoomLevels) - 1:
+            self.__clickedFrame.setZoomFactor(self.__zoomLevels[index + 1] / 100)
+    
+    def __zoomResetClickedFrame(self):
+        """
+        Private slot to reset the zoom factor of the clicked frame.
+        """
+        self.__clickedFrame.setZoomFactor(self.__currentZoom / 100)
+    
+    def __zoomOutClickedFrame(self):
+        """
+        Private slot to zoom out of the clicked frame.
+        """
+        index = self.__levelForZoom(int(self.__clickedFrame.zoomFactor() * 100))
+        if index > 0:
+            self.__clickedFrame.setZoomFactor(self.__zoomLevels[index - 1] / 100)
+    
+    def __showClickedFrameSource(self):
+        """
+        Private slot to show the source of the clicked frame.
+        """
+        from QScintilla.MiniEditor import MiniEditor
+        src = self.__clickedFrame.toHtml()
+        editor = MiniEditor(parent=self)
+        editor.setText(src, "Html")
+        editor.setLanguage("dummy.html")
+        editor.show()
 
 
 def contentSniff(data):

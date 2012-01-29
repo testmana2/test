@@ -1097,6 +1097,7 @@ class HelpWindow(QMainWindow):
         self.__actions.append(self.passwordsAct)
         
         self.adblockAct = E5Action(self.trUtf8('Ad Block'),
+                      UI.PixmapCache.getIcon("adBlockPlus.png"),
                       self.trUtf8('&Ad Block...'),
                       0, 0,
                       self, 'help_adblock')

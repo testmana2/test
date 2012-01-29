@@ -4231,21 +4231,32 @@
       <keyword name="HelpBrowser.__downloadImage" id="HelpBrowser.__downloadImage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadImage" />
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
+      <keyword name="HelpBrowser.__generatePrintPreviewClickedFrame" id="HelpBrowser.__generatePrintPreviewClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__generatePrintPreviewClickedFrame" />
       <keyword name="HelpBrowser.__hideAccessKeys" id="HelpBrowser.__hideAccessKeys" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__hideAccessKeys" />
+      <keyword name="HelpBrowser.__isUrlValid" id="HelpBrowser.__isUrlValid" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__isUrlValid" />
       <keyword name="HelpBrowser.__levelForZoom" id="HelpBrowser.__levelForZoom" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__levelForZoom" />
       <keyword name="HelpBrowser.__linkHovered" id="HelpBrowser.__linkHovered" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__linkHovered" />
+      <keyword name="HelpBrowser.__loadClickedFrame" id="HelpBrowser.__loadClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadClickedFrame" />
       <keyword name="HelpBrowser.__loadFinished" id="HelpBrowser.__loadFinished" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadFinished" />
       <keyword name="HelpBrowser.__loadProgress" id="HelpBrowser.__loadProgress" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadProgress" />
       <keyword name="HelpBrowser.__loadStarted" id="HelpBrowser.__loadStarted" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__loadStarted" />
       <keyword name="HelpBrowser.__makeAccessLabel" id="HelpBrowser.__makeAccessLabel" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__makeAccessLabel" />
       <keyword name="HelpBrowser.__openLinkInNewTab" id="HelpBrowser.__openLinkInNewTab" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__openLinkInNewTab" />
+      <keyword name="HelpBrowser.__printClickedFrame" id="HelpBrowser.__printClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printClickedFrame" />
+      <keyword name="HelpBrowser.__printPdfClickedFrame" id="HelpBrowser.__printPdfClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printPdfClickedFrame" />
+      <keyword name="HelpBrowser.__printPreviewClickedFrame" id="HelpBrowser.__printPreviewClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printPreviewClickedFrame" />
       <keyword name="HelpBrowser.__searchRequested" id="HelpBrowser.__searchRequested" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__searchRequested" />
+      <keyword name="HelpBrowser.__sendLink" id="HelpBrowser.__sendLink" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__sendLink" />
       <keyword name="HelpBrowser.__showAccessKeys" id="HelpBrowser.__showAccessKeys" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__showAccessKeys" />
+      <keyword name="HelpBrowser.__showClickedFrameSource" id="HelpBrowser.__showClickedFrameSource" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__showClickedFrameSource" />
       <keyword name="HelpBrowser.__statusBarMessage" id="HelpBrowser.__statusBarMessage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__statusBarMessage" />
       <keyword name="HelpBrowser.__unsupportedContent" id="HelpBrowser.__unsupportedContent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__unsupportedContent" />
       <keyword name="HelpBrowser.__urlChanged" id="HelpBrowser.__urlChanged" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__urlChanged" />
       <keyword name="HelpBrowser.__virusTotal" id="HelpBrowser.__virusTotal" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__virusTotal" />
       <keyword name="HelpBrowser.__webInspector" id="HelpBrowser.__webInspector" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__webInspector" />
+      <keyword name="HelpBrowser.__zoomInClickedFrame" id="HelpBrowser.__zoomInClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__zoomInClickedFrame" />
+      <keyword name="HelpBrowser.__zoomOutClickedFrame" id="HelpBrowser.__zoomOutClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__zoomOutClickedFrame" />
+      <keyword name="HelpBrowser.__zoomResetClickedFrame" id="HelpBrowser.__zoomResetClickedFrame" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.__zoomResetClickedFrame" />
       <keyword name="HelpBrowser.addBookmark" id="HelpBrowser.addBookmark" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.addBookmark" />
       <keyword name="HelpBrowser.backward" id="HelpBrowser.backward" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.backward" />
       <keyword name="HelpBrowser.checkRSS" id="HelpBrowser.checkRSS" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpBrowser.checkRSS" />
