@@ -165,7 +165,7 @@ class SvgDiagram(QMainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta()< 0:
+            if evt.delta() < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()

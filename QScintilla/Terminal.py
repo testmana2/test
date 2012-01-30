@@ -495,7 +495,7 @@ class Terminal(QsciScintillaCompat):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta()< 0:
+            if evt.delta() < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()
@@ -539,6 +539,7 @@ class Terminal(QsciScintillaCompat):
                     pinch.setScaleFactor(3.0)
                 self.zoomTo(zoom)
             evt.accept()
+
     def editorCommand(self, cmd):
         """
         Public method to perform an editor command.

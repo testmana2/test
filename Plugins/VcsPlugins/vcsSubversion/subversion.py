@@ -670,7 +670,7 @@ class Subversion(VersionControl):
                         d = os.path.dirname(d)
                 else:
                     while not os.path.exists(os.path.join(d, self.adminDir)):
-                        # add directories recursively, 
+                        # add directories recursively,
                         # if they aren't in the repository already
                         if d in tree:
                             break
@@ -1132,7 +1132,7 @@ class Subversion(VersionControl):
             return self.statusCache[name]
         
         name = os.path.normcase(name)
-        states = { name : 0 }
+        states = {name: 0}
         states = self.vcsAllRegisteredStates(states, dname, False)
         if states[name] == self.canBeCommitted:
             return self.canBeCommitted
@@ -1184,7 +1184,7 @@ class Subversion(VersionControl):
         else:
             return self.__vcsAllRegisteredStates_wc(names, dname, shortcut)
         
-    def __vcsAllRegisteredStates_wcng(self, names, dname, shortcut = True):
+    def __vcsAllRegisteredStates_wcng(self, names, dname, shortcut=True):
         """
         Private method used to get the registered states of a number of files in the vcs.
         
@@ -1198,7 +1198,7 @@ class Subversion(VersionControl):
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
         @param shortcut flag indicating a shortcut should be taken (boolean)
-        @return the received dictionary completed with a combination of 
+        @return the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
         """
         if dname.endswith(os.sep):
@@ -1252,7 +1252,7 @@ class Subversion(VersionControl):
         
         return names
         
-    def __vcsAllRegisteredStates_wc(self, names, dname, shortcut = True):
+    def __vcsAllRegisteredStates_wc(self, names, dname, shortcut=True):
         """
         Private method used to get the registered states of a number of files in the vcs.
         
@@ -1266,7 +1266,7 @@ class Subversion(VersionControl):
         @param names dictionary with all filenames to be checked as keys
         @param dname directory to check in (string)
         @param shortcut flag indicating a shortcut should be taken (boolean)
-        @return the received dictionary completed with a combination of 
+        @return the received dictionary completed with a combination of
             canBeCommited and canBeAdded or None in order to signal an error
         """
         if not os.path.isdir(os.path.join(dname, self.adminDir)):
