@@ -446,7 +446,7 @@ class Prefs(object):
         "AnnotationsErrorBackground": QColor("#ffd0d0"),
         "WhitespaceForeground": QColor(Qt.darkGray),
         "WhitespaceBackground": QColor(Qt.white),
-        "EditAreaForeground": 
+        "EditAreaForeground":
             QApplication.palette().color(QPalette.Active, QPalette.Base),
         "EditAreaBackground":
             QApplication.palette().color(QPalette.Active, QPalette.Text),

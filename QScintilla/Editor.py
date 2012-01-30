@@ -2938,13 +2938,13 @@ class Editor(QsciScintillaCompat):
             begline = line
             while begline > 0 and \
                   self.text(begline - 1).strip().startswith(commentStr):
-                begline -=  1
+                begline -= 1
             # determine the end of the comment block
             endline = line
             lines = self.lines()
             while endline < lines and \
                   self.text(endline + 1).strip().startswith(commentStr):
-                endline +=  1
+                endline += 1
             
             self.setSelection(begline, 0, endline, self.lineLength(endline))
             self.uncommentLineOrSelection()
@@ -5415,7 +5415,7 @@ class Editor(QsciScintillaCompat):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta()< 0:
+            if evt.delta() < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()

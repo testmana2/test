@@ -956,7 +956,7 @@ class HelpBrowser(QWebView):
                 langCode = language.split("[")[1][:2]
                 googleTranslatorUrl = QUrl(
                     "http://translate.google.com/#auto|{0}|{1}".format(
-                        langCode,self.selectedText()))
+                        langCode, self.selectedText()))
                 menu.addAction(UI.PixmapCache.getIcon("translate.png"),
                     self.trUtf8("Google Translate"), self.__openLinkInNewTab)\
                     .setData(googleTranslatorUrl)
