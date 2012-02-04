@@ -212,8 +212,11 @@ class HelpWebPage(QWebPage):
         
         @param request reference to the network request object (QNetworkRequest)
         """
-        request.setAttribute(QNetworkRequest.User + 100, self)
-        request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
+        try:
+            request.setAttribute(QNetworkRequest.User + 100, self)
+            request.setAttribute(QNetworkRequest.User + 101, self.__lastRequestType)
+        except TypeError:
+            pass
     
     def pageAttributeId(self):
         """
