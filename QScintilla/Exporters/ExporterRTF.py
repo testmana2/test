@@ -30,7 +30,7 @@ class ExporterRTF(ExporterBase):
     RTF_HEADEROPEN = "{\\rtf1\\ansi\\deff0\\deftab720"
     RTF_HEADERCLOSE = "\n"
     RTF_FONTDEFOPEN = "{\\fonttbl"
-    RTF_FONTDEF = "{\\f{0:d}\\fnil\\fcharset{1:d} {2};}"
+    RTF_FONTDEF = "{{\\f{0:d}\\fnil\\fcharset{1:d} {2};}}"
     RTF_FONTDEFCLOSE = "}"
     RTF_COLORDEFOPEN = "{\\colortbl"
     RTF_COLORDEF = "\\red{0:d}\\green{1:d}\\blue{2:d};"
@@ -51,7 +51,7 @@ class ExporterRTF(ExporterBase):
     RTF_ITALIC_ON = "\\i"
     RTF_ITALIC_OFF = "\\i0"
 
-    RTF_EOLN = "\\par\n"
+    RTF_EOLN = "\\line\n"
     RTF_TAB = "\\tab "
 
     RTF_COLOR = "#000000"
@@ -330,7 +330,7 @@ class ExporterRTF(ExporterBase):
                             f.write(ch.decode())
                     
                     column += 1
-                    prevCR = ch == '\r'
+                    prevCR = ch == b'\r'
                     pos += 1
                 
                 f.write(self.RTF_BODYCLOSE)

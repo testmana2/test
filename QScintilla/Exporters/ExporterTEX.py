@@ -206,7 +206,7 @@ class ExporterTEX(ExporterBase):
                     style = self.editor.styleAt(pos)
                     if style != styleCurrent:
                         # new style
-                        f.write("}\n\\eric{0}{{".format(self.__texStyle(style)))
+                        f.write("}}\n\\eric{0}{{".format(self.__texStyle(style)))
                         styleCurrent = style
                     
                     if ch == b'\t':
