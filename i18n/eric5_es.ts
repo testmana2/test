@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1637,8 +1638,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1856,8 +1857,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -10333,37 +10334,37 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
         <source>Select to set the colour of the edit area different to the default style</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para establecer el color del área de edición distinto del estilo por defecto</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
         <source>Override edit area colours</source>
-        <translation type="unfinished"></translation>
+        <translation>Sobreescribir colores del área de edición</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
         <source>Edit area foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de primer plano para el área de edición:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
         <source>Select the foreground colour for the edit area.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de primer plano para el área de edición.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="95"/>
         <source>Edit area background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fondo para el área de edición:</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="111"/>
         <source>Select the background colour for the edit area.</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de fondo para el área de edición.</translation>
     </message>
     <message>
         <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
         <source>Colours</source>
-        <translation type="unfinished">Colores</translation>
+        <translation>Colores</translation>
     </message>
 </context>
 <context>
@@ -12982,7 +12983,7 @@ selección completa.&lt;/li&gt;
     <name>HelpBrowser</name>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="837"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -13183,97 +13184,97 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="849"/>
         <source>Send Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Enlace</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="870"/>
         <source>Send Image Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Enlace de Imagen</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
         <source>This Frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Este Marco</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="902"/>
         <source>Show &amp;only this frame</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar s&amp;olo este marco</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="904"/>
         <source>Show in new &amp;tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar en nueva pes&amp;taña</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="908"/>
         <source>&amp;Print</source>
-        <translation type="unfinished">Im&amp;primir</translation>
+        <translation>Im&amp;primir</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
         <source>Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Presentación preliminar</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
         <source>Print as PDF</source>
-        <translation type="unfinished">Imprimir como PDF</translation>
+        <translation>Imprimir como PDF</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="915"/>
         <source>Zoom &amp;in</source>
-        <translation type="unfinished">A&amp;umentar Zoom</translation>
+        <translation>A&amp;umentar Zoom</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="917"/>
         <source>Zoom &amp;reset</source>
-        <translation type="unfinished">&amp;Restablecer zoom</translation>
+        <translation>&amp;Restablecer zoom</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
         <source>Zoom &amp;out</source>
-        <translation type="unfinished">Dismi&amp;nuir Zoom</translation>
+        <translation>Dismi&amp;nuir Zoom</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="922"/>
         <source>Show frame so&amp;urce</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar f&amp;uentes del marco</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="930"/>
         <source>Send Page Link</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Enlace de Página</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="946"/>
         <source>Send Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Enviar Texto</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="971"/>
         <source>Google Translate</source>
-        <translation type="unfinished"></translation>
+        <translation>Google Translate</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
         <source>Dictionary</source>
-        <translation type="unfinished"></translation>
+        <translation>Diccionario</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="984"/>
         <source>Go to web address</source>
-        <translation type="unfinished"></translation>
+        <translation>Ir a la dirección web</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="1967"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="933"/>
         <source>User Agent</source>
-        <translation type="unfinished">Agente de Usuario</translation>
+        <translation>Agente de Usuario</translation>
     </message>
 </context>
 <context>
@@ -15977,63 +15978,65 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ver|Aumentar Zoom</translatorcomment>
+        <translation>Aumentar Zoom</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="800"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ver|Disminuir Zoom</translatorcomment>
+        <translation>Disminuir Zoom</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1131"/>
         <source>Network Monitor</source>
-        <translation type="unfinished">Monitor de Red</translation>
+        <translation>Monitor de Red</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1131"/>
         <source>&amp;Network Monitor...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mo&amp;nitor de Red...</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1136"/>
         <source>&lt;b&gt;Network Monitor...&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Monitor de Red...&lt;/b&gt;&lt;p&gt;Muestra el diálogo de monitor de red.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1703"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Navegador Web de eric5- {0}&lt;/b&gt;&lt;p&gt;El Navegador Web de eric5 is una combación de navegador de archivos de ayuda y de HTML. Es parte del conjunto de herramientas de desarrollo de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1938"/>
         <source>Restore Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar Ventana</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1189"/>
         <source>Manage User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Ajustes de Agente de Usuario</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1189"/>
         <source>Manage &amp;User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Ajustes de Agente de &amp;Usuario</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1192"/>
         <source>Shows a dialog to manage the User Agent settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Muestra un diálogo para gestionar los ajustes de Agente de Usuario</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1194"/>
         <source>&lt;b&gt;Manage User Agent Settings&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the User Agent settings.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Gestionar Ajustes de Agente de Usuario&lt;/b&gt;&lt;p&gt;Muestra un diálogo para gestionar los ajustes de Agente de Usuario.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1317"/>
         <source>Global User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Agente de Usuario Global</translation>
     </message>
 </context>
 <context>
@@ -33985,7 +33988,7 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
     <message>
         <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
         <source>Press to replace the selection and search for the next occurence</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para reemplazar la selección y buscar la siguiente ocurrencia</translation>
     </message>
 </context>
 <context>
@@ -44376,22 +44379,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="56"/>
         <source>Saving user agent data</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardando datos de agente de usuario</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="56"/>
         <source>&lt;p&gt;User agent data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Los datos de Agente de usuario no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="73"/>
         <source>Loading user agent data</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargando datos de agente de usuario</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="73"/>
         <source>&lt;p&gt;User agent data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Los datos de Agente de usuario no se han podido cargar de &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -44437,12 +44440,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentModel.py" line="30"/>
         <source>Host</source>
-        <translation type="unfinished"></translation>
+        <translation>Host</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentModel.py" line="31"/>
         <source>User Agent String</source>
-        <translation type="unfinished"></translation>
+        <translation>Cadena de Agente de Usuario</translation>
     </message>
 </context>
 <context>
@@ -44450,37 +44453,37 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="43"/>
         <source>Enter search term</source>
-        <translation type="unfinished">Introduzca el término de búsqueda</translation>
+        <translation>Introduzca el término de búsqueda</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="50"/>
         <source>Press to clear the search edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para limpiar la caja de búsqueda</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="85"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+        <translation>Pulse para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="88"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="95"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+        <translation>Pulse para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="98"/>
         <source>Remove &amp;All</source>
-        <translation type="unfinished">Eliminar &amp;Todas</translation>
+        <translation>Eliminar &amp;Todas</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="14"/>
         <source>User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes de Agente de Usuario</translation>
     </message>
 </context>
 <context>
@@ -50257,13 +50260,15 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="2740"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ver|Aumentar Zoom</translatorcomment>
+        <translation>Aumentar Zoom</translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2757"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Ver|Disminuir Zoom</translatorcomment>
+        <translation>Disminuir Zoom</translation>
     </message>
 </context>
 <context>
