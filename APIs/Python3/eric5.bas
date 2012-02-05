@@ -597,7 +597,10 @@ UnittestWindow QMainWindow
 UnusedImport Message
 UnusedVariable Message
 UrlBar E5LineEdit
+UserAgentManager QObject
 UserAgentMenu QMenu
+UserAgentModel QAbstractTableModel
+UserAgentsDialog QDialog Ui_UserAgentsDialog
 UserInterface QMainWindow
 UserProjectReader XMLStreamReaderBase
 UserProjectWriter XMLStreamWriterBase

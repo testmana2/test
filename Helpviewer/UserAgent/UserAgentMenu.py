@@ -15,20 +15,30 @@ from E5Gui import E5MessageBox
 from .UserAgentDefaults import UserAgentDefaults
 
 from Helpviewer.HelpBrowserWV import HelpWebPage
+import Helpviewer.HelpWindow
 
 
 class UserAgentMenu(QMenu):
     """
     Class implementing a menu to select the user agent string.
     """
-    def __init__(self, title, parent=None):
+    def __init__(self, title, url=None, parent=None):
         """
         Constructor
         
         @param title title of the menu (string)
+        @param url URL to set user agent for (QUrl)
         @param parent reference to the parent widget (QWidget)
         """
         super().__init__(title, parent)
+        
+        self.__manager = None
+        self.__url = url
+        if self.__url:
+            if self.__url.isValid():
+                self.__manager = Helpviewer.HelpWindow.HelpWindow.userAgentsManager()
+            else:
+                self.__url = None
         
         self.aboutToShow.connect(self.__populateMenu)
     
@@ -45,7 +55,11 @@ class UserAgentMenu(QMenu):
         self.__defaultUserAgent.setText(self.trUtf8("Default"))
         self.__defaultUserAgent.setCheckable(True)
         self.__defaultUserAgent.triggered[()].connect(self.__switchToDefaultUserAgent)
-        self.__defaultUserAgent.setChecked(HelpWebPage().userAgent() == "")
+        if self.__url:
+            self.__defaultUserAgent.setChecked(
+                self.__manager.userAgentForUrl(self.__url) == "")
+        else:
+            self.__defaultUserAgent.setChecked(HelpWebPage().userAgent() == "")
         self.addAction(self.__defaultUserAgent)
         self.__actionGroup.addAction(self.__defaultUserAgent)
         isChecked = self.__defaultUserAgent.isChecked()
@@ -67,7 +81,10 @@ class UserAgentMenu(QMenu):
         """
         Private slot to set the default user agent.
         """
-        HelpWebPage().setUserAgent("")
+        if self.__url:
+            self.__manager.removeUserAgent(self.__url.host())
+        else:
+            HelpWebPage().setUserAgent("")
     
     def __switchToOtherUserAgent(self):
         """
@@ -80,14 +97,20 @@ class UserAgentMenu(QMenu):
             QLineEdit.Normal,
             HelpWebPage().userAgent(resolveEmpty=True))
         if ok:
-            HelpWebPage().setUserAgent(userAgent)
+            if self.__url:
+                self.__manager.setUserAgentForUrl(self.__url, userAgent)
+            else:
+                HelpWebPage().setUserAgent(userAgent)
     
     def __changeUserAgent(self):
         """
         Private slot to change the user agent.
         """
         act = self.sender()
-        HelpWebPage().setUserAgent(act.data())
+        if self.__url:
+            self.__manager.setUserAgentForUrl(self.__url, act.data())
+        else:
+            HelpWebPage().setUserAgent(act.data())
     
     def __addDefaultActions(self):
         """
@@ -99,7 +122,10 @@ class UserAgentMenu(QMenu):
         isChecked = False
         defaultUserAgents = QByteArray(UserAgentDefaults)
         
-        currentUserAgentString = HelpWebPage().userAgent()
+        if self.__url:
+            currentUserAgentString = self.__manager.userAgentForUrl(self.__url)
+        else:
+            currentUserAgentString = HelpWebPage().userAgent()
         xml = QXmlStreamReader(defaultUserAgents)
         while not xml.atEnd():
             xml.readNext()
