@@ -294,7 +294,7 @@ class HelpWebPage(QWebPage):
     
     def userAgent(self, resolveEmpty=False):
         """
-        Public method to get the current user agent setting.
+        Public method to get the global user agent setting.
         
         @param resolveEmpty flag indicating to resolve an empty
             user agent (boolean)
@@ -307,7 +307,7 @@ class HelpWebPage(QWebPage):
     
     def setUserAgent(self, agent):
         """
-        Public method to set the current user agent string.
+        Public method to set the global user agent string.
         
         @param agent new current user agent string (string)
         """
@@ -320,9 +320,13 @@ class HelpWebPage(QWebPage):
         @param url URL to determine user agent for (QUrl)
         @return user agent string (string)
         """
-        agent = Preferences.getHelp("UserAgent")
+        agent = Helpviewer.HelpWindow.HelpWindow.userAgentsManager().userAgentForUrl(url)
         if agent == "":
-            agent = QWebPage.userAgentForUrl(self, url)
+            # no agent string specified for the given host -> use global one
+            agent = Preferences.getHelp("UserAgent")
+            if agent == "":
+                # no global agent string specified -> use default one
+                agent = QWebPage.userAgentForUrl(self, url)
         return agent
     
     def __managerFinished(self, reply):
@@ -824,6 +828,7 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the context menu event object (QContextMenuEvent)
         """
+        from .UserAgent.UserAgentMenu import UserAgentMenu
         menu = QMenu(self)
         
         frameAtPos = self.page().frameAt(evt.pos())
@@ -924,6 +929,9 @@ class HelpBrowser(QWebView):
             self.trUtf8("Bookmark this Page"), self.addBookmark)
         menu.addAction(UI.PixmapCache.getIcon("mailSend.png"),
             self.trUtf8("Send Page Link"), self.__sendLink).setData(self.url())
+        menu.addSeparator()
+        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"), url=self.url())
+        menu.addMenu(self.__userAgentMenu)
         menu.addSeparator()
         menu.addAction(self.mw.backAct)
         menu.addAction(self.mw.forwardAct)

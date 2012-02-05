@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1638,8 +1637,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1857,8 +1856,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="76"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
 </context>
 <context>
@@ -1902,67 +1901,67 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Breakpoints</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="171"/>
+        <location filename="Debugger/BreakPointViewer.py" line="170"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="142"/>
+        <location filename="Debugger/BreakPointViewer.py" line="141"/>
         <source>Edit...</source>
         <translation>Editar...</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="144"/>
+        <location filename="Debugger/BreakPointViewer.py" line="143"/>
         <source>Enable</source>
         <translation>Habilitar</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="175"/>
+        <location filename="Debugger/BreakPointViewer.py" line="174"/>
         <source>Enable all</source>
         <translation>Habilitar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="147"/>
+        <location filename="Debugger/BreakPointViewer.py" line="146"/>
         <source>Disable</source>
         <translation>Deshabilitar</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="179"/>
+        <location filename="Debugger/BreakPointViewer.py" line="178"/>
         <source>Disable all</source>
         <translation>Deshabilitar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="150"/>
+        <location filename="Debugger/BreakPointViewer.py" line="149"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="183"/>
+        <location filename="Debugger/BreakPointViewer.py" line="182"/>
         <source>Delete all</source>
         <translation>Borrar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="153"/>
+        <location filename="Debugger/BreakPointViewer.py" line="152"/>
         <source>Goto</source>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="173"/>
+        <location filename="Debugger/BreakPointViewer.py" line="172"/>
         <source>Enable selected</source>
         <translation>Habilitar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="177"/>
+        <location filename="Debugger/BreakPointViewer.py" line="176"/>
         <source>Disable selected</source>
         <translation>Deshabilitar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="181"/>
+        <location filename="Debugger/BreakPointViewer.py" line="180"/>
         <source>Delete selected</source>
         <translation>Borrar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/BreakPointViewer.py" line="185"/>
+        <location filename="Debugger/BreakPointViewer.py" line="184"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
@@ -1980,72 +1979,72 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;La Ventana del Navegador&lt;/b&gt;&lt;p&gt;Esta ventana le permite navegar facilmente a través de la jerarquía de directorios y archivos en su sistema, identificando los programas escritos con Python, y abrirlos en un editor de Código Fuente. La ventana muestra varias jerarquías separadas.&lt;/p&gt;&lt;p&gt;La primera jerarquía sólamente se muestra si se ha abierto un programa para su depuración, y su raíz es el directorio que contiene dicho programa. Por lo común, todos los archivos que forman una aplicación Python son mantenidos en el mismo directorio, con lo que esta jerarquía permite acceder fácilmente a la mayor parte del material necesario para la aplicación.&lt;/p&gt;&lt;p&gt;La siguiente jerarquía se utiliza para navegar fácilmente los directorios que se han especificado en la variable &lt;tt&gt;sys.path&lt;/tt&gt; de Python.&lt;/p&gt;&lt;p&gt;Las restantes jerarquías permiten navegar a través del sistema como un todo. En un sistema UNIX se mostrará una jerarquía con &lt;tt&gt;/&lt;/tt&gt; en la raíz y otra con el directorio home del usuario. En un sistema windows se muestra una jerarquía para cada drive del sistema.&lt;/p&gt;&lt;p&gt;Los programas Python (es decir aquellos archivos con extensión &lt;tt&gt;.py&lt;/tt&gt;) se identifican en las jerarquías con un icono de Python. El botón derecho del ratón invoca un menú emergente que permite abrir el fichero en una ventana de edición, abrir el fichero para su depuración, o utilizarlo para ejecutar un test unitario.&lt;/p&gt;&lt;p&gt;El menú de contexto de una clase, función o método permite abrir el archivo donde se define esta clase, función o método y asegurar que se muestra la línea de código adecuada.&lt;/p&gt;&lt;p&gt;Los archivos de Qt-Designer (es decir, aquellos con extensión &lt;tt&gt;.ui&lt;/tt&gt;)  se muestran con un icono de Designer. El menú de contexto de estos archivos permite ejecutar Qt-Designer asociado al archivo en cuestión.&lt;/p&gt;&lt;p&gt;Los archivos de Qt-Linguist (es decir aquellos con extensión &lt;tt&gt;.ts&lt;/tt&gt;) se muestran con un icono de Linguist. El menú de contexto de estos archivos permite ejecutar Qt-Linguist asociado al archivo en cuestión.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="203"/>
+        <location filename="UI/Browser.py" line="202"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="181"/>
+        <location filename="UI/Browser.py" line="180"/>
         <source>Run unittest...</source>
         <translation>Ejecutar test unitario...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="259"/>
+        <location filename="UI/Browser.py" line="258"/>
         <source>New toplevel directory...</source>
         <translation>Nuevo directorio raíz...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="215"/>
+        <location filename="UI/Browser.py" line="214"/>
         <source>Add as toplevel directory</source>
         <translation>Añadir como directorio raíz</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="218"/>
+        <location filename="UI/Browser.py" line="217"/>
         <source>Remove from toplevel</source>
         <translation>Quitar de la raíz</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="226"/>
+        <location filename="UI/Browser.py" line="225"/>
         <source>Find in this directory</source>
         <translation>Buscar en este directorio</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="459"/>
+        <location filename="UI/Browser.py" line="458"/>
         <source>New toplevel directory</source>
         <translation>Nuevo directorio raíz</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="229"/>
+        <location filename="UI/Browser.py" line="228"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>Buscar&amp;&amp;Reemplazar en este directorio</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="264"/>
+        <location filename="UI/Browser.py" line="263"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="191"/>
+        <location filename="UI/Browser.py" line="190"/>
         <source>Open in Icon Editor</source>
         <translation>Abrir en Editor de Iconos</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="232"/>
+        <location filename="UI/Browser.py" line="231"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="222"/>
+        <location filename="UI/Browser.py" line="221"/>
         <source>Refresh directory</source>
         <translation>Actualizar directorio</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="241"/>
+        <location filename="UI/Browser.py" line="240"/>
         <source>Goto</source>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="UI/Browser.py" line="343"/>
+        <location filename="UI/Browser.py" line="342"/>
         <source>Line {0}</source>
         <translation>Línea {0}</translation>
     </message>
@@ -2414,37 +2413,37 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <translation>Muestra el progreso del cálculo de métricas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
         <source>files</source>
         <translation>archivos</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
         <source>lines</source>
         <translation>líneas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>comments</source>
         <translation>comentarios</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
         <source>empty lines</source>
         <translation>líneas vacias</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="193"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="192"/>
         <source>non-commentary lines</source>
         <translation>líneas no comentadas</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="195"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="194"/>
         <source>documentation lines</source>
         <translation>líneas de documentación</translation>
     </message>
@@ -6850,7 +6849,7 @@ selección completa.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="QScintilla/Editor.py" line="2407"/>
+        <location filename="QScintilla/Editor.py" line="2410"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
@@ -7125,7 +7124,7 @@ selección completa.&lt;/li&gt;
         <translation>Editar punto de interrupción...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4267"/>
+        <location filename="QScintilla/Editor.py" line="4277"/>
         <source>Enable breakpoint</source>
         <translation>Activar punto de interrupción</translation>
     </message>
@@ -7185,162 +7184,162 @@ selección completa.&lt;/li&gt;
         <translation>No se ha proporcionado un formato de exportación. Abortando...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1557"/>
+        <location filename="QScintilla/Editor.py" line="1560"/>
         <source>Modification of Read Only file</source>
         <translation>Modificación de un archivo de solo lectura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="1557"/>
+        <location filename="QScintilla/Editor.py" line="1560"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Usted está intentando modificar un archivo solo lectura. Por favor guarde en otro archivo primero.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2186"/>
+        <location filename="QScintilla/Editor.py" line="2189"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2203"/>
+        <location filename="QScintilla/Editor.py" line="2206"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2205"/>
+        <location filename="QScintilla/Editor.py" line="2208"/>
         <source>Error while printing</source>
         <translation>Error al imprimir</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2208"/>
+        <location filename="QScintilla/Editor.py" line="2211"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2359"/>
+        <location filename="QScintilla/Editor.py" line="2362"/>
         <source>File Modified</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2560"/>
+        <location filename="QScintilla/Editor.py" line="2563"/>
         <source>Save File</source>
         <translation>Guardar archivo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3777"/>
+        <location filename="QScintilla/Editor.py" line="3787"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3777"/>
+        <location filename="QScintilla/Editor.py" line="3787"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Autocompletar no está disponible porque no hay origen de datos para autocompletar.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4270"/>
+        <location filename="QScintilla/Editor.py" line="4280"/>
         <source>Disable breakpoint</source>
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4587"/>
+        <location filename="QScintilla/Editor.py" line="4597"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4587"/>
+        <location filename="QScintilla/Editor.py" line="4597"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4643"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4629"/>
+        <location filename="QScintilla/Editor.py" line="4639"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4633"/>
+        <location filename="QScintilla/Editor.py" line="4643"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4725"/>
+        <location filename="QScintilla/Editor.py" line="4735"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4725"/>
+        <location filename="QScintilla/Editor.py" line="4735"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4855"/>
+        <location filename="QScintilla/Editor.py" line="4865"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4855"/>
+        <location filename="QScintilla/Editor.py" line="4865"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5080"/>
+        <location filename="QScintilla/Editor.py" line="5090"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5080"/>
+        <location filename="QScintilla/Editor.py" line="5090"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5108"/>
+        <location filename="QScintilla/Editor.py" line="5118"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5148"/>
+        <location filename="QScintilla/Editor.py" line="5158"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5129"/>
+        <location filename="QScintilla/Editor.py" line="5139"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5148"/>
+        <location filename="QScintilla/Editor.py" line="5158"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5165"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5180"/>
+        <location filename="QScintilla/Editor.py" line="5190"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5191"/>
+        <location filename="QScintilla/Editor.py" line="5201"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5191"/>
+        <location filename="QScintilla/Editor.py" line="5201"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5216"/>
+        <location filename="QScintilla/Editor.py" line="5226"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5216"/>
+        <location filename="QScintilla/Editor.py" line="5226"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
@@ -7350,87 +7349,87 @@ selección completa.&lt;/li&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5341"/>
+        <location filename="QScintilla/Editor.py" line="5351"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5596"/>
+        <location filename="QScintilla/Editor.py" line="5606"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5614"/>
+        <location filename="QScintilla/Editor.py" line="5624"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5616"/>
+        <location filename="QScintilla/Editor.py" line="5626"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5618"/>
+        <location filename="QScintilla/Editor.py" line="5628"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5620"/>
+        <location filename="QScintilla/Editor.py" line="5630"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5622"/>
+        <location filename="QScintilla/Editor.py" line="5632"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5625"/>
+        <location filename="QScintilla/Editor.py" line="5635"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5643"/>
+        <location filename="QScintilla/Editor.py" line="5653"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5659"/>
+        <location filename="QScintilla/Editor.py" line="5669"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5686"/>
+        <location filename="QScintilla/Editor.py" line="5696"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5747"/>
+        <location filename="QScintilla/Editor.py" line="5757"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5747"/>
+        <location filename="QScintilla/Editor.py" line="5757"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5764"/>
+        <location filename="QScintilla/Editor.py" line="5774"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5764"/>
+        <location filename="QScintilla/Editor.py" line="5774"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5776"/>
+        <location filename="QScintilla/Editor.py" line="5786"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5776"/>
+        <location filename="QScintilla/Editor.py" line="5786"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
@@ -7505,7 +7504,7 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6014"/>
+        <location filename="QScintilla/Editor.py" line="6024"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
@@ -7515,12 +7514,12 @@ selección completa.&lt;/li&gt;
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6016"/>
+        <location filename="QScintilla/Editor.py" line="6026"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6018"/>
+        <location filename="QScintilla/Editor.py" line="6028"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
@@ -7545,52 +7544,52 @@ selección completa.&lt;/li&gt;
         <translation>Alternativas ({0})</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2359"/>
+        <location filename="QScintilla/Editor.py" line="2362"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; tiene cambios sin guardar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2407"/>
+        <location filename="QScintilla/Editor.py" line="2410"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo&lt;b&gt;{0}&lt;/b&gt; no puede ser abierto.&lt;br /&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2508"/>
+        <location filename="QScintilla/Editor.py" line="2511"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5122"/>
+        <location filename="QScintilla/Editor.py" line="5132"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5129"/>
+        <location filename="QScintilla/Editor.py" line="5139"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5180"/>
+        <location filename="QScintilla/Editor.py" line="5190"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5332"/>
+        <location filename="QScintilla/Editor.py" line="5342"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5479"/>
+        <location filename="QScintilla/Editor.py" line="5489"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5596"/>
+        <location filename="QScintilla/Editor.py" line="5606"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5686"/>
+        <location filename="QScintilla/Editor.py" line="5696"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -7615,57 +7614,57 @@ selección completa.&lt;/li&gt;
         <translation>Limpiar advertencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4981"/>
+        <location filename="QScintilla/Editor.py" line="4991"/>
         <source>py3flakes Warning</source>
         <translation>Advertencia de py3flakes</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4981"/>
+        <location filename="QScintilla/Editor.py" line="4991"/>
         <source>No py3flakes warning message available.</source>
         <translation>No hay un mensaje de advertencia de py3flakes disponible.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="2560"/>
+        <location filename="QScintilla/Editor.py" line="2563"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5165"/>
+        <location filename="QScintilla/Editor.py" line="5175"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5024"/>
+        <location filename="QScintilla/Editor.py" line="5034"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5030"/>
+        <location filename="QScintilla/Editor.py" line="5040"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="5337"/>
+        <location filename="QScintilla/Editor.py" line="5347"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3873"/>
+        <location filename="QScintilla/Editor.py" line="3883"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Activando el Proveedor de Autocompletado</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="3873"/>
+        <location filename="QScintilla/Editor.py" line="3883"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de autocompletado no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4058"/>
+        <location filename="QScintilla/Editor.py" line="4068"/>
         <source>Activating Calltip Provider</source>
         <translation>Activando Proveedor de Calltip</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="4058"/>
+        <location filename="QScintilla/Editor.py" line="4068"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>El proveedor de calltip no puede ser conectado porque ya hay uno activo. Por favor revise la configuración.</translation>
     </message>
@@ -9697,117 +9696,117 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Configurar estilos del editor&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="124"/>
         <source>Fonts</source>
         <translation>Fuentes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="130"/>
         <source>Select, whether the monospaced font should be used as default</source>
         <translation>Seleccionar si la fuente monoespacio se debe usar por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="133"/>
         <source>Use monospaced as default</source>
         <translation>Usar monoespacio por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="143"/>
         <source>Default Text</source>
         <translation>Texto por Defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="79"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="156"/>
         <source>Press to select the default font for the editor&apos;s text</source>
         <translation>Pulse para seleccionar la fuente por defecto del editor de texto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="159"/>
         <source>Default Text Font</source>
         <translation>Fuente de texto por defecto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="89"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="166"/>
         <source>Press to select the font to be used as the monospaced font</source>
         <translation>Pulse para seleccionar la fuente para utilizar como fuente monoespacio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="92"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="169"/>
         <source>Monospaced Font</source>
         <translation>Fuente Monoespacio</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="403"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="480"/>
         <source>Press to select the font for the editor line numbers</source>
         <translation>Pulse para seleccionar la fuente para números de línea en el editor</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="406"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="483"/>
         <source>Line Numbers Font</source>
         <translation>Fuente para números de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="102"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="179"/>
         <source>Monospaced Text</source>
         <translation>Texto Monoespaciado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="422"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="499"/>
         <source>2345</source>
         <translation>2345</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="118"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="195"/>
         <source>Margins</source>
         <translation>Márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="126"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="203"/>
         <source>Select whether line numbers margin should be shown.</source>
         <translation>Seleccionar si el margen para números de línea debe ser mostrado.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="129"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="206"/>
         <source>Show Line Numbers Margin</source>
         <translation>Mostrar margen para números de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="136"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="213"/>
         <source>Select whether the fold margin should be shown.</source>
         <translation>Seleccionar si el margen de plegado debe ser mostrado.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="139"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="216"/>
         <source>Show Fold Margin</source>
         <translation>Mostrar margen de plegado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="160"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="237"/>
         <source>Linenumbers width:</source>
         <translation>Ancho de números de línea:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="170"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
         <source>Move to set the width of the linenumbers margin.</source>
         <translation>Mover para establecer la anchura del margen para números de línea.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="192"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="269"/>
         <source>Displays the selected width of the linenumbers margin.</source>
         <translation>Muestra la anchura seleccionada para el margen de números de línea.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="212"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="289"/>
         <source>Folding style:</source>
         <translation>Estilo de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="225"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="302"/>
         <source>Select the folding style to be used in the folding margin</source>
         <translation>Seleccionar el estilo de plegado a utilizar en el margen de plegado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="305"/>
         <source>&lt;b&gt;Folding style&lt;/b&gt;
 &lt;p&gt;Select the desired folding style to be used in the folding margin.&lt;/p&gt;
 &lt;p&gt;The available styles are:
@@ -9832,402 +9831,402 @@ selección completa.&lt;/li&gt;
 &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="242"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="319"/>
         <source>Plain</source>
         <translation>Plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="324"/>
         <source>Circled</source>
         <translation>Con círculo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="252"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="329"/>
         <source>Boxed</source>
         <translation>Con Caja</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="257"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="334"/>
         <source>Circled Tree</source>
         <translation>Árbol con Círculo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="262"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="339"/>
         <source>Boxed Tree</source>
         <translation>Árbol con Caja</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="453"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="530"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="461"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="538"/>
         <source>Select to use custom selection colours</source>
         <translation>Seleccione para usar colores personalizados para la selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="464"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="541"/>
         <source>&lt;b&gt;Use custom selection colours&lt;/b&gt;&lt;p&gt;Select this entry in order to use custom selection colours in the editor and shell windows. The colours for the selection foreground and background are defined on the colours page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Usar colores personalizados para la selección&lt;/b&gt;&lt;p&gt;Seleccione esta entrada para utilizar colores personalizados de selección en las ventanas de edición y shell. Los colores para el primer plano y para el fondo se definen en la página de colores&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="467"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="544"/>
         <source>Use custom selection colours</source>
         <translation>Usar colores personalizados para la selección</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="474"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="551"/>
         <source>Select, if selected text should be colourized by the lexer.</source>
         <translation>Seleccione si el texto seleccionado debe ser coloreado por el analizador léxico.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="477"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="554"/>
         <source>Colourize selected text</source>
         <translation>Colorizar texto seleccionado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="484"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="561"/>
         <source>Select to extend selection to end of line</source>
         <translation>Seleccionar para extender la selección hasta el final de la línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="487"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="564"/>
         <source>Extend selection to end of line</source>
         <translation>Extender selección hasta el final de la línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="498"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="575"/>
         <source>Selection foreground:</source>
         <translation>Primer plano de la selección:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="511"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="588"/>
         <source>Select the foreground colour for the selection.</source>
         <translation>Seleccionar el color de primer plano para la selección.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="521"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="598"/>
         <source>Selection background:</source>
         <translation>Color de fondo de la selección:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="534"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="611"/>
         <source>Select the background colour for the selection.</source>
         <translation>Seleccione el color de fondo para la selección.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="549"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="626"/>
         <source>Caret</source>
         <translation>Punto de inserción de texto</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="555"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="632"/>
         <source>Select, whether the caretline should be highlighted</source>
         <translation>Seleccionar si la línea con el punto de inserción de texto debe ser resaltada</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="558"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="635"/>
         <source>Caretline visible</source>
         <translation>Punto de inserción de texto visible</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="567"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="644"/>
         <source>Caret width:</source>
         <translation>Anchura del punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="574"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="651"/>
         <source>Select caret width (1, 2 or 3 pixels)</source>
         <translation>Seleccionar ancho del punto de inserción de texto  (1, 2 o 3 píxeles)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="607"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="684"/>
         <source>Caret foreground:</source>
         <translation>Color de primer plano para el punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="620"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="697"/>
         <source>Select the colour for the caret.</source>
         <translation>Seleccionar el color para el punto de inserción de texto.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="630"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="707"/>
         <source>Caretline background:</source>
         <translation>Color de fondo para la línea con el punto de inserción de texto:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="643"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="720"/>
         <source>Select the background colour for the line containing the caret.</source>
         <translation>Seleccionar el color de fondo para la línea que contiene el punto de inserción de texto.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="664"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="741"/>
         <source>Current line marker:</source>
         <translation>Marcador de línea actual:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="677"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="754"/>
         <source>Select the colour for the current line marker.</source>
         <translation>Seleccionar el color para el marcador de línea actual.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="687"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="764"/>
         <source>Error line marker:</source>
         <translation>Marcador de línea con error:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="700"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="777"/>
         <source>Select the colour for the error line marker.</source>
         <translation>Seleccionar el color para el marcador de línea con error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="713"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="790"/>
         <source>Braces</source>
         <translation>Llaves ( &apos;{&apos; y &apos;}&apos; )</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="719"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="796"/>
         <source>Select whether matching and bad braces shall be highlighted.</source>
         <translation>Seleccionar si las llaves coincidentes y las que no se han de resaltar.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="722"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="799"/>
         <source>Highlight braces</source>
         <translation>Resaltar llaves</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="729"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="806"/>
         <source>Matched braces:</source>
         <translation>Llaves coincidentes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="742"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="819"/>
         <source>Select the colour for highlighting matching braces.</source>
         <translation>Seleccione el color de resaltado de llaves coincidentes.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="752"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="829"/>
         <source>Matched braces background:</source>
         <translation>Fondo de llaves coincidentes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="765"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
         <source>Select the background colour for highlighting matching braces.</source>
         <translation>Seleccione el color de fondo para resaltar llaves coincidentes.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="781"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="858"/>
         <source>Unmatched brace:</source>
         <translation>Llave sin coincidencia:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="788"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="865"/>
         <source>Select the colour for  highlighting nonmatching braces.</source>
         <translation>Seleccione el color de resaltado de llaves sin coincidencia.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="804"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="881"/>
         <source>Unmatched brace background:</source>
         <translation>Fondo de llaves sin coincidencia:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="811"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="888"/>
         <source>Select the background colour for  highlighting nonmatching braces.</source>
         <translation>Seleccione el color de fondo para resaltar llaves sin coincidencia.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="824"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="901"/>
         <source>End of Line</source>
         <translation>Final de Línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="832"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="909"/>
         <source>Select whether end of line shall be shown</source>
         <translation>Seleccionar si el final de línea debe ser mostrado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="835"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="912"/>
         <source>Show End of Line</source>
         <translation>Mostrar final de línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="842"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="919"/>
         <source>Select, whether long lines should be wrapped</source>
         <translation>Seleccionar si las líneas largas se deben partir</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="845"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="922"/>
         <source>Wrap long lines</source>
         <translation>Partir líneas largas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="854"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="931"/>
         <source>Edge Mode</source>
         <translation>Modo del Borde</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="898"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="975"/>
         <source>Select the colour for the edge marker.</source>
         <translation>Seleccionar el color para el marcador del borde.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="908"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="985"/>
         <source>Background colour:</source>
         <translation>Color de fondo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="921"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="998"/>
         <source>Move to set the edge column.</source>
         <translation>Mover para establecer la columna del borde.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="949"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1026"/>
         <source>Displays the selected tab width.</source>
         <translation>Muestra el ancho de tabulación seleccionado.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="965"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1042"/>
         <source>Column number:</source>
         <translation>Número de columnas:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="972"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1049"/>
         <source>Mode:</source>
         <translation>Modo:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="986"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1063"/>
         <source>Disabled</source>
         <translation>Deshabilitado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="991"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1068"/>
         <source>Draw Line</source>
         <translation>Dibujar línea</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="996"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
         <source>Change Background Colour</source>
         <translation>Cambiar color de fondo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1285"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1362"/>
         <source>Various</source>
         <translation>Varios</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1182"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1259"/>
         <source>Select whether whitspace characters shall be shown</source>
         <translation>Seleccionar si los caracteres de espacio en blanco deben ser mostrados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1185"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1262"/>
         <source>Show Whitespace</source>
         <translation>Mostrar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1291"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1368"/>
         <source>Select to show a minimalistic context menu</source>
         <translation>Seleccionar mostrar un menú de contexto minimalista</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1294"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1371"/>
         <source>Show minimal context menu</source>
         <translation>Mostrar menú de contexto minimalista</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="284"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="361"/>
         <source>Margins foreground:</source>
         <translation>Color de primer plano para márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="297"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="374"/>
         <source>Select the foreground colour for the margins</source>
         <translation>Seleccionar el color de primer plano para los márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="307"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="384"/>
         <source>Margins background:</source>
         <translation>Color de fondo para los márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="320"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="397"/>
         <source>Select the background colour for the margins</source>
         <translation>Seleccione el color de fondo para los márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="330"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="407"/>
         <source>Foldmargin background:</source>
         <translation>Color de fondo para los pliegues de los márgenes:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="343"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="420"/>
         <source>Select the background colour for the foldmargin</source>
         <translation>Seleccione el color de fondo para los pliegues de los márgenes</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="146"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="223"/>
         <source>Select to show unified margins (like eric4 &lt; 4.3.0)</source>
         <translation>Seleccionar para mostrar márgenes unificados (como eric4 &lt; 4.3.0)</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="149"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="226"/>
         <source>Show unified margins</source>
         <translation>Mostrar márgenes unificados</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="658"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="735"/>
         <source>Debugging Line Markers</source>
         <translation>Marcadores de Línea de Depuración</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1010"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1087"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1016"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1093"/>
         <source>Initial zoom factor:</source>
         <translation>Factor de zoom inicial:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1026"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1103"/>
         <source>Move to set the initial zoom factor</source>
         <translation>Mover para establecer el factor de zoom inicial</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1048"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1125"/>
         <source>Displays the selected initial zoom factor</source>
         <translation>Muestra el factor de zoom inicial seleccionado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="267"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="344"/>
         <source>Arrow</source>
         <translation>Flecha</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="272"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="349"/>
         <source>Arrow Tree</source>
         <translation>Árbol de flechas</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="353"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="430"/>
         <source>Foldmarkers foreground:</source>
         <translation>Color de primer plano para marcadores de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="366"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="443"/>
         <source>Select the foreground colour of the foldmarkers</source>
         <translation>Seleccionar el color de primer plano para los marcadores de plegado</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="376"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="453"/>
         <source>Foldmarkers background:</source>
         <translation>Color de fondo para marcadores de plegado:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="389"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="466"/>
         <source>Select the background colour of the foldmarkers</source>
         <translation>Seleccionar el color de fondo para los marcadores de plegado</translation>
     </message>
@@ -10237,94 +10236,134 @@ selección completa.&lt;/li&gt;
         <translation>&lt;b&gt;Nota:&lt;/b&gt; Las fuentes y colores de los resaltadores de sintaxis deben ser configurados en la página de estilos de resaltado de sintaxis.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1067"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1144"/>
         <source>Annotations</source>
         <translation>Anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1073"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1150"/>
         <source>Select to enable the display of annotations</source>
         <translation>Seleccionar para habilitar la visualización de anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1076"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1153"/>
         <source>Show annotations</source>
         <translation>Mostrar anotaciones</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1083"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1160"/>
         <source>Warnings</source>
         <translation>Advertencias</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1134"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1211"/>
         <source>Press to select the foreground colour</source>
         <translation>Pulse para seleccionar el color de primer plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1137"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1214"/>
         <source>Foreground</source>
         <translation>Primer plano</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1144"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1221"/>
         <source>Press to select the background colour</source>
         <translation>Pulse para seleccionar el color de fondo </translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1147"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1224"/>
         <source>Background</source>
         <translation>Fondo</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1112"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1189"/>
         <source>Warning: There might be an error.</source>
         <translation>Advertencia: podría haber un error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1128"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1205"/>
         <source>Errors</source>
         <translation>Errores</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1157"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1234"/>
         <source>Error: There  is an error.</source>
         <translation>Error: hay un error.</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1176"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1253"/>
         <source>Whitespace</source>
         <translation>Espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1194"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1271"/>
         <source>Whitespace size:</source>
         <translation>Tamaño de espacio en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1201"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1278"/>
         <source>Select the size of the dots used to represent visible whitespace</source>
         <translation>Seleccionar el tamaño de los puntos utilizados para visualizar espacios en blanco</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1234"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1311"/>
         <source>Whitespace foreground:</source>
         <translation>Color de primer plano para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1247"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1324"/>
         <source>Select the foreground colour for visible whitespace</source>
         <translation>Seleccionar el color de primer plano para espacios en blanco visibles</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1257"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1334"/>
         <source>Whitespace background:</source>
         <translation>Color de fondo para espacios en blanco:</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1270"/>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="1347"/>
         <source>Select the background colour for visible whitespace</source>
         <translation>Seleccionar el color de fondo para espacios en blanco visibles</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
+        <source>Colour</source>
+        <translation type="obsolete">Color</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="53"/>
+        <source>Select to set the colour of the edit area different to the default style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="56"/>
+        <source>Override edit area colours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="66"/>
+        <source>Edit area foreground:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="82"/>
+        <source>Select the foreground colour for the edit area.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="95"/>
+        <source>Edit area background:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="111"/>
+        <source>Select the background colour for the edit area.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/EditorStylesPage.ui" line="47"/>
+        <source>Colours</source>
+        <translation type="unfinished">Colores</translation>
     </message>
 </context>
 <context>
@@ -12942,72 +12981,72 @@ selección completa.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="790"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="837"/>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="403"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="444"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ventana de Ayuda&lt;/b&gt;&lt;p&gt;Esta ventana muestra la información de ayuda seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="869"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="997"/>
         <source>Web Inspector...</source>
         <translation>Inspector Web...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1402"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1556"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1402"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1556"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1402"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1556"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="833"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="928"/>
         <source>Bookmark this Page</source>
         <translation>Marcador a esta Página</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="794"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="841"/>
         <source>Save Lin&amp;k</source>
         <translation>Guardar &amp;Enlace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="795"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="843"/>
         <source>Bookmark this Link</source>
         <translation>Marcador a este Enlace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="798"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="847"/>
         <source>Copy Link to Clipboard</source>
         <translation>Copiar Enlace al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="808"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="860"/>
         <source>Open Image in New Tab</source>
         <translation>Abrir Imagen en Nueva Pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="812"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="864"/>
         <source>Save Image</source>
         <translation>Guardar imagen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="813"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="866"/>
         <source>Copy Image to Clipboard</source>
         <translation>Copiar Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="814"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="867"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copiar Ubicación de la Imagen al Portapapeles</translation>
     </message>
@@ -13017,129 +13056,224 @@ selección completa.&lt;/li&gt;
         <translation type="obsolete">Navegador Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="818"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="873"/>
         <source>Block Image</source>
         <translation>Bloquear Imagen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="847"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="951"/>
         <source>Search with...</source>
         <translation>Buscar con...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="585"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="630"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="622"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="667"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar un visor para el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="605"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="650"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo ejecutar una aplicación para la URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1393"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1547"/>
         <source>Error loading page: {0}</source>
         <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1402"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1556"/>
         <source>When connecting to: {0}.</source>
         <translation>Al conectar con: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1442"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1596"/>
         <source>Web Database Quota</source>
         <translation>Cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1442"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1596"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La cuota de base de datos de &lt;strong&gt;{0}&lt;/strong&gt; se ha superado mientras se accedía a la base de datos &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;¿Debe ser cambiada?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1450"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1604"/>
         <source>New Web Database Quota</source>
         <translation>Nueva cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1470"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1624"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1473"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1627"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1476"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1630"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1450"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1604"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Introducir la nueva cuota en MB (actual = {0}, usados = {1}; tamaño de paso = 5MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="864"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="993"/>
         <source>Add to web search toolbar</source>
         <translation>Añadir a la barra de búsqueda web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="984"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1138"/>
         <source>Method not supported</source>
         <translation>Método no soportado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="984"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1138"/>
         <source>{0} method is not supported.</source>
         <translation>El método {0} no está soportado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1026"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1180"/>
         <source>Search engine</source>
         <translation>Motor de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1026"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1180"/>
         <source>Choose the desired search engine</source>
         <translation>Elegir el motor de búsqueda deseado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1043"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1197"/>
         <source>Engine name</source>
         <translation>Nombre de motor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1043"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1197"/>
         <source>Enter a name for the engine</source>
         <translation>Introducir el nombre para el motor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1402"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1556"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="801"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="853"/>
         <source>Scan Link with VirusTotal</source>
         <translation>Analizar enlace con VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="822"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="878"/>
         <source>Scan Image with VirusTotal</source>
         <translation>Analizar Imagen con VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="622"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1967"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="849"/>
+        <source>Send Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="870"/>
+        <source>Send Image Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
+        <source>This Frame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="902"/>
+        <source>Show &amp;only this frame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="904"/>
+        <source>Show in new &amp;tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="908"/>
+        <source>&amp;Print</source>
+        <translation type="unfinished">Im&amp;primir</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
+        <source>Print Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
+        <source>Print as PDF</source>
+        <translation type="unfinished">Imprimir como PDF</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="915"/>
+        <source>Zoom &amp;in</source>
+        <translation type="unfinished">A&amp;umentar Zoom</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="917"/>
+        <source>Zoom &amp;reset</source>
+        <translation type="unfinished">&amp;Restablecer zoom</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
+        <source>Zoom &amp;out</source>
+        <translation type="unfinished">Dismi&amp;nuir Zoom</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="922"/>
+        <source>Show frame so&amp;urce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="930"/>
+        <source>Send Page Link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="946"/>
+        <source>Send Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="971"/>
+        <source>Google Translate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="977"/>
+        <source>Dictionary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="984"/>
+        <source>Go to web address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1967"/>
+        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="933"/>
+        <source>User Agent</source>
+        <translation type="unfinished">Agente de Usuario</translation>
     </message>
 </context>
 <context>
@@ -13538,27 +13672,27 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="591"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="595"/>
         <source>Loading...</source>
         <translation>Cargando...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="608"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="612"/>
         <source>Finished loading</source>
         <translation>Carga terminada</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="610"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="614"/>
         <source>Failed to load</source>
         <translation>Ha fallado la carga</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="646"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
         <source>Are you sure you want to close the window?</source>
         <translation>¿Realmente desea cerrar la ventana?</translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/HelpTabWidget.py" line="646"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -13569,17 +13703,17 @@ Tiene %n pestañas abiertas.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="653"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="657"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="656"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="660"/>
         <source>&amp;Quit</source>
         <translation>&amp;Salir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="658"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="662"/>
         <source>C&amp;lose Current Tab</source>
         <translation>Cerrar Pestaña Actua&amp;l</translation>
     </message>
@@ -14213,52 +14347,52 @@ Tiene %n pestañas abiertas.</numerusform>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="260"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="265"/>
         <source>Error loading page: {0}</source>
         <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="269"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
         <source>When connecting to: {0}.</source>
         <translation>Al conectar con: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="269"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="269"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="269"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="269"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="274"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="367"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="381"/>
         <source>SSL Certificate Info</source>
         <translation>Información del Certificado SSL</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="367"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="381"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation>No hay información disponible para el Certificado SSL.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="196"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="198"/>
         <source>Resending POST request</source>
         <translation>Reenviando solicitud POST</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="196"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="198"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
         <translation>Para poder mostrar el sitio, la solicitud con todos los datos debe ser enviada de nuevo, lo cual puede conducir a algún tipo de comportamiento inesperado del sitio, por ejemplo la misma acción podría ser repetida. ¿Desea continuar de todos modos?</translation>
     </message>
@@ -14294,1239 +14428,1239 @@ Tiene %n pestañas abiertas.</numerusform>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="497"/>
+        <location filename="Helpviewer/HelpWindow.py" line="500"/>
         <source>Close the current help window</source>
         <translation>Cierra la ventana actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="353"/>
+        <location filename="Helpviewer/HelpWindow.py" line="356"/>
         <source>Open a new help window tab</source>
         <translation>Abre una nueva pestaña con la ventana de ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="348"/>
+        <location filename="Helpviewer/HelpWindow.py" line="351"/>
         <source>New Tab</source>
         <translation>Nueva pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="348"/>
+        <location filename="Helpviewer/HelpWindow.py" line="351"/>
         <source>&amp;New Tab</source>
         <translation>Nueva pes&amp;taña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="348"/>
+        <location filename="Helpviewer/HelpWindow.py" line="351"/>
         <source>Ctrl+T</source>
         <comment>File|New Tab</comment>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="354"/>
+        <location filename="Helpviewer/HelpWindow.py" line="357"/>
         <source>&lt;b&gt;New Tab&lt;/b&gt;&lt;p&gt;This opens a new help window tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nueva pestaña&lt;/b&gt;&lt;p&gt;Abre una nueva pestaña con la ventana de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="362"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>New Window</source>
         <translation>Nueva Ventana</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="362"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>Ctrl+N</source>
         <comment>File|New Window</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="367"/>
+        <location filename="Helpviewer/HelpWindow.py" line="370"/>
         <source>Open a new help browser window</source>
         <translation>Abre una nueva ventana del navegador de ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="368"/>
+        <location filename="Helpviewer/HelpWindow.py" line="371"/>
         <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new help browser window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nueva Ventana&lt;/b&gt;&lt;p&gt;Abre una nueva ventana del navegador de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1656"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1675"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="379"/>
         <source>&amp;Open File</source>
         <translation>&amp;Abrir archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="376"/>
+        <location filename="Helpviewer/HelpWindow.py" line="379"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="381"/>
+        <location filename="Helpviewer/HelpWindow.py" line="384"/>
         <source>Open a help file for display</source>
         <translation>Abre un archivo de ayuda para mostrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="382"/>
+        <location filename="Helpviewer/HelpWindow.py" line="385"/>
         <source>&lt;b&gt;Open File&lt;/b&gt;&lt;p&gt;This opens a new help file for display. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir Archivo&lt;/b&gt;&lt;p&gt;Abre un nuevo archivo de ayuda para mostrar. Abre un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="391"/>
+        <location filename="Helpviewer/HelpWindow.py" line="394"/>
         <source>Open File in New Tab</source>
         <translation>Abrir Archivo en Nueva Pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="391"/>
+        <location filename="Helpviewer/HelpWindow.py" line="394"/>
         <source>Open File in New &amp;Tab</source>
         <translation>Abrir Archivo en Nueva Pes&amp;taña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="391"/>
+        <location filename="Helpviewer/HelpWindow.py" line="394"/>
         <source>Shift+Ctrl+O</source>
         <comment>File|Open in new tab</comment>
         <translation>Shift+Ctrl+O</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="396"/>
+        <location filename="Helpviewer/HelpWindow.py" line="399"/>
         <source>Open a help file for display in a new tab</source>
         <translation>Abre un fichero de ayuda para mostrar en una nueva pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="398"/>
+        <location filename="Helpviewer/HelpWindow.py" line="401"/>
         <source>&lt;b&gt;Open File in New Tab&lt;/b&gt;&lt;p&gt;This opens a new help file for display in a new tab. It pops up a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir Archivo en Nueva Pestaña&lt;/b&gt;&lt;p&gt;Abre un nuevo archivo de ayuda para mostrar en una nueva pestaña. Abre un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="454"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="454"/>
         <source>&amp;Print</source>
         <translation>Im&amp;primir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="454"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="456"/>
+        <location filename="Helpviewer/HelpWindow.py" line="459"/>
         <source>Print the displayed help</source>
         <translation>Imprimir la ayuda que se está mostrando</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="457"/>
+        <location filename="Helpviewer/HelpWindow.py" line="460"/>
         <source>&lt;b&gt;Print&lt;/b&gt;&lt;p&gt;Print the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Imprimir&lt;/b&gt;&lt;p&gt;Imprimir el texto de ayuda mostrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="492"/>
+        <location filename="Helpviewer/HelpWindow.py" line="495"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="492"/>
+        <location filename="Helpviewer/HelpWindow.py" line="495"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="492"/>
+        <location filename="Helpviewer/HelpWindow.py" line="495"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="498"/>
+        <location filename="Helpviewer/HelpWindow.py" line="501"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;Closes the current help window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra la ventana actual de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="506"/>
+        <location filename="Helpviewer/HelpWindow.py" line="509"/>
         <source>Close All</source>
         <translation>Cerrar todo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="506"/>
+        <location filename="Helpviewer/HelpWindow.py" line="509"/>
         <source>Close &amp;All</source>
         <translation>Cerrar &amp;Todo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="510"/>
+        <location filename="Helpviewer/HelpWindow.py" line="513"/>
         <source>&lt;b&gt;Close All&lt;/b&gt;&lt;p&gt;Closes all help windows except the first one.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar Todo&lt;/b&gt;&lt;p&gt;Cierra todas las ventanas de ayuda excepto la primera.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="536"/>
         <source>Quit</source>
         <translation>Salir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="536"/>
         <source>&amp;Quit</source>
         <translation>&amp;Salir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="533"/>
+        <location filename="Helpviewer/HelpWindow.py" line="536"/>
         <source>Ctrl+Q</source>
         <comment>File|Quit</comment>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="550"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Backward</source>
         <translation>Atrás</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="550"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>&amp;Backward</source>
         <translation>&amp;Atrás</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="550"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Alt+Left</source>
         <comment>Go|Backward</comment>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="550"/>
+        <location filename="Helpviewer/HelpWindow.py" line="553"/>
         <source>Backspace</source>
         <comment>Go|Backward</comment>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="556"/>
+        <location filename="Helpviewer/HelpWindow.py" line="559"/>
         <source>Move one help screen backward</source>
         <translation>Mover la ayuda una pantalla hacia atrás</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="557"/>
+        <location filename="Helpviewer/HelpWindow.py" line="560"/>
         <source>&lt;b&gt;Backward&lt;/b&gt;&lt;p&gt;Moves one help screen backward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Retroceso&lt;/b&gt;&lt;p&gt;Mueve la ayuda una pantalla hacia atrás. Si no hay ninguna disponible, esta acción no tiene efecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="566"/>
+        <location filename="Helpviewer/HelpWindow.py" line="569"/>
         <source>Forward</source>
         <translation>Adelante</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="566"/>
+        <location filename="Helpviewer/HelpWindow.py" line="569"/>
         <source>&amp;Forward</source>
         <translation>A&amp;delante</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="566"/>
+        <location filename="Helpviewer/HelpWindow.py" line="569"/>
         <source>Alt+Right</source>
         <comment>Go|Forward</comment>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="566"/>
+        <location filename="Helpviewer/HelpWindow.py" line="569"/>
         <source>Shift+Backspace</source>
         <comment>Go|Forward</comment>
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="572"/>
+        <location filename="Helpviewer/HelpWindow.py" line="575"/>
         <source>Move one help screen forward</source>
         <translation>Mover la ayuda una pantalla hacia adelante</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="573"/>
+        <location filename="Helpviewer/HelpWindow.py" line="576"/>
         <source>&lt;b&gt;Forward&lt;/b&gt;&lt;p&gt;Moves one help screen forward. If none is available, this action is disabled.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Adelante&lt;/b&gt;&lt;p&gt;Mueve la ayuda una pantalla hacia adelante. Si no hay ninguna disponible, esta acción no tiene efecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="582"/>
+        <location filename="Helpviewer/HelpWindow.py" line="585"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="582"/>
+        <location filename="Helpviewer/HelpWindow.py" line="585"/>
         <source>&amp;Home</source>
         <translation>&amp;Inicio</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="582"/>
+        <location filename="Helpviewer/HelpWindow.py" line="585"/>
         <source>Ctrl+Home</source>
         <comment>Go|Home</comment>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="587"/>
+        <location filename="Helpviewer/HelpWindow.py" line="590"/>
         <source>Move to the initial help screen</source>
         <translation>Mover a la pantalla inicial de ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="588"/>
+        <location filename="Helpviewer/HelpWindow.py" line="591"/>
         <source>&lt;b&gt;Home&lt;/b&gt;&lt;p&gt;Moves to the initial help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Inicio&lt;/b&gt;&lt;p&gt;Mueve a la pantalla inicial de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="596"/>
+        <location filename="Helpviewer/HelpWindow.py" line="599"/>
         <source>Reload</source>
         <translation>Recargar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="596"/>
+        <location filename="Helpviewer/HelpWindow.py" line="599"/>
         <source>&amp;Reload</source>
         <translation>&amp;Recargar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="596"/>
+        <location filename="Helpviewer/HelpWindow.py" line="599"/>
         <source>Ctrl+R</source>
         <comment>Go|Reload</comment>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="602"/>
+        <location filename="Helpviewer/HelpWindow.py" line="605"/>
         <source>Reload the current help screen</source>
         <translation>Recarga la pantalla de ayuda actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="603"/>
+        <location filename="Helpviewer/HelpWindow.py" line="606"/>
         <source>&lt;b&gt;Reload&lt;/b&gt;&lt;p&gt;Reloads the current help screen.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Recargar&lt;/b&gt;&lt;p&gt;Recarga la ventana actual de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="626"/>
+        <location filename="Helpviewer/HelpWindow.py" line="629"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="626"/>
+        <location filename="Helpviewer/HelpWindow.py" line="629"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="626"/>
+        <location filename="Helpviewer/HelpWindow.py" line="629"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="631"/>
+        <location filename="Helpviewer/HelpWindow.py" line="634"/>
         <source>Copy the selected text</source>
         <translation>Copiar el texto seleccionado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="632"/>
+        <location filename="Helpviewer/HelpWindow.py" line="635"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Copiar&lt;/b&gt;&lt;p&gt;Copiar el texto seleccionado al portapapeles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="643"/>
         <source>Find...</source>
         <translation>Buscar...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="643"/>
         <source>&amp;Find...</source>
         <translation>&amp;Buscar...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="640"/>
+        <location filename="Helpviewer/HelpWindow.py" line="643"/>
         <source>Ctrl+F</source>
         <comment>Edit|Find</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="645"/>
+        <location filename="Helpviewer/HelpWindow.py" line="648"/>
         <source>Find text in page</source>
         <translation>Buscar texto en página</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="646"/>
+        <location filename="Helpviewer/HelpWindow.py" line="649"/>
         <source>&lt;b&gt;Find&lt;/b&gt;&lt;p&gt;Find text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar&lt;/b&gt;&lt;p&gt;Buscar texto en la página actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="654"/>
+        <location filename="Helpviewer/HelpWindow.py" line="657"/>
         <source>Find next</source>
         <translation>Buscar siguiente</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="654"/>
+        <location filename="Helpviewer/HelpWindow.py" line="657"/>
         <source>Find &amp;next</source>
         <translation>Buscar sigui&amp;ente</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="654"/>
+        <location filename="Helpviewer/HelpWindow.py" line="657"/>
         <source>F3</source>
         <comment>Edit|Find next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="668"/>
+        <location filename="Helpviewer/HelpWindow.py" line="671"/>
         <source>Find previous</source>
         <translation>Buscar anterior</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="668"/>
+        <location filename="Helpviewer/HelpWindow.py" line="671"/>
         <source>Find &amp;previous</source>
         <translation>Buscar a&amp;nterior</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="668"/>
+        <location filename="Helpviewer/HelpWindow.py" line="671"/>
         <source>Shift+F3</source>
         <comment>Edit|Find previous</comment>
         <translation>Shift+F3</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="700"/>
         <source>Add Bookmark</source>
         <translation>Añadir Marcador</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="739"/>
+        <location filename="Helpviewer/HelpWindow.py" line="742"/>
         <source>What&apos;s This?</source>
         <translation>¿Qué es esto?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="739"/>
+        <location filename="Helpviewer/HelpWindow.py" line="742"/>
         <source>&amp;What&apos;s This?</source>
         <translation>¿&amp;Qué es esto?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="739"/>
+        <location filename="Helpviewer/HelpWindow.py" line="742"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="744"/>
+        <location filename="Helpviewer/HelpWindow.py" line="747"/>
         <source>Context sensitive help</source>
         <translation>Ayuda sensible al contexto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="745"/>
+        <location filename="Helpviewer/HelpWindow.py" line="748"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar ayuda sensible al contexto&lt;/b&gt;&lt;p&gt;En modo ¿Qué es esto? el puntero del ratón muestra una flecha con un interrogante, y se puede hacer click en elementos de la interfaz gráfica para obtener una descripción corta de lo que hacen y de cómo se utilizan. En los diálogos, se puede acceder a esta característica utilizando el botón de ayuda de contexto en la barra de título.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="757"/>
+        <location filename="Helpviewer/HelpWindow.py" line="760"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="757"/>
+        <location filename="Helpviewer/HelpWindow.py" line="760"/>
         <source>&amp;About</source>
         <translation>&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="760"/>
+        <location filename="Helpviewer/HelpWindow.py" line="763"/>
         <source>Display information about this software</source>
         <translation>Muestra información acerca de este software</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="761"/>
+        <location filename="Helpviewer/HelpWindow.py" line="764"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Acerca de&lt;/b&gt;&lt;p&gt;Muestra información acerca de este software.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="769"/>
+        <location filename="Helpviewer/HelpWindow.py" line="772"/>
         <source>About Qt</source>
         <translation>Acerca de Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="769"/>
+        <location filename="Helpviewer/HelpWindow.py" line="772"/>
         <source>About &amp;Qt</source>
         <translation>Acerca de &amp;Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="772"/>
+        <location filename="Helpviewer/HelpWindow.py" line="775"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Muestra información sobre las herramientas Qt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="774"/>
+        <location filename="Helpviewer/HelpWindow.py" line="777"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Acerca de Qt&lt;/b&gt;&lt;p&gt;Muestra información sobre las herramientas Qt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="782"/>
+        <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>Zoom in</source>
         <translation>Aumentar zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="782"/>
+        <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>Zoom &amp;in</source>
         <translation>A&amp;umentar Zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="782"/>
+        <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="788"/>
+        <location filename="Helpviewer/HelpWindow.py" line="791"/>
         <source>Zoom in on the text</source>
         <translation>Aumentar zoom en el texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="789"/>
+        <location filename="Helpviewer/HelpWindow.py" line="792"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aumentar Zoom&lt;/b&gt;&lt;p&gt;Aumenta el zoom sobre el texto. Esto provoca que el texto sea mayor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="800"/>
         <source>Zoom out</source>
         <translation>Disminuir Zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="800"/>
         <source>Zoom &amp;out</source>
         <translation>Dismi&amp;nuir Zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="800"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="803"/>
+        <location filename="Helpviewer/HelpWindow.py" line="806"/>
         <source>Zoom out on the text</source>
         <translation>Disminuir zoom en el texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="804"/>
+        <location filename="Helpviewer/HelpWindow.py" line="807"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Disminuir Zoom&lt;/b&gt;&lt;p&gt;Disminuir el zoom en el texto. Esto provoca que el texto sea menor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1205"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1223"/>
         <source>&amp;File</source>
         <translation>&amp;Archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1228"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1246"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edición</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1236"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1254"/>
         <source>&amp;View</source>
         <translation>&amp;Ver</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1252"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1270"/>
         <source>&amp;Go</source>
         <translation>&amp;Ir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1265"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1283"/>
         <source>H&amp;istory</source>
         <translation>&amp;Historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1272"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1290"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1326"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1345"/>
         <source>&amp;Help</source>
         <translation>A&amp;yuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1337"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1356"/>
         <source>File</source>
         <translation>Archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1354"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1373"/>
         <source>Edit</source>
         <translation>Edición</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1359"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1378"/>
         <source>View</source>
         <translation>Ver</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1368"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1387"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1400"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1419"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1407"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1426"/>
         <source>Go</source>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1656"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1675"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Archivos de Ayuda (*.html *.htm);;Archivos PDF (*.pdf);;Archivos CHM (*.chm);;Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="659"/>
+        <location filename="Helpviewer/HelpWindow.py" line="662"/>
         <source>Find next occurrence of text in page</source>
         <translation>Busca la próxima aparición del texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="660"/>
+        <location filename="Helpviewer/HelpWindow.py" line="663"/>
         <source>&lt;b&gt;Find next&lt;/b&gt;&lt;p&gt;Find the next occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar siguiente&lt;/b&gt;&lt;p&gt;Buscar la siguiente aparición del texto en la página actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="673"/>
+        <location filename="Helpviewer/HelpWindow.py" line="676"/>
         <source>Find previous occurrence of text in page</source>
         <translation>Busca la anterior aparición del texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="675"/>
+        <location filename="Helpviewer/HelpWindow.py" line="678"/>
         <source>&lt;b&gt;Find previous&lt;/b&gt;&lt;p&gt;Find the previous occurrence of text in the current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar anterior&lt;/b&gt;&lt;p&gt;Buscar la anterior aparición del texto en la página actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="478"/>
+        <location filename="Helpviewer/HelpWindow.py" line="481"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="482"/>
+        <location filename="Helpviewer/HelpWindow.py" line="485"/>
         <source>Print preview of the displayed help</source>
         <translation>Presentación preliminar de la ayuda mostrada</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="484"/>
+        <location filename="Helpviewer/HelpWindow.py" line="487"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the displayed help text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Presentación Preliminar&lt;/b&gt;&lt;p&gt;Presentación preliminar del texto de ayuda mostrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="868"/>
+        <location filename="Helpviewer/HelpWindow.py" line="871"/>
         <source>Show next tab</source>
         <translation>Mostrar siguiente pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="868"/>
+        <location filename="Helpviewer/HelpWindow.py" line="871"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="877"/>
+        <location filename="Helpviewer/HelpWindow.py" line="880"/>
         <source>Show previous tab</source>
         <translation>Mostrar pestaña anterior</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="877"/>
+        <location filename="Helpviewer/HelpWindow.py" line="880"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="886"/>
+        <location filename="Helpviewer/HelpWindow.py" line="889"/>
         <source>Switch between tabs</source>
         <translation>Alternar entre pestañas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="886"/>
+        <location filename="Helpviewer/HelpWindow.py" line="889"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1056"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1059"/>
         <source>Clear icons database</source>
         <translation>Limpiar base de datos de iconos</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1060"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1063"/>
         <source>Clear the database of favicons</source>
         <translation>Limpiar base de datos de favicons</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1061"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1064"/>
         <source>&lt;b&gt;Clear icons database&lt;/b&gt;&lt;p&gt;Clears the database of favicons of previously visited URLs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar base de datos de iconos&lt;/b&gt;&lt;p&gt;Limpia la base de datos de favicons de URLs previamente visitadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="895"/>
+        <location filename="Helpviewer/HelpWindow.py" line="898"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="895"/>
+        <location filename="Helpviewer/HelpWindow.py" line="898"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Preferencias...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="898"/>
+        <location filename="Helpviewer/HelpWindow.py" line="901"/>
         <source>Set the prefered configuration</source>
         <translation>Establecer la configuración preferida</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="899"/>
+        <location filename="Helpviewer/HelpWindow.py" line="902"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Preferencias&lt;/b&gt;&lt;p&gt;Establecezca los elementos de configuración de la aplicación con sus valores preferidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="152"/>
+        <location filename="Helpviewer/HelpWindow.py" line="155"/>
         <source>Contents</source>
         <translation>Contenido</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="509"/>
+        <location filename="Helpviewer/HelpWindow.py" line="512"/>
         <source>Close all help windows</source>
         <translation>Cerrar todas las ventanas de ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="948"/>
+        <location filename="Helpviewer/HelpWindow.py" line="951"/>
         <source>Sync with Table of Contents</source>
         <translation>Sincronizar con la Tabla de Contenidos</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="952"/>
+        <location filename="Helpviewer/HelpWindow.py" line="955"/>
         <source>Synchronizes the table of contents with current page</source>
         <translation>Sincroniza la tabla de contenidos con la página actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="954"/>
+        <location filename="Helpviewer/HelpWindow.py" line="957"/>
         <source>&lt;b&gt;Sync with Table of Contents&lt;/b&gt;&lt;p&gt;Synchronizes the table of contents with current page.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sincronizar con la Tabla de Contenidos&lt;/b&gt;Sincroniza la tabla de contenidos con la página actual&lt;p&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="962"/>
+        <location filename="Helpviewer/HelpWindow.py" line="965"/>
         <source>Table of Contents</source>
         <translation>Tabla de Contenidos</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="965"/>
+        <location filename="Helpviewer/HelpWindow.py" line="968"/>
         <source>Shows the table of contents window</source>
         <translation>Muestra la ventana de la tabla de contenidos</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="967"/>
+        <location filename="Helpviewer/HelpWindow.py" line="970"/>
         <source>&lt;b&gt;Table of Contents&lt;/b&gt;&lt;p&gt;Shows the table of contents window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tabla de Contenidos&lt;/b&gt;&lt;p&gt;Muestra la ventana de la tabla de contenidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1001"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1004"/>
         <source>Manage QtHelp Documents</source>
         <translation>Gestionar Documentos de QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1004"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1007"/>
         <source>Shows a dialog to manage the QtHelp documentation set</source>
         <translation>Muestra un diálogo para gestionar el conjunto de documentación de QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1006"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1009"/>
         <source>&lt;b&gt;Manage QtHelp Documents&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestionar Documentos de QtHelp&lt;/b&gt;&lt;p&gt;Muestra un diálogo para gestionar el conjunto de documentación de QtHelp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1316"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1335"/>
         <source>&amp;Window</source>
         <translation>&amp;Ventana</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1375"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1394"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1380"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1399"/>
         <source>Filtered by: </source>
         <translation>Filtrado por:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2168"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2190"/>
         <source>Could not find an associated content.</source>
         <translation>No se ha podido encontrar un contenido asociado.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1015"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1018"/>
         <source>Manage QtHelp Filters</source>
         <translation>Gestionar Filtros de QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1018"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1021"/>
         <source>Shows a dialog to manage the QtHelp filters</source>
         <translation>Muestra un diálogo para gestionar los filtros deQtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1020"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1023"/>
         <source>&lt;b&gt;Manage QtHelp Filters&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the QtHelp filters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestionar Filtros de QtHelp&lt;/b&gt;&lt;p&gt;Muestra un diálogo para gestionar los filtros de QtHelp.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="975"/>
+        <location filename="Helpviewer/HelpWindow.py" line="978"/>
         <source>Index</source>
         <translation>Índice</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="978"/>
+        <location filename="Helpviewer/HelpWindow.py" line="981"/>
         <source>Shows the index window</source>
         <translation>Muestra la ventana del índice</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="980"/>
+        <location filename="Helpviewer/HelpWindow.py" line="983"/>
         <source>&lt;b&gt;Index&lt;/b&gt;&lt;p&gt;Shows the index window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Índice&lt;/b&gt;&lt;p&gt;Muestra la ventana del índice.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="988"/>
+        <location filename="Helpviewer/HelpWindow.py" line="991"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="991"/>
+        <location filename="Helpviewer/HelpWindow.py" line="994"/>
         <source>Shows the search window</source>
         <translation>Muestra la ventana de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="993"/>
+        <location filename="Helpviewer/HelpWindow.py" line="996"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Shows the search window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar&lt;/b&gt;&lt;p&gt;Muestra la ventana de búsqueda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1028"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1031"/>
         <source>Reindex Documentation</source>
         <translation>Reindexar Documentación</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1031"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1034"/>
         <source>Reindexes the documentation set</source>
         <translation>Reindexa el conjunto de documentación</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1033"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1036"/>
         <source>&lt;b&gt;Reindex Documentation&lt;/b&gt;&lt;p&gt;Reindexes the documentation set.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reindexar Documentación&lt;/b&gt;&lt;p&gt;Reindexa el conjunto de documentación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2277"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2299"/>
         <source>Updating search index</source>
         <translation>Actualizando índice de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2329"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2351"/>
         <source>Looking for Documentation...</source>
         <translation>Buscando Documentación...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2359"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2381"/>
         <source>Unfiltered</source>
         <translation>Sin filtrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2378"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2400"/>
         <source>Help Engine</source>
         <translation>Motor de Ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="522"/>
+        <location filename="Helpviewer/HelpWindow.py" line="525"/>
         <source>Private Browsing</source>
         <translation>Navegación Privada</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="518"/>
+        <location filename="Helpviewer/HelpWindow.py" line="521"/>
         <source>Private &amp;Browsing</source>
         <translation>&amp;Navegación Privada</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="523"/>
+        <location filename="Helpviewer/HelpWindow.py" line="526"/>
         <source>&lt;b&gt;Private Browsing&lt;/b&gt;&lt;p&gt;Enables private browsing. In this mode no history is recorded anymore.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navegación Privada&lt;/b&gt;&lt;p&gt;Habilita navegación privada. En este modo, el historial no queda registrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="858"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1932"/>
         <source>Full Screen</source>
         <translation>Pantalla Completa</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="858"/>
+        <location filename="Helpviewer/HelpWindow.py" line="861"/>
         <source>&amp;Full Screen</source>
         <translation>&amp;Pantalla Completa</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="858"/>
+        <location filename="Helpviewer/HelpWindow.py" line="861"/>
         <source>F11</source>
         <translation>F11</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1001"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1004"/>
         <source>Manage QtHelp &amp;Documents</source>
         <translation>Gestionar &amp;Documentos de QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1015"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1018"/>
         <source>Manage QtHelp &amp;Filters</source>
         <translation>Gestionar &amp;Filtros de QtHelp</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1028"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1031"/>
         <source>&amp;Reindex Documentation</source>
         <translation>&amp;Reindexar Documentación</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1046"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1049"/>
         <source>Clear private data</source>
         <translation>Limpiar Datos Privados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1042"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1045"/>
         <source>&amp;Clear private data</source>
         <translation>Li&amp;mpiar Datos Privados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1047"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1050"/>
         <source>&lt;b&gt;Clear private data&lt;/b&gt;&lt;p&gt;Clears the private data like browsing history, search history or the favicons database.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Limpiar datos privados&lt;/b&gt;&lt;p&gt;Limpia los datos privados como historial de navegación, de búsqueda o base de datos de favicons.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1056"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1059"/>
         <source>Clear &amp;icons database</source>
         <translation>Limpiar base de datos de &amp;iconos</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1127"/>
         <source>Show Network Monitor</source>
-        <translation>Mostrar monitor de red</translation>
+        <translation type="obsolete">Mostrar monitor de red</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1127"/>
         <source>Show &amp;Network Monitor</source>
-        <translation>Mostrar mo&amp;nitor de red</translation>
+        <translation type="obsolete">Mostrar mo&amp;nitor de red</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1131"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1135"/>
         <source>Show the network monitor dialog</source>
         <translation>Muestra el diálogo de monitor de red</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1132"/>
         <source>&lt;b&gt;Show Network Monitor&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostrar Monitor de Red&lt;/b&gt;&lt;p&gt;Muestra el diálogo de monitor de red.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostrar Monitor de Red&lt;/b&gt;&lt;p&gt;Muestra el diálogo de monitor de red.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1284"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1302"/>
         <source>&amp;Settings</source>
         <translation>Con&amp;figuración</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1309"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1328"/>
         <source>&amp;Tools</source>
         <translation>&amp;Herramientas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="844"/>
+        <location filename="Helpviewer/HelpWindow.py" line="847"/>
         <source>Show page source</source>
         <translation>Mostrar código fuente</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="844"/>
+        <location filename="Helpviewer/HelpWindow.py" line="847"/>
         <source>Ctrl+U</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="848"/>
+        <location filename="Helpviewer/HelpWindow.py" line="851"/>
         <source>Show the page source in an editor</source>
         <translation>Muestra el código fuente en un editor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="849"/>
+        <location filename="Helpviewer/HelpWindow.py" line="852"/>
         <source>&lt;b&gt;Show page source&lt;/b&gt;&lt;p&gt;Show the page source in an editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mostrar codigo fuente&lt;/b&gt;&lt;p&gt;Muestra el código fuente en un editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="908"/>
+        <location filename="Helpviewer/HelpWindow.py" line="911"/>
         <source>&amp;Languages...</source>
         <translation>&amp;Lenguajes...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="911"/>
+        <location filename="Helpviewer/HelpWindow.py" line="914"/>
         <source>Configure the accepted languages for web pages</source>
         <translation>Configurar los lenguajes aceptados para páginas web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="913"/>
+        <location filename="Helpviewer/HelpWindow.py" line="916"/>
         <source>&lt;b&gt;Languages&lt;/b&gt;&lt;p&gt;Configure the accepted languages for web pages.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lenguagjes&lt;/b&gt;&lt;p&gt;Configurar los lenguajes aceptados para páginas web..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="908"/>
+        <location filename="Helpviewer/HelpWindow.py" line="911"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="921"/>
+        <location filename="Helpviewer/HelpWindow.py" line="924"/>
         <source>Cookies</source>
         <translation>Cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="921"/>
+        <location filename="Helpviewer/HelpWindow.py" line="924"/>
         <source>C&amp;ookies...</source>
         <translation>C&amp;ookies...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="924"/>
+        <location filename="Helpviewer/HelpWindow.py" line="927"/>
         <source>Configure cookies handling</source>
         <translation>Configurar manejo de cookies</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="926"/>
+        <location filename="Helpviewer/HelpWindow.py" line="929"/>
         <source>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configure cookies handling.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cookies&lt;/b&gt;&lt;p&gt;Configurar manejo de cookies.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1386"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1405"/>
         <source>Settings</source>
         <translation>Configuración</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="815"/>
         <source>Zoom reset</source>
         <translation>Restablecer zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="815"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Restablecer zoom</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="815"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="817"/>
+        <location filename="Helpviewer/HelpWindow.py" line="820"/>
         <source>Reset the zoom of the text</source>
         <translation>Restablecer el zoom aplicado al texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="828"/>
+        <location filename="Helpviewer/HelpWindow.py" line="831"/>
         <source>Zoom text only</source>
         <translation>Aplicar zoom al texto solamente</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="828"/>
+        <location filename="Helpviewer/HelpWindow.py" line="831"/>
         <source>Zoom &amp;text only</source>
         <translation>Aplicar zoom al &amp;texto solamente</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="832"/>
+        <location filename="Helpviewer/HelpWindow.py" line="835"/>
         <source>Zoom text only; pictures remain constant</source>
         <translation>El zoom se aplica al texto solamente; las imágenes permanecen constantes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="834"/>
+        <location filename="Helpviewer/HelpWindow.py" line="837"/>
         <source>&lt;b&gt;Zoom text only&lt;/b&gt;&lt;p&gt;Zoom text only; pictures remain constant.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aplicar zoom al texto solamente&lt;/b&gt;&lt;p&gt;El zoom se aplica al texto solamente; las imágenes permanecen constantes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="818"/>
+        <location filename="Helpviewer/HelpWindow.py" line="821"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restablecer zoom&lt;/b&gt;&lt;p&gt;Restablece el zoom aplicado al texto. Establece el factor de zoom a 100%.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="362"/>
+        <location filename="Helpviewer/HelpWindow.py" line="365"/>
         <source>New &amp;Window</source>
         <translation>Nueva &amp;Ventana</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="423"/>
+        <location filename="Helpviewer/HelpWindow.py" line="426"/>
         <source>Import Bookmarks</source>
         <translation>Importar Marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="423"/>
+        <location filename="Helpviewer/HelpWindow.py" line="426"/>
         <source>&amp;Import Bookmarks...</source>
         <translation>&amp;Importar Marcadores...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="426"/>
+        <location filename="Helpviewer/HelpWindow.py" line="429"/>
         <source>Import bookmarks from other browsers</source>
         <translation>Importar marcadores desde otros navegadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="428"/>
+        <location filename="Helpviewer/HelpWindow.py" line="431"/>
         <source>&lt;b&gt;Import Bookmarks&lt;/b&gt;&lt;p&gt;Import bookmarks from other browsers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Importar Marcadores&lt;/b&gt;&lt;p&gt;Importar marcadores desde otros navegadores.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="437"/>
+        <location filename="Helpviewer/HelpWindow.py" line="440"/>
         <source>Export Bookmarks</source>
         <translation>Exportar Marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="437"/>
+        <location filename="Helpviewer/HelpWindow.py" line="440"/>
         <source>&amp;Export Bookmarks...</source>
         <translation>&amp;Exportar Marcadores...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="440"/>
+        <location filename="Helpviewer/HelpWindow.py" line="443"/>
         <source>Export the bookmarks into a file</source>
         <translation>Exportar marcadores a un archivo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="442"/>
+        <location filename="Helpviewer/HelpWindow.py" line="445"/>
         <source>&lt;b&gt;Export Bookmarks&lt;/b&gt;&lt;p&gt;Export the bookmarks into a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exportar Marcadores&lt;/b&gt;&lt;p&gt;Exportar los marcadores a un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="686"/>
         <source>Manage Bookmarks</source>
         <translation>Gestionar marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="686"/>
         <source>&amp;Manage Bookmarks...</source>
         <translation>&amp;Gestionar marcadores...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="683"/>
+        <location filename="Helpviewer/HelpWindow.py" line="686"/>
         <source>Ctrl+Shift+B</source>
         <comment>Help|Manage bookmarks</comment>
         <translation>Ctrl+Shift+B</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="687"/>
+        <location filename="Helpviewer/HelpWindow.py" line="690"/>
         <source>Open a dialog to manage the bookmarks.</source>
         <translation>Abrir un diálogo para gestionar los marcadores.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="689"/>
+        <location filename="Helpviewer/HelpWindow.py" line="692"/>
         <source>&lt;b&gt;Manage Bookmarks...&lt;/b&gt;&lt;p&gt;Open a dialog to manage the bookmarks.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestionar Bookmarks...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para gestionar los marcadores.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="700"/>
         <source>Add &amp;Bookmark...</source>
         <translation>Añadir &amp;Marcador...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="700"/>
         <source>Ctrl+D</source>
         <comment>Help|Add bookmark</comment>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="703"/>
+        <location filename="Helpviewer/HelpWindow.py" line="706"/>
         <source>Open a dialog to add a bookmark.</source>
         <translation>Abrir un diálogo para añadir un marcador.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="704"/>
+        <location filename="Helpviewer/HelpWindow.py" line="707"/>
         <source>&lt;b&gt;Add Bookmark&lt;/b&gt;&lt;p&gt;Open a dialog to add the current URL as a bookmark.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir Marcador&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir la URL actual como un marcador.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="712"/>
+        <location filename="Helpviewer/HelpWindow.py" line="715"/>
         <source>Add Folder</source>
         <translation>Añadir Carpeta</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="712"/>
+        <location filename="Helpviewer/HelpWindow.py" line="715"/>
         <source>Add &amp;Folder...</source>
         <translation>Añadir &amp;Carpeta...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="718"/>
         <source>Open a dialog to add a new bookmarks folder.</source>
         <translation>Abre un diálogo para añadir una nueva carpeta de marcadores.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="717"/>
+        <location filename="Helpviewer/HelpWindow.py" line="720"/>
         <source>&lt;b&gt;Add Folder...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir Carpeta...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para añadir una nueva carpeta de marcadores.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="725"/>
+        <location filename="Helpviewer/HelpWindow.py" line="728"/>
         <source>Bookmark All Tabs</source>
         <translation>Todas las Pestañas a Marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="725"/>
+        <location filename="Helpviewer/HelpWindow.py" line="728"/>
         <source>Bookmark All Tabs...</source>
         <translation>Todas las Pestañas a Marcadores...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="728"/>
+        <location filename="Helpviewer/HelpWindow.py" line="731"/>
         <source>Bookmark all open tabs.</source>
         <translation>Todas las pestañas abiertas a marcadores.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="730"/>
+        <location filename="Helpviewer/HelpWindow.py" line="733"/>
         <source>&lt;b&gt;Bookmark All Tabs...&lt;/b&gt;&lt;p&gt;Open a dialog to add a new bookmarks folder for all open tabs.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Todas las Pestañas a Marcadores...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para añadir una nueva carpeta de marcadores para todas las pestañas abiertas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1763"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1783"/>
         <source>Saved Tabs</source>
         <translation>Pestañas Guardadas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="596"/>
+        <location filename="Helpviewer/HelpWindow.py" line="599"/>
         <source>F5</source>
         <comment>Go|Reload</comment>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="611"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Stop</source>
         <translation>Detener</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="611"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>&amp;Stop</source>
         <translation>&amp;Detener</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="611"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Ctrl+.</source>
         <comment>Go|Stop</comment>
         <translation>Ctrl+.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="611"/>
+        <location filename="Helpviewer/HelpWindow.py" line="614"/>
         <source>Esc</source>
         <comment>Go|Stop</comment>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="617"/>
+        <location filename="Helpviewer/HelpWindow.py" line="620"/>
         <source>Stop loading</source>
         <translation>Detener carga</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="618"/>
+        <location filename="Helpviewer/HelpWindow.py" line="621"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Stops loading of the current tab.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Detener&lt;/b&gt;&lt;p&gt;Detiene la carga de la pestaña actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="407"/>
+        <location filename="Helpviewer/HelpWindow.py" line="410"/>
         <source>Save As </source>
         <translation>Guardar como</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="407"/>
+        <location filename="Helpviewer/HelpWindow.py" line="410"/>
         <source>&amp;Save As...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="407"/>
+        <location filename="Helpviewer/HelpWindow.py" line="410"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="412"/>
+        <location filename="Helpviewer/HelpWindow.py" line="415"/>
         <source>Save the current page to disk</source>
         <translation>Guardar página actual en disco</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="414"/>
+        <location filename="Helpviewer/HelpWindow.py" line="417"/>
         <source>&lt;b&gt;Save As...&lt;/b&gt;&lt;p&gt;Saves the current page to disk.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar Como...&lt;/b&gt;&lt;p&gt;Guarda la página actual en disco.&lt;/p&gt;</translation>
     </message>
@@ -15551,307 +15685,355 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation type="obsolete">&lt;b&gt;Salir&lt;/b&gt;&lt;p&gt;Salir del navegador web.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1069"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1072"/>
         <source>Configure Search Engines</source>
         <translation>Configurar Motores de Búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1073"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1076"/>
         <source>Configure the available search engines</source>
         <translation>Configurar los motores de búsqueda disponibles</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1075"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1078"/>
         <source>&lt;b&gt;Configure Search Engines...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available search engines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Configurar Motores de Búsqueda...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar los motores de búsqueda disponibles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1084"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1087"/>
         <source>Manage Saved Passwords</source>
         <translation>Gestionar Contraseñas Almacenadas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1084"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1087"/>
         <source>Manage Saved Passwords...</source>
         <translation>Gestionar Contraseñas Almacenadas...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1088"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1091"/>
         <source>Manage the saved passwords</source>
         <translation>Gestionar las contraseñas almacenadas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1090"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1093"/>
         <source>&lt;b&gt;Manage Saved Passwords...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved passwords.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestionar Contraseñas Almacenadas&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar las contraseñas almacenadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1098"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1101"/>
         <source>Ad Block</source>
         <translation>Ad Block</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1098"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1101"/>
         <source>&amp;Ad Block...</source>
         <translation>&amp;Ad Block...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1102"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1106"/>
         <source>Configure AdBlock subscriptions and rules</source>
         <translation>Configurar las suscripciones y reglas de AdBlock</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1104"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1108"/>
         <source>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure AdBlock subscriptions and rules.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar las suscripciones y reglas de AdBlock&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2338"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2360"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="465"/>
+        <location filename="Helpviewer/HelpWindow.py" line="468"/>
         <source>Print as PDF</source>
         <translation>Imprimir como PDF</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="469"/>
+        <location filename="Helpviewer/HelpWindow.py" line="472"/>
         <source>Print the displayed help as PDF</source>
         <translation>Imprimir la ayuda mostrada como PDF</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="470"/>
+        <location filename="Helpviewer/HelpWindow.py" line="473"/>
         <source>&lt;b&gt;Print as PDF&lt;/b&gt;&lt;p&gt;Print the displayed help text as a PDF file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Imprimir como PDF&lt;/b&gt;&lt;p&gt;Imprimir la ayuda mostrada como un archivo PDF.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="934"/>
+        <location filename="Helpviewer/HelpWindow.py" line="937"/>
         <source>Offline Storage</source>
         <translation>Almacenamiento Offline</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="934"/>
+        <location filename="Helpviewer/HelpWindow.py" line="937"/>
         <source>Offline &amp;Storage...</source>
         <translation>Almacenamiento &amp;Offline...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="937"/>
+        <location filename="Helpviewer/HelpWindow.py" line="940"/>
         <source>Configure offline storage</source>
         <translation>Configurar el almacenamiento offline</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="939"/>
+        <location filename="Helpviewer/HelpWindow.py" line="942"/>
         <source>&lt;b&gt;Offline Storage&lt;/b&gt;&lt;p&gt;Opens a dialog to configure offline storage.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Almacenamiento Offline&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar el almacenamiento offline (sin conexión).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1069"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1072"/>
         <source>Configure Search &amp;Engines...</source>
         <translation>Configurar Motor&amp;es de Búsqueda...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1939"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1961"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;¿Está seguro de que desea activar la navegación privada?&lt;/b&gt;&lt;p&gt;Cuando la navegación privada ha sido activada, las páginas web no se añaden al historial, las búsquedas no se añaden a la lista de búsquedas recientes, y los iconos de website y las cookies no son almacenados. El almacenamiento offline de HTML5 tambien es desactivado. Hasta que la ventana sea cerrada, todavía se pueden utilizar los botones de Atrás y Adelante para retornar a las páginas web que hayan sido navegadas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1247"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1265"/>
         <source>Text Encoding</source>
         <translation>Codificación de Texto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1299"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1301"/>
         <source>User Agent</source>
-        <translation>Agente de Usuario</translation>
+        <translation type="obsolete">Agente de Usuario</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2693"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2715"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2694"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2716"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2695"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2717"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2696"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2718"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2697"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2719"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2698"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2720"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2720"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2742"/>
         <source>Default Encoding</source>
         <translation>Codificación por Defecto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1140"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1144"/>
         <source>Downloads</source>
         <translation>Descargas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1143"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1147"/>
         <source>Shows the downloads window</source>
         <translation>Muestra la ventana de descargas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1145"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1149"/>
         <source>&lt;b&gt;Downloads&lt;/b&gt;&lt;p&gt;Shows the downloads window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Descargas&lt;/b&gt;&lt;p&gt;Muestra la ventana de descargas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1113"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1117"/>
         <source>Manage Certificates</source>
         <translation>Gestionar Certificados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1113"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1117"/>
         <source>Manage Certificates...</source>
         <translation>Gestionar Certificados...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1117"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1121"/>
         <source>Manage the saved certificates</source>
         <translation>Gestionar los certificados almacenados</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1119"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1123"/>
         <source>&lt;b&gt;Manage Saved Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved certificates.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gestionar Certificados Almacenados&lt;/b&gt;&lt;p&gt;Abre un diálogo para gestionar los certificados almacenados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1457"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1476"/>
         <source>VirusTotal</source>
         <translation>VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1463"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1482"/>
         <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
         <translation>&lt;h2&gt;Búsqueda de archivo&lt;/h2&gt;&lt;p&gt;Para buscar el último informe de VirusTotal en un archivo dado, solamente introduzca su hash. Los hashes permitidos actualmente son MD5, SHA1 y SHA256. Tambien puede buscar un informe para un archivo concreto introduciendo su permalink id.&lt;/p&gt;&lt;h2&gt;Búsqueda de URL&lt;/h2&gt;&lt;p&gt;Las búsquedas de URL son sencillas, simplemente introduzca la URL concreta, la aplicación la normalizará y comparará contra las entradas en la base de datos de VirusTotal. Alternativamente se puede introducir el hash MD5 de una URL precedido por &quot;url:&quot;, por ejemplo url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;Búsqueda de Usuario&lt;/h2&gt;&lt;p&gt;¿Desea saber si un amigo tiene cuenta Community de VT? Simplemente teclee su nick precedido por el símbolo &quot;@&quot;,por ejemplo. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Búsqueda a través de comentarios&lt;/h2&gt;&lt;p&gt;Los comentarios en la Comunidad de VT pueden a menudo ser útiles en la desinfección de su PC, o bien pueden demostrar su utilidad al analizar una muestra en particular de malware, las etiquetas de comentario habilitan a los usuarios a través de las revisiones de la Comunidad de VT. Las etiquetas estándar de archivo son: {0} Las etiquetas estándar de URL son: {1} Las etiquetas generadas por los usuarios se preceden del símbolo &quot;#&quot;, por ejemplo. #disinfect.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1507"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1526"/>
         <source>Search VirusTotal</source>
         <translation>Buscar VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1513"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1532"/>
         <source>Scan current site</source>
         <translation>Analizar sitio actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2875"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2918"/>
         <source>VirusTotal Scan</source>
         <translation>Análisis con VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2875"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2918"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El análisis con VirusTotal no se ha podido programar.&lt;p&gt;
 &lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="538"/>
+        <location filename="Helpviewer/HelpWindow.py" line="541"/>
         <source>Quit the eric5 Web Browser</source>
         <translation>Salir del Navegador Web de eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="539"/>
+        <location filename="Helpviewer/HelpWindow.py" line="542"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salir&lt;/b&gt;&lt;p&gt;Salir del Navegador Web de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpWindow.py" line="1684"/>
         <source>&lt;h3&gt;About eric5 Web Browser&lt;/h3&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Acerca del Navegador Web de eric5&lt;/h3&gt;&lt;p&gt;El Navegador Web de eric5 es una combinación de navegador Web y navegador de archivos de ayuda.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;h3&gt;Acerca del Navegador Web de eric5&lt;/h3&gt;&lt;p&gt;El Navegador Web de eric5 es una combinación de navegador Web y navegador de archivos de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1153"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1157"/>
         <source>RSS Feeds Dialog</source>
         <translation>Diálogo de RSS Feeds</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1153"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1157"/>
         <source>&amp;RSS Feeds Dialog...</source>
         <translation>Diálogo de &amp;RSS Feeds...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1153"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1157"/>
         <source>Ctrl+Shift+F</source>
         <comment>Help|RSS Feeds Dialog</comment>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1158"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1162"/>
         <source>Open a dialog showing the configured RSS feeds.</source>
         <translation>Abrir un diálogo mostrando los RSS feeds configurados.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1160"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1164"/>
         <source>&lt;b&gt;RSS Feeds Dialog...&lt;/b&gt;&lt;p&gt;Open a dialog to show the configured RSS feeds. It can be used to mange the feeds and to show their contents.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diálogo de RSS Feeds ...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para mostrar todos los RSS feeds configurados. Puede utilizarse para gestionar los feeds y cómo mostrar sus contenidos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1169"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1173"/>
         <source>Siteinfo Dialog</source>
         <translation>Diálogo Siteinfo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1169"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1173"/>
         <source>&amp;Siteinfo Dialog...</source>
         <translation>Diálogo &amp;Siteinfo...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1169"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1173"/>
         <source>Ctrl+Shift+I</source>
         <comment>Help|Siteinfo Dialog</comment>
         <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1174"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1178"/>
         <source>Open a dialog showing some information about the current site.</source>
         <translation>Abrir un diálogo para mostrar información acerca del site actual.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1176"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1180"/>
         <source>&lt;b&gt;Siteinfo Dialog...&lt;/b&gt;&lt;p&gt;Opens a dialog showing some information about the current site.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diálogo Siteinfo...&lt;/b&gt;&lt;p&gt;Abre un diálogo que muestra información acerca del site actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1394"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1413"/>
         <source>Tools</source>
         <translation>Herramientas</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="782"/>
+        <location filename="Helpviewer/HelpWindow.py" line="785"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
-        <translatorcomment>Ver|Aumentar zoom</translatorcomment>
-        <translation>Aumentar Zoom</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="800"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
-        <translatorcomment>Ver|Disminuir zoom</translatorcomment>
-        <translation>Disminuir Zoom</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1131"/>
+        <source>Network Monitor</source>
+        <translation type="unfinished">Monitor de Red</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1131"/>
+        <source>&amp;Network Monitor...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1136"/>
+        <source>&lt;b&gt;Network Monitor...&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1703"/>
+        <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1938"/>
+        <source>Restore Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1189"/>
+        <source>Manage User Agent Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1189"/>
+        <source>Manage &amp;User Agent Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1192"/>
+        <source>Shows a dialog to manage the User Agent settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1194"/>
+        <source>&lt;b&gt;Manage User Agent Settings&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the User Agent settings.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpWindow.py" line="1317"/>
+        <source>Global User Agent</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16852,32 +17034,32 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="134"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation>No se ha recibido el mensaje &apos;hello&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="135"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="136"/>
         <source>Received data on unexpected channel.</source>
         <translation>Datos recibidos en canal no esperado.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="140"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="141"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation>Mensaje &apos;hello&apos; erróneo, se esperaba &apos;capabilities&apos; pero se obtuvo &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="144"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="145"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation>El mensaje &apos;capabilities&apos; no contiene ninguna capacidad.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="152"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="153"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation>Mensaje &apos;hello&apos; erróneo, se esperaba &apos;encoding&apos; pero se obtuvo &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="156"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="157"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation>El mensaje &apos;encoding&apos; no contiene ninguna codificación.</translation>
     </message>
@@ -17534,7 +17716,7 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Seleccionar la categoría sobre la que filtrar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="313"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="312"/>
         <source>Revision</source>
         <translation>Revisión</translation>
     </message>
@@ -17755,12 +17937,12 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Seleccione el campo de filtrado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1130"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1129"/>
         <source>Revision</source>
         <translation>Revisión</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1127"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1126"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -20065,7 +20247,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>perdido</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="295"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="294"/>
         <source>unknown</source>
         <translation>desconocido</translation>
     </message>
@@ -20884,27 +21066,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="546"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="660"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>No hay cambios pendientes de commit disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="585"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="586"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="585"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>No hay entradas sin versionar disponibles/seleccionadas.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="643"/>
         <source>Revert</source>
         <translation>Revertir</translation>
     </message>
@@ -20914,12 +21096,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Eliminar de repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="607"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="606"/>
         <source>Remove</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="644"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="643"/>
         <source>There are no missing entries available/selected.</source>
         <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
@@ -21004,7 +21186,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Restore sobre elementos perdidos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="459"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="458"/>
         <source>all</source>
         <translation>todo</translation>
     </message>
@@ -21014,12 +21196,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation type="obsolete">Diferencia</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="661"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="660"/>
         <source>Differences</source>
         <translation>Diferencias</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="547"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="546"/>
         <source>There are no entries selected to be committed.</source>
         <translation>No hay entradas seleccionadas sobre las que aplicar commit.</translation>
     </message>
@@ -21154,12 +21336,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="250"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="249"/>
         <source>active</source>
         <translation>activo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="255"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgTagBranchListDialog.py" line="254"/>
         <source>yes</source>
         <translation>si</translation>
     </message>
@@ -23282,7 +23464,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation type="obsolete">Navegador Web de Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="97"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="99"/>
         <source>Search!</source>
         <translation>¡Buscar!</translation>
     </message>
@@ -23292,22 +23474,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation type="obsolete">Acerca de Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="136"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="138"/>
         <source>Search results provided by {0}</source>
         <translation>Buscar resultados proporcionados por {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="95"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="97"/>
         <source>Welcome to eric5 Web Browser!</source>
         <translation>¡Bienvenido al Navegador Web de eric5!</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="96"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="98"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="100"/>
         <source>About eric5</source>
         <translation>Acerca de eric5</translation>
     </message>
@@ -25303,7 +25485,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Archivo guardado</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2278"/>
+        <location filename="QScintilla/MiniEditor.py" line="2282"/>
         <source>Untitled</source>
         <translation>Sin título</translation>
     </message>
@@ -25313,22 +25495,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2318"/>
+        <location filename="QScintilla/MiniEditor.py" line="2322"/>
         <source>Select all</source>
         <translation>Seleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2319"/>
+        <location filename="QScintilla/MiniEditor.py" line="2323"/>
         <source>Deselect all</source>
         <translation>Deseleccionar todo</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2330"/>
+        <location filename="QScintilla/MiniEditor.py" line="2334"/>
         <source>Languages</source>
         <translation>Lenguajes</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2333"/>
+        <location filename="QScintilla/MiniEditor.py" line="2337"/>
         <source>No Language</source>
         <translation>Ningún Lenguaje</translation>
     </message>
@@ -25359,22 +25541,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Imprime el archivo actual</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2244"/>
+        <location filename="QScintilla/MiniEditor.py" line="2248"/>
         <source>Printing...</source>
         <translation>Imprimiendo...</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2260"/>
+        <location filename="QScintilla/MiniEditor.py" line="2264"/>
         <source>Printing completed</source>
         <translation>Impresión completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2262"/>
+        <location filename="QScintilla/MiniEditor.py" line="2266"/>
         <source>Error while printing</source>
         <translation>Error mientras se imprimía</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2265"/>
+        <location filename="QScintilla/MiniEditor.py" line="2269"/>
         <source>Printing aborted</source>
         <translation>Impresión cancelada</translation>
     </message>
@@ -25399,22 +25581,22 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>&lt;b&gt;Presentación Preliminar&lt;/b&gt;&lt;p&gt;Presentación preliminar del texto de ayuda mostrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2352"/>
+        <location filename="QScintilla/MiniEditor.py" line="2356"/>
         <source>Guessed</source>
         <translation>Suposición</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2372"/>
+        <location filename="QScintilla/MiniEditor.py" line="2376"/>
         <source>Alternatives</source>
         <translation>Alternativas</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2386"/>
+        <location filename="QScintilla/MiniEditor.py" line="2390"/>
         <source>Pygments Lexer</source>
         <translation>Analizador Léxico de Pygments</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2386"/>
+        <location filename="QScintilla/MiniEditor.py" line="2390"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Seleccionar el Analizador Léxico de Pygments a aplicar.</translation>
     </message>
@@ -25464,7 +25646,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>{0}[*] - {1}</translation>
     </message>
     <message>
-        <location filename="QScintilla/MiniEditor.py" line="2369"/>
+        <location filename="QScintilla/MiniEditor.py" line="2373"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativas ({0})</translation>
     </message>
@@ -26580,7 +26762,7 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <translation>Almacenar contraseña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="586"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="589"/>
         <source>Re-encoding saved passwords...</source>
         <translation>Recodificando contraseñas almacenadas...</translation>
     </message>
@@ -27660,27 +27842,27 @@ Select Update.</source>
 Seleccione Actualizar.</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="349"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="352"/>
         <source>Error downloading file</source>
         <translation>Error al descargar el fichero</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="418"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="421"/>
         <source>Stable</source>
         <translation>Estable</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="424"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="427"/>
         <source>Unstable</source>
         <translation>Inestable</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="430"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="433"/>
         <source>Unknown</source>
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="484"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="487"/>
         <source>SSL Errors</source>
         <translation>Errores SSL</translation>
     </message>
@@ -27690,12 +27872,12 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo de repositorio de plugins &lt;b&gt;{0}&lt;/b&gt; no se ha podido leer. Seleccione Actualizar&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="349"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="352"/>
         <source>&lt;p&gt;Could not download the requested file from {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo descargar el archivo solicitado desde {0}.&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="484"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="487"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errores SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
@@ -27708,17 +27890,17 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PluginRepositoryWindow</name>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="579"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="582"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="579"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="582"/>
         <source>OK</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="PluginManager/PluginRepositoryDialog.py" line="579"/>
+        <location filename="PluginManager/PluginRepositoryDialog.py" line="582"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el proceso.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -27792,27 +27974,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="971"/>
+        <location filename="Preferences/__init__.py" line="976"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="998"/>
+        <location filename="Preferences/__init__.py" line="1003"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="998"/>
+        <location filename="Preferences/__init__.py" line="1003"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1091"/>
+        <location filename="Preferences/__init__.py" line="1096"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1091"/>
+        <location filename="Preferences/__init__.py" line="1096"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -28232,7 +28414,7 @@ Seleccione Actualizar.</translation>
         <translation>¿Le gustaría editar las opciones de comando para VCS?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2898"/>
+        <location filename="Project/Project.py" line="2912"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
@@ -28252,7 +28434,7 @@ Seleccione Actualizar.</translation>
         <translation>Seleccione el sistema de control de versiones para el proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2911"/>
+        <location filename="Project/Project.py" line="2925"/>
         <source>Open project</source>
         <translation>Abrir proyecto</translation>
     </message>
@@ -28262,7 +28444,7 @@ Seleccione Actualizar.</translation>
         <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2945"/>
+        <location filename="Project/Project.py" line="2959"/>
         <source>Save project as</source>
         <translation>Guardar proyecto como</translation>
     </message>
@@ -28295,587 +28477,587 @@ Seleccione Actualizar.</translation>
         </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2898"/>
+        <location filename="Project/Project.py" line="2912"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuevo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2902"/>
+        <location filename="Project/Project.py" line="2916"/>
         <source>Generate a new project</source>
         <translation>Generar un nuevo proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2903"/>
+        <location filename="Project/Project.py" line="2917"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo...&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir la información para un nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2911"/>
+        <location filename="Project/Project.py" line="2925"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2915"/>
+        <location filename="Project/Project.py" line="2929"/>
         <source>Open an existing project</source>
         <translation>Abrir un proyecto existente</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2916"/>
+        <location filename="Project/Project.py" line="2930"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir...&lt;/b&gt;&lt;p&gt;Abre un proyecto existente..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2923"/>
+        <location filename="Project/Project.py" line="2937"/>
         <source>Close project</source>
         <translation>Cerrar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2923"/>
+        <location filename="Project/Project.py" line="2937"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2926"/>
+        <location filename="Project/Project.py" line="2940"/>
         <source>Close the current project</source>
         <translation>Cierra el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2927"/>
+        <location filename="Project/Project.py" line="2941"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra el proyecto actualt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2934"/>
+        <location filename="Project/Project.py" line="2948"/>
         <source>Save project</source>
         <translation>Guardar proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3088"/>
+        <location filename="Project/Project.py" line="3102"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2937"/>
+        <location filename="Project/Project.py" line="2951"/>
         <source>Save the current project</source>
         <translation>Guarda el proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2938"/>
+        <location filename="Project/Project.py" line="2952"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar&lt;/b&gt;&lt;p&gt;Guarda el proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2945"/>
+        <location filename="Project/Project.py" line="2959"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2948"/>
+        <location filename="Project/Project.py" line="2962"/>
         <source>Save the current project to a new file</source>
         <translation>Guardar el proyecto actual en un nuevo archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2949"/>
+        <location filename="Project/Project.py" line="2963"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar como&lt;/b&gt;&lt;p&gt;Guarda el proyecto en otro archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2958"/>
+        <location filename="Project/Project.py" line="2972"/>
         <source>Add files to project</source>
         <translation>Agregar archivos al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2958"/>
+        <location filename="Project/Project.py" line="2972"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Agregar archivos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2962"/>
+        <location filename="Project/Project.py" line="2976"/>
         <source>Add files to the current project</source>
         <translation>Añadir archivos al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2963"/>
+        <location filename="Project/Project.py" line="2977"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir archivos...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir archivos al proyecto actual. El lugar donde se van a añadir es determinado por la extensión del nombre de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2972"/>
+        <location filename="Project/Project.py" line="2986"/>
         <source>Add directory to project</source>
         <translation>Agregar directorio al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2972"/>
+        <location filename="Project/Project.py" line="2986"/>
         <source>Add directory...</source>
         <translation>Agregar directorio...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2976"/>
+        <location filename="Project/Project.py" line="2990"/>
         <source>Add a directory to the current project</source>
         <translation>Agregar directorio al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2978"/>
+        <location filename="Project/Project.py" line="2992"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir directorio...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir un directorio al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2986"/>
+        <location filename="Project/Project.py" line="3000"/>
         <source>Add translation to project</source>
         <translation>Añadir traducción al proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2986"/>
+        <location filename="Project/Project.py" line="3000"/>
         <source>Add &amp;translation...</source>
         <translation>Añadir &amp;Traducción...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2990"/>
+        <location filename="Project/Project.py" line="3004"/>
         <source>Add a translation to the current project</source>
         <translation>Añadir una traducción al proyecto actual</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="2992"/>
+        <location filename="Project/Project.py" line="3006"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir traducción...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir una traducción al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3000"/>
+        <location filename="Project/Project.py" line="3014"/>
         <source>Search new files</source>
         <translation>Buscar archivos nuevos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3000"/>
+        <location filename="Project/Project.py" line="3014"/>
         <source>Searc&amp;h new files...</source>
         <translation>Bus&amp;car archivos nuevos...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3003"/>
+        <location filename="Project/Project.py" line="3017"/>
         <source>Search new files in the project directory.</source>
         <translation>Bucar nuevos archivos en el directorio de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3004"/>
+        <location filename="Project/Project.py" line="3018"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar nuevos archivos...&lt;/b&gt;&lt;p&gt;Busca nuevos archivos (fuentes, *.ui, *.idl) en el directorio del proyecto y en los subdirectorios registrados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3012"/>
+        <location filename="Project/Project.py" line="3026"/>
         <source>Project properties</source>
         <translation>Propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3012"/>
+        <location filename="Project/Project.py" line="3026"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propiedades...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3015"/>
+        <location filename="Project/Project.py" line="3029"/>
         <source>Show the project properties</source>
         <translation>Ver las propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3016"/>
+        <location filename="Project/Project.py" line="3030"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las propiedades del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3023"/>
+        <location filename="Project/Project.py" line="3037"/>
         <source>User project properties</source>
         <translation>Propiedades del usuario del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3023"/>
+        <location filename="Project/Project.py" line="3037"/>
         <source>&amp;User Properties...</source>
         <translation>Propiedades del &amp;Usuario...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3026"/>
+        <location filename="Project/Project.py" line="3040"/>
         <source>Show the user specific project properties</source>
         <translation>Muestra propiedades del proyecto específicas del usuario</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3028"/>
+        <location filename="Project/Project.py" line="3042"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Usuario...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del proyecto específicas del usuario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3035"/>
+        <location filename="Project/Project.py" line="3049"/>
         <source>Filetype Associations</source>
         <translation>Asociación de tipos de archivo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3035"/>
+        <location filename="Project/Project.py" line="3049"/>
         <source>Filetype Associations...</source>
         <translation>Asociación de tipos de archivo...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3038"/>
+        <location filename="Project/Project.py" line="3052"/>
         <source>Show the project filetype associations</source>
         <translation>Ver las asociaciones del proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3040"/>
+        <location filename="Project/Project.py" line="3054"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Tipo de Archivo...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de los tipos de archivos del proyecto. Estas asociaciones determinan el tipo (fuente, formulario, interfaz u otras) con un patrón de nombres de archivo. Se usan cuando se añade un archivo al proyecto y cuando se realiza una búsqueda de nuevos archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3066"/>
+        <location filename="Project/Project.py" line="3080"/>
         <source>Debugger Properties</source>
         <translation>Propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3066"/>
+        <location filename="Project/Project.py" line="3080"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Propiedades del depurador...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3069"/>
+        <location filename="Project/Project.py" line="3083"/>
         <source>Show the debugger properties</source>
         <translation>Muestra las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3070"/>
+        <location filename="Project/Project.py" line="3084"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Depurador...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3077"/>
+        <location filename="Project/Project.py" line="3091"/>
         <source>Load</source>
         <translation>Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3077"/>
+        <location filename="Project/Project.py" line="3091"/>
         <source>&amp;Load</source>
         <translation>&amp;Cargar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3080"/>
+        <location filename="Project/Project.py" line="3094"/>
         <source>Load the debugger properties</source>
         <translation>Cargar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3081"/>
+        <location filename="Project/Project.py" line="3095"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Carga las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3088"/>
+        <location filename="Project/Project.py" line="3102"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3091"/>
+        <location filename="Project/Project.py" line="3105"/>
         <source>Save the debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3092"/>
+        <location filename="Project/Project.py" line="3106"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Guarda las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3099"/>
+        <location filename="Project/Project.py" line="3113"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3099"/>
+        <location filename="Project/Project.py" line="3113"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3102"/>
+        <location filename="Project/Project.py" line="3116"/>
         <source>Delete the debugger properties</source>
         <translation>Borrar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3103"/>
+        <location filename="Project/Project.py" line="3117"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Borra el archivo que contiene las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3111"/>
+        <location filename="Project/Project.py" line="3125"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3111"/>
+        <location filename="Project/Project.py" line="3125"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reiniciar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3114"/>
+        <location filename="Project/Project.py" line="3128"/>
         <source>Reset the debugger properties</source>
         <translation>Restablecer las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3115"/>
+        <location filename="Project/Project.py" line="3129"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restablecer Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Restablece las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3124"/>
+        <location filename="Project/Project.py" line="3138"/>
         <source>Load session</source>
         <translation>Cargar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3127"/>
+        <location filename="Project/Project.py" line="3141"/>
         <source>Load the projects session file.</source>
         <translation>Cargar archivo de sesión de proyectos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3128"/>
+        <location filename="Project/Project.py" line="3142"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar sesión&lt;/b&gt;&lt;p&gt;Carga el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3141"/>
+        <location filename="Project/Project.py" line="3155"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3144"/>
+        <location filename="Project/Project.py" line="3158"/>
         <source>Save the projects session file.</source>
         <translation>Guardar archivos de sessión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3145"/>
+        <location filename="Project/Project.py" line="3159"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar sesión&lt;/b&gt;&lt;p&gt;Guarda el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3158"/>
+        <location filename="Project/Project.py" line="3172"/>
         <source>Delete session</source>
         <translation>Borrar sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3161"/>
+        <location filename="Project/Project.py" line="3175"/>
         <source>Delete the projects session file.</source>
         <translation>Borrar el archivo de sesión de proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3162"/>
+        <location filename="Project/Project.py" line="3176"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar sesión&lt;/b&gt;&lt;p&gt;Borra el archivo de sesión del proyecto&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3171"/>
+        <location filename="Project/Project.py" line="3185"/>
         <source>Code Metrics</source>
         <translation>Métricas de código</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3171"/>
+        <location filename="Project/Project.py" line="3185"/>
         <source>&amp;Code Metrics...</source>
         <translation>Métricas de &amp;código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3174"/>
+        <location filename="Project/Project.py" line="3188"/>
         <source>Show some code metrics for the project.</source>
         <translation>Muestra algunas métricas del código para este proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3176"/>
+        <location filename="Project/Project.py" line="3190"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas de Código...&lt;/b&gt;&lt;p&gt;Muestra algunas métricas de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3183"/>
+        <location filename="Project/Project.py" line="3197"/>
         <source>Python Code Coverage</source>
         <translation>Cobertura de Código Python</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3183"/>
+        <location filename="Project/Project.py" line="3197"/>
         <source>Code Co&amp;verage...</source>
         <translation>Co&amp;bertura de código...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3186"/>
+        <location filename="Project/Project.py" line="3200"/>
         <source>Show code coverage information for the project.</source>
         <translation>Muestra información de cobertura de código para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3188"/>
+        <location filename="Project/Project.py" line="3202"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código...&lt;/b&gt;&lt;p&gt;Muestra la información de cobertura de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3868"/>
+        <location filename="Project/Project.py" line="3882"/>
         <source>Profile Data</source>
         <translation>Datos de perfil</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3196"/>
+        <location filename="Project/Project.py" line="3210"/>
         <source>&amp;Profile Data...</source>
         <translation>Datos de &amp;pefil...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3199"/>
+        <location filename="Project/Project.py" line="3213"/>
         <source>Show profiling data for the project.</source>
         <translation>Mostrar datos de profiling para el proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3201"/>
+        <location filename="Project/Project.py" line="3215"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datos de Profiling...&lt;/b&gt;&lt;p&gt;Muestra datos de profiling para el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3921"/>
+        <location filename="Project/Project.py" line="3935"/>
         <source>Application Diagram</source>
         <translation>Diagrama de Aplicación</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3208"/>
+        <location filename="Project/Project.py" line="3222"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagrama de &amp;Aplicación...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3211"/>
+        <location filename="Project/Project.py" line="3225"/>
         <source>Show a diagram of the project.</source>
         <translation>Mostrar diagrama del proyecto.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3213"/>
+        <location filename="Project/Project.py" line="3227"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4052"/>
+        <location filename="Project/Project.py" line="4066"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3222"/>
+        <location filename="Project/Project.py" line="3236"/>
         <source>Create &amp;Package List</source>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4212"/>
+        <location filename="Project/Project.py" line="4226"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3236"/>
+        <location filename="Project/Project.py" line="3250"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Crear &amp;Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3285"/>
+        <location filename="Project/Project.py" line="3299"/>
         <source>&amp;Project</source>
         <translation>&amp;Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3286"/>
+        <location filename="Project/Project.py" line="3300"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Abrir Proyectos &amp;Recientes</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3287"/>
+        <location filename="Project/Project.py" line="3301"/>
         <source>&amp;Version Control</source>
         <translation>Control de &amp;Versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3290"/>
+        <location filename="Project/Project.py" line="3304"/>
         <source>Chec&amp;k</source>
         <translation>Veri&amp;ficar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3292"/>
+        <location filename="Project/Project.py" line="3306"/>
         <source>Sho&amp;w</source>
         <translation>V&amp;er</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3293"/>
+        <location filename="Project/Project.py" line="3307"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramas</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3294"/>
+        <location filename="Project/Project.py" line="3308"/>
         <source>Session</source>
         <translation>Sesión</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3295"/>
+        <location filename="Project/Project.py" line="3309"/>
         <source>Source &amp;Documentation</source>
         <translation>Origen de &amp;Documentación </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3297"/>
+        <location filename="Project/Project.py" line="3311"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3298"/>
+        <location filename="Project/Project.py" line="3312"/>
         <source>Pac&amp;kagers</source>
         <translation>Empa&amp;quetadores</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3400"/>
+        <location filename="Project/Project.py" line="3414"/>
         <source>Project</source>
         <translation>Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3461"/>
+        <location filename="Project/Project.py" line="3475"/>
         <source>&amp;Clear</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3571"/>
+        <location filename="Project/Project.py" line="3585"/>
         <source>Search New Files</source>
         <translation>Buscar nuevos archivos</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3571"/>
+        <location filename="Project/Project.py" line="3585"/>
         <source>There were no new files found to be added.</source>
         <translation>No se han encontrado nuevos archivos para ser añadidos.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3709"/>
+        <location filename="Project/Project.py" line="3723"/>
         <source>Version Control System</source>
         <translation>Sistema de control de versiones</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3801"/>
+        <location filename="Project/Project.py" line="3815"/>
         <source>Coverage Data</source>
         <translation>Datos de Cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3847"/>
+        <location filename="Project/Project.py" line="3861"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3822"/>
+        <location filename="Project/Project.py" line="3836"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3822"/>
+        <location filename="Project/Project.py" line="3836"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3868"/>
+        <location filename="Project/Project.py" line="3882"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3921"/>
+        <location filename="Project/Project.py" line="3935"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4025"/>
+        <location filename="Project/Project.py" line="4039"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4069"/>
+        <location filename="Project/Project.py" line="4083"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4077"/>
+        <location filename="Project/Project.py" line="4091"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
@@ -28885,12 +29067,12 @@ Seleccione Actualizar.</translation>
         <translation>Registrando Tipo de Proyecto</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3251"/>
+        <location filename="Project/Project.py" line="3265"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Crear un Archivo de Plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3251"/>
+        <location filename="Project/Project.py" line="3265"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Crear un Archivo de Plugin (&amp;Snapshot)</translation>
     </message>
@@ -28910,22 +29092,22 @@ Seleccione Actualizar.</translation>
         <translation>Introduzca el patrón de ruta para los archivos de traducción (use &apos;%language%&apos; in lugar del código de idioma):</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3050"/>
+        <location filename="Project/Project.py" line="3064"/>
         <source>Lexer Associations</source>
         <translation>Asociaciones de Analizador Léxico</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3050"/>
+        <location filename="Project/Project.py" line="3064"/>
         <source>Lexer Associations...</source>
         <translation>Asociaciones de Analizador Léxico...</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3053"/>
+        <location filename="Project/Project.py" line="3067"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Ver las asociaciones de analizador léxico del proyecto (sobreescribiendo valores por defecto)</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3055"/>
+        <location filename="Project/Project.py" line="3069"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Analizador Léxico ...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de analizador léxico del proyecto. Estas asociaciones sobreescriben las asociaciones de analizador léxico globales. Los analizadores léxicos se utilizan para resaltar el texto en el editor.&lt;/p&gt;</translation>
     </message>
@@ -29050,72 +29232,72 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3226"/>
+        <location filename="Project/Project.py" line="3240"/>
         <source>Create an initial PKGLIST file for an eric5 plugin.</source>
         <translation>Crear un archivo inicial PKGLIST para un plugin  para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3228"/>
+        <location filename="Project/Project.py" line="3242"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Lista del Paquete&lt;/b&gt;&lt;p&gt;Crea una lista inicial de archivos a incluir en un archivo para plugin de eric5. Esta lista se crea a partir del archivo de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3240"/>
+        <location filename="Project/Project.py" line="3254"/>
         <source>Create an eric5 plugin archive file.</source>
         <translation>Crear un archivo de plugin para eric5.</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3242"/>
+        <location filename="Project/Project.py" line="3256"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Archivo de Plugin&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin para eric5 utilizando la lista de archivos dada en el archivo PKGLIST. El nombre de archivo se determina a partir del nombr del script principal.&lt;/p&gt; </translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3255"/>
+        <location filename="Project/Project.py" line="3269"/>
         <source>Create an eric5 plugin archive file (snapshot release).</source>
         <translation>Crear un archivo de plugin de eric5 (snapshot release).</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3257"/>
+        <location filename="Project/Project.py" line="3271"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un archivo de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin utilizando la lista de archivos proporcionada en el archivo PKGLIST. El nombre del archivo se determina por el nombre del script principal. La entrada para la versión del script proncipal se modifica para reflejar una versión snapshot.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3700"/>
+        <location filename="Project/Project.py" line="3714"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Revirtiendo sobreescritura.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="3709"/>
+        <location filename="Project/Project.py" line="3723"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4052"/>
+        <location filename="Project/Project.py" line="4066"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4089"/>
+        <location filename="Project/Project.py" line="4103"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4100"/>
+        <location filename="Project/Project.py" line="4114"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4120"/>
+        <location filename="Project/Project.py" line="4134"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4132"/>
+        <location filename="Project/Project.py" line="4146"/>
         <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Project/Project.py" line="4212"/>
+        <location filename="Project/Project.py" line="4226"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
@@ -33741,85 +33923,85 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <translation>Buscar y Reemplazar</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="32"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="23"/>
         <source>Press to close the window</source>
         <translation>Pulsar para  cerrar la ventana</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="42"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="33"/>
         <source>Find:</source>
         <translation>Buscar:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="71"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="62"/>
         <source>Press to find the previous occurrence</source>
         <translation>Pulsar para encontrar la ocurrencia anterior</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="78"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="69"/>
         <source>Press to find the next occurrence</source>
         <translation>Pulsar para encontrar la ocurrencia siguiente</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="85"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="76"/>
         <source>Match case</source>
         <translation>Coincidir mayúsculas/minúsculas</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="92"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="83"/>
         <source>Whole word</source>
         <translation>Palabra completa</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="106"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="97"/>
         <source>Replace:</source>
         <translation>Reemplazar:</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="135"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="126"/>
         <source>Press to replace the selection</source>
         <translation>Pulse para reemplazar la selección</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="149"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="140"/>
         <source>Press to replace all occurrences</source>
         <translation>Pulse para reemplazar todas las ocurrencias</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="99"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="90"/>
         <source>Regexp</source>
         <translation>Regexp</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="156"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="147"/>
         <source>Wrap around</source>
         <translation>Envolver</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="163"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="154"/>
         <source>Selection only</source>
         <translation>Selección solamente</translation>
     </message>
     <message>
-        <location filename="QScintilla/ReplaceWidget.ui" line="142"/>
+        <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
         <source>Press to replace the selection and search for the next occurence</source>
-        <translation>Pulse para reemplazar la selección y buscar la siguiente ocurrencia</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="506"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="511"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; no se ha encontrado.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="582"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="587"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Se han reemplazado {0} ocurrencias.</translation>
     </message>
     <message>
-        <location filename="QScintilla/SearchReplaceWidget.py" line="586"/>
+        <location filename="QScintilla/SearchReplaceWidget.py" line="591"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>No se ha reemplazado nada porque &apos;{0}&apos; no se ha encontrado.</translation>
     </message>
@@ -34111,17 +34293,17 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>Restaurar y borrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="541"/>
+        <location filename="QScintilla/Shell.py" line="548"/>
         <source>Passive Debug Mode</source>
         <translation>Modo de depuración pasiva</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="544"/>
+        <location filename="QScintilla/Shell.py" line="551"/>
         <source>No.</source>
         <translation>No.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1428"/>
+        <location filename="QScintilla/Shell.py" line="1435"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
@@ -34141,17 +34323,17 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="492"/>
+        <location filename="QScintilla/Shell.py" line="499"/>
         <source>Select History</source>
         <translation>Seleccionar historial</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="492"/>
+        <location filename="QScintilla/Shell.py" line="499"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Seleccionar la entrada del historial a ejecutar (las más recientes mostradas en último lugar).</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="542"/>
+        <location filename="QScintilla/Shell.py" line="549"/>
         <source>
 Not connected</source>
         <translation>No conectado</translation>
@@ -34167,29 +34349,29 @@ Not connected</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="546"/>
+        <location filename="QScintilla/Shell.py" line="553"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} en {1}, {2}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="607"/>
+        <location filename="QScintilla/Shell.py" line="614"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="615"/>
+        <location filename="QScintilla/Shell.py" line="622"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1158"/>
+        <location filename="QScintilla/Shell.py" line="1165"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Lenguaje de Shell  &quot;{0}&quot; no soportado.
 </translation>
     </message>
     <message>
-        <location filename="QScintilla/Shell.py" line="1428"/>
+        <location filename="QScintilla/Shell.py" line="1435"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
@@ -36266,202 +36448,202 @@ Not connected</source>
 <context>
     <name>Subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="192"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="194"/>
         <source>The svn process did not finish within 30s.</source>
         <translation>El proceso svn no terminó en un plazo de 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="194"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="196"/>
         <source>Could not start the svn executable.</source>
         <translation>No se ha podido ejecutar svn.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="219"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="221"/>
         <source>Create project in repository</source>
         <translation>Crear proyecto en el repositorio</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="219"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="221"/>
         <source>The project could not be created in the repository. Maybe the given repository doesn&apos;t exist or the repository server is down.</source>
         <translation>El proyecto no se ha podido crear en el repositorio. Quizá el repositorio proporcionado no existe o el servidor está caído.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="241"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="243"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="241"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="243"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
         <translation>No se ha podido hacer un checkout del proyecto en el repositorio.&lt;br/&gt;Restaurando los contenidos originales.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="311"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="313"/>
         <source>Importing project into Subversion repository</source>
         <translation>Importando proyecto al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="361"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="363"/>
         <source>Subversion Checkout</source>
         <translation>Checkout de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="423"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="425"/>
         <source>The tag must be a normal tag (tags) or a branch tag (branches). Please select from the list.</source>
         <translation>El tag debe ser una tag (tags) normal o branch (branches). Por favor, seleccione de la lista.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="382"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="384"/>
         <source>Checking project out of Subversion repository</source>
         <translation>Haciendo checkout del proyecto desde el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="423"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="425"/>
         <source>Subversion Export</source>
         <translation>Export de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="443"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="445"/>
         <source>Exporting project from Subversion repository</source>
         <translation>Exportando proyecto desde el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="527"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="529"/>
         <source>Commiting changes to Subversion repository</source>
         <translation>Haciendo commit de los cambios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="583"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="585"/>
         <source>Synchronizing with the Subversion repository</source>
         <translation>Sincronizando con el repositorio de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="657"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="686"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Añadiendo archivos/directorios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="730"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="785"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Añadiendo árboles de directorios al repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="765"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="820"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Eliminando archivos/directorios del repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1070"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1125"/>
         <source>Subversion Error</source>
         <translation>Error de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="931"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="986"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>La URL del repositorio del proyecto no ha podido recuperarse de la copia de trabajo. La operación tag se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="955"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1010"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>La URL del repositorio del proyecto tiene un formato no válido. La operación tag se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1019"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1074"/>
         <source>Reverting changes</source>
         <translation>Revirtiendo cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1046"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1101"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>La URL del repositorio del proyecto no ha podido recuperarse de la copia de trabajo. La operación switch se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1070"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1125"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>La URL del repositorio del proyecto tiene un formato no válido. La operación switch se abortará</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1350"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1548"/>
         <source>Subversion command</source>
         <translation>Comando de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1457"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1655"/>
         <source>Resolving conficts</source>
         <translation>Resolviendo conflictos</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1563"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1761"/>
         <source>Subversion Set Property</source>
         <translation>Asignar Propiedad de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1596"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1794"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Tiene que proporcionar un nombre de propiedad. Abortando.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1614"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1812"/>
         <source>Subversion Delete Property</source>
         <translation>Borrar Propiedad de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1443"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1632"/>
         <source>Enter property name</source>
         <translation>Introducir nombre de la propiedad</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="867"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="922"/>
         <source>Subversion Log</source>
         <translation>Log de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="867"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="922"/>
         <source>Select number of entries to show.</source>
         <translation>Seleccionar número de entradas a mostrar.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1780"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1978"/>
         <source>Locking in the Subversion repository</source>
         <translation>Bloqueando en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1818"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2016"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Desbloqueando en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1579"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1777"/>
         <source>Property set.</source>
         <translation>Propiedad establecida.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1629"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1827"/>
         <source>Property deleted.</source>
         <translation>Propiedad borrada.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1760"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1958"/>
         <source>Subversion Lock</source>
         <translation>Bloqueo de Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1760"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1958"/>
         <source>Enter lock comment</source>
         <translation>Introducir comentario para el bloqueo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1863"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2061"/>
         <source>Relocating</source>
         <translation>Realojando</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1889"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2087"/>
         <source>Repository Browser</source>
         <translation>Navegador de Repositorios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1889"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2087"/>
         <source>Enter the repository URL.</source>
         <translation>Introducir la URL del repositorio.</translation>
     </message>
@@ -36616,17 +36798,17 @@ Not connected</source>
         <translation>Sin versionar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1913"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2111"/>
         <source>Remove from changelist</source>
         <translation>Quitar de la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1949"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2147"/>
         <source>Add to changelist</source>
         <translation>Añadir a la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1939"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2137"/>
         <source>Enter name of the changelist:</source>
         <translation>Introduzca el nombre de la lista de cambios:</translation>
     </message>
@@ -36646,53 +36828,53 @@ Not connected</source>
         <translation>Lista de cambios movida</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="189"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="191"/>
         <source>The svn process finished with the exit code {0}</source>
         <translation>El proceso svn ha terminado con código de salida {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="827"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="882"/>
         <source>Moving {0}</source>
         <translation>Moviendo {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="990"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1045"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Haciendo un tag {0} en el repositorio Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1092"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1147"/>
         <source>Switching to {0}</source>
         <translation>Haciendo un switch a {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1194"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1249"/>
         <source>Merging {0}</source>
         <translation>Haciendo un merge de {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1314"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1512"/>
         <source>Cleaning up {0}</source>
         <translation>Limpiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1496"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1694"/>
         <source>Copying {0}</source>
         <translation>Copiando {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="327"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="329"/>
         <source>Imported revision {0}.
 </source>
         <translation>Importada revisión {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="554"/>
         <source>Committed revision {0}.</source>
         <translation>Commit realizado para revisión {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1099"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1154"/>
         <source>Revision {0}.
 </source>
         <translation>Revisión {0}.</translation>
@@ -37181,7 +37363,7 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDialog.py" line="80"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDialog.py" line="81"/>
         <source> (binary)</source>
         <translation>(binario)</translation>
     </message>
@@ -37197,7 +37379,7 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <translation>Revisión {0}.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDialog.py" line="81"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnDialog.py" line="82"/>
         <source>{0} {1}{2}
 </source>
         <translation>{0} {1}{2}
@@ -37528,12 +37710,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
         <translation>Seleccione el campo de filtrado</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="552"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="551"/>
         <source>Revision</source>
         <translation>Revisión</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="549"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="548"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -39475,12 +39657,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
         <source>Lock</source>
         <translation>Bloquear</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="718"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="717"/>
         <source>Unlock</source>
         <translation>Desbloquear</translation>
     </message>
@@ -39595,47 +39777,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>No hay cambios pendientes de commit disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="624"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>No hay entradas sin versionar disponibles/seleccionadas.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
         <source>Revert</source>
         <translation>Revertir</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="702"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>No hay archivos desbloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
         <source>There are no locked files available/selected.</source>
         <translation>No hay archivos bloqueados disponibles/seleccionados.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="735"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="734"/>
         <source>Break Lock</source>
         <translation>Romper Bloqueo</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="752"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
         <source>Steal Lock</source>
         <translation>Robar Bloqueo</translation>
     </message>
@@ -39650,17 +39832,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Añadir a la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
         <source>Remove from Changelist</source>
         <translation>Quitar de la lista de cambios</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="768"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que no pertenezcan a una lista de cambios.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="786"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>No hay archivos disponibles/seleccionados que pertenezcan a una lista de cambios.</translation>
     </message>
@@ -39740,7 +39922,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Restaurar perdidas</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="504"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="503"/>
         <source>all</source>
         <translation>todo</translation>
     </message>
@@ -39750,17 +39932,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation type="obsolete">Diferencia</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="683"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
         <source>Differences</source>
         <translation>Diferencias</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="585"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
         <source>There are no entries selected to be committed.</source>
         <translation>No hay entradas seleccionads sobre las que hacer commit.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="666"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
         <source>There are no missing entries available/selected.</source>
         <translation>No hay entradas perdidas disponibles/seleccionadas.</translation>
     </message>
@@ -42189,12 +42371,12 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="QScintilla/Terminal.py" line="404"/>
+        <location filename="QScintilla/Terminal.py" line="411"/>
         <source>Select History</source>
         <translation>Seleccionar historial</translation>
     </message>
     <message>
-        <location filename="QScintilla/Terminal.py" line="404"/>
+        <location filename="QScintilla/Terminal.py" line="411"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Seleccionar la entrada del historial a ejecutar (las más recientes mostradas en último lugar).</translation>
     </message>
@@ -42204,7 +42386,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Terminal.py" line="909"/>
+        <location filename="QScintilla/Terminal.py" line="917"/>
         <source>No shell has been configured.</source>
         <translation>No se ha configurado la shell.</translation>
     </message>
@@ -44190,41 +44372,115 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     </message>
 </context>
 <context>
+    <name>UserAgentManager</name>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="56"/>
+        <source>Saving user agent data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="56"/>
+        <source>&lt;p&gt;User agent data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="73"/>
+        <source>Loading user agent data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="73"/>
+        <source>&lt;p&gt;User agent data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>UserAgentMenu</name>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="45"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="55"/>
         <source>Default</source>
         <translation>Por defecto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="59"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="73"/>
         <source>Other...</source>
         <translation>Otro...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="93"/>
         <source>Custom user agent</source>
         <translation>Agente de usuario personalizado</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="76"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="93"/>
         <source>User agent:</source>
         <translation>Agente de Usuario:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="147"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="173"/>
         <source>Parsing default user agents</source>
         <translation>Interpretando agentes de usuario por defecto</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="147"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="173"/>
         <source>&lt;p&gt;Error parsing default user agents.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Error al interpretar agentes de usuario por defecto.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="136"/>
+        <location filename="Helpviewer/UserAgent/UserAgentMenu.py" line="162"/>
         <source>Various</source>
         <translation>Varios</translation>
+    </message>
+</context>
+<context>
+    <name>UserAgentModel</name>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentModel.py" line="30"/>
+        <source>Host</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentModel.py" line="31"/>
+        <source>User Agent String</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UserAgentsDialog</name>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="43"/>
+        <source>Enter search term</source>
+        <translation type="unfinished">Introduzca el término de búsqueda</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="50"/>
+        <source>Press to clear the search edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="85"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished">Pulse para eliminar las entradas seleccionadas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="88"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="95"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished">Pulse para eliminar todas las entradas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="98"/>
+        <source>Remove &amp;All</source>
+        <translation type="unfinished">Eliminar &amp;Todas</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentsDialog.ui" line="14"/>
+        <source>User Agent Settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -45166,7 +45422,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;h3&gt;Números de Versiones&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5807"/>
+        <location filename="UI/UserInterface.py" line="5810"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -45261,7 +45517,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Error de volcado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5773"/>
+        <location filename="UI/UserInterface.py" line="5776"/>
         <source>Error during updates check</source>
         <translation>Error durante la verificación de actualización</translation>
     </message>
@@ -45281,22 +45537,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation type="obsolete">No se puede descargar el archivo de versiones.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5760"/>
+        <location filename="UI/UserInterface.py" line="5763"/>
         <source>Update available</source>
         <translation>Actualizaciones disponibles</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5773"/>
+        <location filename="UI/UserInterface.py" line="5776"/>
         <source>Could not perform updates check.</source>
         <translation>No se puede llevar a cabo la verificación de actualizaciones.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5794"/>
+        <location filename="UI/UserInterface.py" line="5797"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versiones disponibles&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5847"/>
+        <location filename="UI/UserInterface.py" line="5850"/>
         <source>First time usage</source>
         <translation>Usado por primera vez</translation>
     </message>
@@ -45421,7 +45677,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;p&gt;Esta zona de la barra de estado muestra una indicación de las propiedades de escritura de los archivos del editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5822"/>
+        <location filename="UI/UserInterface.py" line="5825"/>
         <source>SSL Errors</source>
         <translation>Errores SSL</translation>
     </message>
@@ -45954,27 +46210,27 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Probando host {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5760"/>
+        <location filename="UI/UserInterface.py" line="5763"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>La actualización para &lt;b&gt;{0}&lt;/b&gt; de eric5 está disponible en &lt;b&gt;{1}&lt;/b&gt;. ¿Le gustaría obtenerla?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5769"/>
+        <location filename="UI/UserInterface.py" line="5772"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 está actualizado</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5769"/>
+        <location filename="UI/UserInterface.py" line="5772"/>
         <source>You are using the latest version of eric5</source>
         <translation>Está utilizando la última versión de eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5822"/>
+        <location filename="UI/UserInterface.py" line="5825"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errores SSL:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;¿Desea ignorar estos errores?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5847"/>
+        <location filename="UI/UserInterface.py" line="5850"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 todavía no está configurado. El diálogo de configuración va a ser iniciado.</translation>
     </message>
@@ -46114,12 +46370,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&lt;b&gt;Documentación de Python 2&lt;/b&gt;&lt;p&gt;Mostrar la documentación de Python 2. Si no se ha configurado un directorio con esta documentación, la ubicación de la documentación de Python 2 se asumirá en el directorio de documentación bajo la ubicación del ejecutable configurado de Python 2 en Windows, y en &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; para Unix. Establezca el valor de la variable de entorno PYTHON2DOCDIR para sobreescribir estas opciones. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5687"/>
+        <location filename="UI/UserInterface.py" line="5690"/>
         <source>Error getting versions information</source>
         <translation>Error al obtener información de versiones</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5681"/>
+        <location filename="UI/UserInterface.py" line="5684"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar. Póngase online por favor e inténtelo de nuevo.</translation>
     </message>
@@ -46134,7 +46390,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>No se ha podido iniciar el navegador web</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5687"/>
+        <location filename="UI/UserInterface.py" line="5690"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
@@ -50001,15 +50257,13 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="ViewManager/ViewManager.py" line="2740"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
-        <translatorcomment>Ver|Aumentar zoom</translatorcomment>
-        <translation>Aumentar Zoom</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="ViewManager/ViewManager.py" line="2757"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
-        <translatorcomment>Ver|Disminuir zoom</translatorcomment>
-        <translation>Disminuir Zoom</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -50337,77 +50591,77 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Puntos a examinar</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="167"/>
+        <location filename="Debugger/WatchPointViewer.py" line="166"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="137"/>
+        <location filename="Debugger/WatchPointViewer.py" line="136"/>
         <source>Edit...</source>
         <translation>Editar...</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="139"/>
+        <location filename="Debugger/WatchPointViewer.py" line="138"/>
         <source>Enable</source>
         <translation>Habilitar</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="171"/>
+        <location filename="Debugger/WatchPointViewer.py" line="170"/>
         <source>Enable all</source>
         <translation>Habilitar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="142"/>
+        <location filename="Debugger/WatchPointViewer.py" line="141"/>
         <source>Disable</source>
         <translation>Deshabilitar</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="175"/>
+        <location filename="Debugger/WatchPointViewer.py" line="174"/>
         <source>Disable all</source>
         <translation>Deshabilitar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="145"/>
+        <location filename="Debugger/WatchPointViewer.py" line="144"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="179"/>
+        <location filename="Debugger/WatchPointViewer.py" line="178"/>
         <source>Delete all</source>
         <translation>Borrar todo</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="169"/>
+        <location filename="Debugger/WatchPointViewer.py" line="168"/>
         <source>Enable selected</source>
         <translation>Habilitar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="173"/>
+        <location filename="Debugger/WatchPointViewer.py" line="172"/>
         <source>Disable selected</source>
         <translation>Deshabilitar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="177"/>
+        <location filename="Debugger/WatchPointViewer.py" line="176"/>
         <source>Delete selected</source>
         <translation>Borrar selección</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="232"/>
+        <location filename="Debugger/WatchPointViewer.py" line="231"/>
         <source>Watch expression already exists</source>
         <translation>La expresión a Examinar ya existe</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="181"/>
+        <location filename="Debugger/WatchPointViewer.py" line="180"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="225"/>
+        <location filename="Debugger/WatchPointViewer.py" line="224"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una expresión a examinar &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Debugger/WatchPointViewer.py" line="229"/>
+        <location filename="Debugger/WatchPointViewer.py" line="228"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una expresión a examinar &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; para la variable &lt;b&gt;{1}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
@@ -50914,17 +51168,17 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
 <context>
     <name>subversion</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1391"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1589"/>
         <source>unknown</source>
         <translation>desconocido</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1269"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1458"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Información del repositorio&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión actual&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión enviada&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Último autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1392"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1590"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Comitted time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
         <translation>&lt;h3&gt;Information del repositorio&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;PySvn V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Subversion API V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;URL&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Current revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión enviada&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha de envío&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Hora de envio&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{7}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Último autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{8}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>

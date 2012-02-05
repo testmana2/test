@@ -2147,6 +2147,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow.adblockManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarkAll?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarksManager?4()
@@ -2189,6 +2190,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.userAgentsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric5.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric=False, initShortcutsOnly=False, searchWord=None)
 eric5.Helpviewer.History.HistoryCompleter.HistoryCompleter.pathFromIndex?4(idx)
@@ -2530,7 +2532,25 @@ eric5.Helpviewer.UrlBar.UrlBar.UrlBar.setBrowser?4(browser)
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar.setPrivateMode?4(on)
 eric5.Helpviewer.UrlBar.UrlBar.UrlBar?1(mainWindow, parent=None)
 eric5.Helpviewer.UserAgent.UserAgentDefaults.UserAgentDefaults?7
-eric5.Helpviewer.UserAgent.UserAgentMenu.UserAgentMenu?1(title, parent=None)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.allHostNames?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.changed?7
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.close?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.hostsCount?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.removeUserAgent?4(host)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.save?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.setUserAgent?4(host, agent)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.setUserAgentForUrl?4(url, agent)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.userAgent?4(host)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.userAgentForUrl?4(url)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager?1(parent=None)
+eric5.Helpviewer.UserAgent.UserAgentMenu.UserAgentMenu?1(title, url=None, parent=None)
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.columnCount?4(parent=QModelIndex())
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.data?4(index, role)
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.headerData?4(section, orientation, role=Qt.DisplayRole)
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.removeRows?4(row, count, parent=QModelIndex())
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.rowCount?4(parent=QModelIndex())
+eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel?1(manager, parent=None)
+eric5.Helpviewer.UserAgent.UserAgentsDialog.UserAgentsDialog?1(parent=None)
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetFileReportPattern?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetUrlReportPattern?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.ReportFileScanPagePattern?7

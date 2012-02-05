@@ -44,6 +44,7 @@ from .Network.NetworkAccessManager import NetworkAccessManager, SSL_AVAILABLE
 from .AdBlock.AdBlockManager import AdBlockManager
 from .OfflineStorage.OfflineStorageConfigDialog import OfflineStorageConfigDialog
 from .UserAgent.UserAgentMenu import UserAgentMenu
+from .UserAgent.UserAgentManager import UserAgentManager
 from .HelpTabWidget import HelpTabWidget
 from .Download.DownloadManager import DownloadManager
 from .VirusTotalApi import VirusTotalAPI
@@ -91,6 +92,7 @@ class HelpWindow(QMainWindow):
     _adblockManager = None
     _downloadManager = None
     _feedsManager = None
+    _userAgentsManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -1184,6 +1186,20 @@ class HelpWindow(QMainWindow):
             self.siteInfoAct.triggered[()].connect(self.__showSiteinfoDialog)
         self.__actions.append(self.siteInfoAct)
         
+        self.userAgentManagerAct = E5Action(self.trUtf8('Manage User Agent Settings'),
+            self.trUtf8('Manage &User Agent Settings'),
+            0, 0, self, 'help_user_agent_settings')
+        self.userAgentManagerAct.setStatusTip(self.trUtf8(
+                'Shows a dialog to manage the User Agent settings'))
+        self.userAgentManagerAct.setWhatsThis(self.trUtf8(
+                """<b>Manage User Agent Settings</b>"""
+                """<p>Shows a dialog to manage the User Agent settings.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.userAgentManagerAct.triggered[()].connect(
+                self.__showUserAgentsDialog)
+        self.__actions.append(self.userAgentManagerAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1298,8 +1314,9 @@ class HelpWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.adblockAct)
         menu.addSeparator()
-        self.__userAgentMenu = UserAgentMenu(self.trUtf8("User Agent"))
+        self.__userAgentMenu = UserAgentMenu(self.trUtf8("Global User Agent"))
         menu.addMenu(self.__userAgentMenu)
+        menu.addAction(self.userAgentManagerAct)
         menu.addSeparator()
         menu.addAction(self.manageQtHelpDocsAct)
         menu.addAction(self.manageQtHelpFiltersAct)
@@ -2829,6 +2846,27 @@ class HelpWindow(QMainWindow):
         self.__siteinfoDialog = SiteInfoDialog(self.currentBrowser(), self)
         self.__siteinfoDialog.setAttribute(Qt.WA_DeleteOnClose)
         self.__siteinfoDialog.show()
+
+    @classmethod
+    def userAgentsManager(cls):
+        """
+        Class method to get a reference to the user agents manager.
+        
+        @return reference to the user agents manager (UserAgentManager)
+        """
+        if cls._userAgentsManager is None:
+            cls._userAgentsManager = UserAgentManager()
+        
+        return cls._userAgentsManager
+    
+    def __showUserAgentsDialog(self):
+        """
+        Private slot to show the user agents management dialog.
+        """
+        from .UserAgent.UserAgentsDialog import UserAgentsDialog
+        
+        dlg = UserAgentsDialog(self)
+        dlg.exec_()
     
     ###########################################################################
     ## Interface to VirusTotal below                                         ##

@@ -287,7 +287,10 @@
             </section>
             <section title="eric5.Helpviewer.UserAgent" ref="index-eric5.Helpviewer.UserAgent.html">
               <section title="eric5.Helpviewer.UserAgent.UserAgentDefaults" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentManager" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentModel" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentsDialog" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html" />
             </section>
             <section title="eric5.Helpviewer.HTMLResources" ref="eric5.Helpviewer.HTMLResources.html" />
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
@@ -4550,6 +4553,7 @@
       <keyword name="HelpWindow.__showSearchWindow" id="HelpWindow.__showSearchWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSearchWindow" />
       <keyword name="HelpWindow.__showSiteinfoDialog" id="HelpWindow.__showSiteinfoDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSiteinfoDialog" />
       <keyword name="HelpWindow.__showTocWindow" id="HelpWindow.__showTocWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showTocWindow" />
+      <keyword name="HelpWindow.__showUserAgentsDialog" id="HelpWindow.__showUserAgentsDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showUserAgentsDialog" />
       <keyword name="HelpWindow.__stopLoading" id="HelpWindow.__stopLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__stopLoading" />
       <keyword name="HelpWindow.__switchTab" id="HelpWindow.__switchTab" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__switchTab" />
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
@@ -4605,6 +4609,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.userAgentsManager" id="HelpWindow.userAgentsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.userAgentsManager" />
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric5.Helpviewer.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
@@ -9771,6 +9776,19 @@
       <keyword name="UrlBar.setPrivateMode" id="UrlBar.setPrivateMode" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.setPrivateMode" />
       <keyword name="UserAgent (Package)" id="UserAgent (Package)" ref="index-eric5.Helpviewer.UserAgent.html" />
       <keyword name="UserAgentDefaults (Module)" id="UserAgentDefaults (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentDefaults.html" />
+      <keyword name="UserAgentManager" id="UserAgentManager" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager" />
+      <keyword name="UserAgentManager (Constructor)" id="UserAgentManager (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__init__" />
+      <keyword name="UserAgentManager (Module)" id="UserAgentManager (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
+      <keyword name="UserAgentManager.__load" id="UserAgentManager.__load" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__load" />
+      <keyword name="UserAgentManager.allHostNames" id="UserAgentManager.allHostNames" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.allHostNames" />
+      <keyword name="UserAgentManager.close" id="UserAgentManager.close" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.close" />
+      <keyword name="UserAgentManager.hostsCount" id="UserAgentManager.hostsCount" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.hostsCount" />
+      <keyword name="UserAgentManager.removeUserAgent" id="UserAgentManager.removeUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.removeUserAgent" />
+      <keyword name="UserAgentManager.save" id="UserAgentManager.save" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.save" />
+      <keyword name="UserAgentManager.setUserAgent" id="UserAgentManager.setUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.setUserAgent" />
+      <keyword name="UserAgentManager.setUserAgentForUrl" id="UserAgentManager.setUserAgentForUrl" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.setUserAgentForUrl" />
+      <keyword name="UserAgentManager.userAgent" id="UserAgentManager.userAgent" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.userAgent" />
+      <keyword name="UserAgentManager.userAgentForUrl" id="UserAgentManager.userAgentForUrl" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.userAgentForUrl" />
       <keyword name="UserAgentMenu" id="UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu" />
       <keyword name="UserAgentMenu (Constructor)" id="UserAgentMenu (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__init__" />
       <keyword name="UserAgentMenu (Module)" id="UserAgentMenu (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
@@ -9779,6 +9797,18 @@
       <keyword name="UserAgentMenu.__populateMenu" id="UserAgentMenu.__populateMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__populateMenu" />
       <keyword name="UserAgentMenu.__switchToDefaultUserAgent" id="UserAgentMenu.__switchToDefaultUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__switchToDefaultUserAgent" />
       <keyword name="UserAgentMenu.__switchToOtherUserAgent" id="UserAgentMenu.__switchToOtherUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html#UserAgentMenu.__switchToOtherUserAgent" />
+      <keyword name="UserAgentModel" id="UserAgentModel" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel" />
+      <keyword name="UserAgentModel (Constructor)" id="UserAgentModel (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.__init__" />
+      <keyword name="UserAgentModel (Module)" id="UserAgentModel (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html" />
+      <keyword name="UserAgentModel.__userAgentsChanged" id="UserAgentModel.__userAgentsChanged" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.__userAgentsChanged" />
+      <keyword name="UserAgentModel.columnCount" id="UserAgentModel.columnCount" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.columnCount" />
+      <keyword name="UserAgentModel.data" id="UserAgentModel.data" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.data" />
+      <keyword name="UserAgentModel.headerData" id="UserAgentModel.headerData" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.headerData" />
+      <keyword name="UserAgentModel.removeRows" id="UserAgentModel.removeRows" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.removeRows" />
+      <keyword name="UserAgentModel.rowCount" id="UserAgentModel.rowCount" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.rowCount" />
+      <keyword name="UserAgentsDialog" id="UserAgentsDialog" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html#UserAgentsDialog" />
+      <keyword name="UserAgentsDialog (Constructor)" id="UserAgentsDialog (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html#UserAgentsDialog.__init__" />
+      <keyword name="UserAgentsDialog (Module)" id="UserAgentsDialog (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html" />
       <keyword name="UserInterface" id="UserInterface" ref="eric5.UI.UserInterface.html#UserInterface" />
       <keyword name="UserInterface (Constructor)" id="UserInterface (Constructor)" ref="eric5.UI.UserInterface.html#UserInterface.__init__" />
       <keyword name="UserInterface (Module)" id="UserInterface (Module)" ref="eric5.UI.UserInterface.html" />
@@ -11496,7 +11526,10 @@
       <file>eric5.Helpviewer.UrlBar.StackedUrlBar.html</file>
       <file>eric5.Helpviewer.UrlBar.UrlBar.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentDefaults.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentManager.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentMenu.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentModel.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentsDialog.html</file>
       <file>eric5.Helpviewer.VirusTotalApi.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
