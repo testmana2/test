@@ -1833,6 +1833,8 @@ class HelpWindow(QMainWindow):
         
         self.adblockManager().close()
         
+        self.userAgentsManager().close()
+        
         self.searchEdit.openSearchManager().close()
         
         self.__searchEngine.cancelIndexing()
