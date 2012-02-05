@@ -260,7 +260,7 @@ class PasswordManager(QObject):
     
     def close(self):
         """
-        Public method to close the open search engines manager.
+        Public method to close the passwords manager.
         """
         self.__saveTimer.saveIfNeccessary()
     

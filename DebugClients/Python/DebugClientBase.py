@@ -1422,7 +1422,7 @@ class DebugClientBase(object):
                             dictkeys = dict.keys()
                         else:
                             dictkeys = range(len(dict))
-                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter, 
+                    vlist = self.__formatVariablesList(dictkeys, dict, scope, filter,
                                                      formatSequences)
             varlist.extend(vlist)
         
