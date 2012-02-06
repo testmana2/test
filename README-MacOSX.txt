@@ -92,7 +92,7 @@ the Qt4 directory within the extracted folder and enter these commands in a
 terminal window
 
 qmake qscintilla.pro -spec macx-g++
-make -j
+make -j x (number of cores including hyper threaded ones)
 sudo make install
 
 
@@ -107,7 +107,7 @@ archive in the Downloads folder (or any other folder of your choice). Change to
 the extracted folder and enter these commands in a terminal window
 
 python3 configure.py
-make -j
+make -j x (number of cores including hyper threaded ones)
 sudo make install
 
 
@@ -121,8 +121,8 @@ After the download has finished open a Finder window and extract the downloaded
 archive in the Downloads folder (or any other folder of your choice). Change to
 the extracted folder and enter these commands in a terminal window
 
-python3 configure.py -c -j 8 (number of cores including hyper threaded ones)
-make -j
+python3 configure.py -c -j x (number of cores including hyper threaded ones)
+make -j x (number of cores including hyper threaded ones)
 sudo make install
 
 
@@ -131,8 +131,8 @@ sudo make install
 Change back to the extracted QScintilla2 directory and in there change to the
 Python subdirectory. Enter these commands in a terminal window
 
-python3 configure.py -c -j 8 (number of cores including hyper threaded ones)
-make -j
+python3 configure.py -c -j x (number of cores including hyper threaded ones)
+make -j x (number of cores including hyper threaded ones)
 sudo make install
 
 
@@ -148,6 +148,9 @@ http://www.macports.org/install.php
 and install it with the usual procedure. You may read about it's usage via
 
 http://guide.macports.org/#using.port
+
+For a recipe on how to update MacPorts and the installed ports see the end
+of this file (Appendix A)
 
 
 9. Install aspell and dictionaries
@@ -344,3 +347,11 @@ sudo python3 setup.py install
 
 This completes this installation instruction. Please enjoy using eric4 and let
 the world know about it.
+
+Appendix A Update of MacPorts
+-----------------------------
+In order to update MacPorts and the installed packages enter these commands in a
+terminal window
+
+sudo port selfupdate        (update MacPorts itself)
+sudo port upgrade outdated  (update outdated installed ports)
