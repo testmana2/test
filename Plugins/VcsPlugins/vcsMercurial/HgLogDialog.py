@@ -131,7 +131,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if self.mode == "log":
             args.append('--copies')
         args.append('--style')
-        if self.vcs.version >= (1, 8):
+        if self.vcs.version >= (2, 1):
+            args.append(os.path.join(os.path.dirname(__file__),
+                                     "styles", "logDialogBookmarkPhase.style"))
+        elif self.vcs.version >= (1, 8):
             args.append(os.path.join(os.path.dirname(__file__),
                                      "styles", "logDialogBookmark.style"))
         else:
@@ -301,6 +304,9 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             dstr += '<br />\n'
             html += dstr
             
+            if "phase" in entry:
+                html += self.trUtf8("Phase: {0}<br />\n").format(entry["phase"])
+            
             html += self.trUtf8("Branches: {0}<br />\n").format(entry["branches"])
             
             html += self.trUtf8("Tags: {0}<br />\n").format(entry["tags"])
@@ -384,7 +390,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 self.endInitialText = True
             if key in ("change", "branches", "tags", "parents", "user",
                         "date", "file_copies", "file_adds", "files_mods",
-                        "file_dels", "bookmarks"):
+                        "file_dels", "bookmarks", "phase"):
                 self.lastLogEntry[key] = value.strip()
             elif key == "description":
                 self.lastLogEntry[key] = [value.strip()]

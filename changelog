@@ -6,6 +6,8 @@ Version 5.3.0:
   -- added capability to change the colours of the edit area independant from
      the colours of the system style
 - Version Control System Interfaces
+  -- Mercurial
+     --- added support for Phases as of Mercurial 2.1
   -- Subversion
      --- changed code to make the subversion plug-ins compatible with the new
          generation working copy meta-data format

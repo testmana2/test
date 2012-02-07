@@ -1307,6 +1307,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmark.style</Other>
     <Other>README-MacOSX.txt</Other>
     <Other>default_Mac.e4k</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmarkPhase.style</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmarkPhase.style</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

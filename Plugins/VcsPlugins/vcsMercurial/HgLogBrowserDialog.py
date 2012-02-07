@@ -38,10 +38,11 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     IconColumn = 0
     BranchColumn = 1
     RevisionColumn = 2
-    AuthorColumn = 3
-    DateColumn = 4
-    MessageColumn = 5
-    TagsColumn = 6
+    PhaseColumn = 3
+    AuthorColumn = 4
+    DateColumn = 5
+    MessageColumn = 6
+    TagsColumn = 7
     
     def __init__(self, vcs, mode="log", bundle=None, parent=None):
         """
@@ -130,6 +131,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.vcs.version >= (1, 8):
             self.logTree.headerItem().setText(self.logTree.columnCount(),
                 self.trUtf8("Bookmarks"))
+        if self.vcs.version < (2, 1):
+            self.logTree.setColumnHidden(self.PhaseColumn, True)
     
     def __initData(self):
         """
@@ -505,7 +508,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         parts[-2].split(":", 1)[0])
     
     def __generateLogItem(self, author, date, message, revision, changedPaths,
-                          parents, branches, tags, bookmarks=None):
+                          parents, branches, tags, phase, bookmarks=None):
         """
         Private method to generate a log tree entry.
         
@@ -537,6 +540,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             "",
             branches[0] + closedStr,
             "{0:>7}:{1}".format(rev, node),
+            phase,
             author,
             date,
             msgtxt,
@@ -637,7 +641,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         if self.commandMode == "log":
             args.append('--copies')
         args.append('--style')
-        if self.vcs.version >= (1, 8):
+        if self.vcs.version >= (2, 1):
+            args.append(os.path.join(os.path.dirname(__file__),
+                                     "styles", "logBrowserBookmarkPhase.style"))
+        elif self.vcs.version >= (1, 8):
             args.append(os.path.join(os.path.dirname(__file__),
                                      "styles", "logBrowserBookmark.style"))
         else:
@@ -751,7 +758,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private method to process the buffered output of the hg log command.
         """
         noEntries = 0
-        log = {"message": [], "bookmarks": None}
+        log = {"message": [], "bookmarks": None, "phase": ""}
         changedPaths = []
         initialText = True
         fileCopies = {}
@@ -820,6 +827,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     log["tags"] = value.strip().split(", ")
                 elif key == "bookmarks":
                     log["bookmarks"] = value.strip().split(", ")
+                elif key == "phase":
+                    log["phase"] = value.strip()
                 else:
                     if initialText:
                         continue
@@ -830,7 +839,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     self.__generateLogItem(log["author"], log["date"],
                         log["message"], log["revision"], changedPaths,
                         log["parents"], log["branches"], log["tags"],
-                        log["bookmarks"])
+                        log["phase"], log["bookmarks"])
                     dt = QDate.fromString(log["date"], Qt.ISODate)
                     if not self.__maxDate.isValid() and \
                        not self.__minDate.isValid():
@@ -842,7 +851,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         if self.__minDate > dt:
                             self.__minDate = dt
                     noEntries += 1
-                    log = {"message": [], "bookmarks": None}
+                    log = {"message": [], "bookmarks": None, "phase": ""}
                     changedPaths = []
                     fileCopies = {}
         
