@@ -1124,9 +1124,9 @@ class DebugClientBase(object):
         # Search sys.path.
         for p in sys.path:
             afn = os.path.abspath(os.path.join(p, fn))
-            afn = os.path.normcase(afn)
+            nafn = os.path.normcase(afn)
 
-            if os.path.exists(afn):
+            if os.path.exists(nafn):
                 self.fncache[fn] = afn
                 d = os.path.dirname(afn)
                 if (d not in sys.path) and (d not in self.dircache):
@@ -1136,9 +1136,9 @@ class DebugClientBase(object):
         # Search the additional directory cache
         for p in self.dircache:
             afn = os.path.abspath(os.path.join(p, fn))
-            afn = os.path.normcase(afn)
+            nafn = os.path.normcase(afn)
             
-            if os.path.exists(afn):
+            if os.path.exists(nafn):
                 self.fncache[fn] = afn
                 return afn
                 
