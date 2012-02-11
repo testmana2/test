@@ -101,12 +101,29 @@ class EditorAssembly(QWidget):
             # step 2: populate the members combo, if the entry is a class
             self.__membersCombo.clear()
             entryName = self.__globalsCombo.itemText(index)
-            if self.__module and entryName in self.__module.classes:
-                cl = self.__module.classes[entryName]
+            if self.__module:
+                if entryName in self.__module.classes:
+                    entry = self.__module.classes[entryName]
+                elif entryName in self.__module.modules:
+                    entry = self.__module.modules[entryName]
+                    # step 2.0: add module classes
+                    items = []
+                    for cl in entry.classes.values():
+                        if cl.isPrivate():
+                            icon = UI.PixmapCache.getIcon("class_private.png")
+                        elif cl.isProtected():
+                            icon = UI.PixmapCache.getIcon("class_protected.png")
+                        else:
+                            icon = UI.PixmapCache.getIcon("class.png")
+                        items.append((cl.name, icon, cl.lineno))
+                    for itm in sorted(items):
+                        self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                else:
+                    return
                 
                 # step 2.1: add class methods
                 items = []
-                for meth in cl.methods.values():
+                for meth in entry.methods.values():
                     if meth.modifier == Function.Static:
                         icon = UI.PixmapCache.getIcon("method_static.png")
                     elif meth.modifier == Function.Class:
@@ -123,7 +140,7 @@ class EditorAssembly(QWidget):
                 
                 # step 2.2: add class instance attributes
                 items = []
-                for attr in cl.attributes.values():
+                for attr in entry.attributes.values():
                     if attr.isPrivate():
                         icon = UI.PixmapCache.getIcon("attribute_private.png")
                     elif attr.isProtected():
@@ -137,7 +154,7 @@ class EditorAssembly(QWidget):
                 # step 2.3: add class attributes
                 items = []
                 icon = UI.PixmapCache.getIcon("attribute_class.png")
-                for glob in cl.globals.values():
+                for glob in entry.globals.values():
                     items.append((glob.name, icon, glob.lineno))
                 for itm in sorted(items):
                     self.__membersCombo.addItem(itm[1], itm[0], itm[2])
@@ -187,7 +204,15 @@ class EditorAssembly(QWidget):
                 
                 self.__globalsCombo.addItem("")
                 
-                # step 1: add classes
+                # step 1: add modules
+                items = []
+                for module in self.__module.modules.values():
+                    items.append((module.name, UI.PixmapCache.getIcon("module.png"),
+                                  module.lineno))
+                for itm in sorted(items):
+                    self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                
+                # step 2: add classes
                 items = []
                 for cl in self.__module.classes.values():
                     if cl.isPrivate():
@@ -200,7 +225,7 @@ class EditorAssembly(QWidget):
                 for itm in sorted(items):
                     self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
                 
-                # step 2: add functions
+                # step 3: add functions
                 items = []
                 for func in self.__module.functions.values():
                     if func.isPrivate():
@@ -213,7 +238,7 @@ class EditorAssembly(QWidget):
                 for itm in sorted(items):
                     self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
                 
-                # step 3: add attributes
+                # step 4: add attributes
                 items = []
                 for glob in self.__module.globals.values():
                     if glob.isPrivate():
