@@ -170,6 +170,9 @@ VersionControl
 <td><a href="#Hg.hgOutgoing">hgOutgoing</a></td>
 <td>Public method used to view the log of outgoing changes from the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgPhase">hgPhase</a></td>
+<td>Public method to change the phase of revisions.</td>
+</tr><tr>
 <td><a href="#Hg.hgPreviewBundle">hgPreviewBundle</a></td>
 <td>Public method used to view the log of incoming changes from a changegroup file.</td>
 </tr><tr>
@@ -711,6 +714,25 @@ properly normalized url for subversion (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to show the log of (string)
+</dd>
+</dl><a NAME="Hg.hgPhase" ID="Hg.hgPhase"></a>
+<h4>Hg.hgPhase</h4>
+<b>hgPhase</b>(<i>name, data=None</i>)
+<p>
+        Public method to change the phase of revisions.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+directory name of the project to export from (string)
+</dd><dt><i>data</i></dt>
+<dd>
+tuple giving phase data (list of revisions, phase, flag
+            indicating a forced operation) (list of strings, string, boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="Hg.hgPreviewBundle" ID="Hg.hgPreviewBundle"></a>
 <h4>Hg.hgPreviewBundle</h4>

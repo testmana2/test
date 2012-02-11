@@ -133,6 +133,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 self.trUtf8("Bookmarks"))
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
+            self.phaseLine.hide()
+            self.phaseButton.hide()
     
     def __initData(self):
         """
@@ -985,6 +987,52 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             self.diffRevisionsButton.setEnabled(False)
     
+    def __updatePhaseButton(self):
+        """
+        Private slot to update the status of the phase button.
+        """
+        # step 1: count entries with changeable phases
+        secret = 0
+        draft = 0
+        public = 0
+        for itm in self.logTree.selectedItems():
+            phase = itm.text(self.PhaseColumn)
+            if phase == "draft":
+                draft += 1
+            elif phase == "secret":
+                secret += 1
+            else:
+                public += 1
+        
+        # step 2: set the status of the phase button
+        if public == 0 and \
+           ((secret > 0 and draft == 0) or \
+            (secret == 0 and draft > 0)):
+            self.phaseButton.setEnabled(True)
+        else:
+            self.phaseButton.setEnabled(False)
+    
+    def __updateGui(self, itm):
+        """
+        Private slot to update GUI elements except the diff and phase buttons.
+        
+        @param itm reference to the item the update should be based on (QTreeWidgetItem)
+        """
+        self.messageEdit.clear()
+        self.filesTree.clear()
+        
+        if itm is not None:
+            for line in itm.data(0, self.__messageRole):
+                self.messageEdit.append(line.strip())
+            
+            changes = itm.data(0, self.__changesRole)
+            if len(changes) > 0:
+                for change in changes:
+                    self.__generateFileItem(
+                        change["action"], change["path"], change["copyfrom"])
+                self.__resizeColumnsFiles()
+                self.__resortFiles()
+    
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_logTree_currentItemChanged(self, current, previous):
         """
@@ -993,22 +1041,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param current reference to the new current item (QTreeWidgetItem)
         @param previous reference to the old current item (QTreeWidgetItem)
         """
-        self.messageEdit.clear()
-        self.filesTree.clear()
-        
-        if current is not None:
-            for line in current.data(0, self.__messageRole):
-                self.messageEdit.append(line.strip())
-            
-            changes = current.data(0, self.__changesRole)
-            if len(changes) > 0:
-                for change in changes:
-                    self.__generateFileItem(
-                        change["action"], change["path"], change["copyfrom"])
-                self.__resizeColumnsFiles()
-                self.__resortFiles()
-        
+        self.__updateGui(current)
         self.__updateDiffButtons()
+        self.__updatePhaseButton()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1016,9 +1051,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         Private slot called, when the selection has changed.
         """
         if len(self.logTree.selectedItems()) == 1:
-            self.logTree.setCurrentItem(self.logTree.selectedItems()[0])
+            self.__updateGui(self.logTree.selectedItems()[0])
         
         self.__updateDiffButtons()
+        self.__updatePhaseButton()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -1033,7 +1069,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 1 button.
         """
-        itm = self.logTree.currentItem()
+        itm = self.logTree.selectedItems()[0]
         if itm is None:
             self.diffP1Button.setEnabled(False)
             return
@@ -1051,7 +1087,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         Private slot to handle the Diff to Parent 2 button.
         """
-        itm = self.logTree.currentItem()
+        itm = self.logTree.selectedItems()[0]
         if itm is None:
             self.diffP2Button.setEnabled(False)
             return
@@ -1250,3 +1286,29 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             evt.accept()
             return
         super().keyPressEvent(evt)
+    
+    @pyqtSlot()
+    def on_phaseButton_clicked(self):
+        """
+        Private slot to handle the Change Phase button.
+        """
+        currentPhase = self.logTree.selectedItems()[0].text(self.PhaseColumn)
+        revs = []
+        for itm in self.logTree.selectedItems():
+            if itm.text(self.PhaseColumn) == currentPhase:
+                revs.append(itm.text(self.RevisionColumn).split(":")[0].strip())
+        
+        if not revs:
+            self.phaseButton.setEnabled(False)
+            return
+        
+        if currentPhase == "draft":
+            newPhase = "secret"
+            data = (revs, "s", True)
+        else:
+            newPhase = "draft"
+            data = (revs, "d", False)
+        res = self.vcs.hgPhase(self.repodir, data)
+        if res:
+            for itm in self.logTree.selectedItems():
+                itm.setText(self.PhaseColumn, newPhase)

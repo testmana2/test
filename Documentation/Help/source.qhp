@@ -445,6 +445,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html" />
@@ -4646,6 +4647,7 @@
       <keyword name="Hg.hgLogBrowser" id="Hg.hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgLogBrowser" />
       <keyword name="Hg.hgNormalizeURL" id="Hg.hgNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgNormalizeURL" />
       <keyword name="Hg.hgOutgoing" id="Hg.hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgOutgoing" />
+      <keyword name="Hg.hgPhase" id="Hg.hgPhase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPhase" />
       <keyword name="Hg.hgPreviewBundle" id="Hg.hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPreviewBundle" />
       <keyword name="Hg.hgPull" id="Hg.hgPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPull" />
       <keyword name="Hg.hgPush" id="Hg.hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgPush" />
@@ -4974,6 +4976,8 @@
       <keyword name="HgLogBrowserDialog.__resortFiles" id="HgLogBrowserDialog.__resortFiles" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resortFiles" />
       <keyword name="HgLogBrowserDialog.__showError" id="HgLogBrowserDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__showError" />
       <keyword name="HgLogBrowserDialog.__updateDiffButtons" id="HgLogBrowserDialog.__updateDiffButtons" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateDiffButtons" />
+      <keyword name="HgLogBrowserDialog.__updateGui" id="HgLogBrowserDialog.__updateGui" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updateGui" />
+      <keyword name="HgLogBrowserDialog.__updatePhaseButton" id="HgLogBrowserDialog.__updatePhaseButton" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__updatePhaseButton" />
       <keyword name="HgLogBrowserDialog.closeEvent" id="HgLogBrowserDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.closeEvent" />
       <keyword name="HgLogBrowserDialog.col2x" id="HgLogBrowserDialog.col2x" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.col2x" />
       <keyword name="HgLogBrowserDialog.keyPressEvent" id="HgLogBrowserDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.keyPressEvent" />
@@ -4990,6 +4994,7 @@
       <keyword name="HgLogBrowserDialog.on_logTree_itemSelectionChanged" id="HgLogBrowserDialog.on_logTree_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_logTree_itemSelectionChanged" />
       <keyword name="HgLogBrowserDialog.on_nextButton_clicked" id="HgLogBrowserDialog.on_nextButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_nextButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_passwordCheckBox_toggled" id="HgLogBrowserDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgLogBrowserDialog.on_phaseButton_clicked" id="HgLogBrowserDialog.on_phaseButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_phaseButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_refreshButton_clicked" id="HgLogBrowserDialog.on_refreshButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_refreshButton_clicked" />
       <keyword name="HgLogBrowserDialog.on_rxEdit_textChanged" id="HgLogBrowserDialog.on_rxEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_rxEdit_textChanged" />
       <keyword name="HgLogBrowserDialog.on_sendButton_clicked" id="HgLogBrowserDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.on_sendButton_clicked" />
@@ -5051,6 +5056,13 @@
       <keyword name="HgOptionsDialog (Constructor)" id="HgOptionsDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.__init__" />
       <keyword name="HgOptionsDialog (Module)" id="HgOptionsDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
       <keyword name="HgOptionsDialog.getData" id="HgOptionsDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.getData" />
+      <keyword name="HgPhaseDialog" id="HgPhaseDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog" />
+      <keyword name="HgPhaseDialog (Constructor)" id="HgPhaseDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog.__init__" />
+      <keyword name="HgPhaseDialog (Module)" id="HgPhaseDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html" />
+      <keyword name="HgPhaseDialog.__updateOk" id="HgPhaseDialog.__updateOk" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog.__updateOk" />
+      <keyword name="HgPhaseDialog.getData" id="HgPhaseDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog.getData" />
+      <keyword name="HgPhaseDialog.on_phaseCombo_activated" id="HgPhaseDialog.on_phaseCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog.on_phaseCombo_activated" />
+      <keyword name="HgPhaseDialog.on_revisionsEdit_textChanged" id="HgPhaseDialog.on_revisionsEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html#HgPhaseDialog.on_revisionsEdit_textChanged" />
       <keyword name="HgProjectBrowserHelper" id="HgProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper" />
       <keyword name="HgProjectBrowserHelper (Constructor)" id="HgProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__init__" />
       <keyword name="HgProjectBrowserHelper.__HgAnnotate" id="HgProjectBrowserHelper.__HgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgAnnotate" />
@@ -5095,6 +5107,7 @@
       <keyword name="HgProjectHelper.__hgLogBrowser" id="HgProjectHelper.__hgLogBrowser" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgLogBrowser" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />
       <keyword name="HgProjectHelper.__hgParents" id="HgProjectHelper.__hgParents" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgParents" />
+      <keyword name="HgProjectHelper.__hgPhase" id="HgProjectHelper.__hgPhase" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPhase" />
       <keyword name="HgProjectHelper.__hgPreviewBundle" id="HgProjectHelper.__hgPreviewBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPreviewBundle" />
       <keyword name="HgProjectHelper.__hgPull" id="HgProjectHelper.__hgPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPull" />
       <keyword name="HgProjectHelper.__hgPush" id="HgProjectHelper.__hgPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgPush" />
@@ -11616,6 +11629,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgServeDialog.html</file>

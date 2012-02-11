@@ -3478,6 +3478,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.Bran
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.DateColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.IconColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.MessageColumn?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.PhaseColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.RevisionColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.TagsColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.closeEvent?4(e)
@@ -3496,6 +3497,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_l
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_itemSelectionChanged?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_nextButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_passwordCheckBox_toggled?4(isOn)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_phaseButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_refreshButton_clicked?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_rxEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_sendButton_clicked?4()
@@ -3538,6 +3540,10 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.HgNewProjectOpti
 eric5.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.HgNewProjectOptionsDialog?1(vcs, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.HgOptionsDialog.getData?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.HgOptionsDialog?1(vcs, project, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.HgPhaseDialog.getData?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.HgPhaseDialog.on_phaseCombo_activated?4(txt)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.HgPhaseDialog.on_revisionsEdit_textChanged?4()
+eric5.Plugins.VcsPlugins.vcsMercurial.HgPhaseDialog.HgPhaseDialog?1(parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.getRevision?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.on_bookmarkButton_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.on_bookmarkCombo_editTextChanged?4(txt)
@@ -3796,6 +3802,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgListTagBranch?4(path, tags=True)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgLogBrowser?4(path)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgNormalizeURL?4(url)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgOutgoing?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPhase?4(name, data=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPreviewBundle?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPull?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgPush?4(name, force=False, newBranch=False)

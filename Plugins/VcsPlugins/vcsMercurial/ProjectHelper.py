@@ -838,7 +838,7 @@ class HgProjectHelper(VcsProjectHelper):
         
         self.hgExportAct = E5Action(self.trUtf8('Export Patches'),
                 self.trUtf8('Export Patches...'),
-                0, 0, self, 'mercurial_import')
+                0, 0, self, 'mercurial_export')
         self.hgExportAct.setStatusTip(self.trUtf8(
             'Export revisions to patch files'
         ))
@@ -848,6 +848,19 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgExportAct.triggered[()].connect(self.__hgExport)
         self.actions.append(self.hgExportAct)
+        
+        self.hgPhaseAct = E5Action(self.trUtf8('Change Phase'),
+                self.trUtf8('Change Phase...'),
+                0, 0, self, 'mercurial_change_phase')
+        self.hgPhaseAct.setStatusTip(self.trUtf8(
+            'Change the phase of revisions'
+        ))
+        self.hgPhaseAct.setWhatsThis(self.trUtf8(
+            """<b>Change Phase</b>"""
+            """<p>This changes the phase of revisions.</p>"""
+        ))
+        self.hgPhaseAct.triggered[()].connect(self.__hgPhase)
+        self.actions.append(self.hgPhaseAct)
     
     def initMenu(self, menu):
         """
@@ -965,6 +978,9 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsDiffAct)
         menu.addAction(self.hgExtDiffAct)
         menu.addSeparator()
+        if self.vcs.version >= (2, 1):
+            menu.addAction(self.hgPhaseAct)
+            menu.addSeparator()
         menu.addAction(self.vcsRevertAct)
         menu.addAction(self.vcsMergeAct)
         menu.addAction(self.vcsResolveAct)
@@ -1288,3 +1304,10 @@ class HgProjectHelper(VcsProjectHelper):
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
+    
+    def __hgPhase(self):
+        """
+        Private slot used to change the phase of revisions.
+        """
+        self.vcs.hgPhase(self.project.ppath)
+

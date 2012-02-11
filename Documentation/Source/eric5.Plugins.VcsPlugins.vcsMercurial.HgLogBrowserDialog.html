@@ -49,7 +49,7 @@ Module implementing a dialog to browse the log history.
 QDialog, Ui_HgLogBrowserDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
+<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -130,6 +130,12 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__updateDiffButtons">__updateDiffButtons</a></td>
 <td>Private slot to update the enabled status of the diff buttons.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__updateGui">__updateGui</a></td>
+<td>Private slot to update GUI elements except the diff and phase buttons.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__updatePhaseButton">__updatePhaseButton</a></td>
+<td>Private slot to update the status of the phase button.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
 </tr><tr>
@@ -177,6 +183,9 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
 <td>Private slot to handle the password checkbox toggled.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_phaseButton_clicked">on_phaseButton_clicked</a></td>
+<td>Private slot to handle the Change Phase button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
 <td>Private slot to refresh the log.</td>
@@ -341,7 +350,7 @@ icon for the node (QIcon)
 </dd>
 </dl><a NAME="HgLogBrowserDialog.__generateLogItem" ID="HgLogBrowserDialog.__generateLogItem"></a>
 <h4>HgLogBrowserDialog.__generateLogItem</h4>
-<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths, parents, branches, tags, bookmarks=None</i>)
+<b>__generateLogItem</b>(<i>author, date, message, revision, changedPaths, parents, branches, tags, phase, bookmarks=None</i>)
 <p>
         Private method to generate a log tree entry.
 </p><dl>
@@ -498,6 +507,21 @@ error to be shown (string)
 <b>__updateDiffButtons</b>(<i></i>)
 <p>
         Private slot to update the enabled status of the diff buttons.
+</p><a NAME="HgLogBrowserDialog.__updateGui" ID="HgLogBrowserDialog.__updateGui"></a>
+<h4>HgLogBrowserDialog.__updateGui</h4>
+<b>__updateGui</b>(<i>itm</i>)
+<p>
+        Private slot to update GUI elements except the diff and phase buttons.
+</p><dl>
+<dt><i>itm</i></dt>
+<dd>
+reference to the item the update should be based on (QTreeWidgetItem)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__updatePhaseButton" ID="HgLogBrowserDialog.__updatePhaseButton"></a>
+<h4>HgLogBrowserDialog.__updatePhaseButton</h4>
+<b>__updatePhaseButton</b>(<i></i>)
+<p>
+        Private slot to update the status of the phase button.
 </p><a NAME="HgLogBrowserDialog.closeEvent" ID="HgLogBrowserDialog.closeEvent"></a>
 <h4>HgLogBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
@@ -629,7 +653,12 @@ reference to the old current item (QTreeWidgetItem)
 <dd>
 flag indicating the status of the check box (boolean)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_refreshButton_clicked" ID="HgLogBrowserDialog.on_refreshButton_clicked"></a>
+</dl><a NAME="HgLogBrowserDialog.on_phaseButton_clicked" ID="HgLogBrowserDialog.on_phaseButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_phaseButton_clicked</h4>
+<b>on_phaseButton_clicked</b>(<i></i>)
+<p>
+        Private slot to handle the Change Phase button.
+</p><a NAME="HgLogBrowserDialog.on_refreshButton_clicked" ID="HgLogBrowserDialog.on_refreshButton_clicked"></a>
 <h4>HgLogBrowserDialog.on_refreshButton_clicked</h4>
 <b>on_refreshButton_clicked</b>(<i></i>)
 <p>

@@ -50,6 +50,7 @@ from .HgUtilities import getConfigPath
 from .HgClient import HgClient
 from .HgImportDialog import HgImportDialog
 from .HgExportDialog import HgExportDialog
+from .HgPhaseDialog import HgPhaseDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -2472,6 +2473,57 @@ class Hg(VersionControl):
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+    
+    def hgPhase(self, name, data=None):
+        """
+        Public method to change the phase of revisions.
+        
+        @param name directory name of the project to export from (string)
+        @param data tuple giving phase data (list of revisions, phase, flag
+            indicating a forced operation) (list of strings, string, boolean)
+        @return flag indicating success (boolean)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return False
+        
+        if data is None:
+            dlg = HgPhaseDialog()
+            if dlg.exec_() == QDialog.Accepted:
+                data = dlg.getData()
+        
+        if data:
+            revs, phase, force = data
+            
+            args = []
+            args.append("phase")
+            if phase == "p":
+                args.append("--public")
+            elif phase == "d":
+                args.append("--draft")
+            elif phase == "s":
+                args.append("--secret")
+            else:
+                raise ValueError("Invalid phase given.")
+            if force:
+                args.append("--force")
+            for rev in revs:
+                args.append(rev)
+            
+            dia = HgDialog(self.trUtf8("Change Phase"), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+                res = dia.normalExitWithoutErrors()
+        else:
+            res = False
+        
+        return res
     
     ############################################################################
     ## Methods to handle extensions are below.

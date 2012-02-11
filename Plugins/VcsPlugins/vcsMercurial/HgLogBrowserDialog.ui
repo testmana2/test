@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1000</width>
     <height>800</height>
    </rect>
   </property>
@@ -279,7 +279,7 @@
         <number>10000</number>
        </property>
        <property name="value">
-        <number>100</number>
+        <number>20</number>
        </property>
       </widget>
      </item>
@@ -333,6 +333,33 @@
        </property>
        <property name="text">
         <string>&amp;Compare Revisions</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="phaseLine">
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="phaseButton">
+       <property name="toolTip">
+        <string>Change the phase of the selected revisions</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Change Phase&lt;/b&gt;
+&lt;p&gt;This changes the phase of the selected revisions. The selected revisions have to have the same current phase.&lt;/p&gt;</string>
+       </property>
+       <property name="text">
+        <string>Change Phase</string>
        </property>
       </widget>
      </item>
@@ -468,6 +495,7 @@
   <tabstop>diffP1Button</tabstop>
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
+  <tabstop>phaseButton</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>
   <tabstop>sendButton</tabstop>
