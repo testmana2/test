@@ -258,6 +258,7 @@ class HelpWebPage(QWebPage):
                     return False
                 
                 errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
+                errorPage.baseUrl = info.url
                 urlString = bytes(info.url.toEncoded()).decode()
                 html = notFoundPage_html
                 title = self.trUtf8("Error loading page: {0}").format(urlString)
