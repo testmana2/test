@@ -5736,7 +5736,7 @@ class UserInterface(QMainWindow):
         try:
             if "-snapshot-" in Version:
                 # check snapshot version
-                if versions[2] > Version:
+                if versions[2][0] == "5" and versions[2] > Version:
                     res = E5MessageBox.yesNo(self,
                         self.trUtf8("Update available"),
                         self.trUtf8("""The update to <b>{0}</b> of eric5 is available"""
