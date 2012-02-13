@@ -307,6 +307,7 @@
             <section title="eric5.Helpviewer.HelpWebSearchWidget" ref="eric5.Helpviewer.HelpWebSearchWidget.html" />
             <section title="eric5.Helpviewer.HelpWindow" ref="eric5.Helpviewer.HelpWindow.html" />
             <section title="eric5.Helpviewer.JavaScriptResources" ref="eric5.Helpviewer.JavaScriptResources.html" />
+            <section title="eric5.Helpviewer.PageScreenDialog" ref="eric5.Helpviewer.PageScreenDialog.html" />
             <section title="eric5.Helpviewer.QtHelpDocumentationDialog" ref="eric5.Helpviewer.QtHelpDocumentationDialog.html" />
             <section title="eric5.Helpviewer.QtHelpFiltersDialog" ref="eric5.Helpviewer.QtHelpFiltersDialog.html" />
             <section title="eric5.Helpviewer.SearchWidget" ref="eric5.Helpviewer.SearchWidget.html" />
@@ -4529,6 +4530,7 @@
       <keyword name="HelpWindow.__privateBrowsing" id="HelpWindow.__privateBrowsing" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__privateBrowsing" />
       <keyword name="HelpWindow.__reload" id="HelpWindow.__reload" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__reload" />
       <keyword name="HelpWindow.__savePageAs" id="HelpWindow.__savePageAs" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageAs" />
+      <keyword name="HelpWindow.__savePageScreen" id="HelpWindow.__savePageScreen" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__savePageScreen" />
       <keyword name="HelpWindow.__searchForWord" id="HelpWindow.__searchForWord" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__searchForWord" />
       <keyword name="HelpWindow.__setIconDatabasePath" id="HelpWindow.__setIconDatabasePath" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setIconDatabasePath" />
       <keyword name="HelpWindow.__setTextEncoding" id="HelpWindow.__setTextEncoding" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__setTextEncoding" />
@@ -6574,6 +6576,12 @@
       <keyword name="PackageModel.addModule" id="PackageModel.addModule" ref="eric5.Graphics.PackageItem.html#PackageModel.addModule" />
       <keyword name="PackageModel.getModules" id="PackageModel.getModules" ref="eric5.Graphics.PackageItem.html#PackageModel.getModules" />
       <keyword name="PackageModel.getName" id="PackageModel.getName" ref="eric5.Graphics.PackageItem.html#PackageModel.getName" />
+      <keyword name="PageScreenDialog" id="PageScreenDialog" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog" />
+      <keyword name="PageScreenDialog (Constructor)" id="PageScreenDialog (Constructor)" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__init__" />
+      <keyword name="PageScreenDialog (Module)" id="PageScreenDialog (Module)" ref="eric5.Helpviewer.PageScreenDialog.html" />
+      <keyword name="PageScreenDialog.__createPixmap" id="PageScreenDialog.__createPixmap" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__createPixmap" />
+      <keyword name="PageScreenDialog.__savePageScreen" id="PageScreenDialog.__savePageScreen" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__savePageScreen" />
+      <keyword name="PageScreenDialog.on_buttonBox_clicked" id="PageScreenDialog.on_buttonBox_clicked" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.on_buttonBox_clicked" />
       <keyword name="Parser" id="Parser" ref="eric5.DataViews.CodeMetrics.html#Parser" />
       <keyword name="Parser.__addToken" id="Parser.__addToken" ref="eric5.DataViews.CodeMetrics.html#Parser.__addToken" />
       <keyword name="Parser.parse" id="Parser.parse" ref="eric5.DataViews.CodeMetrics.html#Parser.parse" />
@@ -11523,6 +11531,7 @@
       <file>eric5.Helpviewer.OpenSearch.OpenSearchManager.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchReader.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchWriter.html</file>
+      <file>eric5.Helpviewer.PageScreenDialog.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordManager.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordModel.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordsDialog.html</file>

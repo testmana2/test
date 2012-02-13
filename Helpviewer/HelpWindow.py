@@ -29,6 +29,7 @@ from .HelpDocsInstaller import HelpDocsInstaller
 from .HelpWebSearchWidget import HelpWebSearchWidget
 from .HelpClearPrivateDataDialog import HelpClearPrivateDataDialog
 from .HelpLanguagesDialog import HelpLanguagesDialog
+from .PageScreenDialog import PageScreenDialog
 from .CookieJar.CookieJar import CookieJar
 from .CookieJar.CookiesConfigurationDialog import CookiesConfigurationDialog
 from .Bookmarks.BookmarksManager import BookmarksManager
@@ -407,7 +408,7 @@ class HelpWindow(QMainWindow):
             self.openTabAct.triggered[()].connect(self.__openFileNewTab)
         self.__actions.append(self.openTabAct)
         
-        self.saveAsAct = E5Action(self.trUtf8('Save As '),
+        self.saveAsAct = E5Action(self.trUtf8('Save As'),
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.trUtf8('&Save As...'),
             QKeySequence(self.trUtf8("Shift+Ctrl+S", "File|Save As")),
@@ -421,6 +422,20 @@ class HelpWindow(QMainWindow):
         if not self.initShortcutsOnly:
             self.saveAsAct.triggered[()].connect(self.__savePageAs)
         self.__actions.append(self.saveAsAct)
+        
+        self.savePageScreenAct = E5Action(self.trUtf8('Save Page Screen'),
+            UI.PixmapCache.getIcon("filePixmap.png"),
+            self.trUtf8('Save Page Screen...'),
+            0, 0, self, 'help_file_save_page_screen')
+        self.savePageScreenAct.setStatusTip(
+            self.trUtf8('Save the current page as a screen shot'))
+        self.savePageScreenAct.setWhatsThis(self.trUtf8(
+                """<b>Save Page Screen...</b>"""
+                """<p>Saves the current page as a screen shot.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.savePageScreenAct.triggered[()].connect(self.__savePageScreen)
+        self.__actions.append(self.savePageScreenAct)
         
         bookmarksManager = self.bookmarksManager()
         self.importBookmarksAct = E5Action(self.trUtf8('Import Bookmarks'),
@@ -1228,6 +1243,7 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.openTabAct)
         menu.addSeparator()
         menu.addAction(self.saveAsAct)
+        menu.addAction(self.savePageScreenAct)
         menu.addSeparator()
         menu.addAction(self.importBookmarksAct)
         menu.addAction(self.exportBookmarksAct)
@@ -1362,6 +1378,7 @@ class HelpWindow(QMainWindow):
         filetb.addAction(self.openTabAct)
         filetb.addSeparator()
         filetb.addAction(self.saveAsAct)
+        filetb.addAction(self.savePageScreenAct)
         filetb.addSeparator()
         filetb.addAction(self.printPreviewAct)
         filetb.addAction(self.printAct)
@@ -1695,6 +1712,13 @@ class HelpWindow(QMainWindow):
         browser = self.currentBrowser()
         if browser is not None:
             browser.saveAs()
+        
+    def __savePageScreen(self):
+        """
+        Private slot to save the current page as a screen shot.
+        """
+        self.__pageScreen = PageScreenDialog(self.currentBrowser())
+        self.__pageScreen.show()
         
     def __about(self):
         """

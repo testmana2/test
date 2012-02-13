@@ -19,6 +19,7 @@ Version 5.3.0:
      Google Translate and search it in Wictionary
   -- extended the User Agent handling to be able to set the string on a host basis
      (next to the global user agent string)
+  -- added code to save the current page as a screen shot
 
 Version 5.2.0:
 - bug fixes

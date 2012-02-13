@@ -942,6 +942,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/UserAgent/UserAgentModel.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentManager.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.py</Source>
+    <Source>Helpviewer/PageScreenDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1215,6 +1216,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/SslInfoWidget.ui</Form>
     <Form>Helpviewer/UserAgent/UserAgentsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui</Form>
+    <Form>Helpviewer/PageScreenDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -383,6 +383,7 @@ OpenSearchReader QXmlStreamReader
 OpenSearchWriter QXmlStreamWriter
 PackageDiagram UMLDialog
 PackageItem UMLItem
+PageScreenDialog QDialog Ui_PageScreenDialog
 PasswordManager QObject
 PasswordModel QAbstractTableModel
 PasswordsDialog QDialog Ui_PasswordsDialog
