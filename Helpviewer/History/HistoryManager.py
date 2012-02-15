@@ -7,6 +7,8 @@
 Module implementing the history manager.
 """
 
+import os
+
 from PyQt4.QtCore import pyqtSignal, QFileInfo, QDateTime, QDate, QTime, QUrl, QTimer, \
     QFile, QIODevice, QByteArray, QDataStream, QTemporaryFile
 from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
@@ -332,11 +334,19 @@ class HistoryManager(QWebHistoryInterface):
         self.historyReset.emit()
         self.historyCleared.emit()
     
+    def getFileName(self):
+        """
+        Public method to get the file name of the history file.
+        
+        @return name of the history file (string)
+        """
+        return os.path.join(Utilities.getConfigDir(), "browser", "history")
+    
     def __load(self):
         """
         Private method to load the saved history entries from disk.
         """
-        historyFile = QFile(Utilities.getConfigDir() + "/browser/history")
+        historyFile = QFile(self.getFileName())
         if not historyFile.exists():
             return
         if not historyFile.open(QIODevice.ReadOnly):
@@ -392,7 +402,7 @@ class HistoryManager(QWebHistoryInterface):
         """
         Public slot to save the history entries to disk.
         """
-        historyFile = QFile(Utilities.getConfigDir() + "/browser/history")
+        historyFile = QFile(self.getFileName())
         if not historyFile.exists():
             self.__lastSavedUrl = ""
         

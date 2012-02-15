@@ -39,6 +39,14 @@ class UserAgentManager(QObject):
         
         self.changed.connect(self.__saveTimer.changeOccurred)
     
+    def getFileName(self):
+        """
+        Public method to get the file name of the user agents file.
+        
+        @return name of the user agents file (string)
+        """
+        return os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings")
+    
     def save(self):
         """
         Public slot to save the user agent entries to disk.
@@ -46,7 +54,7 @@ class UserAgentManager(QObject):
         if not self.__loaded:
             return
         
-        agentFile = os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings")
+        agentFile = self.getFileName()
         try:
             f = open(agentFile, "w", encoding="utf-8")
             for host, agent in self.__agents.items():
@@ -63,7 +71,7 @@ class UserAgentManager(QObject):
         """
         Private method to load the saved user agent settings.
         """
-        agentFile = os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings")
+        agentFile = self.getFileName()
         if os.path.exists(agentFile):
             try:
                 f = open(agentFile, "r", encoding="utf-8")

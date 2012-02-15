@@ -166,6 +166,14 @@ class PasswordManager(QObject):
             key = "{0}://{1}".format(url.scheme(), url.authority())
         return key
     
+    def getFileName(self):
+        """
+        Public method to get the file name of the passwords file.
+        
+        @return name of the passwords file (string)
+        """
+        return os.path.join(Utilities.getConfigDir(), "browser", "logins")
+    
     def save(self):
         """
         Public slot to save the login entries to disk.
@@ -173,7 +181,7 @@ class PasswordManager(QObject):
         if not self.__loaded:
             return
         
-        loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
+        loginFile = self.getFileName()
         try:
             f = open(loginFile, "w", encoding="utf-8")
             for key, login in list(self.__logins.items()):
@@ -203,7 +211,7 @@ class PasswordManager(QObject):
         """
         Private method to load the saved login credentials.
         """
-        loginFile = os.path.join(Utilities.getConfigDir(), "browser", "logins")
+        loginFile = self.getFileName()
         if os.path.exists(loginFile):
             try:
                 f = open(loginFile, "r", encoding="utf-8")

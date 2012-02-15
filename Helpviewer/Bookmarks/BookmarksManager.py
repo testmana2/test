@@ -122,6 +122,14 @@ class BookmarksManager(QObject):
         self.entryRemoved.connect(self.__saveTimer.changeOccurred)
         self.entryChanged.connect(self.__saveTimer.changeOccurred)
     
+    def getFileName(self):
+        """
+        Public method to get the file name of the bookmark file.
+        
+        @return name of the bookmark file (string)
+        """
+        return os.path.join(Utilities.getConfigDir(), "browser", "bookmarks.xbel")
+    
     def close(self):
         """
         Public method to close the bookmark manager.
@@ -151,7 +159,7 @@ class BookmarksManager(QObject):
         
         self.__loaded = True
         
-        bookmarkFile = os.path.join(Utilities.getConfigDir(), "browser", "bookmarks.xbel")
+        bookmarkFile = self.getFileName()
         if not QFile.exists(bookmarkFile):
             ba = QByteArray(DefaultBookmarks)
             bookmarkFile = QBuffer(ba)
@@ -215,7 +223,7 @@ class BookmarksManager(QObject):
             return
         
         writer = XbelWriter()
-        bookmarkFile = os.path.join(Utilities.getConfigDir(), "browser", "bookmarks.xbel")
+        bookmarkFile = self.getFileName()
         
         # save root folder titles in English (i.e. not localized)
         self.__menu.title = BOOKMARKMENU

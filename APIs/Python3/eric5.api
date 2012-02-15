@@ -1793,6 +1793,7 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryAdded?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryChanged?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryRemoved?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.exportBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.getFileName?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.iconChanged?4(url)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.importBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.load?4()
@@ -2240,6 +2241,7 @@ eric5.Helpviewer.History.HistoryManager.HistoryManager.daysToExpire?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.entryAdded?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.entryRemoved?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.entryUpdated?7
+eric5.Helpviewer.History.HistoryManager.HistoryManager.getFileName?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.history?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyCleared?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyContains?4(url)
@@ -2441,6 +2443,7 @@ eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.changed?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.clear?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.close?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.fill?4(page)
+eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.getFileName?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.getLogin?4(url, realm)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.masterPasswordChanged?4(oldPassword, newPassword)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.post?4(request, data)
@@ -2537,6 +2540,7 @@ eric5.Helpviewer.UserAgent.UserAgentDefaults.UserAgentDefaults?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.allHostNames?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.changed?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.close?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.getFileName?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.hostsCount?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.removeUserAgent?4(host)
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.save?4()
