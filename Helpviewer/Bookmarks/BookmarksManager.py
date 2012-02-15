@@ -97,10 +97,12 @@ class BookmarksManager(QObject):
     @signal entryRemoved(BookmarkNode, int, BookmarkNode) emitted after a bookmark
         node has been removed
     @signal entryChanged(BookmarkNode) emitted after a bookmark node has been changed
+    @signal bookmarksSaved() emitted after the bookmarks were saved
     """
     entryAdded = pyqtSignal(BookmarkNode)
     entryRemoved = pyqtSignal(BookmarkNode, int, BookmarkNode)
     entryChanged = pyqtSignal(BookmarkNode)
+    bookmarksSaved = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -237,6 +239,8 @@ class BookmarksManager(QObject):
         # restore localized titles
         self.__menu.title = self.trUtf8(BOOKMARKMENU)
         self.__toolbar.title = self.trUtf8(BOOKMARKBAR)
+        
+        self.bookmarksSaved.emit()
     
     def addBookmark(self, parent, node, row=-1):
         """

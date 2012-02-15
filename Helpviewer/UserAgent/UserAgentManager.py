@@ -22,8 +22,10 @@ class UserAgentManager(QObject):
     Class implementing a user agent manager.
     
     @signal changed() emitted to indicate a change
+    @signal userAgentSettingsSaved() emitted after the user agent settings were saved
     """
     changed = pyqtSignal()
+    userAgentSettingsSaved = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -60,6 +62,7 @@ class UserAgentManager(QObject):
             for host, agent in self.__agents.items():
                 f.write("{0}@@{1}\n".format(host, agent))
             f.close()
+            self.userAgentSettingsSaved.emit()
         except IOError as err:
             E5MessageBox.critical(None,
                 self.trUtf8("Saving user agent data"),

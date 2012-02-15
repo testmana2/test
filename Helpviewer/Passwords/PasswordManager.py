@@ -80,8 +80,10 @@ class PasswordManager(QObject):
     Class implementing the password manager.
     
     @signal changed() emitted to indicate a change
+    @signal passwordsSaved() emitted after the passwords were saved
     """
     changed = pyqtSignal()
+    passwordsSaved = pyqtSignal()
     
     SEPARATOR = "===================="
     FORMS = "=====FORMS====="
@@ -200,6 +202,7 @@ class PasswordManager(QObject):
                 for key in self.__never:
                     f.write("{0}\n".format(key))
             f.close()
+            self.passwordsSaved.emit()
         except IOError as err:
             E5MessageBox.critical(None,
                 self.trUtf8("Saving login data"),

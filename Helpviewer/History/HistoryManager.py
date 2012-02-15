@@ -87,12 +87,14 @@ class HistoryManager(QWebHistoryInterface):
     @signal entryAdded(HistoryEntry) emitted after a history entry has been added
     @signal entryRemoved(HistoryEntry) emitted after a history entry has been removed
     @signal entryUpdated(int) emitted after a history entry has been updated
+    @signal historySaved() emitted after the history was saved
     """
     historyCleared = pyqtSignal()
     historyReset = pyqtSignal()
     entryAdded = pyqtSignal(HistoryEntry)
     entryRemoved = pyqtSignal(HistoryEntry)
     entryUpdated = pyqtSignal(int)
+    historySaved = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -458,7 +460,7 @@ class HistoryManager(QWebHistoryInterface):
                     self.trUtf8("""<p>Error moving new history file over old one """
                                 """(<b>{0}</b>).<br/>Reason: {1}</p>""")\
                         .format(historyFile.fileName(), f.errorString()))
-        
+        self.historySaved.emit()
         try:
             self.__lastSavedUrl = self.__history[0].url
         except IndexError:
