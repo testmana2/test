@@ -277,7 +277,7 @@ class FtpReply(QNetworkReply):
     
     def __setContent(self):
         """
-        Private method to set the finish the setup of the data.
+        Private method to finish the setup of the data.
         """
         self.open(QIODevice.ReadOnly | QIODevice.Unbuffered)
         self.setHeader(QNetworkRequest.ContentLengthHeader, self.__items[0].size())
