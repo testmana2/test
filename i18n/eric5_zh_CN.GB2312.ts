@@ -31892,6 +31892,11 @@ Select Update.</source>
         <source>files removed</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Project/ProjectBrowser.py" line="359"/>
+        <source>unknown status</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ProjectBrowserModel</name>

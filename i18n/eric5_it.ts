@@ -29526,6 +29526,11 @@ Selezionare Aggiorna.</translation>
         <source>files removed</source>
         <translation>file rimossi</translation>
     </message>
+    <message>
+        <location filename="Project/ProjectBrowser.py" line="359"/>
+        <source>unknown status</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ProjectBrowserModel</name>

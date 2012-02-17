@@ -31932,6 +31932,11 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <source>files removed</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="Project/ProjectBrowser.py" line="359"/>
+        <source>unknown status</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ProjectBrowserModel</name>

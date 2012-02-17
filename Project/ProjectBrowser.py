@@ -355,4 +355,7 @@ class ProjectBrowser(E5TabWidget):
         else:
             self.vcsStatusIndicator.setColor(
                 Preferences.getProjectBrowserColour(self.vcsStatusColorNames[state]))
-        self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])
+        if state not in self.vcsStatusText:
+            self.vcsStatusIndicator.setToolTip(self.trUtf8("unknown status"))
+        else:
+            self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])
