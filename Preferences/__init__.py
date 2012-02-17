@@ -651,6 +651,17 @@ class Prefs(object):
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
         "RssFeeds": [],
+        "SyncEnabled": False,
+        "SyncBookmarks": True,
+        "SyncHistory": True,
+        "SyncPasswords": False,
+        "SyncUserAgents": True,
+        "SyncType": 0,
+        "SyncFtpServer": "",
+        "SyncFtpUser": "",
+        "SyncFtpPassword": "",
+        "SyncFtpPath": "",
+        "SyncFtpPort": 21,
     }
     
     websettings = QWebSettings.globalSettings()
@@ -2007,11 +2018,15 @@ def getHelp(key, prefClass=Prefs):
             feeds.append((url, title, icon))
         prefClass.settings.endArray()
         return feeds
+    elif key == "SyncFtpPassword":
+        from Utilities.crypto import pwConvert
+        return pwConvert(prefClass.settings.value("Help/" + key,
+            prefClass.helpDefaults[key]), encode=False)
     elif key in ["HelpViewerType", "DiskCacheSize", "AcceptCookies",
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
                  "CachePolicy", "DownloadManagerRemovePolicy",
-                 "SearchLanguage"]:
+                 "SearchLanguage", "SyncType", "SyncFtpPort"]:
         return int(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",
@@ -2024,7 +2039,9 @@ def getHelp(key, prefClass=Prefs):
                  "VirusTotalEnabled", "VirusTotalSecure", "DoNotTrack",
                  "SpatialNavigationEnabled", "LinksIncludedInFocusChain",
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
-                 "XSSAuditingEnabled", "SiteSpecificQuirksEnabled"]:
+                 "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
+                 "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
+                ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions"]:
@@ -2082,6 +2099,10 @@ def setHelp(key, value, prefClass=Prefs):
             prefClass.settings.setValue("Icon", v[2])
             index += 1
         prefClass.settings.endArray()
+    elif key == "SyncFtpPassword":
+        from Utilities.crypto import pwConvert
+        prefClass.settings.setValue(
+            "Help/" + key, pwConvert(value, encode=True))
     else:
         prefClass.settings.setValue("Help/" + key, value)
     

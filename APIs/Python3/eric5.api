@@ -1787,6 +1787,8 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarkForUrl?4(ur
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksForUrl?4(url, start=StartRoot)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksModel?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksReloaded?7
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.bookmarksSaved?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.changeExpanded?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.close?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.entryAdded?7
@@ -1798,6 +1800,7 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.iconChanged?4(url)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.importBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.load?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.menu?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.reload?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.removeBookmark?4(node)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.save?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.setTitle?4(node, newTitle)
@@ -2148,6 +2151,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._syncManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow.adblockManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.bookmarkAll?4()
@@ -2191,6 +2195,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.syncManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.userAgentsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric5.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric=False, initShortcutsOnly=False, searchWord=None)
@@ -2248,8 +2253,10 @@ eric5.Helpviewer.History.HistoryManager.HistoryManager.historyContains?4(url)
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyFilterModel?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyModel?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyReset?7
+eric5.Helpviewer.History.HistoryManager.HistoryManager.historySaved?7
 eric5.Helpviewer.History.HistoryManager.HistoryManager.historyTreeModel?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.preferencesChanged?4()
+eric5.Helpviewer.History.HistoryManager.HistoryManager.reload?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.removeHistoryEntry?4(url, title="")
 eric5.Helpviewer.History.HistoryManager.HistoryManager.save?4()
 eric5.Helpviewer.History.HistoryManager.HistoryManager.setDaysToExpire?4(limit)
@@ -2446,7 +2453,9 @@ eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.fill?4(page)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.getFileName?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.getLogin?4(url, realm)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.masterPasswordChanged?4(oldPassword, newPassword)
+eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.passwordsSaved?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.post?4(request, data)
+eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.reload?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.removePassword?4(site)
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.save?4()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.setLogin?4(url, realm, username, password)
@@ -2505,6 +2514,47 @@ eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog?1(parent=None)
 eric5.Helpviewer.SslInfoDialog.SslInfoDialog?1(certificate, parent=None)
 eric5.Helpviewer.SslInfoWidget.SslInfoWidget.showCertificate?4(certificate)
 eric5.Helpviewer.SslInfoWidget.SslInfoWidget?1(parent=None)
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.initialLoadAndCheck?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.shutdown?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncBookmarks?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncError?7
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncFinished?7
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncHistory?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncPasswords?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncStatus?7
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncUserAgents?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler?1(parent=None)
+eric5.Helpviewer.Sync.SyncAssistantDialog.SyncAssistantDialog?1(parent=None)
+eric5.Helpviewer.Sync.SyncCheckPage.SyncCheckPage.initializePage?4()
+eric5.Helpviewer.Sync.SyncCheckPage.SyncCheckPage?1(parent=None)
+eric5.Helpviewer.Sync.SyncDataPage.SyncDataPage.nextId?4()
+eric5.Helpviewer.Sync.SyncDataPage.SyncDataPage?1(parent=None)
+eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage.isComplete?4()
+eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage.nextId?4()
+eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage?1(parent=None)
+eric5.Helpviewer.Sync.SyncGlobals.PageCheck?7
+eric5.Helpviewer.Sync.SyncGlobals.PageData?7
+eric5.Helpviewer.Sync.SyncGlobals.PageFTPSettings?7
+eric5.Helpviewer.Sync.SyncGlobals.PageType?7
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.initialLoadAndCheck?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.shutdown?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncBookmarks?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncError?7
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncFinished?7
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncHistory?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncPasswords?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncStatus?7
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncUserAgents?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler?1(parent=None)
+eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage.nextId?4()
+eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage?1(parent=None)
+eric5.Helpviewer.Sync.SyncManager.SyncManager.close?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.handler?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.loadSettings?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.showSyncDialog?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.syncEnabled?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.syncError?7
+eric5.Helpviewer.Sync.SyncManager.SyncManager?1(parent=None)
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.accept?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.on_removeButton_clicked?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog?1(bookmark, parent=None)
@@ -2542,12 +2592,14 @@ eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.changed?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.close?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.getFileName?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.hostsCount?4()
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.reload?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.removeUserAgent?4(host)
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.save?4()
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.setUserAgent?4(host, agent)
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.setUserAgentForUrl?4(url, agent)
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.userAgent?4(host)
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.userAgentForUrl?4(url)
+eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager.userAgentSettingsSaved?7
 eric5.Helpviewer.UserAgent.UserAgentManager.UserAgentManager?1(parent=None)
 eric5.Helpviewer.UserAgent.UserAgentMenu.UserAgentMenu?1(title, url=None, parent=None)
 eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.columnCount?4(parent=QModelIndex())

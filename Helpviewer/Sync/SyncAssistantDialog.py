@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2012 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Module implementing a wizard dialog to enter the synchronization data.
+"""
+
+from PyQt4.QtGui import QWizard
+
+from .SyncDataPage import SyncDataPage
+from .SyncHostTypePage import SyncHostTypePage
+from .SyncFtpSettingsPage import SyncFtpSettingsPage
+from .SyncCheckPage import SyncCheckPage
+
+from . import SyncGlobals
+
+import UI.PixmapCache
+
+
+class SyncAssistantDialog(QWizard):
+    """
+    Class implementing a wizard dialog to enter the synchronization data.
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor
+        
+        @param parent reference to the parent widget (QWidget)
+        """
+        super().__init__(parent)
+        
+        self.setPage(SyncGlobals.PageData, SyncDataPage(self))
+        self.setPage(SyncGlobals.PageType, SyncHostTypePage(self))
+        self.setPage(SyncGlobals.PageFTPSettings, SyncFtpSettingsPage(self))
+        self.setPage(SyncGlobals.PageCheck, SyncCheckPage(self))
+        
+        self.setPixmap(QWizard.LogoPixmap, UI.PixmapCache.getPixmap("ericWeb48.png"))
+        
+        self.resize(600, 400)

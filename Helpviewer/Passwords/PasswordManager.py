@@ -269,6 +269,15 @@ class PasswordManager(QObject):
         
         self.__loaded = True
     
+    def reload(self):
+        """
+        Public method to reload the login data.
+        """
+        if not self.__loaded:
+            return
+        
+        self.__load()
+    
     def close(self):
         """
         Public method to close the passwords manager.

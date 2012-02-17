@@ -278,6 +278,17 @@
             <section title="eric5.Helpviewer.SiteInfo" ref="index-eric5.Helpviewer.SiteInfo.html">
               <section title="eric5.Helpviewer.SiteInfo.SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.Sync" ref="index-eric5.Helpviewer.Sync.html">
+              <section title="eric5.Helpviewer.Sync.FtpSyncHandler" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
+              <section title="eric5.Helpviewer.Sync.SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
+              <section title="eric5.Helpviewer.Sync.SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncGlobals" ref="eric5.Helpviewer.Sync.SyncGlobals.html" />
+              <section title="eric5.Helpviewer.Sync.SyncHandler" ref="eric5.Helpviewer.Sync.SyncHandler.html" />
+              <section title="eric5.Helpviewer.Sync.SyncHostTypePage" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncManager" ref="eric5.Helpviewer.Sync.SyncManager.html" />
+            </section>
             <section title="eric5.Helpviewer.UrlBar" ref="index-eric5.Helpviewer.UrlBar.html">
               <section title="eric5.Helpviewer.UrlBar.BookmarkInfoDialog" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html" />
               <section title="eric5.Helpviewer.UrlBar.FavIconLabel" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html" />
@@ -1321,6 +1332,7 @@
       <keyword name="BookmarksManager (Constructor)" id="BookmarksManager (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__init__" />
       <keyword name="BookmarksManager (Module)" id="BookmarksManager (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
       <keyword name="BookmarksManager.__convertFromOldBookmarks" id="BookmarksManager.__convertFromOldBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__convertFromOldBookmarks" />
+      <keyword name="BookmarksManager.__initialize" id="BookmarksManager.__initialize" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__initialize" />
       <keyword name="BookmarksManager.__searchBookmark" id="BookmarksManager.__searchBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__searchBookmark" />
       <keyword name="BookmarksManager.__searchBookmarks" id="BookmarksManager.__searchBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__searchBookmarks" />
       <keyword name="BookmarksManager.addBookmark" id="BookmarksManager.addBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.addBookmark" />
@@ -1336,6 +1348,7 @@
       <keyword name="BookmarksManager.importBookmarks" id="BookmarksManager.importBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.importBookmarks" />
       <keyword name="BookmarksManager.load" id="BookmarksManager.load" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.load" />
       <keyword name="BookmarksManager.menu" id="BookmarksManager.menu" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.menu" />
+      <keyword name="BookmarksManager.reload" id="BookmarksManager.reload" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.reload" />
       <keyword name="BookmarksManager.removeBookmark" id="BookmarksManager.removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.removeBookmark" />
       <keyword name="BookmarksManager.save" id="BookmarksManager.save" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.save" />
       <keyword name="BookmarksManager.setTitle" id="BookmarksManager.setTitle" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setTitle" />
@@ -1404,6 +1417,7 @@
       <keyword name="BookmarksToolBar.__openBookmark" id="BookmarksToolBar.__openBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__openBookmark" />
       <keyword name="BookmarksToolBar.__openBookmarkInNewTab" id="BookmarksToolBar.__openBookmarkInNewTab" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__openBookmarkInNewTab" />
       <keyword name="BookmarksToolBar.__openToolBarBookmark" id="BookmarksToolBar.__openToolBarBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__openToolBarBookmark" />
+      <keyword name="BookmarksToolBar.__rebuild" id="BookmarksToolBar.__rebuild" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__rebuild" />
       <keyword name="BookmarksToolBar.__removeBookmark" id="BookmarksToolBar.__removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__removeBookmark" />
       <keyword name="BookmarksToolBar._createMenu" id="BookmarksToolBar._createMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar._createMenu" />
       <keyword name="BreakPointModel" id="BreakPointModel" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel" />
@@ -4161,6 +4175,22 @@
       <keyword name="FtpReply.bytesAvailable" id="FtpReply.bytesAvailable" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.bytesAvailable" />
       <keyword name="FtpReply.isSequential" id="FtpReply.isSequential" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.isSequential" />
       <keyword name="FtpReply.readData" id="FtpReply.readData" ref="eric5.Helpviewer.Network.FtpReply.html#FtpReply.readData" />
+      <keyword name="FtpSyncHandler" id="FtpSyncHandler" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler" />
+      <keyword name="FtpSyncHandler (Constructor)" id="FtpSyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__init__" />
+      <keyword name="FtpSyncHandler (Module)" id="FtpSyncHandler (Module)" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
+      <keyword name="FtpSyncHandler.__changeToStore" id="FtpSyncHandler.__changeToStore" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__changeToStore" />
+      <keyword name="FtpSyncHandler.__checkSyncFiles" id="FtpSyncHandler.__checkSyncFiles" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__checkSyncFiles" />
+      <keyword name="FtpSyncHandler.__commandFinished" id="FtpSyncHandler.__commandFinished" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__commandFinished" />
+      <keyword name="FtpSyncHandler.__initialSync" id="FtpSyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSync" />
+      <keyword name="FtpSyncHandler.__initialSyncFile" id="FtpSyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSyncFile" />
+      <keyword name="FtpSyncHandler.__storeReached" id="FtpSyncHandler.__storeReached" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__storeReached" />
+      <keyword name="FtpSyncHandler.__syncFile" id="FtpSyncHandler.__syncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__syncFile" />
+      <keyword name="FtpSyncHandler.initialLoadAndCheck" id="FtpSyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.initialLoadAndCheck" />
+      <keyword name="FtpSyncHandler.shutdown" id="FtpSyncHandler.shutdown" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.shutdown" />
+      <keyword name="FtpSyncHandler.syncBookmarks" id="FtpSyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncBookmarks" />
+      <keyword name="FtpSyncHandler.syncHistory" id="FtpSyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncHistory" />
+      <keyword name="FtpSyncHandler.syncPasswords" id="FtpSyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncPasswords" />
+      <keyword name="FtpSyncHandler.syncUserAgents" id="FtpSyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncUserAgents" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Function" />
@@ -4556,6 +4586,7 @@
       <keyword name="HelpWindow.__showPreferences" id="HelpWindow.__showPreferences" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showPreferences" />
       <keyword name="HelpWindow.__showSearchWindow" id="HelpWindow.__showSearchWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSearchWindow" />
       <keyword name="HelpWindow.__showSiteinfoDialog" id="HelpWindow.__showSiteinfoDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSiteinfoDialog" />
+      <keyword name="HelpWindow.__showSyncDialog" id="HelpWindow.__showSyncDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showSyncDialog" />
       <keyword name="HelpWindow.__showTocWindow" id="HelpWindow.__showTocWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showTocWindow" />
       <keyword name="HelpWindow.__showUserAgentsDialog" id="HelpWindow.__showUserAgentsDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showUserAgentsDialog" />
       <keyword name="HelpWindow.__stopLoading" id="HelpWindow.__stopLoading" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__stopLoading" />
@@ -4613,6 +4644,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.syncManager" id="HelpWindow.syncManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.syncManager" />
       <keyword name="HelpWindow.userAgentsManager" id="HelpWindow.userAgentsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.userAgentsManager" />
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric5.Helpviewer.html" />
       <keyword name="Hg" id="Hg" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
@@ -5471,6 +5503,7 @@
       <keyword name="HistoryManager.historyModel" id="HistoryManager.historyModel" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.historyModel" />
       <keyword name="HistoryManager.historyTreeModel" id="HistoryManager.historyTreeModel" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.historyTreeModel" />
       <keyword name="HistoryManager.preferencesChanged" id="HistoryManager.preferencesChanged" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.preferencesChanged" />
+      <keyword name="HistoryManager.reload" id="HistoryManager.reload" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.reload" />
       <keyword name="HistoryManager.removeHistoryEntry" id="HistoryManager.removeHistoryEntry" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.removeHistoryEntry" />
       <keyword name="HistoryManager.save" id="HistoryManager.save" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.save" />
       <keyword name="HistoryManager.setDaysToExpire" id="HistoryManager.setDaysToExpire" ref="eric5.Helpviewer.History.HistoryManager.html#HistoryManager.setDaysToExpire" />
@@ -6610,6 +6643,7 @@
       <keyword name="PasswordManager.getLogin" id="PasswordManager.getLogin" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.getLogin" />
       <keyword name="PasswordManager.masterPasswordChanged" id="PasswordManager.masterPasswordChanged" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.masterPasswordChanged" />
       <keyword name="PasswordManager.post" id="PasswordManager.post" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.post" />
+      <keyword name="PasswordManager.reload" id="PasswordManager.reload" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.reload" />
       <keyword name="PasswordManager.removePassword" id="PasswordManager.removePassword" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.removePassword" />
       <keyword name="PasswordManager.save" id="PasswordManager.save" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.save" />
       <keyword name="PasswordManager.setLogin" id="PasswordManager.setLogin" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.setLogin" />
@@ -9122,6 +9156,53 @@
       <keyword name="SymbolsWidget.on_symbolSpinBox_editingFinished" id="SymbolsWidget.on_symbolSpinBox_editingFinished" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_symbolSpinBox_editingFinished" />
       <keyword name="SymbolsWidget.on_symbolsTable_activated" id="SymbolsWidget.on_symbolsTable_activated" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_symbolsTable_activated" />
       <keyword name="SymbolsWidget.on_tableCombo_currentIndexChanged" id="SymbolsWidget.on_tableCombo_currentIndexChanged" ref="eric5.UI.SymbolsWidget.html#SymbolsWidget.on_tableCombo_currentIndexChanged" />
+      <keyword name="Sync (Package)" id="Sync (Package)" ref="index-eric5.Helpviewer.Sync.html" />
+      <keyword name="SyncAssistantDialog" id="SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html#SyncAssistantDialog" />
+      <keyword name="SyncAssistantDialog (Constructor)" id="SyncAssistantDialog (Constructor)" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html#SyncAssistantDialog.__init__" />
+      <keyword name="SyncAssistantDialog (Module)" id="SyncAssistantDialog (Module)" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
+      <keyword name="SyncCheckPage" id="SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage" />
+      <keyword name="SyncCheckPage (Constructor)" id="SyncCheckPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__init__" />
+      <keyword name="SyncCheckPage (Module)" id="SyncCheckPage (Module)" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
+      <keyword name="SyncCheckPage.__syncError" id="SyncCheckPage.__syncError" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__syncError" />
+      <keyword name="SyncCheckPage.__updatePage" id="SyncCheckPage.__updatePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__updatePage" />
+      <keyword name="SyncCheckPage.initializePage" id="SyncCheckPage.initializePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.initializePage" />
+      <keyword name="SyncDataPage" id="SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage" />
+      <keyword name="SyncDataPage (Constructor)" id="SyncDataPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.__init__" />
+      <keyword name="SyncDataPage (Module)" id="SyncDataPage (Module)" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
+      <keyword name="SyncDataPage.nextId" id="SyncDataPage.nextId" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.nextId" />
+      <keyword name="SyncFtpSettingsPage" id="SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage" />
+      <keyword name="SyncFtpSettingsPage (Constructor)" id="SyncFtpSettingsPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage.__init__" />
+      <keyword name="SyncFtpSettingsPage (Module)" id="SyncFtpSettingsPage (Module)" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
+      <keyword name="SyncFtpSettingsPage.isComplete" id="SyncFtpSettingsPage.isComplete" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage.isComplete" />
+      <keyword name="SyncFtpSettingsPage.nextId" id="SyncFtpSettingsPage.nextId" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage.nextId" />
+      <keyword name="SyncGlobals (Module)" id="SyncGlobals (Module)" ref="eric5.Helpviewer.Sync.SyncGlobals.html" />
+      <keyword name="SyncHandler" id="SyncHandler" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler" />
+      <keyword name="SyncHandler (Constructor)" id="SyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.__init__" />
+      <keyword name="SyncHandler (Module)" id="SyncHandler (Module)" ref="eric5.Helpviewer.Sync.SyncHandler.html" />
+      <keyword name="SyncHandler.initialLoadAndCheck" id="SyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.initialLoadAndCheck" />
+      <keyword name="SyncHandler.shutdown" id="SyncHandler.shutdown" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.shutdown" />
+      <keyword name="SyncHandler.syncBookmarks" id="SyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncBookmarks" />
+      <keyword name="SyncHandler.syncHistory" id="SyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncHistory" />
+      <keyword name="SyncHandler.syncPasswords" id="SyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncPasswords" />
+      <keyword name="SyncHandler.syncUserAgents" id="SyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncUserAgents" />
+      <keyword name="SyncHostTypePage" id="SyncHostTypePage" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage" />
+      <keyword name="SyncHostTypePage (Constructor)" id="SyncHostTypePage (Constructor)" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage.__init__" />
+      <keyword name="SyncHostTypePage (Module)" id="SyncHostTypePage (Module)" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html" />
+      <keyword name="SyncHostTypePage.nextId" id="SyncHostTypePage.nextId" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage.nextId" />
+      <keyword name="SyncManager" id="SyncManager" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager" />
+      <keyword name="SyncManager (Constructor)" id="SyncManager (Constructor)" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__init__" />
+      <keyword name="SyncManager (Module)" id="SyncManager (Module)" ref="eric5.Helpviewer.Sync.SyncManager.html" />
+      <keyword name="SyncManager.__syncBookmarks" id="SyncManager.__syncBookmarks" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncBookmarks" />
+      <keyword name="SyncManager.__syncError" id="SyncManager.__syncError" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncError" />
+      <keyword name="SyncManager.__syncFinished" id="SyncManager.__syncFinished" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncFinished" />
+      <keyword name="SyncManager.__syncHistory" id="SyncManager.__syncHistory" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncHistory" />
+      <keyword name="SyncManager.__syncPasswords" id="SyncManager.__syncPasswords" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncPasswords" />
+      <keyword name="SyncManager.__syncUserAgents" id="SyncManager.__syncUserAgents" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncUserAgents" />
+      <keyword name="SyncManager.close" id="SyncManager.close" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.close" />
+      <keyword name="SyncManager.handler" id="SyncManager.handler" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.handler" />
+      <keyword name="SyncManager.loadSettings" id="SyncManager.loadSettings" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.loadSettings" />
+      <keyword name="SyncManager.showSyncDialog" id="SyncManager.showSyncDialog" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.showSyncDialog" />
+      <keyword name="SyncManager.syncEnabled" id="SyncManager.syncEnabled" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.syncEnabled" />
       <keyword name="SyntaxChecker (Package)" id="SyntaxChecker (Package)" ref="index-eric5.Plugins.CheckerPlugins.SyntaxChecker.html" />
       <keyword name="SyntaxCheckerDialog" id="SyntaxCheckerDialog" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog" />
       <keyword name="SyntaxCheckerDialog (Constructor)" id="SyntaxCheckerDialog (Constructor)" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__init__" />
@@ -9808,6 +9889,7 @@
       <keyword name="UserAgentManager.close" id="UserAgentManager.close" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.close" />
       <keyword name="UserAgentManager.getFileName" id="UserAgentManager.getFileName" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.getFileName" />
       <keyword name="UserAgentManager.hostsCount" id="UserAgentManager.hostsCount" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.hostsCount" />
+      <keyword name="UserAgentManager.reload" id="UserAgentManager.reload" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.reload" />
       <keyword name="UserAgentManager.removeUserAgent" id="UserAgentManager.removeUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.removeUserAgent" />
       <keyword name="UserAgentManager.save" id="UserAgentManager.save" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.save" />
       <keyword name="UserAgentManager.setUserAgent" id="UserAgentManager.setUserAgent" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.setUserAgent" />
@@ -11546,6 +11628,15 @@
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.SslInfoWidget.html</file>
+      <file>eric5.Helpviewer.Sync.FtpSyncHandler.html</file>
+      <file>eric5.Helpviewer.Sync.SyncAssistantDialog.html</file>
+      <file>eric5.Helpviewer.Sync.SyncCheckPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncDataPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncFtpSettingsPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncGlobals.html</file>
+      <file>eric5.Helpviewer.Sync.SyncHandler.html</file>
+      <file>eric5.Helpviewer.Sync.SyncHostTypePage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncManager.html</file>
       <file>eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.FavIconLabel.html</file>
       <file>eric5.Helpviewer.UrlBar.SslLabel.html</file>
@@ -12020,6 +12111,7 @@
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
       <file>index-eric5.Helpviewer.SiteInfo.html</file>
+      <file>index-eric5.Helpviewer.Sync.html</file>
       <file>index-eric5.Helpviewer.UrlBar.html</file>
       <file>index-eric5.Helpviewer.UserAgent.html</file>
       <file>index-eric5.Helpviewer.html</file>

@@ -20,6 +20,8 @@ Version 5.3.0:
   -- extended the User Agent handling to be able to set the string on a host basis
      (next to the global user agent string)
   -- added code to save the current page as a screen shot
+  -- added capability to synchronise bookmarks, history, passwords and user agent
+     settings via an FTP server
 
 Version 5.2.0:
 - bug fixes

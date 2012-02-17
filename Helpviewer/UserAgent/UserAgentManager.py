@@ -100,6 +100,17 @@ class UserAgentManager(QObject):
         
         self.__loaded = True
     
+    def reload(self):
+        """
+        Public method to reload the user agent settings.
+        """
+        if not self.__loaded:
+            return
+        
+        self.__agents = {}
+        self.__load()
+        self.changed.emit()
+    
     def close(self):
         """
         Public method to close the user agents manager.

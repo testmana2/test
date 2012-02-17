@@ -1310,4 +1310,3 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to change the phase of revisions.
         """
         self.vcs.hgPhase(self.project.ppath)
-

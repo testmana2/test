@@ -44,6 +44,9 @@ class BookmarksToolBar(E5ModelToolBar):
         self.__mw = mainWindow
         self.__bookmarksModel = model
         
+        Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+            .bookmarksReloaded.connect(self.__rebuild)
+        
         self.setModel(model)
         self.setRootIndex(model.nodeIndex(
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().toolbar()))
@@ -55,6 +58,17 @@ class BookmarksToolBar(E5ModelToolBar):
         self.setHidden(True)
         self.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
         
+        self._build()
+    
+    def __rebuild(self):
+        """
+        Private slot to rebuild the toolbar.
+        """
+        self.__bookmarksModel = \
+            Helpviewer.HelpWindow.HelpWindow.bookmarksManager().bookmarksModel()
+        self.setModel(self.__bookmarksModel)
+        self.setRootIndex(self.__bookmarksModel.nodeIndex(
+            Helpviewer.HelpWindow.HelpWindow.bookmarksManager().toolbar()))
         self._build()
     
     def __contextMenuRequested(self, pos):

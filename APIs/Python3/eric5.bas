@@ -204,6 +204,7 @@ FontDialogWizard QObject
 FontDialogWizardDialog QDialog Ui_FontDialogWizardDialog
 FtpAccessHandler SchemeAccessHandler
 FtpReply QNetworkReply
+FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
 FunctionDefinition Binding
 FunctionScope Scope
@@ -546,6 +547,13 @@ SvnTagDialog QDialog Ui_SvnTagDialog
 SvnUrlSelectionDialog QDialog Ui_SvnUrlSelectionDialog
 SymbolsModel QAbstractTableModel
 SymbolsWidget QWidget Ui_SymbolsWidget
+SyncAssistantDialog QWizard
+SyncCheckPage QWizardPage Ui_SyncCheckPage
+SyncDataPage QWizardPage Ui_SyncDataPage
+SyncFtpSettingsPage QWizardPage Ui_SyncFtpSettingsPage
+SyncHandler QObject
+SyncHostTypePage QWizardPage Ui_SyncHostTypePage
+SyncManager QObject
 SyntaxCheckerDialog QDialog Ui_SyntaxCheckerDialog
 SyntaxCheckerPlugin QObject
 TRPreviewer QMainWindow

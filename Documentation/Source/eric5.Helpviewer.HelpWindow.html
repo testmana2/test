@@ -59,7 +59,7 @@ emitted after the zoom text only setting was
 QMainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_passwordManager</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -96,6 +96,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.passwordManager">passwordManager</a></td>
 <td>Class method to get a reference to the password manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.syncManager">syncManager</a></td>
+<td>Class method to get a reference to the data synchronization manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.userAgentsManager">userAgentsManager</a></td>
 <td>Class method to get a reference to the user agents manager.</td>
@@ -313,6 +316,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__showSiteinfoDialog">__showSiteinfoDialog</a></td>
 <td>Private slot to show the site info dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showSyncDialog">__showSyncDialog</a></td>
+<td>Private slot to show the synchronization dialog.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__showTocWindow">__showTocWindow</a></td>
 <td>Private method to show the table of contents window.</td>
@@ -574,6 +580,16 @@ reference to the network access manager (NetworkAccessManager)
 <dt>Returns:</dt>
 <dd>
 reference to the password manager (PasswordManager)
+</dd>
+</dl><a NAME="HelpWindow.syncManager" ID="HelpWindow.syncManager"></a>
+<h4>HelpWindow.syncManager (class method)</h4>
+<b>syncManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the data synchronization manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the data synchronization manager (SyncManager)
 </dd>
 </dl><a NAME="HelpWindow.userAgentsManager" ID="HelpWindow.userAgentsManager"></a>
 <h4>HelpWindow.userAgentsManager (class method)</h4>
@@ -1028,6 +1044,11 @@ message to be shown (string)
 <b>__showSiteinfoDialog</b>(<i></i>)
 <p>
         Private slot to show the site info dialog.
+</p><a NAME="HelpWindow.__showSyncDialog" ID="HelpWindow.__showSyncDialog"></a>
+<h4>HelpWindow.__showSyncDialog</h4>
+<b>__showSyncDialog</b>(<i></i>)
+<p>
+        Private slot to show the synchronization dialog.
 </p><a NAME="HelpWindow.__showTocWindow" ID="HelpWindow.__showTocWindow"></a>
 <h4>HelpWindow.__showTocWindow</h4>
 <b>__showTocWindow</b>(<i></i>)

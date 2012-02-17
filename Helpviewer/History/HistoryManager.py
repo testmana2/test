@@ -344,6 +344,12 @@ class HistoryManager(QWebHistoryInterface):
         """
         return os.path.join(Utilities.getConfigDir(), "browser", "history")
     
+    def reload(self):
+        """
+        Public method to reload the history.
+        """
+        self.__load()
+    
     def __load(self):
         """
         Private method to load the saved history entries from disk.

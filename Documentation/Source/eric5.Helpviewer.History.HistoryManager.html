@@ -160,6 +160,9 @@ emitted after the history has been cleared
 </dd><dt>historyReset()</dt>
 <dd>
 emitted after the history has been reset
+</dd><dt>historySaved()</dt>
+<dd>
+emitted after the history was saved
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -228,6 +231,9 @@ QWebHistoryInterface
 </tr><tr>
 <td><a href="#HistoryManager.preferencesChanged">preferencesChanged</a></td>
 <td>Public method to indicate a change of preferences.</td>
+</tr><tr>
+<td><a href="#HistoryManager.reload">reload</a></td>
+<td>Public method to reload the history.</td>
 </tr><tr>
 <td><a href="#HistoryManager.removeHistoryEntry">removeHistoryEntry</a></td>
 <td>Public method to remove a history entry.</td>
@@ -399,6 +405,11 @@ reference to the history tree model (HistoryTreeModel)
 <b>preferencesChanged</b>(<i></i>)
 <p>
         Public method to indicate a change of preferences.
+</p><a NAME="HistoryManager.reload" ID="HistoryManager.reload"></a>
+<h4>HistoryManager.reload</h4>
+<b>reload</b>(<i></i>)
+<p>
+        Public method to reload the history.
 </p><a NAME="HistoryManager.removeHistoryEntry" ID="HistoryManager.removeHistoryEntry"></a>
 <h4>HistoryManager.removeHistoryEntry</h4>
 <b>removeHistoryEntry</b>(<i>url, title=""</i>)

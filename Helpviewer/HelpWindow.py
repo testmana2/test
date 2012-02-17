@@ -51,6 +51,7 @@ from .Download.DownloadManager import DownloadManager
 from .VirusTotalApi import VirusTotalAPI
 from .Feeds.FeedsManager import FeedsManager
 from .SiteInfo.SiteInfoDialog import SiteInfoDialog
+from .Sync.SyncManager import SyncManager
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
@@ -94,6 +95,7 @@ class HelpWindow(QMainWindow):
     _downloadManager = None
     _feedsManager = None
     _userAgentsManager = None
+    _syncManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -196,6 +198,8 @@ class HelpWindow(QMainWindow):
             self.__initToolbars()
             
             self.historyManager()
+            
+            self.syncManager()
             
             self.tabWidget.newBrowser(home)
             self.tabWidget.currentBrowser().setFocus()
@@ -1215,6 +1219,21 @@ class HelpWindow(QMainWindow):
                 self.__showUserAgentsDialog)
         self.__actions.append(self.userAgentManagerAct)
         
+        self.synchronizationAct = E5Action(self.trUtf8('Synchronize data'),
+            UI.PixmapCache.getIcon("sync.png"),
+            self.trUtf8('&Synchronize Data...'),
+            0, 0, self, 'help_synchronize_data')
+        self.synchronizationAct.setStatusTip(self.trUtf8(
+                'Shows a dialog to synchronize data via the network'))
+        self.synchronizationAct.setWhatsThis(self.trUtf8(
+                """<b>Synchronize Data...</b>"""
+                """<p>This shows a dialog to synchronize data via the network.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.synchronizationAct.triggered[()].connect(
+                self.__showSyncDialog)
+        self.__actions.append(self.synchronizationAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1346,6 +1365,8 @@ class HelpWindow(QMainWindow):
         menu.addAction(self.feedsManagerAct)
         menu.addAction(self.siteInfoAct)
         menu.addSeparator()
+        menu.addAction(self.synchronizationAct)
+        menu.addSeparator()
         menu.addAction(self.toolsMonitorAct)
         
         menu = mb.addMenu(self.trUtf8("&Window"))
@@ -1432,6 +1453,8 @@ class HelpWindow(QMainWindow):
         toolstb.setIconSize(UI.Config.ToolBarIconSize)
         toolstb.addAction(self.feedsManagerAct)
         toolstb.addAction(self.siteInfoAct)
+        toolstb.addSeparator()
+        toolstb.addAction(self.synchronizationAct)
         
         helptb = self.addToolBar(self.trUtf8("Help"))
         helptb.setObjectName("HelpToolBar")
@@ -1858,6 +1881,8 @@ class HelpWindow(QMainWindow):
         self.adblockManager().close()
         
         self.userAgentsManager().close()
+        
+        self.syncManager().close()
         
         self.searchEdit.openSearchManager().close()
         
@@ -2893,6 +2918,24 @@ class HelpWindow(QMainWindow):
         
         dlg = UserAgentsDialog(self)
         dlg.exec_()
+    
+    @classmethod
+    def syncManager(cls):
+        """
+        Class method to get a reference to the data synchronization manager.
+        
+        @return reference to the data synchronization manager (SyncManager)
+        """
+        if cls._syncManager is None:
+            cls._syncManager = SyncManager()
+        
+        return cls._syncManager
+    
+    def __showSyncDialog(self):
+        """
+        Private slot to show the synchronization dialog.
+        """
+        self.syncManager().showSyncDialog()
     
     ###########################################################################
     ## Interface to VirusTotal below                                         ##

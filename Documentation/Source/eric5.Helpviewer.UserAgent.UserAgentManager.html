@@ -49,6 +49,9 @@ Module implementing a user agent manager.
 <dt>changed()</dt>
 <dd>
 emitted to indicate a change
+</dd><dt>userAgentSettingsSaved()</dt>
+<dd>
+emitted after the user agent settings were saved
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -81,6 +84,9 @@ QObject
 </tr><tr>
 <td><a href="#UserAgentManager.hostsCount">hostsCount</a></td>
 <td>Public method to get the number of available user agent settings.</td>
+</tr><tr>
+<td><a href="#UserAgentManager.reload">reload</a></td>
+<td>Public method to reload the user agent settings.</td>
 </tr><tr>
 <td><a href="#UserAgentManager.removeUserAgent">removeUserAgent</a></td>
 <td>Public method to remove a user agent entry.</td>
@@ -155,7 +161,12 @@ name of the user agents file (string)
 <dd>
 number of user agent settings (integer)
 </dd>
-</dl><a NAME="UserAgentManager.removeUserAgent" ID="UserAgentManager.removeUserAgent"></a>
+</dl><a NAME="UserAgentManager.reload" ID="UserAgentManager.reload"></a>
+<h4>UserAgentManager.reload</h4>
+<b>reload</b>(<i></i>)
+<p>
+        Public method to reload the user agent settings.
+</p><a NAME="UserAgentManager.removeUserAgent" ID="UserAgentManager.removeUserAgent"></a>
 <h4>UserAgentManager.removeUserAgent</h4>
 <b>removeUserAgent</b>(<i>host</i>)
 <p>

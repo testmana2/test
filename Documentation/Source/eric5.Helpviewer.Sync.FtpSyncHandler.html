@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Helpviewer.Sync.FtpSyncHandler</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Helpviewer.Sync.FtpSyncHandler</h1>
+<p>
+Module implementing a synchronization handler using FTP.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#FtpSyncHandler">FtpSyncHandler</a></td>
+<td>Class implementing a synchronization handler using FTP.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="FtpSyncHandler" ID="FtpSyncHandler"></a>
+<h2>FtpSyncHandler</h2>
+<p>
+    Class implementing a synchronization handler using FTP.
+</p><h3>Signals</h3>
+<dl>
+<dt>syncError(message)</dt>
+<dd>
+emitted for a general error with the error message (string)
+</dd><dt>syncFinished(type_, done, download)</dt>
+<dd>
+emitted after a synchronization has
+        finished (string one of "bookmarks", "history", "passwords" or "useragents",
+        boolean, boolean)
+</dd><dt>syncStatus(type_, done, message)</dt>
+<dd>
+emitted to indicate the synchronization
+        status (string one of "bookmarks", "history", "passwords" or "useragents",
+        boolean, string)
+</dd>
+</dl>
+<h3>Derived from</h3>
+SyncHandler
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#FtpSyncHandler.__init__">FtpSyncHandler</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__changeToStore">__changeToStore</a></td>
+<td>Private slot to change to the storage directory.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__checkSyncFiles">__checkSyncFiles</a></td>
+<td>Private slot called for each entry sent by the FTP list command.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__commandFinished">__commandFinished</a></td>
+<td>Private slot handling the end of a command.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__initialSync">__initialSync</a></td>
+<td>Private slot to do the initial synchronization.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__initialSyncFile">__initialSyncFile</a></td>
+<td>Private method to do the initial synchronization of the given file.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__storeReached">__storeReached</a></td>
+<td>Private slot executed, when the storage directory was reached.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.__syncFile">__syncFile</a></td>
+<td>Private method to synchronize the given file.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.initialLoadAndCheck">initialLoadAndCheck</a></td>
+<td>Public method to do the initial check.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.shutdown">shutdown</a></td>
+<td>Public method to shut down the handler.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.syncBookmarks">syncBookmarks</a></td>
+<td>Public method to synchronize the bookmarks.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.syncHistory">syncHistory</a></td>
+<td>Public method to synchronize the history.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.syncPasswords">syncPasswords</a></td>
+<td>Public method to synchronize the passwords.</td>
+</tr><tr>
+<td><a href="#FtpSyncHandler.syncUserAgents">syncUserAgents</a></td>
+<td>Public method to synchronize the user agents.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="FtpSyncHandler.__init__" ID="FtpSyncHandler.__init__"></a>
+<h4>FtpSyncHandler (Constructor)</h4>
+<b>FtpSyncHandler</b>(<i>parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
+</dd>
+</dl><a NAME="FtpSyncHandler.__changeToStore" ID="FtpSyncHandler.__changeToStore"></a>
+<h4>FtpSyncHandler.__changeToStore</h4>
+<b>__changeToStore</b>(<i></i>)
+<p>
+        Private slot to change to the storage directory.
+</p><p>
+        This action might cause the storage path to be created on the server.
+</p><a NAME="FtpSyncHandler.__checkSyncFiles" ID="FtpSyncHandler.__checkSyncFiles"></a>
+<h4>FtpSyncHandler.__checkSyncFiles</h4>
+<b>__checkSyncFiles</b>(<i>info</i>)
+<p>
+        Private slot called for each entry sent by the FTP list command.
+</p><dl>
+<dt><i>info</i></dt>
+<dd>
+info about the entry (QUrlInfo)
+</dd>
+</dl><a NAME="FtpSyncHandler.__commandFinished" ID="FtpSyncHandler.__commandFinished"></a>
+<h4>FtpSyncHandler.__commandFinished</h4>
+<b>__commandFinished</b>(<i>id, error</i>)
+<p>
+        Private slot handling the end of a command.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+id of the finished command (integer)
+</dd><dt><i>error</i></dt>
+<dd>
+flag indicating an error situation (boolean)
+</dd>
+</dl><a NAME="FtpSyncHandler.__initialSync" ID="FtpSyncHandler.__initialSync"></a>
+<h4>FtpSyncHandler.__initialSync</h4>
+<b>__initialSync</b>(<i></i>)
+<p>
+        Private slot to do the initial synchronization.
+</p><a NAME="FtpSyncHandler.__initialSyncFile" ID="FtpSyncHandler.__initialSyncFile"></a>
+<h4>FtpSyncHandler.__initialSyncFile</h4>
+<b>__initialSyncFile</b>(<i>type_, fileName</i>)
+<p>
+        Private method to do the initial synchronization of the given file.
+</p><dl>
+<dt><i>type_</i></dt>
+<dd>
+type of the synchronization event (string one
+            of "bookmarks", "history", "passwords" or "useragents")
+</dd><dt><i>fileName</i></dt>
+<dd>
+name of the file to be synchronized (string)
+</dd>
+</dl><a NAME="FtpSyncHandler.__storeReached" ID="FtpSyncHandler.__storeReached"></a>
+<h4>FtpSyncHandler.__storeReached</h4>
+<b>__storeReached</b>(<i></i>)
+<p>
+        Private slot executed, when the storage directory was reached.
+</p><a NAME="FtpSyncHandler.__syncFile" ID="FtpSyncHandler.__syncFile"></a>
+<h4>FtpSyncHandler.__syncFile</h4>
+<b>__syncFile</b>(<i>type_, fileName</i>)
+<p>
+        Private method to synchronize the given file.
+</p><dl>
+<dt><i>type_</i></dt>
+<dd>
+type of the synchronization event (string one
+            of "bookmarks", "history", "passwords" or "useragents")
+</dd><dt><i>fileName</i></dt>
+<dd>
+name of the file to be synchronized (string)
+</dd>
+</dl><a NAME="FtpSyncHandler.initialLoadAndCheck" ID="FtpSyncHandler.initialLoadAndCheck"></a>
+<h4>FtpSyncHandler.initialLoadAndCheck</h4>
+<b>initialLoadAndCheck</b>(<i></i>)
+<p>
+        Public method to do the initial check.
+</p><a NAME="FtpSyncHandler.shutdown" ID="FtpSyncHandler.shutdown"></a>
+<h4>FtpSyncHandler.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to shut down the handler.
+</p><a NAME="FtpSyncHandler.syncBookmarks" ID="FtpSyncHandler.syncBookmarks"></a>
+<h4>FtpSyncHandler.syncBookmarks</h4>
+<b>syncBookmarks</b>(<i></i>)
+<p>
+        Public method to synchronize the bookmarks.
+</p><a NAME="FtpSyncHandler.syncHistory" ID="FtpSyncHandler.syncHistory"></a>
+<h4>FtpSyncHandler.syncHistory</h4>
+<b>syncHistory</b>(<i></i>)
+<p>
+        Public method to synchronize the history.
+</p><a NAME="FtpSyncHandler.syncPasswords" ID="FtpSyncHandler.syncPasswords"></a>
+<h4>FtpSyncHandler.syncPasswords</h4>
+<b>syncPasswords</b>(<i></i>)
+<p>
+        Public method to synchronize the passwords.
+</p><a NAME="FtpSyncHandler.syncUserAgents" ID="FtpSyncHandler.syncUserAgents"></a>
+<h4>FtpSyncHandler.syncUserAgents</h4>
+<b>syncUserAgents</b>(<i></i>)
+<p>
+        Public method to synchronize the user agents.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

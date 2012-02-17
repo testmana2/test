@@ -943,6 +943,16 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/UserAgent/UserAgentManager.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.py</Source>
     <Source>Helpviewer/PageScreenDialog.py</Source>
+    <Source>Helpviewer/Sync/__init__.py</Source>
+    <Source>Helpviewer/Sync/SyncHandler.py</Source>
+    <Source>Helpviewer/Sync/SyncManager.py</Source>
+    <Source>Helpviewer/Sync/SyncAssistantDialog.py</Source>
+    <Source>Helpviewer/Sync/SyncDataPage.py</Source>
+    <Source>Helpviewer/Sync/SyncHostTypePage.py</Source>
+    <Source>Helpviewer/Sync/SyncFtpSettingsPage.py</Source>
+    <Source>Helpviewer/Sync/SyncCheckPage.py</Source>
+    <Source>Helpviewer/Sync/FtpSyncHandler.py</Source>
+    <Source>Helpviewer/Sync/SyncGlobals.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1217,6 +1227,10 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/UserAgent/UserAgentsDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui</Form>
     <Form>Helpviewer/PageScreenDialog.ui</Form>
+    <Form>Helpviewer/Sync/SyncDataPage.ui</Form>
+    <Form>Helpviewer/Sync/SyncHostTypePage.ui</Form>
+    <Form>Helpviewer/Sync/SyncFtpSettingsPage.ui</Form>
+    <Form>Helpviewer/Sync/SyncCheckPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

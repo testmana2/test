@@ -98,11 +98,13 @@ class BookmarksManager(QObject):
         node has been removed
     @signal entryChanged(BookmarkNode) emitted after a bookmark node has been changed
     @signal bookmarksSaved() emitted after the bookmarks were saved
+    @signal bookmarksReloaded() emitted after the bookmarks were reloaded
     """
     entryAdded = pyqtSignal(BookmarkNode)
     entryRemoved = pyqtSignal(BookmarkNode, int, BookmarkNode)
     entryChanged = pyqtSignal(BookmarkNode)
     bookmarksSaved = pyqtSignal()
+    bookmarksReloaded = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -112,17 +114,23 @@ class BookmarksManager(QObject):
         """
         super().__init__(parent)
         
-        self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)
+        self.entryAdded.connect(self.__saveTimer.changeOccurred)
+        self.entryRemoved.connect(self.__saveTimer.changeOccurred)
+        self.entryChanged.connect(self.__saveTimer.changeOccurred)
+        
+        self.__initialize()
+    
+    def __initialize(self):
+        """
+        Private method to initialize some data.
+        """
+        self.__loaded = False
         self.__bookmarkRootNode = None
         self.__toolbar = None
         self.__menu = None
         self.__bookmarksModel = None
         self.__commands = QUndoStack()
-        
-        self.entryAdded.connect(self.__saveTimer.changeOccurred)
-        self.entryRemoved.connect(self.__saveTimer.changeOccurred)
-        self.entryChanged.connect(self.__saveTimer.changeOccurred)
     
     def getFileName(self):
         """
@@ -151,6 +159,14 @@ class BookmarksManager(QObject):
         Public method to handle a change of the expanded state.
         """
         self.__saveTimer.changeOccurred()
+    
+    def reload(self):
+        """
+        Public method used to initiate a reloading of the bookmarks.
+        """
+        self.__initialize()
+        self.load()
+        self.bookmarksReloaded.emit()
     
     def load(self):
         """
