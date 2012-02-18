@@ -339,10 +339,11 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         # draw a dot for the revision
         if currentRev:
             # enlarge dot for the current revision
-            delta = 2
+            delta = 1
             radius += 2 * delta
             dot_y -= delta
             dot_x -= delta
+            penradius = 3
         painter.setBrush(dotColor)
         pen = QPen(pencolor)
         pen.setWidth(penradius)
