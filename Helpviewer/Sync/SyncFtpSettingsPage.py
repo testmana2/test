@@ -34,6 +34,7 @@ class SyncFtpSettingsPage(QWizardPage, Ui_SyncFtpSettingsPage):
         self.passwordEdit.setText(Preferences.getHelp("SyncFtpPassword"))
         self.pathEdit.setText(Preferences.getHelp("SyncFtpPath"))
         self.portSpinBox.setValue(Preferences.getHelp("SyncFtpPort"))
+        self.idleSpinBox.setValue(Preferences.getHelp("SyncFtpIdleTimeout"))
         
         self.serverEdit.textChanged.connect(self.completeChanged)
         self.userNameEdit.textChanged.connect(self.completeChanged)
@@ -52,6 +53,7 @@ class SyncFtpSettingsPage(QWizardPage, Ui_SyncFtpSettingsPage):
         Preferences.setHelp("SyncFtpPassword", self.passwordEdit.text())
         Preferences.setHelp("SyncFtpPath", self.pathEdit.text())
         Preferences.setHelp("SyncFtpPort", self.portSpinBox.value())
+        Preferences.setHelp("SyncFtpIdleTimeout", self.idleSpinBox.value())
         
         return SyncGlobals.PageCheck
     

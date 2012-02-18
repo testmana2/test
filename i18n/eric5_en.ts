@@ -12605,7 +12605,7 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="121"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="125"/>
         <source>No suitable proxy found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17717,12 +17717,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1174"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1175"/>
         <source>Revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1171"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1172"/>
         <source>Author</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17897,27 +17897,27 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="495"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="496"/>
         <source>The hg process did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="498"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="499"/>
         <source>Could not start the hg executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="501"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="502"/>
         <source>Mercurial Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="690"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="691"/>
         <source>Process Generation Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="690"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="691"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -27590,27 +27590,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="988"/>
+        <location filename="Preferences/__init__.py" line="989"/>
         <source>Export Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1015"/>
+        <location filename="Preferences/__init__.py" line="1016"/>
         <source>Import Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1015"/>
+        <location filename="Preferences/__init__.py" line="1016"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1108"/>
+        <location filename="Preferences/__init__.py" line="1109"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1108"/>
+        <location filename="Preferences/__init__.py" line="1109"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40400,6 +40400,21 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="95"/>
         <source>Enter the remote port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="127"/>
+        <source>Idle Timeout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="134"/>
+        <source>Enter the idle timeout interval to prevent a server disconnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="140"/>
+        <source> s</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

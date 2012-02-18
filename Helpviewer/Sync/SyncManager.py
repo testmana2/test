@@ -61,6 +61,7 @@ class SyncManager(QObject):
                 if self.__handler is not None:
                     self.__handler.syncError.disconnect(self.__syncError)
                     self.__handler.syncFinished.disconnect(self.__syncFinished)
+                    self.__handler.shutdown()
                 self.__handler = FtpSyncHandler(self)
                 self.__handler.syncError.connect(self.__syncError)
                 self.__handler.syncFinished.connect(self.__syncFinished)
@@ -114,6 +115,7 @@ class SyncManager(QObject):
             if self.__handler is not None:
                 self.__handler.syncError.disconnect(self.__syncError)
                 self.__handler.syncFinished.disconnect(self.__syncFinished)
+                self.__handler.shutdown()
             self.__handler = None
             
             try:

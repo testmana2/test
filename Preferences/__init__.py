@@ -662,6 +662,7 @@ class Prefs(object):
         "SyncFtpPassword": "",
         "SyncFtpPath": "",
         "SyncFtpPort": 21,
+        "SyncFtpIdleTimeout": 30,
         "WarnOnMultipleClose": True,
     }
     
@@ -2027,7 +2028,7 @@ def getHelp(key, prefClass=Prefs):
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
                  "CachePolicy", "DownloadManagerRemovePolicy",
-                 "SearchLanguage", "SyncType", "SyncFtpPort"]:
+                 "SearchLanguage", "SyncType", "SyncFtpPort", "SyncFtpIdleTimeout"]:
         return int(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",

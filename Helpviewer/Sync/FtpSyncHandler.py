@@ -7,7 +7,7 @@
 Module implementing a synchronization handler using FTP.
 """
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QFile, QIODevice, QTime, QThread
+from PyQt4.QtCore import pyqtSignal, QUrl, QFile, QIODevice, QTime, QThread, QTimer
 from PyQt4.QtNetwork import QFtp, QNetworkProxyQuery, QNetworkProxy, QNetworkProxyFactory
 
 from .SyncHandler import SyncHandler
@@ -100,6 +100,10 @@ class FtpSyncHandler(SyncHandler):
         self.__remoteFilesFound = []
         self.__syncIDs = {}
         
+        self.__idleTimer = QTimer(self)
+        self.__idleTimer.setInterval(Preferences.getHelp("SyncFtpIdleTimeout") * 1000)
+        self.__idleTimer.timeout.connect(self.__idleTimeout)
+        
         self.__ftp = QFtp(self)
         self.__ftp.commandFinished.connect(self.__commandFinished)
         self.__ftp.listInfo.connect(self.__checkSyncFiles)
@@ -184,7 +188,9 @@ class FtpSyncHandler(SyncHandler):
         """
         Private slot executed, when the storage directory was reached.
         """
-        self.__ftp.list()
+        if self.__state == "initializing":
+            self.__ftp.list()
+            self.__idleTimer.start()
     
     def __checkSyncFiles(self, info):
         """
@@ -254,6 +260,7 @@ class FtpSyncHandler(SyncHandler):
             of "bookmarks", "history", "passwords" or "useragents")
         @param fileName name of the file to be synchronized (string)
         """
+        self.__state = "uploading"
         f = QFile(fileName)
         if f.exists():
             f.open(QIODevice.ReadOnly)
@@ -292,6 +299,9 @@ class FtpSyncHandler(SyncHandler):
         """
         Public method to shut down the handler.
         """
+        if self.__idleTimer.isActive():
+            self.__idleTimer.stop()
+        
         t = QTime.currentTime()
         t.start()
         while t.elapsed() < 5000 and self.__ftp.hasPendingCommands():
@@ -300,3 +310,9 @@ class FtpSyncHandler(SyncHandler):
             self.__ftp.clearPendingCommands()
         if self.__ftp.currentCommand() != 0:
             self.__ftp.abort()
+    
+    def __idleTimeout(self):
+        """
+        Private slot to prevent a disconnect from the server.
+        """
+        self.__ftp.rawCommand("NOOP")
