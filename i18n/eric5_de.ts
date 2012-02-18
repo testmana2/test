@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1640,8 +1641,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1859,7 +1860,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -12943,7 +12944,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="839"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -40801,17 +40802,17 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="127"/>
         <source>Idle Timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leerlaufzeit:</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="134"/>
         <source>Enter the idle timeout interval to prevent a server disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Gib die Leerlaufzeit ein, um ein Abmelden vom Server zu verhindern</translation>
     </message>
     <message>
         <location filename="Helpviewer/Sync/SyncFtpSettingsPage.ui" line="140"/>
         <source> s</source>
-        <translation type="unfinished"> s</translation>
+        <translation> s</translation>
     </message>
 </context>
 <context>
