@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>497</width>
-    <height>458</height>
+    <height>547</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -219,6 +219,16 @@
        <widget class="QCheckBox" name="tabsCloseButtonCheckBox">
         <property name="text">
          <string>Show only one close button instead of one for each tab</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="warnOnMultipleCloseCheckBox">
+        <property name="toolTip">
+         <string>Select to issue a warning, if multiple tabs are about to be closed</string>
+        </property>
+        <property name="text">
+         <string>Warn, if multiple tabs are about to be closed</string>
         </property>
        </widget>
       </item>

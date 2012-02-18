@@ -12890,7 +12890,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>...</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="133"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.py" line="138"/>
         <source>Select Style Sheet</source>
         <translation>Wähle Style Sheet</translation>
     </message>
@@ -12923,6 +12923,16 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="221"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Nur einen Schließen-Knopf anzeigen anstelle von einem pro Tab</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="231"/>
+        <source>Warn, if multiple tabs are about to be closed</source>
+        <translation>Warnen, wenn mehrere Tabs geschlossen werden</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="228"/>
+        <source>Select to issue a warning, if multiple tabs are about to be closed</source>
+        <translation>Auswählen, um eine Warnung auszugeben, wenn mehrere Tabs geschlossen werden</translation>
     </message>
 </context>
 <context>
@@ -27736,27 +27746,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="987"/>
+        <location filename="Preferences/__init__.py" line="988"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1014"/>
+        <location filename="Preferences/__init__.py" line="1015"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1014"/>
+        <location filename="Preferences/__init__.py" line="1015"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1107"/>
+        <location filename="Preferences/__init__.py" line="1108"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1107"/>
+        <location filename="Preferences/__init__.py" line="1108"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>

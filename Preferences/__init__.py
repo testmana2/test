@@ -662,6 +662,7 @@ class Prefs(object):
         "SyncFtpPassword": "",
         "SyncFtpPath": "",
         "SyncFtpPort": 21,
+        "WarnOnMultipleClose": True,
     }
     
     websettings = QWebSettings.globalSettings()
@@ -2041,6 +2042,7 @@ def getHelp(key, prefClass=Prefs):
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
                  "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
                  "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
+                 "WarnOnMultipleClose"
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))

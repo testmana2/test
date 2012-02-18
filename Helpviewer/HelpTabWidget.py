@@ -646,7 +646,7 @@ class HelpTabWidget(E5TabWidget):
         
         @return flag indicating a shut down (boolean)
         """
-        if self.count() > 1:
+        if self.count() > 1 and Preferences.getHelp("WarnOnMultipleClose"):
             mb = E5MessageBox.E5MessageBox(E5MessageBox.Information,
                 self.trUtf8("Are you sure you want to close the window?"),
                 self.trUtf8("""Are you sure you want to close the window?\n"""

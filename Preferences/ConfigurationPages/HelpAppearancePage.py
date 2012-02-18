@@ -60,6 +60,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.styleSheetEdit.setText(Preferences.getHelp("UserStyleSheet"))
         
         self.tabsCloseButtonCheckBox.setChecked(Preferences.getUI("SingleCloseButton"))
+        self.warnOnMultipleCloseCheckBox.setChecked(
+            Preferences.getHelp("WarnOnMultipleClose"))
     
     def setMode(self, displayMode):
         """
@@ -99,6 +101,9 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         if self.__displayMode == ConfigurationWidget.HelpBrowserMode:
             Preferences.setUI("SingleCloseButton",
                 self.tabsCloseButtonCheckBox.isChecked())
+        
+        Preferences.setHelp("WarnOnMultipleClose",
+            self.warnOnMultipleCloseCheckBox.isChecked())
     
     @pyqtSlot()
     def on_standardFontButton_clicked(self):
