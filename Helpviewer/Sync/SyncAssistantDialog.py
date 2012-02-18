@@ -37,5 +37,7 @@ class SyncAssistantDialog(QWizard):
         self.setPage(SyncGlobals.PageCheck, SyncCheckPage(self))
         
         self.setPixmap(QWizard.LogoPixmap, UI.PixmapCache.getPixmap("ericWeb48.png"))
+        self.setPixmap(QWizard.WatermarkPixmap, UI.PixmapCache.getPixmap("eric256.png"))
+        self.setPixmap(QWizard.BackgroundPixmap, UI.PixmapCache.getPixmap("eric256.png"))
         
-        self.resize(600, 400)
+        self.setMinimumSize(650, 450)
