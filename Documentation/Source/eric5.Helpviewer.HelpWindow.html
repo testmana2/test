@@ -336,7 +336,7 @@ QMainWindow
 <td>Private slot to synchronize the TOC with the currently shown page.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__titleChanged">__titleChanged</a></td>
-<td>Private slot called to handle a change of the current browsers title.</td>
+<td>Private slot called to handle a change of s browser's title.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__viewFullScreen">__viewFullScreen</a></td>
 <td>Private slot called to toggle fullscreen mode.</td>
@@ -1076,11 +1076,14 @@ message to be shown (string)
         Private slot to synchronize the TOC with the currently shown page.
 </p><a NAME="HelpWindow.__titleChanged" ID="HelpWindow.__titleChanged"></a>
 <h4>HelpWindow.__titleChanged</h4>
-<b>__titleChanged</b>(<i>title</i>)
+<b>__titleChanged</b>(<i>browser, title</i>)
 <p>
-        Private slot called to handle a change of the current browsers title.
+        Private slot called to handle a change of s browser's title.
 </p><dl>
-<dt><i>title</i></dt>
+<dt><i>browser</i></dt>
+<dd>
+reference to the browser (HelpBrowser)
+</dd><dt><i>title</i></dt>
 <dd>
 new title (string)
 </dd>

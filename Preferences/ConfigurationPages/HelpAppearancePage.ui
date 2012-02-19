@@ -190,26 +190,6 @@
     </widget>
    </item>
    <item>
-    <widget class="Line" name="separatorLine">
-     <property name="frameShape">
-      <enum>QFrame::HLine</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="nextStartupNoteLabel">
-     <property name="text">
-      <string>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="tabsGroupBox">
      <property name="title">
       <string>Tabs</string>

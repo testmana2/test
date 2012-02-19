@@ -37,9 +37,16 @@ from eric5config import getConfig
 class HelpTabWidget(E5TabWidget):
     """
     Class implementing the central widget showing the web pages.
+    
+    @signal sourceChanged(HelpBrowser, QUrl) emitted after the URL of a browser
+            has changed
+    @signal titleChanged(HelpBrowser, str) emitted after the title of a browser
+            has changed
+    @signal showMessage(str) emitted to show a message in the main window status bar
+    @signal browserClosed(QWidget) emitted after a browser was closed
     """
-    sourceChanged = pyqtSignal(QUrl)
-    titleChanged = pyqtSignal(str)
+    sourceChanged = pyqtSignal(HelpBrowser, QUrl)
+    titleChanged = pyqtSignal(HelpBrowser, str)
     showMessage = pyqtSignal(str)
     browserClosed = pyqtSignal(QWidget)
     
@@ -84,18 +91,19 @@ class HelpTabWidget(E5TabWidget):
         self.__navigationButton.setEnabled(False)
         self.__rightCornerWidgetLayout.addWidget(self.__navigationButton)
         
+        self.__closeButton = QToolButton(self)
+        self.__closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
+        self.__closeButton.setToolTip(self.trUtf8("Close the current help window"))
+        self.__closeButton.setEnabled(False)
+        self.__closeButton.clicked[bool].connect(self.closeBrowser)
+        self.__rightCornerWidgetLayout.addWidget(self.__closeButton)
         if Preferences.getUI("SingleCloseButton") or \
            not hasattr(self, 'setTabsClosable'):
-            self.__closeButton = QToolButton(self)
-            self.__closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
-            self.__closeButton.setToolTip(self.trUtf8("Close the current help window"))
-            self.__closeButton.setEnabled(False)
-            self.__closeButton.clicked[bool].connect(self.closeBrowser)
-            self.__rightCornerWidgetLayout.addWidget(self.__closeButton)
+            self.__closeButton.show()
         else:
             self.setTabsClosable(True)
             self.tabCloseRequested.connect(self.closeBrowserAt)
-            self.__closeButton = None
+            self.__closeButton.hide()
         
         self.setCornerWidget(self.__rightCornerWidget, Qt.TopRightCorner)
         
@@ -271,7 +279,7 @@ class HelpTabWidget(E5TabWidget):
         
         self.__mainWindow.closeAct.setEnabled(True)
         self.__mainWindow.closeAllAct.setEnabled(True)
-        self.__closeButton and self.__closeButton.setEnabled(True)
+        self.__closeButton.setEnabled(True)
         self.__navigationButton.setEnabled(True)
         
         if not linkName and not requestData and \
@@ -528,7 +536,10 @@ class HelpTabWidget(E5TabWidget):
         
         @param url URL of the new site (QUrl)
         """
-        self.sourceChanged.emit(url)
+        browser = self.sender()
+        
+        if browser is not None:
+            self.sourceChanged.emit(browser, url)
     
     def __titleChanged(self, title):
         """
@@ -536,13 +547,17 @@ class HelpTabWidget(E5TabWidget):
         
         @param title new title (string)
         """
-        if title == "":
-            title = self.currentBrowser().url().toString()
+        browser = self.sender()
         
-        self.setTabText(self.currentIndex(), self.__elide(title.replace("&", "&&")))
-        self.setTabToolTip(self.currentIndex(), title)
+        if browser is not None:
+            index = self.indexOf(browser)
+            if title == "":
+                title = browser.url().toString()
+            
+            self.setTabText(index, self.__elide(title.replace("&", "&&")))
+            self.setTabToolTip(index, title)
         
-        self.titleChanged.emit(title)
+            self.titleChanged.emit(browser, title)
     
     def __elide(self, txt, mode=Qt.ElideRight, length=40):
         """
@@ -574,6 +589,20 @@ class HelpTabWidget(E5TabWidget):
         
         for urlbar in self.__stackedUrlBar.urlBars():
             urlbar.preferencesChanged()
+        
+        if Preferences.getUI("SingleCloseButton") or \
+           not hasattr(self, 'setTabsClosable'):
+            if hasattr(self, 'setTabsClosable'):
+                self.setTabsClosable(False)
+                try:
+                    self.tabCloseRequested.disconnect(self.closeBrowserAt)
+                except TypeError:
+                    pass
+            self.__closeButton.show()
+        else:
+            self.setTabsClosable(True)
+            self.tabCloseRequested.connect(self.closeBrowserAt)
+            self.__closeButton.hide()
     
     def __loadStarted(self):
         """

@@ -44,7 +44,24 @@ Module implementing the central widget showing the web pages.
 <h2>HelpTabWidget</h2>
 <p>
     Class implementing the central widget showing the web pages.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>browserClosed(QWidget)</dt>
+<dd>
+emitted after a browser was closed
+</dd><dt>showMessage(str)</dt>
+<dd>
+emitted to show a message in the main window status bar
+</dd><dt>sourceChanged(HelpBrowser, QUrl)</dt>
+<dd>
+emitted after the URL of a browser
+            has changed
+</dd><dt>titleChanged(HelpBrowser, str)</dt>
+<dd>
+emitted after the title of a browser
+            has changed
+</dd>
+</dl>
 <h3>Derived from</h3>
 E5TabWidget
 <h3>Class Attributes</h3>
