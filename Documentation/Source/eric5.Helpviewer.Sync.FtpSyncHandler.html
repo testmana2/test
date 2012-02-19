@@ -86,6 +86,9 @@ SyncHandler
 <td><a href="#FtpSyncHandler.__commandFinished">__commandFinished</a></td>
 <td>Private slot handling the end of a command.</td>
 </tr><tr>
+<td><a href="#FtpSyncHandler.__idleTimeout">__idleTimeout</a></td>
+<td>Private slot to prevent a disconnect from the server.</td>
+</tr><tr>
 <td><a href="#FtpSyncHandler.__initialSync">__initialSync</a></td>
 <td>Private slot to do the initial synchronization.</td>
 </tr><tr>
@@ -161,7 +164,12 @@ id of the finished command (integer)
 <dd>
 flag indicating an error situation (boolean)
 </dd>
-</dl><a NAME="FtpSyncHandler.__initialSync" ID="FtpSyncHandler.__initialSync"></a>
+</dl><a NAME="FtpSyncHandler.__idleTimeout" ID="FtpSyncHandler.__idleTimeout"></a>
+<h4>FtpSyncHandler.__idleTimeout</h4>
+<b>__idleTimeout</b>(<i></i>)
+<p>
+        Private slot to prevent a disconnect from the server.
+</p><a NAME="FtpSyncHandler.__initialSync" ID="FtpSyncHandler.__initialSync"></a>
 <h4>FtpSyncHandler.__initialSync</h4>
 <b>__initialSync</b>(<i></i>)
 <p>

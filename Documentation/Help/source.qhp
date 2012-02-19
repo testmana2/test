@@ -4181,6 +4181,7 @@
       <keyword name="FtpSyncHandler.__changeToStore" id="FtpSyncHandler.__changeToStore" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__changeToStore" />
       <keyword name="FtpSyncHandler.__checkSyncFiles" id="FtpSyncHandler.__checkSyncFiles" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__checkSyncFiles" />
       <keyword name="FtpSyncHandler.__commandFinished" id="FtpSyncHandler.__commandFinished" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__commandFinished" />
+      <keyword name="FtpSyncHandler.__idleTimeout" id="FtpSyncHandler.__idleTimeout" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__idleTimeout" />
       <keyword name="FtpSyncHandler.__initialSync" id="FtpSyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSync" />
       <keyword name="FtpSyncHandler.__initialSyncFile" id="FtpSyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSyncFile" />
       <keyword name="FtpSyncHandler.__storeReached" id="FtpSyncHandler.__storeReached" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__storeReached" />
