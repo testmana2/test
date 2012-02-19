@@ -106,19 +106,20 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         if revision == "":
             rev = ""
         else:
-            rev = "{0:7d}".format(revision.number)
+            rev = revision.number
         if date == "":
             dt = ""
         else:
             dt = formatTime(date)
-        if size == 0:
-            sz = ""
-        else:
-            sz = "{0:7d}".format(size)
         if author is None:
             author = ""
         
-        itm = QTreeWidgetItem(parent, [path, rev, author, sz, dt])
+        itm = QTreeWidgetItem(parent)
+        itm.setData(0, Qt.DisplayRole, path)
+        itm.setData(1, Qt.DisplayRole, rev)
+        itm.setData(2, Qt.DisplayRole, author)
+        itm.setData(3, Qt.DisplayRole, size)
+        itm.setData(4, Qt.DisplayRole, dt)
         
         if nodekind == pysvn.node_kind.dir:
             itm.setIcon(0, self.__dirIcon)

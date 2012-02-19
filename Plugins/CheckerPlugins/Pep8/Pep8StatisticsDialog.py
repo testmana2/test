@@ -73,8 +73,10 @@ class Pep8StatisticsDialog(QDialog, Ui_Pep8StatisticsDialog):
         @param code of a PEP 8 message (string)
         @param message PEP 8 message to be shown (string)
         """
-        itm = QTreeWidgetItem(self.statisticsList,
-            ["{0:6}".format(count), code, message])
+        itm = QTreeWidgetItem(self.statisticsList)
+        itm.setData(0, Qt.DisplayRole, count)
+        itm.setData(1, Qt.DisplayRole, code)
+        itm.setData(2, Qt.DisplayRole, message)
         if code.startswith("W"):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("E"):

@@ -142,16 +142,18 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             rev = ""
             self.__lastRev = 0
         else:
-            rev = "{0:7d}".format(revision.number)
+            rev = revision.number
             self.__lastRev = revision.number
         if date == "":
             dt = ""
         else:
             dt = formatTime(date)
         
-        itm = QTreeWidgetItem(self.logTree,
-            [rev, author, dt, " ".join(message.splitlines())]
-        )
+        itm = QTreeWidgetItem(self.logTree)
+        itm.setData(0, Qt.DisplayRole, rev)
+        itm.setData(1, Qt.DisplayRole, author)
+        itm.setData(2, Qt.DisplayRole, dt)
+        itm.setData(3, Qt.DisplayRole, " ".join(message.splitlines()))
         
         changes = []
         for changedPath in changedPaths:

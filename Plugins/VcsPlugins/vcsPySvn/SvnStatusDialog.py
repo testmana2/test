@@ -207,21 +207,20 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         @param path path of the file or directory (string)
         """
         statusText = self.trUtf8(svnStatusMap[status])
-        itm = QTreeWidgetItem(self.statusList, [
-            "",
-            changelist,
-            statusText,
-            self.trUtf8(svnStatusMap[propStatus]),
-            self.yesno[locked],
-            self.yesno[history],
-            self.yesno[switched],
-            self.lockinfo[lockinfo],
-            self.yesno[uptodate],
-            "{0:7}".format(str(revision)),
-            "{0:7}".format(str(change)),
-            author,
-            path,
-        ])
+        itm = QTreeWidgetItem(self.statusList)
+        itm.setData(0, Qt.DisplayRole, "")
+        itm.setData(1, Qt.DisplayRole, changelist)
+        itm.setData(2, Qt.DisplayRole, statusText)
+        itm.setData(3, Qt.DisplayRole, self.trUtf8(svnStatusMap[propStatus]))
+        itm.setData(4, Qt.DisplayRole, self.yesno[locked])
+        itm.setData(5, Qt.DisplayRole, self.yesno[history])
+        itm.setData(6, Qt.DisplayRole, self.yesno[switched])
+        itm.setData(7, Qt.DisplayRole, self.lockinfo[lockinfo])
+        itm.setData(8, Qt.DisplayRole, self.yesno[uptodate])
+        itm.setData(9, Qt.DisplayRole, revision)
+        itm.setData(10, Qt.DisplayRole, change)
+        itm.setData(11, Qt.DisplayRole, author)
+        itm.setData(12, Qt.DisplayRole, path)
         
         itm.setTextAlignment(1, Qt.AlignLeft)
         itm.setTextAlignment(2, Qt.AlignHCenter)

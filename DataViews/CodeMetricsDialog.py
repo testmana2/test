@@ -64,15 +64,17 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
         
-    def __createResultItem(self, parent, strings):
+    def __createResultItem(self, parent, values):
         """
         Private slot to create a new item in the result list.
         
         @param parent parent of the new item (QTreeWidget or QTreeWidgetItem)
-        @param strings strings to be displayed (list of strings)
+        @param values values to be displayed (list)
         @return the generated item
         """
-        itm = QTreeWidgetItem(parent, strings)
+        itm = QTreeWidgetItem(parent)
+        for col in range(len(values)):
+            itm.setData(col, Qt.DisplayRole, values[col])
         for col in range(1, 7):
             itm.setTextAlignment(col, Qt.Alignment(Qt.AlignRight))
         return itm
@@ -209,7 +211,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         v = []
         for key in ('start', 'end', 'lines', 'nloc', 'comments', 'empty'):
             if counters.get(key, 0):
-                v.append("{0:>7}".format(loc.toString(counters[key])))
+                v.append(counters[key])
             else:
                 v.append('')
         return v

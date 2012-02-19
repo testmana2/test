@@ -285,19 +285,16 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             ])
         else:
             if index == -1:
-                indexStr = ""
-            else:
-                indexStr = "{0:>7}".format(index)
+                index = ""
             try:
                 statusStr = self.__statusDict[status]
             except KeyError:
                 statusStr = self.trUtf8("unknown")
-            itm = QTreeWidgetItem(self.patchesList, [
-                indexStr,
-                name,
-                statusStr,
-                summary
-            ])
+            itm = QTreeWidgetItem(self.patchesList)
+            itm.setData(0, Qt.DisplayRole, index)
+            itm.setData(1, Qt.DisplayRole, name)
+            itm.setData(2, Qt.DisplayRole, statusStr)
+            itm.setData(3, Qt.DisplayRole, summary)
             if status == "A":
                 # applied
                 for column in range(itm.columnCount()):

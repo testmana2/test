@@ -68,7 +68,10 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param line linenumber of faulty source (integer or string)
         @param sourcecode faulty line of code (string)
         """
-        itm = QTreeWidgetItem(self.resultList, [file, str(line), sourcecode])
+        itm = QTreeWidgetItem(self.resultList)
+        itm.setData(0, Qt.DisplayRole, file)
+        itm.setData(1, Qt.DisplayRole, line)
+        itm.setData(2, Qt.DisplayRole, sourcecode)
         itm.setTextAlignment(1, Qt.AlignRight)
         
     def prepare(self, fileList, project):

@@ -90,12 +90,14 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.__lastFileItem.setExpanded(True)
             self.__lastFileItem.setData(0, self.filenameRole, file)
         
-        itm = QTreeWidgetItem(self.__lastFileItem,
-                              ["{0:6}".format(line), error, sourcecode])
+        itm = QTreeWidgetItem(self.__lastFileItem)
         if isWarning:
             itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
         else:
             itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))
+        itm.setData(0, Qt.DisplayRole, line)
+        itm.setData(1, Qt.DisplayRole, error)
+        itm.setData(2, Qt.DisplayRole, sourcecode)
         itm.setData(0, self.filenameRole, file)
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.indexRole, index)

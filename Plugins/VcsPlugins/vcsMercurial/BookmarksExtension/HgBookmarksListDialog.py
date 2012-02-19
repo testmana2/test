@@ -200,11 +200,11 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         @param status of the bookmark (string)
         @param name name of the bookmark (string)
         """
-        itm = QTreeWidgetItem(self.bookmarksList, [
-            "{0:>7}".format(revision),
-            changeset,
-            status,
-            name])
+        itm = QTreeWidgetItem(self.bookmarksList)
+        itm.setData(0, Qt.DisplayRole, int(revision))
+        itm.setData(1, Qt.DisplayRole, changeset)
+        itm.setData(2, Qt.DisplayRole, status)
+        itm.setData(3, Qt.DisplayRole, name)
         itm.setTextAlignment(0, Qt.AlignRight)
         itm.setTextAlignment(1, Qt.AlignRight)
         itm.setTextAlignment(2, Qt.AlignHCenter)

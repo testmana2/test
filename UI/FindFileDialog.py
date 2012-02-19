@@ -149,9 +149,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 # is True (< 4.5.0)
             self.__lastFileItem.setData(0, self.md5Role, md5)
         
-        itm = QTreeWidgetItem(self.__lastFileItem,
-            [' {0:5d} '.format(line), text])
+        itm = QTreeWidgetItem(self.__lastFileItem)
         itm.setTextAlignment(0,  Qt.AlignRight)
+        itm.setData(0, Qt.DisplayRole, line)
+        itm.setData(1, Qt.DisplayRole, text)
         itm.setData(0, self.lineRole, line)
         itm.setData(0, self.startRole, start)
         itm.setData(0, self.endRole, end)
