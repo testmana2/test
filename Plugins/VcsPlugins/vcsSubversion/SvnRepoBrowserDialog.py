@@ -108,13 +108,21 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         """
         path = repopath
         
-        itm = QTreeWidgetItem(self.parentItem, [
-            path,
-            revision,
-            author,
-            size,
-            date,
-        ])
+        if revision == "":
+            rev = ""
+        else:
+            rev = int(revision)
+        if size == "":
+            sz = ""
+        else:
+            sz = int(size)
+        
+        itm = QTreeWidgetItem(self.parentItem)
+        itm.setData(0, Qt.DisplayRole, path)
+        itm.setData(1, Qt.DisplayRole, rev)
+        itm.setData(2, Qt.DisplayRole, author)
+        itm.setData(3, Qt.DisplayRole, sz)
+        itm.setData(4, Qt.DisplayRole, date)
         
         if nodekind == "dir":
             itm.setIcon(0, self.__dirIcon)

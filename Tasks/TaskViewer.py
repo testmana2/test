@@ -54,6 +54,8 @@ class Task(QTreeWidgetItem):
         @param project reference to the project object (Project)
         @param longtext explanatory text of the task (string)
         """
+        super().__init__()
+        
         self.description = description
         self.longtext = longtext
         if priority in [0, 1, 2]:
@@ -71,8 +73,11 @@ class Task(QTreeWidgetItem):
         if isProjectTask:
             self.filename = self.project.getRelativePath(self.filename)
             
-        super().__init__(["", "", self.description, self.filename,
-            (self.lineno and "{0:6d}".format(self.lineno) or "")])
+        self.setData(0, Qt.DisplayRole, "")
+        self.setData(1, Qt.DisplayRole, "")
+        self.setData(2, Qt.DisplayRole, self.description)
+        self.setData(3, Qt.DisplayRole, self.filename)
+        self.setData(4, Qt.DisplayRole, self.lineno or "")
         
         if self.completed:
             self.setIcon(0, UI.PixmapCache.getIcon("taskCompleted.png"))

@@ -243,21 +243,30 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
            self.currentChangelist == "":
             return
         
+        if revision == "":
+            rev = ""
+        else:
+            rev = int(revision)
+        if change == "":
+            chg = ""
+        else:
+            chg = int(change)
         statusText = self.status[status]
-        itm = QTreeWidgetItem(self.statusList, [
-            self.currentChangelist,
-            statusText,
-            self.propStatus[propStatus],
-            self.locked[locked],
-            self.history[history],
-            self.switched[switched],
-            self.lockinfo[lockinfo],
-            self.uptodate[uptodate],
-            "{0:7}".format(str(revision)),
-            "{0:7}".format(str(change)),
-            author,
-            path,
-        ])
+        
+        itm = QTreeWidgetItem(self.statusList)
+        itm.setData(0, Qt.DisplayRole, "")
+        itm.setData(1, Qt.DisplayRole, self.currentChangelist)
+        itm.setData(2, Qt.DisplayRole, statusText)
+        itm.setData(3, Qt.DisplayRole, self.propStatus[propStatus])
+        itm.setData(4, Qt.DisplayRole, self.locked[locked])
+        itm.setData(5, Qt.DisplayRole, self.history[history])
+        itm.setData(6, Qt.DisplayRole, self.switched[switched])
+        itm.setData(7, Qt.DisplayRole, self.lockinfo[lockinfo])
+        itm.setData(8, Qt.DisplayRole, self.uptodate[uptodate])
+        itm.setData(9, Qt.DisplayRole, rev)
+        itm.setData(10, Qt.DisplayRole, chg)
+        itm.setData(11, Qt.DisplayRole, author)
+        itm.setData(12, Qt.DisplayRole, path)
         
         itm.setTextAlignment(1, Qt.AlignLeft)
         itm.setTextAlignment(2, Qt.AlignHCenter)
@@ -477,7 +486,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                                         change, author, path)
                 elif self.rx_status2.exactMatch(s):
                     flags = self.rx_status2.cap(1)
-                    path = self.rx_status2.cap(2).trimmed()
+                    path = self.rx_status2.cap(2).strip()
                     
                     self.__generateItem(flags[0], flags[1], flags[2], flags[3],
                                         flags[4], flags[5], flags[7], "", "",

@@ -205,8 +205,11 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin, Ui_SvnTagBranchListDialog)
         @param date date of the tag (string)
         @param name name (path) of the tag (string)
         """
-        itm = QTreeWidgetItem(self.tagList,
-                              ["{0:6d}".format(revision), author, date, name])
+        itm = QTreeWidgetItem(self.tagList)
+        itm.setData(0, Qt.DisplayRole, revision)
+        itm.setData(1, Qt.DisplayRole, author)
+        itm.setData(2, Qt.DisplayRole, date)
+        itm.setData(3, Qt.DisplayRole, name)
         itm.setTextAlignment(0, Qt.AlignRight)
         
     def getTagList(self):

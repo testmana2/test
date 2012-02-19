@@ -155,12 +155,11 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         for line in message:
             msg.append(line.strip())
         
-        itm = QTreeWidgetItem(self.logTree, [
-            "{0:>7}".format(revision),
-            author,
-            date,
-            " ".join(msg),
-        ])
+        itm = QTreeWidgetItem(self.logTree)
+        itm.setData(0, Qt.DisplayRole, int(revision))
+        itm.setData(1, Qt.DisplayRole, author)
+        itm.setData(2, Qt.DisplayRole, date)
+        itm.setData(3, Qt.DisplayRole, " ".join(msg))
         
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
