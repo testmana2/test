@@ -37,9 +37,16 @@ from eric5config import getConfig
 class HelpTabWidget(E5TabWidget):
     """
     Class implementing the central widget showing the web pages.
+    
+    @signal sourceChanged(HelpBrowser, QUrl) emitted after the URL of a browser
+            has changed
+    @signal titleChanged(HelpBrowser, str) emitted after the title of a browser
+            has changed
+    @signal showMessage(str) emitted to show a message in the main window status bar
+    @signal browserClosed(QWidget) emitted after a browser was closed
     """
-    sourceChanged = pyqtSignal(QUrl)
-    titleChanged = pyqtSignal(str)
+    sourceChanged = pyqtSignal(HelpBrowser, QUrl)
+    titleChanged = pyqtSignal(HelpBrowser, str)
     showMessage = pyqtSignal(str)
     browserClosed = pyqtSignal(QWidget)
     
@@ -528,7 +535,10 @@ class HelpTabWidget(E5TabWidget):
         
         @param url URL of the new site (QUrl)
         """
-        self.sourceChanged.emit(url)
+        browser = self.sender()
+        
+        if browser is not None:
+            self.sourceChanged.emit(browser, url)
     
     def __titleChanged(self, title):
         """
@@ -536,13 +546,17 @@ class HelpTabWidget(E5TabWidget):
         
         @param title new title (string)
         """
-        if title == "":
-            title = self.currentBrowser().url().toString()
+        browser = self.sender()
         
-        self.setTabText(self.currentIndex(), self.__elide(title.replace("&", "&&")))
-        self.setTabToolTip(self.currentIndex(), title)
-        
-        self.titleChanged.emit(title)
+        if browser is not None:
+            index = self.indexOf(browser)
+            if title == "":
+                title = browser.url().toString()
+            
+            self.setTabText(index, self.__elide(title.replace("&", "&&")))
+            self.setTabToolTip(index, title)
+            
+            self.titleChanged.emit(browser, title)
     
     def __elide(self, txt, mode=Qt.ElideRight, length=40):
         """

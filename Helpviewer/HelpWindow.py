@@ -1572,14 +1572,15 @@ class HelpWindow(QMainWindow):
             idx += 1
             act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))
         
-    def __titleChanged(self, title):
+    def __titleChanged(self, browser, title):
         """
-        Private slot called to handle a change of the current browsers title.
+        Private slot called to handle a change of s browser's title.
         
+        @param browser reference to the browser (HelpBrowser)
         @param title new title (string)
         """
         self.historyManager().updateHistoryEntry(
-            self.currentBrowser().url().toString(), title)
+            browser.url().toString(), title)
     
     def newTab(self, link=None, requestData=None):
         """
