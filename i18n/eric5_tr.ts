@@ -94,7 +94,7 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockBlockedNetworkReply.py" line="30"/>
         <source>Blocked by AdBlock rule: {0}.</source>
-        <translation>Durdurmayı sağlayan Bloke kuralı: {0}.</translation>
+        <translation type="obsolete">Durdurmayı sağlayan Bloke kuralı: {0}.</translation>
     </message>
 </context>
 <context>
@@ -2427,37 +2427,37 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Hepsini genişlet</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>files</source>
         <translation>dosyalar</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>lines</source>
         <translation>satırlar</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
         <source>bytes</source>
         <translation>bitler</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
         <source>comments</source>
         <translation>yorumlar</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="192"/>
         <source>empty lines</source>
         <translation>boş satırlar</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="192"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="194"/>
         <source>non-commentary lines</source>
         <translation>Yorumlanmayan satırlar</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="194"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="196"/>
         <source>documentation lines</source>
         <translation>belge satırları</translation>
     </message>
@@ -12613,47 +12613,47 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Bul</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="634"/>
+        <location filename="UI/FindFileDialog.py" line="635"/>
         <source>Replace in Files</source>
         <translation>Dosyalarda yer değiştir</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="367"/>
         <source>Invalid search expression</source>
         <translation>Geçersiz arama ifadesi</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="367"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="531"/>
+        <location filename="UI/FindFileDialog.py" line="532"/>
         <source>Select directory</source>
         <translation>Dizin Seçiniz</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="595"/>
+        <location filename="UI/FindFileDialog.py" line="596"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="634"/>
+        <location filename="UI/FindFileDialog.py" line="635"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="660"/>
+        <location filename="UI/FindFileDialog.py" line="661"/>
         <source>Open</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="661"/>
+        <location filename="UI/FindFileDialog.py" line="662"/>
         <source>Copy Path to Clipboard</source>
         <translation>Yolu Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="609"/>
+        <location filename="UI/FindFileDialog.py" line="610"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13149,25 +13149,25 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
+        <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Not:&lt;/b&gt; Bu ayarlamalar uygulamanın bir sonraki çalıştırılmasında aktif hale geçecektir.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="195"/>
         <source>Tabs</source>
         <translation type="unfinished">Sekmeler</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="201"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished">Her bir sekmede bir tane yerine tek bir kapatma düğmesi göster</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="211"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13175,7 +13175,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="446"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="490"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Yardım Penceresi&lt;/b&gt;&lt;p&gt;Bu pencere seçilen yardım bilgilerini gösterir.&lt;/p&gt;</translation>
     </message>
@@ -13185,292 +13185,292 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="632"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="676"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası yok.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="669"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyası için görüntüleyici çalışmıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="652"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="696"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt; URL &lt;b&gt;{0}&lt;/b&gt;adresindeki uygulama başlatılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="839"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="883"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Yeni sekmede bir bağlantı açar<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="843"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="887"/>
         <source>Save Lin&amp;k</source>
         <translation>Bağlantıyı &amp;Kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="845"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="889"/>
         <source>Bookmark this Link</source>
         <translation>Bu linki yerimine ekle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="849"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="893"/>
         <source>Copy Link to Clipboard</source>
         <translation>Bağlantıyı Panoya Kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="862"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="906"/>
         <source>Open Image in New Tab</source>
         <translation>Görüntüyü yeni sekmede aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="866"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
         <source>Save Image</source>
         <translation>Görüntüyü Kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="868"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
         <source>Copy Image to Clipboard</source>
         <translation>Görüntüyü Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="869"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="913"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Görüntünün Yerini  Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="875"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
         <source>Block Image</source>
         <translation>Görüntüleri Engelle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="930"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="974"/>
         <source>Bookmark this Page</source>
         <translation>Bu sayfayı yerimine ekle</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="953"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="997"/>
         <source>Search with...</source>
         <translation>Bununla Ara...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="999"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1043"/>
         <source>Web Inspector...</source>
         <translation>Web Denetleyicisi...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1549"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1593"/>
         <source>Error loading page: {0}</source>
         <translation>Sayfa yüklenirken hata: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>When connecting to: {0}.</source>
         <translation>Bağlantı:{0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Adresi kontrol ediniz Örneğin &lt;b&gt;www&lt;/b&gt;.example.org yerine &lt;b&gt;ww&lt;/b&gt;.example.org yazmış olabilirsiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Eğer adres doğru ise, ağ bağlantınızı kontrol ediniz.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Eğer bilgisayarınız veya ağınız bir güvenlik duvarı yada proxy ile korunuyorsa, gözatıcınıza ağa giriş izni veriniz.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="995"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1039"/>
         <source>Add to web search toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1184"/>
         <source>Method not supported</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1184"/>
         <source>{0} method is not supported.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1182"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>Search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1182"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>Choose the desired search engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1243"/>
         <source>Engine name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1243"/>
         <source>Enter a name for the engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1599"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1643"/>
         <source>Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1599"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1643"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1607"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1651"/>
         <source>New Web Database Quota</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1607"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1651"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1627"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1671"/>
         <source>bytes</source>
         <translation>bitler</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1630"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1674"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1633"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1677"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="855"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
         <source>Scan Link with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="880"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
         <source>Scan Image with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1970"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2014"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="851"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="895"/>
         <source>Send Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="872"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="916"/>
         <source>Send Image Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="901"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
         <source>This Frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="904"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="948"/>
         <source>Show &amp;only this frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="906"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="950"/>
         <source>Show in new &amp;tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>&amp;Print</source>
         <translation type="unfinished">&amp;Yazdır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>Print Preview</source>
         <translation type="unfinished">Baskı Öngörünümü</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="914"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="917"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>Zoom &amp;in</source>
         <translation type="unfinished">Bü&amp;yült</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="963"/>
         <source>Zoom &amp;reset</source>
         <translation type="unfinished">Büyütmeyi sıfı&amp;rla</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="921"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="965"/>
         <source>Zoom &amp;out</source>
         <translation type="unfinished">Küçü&amp;lt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="968"/>
         <source>Show frame so&amp;urce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="932"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="976"/>
         <source>Send Page Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="948"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
         <source>Send Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="973"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Google Translate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="979"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1023"/>
         <source>Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="986"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1030"/>
         <source>Go to web address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1970"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2014"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;PyQt4 te hatyı yazdırmak tam olarak mümkün değil. Lütfen güncelleyiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="935"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="979"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>Try Again</source>
         <translation type="unfinished">Tekrar Dene</translation>
     </message>
@@ -13806,77 +13806,77 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>HelpTabWidget</name>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="81"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="88"/>
         <source>Show a navigation menu</source>
         <translation>Yönlendirme Menüsünü Göster</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="91"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="96"/>
         <source>Close the current help window</source>
         <translation>Geçerli yardım penceresini kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="104"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>Open a new help window tab</source>
         <translation>Yeni bir yardım penceresi sekmesi aç</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="118"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="126"/>
         <source>New Tab</source>
         <translation>Yeni Sekme</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="122"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
         <source>Move Left</source>
         <translation>Sola Götür</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="125"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
         <source>Move Right</source>
         <translation>Sağa Götür</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="129"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
         <source>Duplicate Page</source>
         <translation>Sayfayı Çoğalt</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="136"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="144"/>
         <source>Close Others</source>
         <translation>Diğerlerini Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="138"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
         <source>Close All</source>
         <translation>Hepsini Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
         <source>Print Preview</source>
         <translation>Baskı Öngörünümü</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="143"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="151"/>
         <source>Print</source>
         <translation>Yazdır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="145"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="148"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="156"/>
         <source>Bookmark All Tabs</source>
         <translation>Tüm Sekmeleri Yerimi yap</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="269"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="277"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -13886,32 +13886,32 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">Eric Web Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="519"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="527"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;PyQt4 te hatyı yazdırmak tam olarak mümkün değil. Lütfen güncelleyiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="595"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="624"/>
         <source>Loading...</source>
         <translation>Yükleniyor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="612"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="641"/>
         <source>Finished loading</source>
         <translation>Yükleme bitirildi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="614"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="643"/>
         <source>Failed to load</source>
         <translation>Yüklerken başarısız olundu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="679"/>
         <source>Are you sure you want to close the window?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="679"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation type="unfinished">
@@ -13920,22 +13920,22 @@ You have %n tab(s) open.</source>
         </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="657"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
         <source>&amp;Close</source>
         <translation>&amp;Kapat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="660"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="689"/>
         <source>&amp;Quit</source>
         <translation>&amp;Çıkış</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="662"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="691"/>
         <source>C&amp;lose Current Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="519"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="527"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
     </message>
@@ -14551,27 +14551,27 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="266"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="302"/>
         <source>Error loading page: {0}</source>
         <translation>Sayfa yüklenirken hata: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>When connecting to: {0}.</source>
         <translation>Bağlantı:{0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Adresi kontrol ediniz Örneğin &lt;b&gt;www&lt;/b&gt;.example.org yerine &lt;b&gt;ww&lt;/b&gt;.example.org yazmış olabilirsiniz</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Eğer adres doğru ise, ağ bağlantınızı kontrol ediniz.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Eğer bilgisayarınız veya ağınız bir güvenlik duvarı yada proxy ile korunuyorsa, gözatıcınıza ağa giriş izni veriniz.</translation>
     </message>
@@ -14586,24 +14586,34 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="383"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="427"/>
         <source>SSL Certificate Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="383"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="427"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>Try Again</source>
         <translation type="unfinished">Tekrar Dene</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="280"/>
+        <source>Content blocked by AdBlock Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="295"/>
+        <source>Blocked by rule: &lt;i&gt;{0}&lt;/i&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14637,7 +14647,7 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2411"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2412"/>
         <source>eric5 Web Browser</source>
         <translation>Eric5 Web Gözatıcısı</translation>
     </message>
@@ -14719,7 +14729,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Yeni Pencere&lt;/b&gt;&lt;p&gt;Bu yeni bir yardım gözatıcı penceresi açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1716"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
@@ -15494,7 +15504,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Sayfa kaynağını göster&lt;/b&gt;&lt;p&gt;Sayfa kaynağını bir düzenleyicide göster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1983"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1984"/>
         <source>Full Screen</source>
         <translation>Tam Ekran</translation>
     </message>
@@ -15944,7 +15954,7 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;p&gt;Görüntülenen bu düzenleme alanından direkt yardım dosyasını gir. Aşağı kayan listededen öncelikle görünmesini istediğiniz yardım dosyasını seçiniz.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1716"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Yardım Dosyaları (*.html *.htm);;PDF Dosyaları (*.pdf);;CHM Dosyaları (*.chm);;Tüm Dosyalar (*)</translation>
     </message>
@@ -15964,7 +15974,7 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">&lt;h3&gt;Eric Web Gözatıcısı Hakkındar&lt;/h3&gt;&lt;p&gt;Eric Web Gözatıcısı Yardım dosyası ve HTML gözatıcısının birleştirilmiş halidir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1830"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1831"/>
         <source>Saved Tabs</source>
         <translation>Sekmeleri Kaydet</translation>
     </message>
@@ -15984,27 +15994,27 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Yükleme bitirildi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2241"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2242"/>
         <source>Could not find an associated content.</source>
         <translation>Birleştirilmiş bir içerek bulunamadı.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2350"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2351"/>
         <source>Updating search index</source>
         <translation>Arama index yenileniyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2402"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2403"/>
         <source>Looking for Documentation...</source>
         <translation>Dökümanlara bakılıyor...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2432"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2433"/>
         <source>Unfiltered</source>
         <translation>Süzülmemiş</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
         <source>Help Engine</source>
         <translation>Yardım Motoru</translation>
     </message>
@@ -16089,42 +16099,42 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2012"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2013"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2766"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2767"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2768"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2768"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2769"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2769"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2770"/>
         <source>Unicode</source>
         <translation>Evrensel kod</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2770"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2771"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2771"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2772"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
         <source>Default Encoding</source>
         <translation>Varsayılan Kodlama</translation>
     </message>
@@ -16149,12 +16159,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2987"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2988"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2987"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2988"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16254,12 +16264,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1750"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1751"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1989"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1990"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20552,7 +20562,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">kayıp</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="292"/>
         <source>unknown</source>
         <translation type="unfinished">bilinmeyen</translation>
     </message>
@@ -38049,12 +38059,12 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="551"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="550"/>
         <source>Revision</source>
         <translation>Gözden Geçirme</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="548"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="547"/>
         <source>Author</source>
         <translation>Yazar</translation>
     </message>
@@ -38204,17 +38214,17 @@ directory selection dialog.&lt;/p&gt;</source>
         <translation>Değiştirildi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogBrowserDialog.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogBrowserDialog.py" line="429"/>
         <source>Subversion Error</source>
         <translation>Altsürüm Hatası</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="243"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="243"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
@@ -39709,22 +39719,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="193"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="194"/>
         <source>The installed version of PySvn should be 1.4.0 or better.</source>
         <translation>Kurulan PySvn sürümü 1.4.0 veya daha yeni olmalıdır.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="269"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="270"/>
         <source>Subversion Error</source>
         <translation>Altsürüm Hatası</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
@@ -39840,7 +39850,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>SvnStatusDialog</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="279"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="278"/>
         <source>Subversion Status</source>
         <translation>Altsürüm Durumu</translation>
     </message>
@@ -39987,17 +39997,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Değişiklik Listesine Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
         <source>Remove from Changelist</source>
         <translation>DEğişiklik listesinden çıkar</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
         <source>Lock</source>
         <translation>Kilitli</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="717"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="716"/>
         <source>Unlock</source>
         <translation>Kilitsiz</translation>
     </message>
@@ -40107,67 +40117,67 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>evet</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
         <source>Commit</source>
         <translation>Teslimat</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
         <source>Add</source>
         <translation>Ekle</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
         <source>Revert</source>
         <translation>Başa Dönme</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
         <source>There are no unlocked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
         <source>There are no locked files available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="734"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
         <source>Break Lock</source>
         <translation>Kırma Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
         <source>Steal Lock</source>
         <translation>Hırsızlık Kilidi</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="766"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40242,7 +40252,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="503"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="502"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40252,17 +40262,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Farklılık</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41515,7 +41525,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="274"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="276"/>
         <source>No issues found.</source>
         <translation>Sorun bulunamadı.</translation>
     </message>
@@ -41545,7 +41555,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Başla</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="193"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="195"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
@@ -41959,7 +41969,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Sekme yardımcısı işlem sürecini göster</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="187"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="190"/>
         <source>No indentation errors found.</source>
         <translation>Hiç girintileme hatası bulunamadı.</translation>
     </message>
@@ -41989,12 +41999,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Başla</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="258"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="261"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Python2 yorumlayıcı ayarlanmadı.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="283"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="286"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>Python2 yorumlayıcı 15 s. de bitmedi.</translation>
     </message>
@@ -42299,129 +42309,129 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Summary</source>
         <translation>Özet</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Filename</source>
         <translation>Dosyaadı</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Line</source>
         <translation>Satır</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="425"/>
+        <location filename="Tasks/TaskViewer.py" line="430"/>
         <source>&amp;New Task...</source>
         <translation>Ye&amp;ni Görev...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="387"/>
+        <location filename="Tasks/TaskViewer.py" line="392"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>P&amp;roje görevlerini yeniden üret</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="400"/>
+        <location filename="Tasks/TaskViewer.py" line="405"/>
         <source>&amp;Go To</source>
         <translation>Buraya &amp;Git</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="402"/>
+        <location filename="Tasks/TaskViewer.py" line="407"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="429"/>
+        <location filename="Tasks/TaskViewer.py" line="434"/>
         <source>&amp;Paste</source>
         <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="404"/>
+        <location filename="Tasks/TaskViewer.py" line="409"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="406"/>
+        <location filename="Tasks/TaskViewer.py" line="411"/>
         <source>&amp;Mark Completed</source>
         <translation>İşaretle&amp;me Tamamlandı</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="432"/>
+        <location filename="Tasks/TaskViewer.py" line="437"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>&amp;Tamalanan Görevleri Sil</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="416"/>
         <source>P&amp;roperties...</source>
         <translation>Özellikle&amp;r...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="436"/>
+        <location filename="Tasks/TaskViewer.py" line="441"/>
         <source>&amp;Filtered display</source>
         <translation>Süzgeçlenmiş Görüntü &amp;f</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="440"/>
+        <location filename="Tasks/TaskViewer.py" line="445"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>Süzgeç Ayarları &amp;o...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="443"/>
+        <location filename="Tasks/TaskViewer.py" line="448"/>
         <source>Resi&amp;ze columns</source>
         <translation>Sütünları yeniden boyutlandır &amp;z</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="445"/>
+        <location filename="Tasks/TaskViewer.py" line="450"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="747"/>
+        <location filename="Tasks/TaskViewer.py" line="752"/>
         <source>Activate task filter</source>
         <translation>Görev süzgeçini etkinleştir</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="747"/>
+        <location filename="Tasks/TaskViewer.py" line="752"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Görev süzgeçlerinin etkin olan hiç süzgeçi yok. Bu süzgeçlerin ayarlarını yapmak ister misiniz?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="805"/>
+        <location filename="Tasks/TaskViewer.py" line="810"/>
         <source>Extracting project tasks...</source>
         <translation>Proje görevleri çıkarılıyor...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="805"/>
+        <location filename="Tasks/TaskViewer.py" line="810"/>
         <source>Abort</source>
         <translation>Vazgeç</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="811"/>
+        <location filename="Tasks/TaskViewer.py" line="816"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Proje görevleri çıkarılıyor...
 {0}</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="391"/>
+        <location filename="Tasks/TaskViewer.py" line="396"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="776"/>
+        <location filename="Tasks/TaskViewer.py" line="781"/>
         <source>Scan Filter Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="776"/>
+        <location filename="Tasks/TaskViewer.py" line="781"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="385"/>
+        <location filename="Tasks/TaskViewer.py" line="390"/>
         <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>

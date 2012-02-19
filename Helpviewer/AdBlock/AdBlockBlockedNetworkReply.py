@@ -28,7 +28,7 @@ class AdBlockBlockedNetworkReply(QNetworkReply):
         self.setRequest(request)
         self.setUrl(request.url())
         self.setError(QNetworkReply.ContentAccessDenied,
-                      self.trUtf8("Blocked by AdBlock rule: {0}.").format(rule.filter()))
+                      "AdBlockRule:{0}".format(rule.filter()))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):

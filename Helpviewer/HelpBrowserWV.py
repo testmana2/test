@@ -29,7 +29,7 @@ import UI.PixmapCache
 
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
-from .HTMLResources import notFoundPage_html
+from .HTMLResources import notFoundPage_html, adblockPage_html
 try:
     from .SslInfoDialog import SslInfoDialog
     from PyQt4.QtNetwork import QSslCertificate
@@ -262,15 +262,59 @@ class HelpWebPage(QWebPage):
                 errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
                 urlString = bytes(info.url.toEncoded()).decode()
                 errorPage.baseUrl = info.url
+                if info.domain == QWebPage.QtNetwork and \
+                   info.error == QNetworkReply.ContentAccessDenied and \
+                   info.errorString.startswith("AdBlockRule:"):
+                    if info.frame != info.frame.page().mainFrame():
+                        # content in <iframe>
+                        docElement = info.frame.page().mainFrame().documentElement()
+                        for element in docElement.findAll("iframe"):
+                            src = element.attribute("src")
+                            if src in info.url.toString():
+                                element.setAttribute("style", "display:none;")
+                        return False
+                    else:
+                        # the whole page is blocked
+                        rule = info.errorString.replace("AdBlockRule:", "")
+                        html = adblockPage_html
+                        title = self.trUtf8("Content blocked by AdBlock Plus")
+                        pixmap = UI.PixmapCache.getPixmap("adBlockPlus16.png")
+                        imageBuffer = QBuffer()
+                        imageBuffer.open(QIODevice.ReadWrite)
+                        if pixmap.save(imageBuffer, "PNG"):
+                            html = html.replace("@FAVICON@",
+                                         str(imageBuffer.buffer().toBase64(),
+                                             encoding="ascii"))
+                        pixmap = UI.PixmapCache.getPixmap("adBlockPlus64.png")
+                        imageBuffer = QBuffer()
+                        imageBuffer.open(QIODevice.ReadWrite)
+                        if pixmap.save(imageBuffer, "PNG"):
+                            html = html.replace("@IMAGE@",
+                                         str(imageBuffer.buffer().toBase64(),
+                                             encoding="ascii"))
+                        errorPage.content = QByteArray(html.format(
+                            title,
+                            self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
+                        ).encode("utf8"))
+                        return True
+                
                 html = notFoundPage_html
                 title = self.trUtf8("Error loading page: {0}").format(urlString)
                 pixmap = qApp.style()\
                          .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                         .pixmap(32, 32)
+                         .pixmap(48, 48)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("IMAGE_BINARY_DATA_HERE",
+                    html = html.replace("@IMAGE@",
+                                 str(imageBuffer.buffer().toBase64(), encoding="ascii"))
+                pixmap = qApp.style()\
+                         .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
+                         .pixmap(16, 16)
+                imageBuffer = QBuffer()
+                imageBuffer.open(QIODevice.ReadWrite)
+                if pixmap.save(imageBuffer, "PNG"):
+                    html = html.replace("@FAVICON@",
                                  str(imageBuffer.buffer().toBase64(), encoding="ascii"))
                 errorPage.content = QByteArray(html.format(
                     title,

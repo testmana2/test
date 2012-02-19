@@ -8,9 +8,13 @@ Module containing some HTML resources.
 """
 
 notFoundPage_html = """\
-<html>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>{0}</title>
+<link rel="icon" href="data:image/png;base64,@FAVICON@" type="image/x-icon" />
 <style>
 body {{
   padding: 3em 0em;
@@ -27,30 +31,30 @@ img {{
   width: 600px;
   padding: 60px;
   margin: auto;
-  -webkit-border-radius: 0.8em;
+  border-radius: 0.8em;
 }}
 h1 {{
   font-size: 130%;
   font-weight: bold;
   border-bottom: 1px solid #85784A;
-  margin-left: 48px;
+  margin-left: 64px;
 }}
 h2 {{
   font-size: 100%;
   font-weight: normal;
   border-bottom: 1px solid #85784A;
-  margin-left: 48px;
+  margin-left: 64px;
 }}
 ul {{
   font-size: 100%;
-  padding-left: 48px;
+  padding-left: 64px;
   margin: 5px 0;
 }}
 </style>
 </head>
 <body>
   <div id="box">
-    <img src="data:image/png;base64,IMAGE_BINARY_DATA_HERE" width="32" height="32"/>
+    <img src="data:image/png;base64,@IMAGE@" width="48" height="48"/>
     <h1>{1}</h1>
     <h2>{2}</h2>
     <ul>
@@ -60,6 +64,53 @@ ul {{
       <li>{6}</li>
       <input type="submit" id="reloadButton" value="{7}" onclick="window.location.reload()">
     </ul>
+  </div>
+</body>
+</html>
+"""
+
+##########################################################################################
+
+adblockPage_html ="""\
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>{0}</title>
+<link rel="icon" href="data:image/png;base64,@FAVICON@" type="image/x-icon" />
+<style>
+body {{
+  padding: 3em 0em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#85784A), to(#FDFDFD), color-stop(0.5, #FDFDFD));
+  background-repeat: repeat-x;
+}}
+#box {{
+  background: white;
+  border: 1px solid #85784A;
+  max-width: 600px;
+  height: 50%;
+  padding: 40px;
+  padding-bottom: 10px;
+  margin: auto;
+  border-radius: 0.8em;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+}}
+h1 {{
+  font-size: 130%;
+  font-weight: bold;
+  border-bottom: 1px solid #85784A;
+  margin-bottom: 0px;
+}}
+</style>
+</head>
+<body>
+  <div id="box">
+    <img src="data:image/png;base64,@IMAGE@" width="64" height="64"/>
+    <h1>AdBlock Plus</h1>
+    <p>{1}</p>
   </div>
 </body>
 </html>
@@ -93,7 +144,7 @@ body {
 }
 
 #header, #search {
-    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
     padding: 25px;
 }
 

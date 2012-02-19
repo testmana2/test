@@ -94,7 +94,7 @@
     <message>
         <location filename="Helpviewer/AdBlock/AdBlockBlockedNetworkReply.py" line="30"/>
         <source>Blocked by AdBlock rule: {0}.</source>
-        <translation>Заблокировано AdBlock правилом: {0}.</translation>
+        <translation type="obsolete">Заблокировано AdBlock правилом: {0}.</translation>
     </message>
 </context>
 <context>
@@ -2344,37 +2344,37 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>CodeMetricsDialog</name>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="192"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="194"/>
         <source>non-commentary lines</source>
         <translation>строки не-комментарии</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="192"/>
         <source>empty lines</source>
         <translation>пустые строки</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="191"/>
         <source>comments</source>
         <translation>комментарии</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="190"/>
         <source>bytes</source>
         <translation>байты</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="187"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="189"/>
         <source>lines</source>
         <translation>строки</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="186"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="188"/>
         <source>files</source>
         <translation>файлы</translation>
     </message>
     <message>
-        <location filename="DataViews/CodeMetricsDialog.py" line="194"/>
+        <location filename="DataViews/CodeMetricsDialog.py" line="196"/>
         <source>documentation lines</source>
         <translation>строки документации</translation>
     </message>
@@ -12322,7 +12322,7 @@ whole selection.&lt;/li&gt;
 <context>
     <name>FindFileDialog</name>
     <message>
-        <location filename="UI/FindFileDialog.py" line="531"/>
+        <location filename="UI/FindFileDialog.py" line="532"/>
         <source>Select directory</source>
         <translation>Выберите каталог</translation>
     </message>
@@ -12517,17 +12517,17 @@ whole selection.&lt;/li&gt;
         <translation>Заменить</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="634"/>
+        <location filename="UI/FindFileDialog.py" line="635"/>
         <source>Replace in Files</source>
         <translation>Заменить в файлах</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="595"/>
+        <location filename="UI/FindFileDialog.py" line="596"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу прочитать файл &lt;b&gt;{0}&lt;/b&gt;. Пропускаю.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="634"/>
+        <location filename="UI/FindFileDialog.py" line="635"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу сохранить файл &lt;b&gt;{0}&lt;/b&gt;. Пропускаю.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
@@ -12552,27 +12552,27 @@ whole selection.&lt;/li&gt;
         <translation>Приблизительно</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="660"/>
+        <location filename="UI/FindFileDialog.py" line="661"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="661"/>
+        <location filename="UI/FindFileDialog.py" line="662"/>
         <source>Copy Path to Clipboard</source>
         <translation>Сопировать путь в буфер обмена</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="367"/>
         <source>Invalid search expression</source>
         <translation>Неверное выражение для поиска</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="366"/>
+        <location filename="UI/FindFileDialog.py" line="367"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Неверное выражение для поиска.&lt;/p&gt;&lt;p&gt;Ошибка: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/FindFileDialog.py" line="609"/>
+        <location filename="UI/FindFileDialog.py" line="610"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Хэш для файла &lt;b&gt;{0}&lt;/b&gt; изменился. Пропускаем.&lt;/p&gt;&lt;p&gt;Хэш 1:{1}&lt;/p&gt;&lt;p&gt;Хэш 2: {2}&lt;/p&gt;</translation>
     </message>
@@ -13070,25 +13070,25 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
-        <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Примечание:&lt;/b&gt; Эти изменения вступят в силу при следующем запуске приложения.&lt;/font&gt;</translation>
+        <translation type="obsolete">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Примечание:&lt;/b&gt; Эти изменения вступят в силу при следующем запуске приложения.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="215"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="195"/>
         <source>Tabs</source>
         <translation type="unfinished">Закладки</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="221"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="201"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished">Показывать только одну общую закрывающую кнопку</translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="231"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="211"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="228"/>
+        <location filename="Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13096,97 +13096,97 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="669"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="713"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик для файла &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="839"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="883"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="632"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="676"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; не существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="446"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="490"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно помощи&lt;/b&gt;&lt;p&gt;В этом окне отображается имеющаяся помощь.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="999"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1043"/>
         <source>Web Inspector...</source>
         <translation>WEB проводник...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1549"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1593"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="652"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="696"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить приложение для URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="930"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="974"/>
         <source>Bookmark this Page</source>
         <translation>Создать закладку для этой страницы</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="843"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="887"/>
         <source>Save Lin&amp;k</source>
         <translation>Сохранить &amp;ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="845"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="889"/>
         <source>Bookmark this Link</source>
         <translation>Сохранить ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="849"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="893"/>
         <source>Copy Link to Clipboard</source>
         <translation>Скопировать ссылку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="862"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="906"/>
         <source>Open Image in New Tab</source>
         <translation>Открыть изображение в новой закладке</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="866"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="868"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
         <source>Copy Image to Clipboard</source>
         <translation>Скопировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="869"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="913"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Скопировать адрес изображения</translation>
     </message>
@@ -13196,202 +13196,202 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">Просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="875"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
         <source>Block Image</source>
         <translation>Заблокировать изображение</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="953"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="997"/>
         <source>Search with...</source>
         <translation>Искать с...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1599"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1643"/>
         <source>Web Database Quota</source>
         <translation>Квота Web базы данных</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1599"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1643"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Квота Web базы данных &lt;strong&gt;{0}&lt;/strong&gt; была превышена при доступе к базе &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Изменить квоту?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1607"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1651"/>
         <source>New Web Database Quota</source>
         <translation>Новая квота Web базы данных</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1627"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1671"/>
         <source>bytes</source>
         <translation>байт</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1630"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1674"/>
         <source>kB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1633"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1677"/>
         <source>MB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1607"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1651"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Введите новую квоту в MB (текущая = {0}, использовано = {1}; шаг изменения = 5 MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="995"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1039"/>
         <source>Add to web search toolbar</source>
         <translation>Добавить к панели инструментов Web поиска</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1184"/>
         <source>Method not supported</source>
         <translation>Метод не поддерживается</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1184"/>
         <source>{0} method is not supported.</source>
         <translation>{0} метод не поддерживается.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1182"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>Search engine</source>
         <translation>Поисковик</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1182"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1226"/>
         <source>Choose the desired search engine</source>
         <translation>Выберите поисковик</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1243"/>
         <source>Engine name</source>
         <translation>Имя поисковика</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1199"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1243"/>
         <source>Enter a name for the engine</source>
         <translation>Введите имя поисковика</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="855"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
         <source>Scan Link with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="880"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
         <source>Scan Image with VirusTotal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1970"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2014"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="851"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="895"/>
         <source>Send Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="872"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="916"/>
         <source>Send Image Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="901"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="945"/>
         <source>This Frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="904"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="948"/>
         <source>Show &amp;only this frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="906"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="950"/>
         <source>Show in new &amp;tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="910"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="954"/>
         <source>&amp;Print</source>
         <translation type="unfinished">&amp;Печать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="912"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="956"/>
         <source>Print Preview</source>
         <translation type="unfinished">Предварительный просмотр печати</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="914"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="958"/>
         <source>Print as PDF</source>
         <translation type="unfinished">Печать как PDF</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="917"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="961"/>
         <source>Zoom &amp;in</source>
         <translation type="unfinished">У&amp;величить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="919"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="963"/>
         <source>Zoom &amp;reset</source>
         <translation type="unfinished">&amp;Сбросить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="921"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="965"/>
         <source>Zoom &amp;out</source>
         <translation type="unfinished">У&amp;меньшить масштаб</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="924"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="968"/>
         <source>Show frame so&amp;urce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="932"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="976"/>
         <source>Send Page Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="948"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="992"/>
         <source>Send Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="973"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1017"/>
         <source>Google Translate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="979"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1023"/>
         <source>Dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="986"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1030"/>
         <source>Go to web address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1970"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2014"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="935"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="979"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1558"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1602"/>
         <source>Try Again</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13707,77 +13707,77 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpTabWidget</name>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="81"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="88"/>
         <source>Show a navigation menu</source>
         <translation>Показать меню</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="91"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="96"/>
         <source>Close the current help window</source>
         <translation>Закрыть это окно помощи</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="104"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>Open a new help window tab</source>
         <translation>Открыть новую закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="118"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="126"/>
         <source>New Tab</source>
         <translation>Новая закладка</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="122"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
         <source>Move Left</source>
         <translation>Сдвинуть влево</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="125"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
         <source>Move Right</source>
         <translation>Сдвинуть вправо</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="129"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
         <source>Duplicate Page</source>
         <translation>Продублировать страницу</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="136"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="144"/>
         <source>Close Others</source>
         <translation>Закрыть остальные</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="138"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
         <source>Close All</source>
         <translation>Закрыть всё</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
         <source>Print Preview</source>
         <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="143"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="151"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="145"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
         <source>Print as PDF</source>
         <translation>Печать как PDF</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="148"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="156"/>
         <source>Bookmark All Tabs</source>
         <translation>Создать закладки для всех открытых страниц</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="269"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="277"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -13787,32 +13787,32 @@ whole selection.&lt;/li&gt;
         <translation type="obsolete">Встроенный просмотрщик Web</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="519"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="527"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="595"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="624"/>
         <source>Loading...</source>
         <translation>Загружаю...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="612"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="641"/>
         <source>Finished loading</source>
         <translation>Загрузка завершена</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="614"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="643"/>
         <source>Failed to load</source>
         <translation>Загрука не удалась</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="679"/>
         <source>Are you sure you want to close the window?</source>
         <translation>Вы действительно хотите закрыть это окно?</translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="679"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -13825,22 +13825,22 @@ You have %n tab(s) open.</source>
         </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="657"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
         <source>&amp;Close</source>
         <translation>&amp;Закрыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="660"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="689"/>
         <source>&amp;Quit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="662"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="691"/>
         <source>C&amp;lose Current Tab</source>
         <translation>&amp;Закрыть текущую закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="519"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="527"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
     </message>
@@ -14466,42 +14466,42 @@ You have %n tab(s) open.</source>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="266"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="302"/>
         <source>Error loading page: {0}</source>
         <translation>Ошибка при загрузке страницы: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>When connecting to: {0}.</source>
         <translation>При соединении с {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Проверьте адрес на ошибки типа &lt;b&gt;ww&lt;/b&gt;.example.org вместо &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Если адрес правильный, проверьте сетевое соединение.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Если ваш компьютер или локальная сеть находятся за firewall или proxy, убедитесь что браузеру разрешено подсоединяться к сети.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Если режим кэша установлен в offline, то доступны только страницы из локального кзша.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="383"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="427"/>
         <source>SSL Certificate Info</source>
         <translation>SLL сертификат</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="383"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="427"/>
         <source>There is no SSL Certificate Info available.</source>
         <translation>SLL сертификат отсутствует.</translation>
     </message>
@@ -14516,8 +14516,18 @@ You have %n tab(s) open.</source>
         <translation>Для того чтобы показать страницу, необходимо повторить запрос, что может вызвать неожиданное поведение сервера, например, он может дважды сделать одно и то же действие. Продолжить не смотря на это?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="275"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="319"/>
         <source>Try Again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="280"/>
+        <source>Content blocked by AdBlock Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="295"/>
+        <source>Blocked by rule: &lt;i&gt;{0}&lt;/i&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14557,7 +14567,7 @@ You have %n tab(s) open.</source>
         <translation>Новое окно</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1716"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
@@ -14954,7 +14964,7 @@ You have %n tab(s) open.</source>
         <translation>Перейти</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1715"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1716"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Файлы помощи (*.html *.htm);;Файлы PDF (*.pdf);;Файлы CHM (*.chm);;Все файлы (*)</translation>
     </message>
@@ -15304,7 +15314,7 @@ You have %n tab(s) open.</source>
         <translation>Фильтровать по:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2241"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2242"/>
         <source>Could not find an associated content.</source>
         <translation>Невозможно найти соответствующее содержание.</translation>
     </message>
@@ -15369,22 +15379,22 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Переиндексировать документацию&lt;/b&gt;&lt;p&gt;Переиндексировать документацию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2350"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2351"/>
         <source>Updating search index</source>
         <translation>Обновление поискового индекса</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2402"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2403"/>
         <source>Looking for Documentation...</source>
         <translation>Идёт поиск помощи...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2432"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2433"/>
         <source>Unfiltered</source>
         <translation>Нефильтрованное</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2451"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
         <source>Help Engine</source>
         <translation>Просмотрщик помощи</translation>
     </message>
@@ -15404,7 +15414,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Личный просмотр&lt;/b&gt;&lt;p&gt;Разрешает режим личного просмотра. В этом режиме история не сохраняется.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1983"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1984"/>
         <source>Full Screen</source>
         <translation>Полный экран</translation>
     </message>
@@ -15727,7 +15737,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Создать закладки для всех открытых страниц...&lt;/b&gt;&lt;p&gt;Показать диалог добавления папки для закладок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1830"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1831"/>
         <source>Saved Tabs</source>
         <translation>Сохраненные закладки</translation>
     </message>
@@ -15871,7 +15881,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Показать диалог для настройки AdBlock подписок и правил.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2411"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2412"/>
         <source>eric5 Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
@@ -15916,7 +15926,7 @@ You have %n tab(s) open.</source>
         <translation>Настройка &amp;поисковиков...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2012"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2013"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Подтвердите включение закрытого режима.&lt;/b&gt;&lt;p&gt;В закрытом режиме посещённые WEB страницы не сохраняются в истории, поиски не сохраняються в списке последних поисков, иконки сайтов и cookies так же не сохраняются. HTML5 автономное хранилище будет выключено. Пока текущее окно не закрыто, переход вперёд и назад на просмотренные уже страницы всё же будет работать.&lt;/p&gt;</translation>
     </message>
@@ -15926,37 +15936,37 @@ You have %n tab(s) open.</source>
         <translation>Кодировка текста</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2766"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2767"/>
         <source>ISO</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2767"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2768"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2768"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2769"/>
         <source>ISCII</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2769"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2770"/>
         <source>Unicode</source>
         <translation>Юникод</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2770"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2771"/>
         <source>Other</source>
         <translation>Другое</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2771"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2772"/>
         <source>IBM</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
         <source>Default Encoding</source>
         <translation>Кодировка по умолчанию</translation>
     </message>
@@ -16016,12 +16026,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2987"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2988"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2987"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2988"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16121,12 +16131,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1750"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1751"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1989"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1990"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20497,7 +20507,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="294"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="292"/>
         <source>unknown</source>
         <translation type="unfinished">неизвестный</translation>
     </message>
@@ -37956,12 +37966,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Журнал Subversion</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="551"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="550"/>
         <source>Revision</source>
         <translation>Версия (ревизия)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="548"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="547"/>
         <source>Author</source>
         <translation>Автор</translation>
     </message>
@@ -38046,7 +38056,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Изменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogBrowserDialog.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnLogBrowserDialog.py" line="429"/>
         <source>Subversion Error</source>
         <translation>Ошибка Subversion</translation>
     </message>
@@ -38102,12 +38112,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="243"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="243"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -39632,7 +39642,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Дата</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="269"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="270"/>
         <source>Subversion Error</source>
         <translation>Ошибка Subversion</translation>
     </message>
@@ -39682,12 +39692,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -39697,7 +39707,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ошибки&lt;/b&gt;&lt;p&gt;Показаны возможные ошибки команды &lt;tt&gt;cvn list&lt;/tt&gt; и &lt;tt&gt;cvn info&lt;/tt&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="193"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnRepoBrowserDialog.py" line="194"/>
         <source>The installed version of PySvn should be 1.4.0 or better.</source>
         <translation>Установленный PySvn должен быть версии 1.4.0 или выше.</translation>
     </message>
@@ -39873,7 +39883,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>игнорированный</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="279"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="278"/>
         <source>Subversion Status</source>
         <translation>Статус Subversion</translation>
     </message>
@@ -39883,22 +39893,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Зафиксировать изменения в репозитории...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
         <source>Commit</source>
         <translation>Зафиксировать</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Нет доступных/выбранных неотправленных изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
         <source>Lock</source>
         <translation>Захватить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="717"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="716"/>
         <source>Unlock</source>
         <translation>Освободить</translation>
     </message>
@@ -39943,22 +39953,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>заменено</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="701"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="700"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>Нет доступных/выбранных незахваченных файлов.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
         <source>There are no locked files available/selected.</source>
         <translation>Нет доступных/выбранных захваченных файлов.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="734"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="733"/>
         <source>Break Lock</source>
         <translation>Нарушить захват</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="751"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="750"/>
         <source>Steal Lock</source>
         <translation>Украсть захват</translation>
     </message>
@@ -40080,7 +40090,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Подстроить размеры колонок</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
@@ -40100,22 +40110,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Отмена изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="623"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="622"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Нет/не выбраны неверсионные элементы.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
         <source>Revert</source>
         <translation>Откатить</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="375"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
@@ -40130,17 +40140,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Добавить к списку изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
         <source>Remove from Changelist</source>
         <translation>Удалить из списка изменений</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="767"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="766"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>Среди выбранных нет файлов не включенных в список изменений.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="785"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="784"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>Среди выбранных нет файлов включенных в список изменений.</translation>
     </message>
@@ -40215,7 +40225,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="503"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="502"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40225,17 +40235,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Различие</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="682"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="681"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="584"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="583"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="665"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="664"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished">Нет/не выбраны пропущенных элементы.</translation>
     </message>
@@ -41498,7 +41508,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="274"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="276"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
@@ -41528,7 +41538,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Начать</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="193"/>
+        <location filename="Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="195"/>
         <source>Error: {0}</source>
         <translation>Ошибка: {0}</translation>
     </message>
@@ -41900,7 +41910,7 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="187"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="190"/>
         <source>No indentation errors found.</source>
         <translation>Ошибки в отступах не найдены.</translation>
     </message>
@@ -41974,12 +41984,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Начать</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="258"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="261"/>
         <source>Python2 interpreter not configured.</source>
         <translation>Интерпретатор Python2 не настроен.</translation>
     </message>
     <message>
-        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="283"/>
+        <location filename="Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="286"/>
         <source>Python2 interpreter did not finish within 15s.</source>
         <translation>Интерпретатор Python2 не завершился в течение 15 секунд.</translation>
     </message>
@@ -42284,129 +42294,129 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Filename</source>
         <translation>Имя файла</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Line</source>
         <translation>Строка</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="400"/>
+        <location filename="Tasks/TaskViewer.py" line="405"/>
         <source>&amp;Go To</source>
         <translation>&amp;Перейти</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="402"/>
+        <location filename="Tasks/TaskViewer.py" line="407"/>
         <source>&amp;Copy</source>
         <translation>&amp;Копировать</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="429"/>
+        <location filename="Tasks/TaskViewer.py" line="434"/>
         <source>&amp;Paste</source>
         <translation>Вс&amp;тавить</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="404"/>
+        <location filename="Tasks/TaskViewer.py" line="409"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="406"/>
+        <location filename="Tasks/TaskViewer.py" line="411"/>
         <source>&amp;Mark Completed</source>
         <translation>&amp;Отметить как завершённую</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="432"/>
+        <location filename="Tasks/TaskViewer.py" line="437"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Удалить &amp;завершённые задачи</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="425"/>
+        <location filename="Tasks/TaskViewer.py" line="430"/>
         <source>&amp;New Task...</source>
         <translation>&amp;Новая задача...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="416"/>
         <source>P&amp;roperties...</source>
         <translation>&amp;Свойства...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="436"/>
+        <location filename="Tasks/TaskViewer.py" line="441"/>
         <source>&amp;Filtered display</source>
         <translation>&amp;Фильтровать</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="440"/>
+        <location filename="Tasks/TaskViewer.py" line="445"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>&amp;Настройки фильтра...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="443"/>
+        <location filename="Tasks/TaskViewer.py" line="448"/>
         <source>Resi&amp;ze columns</source>
         <translation>Изменить размер &amp;колонок</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="747"/>
+        <location filename="Tasks/TaskViewer.py" line="752"/>
         <source>Activate task filter</source>
         <translation>Включить фильтр задач</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="747"/>
+        <location filename="Tasks/TaskViewer.py" line="752"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Фильтр задач не содержит ни одного активного фильтра. Настроить фильтры?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="387"/>
+        <location filename="Tasks/TaskViewer.py" line="392"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>&amp;Перегенерировать задачи проекта</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="805"/>
+        <location filename="Tasks/TaskViewer.py" line="810"/>
         <source>Extracting project tasks...</source>
         <translation>Извлечение задач проекта...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="805"/>
+        <location filename="Tasks/TaskViewer.py" line="810"/>
         <source>Abort</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="811"/>
+        <location filename="Tasks/TaskViewer.py" line="816"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Извлечение задач проекта...
 {0}</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="367"/>
+        <location filename="Tasks/TaskViewer.py" line="372"/>
         <source>Summary</source>
         <translation>Итого</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="445"/>
+        <location filename="Tasks/TaskViewer.py" line="450"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="391"/>
+        <location filename="Tasks/TaskViewer.py" line="396"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="776"/>
+        <location filename="Tasks/TaskViewer.py" line="781"/>
         <source>Scan Filter Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="776"/>
+        <location filename="Tasks/TaskViewer.py" line="781"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="385"/>
+        <location filename="Tasks/TaskViewer.py" line="390"/>
         <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
