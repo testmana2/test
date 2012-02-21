@@ -34,6 +34,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         self.setupUi(self)
         
         self.clearButton.setIcon(UI.PixmapCache.getIcon("clearLeft.png"))
+        self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus48.png"))
         
         self.__adBlockModel = AdBlockModel(self)
         self.__proxyModel = E5TreeSortFilterProxyModel(self)
