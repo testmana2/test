@@ -4477,6 +4477,7 @@
       <keyword name="HelpWindow.__browserClosed" id="HelpWindow.__browserClosed" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__browserClosed" />
       <keyword name="HelpWindow.__clearIconsDatabase" id="HelpWindow.__clearIconsDatabase" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearIconsDatabase" />
       <keyword name="HelpWindow.__clearPrivateData" id="HelpWindow.__clearPrivateData" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearPrivateData" />
+      <keyword name="HelpWindow.__closeAllWindows" id="HelpWindow.__closeAllWindows" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeAllWindows" />
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
       <keyword name="HelpWindow.__copy" id="HelpWindow.__copy" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__copy" />
       <keyword name="HelpWindow.__currentChanged" id="HelpWindow.__currentChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__currentChanged" />

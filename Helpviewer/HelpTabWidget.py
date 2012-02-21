@@ -356,6 +356,7 @@ class HelpTabWidget(E5TabWidget):
         del urlbar
         
         browser = self.widget(index)
+        browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)
         del browser

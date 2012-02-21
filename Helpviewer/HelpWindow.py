@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, QUrl, \
     QThread, QTextCodec
 from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
-    QDesktopServices, QKeySequence, qApp, QComboBox, QFont, QFontMetrics, QLabel, \
+    QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
     QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
     QHBoxLayout, QProgressBar, QAction, QIcon
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
@@ -545,7 +545,7 @@ class HelpWindow(QMainWindow):
             if self.fromEric:
                 self.exitAct.triggered[()].connect(self.close)
             else:
-                self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+                self.exitAct.triggered[()].connect(self.__closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(self.trUtf8('Backward'),
@@ -1785,6 +1785,15 @@ class HelpWindow(QMainWindow):
         search actions and to collect the various search info.
         """
         self.findDlg.showFind()
+        
+    def __closeAllWindows(self):
+        """
+        Private slot to close all windows.
+        """
+        for browser in HelpWindow.helpwindows:
+            if browser != self:
+                browser.close()
+        self.close()
         
     def closeEvent(self, e):
         """
