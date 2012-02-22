@@ -7083,7 +7083,6 @@
       <keyword name="Project.__writeDebugProperties" id="Project.__writeDebugProperties" ref="eric5.Project.Project.html#Project.__writeDebugProperties" />
       <keyword name="Project.__writeProject" id="Project.__writeProject" ref="eric5.Project.Project.html#Project.__writeProject" />
       <keyword name="Project.__writeSession" id="Project.__writeSession" ref="eric5.Project.Project.html#Project.__writeSession" />
-      <keyword name="Project.__writeTasks" id="Project.__writeTasks" ref="eric5.Project.Project.html#Project.__writeTasks" />
       <keyword name="Project.__writeUserProperties" id="Project.__writeUserProperties" ref="eric5.Project.Project.html#Project.__writeUserProperties" />
       <keyword name="Project.addDirectory" id="Project.addDirectory" ref="eric5.Project.Project.html#Project.addDirectory" />
       <keyword name="Project.addE5Actions" id="Project.addE5Actions" ref="eric5.Project.Project.html#Project.addE5Actions" />
@@ -7187,6 +7186,7 @@
       <keyword name="Project.unregisterProjectType" id="Project.unregisterProjectType" ref="eric5.Project.Project.html#Project.unregisterProjectType" />
       <keyword name="Project.updateFileTypes" id="Project.updateFileTypes" ref="eric5.Project.Project.html#Project.updateFileTypes" />
       <keyword name="Project.useSystemEol" id="Project.useSystemEol" ref="eric5.Project.Project.html#Project.useSystemEol" />
+      <keyword name="Project.writeTasks" id="Project.writeTasks" ref="eric5.Project.Project.html#Project.writeTasks" />
       <keyword name="ProjectBaseBrowser" id="ProjectBaseBrowser" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser" />
       <keyword name="ProjectBaseBrowser (Constructor)" id="ProjectBaseBrowser (Constructor)" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.__init__" />
       <keyword name="ProjectBaseBrowser (Module)" id="ProjectBaseBrowser (Module)" ref="eric5.Project.ProjectBaseBrowser.html" />
@@ -9467,6 +9467,7 @@
       <keyword name="TaskViewer.getGlobalTasks" id="TaskViewer.getGlobalTasks" ref="eric5.Tasks.TaskViewer.html#TaskViewer.getGlobalTasks" />
       <keyword name="TaskViewer.getProjectTasks" id="TaskViewer.getProjectTasks" ref="eric5.Tasks.TaskViewer.html#TaskViewer.getProjectTasks" />
       <keyword name="TaskViewer.handlePreferencesChanged" id="TaskViewer.handlePreferencesChanged" ref="eric5.Tasks.TaskViewer.html#TaskViewer.handlePreferencesChanged" />
+      <keyword name="TaskViewer.saveProjectTasks" id="TaskViewer.saveProjectTasks" ref="eric5.Tasks.TaskViewer.html#TaskViewer.saveProjectTasks" />
       <keyword name="TaskViewer.setProjectOpen" id="TaskViewer.setProjectOpen" ref="eric5.Tasks.TaskViewer.html#TaskViewer.setProjectOpen" />
       <keyword name="Tasks (Package)" id="Tasks (Package)" ref="index-eric5.Tasks.html" />
       <keyword name="TasksPage" id="TasksPage" ref="eric5.Preferences.ConfigurationPages.TasksPage.html#TasksPage" />

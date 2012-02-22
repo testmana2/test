@@ -30,6 +30,8 @@ import UI.PixmapCache
 import Preferences
 import Utilities
 
+from Utilities.AutoSaver import AutoSaver
+
 
 class Task(QTreeWidgetItem):
     """
@@ -387,6 +389,8 @@ class TaskViewer(QTreeWidget):
         self.taskFilter = TaskFilter()
         self.taskFilter.setActive(False)
         
+        self.__projectTasksSaveTimer = AutoSaver(self, self.saveProjectTasks)
+        
         self.__projectTasksMenu = QMenu(
             self.trUtf8("P&roject Tasks"), self)
         self.__projectTasksMenu.addAction(
@@ -565,6 +569,9 @@ class TaskViewer(QTreeWidget):
             self.addTopLevelItem(task)
             self.__resort()
             self.__resizeColumns()
+        
+        if isProjectTask:
+            self.__projectTasksSaveTimer.changeOccurred()
     
     def addFileTask(self, description, filename, lineno, isBugfixTask=False,
                     longtext=""):
@@ -641,6 +648,8 @@ class TaskViewer(QTreeWidget):
                 index = self.indexOfTopLevelItem(task)
                 self.takeTopLevelItem(index)
                 self.tasks.remove(task)
+                if task.isProjectTask:
+                    self.__projectTasksSaveTimer.changeOccurred()
                 del task
         
     def __editTaskProperties(self):
@@ -659,6 +668,7 @@ class TaskViewer(QTreeWidget):
             task.setCompleted(data[2])
             task.setProjectTask(data[3])
             task.setLongText(data[4])
+            self.__projectTasksSaveTimer.changeOccurred() 
     
     def __newTask(self):
         """
@@ -688,6 +698,8 @@ class TaskViewer(QTreeWidget):
                 index = self.indexOfTopLevelItem(task)
                 self.takeTopLevelItem(index)
                 self.tasks.remove(task)
+                if task.isProjectTask:
+                    self.__projectTasksSaveTimer.changeOccurred()
                 del task
         ci = self.currentItem()
         if ci:
@@ -722,6 +734,8 @@ class TaskViewer(QTreeWidget):
         index = self.indexOfTopLevelItem(task)
         self.takeTopLevelItem(index)
         self.tasks.remove(task)
+        if task.isProjectTask:
+            self.__projectTasksSaveTimer.changeOccurred()
         del task
         ci = self.currentItem()
         if ci:
@@ -864,3 +878,10 @@ class TaskViewer(QTreeWidget):
         Private method to open the configuration dialog.
         """
         e5App().getObject("UserInterface").showPreferences("tasksPage")
+    
+    def saveProjectTasks(self):
+        """
+        Public method to write the project tasks.
+        """
+        if self.projectOpen and Preferences.getTasks("TasksProjectAutoSave"):
+            self.project.writeTasks()

@@ -855,9 +855,9 @@ class Project(QObject):
                 self.trUtf8("<p>The tasks file <b>{0}</b> could not be read.</p>")\
                     .format(fn))
         
-    def __writeTasks(self):
+    def writeTasks(self):
         """
-        Private method to write the tasks data to an XML file (.e4t).
+        Public method to write the tasks data to an XML file (.e4t).
         """
         if self.pfile is None:
             return
@@ -2439,7 +2439,7 @@ class Project(QObject):
                     os.makedirs(mgmtDir)
                 
                 # now save the tasks
-                self.__writeTasks()
+                self.writeTasks()
             
             self.sessActGrp.setEnabled(ok)
             self.menuSessionAct.setEnabled(ok)
@@ -2536,7 +2536,7 @@ class Project(QObject):
         
         # now save the tasks
         if not noSave:
-            self.__writeTasks()
+            self.writeTasks()
         self.ui.taskViewer.clearProjectTasks()
         self.ui.taskViewer.setProjectOpen(False)
         

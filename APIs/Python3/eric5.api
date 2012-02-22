@@ -5330,6 +5330,7 @@ eric5.Project.Project.Project.updateFileTypes?4()
 eric5.Project.Project.Project.useSystemEol?4()
 eric5.Project.Project.Project.userKeynames?7
 eric5.Project.Project.Project.vcsStatusMonitorStatus?7
+eric5.Project.Project.Project.writeTasks?4()
 eric5.Project.Project.Project?1(parent=None, filename=None)
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._collapseAllDirs?5()
 eric5.Project.ProjectBaseBrowser.ProjectBaseBrowser._completeRepopulateItem?5(name)
@@ -6308,6 +6309,7 @@ eric5.Tasks.TaskViewer.TaskViewer.displayFile?7
 eric5.Tasks.TaskViewer.TaskViewer.getGlobalTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.getProjectTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.handlePreferencesChanged?4()
+eric5.Tasks.TaskViewer.TaskViewer.saveProjectTasks?4()
 eric5.Tasks.TaskViewer.TaskViewer.setProjectOpen?4(o=False)
 eric5.Tasks.TaskViewer.TaskViewer?1(parent, project)
 eric5.Templates.TemplateMultipleVariablesDialog.TemplateMultipleVariablesDialog.getVariables?4()

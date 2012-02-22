@@ -812,6 +812,7 @@ class Prefs(object):
         "TasksBgColour": QColor(Qt.white),
         "TasksProjectBgColour": QColor(Qt.lightGray),
         "ClearOnFileClose": True,
+        "TasksProjectAutoSave": True,
     }
     
     # defaults for templates related stuff
@@ -2297,7 +2298,7 @@ def getTasks(key, prefClass=Prefs):
             return QColor(col)
         else:
             return prefClass.tasksDefaults[key]
-    elif key in ["ClearOnFileClose"]:
+    elif key in ["ClearOnFileClose", "TasksProjectAutoSave"]:
         return toBool(prefClass.settings.value("Tasks/" + key,
             prefClass.tasksDefaults[key]))
     else:

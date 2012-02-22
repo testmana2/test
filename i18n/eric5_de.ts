@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1632,8 +1633,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
@@ -1851,7 +1852,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -13046,7 +13047,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="901"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -27888,27 +27889,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="991"/>
+        <location filename="Preferences/__init__.py" line="992"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1018"/>
+        <location filename="Preferences/__init__.py" line="1019"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1018"/>
+        <location filename="Preferences/__init__.py" line="1019"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1111"/>
+        <location filename="Preferences/__init__.py" line="1112"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1111"/>
+        <location filename="Preferences/__init__.py" line="1112"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>
@@ -30038,6 +30039,21 @@ Bitte Aktualisieren.</translation>
         <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="201"/>
         <source>Determine Python variant from project language</source>
         <translation>Python Variante über Projektsprache bestimmen</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="256"/>
+        <source>Tasks</source>
+        <translation>Aufgaben</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="262"/>
+        <source>Select to save the project tasks automatically</source>
+        <translation>Auswählen, um Projektaufgaben automatisch zu speichern</translation>
+    </message>
+    <message>
+        <location filename="Preferences/ConfigurationPages/ProjectPage.ui" line="265"/>
+        <source>Save tasks automatically</source>
+        <translation>Aufgaben automatisch speichern</translation>
     </message>
 </context>
 <context>
@@ -41839,129 +41855,129 @@ Zeile.&lt;/p&gt;</translation>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>Filename</source>
         <translation>Dateiname</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>Line</source>
         <translation>Zeile</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="405"/>
+        <location filename="Tasks/TaskViewer.py" line="409"/>
         <source>&amp;Go To</source>
         <translation>&amp;Gehe zu</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="407"/>
+        <location filename="Tasks/TaskViewer.py" line="411"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="434"/>
+        <location filename="Tasks/TaskViewer.py" line="438"/>
         <source>&amp;Paste</source>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="409"/>
+        <location filename="Tasks/TaskViewer.py" line="413"/>
         <source>&amp;Delete</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="411"/>
+        <location filename="Tasks/TaskViewer.py" line="415"/>
         <source>&amp;Mark Completed</source>
         <translation>Als &amp;beendet markieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="437"/>
+        <location filename="Tasks/TaskViewer.py" line="441"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Lösche beendete &amp;Aufgaben</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="430"/>
+        <location filename="Tasks/TaskViewer.py" line="434"/>
         <source>&amp;New Task...</source>
         <translation>&amp;Neue Aufgabe...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="416"/>
+        <location filename="Tasks/TaskViewer.py" line="420"/>
         <source>P&amp;roperties...</source>
         <translation>&amp;Eigenschaften...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="441"/>
+        <location filename="Tasks/TaskViewer.py" line="445"/>
         <source>&amp;Filtered display</source>
         <translation>Gef&amp;ilterte Anzeige</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="445"/>
+        <location filename="Tasks/TaskViewer.py" line="449"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>Fil&amp;terkonfiguration...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="448"/>
+        <location filename="Tasks/TaskViewer.py" line="452"/>
         <source>Resi&amp;ze columns</source>
         <translation>Spaltenbreite an&amp;passen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="752"/>
+        <location filename="Tasks/TaskViewer.py" line="766"/>
         <source>Activate task filter</source>
         <translation>Aufgabenfilter aktivieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="752"/>
+        <location filename="Tasks/TaskViewer.py" line="766"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Der Aufgabenfilter hat keinen aktiven Filter. Soll die Filterkonfiguration erstellt werden?</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="392"/>
+        <location filename="Tasks/TaskViewer.py" line="396"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>Projektaufgaben &amp;regenerieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="810"/>
+        <location filename="Tasks/TaskViewer.py" line="824"/>
         <source>Extracting project tasks...</source>
         <translation>Extrahiere Projektaufgaben...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="810"/>
+        <location filename="Tasks/TaskViewer.py" line="824"/>
         <source>Abort</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="816"/>
+        <location filename="Tasks/TaskViewer.py" line="830"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Extrahiere Projektaufgaben...
 {0}</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="372"/>
+        <location filename="Tasks/TaskViewer.py" line="374"/>
         <source>Summary</source>
         <translation>Zusammenfassung</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="450"/>
+        <location filename="Tasks/TaskViewer.py" line="454"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="396"/>
+        <location filename="Tasks/TaskViewer.py" line="400"/>
         <source>&amp;Configure scan options</source>
         <translation>Scanoptionen &amp;konfigurieren</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="781"/>
+        <location filename="Tasks/TaskViewer.py" line="795"/>
         <source>Scan Filter Patterns</source>
         <translation>Scanfiltermuster</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="781"/>
+        <location filename="Tasks/TaskViewer.py" line="795"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation>Gib Dateimuster getrennt durch Komma von Dateien ein, die ignoriert werden sollen:</translation>
     </message>
     <message>
-        <location filename="Tasks/TaskViewer.py" line="390"/>
+        <location filename="Tasks/TaskViewer.py" line="394"/>
         <source>P&amp;roject Tasks</source>
         <translation>&amp;Projektaufgaben</translation>
     </message>

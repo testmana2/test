@@ -321,9 +321,6 @@ QObject
 <td><a href="#Project.__writeSession">__writeSession</a></td>
 <td>Private method to write the session data to an XML file (.e4s).</td>
 </tr><tr>
-<td><a href="#Project.__writeTasks">__writeTasks</a></td>
-<td>Private method to write the tasks data to an XML file (.e4t).</td>
-</tr><tr>
 <td><a href="#Project.__writeUserProperties">__writeUserProperties</a></td>
 <td>Private method to write the project data to an XML file.</td>
 </tr><tr>
@@ -632,6 +629,9 @@ QObject
 </tr><tr>
 <td><a href="#Project.useSystemEol">useSystemEol</a></td>
 <td>Public method to check, if the project uses the system eol setting.</td>
+</tr><tr>
+<td><a href="#Project.writeTasks">writeTasks</a></td>
+<td>Public method to write the tasks data to an XML file (.e4t).</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -1084,12 +1084,7 @@ flag indicating quiet operations.
 <dd>
 indicator string (string)
 </dd>
-</dl><a NAME="Project.__writeTasks" ID="Project.__writeTasks"></a>
-<h4>Project.__writeTasks</h4>
-<b>__writeTasks</b>(<i></i>)
-<p>
-        Private method to write the tasks data to an XML file (.e4t).
-</p><a NAME="Project.__writeUserProperties" ID="Project.__writeUserProperties"></a>
+</dl><a NAME="Project.__writeUserProperties" ID="Project.__writeUserProperties"></a>
 <h4>Project.__writeUserProperties</h4>
 <b>__writeUserProperties</b>(<i></i>)
 <p>
@@ -2252,7 +2247,12 @@ internal type designator to be unregistered (string)
 <dd>
 flag indicating the usage of system eol (boolean)
 </dd>
-</dl>
+</dl><a NAME="Project.writeTasks" ID="Project.writeTasks"></a>
+<h4>Project.writeTasks</h4>
+<b>writeTasks</b>(<i></i>)
+<p>
+        Public method to write the tasks data to an XML file (.e4t).
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

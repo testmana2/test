@@ -53,6 +53,9 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         self.pythonVariantCheckBox.setChecked(
             Preferences.getProject("DeterminePyFromProject"))
         
+        self.autosaveTasksCheckBox.setChecked(
+            Preferences.getTasks("TasksProjectAutoSave"))
+        
     def save(self):
         """
         Public slot to save the Project configuration.
@@ -83,6 +86,9 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
             self.projectRecentSpinBox.value())
         Preferences.setProject("DeterminePyFromProject",
             self.pythonVariantCheckBox.isChecked())
+        
+        Preferences.setTasks("TasksProjectAutoSave",
+            self.autosaveTasksCheckBox.isChecked())
     
 
 def create(dlg):
