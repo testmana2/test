@@ -10,6 +10,7 @@ Version 5.3-snapshot-2012mmdd:
      project configuration page of configuration dialog)
 - Version Control System Interfaces
   -- Mercurial
+     --- added support for the graft command as of Mercurial 2.0
      --- added support for Phases as of Mercurial 2.1
   -- Subversion
      --- changed code to make the subversion plug-ins compatible with the new

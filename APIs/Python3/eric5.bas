@@ -255,6 +255,7 @@ HgExtensionProjectHelper QObject
 HgFetchDialog QDialog Ui_HgFetchDialog
 HgGpgSignDialog QDialog Ui_HgGpgSignDialog
 HgGpgSignaturesDialog QDialog Ui_HgGpgSignaturesDialog
+HgGraftDialog QDialog Ui_HgGraftDialog
 HgImportDialog QDialog Ui_HgImportDialog
 HgLogBrowserDialog QDialog Ui_HgLogBrowserDialog
 HgLogDialog QWidget Ui_HgLogDialog

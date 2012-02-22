@@ -861,6 +861,37 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgPhaseAct.triggered[()].connect(self.__hgPhase)
         self.actions.append(self.hgPhaseAct)
+        
+        self.hgGraftAct = E5Action(self.trUtf8('Copy Changesets'),
+                UI.PixmapCache.getIcon("vcsGraft.png"),
+                self.trUtf8('Copy Changesets'),
+                0, 0, self, 'mercurial_graft')
+        self.hgGraftAct.setStatusTip(self.trUtf8(
+            'Copies changesets from another branch'
+        ))
+        self.hgGraftAct.setWhatsThis(self.trUtf8(
+            """<b>Copy Changesets</b>"""
+            """<p>This copies changesets from another branch on top of the"""
+            """ current working directory with the user, date and description"""
+            """ of the original changeset.</p>"""
+        ))
+        self.hgGraftAct.triggered[()].connect(self.__hgGraft)
+        self.actions.append(self.hgGraftAct)
+        
+        self.hgGraftContinueAct = E5Action(
+                self.trUtf8('Continue Copying Session'),
+                self.trUtf8('Continue Copying Session'),
+                0, 0, self, 'mercurial_graft_continue')
+        self.hgGraftContinueAct.setStatusTip(self.trUtf8(
+            'Continue the last copying session after conflicts were resolved'
+        ))
+        self.hgGraftContinueAct.setWhatsThis(self.trUtf8(
+            """<b>Continue Copying Session</b>"""
+            """<p>This continues the last copying session after conflicts were"""
+            """ resolved.</p>"""
+        ))
+        self.hgGraftContinueAct.triggered[()].connect(self.__hgGraftContinue)
+        self.actions.append(self.hgGraftContinueAct)
     
     def initMenu(self, menu):
         """
@@ -934,6 +965,15 @@ class HgProjectHelper(VcsProjectHelper):
                 self.__extensions[extensionName].initMenu(self.__extensionsMenu))
         self.vcs.activeExtensionsChanged.connect(self.__showExtensionMenu)
         
+        if self.vcs.version >= (2, 0):
+            graftMenu = QMenu(self.trUtf8("Graft"), menu)
+            graftMenu.setIcon(UI.PixmapCache.getIcon("vcsGraft.png"))
+            graftMenu.setTearOffEnabled(True)
+            graftMenu.addAction(self.hgGraftAct)
+            graftMenu.addAction(self.hgGraftContinueAct)
+        else:
+            graftMenu = None
+        
         act = menu.addAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons", "mercurial.png")),
@@ -951,6 +991,9 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgOutgoingAct)
         menu.addAction(self.hgPushAct)
         menu.addSeparator()
+        if graftMenu is not None:
+            menu.addMenu(graftMenu)
+            menu.addSeparator()
         menu.addMenu(bundleMenu)
         menu.addMenu(patchMenu)
         menu.addSeparator()
@@ -1310,3 +1353,30 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to change the phase of revisions.
         """
         self.vcs.hgPhase(self.project.ppath)
+    
+    def __hgGraft(self):
+        """
+        Private slot used to copy changesets from another branch.
+        """
+        shouldReopen = self.vcs.hgGraft(self.project.getProjectPath())
+        if shouldReopen:
+            res = E5MessageBox.yesNo(None,
+                self.trUtf8("Copy Changesets"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()
+    
+    def __hgGraftContinue(self):
+        """
+        Private slot used to continue the last copying session after conflicts
+        were resolved.
+        """
+        shouldReopen = self.vcs.hgGraftContinue(self.project.getProjectPath())
+        if shouldReopen:
+            res = E5MessageBox.yesNo(None,
+                self.trUtf8("Copy Changesets (Continue)"),
+                self.trUtf8("""The project should be reread. Do this now?"""),
+                yesDefault=True)
+            if res:
+                self.project.reopenProject()

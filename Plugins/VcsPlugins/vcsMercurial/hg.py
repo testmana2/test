@@ -51,6 +51,7 @@ from .HgClient import HgClient
 from .HgImportDialog import HgImportDialog
 from .HgExportDialog import HgExportDialog
 from .HgPhaseDialog import HgPhaseDialog
+from .HgGraftDialog import HgGraftDialog
 
 from .BookmarksExtension.bookmarks import Bookmarks
 from .QueuesExtension.queues import Queues
@@ -2523,6 +2524,78 @@ class Hg(VersionControl):
         else:
             res = False
         
+        return res
+    
+    def hgGraft(self, path):
+        """
+        Public method to copy changesets from another branch.
+        
+        @param path directory name of the project (string)
+        @return flag indicating that the project should be reread (boolean)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(path)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return False
+        
+        res = False
+        dlg = HgGraftDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            revs, (userData, currentUser, userName), \
+            (dateData, currentDate, dateStr) = dlg.getData()
+            
+            args = []
+            args.append("graft")
+            args.append("--verbose")
+            if userData:
+                if currentUser:
+                    args.append("--currentuser")
+                else:
+                    args.append("--user")
+                    args.append(userName)
+            if dateData:
+                if currentDate:
+                    args.append("--currentdate")
+                else:
+                    args.append("--date")
+                    args.append(dateStr)
+            args.extend(revs)
+            
+            dia = HgDialog(self.trUtf8('Copy Changesets'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+                res = dia.hasAddOrDelete()
+                self.checkVCSStatus()
+        return res
+    
+    def hgGraftContinue(self, path):
+        """
+        Public method to continue copying changesets from another branch.
+        
+        @param path directory name of the project (string)
+        @return flag indicating that the project should be reread (boolean)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(path)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        args = []
+        args.append("graft")
+        args.append("--continue")
+        args.append("--verbose")
+        
+        dia = HgDialog(self.trUtf8('Copy Changesets (Continue)'), self)
+        res = dia.startProcess(args, repodir)
+        if res:
+            dia.exec_()
+            res = dia.hasAddOrDelete()
+            self.vcs.checkVCSStatus()
         return res
     
     ############################################################################

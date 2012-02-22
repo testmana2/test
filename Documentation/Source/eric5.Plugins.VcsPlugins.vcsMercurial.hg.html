@@ -143,6 +143,12 @@ VersionControl
 <td><a href="#Hg.hgGetTagsList">hgGetTagsList</a></td>
 <td>Public method to get the list of tags.</td>
 </tr><tr>
+<td><a href="#Hg.hgGraft">hgGraft</a></td>
+<td>Public method to copy changesets from another branch.</td>
+</tr><tr>
+<td><a href="#Hg.hgGraftContinue">hgGraftContinue</a></td>
+<td>Public method to continue copying changesets from another branch.</td>
+</tr><tr>
 <td><a href="#Hg.hgIdentify">hgIdentify</a></td>
 <td>Public method to identify the current working directory.</td>
 </tr><tr>
@@ -603,6 +609,36 @@ directory name of the repository (string)
 <dt>Returns:</dt>
 <dd>
 list of tags (list of string)
+</dd>
+</dl><a NAME="Hg.hgGraft" ID="Hg.hgGraft"></a>
+<h4>Hg.hgGraft</h4>
+<b>hgGraft</b>(<i>path</i>)
+<p>
+        Public method to copy changesets from another branch.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name of the project (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the project should be reread (boolean)
+</dd>
+</dl><a NAME="Hg.hgGraftContinue" ID="Hg.hgGraftContinue"></a>
+<h4>Hg.hgGraftContinue</h4>
+<b>hgGraftContinue</b>(<i>path</i>)
+<p>
+        Public method to continue copying changesets from another branch.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name of the project (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the project should be reread (boolean)
 </dd>
 </dl><a NAME="Hg.hgIdentify" ID="Hg.hgIdentify"></a>
 <h4>Hg.hgIdentify</h4>

@@ -960,6 +960,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashPlugin.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1240,6 +1241,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Sync/SyncCheckPage.ui</Form>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.ui</Form>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

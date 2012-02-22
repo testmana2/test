@@ -459,6 +459,7 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html" />
@@ -4723,6 +4724,8 @@
       <keyword name="Hg.hgForget" id="Hg.hgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgForget" />
       <keyword name="Hg.hgGetBranchesList" id="Hg.hgGetBranchesList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetBranchesList" />
       <keyword name="Hg.hgGetTagsList" id="Hg.hgGetTagsList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetTagsList" />
+      <keyword name="Hg.hgGraft" id="Hg.hgGraft" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGraft" />
+      <keyword name="Hg.hgGraftContinue" id="Hg.hgGraftContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGraftContinue" />
       <keyword name="Hg.hgIdentify" id="Hg.hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentify" />
       <keyword name="Hg.hgIdentifyBundle" id="Hg.hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentifyBundle" />
       <keyword name="Hg.hgImport" id="Hg.hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgImport" />
@@ -5028,6 +5031,15 @@
       <keyword name="HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" id="HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_signaturesList_itemSelectionChanged" />
       <keyword name="HgGpgSignaturesDialog.on_verifyButton_clicked" id="HgGpgSignaturesDialog.on_verifyButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.on_verifyButton_clicked" />
       <keyword name="HgGpgSignaturesDialog.start" id="HgGpgSignaturesDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.HgGpgSignaturesDialog.html#HgGpgSignaturesDialog.start" />
+      <keyword name="HgGraftDialog" id="HgGraftDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog" />
+      <keyword name="HgGraftDialog (Constructor)" id="HgGraftDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.__init__" />
+      <keyword name="HgGraftDialog (Module)" id="HgGraftDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html" />
+      <keyword name="HgGraftDialog.__updateOk" id="HgGraftDialog.__updateOk" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.__updateOk" />
+      <keyword name="HgGraftDialog.getData" id="HgGraftDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.getData" />
+      <keyword name="HgGraftDialog.on_currentUserCheckBox_toggled" id="HgGraftDialog.on_currentUserCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.on_currentUserCheckBox_toggled" />
+      <keyword name="HgGraftDialog.on_revisionsEdit_textChanged" id="HgGraftDialog.on_revisionsEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.on_revisionsEdit_textChanged" />
+      <keyword name="HgGraftDialog.on_userEdit_textChanged" id="HgGraftDialog.on_userEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.on_userEdit_textChanged" />
+      <keyword name="HgGraftDialog.on_userGroup_toggled" id="HgGraftDialog.on_userGroup_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html#HgGraftDialog.on_userGroup_toggled" />
       <keyword name="HgImportDialog" id="HgImportDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog" />
       <keyword name="HgImportDialog (Constructor)" id="HgImportDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.__init__" />
       <keyword name="HgImportDialog (Module)" id="HgImportDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
@@ -5184,6 +5196,8 @@
       <keyword name="HgProjectHelper.__hgEditUserConfig" id="HgProjectHelper.__hgEditUserConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgEditUserConfig" />
       <keyword name="HgProjectHelper.__hgExport" id="HgProjectHelper.__hgExport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgExport" />
       <keyword name="HgProjectHelper.__hgExtendedDiff" id="HgProjectHelper.__hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgExtendedDiff" />
+      <keyword name="HgProjectHelper.__hgGraft" id="HgProjectHelper.__hgGraft" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgGraft" />
+      <keyword name="HgProjectHelper.__hgGraftContinue" id="HgProjectHelper.__hgGraftContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgGraftContinue" />
       <keyword name="HgProjectHelper.__hgHeads" id="HgProjectHelper.__hgHeads" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgHeads" />
       <keyword name="HgProjectHelper.__hgIdentify" id="HgProjectHelper.__hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentify" />
       <keyword name="HgProjectHelper.__hgIdentifyBundle" id="HgProjectHelper.__hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentifyBundle" />
@@ -11797,6 +11811,7 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectHelper.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgGraftDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgLogDialog.html</file>
