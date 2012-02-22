@@ -12,7 +12,7 @@ import os
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, QUrl, \
     QThread, QTextCodec
 from PyQt4.QtGui import QMainWindow, QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
-    QDesktopServices, QKeySequence, qApp, QComboBox, QFont, QFontMetrics, QLabel, \
+    QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
     QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, QDialog, \
     QHBoxLayout, QProgressBar, QAction, QIcon
 from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, QWebPage
@@ -566,7 +566,7 @@ class HelpWindow(QMainWindow):
             if self.fromEric:
                 self.exitAct.triggered[()].connect(self.close)
             else:
-                self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+                self.exitAct.triggered[()].connect(self.__closeAllWindows)
         self.__actions.append(self.exitAct)
         
         self.backAct = E5Action(self.trUtf8('Backward'),
@@ -1132,6 +1132,21 @@ class HelpWindow(QMainWindow):
             self.adblockAct.triggered[()].connect(self.__showAdBlockDialog)
         self.__actions.append(self.adblockAct)
         
+        self.flashblockAct = E5Action(self.trUtf8('ClickToFlash'),
+                      UI.PixmapCache.getIcon("flashBlock.png"),
+                      self.trUtf8('&ClickToFlash...'),
+                      0, 0,
+                      self, 'help_flashblock')
+        self.flashblockAct.setStatusTip(self.trUtf8(
+                'Configure ClickToFlash whitelist'))
+        self.flashblockAct.setWhatsThis(self.trUtf8(
+                """<b>ClickToFlash...</b>"""
+                """<p>Opens a dialog to configure the ClickToFlash whitelist.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.flashblockAct.triggered[()].connect(self.__showClickToFlashDialog)
+        self.__actions.append(self.flashblockAct)
+        
         if SSL_AVAILABLE:
             self.certificatesAct = E5Action(self.trUtf8('Manage Certificates'),
                           self.trUtf8('Manage Certificates...'),
@@ -1348,6 +1363,7 @@ class HelpWindow(QMainWindow):
             menu.addAction(self.certificatesAct)
         menu.addSeparator()
         menu.addAction(self.adblockAct)
+        menu.addAction(self.flashblockAct)
         menu.addSeparator()
         self.__userAgentMenu = UserAgentMenu(self.trUtf8("Global User Agent"))
         menu.addMenu(self.__userAgentMenu)
@@ -1850,6 +1866,15 @@ class HelpWindow(QMainWindow):
         search actions and to collect the various search info.
         """
         self.findDlg.showFind()
+        
+    def __closeAllWindows(self):
+        """
+        Private slot to close all windows.
+        """
+        for browser in HelpWindow.helpwindows:
+            if browser != self:
+                browser.close()
+        self.close()
         
     def closeEvent(self, e):
         """
@@ -2579,6 +2604,13 @@ class HelpWindow(QMainWindow):
         Private slot to show the AdBlock configuration dialog.
         """
         self.adblockManager().showDialog()
+        
+    def __showClickToFlashDialog(self):
+        """
+        Private slot to open the ClickToFlash whitelist configuration dialog.
+        """
+        from .HelpBrowserWV import HelpWebPage
+        HelpWebPage.webPluginFactory().plugin("ClickToFlash").configure()
         
     def __showNetworkMonitor(self):
         """

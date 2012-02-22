@@ -44,6 +44,8 @@ from .Network.NetworkAccessManagerProxy import NetworkAccessManagerProxy
 from .OpenSearch.OpenSearchEngineAction import OpenSearchEngineAction
 from .OpenSearch.OpenSearchEngine import OpenSearchEngine
 
+from .WebPlugins.WebPluginFactory import WebPluginFactory
+
 ##########################################################################################
 
 
@@ -157,6 +159,8 @@ class HelpWebPage(QWebPage):
     """
     Class implementing an enhanced web page.
     """
+    _webPluginFactory = None
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -164,6 +168,8 @@ class HelpWebPage(QWebPage):
         @param parent parent widget of this window (QWidget)
         """
         super().__init__(parent)
+        
+        self.setPluginFactory(self.webPluginFactory())
         
         self.__lastRequest = None
         self.__lastRequestType = QWebPage.NavigationTypeOther
@@ -454,6 +460,18 @@ class HelpWebPage(QWebPage):
                 return False
         
         return True
+    
+    @classmethod
+    def webPluginFactory(cls):
+        """
+        Class method to get a reference to the web plug-in factory instance.
+        
+        @return reference to the web plug-in factory instance (WebPluginFactory
+        """
+        if cls._webPluginFactory is None:
+            cls._webPluginFactory = WebPluginFactory()
+        
+        return cls._webPluginFactory
 
 ##########################################################################################
 
@@ -1521,6 +1539,11 @@ class HelpBrowser(QWebView):
         """
         self.__isLoading = False
         self.__progress = 0
+        
+        if Preferences.getHelp("ClickToFlashEnabled"):
+            # this is a hack to make the ClickToFlash button appear
+            self.zoomIn()
+            self.zoomOut()
         
         if ok:
             self.mw.adblockManager().page().applyRulesToPage(self.page())

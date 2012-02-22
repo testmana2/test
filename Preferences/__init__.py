@@ -664,6 +664,8 @@ class Prefs(object):
         "SyncFtpPort": 21,
         "SyncFtpIdleTimeout": 30,
         "WarnOnMultipleClose": True,
+        "ClickToFlashEnabled": False,
+        "ClickToFlashWhitelist": [],
     }
     
     websettings = QWebSettings.globalSettings()
@@ -2043,11 +2045,11 @@ def getHelp(key, prefClass=Prefs):
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
                  "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
                  "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
-                 "WarnOnMultipleClose"
+                 "WarnOnMultipleClose", "ClickToFlashEnabled"
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
-    elif key in ["AdBlockSubscriptions"]:
+    elif key in ["AdBlockSubscriptions", "ClickToFlashWhitelist"]:
         return toList(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     else:

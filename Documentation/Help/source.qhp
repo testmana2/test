@@ -303,6 +303,15 @@
               <section title="eric5.Helpviewer.UserAgent.UserAgentModel" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentsDialog" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.WebPlugins" ref="index-eric5.Helpviewer.WebPlugins.html">
+              <section title="eric5.Helpviewer.WebPlugins.ClickToFlash" ref="index-eric5.Helpviewer.WebPlugins.ClickToFlash.html">
+                <section title="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html" />
+                <section title="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html" />
+                <section title="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html" />
+              </section>
+              <section title="eric5.Helpviewer.WebPlugins.WebPluginFactory" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html" />
+              <section title="eric5.Helpviewer.WebPlugins.WebPluginInterface" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html" />
+            </section>
             <section title="eric5.Helpviewer.HTMLResources" ref="eric5.Helpviewer.HTMLResources.html" />
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
             <section title="eric5.Helpviewer.HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
@@ -1804,6 +1813,43 @@
       <keyword name="ClbrVisibilityMixinBase.setPrivate" id="ClbrVisibilityMixinBase.setPrivate" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrVisibilityMixinBase.setPrivate" />
       <keyword name="ClbrVisibilityMixinBase.setProtected" id="ClbrVisibilityMixinBase.setProtected" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrVisibilityMixinBase.setProtected" />
       <keyword name="ClbrVisibilityMixinBase.setPublic" id="ClbrVisibilityMixinBase.setPublic" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrVisibilityMixinBase.setPublic" />
+      <keyword name="ClickToFlash" id="ClickToFlash" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash" />
+      <keyword name="ClickToFlash (Constructor)" id="ClickToFlash (Constructor)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__init__" />
+      <keyword name="ClickToFlash (Module)" id="ClickToFlash (Module)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html" />
+      <keyword name="ClickToFlash (Package)" id="ClickToFlash (Package)" ref="index-eric5.Helpviewer.WebPlugins.ClickToFlash.html" />
+      <keyword name="ClickToFlash.__addToWhitelist" id="ClickToFlash.__addToWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__addToWhitelist" />
+      <keyword name="ClickToFlash.__checkElement" id="ClickToFlash.__checkElement" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__checkElement" />
+      <keyword name="ClickToFlash.__checkUrlOnElement" id="ClickToFlash.__checkUrlOnElement" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__checkUrlOnElement" />
+      <keyword name="ClickToFlash.__configure" id="ClickToFlash.__configure" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__configure" />
+      <keyword name="ClickToFlash.__elide" id="ClickToFlash.__elide" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__elide" />
+      <keyword name="ClickToFlash.__findElement" id="ClickToFlash.__findElement" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__findElement" />
+      <keyword name="ClickToFlash.__hideAdBlocked" id="ClickToFlash.__hideAdBlocked" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__hideAdBlocked" />
+      <keyword name="ClickToFlash.__load" id="ClickToFlash.__load" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__load" />
+      <keyword name="ClickToFlash.__removeFromWhitelist" id="ClickToFlash.__removeFromWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__removeFromWhitelist" />
+      <keyword name="ClickToFlash.__showContextMenu" id="ClickToFlash.__showContextMenu" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__showContextMenu" />
+      <keyword name="ClickToFlash.__showInfo" id="ClickToFlash.__showInfo" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.__showInfo" />
+      <keyword name="ClickToFlash.isAlreadyAccepted" id="ClickToFlash.isAlreadyAccepted" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.isAlreadyAccepted" />
+      <keyword name="ClickToFlash.on_loadFlashButton_clicked" id="ClickToFlash.on_loadFlashButton_clicked" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.on_loadFlashButton_clicked" />
+      <keyword name="ClickToFlash.swapping" id="ClickToFlash.swapping" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html#ClickToFlash.swapping" />
+      <keyword name="ClickToFlashPlugin" id="ClickToFlashPlugin" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin" />
+      <keyword name="ClickToFlashPlugin (Constructor)" id="ClickToFlashPlugin (Constructor)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.__init__" />
+      <keyword name="ClickToFlashPlugin (Module)" id="ClickToFlashPlugin (Module)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html" />
+      <keyword name="ClickToFlashPlugin.__enabled" id="ClickToFlashPlugin.__enabled" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.__enabled" />
+      <keyword name="ClickToFlashPlugin.__load" id="ClickToFlashPlugin.__load" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.__load" />
+      <keyword name="ClickToFlashPlugin.__save" id="ClickToFlashPlugin.__save" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.__save" />
+      <keyword name="ClickToFlashPlugin.addToWhitelist" id="ClickToFlashPlugin.addToWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.addToWhitelist" />
+      <keyword name="ClickToFlashPlugin.configure" id="ClickToFlashPlugin.configure" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.configure" />
+      <keyword name="ClickToFlashPlugin.create" id="ClickToFlashPlugin.create" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.create" />
+      <keyword name="ClickToFlashPlugin.getIconName" id="ClickToFlashPlugin.getIconName" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.getIconName" />
+      <keyword name="ClickToFlashPlugin.isAnonymous" id="ClickToFlashPlugin.isAnonymous" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.isAnonymous" />
+      <keyword name="ClickToFlashPlugin.metaPlugin" id="ClickToFlashPlugin.metaPlugin" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.metaPlugin" />
+      <keyword name="ClickToFlashPlugin.onWhitelist" id="ClickToFlashPlugin.onWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.onWhitelist" />
+      <keyword name="ClickToFlashPlugin.removeFromWhitelist" id="ClickToFlashPlugin.removeFromWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html#ClickToFlashPlugin.removeFromWhitelist" />
+      <keyword name="ClickToFlashWhitelistDialog" id="ClickToFlashWhitelistDialog" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog" />
+      <keyword name="ClickToFlashWhitelistDialog (Constructor)" id="ClickToFlashWhitelistDialog (Constructor)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog.__init__" />
+      <keyword name="ClickToFlashWhitelistDialog (Module)" id="ClickToFlashWhitelistDialog (Module)" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html" />
+      <keyword name="ClickToFlashWhitelistDialog.getWhitelist" id="ClickToFlashWhitelistDialog.getWhitelist" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog.getWhitelist" />
+      <keyword name="ClickToFlashWhitelistDialog.on_addButton_clicked" id="ClickToFlashWhitelistDialog.on_addButton_clicked" ref="eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog.on_addButton_clicked" />
       <keyword name="Client" id="Client" ref="eric5.DebugClients.Ruby.Debuggee.html#Client" />
       <keyword name="Client.eventLoop" id="Client.eventLoop" ref="eric5.DebugClients.Ruby.Debuggee.html#Client.eventLoop" />
       <keyword name="Client.eventPoll" id="Client.eventPoll" ref="eric5.DebugClients.Ruby.Debuggee.html#Client.eventPoll" />
@@ -4488,6 +4534,7 @@
       <keyword name="HelpWebPage.supportsExtension" id="HelpWebPage.supportsExtension" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.supportsExtension" />
       <keyword name="HelpWebPage.userAgent" id="HelpWebPage.userAgent" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgent" />
       <keyword name="HelpWebPage.userAgentForUrl" id="HelpWebPage.userAgentForUrl" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.userAgentForUrl" />
+      <keyword name="HelpWebPage.webPluginFactory" id="HelpWebPage.webPluginFactory" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.webPluginFactory" />
       <keyword name="HelpWebSearchEdit" id="HelpWebSearchEdit" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit" />
       <keyword name="HelpWebSearchEdit (Constructor)" id="HelpWebSearchEdit (Constructor)" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.__init__" />
       <keyword name="HelpWebSearchEdit.mousePressEvent" id="HelpWebSearchEdit.mousePressEvent" ref="eric5.Helpviewer.HelpWebSearchWidget.html#HelpWebSearchEdit.mousePressEvent" />
@@ -4528,6 +4575,7 @@
       <keyword name="HelpWindow.__browserClosed" id="HelpWindow.__browserClosed" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__browserClosed" />
       <keyword name="HelpWindow.__clearIconsDatabase" id="HelpWindow.__clearIconsDatabase" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearIconsDatabase" />
       <keyword name="HelpWindow.__clearPrivateData" id="HelpWindow.__clearPrivateData" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__clearPrivateData" />
+      <keyword name="HelpWindow.__closeAllWindows" id="HelpWindow.__closeAllWindows" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeAllWindows" />
       <keyword name="HelpWindow.__closeNetworkMonitor" id="HelpWindow.__closeNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__closeNetworkMonitor" />
       <keyword name="HelpWindow.__copy" id="HelpWindow.__copy" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__copy" />
       <keyword name="HelpWindow.__currentChanged" id="HelpWindow.__currentChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__currentChanged" />
@@ -4572,6 +4620,7 @@
       <keyword name="HelpWindow.__showBackMenu" id="HelpWindow.__showBackMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBackMenu" />
       <keyword name="HelpWindow.__showBookmarksDialog" id="HelpWindow.__showBookmarksDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showBookmarksDialog" />
       <keyword name="HelpWindow.__showCertificatesDialog" id="HelpWindow.__showCertificatesDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCertificatesDialog" />
+      <keyword name="HelpWindow.__showClickToFlashDialog" id="HelpWindow.__showClickToFlashDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showClickToFlashDialog" />
       <keyword name="HelpWindow.__showCookiesConfiguration" id="HelpWindow.__showCookiesConfiguration" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showCookiesConfiguration" />
       <keyword name="HelpWindow.__showDownloadsWindow" id="HelpWindow.__showDownloadsWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showDownloadsWindow" />
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
@@ -10648,6 +10697,21 @@
       <keyword name="WebDatabasesModel.parent" id="WebDatabasesModel.parent" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.parent" />
       <keyword name="WebDatabasesModel.removeRows" id="WebDatabasesModel.removeRows" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.removeRows" />
       <keyword name="WebDatabasesModel.rowCount" id="WebDatabasesModel.rowCount" ref="eric5.Helpviewer.OfflineStorage.WebDatabasesModel.html#WebDatabasesModel.rowCount" />
+      <keyword name="WebPluginFactory" id="WebPluginFactory" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory" />
+      <keyword name="WebPluginFactory (Constructor)" id="WebPluginFactory (Constructor)" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.__init__" />
+      <keyword name="WebPluginFactory (Module)" id="WebPluginFactory (Module)" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html" />
+      <keyword name="WebPluginFactory.__initialize" id="WebPluginFactory.__initialize" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.__initialize" />
+      <keyword name="WebPluginFactory.create" id="WebPluginFactory.create" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.create" />
+      <keyword name="WebPluginFactory.plugin" id="WebPluginFactory.plugin" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.plugin" />
+      <keyword name="WebPluginFactory.plugins" id="WebPluginFactory.plugins" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.plugins" />
+      <keyword name="WebPluginFactory.refreshPlugins" id="WebPluginFactory.refreshPlugins" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html#WebPluginFactory.refreshPlugins" />
+      <keyword name="WebPluginInterface" id="WebPluginInterface" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html#WebPluginInterface" />
+      <keyword name="WebPluginInterface (Module)" id="WebPluginInterface (Module)" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html" />
+      <keyword name="WebPluginInterface.configure" id="WebPluginInterface.configure" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html#WebPluginInterface.configure" />
+      <keyword name="WebPluginInterface.create" id="WebPluginInterface.create" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html#WebPluginInterface.create" />
+      <keyword name="WebPluginInterface.isAnonymous" id="WebPluginInterface.isAnonymous" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html#WebPluginInterface.isAnonymous" />
+      <keyword name="WebPluginInterface.metaPlugin" id="WebPluginInterface.metaPlugin" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html#WebPluginInterface.metaPlugin" />
+      <keyword name="WebPlugins (Package)" id="WebPlugins (Package)" ref="index-eric5.Helpviewer.WebPlugins.html" />
       <keyword name="Whitespace" id="Whitespace" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#Whitespace" />
       <keyword name="Whitespace" id="Whitespace" ref="eric5.UtilitiesPython2.Tabnanny.html#Whitespace" />
       <keyword name="Whitespace (Constructor)" id="Whitespace (Constructor)" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#Whitespace.__init__" />
@@ -11649,6 +11713,11 @@
       <file>eric5.Helpviewer.UserAgent.UserAgentModel.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentsDialog.html</file>
       <file>eric5.Helpviewer.VirusTotalApi.html</file>
+      <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html</file>
+      <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html</file>
+      <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html</file>
+      <file>eric5.Helpviewer.WebPlugins.WebPluginFactory.html</file>
+      <file>eric5.Helpviewer.WebPlugins.WebPluginInterface.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>
@@ -12115,6 +12184,8 @@
       <file>index-eric5.Helpviewer.Sync.html</file>
       <file>index-eric5.Helpviewer.UrlBar.html</file>
       <file>index-eric5.Helpviewer.UserAgent.html</file>
+      <file>index-eric5.Helpviewer.WebPlugins.ClickToFlash.html</file>
+      <file>index-eric5.Helpviewer.WebPlugins.html</file>
       <file>index-eric5.Helpviewer.html</file>
       <file>index-eric5.IconEditor.cursors.html</file>
       <file>index-eric5.IconEditor.html</file>

@@ -15,6 +15,7 @@ from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage
 
 import Preferences
+import UI.PixmapCache
 
 
 class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
@@ -44,6 +45,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         defaultSchemes = ["file://", "http://", "https://", "qthelp://"]
         self.defaultSchemeCombo.addItems(defaultSchemes)
         
+        self.clickToFlashCheckBox.setIcon(UI.PixmapCache.getIcon("flashBlock.png"))
+        
         # set initial values
         self.singleHelpWindowCheckBox.setChecked(
             Preferences.getHelp("SingleHelpWindow"))
@@ -66,6 +69,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("JavaScriptCanAccessClipboard"))
         self.pluginsCheckBox.setChecked(
             Preferences.getHelp("PluginsEnabled"))
+        self.clickToFlashCheckBox.setChecked(
+            Preferences.getHelp("ClickToFlashEnabled"))
         self.doNotTrackCheckBox.setChecked(
             Preferences.getHelp("DoNotTrack"))
         
@@ -169,6 +174,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.jsClipboardCheckBox.isChecked())
         Preferences.setHelp("PluginsEnabled",
             self.pluginsCheckBox.isChecked())
+        Preferences.setHelp("ClickToFlashEnabled",
+            self.clickToFlashCheckBox.isChecked())
         Preferences.setHelp("DoNotTrack",
             self.doNotTrackCheckBox.isChecked())
         

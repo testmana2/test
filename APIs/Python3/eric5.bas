@@ -58,6 +58,9 @@ Class ClbrBase
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
+ClickToFlash QWidget Ui_ClickToFlash
+ClickToFlashPlugin WebPluginInterface
+ClickToFlashWhitelistDialog QDialog Ui_ClickToFlashWhitelistDialog
 CodeMetricsDialog QDialog Ui_CodeMetricsDialog
 Coding ClbrBase
 CodingError Exception
@@ -639,6 +642,7 @@ WatchPointModel QAbstractItemModel
 WatchPointViewer QTreeView
 WebDatabasesDialog QDialog Ui_WebDatabasesDialog
 WebDatabasesModel QAbstractItemModel
+WebPluginFactory QWebPluginFactory
 WidgetArea QMdiArea
 WidgetView QWidget
 XMLStreamReaderBase QXmlStreamReader
