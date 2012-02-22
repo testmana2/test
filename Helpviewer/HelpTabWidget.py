@@ -108,7 +108,7 @@ class HelpTabWidget(E5TabWidget):
         self.setCornerWidget(self.__rightCornerWidget, Qt.TopRightCorner)
         
         self.__newTabButton = QToolButton(self)
-        self.__newTabButton.setIcon(UI.PixmapCache.getIcon("tabNew.png"))
+        self.__newTabButton.setIcon(UI.PixmapCache.getIcon("plus.png"))
         self.__newTabButton.setToolTip(self.trUtf8("Open a new help window tab"))
         self.setCornerWidget(self.__newTabButton, Qt.TopLeftCorner)
         self.__newTabButton.clicked[bool].connect(self.newBrowser)
