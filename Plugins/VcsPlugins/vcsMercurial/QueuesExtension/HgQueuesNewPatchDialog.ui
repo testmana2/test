@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>350</height>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -199,8 +199,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>157</x>
-     <y>326</y>
+     <x>166</x>
+     <y>352</y>
     </hint>
     <hint type="destinationlabel">
      <x>45</x>
@@ -253,6 +253,22 @@
     <hint type="destinationlabel">
      <x>20</x>
      <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>currentDateCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dateTimeEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>266</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>290</y>
     </hint>
    </hints>
   </connection>
