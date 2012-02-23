@@ -632,7 +632,7 @@ class Prefs(object):
         "FilterTrackingCookies": True,
         "PrintBackgrounds": False,
         "StartupBehavior": 0,      # show home page
-        "HomePage": "pyrc:home",
+        "HomePage": "eric:home",
         "HistoryLimit": 30,
         "DefaultScheme": "file://",
         "AdBlockEnabled": False,

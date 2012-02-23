@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+  <file>html/startPage.html</file>
+  <file>html/adblockPage.html</file>
+  <file>html/notFoundPage.html</file>
+</qresource>
+</RCC>

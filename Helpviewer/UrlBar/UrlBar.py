@@ -139,7 +139,7 @@ class UrlBar(E5LineEdit):
         @param ok flag indicating a successful load (boolean)
         """
         try:
-            if self.__browser.url().scheme() in ["pyrc", "about"]:
+            if self.__browser.url().scheme() in ["eric", "about"]:
                 self.__bookmarkButton.setVisible(False)
             else:
                 if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\

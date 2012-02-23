@@ -760,7 +760,7 @@ class HelpTabWidget(E5TabWidget):
         
         if url.scheme() == "about" and \
            url.path() == "home":
-            url = QUrl("pyrc:home")
+            url = QUrl("eric:home")
         
         if url.scheme() in ["s", "search"]:
             url = manager.currentEngine().searchUrl(url.path().strip())

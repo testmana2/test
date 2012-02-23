@@ -961,6 +961,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.py</Source>
+    <Source>Helpviewer/data/__init__.py</Source>
+    <Source>Helpviewer/data/icons_rc.py</Source>
+    <Source>Helpviewer/data/html_rc.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1265,6 +1268,8 @@ bindings and the QScintilla2 editor widget.</Description>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
+    <Resource>Helpviewer/data/icons.qrc</Resource>
+    <Resource>Helpviewer/data/html.qrc</Resource>
   </Resources>
   <Interfaces/>
   <Others>
@@ -1338,6 +1343,13 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>default_Mac.e4k</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmarkPhase.style</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialogBookmarkPhase.style</Other>
+    <Other>Helpviewer/data/icons/ericWeb16.png</Other>
+    <Other>Helpviewer/data/icons/ericWeb32.png</Other>
+    <Other>Helpviewer/data/html/startPage.html</Other>
+    <Other>Helpviewer/data/html/adblockPage.html</Other>
+    <Other>Helpviewer/data/icons/adBlockPlus16.png</Other>
+    <Other>Helpviewer/data/icons/adBlockPlus64.png</Other>
+    <Other>Helpviewer/data/html/notFoundPage.html</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

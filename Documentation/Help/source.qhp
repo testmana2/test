@@ -312,7 +312,10 @@
               <section title="eric5.Helpviewer.WebPlugins.WebPluginFactory" ref="eric5.Helpviewer.WebPlugins.WebPluginFactory.html" />
               <section title="eric5.Helpviewer.WebPlugins.WebPluginInterface" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html" />
             </section>
-            <section title="eric5.Helpviewer.HTMLResources" ref="eric5.Helpviewer.HTMLResources.html" />
+            <section title="eric5.Helpviewer.data" ref="index-eric5.Helpviewer.data.html">
+              <section title="eric5.Helpviewer.data.html_rc" ref="eric5.Helpviewer.data.html_rc.html" />
+              <section title="eric5.Helpviewer.data.icons_rc" ref="eric5.Helpviewer.data.icons_rc.html" />
+            </section>
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
             <section title="eric5.Helpviewer.HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
             <section title="eric5.Helpviewer.HelpDocsInstaller" ref="eric5.Helpviewer.HelpDocsInstaller.html" />
@@ -4287,7 +4290,6 @@
       <keyword name="HTMLGenerator" id="HTMLGenerator" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator" />
       <keyword name="HTMLGenerator (Constructor)" id="HTMLGenerator (Constructor)" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.__init__" />
       <keyword name="HTMLGenerator.generate" id="HTMLGenerator.generate" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.generate" />
-      <keyword name="HTMLResources (Module)" id="HTMLResources (Module)" ref="eric5.Helpviewer.HTMLResources.html" />
       <keyword name="HelpAppearancePage" id="HelpAppearancePage" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage" />
       <keyword name="HelpAppearancePage (Constructor)" id="HelpAppearancePage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.__init__" />
       <keyword name="HelpAppearancePage (Module)" id="HelpAppearancePage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html" />
@@ -10962,6 +10964,7 @@
       <keyword name="crypto (Package)" id="crypto (Package)" ref="index-eric5.Utilities.crypto.html" />
       <keyword name="cursors (Package)" id="cursors (Package)" ref="index-eric5.IconEditor.cursors.html" />
       <keyword name="cursors_rc (Module)" id="cursors_rc (Module)" ref="eric5.IconEditor.cursors.cursors_rc.html" />
+      <keyword name="data (Package)" id="data (Package)" ref="index-eric5.Helpviewer.data.html" />
       <keyword name="dataString" id="dataString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#dataString" />
       <keyword name="dateFromTime_t" id="dateFromTime_t" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#dateFromTime_t" />
       <keyword name="debug_thread_info" id="debug_thread_info" ref="eric5.DebugClients.Ruby.Debuggee.html#debug_thread_info" />
@@ -11166,7 +11169,9 @@
       <keyword name="hashPasswordTuple" id="hashPasswordTuple" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPasswordTuple" />
       <keyword name="hg (Module)" id="hg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html" />
       <keyword name="html_encode" id="html_encode" ref="eric5.Utilities.__init__.html#html_encode" />
+      <keyword name="html_rc (Module)" id="html_rc (Module)" ref="eric5.Helpviewer.data.html_rc.html" />
       <keyword name="html_uencode" id="html_uencode" ref="eric5.Utilities.__init__.html#html_uencode" />
+      <keyword name="icons_rc (Module)" id="icons_rc (Module)" ref="eric5.Helpviewer.data.icons_rc.html" />
       <keyword name="idlclbr (Module)" id="idlclbr (Module)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html" />
       <keyword name="ignore_code" id="ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#ignore_code" />
       <keyword name="ignore_code" id="ignore_code" ref="eric5.UtilitiesPython2.pep8.html#ignore_code" />
@@ -11304,7 +11309,11 @@
       <keyword name="python_3000_not_equal" id="python_3000_not_equal" ref="eric5.UtilitiesPython2.pep8.html#python_3000_not_equal" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_raise_comma" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.UtilitiesPython2.pep8.html#python_3000_raise_comma" />
+      <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.Helpviewer.data.html_rc.html#qCleanupResources" />
+      <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.Helpviewer.data.icons_rc.html#qCleanupResources" />
       <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qCleanupResources" />
+      <keyword name="qInitResources" id="qInitResources" ref="eric5.Helpviewer.data.html_rc.html#qInitResources" />
+      <keyword name="qInitResources" id="qInitResources" ref="eric5.Helpviewer.data.icons_rc.html#qInitResources" />
       <keyword name="qInitResources" id="qInitResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qInitResources" />
       <keyword name="question" id="question" ref="eric5.E5Gui.E5MessageBox.html#question" />
       <keyword name="queues (Module)" id="queues (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
@@ -11733,6 +11742,8 @@
       <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html</file>
       <file>eric5.Helpviewer.WebPlugins.WebPluginFactory.html</file>
       <file>eric5.Helpviewer.WebPlugins.WebPluginInterface.html</file>
+      <file>eric5.Helpviewer.data.html_rc.html</file>
+      <file>eric5.Helpviewer.data.icons_rc.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>
@@ -12202,6 +12213,7 @@
       <file>index-eric5.Helpviewer.UserAgent.html</file>
       <file>index-eric5.Helpviewer.WebPlugins.ClickToFlash.html</file>
       <file>index-eric5.Helpviewer.WebPlugins.html</file>
+      <file>index-eric5.Helpviewer.data.html</file>
       <file>index-eric5.Helpviewer.html</file>
       <file>index-eric5.IconEditor.cursors.html</file>
       <file>index-eric5.IconEditor.html</file>

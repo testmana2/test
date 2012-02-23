@@ -1999,9 +1999,6 @@ eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadButton_clicked?4()
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.openUrl?7
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager.show?4()
 eric5.Helpviewer.Feeds.FeedsManager.FeedsManager?1(parent=None)
-eric5.Helpviewer.HTMLResources.adblockPage_html?7
-eric5.Helpviewer.HTMLResources.notFoundPage_html?7
-eric5.Helpviewer.HTMLResources.startPage_html?7
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.addBookmark?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric5.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
@@ -2661,6 +2658,16 @@ eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.configure?4()
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.create?4(mimeType, url, argumentNames, argumentValues)
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.isAnonymous?4()
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.metaPlugin?4()
+eric5.Helpviewer.data.html_rc.qCleanupResources?4()
+eric5.Helpviewer.data.html_rc.qInitResources?4()
+eric5.Helpviewer.data.html_rc.qt_resource_data?7
+eric5.Helpviewer.data.html_rc.qt_resource_name?7
+eric5.Helpviewer.data.html_rc.qt_resource_struct?7
+eric5.Helpviewer.data.icons_rc.qCleanupResources?4()
+eric5.Helpviewer.data.icons_rc.qInitResources?4()
+eric5.Helpviewer.data.icons_rc.qt_resource_data?7
+eric5.Helpviewer.data.icons_rc.qt_resource_name?7
+eric5.Helpviewer.data.icons_rc.qt_resource_struct?7
 eric5.IconEditor.IconEditorGrid.IconEditCommand.redo?4()
 eric5.IconEditor.IconEditorGrid.IconEditCommand.setAfterImage?4(image)
 eric5.IconEditor.IconEditorGrid.IconEditCommand.undo?4()
@@ -7595,6 +7602,7 @@ eric5.install.createGlobalPluginsDir?4()
 eric5.install.createInstallConfig?4()
 eric5.install.createMacAppBundle?4(pydir)
 eric5.install.createPyWrapper?4(pydir, wfile, isGuiScript=True)
+eric5.install.currDir?7
 eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7

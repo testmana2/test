@@ -95,7 +95,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         # register scheme handlers
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
-        self.setSchemeHandler("pyrc", PyrcAccessHandler(self))
+        self.setSchemeHandler("eric", PyrcAccessHandler(self))
         self.setSchemeHandler("about", AboutAccessHandler(self))
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
         self.setSchemeHandler("ftp", FtpAccessHandler(self))

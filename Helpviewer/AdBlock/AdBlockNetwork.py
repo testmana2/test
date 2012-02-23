@@ -26,7 +26,7 @@ class AdBlockNetwork(QObject):
         """
         url = request.url()
         
-        if url.scheme() in ["data", "pyrc", "qthelp"]:
+        if url.scheme() in ["data", "eric", "qthelp", "qrc", "file"]:
             return None
         
         manager = Helpviewer.HelpWindow.HelpWindow.adblockManager()

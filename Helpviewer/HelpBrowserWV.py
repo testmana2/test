@@ -9,7 +9,7 @@ Module implementing the helpbrowser using QWebView.
 """
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, QUrl, \
-    QBuffer, QIODevice, QByteArray, QFileInfo, Qt, QTimer, QEvent, QRect
+    QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile
 from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
     QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, QColor, \
     QPalette, QFrame, QPrinter, QPrintDialog, QDialog
@@ -29,7 +29,6 @@ import UI.PixmapCache
 
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
 from .JavaScriptResources import fetchLinks_js
-from .HTMLResources import notFoundPage_html, adblockPage_html
 try:
     from .SslInfoDialog import SslInfoDialog
     from PyQt4.QtNetwork import QSslCertificate
@@ -282,62 +281,58 @@ class HelpWebPage(QWebPage):
                     else:
                         # the whole page is blocked
                         rule = info.errorString.replace("AdBlockRule:", "")
-                        html = adblockPage_html
                         title = self.trUtf8("Content blocked by AdBlock Plus")
-                        pixmap = UI.PixmapCache.getPixmap("adBlockPlus16.png")
-                        imageBuffer = QBuffer()
-                        imageBuffer.open(QIODevice.ReadWrite)
-                        if pixmap.save(imageBuffer, "PNG"):
-                            html = html.replace("@FAVICON@",
-                                         str(imageBuffer.buffer().toBase64(),
-                                             encoding="ascii"))
-                        pixmap = UI.PixmapCache.getPixmap("adBlockPlus64.png")
-                        imageBuffer = QBuffer()
-                        imageBuffer.open(QIODevice.ReadWrite)
-                        if pixmap.save(imageBuffer, "PNG"):
-                            html = html.replace("@IMAGE@",
-                                         str(imageBuffer.buffer().toBase64(),
-                                             encoding="ascii"))
-                        errorPage.content = QByteArray(html.format(
-                            title,
-                            self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
-                        ).encode("utf8"))
+                        message = self.trUtf8("Blocked by rule: <i>{0}</i>").format(rule)
+                        
+                        htmlFile = QFile(":/html/adblockPage.html")
+                        htmlFile.open(QFile.ReadOnly)
+                        html = htmlFile.readAll()
+                        html = html.replace("@FAVICON@", "qrc:icons/adBlockPlus16.png")
+                        html = html.replace("@IMAGE@", "qrc:icons/adBlockPlus64.png")
+                        html = html.replace("@TITLE@", title.encode("utf8"))
+                        html = html.replace("@MESSAGE@", message.encode("utf8"))
+                        errorPage.content = html
                         return True
                 
-                html = notFoundPage_html
                 title = self.trUtf8("Error loading page: {0}").format(urlString)
+                htmlFile = QFile(":/html/notFoundPage.html")
+                htmlFile.open(QFile.ReadOnly)
+                html = htmlFile.readAll()
                 pixmap = qApp.style()\
                          .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
                          .pixmap(48, 48)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("@IMAGE@",
-                                 str(imageBuffer.buffer().toBase64(), encoding="ascii"))
+                    html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
                 pixmap = qApp.style()\
                          .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
                          .pixmap(16, 16)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
-                    html = html.replace("@FAVICON@",
-                                 str(imageBuffer.buffer().toBase64(), encoding="ascii"))
-                errorPage.content = QByteArray(html.format(
-                    title,
-                    info.errorString,
-                    self.trUtf8("When connecting to: {0}.").format(urlString),
+                    html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
+                html = html.replace("@TITLE@", title.encode("utf8"))
+                html = html.replace("@H1@", info.errorString.encode("utf8"))
+                html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
+                    .format(urlString).encode("utf8"))
+                html = html.replace("@LI-1@",
                     self.trUtf8("Check the address for errors such as "
                                 "<b>ww</b>.example.org instead of "
-                                "<b>www</b>.example.org"),
+                                "<b>www</b>.example.org").encode("utf8"))
+                html = html.replace("@LI-2@",
                     self.trUtf8("If the address is correct, try checking the network "
-                                "connection."),
+                                "connection.").encode("utf8"))
+                html = html.replace("@LI-3@",
                     self.trUtf8("If your computer or network is protected by a firewall "
                                 "or proxy, make sure that the browser is permitted to "
-                                "access the network."),
+                                "access the network.").encode("utf8"))
+                html = html.replace("@LI-4@",
                     self.trUtf8("If your cache policy is set to offline browsing,"
-                                "only pages in the local cache are available."),
-                    self.trUtf8("Try Again")
-                ).encode("utf8"))
+                                "only pages in the local cache are available.")\
+                    .encode("utf8"))
+                html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+                errorPage.content = html
                 return True
         except AttributeError:
             pass
@@ -591,7 +586,7 @@ class HelpBrowser(QWebView):
             frame = self.sender()
             if isinstance(frame, HelpWebPage):
                 frame = frame.mainFrame()
-            if frame.url().scheme() == "pyrc" and frame.url().path() == "home":
+            if frame.url().scheme() == "eric" and frame.url().path() == "home":
                 if self.__javaScriptEricObject is None:
                     self.__javaScriptEricObject = JavaScriptEricObject(self.mw, self)
                 frame.addToJavaScriptWindowObject("eric", self.__javaScriptEricObject)
@@ -662,7 +657,7 @@ class HelpBrowser(QWebView):
         """
         Private slot to track a change of the current search engine.
         """
-        if self.url().toString() == "pyrc:home":
+        if self.url().toString() == "eric:home":
             self.reload()
     
     def setSource(self, name):
@@ -1611,33 +1606,46 @@ class HelpBrowser(QWebView):
                 notFoundFrame.setHtml(str(data, encoding="utf-8"), replyUrl)
                 return
         
-        html = notFoundPage_html
         urlString = bytes(replyUrl.toEncoded()).decode()
         title = self.trUtf8("Error loading page: {0}").format(urlString)
+        htmlFile = QFile(":/html/notFoundPage.html")
+        htmlFile.open(QFile.ReadOnly)
+        html = htmlFile.readAll()
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self)\
-                 .pixmap(32, 32)
+                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
+                 .pixmap(48, 48)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):
-            html = html.replace("IMAGE_BINARY_DATA_HERE",
-                         str(imageBuffer.buffer().toBase64(), encoding="ascii"))
-        html = html.format(
-            title,
-            reply.errorString(),
-            self.trUtf8("When connecting to: {0}.").format(urlString),
-            self.trUtf8("Check the address for errors such as <b>ww</b>.example.org "
-                        "instead of <b>www</b>.example.org"),
+            html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
+        pixmap = qApp.style()\
+                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
+                 .pixmap(16, 16)
+        imageBuffer = QBuffer()
+        imageBuffer.open(QIODevice.ReadWrite)
+        if pixmap.save(imageBuffer, "PNG"):
+            html = html.replace("@FAVICON@", imageBuffer.buffer().toBase64())
+        html = html.replace("@TITLE@", title.encode("utf8"))
+        html = html.replace("@H1@", reply.errorString().encode("utf8"))
+        html = html.replace("@H2@", self.trUtf8("When connecting to: {0}.")\
+            .format(urlString).encode("utf8"))
+        html = html.replace("@LI-1@",
+            self.trUtf8("Check the address for errors such as "
+                        "<b>ww</b>.example.org instead of "
+                        "<b>www</b>.example.org").encode("utf8"))
+        html = html.replace("@LI-2@",
             self.trUtf8("If the address is correct, try checking the network "
-                        "connection."),
-            self.trUtf8("If your computer or network is protected by a firewall or "
-                        "proxy, make sure that the browser is permitted to access "
-                        "the network."),
+                        "connection.").encode("utf8"))
+        html = html.replace("@LI-3@",
+            self.trUtf8("If your computer or network is protected by a firewall "
+                        "or proxy, make sure that the browser is permitted to "
+                        "access the network.").encode("utf8"))
+        html = html.replace("@LI-4@",
             self.trUtf8("If your cache policy is set to offline browsing,"
-                        "only pages in the local cache are available."),
-            self.trUtf8("Try Again")
-        )
-        notFoundFrame.setHtml(html, replyUrl)
+                        "only pages in the local cache are available.")\
+            .encode("utf8"))
+        html = html.replace("@BUTTON@", self.trUtf8("Try Again").encode("utf8"))
+        notFoundFrame.setHtml(bytes(html).decode("utf8"), replyUrl)
         self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
         self.loadFinished.emit(False)
     

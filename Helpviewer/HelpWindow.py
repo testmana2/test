@@ -53,6 +53,9 @@ from .Feeds.FeedsManager import FeedsManager
 from .SiteInfo.SiteInfoDialog import SiteInfoDialog
 from .Sync.SyncManager import SyncManager
 
+from .data import icons_rc      # __IGNORE_WARNING__
+from .data import html_rc      # __IGNORE_WARNING__
+
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -345,6 +348,8 @@ class HelpWindow(QMainWindow):
         if hasattr(QWebSettings, "SiteSpecificQuirksEnabled"):
             settings.setAttribute(QWebSettings.SiteSpecificQuirksEnabled,
                 Preferences.getHelp("SiteSpecificQuirksEnabled"))
+        
+        QWebSecurityOrigin.addLocalScheme("eric");
     
     def __initActions(self):
         """
@@ -1690,7 +1695,7 @@ class HelpWindow(QMainWindow):
         if self.__previewer is None:
             if self.tabWidget.count() != 1 or \
                self.currentBrowser().url().toString() not in [
-                    "", "pyrc:home", "about:blank"]:
+                    "", "eric:home", "about:blank"]:
                 self.newTab()
             self.__previewer = self.currentBrowser()
         self.tabWidget.setCurrentWidget(self.__previewer)
