@@ -125,6 +125,7 @@ startPage_html = """\
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <title></title>
+    <link rel="icon" href="data:image/png;base64,@FAVICON@" type="image/x-icon" />
     <style>
 * {
     margin: 0;
@@ -234,7 +235,7 @@ body {
 <body onload="document.forms[0].lineEdit.select(); update();">
     <div id="header">
         <h1 id="headerTitle"></h1>
-        <img src="data:image/png;base64,IMAGE_BINARY_DATA_HERE" width="32" height="32"/>
+        <img src="data:image/png;base64,@IMAGE@" width="32" height="32"/>
     </div>
     <div id="search">
         <form action="javascript:formSubmitted();">
