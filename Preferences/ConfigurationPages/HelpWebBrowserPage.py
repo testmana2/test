@@ -73,6 +73,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             Preferences.getHelp("ClickToFlashEnabled"))
         self.doNotTrackCheckBox.setChecked(
             Preferences.getHelp("DoNotTrack"))
+        self.sendRefererCheckBox.setChecked(
+            Preferences.getHelp("SendReferer"))
         
         self.diskCacheCheckBox.setChecked(
             Preferences.getHelp("DiskCacheEnabled"))
@@ -178,6 +180,8 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.clickToFlashCheckBox.isChecked())
         Preferences.setHelp("DoNotTrack",
             self.doNotTrackCheckBox.isChecked())
+        Preferences.setHelp("SendReferer",
+            self.sendRefererCheckBox.isChecked())
         
         Preferences.setHelp("DiskCacheEnabled",
             self.diskCacheCheckBox.isChecked())

@@ -91,6 +91,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.authenticationRequired.connect(self.__authenticationRequired)
         
         self.__doNotTrack = Preferences.getHelp("DoNotTrack")
+        self.__sendReferer = Preferences.getHelp("SendReferer")
         
         # register scheme handlers
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
@@ -157,6 +158,10 @@ class NetworkAccessManager(QNetworkAccessManager):
         # Do Not Track feature
         if self.__doNotTrack:
             req.setRawHeader("DNT", "1")
+        
+        # Send referer header?
+        if not self.__sendReferer:
+            req.setRawHeader("Referer", "")
         
         reply = QNetworkAccessManager.createRequest(self, op, req, outgoingData)
         self.requestCreated.emit(op, req, reply)
@@ -328,6 +333,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         self.__setDiskCache()
         
         self.__doNotTrack = Preferences.getHelp("DoNotTrack")
+        self.__sendReferer = Preferences.getHelp("SendReferer")
     
     def languagesChanged(self):
         """

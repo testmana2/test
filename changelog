@@ -27,6 +27,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added capability to synchronise bookmarks, history, passwords and user agent
      settings via an FTP server
   -- added the ClickToFlash plug-in to (temporarily) block Flash and related content
+  -- added capability to suppress Referer Headers (configurable via eric4 Web Browser
+     configuration page)
 
 Version 5.2.0:
 - bug fixes

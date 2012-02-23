@@ -206,7 +206,7 @@
       <string>Privacy</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
+      <item row="0" column="0" colspan="2">
        <widget class="QCheckBox" name="javaCheckBox">
         <property name="toolTip">
          <string>Select to enable Java</string>
@@ -216,7 +216,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="1" column="0" colspan="2">
        <widget class="QCheckBox" name="javaScriptCheckBox">
         <property name="toolTip">
          <string>Select to enable JavaScript</string>
@@ -246,7 +246,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="3" column="0" colspan="2">
        <widget class="QCheckBox" name="pluginsCheckBox">
         <property name="toolTip">
          <string>Select to enable plugins in web pages</string>
@@ -315,13 +315,23 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
+      <item row="6" column="0" colspan="2">
        <widget class="QCheckBox" name="doNotTrackCheckBox">
         <property name="toolTip">
          <string>Select to enabled the &quot;Do Not Track&quot; feature</string>
         </property>
         <property name="text">
          <string>Tell web sites I do not want to be tracked</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QCheckBox" name="sendRefererCheckBox">
+        <property name="toolTip">
+         <string>Select to send referer headers to the server</string>
+        </property>
+        <property name="text">
+         <string>Send Referer header to servers</string>
         </property>
        </widget>
       </item>
@@ -647,6 +657,7 @@
   <tabstop>pluginsCheckBox</tabstop>
   <tabstop>clickToFlashCheckBox</tabstop>
   <tabstop>doNotTrackCheckBox</tabstop>
+  <tabstop>sendRefererCheckBox</tabstop>
   <tabstop>xssAuditingCheckBox</tabstop>
   <tabstop>expireHistory</tabstop>
   <tabstop>diskCacheCheckBox</tabstop>
