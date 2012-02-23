@@ -21,6 +21,7 @@ import distutils.sysconfig
 
 # Define the globals.
 progName = None
+currDir = os.getcwd()
 modDir = None
 pyModDir = None
 platBinDir = None
@@ -45,8 +46,12 @@ def exit(rcode=0):
     """
     Exit the install script.
     """
+    global currDir
+    
     if sys.platform.startswith("win"):
         input("Press enter to continue...")
+    
+    os.chdir(currDir)
     
     sys.exit(rcode)
 
@@ -923,6 +928,8 @@ def main(argv):
     global sourceDir, configName
     
     progName = os.path.basename(argv[0])
+    
+    os.chdir(os.path.dirname(argv[0]))
 
     initGlobals()
 
