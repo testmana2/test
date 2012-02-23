@@ -609,7 +609,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Bookmarks/AddBookmarkDialog.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksDialog.py</Source>
     <Source>Preferences/ConfigurationPages/HelpWebBrowserPage.py</Source>
-    <Source>Helpviewer/HTMLResources.py</Source>
     <Source>Helpviewer/JavaScriptResources.py</Source>
     <Source>Helpviewer/SearchWidget.py</Source>
     <Source>Helpviewer/History/__init__.py</Source>
