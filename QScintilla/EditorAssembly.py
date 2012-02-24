@@ -107,7 +107,7 @@ class EditorAssembly(QWidget):
                 elif entryName in self.__module.modules:
                     entry = self.__module.modules[entryName]
                     # step 2.0: add module classes
-                    items = []
+                    items = {}
                     for cl in entry.classes.values():
                         if cl.isPrivate():
                             icon = UI.PixmapCache.getIcon("class_private.png")
@@ -115,14 +115,15 @@ class EditorAssembly(QWidget):
                             icon = UI.PixmapCache.getIcon("class_protected.png")
                         else:
                             icon = UI.PixmapCache.getIcon("class.png")
-                        items.append((cl.name, icon, cl.lineno))
-                    for itm in sorted(items):
-                        self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                        items[cl.name] = (icon, cl.lineno)
+                    for key in sorted(items.keys()):
+                        itm = items[key]
+                        self.__membersCombo.addItem(itm[0], key, itm[1])
                 else:
                     return
                 
                 # step 2.1: add class methods
-                items = []
+                items = {}
                 for meth in entry.methods.values():
                     if meth.modifier == Function.Static:
                         icon = UI.PixmapCache.getIcon("method_static.png")
@@ -134,12 +135,13 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("method_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("method.png")
-                    items.append((meth.name, icon, meth.lineno))
-                for itm in sorted(items):
-                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                    items[meth.name] = (icon, meth.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__membersCombo.addItem(itm[0], key, itm[1])
                 
                 # step 2.2: add class instance attributes
-                items = []
+                items = {}
                 for attr in entry.attributes.values():
                     if attr.isPrivate():
                         icon = UI.PixmapCache.getIcon("attribute_private.png")
@@ -147,17 +149,19 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("attribute_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("attribute.png")
-                    items.append((attr.name, icon, attr.lineno))
-                for itm in sorted(items):
-                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                    items[attr.name] = (icon, attr.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__membersCombo.addItem(itm[0], key, itm[1])
                 
                 # step 2.3: add class attributes
-                items = []
+                items = {}
                 icon = UI.PixmapCache.getIcon("attribute_class.png")
                 for glob in entry.globals.values():
-                    items.append((glob.name, icon, glob.lineno))
-                for itm in sorted(items):
-                    self.__membersCombo.addItem(itm[1], itm[0], itm[2])
+                    items[glob.name] = (icon, glob.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__membersCombo.addItem(itm[0], key, itm[1])
     
     def __membersActivated(self, index, moveCursor=True):
         """
@@ -205,15 +209,16 @@ class EditorAssembly(QWidget):
                 self.__globalsCombo.addItem("")
                 
                 # step 1: add modules
-                items = []
+                items = {}
                 for module in self.__module.modules.values():
-                    items.append((module.name, UI.PixmapCache.getIcon("module.png"),
-                                  module.lineno))
-                for itm in sorted(items):
-                    self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                    items[module.name] = (UI.PixmapCache.getIcon("module.png"),
+                                          module.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__globalsCombo.addItem(itm[0], key, itm[1])
                 
                 # step 2: add classes
-                items = []
+                items = {}
                 for cl in self.__module.classes.values():
                     if cl.isPrivate():
                         icon = UI.PixmapCache.getIcon("class_private.png")
@@ -221,12 +226,13 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("class_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("class.png")
-                    items.append((cl.name, icon, cl.lineno))
-                for itm in sorted(items):
-                    self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                    items[cl.name] = (icon, cl.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__globalsCombo.addItem(itm[0], key, itm[1])
                 
                 # step 3: add functions
-                items = []
+                items = {}
                 for func in self.__module.functions.values():
                     if func.isPrivate():
                         icon = UI.PixmapCache.getIcon("method_private.png")
@@ -234,12 +240,13 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("method_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("method.png")
-                    items.append((func.name, icon, func.lineno))
-                for itm in sorted(items):
-                    self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                    items[func.name] = (icon, func.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__globalsCombo.addItem(itm[0], key, itm[1])
                 
                 # step 4: add attributes
-                items = []
+                items = {}
                 for glob in self.__module.globals.values():
                     if glob.isPrivate():
                         icon = UI.PixmapCache.getIcon("attribute_private.png")
@@ -247,9 +254,10 @@ class EditorAssembly(QWidget):
                         icon = UI.PixmapCache.getIcon("attribute_protected.png")
                     else:
                         icon = UI.PixmapCache.getIcon("attribute.png")
-                    items.append((glob.name, icon, glob.lineno))
-                for itm in sorted(items):
-                    self.__globalsCombo.addItem(itm[1], itm[0], itm[2])
+                    items[glob.name] = (icon, glob.lineno)
+                for key in sorted(items.keys()):
+                    itm = items[key]
+                    self.__globalsCombo.addItem(itm[0], key, itm[1])
                 
                 # reset the currently selected entries without moving the text cursor
                 index = self.__globalsCombo.findText(self.__selectedGlobal)
