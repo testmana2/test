@@ -263,8 +263,7 @@ class HelpWebPage(QWebPage):
                 html = notFoundPage_html
                 title = self.trUtf8("Error loading page: {0}").format(urlString)
                 pixmap = qApp.style()\
-                         .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                         .pixmap(32, 32)
+                         .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(32, 32)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
@@ -1398,8 +1397,7 @@ class HelpBrowser(QWebView):
         urlString = bytes(replyUrl.toEncoded()).decode()
         title = self.trUtf8("Error loading page: {0}").format(urlString)
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self)\
-                 .pixmap(32, 32)
+                 .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(32, 32)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):

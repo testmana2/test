@@ -122,7 +122,12 @@ class UrlBar(E5LineEdit):
         
         @param url new URL of the browser (QUrl)
         """
-        self.setText(str(url.toEncoded(), encoding="utf-8"))
+        strUrl = url.toString()
+        if strUrl in ["pyrc:home", "about:blank"]:
+            strUrl = ""
+        
+        if self.text() != strUrl:
+            self.setText(strUrl)
         self.setCursorPosition(0)
     
     def __loadStarted(self):

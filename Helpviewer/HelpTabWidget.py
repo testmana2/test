@@ -356,6 +356,8 @@ class HelpTabWidget(E5TabWidget):
         del urlbar
         
         browser = self.widget(index)
+        if browser is None:
+            return
         browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)
@@ -618,6 +620,8 @@ class HelpTabWidget(E5TabWidget):
         @param ok flag indicating the result (boolean)
         """
         browser = self.sender()
+        if not isinstance(browser, HelpBrowser):
+            return
         
         if browser is not None:
             index = self.indexOf(browser)
