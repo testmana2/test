@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>org.eric5.ide.51</namespace>
+  <namespace>org.eric5.ide.53</namespace>
   <virtualFolder>eric5</virtualFolder>
   <customFilter name="eric5">
-    <filterAttribute>5.1</filterAttribute>
+    <filterAttribute>5.3</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
   </customFilter>
   <filterSection>
-    <filterAttribute>5.1</filterAttribute>
+    <filterAttribute>5.3</filterAttribute>
     <filterAttribute>eric5</filterAttribute>
     <filterAttribute>ide</filterAttribute>
     <toc>
@@ -243,6 +243,7 @@
             </section>
             <section title="eric5.Helpviewer.Network" ref="index-eric5.Helpviewer.Network.html">
               <section title="eric5.Helpviewer.Network.AboutAccessHandler" ref="eric5.Helpviewer.Network.AboutAccessHandler.html" />
+              <section title="eric5.Helpviewer.Network.EricAccessHandler" ref="eric5.Helpviewer.Network.EricAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.FtpAccessHandler" ref="eric5.Helpviewer.Network.FtpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.FtpReply" ref="eric5.Helpviewer.Network.FtpReply.html" />
               <section title="eric5.Helpviewer.Network.NetworkAccessManager" ref="eric5.Helpviewer.Network.NetworkAccessManager.html" />
@@ -3949,6 +3950,11 @@
       <keyword name="EmailPage.on_mailUserEdit_textChanged" id="EmailPage.on_mailUserEdit_textChanged" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_mailUserEdit_textChanged" />
       <keyword name="EmailPage.on_testButton_clicked" id="EmailPage.on_testButton_clicked" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.on_testButton_clicked" />
       <keyword name="EmailPage.save" id="EmailPage.save" ref="eric5.Preferences.ConfigurationPages.EmailPage.html#EmailPage.save" />
+      <keyword name="EricAccessHandler" id="EricAccessHandler" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler" />
+      <keyword name="EricAccessHandler (Module)" id="EricAccessHandler (Module)" ref="eric5.Helpviewer.Network.EricAccessHandler.html" />
+      <keyword name="EricAccessHandler.__createHomePage" id="EricAccessHandler.__createHomePage" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler.__createHomePage" />
+      <keyword name="EricAccessHandler.__createSpeedDialPage" id="EricAccessHandler.__createSpeedDialPage" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler.__createSpeedDialPage" />
+      <keyword name="EricAccessHandler.createRequest" id="EricAccessHandler.createRequest" ref="eric5.Helpviewer.Network.EricAccessHandler.html#EricAccessHandler.createRequest" />
       <keyword name="Ericapi (Package)" id="Ericapi (Package)" ref="index-eric5.Plugins.DocumentationPlugins.Ericapi.html" />
       <keyword name="EricapiConfigDialog" id="EricapiConfigDialog" ref="eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog" />
       <keyword name="EricapiConfigDialog (Constructor)" id="EricapiConfigDialog (Constructor)" ref="eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.__init__" />
@@ -7685,11 +7691,7 @@
       <keyword name="PyRegExpWizardWindow (Constructor)" id="PyRegExpWizardWindow (Constructor)" ref="eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardDialog.html#PyRegExpWizardWindow.__init__" />
       <keyword name="PySideImporter (Module)" id="PySideImporter (Module)" ref="eric5.UtilitiesPython2.PySideImporter.html" />
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric5.PyUnit.html" />
-      <keyword name="PyrcAccessHandler" id="PyrcAccessHandler" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler" />
       <keyword name="PyrcAccessHandler (Module)" id="PyrcAccessHandler (Module)" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html" />
-      <keyword name="PyrcAccessHandler.__createHomePage" id="PyrcAccessHandler.__createHomePage" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.__createHomePage" />
-      <keyword name="PyrcAccessHandler.__createSpeedDialPage" id="PyrcAccessHandler.__createSpeedDialPage" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.__createSpeedDialPage" />
-      <keyword name="PyrcAccessHandler.createRequest" id="PyrcAccessHandler.createRequest" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.createRequest" />
       <keyword name="Python (Package)" id="Python (Package)" ref="index-eric5.DebugClients.Python.html" />
       <keyword name="Python3 (Package)" id="Python3 (Package)" ref="index-eric5.DebugClients.Python3.html" />
       <keyword name="PythonPage" id="PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html#PythonPage" />
@@ -11729,6 +11731,7 @@
       <file>eric5.Helpviewer.History.HistoryTreeModel.html</file>
       <file>eric5.Helpviewer.JavaScriptResources.html</file>
       <file>eric5.Helpviewer.Network.AboutAccessHandler.html</file>
+      <file>eric5.Helpviewer.Network.EricAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.FtpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.FtpReply.html</file>
       <file>eric5.Helpviewer.Network.NetworkAccessManager.html</file>

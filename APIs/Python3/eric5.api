@@ -2316,6 +2316,9 @@ eric5.Helpviewer.History.HistoryTreeModel.HistoryTreeModel?1(sourceModel, parent
 eric5.Helpviewer.JavaScriptResources.fetchLinks_js?7
 eric5.Helpviewer.JavaScriptResources.parseForms_js?7
 eric5.Helpviewer.Network.AboutAccessHandler.AboutAccessHandler.createRequest?4(op, request, outgoingData=None)
+eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._homePage?8
+eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler._speedDialPage?8
+eric5.Helpviewer.Network.EricAccessHandler.EricAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.FtpAccessHandler.FtpAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.FtpReply.FtpReply.abort?4()
 eric5.Helpviewer.Network.FtpReply.FtpReply.bytesAvailable?4()
@@ -2342,9 +2345,6 @@ eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent=None)
-eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler._homePage?8
-eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler._speedDialPage?8
-eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.ExtensionMap?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtDocPath?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtHelpAccessHandler.createRequest?4(op, request, outgoingData=None)

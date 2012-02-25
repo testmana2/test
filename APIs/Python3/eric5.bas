@@ -178,6 +178,7 @@ EditorSyntaxPage ConfigurationPageBase Ui_EditorSyntaxPage
 EditorTypingPage ConfigurationPageBase Ui_EditorTypingPage
 EmailDialog QDialog Ui_EmailDialog
 EmailPage ConfigurationPageBase Ui_EmailPage
+EricAccessHandler SchemeAccessHandler
 EricapiConfigDialog QDialog Ui_EricapiConfigDialog
 EricapiExecDialog QDialog Ui_EricapiExecDialog
 EricapiPlugin QObject
@@ -460,7 +461,6 @@ PyRegExpWizardDialog QDialog
 PyRegExpWizardRepeatDialog QDialog Ui_PyRegExpWizardRepeatDialog
 PyRegExpWizardWidget QWidget Ui_PyRegExpWizardDialog
 PyRegExpWizardWindow QMainWindow
-PyrcAccessHandler SchemeAccessHandler
 PythonPage ConfigurationPageBase Ui_PythonPage
 QRegExpWizard QObject
 QRegExpWizardCharactersDialog QDialog Ui_QRegExpWizardCharactersDialog

@@ -11034,6 +11034,74 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>EricAccessHandler</name>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="87"/>
+        <source>Speed Dial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="88"/>
+        <source>URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <source>Title</source>
+        <translation type="unfinished">Заголовок</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <source>Apply</source>
+        <translation type="unfinished">Применить</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <source>New Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <source>Edit</source>
+        <translation type="unfinished">Редактировать</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <source>Remove</source>
+        <translation type="unfinished">Удалить</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <source>Reload</source>
+        <translation type="unfinished">Переоткрыть</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <source>Load title from page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <source>Speed Dial Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <source>Add New Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="98"/>
+        <source>Maximum pages in a row:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <source>Change size of pages:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>EricapiConfigDialog</name>
     <message>
         <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="170"/>
@@ -32855,69 +32923,29 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
 <context>
     <name>PyrcAccessHandler</name>
     <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="87"/>
-        <source>Speed Dial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="88"/>
-        <source>URL</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="89"/>
         <source>Title</source>
-        <translation type="unfinished">Заголовок</translation>
+        <translation type="obsolete">Заголовок</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="90"/>
         <source>Apply</source>
-        <translation type="unfinished">Применить</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="91"/>
-        <source>New Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Применить</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="92"/>
         <source>Edit</source>
-        <translation type="unfinished">Редактировать</translation>
+        <translation type="obsolete">Редактировать</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="93"/>
         <source>Remove</source>
-        <translation type="unfinished">Удалить</translation>
+        <translation type="obsolete">Удалить</translation>
     </message>
     <message>
         <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="94"/>
         <source>Reload</source>
-        <translation type="unfinished">Переоткрыть</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="95"/>
-        <source>Load title from page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="96"/>
-        <source>Speed Dial Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="97"/>
-        <source>Add New Page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="98"/>
-        <source>Maximum pages in a row:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="99"/>
-        <source>Change size of pages:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Переоткрыть</translation>
     </message>
 </context>
 <context>

@@ -33,7 +33,7 @@ from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 from .NetworkDiskCache import NetworkDiskCache
 
 from .QtHelpAccessHandler import QtHelpAccessHandler
-from .PyrcAccessHandler import PyrcAccessHandler
+from .EricAccessHandler import EricAccessHandler
 from .AboutAccessHandler import AboutAccessHandler
 from .FtpAccessHandler import FtpAccessHandler
 
@@ -95,7 +95,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         # register scheme handlers
         self.setSchemeHandler("qthelp", QtHelpAccessHandler(engine, self))
-        self.setSchemeHandler("eric", PyrcAccessHandler(self))
+        self.setSchemeHandler("eric", EricAccessHandler(self))
         self.setSchemeHandler("about", AboutAccessHandler(self))
         self.setSchemeHandler("abp", AdBlockAccessHandler(self))
         self.setSchemeHandler("ftp", FtpAccessHandler(self))

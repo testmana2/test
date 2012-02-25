@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1661,8 +1660,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -1898,7 +1897,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -10910,6 +10909,74 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>EricAccessHandler</name>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="87"/>
+        <source>Speed Dial</source>
+        <translation>Schnellwahl</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="88"/>
+        <source>URL</source>
+        <translation>URL</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <source>Apply</source>
+        <translation>Anwenden</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <source>New Page</source>
+        <translation>Neue Seite</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <source>Remove</source>
+        <translation>Entfernen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <source>Reload</source>
+        <translation>Erneut laden</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <source>Load title from page</source>
+        <translation>Titel von der Seite laden</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <source>Speed Dial Settings</source>
+        <translation>Schnellwahleinstellungen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <source>Add New Page</source>
+        <translation>Neue Seite hinzufügen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="98"/>
+        <source>Maximum pages in a row:</source>
+        <translation>Maximale Zahl an Seiten pro Zeile:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <source>Change size of pages:</source>
+        <translation>Größe der Seiten ändern:</translation>
+    </message>
+</context>
+<context>
     <name>EricapiConfigDialog</name>
     <message>
         <location filename="Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="170"/>
@@ -13093,7 +13160,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -32272,74 +32339,6 @@ Schreibt man &apos;(?&amp;lt;!u)q&apos;, so bedeutet dies, finde das Zeichen &ap
         <location filename="Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.py" line="394"/>
         <source>Validation</source>
         <translation>Validation</translation>
-    </message>
-</context>
-<context>
-    <name>PyrcAccessHandler</name>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="87"/>
-        <source>Speed Dial</source>
-        <translation>Schnellwahl</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="88"/>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="89"/>
-        <source>Title</source>
-        <translation>Titel</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="90"/>
-        <source>Apply</source>
-        <translation>Anwenden</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="91"/>
-        <source>New Page</source>
-        <translation>Neue Seite</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="92"/>
-        <source>Edit</source>
-        <translation>Bearbeiten</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="93"/>
-        <source>Remove</source>
-        <translation>Entfernen</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="94"/>
-        <source>Reload</source>
-        <translation>Erneut laden</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="95"/>
-        <source>Load title from page</source>
-        <translation>Titel von der Seite laden</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="96"/>
-        <source>Speed Dial Settings</source>
-        <translation>Schnellwahleinstellungen</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="97"/>
-        <source>Add New Page</source>
-        <translation>Neue Seite hinzufügen</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="98"/>
-        <source>Maximum pages in a row:</source>
-        <translation>Maximale Zahl an Seiten pro Zeile:</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Network/PyrcAccessHandler.py" line="99"/>
-        <source>Change size of pages:</source>
-        <translation>Größe der Seiten ändern:</translation>
     </message>
 </context>
 <context>

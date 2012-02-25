@@ -17,7 +17,7 @@ from .NetworkProtocolUnknownErrorReply import NetworkProtocolUnknownErrorReply
 import Helpviewer.HelpWindow
 
 
-class PyrcAccessHandler(SchemeAccessHandler):
+class EricAccessHandler(SchemeAccessHandler):
     """
     Class implementing a scheme access handler for Python resources.
     """
