@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1649,24 +1650,42 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksMenu</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="95"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="97"/>
         <source>Open all in Tabs</source>
         <translation>Alle in Tabs öffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="137"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
         <source>&amp;Open</source>
         <translation>Ö&amp;ffnen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
         <source>&amp;Remove</source>
         <translation>&amp;Entfernen</translation>
+    </message>
+</context>
+<context>
+    <name>BookmarksMenuBarMenu</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="254"/>
+        <source>Default Home Page</source>
+        <translation>Stadard Startseite</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="257"/>
+        <source>Speed Dial</source>
+        <translation>Schnellwahl</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="261"/>
+        <source>Open all in Tabs</source>
+        <translation>Alle in Tabs öffnen</translation>
     </message>
 </context>
 <context>
@@ -1879,7 +1898,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -13074,7 +13093,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -35101,7 +35120,7 @@ nicht verbunden</translation>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="322"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="330"/>
         <source>Unable to load</source>
         <translation>Fehler beim Laden</translation>
     </message>

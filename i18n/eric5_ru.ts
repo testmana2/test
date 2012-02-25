@@ -1653,24 +1653,42 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksMenu</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="95"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="97"/>
         <source>Open all in Tabs</source>
         <translation>Открыть всё в закладках</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="137"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
         <source>&amp;Open</source>
         <translation>&amp;Открыть</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
         <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="146"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
         <source>&amp;Remove</source>
         <translation>&amp;Удалить</translation>
+    </message>
+</context>
+<context>
+    <name>BookmarksMenuBarMenu</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="254"/>
+        <source>Default Home Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="257"/>
+        <source>Speed Dial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="261"/>
+        <source>Open all in Tabs</source>
+        <translation type="unfinished">Открыть всё в закладках</translation>
     </message>
 </context>
 <context>
@@ -35613,7 +35631,7 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="322"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="330"/>
         <source>Unable to load</source>
         <translation type="unfinished"></translation>
     </message>

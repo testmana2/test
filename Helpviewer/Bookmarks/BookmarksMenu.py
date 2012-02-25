@@ -22,8 +22,10 @@ class BookmarksMenu(E5ModelMenu):
     """
     Class implementing the bookmarks menu base class.
     
-    @signal openUrl(QUrl, str) emitted to open a URL in the current tab
-    @signal newUrl(QUrl, str) emitted to open a URL in a new tab
+    @signal openUrl(QUrl, str) emitted to open a URL with the given title in the
+        current tab
+    @signal newUrl(QUrl, str) emitted to open a URL with the given title in a
+        new tab
     """
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
@@ -93,11 +95,11 @@ class BookmarksMenu(E5ModelMenu):
         
         self.addSeparator()
         act = self.addAction(self.trUtf8("Open all in Tabs"))
-        act.triggered[()].connect(self.__openAll)
+        act.triggered[()].connect(self.openAll)
     
-    def __openAll(self):
+    def openAll(self):
         """
-        Private slot to open all the menu's items.
+        Public slot to open all the menu's items.
         """
         menu = self.sender().parent()
         if menu is None:
@@ -187,7 +189,12 @@ class BookmarksMenu(E5ModelMenu):
 class BookmarksMenuBarMenu(BookmarksMenu):
     """
     Class implementing a dynamically populated menu for bookmarks.
+    
+    @signal openUrl(QUrl, str) emitted to open a URL with the given title in the
+        current tab
     """
+    openUrl = pyqtSignal(QUrl, str)
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -222,6 +229,38 @@ class BookmarksMenuBarMenu(BookmarksMenu):
             1, self)
         return True
     
+    def postPopulated(self):
+        """
+        Public method to add any actions after the tree.
+        """
+        if self.isEmpty():
+            return
+        
+        parent = self.rootIndex()
+        
+        hasBookmarks = False
+        
+        for i in range(parent.model().rowCount(parent)):
+            child = parent.model().index(i, 0, parent)
+            
+            if child.data(BookmarksModel.TypeRole) == BookmarkNode.Bookmark:
+                hasBookmarks = True
+                break
+        
+        if not hasBookmarks:
+            return
+        
+        self.addSeparator()
+        act = self.addAction(self.trUtf8("Default Home Page"))
+        act.setData("eric:home")
+        act.triggered[()].connect(self.__defaultBookmarkTriggered)
+        act = self.addAction(self.trUtf8("Speed Dial"))
+        act.setData("eric:speeddial")
+        act.triggered[()].connect(self.__defaultBookmarkTriggered)
+        self.addSeparator()
+        act = self.addAction(self.trUtf8("Open all in Tabs"))
+        act.triggered[()].connect(self.openAll)
+    
     def setInitialActions(self, actions):
         """
         Public method to set the list of actions that should appear first in the menu.
@@ -231,3 +270,12 @@ class BookmarksMenuBarMenu(BookmarksMenu):
         self.__initialActions = actions[:]
         for act in self.__initialActions:
             self.addAction(act)
+    
+    def __defaultBookmarkTriggered(self):
+        """
+        Private slot handling the default bookmark menu entries.
+        """
+        act = self.sender()
+        urlStr = act.data()
+        if urlStr.startswith("eric:"):
+            self.openUrl.emit(QUrl(urlStr), "")
