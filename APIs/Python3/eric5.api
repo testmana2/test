@@ -2151,6 +2151,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
 eric5.Helpviewer.HelpWindow.HelpWindow._historyManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._networkAccessManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._passwordManager?8
+eric5.Helpviewer.HelpWindow.HelpWindow._speedDial?8
 eric5.Helpviewer.HelpWindow.HelpWindow._syncManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
 eric5.Helpviewer.HelpWindow.HelpWindow.adblockManager?4()
@@ -2172,6 +2173,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.helpEngine?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.helpwindows?7
 eric5.Helpviewer.HelpWindow.HelpWindow.historyManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.icon?4(url)
+eric5.Helpviewer.HelpWindow.HelpWindow.keyPressEvent?4(evt)
 eric5.Helpviewer.HelpWindow.HelpWindow.mainWindow?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.masterPasswordChanged?4(oldPassword, newPassword)
 eric5.Helpviewer.HelpWindow.HelpWindow.maxMenuFilePathLen?7
@@ -2195,6 +2197,7 @@ eric5.Helpviewer.HelpWindow.HelpWindow.setEventMouseButtons?4(buttons)
 eric5.Helpviewer.HelpWindow.HelpWindow.setForwardAvailable?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setLoadingActions?4(b)
 eric5.Helpviewer.HelpWindow.HelpWindow.setPrivateMode?4(on)
+eric5.Helpviewer.HelpWindow.HelpWindow.speedDial?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.syncManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.userAgentsManager?4()
 eric5.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
@@ -2336,6 +2339,8 @@ eric5.Helpviewer.Network.NetworkReply.NetworkReply.abort?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.bytesAvailable?4()
 eric5.Helpviewer.Network.NetworkReply.NetworkReply.readData?4(maxlen)
 eric5.Helpviewer.Network.NetworkReply.NetworkReply?1(request, fileData, mimeType, parent=None)
+eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler._homePage?8
+eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler._speedDialPage?8
 eric5.Helpviewer.Network.PyrcAccessHandler.PyrcAccessHandler.createRequest?4(op, request, outgoingData=None)
 eric5.Helpviewer.Network.QtHelpAccessHandler.ExtensionMap?7
 eric5.Helpviewer.Network.QtHelpAccessHandler.QtDocPath?7
@@ -2499,6 +2504,32 @@ eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.okStyle?7
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_imagesTree_currentItemChanged?4(current, previous)
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_securityDetailsButton_clicked?4()
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog?1(browser, parent=None)
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.loadTitle?4()
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.setLoadTitle?4(load)
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.setSize?4(size)
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.setUrl?4(url)
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.start?4()
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.thumbnailCreated?7
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.title?4()
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer.url?4()
+eric5.Helpviewer.SpeedDial.PageThumbnailer.PageThumbnailer?1(parent=None)
+eric5.Helpviewer.SpeedDial.SpeedDial.Page?1(url="", title="", broken=False)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.addPage?4(url, title)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.addWebFrame?4(frame)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.changed?4(allPages)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.initialScript?4()
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.loadThumbnail?4(url, loadTitle=False)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pageForUrl?4(url)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pagesChanged?7
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pagesInRow?4()
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.removeImageForUrl?4(url)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.removePage?4(url)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.sdSize?4()
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setPagesInRow?4(count)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setSdSize?4(size)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlForShortcut?4(key)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlFromUserInput?4(url)
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial?1(parent=None)
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.CertRole?7
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caCertificatesTree_currentItemChanged?4(current, previous)
 eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog.on_caDeleteButton_clicked?4()
@@ -2555,6 +2586,15 @@ eric5.Helpviewer.Sync.SyncManager.SyncManager.showSyncDialog?4()
 eric5.Helpviewer.Sync.SyncManager.SyncManager.syncEnabled?4()
 eric5.Helpviewer.Sync.SyncManager.SyncManager.syncError?7
 eric5.Helpviewer.Sync.SyncManager.SyncManager?1(parent=None)
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.AddBookmark?7
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.AddSpeeddial?7
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.EditBookmark?7
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.RemoveSpeeddial?7
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.Undefined?7
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.getAction?4()
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.on_bookmarkPushButton_clicked?4()
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.on_speeddialPushButton_clicked?4()
+eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog?1(url, parent=None)
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.accept?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog.on_removeButton_clicked?4()
 eric5.Helpviewer.UrlBar.BookmarkInfoDialog.BookmarkInfoDialog?1(bookmark, parent=None)
@@ -2658,16 +2698,6 @@ eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.configure?4()
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.create?4(mimeType, url, argumentNames, argumentValues)
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.isAnonymous?4()
 eric5.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.metaPlugin?4()
-eric5.Helpviewer.data.html_rc.qCleanupResources?4()
-eric5.Helpviewer.data.html_rc.qInitResources?4()
-eric5.Helpviewer.data.html_rc.qt_resource_data?7
-eric5.Helpviewer.data.html_rc.qt_resource_name?7
-eric5.Helpviewer.data.html_rc.qt_resource_struct?7
-eric5.Helpviewer.data.icons_rc.qCleanupResources?4()
-eric5.Helpviewer.data.icons_rc.qInitResources?4()
-eric5.Helpviewer.data.icons_rc.qt_resource_data?7
-eric5.Helpviewer.data.icons_rc.qt_resource_name?7
-eric5.Helpviewer.data.icons_rc.qt_resource_struct?7
 eric5.IconEditor.IconEditorGrid.IconEditCommand.redo?4()
 eric5.IconEditor.IconEditorGrid.IconEditCommand.setAfterImage?4(image)
 eric5.IconEditor.IconEditorGrid.IconEditCommand.undo?4()
@@ -4838,6 +4868,7 @@ eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.HelpVirusTotalPage?1(par
 eric5.Preferences.ConfigurationPages.HelpVirusTotalPage.create?4(dlg)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_defaultHomeButton_clicked?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_setCurrentPageButton_clicked?4()
+eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.on_startupCombo_currentIndexChanged?4(index)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage.save?4()
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.HelpWebBrowserPage?1(configDialog)
 eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.create?4(dlg)

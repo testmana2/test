@@ -29,6 +29,7 @@ Attribute ClbrBaseClasses.Attribute VisibilityMixin
 AuthenticationDialog QDialog Ui_AuthenticationDialog
 AutoSaver QObject
 BinaryModel QAbstractTableModel
+BookmarkActionSelectionDialog QDialog Ui_BookmarkActionSelectionDialog
 BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
 BookmarkedFilesDialog QDialog Ui_BookmarkedFilesDialog
 Bookmarks HgExtension
@@ -389,6 +390,7 @@ OpenSearchWriter QXmlStreamWriter
 PackageDiagram UMLDialog
 PackageItem UMLItem
 PageScreenDialog QDialog Ui_PageScreenDialog
+PageThumbnailer QObject
 PasswordManager QObject
 PasswordModel QAbstractTableModel
 PasswordsDialog QDialog Ui_PasswordsDialog
@@ -503,6 +505,7 @@ SingleApplicationServer QLocalServer
 SiteInfoDialog QDialog Ui_SiteInfoDialog
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
+SpeedDial QObject
 SpellChecker QObject
 SpellCheckingDialog QDialog Ui_SpellCheckingDialog
 SpellingPropertiesDialog QDialog Ui_SpellingPropertiesDialog

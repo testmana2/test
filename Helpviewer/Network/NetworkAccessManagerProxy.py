@@ -71,10 +71,10 @@ class NetworkAccessManagerProxy(QNetworkAccessManager):
             (QIODevice)
         @return reference to the created reply object (QNetworkReply)
         """
-        if self.primaryManager is not None and \
-           self.__webPage is not None:
+        if self.primaryManager is not None:
             pageRequest = QNetworkRequest(request)
-            self.__webPage.populateNetworkRequest(pageRequest)
+            if self.__webPage is not None:
+                self.__webPage.populateNetworkRequest(pageRequest)
             return self.primaryManager.createRequest(op, pageRequest, outgoingData)
         else:
             return QNetworkAccessManager.createRequest(self, op, request, outgoingData)

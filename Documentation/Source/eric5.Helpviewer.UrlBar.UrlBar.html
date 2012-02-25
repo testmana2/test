@@ -62,10 +62,13 @@ E5LineEdit
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#UrlBar.__bookmarkChanged">__bookmarkChanged</a></td>
-<td>Private slot to handle bookmark changes.</td>
+<td>Private slot to handle bookmark or speed dial changes.</td>
 </tr><tr>
 <td><a href="#UrlBar.__browserUrlChanged">__browserUrlChanged</a></td>
 <td>Private slot to handle a URL change of the associated browser.</td>
+</tr><tr>
+<td><a href="#UrlBar.__checkBookmark">__checkBookmark</a></td>
+<td>Private slot to check the current URL for the bookmarked state.</td>
 </tr><tr>
 <td><a href="#UrlBar.__loadFinished">__loadFinished</a></td>
 <td>Private slot to set some data after the page was loaded.</td>
@@ -140,7 +143,7 @@ reference to the parent widget (HelpBrowser)
 <h4>UrlBar.__bookmarkChanged</h4>
 <b>__bookmarkChanged</b>(<i></i>)
 <p>
-        Private slot to handle bookmark changes.
+        Private slot to handle bookmark or speed dial changes.
 </p><a NAME="UrlBar.__browserUrlChanged" ID="UrlBar.__browserUrlChanged"></a>
 <h4>UrlBar.__browserUrlChanged</h4>
 <b>__browserUrlChanged</b>(<i>url</i>)
@@ -151,7 +154,12 @@ reference to the parent widget (HelpBrowser)
 <dd>
 new URL of the browser (QUrl)
 </dd>
-</dl><a NAME="UrlBar.__loadFinished" ID="UrlBar.__loadFinished"></a>
+</dl><a NAME="UrlBar.__checkBookmark" ID="UrlBar.__checkBookmark"></a>
+<h4>UrlBar.__checkBookmark</h4>
+<b>__checkBookmark</b>(<i></i>)
+<p>
+        Private slot to check the current URL for the bookmarked state.
+</p><a NAME="UrlBar.__loadFinished" ID="UrlBar.__loadFinished"></a>
 <h4>UrlBar.__loadFinished</h4>
 <b>__loadFinished</b>(<i>ok</i>)
 <p>

@@ -8,7 +8,7 @@ Module implementing the URL bar widget.
 """
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl
-from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon
+from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon, QDialog
 try:
     from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
 except ImportError:
@@ -23,6 +23,7 @@ import Helpviewer.HelpWindow
 from .FavIconLabel import FavIconLabel
 from .SslLabel import SslLabel
 from .BookmarkInfoDialog import BookmarkInfoDialog
+from .BookmarkActionSelectionDialog import BookmarkActionSelectionDialog
 
 from Helpviewer.Feeds.FeedsDialog import FeedsDialog
 
@@ -93,6 +94,8 @@ class UrlBar(E5LineEdit):
             self.__bookmarkChanged)
         Helpviewer.HelpWindow.HelpWindow.bookmarksManager().entryRemoved.connect(
             self.__bookmarkChanged)
+        Helpviewer.HelpWindow.HelpWindow.speedDial().pagesChanged.connect(
+            self.__bookmarkChanged)
     
     def setBrowser(self, browser):
         """
@@ -122,7 +125,12 @@ class UrlBar(E5LineEdit):
         
         @param url new URL of the browser (QUrl)
         """
-        self.setText(str(url.toEncoded(), encoding="utf-8"))
+        strUrl = url.toString()
+        if strUrl in ["eric:speeddial", "eric:home", "about:blank"]:
+            strUrl = ""
+        
+        if self.text() != strUrl:
+            self.setText(strUrl)
         self.setCursorPosition(0)
     
     def __loadStarted(self):
@@ -131,6 +139,18 @@ class UrlBar(E5LineEdit):
         """
         self.__sslLabel.setVisible(False)
         self.__bookmarkButton.setVisible(False)
+    
+    def __checkBookmark(self):
+        """
+        Private slot to check the current URL for the bookmarked state.
+        """
+        if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+           .bookmarkForUrl(self.__browser.url()) is None and \
+           Helpviewer.HelpWindow.HelpWindow.speedDial()\
+           .pageForUrl(self.__browser.url()).url == "":
+            self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
+        else:
+            self.__bookmarkButton.setIcon(self.__bmActiveIcon)
     
     def __loadFinished(self, ok):
         """
@@ -142,11 +162,7 @@ class UrlBar(E5LineEdit):
             if self.__browser.url().scheme() in ["eric", "about"]:
                 self.__bookmarkButton.setVisible(False)
             else:
-                if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-                   .bookmarkForUrl(self.__browser.url()) is None:
-                    self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
-                else:
-                    self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+                self.__checkBookmark()
                 self.__bookmarkButton.setVisible(True)
             
             if ok:
@@ -208,24 +224,29 @@ class UrlBar(E5LineEdit):
         """
         Private slot to show a dialog with some bookmark info.
         """
-        bookmark = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-           .bookmarkForUrl(self.__browser.url())
-        if bookmark is None:
-            self.__browser.addBookmark()
-        else:
-            dlg = BookmarkInfoDialog(bookmark, self.__browser)
-            dlg.exec_()
+        url = self.__browser.url()
+        dlg = BookmarkActionSelectionDialog(url)
+        if dlg.exec_() == QDialog.Accepted:
+            action = dlg.getAction()
+            if action == BookmarkActionSelectionDialog.AddBookmark:
+                self.__browser.addBookmark()
+            elif action == BookmarkActionSelectionDialog.EditBookmark:
+                bookmark = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
+                   .bookmarkForUrl(url)
+                dlg = BookmarkInfoDialog(bookmark, self.__browser)
+                dlg.exec_()
+            elif action == BookmarkActionSelectionDialog.AddSpeeddial:
+                Helpviewer.HelpWindow.HelpWindow.speedDial().addPage(
+                    url, self.__browser.title())
+            elif action == BookmarkActionSelectionDialog.RemoveSpeeddial:
+                Helpviewer.HelpWindow.HelpWindow.speedDial().removePage(url)
     
     @pyqtSlot()
     def __bookmarkChanged(self):
         """
-        Private slot to handle bookmark changes.
+        Private slot to handle bookmark or speed dial changes.
         """
-        if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-           .bookmarkForUrl(self.__browser.url()) is None:
-            self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
-        else:
-            self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+        self.__checkBookmark()
     
     def paintEvent(self, evt):
         """

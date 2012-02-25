@@ -4,5 +4,6 @@
   <file>html/startPage.html</file>
   <file>html/adblockPage.html</file>
   <file>html/notFoundPage.html</file>
+  <file>html/speeddialPage.html</file>
 </qresource>
 </RCC>

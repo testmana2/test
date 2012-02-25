@@ -299,15 +299,13 @@ class HelpWebPage(QWebPage):
                 htmlFile.open(QFile.ReadOnly)
                 html = htmlFile.readAll()
                 pixmap = qApp.style()\
-                         .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                         .pixmap(48, 48)
+                         .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
                     html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
                 pixmap = qApp.style()\
-                         .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                         .pixmap(16, 16)
+                         .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
                 imageBuffer = QBuffer()
                 imageBuffer.open(QIODevice.ReadWrite)
                 if pixmap.save(imageBuffer, "PNG"):
@@ -505,6 +503,8 @@ class HelpBrowser(QWebView):
                 """<p>This window displays the selected help information.</p>"""
         ))
         
+        self.__speedDial = Helpviewer.HelpWindow.HelpWindow.speedDial()
+        
         self.__page = HelpWebPage(self)
         self.setPage(self.__page)
         
@@ -590,6 +590,9 @@ class HelpBrowser(QWebView):
                 if self.__javaScriptEricObject is None:
                     self.__javaScriptEricObject = JavaScriptEricObject(self.mw, self)
                 frame.addToJavaScriptWindowObject("eric", self.__javaScriptEricObject)
+            elif frame.url().scheme() == "eric" and frame.url().path() == "speeddial":
+                frame.addToJavaScriptWindowObject("speeddial", self.__speedDial)
+                self.__speedDial.addWebFrame(frame)
         else:
             # called from QWebPage.frameCreated
             frame.javaScriptWindowObjectCleared.connect(self.__addExternalBinding)
@@ -1612,15 +1615,13 @@ class HelpBrowser(QWebView):
         htmlFile.open(QFile.ReadOnly)
         html = htmlFile.readAll()
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                 .pixmap(48, 48)
+                 .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(48, 48)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):
             html = html.replace("@IMAGE@", imageBuffer.buffer().toBase64())
         pixmap = qApp.style()\
-                 .standardIcon(QStyle.SP_MessageBoxWarning, None, self.parent())\
-                 .pixmap(16, 16)
+                 .standardIcon(QStyle.SP_MessageBoxWarning).pixmap(16, 16)
         imageBuffer = QBuffer()
         imageBuffer.open(QIODevice.ReadWrite)
         if pixmap.save(imageBuffer, "PNG"):

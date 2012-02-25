@@ -963,6 +963,11 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/data/__init__.py</Source>
     <Source>Helpviewer/data/icons_rc.py</Source>
     <Source>Helpviewer/data/html_rc.py</Source>
+    <Source>Helpviewer/SpeedDial/__init__.py</Source>
+    <Source>Helpviewer/SpeedDial/SpeedDial.py</Source>
+    <Source>Helpviewer/data/javascript_rc.py</Source>
+    <Source>Helpviewer/SpeedDial/PageThumbnailer.py</Source>
+    <Source>Helpviewer/UrlBar/BookmarkActionSelectionDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1244,6 +1249,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.ui</Form>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui</Form>
+    <Form>Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>
@@ -1269,6 +1275,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
     <Resource>Helpviewer/data/icons.qrc</Resource>
     <Resource>Helpviewer/data/html.qrc</Resource>
+    <Resource>Helpviewer/data/javascript.qrc</Resource>
   </Resources>
   <Interfaces/>
   <Others>
@@ -1349,6 +1356,17 @@ bindings and the QScintilla2 editor widget.</Description>
     <Other>Helpviewer/data/icons/adBlockPlus16.png</Other>
     <Other>Helpviewer/data/icons/adBlockPlus64.png</Other>
     <Other>Helpviewer/data/html/notFoundPage.html</Other>
+    <Other>Helpviewer/data/html/speeddialPage.html</Other>
+    <Other>Helpviewer/data/icons/box-border-small.png</Other>
+    <Other>Helpviewer/data/icons/brokenPage.png</Other>
+    <Other>Helpviewer/data/icons/close.png</Other>
+    <Other>Helpviewer/data/icons/edit.png</Other>
+    <Other>Helpviewer/data/icons/loading.gif</Other>
+    <Other>Helpviewer/data/icons/plus.png</Other>
+    <Other>Helpviewer/data/icons/reload.png</Other>
+    <Other>Helpviewer/data/icons/setting.png</Other>
+    <Other>Helpviewer/data/javascript/jquery-ui.js</Other>
+    <Other>Helpviewer/data/javascript/jquery.js</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
@@ -1482,6 +1500,7 @@ bindings and the QScintilla2 editor widget.</Description>
                 <string>_hg</string>
                 <string>.directory</string>
                 <string>.issues</string>
+                <string>data</string>
               </list>
             </value>
             <key>
@@ -1607,6 +1626,7 @@ bindings and the QScintilla2 editor widget.</Description>
             <value>
               <list>
                 <string>Ui_*</string>
+                <string>*_rc.py</string>
               </list>
             </value>
             <key>

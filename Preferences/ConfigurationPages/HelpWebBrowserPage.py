@@ -260,6 +260,19 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         Private slot to set the default home page.
         """
         self.homePageEdit.setText(Preferences.Prefs.helpDefaults["HomePage"])
+    
+    @pyqtSlot(int)
+    def on_startupCombo_currentIndexChanged(self, index):
+        """
+        Private slot to enable elements depending on the selected startup entry.
+        
+        @param index index of the selected entry (integer)
+        """
+        enable = index == 0
+        self.homePageLabel.setEnabled(enable)
+        self.homePageEdit.setEnabled(enable)
+        self.defaultHomeButton.setEnabled(enable)
+        self.setCurrentPageButton.setEnabled(enable)
 
 
 def create(dlg):

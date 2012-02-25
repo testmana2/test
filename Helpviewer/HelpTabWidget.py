@@ -282,9 +282,11 @@ class HelpTabWidget(E5TabWidget):
         self.__closeButton.setEnabled(True)
         self.__navigationButton.setEnabled(True)
         
-        if not linkName and not requestData and \
-           Preferences.getHelp("StartupBehavior") == 0:
-            linkName = Preferences.getHelp("HomePage")
+        if not linkName and not requestData:
+            if Preferences.getHelp("StartupBehavior") == 0:
+                linkName = Preferences.getHelp("HomePage")
+            elif Preferences.getHelp("StartupBehavior") == 1:
+                linkName = "eric:speeddial"
         
         if linkName:
             browser.setSource(QUrl(linkName))
@@ -357,6 +359,8 @@ class HelpTabWidget(E5TabWidget):
         del urlbar
         
         browser = self.widget(index)
+        if browser is None:
+            return
         browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)
@@ -633,6 +637,8 @@ class HelpTabWidget(E5TabWidget):
         @param ok flag indicating the result (boolean)
         """
         browser = self.sender()
+        if not isinstance(browser, HelpBrowser):
+            return
         
         if browser is not None:
             index = self.indexOf(browser)

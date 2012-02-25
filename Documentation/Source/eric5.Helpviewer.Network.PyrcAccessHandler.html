@@ -49,7 +49,7 @@ Module implementing a scheme access handler for Python resources.
 SchemeAccessHandler
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>_homePage</td></tr><tr><td>_speedDialPage</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -58,6 +58,12 @@ SchemeAccessHandler
 <h3>Methods</h3>
 <table>
 <tr>
+<td><a href="#PyrcAccessHandler.__createHomePage">__createHomePage</a></td>
+<td>Private method to create the Home page.</td>
+</tr><tr>
+<td><a href="#PyrcAccessHandler.__createSpeedDialPage">__createSpeedDialPage</a></td>
+<td>Private method to create the Speeddial page.</td>
+</tr><tr>
 <td><a href="#PyrcAccessHandler.createRequest">createRequest</a></td>
 <td>Protected method to create a request.</td>
 </tr>
@@ -66,7 +72,27 @@ SchemeAccessHandler
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="PyrcAccessHandler.createRequest" ID="PyrcAccessHandler.createRequest"></a>
+<a NAME="PyrcAccessHandler.__createHomePage" ID="PyrcAccessHandler.__createHomePage"></a>
+<h4>PyrcAccessHandler.__createHomePage</h4>
+<b>__createHomePage</b>(<i></i>)
+<p>
+        Private method to create the Home page.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+prepared home page (QByteArray)
+</dd>
+</dl><a NAME="PyrcAccessHandler.__createSpeedDialPage" ID="PyrcAccessHandler.__createSpeedDialPage"></a>
+<h4>PyrcAccessHandler.__createSpeedDialPage</h4>
+<b>__createSpeedDialPage</b>(<i></i>)
+<p>
+        Private method to create the Speeddial page.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+prepared speeddial page (QByteArray)
+</dd>
+</dl><a NAME="PyrcAccessHandler.createRequest" ID="PyrcAccessHandler.createRequest"></a>
 <h4>PyrcAccessHandler.createRequest</h4>
 <b>createRequest</b>(<i>op, request, outgoingData=None</i>)
 <p>

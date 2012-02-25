@@ -29,6 +29,10 @@ Version 5.3-snapshot-2012mmdd:
   -- added the ClickToFlash plug-in to (temporarily) block Flash and related content
   -- added capability to suppress Referer Headers (configurable via eric4 Web Browser
      configuration page)
+  -- added capability to select the first nine tabs by pressing Alt+1 to Alt+9 and to
+     switch to the last tab by pressing Alt+0
+  -- added a Speed Dial to the web browser including the capability to select the first
+     ten pages by pressing Meta+1 to Meta+0
 
 Version 5.2.0:
 - bug fixes

@@ -631,7 +631,7 @@ class Prefs(object):
         "KeepCookiesUntil": 0,     # CookieJar.KeepUntilExpire
         "FilterTrackingCookies": True,
         "PrintBackgrounds": False,
-        "StartupBehavior": 0,      # show home page
+        "StartupBehavior": 1,      # show speed dial
         "HomePage": "eric:home",
         "HistoryLimit": 30,
         "DefaultScheme": "file://",

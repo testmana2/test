@@ -278,6 +278,10 @@
             <section title="eric5.Helpviewer.SiteInfo" ref="index-eric5.Helpviewer.SiteInfo.html">
               <section title="eric5.Helpviewer.SiteInfo.SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
             </section>
+            <section title="eric5.Helpviewer.SpeedDial" ref="index-eric5.Helpviewer.SpeedDial.html">
+              <section title="eric5.Helpviewer.SpeedDial.PageThumbnailer" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html" />
+              <section title="eric5.Helpviewer.SpeedDial.SpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
+            </section>
             <section title="eric5.Helpviewer.Sync" ref="index-eric5.Helpviewer.Sync.html">
               <section title="eric5.Helpviewer.Sync.FtpSyncHandler" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
               <section title="eric5.Helpviewer.Sync.SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
@@ -290,6 +294,7 @@
               <section title="eric5.Helpviewer.Sync.SyncManager" ref="eric5.Helpviewer.Sync.SyncManager.html" />
             </section>
             <section title="eric5.Helpviewer.UrlBar" ref="index-eric5.Helpviewer.UrlBar.html">
+              <section title="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html" />
               <section title="eric5.Helpviewer.UrlBar.BookmarkInfoDialog" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html" />
               <section title="eric5.Helpviewer.UrlBar.FavIconLabel" ref="eric5.Helpviewer.UrlBar.FavIconLabel.html" />
               <section title="eric5.Helpviewer.UrlBar.SslLabel" ref="eric5.Helpviewer.UrlBar.SslLabel.html" />
@@ -313,8 +318,6 @@
               <section title="eric5.Helpviewer.WebPlugins.WebPluginInterface" ref="eric5.Helpviewer.WebPlugins.WebPluginInterface.html" />
             </section>
             <section title="eric5.Helpviewer.data" ref="index-eric5.Helpviewer.data.html">
-              <section title="eric5.Helpviewer.data.html_rc" ref="eric5.Helpviewer.data.html_rc.html" />
-              <section title="eric5.Helpviewer.data.icons_rc" ref="eric5.Helpviewer.data.icons_rc.html" />
             </section>
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
             <section title="eric5.Helpviewer.HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
@@ -341,7 +344,6 @@
           </section>
           <section title="eric5.IconEditor" ref="index-eric5.IconEditor.html">
             <section title="eric5.IconEditor.cursors" ref="index-eric5.IconEditor.cursors.html">
-              <section title="eric5.IconEditor.cursors.cursors_rc" ref="eric5.IconEditor.cursors.cursors_rc.html" />
             </section>
             <section title="eric5.IconEditor.IconEditorGrid" ref="eric5.IconEditor.IconEditorGrid.html" />
             <section title="eric5.IconEditor.IconEditorPalette" ref="eric5.IconEditor.IconEditorPalette.html" />
@@ -1282,6 +1284,12 @@
       <keyword name="Binding.__repr__" id="Binding.__repr__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding.__repr__" />
       <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__str__" />
       <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding.__str__" />
+      <keyword name="BookmarkActionSelectionDialog" id="BookmarkActionSelectionDialog" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog" />
+      <keyword name="BookmarkActionSelectionDialog (Constructor)" id="BookmarkActionSelectionDialog (Constructor)" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog.__init__" />
+      <keyword name="BookmarkActionSelectionDialog (Module)" id="BookmarkActionSelectionDialog (Module)" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html" />
+      <keyword name="BookmarkActionSelectionDialog.getAction" id="BookmarkActionSelectionDialog.getAction" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog.getAction" />
+      <keyword name="BookmarkActionSelectionDialog.on_bookmarkPushButton_clicked" id="BookmarkActionSelectionDialog.on_bookmarkPushButton_clicked" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog.on_bookmarkPushButton_clicked" />
+      <keyword name="BookmarkActionSelectionDialog.on_speeddialPushButton_clicked" id="BookmarkActionSelectionDialog.on_speeddialPushButton_clicked" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog.on_speeddialPushButton_clicked" />
       <keyword name="BookmarkInfoDialog" id="BookmarkInfoDialog" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog" />
       <keyword name="BookmarkInfoDialog (Constructor)" id="BookmarkInfoDialog (Constructor)" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html#BookmarkInfoDialog.__init__" />
       <keyword name="BookmarkInfoDialog (Module)" id="BookmarkInfoDialog (Module)" ref="eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html" />
@@ -4522,6 +4530,7 @@
       <keyword name="HelpWebBrowserPage (Module)" id="HelpWebBrowserPage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html" />
       <keyword name="HelpWebBrowserPage.on_defaultHomeButton_clicked" id="HelpWebBrowserPage.on_defaultHomeButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_defaultHomeButton_clicked" />
       <keyword name="HelpWebBrowserPage.on_setCurrentPageButton_clicked" id="HelpWebBrowserPage.on_setCurrentPageButton_clicked" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_setCurrentPageButton_clicked" />
+      <keyword name="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" id="HelpWebBrowserPage.on_startupCombo_currentIndexChanged" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.on_startupCombo_currentIndexChanged" />
       <keyword name="HelpWebBrowserPage.save" id="HelpWebBrowserPage.save" ref="eric5.Preferences.ConfigurationPages.HelpWebBrowserPage.html#HelpWebBrowserPage.save" />
       <keyword name="HelpWebPage" id="HelpWebPage" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage" />
       <keyword name="HelpWebPage (Constructor)" id="HelpWebPage (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#HelpWebPage.__init__" />
@@ -4676,6 +4685,7 @@
       <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
       <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
       <keyword name="HelpWindow.icon" id="HelpWindow.icon" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.icon" />
+      <keyword name="HelpWindow.keyPressEvent" id="HelpWindow.keyPressEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.keyPressEvent" />
       <keyword name="HelpWindow.mainWindow" id="HelpWindow.mainWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mainWindow" />
       <keyword name="HelpWindow.masterPasswordChanged" id="HelpWindow.masterPasswordChanged" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.masterPasswordChanged" />
       <keyword name="HelpWindow.mousePressEvent" id="HelpWindow.mousePressEvent" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.mousePressEvent" />
@@ -4697,6 +4707,7 @@
       <keyword name="HelpWindow.setForwardAvailable" id="HelpWindow.setForwardAvailable" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setForwardAvailable" />
       <keyword name="HelpWindow.setLoadingActions" id="HelpWindow.setLoadingActions" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setLoadingActions" />
       <keyword name="HelpWindow.setPrivateMode" id="HelpWindow.setPrivateMode" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.setPrivateMode" />
+      <keyword name="HelpWindow.speedDial" id="HelpWindow.speedDial" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.speedDial" />
       <keyword name="HelpWindow.syncManager" id="HelpWindow.syncManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.syncManager" />
       <keyword name="HelpWindow.userAgentsManager" id="HelpWindow.userAgentsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.userAgentsManager" />
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric5.Helpviewer.html" />
@@ -6677,12 +6688,26 @@
       <keyword name="PackageModel.addModule" id="PackageModel.addModule" ref="eric5.Graphics.PackageItem.html#PackageModel.addModule" />
       <keyword name="PackageModel.getModules" id="PackageModel.getModules" ref="eric5.Graphics.PackageItem.html#PackageModel.getModules" />
       <keyword name="PackageModel.getName" id="PackageModel.getName" ref="eric5.Graphics.PackageItem.html#PackageModel.getName" />
+      <keyword name="Page" id="Page" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page" />
+      <keyword name="Page (Constructor)" id="Page (Constructor)" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page.__init__" />
+      <keyword name="Page.__eq__" id="Page.__eq__" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page.__eq__" />
       <keyword name="PageScreenDialog" id="PageScreenDialog" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog" />
       <keyword name="PageScreenDialog (Constructor)" id="PageScreenDialog (Constructor)" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__init__" />
       <keyword name="PageScreenDialog (Module)" id="PageScreenDialog (Module)" ref="eric5.Helpviewer.PageScreenDialog.html" />
       <keyword name="PageScreenDialog.__createPixmap" id="PageScreenDialog.__createPixmap" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__createPixmap" />
       <keyword name="PageScreenDialog.__savePageScreen" id="PageScreenDialog.__savePageScreen" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__savePageScreen" />
       <keyword name="PageScreenDialog.on_buttonBox_clicked" id="PageScreenDialog.on_buttonBox_clicked" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.on_buttonBox_clicked" />
+      <keyword name="PageThumbnailer" id="PageThumbnailer" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer" />
+      <keyword name="PageThumbnailer (Constructor)" id="PageThumbnailer (Constructor)" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.__init__" />
+      <keyword name="PageThumbnailer (Module)" id="PageThumbnailer (Module)" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html" />
+      <keyword name="PageThumbnailer.__createThumbnail" id="PageThumbnailer.__createThumbnail" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.__createThumbnail" />
+      <keyword name="PageThumbnailer.loadTitle" id="PageThumbnailer.loadTitle" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.loadTitle" />
+      <keyword name="PageThumbnailer.setLoadTitle" id="PageThumbnailer.setLoadTitle" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.setLoadTitle" />
+      <keyword name="PageThumbnailer.setSize" id="PageThumbnailer.setSize" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.setSize" />
+      <keyword name="PageThumbnailer.setUrl" id="PageThumbnailer.setUrl" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.setUrl" />
+      <keyword name="PageThumbnailer.start" id="PageThumbnailer.start" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.start" />
+      <keyword name="PageThumbnailer.title" id="PageThumbnailer.title" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.title" />
+      <keyword name="PageThumbnailer.url" id="PageThumbnailer.url" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html#PageThumbnailer.url" />
       <keyword name="Parser" id="Parser" ref="eric5.DataViews.CodeMetrics.html#Parser" />
       <keyword name="Parser.__addToken" id="Parser.__addToken" ref="eric5.DataViews.CodeMetrics.html#Parser.__addToken" />
       <keyword name="Parser.parse" id="Parser.parse" ref="eric5.DataViews.CodeMetrics.html#Parser.parse" />
@@ -7660,6 +7685,8 @@
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric5.PyUnit.html" />
       <keyword name="PyrcAccessHandler" id="PyrcAccessHandler" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler" />
       <keyword name="PyrcAccessHandler (Module)" id="PyrcAccessHandler (Module)" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html" />
+      <keyword name="PyrcAccessHandler.__createHomePage" id="PyrcAccessHandler.__createHomePage" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.__createHomePage" />
+      <keyword name="PyrcAccessHandler.__createSpeedDialPage" id="PyrcAccessHandler.__createSpeedDialPage" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.__createSpeedDialPage" />
       <keyword name="PyrcAccessHandler.createRequest" id="PyrcAccessHandler.createRequest" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html#PyrcAccessHandler.createRequest" />
       <keyword name="Python (Package)" id="Python (Package)" ref="index-eric5.DebugClients.Python.html" />
       <keyword name="Python3 (Package)" id="Python3 (Package)" ref="index-eric5.DebugClients.Python3.html" />
@@ -8235,6 +8262,30 @@
       <keyword name="SpecialVarItem" id="SpecialVarItem" ref="eric5.Debugger.VariablesViewer.html#SpecialVarItem" />
       <keyword name="SpecialVarItem (Constructor)" id="SpecialVarItem (Constructor)" ref="eric5.Debugger.VariablesViewer.html#SpecialVarItem.__init__" />
       <keyword name="SpecialVarItem.expand" id="SpecialVarItem.expand" ref="eric5.Debugger.VariablesViewer.html#SpecialVarItem.expand" />
+      <keyword name="SpeedDial" id="SpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial" />
+      <keyword name="SpeedDial (Constructor)" id="SpeedDial (Constructor)" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__init__" />
+      <keyword name="SpeedDial (Module)" id="SpeedDial (Module)" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
+      <keyword name="SpeedDial (Package)" id="SpeedDial (Package)" ref="index-eric5.Helpviewer.SpeedDial.html" />
+      <keyword name="SpeedDial.__cleanFrames" id="SpeedDial.__cleanFrames" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__cleanFrames" />
+      <keyword name="SpeedDial.__generateAllPages" id="SpeedDial.__generateAllPages" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__generateAllPages" />
+      <keyword name="SpeedDial.__imageFileName" id="SpeedDial.__imageFileName" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__imageFileName" />
+      <keyword name="SpeedDial.__initialize" id="SpeedDial.__initialize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__initialize" />
+      <keyword name="SpeedDial.__pagesChanged" id="SpeedDial.__pagesChanged" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__pagesChanged" />
+      <keyword name="SpeedDial.__thumbnailCreated" id="SpeedDial.__thumbnailCreated" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__thumbnailCreated" />
+      <keyword name="SpeedDial.addPage" id="SpeedDial.addPage" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.addPage" />
+      <keyword name="SpeedDial.addWebFrame" id="SpeedDial.addWebFrame" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.addWebFrame" />
+      <keyword name="SpeedDial.changed" id="SpeedDial.changed" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.changed" />
+      <keyword name="SpeedDial.initialScript" id="SpeedDial.initialScript" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.initialScript" />
+      <keyword name="SpeedDial.loadThumbnail" id="SpeedDial.loadThumbnail" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.loadThumbnail" />
+      <keyword name="SpeedDial.pageForUrl" id="SpeedDial.pageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pageForUrl" />
+      <keyword name="SpeedDial.pagesInRow" id="SpeedDial.pagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pagesInRow" />
+      <keyword name="SpeedDial.removeImageForUrl" id="SpeedDial.removeImageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removeImageForUrl" />
+      <keyword name="SpeedDial.removePage" id="SpeedDial.removePage" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removePage" />
+      <keyword name="SpeedDial.sdSize" id="SpeedDial.sdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.sdSize" />
+      <keyword name="SpeedDial.setPagesInRow" id="SpeedDial.setPagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setPagesInRow" />
+      <keyword name="SpeedDial.setSdSize" id="SpeedDial.setSdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setSdSize" />
+      <keyword name="SpeedDial.urlForShortcut" id="SpeedDial.urlForShortcut" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlForShortcut" />
+      <keyword name="SpeedDial.urlFromUserInput" id="SpeedDial.urlFromUserInput" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlFromUserInput" />
       <keyword name="SpellChecker" id="SpellChecker" ref="eric5.QScintilla.SpellChecker.html#SpellChecker" />
       <keyword name="SpellChecker (Constructor)" id="SpellChecker (Constructor)" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__init__" />
       <keyword name="SpellChecker (Module)" id="SpellChecker (Module)" ref="eric5.QScintilla.SpellChecker.html" />
@@ -9929,6 +9980,7 @@
       <keyword name="UrlBar (Package)" id="UrlBar (Package)" ref="index-eric5.Helpviewer.UrlBar.html" />
       <keyword name="UrlBar.__bookmarkChanged" id="UrlBar.__bookmarkChanged" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__bookmarkChanged" />
       <keyword name="UrlBar.__browserUrlChanged" id="UrlBar.__browserUrlChanged" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__browserUrlChanged" />
+      <keyword name="UrlBar.__checkBookmark" id="UrlBar.__checkBookmark" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__checkBookmark" />
       <keyword name="UrlBar.__loadFinished" id="UrlBar.__loadFinished" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__loadFinished" />
       <keyword name="UrlBar.__loadStarted" id="UrlBar.__loadStarted" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__loadStarted" />
       <keyword name="UrlBar.__privacyClicked" id="UrlBar.__privacyClicked" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__privacyClicked" />
@@ -10963,7 +11015,6 @@
       <keyword name="critical" id="critical" ref="eric5.E5Gui.E5MessageBox.html#critical" />
       <keyword name="crypto (Package)" id="crypto (Package)" ref="index-eric5.Utilities.crypto.html" />
       <keyword name="cursors (Package)" id="cursors (Package)" ref="index-eric5.IconEditor.cursors.html" />
-      <keyword name="cursors_rc (Module)" id="cursors_rc (Module)" ref="eric5.IconEditor.cursors.cursors_rc.html" />
       <keyword name="data (Package)" id="data (Package)" ref="index-eric5.Helpviewer.data.html" />
       <keyword name="dataString" id="dataString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#dataString" />
       <keyword name="dateFromTime_t" id="dateFromTime_t" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#dateFromTime_t" />
@@ -11169,9 +11220,7 @@
       <keyword name="hashPasswordTuple" id="hashPasswordTuple" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPasswordTuple" />
       <keyword name="hg (Module)" id="hg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html" />
       <keyword name="html_encode" id="html_encode" ref="eric5.Utilities.__init__.html#html_encode" />
-      <keyword name="html_rc (Module)" id="html_rc (Module)" ref="eric5.Helpviewer.data.html_rc.html" />
       <keyword name="html_uencode" id="html_uencode" ref="eric5.Utilities.__init__.html#html_uencode" />
-      <keyword name="icons_rc (Module)" id="icons_rc (Module)" ref="eric5.Helpviewer.data.icons_rc.html" />
       <keyword name="idlclbr (Module)" id="idlclbr (Module)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html" />
       <keyword name="ignore_code" id="ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#ignore_code" />
       <keyword name="ignore_code" id="ignore_code" ref="eric5.UtilitiesPython2.pep8.html#ignore_code" />
@@ -11309,12 +11358,6 @@
       <keyword name="python_3000_not_equal" id="python_3000_not_equal" ref="eric5.UtilitiesPython2.pep8.html#python_3000_not_equal" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#python_3000_raise_comma" />
       <keyword name="python_3000_raise_comma" id="python_3000_raise_comma" ref="eric5.UtilitiesPython2.pep8.html#python_3000_raise_comma" />
-      <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.Helpviewer.data.html_rc.html#qCleanupResources" />
-      <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.Helpviewer.data.icons_rc.html#qCleanupResources" />
-      <keyword name="qCleanupResources" id="qCleanupResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qCleanupResources" />
-      <keyword name="qInitResources" id="qInitResources" ref="eric5.Helpviewer.data.html_rc.html#qInitResources" />
-      <keyword name="qInitResources" id="qInitResources" ref="eric5.Helpviewer.data.icons_rc.html#qInitResources" />
-      <keyword name="qInitResources" id="qInitResources" ref="eric5.IconEditor.cursors.cursors_rc.html#qInitResources" />
       <keyword name="question" id="question" ref="eric5.E5Gui.E5MessageBox.html#question" />
       <keyword name="queues (Module)" id="queues (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
       <keyword name="rbclbr (Module)" id="rbclbr (Module)" ref="eric5.Utilities.ClassBrowsers.rbclbr.html" />
@@ -11661,7 +11704,6 @@
       <file>eric5.Helpviewer.Feeds.FeedEditDialog.html</file>
       <file>eric5.Helpviewer.Feeds.FeedsDialog.html</file>
       <file>eric5.Helpviewer.Feeds.FeedsManager.html</file>
-      <file>eric5.Helpviewer.HTMLResources.html</file>
       <file>eric5.Helpviewer.HelpBrowserWV.html</file>
       <file>eric5.Helpviewer.HelpClearPrivateDataDialog.html</file>
       <file>eric5.Helpviewer.HelpDocsInstaller.html</file>
@@ -11714,6 +11756,8 @@
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
       <file>eric5.Helpviewer.SiteInfo.SiteInfoDialog.html</file>
+      <file>eric5.Helpviewer.SpeedDial.PageThumbnailer.html</file>
+      <file>eric5.Helpviewer.SpeedDial.SpeedDial.html</file>
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.SslInfoWidget.html</file>
@@ -11726,6 +11770,7 @@
       <file>eric5.Helpviewer.Sync.SyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.SyncHostTypePage.html</file>
       <file>eric5.Helpviewer.Sync.SyncManager.html</file>
+      <file>eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.BookmarkInfoDialog.html</file>
       <file>eric5.Helpviewer.UrlBar.FavIconLabel.html</file>
       <file>eric5.Helpviewer.UrlBar.SslLabel.html</file>
@@ -12208,6 +12253,7 @@
       <file>index-eric5.Helpviewer.OpenSearch.html</file>
       <file>index-eric5.Helpviewer.Passwords.html</file>
       <file>index-eric5.Helpviewer.SiteInfo.html</file>
+      <file>index-eric5.Helpviewer.SpeedDial.html</file>
       <file>index-eric5.Helpviewer.Sync.html</file>
       <file>index-eric5.Helpviewer.UrlBar.html</file>
       <file>index-eric5.Helpviewer.UserAgent.html</file>

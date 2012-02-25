@@ -52,9 +52,11 @@ from .VirusTotalApi import VirusTotalAPI
 from .Feeds.FeedsManager import FeedsManager
 from .SiteInfo.SiteInfoDialog import SiteInfoDialog
 from .Sync.SyncManager import SyncManager
+from .SpeedDial.SpeedDial import SpeedDial
 
-from .data import icons_rc      # __IGNORE_WARNING__
-from .data import html_rc      # __IGNORE_WARNING__
+from .data import icons_rc          # __IGNORE_WARNING__
+from .data import html_rc           # __IGNORE_WARNING__
+from .data import javascript_rc     # __IGNORE_WARNING__
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox, E5FileDialog
@@ -99,6 +101,7 @@ class HelpWindow(QMainWindow):
     _feedsManager = None
     _userAgentsManager = None
     _syncManager = None
+    _speedDial = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -1695,7 +1698,7 @@ class HelpWindow(QMainWindow):
         if self.__previewer is None:
             if self.tabWidget.count() != 1 or \
                self.currentBrowser().url().toString() not in [
-                    "", "eric:home", "about:blank"]:
+                    "", "eric:home", "eric:speeddial", "about:blank"]:
                 self.newTab()
             self.__previewer = self.currentBrowser()
         self.tabWidget.setCurrentWidget(self.__previewer)
@@ -2974,6 +2977,63 @@ class HelpWindow(QMainWindow):
         Private slot to show the synchronization dialog.
         """
         self.syncManager().showSyncDialog()
+    
+    @classmethod
+    def speedDial(cls):
+        """
+        Class methdo to get a reference to the speed dial.
+        
+        @return reference to the speed dial (SpeedDial)
+        """
+        if cls._speedDial is None:
+            cls._speedDial = SpeedDial()
+        
+        return cls._speedDial
+    
+    def keyPressEvent(self, evt):
+        """
+        Protected method to handle key presses.
+        
+        @param evt reference to the key press event (QKeyEvent)
+        """
+        number = -1
+        key = evt.key()
+        
+        if key == Qt.Key_1:
+            number = 1
+        elif key == Qt.Key_2:
+            number = 2
+        elif key == Qt.Key_3:
+            number = 3
+        elif key == Qt.Key_4:
+            number = 4
+        elif key == Qt.Key_5:
+            number = 5
+        elif key == Qt.Key_6:
+            number = 6
+        elif key == Qt.Key_7:
+            number = 7
+        elif key == Qt.Key_8:
+            number = 8
+        elif key == Qt.Key_9:
+            number = 9
+        elif key == Qt.Key_0:
+            number = 10
+        
+        if number != -1:
+            if evt.modifiers() == Qt.KeyboardModifiers(Qt.AltModifier):
+                if number == 10:
+                    number = self.tabWidget.count()
+                self.tabWidget.setCurrentIndex(number - 1)
+                return
+            
+            if evt.modifiers() == Qt.KeyboardModifiers(Qt.MetaModifier):
+                url = self.speedDial().urlForShortcut(number - 1)
+                if url.isValid():
+                    self.__linkActivated(url)
+                    return
+        
+        super().keyPressEvent(evt)
     
     ###########################################################################
     ## Interface to VirusTotal below                                         ##
