@@ -618,7 +618,7 @@ class HelpTabWidget(E5TabWidget):
         if browser is not None:
             index = self.indexOf(browser)
             anim = self.animationLabel(
-                index, os.path.join(getConfig("ericPixDir"), "loading.gif"))
+                index, os.path.join(getConfig("ericPixDir"), "loading.gif"), 100)
             if not anim:
                 loading = QIcon(os.path.join(getConfig("ericPixDir"), "loading.gif"))
                 self.setTabIcon(index, loading)

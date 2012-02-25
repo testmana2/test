@@ -1381,14 +1381,16 @@
       <keyword name="BookmarksMenu (Module)" id="BookmarksMenu (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html" />
       <keyword name="BookmarksMenu.__activated" id="BookmarksMenu.__activated" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__activated" />
       <keyword name="BookmarksMenu.__contextMenuRequested" id="BookmarksMenu.__contextMenuRequested" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__contextMenuRequested" />
-      <keyword name="BookmarksMenu.__openAll" id="BookmarksMenu.__openAll" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__openAll" />
       <keyword name="BookmarksMenu.__openBookmark" id="BookmarksMenu.__openBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__openBookmark" />
       <keyword name="BookmarksMenu.__openBookmarkInNewTab" id="BookmarksMenu.__openBookmarkInNewTab" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__openBookmarkInNewTab" />
       <keyword name="BookmarksMenu.__removeBookmark" id="BookmarksMenu.__removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__removeBookmark" />
       <keyword name="BookmarksMenu.createBaseMenu" id="BookmarksMenu.createBaseMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.createBaseMenu" />
+      <keyword name="BookmarksMenu.openAll" id="BookmarksMenu.openAll" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.openAll" />
       <keyword name="BookmarksMenu.postPopulated" id="BookmarksMenu.postPopulated" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.postPopulated" />
       <keyword name="BookmarksMenuBarMenu" id="BookmarksMenuBarMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu" />
       <keyword name="BookmarksMenuBarMenu (Constructor)" id="BookmarksMenuBarMenu (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu.__init__" />
+      <keyword name="BookmarksMenuBarMenu.__defaultBookmarkTriggered" id="BookmarksMenuBarMenu.__defaultBookmarkTriggered" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu.__defaultBookmarkTriggered" />
+      <keyword name="BookmarksMenuBarMenu.postPopulated" id="BookmarksMenuBarMenu.postPopulated" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu.postPopulated" />
       <keyword name="BookmarksMenuBarMenu.prePopulated" id="BookmarksMenuBarMenu.prePopulated" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu.prePopulated" />
       <keyword name="BookmarksMenuBarMenu.setInitialActions" id="BookmarksMenuBarMenu.setInitialActions" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenuBarMenu.setInitialActions" />
       <keyword name="BookmarksModel" id="BookmarksModel" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html#BookmarksModel" />
@@ -9280,6 +9282,7 @@
       <keyword name="SyncCheckPage" id="SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage" />
       <keyword name="SyncCheckPage (Constructor)" id="SyncCheckPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__init__" />
       <keyword name="SyncCheckPage (Module)" id="SyncCheckPage (Module)" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
+      <keyword name="SyncCheckPage.__makeAnimatedLabel" id="SyncCheckPage.__makeAnimatedLabel" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__makeAnimatedLabel" />
       <keyword name="SyncCheckPage.__syncError" id="SyncCheckPage.__syncError" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__syncError" />
       <keyword name="SyncCheckPage.__updatePage" id="SyncCheckPage.__updatePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__updatePage" />
       <keyword name="SyncCheckPage.initializePage" id="SyncCheckPage.initializePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.initializePage" />
@@ -11787,8 +11790,6 @@
       <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html</file>
       <file>eric5.Helpviewer.WebPlugins.WebPluginFactory.html</file>
       <file>eric5.Helpviewer.WebPlugins.WebPluginInterface.html</file>
-      <file>eric5.Helpviewer.data.html_rc.html</file>
-      <file>eric5.Helpviewer.data.icons_rc.html</file>
       <file>eric5.IconEditor.IconEditorGrid.html</file>
       <file>eric5.IconEditor.IconEditorPalette.html</file>
       <file>eric5.IconEditor.IconEditorWindow.html</file>

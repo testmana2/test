@@ -1391,7 +1391,7 @@ eric5.E5Gui.E5TabWidget.E5DnDTabBar.mouseMoveEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5DnDTabBar.mousePressEvent?4(event)
 eric5.E5Gui.E5TabWidget.E5DnDTabBar.tabMoveRequested?7
 eric5.E5Gui.E5TabWidget.E5DnDTabBar?1(parent=None)
-eric5.E5Gui.E5TabWidget.E5TabWidget.animationLabel?4(index, animationFile)
+eric5.E5Gui.E5TabWidget.E5TabWidget.animationLabel?4(index, animationFile, speed=100)
 eric5.E5Gui.E5TabWidget.E5TabWidget.customTabContextMenuRequested?7
 eric5.E5Gui.E5TabWidget.E5TabWidget.moveTab?4(curIndex, newIndex)
 eric5.E5Gui.E5TabWidget.E5TabWidget.nextTab?4()
@@ -1823,9 +1823,12 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.StartToolBar?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.createBaseMenu?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.newUrl?7
+eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.openAll?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.postPopulated?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu?1(parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu.openUrl?7
+eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu.postPopulated?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu.prePopulated?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu.setInitialActions?4(actions)
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenuBarMenu?1(parent=None)

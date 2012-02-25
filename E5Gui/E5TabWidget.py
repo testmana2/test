@@ -298,12 +298,14 @@ class E5TabWidget(QTabWidget):
             side = QTabBar.LeftSide
         return side
     
-    def animationLabel(self, index, animationFile):
+    def animationLabel(self, index, animationFile, speed=100):
         """
         Public slot to set an animated icon.
         
         @param index tab index (integer)
         @param animationFile name of the file containing the animation (string)
+        @param speed animation speed of the icon in percent of the original
+            icon's speed (integer)
         @return reference to the created label (QLabel)
         """
         if index == -1:
@@ -314,7 +316,7 @@ class E5TabWidget(QTabWidget):
             animation = QLabel(self)
             if animationFile and not animation.movie():
                 movie = QMovie(animationFile, QByteArray(), animation)
-                movie.setSpeed(50)
+                movie.setSpeed(speed)
                 animation.setMovie(movie)
                 movie.start()
             self.__tabBar.setTabButton(index, side, None)

@@ -68,42 +68,42 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         
         # bookmarks
         if Preferences.getHelp("SyncBookmarks"):
-            movie = QMovie(animationFile, QByteArray(), self.bookmarkLabel)
-            movie.setSpeed(50)
-            self.bookmarkLabel.setMovie(movie)
-            movie.start()
+            self.__makeAnimatedLabel(animationFile, self.bookmarkLabel)
         else:
             self.bookmarkLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
         # history
         if Preferences.getHelp("SyncHistory"):
-            movie = QMovie(animationFile, QByteArray(), self.historyLabel)
-            movie.setSpeed(50)
-            self.historyLabel.setMovie(movie)
-            movie.start()
+            self.__makeAnimatedLabel(animationFile, self.historyLabel)
         else:
             self.historyLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
         # Passwords
         if Preferences.getHelp("SyncPasswords"):
-            movie = QMovie(animationFile, QByteArray(), self.passwordsLabel)
-            movie.setSpeed(50)
-            self.passwordsLabel.setMovie(movie)
-            movie.start()
+            self.__makeAnimatedLabel(animationFile, self.passwordsLabel)
         else:
             self.passwordsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
         # user agent settings
         if Preferences.getHelp("SyncUserAgents"):
-            movie = QMovie(animationFile, QByteArray(), self.userAgentsLabel)
-            movie.setSpeed(50)
-            self.userAgentsLabel.setMovie(movie)
-            movie.start()
+            self.__makeAnimatedLabel(animationFile, self.userAgentsLabel)
         else:
             self.userAgentsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
         handler = syncMgr.handler()
         handler.syncStatus.connect(self.__updatePage)
+    
+    def __makeAnimatedLabel(self, fileName, label):
+        """
+        Private slot to create an animated label.
+        
+        @param fileName name of the file containing the animation (string)
+        @param label reference to the label to be animated (QLabel)
+        """
+        movie = QMovie(fileName, QByteArray(), label)
+        movie.setSpeed(100)
+        label.setMovie(movie)
+        movie.start()
     
     def __updatePage(self, type_, done, msg):
         """

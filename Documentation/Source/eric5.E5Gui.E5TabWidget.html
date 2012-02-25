@@ -261,7 +261,7 @@ point the context menu was requested (QPoint)
 </dd>
 </dl><a NAME="E5TabWidget.animationLabel" ID="E5TabWidget.animationLabel"></a>
 <h4>E5TabWidget.animationLabel</h4>
-<b>animationLabel</b>(<i>index, animationFile</i>)
+<b>animationLabel</b>(<i>index, animationFile, speed=100</i>)
 <p>
         Public slot to set an animated icon.
 </p><dl>
@@ -271,6 +271,10 @@ tab index (integer)
 </dd><dt><i>animationFile</i></dt>
 <dd>
 name of the file containing the animation (string)
+</dd><dt><i>speed</i></dt>
+<dd>
+animation speed of the icon in percent of the original
+            icon's speed (integer)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

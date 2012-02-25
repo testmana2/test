@@ -51,10 +51,12 @@ Module implementing the bookmarks menu.
 <dl>
 <dt>newUrl(QUrl, str)</dt>
 <dd>
-emitted to open a URL in a new tab
+emitted to open a URL with the given title in a
+        new tab
 </dd><dt>openUrl(QUrl, str)</dt>
 <dd>
-emitted to open a URL in the current tab
+emitted to open a URL with the given title in the
+        current tab
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -79,9 +81,6 @@ E5ModelMenu
 <td><a href="#BookmarksMenu.__contextMenuRequested">__contextMenuRequested</a></td>
 <td>Private slot to handle the context menu request.</td>
 </tr><tr>
-<td><a href="#BookmarksMenu.__openAll">__openAll</a></td>
-<td>Private slot to open all the menu's items.</td>
-</tr><tr>
 <td><a href="#BookmarksMenu.__openBookmark">__openBookmark</a></td>
 <td>Private slot to open a bookmark in the current browser tab.</td>
 </tr><tr>
@@ -93,6 +92,9 @@ E5ModelMenu
 </tr><tr>
 <td><a href="#BookmarksMenu.createBaseMenu">createBaseMenu</a></td>
 <td>Public method to get the menu that is used to populate sub menu's.</td>
+</tr><tr>
+<td><a href="#BookmarksMenu.openAll">openAll</a></td>
+<td>Public slot to open all the menu's items.</td>
 </tr><tr>
 <td><a href="#BookmarksMenu.postPopulated">postPopulated</a></td>
 <td>Public method to add any actions after the tree.</td>
@@ -132,12 +134,7 @@ index of the activated item (QModelIndex)
 <dd>
 position the context menu shall be shown (QPoint)
 </dd>
-</dl><a NAME="BookmarksMenu.__openAll" ID="BookmarksMenu.__openAll"></a>
-<h4>BookmarksMenu.__openAll</h4>
-<b>__openAll</b>(<i></i>)
-<p>
-        Private slot to open all the menu's items.
-</p><a NAME="BookmarksMenu.__openBookmark" ID="BookmarksMenu.__openBookmark"></a>
+</dl><a NAME="BookmarksMenu.__openBookmark" ID="BookmarksMenu.__openBookmark"></a>
 <h4>BookmarksMenu.__openBookmark</h4>
 <b>__openBookmark</b>(<i></i>)
 <p>
@@ -162,7 +159,12 @@ position the context menu shall be shown (QPoint)
 <dd>
 reference to the menu (BookmarksMenu)
 </dd>
-</dl><a NAME="BookmarksMenu.postPopulated" ID="BookmarksMenu.postPopulated"></a>
+</dl><a NAME="BookmarksMenu.openAll" ID="BookmarksMenu.openAll"></a>
+<h4>BookmarksMenu.openAll</h4>
+<b>openAll</b>(<i></i>)
+<p>
+        Public slot to open all the menu's items.
+</p><a NAME="BookmarksMenu.postPopulated" ID="BookmarksMenu.postPopulated"></a>
 <h4>BookmarksMenu.postPopulated</h4>
 <b>postPopulated</b>(<i></i>)
 <p>
@@ -174,7 +176,14 @@ reference to the menu (BookmarksMenu)
 <h2>BookmarksMenuBarMenu</h2>
 <p>
     Class implementing a dynamically populated menu for bookmarks.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>openUrl(QUrl, str)</dt>
+<dd>
+emitted to open a URL with the given title in the
+        current tab
+</dd>
+</dl>
 <h3>Derived from</h3>
 BookmarksMenu
 <h3>Class Attributes</h3>
@@ -190,6 +199,12 @@ BookmarksMenu
 <tr>
 <td><a href="#BookmarksMenuBarMenu.__init__">BookmarksMenuBarMenu</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#BookmarksMenuBarMenu.__defaultBookmarkTriggered">__defaultBookmarkTriggered</a></td>
+<td>Private slot handling the default bookmark menu entries.</td>
+</tr><tr>
+<td><a href="#BookmarksMenuBarMenu.postPopulated">postPopulated</a></td>
+<td>Public method to add any actions after the tree.</td>
 </tr><tr>
 <td><a href="#BookmarksMenuBarMenu.prePopulated">prePopulated</a></td>
 <td>Public method to add any actions before the tree.</td>
@@ -212,7 +227,17 @@ BookmarksMenu
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="BookmarksMenuBarMenu.prePopulated" ID="BookmarksMenuBarMenu.prePopulated"></a>
+</dl><a NAME="BookmarksMenuBarMenu.__defaultBookmarkTriggered" ID="BookmarksMenuBarMenu.__defaultBookmarkTriggered"></a>
+<h4>BookmarksMenuBarMenu.__defaultBookmarkTriggered</h4>
+<b>__defaultBookmarkTriggered</b>(<i></i>)
+<p>
+        Private slot handling the default bookmark menu entries.
+</p><a NAME="BookmarksMenuBarMenu.postPopulated" ID="BookmarksMenuBarMenu.postPopulated"></a>
+<h4>BookmarksMenuBarMenu.postPopulated</h4>
+<b>postPopulated</b>(<i></i>)
+<p>
+        Public method to add any actions after the tree.
+</p><a NAME="BookmarksMenuBarMenu.prePopulated" ID="BookmarksMenuBarMenu.prePopulated"></a>
 <h4>BookmarksMenuBarMenu.prePopulated</h4>
 <b>prePopulated</b>(<i></i>)
 <p>
