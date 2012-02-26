@@ -170,8 +170,8 @@ class FtpSyncHandler(SyncHandler):
                 self.__ftp.cd(self.__storePathList[0])
             else:
                 if id in self.__syncIDs:
-                    # TODO: change this like below
-                    self.__syncIDs[id][1].close()
+                    if self.__ftp.currentCommand() == QFtp.Get:
+                        self.__syncIDs[id][1].close()
                     self.syncStatus.emit(self.__syncIDs[id][0], False,
                         self.__ftp.errorString())
                     self.syncFinished.emit(self.__syncIDs[id][0], False,
