@@ -2628,6 +2628,11 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
             prefClass.settings.value("User/" + key, prefClass.userDefaults[key]),
             oldPassword,
             newPassword))
+    for key in ["SyncFtpPassword"]:
+        prefClass.settings.setValue("Help/" + key, pwRecode(
+            prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key]),
+            oldPassword,
+            newPassword))
 
 
 initPreferences()
