@@ -709,6 +709,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         except IOError:
             return False
         
+        qrcDirName = os.path.dirname(filename)
         lbuf = ""
         for line in buf.splitlines():
             line = line.strip()
@@ -719,7 +720,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             if lbuf.lower().endswith("</file>"):
                 rfile = lbuf.split(">", 1)[1].split("<", 1)[0]
                 if not os.path.isabs(rfile):
-                    rfile = os.path.join(self.project.ppath, rfile)
+                    rfile = os.path.join(qrcDirName, rfile)
                 if os.path.exists(rfile) and \
                    os.stat(rfile).st_mtime > mtime:
                     return True
