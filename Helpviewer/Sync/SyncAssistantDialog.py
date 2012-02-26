@@ -10,6 +10,7 @@ Module implementing a wizard dialog to enter the synchronization data.
 from PyQt4.QtGui import QWizard
 
 from .SyncDataPage import SyncDataPage
+from .SyncEncryptionPage import SyncEncryptionPage
 from .SyncHostTypePage import SyncHostTypePage
 from .SyncFtpSettingsPage import SyncFtpSettingsPage
 from .SyncCheckPage import SyncCheckPage
@@ -32,6 +33,7 @@ class SyncAssistantDialog(QWizard):
         super().__init__(parent)
         
         self.setPage(SyncGlobals.PageData, SyncDataPage(self))
+        self.setPage(SyncGlobals.PageEncryption, SyncEncryptionPage(self))
         self.setPage(SyncGlobals.PageType, SyncHostTypePage(self))
         self.setPage(SyncGlobals.PageFTPSettings, SyncFtpSettingsPage(self))
         self.setPage(SyncGlobals.PageCheck, SyncCheckPage(self))

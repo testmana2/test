@@ -2548,12 +2548,13 @@ eric5.Helpviewer.SslCertificatesDialog.SslCertificatesDialog?1(parent=None)
 eric5.Helpviewer.SslInfoDialog.SslInfoDialog?1(certificate, parent=None)
 eric5.Helpviewer.SslInfoWidget.SslInfoWidget.showCertificate?4(certificate)
 eric5.Helpviewer.SslInfoWidget.SslInfoWidget?1(parent=None)
-eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.initialLoadAndCheck?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.initialLoadAndCheck?4(forceUpload)
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.shutdown?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncBookmarks?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncError?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncFinished?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncHistory?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncMessage?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncPasswords?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncStatus?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncUserAgents?4()
@@ -2563,31 +2564,43 @@ eric5.Helpviewer.Sync.SyncCheckPage.SyncCheckPage.initializePage?4()
 eric5.Helpviewer.Sync.SyncCheckPage.SyncCheckPage?1(parent=None)
 eric5.Helpviewer.Sync.SyncDataPage.SyncDataPage.nextId?4()
 eric5.Helpviewer.Sync.SyncDataPage.SyncDataPage?1(parent=None)
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.isComplete?4()
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.nextId?4()
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.on_encryptionGroupBox_toggled?4(on)
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.on_encryptionKeyAgainEdit_textChanged?4(txt)
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.on_encryptionKeyEdit_textChanged?4(txt)
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage.on_reencryptCheckBox_toggled?4(on)
+eric5.Helpviewer.Sync.SyncEncryptionPage.SyncEncryptionPage?1(parent=None)
 eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage.isComplete?4()
 eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage.nextId?4()
 eric5.Helpviewer.Sync.SyncFtpSettingsPage.SyncFtpSettingsPage?1(parent=None)
 eric5.Helpviewer.Sync.SyncGlobals.PageCheck?7
 eric5.Helpviewer.Sync.SyncGlobals.PageData?7
+eric5.Helpviewer.Sync.SyncGlobals.PageEncryption?7
 eric5.Helpviewer.Sync.SyncGlobals.PageFTPSettings?7
 eric5.Helpviewer.Sync.SyncGlobals.PageType?7
-eric5.Helpviewer.Sync.SyncHandler.SyncHandler.initialLoadAndCheck?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.initialLoadAndCheck?4(forceUpload)
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.readFile?4(fileName)
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.shutdown?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncBookmarks?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncError?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncFinished?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncHistory?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncMessage?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncPasswords?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncStatus?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncUserAgents?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.writeFile?4(data, fileName)
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler?1(parent=None)
 eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage.nextId?4()
 eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage?1(parent=None)
 eric5.Helpviewer.Sync.SyncManager.SyncManager.close?4()
 eric5.Helpviewer.Sync.SyncManager.SyncManager.handler?4()
-eric5.Helpviewer.Sync.SyncManager.SyncManager.loadSettings?4()
+eric5.Helpviewer.Sync.SyncManager.SyncManager.loadSettings?4(forceUpload=False)
 eric5.Helpviewer.Sync.SyncManager.SyncManager.showSyncDialog?4()
 eric5.Helpviewer.Sync.SyncManager.SyncManager.syncEnabled?4()
 eric5.Helpviewer.Sync.SyncManager.SyncManager.syncError?7
+eric5.Helpviewer.Sync.SyncManager.SyncManager.syncMessage?7
 eric5.Helpviewer.Sync.SyncManager.SyncManager?1(parent=None)
 eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.AddBookmark?7
 eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.BookmarkActionSelectionDialog.AddSpeeddial?7
@@ -6958,6 +6971,8 @@ eric5.Utilities.crypto.Delimiter?7
 eric5.Utilities.crypto.EncodeMarker?7
 eric5.Utilities.crypto.MasterPassword?7
 eric5.Utilities.crypto.changeRememberedMaster?4(newPassword)
+eric5.Utilities.crypto.dataDecrypt?4(edata, password)
+eric5.Utilities.crypto.dataEncrypt?4(data, password)
 eric5.Utilities.crypto.pwConvert?4(pw, encode=True)
 eric5.Utilities.crypto.pwDecode?4(epw)
 eric5.Utilities.crypto.pwDecrypt?4(epw, masterPW=None)

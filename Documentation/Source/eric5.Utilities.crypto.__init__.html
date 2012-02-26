@@ -41,6 +41,12 @@ Package implementing cryptography related functionality.
 <td><a href="#changeRememberedMaster">changeRememberedMaster</a></td>
 <td>Module function to change the remembered master password.</td>
 </tr><tr>
+<td><a href="#dataDecrypt">dataDecrypt</a></td>
+<td>Module function to decrypt a password.</td>
+</tr><tr>
+<td><a href="#dataEncrypt">dataEncrypt</a></td>
+<td>Module function to encrypt a password.</td>
+</tr><tr>
 <td><a href="#pwConvert">pwConvert</a></td>
 <td>Module function to convert a plaintext password to the encoded form or vice versa.</td>
 </tr><tr>
@@ -81,6 +87,50 @@ Package implementing cryptography related functionality.
 <dt><i>newPassword</i></dt>
 <dd>
 new password to be used (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="dataDecrypt" ID="dataDecrypt"></a>
+<h2>dataDecrypt</h2>
+<b>dataDecrypt</b>(<i>edata, password</i>)
+<p>
+    Module function to decrypt a password.
+</p><dl>
+<dt><i>edata</i></dt>
+<dd>
+hashed data to decrypt (string)
+</dd><dt><i>password</i></dt>
+<dd>
+password to be used for decryption (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+decrypted data (bytes) and flag indicating
+        success (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="dataEncrypt" ID="dataEncrypt"></a>
+<h2>dataEncrypt</h2>
+<b>dataEncrypt</b>(<i>data, password</i>)
+<p>
+    Module function to encrypt a password.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+data to encrypt (bytes)
+</dd><dt><i>password</i></dt>
+<dd>
+password to be used for encryption (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+encrypted data (bytes) and flag indicating
+        success (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -139,7 +189,7 @@ decoded password (string)
 hashed password to decrypt (string)
 </dd><dt><i>masterPW</i></dt>
 <dd>
-password to be used for encryption (string)
+password to be used for decryption (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

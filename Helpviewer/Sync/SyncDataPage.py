@@ -51,6 +51,6 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         Preferences.setHelp("SyncUserAgents", self.userAgentsCheckBox.isChecked())
         
         if self.activeCheckBox.isChecked():
-            return SyncGlobals.PageType
+            return SyncGlobals.PageEncryption
         else:
             return SyncGlobals.PageCheck

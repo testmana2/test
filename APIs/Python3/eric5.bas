@@ -557,6 +557,7 @@ SymbolsWidget QWidget Ui_SymbolsWidget
 SyncAssistantDialog QWizard
 SyncCheckPage QWizardPage Ui_SyncCheckPage
 SyncDataPage QWizardPage Ui_SyncDataPage
+SyncEncryptionPage QWizardPage Ui_SyncEncryptionPage
 SyncFtpSettingsPage QWizardPage Ui_SyncFtpSettingsPage
 SyncHandler QObject
 SyncHostTypePage QWizardPage Ui_SyncHostTypePage

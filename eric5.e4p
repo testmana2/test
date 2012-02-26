@@ -968,6 +968,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/SpeedDial/PageThumbnailer.py</Source>
     <Source>Helpviewer/UrlBar/BookmarkActionSelectionDialog.py</Source>
     <Source>Helpviewer/Network/EricAccessHandler.py</Source>
+    <Source>Helpviewer/Sync/SyncEncryptionPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1250,6 +1251,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui</Form>
     <Form>Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui</Form>
+    <Form>Helpviewer/Sync/SyncEncryptionPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

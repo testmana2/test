@@ -21,9 +21,13 @@ class SyncManager(QObject):
     """
     Class implementing the synchronization manager.
     
-    @signal syncError(message) emitted for a general error with the error message (string)
+    @signal syncError(message) emitted for a general error with the error
+        message (string)
+    @signal syncMessage(message) emitted to give status info about the sync
+        process (string)
     """
     syncError = pyqtSignal(str)
+    syncMessage = pyqtSignal(str)
     
     def __init__(self, parent=None):
         """
@@ -52,21 +56,27 @@ class SyncManager(QObject):
         dlg = SyncAssistantDialog()
         dlg.exec_()
     
-    def loadSettings(self):
+    def loadSettings(self, forceUpload=False):
         """
         Public method to load the settings.
+        
+        @keyparam forceUpload flag indicating a forced upload of the files (boolean)
         """
         if self.syncEnabled():
             if Preferences.getHelp("SyncType") == 0:
                 if self.__handler is not None:
                     self.__handler.syncError.disconnect(self.__syncError)
                     self.__handler.syncFinished.disconnect(self.__syncFinished)
+                    self.__handler.syncStatus.disconnect(self.__syncStatus)
+                    self.__handler.syncMessage.disconnect(self.syncMessage)
                     self.__handler.shutdown()
                 self.__handler = FtpSyncHandler(self)
                 self.__handler.syncError.connect(self.__syncError)
                 self.__handler.syncFinished.connect(self.__syncFinished)
+                self.__handler.syncStatus.connect(self.__syncStatus)
+                self.__handler.syncMessage.connect(self.syncMessage)
             
-            self.__handler.initialLoadAndCheck()
+            self.__handler.initialLoadAndCheck(forceUpload=forceUpload)
             
             # connect sync manager to bookmarks manager
             if Preferences.getHelp("SyncBookmarks"):
@@ -115,6 +125,8 @@ class SyncManager(QObject):
             if self.__handler is not None:
                 self.__handler.syncError.disconnect(self.__syncError)
                 self.__handler.syncFinished.disconnect(self.__syncFinished)
+                self.__handler.syncStatus.disconnect(self.__syncStatus)
+                self.__handler.syncMessage.disconnect(self.syncMessage)
                 self.__handler.shutdown()
             self.__handler = None
             
@@ -202,6 +214,17 @@ class SyncManager(QObject):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().reload()
             elif type_ == "useragents":
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager().reload()
+    
+    def __syncStatus(self, type_, status, message):
+        """
+        Private slot to handle a status update of a synchronization event.
+        
+        @param type_ type of the synchronization event (string one
+            of "bookmarks", "history", "passwords" or "useragents")
+        @param status flag indicating success (boolean)
+        @param message status message for the event (string)
+        """
+        self.syncMessage.emit(message)
     
     def close(self):
         """

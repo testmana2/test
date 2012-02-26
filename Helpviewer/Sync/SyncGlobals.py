@@ -8,6 +8,7 @@ Module implementing some global definitions.
 """
 
 PageData = 0
-PageType = 1
-PageFTPSettings = 2
-PageCheck = 3
+PageEncryption = 1
+PageType = 2
+PageFTPSettings = 3
+PageCheck = 4

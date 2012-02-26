@@ -129,7 +129,7 @@ def pwDecrypt(epw, masterPW=None):
     Module function to decrypt a password.
     
     @param epw hashed password to decrypt (string)
-    @param masterPW password to be used for encryption (string)
+    @param masterPW password to be used for decryption (string)
     @return decrypted password (string) and flag indicating
         success (boolean)
     """
@@ -241,6 +241,52 @@ def changeRememberedMaster(newPassword):
         MasterPassword = None
     else:
         MasterPassword = pwEncode(newPassword)
+
+
+def dataEncrypt(data, password):
+    """
+    Module function to encrypt a password.
+    
+    @param data data to encrypt (bytes)
+    @param password password to be used for encryption (string)
+    @return encrypted data (bytes) and flag indicating
+        success (boolean)
+    """
+    digestname, iterations, salt, hash = hashPasswordTuple(password)
+    key = hash[:32]
+    try:
+        cipher = encryptData(key, data)
+    except ValueError:
+        return b"", False
+    return CryptoMarker.encode() + Delimiter.encode().join([
+        digestname.encode(),
+        str(iterations).encode(),
+        base64.b64encode(salt),
+        base64.b64encode(cipher)
+    ]), True
+
+
+def dataDecrypt(edata, password):
+    """
+    Module function to decrypt a password.
+    
+    @param edata hashed data to decrypt (string)
+    @param password password to be used for decryption (string)
+    @return decrypted data (bytes) and flag indicating
+        success (boolean)
+    """
+    if not edata.startswith(CryptoMarker.encode()):
+        return edata, False  # it was not encoded using dataEncrypt
+    
+    hashParametersBytes, edata = edata[3:].rsplit(Delimiter.encode(), 1)
+    hashParameters = hashParametersBytes.decode()
+    try:
+        # recreate the key used to encrypt
+        key = rehashPassword(password, hashParameters)[:32]
+        plaintext = decryptData(key, base64.b64decode(edata))
+    except ValueError:
+        return "", False
+    return plaintext, True
     
 if __name__ == "__main__":
     import sys

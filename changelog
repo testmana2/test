@@ -24,7 +24,7 @@ Version 5.3-snapshot-2012mmdd:
   -- extended the User Agent handling to be able to set the string on a host basis
      (next to the global user agent string)
   -- added code to save the current page as a screen shot
-  -- added capability to synchronise bookmarks, history, passwords and user agent
+  -- added capability to synchronize bookmarks, history, passwords and user agent
      settings via an FTP server
   -- added the ClickToFlash plug-in to (temporarily) block Flash and related content
   -- added capability to suppress Referer Headers (configurable via eric4 Web Browser

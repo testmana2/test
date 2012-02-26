@@ -251,7 +251,6 @@
               <section title="eric5.Helpviewer.Network.NetworkDiskCache" ref="eric5.Helpviewer.Network.NetworkDiskCache.html" />
               <section title="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply" ref="eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html" />
               <section title="eric5.Helpviewer.Network.NetworkReply" ref="eric5.Helpviewer.Network.NetworkReply.html" />
-              <section title="eric5.Helpviewer.Network.PyrcAccessHandler" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.QtHelpAccessHandler" ref="eric5.Helpviewer.Network.QtHelpAccessHandler.html" />
               <section title="eric5.Helpviewer.Network.SchemeAccessHandler" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
             </section>
@@ -288,6 +287,7 @@
               <section title="eric5.Helpviewer.Sync.SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
               <section title="eric5.Helpviewer.Sync.SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncGlobals" ref="eric5.Helpviewer.Sync.SyncGlobals.html" />
               <section title="eric5.Helpviewer.Sync.SyncHandler" ref="eric5.Helpviewer.Sync.SyncHandler.html" />
@@ -4247,11 +4247,13 @@
       <keyword name="FtpSyncHandler.__changeToStore" id="FtpSyncHandler.__changeToStore" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__changeToStore" />
       <keyword name="FtpSyncHandler.__checkSyncFiles" id="FtpSyncHandler.__checkSyncFiles" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__checkSyncFiles" />
       <keyword name="FtpSyncHandler.__commandFinished" id="FtpSyncHandler.__commandFinished" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__commandFinished" />
+      <keyword name="FtpSyncHandler.__downloadFile" id="FtpSyncHandler.__downloadFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__downloadFile" />
       <keyword name="FtpSyncHandler.__idleTimeout" id="FtpSyncHandler.__idleTimeout" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__idleTimeout" />
       <keyword name="FtpSyncHandler.__initialSync" id="FtpSyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSync" />
       <keyword name="FtpSyncHandler.__initialSyncFile" id="FtpSyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__initialSyncFile" />
       <keyword name="FtpSyncHandler.__storeReached" id="FtpSyncHandler.__storeReached" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__storeReached" />
       <keyword name="FtpSyncHandler.__syncFile" id="FtpSyncHandler.__syncFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__syncFile" />
+      <keyword name="FtpSyncHandler.__uploadFile" id="FtpSyncHandler.__uploadFile" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.__uploadFile" />
       <keyword name="FtpSyncHandler.initialLoadAndCheck" id="FtpSyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.initialLoadAndCheck" />
       <keyword name="FtpSyncHandler.shutdown" id="FtpSyncHandler.shutdown" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.shutdown" />
       <keyword name="FtpSyncHandler.syncBookmarks" id="FtpSyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncBookmarks" />
@@ -7691,7 +7693,6 @@
       <keyword name="PyRegExpWizardWindow (Constructor)" id="PyRegExpWizardWindow (Constructor)" ref="eric5.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardDialog.html#PyRegExpWizardWindow.__init__" />
       <keyword name="PySideImporter (Module)" id="PySideImporter (Module)" ref="eric5.UtilitiesPython2.PySideImporter.html" />
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric5.PyUnit.html" />
-      <keyword name="PyrcAccessHandler (Module)" id="PyrcAccessHandler (Module)" ref="eric5.Helpviewer.Network.PyrcAccessHandler.html" />
       <keyword name="Python (Package)" id="Python (Package)" ref="index-eric5.DebugClients.Python.html" />
       <keyword name="Python3 (Package)" id="Python3 (Package)" ref="index-eric5.DebugClients.Python3.html" />
       <keyword name="PythonPage" id="PythonPage" ref="eric5.Preferences.ConfigurationPages.PythonPage.html#PythonPage" />
@@ -9292,6 +9293,16 @@
       <keyword name="SyncDataPage (Constructor)" id="SyncDataPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.__init__" />
       <keyword name="SyncDataPage (Module)" id="SyncDataPage (Module)" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
       <keyword name="SyncDataPage.nextId" id="SyncDataPage.nextId" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.nextId" />
+      <keyword name="SyncEncryptionPage" id="SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage" />
+      <keyword name="SyncEncryptionPage (Constructor)" id="SyncEncryptionPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.__init__" />
+      <keyword name="SyncEncryptionPage (Module)" id="SyncEncryptionPage (Module)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
+      <keyword name="SyncEncryptionPage.__updateUI" id="SyncEncryptionPage.__updateUI" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.__updateUI" />
+      <keyword name="SyncEncryptionPage.isComplete" id="SyncEncryptionPage.isComplete" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.isComplete" />
+      <keyword name="SyncEncryptionPage.nextId" id="SyncEncryptionPage.nextId" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.nextId" />
+      <keyword name="SyncEncryptionPage.on_encryptionGroupBox_toggled" id="SyncEncryptionPage.on_encryptionGroupBox_toggled" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.on_encryptionGroupBox_toggled" />
+      <keyword name="SyncEncryptionPage.on_encryptionKeyAgainEdit_textChanged" id="SyncEncryptionPage.on_encryptionKeyAgainEdit_textChanged" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.on_encryptionKeyAgainEdit_textChanged" />
+      <keyword name="SyncEncryptionPage.on_encryptionKeyEdit_textChanged" id="SyncEncryptionPage.on_encryptionKeyEdit_textChanged" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.on_encryptionKeyEdit_textChanged" />
+      <keyword name="SyncEncryptionPage.on_reencryptCheckBox_toggled" id="SyncEncryptionPage.on_reencryptCheckBox_toggled" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.on_reencryptCheckBox_toggled" />
       <keyword name="SyncFtpSettingsPage" id="SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage" />
       <keyword name="SyncFtpSettingsPage (Constructor)" id="SyncFtpSettingsPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html#SyncFtpSettingsPage.__init__" />
       <keyword name="SyncFtpSettingsPage (Module)" id="SyncFtpSettingsPage (Module)" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
@@ -9302,11 +9313,13 @@
       <keyword name="SyncHandler (Constructor)" id="SyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.__init__" />
       <keyword name="SyncHandler (Module)" id="SyncHandler (Module)" ref="eric5.Helpviewer.Sync.SyncHandler.html" />
       <keyword name="SyncHandler.initialLoadAndCheck" id="SyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.initialLoadAndCheck" />
+      <keyword name="SyncHandler.readFile" id="SyncHandler.readFile" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.readFile" />
       <keyword name="SyncHandler.shutdown" id="SyncHandler.shutdown" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.shutdown" />
       <keyword name="SyncHandler.syncBookmarks" id="SyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncBookmarks" />
       <keyword name="SyncHandler.syncHistory" id="SyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncHistory" />
       <keyword name="SyncHandler.syncPasswords" id="SyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncPasswords" />
       <keyword name="SyncHandler.syncUserAgents" id="SyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncUserAgents" />
+      <keyword name="SyncHandler.writeFile" id="SyncHandler.writeFile" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.writeFile" />
       <keyword name="SyncHostTypePage" id="SyncHostTypePage" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage" />
       <keyword name="SyncHostTypePage (Constructor)" id="SyncHostTypePage (Constructor)" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage.__init__" />
       <keyword name="SyncHostTypePage (Module)" id="SyncHostTypePage (Module)" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html" />
@@ -9319,6 +9332,7 @@
       <keyword name="SyncManager.__syncFinished" id="SyncManager.__syncFinished" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncFinished" />
       <keyword name="SyncManager.__syncHistory" id="SyncManager.__syncHistory" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncHistory" />
       <keyword name="SyncManager.__syncPasswords" id="SyncManager.__syncPasswords" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncPasswords" />
+      <keyword name="SyncManager.__syncStatus" id="SyncManager.__syncStatus" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncStatus" />
       <keyword name="SyncManager.__syncUserAgents" id="SyncManager.__syncUserAgents" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncUserAgents" />
       <keyword name="SyncManager.close" id="SyncManager.close" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.close" />
       <keyword name="SyncManager.handler" id="SyncManager.handler" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.handler" />
@@ -11021,6 +11035,8 @@
       <keyword name="crypto (Package)" id="crypto (Package)" ref="index-eric5.Utilities.crypto.html" />
       <keyword name="cursors (Package)" id="cursors (Package)" ref="index-eric5.IconEditor.cursors.html" />
       <keyword name="data (Package)" id="data (Package)" ref="index-eric5.Helpviewer.data.html" />
+      <keyword name="dataDecrypt" id="dataDecrypt" ref="eric5.Utilities.crypto.__init__.html#dataDecrypt" />
+      <keyword name="dataEncrypt" id="dataEncrypt" ref="eric5.Utilities.crypto.__init__.html#dataEncrypt" />
       <keyword name="dataString" id="dataString" ref="eric5.Helpviewer.Download.DownloadUtilities.html#dataString" />
       <keyword name="dateFromTime_t" id="dateFromTime_t" ref="eric5.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#dateFromTime_t" />
       <keyword name="debug_thread_info" id="debug_thread_info" ref="eric5.DebugClients.Ruby.Debuggee.html#debug_thread_info" />
@@ -11739,7 +11755,6 @@
       <file>eric5.Helpviewer.Network.NetworkDiskCache.html</file>
       <file>eric5.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html</file>
       <file>eric5.Helpviewer.Network.NetworkReply.html</file>
-      <file>eric5.Helpviewer.Network.PyrcAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.QtHelpAccessHandler.html</file>
       <file>eric5.Helpviewer.Network.SchemeAccessHandler.html</file>
       <file>eric5.Helpviewer.OfflineStorage.OfflineStorageConfigDialog.html</file>
@@ -11771,6 +11786,7 @@
       <file>eric5.Helpviewer.Sync.SyncAssistantDialog.html</file>
       <file>eric5.Helpviewer.Sync.SyncCheckPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncDataPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncEncryptionPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncFtpSettingsPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncGlobals.html</file>
       <file>eric5.Helpviewer.Sync.SyncHandler.html</file>

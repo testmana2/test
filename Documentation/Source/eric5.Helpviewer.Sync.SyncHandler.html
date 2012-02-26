@@ -54,6 +54,9 @@ emitted for a general error with the error message (string)
 emitted after a synchronization has
         finished (string one of "bookmarks", "history", "passwords" or "useragents",
         boolean, boolean)
+</dd><dt>syncMessage(message)</dt>
+<dd>
+emitted to send a message about synchronization (string)
 </dd><dt>syncStatus(type_, done, message)</dt>
 <dd>
 emitted to indicate the synchronization
@@ -80,6 +83,9 @@ QObject
 <td><a href="#SyncHandler.initialLoadAndCheck">initialLoadAndCheck</a></td>
 <td>Public method to do the initial check.</td>
 </tr><tr>
+<td><a href="#SyncHandler.readFile">readFile</a></td>
+<td>Public method to read a file.</td>
+</tr><tr>
 <td><a href="#SyncHandler.shutdown">shutdown</a></td>
 <td>Public method to shut down the handler.</td>
 </tr><tr>
@@ -94,6 +100,9 @@ QObject
 </tr><tr>
 <td><a href="#SyncHandler.syncUserAgents">syncUserAgents</a></td>
 <td>Public method to synchronize the user agents.</td>
+</tr><tr>
+<td><a href="#SyncHandler.writeFile">writeFile</a></td>
+<td>Public method to write the data to a file.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -112,10 +121,33 @@ reference to the parent object (QObject)
 </dd>
 </dl><a NAME="SyncHandler.initialLoadAndCheck" ID="SyncHandler.initialLoadAndCheck"></a>
 <h4>SyncHandler.initialLoadAndCheck</h4>
-<b>initialLoadAndCheck</b>(<i></i>)
+<b>initialLoadAndCheck</b>(<i>forceUpload</i>)
 <p>
         Public method to do the initial check.
-</p><a NAME="SyncHandler.shutdown" ID="SyncHandler.shutdown"></a>
+</p><dl>
+<dt><i>forceUpload=</i></dt>
+<dd>
+flag indicating a forced upload of the files (boolean)
+</dd>
+</dl><a NAME="SyncHandler.readFile" ID="SyncHandler.readFile"></a>
+<h4>SyncHandler.readFile</h4>
+<b>readFile</b>(<i>fileName</i>)
+<p>
+        Public method to read a file.
+</p><p>
+        If encrypted synchronization is enabled, the data will be encrypted using
+        the relevant encryption key.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file to be read (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+data of the file, optionally encrypted (QByteArray)
+</dd>
+</dl><a NAME="SyncHandler.shutdown" ID="SyncHandler.shutdown"></a>
 <h4>SyncHandler.shutdown</h4>
 <b>shutdown</b>(<i></i>)
 <p>
@@ -140,7 +172,28 @@ reference to the parent object (QObject)
 <b>syncUserAgents</b>(<i></i>)
 <p>
         Public method to synchronize the user agents.
-</p>
+</p><a NAME="SyncHandler.writeFile" ID="SyncHandler.writeFile"></a>
+<h4>SyncHandler.writeFile</h4>
+<b>writeFile</b>(<i>data, fileName</i>)
+<p>
+        Public method to write the data to a file.
+</p><p>
+        If encrypted synchronization is enabled, the data will be decrypted using
+        the relevant encryption key.
+</p><dl>
+<dt><i>data</i></dt>
+<dd>
+data to be written and optionally decrypted (QByteArray)
+</dd><dt><i>fileName</i></dt>
+<dd>
+name of the file the data is to be written to (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple giving a success flag and an error string (boolean, string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

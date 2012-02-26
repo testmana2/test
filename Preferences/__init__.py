@@ -657,6 +657,8 @@ class Prefs(object):
         "SyncHistory": True,
         "SyncPasswords": False,
         "SyncUserAgents": True,
+        "SyncEncryptData": False,
+        "SyncEncryptionKey": "",
         "SyncType": 0,
         "SyncFtpServer": "",
         "SyncFtpUser": "",
@@ -2024,7 +2026,7 @@ def getHelp(key, prefClass=Prefs):
             feeds.append((url, title, icon))
         prefClass.settings.endArray()
         return feeds
-    elif key == "SyncFtpPassword":
+    elif key in ["SyncFtpPassword", "SyncEncryptionKey"]:
         from Utilities.crypto import pwConvert
         return pwConvert(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]), encode=False)
@@ -2047,7 +2049,7 @@ def getHelp(key, prefClass=Prefs):
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
                  "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
                  "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
-                 "WarnOnMultipleClose", "ClickToFlashEnabled"
+                 "SyncEncryptData","WarnOnMultipleClose", "ClickToFlashEnabled"
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
@@ -2106,7 +2108,7 @@ def setHelp(key, value, prefClass=Prefs):
             prefClass.settings.setValue("Icon", v[2])
             index += 1
         prefClass.settings.endArray()
-    elif key == "SyncFtpPassword":
+    elif key in ["SyncFtpPassword", "SyncEncryptionKey"]:
         from Utilities.crypto import pwConvert
         prefClass.settings.setValue(
             "Help/" + key, pwConvert(value, encode=True))
@@ -2628,7 +2630,7 @@ def convertPasswords(oldPassword, newPassword, prefClass=Prefs):
             prefClass.settings.value("User/" + key, prefClass.userDefaults[key]),
             oldPassword,
             newPassword))
-    for key in ["SyncFtpPassword"]:
+    for key in ["SyncFtpPassword", "SyncEncryptionKey"]:
         prefClass.settings.setValue("Help/" + key, pwRecode(
             prefClass.settings.value("Help/" + key, prefClass.helpDefaults[key]),
             oldPassword,

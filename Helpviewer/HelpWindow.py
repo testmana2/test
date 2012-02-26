@@ -205,7 +205,9 @@ class HelpWindow(QMainWindow):
             
             self.historyManager()
             
-            self.syncManager()
+            syncMgr = self.syncManager()
+            syncMgr.syncMessage.connect(self.statusBar().showMessage)
+            syncMgr.syncError.connect(self.statusBar().showMessage)
             
             self.tabWidget.newBrowser(home)
             self.tabWidget.currentBrowser().setFocus()

@@ -41,9 +41,11 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         """
         self.syncErrorLabel.hide()
         
+        forceUpload = self.field("ReencryptData")
+        
         syncMgr = Helpviewer.HelpWindow.HelpWindow.syncManager()
         syncMgr.syncError.connect(self.__syncError)
-        syncMgr.loadSettings()
+        syncMgr.loadSettings(forceUpload=forceUpload)
         
         if Preferences.getHelp("SyncType") == 0:
             self.handlerLabel.setText(self.trUtf8("FTP"))

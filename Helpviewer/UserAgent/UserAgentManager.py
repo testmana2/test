@@ -109,7 +109,6 @@ class UserAgentManager(QObject):
         
         self.__agents = {}
         self.__load()
-        self.changed.emit()
     
     def close(self):
         """

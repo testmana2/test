@@ -48,7 +48,12 @@ Module implementing the synchronization manager class.
 <dl>
 <dt>syncError(message)</dt>
 <dd>
-emitted for a general error with the error message (string)
+emitted for a general error with the error
+        message (string)
+</dd><dt>syncMessage(message)</dt>
+<dd>
+emitted to give status info about the sync
+        process (string)
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -81,6 +86,9 @@ QObject
 </tr><tr>
 <td><a href="#SyncManager.__syncPasswords">__syncPasswords</a></td>
 <td>Private slot to synchronize the passwords.</td>
+</tr><tr>
+<td><a href="#SyncManager.__syncStatus">__syncStatus</a></td>
+<td>Private slot to handle a status update of a synchronization event.</td>
 </tr><tr>
 <td><a href="#SyncManager.__syncUserAgents">__syncUserAgents</a></td>
 <td>Private slot to synchronize the user agent settings.</td>
@@ -157,7 +165,24 @@ flag indicating a download of a file (boolean)
 <b>__syncPasswords</b>(<i></i>)
 <p>
         Private slot to synchronize the passwords.
-</p><a NAME="SyncManager.__syncUserAgents" ID="SyncManager.__syncUserAgents"></a>
+</p><a NAME="SyncManager.__syncStatus" ID="SyncManager.__syncStatus"></a>
+<h4>SyncManager.__syncStatus</h4>
+<b>__syncStatus</b>(<i>type_, status, message</i>)
+<p>
+        Private slot to handle a status update of a synchronization event.
+</p><dl>
+<dt><i>type_</i></dt>
+<dd>
+type of the synchronization event (string one
+            of "bookmarks", "history", "passwords" or "useragents")
+</dd><dt><i>status</i></dt>
+<dd>
+flag indicating success (boolean)
+</dd><dt><i>message</i></dt>
+<dd>
+status message for the event (string)
+</dd>
+</dl><a NAME="SyncManager.__syncUserAgents" ID="SyncManager.__syncUserAgents"></a>
 <h4>SyncManager.__syncUserAgents</h4>
 <b>__syncUserAgents</b>(<i></i>)
 <p>
@@ -179,10 +204,15 @@ reference to the sync handler object (SyncHandler)
 </dd>
 </dl><a NAME="SyncManager.loadSettings" ID="SyncManager.loadSettings"></a>
 <h4>SyncManager.loadSettings</h4>
-<b>loadSettings</b>(<i></i>)
+<b>loadSettings</b>(<i>forceUpload=False</i>)
 <p>
         Public method to load the settings.
-</p><a NAME="SyncManager.showSyncDialog" ID="SyncManager.showSyncDialog"></a>
+</p><dl>
+<dt><i>forceUpload=</i></dt>
+<dd>
+flag indicating a forced upload of the files (boolean)
+</dd>
+</dl><a NAME="SyncManager.showSyncDialog" ID="SyncManager.showSyncDialog"></a>
 <h4>SyncManager.showSyncDialog</h4>
 <b>showSyncDialog</b>(<i></i>)
 <p>
