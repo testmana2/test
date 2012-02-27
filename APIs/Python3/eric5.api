@@ -6971,8 +6971,8 @@ eric5.Utilities.crypto.Delimiter?7
 eric5.Utilities.crypto.EncodeMarker?7
 eric5.Utilities.crypto.MasterPassword?7
 eric5.Utilities.crypto.changeRememberedMaster?4(newPassword)
-eric5.Utilities.crypto.dataDecrypt?4(edata, password)
-eric5.Utilities.crypto.dataEncrypt?4(data, password)
+eric5.Utilities.crypto.dataDecrypt?4(edata, password, keyLength=32)
+eric5.Utilities.crypto.dataEncrypt?4(data, password, keyLength=32, hashIterations=10000)
 eric5.Utilities.crypto.pwConvert?4(pw, encode=True)
 eric5.Utilities.crypto.pwDecode?4(epw)
 eric5.Utilities.crypto.pwDecrypt?4(epw, masterPW=None)

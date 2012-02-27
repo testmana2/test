@@ -243,17 +243,21 @@ def changeRememberedMaster(newPassword):
         MasterPassword = pwEncode(newPassword)
 
 
-def dataEncrypt(data, password):
+def dataEncrypt(data, password, keyLength=32, hashIterations=10000):
     """
     Module function to encrypt a password.
     
     @param data data to encrypt (bytes)
     @param password password to be used for encryption (string)
+    @keyparam keyLength length of the key to be generated for encryption (16, 24 or 32)
+    @keyparam hashIterations number of hashes to be applied to the password for
+        generating the encryption key (integer)
     @return encrypted data (bytes) and flag indicating
         success (boolean)
     """
-    digestname, iterations, salt, hash = hashPasswordTuple(password)
-    key = hash[:32]
+    digestname, iterations, salt, hash = \
+        hashPasswordTuple(password, iterations=hashIterations)
+    key = hash[:keyLength]
     try:
         cipher = encryptData(key, data)
     except ValueError:
@@ -266,12 +270,13 @@ def dataEncrypt(data, password):
     ]), True
 
 
-def dataDecrypt(edata, password):
+def dataDecrypt(edata, password, keyLength=32):
     """
     Module function to decrypt a password.
     
     @param edata hashed data to decrypt (string)
     @param password password to be used for decryption (string)
+    @keyparam keyLength length of the key to be generated for decryption (16, 24 or 32)
     @return decrypted data (bytes) and flag indicating
         success (boolean)
     """
@@ -282,7 +287,7 @@ def dataDecrypt(edata, password):
     hashParameters = hashParametersBytes.decode()
     try:
         # recreate the key used to encrypt
-        key = rehashPassword(password, hashParameters)[:32]
+        key = rehashPassword(password, hashParameters)[:keyLength]
         plaintext = decryptData(key, base64.b64decode(edata))
     except ValueError:
         return "", False

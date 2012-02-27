@@ -28700,27 +28700,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="995"/>
+        <location filename="Preferences/__init__.py" line="996"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1022"/>
+        <location filename="Preferences/__init__.py" line="1023"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1022"/>
+        <location filename="Preferences/__init__.py" line="1023"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1115"/>
+        <location filename="Preferences/__init__.py" line="1116"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1115"/>
+        <location filename="Preferences/__init__.py" line="1116"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -41869,12 +41869,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
         <translation type="obsolete">Muestra una indicación sobre la fuerza de la contraseña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="81"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="89"/>
         <source>Encryption key must not be empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="86"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="94"/>
         <source>Repeated encryption key is wrong.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41886,6 +41886,31 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="89"/>
         <source>Shows an indication for the encryption key strength</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="98"/>
+        <source>Size of generated encryption key:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="105"/>
+        <source>Select the size of the generated encryption key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="33"/>
+        <source>128 Bits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="34"/>
+        <source>192 Bits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="35"/>
+        <source>256 Bits</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -41975,12 +42000,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="132"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="134"/>
         <source>Invalid encryption key given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="136"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="139"/>
         <source>Data cannot be decrypted.</source>
         <translation type="unfinished"></translation>
     </message>

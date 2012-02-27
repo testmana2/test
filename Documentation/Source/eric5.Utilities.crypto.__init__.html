@@ -93,7 +93,7 @@ new password to be used (string)
 <hr /><hr />
 <a NAME="dataDecrypt" ID="dataDecrypt"></a>
 <h2>dataDecrypt</h2>
-<b>dataDecrypt</b>(<i>edata, password</i>)
+<b>dataDecrypt</b>(<i>edata, password, keyLength=32</i>)
 <p>
     Module function to decrypt a password.
 </p><dl>
@@ -103,6 +103,9 @@ hashed data to decrypt (string)
 </dd><dt><i>password</i></dt>
 <dd>
 password to be used for decryption (string)
+</dd><dt><i>keyLength=</i></dt>
+<dd>
+length of the key to be generated for decryption (16, 24 or 32)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -115,7 +118,7 @@ decrypted data (bytes) and flag indicating
 <hr /><hr />
 <a NAME="dataEncrypt" ID="dataEncrypt"></a>
 <h2>dataEncrypt</h2>
-<b>dataEncrypt</b>(<i>data, password</i>)
+<b>dataEncrypt</b>(<i>data, password, keyLength=32, hashIterations=10000</i>)
 <p>
     Module function to encrypt a password.
 </p><dl>
@@ -125,6 +128,13 @@ data to encrypt (bytes)
 </dd><dt><i>password</i></dt>
 <dd>
 password to be used for encryption (string)
+</dd><dt><i>keyLength=</i></dt>
+<dd>
+length of the key to be generated for encryption (16, 24 or 32)
+</dd><dt><i>hashIterations=</i></dt>
+<dd>
+number of hashes to be applied to the password for
+        generating the encryption key (integer)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

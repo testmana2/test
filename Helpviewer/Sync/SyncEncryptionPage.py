@@ -30,11 +30,17 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         super().__init__(parent)
         self.setupUi(self)
         
+        self.keySizeComboBox.addItem(self.trUtf8("128 Bits"), 16)
+        self.keySizeComboBox.addItem(self.trUtf8("192 Bits"), 24)
+        self.keySizeComboBox.addItem(self.trUtf8("256 Bits"), 32)
+        
         self.registerField("ReencryptData", self.reencryptCheckBox)
         
         self.encryptionGroupBox.setChecked(Preferences.getHelp("SyncEncryptData"))
         self.encryptionKeyEdit.setText(Preferences.getHelp("SyncEncryptionKey"))
         self.encryptionKeyAgainEdit.setEnabled(False)
+        self.keySizeComboBox.setCurrentIndex(self.keySizeComboBox.findData(
+            Preferences.getHelp("SyncEncryptionKeyLength")))
     
     def nextId(self):
         """
@@ -44,6 +50,8 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         """
         Preferences.setHelp("SyncEncryptData", self.encryptionGroupBox.isChecked())
         Preferences.setHelp("SyncEncryptionKey", self.encryptionKeyEdit.text())
+        Preferences.setHelp("SyncEncryptionKeyLength", self.keySizeComboBox.itemData(
+            self.keySizeComboBox.currentIndex()))
         
         return SyncGlobals.PageType
     

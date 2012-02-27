@@ -659,6 +659,7 @@ class Prefs(object):
         "SyncUserAgents": True,
         "SyncEncryptData": False,
         "SyncEncryptionKey": "",
+        "SyncEncryptionKeyLength": 32,      # 16, 24 or 32
         "SyncType": 0,
         "SyncFtpServer": "",
         "SyncFtpUser": "",
@@ -2034,7 +2035,8 @@ def getHelp(key, prefClass=Prefs):
                  "KeepCookiesUntil", "StartupBehavior", "HistoryLimit",
                  "OfflineStorageDatabaseQuota", "OfflineWebApplicationCacheQuota",
                  "CachePolicy", "DownloadManagerRemovePolicy",
-                 "SearchLanguage", "SyncType", "SyncFtpPort", "SyncFtpIdleTimeout"]:
+                 "SearchLanguage", "SyncType", "SyncFtpPort", "SyncFtpIdleTimeout",
+                 "SyncEncryptionKeyLength"]:
         return int(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))
     elif key in ["SingleHelpWindow", "SaveGeometry", "WebSearchSuggestions",

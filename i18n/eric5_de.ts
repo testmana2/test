@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1660,8 +1661,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -1897,7 +1898,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -13185,7 +13186,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -28170,27 +28171,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="995"/>
+        <location filename="Preferences/__init__.py" line="996"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1022"/>
+        <location filename="Preferences/__init__.py" line="1023"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1022"/>
+        <location filename="Preferences/__init__.py" line="1023"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1115"/>
+        <location filename="Preferences/__init__.py" line="1116"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1115"/>
+        <location filename="Preferences/__init__.py" line="1116"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>
@@ -41232,12 +41233,12 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <translation>Gib den Schlüssel erneut ein</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="81"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="89"/>
         <source>Encryption key must not be empty.</source>
         <translation>Der Schlüssel darf nicht leer sein.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="86"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="94"/>
         <source>Repeated encryption key is wrong.</source>
         <translation>Die Schlüsselwiederholung ist falsch.</translation>
     </message>
@@ -41250,6 +41251,31 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="89"/>
         <source>Shows an indication for the encryption key strength</source>
         <translation>Zeigt eine Indikation für die Schlüsselstärke an</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="98"/>
+        <source>Size of generated encryption key:</source>
+        <translation>Länge des erzeugten Schlüssels:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="105"/>
+        <source>Select the size of the generated encryption key</source>
+        <translation>Wähle die Länge des erzeugten Schlüssels</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="33"/>
+        <source>128 Bits</source>
+        <translation>128 Bits</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="34"/>
+        <source>192 Bits</source>
+        <translation>192 Bits</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="35"/>
+        <source>256 Bits</source>
+        <translation>256 Bits</translation>
     </message>
 </context>
 <context>
@@ -41338,12 +41364,12 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="132"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="134"/>
         <source>Invalid encryption key given.</source>
         <translation>Ungültiger Schlüssel angegeben.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="136"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="139"/>
         <source>Data cannot be decrypted.</source>
         <translation>Daten können nicht entschlüsselt werden.</translation>
     </message>

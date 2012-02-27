@@ -617,7 +617,7 @@ class AESModeOfOperation(object):
         @param input data to be encrypted (bytes)
         @param mode mode of operation (0, 1 or 2)
         @param key key to be used (bytes)
-        @param size length of the key (integer)
+        @param size length of the key (16, 24 or 32)
         @param IV initialisation vector (bytearray)
         @return tuple with mode of operation, length of the input and
             the encrypted data (integer, integer, bytes)
@@ -709,7 +709,7 @@ class AESModeOfOperation(object):
             (integer)
         @param mode mode of operation (0, 1 or 2)
         @param key key to be used (bytes)
-        @param size length of the key (integer)
+        @param size length of the key (16, 24 or 32)
         @param IV initialisation vector (bytearray)
         @return decrypted data (bytes)
         """

@@ -105,7 +105,9 @@ class SyncHandler(QObject):
                 if not key:
                     return QByteArray()
                 
-                data, ok = dataEncrypt(data, key)
+                data, ok = dataEncrypt(data, key,
+                    keyLength=Preferences.getHelp("SyncEncryptionKeyLength"),
+                    hashIterations=100)
                 if not ok:
                     return QByteArray()
             
@@ -131,7 +133,8 @@ class SyncHandler(QObject):
             if not key:
                 return False, self.trUtf8("Invalid encryption key given.")
             
-            data, ok = dataDecrypt(data, key)
+            data, ok = dataDecrypt(data, key,
+                keyLength=Preferences.getHelp("SyncEncryptionKeyLength"))
             if not ok:
                 return False, self.trUtf8("Data cannot be decrypted.")
         
