@@ -1976,11 +1976,13 @@ class Subversion(VersionControl):
         @param url url string (string)
         @return properly normalized url for subversion (string)
         """
+        protocol, url = url.split("://")
+        if url.startswith("\\\\"):
+            url = url[2:]
         url = url.replace('\\', '/')
         if url.endswith('/'):
             url = url[:-1]
-        urll = url.split('//')
-        return "{0}//{1}".format(urll[0], '/'.join(urll[1:]))
+        return "{0}://{1}".format(protocol, url)
 
     ############################################################################
     ## Methods to get the helper objects are below.
