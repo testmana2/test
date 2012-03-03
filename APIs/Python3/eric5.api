@@ -2666,6 +2666,10 @@ eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.headerData?4(section, o
 eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.removeRows?4(row, count, parent=QModelIndex())
 eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel.rowCount?4(parent=QModelIndex())
 eric5.Helpviewer.UserAgent.UserAgentModel.UserAgentModel?1(manager, parent=None)
+eric5.Helpviewer.UserAgent.UserAgentReader.UserAgentReader.read?4(fileNameOrDevice)
+eric5.Helpviewer.UserAgent.UserAgentReader.UserAgentReader?1()
+eric5.Helpviewer.UserAgent.UserAgentWriter.UserAgentWriter.write?4(fileNameOrDevice, agents)
+eric5.Helpviewer.UserAgent.UserAgentWriter.UserAgentWriter?1()
 eric5.Helpviewer.UserAgent.UserAgentsDialog.UserAgentsDialog?1(parent=None)
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetFileReportPattern?7
 eric5.Helpviewer.VirusTotalApi.VirusTotalAPI.GetUrlReportPattern?7

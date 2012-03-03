@@ -620,6 +620,8 @@ UrlBar E5LineEdit
 UserAgentManager QObject
 UserAgentMenu QMenu
 UserAgentModel QAbstractTableModel
+UserAgentReader QXmlStreamReader
+UserAgentWriter QXmlStreamWriter
 UserAgentsDialog QDialog Ui_UserAgentsDialog
 UserInterface QMainWindow
 UserProjectReader XMLStreamReaderBase

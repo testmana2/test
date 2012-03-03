@@ -310,6 +310,8 @@
               <section title="eric5.Helpviewer.UserAgent.UserAgentManager" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentMenu" ref="eric5.Helpviewer.UserAgent.UserAgentMenu.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentModel" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentReader" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html" />
+              <section title="eric5.Helpviewer.UserAgent.UserAgentWriter" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html" />
               <section title="eric5.Helpviewer.UserAgent.UserAgentsDialog" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html" />
             </section>
             <section title="eric5.Helpviewer.WebPlugins" ref="index-eric5.Helpviewer.WebPlugins.html">
@@ -10043,6 +10045,7 @@
       <keyword name="UserAgentManager (Constructor)" id="UserAgentManager (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__init__" />
       <keyword name="UserAgentManager (Module)" id="UserAgentManager (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html" />
       <keyword name="UserAgentManager.__load" id="UserAgentManager.__load" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__load" />
+      <keyword name="UserAgentManager.__loadNonXml" id="UserAgentManager.__loadNonXml" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.__loadNonXml" />
       <keyword name="UserAgentManager.allHostNames" id="UserAgentManager.allHostNames" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.allHostNames" />
       <keyword name="UserAgentManager.close" id="UserAgentManager.close" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.close" />
       <keyword name="UserAgentManager.getFileName" id="UserAgentManager.getFileName" ref="eric5.Helpviewer.UserAgent.UserAgentManager.html#UserAgentManager.getFileName" />
@@ -10071,6 +10074,17 @@
       <keyword name="UserAgentModel.headerData" id="UserAgentModel.headerData" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.headerData" />
       <keyword name="UserAgentModel.removeRows" id="UserAgentModel.removeRows" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.removeRows" />
       <keyword name="UserAgentModel.rowCount" id="UserAgentModel.rowCount" ref="eric5.Helpviewer.UserAgent.UserAgentModel.html#UserAgentModel.rowCount" />
+      <keyword name="UserAgentReader" id="UserAgentReader" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html#UserAgentReader" />
+      <keyword name="UserAgentReader (Constructor)" id="UserAgentReader (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html#UserAgentReader.__init__" />
+      <keyword name="UserAgentReader (Module)" id="UserAgentReader (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html" />
+      <keyword name="UserAgentReader.__readUserAgents" id="UserAgentReader.__readUserAgents" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html#UserAgentReader.__readUserAgents" />
+      <keyword name="UserAgentReader.__skipUnknownElement" id="UserAgentReader.__skipUnknownElement" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html#UserAgentReader.__skipUnknownElement" />
+      <keyword name="UserAgentReader.read" id="UserAgentReader.read" ref="eric5.Helpviewer.UserAgent.UserAgentReader.html#UserAgentReader.read" />
+      <keyword name="UserAgentWriter" id="UserAgentWriter" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html#UserAgentWriter" />
+      <keyword name="UserAgentWriter (Constructor)" id="UserAgentWriter (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html#UserAgentWriter.__init__" />
+      <keyword name="UserAgentWriter (Module)" id="UserAgentWriter (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html" />
+      <keyword name="UserAgentWriter.__write" id="UserAgentWriter.__write" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html#UserAgentWriter.__write" />
+      <keyword name="UserAgentWriter.write" id="UserAgentWriter.write" ref="eric5.Helpviewer.UserAgent.UserAgentWriter.html#UserAgentWriter.write" />
       <keyword name="UserAgentsDialog" id="UserAgentsDialog" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html#UserAgentsDialog" />
       <keyword name="UserAgentsDialog (Constructor)" id="UserAgentsDialog (Constructor)" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html#UserAgentsDialog.__init__" />
       <keyword name="UserAgentsDialog (Module)" id="UserAgentsDialog (Module)" ref="eric5.Helpviewer.UserAgent.UserAgentsDialog.html" />
@@ -11825,6 +11839,8 @@
       <file>eric5.Helpviewer.UserAgent.UserAgentManager.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentMenu.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentModel.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentReader.html</file>
+      <file>eric5.Helpviewer.UserAgent.UserAgentWriter.html</file>
       <file>eric5.Helpviewer.UserAgent.UserAgentsDialog.html</file>
       <file>eric5.Helpviewer.VirusTotalApi.html</file>
       <file>eric5.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html</file>

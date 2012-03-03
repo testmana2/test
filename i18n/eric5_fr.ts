@@ -29171,42 +29171,42 @@ Voulez-vous enregistrer les modifications?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="209"/>
         <source>Loading login data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="374"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="381"/>
         <source>Never for this site</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="384"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="383"/>
         <source>Not now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="187"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="186"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="209"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="374"/>
         <source>Save password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="582"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="581"/>
         <source>Re-encoding saved passwords...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49112,23 +49112,29 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
 <context>
     <name>UserAgentManager</name>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="67"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="65"/>
         <source>Saving user agent data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="67"/>
-        <source>&lt;p&gt;User agent data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="84"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
         <source>Loading user agent data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="84"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
         <source>&lt;p&gt;User agent data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="65"/>
+        <source>&lt;p&gt;User agent data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="107"/>
+        <source>Error when loading user agent data on line {0}, column {1}:
+{2}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -49180,6 +49186,14 @@ Double-cliquer sur une entrée pour afficher la trace de l&apos;erreur.&lt;/p&gt
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentModel.py" line="31"/>
         <source>User Agent String</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UserAgentReader</name>
+    <message>
+        <location filename="Helpviewer/UserAgent/UserAgentReader.py" line="51"/>
+        <source>The file is not a UserAgents version 1.0 file.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

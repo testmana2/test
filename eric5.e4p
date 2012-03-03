@@ -972,6 +972,8 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Passwords/PasswordWriter.py</Source>
     <Source>Helpviewer/Passwords/PasswordReader.py</Source>
     <Source>Helpviewer/Passwords/LoginForm.py</Source>
+    <Source>Helpviewer/UserAgent/UserAgentWriter.py</Source>
+    <Source>Helpviewer/UserAgent/UserAgentReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

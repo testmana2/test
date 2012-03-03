@@ -9,9 +9,12 @@ Module implementing a user agent manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject
+from PyQt4.QtCore import pyqtSignal, QObject, QXmlStreamReader
 
 from E5Gui import E5MessageBox
+
+from .UserAgentWriter import UserAgentWriter
+from .UserAgentReader import UserAgentReader
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -47,7 +50,7 @@ class UserAgentManager(QObject):
         
         @return name of the user agents file (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings")
+        return os.path.join(Utilities.getConfigDir(), "browser", "userAgentSettings.xml")
     
     def save(self):
         """
@@ -57,24 +60,45 @@ class UserAgentManager(QObject):
             return
         
         agentFile = self.getFileName()
-        try:
-            f = open(agentFile, "w", encoding="utf-8")
-            for host, agent in self.__agents.items():
-                f.write("{0}@@{1}\n".format(host, agent))
-            f.close()
-            self.userAgentSettingsSaved.emit()
-        except IOError as err:
+        writer = UserAgentWriter()
+        if not writer.write(agentFile, self.__agents):
             E5MessageBox.critical(None,
                 self.trUtf8("Saving user agent data"),
                 self.trUtf8("""<p>User agent data could not be saved to <b>{0}</b></p>"""
-                            """<p>Reason: {1}</p>""").format(agentFile, str(err)))
-            return
+                            ).format(agentFile))
+        else:
+            self.userAgentSettingsSaved.emit()
     
     def __load(self):
         """
         Private method to load the saved user agent settings.
         """
         agentFile = self.getFileName()
+        if not os.path.exists(agentFile):
+            self.__loadNonXml(os.path.splitext(agentFile)[0])
+        else:
+            reader = UserAgentReader()
+            self.__agents = reader.read(agentFile)
+            if reader.error() != QXmlStreamReader.NoError:
+                E5MessageBox.warning(None,
+                    self.trUtf8("Loading user agent data"),
+                    self.trUtf8("""Error when loading user agent data on"""
+                                """ line {0}, column {1}:\n{2}""")\
+                        .format(reader.lineNumber(),
+                                reader.columnNumber(),
+                                reader.errorString()))
+        
+        self.__loaded = True
+    
+    def __loadNonXml(self, agentFile):
+        """
+        Private method to load non-XML user agent files.
+        
+        This method is to convert from the old, non-XML format to the new
+        XML based format.
+        
+        @param agentFile name of the non-XML user agent file (string)
+        """
         if os.path.exists(agentFile):
             try:
                 f = open(agentFile, "r", encoding="utf-8")
@@ -97,8 +121,13 @@ class UserAgentManager(QObject):
                 
                 host, agent = line.split("@@", 1)
                 self.__agents[host] = agent
+            
+            os.remove(agentFile)
         
         self.__loaded = True
+        
+        # this does the conversion
+        self.save()
     
     def reload(self):
         """

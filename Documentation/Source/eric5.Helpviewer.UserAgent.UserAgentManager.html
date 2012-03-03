@@ -73,6 +73,9 @@ QObject
 <td><a href="#UserAgentManager.__load">__load</a></td>
 <td>Private method to load the saved user agent settings.</td>
 </tr><tr>
+<td><a href="#UserAgentManager.__loadNonXml">__loadNonXml</a></td>
+<td>Private method to load non-XML user agent files.</td>
+</tr><tr>
 <td><a href="#UserAgentManager.allHostNames">allHostNames</a></td>
 <td>Public method to get a list of all host names we a user agent setting for.</td>
 </tr><tr>
@@ -126,7 +129,20 @@ reference to the parent object (QObject)
 <b>__load</b>(<i></i>)
 <p>
         Private method to load the saved user agent settings.
-</p><a NAME="UserAgentManager.allHostNames" ID="UserAgentManager.allHostNames"></a>
+</p><a NAME="UserAgentManager.__loadNonXml" ID="UserAgentManager.__loadNonXml"></a>
+<h4>UserAgentManager.__loadNonXml</h4>
+<b>__loadNonXml</b>(<i>agentFile</i>)
+<p>
+        Private method to load non-XML user agent files.
+</p><p>
+        This method is to convert from the old, non-XML format to the new
+        XML based format.
+</p><dl>
+<dt><i>agentFile</i></dt>
+<dd>
+name of the non-XML user agent file (string)
+</dd>
+</dl><a NAME="UserAgentManager.allHostNames" ID="UserAgentManager.allHostNames"></a>
 <h4>UserAgentManager.allHostNames</h4>
 <b>allHostNames</b>(<i></i>)
 <p>
