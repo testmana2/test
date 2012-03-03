@@ -55,7 +55,7 @@ BrowserSortFilterProxyModel QSortFilterProxyModel
 BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
-Class ClbrBaseClasses.Class VisibilityMixin
+Class ClbrBase
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
@@ -394,6 +394,8 @@ PageScreenDialog QDialog Ui_PageScreenDialog
 PageThumbnailer QObject
 PasswordManager QObject
 PasswordModel QAbstractTableModel
+PasswordReader QXmlStreamReader
+PasswordWriter QXmlStreamWriter
 PasswordsDialog QDialog Ui_PasswordsDialog
 Pep8Checker pep8.Checker
 Pep8CheckerPlugin QObject

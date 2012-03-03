@@ -271,8 +271,11 @@
               <section title="eric5.Helpviewer.OpenSearch.OpenSearchWriter" ref="eric5.Helpviewer.OpenSearch.OpenSearchWriter.html" />
             </section>
             <section title="eric5.Helpviewer.Passwords" ref="index-eric5.Helpviewer.Passwords.html">
+              <section title="eric5.Helpviewer.Passwords.LoginForm" ref="eric5.Helpviewer.Passwords.LoginForm.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordManager" ref="eric5.Helpviewer.Passwords.PasswordManager.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordModel" ref="eric5.Helpviewer.Passwords.PasswordModel.html" />
+              <section title="eric5.Helpviewer.Passwords.PasswordReader" ref="eric5.Helpviewer.Passwords.PasswordReader.html" />
+              <section title="eric5.Helpviewer.Passwords.PasswordWriter" ref="eric5.Helpviewer.Passwords.PasswordWriter.html" />
               <section title="eric5.Helpviewer.Passwords.PasswordsDialog" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html" />
             </section>
             <section title="eric5.Helpviewer.SiteInfo" ref="index-eric5.Helpviewer.SiteInfo.html">
@@ -6181,11 +6184,10 @@
       <keyword name="LogViewer.appendToStderr" id="LogViewer.appendToStderr" ref="eric5.UI.LogView.html#LogViewer.appendToStderr" />
       <keyword name="LogViewer.appendToStdout" id="LogViewer.appendToStdout" ref="eric5.UI.LogView.html#LogViewer.appendToStdout" />
       <keyword name="LogViewer.preferencesChanged" id="LogViewer.preferencesChanged" ref="eric5.UI.LogView.html#LogViewer.preferencesChanged" />
-      <keyword name="LoginForm" id="LoginForm" ref="eric5.Helpviewer.Passwords.PasswordManager.html#LoginForm" />
-      <keyword name="LoginForm (Constructor)" id="LoginForm (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordManager.html#LoginForm.__init__" />
-      <keyword name="LoginForm.isValid" id="LoginForm.isValid" ref="eric5.Helpviewer.Passwords.PasswordManager.html#LoginForm.isValid" />
-      <keyword name="LoginForm.load" id="LoginForm.load" ref="eric5.Helpviewer.Passwords.PasswordManager.html#LoginForm.load" />
-      <keyword name="LoginForm.save" id="LoginForm.save" ref="eric5.Helpviewer.Passwords.PasswordManager.html#LoginForm.save" />
+      <keyword name="LoginForm" id="LoginForm" ref="eric5.Helpviewer.Passwords.LoginForm.html#LoginForm" />
+      <keyword name="LoginForm (Constructor)" id="LoginForm (Constructor)" ref="eric5.Helpviewer.Passwords.LoginForm.html#LoginForm.__init__" />
+      <keyword name="LoginForm (Module)" id="LoginForm (Module)" ref="eric5.Helpviewer.Passwords.LoginForm.html" />
+      <keyword name="LoginForm.isValid" id="LoginForm.isValid" ref="eric5.Helpviewer.Passwords.LoginForm.html#LoginForm.isValid" />
       <keyword name="MasterPasswordEntryDialog" id="MasterPasswordEntryDialog" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog" />
       <keyword name="MasterPasswordEntryDialog (Constructor)" id="MasterPasswordEntryDialog (Constructor)" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.__init__" />
       <keyword name="MasterPasswordEntryDialog (Module)" id="MasterPasswordEntryDialog (Module)" ref="eric5.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
@@ -6735,6 +6737,7 @@
       <keyword name="PasswordManager.__extractMultipartQueryItems" id="PasswordManager.__extractMultipartQueryItems" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.__extractMultipartQueryItems" />
       <keyword name="PasswordManager.__findForm" id="PasswordManager.__findForm" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.__findForm" />
       <keyword name="PasswordManager.__load" id="PasswordManager.__load" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.__load" />
+      <keyword name="PasswordManager.__loadNonXml" id="PasswordManager.__loadNonXml" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.__loadNonXml" />
       <keyword name="PasswordManager.__stripUrl" id="PasswordManager.__stripUrl" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.__stripUrl" />
       <keyword name="PasswordManager.allSiteNames" id="PasswordManager.allSiteNames" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.allSiteNames" />
       <keyword name="PasswordManager.clear" id="PasswordManager.clear" ref="eric5.Helpviewer.Passwords.PasswordManager.html#PasswordManager.clear" />
@@ -6761,6 +6764,23 @@
       <keyword name="PasswordModel.rowCount" id="PasswordModel.rowCount" ref="eric5.Helpviewer.Passwords.PasswordModel.html#PasswordModel.rowCount" />
       <keyword name="PasswordModel.setShowPasswords" id="PasswordModel.setShowPasswords" ref="eric5.Helpviewer.Passwords.PasswordModel.html#PasswordModel.setShowPasswords" />
       <keyword name="PasswordModel.showPasswords" id="PasswordModel.showPasswords" ref="eric5.Helpviewer.Passwords.PasswordModel.html#PasswordModel.showPasswords" />
+      <keyword name="PasswordReader" id="PasswordReader" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader" />
+      <keyword name="PasswordReader (Constructor)" id="PasswordReader (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__init__" />
+      <keyword name="PasswordReader (Module)" id="PasswordReader (Module)" ref="eric5.Helpviewer.Passwords.PasswordReader.html" />
+      <keyword name="PasswordReader.__readForms" id="PasswordReader.__readForms" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__readForms" />
+      <keyword name="PasswordReader.__readLogins" id="PasswordReader.__readLogins" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__readLogins" />
+      <keyword name="PasswordReader.__readNevers" id="PasswordReader.__readNevers" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__readNevers" />
+      <keyword name="PasswordReader.__readPasswords" id="PasswordReader.__readPasswords" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__readPasswords" />
+      <keyword name="PasswordReader.__skipUnknownElement" id="PasswordReader.__skipUnknownElement" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.__skipUnknownElement" />
+      <keyword name="PasswordReader.read" id="PasswordReader.read" ref="eric5.Helpviewer.Passwords.PasswordReader.html#PasswordReader.read" />
+      <keyword name="PasswordWriter" id="PasswordWriter" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter" />
+      <keyword name="PasswordWriter (Constructor)" id="PasswordWriter (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.__init__" />
+      <keyword name="PasswordWriter (Module)" id="PasswordWriter (Module)" ref="eric5.Helpviewer.Passwords.PasswordWriter.html" />
+      <keyword name="PasswordWriter.__write" id="PasswordWriter.__write" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.__write" />
+      <keyword name="PasswordWriter.__writeForms" id="PasswordWriter.__writeForms" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.__writeForms" />
+      <keyword name="PasswordWriter.__writeLogins" id="PasswordWriter.__writeLogins" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.__writeLogins" />
+      <keyword name="PasswordWriter.__writeNevers" id="PasswordWriter.__writeNevers" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.__writeNevers" />
+      <keyword name="PasswordWriter.write" id="PasswordWriter.write" ref="eric5.Helpviewer.Passwords.PasswordWriter.html#PasswordWriter.write" />
       <keyword name="Passwords (Package)" id="Passwords (Package)" ref="index-eric5.Helpviewer.Passwords.html" />
       <keyword name="PasswordsDialog" id="PasswordsDialog" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog" />
       <keyword name="PasswordsDialog (Constructor)" id="PasswordsDialog (Constructor)" ref="eric5.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__init__" />
@@ -11770,8 +11790,11 @@
       <file>eric5.Helpviewer.OpenSearch.OpenSearchReader.html</file>
       <file>eric5.Helpviewer.OpenSearch.OpenSearchWriter.html</file>
       <file>eric5.Helpviewer.PageScreenDialog.html</file>
+      <file>eric5.Helpviewer.Passwords.LoginForm.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordManager.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordModel.html</file>
+      <file>eric5.Helpviewer.Passwords.PasswordReader.html</file>
+      <file>eric5.Helpviewer.Passwords.PasswordWriter.html</file>
       <file>eric5.Helpviewer.Passwords.PasswordsDialog.html</file>
       <file>eric5.Helpviewer.QtHelpDocumentationDialog.html</file>
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>

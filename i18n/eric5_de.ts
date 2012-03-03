@@ -26911,54 +26911,66 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 <context>
     <name>PasswordManager</name>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="143"/>
         <source>Saving login data</source>
         <translation>Anmeldedaten speichern</translation>
     </message>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
         <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Die Anmeldedaten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Die Anmeldedaten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="247"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
         <source>Loading login data</source>
         <translation>Anmeldedaten laden</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="224"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="187"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Anmeldedaten konnten nicht aus der Datei &lt;b&gt;{0}&lt;/b&gt; geladen werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="247"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Anmeldedaten konnten nicht aus der Datei &lt;b&gt;{0}&lt;/b&gt; geladen werden.&lt;/p&gt;&lt;p&gt;Ursache: Falsches Format&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="402"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation>&lt;b&gt;Wollen sie das Kennwort speichern?&lt;/b&gt;&lt;br/&gt;Um die gespeicherten Kennworte anzusehen und zu löschen, verwenden sie den Kennwortmanagement Dialog aus dem Einstellungen Menü.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="409"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>Never for this site</source>
         <translation>Niemals für diese Site</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="411"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="384"/>
         <source>Not now</source>
         <translation>Jetzt nicht</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="402"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
         <source>Save password</source>
         <translation>Kennwort speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="609"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="582"/>
         <source>Re-encoding saved passwords...</source>
         <translation>Kodieren gespeicherte Kennworte neu...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="143"/>
+        <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Die Anmeldedaten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="161"/>
+        <source>Error when loading login data on line {0}, column {1}:
+{2}</source>
+        <translation>Fehler beim Laden der Anmeldedaten in Zeile {0}, Spalte {1}:
+{2}</translation>
     </message>
 </context>
 <context>
@@ -26977,6 +26989,14 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="Helpviewer/Passwords/PasswordModel.py" line="32"/>
         <source>Password</source>
         <translation>Kennwort</translation>
+    </message>
+</context>
+<context>
+    <name>PasswordReader</name>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordReader.py" line="54"/>
+        <source>The file is not a Passwords version 1.0 file.</source>
+        <translation>Die Datei ist keine Kennwortdatei der Version 1.0.</translation>
     </message>
 </context>
 <context>

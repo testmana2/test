@@ -2446,10 +2446,8 @@ eric5.Helpviewer.OpenSearch.OpenSearchWriter.OpenSearchWriter.write?4(device, en
 eric5.Helpviewer.OpenSearch.OpenSearchWriter.OpenSearchWriter?1()
 eric5.Helpviewer.PageScreenDialog.PageScreenDialog.on_buttonBox_clicked?4(button)
 eric5.Helpviewer.PageScreenDialog.PageScreenDialog?1(view, parent=None)
-eric5.Helpviewer.Passwords.PasswordManager.LoginForm.isValid?4()
-eric5.Helpviewer.Passwords.PasswordManager.LoginForm.load?4(data)
-eric5.Helpviewer.Passwords.PasswordManager.LoginForm.save?4(f)
-eric5.Helpviewer.Passwords.PasswordManager.LoginForm?1()
+eric5.Helpviewer.Passwords.LoginForm.LoginForm.isValid?4()
+eric5.Helpviewer.Passwords.LoginForm.LoginForm?1()
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.FORMS?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.NEVER?7
 eric5.Helpviewer.Passwords.PasswordManager.PasswordManager.SEPARATOR?7
@@ -2478,6 +2476,10 @@ eric5.Helpviewer.Passwords.PasswordModel.PasswordModel.rowCount?4(parent=QModelI
 eric5.Helpviewer.Passwords.PasswordModel.PasswordModel.setShowPasswords?4(on)
 eric5.Helpviewer.Passwords.PasswordModel.PasswordModel.showPasswords?4()
 eric5.Helpviewer.Passwords.PasswordModel.PasswordModel?1(manager, parent=None)
+eric5.Helpviewer.Passwords.PasswordReader.PasswordReader.read?4(fileNameOrDevice)
+eric5.Helpviewer.Passwords.PasswordReader.PasswordReader?1()
+eric5.Helpviewer.Passwords.PasswordWriter.PasswordWriter.write?4(fileNameOrDevice, logins, forms, nevers)
+eric5.Helpviewer.Passwords.PasswordWriter.PasswordWriter?1()
 eric5.Helpviewer.Passwords.PasswordsDialog.PasswordsDialog.on_passwordsButton_clicked?4()
 eric5.Helpviewer.Passwords.PasswordsDialog.PasswordsDialog?1(parent=None)
 eric5.Helpviewer.QtHelpDocumentationDialog.QtHelpDocumentationDialog.getTabsToClose?4()

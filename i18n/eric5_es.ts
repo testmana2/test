@@ -27443,54 +27443,65 @@ puede estar entre -10 y +20, y es el incremento que se añade
 <context>
     <name>PasswordManager</name>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="143"/>
         <source>Saving login data</source>
         <translation>Guardar datos de login</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="247"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
         <source>Loading login data</source>
         <translation>Cargando datos de login</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="402"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation>&lt;b&gt;¿Le gustaría almacenar esta contraseña?&lt;/b&gt;&lt;br/&gt;Para revisar las contraselas que tiene almacenadas y eliminarlas, utilice el diálogo de gestión de contraseñas del menú de Configuración.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="409"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="382"/>
         <source>Never for this site</source>
         <translation>Nunca para este sitio</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="411"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="384"/>
         <source>Not now</source>
         <translation>Ahora no</translation>
     </message>
     <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
         <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Los datos de login no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Los datos de login no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="224"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="187"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los datos de login no se han podido cargar desde &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="247"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="210"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los datos de login no se han podido cargar desde &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: Formato erróneo de input&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="402"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="375"/>
         <source>Save password</source>
         <translation>Almacenar contraseña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="609"/>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="582"/>
         <source>Re-encoding saved passwords...</source>
         <translation>Recodificando contraseñas almacenadas...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="143"/>
+        <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordManager.py" line="161"/>
+        <source>Error when loading login data on line {0}, column {1}:
+{2}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -27509,6 +27520,14 @@ puede estar entre -10 y +20, y es el incremento que se añade
         <location filename="Helpviewer/Passwords/PasswordModel.py" line="32"/>
         <source>Password</source>
         <translation>Contraseña</translation>
+    </message>
+</context>
+<context>
+    <name>PasswordReader</name>
+    <message>
+        <location filename="Helpviewer/Passwords/PasswordReader.py" line="54"/>
+        <source>The file is not a Passwords version 1.0 file.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -9,7 +9,8 @@ Module implementing the password manager.
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QCoreApplication
+from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QCoreApplication, \
+    QXmlStreamReader
 from PyQt4.QtGui import QProgressDialog, QApplication
 from PyQt4.QtNetwork import QNetworkRequest
 from PyQt4.QtWebKit import QWebSettings, QWebPage
@@ -18,61 +19,14 @@ from E5Gui import E5MessageBox
 
 from Helpviewer.JavaScriptResources import parseForms_js
 
+from .LoginForm import LoginForm
+from .PasswordWriter import PasswordWriter
+from .PasswordReader import PasswordReader
+
 from Utilities.AutoSaver import AutoSaver
 import Utilities
 import Utilities.crypto
 import Preferences
-
-
-class LoginForm(object):
-    """
-    Class implementing a data structure for login forms.
-    """
-    def __init__(self):
-        """
-        Constructor
-        """
-        self.url = QUrl()
-        self.name = ""
-        self.hasAPassword = False
-        self.elements = []      # list of tuples of element name and value
-                                # (string, string)
-        self.elementTypes = {}  # dict of element name as key and type as value
-    
-    def isValid(self):
-        """
-        Public method to test for validity.
-        
-        @return flag indicating a valid form (boolean)
-        """
-        return len(self.elements) > 0
-    
-    def load(self, data):
-        """
-        Public method to load the form data from a file.
-        
-        @param data list of strings to load data from (list of strings)
-        @return flag indicating success (boolean)
-        """
-        self.url = QUrl(data[0])
-        self.name = data[1]
-        self.hasAPassword = data[2] == "True"
-        for element in data[3:]:
-            name, value = element.split(" = ", 1)
-            self.elements.append((name, value))
-    
-    def save(self, f):
-        """
-        Public method to save the form data to a file.
-        
-        @param f file or file like object open for writing
-        @return flag indicating success (booelan)
-        """
-        f.write("{0}\n".format(self.url.toString()))
-        f.write("{0}\n".format(self.name))
-        f.write("{0}\n".format(self.hasAPassword))
-        for element in self.elements:
-            f.write("{0} = {1}\n".format(element[0], element[1]))
 
 
 class PasswordManager(QObject):
@@ -174,7 +128,7 @@ class PasswordManager(QObject):
         
         @return name of the passwords file (string)
         """
-        return os.path.join(Utilities.getConfigDir(), "browser", "logins")
+        return os.path.join(Utilities.getConfigDir(), "browser", "logins.xml")
     
     def save(self):
         """
@@ -184,37 +138,46 @@ class PasswordManager(QObject):
             return
         
         loginFile = self.getFileName()
-        try:
-            f = open(loginFile, "w", encoding="utf-8")
-            for key, login in list(self.__logins.items()):
-                f.write("{0}\n".format(key))
-                f.write("{0}\n".format(login[0]))
-                f.write("{0}\n".format(login[1]))
-                f.write("{0}\n".format(self.SEPARATOR))
-            if self.__loginForms:
-                f.write("{0}\n".format(self.FORMS))
-                for key, form in list(self.__loginForms.items()):
-                    f.write("{0}\n".format(key))
-                    form.save(f)
-                    f.write("{0}\n".format(self.SEPARATOR))
-            if self.__never:
-                f.write("{0}\n".format(self.NEVER))
-                for key in self.__never:
-                    f.write("{0}\n".format(key))
-            f.close()
-            self.passwordsSaved.emit()
-        except IOError as err:
+        writer = PasswordWriter()
+        if not writer.write(loginFile, self.__logins, self.__loginForms, self.__never):
             E5MessageBox.critical(None,
                 self.trUtf8("Saving login data"),
                 self.trUtf8("""<p>Login data could not be saved to <b>{0}</b></p>"""
-                            """<p>Reason: {1}</p>""").format(loginFile, str(err)))
-            return
+                            ).format(loginFile))
+        else:
+            self.passwordsSaved.emit()
     
     def __load(self):
         """
         Private method to load the saved login credentials.
         """
         loginFile = self.getFileName()
+        if not os.path.exists(loginFile):
+            self.__loadNonXml(os.path.splitext(loginFile)[0])
+        else:
+            reader = PasswordReader()
+            self.__logins, self.__loginForms, self.__never = reader.read(loginFile)
+            if reader.error() != QXmlStreamReader.NoError:
+                E5MessageBox.warning(None,
+                    self.trUtf8("Loading login data"),
+                    self.trUtf8("""Error when loading login data on"""
+                                """ line {0}, column {1}:\n{2}""")\
+                        .format(reader.lineNumber(),
+                                reader.columnNumber(),
+                                reader.errorString()))
+            pass
+        
+        self.__loaded = True
+    
+    def __loadNonXml(self, loginFile):
+        """
+        Private method to load non-XML password files.
+        
+        This method is to convert from the old, non-XML format to the new
+        XML based format.
+        
+        @param loginFile name of the non-XML password file (string)
+        """
         if os.path.exists(loginFile):
             try:
                 f = open(loginFile, "r", encoding="utf-8")
@@ -260,14 +223,24 @@ class PasswordManager(QObject):
                     else:
                         key = data[0]
                         form = LoginForm()
-                        form.load(data[1:])
+                        form.url = QUrl(data[1])
+                        form.name = data[2]
+                        form.hasAPassword = data[3] == "True"
+                        for element in data[4:]:
+                            name, value = element.split(" = ", 1)
+                            form.elements.append((name, value))
                         self.__loginForms[key] = form
                         data = []
                 
                 elif section == 2:
                     self.__never.append(line)
+            
+            os.remove(loginFile)
         
         self.__loaded = True
+        
+        # this does the conversion
+        self.save()
     
     def reload(self):
         """

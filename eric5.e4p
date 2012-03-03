@@ -969,6 +969,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/UrlBar/BookmarkActionSelectionDialog.py</Source>
     <Source>Helpviewer/Network/EricAccessHandler.py</Source>
     <Source>Helpviewer/Sync/SyncEncryptionPage.py</Source>
+    <Source>Helpviewer/Passwords/PasswordWriter.py</Source>
+    <Source>Helpviewer/Passwords/PasswordReader.py</Source>
+    <Source>Helpviewer/Passwords/LoginForm.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
