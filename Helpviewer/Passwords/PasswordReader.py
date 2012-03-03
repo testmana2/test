@@ -24,7 +24,7 @@ class PasswordReader(QXmlStreamReader):
     
     def read(self, fileNameOrDevice):
         """
-        Public method to read an XBEL bookmark file.
+        Public method to read a login data file.
         
         @param fileNameOrDevice name of the file to read (string)
             or reference to the device to read (QIODevice)
@@ -61,7 +61,7 @@ class PasswordReader(QXmlStreamReader):
         """
         Private method to read and parse the login data file.
         """
-        if not self.isStartElement() and self.name() != "xbel":
+        if not self.isStartElement() and self.name() != "Password":
             return
         
         while not self.atEnd():

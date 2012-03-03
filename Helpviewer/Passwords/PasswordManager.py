@@ -165,7 +165,6 @@ class PasswordManager(QObject):
                         .format(reader.lineNumber(),
                                 reader.columnNumber(),
                                 reader.errorString()))
-            pass
         
         self.__loaded = True
     

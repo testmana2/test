@@ -49,6 +49,7 @@ class PasswordWriter(QXmlStreamWriter):
         @param logins dictionary with login data (user name, password)
         @param forms list of forms data (list of LoginForm)
         @param nevers list of URLs to never store data for (list of strings)
+        @return flag indicating success (boolean)
         """
         self.writeStartDocument()
         self.writeDTD("<!DOCTYPE passwords>")
