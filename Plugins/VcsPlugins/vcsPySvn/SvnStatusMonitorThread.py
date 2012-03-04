@@ -42,6 +42,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         <ul>
             <li>"A" path was added but not yet comitted</li>
             <li>"M" path has local changes</li>
+            <li>"O" path was removed</li>
             <li>"R" path was deleted and then re-added</li>
             <li>"U" path needs an update</li>
             <li>"Z" path contains a conflict</li>
@@ -83,6 +84,9 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                 elif file.text_status == pysvn.wc_status_kind.conflicted or \
                    file.prop_status == pysvn.wc_status_kind.conflicted:
                     status = "Z"
+                elif file.text_status == pysvn.wc_status_kind.deleted or \
+                   file.prop_status == pysvn.wc_status_kind.deleted:
+                    status = "O"
                 elif file.text_status == pysvn.wc_status_kind.modified or \
                    file.prop_status == pysvn.wc_status_kind.modified:
                     status = "M"
