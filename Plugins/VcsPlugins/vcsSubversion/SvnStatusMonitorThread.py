@@ -47,6 +47,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         <ul>
             <li>"A" path was added but not yet comitted</li>
             <li>"M" path has local changes</li>
+            <li>"O" path was removed</li>
             <li>"R" path was deleted and then re-added</li>
             <li>"U" path needs an update</li>
             <li>"Z" path contains a conflict</li>
@@ -83,7 +84,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                         path = self.rx_status2.cap(5).strip()
                     else:
                         continue
-                    if flags[0] in "ACMR" or \
+                    if flags[0] in "ACDMR" or \
                        (flags[0] == " " and flags[7] == "*"):
                         if flags[7] == "*":
                             status = "U"
@@ -91,6 +92,8 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                             status = flags[0]
                         if status == "C":
                             status = "Z"    # give it highest priority
+                        elif status == "D":
+                            status = "O"
                         if status == "U":
                             self.shouldUpdate = True
                         name = path
