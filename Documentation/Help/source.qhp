@@ -4526,7 +4526,6 @@
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showFeedsManager" id="HelpWindow.__showFeedsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showFeedsManager" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
-      <keyword name="HelpWindow.__showHistoryMenu" id="HelpWindow.__showHistoryMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showHistoryMenu" />
       <keyword name="HelpWindow.__showIndexWindow" id="HelpWindow.__showIndexWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showIndexWindow" />
       <keyword name="HelpWindow.__showInstallationError" id="HelpWindow.__showInstallationError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showInstallationError" />
       <keyword name="HelpWindow.__showNetworkMonitor" id="HelpWindow.__showNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNetworkMonitor" />
