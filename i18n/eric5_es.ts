@@ -14873,7 +14873,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Nueva Ventana&lt;/b&gt;&lt;p&gt;Abre una nueva ventana del navegador de ayuda.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1742"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1726"/>
         <source>Open File</source>
         <translation>Abrir archivo</translation>
     </message>
@@ -15391,7 +15391,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1742"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1726"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation>Archivos de Ayuda (*.html *.htm);;Archivos PDF (*.pdf);;Archivos CHM (*.chm);;Todos los Archivos (*)</translation>
     </message>
@@ -15566,7 +15566,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Filtrado por:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2277"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2261"/>
         <source>Could not find an associated content.</source>
         <translation>No se ha podido encontrar un contenido asociado.</translation>
     </message>
@@ -15631,22 +15631,22 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Reindexar Documentación&lt;/b&gt;&lt;p&gt;Reindexa el conjunto de documentación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2386"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2370"/>
         <source>Updating search index</source>
         <translation>Actualizando índice de búsqueda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2438"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2422"/>
         <source>Looking for Documentation...</source>
         <translation>Buscando Documentación...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2468"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
         <source>Unfiltered</source>
         <translation>Sin filtrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2471"/>
         <source>Help Engine</source>
         <translation>Motor de Ayuda</translation>
     </message>
@@ -15666,7 +15666,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Navegación Privada&lt;/b&gt;&lt;p&gt;Habilita navegación privada. En este modo, el historial no queda registrado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2019"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2003"/>
         <source>Full Screen</source>
         <translation>Pantalla Completa</translation>
     </message>
@@ -15989,7 +15989,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Todas las Pestañas a Marcadores...&lt;/b&gt;&lt;p&gt;Abrir un diálogo para añadir una nueva carpeta de marcadores para todas las pestañas abiertas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1857"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1841"/>
         <source>Saved Tabs</source>
         <translation>Pestañas Guardadas</translation>
     </message>
@@ -16133,7 +16133,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar las suscripciones y reglas de AdBlock&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2447"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
     </message>
@@ -16178,7 +16178,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Configurar Motor&amp;es de Búsqueda...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2048"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2032"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;¿Está seguro de que desea activar la navegación privada?&lt;/b&gt;&lt;p&gt;Cuando la navegación privada ha sido activada, las páginas web no se añaden al historial, las búsquedas no se añaden a la lista de búsquedas recientes, y los iconos de website y las cookies no son almacenados. El almacenamiento offline de HTML5 tambien es desactivado. Hasta que la ventana sea cerrada, todavía se pueden utilizar los botones de Atrás y Adelante para retornar a las páginas web que hayan sido navegadas.&lt;/p&gt;</translation>
     </message>
@@ -16193,37 +16193,37 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation type="obsolete">Agente de Usuario</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2809"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2810"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2811"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2813"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2814"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2836"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
         <source>Default Encoding</source>
         <translation>Codificación por Defecto</translation>
     </message>
@@ -16283,12 +16283,12 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Analizar sitio actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
         <source>VirusTotal Scan</source>
         <translation>Análisis con VirusTotal</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El análisis con VirusTotal no se ha podido programar.&lt;p&gt;
@@ -16394,12 +16394,12 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Monitor de Red...&lt;/b&gt;&lt;p&gt;Muestra el diálogo de monitor de red.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1777"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1761"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navegador Web de eric5- {0}&lt;/b&gt;&lt;p&gt;El Navegador Web de eric5 is una combación de navegador de archivos de ayuda y de HTML. Es parte del conjunto de herramientas de desarrollo de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2025"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2009"/>
         <source>Restore Window</source>
         <translation>Restaurar Ventana</translation>
     </message>
@@ -22174,27 +22174,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>HistoryManager</name>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="361"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="364"/>
         <source>Loading History</source>
         <translation>Cargando Historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="464"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
         <source>Saving History</source>
         <translation>Guardando Historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="438"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="441"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido abrir el archivo de historial &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="458"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="461"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Error al eliminar el archivo de historial antiguo &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="464"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Error al copiar el nuevo archivo de historial sobre el antiguo (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
@@ -22202,24 +22202,29 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>HistoryMenu</name>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="275"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="325"/>
         <source>Show All History...</source>
         <translation>Mostrar Todo el Historial...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="278"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
         <source>Clear History...</source>
         <translation>Borrar Historial...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="307"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
         <source>Clear History</source>
         <translation>Borrar Historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="307"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
         <source>Do you want to clear the history?</source>
         <translation>¿Desea eliminar el historial?</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="319"/>
+        <source>Most Visited</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -40766,17 +40771,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>SvnStatusMonitorThread</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="108"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="111"/>
         <source>Subversion status checked successfully (using svn)</source>
         <translation>Estado de Subversion verificado satisfactoriamente (utilizando svn)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="122"/>
         <source>Could not start the Subversion process.</source>
         <translation>No se pudo ejecutar el proceso Subversion.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="108"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="112"/>
         <source>Subversion status checked successfully (using pysvn)</source>
         <translation>Estado de Subversion verificado satisfactoriamente (utilizando pysvn)</translation>
     </message>
@@ -45563,12 +45568,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation type="obsolete">&lt;p&gt;Los datos de Agente de usuario no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="108"/>
         <source>Loading user agent data</source>
         <translation>Cargando datos de agente de usuario</translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="108"/>
         <source>&lt;p&gt;User agent data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los datos de Agente de usuario no se han podido cargar de &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
@@ -45578,7 +45583,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="107"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="83"/>
         <source>Error when loading user agent data on line {0}, column {1}:
 {2}</source>
         <translation type="unfinished"></translation>

@@ -14545,7 +14545,7 @@ You have %n tabs open.</numerusform>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2447"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14617,7 +14617,7 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1742"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1726"/>
         <source>Open File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15397,7 +15397,7 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2019"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2003"/>
         <source>Full Screen</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15832,77 +15832,77 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1742"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1726"/>
         <source>Help Files (*.html *.htm);;PDF Files (*.pdf);;CHM Files (*.chm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1857"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1841"/>
         <source>Saved Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2048"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2032"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2277"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2261"/>
         <source>Could not find an associated content.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2386"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2370"/>
         <source>Updating search index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2438"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2422"/>
         <source>Looking for Documentation...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2468"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
         <source>Unfiltered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2487"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2471"/>
         <source>Help Engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2809"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2810"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
         <source>Windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2811"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2812"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
         <source>Unicode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2813"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2814"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2836"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
         <source>Default Encoding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15962,12 +15962,12 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3087"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16067,12 +16067,12 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1777"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1761"/>
         <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2025"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2009"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21672,27 +21672,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryManager</name>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="361"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="364"/>
         <source>Loading History</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="438"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="441"/>
         <source>&lt;p&gt;Unable to open history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="464"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
         <source>Saving History</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="458"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="461"/>
         <source>&lt;p&gt;Error removing old history file &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryManager.py" line="464"/>
+        <location filename="Helpviewer/History/HistoryManager.py" line="467"/>
         <source>&lt;p&gt;Error moving new history file over old one (&lt;b&gt;{0}&lt;/b&gt;).&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21700,23 +21700,28 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryMenu</name>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="275"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="325"/>
         <source>Show All History...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="278"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
         <source>Clear History...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="307"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
         <source>Clear History</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="307"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
         <source>Do you want to clear the history?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="319"/>
+        <source>Most Visited</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -39742,17 +39747,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>SvnStatusMonitorThread</name>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="108"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="111"/>
         <source>Subversion status checked successfully (using svn)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="119"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusMonitorThread.py" line="122"/>
         <source>Could not start the Subversion process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="108"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="112"/>
         <source>Subversion status checked successfully (using pysvn)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44449,12 +44454,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="108"/>
         <source>Loading user agent data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="132"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="108"/>
         <source>&lt;p&gt;User agent data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44464,7 +44469,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="107"/>
+        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="83"/>
         <source>Error when loading user agent data on line {0}, column {1}:
 {2}</source>
         <translation type="unfinished"></translation>

@@ -211,11 +211,12 @@ class HistoryManager(QWebHistoryInterface):
         @param url URL to be added (string)
         """
         cleanurl = QUrl(url)
-        cleanurl.setPassword("")
-        if cleanurl.host():
-            cleanurl.setHost(cleanurl.host().lower())
-        itm = HistoryEntry(cleanurl.toString(), QDateTime.currentDateTime())
-        self._addHistoryEntry(itm)
+        if cleanurl.scheme() not in ["eric", "about"]:
+            cleanurl.setPassword("")
+            if cleanurl.host():
+                cleanurl.setHost(cleanurl.host().lower())
+            itm = HistoryEntry(cleanurl.toString(), QDateTime.currentDateTime())
+            self._addHistoryEntry(itm)
     
     def updateHistoryEntry(self, url, title):
         """
@@ -224,14 +225,16 @@ class HistoryManager(QWebHistoryInterface):
         @param url URL of the entry to update (string)
         @param title title of the entry to update (string)
         """
-        for index in range(len(self.__history)):
-            if url == self.__history[index].url:
-                self.__history[index].title = title
-                self.__saveTimer.changeOccurred()
-                if not self.__lastSavedUrl:
-                    self.__lastSavedUrl = self.__history[index].url
-                self.entryUpdated.emit(index)
-                break
+        cleanurl = QUrl(url)
+        if cleanurl.scheme() not in ["eric", "about"]:
+            for index in range(len(self.__history)):
+                if url == self.__history[index].url:
+                    self.__history[index].title = title
+                    self.__saveTimer.changeOccurred()
+                    if not self.__lastSavedUrl:
+                        self.__lastSavedUrl = self.__history[index].url
+                    self.entryUpdated.emit(index)
+                    break
     
     def removeHistoryEntry(self, url, title=""):
         """

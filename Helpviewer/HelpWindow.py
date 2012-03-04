@@ -1640,22 +1640,6 @@ class HelpWindow(QMainWindow):
         """
         QWhatsThis.enterWhatsThisMode()
         
-    def __showHistoryMenu(self):
-        """
-        Private slot called in order to show the history menu.
-        """
-        self.historyMenu.clear()
-        self.historyMenu.addAction(self.clearHistoryAct)
-        self.clearHistoryAct.setData(-1)
-        self.historyMenu.addSeparator()
-        idx = 0
-        for hist in self.mHistory:
-            act = self.historyMenu.addAction(
-                Utilities.compactPath(hist, self.maxMenuFilePathLen))
-            act.setData(idx)
-            idx += 1
-            act.setIcon(HelpWindow.__getWebIcon(QUrl(hist)))
-        
     def __titleChanged(self, browser, title):
         """
         Private slot called to handle a change of s browser's title.

@@ -2285,6 +2285,12 @@ eric5.Helpviewer.History.HistoryMenu.HistoryMenuModel.mimeData?4(indexes)
 eric5.Helpviewer.History.HistoryMenu.HistoryMenuModel.parent?4(index)
 eric5.Helpviewer.History.HistoryMenu.HistoryMenuModel.rowCount?4(parent=QModelIndex())
 eric5.Helpviewer.History.HistoryMenu.HistoryMenuModel?1(sourceModel, parent=None)
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenu.newUrl?7
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenu.openUrl?7
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenu.prePopulated?4()
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenu?1(count, parent=None)
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenuModel.lessThan?4(left, right)
+eric5.Helpviewer.History.HistoryMenu.HistoryMostVisitedMenuModel?1(sourceModel, parent=None)
 eric5.Helpviewer.History.HistoryModel.HistoryModel.DateRole?7
 eric5.Helpviewer.History.HistoryModel.HistoryModel.DateTimeRole?7
 eric5.Helpviewer.History.HistoryModel.HistoryModel.MaxRole?7

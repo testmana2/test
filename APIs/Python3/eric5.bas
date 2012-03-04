@@ -298,6 +298,8 @@ HistoryManager QWebHistoryInterface
 HistoryMenu E5ModelMenu
 HistoryMenuModel QAbstractProxyModel
 HistoryModel QAbstractTableModel
+HistoryMostVisitedMenu E5ModelMenu
+HistoryMostVisitedMenuModel QSortFilterProxyModel
 HistoryTreeModel QAbstractProxyModel
 IconEditCommand QUndoCommand
 IconEditorGrid QWidget

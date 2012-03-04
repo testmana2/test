@@ -36,6 +36,12 @@ Module implementing the history menu.
 </tr><tr>
 <td><a href="#HistoryMenuModel">HistoryMenuModel</a></td>
 <td>Class implementing a model for the history menu.</td>
+</tr><tr>
+<td><a href="#HistoryMostVisitedMenu">HistoryMostVisitedMenu</a></td>
+<td>Class implementing the most visited history menu.</td>
+</tr><tr>
+<td><a href="#HistoryMostVisitedMenuModel">HistoryMostVisitedMenuModel</a></td>
+<td>Class implementing a model to show the most visited history entries.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -339,6 +345,146 @@ index of parent (QModelIndex)
 <dt>Returns:</dt>
 <dd>
 number of rows (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="HistoryMostVisitedMenu" ID="HistoryMostVisitedMenu"></a>
+<h2>HistoryMostVisitedMenu</h2>
+<p>
+    Class implementing the most visited history menu.
+</p><h3>Signals</h3>
+<dl>
+<dt>newUrl(QUrl, str)</dt>
+<dd>
+emitted to open a URL in a new tab
+</dd><dt>openUrl(QUrl, str)</dt>
+<dd>
+emitted to open a URL in the current tab
+</dd>
+</dl>
+<h3>Derived from</h3>
+E5ModelMenu
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HistoryMostVisitedMenu.__init__">HistoryMostVisitedMenu</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HistoryMostVisitedMenu.__activated">__activated</a></td>
+<td>Private slot handling the activated signal.</td>
+</tr><tr>
+<td><a href="#HistoryMostVisitedMenu.prePopulated">prePopulated</a></td>
+<td>Public method to add any actions before the tree.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HistoryMostVisitedMenu.__init__" ID="HistoryMostVisitedMenu.__init__"></a>
+<h4>HistoryMostVisitedMenu (Constructor)</h4>
+<b>HistoryMostVisitedMenu</b>(<i>count, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>count</i></dt>
+<dd>
+maximum number of entries to be shown (integer)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HistoryMostVisitedMenu.__activated" ID="HistoryMostVisitedMenu.__activated"></a>
+<h4>HistoryMostVisitedMenu.__activated</h4>
+<b>__activated</b>(<i>idx</i>)
+<p>
+        Private slot handling the activated signal.
+</p><dl>
+<dt><i>idx</i></dt>
+<dd>
+index of the activated item (QModelIndex)
+</dd>
+</dl><a NAME="HistoryMostVisitedMenu.prePopulated" ID="HistoryMostVisitedMenu.prePopulated"></a>
+<h4>HistoryMostVisitedMenu.prePopulated</h4>
+<b>prePopulated</b>(<i></i>)
+<p>
+        Public method to add any actions before the tree.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating if any actions were added (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="HistoryMostVisitedMenuModel" ID="HistoryMostVisitedMenuModel"></a>
+<h2>HistoryMostVisitedMenuModel</h2>
+<p>
+    Class implementing a model to show the most visited history entries.
+</p>
+<h3>Derived from</h3>
+QSortFilterProxyModel
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HistoryMostVisitedMenuModel.__init__">HistoryMostVisitedMenuModel</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HistoryMostVisitedMenuModel.lessThan">lessThan</a></td>
+<td>Protected method used to sort the displayed items.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HistoryMostVisitedMenuModel.__init__" ID="HistoryMostVisitedMenuModel.__init__"></a>
+<h4>HistoryMostVisitedMenuModel (Constructor)</h4>
+<b>HistoryMostVisitedMenuModel</b>(<i>sourceModel, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>sourceModel</i></dt>
+<dd>
+reference to the source model (QAbstractItemModel)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
+</dd>
+</dl><a NAME="HistoryMostVisitedMenuModel.lessThan" ID="HistoryMostVisitedMenuModel.lessThan"></a>
+<h4>HistoryMostVisitedMenuModel.lessThan</h4>
+<b>lessThan</b>(<i>left, right</i>)
+<p>
+        Protected method used to sort the displayed items.
+</p><dl>
+<dt><i>left</i></dt>
+<dd>
+index of left item (QModelIndex)
+</dd><dt><i>right</i></dt>
+<dd>
+index of right item (QModelIndex)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+true, if left is less than right (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

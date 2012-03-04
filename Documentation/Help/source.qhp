@@ -4653,7 +4653,6 @@
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showFeedsManager" id="HelpWindow.__showFeedsManager" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showFeedsManager" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
-      <keyword name="HelpWindow.__showHistoryMenu" id="HelpWindow.__showHistoryMenu" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showHistoryMenu" />
       <keyword name="HelpWindow.__showIndexWindow" id="HelpWindow.__showIndexWindow" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showIndexWindow" />
       <keyword name="HelpWindow.__showInstallationError" id="HelpWindow.__showInstallationError" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showInstallationError" />
       <keyword name="HelpWindow.__showNetworkMonitor" id="HelpWindow.__showNetworkMonitor" ref="eric5.Helpviewer.HelpWindow.html#HelpWindow.__showNetworkMonitor" />
@@ -5631,6 +5630,13 @@
       <keyword name="HistoryModel.historyReset" id="HistoryModel.historyReset" ref="eric5.Helpviewer.History.HistoryModel.html#HistoryModel.historyReset" />
       <keyword name="HistoryModel.removeRows" id="HistoryModel.removeRows" ref="eric5.Helpviewer.History.HistoryModel.html#HistoryModel.removeRows" />
       <keyword name="HistoryModel.rowCount" id="HistoryModel.rowCount" ref="eric5.Helpviewer.History.HistoryModel.html#HistoryModel.rowCount" />
+      <keyword name="HistoryMostVisitedMenu" id="HistoryMostVisitedMenu" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenu" />
+      <keyword name="HistoryMostVisitedMenu (Constructor)" id="HistoryMostVisitedMenu (Constructor)" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenu.__init__" />
+      <keyword name="HistoryMostVisitedMenu.__activated" id="HistoryMostVisitedMenu.__activated" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenu.__activated" />
+      <keyword name="HistoryMostVisitedMenu.prePopulated" id="HistoryMostVisitedMenu.prePopulated" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenu.prePopulated" />
+      <keyword name="HistoryMostVisitedMenuModel" id="HistoryMostVisitedMenuModel" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenuModel" />
+      <keyword name="HistoryMostVisitedMenuModel (Constructor)" id="HistoryMostVisitedMenuModel (Constructor)" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenuModel.__init__" />
+      <keyword name="HistoryMostVisitedMenuModel.lessThan" id="HistoryMostVisitedMenuModel.lessThan" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMostVisitedMenuModel.lessThan" />
       <keyword name="HistoryTreeModel" id="HistoryTreeModel" ref="eric5.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel" />
       <keyword name="HistoryTreeModel (Constructor)" id="HistoryTreeModel (Constructor)" ref="eric5.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.__init__" />
       <keyword name="HistoryTreeModel (Module)" id="HistoryTreeModel (Module)" ref="eric5.Helpviewer.History.HistoryTreeModel.html" />

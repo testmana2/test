@@ -10,7 +10,7 @@ Module implementing the history menu.
 import sys
 
 from PyQt4.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex
-from PyQt4.QtGui import QAbstractProxyModel
+from PyQt4.QtGui import QAbstractProxyModel, QSortFilterProxyModel
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 from E5Gui import E5MessageBox
@@ -19,6 +19,7 @@ import Helpviewer.HelpWindow
 
 from .HistoryModel import HistoryModel
 from .HistoryDialog import HistoryDialog
+from .HistoryFilterModel import HistoryFilterModel
 
 import UI.PixmapCache
 
@@ -100,7 +101,6 @@ class HistoryMenuModel(QAbstractProxyModel):
         @param sourceIndex reference to a source model index (QModelIndex)
         @return proxy model index (QModelIndex)
         """
-        assert False
         sourceRow = self.__treeModel.mapToSource(sourceIndex).row()
         return self.createIndex(sourceIndex.row(), sourceIndex.column(), sourceRow)
     
@@ -202,6 +202,47 @@ class HistoryMenuModel(QAbstractProxyModel):
         return mdata
 
 
+class HistoryMostVisitedMenuModel(QSortFilterProxyModel):
+    """
+    Class implementing a model to show the most visited history entries.
+    """
+    def __init__(self, sourceModel, parent=None):
+        """
+        Constructor
+        
+        @param sourceModel reference to the source model (QAbstractItemModel)
+        @param parent reference to the parent object (QObject)
+        """
+        super().__init__(parent)
+        
+        self.setDynamicSortFilter(True)
+        self.setSourceModel(sourceModel)
+    
+    def lessThan(self, left, right):
+        """
+        Protected method used to sort the displayed items.
+        
+        @param left index of left item (QModelIndex)
+        @param right index of right item (QModelIndex)
+        @return true, if left is less than right (boolean)
+        """
+        frequency_L = \
+            self.sourceModel().data(left, HistoryFilterModel.FrequencyRole)
+        dateTime_L = \
+            self.sourceModel().data(left, HistoryModel.DateTimeRole)
+        frequency_R = \
+            self.sourceModel().data(right, HistoryFilterModel.FrequencyRole)
+        dateTime_R = \
+            self.sourceModel().data(right, HistoryModel.DateTimeRole)
+        
+        # Sort results in descending frequency-derived score. If frequencies are equal,
+        # sort on most recently viewed
+        if frequency_R == frequency_L:
+            return dateTime_R < dateTime_L
+        
+        return frequency_R < frequency_L
+
+
 class HistoryMenu(E5ModelMenu):
     """
     Class implementing the history menu.
@@ -223,6 +264,7 @@ class HistoryMenu(E5ModelMenu):
         self.__historyManager = None
         self.__historyMenuModel = None
         self.__initialActions = []
+        self.__mostVisitedMenu = None
         
         self.setMaxRows(7)
         
@@ -272,6 +314,14 @@ class HistoryMenu(E5ModelMenu):
         if len(self.__historyManager.history()) > 0:
             self.addSeparator()
         
+        if self.__mostVisitedMenu is None:
+            self.__mostVisitedMenu = HistoryMostVisitedMenu(10, self)
+            self.__mostVisitedMenu.setTitle(self.trUtf8("Most Visited"))
+            self.__mostVisitedMenu.openUrl.connect(self.openUrl)
+            self.__mostVisitedMenu.newUrl.connect(self.newUrl)
+        self.addMenu(self.__mostVisitedMenu)
+        self.addSeparator()
+        
         act = self.addAction(UI.PixmapCache.getIcon("history.png"),
                              self.trUtf8("Show All History..."))
         act.triggered[()].connect(self.__showHistoryDialog)
@@ -308,3 +358,60 @@ class HistoryMenu(E5ModelMenu):
                 self.trUtf8("Clear History"),
                 self.trUtf8("""Do you want to clear the history?""")):
             self.__historyManager.clear()
+
+
+class HistoryMostVisitedMenu(E5ModelMenu):
+    """
+    Class implementing the most visited history menu.
+    
+    @signal openUrl(QUrl, str) emitted to open a URL in the current tab
+    @signal newUrl(QUrl, str) emitted to open a URL in a new tab
+    """
+    openUrl = pyqtSignal(QUrl, str)
+    newUrl = pyqtSignal(QUrl, str)
+    
+    def __init__(self, count, parent=None):
+        """
+        Constructor
+        
+        @param count maximum number of entries to be shown (integer)
+        @param parent reference to the parent widget (QWidget)
+        """
+        E5ModelMenu.__init__(self, parent)
+        
+        self.__historyMenuModel = None
+        
+        self.setMaxRows(count + 1)
+        
+        self.activated.connect(self.__activated)
+        self.setStatusBarTextRole(HistoryModel.UrlStringRole)
+    
+    def __activated(self, idx):
+        """
+        Private slot handling the activated signal.
+        
+        @param idx index of the activated item (QModelIndex)
+        """
+        if self._keyboardModifiers & Qt.ControlModifier:
+            self.newUrl.emit(
+                      idx.data(HistoryModel.UrlRole),
+                      idx.data(HistoryModel.TitleRole))
+        else:
+            self.openUrl.emit(
+                      idx.data(HistoryModel.UrlRole),
+                      idx.data(HistoryModel.TitleRole))
+    
+    def prePopulated(self):
+        """
+        Public method to add any actions before the tree.
+       
+        @return flag indicating if any actions were added (boolean)
+        """
+        if self.__historyMenuModel is None:
+            historyManager = Helpviewer.HelpWindow.HelpWindow.historyManager()
+            self.__historyMenuModel = \
+                HistoryMostVisitedMenuModel(historyManager.historyFilterModel(), self)
+            self.setModel(self.__historyMenuModel)
+        self.__historyMenuModel.sort(0)
+        
+        return False
