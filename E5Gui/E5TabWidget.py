@@ -241,7 +241,9 @@ class E5TabWidget(QTabWidget):
             rect = _tabbar.tabRect(index)
             if rect.contains(point):
                 self.customTabContextMenuRequested.emit(_tabbar.mapToParent(point), index)
-                break
+                return
+        
+        self.customTabContextMenuRequested.emit(_tabbar.mapToParent(point), -1)
     
     def selectTab(self, pos):
         """

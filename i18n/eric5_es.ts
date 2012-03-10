@@ -13930,77 +13930,77 @@ selección completa.&lt;/li&gt;
 <context>
     <name>HelpTabWidget</name>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="88"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="92"/>
         <source>Show a navigation menu</source>
         <translation>Mostrar un menú de navegación</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="96"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>Close the current help window</source>
         <translation>Cierra la ventana actual</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="128"/>
         <source>Open a new help window tab</source>
         <translation>Abre una nueva pestaña con la ventana de ayuda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="126"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="142"/>
         <source>New Tab</source>
         <translation>Nueva pestaña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
         <source>Move Left</source>
         <translation>Mover a la Izquierda</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
         <source>Move Right</source>
         <translation>Mover a la Derecha</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
         <source>Duplicate Page</source>
         <translation>Duplicar Página</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="157"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="144"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="160"/>
         <source>Close Others</source>
         <translation>Cerrar Otras</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="179"/>
         <source>Close All</source>
         <translation>Cerrar todo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="165"/>
         <source>Print Preview</source>
         <translation>Presentación Preliminar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="151"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="167"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="169"/>
         <source>Print as PDF</source>
         <translation>Imprimir como PDF</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="156"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="183"/>
         <source>Bookmark All Tabs</source>
         <translation>Todas las Pestañas a Marcadores</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="277"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="322"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -14010,32 +14010,32 @@ selección completa.&lt;/li&gt;
         <translation type="obsolete">Navegador Web de Eric</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="532"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="588"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="629"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="685"/>
         <source>Loading...</source>
         <translation>Cargando...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="648"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="704"/>
         <source>Finished loading</source>
         <translation>Carga terminada</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="706"/>
         <source>Failed to load</source>
         <translation>Ha fallado la carga</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="742"/>
         <source>Are you sure you want to close the window?</source>
         <translation>¿Realmente desea cerrar la ventana?</translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="742"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -14046,24 +14046,49 @@ Tiene %n pestañas abiertas.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="693"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="749"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="696"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="752"/>
         <source>&amp;Quit</source>
         <translation>&amp;Salir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="698"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="754"/>
         <source>C&amp;lose Current Tab</source>
         <translation>Cerrar Pestaña Actua&amp;l</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="532"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="588"/>
         <source>eric5 Web Browser</source>
         <translation>Navegador Web de eric5</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="103"/>
+        <source>Show a navigation menu for closed tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="181"/>
+        <source>Reload All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="186"/>
+        <source>Restore Closed Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="906"/>
+        <source>Restore All Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="908"/>
+        <source>Clear List</source>
+        <translation type="unfinished">Borrar Lista</translation>
     </message>
 </context>
 <context>
@@ -22202,29 +22227,44 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>HistoryMenu</name>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="325"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="337"/>
         <source>Show All History...</source>
         <translation>Mostrar Todo el Historial...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="340"/>
         <source>Clear History...</source>
         <translation>Borrar Historial...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="369"/>
         <source>Clear History</source>
         <translation>Borrar Historial</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="369"/>
         <source>Do you want to clear the history?</source>
         <translation>¿Desea eliminar el historial?</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="319"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
         <source>Most Visited</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="273"/>
+        <source>Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="390"/>
+        <source>Restore All Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="392"/>
+        <source>Clear List</source>
+        <translation type="unfinished">Borrar Lista</translation>
     </message>
 </context>
 <context>

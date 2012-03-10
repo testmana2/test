@@ -78,6 +78,12 @@ E5TabWidget
 <td><a href="#HelpTabWidget.__init__">HelpTabWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.__aboutToShowClosedTabsMenu">__aboutToShowClosedTabsMenu</a></td>
+<td>Private slot to populate the closed tabs menu.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.__closedTabAvailable">__closedTabAvailable</a></td>
+<td>Private slot to handle changes of the availability of closed tabs.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.__currentChanged">__currentChanged</a></td>
 <td>Private slot to handle an index change.</td>
 </tr><tr>
@@ -162,6 +168,12 @@ E5TabWidget
 <td><a href="#HelpTabWidget.browsers">browsers</a></td>
 <td>Public method to get a list of references to all browsers.</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.canRestoreClosedTab">canRestoreClosedTab</a></td>
+<td>Public method to check, if closed tabs can be restored.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.clearClosedTabsList">clearClosedTabsList</a></td>
+<td>Public slot to clear the list of closed tabs.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.closeAllBrowsers">closeAllBrowsers</a></td>
 <td>Public slot called to handle the close all action.</td>
 </tr><tr>
@@ -170,6 +182,9 @@ E5TabWidget
 </tr><tr>
 <td><a href="#HelpTabWidget.closeBrowserAt">closeBrowserAt</a></td>
 <td>Public slot to close a browser based on it's index.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.closedTabsManager">closedTabsManager</a></td>
+<td>Public slot to get a reference to the closed tabs manager.</td>
 </tr><tr>
 <td><a href="#HelpTabWidget.currentBrowser">currentBrowser</a></td>
 <td>Public method to get a reference to the current browser.</td>
@@ -195,6 +210,15 @@ E5TabWidget
 <td><a href="#HelpTabWidget.printPreviewBrowser">printPreviewBrowser</a></td>
 <td>Public slot called to show a print preview of the displayed file.</td>
 </tr><tr>
+<td><a href="#HelpTabWidget.reloadAllBrowsers">reloadAllBrowsers</a></td>
+<td>Public slot to reload all browsers.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.restoreAllClosedTabs">restoreAllClosedTabs</a></td>
+<td>Public slot to restore all closed tabs.</td>
+</tr><tr>
+<td><a href="#HelpTabWidget.restoreClosedTab">restoreClosedTab</a></td>
+<td>Public slot to restore the most recently closed tab.</td>
+</tr><tr>
 <td><a href="#HelpTabWidget.shallShutDown">shallShutDown</a></td>
 <td>Public method to check, if the application should be shut down.</td>
 </tr><tr>
@@ -215,6 +239,21 @@ E5TabWidget
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HelpTabWidget.__aboutToShowClosedTabsMenu" ID="HelpTabWidget.__aboutToShowClosedTabsMenu"></a>
+<h4>HelpTabWidget.__aboutToShowClosedTabsMenu</h4>
+<b>__aboutToShowClosedTabsMenu</b>(<i></i>)
+<p>
+        Private slot to populate the closed tabs menu.
+</p><a NAME="HelpTabWidget.__closedTabAvailable" ID="HelpTabWidget.__closedTabAvailable"></a>
+<h4>HelpTabWidget.__closedTabAvailable</h4>
+<b>__closedTabAvailable</b>(<i>avail</i>)
+<p>
+        Private slot to handle changes of the availability of closed tabs.
+</p><dl>
+<dt><i>avail</i></dt>
+<dd>
+flag indicating the availability of closed tabs (boolean)
 </dd>
 </dl><a NAME="HelpTabWidget.__currentChanged" ID="HelpTabWidget.__currentChanged"></a>
 <h4>HelpTabWidget.__currentChanged</h4>
@@ -450,7 +489,22 @@ reference to the indexed browser (HelpBrowser)
 <dd>
 list of references to browsers (list of HelpBrowser)
 </dd>
-</dl><a NAME="HelpTabWidget.closeAllBrowsers" ID="HelpTabWidget.closeAllBrowsers"></a>
+</dl><a NAME="HelpTabWidget.canRestoreClosedTab" ID="HelpTabWidget.canRestoreClosedTab"></a>
+<h4>HelpTabWidget.canRestoreClosedTab</h4>
+<b>canRestoreClosedTab</b>(<i></i>)
+<p>
+        Public method to check, if closed tabs can be restored.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that closed tabs can be restored (boolean)
+</dd>
+</dl><a NAME="HelpTabWidget.clearClosedTabsList" ID="HelpTabWidget.clearClosedTabsList"></a>
+<h4>HelpTabWidget.clearClosedTabsList</h4>
+<b>clearClosedTabsList</b>(<i></i>)
+<p>
+        Public slot to clear the list of closed tabs.
+</p><a NAME="HelpTabWidget.closeAllBrowsers" ID="HelpTabWidget.closeAllBrowsers"></a>
 <h4>HelpTabWidget.closeAllBrowsers</h4>
 <b>closeAllBrowsers</b>(<i></i>)
 <p>
@@ -469,6 +523,16 @@ list of references to browsers (list of HelpBrowser)
 <dt><i>index</i></dt>
 <dd>
 index of browser to close (integer)
+</dd>
+</dl><a NAME="HelpTabWidget.closedTabsManager" ID="HelpTabWidget.closedTabsManager"></a>
+<h4>HelpTabWidget.closedTabsManager</h4>
+<b>closedTabsManager</b>(<i></i>)
+<p>
+        Public slot to get a reference to the closed tabs manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the closed tabs manager (ClosedTabsManager)
 </dd>
 </dl><a NAME="HelpTabWidget.currentBrowser" ID="HelpTabWidget.currentBrowser"></a>
 <h4>HelpTabWidget.currentBrowser</h4>
@@ -502,7 +566,7 @@ dictionary with tab id as key and host/namespace as value
 </dd>
 </dl><a NAME="HelpTabWidget.newBrowser" ID="HelpTabWidget.newBrowser"></a>
 <h4>HelpTabWidget.newBrowser</h4>
-<b>newBrowser</b>(<i>link=None, requestData=None</i>)
+<b>newBrowser</b>(<i>link=None, requestData=None, position=-1</i>)
 <p>
         Public method to create a new web browser tab.
 </p><dl>
@@ -513,6 +577,10 @@ link to be shown (string or QUrl)
 <dd>
 tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
+</dd><dt><i>position=</i></dt>
+<dd>
+position to create the new tab at or -1 to add it to the end
+            (integer)
 </dd>
 </dl><a NAME="HelpTabWidget.preferencesChanged" ID="HelpTabWidget.preferencesChanged"></a>
 <h4>HelpTabWidget.preferencesChanged</h4>
@@ -549,7 +617,22 @@ reference to the browser to be printed (HelpBrowser)
 <dd>
 reference to the browser to be printed (HelpBrowserWV)
 </dd>
-</dl><a NAME="HelpTabWidget.shallShutDown" ID="HelpTabWidget.shallShutDown"></a>
+</dl><a NAME="HelpTabWidget.reloadAllBrowsers" ID="HelpTabWidget.reloadAllBrowsers"></a>
+<h4>HelpTabWidget.reloadAllBrowsers</h4>
+<b>reloadAllBrowsers</b>(<i></i>)
+<p>
+        Public slot to reload all browsers.
+</p><a NAME="HelpTabWidget.restoreAllClosedTabs" ID="HelpTabWidget.restoreAllClosedTabs"></a>
+<h4>HelpTabWidget.restoreAllClosedTabs</h4>
+<b>restoreAllClosedTabs</b>(<i></i>)
+<p>
+        Public slot to restore all closed tabs.
+</p><a NAME="HelpTabWidget.restoreClosedTab" ID="HelpTabWidget.restoreClosedTab"></a>
+<h4>HelpTabWidget.restoreClosedTab</h4>
+<b>restoreClosedTab</b>(<i></i>)
+<p>
+        Public slot to restore the most recently closed tab.
+</p><a NAME="HelpTabWidget.shallShutDown" ID="HelpTabWidget.shallShutDown"></a>
 <h4>HelpTabWidget.shallShutDown</h4>
 <b>shallShutDown</b>(<i></i>)
 <p>

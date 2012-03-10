@@ -10,7 +10,7 @@ Module implementing the history menu.
 import sys
 
 from PyQt4.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex
-from PyQt4.QtGui import QAbstractProxyModel, QSortFilterProxyModel
+from PyQt4.QtGui import QAbstractProxyModel, QSortFilterProxyModel, QMenu
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 from E5Gui import E5MessageBox
@@ -253,18 +253,27 @@ class HistoryMenu(E5ModelMenu):
     openUrl = pyqtSignal(QUrl, str)
     newUrl = pyqtSignal(QUrl, str)
     
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, tabWidget=None):
         """
         Constructor
         
         @param parent reference to the parent widget (QWidget)
+        @param tabWidget reference to the tab widget managing the browser
+            tabs (HelpTabWidget
         """
         E5ModelMenu.__init__(self, parent)
+        
+        self.__tabWidget = tabWidget
         
         self.__historyManager = None
         self.__historyMenuModel = None
         self.__initialActions = []
         self.__mostVisitedMenu = None
+        
+        self.__closedTabsMenu = QMenu(self.trUtf8("Closed Tabs"))
+        self.__closedTabsMenu.aboutToShow.connect(self.__aboutToShowClosedTabsMenu)
+        self.__tabWidget.closedTabsManager().closedTabAvailable.connect(
+            self.__closedTabAvailable)
         
         self.setMaxRows(7)
         
@@ -320,6 +329,9 @@ class HistoryMenu(E5ModelMenu):
             self.__mostVisitedMenu.openUrl.connect(self.openUrl)
             self.__mostVisitedMenu.newUrl.connect(self.newUrl)
         self.addMenu(self.__mostVisitedMenu)
+        act = self.addMenu(self.__closedTabsMenu)
+        act.setIcon(UI.PixmapCache.getIcon("trash.png"))
+        act.setEnabled(self.__tabWidget.canRestoreClosedTab())
         self.addSeparator()
         
         act = self.addAction(UI.PixmapCache.getIcon("history.png"),
@@ -358,6 +370,35 @@ class HistoryMenu(E5ModelMenu):
                 self.trUtf8("Clear History"),
                 self.trUtf8("""Do you want to clear the history?""")):
             self.__historyManager.clear()
+    
+    def __aboutToShowClosedTabsMenu(self):
+        """
+        Private slot to populate the closed tabs menu.
+        """
+        fm = self.__closedTabsMenu.fontMetrics()
+        maxWidth = fm.width('m') * 40
+        
+        self.__closedTabsMenu.clear()
+        index = 0
+        for tab in self.__tabWidget.closedTabsManager().allClosedTabs():
+            title = fm.elidedText(tab.title, Qt.ElideRight, maxWidth)
+            self.__closedTabsMenu.addAction(
+                Helpviewer.HelpWindow.HelpWindow.icon(tab.url), title, 
+                self.__tabWidget.restoreClosedTab).setData(index)
+            index += 1
+        self.__closedTabsMenu.addSeparator()
+        self.__closedTabsMenu.addAction(self.trUtf8("Restore All Closed Tabs"),
+            self.__tabWidget.restoreAllClosedTabs)
+        self.__closedTabsMenu.addAction(self.trUtf8("Clear List"),
+            self.__tabWidget.clearClosedTabsList)
+    
+    def __closedTabAvailable(self, avail):
+        """
+        Private slot to handle changes of the availability of closed tabs.
+        
+        @param avail flag indicating the availability of closed tabs (boolean)
+        """
+        self.__closedTabsMenu.setEnabled(avail)
 
 
 class HistoryMostVisitedMenu(E5ModelMenu):

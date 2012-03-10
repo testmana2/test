@@ -20,6 +20,7 @@ from E5Gui.E5Application import e5App
 from .HelpTabBar import HelpTabBar
 from .HelpBrowserWV import HelpBrowser
 import Helpviewer
+from .ClosedTabsManager import ClosedTabsManager
 
 from .History.HistoryCompleter import HistoryCompletionModel, HistoryCompleter
 
@@ -66,6 +67,9 @@ class HelpTabWidget(E5TabWidget):
         self.setDocumentMode(True)
         self.setElideMode(Qt.ElideNone)
         
+        self.__closedTabsManager = ClosedTabsManager(self)
+        self.__closedTabsManager.closedTabAvailable.connect(self.__closedTabAvailable)
+        
         self.__stackedUrlBar = StackedUrlBar(self)
         self.__tabBar.tabMoved.connect(self.__stackedUrlBar.moveBar)
         
@@ -90,6 +94,18 @@ class HelpTabWidget(E5TabWidget):
         self.__navigationButton.setMenu(self.__navigationMenu)
         self.__navigationButton.setEnabled(False)
         self.__rightCornerWidgetLayout.addWidget(self.__navigationButton)
+        
+        self.__closedTabsMenu = QMenu(self)
+        self.__closedTabsMenu.aboutToShow.connect(self.__aboutToShowClosedTabsMenu)
+        
+        self.__closedTabsButton = QToolButton(self)
+        self.__closedTabsButton.setIcon(UI.PixmapCache.getIcon("trash.png"))
+        self.__closedTabsButton.setToolTip(
+            self.trUtf8("Show a navigation menu for closed tabs"))
+        self.__closedTabsButton.setPopupMode(QToolButton.InstantPopup)
+        self.__closedTabsButton.setMenu(self.__closedTabsMenu)
+        self.__closedTabsButton.setEnabled(False)
+        self.__rightCornerWidgetLayout.addWidget(self.__closedTabsButton)
         
         self.__closeButton = QToolButton(self)
         self.__closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))
@@ -153,8 +169,26 @@ class HelpTabWidget(E5TabWidget):
         self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("printPdf.png"),
             self.trUtf8('Print as PDF'), self.__tabContextMenuPrintPdf)
         self.__tabContextMenu.addSeparator()
+        self.__tabContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
+            self.trUtf8('Reload All'), self.reloadAllBrowsers)
+        self.__tabContextMenu.addSeparator()
         self.__tabContextMenu.addAction(self.trUtf8('Bookmark All Tabs'),
             self.__mainWindow.bookmarkAll)
+        
+        self.__tabBackContextMenu = QMenu(self)
+        self.__tabBackContextMenu.addAction(self.trUtf8('Close All'),
+            self.closeAllBrowsers)
+        self.__tabBackContextMenu.addAction(UI.PixmapCache.getIcon("reload.png"),
+            self.trUtf8('Reload All'), self.reloadAllBrowsers)
+        self.__tabBackContextMenu.addAction(self.trUtf8('Bookmark All Tabs'),
+            self.__mainWindow.bookmarkAll)
+        self.__tabBackContextMenu.addSeparator()
+        self.__restoreClosedTabAct = self.__tabBackContextMenu.addAction(
+            UI.PixmapCache.getIcon("trash.png"),
+            self.trUtf8('Restore Closed Tab'),
+            self.restoreClosedTab)
+        self.__restoreClosedTabAct.setEnabled(False)
+        self.__restoreClosedTabAct.setData(0)
     
     def __showContextMenu(self, coord, index):
         """
@@ -163,14 +197,17 @@ class HelpTabWidget(E5TabWidget):
         @param coord the position of the mouse pointer (QPoint)
         @param index index of the tab the menu is requested for (integer)
         """
-        self.__tabContextMenuIndex = index
-        self.leftMenuAct.setEnabled(index > 0)
-        self.rightMenuAct.setEnabled(index < self.count() - 1)
-        
-        self.tabContextCloseOthersAct.setEnabled(self.count() > 1)
-        
         coord = self.mapToGlobal(coord)
-        self.__tabContextMenu.popup(coord)
+        if index == -1:
+            self.__tabBackContextMenu.popup(coord)
+        else:
+            self.__tabContextMenuIndex = index
+            self.leftMenuAct.setEnabled(index > 0)
+            self.rightMenuAct.setEnabled(index < self.count() - 1)
+            
+            self.tabContextCloseOthersAct.setEnabled(self.count() > 1)
+            
+            self.__tabContextMenu.popup(coord)
     
     def __tabContextMenuMoveLeft(self):
         """
@@ -232,13 +269,15 @@ class HelpTabWidget(E5TabWidget):
         browser = self.widget(self.__tabContextMenuIndex)
         self.printPreviewBrowser(browser)
     
-    def newBrowser(self, link=None, requestData=None):
+    def newBrowser(self, link=None, requestData=None, position=-1):
         """
         Public method to create a new web browser tab.
         
         @param link link to be shown (string or QUrl)
         @param requestData tuple containing the request data (QNetworkRequest,
             QNetworkAccessManager.Operation, QByteArray)
+        @keyparam position position to create the new tab at or -1 to add it to the end
+            (integer)
         """
         if link is None:
             linkName = ""
@@ -257,7 +296,10 @@ class HelpTabWidget(E5TabWidget):
             self.__historyCompleter.activated[str].connect(self.__pathSelected)
         urlbar.setCompleter(self.__historyCompleter)
         urlbar.returnPressed.connect(self.__lineEditReturnPressed)
-        self.__stackedUrlBar.addWidget(urlbar)
+        if position == -1:
+            self.__stackedUrlBar.addWidget(urlbar)
+        else:
+            self.__stackedUrlBar.insertWidget(position, urlbar)
         
         browser = HelpBrowser(self.__mainWindow, self)
         urlbar.setBrowser(browser)
@@ -274,7 +316,10 @@ class HelpTabWidget(E5TabWidget):
         browser.page().windowCloseRequested.connect(self.__windowCloseRequested)
         browser.page().printRequested.connect(self.__printRequested)
         
-        index = self.addTab(browser, self.trUtf8("..."))
+        if position == -1:
+            index = self.addTab(browser, self.trUtf8("..."))
+        else:
+            index = self.insertTab(position, browser, self.trUtf8("..."))
         self.setCurrentIndex(index)
         
         self.__mainWindow.closeAct.setEnabled(True)
@@ -335,6 +380,14 @@ class HelpTabWidget(E5TabWidget):
         index = self.indexOf(browser)
         self.closeBrowserAt(index)
     
+    def reloadAllBrowsers(self):
+        """
+        Public slot to reload all browsers.
+        """
+        for index in range(self.count()):
+            browser = self.widget(index)
+            browser and browser.reload()
+    
     def closeBrowser(self):
         """
         Public slot called to handle the close action.
@@ -361,6 +414,9 @@ class HelpTabWidget(E5TabWidget):
         browser = self.widget(index)
         if browser is None:
             return
+        
+        self.__closedTabsManager.recordBrowser(browser, index)
+        
         browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)
@@ -794,3 +850,77 @@ class HelpTabWidget(E5TabWidget):
                 self.__stackedUrlBar.currentWidget.setFocus()
             elif browser.url() != "":
                 browser.setFocus()
+    
+    def restoreClosedTab(self):
+        """
+        Public slot to restore the most recently closed tab.
+        """
+        if not self.canRestoreClosedTab():
+            return
+        
+        act = self.sender()
+        tab = self.__closedTabsManager.getClosedTabAt(act.data())
+        
+        self.newBrowser(tab.url.toString(), position = tab.position)
+    
+    def canRestoreClosedTab(self):
+        """
+        Public method to check, if closed tabs can be restored.
+        
+        @return flag indicating that closed tabs can be restored (boolean)
+        """
+        return self.__closedTabsManager.isClosedTabAvailable()
+    
+    def restoreAllClosedTabs(self):
+        """
+        Public slot to restore all closed tabs.
+        """
+        if not self.canRestoreClosedTab():
+            return
+        
+        for tab in self.__closedTabsManager.allClosedTabs():
+            self.newBrowser(tab.url.toString(), position = tab.position)
+        self.__closedTabsManager.clearList()
+    
+    def clearClosedTabsList(self):
+        """
+        Public slot to clear the list of closed tabs.
+        """
+        self.__closedTabsManager.clearList()
+    
+    def __aboutToShowClosedTabsMenu(self):
+        """
+        Private slot to populate the closed tabs menu.
+        """
+        fm = self.__closedTabsMenu.fontMetrics()
+        maxWidth = fm.width('m') * 40
+        
+        self.__closedTabsMenu.clear()
+        index = 0
+        for tab in self.__closedTabsManager.allClosedTabs():
+            title = fm.elidedText(tab.title, Qt.ElideRight, maxWidth)
+            self.__closedTabsMenu.addAction(self.__mainWindow.icon(tab.url), title, 
+                self.restoreClosedTab).setData(index)
+            index += 1
+        self.__closedTabsMenu.addSeparator()
+        self.__closedTabsMenu.addAction(self.trUtf8("Restore All Closed Tabs"),
+            self.restoreAllClosedTabs)
+        self.__closedTabsMenu.addAction(self.trUtf8("Clear List"),
+            self.clearClosedTabsList)
+    
+    def closedTabsManager(self):
+        """
+        Public slot to get a reference to the closed tabs manager.
+        
+        @return reference to the closed tabs manager (ClosedTabsManager)
+        """
+        return self.__closedTabsManager
+    
+    def __closedTabAvailable(self, avail):
+        """
+        Private slot to handle changes of the availability of closed tabs.
+        
+        @param avail flag indicating the availability of closed tabs (boolean)
+        """
+        self.__closedTabsButton.setEnabled(avail)
+        self.__restoreClosedTabAct.setEnabled(avail)

@@ -1338,7 +1338,7 @@ class HelpWindow(QMainWindow):
         menu.addSeparator()
         menu.addAction(self.syncTocAct)
         
-        self.historyMenu = HistoryMenu(self)
+        self.historyMenu = HistoryMenu(self, self.tabWidget)
         self.historyMenu.setTearOffEnabled(True)
         self.historyMenu.setTitle(self.trUtf8('H&istory'))
         self.historyMenu.openUrl.connect(self.openUrl)

@@ -34,6 +34,7 @@ Version 5.3-snapshot-2012mmdd:
   -- added a Speed Dial to the web browser including the capability to select the first
      ten pages by pressing Meta+1 to Meta+0
   -- added a history sub-menu showing the most visited sites
+  -- added the capability to restore closed tabs
 
 Version 5.2.0:
 - bug fixes

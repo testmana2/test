@@ -62,6 +62,7 @@ ClbrBase _ClbrBase
 ClickToFlash QWidget Ui_ClickToFlash
 ClickToFlashPlugin WebPluginInterface
 ClickToFlashWhitelistDialog QDialog Ui_ClickToFlashWhitelistDialog
+ClosedTabsManager QObject
 CodeMetricsDialog QDialog Ui_CodeMetricsDialog
 Coding ClbrBase
 CodingError Exception
