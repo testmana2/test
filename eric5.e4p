@@ -974,6 +974,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Passwords/LoginForm.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentWriter.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentReader.py</Source>
+    <Source>Helpviewer/ClosedTabsManager.py</Source>
+    <Source>Helpviewer/Sync/SyncDirectorySettingsPage.py</Source>
+    <Source>Helpviewer/Sync/DirectorySyncHandler.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1257,6 +1260,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui</Form>
     <Form>Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui</Form>
     <Form>Helpviewer/Sync/SyncEncryptionPage.ui</Form>
+    <Form>Helpviewer/Sync/SyncDirectorySettingsPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

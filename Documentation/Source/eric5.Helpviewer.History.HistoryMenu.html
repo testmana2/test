@@ -79,11 +79,17 @@ E5ModelMenu
 <td><a href="#HistoryMenu.__init__">HistoryMenu</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HistoryMenu.__aboutToShowClosedTabsMenu">__aboutToShowClosedTabsMenu</a></td>
+<td>Private slot to populate the closed tabs menu.</td>
+</tr><tr>
 <td><a href="#HistoryMenu.__activated">__activated</a></td>
 <td>Private slot handling the activated signal.</td>
 </tr><tr>
 <td><a href="#HistoryMenu.__clearHistoryDialog">__clearHistoryDialog</a></td>
 <td>Private slot to clear the history.</td>
+</tr><tr>
+<td><a href="#HistoryMenu.__closedTabAvailable">__closedTabAvailable</a></td>
+<td>Private slot to handle changes of the availability of closed tabs.</td>
 </tr><tr>
 <td><a href="#HistoryMenu.__showHistoryDialog">__showHistoryDialog</a></td>
 <td>Private slot to show the history dialog.</td>
@@ -104,15 +110,24 @@ E5ModelMenu
 </table>
 <a NAME="HistoryMenu.__init__" ID="HistoryMenu.__init__"></a>
 <h4>HistoryMenu (Constructor)</h4>
-<b>HistoryMenu</b>(<i>parent=None</i>)
+<b>HistoryMenu</b>(<i>parent=None, tabWidget=None</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
+</dd><dt><i>tabWidget</i></dt>
+<dd>
+reference to the tab widget managing the browser
+            tabs (HelpTabWidget
 </dd>
-</dl><a NAME="HistoryMenu.__activated" ID="HistoryMenu.__activated"></a>
+</dl><a NAME="HistoryMenu.__aboutToShowClosedTabsMenu" ID="HistoryMenu.__aboutToShowClosedTabsMenu"></a>
+<h4>HistoryMenu.__aboutToShowClosedTabsMenu</h4>
+<b>__aboutToShowClosedTabsMenu</b>(<i></i>)
+<p>
+        Private slot to populate the closed tabs menu.
+</p><a NAME="HistoryMenu.__activated" ID="HistoryMenu.__activated"></a>
 <h4>HistoryMenu.__activated</h4>
 <b>__activated</b>(<i>idx</i>)
 <p>
@@ -127,7 +142,17 @@ index of the activated item (QModelIndex)
 <b>__clearHistoryDialog</b>(<i></i>)
 <p>
         Private slot to clear the history.
-</p><a NAME="HistoryMenu.__showHistoryDialog" ID="HistoryMenu.__showHistoryDialog"></a>
+</p><a NAME="HistoryMenu.__closedTabAvailable" ID="HistoryMenu.__closedTabAvailable"></a>
+<h4>HistoryMenu.__closedTabAvailable</h4>
+<b>__closedTabAvailable</b>(<i>avail</i>)
+<p>
+        Private slot to handle changes of the availability of closed tabs.
+</p><dl>
+<dt><i>avail</i></dt>
+<dd>
+flag indicating the availability of closed tabs (boolean)
+</dd>
+</dl><a NAME="HistoryMenu.__showHistoryDialog" ID="HistoryMenu.__showHistoryDialog"></a>
 <h4>HistoryMenu.__showHistoryDialog</h4>
 <b>__showHistoryDialog</b>(<i></i>)
 <p>

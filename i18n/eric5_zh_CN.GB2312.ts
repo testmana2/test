@@ -6209,6 +6209,32 @@ Not connected
     </message>
 </context>
 <context>
+    <name>DirectorySyncHandler</name>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="68"/>
+        <source>Error creating the shared directory.
+{0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="89"/>
+        <source>Cannot read remote file.
+{0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="120"/>
+        <source>Cannot write remote file.
+{0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="179"/>
+        <source>Synchronization finished</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DownloadAskActionDialog</name>
     <message>
         <location filename="Helpviewer/Download/DownloadAskActionDialog.ui" line="14"/>
@@ -13932,92 +13958,12 @@ whole selection.&lt;/li&gt;
 <context>
     <name>FtpSyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="59"/>
-        <source>Remote bookmarks file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="61"/>
-        <source>Remote bookmarks file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="63"/>
-        <source>Local bookmarks file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="68"/>
-        <source>Remote history file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="70"/>
-        <source>Remote history file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="72"/>
-        <source>Local history file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="77"/>
-        <source>Remote logins file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="79"/>
-        <source>Remote logins file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="81"/>
-        <source>Local logins file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="86"/>
-        <source>Remote user agent settings file exists! Syncing local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="88"/>
-        <source>Remote user agent settings file does NOT exists. Exporting local copy...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="91"/>
-        <source>Local user agent settings file does NOT exist. Skipping synchronization!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="135"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="89"/>
         <source>No suitable proxy found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="65"/>
-        <source>Uploading local bookmarks file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="74"/>
-        <source>Uploading local history file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="83"/>
-        <source>Uploading local logins file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="94"/>
-        <source>Uploading local user agent settings file...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="211"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="166"/>
         <source>Synchronization finished</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15026,107 +14972,107 @@ whole selection.&lt;/li&gt;
 <context>
     <name>HelpTabWidget</name>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="88"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="92"/>
         <source>Show a navigation menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="96"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
         <source>Close the current help window</source>
         <translation type="unfinished">关闭当前帮助浏览器</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="112"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="128"/>
         <source>Open a new help window tab</source>
         <translation type="unfinished">打开新帮助窗口选项卡</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="126"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="142"/>
         <source>New Tab</source>
         <translation type="unfinished">新建选项卡</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="130"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
         <source>Move Left</source>
         <translation type="unfinished">左移</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="133"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
         <source>Move Right</source>
         <translation type="unfinished">右移</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="137"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
         <source>Duplicate Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="141"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="157"/>
         <source>Close</source>
         <translation type="unfinished">关闭</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="144"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="160"/>
         <source>Close Others</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="146"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="179"/>
         <source>Close All</source>
         <translation type="unfinished">全部关闭</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="149"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="165"/>
         <source>Print Preview</source>
         <translation type="unfinished">打印预览</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="151"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="167"/>
         <source>Print</source>
         <translation type="unfinished">打印</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="153"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="169"/>
         <source>Print as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="156"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="183"/>
         <source>Bookmark All Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="277"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="322"/>
         <source>...</source>
         <translation type="unfinished">……</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="532"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="588"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;由于 PyQt4 中存在一个错误，导致无法打印。请升级。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="629"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="685"/>
         <source>Loading...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="648"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="704"/>
         <source>Finished loading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="650"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="706"/>
         <source>Failed to load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="742"/>
         <source>Are you sure you want to close the window?</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="Helpviewer/HelpTabWidget.py" line="686"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="742"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation type="unfinished">
@@ -15134,23 +15080,48 @@ You have %n tab(s) open.</source>
         </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="693"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="749"/>
         <source>&amp;Close</source>
         <translation type="unfinished">关闭(&amp;C)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="696"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="752"/>
         <source>&amp;Quit</source>
         <translation type="unfinished">退出(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="698"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="754"/>
         <source>C&amp;lose Current Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpTabWidget.py" line="532"/>
+        <location filename="Helpviewer/HelpTabWidget.py" line="588"/>
         <source>eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="103"/>
+        <source>Show a navigation menu for closed tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="181"/>
+        <source>Reload All</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="186"/>
+        <source>Restore Closed Tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="906"/>
+        <source>Restore All Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/HelpTabWidget.py" line="908"/>
+        <source>Clear List</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -23358,28 +23329,43 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HistoryMenu</name>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="325"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="337"/>
         <source>Show All History...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="340"/>
         <source>Clear History...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="369"/>
         <source>Clear History</source>
         <translation type="unfinished">清除历史</translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="357"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="369"/>
         <source>Do you want to clear the history?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/History/HistoryMenu.py" line="319"/>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="328"/>
         <source>Most Visited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="273"/>
+        <source>Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="390"/>
+        <source>Restore All Closed Tabs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/History/HistoryMenu.py" line="392"/>
+        <source>Clear List</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -30554,27 +30540,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="996"/>
+        <location filename="Preferences/__init__.py" line="997"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1023"/>
+        <location filename="Preferences/__init__.py" line="1024"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1023"/>
+        <location filename="Preferences/__init__.py" line="1024"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1116"/>
+        <location filename="Preferences/__init__.py" line="1117"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1116"/>
+        <location filename="Preferences/__init__.py" line="1117"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -45030,18 +45016,23 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="51"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="53"/>
         <source>FTP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="54"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="59"/>
         <source>No Synchronization</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="153"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="157"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="56"/>
+        <source>Shared Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -45110,6 +45101,49 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="81"/>
         <source>User Agent Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SyncDirectorySettingsPage</name>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="17"/>
+        <source>Synchronize to a shared directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="20"/>
+        <source>Please enter the data for synchronization via a shared directory. All fields must be filled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="26"/>
+        <source>Shared Directory Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="32"/>
+        <source>Directory Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="39"/>
+        <source>Enter the full path of the shared directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="46"/>
+        <source>Select the shared directory via a directory selection dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
+        <source>...</source>
+        <translation type="unfinished">……</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.py" line="65"/>
+        <source>Shared Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -45297,13 +45331,113 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="134"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="191"/>
         <source>Invalid encryption key given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="139"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="196"/>
         <source>Data cannot be decrypted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="56"/>
+        <source>Remote bookmarks file exists! Syncing local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="58"/>
+        <source>Remote bookmarks file does NOT exists. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="60"/>
+        <source>Local bookmarks file is NEWER. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="62"/>
+        <source>Local bookmarks file does NOT exist. Skipping synchronization!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="64"/>
+        <source>Uploading local bookmarks file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="67"/>
+        <source>Remote history file exists! Syncing local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="69"/>
+        <source>Remote history file does NOT exists. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="71"/>
+        <source>Local history file is NEWER. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="73"/>
+        <source>Local history file does NOT exist. Skipping synchronization!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="75"/>
+        <source>Uploading local history file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="78"/>
+        <source>Remote logins file exists! Syncing local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="80"/>
+        <source>Remote logins file does NOT exists. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="82"/>
+        <source>Local logins file is NEWER. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="84"/>
+        <source>Local logins file does NOT exist. Skipping synchronization!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="86"/>
+        <source>Uploading local logins file...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="89"/>
+        <source>Remote user agent settings file exists! Syncing local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="91"/>
+        <source>Remote user agent settings file does NOT exists. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="94"/>
+        <source>Local user agent settings file is NEWER. Exporting local copy...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="96"/>
+        <source>Local user agent settings file does NOT exist. Skipping synchronization!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="99"/>
+        <source>Uploading local user agent settings file...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -45335,14 +45469,24 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="49"/>
         <source>Select to use no particular host type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="42"/>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="52"/>
         <source>None</source>
         <translation type="unfinished">无</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
+        <source>Select to use a shared directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="42"/>
+        <source>Shared Directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

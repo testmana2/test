@@ -50,10 +50,20 @@ Module implementing the synchronization manager class.
 <dd>
 emitted for a general error with the error
         message (string)
+</dd><dt>syncFinished(type_, done, download)</dt>
+<dd>
+emitted after a synchronization has
+        finished (string one of "bookmarks", "history", "passwords" or "useragents",
+        boolean, boolean)
 </dd><dt>syncMessage(message)</dt>
 <dd>
 emitted to give status info about the sync
         process (string)
+</dd><dt>syncStatus(type_, done, message)</dt>
+<dd>
+emitted to indicate the synchronization
+        status (string one of "bookmarks", "history", "passwords" or "useragents",
+        boolean, string)
 </dd>
 </dl>
 <h3>Derived from</h3>

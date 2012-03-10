@@ -62,6 +62,7 @@ ClbrBase _ClbrBase
 ClickToFlash QWidget Ui_ClickToFlash
 ClickToFlashPlugin WebPluginInterface
 ClickToFlashWhitelistDialog QDialog Ui_ClickToFlashWhitelistDialog
+ClosedTabsManager QObject
 CodeMetricsDialog QDialog Ui_CodeMetricsDialog
 Coding ClbrBase
 CodingError Exception
@@ -112,6 +113,7 @@ DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
 DiffWindow QMainWindow
+DirectorySyncHandler SyncHandler
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
@@ -561,6 +563,7 @@ SymbolsWidget QWidget Ui_SymbolsWidget
 SyncAssistantDialog QWizard
 SyncCheckPage QWizardPage Ui_SyncCheckPage
 SyncDataPage QWizardPage Ui_SyncDataPage
+SyncDirectorySettingsPage QWizardPage Ui_SyncDirectorySettingsPage
 SyncEncryptionPage QWizardPage Ui_SyncEncryptionPage
 SyncFtpSettingsPage QWizardPage Ui_SyncFtpSettingsPage
 SyncHandler QObject

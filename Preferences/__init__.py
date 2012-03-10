@@ -667,6 +667,7 @@ class Prefs(object):
         "SyncFtpPath": "",
         "SyncFtpPort": 21,
         "SyncFtpIdleTimeout": 30,
+        "SyncDirectoryPath": "",
         "WarnOnMultipleClose": True,
         "ClickToFlashEnabled": False,
         "ClickToFlashWhitelist": [],

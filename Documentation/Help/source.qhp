@@ -286,10 +286,12 @@
               <section title="eric5.Helpviewer.SpeedDial.SpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
             </section>
             <section title="eric5.Helpviewer.Sync" ref="index-eric5.Helpviewer.Sync.html">
+              <section title="eric5.Helpviewer.Sync.DirectorySyncHandler" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html" />
               <section title="eric5.Helpviewer.Sync.FtpSyncHandler" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
               <section title="eric5.Helpviewer.Sync.SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
               <section title="eric5.Helpviewer.Sync.SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncDirectorySettingsPage" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncGlobals" ref="eric5.Helpviewer.Sync.SyncGlobals.html" />
@@ -325,6 +327,7 @@
             </section>
             <section title="eric5.Helpviewer.data" ref="index-eric5.Helpviewer.data.html">
             </section>
+            <section title="eric5.Helpviewer.ClosedTabsManager" ref="eric5.Helpviewer.ClosedTabsManager.html" />
             <section title="eric5.Helpviewer.HelpBrowserWV" ref="eric5.Helpviewer.HelpBrowserWV.html" />
             <section title="eric5.Helpviewer.HelpClearPrivateDataDialog" ref="eric5.Helpviewer.HelpClearPrivateDataDialog.html" />
             <section title="eric5.Helpviewer.HelpDocsInstaller" ref="eric5.Helpviewer.HelpDocsInstaller.html" />
@@ -1882,6 +1885,17 @@
       <keyword name="Client.printf_line" id="Client.printf_line" ref="eric5.DebugClients.Ruby.Debuggee.html#Client.printf_line" />
       <keyword name="Client.printf_scriptExcn" id="Client.printf_scriptExcn" ref="eric5.DebugClients.Ruby.Debuggee.html#Client.printf_scriptExcn" />
       <keyword name="Client.traceRuby?" id="Client.traceRuby?" ref="eric5.DebugClients.Ruby.Debuggee.html#Client.traceRuby?" />
+      <keyword name="ClosedTab" id="ClosedTab" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTab" />
+      <keyword name="ClosedTab (Constructor)" id="ClosedTab (Constructor)" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTab.__init__" />
+      <keyword name="ClosedTab.__eq__" id="ClosedTab.__eq__" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTab.__eq__" />
+      <keyword name="ClosedTabsManager" id="ClosedTabsManager" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager" />
+      <keyword name="ClosedTabsManager (Constructor)" id="ClosedTabsManager (Constructor)" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.__init__" />
+      <keyword name="ClosedTabsManager (Module)" id="ClosedTabsManager (Module)" ref="eric5.Helpviewer.ClosedTabsManager.html" />
+      <keyword name="ClosedTabsManager.allClosedTabs" id="ClosedTabsManager.allClosedTabs" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.allClosedTabs" />
+      <keyword name="ClosedTabsManager.clearList" id="ClosedTabsManager.clearList" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.clearList" />
+      <keyword name="ClosedTabsManager.getClosedTabAt" id="ClosedTabsManager.getClosedTabAt" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.getClosedTabAt" />
+      <keyword name="ClosedTabsManager.isClosedTabAvailable" id="ClosedTabsManager.isClosedTabAvailable" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.isClosedTabAvailable" />
+      <keyword name="ClosedTabsManager.recordBrowser" id="ClosedTabsManager.recordBrowser" ref="eric5.Helpviewer.ClosedTabsManager.html#ClosedTabsManager.recordBrowser" />
       <keyword name="CodeMetrics (Module)" id="CodeMetrics (Module)" ref="eric5.DataViews.CodeMetrics.html" />
       <keyword name="CodeMetricsDialog" id="CodeMetricsDialog" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog" />
       <keyword name="CodeMetricsDialog (Constructor)" id="CodeMetricsDialog (Constructor)" ref="eric5.DataViews.CodeMetricsDialog.html#CodeMetricsDialog.__init__" />
@@ -2956,6 +2970,20 @@
       <keyword name="DiffWindow" id="DiffWindow" ref="eric5.UI.DiffDialog.html#DiffWindow" />
       <keyword name="DiffWindow (Constructor)" id="DiffWindow (Constructor)" ref="eric5.UI.DiffDialog.html#DiffWindow.__init__" />
       <keyword name="DiffWindow.eventFilter" id="DiffWindow.eventFilter" ref="eric5.UI.DiffDialog.html#DiffWindow.eventFilter" />
+      <keyword name="DirectorySyncHandler" id="DirectorySyncHandler" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler" />
+      <keyword name="DirectorySyncHandler (Constructor)" id="DirectorySyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__init__" />
+      <keyword name="DirectorySyncHandler (Module)" id="DirectorySyncHandler (Module)" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html" />
+      <keyword name="DirectorySyncHandler.__downloadFile" id="DirectorySyncHandler.__downloadFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__downloadFile" />
+      <keyword name="DirectorySyncHandler.__initialSync" id="DirectorySyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__initialSync" />
+      <keyword name="DirectorySyncHandler.__initialSyncFile" id="DirectorySyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__initialSyncFile" />
+      <keyword name="DirectorySyncHandler.__syncFile" id="DirectorySyncHandler.__syncFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__syncFile" />
+      <keyword name="DirectorySyncHandler.__uploadFile" id="DirectorySyncHandler.__uploadFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__uploadFile" />
+      <keyword name="DirectorySyncHandler.initialLoadAndCheck" id="DirectorySyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.initialLoadAndCheck" />
+      <keyword name="DirectorySyncHandler.shutdown" id="DirectorySyncHandler.shutdown" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.shutdown" />
+      <keyword name="DirectorySyncHandler.syncBookmarks" id="DirectorySyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncBookmarks" />
+      <keyword name="DirectorySyncHandler.syncHistory" id="DirectorySyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncHistory" />
+      <keyword name="DirectorySyncHandler.syncPasswords" id="DirectorySyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncPasswords" />
+      <keyword name="DirectorySyncHandler.syncUserAgents" id="DirectorySyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncUserAgents" />
       <keyword name="DocumentationPlugins (Package)" id="DocumentationPlugins (Package)" ref="index-eric5.Plugins.DocumentationPlugins.html" />
       <keyword name="DocumentationTools (Package)" id="DocumentationTools (Package)" ref="index-eric5.DocumentationTools.html" />
       <keyword name="Download (Package)" id="Download (Package)" ref="index-eric5.Helpviewer.Download.html" />
@@ -4469,6 +4497,8 @@
       <keyword name="HelpTabWidget" id="HelpTabWidget" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget" />
       <keyword name="HelpTabWidget (Constructor)" id="HelpTabWidget (Constructor)" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__init__" />
       <keyword name="HelpTabWidget (Module)" id="HelpTabWidget (Module)" ref="eric5.Helpviewer.HelpTabWidget.html" />
+      <keyword name="HelpTabWidget.__aboutToShowClosedTabsMenu" id="HelpTabWidget.__aboutToShowClosedTabsMenu" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__aboutToShowClosedTabsMenu" />
+      <keyword name="HelpTabWidget.__closedTabAvailable" id="HelpTabWidget.__closedTabAvailable" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__closedTabAvailable" />
       <keyword name="HelpTabWidget.__currentChanged" id="HelpTabWidget.__currentChanged" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__currentChanged" />
       <keyword name="HelpTabWidget.__elide" id="HelpTabWidget.__elide" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__elide" />
       <keyword name="HelpTabWidget.__guessUrlFromPath" id="HelpTabWidget.__guessUrlFromPath" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__guessUrlFromPath" />
@@ -4497,9 +4527,12 @@
       <keyword name="HelpTabWidget.__windowCloseRequested" id="HelpTabWidget.__windowCloseRequested" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.__windowCloseRequested" />
       <keyword name="HelpTabWidget.browserAt" id="HelpTabWidget.browserAt" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.browserAt" />
       <keyword name="HelpTabWidget.browsers" id="HelpTabWidget.browsers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.browsers" />
+      <keyword name="HelpTabWidget.canRestoreClosedTab" id="HelpTabWidget.canRestoreClosedTab" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.canRestoreClosedTab" />
+      <keyword name="HelpTabWidget.clearClosedTabsList" id="HelpTabWidget.clearClosedTabsList" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.clearClosedTabsList" />
       <keyword name="HelpTabWidget.closeAllBrowsers" id="HelpTabWidget.closeAllBrowsers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeAllBrowsers" />
       <keyword name="HelpTabWidget.closeBrowser" id="HelpTabWidget.closeBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeBrowser" />
       <keyword name="HelpTabWidget.closeBrowserAt" id="HelpTabWidget.closeBrowserAt" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closeBrowserAt" />
+      <keyword name="HelpTabWidget.closedTabsManager" id="HelpTabWidget.closedTabsManager" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.closedTabsManager" />
       <keyword name="HelpTabWidget.currentBrowser" id="HelpTabWidget.currentBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.currentBrowser" />
       <keyword name="HelpTabWidget.currentUrlBar" id="HelpTabWidget.currentUrlBar" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.currentUrlBar" />
       <keyword name="HelpTabWidget.getSourceFileList" id="HelpTabWidget.getSourceFileList" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.getSourceFileList" />
@@ -4508,6 +4541,9 @@
       <keyword name="HelpTabWidget.printBrowser" id="HelpTabWidget.printBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowser" />
       <keyword name="HelpTabWidget.printBrowserPdf" id="HelpTabWidget.printBrowserPdf" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printBrowserPdf" />
       <keyword name="HelpTabWidget.printPreviewBrowser" id="HelpTabWidget.printPreviewBrowser" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.printPreviewBrowser" />
+      <keyword name="HelpTabWidget.reloadAllBrowsers" id="HelpTabWidget.reloadAllBrowsers" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.reloadAllBrowsers" />
+      <keyword name="HelpTabWidget.restoreAllClosedTabs" id="HelpTabWidget.restoreAllClosedTabs" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.restoreAllClosedTabs" />
+      <keyword name="HelpTabWidget.restoreClosedTab" id="HelpTabWidget.restoreClosedTab" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.restoreClosedTab" />
       <keyword name="HelpTabWidget.shallShutDown" id="HelpTabWidget.shallShutDown" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.shallShutDown" />
       <keyword name="HelpTabWidget.stackedUrlBar" id="HelpTabWidget.stackedUrlBar" ref="eric5.Helpviewer.HelpTabWidget.html#HelpTabWidget.stackedUrlBar" />
       <keyword name="HelpTocWidget" id="HelpTocWidget" ref="eric5.Helpviewer.HelpTocWidget.html#HelpTocWidget" />
@@ -5603,8 +5639,10 @@
       <keyword name="HistoryMenu" id="HistoryMenu" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu" />
       <keyword name="HistoryMenu (Constructor)" id="HistoryMenu (Constructor)" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__init__" />
       <keyword name="HistoryMenu (Module)" id="HistoryMenu (Module)" ref="eric5.Helpviewer.History.HistoryMenu.html" />
+      <keyword name="HistoryMenu.__aboutToShowClosedTabsMenu" id="HistoryMenu.__aboutToShowClosedTabsMenu" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__aboutToShowClosedTabsMenu" />
       <keyword name="HistoryMenu.__activated" id="HistoryMenu.__activated" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__activated" />
       <keyword name="HistoryMenu.__clearHistoryDialog" id="HistoryMenu.__clearHistoryDialog" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__clearHistoryDialog" />
+      <keyword name="HistoryMenu.__closedTabAvailable" id="HistoryMenu.__closedTabAvailable" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__closedTabAvailable" />
       <keyword name="HistoryMenu.__showHistoryDialog" id="HistoryMenu.__showHistoryDialog" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.__showHistoryDialog" />
       <keyword name="HistoryMenu.postPopulated" id="HistoryMenu.postPopulated" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.postPopulated" />
       <keyword name="HistoryMenu.prePopulated" id="HistoryMenu.prePopulated" ref="eric5.Helpviewer.History.HistoryMenu.html#HistoryMenu.prePopulated" />
@@ -9321,6 +9359,12 @@
       <keyword name="SyncDataPage (Constructor)" id="SyncDataPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.__init__" />
       <keyword name="SyncDataPage (Module)" id="SyncDataPage (Module)" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
       <keyword name="SyncDataPage.nextId" id="SyncDataPage.nextId" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.nextId" />
+      <keyword name="SyncDirectorySettingsPage" id="SyncDirectorySettingsPage" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage" />
+      <keyword name="SyncDirectorySettingsPage (Constructor)" id="SyncDirectorySettingsPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.__init__" />
+      <keyword name="SyncDirectorySettingsPage (Module)" id="SyncDirectorySettingsPage (Module)" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html" />
+      <keyword name="SyncDirectorySettingsPage.isComplete" id="SyncDirectorySettingsPage.isComplete" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.isComplete" />
+      <keyword name="SyncDirectorySettingsPage.nextId" id="SyncDirectorySettingsPage.nextId" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.nextId" />
+      <keyword name="SyncDirectorySettingsPage.on_directoryButton_clicked" id="SyncDirectorySettingsPage.on_directoryButton_clicked" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.on_directoryButton_clicked" />
       <keyword name="SyncEncryptionPage" id="SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage" />
       <keyword name="SyncEncryptionPage (Constructor)" id="SyncEncryptionPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.__init__" />
       <keyword name="SyncEncryptionPage (Module)" id="SyncEncryptionPage (Module)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
@@ -11750,6 +11794,7 @@
       <file>eric5.Helpviewer.Bookmarks.DefaultBookmarks.html</file>
       <file>eric5.Helpviewer.Bookmarks.XbelReader.html</file>
       <file>eric5.Helpviewer.Bookmarks.XbelWriter.html</file>
+      <file>eric5.Helpviewer.ClosedTabsManager.html</file>
       <file>eric5.Helpviewer.CookieJar.CookieDetailsDialog.html</file>
       <file>eric5.Helpviewer.CookieJar.CookieExceptionsModel.html</file>
       <file>eric5.Helpviewer.CookieJar.CookieJar.html</file>
@@ -11825,10 +11870,12 @@
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.SslInfoWidget.html</file>
+      <file>eric5.Helpviewer.Sync.DirectorySyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.FtpSyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.SyncAssistantDialog.html</file>
       <file>eric5.Helpviewer.Sync.SyncCheckPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncDataPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncEncryptionPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncFtpSettingsPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncGlobals.html</file>

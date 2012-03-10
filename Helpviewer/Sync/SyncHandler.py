@@ -43,6 +43,62 @@ class SyncHandler(QObject):
         super().__init__(parent)
         
         self._firstTimeSynced = False
+        
+        self._remoteFiles = {
+            "bookmarks": "Bookmarks",
+            "history": "History",
+            "passwords": "Logins",
+            "useragents": "UserAgentSettings"
+        }
+        
+        self._messages = {
+            "bookmarks": {
+                "RemoteExists": self.trUtf8(
+                    "Remote bookmarks file exists! Syncing local copy..."),
+                "RemoteMissing": self.trUtf8(
+                    "Remote bookmarks file does NOT exists. Exporting local copy..."),
+                "LocalNewer": self.trUtf8(
+                    "Local bookmarks file is NEWER. Exporting local copy..."),
+                "LocalMissing": self.trUtf8(
+                    "Local bookmarks file does NOT exist. Skipping synchronization!"),
+                "Uploading": self.trUtf8("Uploading local bookmarks file..."),
+            },
+            "history": {
+                "RemoteExists": self.trUtf8(
+                    "Remote history file exists! Syncing local copy..."),
+                "RemoteMissing": self.trUtf8(
+                    "Remote history file does NOT exists. Exporting local copy..."),
+                "LocalNewer": self.trUtf8(
+                    "Local history file is NEWER. Exporting local copy..."),
+                "LocalMissing": self.trUtf8(
+                    "Local history file does NOT exist. Skipping synchronization!"),
+                "Uploading": self.trUtf8("Uploading local history file..."),
+            },
+            "passwords": {
+                "RemoteExists": self.trUtf8(
+                    "Remote logins file exists! Syncing local copy..."),
+                "RemoteMissing": self.trUtf8(
+                    "Remote logins file does NOT exists. Exporting local copy..."),
+                "LocalNewer": self.trUtf8(
+                    "Local logins file is NEWER. Exporting local copy..."),
+                "LocalMissing": self.trUtf8(
+                    "Local logins file does NOT exist. Skipping synchronization!"),
+                "Uploading": self.trUtf8("Uploading local logins file..."),
+            },
+            "useragents": {
+                "RemoteExists": self.trUtf8(
+                    "Remote user agent settings file exists! Syncing local copy..."),
+                "RemoteMissing": self.trUtf8(
+                    "Remote user agent settings file does NOT exists."
+                    " Exporting local copy..."),
+                "LocalNewer": self.trUtf8(
+                    "Local user agent settings file is NEWER. Exporting local copy..."),
+                "LocalMissing": self.trUtf8(
+                    "Local user agent settings file does NOT exist."
+                    " Skipping synchronization!"),
+                "Uploading": self.trUtf8("Uploading local user agent settings file..."),
+            },
+        }
     
     def syncBookmarks(self):
         """
@@ -115,7 +171,7 @@ class SyncHandler(QObject):
         
         return QByteArray()
     
-    def writeFile(self, data, fileName):
+    def writeFile(self, data, fileName, timestamp=0):
         """
         Public method to write the data to a file.
         
@@ -124,6 +180,7 @@ class SyncHandler(QObject):
         
         @param data data to be written and optionally decrypted (QByteArray)
         @param fileName name of the file the data is to be written to (string)
+        @param timestamp timestamp to be given to the file (int)
         @return tuple giving a success flag and an error string (boolean, string)
         """
         data = bytes(data)
@@ -142,6 +199,8 @@ class SyncHandler(QObject):
             outputFile = open(fileName, "wb")
             outputFile.write(data)
             outputFile.close()
+            if timestamp > 0:
+                os.utime(fileName, (timestamp, timestamp))
             return True, ""
         except IOError as error:
             return False, str(error)

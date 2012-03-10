@@ -13,6 +13,7 @@ from .SyncDataPage import SyncDataPage
 from .SyncEncryptionPage import SyncEncryptionPage
 from .SyncHostTypePage import SyncHostTypePage
 from .SyncFtpSettingsPage import SyncFtpSettingsPage
+from .SyncDirectorySettingsPage import SyncDirectorySettingsPage
 from .SyncCheckPage import SyncCheckPage
 
 from . import SyncGlobals
@@ -36,6 +37,7 @@ class SyncAssistantDialog(QWizard):
         self.setPage(SyncGlobals.PageEncryption, SyncEncryptionPage(self))
         self.setPage(SyncGlobals.PageType, SyncHostTypePage(self))
         self.setPage(SyncGlobals.PageFTPSettings, SyncFtpSettingsPage(self))
+        self.setPage(SyncGlobals.PageDirectorySettings, SyncDirectorySettingsPage(self))
         self.setPage(SyncGlobals.PageCheck, SyncCheckPage(self))
         
         self.setPixmap(QWizard.LogoPixmap, UI.PixmapCache.getPixmap("ericWeb48.png"))
