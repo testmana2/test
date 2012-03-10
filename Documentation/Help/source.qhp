@@ -286,10 +286,12 @@
               <section title="eric5.Helpviewer.SpeedDial.SpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
             </section>
             <section title="eric5.Helpviewer.Sync" ref="index-eric5.Helpviewer.Sync.html">
+              <section title="eric5.Helpviewer.Sync.DirectorySyncHandler" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html" />
               <section title="eric5.Helpviewer.Sync.FtpSyncHandler" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html" />
               <section title="eric5.Helpviewer.Sync.SyncAssistantDialog" ref="eric5.Helpviewer.Sync.SyncAssistantDialog.html" />
               <section title="eric5.Helpviewer.Sync.SyncCheckPage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
+              <section title="eric5.Helpviewer.Sync.SyncDirectorySettingsPage" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncFtpSettingsPage" ref="eric5.Helpviewer.Sync.SyncFtpSettingsPage.html" />
               <section title="eric5.Helpviewer.Sync.SyncGlobals" ref="eric5.Helpviewer.Sync.SyncGlobals.html" />
@@ -2968,6 +2970,20 @@
       <keyword name="DiffWindow" id="DiffWindow" ref="eric5.UI.DiffDialog.html#DiffWindow" />
       <keyword name="DiffWindow (Constructor)" id="DiffWindow (Constructor)" ref="eric5.UI.DiffDialog.html#DiffWindow.__init__" />
       <keyword name="DiffWindow.eventFilter" id="DiffWindow.eventFilter" ref="eric5.UI.DiffDialog.html#DiffWindow.eventFilter" />
+      <keyword name="DirectorySyncHandler" id="DirectorySyncHandler" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler" />
+      <keyword name="DirectorySyncHandler (Constructor)" id="DirectorySyncHandler (Constructor)" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__init__" />
+      <keyword name="DirectorySyncHandler (Module)" id="DirectorySyncHandler (Module)" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html" />
+      <keyword name="DirectorySyncHandler.__downloadFile" id="DirectorySyncHandler.__downloadFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__downloadFile" />
+      <keyword name="DirectorySyncHandler.__initialSync" id="DirectorySyncHandler.__initialSync" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__initialSync" />
+      <keyword name="DirectorySyncHandler.__initialSyncFile" id="DirectorySyncHandler.__initialSyncFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__initialSyncFile" />
+      <keyword name="DirectorySyncHandler.__syncFile" id="DirectorySyncHandler.__syncFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__syncFile" />
+      <keyword name="DirectorySyncHandler.__uploadFile" id="DirectorySyncHandler.__uploadFile" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.__uploadFile" />
+      <keyword name="DirectorySyncHandler.initialLoadAndCheck" id="DirectorySyncHandler.initialLoadAndCheck" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.initialLoadAndCheck" />
+      <keyword name="DirectorySyncHandler.shutdown" id="DirectorySyncHandler.shutdown" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.shutdown" />
+      <keyword name="DirectorySyncHandler.syncBookmarks" id="DirectorySyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncBookmarks" />
+      <keyword name="DirectorySyncHandler.syncHistory" id="DirectorySyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncHistory" />
+      <keyword name="DirectorySyncHandler.syncPasswords" id="DirectorySyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncPasswords" />
+      <keyword name="DirectorySyncHandler.syncUserAgents" id="DirectorySyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncUserAgents" />
       <keyword name="DocumentationPlugins (Package)" id="DocumentationPlugins (Package)" ref="index-eric5.Plugins.DocumentationPlugins.html" />
       <keyword name="DocumentationTools (Package)" id="DocumentationTools (Package)" ref="index-eric5.DocumentationTools.html" />
       <keyword name="Download (Package)" id="Download (Package)" ref="index-eric5.Helpviewer.Download.html" />
@@ -9343,6 +9359,12 @@
       <keyword name="SyncDataPage (Constructor)" id="SyncDataPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.__init__" />
       <keyword name="SyncDataPage (Module)" id="SyncDataPage (Module)" ref="eric5.Helpviewer.Sync.SyncDataPage.html" />
       <keyword name="SyncDataPage.nextId" id="SyncDataPage.nextId" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.nextId" />
+      <keyword name="SyncDirectorySettingsPage" id="SyncDirectorySettingsPage" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage" />
+      <keyword name="SyncDirectorySettingsPage (Constructor)" id="SyncDirectorySettingsPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.__init__" />
+      <keyword name="SyncDirectorySettingsPage (Module)" id="SyncDirectorySettingsPage (Module)" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html" />
+      <keyword name="SyncDirectorySettingsPage.isComplete" id="SyncDirectorySettingsPage.isComplete" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.isComplete" />
+      <keyword name="SyncDirectorySettingsPage.nextId" id="SyncDirectorySettingsPage.nextId" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.nextId" />
+      <keyword name="SyncDirectorySettingsPage.on_directoryButton_clicked" id="SyncDirectorySettingsPage.on_directoryButton_clicked" ref="eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.on_directoryButton_clicked" />
       <keyword name="SyncEncryptionPage" id="SyncEncryptionPage" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage" />
       <keyword name="SyncEncryptionPage (Constructor)" id="SyncEncryptionPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.__init__" />
       <keyword name="SyncEncryptionPage (Module)" id="SyncEncryptionPage (Module)" ref="eric5.Helpviewer.Sync.SyncEncryptionPage.html" />
@@ -11848,10 +11870,12 @@
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.SslInfoWidget.html</file>
+      <file>eric5.Helpviewer.Sync.DirectorySyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.FtpSyncHandler.html</file>
       <file>eric5.Helpviewer.Sync.SyncAssistantDialog.html</file>
       <file>eric5.Helpviewer.Sync.SyncCheckPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncDataPage.html</file>
+      <file>eric5.Helpviewer.Sync.SyncDirectorySettingsPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncEncryptionPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncFtpSettingsPage.html</file>
       <file>eric5.Helpviewer.Sync.SyncGlobals.html</file>

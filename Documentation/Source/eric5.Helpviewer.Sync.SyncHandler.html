@@ -174,7 +174,7 @@ data of the file, optionally encrypted (QByteArray)
         Public method to synchronize the user agents.
 </p><a NAME="SyncHandler.writeFile" ID="SyncHandler.writeFile"></a>
 <h4>SyncHandler.writeFile</h4>
-<b>writeFile</b>(<i>data, fileName</i>)
+<b>writeFile</b>(<i>data, fileName, timestamp=0</i>)
 <p>
         Public method to write the data to a file.
 </p><p>
@@ -187,6 +187,9 @@ data to be written and optionally decrypted (QByteArray)
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file the data is to be written to (string)
+</dd><dt><i>timestamp</i></dt>
+<dd>
+timestamp to be given to the file (int)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

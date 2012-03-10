@@ -12,6 +12,8 @@ import os
 from PyQt4.QtCore import QByteArray
 from PyQt4.QtGui import QWizardPage, QMovie
 
+from . import SyncGlobals
+
 from .Ui_SyncCheckPage import Ui_SyncCheckPage
 
 import Preferences
@@ -45,11 +47,14 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         
         syncMgr = Helpviewer.HelpWindow.HelpWindow.syncManager()
         syncMgr.syncError.connect(self.__syncError)
-        syncMgr.loadSettings(forceUpload=forceUpload)
+        syncMgr.syncStatus.connect(self.__updatePage)
         
-        if Preferences.getHelp("SyncType") == 0:
+        if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
             self.handlerLabel.setText(self.trUtf8("FTP"))
             self.hostLabel.setText(Preferences.getHelp("SyncFtpServer"))
+        elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
+            self.handlerLabel.setText(self.trUtf8("Shared Directory"))
+            self.hostLabel.setText(Preferences.getHelp("SyncDirectoryPath"))
         else:
             self.handlerLabel.setText(self.trUtf8("No Synchronization"))
             self.hostLabel.setText("")
@@ -92,8 +97,7 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         else:
             self.userAgentsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
-        handler = syncMgr.handler()
-        handler.syncStatus.connect(self.__updatePage)
+        syncMgr.loadSettings(forceUpload=forceUpload)
     
     def __makeAnimatedLabel(self, fileName, label):
         """

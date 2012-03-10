@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de">
+<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1661,8 +1660,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -1898,7 +1897,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -5775,6 +5774,35 @@ Nicht verbunden
         <location filename="UI/DiffDialog.py" line="295"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Patchdatei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>DirectorySyncHandler</name>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="68"/>
+        <source>Error creating the shared directory.
+{0}</source>
+        <translation>Fehler beim Anlegen des gemeinsamen Verzeichnisses.
+{0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="89"/>
+        <source>Cannot read remote file.
+{0}</source>
+        <translation>Entfernte Datei kann nicht gelesen werden.
+{0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="120"/>
+        <source>Cannot write remote file.
+{0}</source>
+        <translation>Entfernte Datei kann nicht geschrieben werden.
+{0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/DirectorySyncHandler.py" line="179"/>
+        <source>Synchronization finished</source>
+        <translation>Synchronisation beendet</translation>
     </message>
 </context>
 <context>
@@ -12850,92 +12878,12 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>FtpSyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="59"/>
-        <source>Remote bookmarks file exists! Syncing local copy...</source>
-        <translation>Entfernte Lesezeichendatei existiert! Synchronisiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="61"/>
-        <source>Remote bookmarks file does NOT exists. Exporting local copy...</source>
-        <translation>Entfernte Lesezeichendatei existiert NICHT. Exportiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="63"/>
-        <source>Local bookmarks file does NOT exist. Skipping synchronization!</source>
-        <translation>Lokale Lesezeichendatei existiert NICHT. Synchronisation wird übersprungen!</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="68"/>
-        <source>Remote history file exists! Syncing local copy...</source>
-        <translation>Entfernte Chronikdatei existiert! Synchronisiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="70"/>
-        <source>Remote history file does NOT exists. Exporting local copy...</source>
-        <translation>Entfernte Chronikdatei existiert NICHT. Exportiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="72"/>
-        <source>Local history file does NOT exist. Skipping synchronization!</source>
-        <translation>Lokale Chronikdatei existiert NICHT. Synchronisation wird übersprungen!</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="77"/>
-        <source>Remote logins file exists! Syncing local copy...</source>
-        <translation>Entfernte Kennwörterdatei existiert! Synchronisiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="79"/>
-        <source>Remote logins file does NOT exists. Exporting local copy...</source>
-        <translation>Entfernte Kennwörterdatei existiert NICHT. Exportiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="81"/>
-        <source>Local logins file does NOT exist. Skipping synchronization!</source>
-        <translation>Lokale Kennwörterdatei existiert NICHT. Synchronisation wird übersprungen!</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="86"/>
-        <source>Remote user agent settings file exists! Syncing local copy...</source>
-        <translation>Entfernte Datei mit User Agent Daten existiert! Synchronisiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="88"/>
-        <source>Remote user agent settings file does NOT exists. Exporting local copy...</source>
-        <translation>Entfernte Datei mit User Agent Daten existiert NICHT. Exportiere lokale Kopie...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="91"/>
-        <source>Local user agent settings file does NOT exist. Skipping synchronization!</source>
-        <translation>Lokale Datei mit User Agent Daten existiert NICHT. Synchronisation wird übersprungen!</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="135"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="89"/>
         <source>No suitable proxy found.</source>
         <translation>Kein geeigneter Proxy gefunden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="65"/>
-        <source>Uploading local bookmarks file...</source>
-        <translation>Lade lokale Lesezeichendatei hoch...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="74"/>
-        <source>Uploading local history file...</source>
-        <translation>Lade lokale Chronikdatei hoch...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="83"/>
-        <source>Uploading local logins file...</source>
-        <translation>Lade lokale Kennwörterdatei hoch...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="94"/>
-        <source>Uploading local user agent settings file...</source>
-        <translation>Lade lokale Datei mit User Agent Daten hoch...</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="211"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="166"/>
         <source>Synchronization finished</source>
         <translation>Synchronisation beendet</translation>
     </message>
@@ -13186,7 +13134,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -26961,11 +26909,6 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <translation>Anmeldedaten speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Passwords/PasswordManager.py" line="207"/>
-        <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Die Anmeldedaten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="Helpviewer/Passwords/PasswordManager.py" line="209"/>
         <source>Loading login data</source>
         <translation>Anmeldedaten laden</translation>
@@ -28236,27 +28179,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="996"/>
+        <location filename="Preferences/__init__.py" line="997"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1023"/>
+        <location filename="Preferences/__init__.py" line="1024"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1023"/>
+        <location filename="Preferences/__init__.py" line="1024"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1116"/>
+        <location filename="Preferences/__init__.py" line="1117"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1116"/>
+        <location filename="Preferences/__init__.py" line="1117"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>
@@ -41162,19 +41105,24 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <translation>User Agent Einstellungen:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="51"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="53"/>
         <source>FTP</source>
         <translation>FTP</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="54"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="59"/>
         <source>No Synchronization</source>
         <translation>keine Synchronisation</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="153"/>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="157"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Error:&lt;/b&gt; {0}&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Fehler:&lt;/b&gt; {0}&lt;/font&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncCheckPage.py" line="56"/>
+        <source>Shared Directory</source>
+        <translation>Gemeinsames Verzeichnis</translation>
     </message>
 </context>
 <context>
@@ -41243,6 +41191,49 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <location filename="Helpviewer/Sync/SyncDataPage.ui" line="81"/>
         <source>User Agent Settings</source>
         <translation>User Agent Einstellungen</translation>
+    </message>
+</context>
+<context>
+    <name>SyncDirectorySettingsPage</name>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="17"/>
+        <source>Synchronize to a shared directory</source>
+        <translation>Synchronisiere in ein gemeinsames Verzeichnis</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="20"/>
+        <source>Please enter the data for synchronization via a shared directory. All fields must be filled.</source>
+        <translation>Bitte geben sie die Daten für eine Synchronisation über ein gemeinsames Verzeichnis ein. Alle Felder müssen ausgefüllt werden.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="26"/>
+        <source>Shared Directory Settings</source>
+        <translation>Einstellungen für gemeinsames Verzeichnis</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="32"/>
+        <source>Directory Name:</source>
+        <translation>Verzeichnisname:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="39"/>
+        <source>Enter the full path of the shared directory</source>
+        <translation>Gib den vollständigen Pfad des gemeinsamen Verzeichnisses ein</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="46"/>
+        <source>Select the shared directory via a directory selection dialog</source>
+        <translation>Wähle das gemeinsame Verzeichnis über einen Verzeichnisauswahldialog</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="49"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncDirectorySettingsPage.py" line="65"/>
+        <source>Shared Directory</source>
+        <translation>Gemeinsames Verzeichnis</translation>
     </message>
 </context>
 <context>
@@ -41429,14 +41420,114 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="134"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="191"/>
         <source>Invalid encryption key given.</source>
         <translation>Ungültiger Schlüssel angegeben.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="139"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="196"/>
         <source>Data cannot be decrypted.</source>
         <translation>Daten können nicht entschlüsselt werden.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="56"/>
+        <source>Remote bookmarks file exists! Syncing local copy...</source>
+        <translation>Entfernte Lesezeichendatei existiert! Synchronisiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="58"/>
+        <source>Remote bookmarks file does NOT exists. Exporting local copy...</source>
+        <translation>Entfernte Lesezeichendatei existiert NICHT. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="60"/>
+        <source>Local bookmarks file is NEWER. Exporting local copy...</source>
+        <translation>Lokale Lesezeichendatei ist JÜNGER. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="62"/>
+        <source>Local bookmarks file does NOT exist. Skipping synchronization!</source>
+        <translation>Lokale Lesezeichendatei existiert NICHT. Synchronisation wird übersprungen!</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="64"/>
+        <source>Uploading local bookmarks file...</source>
+        <translation>Lade lokale Lesezeichendatei hoch...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="67"/>
+        <source>Remote history file exists! Syncing local copy...</source>
+        <translation>Entfernte Chronikdatei existiert! Synchronisiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="69"/>
+        <source>Remote history file does NOT exists. Exporting local copy...</source>
+        <translation>Entfernte Chronikdatei existiert NICHT. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="71"/>
+        <source>Local history file is NEWER. Exporting local copy...</source>
+        <translation>Lokale Chronikdatei ist JÜNGER. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="73"/>
+        <source>Local history file does NOT exist. Skipping synchronization!</source>
+        <translation>Lokale Chronikdatei existiert NICHT. Synchronisation wird übersprungen!</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="75"/>
+        <source>Uploading local history file...</source>
+        <translation>Lade lokale Chronikdatei hoch...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="78"/>
+        <source>Remote logins file exists! Syncing local copy...</source>
+        <translation>Entfernte Kennwörterdatei existiert! Synchronisiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="80"/>
+        <source>Remote logins file does NOT exists. Exporting local copy...</source>
+        <translation>Entfernte Kennwörterdatei existiert NICHT. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="82"/>
+        <source>Local logins file is NEWER. Exporting local copy...</source>
+        <translation>Lokale Kennwörterdatei ist JÜNGER. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="84"/>
+        <source>Local logins file does NOT exist. Skipping synchronization!</source>
+        <translation>Lokale Kennwörterdatei existiert NICHT. Synchronisation wird übersprungen!</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="86"/>
+        <source>Uploading local logins file...</source>
+        <translation>Lade lokale Kennwörterdatei hoch...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="89"/>
+        <source>Remote user agent settings file exists! Syncing local copy...</source>
+        <translation>Entfernte Datei mit User Agent Daten existiert! Synchronisiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="91"/>
+        <source>Remote user agent settings file does NOT exists. Exporting local copy...</source>
+        <translation>Entfernte Datei mit User Agent Daten existiert NICHT. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="94"/>
+        <source>Local user agent settings file is NEWER. Exporting local copy...</source>
+        <translation>Lokale Datei mit User Agent Daten ist JÜNGER. Exportiere lokale Kopie...</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="96"/>
+        <source>Local user agent settings file does NOT exist. Skipping synchronization!</source>
+        <translation>Lokale Datei mit User Agent Daten existiert NICHT. Synchronisation wird übersprungen!</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="99"/>
+        <source>Uploading local user agent settings file...</source>
+        <translation>Lade lokale Datei mit User Agent Daten hoch...</translation>
     </message>
 </context>
 <context>
@@ -41467,14 +41558,24 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <translation>FTP</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="49"/>
         <source>Select to use no particular host type</source>
         <translation>Auswählen, um keinen bestimmten Servertyp zu verwenden</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="42"/>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="52"/>
         <source>None</source>
         <translation>keinen</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
+        <source>Select to use a shared directory</source>
+        <translation>Auswählen, um ein gemeinsames Verzeichnis zu verwenden</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncHostTypePage.ui" line="42"/>
+        <source>Shared Directory</source>
+        <translation>Gemeinsames Verzeichnis</translation>
     </message>
 </context>
 <context>
@@ -44941,11 +45042,6 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="65"/>
         <source>Saving user agent data</source>
         <translation>User Agent Daten speichern</translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="67"/>
-        <source>&lt;p&gt;User agent data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Die User Agent Daten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/UserAgent/UserAgentManager.py" line="108"/>

@@ -34,6 +34,16 @@
        </widget>
       </item>
       <item>
+       <widget class="QRadioButton" name="directoryRadioButton">
+        <property name="toolTip">
+         <string>Select to use a shared directory</string>
+        </property>
+        <property name="text">
+         <string>Shared Directory</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QRadioButton" name="noneRadioButton">
         <property name="toolTip">
          <string>Select to use no particular host type</string>
@@ -61,6 +71,11 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>ftpRadioButton</tabstop>
+  <tabstop>directoryRadioButton</tabstop>
+  <tabstop>noneRadioButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

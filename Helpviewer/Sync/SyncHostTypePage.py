@@ -29,8 +29,10 @@ class SyncHostTypePage(QWizardPage, Ui_SyncHostTypePage):
         super().__init__(parent)
         self.setupUi(self)
         
-        if Preferences.getHelp("SyncType") == 0:
+        if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
             self.ftpRadioButton.setChecked(True)
+        elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
+            self.directoryRadioButton.setChecked(True)
         else:
             self.noneRadioButton.setChecked(True)
     
@@ -42,8 +44,11 @@ class SyncHostTypePage(QWizardPage, Ui_SyncHostTypePage):
         """
         # save the settings
         if self.ftpRadioButton.isChecked():
-            Preferences.setHelp("SyncType", 0)
+            Preferences.setHelp("SyncType", SyncGlobals.SyncTypeFtp)
             return SyncGlobals.PageFTPSettings
+        elif self.directoryRadioButton.isChecked():
+            Preferences.setHelp("SyncType", SyncGlobals.SyncTypeDirectory)
+            return SyncGlobals.PageDirectorySettings
         else:
-            Preferences.setHelp("SyncType", -1)
+            Preferences.setHelp("SyncType", SyncGlobals.SyncTypeNone)
             return SyncGlobals.PageCheck

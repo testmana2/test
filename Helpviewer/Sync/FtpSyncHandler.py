@@ -7,7 +7,8 @@
 Module implementing a synchronization handler using FTP.
 """
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QIODevice, QTime, QThread, QTimer, QBuffer
+from PyQt4.QtCore import pyqtSignal, QUrl, QIODevice, QTime, QThread, QTimer, QBuffer, \
+    QFileInfo
 from PyQt4.QtNetwork import QFtp, QNetworkProxyQuery, QNetworkProxy, QNetworkProxyFactory
 
 from .SyncHandler import SyncHandler
@@ -46,54 +47,7 @@ class FtpSyncHandler(SyncHandler):
         self.__state = "idle"
         self.__forceUpload = False
         
-        self.__remoteFiles = {
-            "bookmarks": "Bookmarks",
-            "history": "History",
-            "passwords": "Logins",
-            "useragents": "UserAgentSettings"
-        }
-        self.__remoteFilesFound = []
-        
-        self.__messages = {
-            "bookmarks": {
-                "RemoteExists": self.trUtf8(
-                    "Remote bookmarks file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
-                    "Remote bookmarks file does NOT exists. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
-                    "Local bookmarks file does NOT exist. Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local bookmarks file..."),
-            },
-            "history": {
-                "RemoteExists": self.trUtf8(
-                    "Remote history file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
-                    "Remote history file does NOT exists. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
-                    "Local history file does NOT exist. Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local history file..."),
-            },
-            "passwords": {
-                "RemoteExists": self.trUtf8(
-                    "Remote logins file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
-                    "Remote logins file does NOT exists. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
-                    "Local logins file does NOT exist. Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local logins file..."),
-            },
-            "useragents": {
-                "RemoteExists": self.trUtf8(
-                    "Remote user agent settings file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
-                    "Remote user agent settings file does NOT exists."
-                    " Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
-                    "Local user agent settings file does NOT exist."
-                    " Skipping synchronization!"),
-                "Uploading": self.trUtf8("Uploading local user agent settings file..."),
-            },
-        }
+        self.__remoteFilesFound = {}
     
     def initialLoadAndCheck(self, forceUpload):
         """
@@ -107,7 +61,7 @@ class FtpSyncHandler(SyncHandler):
         self.__state = "initializing"
         self.__forceUpload = forceUpload
         
-        self.__remoteFilesFound = []
+        self.__remoteFilesFound = {}
         self.__syncIDs = {}
         
         self.__idleTimer = QTimer(self)
@@ -196,10 +150,11 @@ class FtpSyncHandler(SyncHandler):
                     if self.__ftp.currentCommand() == QFtp.Get:
                         self.__syncIDs[id][1].close()
                         ok, error = self.writeFile(self.__syncIDs[id][1].buffer(),
-                                                   self.__syncIDs[id][3])
+                                                   self.__syncIDs[id][3],
+                                                   self.__syncIDs[id][4])
                         if ok:
                             self.syncStatus.emit(self.__syncIDs[id][0], True,
-                                self.__messages[self.__syncIDs[id][0]]["RemoteExists"])
+                                self._messages[self.__syncIDs[id][0]]["RemoteExists"])
                         else:
                             self.syncStatus.emit(self.__syncIDs[id][0], False,
                                 error)
@@ -225,21 +180,22 @@ class FtpSyncHandler(SyncHandler):
         @param info info about the entry (QUrlInfo)
         """
         if info.isValid() and info.isFile():
-            if info.name() in self.__remoteFiles.values():
-                self.__remoteFilesFound.append(info.name())
+            if info.name() in self._remoteFiles.values():
+                self.__remoteFilesFound[info.name()] = info.lastModified()
     
-    def __downloadFile(self, type_, fileName):
+    def __downloadFile(self, type_, fileName, timestamp):
         """
         Private method to downlaod the given file.
         
         @param type_ type of the synchronization event (string one
             of "bookmarks", "history", "passwords" or "useragents")
         @param fileName name of the file to be downloaded (string)
+        @param timestamp time stamp in seconds of the file to be downloaded (int)
         """
         buffer = QBuffer(self)
         buffer.open(QIODevice.WriteOnly)
-        id = self.__ftp.get(self.__remoteFiles[type_], buffer)
-        self.__syncIDs[id] = (type_, buffer, True, fileName)
+        id = self.__ftp.get(self._remoteFiles[type_], buffer)
+        self.__syncIDs[id] = (type_, buffer, True, fileName, timestamp)
     
     def __uploadFile(self, type_, fileName):
         """
@@ -252,9 +208,9 @@ class FtpSyncHandler(SyncHandler):
         data = self.readFile(fileName)
         if data.isEmpty():
             self.syncStatus.emit(type_, True,
-                self.__messages[type_]["LocalMissing"])
+                self._messages[type_]["LocalMissing"])
         else:
-            id = self.__ftp.put(data, self.__remoteFiles[type_])
+            id = self.__ftp.put(data, self._remoteFiles[type_])
             self.__syncIDs[id] = (type_, data, False)
     
     def __initialSyncFile(self, type_, fileName):
@@ -266,11 +222,18 @@ class FtpSyncHandler(SyncHandler):
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
-           self.__remoteFiles[type_] in self.__remoteFilesFound:
-            self.__downloadFile(type_, fileName)
+           self._remoteFiles[type_] in self.__remoteFilesFound and \
+           QFileInfo(fileName).lastModified() <= \
+                self.__remoteFilesFound[self._remoteFiles[type_]]:
+            self.__downloadFile(type_, fileName,
+                self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
         else:
-            self.syncStatus.emit(type_, True,
-                self.__messages[type_]["RemoteMissing"])
+            if self._remoteFiles[type_] not in self.__remoteFilesFound:
+                self.syncStatus.emit(type_, True,
+                    self._messages[type_]["RemoteMissing"])
+            else:
+                self.syncStatus.emit(type_, True,
+                    self._messages[type_]["LocalNewer"])
             self.__uploadFile(type_, fileName)
     
     def __initialSync(self):
@@ -311,7 +274,7 @@ class FtpSyncHandler(SyncHandler):
             return
         
         self.__state = "uploading"
-        self.syncStatus.emit(type_, True, self.__messages[type_]["Uploading"])
+        self.syncStatus.emit(type_, True, self._messages[type_]["Uploading"])
         self.__uploadFile(type_, fileName)
     
     def syncBookmarks(self):
