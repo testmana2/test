@@ -661,6 +661,7 @@ class Prefs(object):
         "SyncEncryptData": False,
         "SyncEncryptionKey": "",
         "SyncEncryptionKeyLength": 32,      # 16, 24 or 32
+        "SyncEncryptPasswordsOnly": False,
         "SyncType": 0,
         "SyncFtpServer": "",
         "SyncFtpUser": "",
@@ -2053,8 +2054,8 @@ def getHelp(key, prefClass=Prefs):
                  "LocalContentCanAccessRemoteUrls", "LocalContentCanAccessFileUrls",
                  "XSSAuditingEnabled", "SiteSpecificQuirksEnabled", "SyncEnabled",
                  "SyncBookmarks", "SyncHistory", "SyncPasswords", "SyncUserAgents",
-                 "SyncSpeedDial", "SyncEncryptData","WarnOnMultipleClose",
-                 "ClickToFlashEnabled"
+                 "SyncSpeedDial", "SyncEncryptData", "SyncEncryptPasswordsOnly",
+                 "WarnOnMultipleClose", "ClickToFlashEnabled"
                 ]:
         return toBool(prefClass.settings.value("Help/" + key,
             prefClass.helpDefaults[key]))

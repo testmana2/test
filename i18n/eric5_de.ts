@@ -12884,7 +12884,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Kein geeigneter Proxy gefunden.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="162"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
         <source>Synchronization finished</source>
         <translation>Synchronisation beendet</translation>
     </message>
@@ -28180,27 +28180,27 @@ Bitte Aktualisieren.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="998"/>
+        <location filename="Preferences/__init__.py" line="999"/>
         <source>Export Preferences</source>
         <translation>Einstellungen exportieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Import Preferences</source>
         <translation>Einstellungen importieren</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Properties Dateien (*.ini);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select Python2 Interpreter</source>
         <translation>Wähle den Python2 Interpreter</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Wähle den zu verwendenden Python2 Interpreter aus:</translation>
     </message>
@@ -41328,12 +41328,12 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <translation>Gib den Schlüssel erneut ein</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="89"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="93"/>
         <source>Encryption key must not be empty.</source>
         <translation>Der Schlüssel darf nicht leer sein.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="94"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="98"/>
         <source>Repeated encryption key is wrong.</source>
         <translation>Die Schlüsselwiederholung ist falsch.</translation>
     </message>
@@ -41371,6 +41371,16 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
         <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="35"/>
         <source>256 Bits</source>
         <translation>256 Bits</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="137"/>
+        <source>Select to encrypt only the passwords</source>
+        <translation>Auswählen, um nur Kennwörter zu verschlüsseln</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="140"/>
+        <source>Encrypt Passwords Only</source>
+        <translation>nur Kennwörter verschlüsseln</translation>
     </message>
 </context>
 <context>
@@ -41459,12 +41469,12 @@ Um zum Hauptzweig zurückzuschalten, muß dieser Eintrag leer sein.&lt;/p&gt;</t
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="211"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="220"/>
         <source>Invalid encryption key given.</source>
         <translation>Ungültiger Schlüssel angegeben.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="216"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="225"/>
         <source>Data cannot be decrypted.</source>
         <translation>Daten können nicht entschlüsselt werden.</translation>
     </message>

@@ -13015,7 +13015,7 @@ selección completa.&lt;/li&gt;
         <translation>¡El archivo remoto de marcadores ya existe! Sincronizando copia local...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="162"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
         <source>Synchronization finished</source>
         <translation>Subiendo archivo local de marcadores...</translation>
     </message>
@@ -28713,27 +28713,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="998"/>
+        <location filename="Preferences/__init__.py" line="999"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -41968,12 +41968,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
         <translation type="obsolete">Muestra una indicación sobre la fuerza de la contraseña</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="89"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="93"/>
         <source>Encryption key must not be empty.</source>
         <translation>La clave de encriptación no puede estar vacía.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="94"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="98"/>
         <source>Repeated encryption key is wrong.</source>
         <translation>La clave de encriptación repetida es errónea.</translation>
     </message>
@@ -42011,6 +42011,16 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
         <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="35"/>
         <source>256 Bits</source>
         <translation>256 Bits</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="137"/>
+        <source>Select to encrypt only the passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="140"/>
+        <source>Encrypt Passwords Only</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -42099,12 +42109,12 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="211"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="220"/>
         <source>Invalid encryption key given.</source>
         <translation>Clave de encriptación proporcionada inválida.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="216"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="225"/>
         <source>Data cannot be decrypted.</source>
         <translation>No se pueden desencriptar los datos.</translation>
     </message>

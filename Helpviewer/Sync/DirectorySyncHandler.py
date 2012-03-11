@@ -77,7 +77,7 @@ class DirectorySyncHandler(SyncHandler):
         Private method to downlaod the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be downloaded (string)
         @param timestamp time stamp in seconds of the file to be downloaded (int)
         """
@@ -94,7 +94,7 @@ class DirectorySyncHandler(SyncHandler):
             return
         
         QCoreApplication.processEvents()
-        ok, error = self.writeFile(QByteArray(data), fileName,  timestamp)
+        ok, error = self.writeFile(QByteArray(data), fileName, type_, timestamp)
         if not ok:
             self.syncStatus.emit(type_, error)
         self.syncFinished.emit(type_, ok, True)
@@ -104,11 +104,11 @@ class DirectorySyncHandler(SyncHandler):
         Private method to upload the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be uploaded (string)
         """
         QCoreApplication.processEvents()
-        data = self.readFile(fileName)
+        data = self.readFile(fileName, type_)
         if data.isEmpty():
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
             self.syncFinished(type_, False, False)
@@ -132,7 +132,7 @@ class DirectorySyncHandler(SyncHandler):
         Private method to do the initial synchronization of the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
@@ -194,7 +194,7 @@ class DirectorySyncHandler(SyncHandler):
         Private method to synchronize the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])

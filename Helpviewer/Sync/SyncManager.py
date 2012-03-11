@@ -229,7 +229,7 @@ class SyncManager(QObject):
         Private slot to handle a finished synchronization event.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param status flag indicating success (boolean)
         @param download flag indicating a download of a file (boolean)
         """
@@ -251,7 +251,7 @@ class SyncManager(QObject):
         Private slot to handle a status update of a synchronization event.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param message status message for the event (string)
         """
         self.syncMessage.emit(message)

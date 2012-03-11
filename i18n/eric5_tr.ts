@@ -13131,7 +13131,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="162"/>
+        <location filename="Helpviewer/Sync/FtpSyncHandler.py" line="163"/>
         <source>Synchronization finished</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28906,27 +28906,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="Preferences/__init__.py" line="998"/>
+        <location filename="Preferences/__init__.py" line="999"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1025"/>
+        <location filename="Preferences/__init__.py" line="1026"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Preferences/__init__.py" line="1118"/>
+        <location filename="Preferences/__init__.py" line="1119"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41992,12 +41992,12 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="89"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="93"/>
         <source>Encryption key must not be empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="94"/>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="98"/>
         <source>Repeated encryption key is wrong.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42034,6 +42034,16 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Sync/SyncEncryptionPage.py" line="35"/>
         <source>256 Bits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="137"/>
+        <source>Select to encrypt only the passwords</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Sync/SyncEncryptionPage.ui" line="140"/>
+        <source>Encrypt Passwords Only</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -42123,12 +42133,12 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 <context>
     <name>SyncHandler</name>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="211"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="220"/>
         <source>Invalid encryption key given.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Sync/SyncHandler.py" line="216"/>
+        <location filename="Helpviewer/Sync/SyncHandler.py" line="225"/>
         <source>Data cannot be decrypted.</source>
         <translation type="unfinished"></translation>
     </message>

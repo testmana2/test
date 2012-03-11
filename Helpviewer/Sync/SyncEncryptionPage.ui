@@ -131,6 +131,16 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QCheckBox" name="loginsOnlyCheckBox">
+        <property name="toolTip">
+         <string>Select to encrypt only the passwords</string>
+        </property>
+        <property name="text">
+         <string>Encrypt Passwords Only</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -161,6 +171,8 @@
   <tabstop>reencryptCheckBox</tabstop>
   <tabstop>encryptionKeyEdit</tabstop>
   <tabstop>encryptionKeyAgainEdit</tabstop>
+  <tabstop>keySizeComboBox</tabstop>
+  <tabstop>loginsOnlyCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

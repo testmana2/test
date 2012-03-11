@@ -151,6 +151,7 @@ class FtpSyncHandler(SyncHandler):
                         self.__syncIDs[id][1].close()
                         ok, error = self.writeFile(self.__syncIDs[id][1].buffer(),
                                                    self.__syncIDs[id][3],
+                                                   self.__syncIDs[id][0],
                                                    self.__syncIDs[id][4])
                         if not ok:
                             self.syncStatus.emit(self.__syncIDs[id][0], error)
@@ -184,7 +185,7 @@ class FtpSyncHandler(SyncHandler):
         Private method to downlaod the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be downloaded (string)
         @param timestamp time stamp in seconds of the file to be downloaded (int)
         """
@@ -199,10 +200,10 @@ class FtpSyncHandler(SyncHandler):
         Private method to upload the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be uploaded (string)
         """
-        data = self.readFile(fileName)
+        data = self.readFile(fileName, type_)
         if data.isEmpty():
             self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
             self.syncFinished(type_, False, False)
@@ -215,7 +216,7 @@ class FtpSyncHandler(SyncHandler):
         Private method to do the initial synchronization of the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if not self.__forceUpload and \
@@ -267,7 +268,7 @@ class FtpSyncHandler(SyncHandler):
         Private method to synchronize the given file.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param fileName name of the file to be synchronized (string)
         """
         if self.__state == "initializing":

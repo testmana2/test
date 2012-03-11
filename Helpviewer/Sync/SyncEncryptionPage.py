@@ -41,6 +41,8 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         self.encryptionKeyAgainEdit.setEnabled(False)
         self.keySizeComboBox.setCurrentIndex(self.keySizeComboBox.findData(
             Preferences.getHelp("SyncEncryptionKeyLength")))
+        self.loginsOnlyCheckBox.setChecked(
+            Preferences.getHelp("SyncEncryptPasswordsOnly"))
     
     def nextId(self):
         """
@@ -52,6 +54,8 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         Preferences.setHelp("SyncEncryptionKey", self.encryptionKeyEdit.text())
         Preferences.setHelp("SyncEncryptionKeyLength", self.keySizeComboBox.itemData(
             self.keySizeComboBox.currentIndex()))
+        Preferences.setHelp("SyncEncryptPasswordsOnly",
+            self.loginsOnlyCheckBox.isChecked())
         
         return SyncGlobals.PageType
     

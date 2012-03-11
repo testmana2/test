@@ -145,7 +145,7 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         Private slot to handle a finished synchronization event.
         
         @param type_ type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param status flag indicating success (boolean)
         @param download flag indicating a download of a file (boolean)
         """

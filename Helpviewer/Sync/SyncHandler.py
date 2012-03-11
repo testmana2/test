@@ -158,7 +158,7 @@ class SyncHandler(QObject):
         """
         raise NotImplementedError
     
-    def readFile(self, fileName):
+    def readFile(self, fileName, type_):
         """
         Public method to read a file.
         
@@ -166,6 +166,8 @@ class SyncHandler(QObject):
         the relevant encryption key.
         
         @param fileName name of the file to be read (string)
+        @param type_ type of the synchronization event (string one
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @return data of the file, optionally encrypted (QByteArray)
         """
         if os.path.exists(fileName):
@@ -176,7 +178,10 @@ class SyncHandler(QObject):
             except IOError:
                 return QByteArray()
             
-            if Preferences.getHelp("SyncEncryptData"):
+            if Preferences.getHelp("SyncEncryptData") and \
+               (not Preferences.getHelp("SyncEncryptPasswordsOnly") or \
+                (Preferences.getHelp("SyncEncryptPasswordsOnly") and \
+                 type_ == "passwords")):
                 key = Preferences.getHelp("SyncEncryptionKey")
                 if not key:
                     return QByteArray()
@@ -191,7 +196,7 @@ class SyncHandler(QObject):
         
         return QByteArray()
     
-    def writeFile(self, data, fileName, timestamp=0):
+    def writeFile(self, data, fileName, type_, timestamp=0):
         """
         Public method to write the data to a file.
         
@@ -200,12 +205,16 @@ class SyncHandler(QObject):
         
         @param data data to be written and optionally decrypted (QByteArray)
         @param fileName name of the file the data is to be written to (string)
+        @param type_ type of the synchronization event (string one
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
         @param timestamp timestamp to be given to the file (int)
         @return tuple giving a success flag and an error string (boolean, string)
         """
         data = bytes(data)
         
-        if Preferences.getHelp("SyncEncryptData"):
+        if Preferences.getHelp("SyncEncryptData") and \
+           (not Preferences.getHelp("SyncEncryptPasswordsOnly") or \
+            (Preferences.getHelp("SyncEncryptPasswordsOnly") and type_ == "passwords")):
             key = Preferences.getHelp("SyncEncryptionKey")
             if not key:
                 return False, self.trUtf8("Invalid encryption key given.")
