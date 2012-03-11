@@ -53,17 +53,17 @@ emitted for a general error with the error
 </dd><dt>syncFinished(type_, done, download)</dt>
 <dd>
 emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, boolean)
+        finished (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", boolean, boolean)
 </dd><dt>syncMessage(message)</dt>
 <dd>
 emitted to give status info about the sync
         process (string)
-</dd><dt>syncStatus(type_, done, message)</dt>
+</dd><dt>syncStatus(type_, message)</dt>
 <dd>
 emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, string)
+        status (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", string)
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -96,6 +96,9 @@ QObject
 </tr><tr>
 <td><a href="#SyncManager.__syncPasswords">__syncPasswords</a></td>
 <td>Private slot to synchronize the passwords.</td>
+</tr><tr>
+<td><a href="#SyncManager.__syncSpeedDial">__syncSpeedDial</a></td>
+<td>Private slot to synchronize the speed dial settings.</td>
 </tr><tr>
 <td><a href="#SyncManager.__syncStatus">__syncStatus</a></td>
 <td>Private slot to handle a status update of a synchronization event.</td>
@@ -157,7 +160,7 @@ error message (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>status</i></dt>
 <dd>
 flag indicating success (boolean)
@@ -175,19 +178,21 @@ flag indicating a download of a file (boolean)
 <b>__syncPasswords</b>(<i></i>)
 <p>
         Private slot to synchronize the passwords.
+</p><a NAME="SyncManager.__syncSpeedDial" ID="SyncManager.__syncSpeedDial"></a>
+<h4>SyncManager.__syncSpeedDial</h4>
+<b>__syncSpeedDial</b>(<i></i>)
+<p>
+        Private slot to synchronize the speed dial settings.
 </p><a NAME="SyncManager.__syncStatus" ID="SyncManager.__syncStatus"></a>
 <h4>SyncManager.__syncStatus</h4>
-<b>__syncStatus</b>(<i>type_, status, message</i>)
+<b>__syncStatus</b>(<i>type_, message</i>)
 <p>
         Private slot to handle a status update of a synchronization event.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
-</dd><dt><i>status</i></dt>
-<dd>
-flag indicating success (boolean)
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>message</i></dt>
 <dd>
 status message for the event (string)

@@ -52,16 +52,16 @@ emitted for a general error with the error message (string)
 </dd><dt>syncFinished(type_, done, download)</dt>
 <dd>
 emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, boolean)
+        finished (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", boolean, boolean)
 </dd><dt>syncMessage(message)</dt>
 <dd>
 emitted to send a message about synchronization (string)
-</dd><dt>syncStatus(type_, done, message)</dt>
+</dd><dt>syncStatus(type_, message)</dt>
 <dd>
 emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, string)
+        status (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", string)
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -110,6 +110,9 @@ SyncHandler
 <td><a href="#DirectorySyncHandler.syncPasswords">syncPasswords</a></td>
 <td>Public method to synchronize the passwords.</td>
 </tr><tr>
+<td><a href="#DirectorySyncHandler.syncSpeedDial">syncSpeedDial</a></td>
+<td>Public method to synchronize the speed dial data.</td>
+</tr><tr>
 <td><a href="#DirectorySyncHandler.syncUserAgents">syncUserAgents</a></td>
 <td>Public method to synchronize the user agents.</td>
 </tr>
@@ -130,17 +133,20 @@ reference to the parent object (QObject)
 </dd>
 </dl><a NAME="DirectorySyncHandler.__downloadFile" ID="DirectorySyncHandler.__downloadFile"></a>
 <h4>DirectorySyncHandler.__downloadFile</h4>
-<b>__downloadFile</b>(<i>type_, fileName</i>)
+<b>__downloadFile</b>(<i>type_, fileName, timestamp</i>)
 <p>
         Private method to downlaod the given file.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be downloaded (string)
+</dd><dt><i>timestamp</i></dt>
+<dd>
+time stamp in seconds of the file to be downloaded (int)
 </dd>
 </dl><a NAME="DirectorySyncHandler.__initialSync" ID="DirectorySyncHandler.__initialSync"></a>
 <h4>DirectorySyncHandler.__initialSync</h4>
@@ -156,7 +162,7 @@ name of the file to be downloaded (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be synchronized (string)
@@ -170,7 +176,7 @@ name of the file to be synchronized (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be synchronized (string)
@@ -184,7 +190,7 @@ name of the file to be synchronized (string)
 <dt><i>type_</i></dt>
 <dd>
 type of the synchronization event (string one
-            of "bookmarks", "history", "passwords" or "useragents")
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
 </dd><dt><i>fileName</i></dt>
 <dd>
 name of the file to be uploaded (string)
@@ -219,6 +225,11 @@ flag indicating a forced upload of the files (boolean)
 <b>syncPasswords</b>(<i></i>)
 <p>
         Public method to synchronize the passwords.
+</p><a NAME="DirectorySyncHandler.syncSpeedDial" ID="DirectorySyncHandler.syncSpeedDial"></a>
+<h4>DirectorySyncHandler.syncSpeedDial</h4>
+<b>syncSpeedDial</b>(<i></i>)
+<p>
+        Public method to synchronize the speed dial data.
 </p><a NAME="DirectorySyncHandler.syncUserAgents" ID="DirectorySyncHandler.syncUserAgents"></a>
 <h4>DirectorySyncHandler.syncUserAgents</h4>
 <b>syncUserAgents</b>(<i></i>)

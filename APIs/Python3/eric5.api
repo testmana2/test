@@ -2549,6 +2549,7 @@ eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.loadThumbnail?4(url, loadTitle=Fa
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pageForUrl?4(url)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pagesChanged?7
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.pagesInRow?4()
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.reload?4()
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.removeImageForUrl?4(url)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.removePage?4(url)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.save?4()
@@ -2586,6 +2587,7 @@ eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncFinished?7
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncHistory?4()
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncMessage?7
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncPasswords?4()
+eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncSpeedDial?4()
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncStatus?7
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler.syncUserAgents?4()
 eric5.Helpviewer.Sync.DirectorySyncHandler.DirectorySyncHandler?1(parent=None)
@@ -2597,6 +2599,7 @@ eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncFinished?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncHistory?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncMessage?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncPasswords?4()
+eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncSpeedDial?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncStatus?7
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler.syncUserAgents?4()
 eric5.Helpviewer.Sync.FtpSyncHandler.FtpSyncHandler?1(parent=None)
@@ -2629,7 +2632,7 @@ eric5.Helpviewer.Sync.SyncGlobals.SyncTypeDirectory?7
 eric5.Helpviewer.Sync.SyncGlobals.SyncTypeFtp?7
 eric5.Helpviewer.Sync.SyncGlobals.SyncTypeNone?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.initialLoadAndCheck?4(forceUpload)
-eric5.Helpviewer.Sync.SyncHandler.SyncHandler.readFile?4(fileName)
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.readFile?4(fileName, type_)
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.shutdown?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncBookmarks?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncError?7
@@ -2637,9 +2640,10 @@ eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncFinished?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncHistory?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncMessage?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncPasswords?4()
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncSpeedDial?4()
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncStatus?7
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler.syncUserAgents?4()
-eric5.Helpviewer.Sync.SyncHandler.SyncHandler.writeFile?4(data, fileName, timestamp=0)
+eric5.Helpviewer.Sync.SyncHandler.SyncHandler.writeFile?4(data, fileName, type_, timestamp=0)
 eric5.Helpviewer.Sync.SyncHandler.SyncHandler?1(parent=None)
 eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage.nextId?4()
 eric5.Helpviewer.Sync.SyncHostTypePage.SyncHostTypePage?1(parent=None)

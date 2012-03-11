@@ -67,7 +67,10 @@ QWizardPage, Ui_SyncCheckPage
 <td><a href="#SyncCheckPage.__syncError">__syncError</a></td>
 <td>Private slot to handle general synchronization issues.</td>
 </tr><tr>
-<td><a href="#SyncCheckPage.__updatePage">__updatePage</a></td>
+<td><a href="#SyncCheckPage.__updateLabels">__updateLabels</a></td>
+<td>Private slot to handle a finished synchronization event.</td>
+</tr><tr>
+<td><a href="#SyncCheckPage.__updateMessages">__updateMessages</a></td>
 <td>Private slot to update the synchronization status info.</td>
 </tr><tr>
 <td><a href="#SyncCheckPage.initializePage">initializePage</a></td>
@@ -111,18 +114,32 @@ reference to the label to be animated (QLabel)
 <dd>
 error message (string)
 </dd>
-</dl><a NAME="SyncCheckPage.__updatePage" ID="SyncCheckPage.__updatePage"></a>
-<h4>SyncCheckPage.__updatePage</h4>
-<b>__updatePage</b>(<i>type_, done, msg</i>)
+</dl><a NAME="SyncCheckPage.__updateLabels" ID="SyncCheckPage.__updateLabels"></a>
+<h4>SyncCheckPage.__updateLabels</h4>
+<b>__updateLabels</b>(<i>type_, status, download</i>)
+<p>
+        Private slot to handle a finished synchronization event.
+</p><dl>
+<dt><i>type_</i></dt>
+<dd>
+type of the synchronization event (string one
+            of "bookmarks", "history", "passwords", "useragents" or "speeddial")
+</dd><dt><i>status</i></dt>
+<dd>
+flag indicating success (boolean)
+</dd><dt><i>download</i></dt>
+<dd>
+flag indicating a download of a file (boolean)
+</dd>
+</dl><a NAME="SyncCheckPage.__updateMessages" ID="SyncCheckPage.__updateMessages"></a>
+<h4>SyncCheckPage.__updateMessages</h4>
+<b>__updateMessages</b>(<i>type_, msg</i>)
 <p>
         Private slot to update the synchronization status info.
 </p><dl>
 <dt><i>type_</i></dt>
 <dd>
 type of synchronization data (string)
-</dd><dt><i>done</i></dt>
-<dd>
-flag indicating success (boolean)
 </dd><dt><i>msg</i></dt>
 <dd>
 synchronization message (string)

@@ -2986,6 +2986,7 @@
       <keyword name="DirectorySyncHandler.syncBookmarks" id="DirectorySyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncBookmarks" />
       <keyword name="DirectorySyncHandler.syncHistory" id="DirectorySyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncHistory" />
       <keyword name="DirectorySyncHandler.syncPasswords" id="DirectorySyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncPasswords" />
+      <keyword name="DirectorySyncHandler.syncSpeedDial" id="DirectorySyncHandler.syncSpeedDial" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncSpeedDial" />
       <keyword name="DirectorySyncHandler.syncUserAgents" id="DirectorySyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncUserAgents" />
       <keyword name="DocumentationPlugins (Package)" id="DocumentationPlugins (Package)" ref="index-eric5.Plugins.DocumentationPlugins.html" />
       <keyword name="DocumentationTools (Package)" id="DocumentationTools (Package)" ref="index-eric5.DocumentationTools.html" />
@@ -4295,6 +4296,7 @@
       <keyword name="FtpSyncHandler.syncBookmarks" id="FtpSyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncBookmarks" />
       <keyword name="FtpSyncHandler.syncHistory" id="FtpSyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncHistory" />
       <keyword name="FtpSyncHandler.syncPasswords" id="FtpSyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncPasswords" />
+      <keyword name="FtpSyncHandler.syncSpeedDial" id="FtpSyncHandler.syncSpeedDial" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncSpeedDial" />
       <keyword name="FtpSyncHandler.syncUserAgents" id="FtpSyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.FtpSyncHandler.html#FtpSyncHandler.syncUserAgents" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Function" />
       <keyword name="Function" id="Function" ref="eric5.Utilities.ClassBrowsers.idlclbr.html#Function" />
@@ -8356,6 +8358,7 @@
       <keyword name="SpeedDial.loadThumbnail" id="SpeedDial.loadThumbnail" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.loadThumbnail" />
       <keyword name="SpeedDial.pageForUrl" id="SpeedDial.pageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pageForUrl" />
       <keyword name="SpeedDial.pagesInRow" id="SpeedDial.pagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pagesInRow" />
+      <keyword name="SpeedDial.reload" id="SpeedDial.reload" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.reload" />
       <keyword name="SpeedDial.removeImageForUrl" id="SpeedDial.removeImageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removeImageForUrl" />
       <keyword name="SpeedDial.removePage" id="SpeedDial.removePage" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removePage" />
       <keyword name="SpeedDial.save" id="SpeedDial.save" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.save" />
@@ -9371,7 +9374,8 @@
       <keyword name="SyncCheckPage (Module)" id="SyncCheckPage (Module)" ref="eric5.Helpviewer.Sync.SyncCheckPage.html" />
       <keyword name="SyncCheckPage.__makeAnimatedLabel" id="SyncCheckPage.__makeAnimatedLabel" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__makeAnimatedLabel" />
       <keyword name="SyncCheckPage.__syncError" id="SyncCheckPage.__syncError" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__syncError" />
-      <keyword name="SyncCheckPage.__updatePage" id="SyncCheckPage.__updatePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__updatePage" />
+      <keyword name="SyncCheckPage.__updateLabels" id="SyncCheckPage.__updateLabels" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__updateLabels" />
+      <keyword name="SyncCheckPage.__updateMessages" id="SyncCheckPage.__updateMessages" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.__updateMessages" />
       <keyword name="SyncCheckPage.initializePage" id="SyncCheckPage.initializePage" ref="eric5.Helpviewer.Sync.SyncCheckPage.html#SyncCheckPage.initializePage" />
       <keyword name="SyncDataPage" id="SyncDataPage" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage" />
       <keyword name="SyncDataPage (Constructor)" id="SyncDataPage (Constructor)" ref="eric5.Helpviewer.Sync.SyncDataPage.html#SyncDataPage.__init__" />
@@ -9408,6 +9412,7 @@
       <keyword name="SyncHandler.syncBookmarks" id="SyncHandler.syncBookmarks" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncBookmarks" />
       <keyword name="SyncHandler.syncHistory" id="SyncHandler.syncHistory" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncHistory" />
       <keyword name="SyncHandler.syncPasswords" id="SyncHandler.syncPasswords" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncPasswords" />
+      <keyword name="SyncHandler.syncSpeedDial" id="SyncHandler.syncSpeedDial" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncSpeedDial" />
       <keyword name="SyncHandler.syncUserAgents" id="SyncHandler.syncUserAgents" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.syncUserAgents" />
       <keyword name="SyncHandler.writeFile" id="SyncHandler.writeFile" ref="eric5.Helpviewer.Sync.SyncHandler.html#SyncHandler.writeFile" />
       <keyword name="SyncHostTypePage" id="SyncHostTypePage" ref="eric5.Helpviewer.Sync.SyncHostTypePage.html#SyncHostTypePage" />
@@ -9422,6 +9427,7 @@
       <keyword name="SyncManager.__syncFinished" id="SyncManager.__syncFinished" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncFinished" />
       <keyword name="SyncManager.__syncHistory" id="SyncManager.__syncHistory" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncHistory" />
       <keyword name="SyncManager.__syncPasswords" id="SyncManager.__syncPasswords" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncPasswords" />
+      <keyword name="SyncManager.__syncSpeedDial" id="SyncManager.__syncSpeedDial" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncSpeedDial" />
       <keyword name="SyncManager.__syncStatus" id="SyncManager.__syncStatus" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncStatus" />
       <keyword name="SyncManager.__syncUserAgents" id="SyncManager.__syncUserAgents" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.__syncUserAgents" />
       <keyword name="SyncManager.close" id="SyncManager.close" ref="eric5.Helpviewer.Sync.SyncManager.html#SyncManager.close" />
