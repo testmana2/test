@@ -168,12 +168,15 @@ class SpeedDial(QObject):
         """
         Private method to load the speed dial configuration.
         """
+        allPages, pagesPerRow, speedDialSize = [], 0, 0
+        
         speedDialFile = self.getFileName()
         if os.path.exists(speedDialFile):
             reader = SpeedDialReader()
             allPages, pagesPerRow, speedDialSize = reader.read(speedDialFile)
-            self.__pagesPerRow = pagesPerRow if pagesPerRow else 4
-            self.__speedDialSize = speedDialSize if speedDialSize else 231
+        
+        self.__pagesPerRow = pagesPerRow if pagesPerRow else 4
+        self.__speedDialSize = speedDialSize if speedDialSize else 231
         
         if allPages:
             self.__webPages = allPages
