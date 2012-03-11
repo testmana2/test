@@ -48,7 +48,7 @@ class UserAgentWriter(QXmlStreamWriter):
         @return flag indicating success (boolean)
         """
         self.writeStartDocument()
-        self.writeDTD("<!DOCTYPE passwords>")
+        self.writeDTD("<!DOCTYPE useragents>")
         self.writeStartElement("UserAgents")
         self.writeAttribute("version", "1.0")
         
