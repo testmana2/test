@@ -27,16 +27,16 @@ class SyncManager(QObject):
         message (string)
     @signal syncMessage(message) emitted to give status info about the sync
         process (string)
-    @signal syncStatus(type_, done, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, string)
+    @signal syncStatus(type_, message) emitted to indicate the synchronization
+        status (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", string)
     @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, boolean)
+        finished (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", boolean, boolean)
     """
     syncError = pyqtSignal(str)
     syncMessage = pyqtSignal(str)
-    syncStatus = pyqtSignal(str, bool, str)
+    syncStatus = pyqtSignal(str, str)
     syncFinished = pyqtSignal(str, bool, bool)
     
     def __init__(self, parent=None):
@@ -48,8 +48,6 @@ class SyncManager(QObject):
         super().__init__(parent)
         
         self.__handler = None
-        
-        self.loadSettings()
     
     def handler(self):
         """
@@ -134,6 +132,17 @@ class SyncManager(QObject):
                         .userAgentSettingsSaved.disconnect(self.__syncUserAgents)
                 except TypeError:
                     pass
+            
+            # connect sync manager to speed dial
+            if Preferences.getHelp("SyncSpeedDial"):
+                Helpviewer.HelpWindow.HelpWindow.speedDial()\
+                    .speedDialSaved.connect(self.__syncSpeedDial)
+            else:
+                try:
+                    Helpviewer.HelpWindow.HelpWindow.speedDial()\
+                        .speedDialSaved.disconnect(self.__syncSpeedDial)
+                except TypeError:
+                    pass
         else:
             self.__handler = None
             
@@ -155,6 +164,11 @@ class SyncManager(QObject):
             try:
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager()\
                     .userAgentSettingsSaved.disconnect(self.__syncUserAgents)
+            except TypeError:
+                pass
+            try:
+                Helpviewer.HelpWindow.HelpWindow.speedDial()\
+                    .speedDialSaved.disconnect(self.__syncSpeedDial)
             except TypeError:
                 pass
     
@@ -195,6 +209,13 @@ class SyncManager(QObject):
         if self.__handler is not None:
             self.__handler.syncUserAgents()
     
+    def __syncSpeedDial(self):
+        """
+        Private slot to synchronize the speed dial settings.
+        """
+        if self.__handler is not None:
+            self.__handler.syncSpeedDial()
+    
     def __syncError(self, message):
         """
         Private slot to handle general synchronization issues.
@@ -221,19 +242,20 @@ class SyncManager(QObject):
                 Helpviewer.HelpWindow.HelpWindow.passwordManager().reload()
             elif type_ == "useragents":
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager().reload()
+            elif type_ == "speeddial":
+                Helpviewer.HelpWindow.HelpWindow.speedDial().reload()
         self.syncFinished.emit(type_, status, download)
     
-    def __syncStatus(self, type_, status, message):
+    def __syncStatus(self, type_, message):
         """
         Private slot to handle a status update of a synchronization event.
         
         @param type_ type of the synchronization event (string one
             of "bookmarks", "history", "passwords" or "useragents")
-        @param status flag indicating success (boolean)
         @param message status message for the event (string)
         """
         self.syncMessage.emit(message)
-        self.syncStatus.emit(type_, status, message)
+        self.syncStatus.emit(type_, message)
     
     def close(self):
         """

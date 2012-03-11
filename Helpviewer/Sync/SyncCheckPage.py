@@ -9,7 +9,7 @@ Module implementing the synchronization status wizard page.
 
 import os
 
-from PyQt4.QtCore import QByteArray
+from PyQt4.QtCore import QByteArray, QTimer
 from PyQt4.QtGui import QWizardPage, QMovie
 
 from . import SyncGlobals
@@ -47,14 +47,17 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         
         syncMgr = Helpviewer.HelpWindow.HelpWindow.syncManager()
         syncMgr.syncError.connect(self.__syncError)
-        syncMgr.syncStatus.connect(self.__updatePage)
+        syncMgr.syncStatus.connect(self.__updateMessages)
+        syncMgr.syncFinished.connect(self.__updateLabels)
         
         if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:
             self.handlerLabel.setText(self.trUtf8("FTP"))
-            self.hostLabel.setText(Preferences.getHelp("SyncFtpServer"))
+            self.infoLabel.setText(self.trUtf8("Host:"))
+            self.infoDataLabel.setText(Preferences.getHelp("SyncFtpServer"))
         elif Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeDirectory:
             self.handlerLabel.setText(self.trUtf8("Shared Directory"))
-            self.hostLabel.setText(Preferences.getHelp("SyncDirectoryPath"))
+            self.infoLabel.setText(self.trUtf8("Directory:"))
+            self.infoDataLabel.setText(Preferences.getHelp("SyncDirectoryPath"))
         else:
             self.handlerLabel.setText(self.trUtf8("No Synchronization"))
             self.hostLabel.setText("")
@@ -63,12 +66,14 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         self.historyMsgLabel.setText("")
         self.passwordsMsgLabel.setText("")
         self.userAgentsMsgLabel.setText("")
+        self.speedDialMsgLabel.setText("")
         
         if not syncMgr.syncEnabled():
             self.bookmarkLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
             self.historyLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
             self.passwordsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
             self.userAgentsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
+            self.speedDialLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
             return
         
         animationFile = os.path.join(getConfig("ericPixDir"), "loading.gif")
@@ -97,7 +102,13 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         else:
             self.userAgentsLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
         
-        syncMgr.loadSettings(forceUpload=forceUpload)
+        # speed dial settings
+        if Preferences.getHelp("SyncSpeedDial"):
+            self.__makeAnimatedLabel(animationFile, self.speedDialLabel)
+        else:
+            self.speedDialLabel.setPixmap(UI.PixmapCache.getPixmap("syncNo.png"))
+        
+        QTimer.singleShot(0, lambda: syncMgr.loadSettings(forceUpload=forceUpload))
     
     def __makeAnimatedLabel(self, fileName, label):
         """
@@ -111,41 +122,62 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         label.setMovie(movie)
         movie.start()
     
-    def __updatePage(self, type_, done, msg):
+    def __updateMessages(self, type_, msg):
         """
         Private slot to update the synchronization status info.
         
         @param type_ type of synchronization data (string)
-        @param done flag indicating success (boolean)
         @param msg synchronization message (string)
         """
         if type_ == "bookmarks":
-            if done:
+            self.bookmarkMsgLabel.setText(msg)
+        elif type_ == "history":
+            self.historyMsgLabel.setText(msg)
+        elif type_ == "passwords":
+            self.passwordsMsgLabel.setText(msg)
+        elif type_ == "useragents":
+            self.userAgentsMsgLabel.setText(msg)
+        elif type_ == "speeddial":
+            self.speedDialMsgLabel.setText(msg)
+    
+    def __updateLabels(self, type_, status, download):
+        """
+        Private slot to handle a finished synchronization event.
+        
+        @param type_ type of the synchronization event (string one
+            of "bookmarks", "history", "passwords" or "useragents")
+        @param status flag indicating success (boolean)
+        @param download flag indicating a download of a file (boolean)
+        """
+        if type_ == "bookmarks":
+            if status:
                 self.bookmarkLabel.setPixmap(
                     UI.PixmapCache.getPixmap("syncCompleted.png"))
             else:
                 self.bookmarkLabel.setPixmap(UI.PixmapCache.getPixmap("syncFailed.png"))
-            self.bookmarkMsgLabel.setText(msg)
         elif type_ == "history":
-            if done:
+            if status:
                 self.historyLabel.setPixmap(UI.PixmapCache.getPixmap("syncCompleted.png"))
             else:
                 self.historyLabel.setPixmap(UI.PixmapCache.getPixmap("syncFailed.png"))
-            self.historyMsgLabel.setText(msg)
         elif type_ == "passwords":
-            if done:
+            if status:
                 self.passwordsLabel.setPixmap(
                     UI.PixmapCache.getPixmap("syncCompleted.png"))
             else:
                 self.passwordsLabel.setPixmap(UI.PixmapCache.getPixmap("syncFailed.png"))
-            self.passwordsMsgLabel.setText(msg)
         elif type_ == "useragents":
-            if done:
+            if status:
                 self.userAgentsLabel.setPixmap(
                     UI.PixmapCache.getPixmap("syncCompleted.png"))
             else:
                 self.userAgentsLabel.setPixmap(UI.PixmapCache.getPixmap("syncFailed.png"))
-            self.userAgentsMsgLabel.setText(msg)
+        elif type_ == "speeddial":
+            if status:
+                self.speedDialLabel.setPixmap(
+                    UI.PixmapCache.getPixmap("syncCompleted.png"))
+            else:
+                self.speedDialLabel.setPixmap(UI.PixmapCache.getPixmap("syncFailed.png"))
     
     def __syncError(self, message):
         """

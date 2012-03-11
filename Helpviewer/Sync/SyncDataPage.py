@@ -33,6 +33,7 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         self.historyCheckBox.setChecked(Preferences.getHelp("SyncHistory"))
         self.passwordsCheckBox.setChecked(Preferences.getHelp("SyncPasswords"))
         self.userAgentsCheckBox.setChecked(Preferences.getHelp("SyncUserAgents"))
+        self.speedDialCheckBox.setChecked(Preferences.getHelp("SyncSpeedDial"))
         
         self.activeCheckBox.setChecked(Preferences.getHelp("SyncEnabled"))
     
@@ -49,6 +50,7 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         Preferences.setHelp("SyncHistory", self.historyCheckBox.isChecked())
         Preferences.setHelp("SyncPasswords", self.passwordsCheckBox.isChecked())
         Preferences.setHelp("SyncUserAgents", self.userAgentsCheckBox.isChecked())
+        Preferences.setHelp("SyncSpeedDial", self.speedDialCheckBox.isChecked())
         
         if self.activeCheckBox.isChecked():
             return SyncGlobals.PageEncryption

@@ -22,16 +22,16 @@ class FtpSyncHandler(SyncHandler):
     """
     Class implementing a synchronization handler using FTP.
     
-    @signal syncStatus(type_, done, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, string)
+    @signal syncStatus(type_, message) emitted to indicate the synchronization
+        status (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", string)
     @signal syncError(message) emitted for a general error with the error message (string)
     @signal syncMessage(message) emitted to send a message about synchronization (string)
     @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, boolean)
+        finished (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", boolean, boolean)
     """
-    syncStatus = pyqtSignal(str, bool, str)
+    syncStatus = pyqtSignal(str, str)
     syncError = pyqtSignal(str)
     syncMessage = pyqtSignal(str)
     syncFinished = pyqtSignal(str, bool, bool)
@@ -126,8 +126,7 @@ class FtpSyncHandler(SyncHandler):
                 if id in self.__syncIDs:
                     if self.__ftp.currentCommand() == QFtp.Get:
                         self.__syncIDs[id][1].close()
-                    self.syncStatus.emit(self.__syncIDs[id][0], False,
-                        self.__ftp.errorString())
+                    self.syncStatus.emit(self.__syncIDs[id][0], self.__ftp.errorString())
                     self.syncFinished.emit(self.__syncIDs[id][0], False,
                         self.__syncIDs[id][2])
                     del self.__syncIDs[id]
@@ -147,18 +146,15 @@ class FtpSyncHandler(SyncHandler):
                 self.__initialSync()
             else:
                 if id in self.__syncIDs:
+                    ok = True
                     if self.__ftp.currentCommand() == QFtp.Get:
                         self.__syncIDs[id][1].close()
                         ok, error = self.writeFile(self.__syncIDs[id][1].buffer(),
                                                    self.__syncIDs[id][3],
                                                    self.__syncIDs[id][4])
-                        if ok:
-                            self.syncStatus.emit(self.__syncIDs[id][0], True,
-                                self._messages[self.__syncIDs[id][0]]["RemoteExists"])
-                        else:
-                            self.syncStatus.emit(self.__syncIDs[id][0], False,
-                                error)
-                    self.syncFinished.emit(self.__syncIDs[id][0], True,
+                        if not ok:
+                            self.syncStatus.emit(self.__syncIDs[id][0], error)
+                    self.syncFinished.emit(self.__syncIDs[id][0], ok,
                         self.__syncIDs[id][2])
                     del self.__syncIDs[id]
                     if not self.__syncIDs:
@@ -192,6 +188,7 @@ class FtpSyncHandler(SyncHandler):
         @param fileName name of the file to be downloaded (string)
         @param timestamp time stamp in seconds of the file to be downloaded (int)
         """
+        self.syncStatus.emit(type_, self._messages[type_]["RemoteExists"])
         buffer = QBuffer(self)
         buffer.open(QIODevice.WriteOnly)
         id = self.__ftp.get(self._remoteFiles[type_], buffer)
@@ -207,8 +204,8 @@ class FtpSyncHandler(SyncHandler):
         """
         data = self.readFile(fileName)
         if data.isEmpty():
-            self.syncStatus.emit(type_, True,
-                self._messages[type_]["LocalMissing"])
+            self.syncStatus.emit(type_, self._messages[type_]["LocalMissing"])
+            self.syncFinished(type_, False, False)
         else:
             id = self.__ftp.put(data, self._remoteFiles[type_])
             self.__syncIDs[id] = (type_, data, False)
@@ -229,11 +226,9 @@ class FtpSyncHandler(SyncHandler):
                 self.__remoteFilesFound[self._remoteFiles[type_]].toTime_t())
         else:
             if self._remoteFiles[type_] not in self.__remoteFilesFound:
-                self.syncStatus.emit(type_, True,
-                    self._messages[type_]["RemoteMissing"])
+                self.syncStatus.emit(type_, self._messages[type_]["RemoteMissing"])
             else:
-                self.syncStatus.emit(type_, True,
-                    self._messages[type_]["LocalNewer"])
+                self.syncStatus.emit(type_, self._messages[type_]["LocalNewer"])
             self.__uploadFile(type_, fileName)
     
     def __initialSync(self):
@@ -260,6 +255,11 @@ class FtpSyncHandler(SyncHandler):
             self.__initialSyncFile("useragents",
                 Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
         
+        # Speed Dial Settings
+        if Preferences.getHelp("SyncSpeedDial"):
+            self.__initialSyncFile("speeddial",
+                Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
+        
         self.__forceUpload = False
     
     def __syncFile(self, type_, fileName):
@@ -274,7 +274,7 @@ class FtpSyncHandler(SyncHandler):
             return
         
         self.__state = "uploading"
-        self.syncStatus.emit(type_, True, self._messages[type_]["Uploading"])
+        self.syncStatus.emit(type_, self._messages[type_]["Uploading"])
         self.__uploadFile(type_, fileName)
     
     def syncBookmarks(self):
@@ -304,6 +304,13 @@ class FtpSyncHandler(SyncHandler):
         """
         self.__syncFile("useragents",
             Helpviewer.HelpWindow.HelpWindow.userAgentsManager().getFileName())
+    
+    def syncSpeedDial(self):
+        """
+        Public method to synchronize the speed dial data.
+        """
+        self.__syncFile("speeddial",
+            Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
     
     def shutdown(self):
         """

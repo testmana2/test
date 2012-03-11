@@ -44,9 +44,6 @@
         <property name="text">
          <string>Bookmarks</string>
         </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
        </widget>
       </item>
       <item>
@@ -56,9 +53,6 @@
         </property>
         <property name="text">
          <string>History</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -80,8 +74,15 @@
         <property name="text">
          <string>User Agent Settings</string>
         </property>
-        <property name="checked">
-         <bool>true</bool>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="speedDialCheckBox">
+        <property name="toolTip">
+         <string>Select to synchronize the speed dial data</string>
+        </property>
+        <property name="text">
+         <string>Speed Dial Settings</string>
         </property>
        </widget>
       </item>

@@ -158,6 +158,12 @@ class SpeedDial(QObject):
         
         self.__load()
     
+    def reload(self):
+        """
+        Public method to reload the speed dial data.
+        """
+        self.__load()
+    
     def __load(self):
         """
         Private method to load the speed dial configuration.

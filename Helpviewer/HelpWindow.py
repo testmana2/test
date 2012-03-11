@@ -244,6 +244,8 @@ class HelpWindow(QMainWindow):
             QTimer.singleShot(0, self.__lookForNewDocumentation)
             if self.__searchWord is not None:
                 QTimer.singleShot(0, self.__searchForWord)
+            
+            QTimer.singleShot(0, syncMgr.loadSettings)
 
     def __setIconDatabasePath(self, enable=True):
         """

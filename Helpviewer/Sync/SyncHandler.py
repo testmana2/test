@@ -20,16 +20,16 @@ class SyncHandler(QObject):
     """
     Base class for synchronization handlers.
     
-    @signal syncStatus(type_, done, message) emitted to indicate the synchronization
-        status (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, string)
+    @signal syncStatus(type_, message) emitted to indicate the synchronization
+        status (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", string)
     @signal syncError(message) emitted for a general error with the error message (string)
     @signal syncMessage(message) emitted to send a message about synchronization (string)
     @signal syncFinished(type_, done, download) emitted after a synchronization has
-        finished (string one of "bookmarks", "history", "passwords" or "useragents",
-        boolean, boolean)
+        finished (string one of "bookmarks", "history", "passwords", "useragents" or
+        "speeddial", boolean, boolean)
     """
-    syncStatus = pyqtSignal(str, bool, str)
+    syncStatus = pyqtSignal(str, str)
     syncError = pyqtSignal(str)
     syncMessage = pyqtSignal(str)
     syncFinished = pyqtSignal(str, bool, bool)
@@ -48,7 +48,8 @@ class SyncHandler(QObject):
             "bookmarks": "Bookmarks",
             "history": "History",
             "passwords": "Logins",
-            "useragents": "UserAgentSettings"
+            "useragents": "UserAgentSettings",
+            "speeddial": "SpeedDial",
         }
         
         self._messages = {
@@ -98,6 +99,19 @@ class SyncHandler(QObject):
                     " Skipping synchronization!"),
                 "Uploading": self.trUtf8("Uploading local user agent settings file..."),
             },
+            "speeddial": {
+                "RemoteExists": self.trUtf8(
+                    "Remote speed dial settings file exists! Syncing local copy..."),
+                "RemoteMissing": self.trUtf8(
+                    "Remote speed dial settings file does NOT exists."
+                    " Exporting local copy..."),
+                "LocalNewer": self.trUtf8(
+                    "Local speed dial settings file is NEWER. Exporting local copy..."),
+                "LocalMissing": self.trUtf8(
+                    "Local speed dial settings file does NOT exist."
+                    " Skipping synchronization!"),
+                "Uploading": self.trUtf8("Uploading local speed dial settings file..."),
+            },
         }
     
     def syncBookmarks(self):
@@ -121,6 +135,12 @@ class SyncHandler(QObject):
     def syncUserAgents(self):
         """
         Public method to synchronize the user agents.
+        """
+        raise NotImplementedError
+    
+    def syncSpeedDial(self):
+        """
+        Public method to synchronize the speed dial data.
         """
         raise NotImplementedError
     
