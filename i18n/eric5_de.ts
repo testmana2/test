@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1660,8 +1661,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -1897,7 +1898,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
 </context>
@@ -13134,7 +13135,7 @@ gesamte Auswahl.&lt;/li&gt;
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="899"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -15350,7 +15351,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Filter: </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2261"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2263"/>
         <source>Could not find an associated content.</source>
         <translation>Konnte keinen zugehörigen Inhalt finden.</translation>
     </message>
@@ -15415,22 +15416,22 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Dokumentation reindizieren&lt;/b&gt;&lt;p&gt;Reindiziert die Dokumentation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2370"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2372"/>
         <source>Updating search index</source>
         <translation>Aktualisiere Suchindex</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2422"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2424"/>
         <source>Looking for Documentation...</source>
         <translation>Suche nach Dokumentation...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2454"/>
         <source>Unfiltered</source>
         <translation>Ungefiltert</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2471"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2473"/>
         <source>Help Engine</source>
         <translation>Hilfe</translation>
     </message>
@@ -15450,7 +15451,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Privates Browsen&lt;/b&gt;&lt;p&gt;Schaltet das private Browsen ein. In diesem Modus wird keine Chronik mehr aufgezeichnet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2003"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2005"/>
         <source>Full Screen</source>
         <translation>Vollbild</translation>
     </message>
@@ -15877,7 +15878,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum konfigurieren von AdBlock Abonnements und Regeln&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2433"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 Web-Browser</translation>
     </message>
@@ -15922,7 +15923,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Such&amp;maschinen verwalten...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2032"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2034"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sind sie sicher, dass sie privates Browsen einschalten möchten?&lt;/b&gt;&lt;p&gt;Wenn das private Browsen eingeschaltet ist, werden keine Web Seiten mehr zur Chronik hinzugefügt und Suchanfragen, Web Site Icons und Cookies werden nicht mehr gespeichert. HTML5 Offline Speicher wird deaktiviert. Bis das Fenster geschlossen wird, können sie jedoch weiterhin die Zurück und Vorwärts Knöpfe nutzen, um zu besuchten Web Seiten zurückzukehren.&lt;/p&gt;</translation>
     </message>
@@ -15932,37 +15933,37 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Zeichenkodierung</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2799"/>
         <source>Other</source>
         <translation>Sonstige</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2800"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2822"/>
         <source>Default Encoding</source>
         <translation>Standardkodierung</translation>
     </message>
@@ -16022,12 +16023,12 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Aktuelle Seite prüfen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>VirusTotal Scan</source>
         <translation>VirusTotal Prüfung</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die VirusTotal Prüfung konnte nicht beauftragt werden.&lt;p&gt;
@@ -16133,7 +16134,7 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;Der eric5-Web-Browser ist eine kombinierte Anzeige für Hilfe- und HTML-Dateien. Er ist Bestandteil der eric5 Entwicklungsumgebung.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2009"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2011"/>
         <source>Restore Window</source>
         <translation>Fenster wiederherstellen</translation>
     </message>
@@ -35153,9 +35154,27 @@ nicht verbunden</translation>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="330"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="357"/>
         <source>Unable to load</source>
         <translation>Fehler beim Laden</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>Saving Speed Dial data</source>
+        <translation>Speichere Schnellwahl Daten</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Die Schnellwahl Daten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedDialReader</name>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="56"/>
+        <source>The file is not a SpeedDial version 1.0 file.</source>
+        <translation>Die Datei ist keine Schnellwahl Datei der Version 1.0.</translation>
     </message>
 </context>
 <context>

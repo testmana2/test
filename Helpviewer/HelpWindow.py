@@ -1902,6 +1902,8 @@ class HelpWindow(QMainWindow):
         
         self.userAgentsManager().close()
         
+        self.speedDial().close()
+        
         self.syncManager().close()
         
         self.searchEdit.openSearchManager().close()

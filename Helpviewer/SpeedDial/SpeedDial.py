@@ -13,36 +13,15 @@ from PyQt4.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, QByt
     QUrl, qWarning
 from PyQt4.QtWebKit import QWebPage
 
+from E5Gui import E5MessageBox
+
+from .Page import Page
 from .PageThumbnailer import PageThumbnailer
+from .SpeedDialReader import SpeedDialReader
+from .SpeedDialWriter import SpeedDialWriter
 
-import Preferences
+from Utilities.AutoSaver import AutoSaver
 import Utilities
-
-
-class Page(object):
-    """
-    Class to hold the data for a speed dial page.
-    """
-    def __init__(self, url="", title="", broken=False):
-        """
-        Constructor
-        
-        @param url URL of the page (string)
-        @param title title of the page (string)
-        """
-        self.url = url
-        self.title = title
-        self.broken = broken
-    
-    def __eq__(self, other):
-        """
-        Public method implementing the equality operator.
-        
-        @param other reference to the other page object (Page)
-        @return flag indicating equality (boolean)
-        """
-        return self.title == other.title and \
-               self.url == other.url
 
 
 class SpeedDial(QObject):
@@ -50,8 +29,10 @@ class SpeedDial(QObject):
     Class implementing the speed dial.
     
     @signal pagesChanged() emitted after the list of pages changed
+    @signal speedDialSaved() emitted after the speed dial data was saved
     """
     pagesChanged = pyqtSignal()
+    speedDialSaved = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -74,6 +55,9 @@ class SpeedDial(QObject):
         self.__initialize()
         
         self.pagesChanged.connect(self.__pagesChanged)
+        
+        self.__saveTimer = AutoSaver(self, self.save)
+        self.pagesChanged.connect(self.__saveTimer.changeOccurred)
     
     def addWebFrame(self, frame):
         """
@@ -154,26 +138,69 @@ class SpeedDial(QObject):
         
         return self.__initialScript
     
+    def getFileName(self):
+        """
+        Public method to get the file name of the user agents file.
+        
+        @return name of the user agents file (string)
+        """
+        return os.path.join(Utilities.getConfigDir(), "browser", "speedDial.xml")
+    
     def __initialize(self):
         """
         Private method to initialize the speed dial.
         """
-        allPages = Preferences.Prefs.settings.value("Help/SpeedDial/Pages", "")
+        self.__thumbnailsDirectory = os.path.join(
+            Utilities.getConfigDir(), "browser", "thumbnails")
+        # Create directory if it does not exist yet
+        if not os.path.exists(self.__thumbnailsDirectory):
+            os.makedirs(self.__thumbnailsDirectory)
         
-        if not allPages:
+        self.__load()
+    
+    def __load(self):
+        """
+        Private method to load the speed dial configuration.
+        """
+        speedDialFile = self.getFileName()
+        if os.path.exists(speedDialFile):
+            reader = SpeedDialReader()
+            allPages, pagesPerRow, speedDialSize = reader.read(speedDialFile)
+            self.__pagesPerRow = pagesPerRow if pagesPerRow else 4
+            self.__speedDialSize = speedDialSize if speedDialSize else 231
+        
+        if allPages:
+            self.__webPages = allPages
+            self.pagesChanged.emit()
+        else:
             allPages = \
                 'url:"http://eric-ide.python-projects.org/"|title:"Eric Web Site";'\
                 'url:"http://www.riverbankcomputing.com/"|title:"PyQt4 Web Site";'\
                 'url:"http://qt.nokia.com/"|title:"Qt Web Site";'\
                 'url:"http://www.python.org"|title:"Python Language Website";'\
                 'url:"http://www.google.com"|title:"Google";'
-        self.changed(allPages)
-        
-        self.__thumbnailsDirectory = os.path.join(
-            Utilities.getConfigDir(), "browser", "thumbnails")
-        # Create directory if it does not exist yet
-        if not os.path.exists(self.__thumbnailsDirectory):
-            os.makedirs(self.__thumbnailsDirectory)
+            self.changed(allPages)
+    
+    def save(self):
+        """
+        Public method to save the speed dial configuration.
+        """
+        speedDialFile = self.getFileName()
+        writer = SpeedDialWriter()
+        if not writer.write(speedDialFile,
+                self.__webPages, self.__pagesPerRow, self.__speedDialSize):
+            E5MessageBox.critical(None,
+                self.trUtf8("Saving Speed Dial data"),
+                self.trUtf8("""<p>Speed Dial data could not be saved to <b>{0}</b></p>"""
+                            ).format(speedDialFile))
+        else:
+            self.speedDialSaved.emit()
+    
+    def close(self):
+        """
+        Public method to close the user agents manager.
+        """
+        self.__saveTimer.saveIfNeccessary()
     
     def pageForUrl(self, url):
         """
@@ -280,7 +307,8 @@ class SpeedDial(QObject):
         
         @param count number of pages per row (integer)
         """
-        Preferences.Prefs.settings.setValue("Help/SpeedDial/PagesPerRow", count)
+        self.__pagesPerRow = count
+        self.__saveTimer.changeOccurred()
 
     def pagesInRow(self):
         """
@@ -288,8 +316,7 @@ class SpeedDial(QObject):
         
         @return number of dials per row (integer)
         """
-        return int(
-            Preferences.Prefs.settings.value("Help/SpeedDial/PagesPerRow", 4))
+        return self.__pagesPerRow
     
     @pyqtSlot(int)
     def setSdSize(self, size):
@@ -298,7 +325,8 @@ class SpeedDial(QObject):
         
         @param size size of the speed dial (integer)
         """
-        Preferences.Prefs.settings.setValue("Help/SpeedDial/SpeedDialSize", size)
+        self.__speedDialSize = size
+        self.__saveTimer.changeOccurred()
     
     def sdSize(self):
         """
@@ -306,8 +334,7 @@ class SpeedDial(QObject):
         
         @return speed dial size (integer)
         """
-        return int(
-            Preferences.Prefs.settings.value("Help/SpeedDial/SpeedDialSize", 231))
+        return self.__speedDialSize
     
     def __thumbnailCreated(self, image):
         """
@@ -370,25 +397,7 @@ class SpeedDial(QObject):
         """
         Private slot to react on a change of the pages configuration.
         """
-        # step 1: save the list of pages
-        Preferences.Prefs.settings.setValue(
-            "Help/SpeedDial/Pages", self.__generateAllPages())
-        
-        # step 2: update all speed dial pages
+        # update all speed dial pages
         self.__regenerateScript = True
         for frame in self.__cleanFrames():
             frame.page().triggerAction(QWebPage.Reload)
-    
-    def __generateAllPages(self):
-        """
-        Private method to generate s string with all pages managed by the speed dial.
-        
-        @return string with all pages (string)
-        """
-        allPages = ""
-        
-        for page in self.__webPages:
-            entry = 'url:"{0}"|title:"{1}";'.format(page.url, page.title)
-            allPages += entry
-        
-        return allPages

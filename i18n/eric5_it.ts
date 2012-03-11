@@ -15533,27 +15533,27 @@ Hai %n schede aperta.</numerusform>
         <translation>Filtrato per:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2261"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2263"/>
         <source>Could not find an associated content.</source>
         <translation>Non posso trovare un contenuto associato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2370"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2372"/>
         <source>Updating search index</source>
         <translation>Aggiornamento indice di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2422"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2424"/>
         <source>Looking for Documentation...</source>
         <translation>Ricerca documentazione...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2454"/>
         <source>Unfiltered</source>
         <translation>Non filtrato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2471"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2473"/>
         <source>Help Engine</source>
         <translation>Motore di help</translation>
     </message>
@@ -15573,7 +15573,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Navigazione anonima&lt;/b&gt;&lt;p&gt;Attiva la navigazione anonima. In questa modalità la cronologia non è più registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2003"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2005"/>
         <source>Full Screen</source>
         <translation>Tutto schermo</translation>
     </message>
@@ -16040,7 +16040,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Apre un dialogo per configurare le regole di sottoscrizione di AdBlock.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2433"/>
         <source>eric5 Web Browser</source>
         <translation>Web Browser di eric5</translation>
     </message>
@@ -16085,7 +16085,7 @@ Hai %n schede aperta.</numerusform>
         <translation>Configura motori di &amp;ricerca...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2032"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2034"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sei sicuro di voler attivare la navigazione riservata?&lt;/b&gt;&lt;p&gt;Quando la navigazione riservata è attivata, le pagine web non sono aggiunte alla cronologia, le ricerche non sono aggiunte alla lista delle ultime ricerche e le icone dei siti e i cookie non sono salvati, l&apos;offline storage di HTML5 viene disattivato. Fino alla chiusura della finestra, puoi premere sui pulsanti Precedente e Successivo per tornare alle pagine web che hai visitato.&lt;/p&gt;</translation>
     </message>
@@ -16100,37 +16100,37 @@ Hai %n schede aperta.</numerusform>
         <translation type="obsolete">User Agent</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2799"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2800"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2822"/>
         <source>Default Encoding</source>
         <translation>Encoding di default</translation>
     </message>
@@ -16190,12 +16190,12 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16300,7 +16300,7 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2009"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2011"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35549,8 +35549,26 @@ Non connesso</translation>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="330"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="357"/>
         <source>Unable to load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>Saving Speed Dial data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SpeedDialReader</name>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="56"/>
+        <source>The file is not a SpeedDial version 1.0 file.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

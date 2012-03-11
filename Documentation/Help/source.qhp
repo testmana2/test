@@ -282,8 +282,11 @@
               <section title="eric5.Helpviewer.SiteInfo.SiteInfoDialog" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html" />
             </section>
             <section title="eric5.Helpviewer.SpeedDial" ref="index-eric5.Helpviewer.SpeedDial.html">
+              <section title="eric5.Helpviewer.SpeedDial.Page" ref="eric5.Helpviewer.SpeedDial.Page.html" />
               <section title="eric5.Helpviewer.SpeedDial.PageThumbnailer" ref="eric5.Helpviewer.SpeedDial.PageThumbnailer.html" />
               <section title="eric5.Helpviewer.SpeedDial.SpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
+              <section title="eric5.Helpviewer.SpeedDial.SpeedDialReader" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html" />
+              <section title="eric5.Helpviewer.SpeedDial.SpeedDialWriter" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html" />
             </section>
             <section title="eric5.Helpviewer.Sync" ref="index-eric5.Helpviewer.Sync.html">
               <section title="eric5.Helpviewer.Sync.DirectorySyncHandler" ref="eric5.Helpviewer.Sync.DirectorySyncHandler.html" />
@@ -6746,9 +6749,10 @@
       <keyword name="PackageModel.addModule" id="PackageModel.addModule" ref="eric5.Graphics.PackageItem.html#PackageModel.addModule" />
       <keyword name="PackageModel.getModules" id="PackageModel.getModules" ref="eric5.Graphics.PackageItem.html#PackageModel.getModules" />
       <keyword name="PackageModel.getName" id="PackageModel.getName" ref="eric5.Graphics.PackageItem.html#PackageModel.getName" />
-      <keyword name="Page" id="Page" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page" />
-      <keyword name="Page (Constructor)" id="Page (Constructor)" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page.__init__" />
-      <keyword name="Page.__eq__" id="Page.__eq__" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#Page.__eq__" />
+      <keyword name="Page" id="Page" ref="eric5.Helpviewer.SpeedDial.Page.html#Page" />
+      <keyword name="Page (Constructor)" id="Page (Constructor)" ref="eric5.Helpviewer.SpeedDial.Page.html#Page.__init__" />
+      <keyword name="Page (Module)" id="Page (Module)" ref="eric5.Helpviewer.SpeedDial.Page.html" />
+      <keyword name="Page.__eq__" id="Page.__eq__" ref="eric5.Helpviewer.SpeedDial.Page.html#Page.__eq__" />
       <keyword name="PageScreenDialog" id="PageScreenDialog" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog" />
       <keyword name="PageScreenDialog (Constructor)" id="PageScreenDialog (Constructor)" ref="eric5.Helpviewer.PageScreenDialog.html#PageScreenDialog.__init__" />
       <keyword name="PageScreenDialog (Module)" id="PageScreenDialog (Module)" ref="eric5.Helpviewer.PageScreenDialog.html" />
@@ -8338,25 +8342,39 @@
       <keyword name="SpeedDial (Module)" id="SpeedDial (Module)" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html" />
       <keyword name="SpeedDial (Package)" id="SpeedDial (Package)" ref="index-eric5.Helpviewer.SpeedDial.html" />
       <keyword name="SpeedDial.__cleanFrames" id="SpeedDial.__cleanFrames" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__cleanFrames" />
-      <keyword name="SpeedDial.__generateAllPages" id="SpeedDial.__generateAllPages" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__generateAllPages" />
       <keyword name="SpeedDial.__imageFileName" id="SpeedDial.__imageFileName" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__imageFileName" />
       <keyword name="SpeedDial.__initialize" id="SpeedDial.__initialize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__initialize" />
+      <keyword name="SpeedDial.__load" id="SpeedDial.__load" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__load" />
       <keyword name="SpeedDial.__pagesChanged" id="SpeedDial.__pagesChanged" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__pagesChanged" />
       <keyword name="SpeedDial.__thumbnailCreated" id="SpeedDial.__thumbnailCreated" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.__thumbnailCreated" />
       <keyword name="SpeedDial.addPage" id="SpeedDial.addPage" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.addPage" />
       <keyword name="SpeedDial.addWebFrame" id="SpeedDial.addWebFrame" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.addWebFrame" />
       <keyword name="SpeedDial.changed" id="SpeedDial.changed" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.changed" />
+      <keyword name="SpeedDial.close" id="SpeedDial.close" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.close" />
+      <keyword name="SpeedDial.getFileName" id="SpeedDial.getFileName" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.getFileName" />
       <keyword name="SpeedDial.initialScript" id="SpeedDial.initialScript" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.initialScript" />
       <keyword name="SpeedDial.loadThumbnail" id="SpeedDial.loadThumbnail" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.loadThumbnail" />
       <keyword name="SpeedDial.pageForUrl" id="SpeedDial.pageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pageForUrl" />
       <keyword name="SpeedDial.pagesInRow" id="SpeedDial.pagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.pagesInRow" />
       <keyword name="SpeedDial.removeImageForUrl" id="SpeedDial.removeImageForUrl" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removeImageForUrl" />
       <keyword name="SpeedDial.removePage" id="SpeedDial.removePage" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.removePage" />
+      <keyword name="SpeedDial.save" id="SpeedDial.save" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.save" />
       <keyword name="SpeedDial.sdSize" id="SpeedDial.sdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.sdSize" />
       <keyword name="SpeedDial.setPagesInRow" id="SpeedDial.setPagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setPagesInRow" />
       <keyword name="SpeedDial.setSdSize" id="SpeedDial.setSdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setSdSize" />
       <keyword name="SpeedDial.urlForShortcut" id="SpeedDial.urlForShortcut" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlForShortcut" />
       <keyword name="SpeedDial.urlFromUserInput" id="SpeedDial.urlFromUserInput" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlFromUserInput" />
+      <keyword name="SpeedDialReader" id="SpeedDialReader" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader" />
+      <keyword name="SpeedDialReader (Constructor)" id="SpeedDialReader (Constructor)" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader.__init__" />
+      <keyword name="SpeedDialReader (Module)" id="SpeedDialReader (Module)" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html" />
+      <keyword name="SpeedDialReader.__readSpeedDial" id="SpeedDialReader.__readSpeedDial" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader.__readSpeedDial" />
+      <keyword name="SpeedDialReader.__skipUnknownElement" id="SpeedDialReader.__skipUnknownElement" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader.__skipUnknownElement" />
+      <keyword name="SpeedDialReader.read" id="SpeedDialReader.read" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader.read" />
+      <keyword name="SpeedDialWriter" id="SpeedDialWriter" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html#SpeedDialWriter" />
+      <keyword name="SpeedDialWriter (Constructor)" id="SpeedDialWriter (Constructor)" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html#SpeedDialWriter.__init__" />
+      <keyword name="SpeedDialWriter (Module)" id="SpeedDialWriter (Module)" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html" />
+      <keyword name="SpeedDialWriter.__write" id="SpeedDialWriter.__write" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html#SpeedDialWriter.__write" />
+      <keyword name="SpeedDialWriter.write" id="SpeedDialWriter.write" ref="eric5.Helpviewer.SpeedDial.SpeedDialWriter.html#SpeedDialWriter.write" />
       <keyword name="SpellChecker" id="SpellChecker" ref="eric5.QScintilla.SpellChecker.html#SpellChecker" />
       <keyword name="SpellChecker (Constructor)" id="SpellChecker (Constructor)" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.__init__" />
       <keyword name="SpellChecker (Module)" id="SpellChecker (Module)" ref="eric5.QScintilla.SpellChecker.html" />
@@ -11865,8 +11883,11 @@
       <file>eric5.Helpviewer.QtHelpFiltersDialog.html</file>
       <file>eric5.Helpviewer.SearchWidget.html</file>
       <file>eric5.Helpviewer.SiteInfo.SiteInfoDialog.html</file>
+      <file>eric5.Helpviewer.SpeedDial.Page.html</file>
       <file>eric5.Helpviewer.SpeedDial.PageThumbnailer.html</file>
       <file>eric5.Helpviewer.SpeedDial.SpeedDial.html</file>
+      <file>eric5.Helpviewer.SpeedDial.SpeedDialReader.html</file>
+      <file>eric5.Helpviewer.SpeedDial.SpeedDialWriter.html</file>
       <file>eric5.Helpviewer.SslCertificatesDialog.html</file>
       <file>eric5.Helpviewer.SslInfoDialog.html</file>
       <file>eric5.Helpviewer.SslInfoWidget.html</file>

@@ -512,6 +512,8 @@ SiteInfoDialog QDialog Ui_SiteInfoDialog
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpeedDial QObject
+SpeedDialReader QXmlStreamReader
+SpeedDialWriter QXmlStreamWriter
 SpellChecker QObject
 SpellCheckingDialog QDialog Ui_SpellCheckingDialog
 SpellingPropertiesDialog QDialog Ui_SpellingPropertiesDialog

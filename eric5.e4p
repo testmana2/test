@@ -977,6 +977,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/ClosedTabsManager.py</Source>
     <Source>Helpviewer/Sync/SyncDirectorySettingsPage.py</Source>
     <Source>Helpviewer/Sync/DirectorySyncHandler.py</Source>
+    <Source>Helpviewer/SpeedDial/Page.py</Source>
+    <Source>Helpviewer/SpeedDial/SpeedDialWriter.py</Source>
+    <Source>Helpviewer/SpeedDial/SpeedDialReader.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

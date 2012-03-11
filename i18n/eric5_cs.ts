@@ -15677,7 +15677,7 @@ You have %n tab(s) open.</source>
         <translation>Filtrováno: </translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2261"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2263"/>
         <source>Could not find an associated content.</source>
         <translation>Asociovaný obsah nelze nalézt.</translation>
     </message>
@@ -15742,22 +15742,22 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Znovu indexovat dokumentaci&lt;/b&gt;&lt;p&gt;Přeindexuje dokumentaci.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2370"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2372"/>
         <source>Updating search index</source>
         <translation>Aktualizovat index pro hledání</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2422"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2424"/>
         <source>Looking for Documentation...</source>
         <translation>Vyhledat dokumentaci...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2452"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2454"/>
         <source>Unfiltered</source>
         <translation>Nefiltrováno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2471"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2473"/>
         <source>Help Engine</source>
         <translation>Engine nápovědy</translation>
     </message>
@@ -15792,7 +15792,7 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Načteno</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2003"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2005"/>
         <source>Full Screen</source>
         <translation>Celá obrazovka</translation>
     </message>
@@ -16269,7 +16269,7 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Otevře dialog pro konfiguraci AdBlock odebírání a pravidel.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2431"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2433"/>
         <source>eric5 Web Browser</source>
         <translation>eric5 web prohlížeč</translation>
     </message>
@@ -16319,7 +16319,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2032"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2034"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16334,37 +16334,37 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">Výchozí</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2793"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
         <source>ISO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2794"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
         <source>Windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2795"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
         <source>ISCII</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2796"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
         <source>Unicode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2799"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2800"/>
         <source>IBM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2820"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2822"/>
         <source>Default Encoding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16424,12 +16424,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3071"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3073"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16534,7 +16534,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2009"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2011"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36047,8 +36047,26 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="330"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="357"/>
         <source>Unable to load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>Saving Speed Dial data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="192"/>
+        <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SpeedDialReader</name>
+    <message>
+        <location filename="Helpviewer/SpeedDial/SpeedDialReader.py" line="56"/>
+        <source>The file is not a SpeedDial version 1.0 file.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
