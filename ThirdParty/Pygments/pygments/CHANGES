@@ -4,9 +4,91 @@ Pygments changelog
 Issue numbers refer to the tracker at
 http://bitbucket.org/birkenfeld/pygments-main/issues.
 
+Version 1.5
+-----------
+(codename Zeitdilatation, released Mar 10, 2012)
+
+- Lexers added:
+
+  * Awk (#630)
+  * Fancy (#633)
+  * PyPy Log
+  * eC
+  * Nimrod
+  * Nemerle (#667)
+  * F# (#353)
+  * Groovy (#501)
+  * PostgreSQL (#660)
+  * DTD
+  * Gosu (#634)
+  * Octave (PR#22)
+  * Standard ML (PR#14)
+  * CFengine3 (#601)
+  * Opa (PR#37)
+  * HTTP sessions (PR#42)
+  * JSON (PR#31)
+  * SNOBOL (PR#30)
+  * MoonScript (PR#43)
+  * ECL (PR#29)
+  * Urbiscript (PR#17)
+  * OpenEdge ABL (PR#27)
+  * SystemVerilog (PR#35)
+  * Coq (#734)
+  * PowerShell (#654)
+  * Dart (#715)
+  * Fantom (PR#36)
+  * Bro (PR#5)
+  * NewLISP (PR#26)
+  * VHDL (PR#45)
+  * Scilab (#740)
+  * Elixir (PR#57)
+  * Tea (PR#56)
+  * Kotlin (PR#58)
+
+- Fix Python 3 terminal highlighting with pygmentize (#691).
+
+- In the LaTeX formatter, escape special &, < and > chars (#648).
+
+- In the LaTeX formatter, fix display problems for styles with token
+  background colors (#670).
+
+- Enhancements to the Squid conf lexer (#664).
+
+- Several fixes to the reStructuredText lexer (#636).
+
+- Recognize methods in the ObjC lexer (#638).
+
+- Fix Lua "class" highlighting: it does not have classes (#665).
+
+- Fix degenerate regex in Scala lexer (#671) and highlighting bugs (#713, 708).
+
+- Fix number pattern order in Ocaml lexer (#647).
+
+- Fix generic type highlighting in ActionScript 3 (#666).
+
+- Fixes to the Clojure lexer (PR#9).
+
+- Fix degenerate regex in Nemerle lexer (#706).
+
+- Fix infinite looping in CoffeeScript lexer (#729).
+
+- Fix crashes and analysis with ObjectiveC lexer (#693, #696).
+
+- Add some Fortran 2003 keywords.
+
+- Fix Boo string regexes (#679).
+
+- Add "rrt" style (#727).
+
+- Fix infinite looping in Darcs Patch lexer.
+
+- Lots of misc fixes to character-eating bugs and ordering problems in many
+  different lexers.
+
+
 Version 1.4
 -----------
-(codename Unschärfe, released Jan 03, 2010)
+(codename Unschärfe, released Jan 03, 2011)
 
 - Lexers added:
 
@@ -269,7 +351,7 @@ Version 1.0
 
 - Added Tango style, written by Andre Roberge for the Crunchy project.
 
-- Added Python3TracebackLexer and ``python3`` option to 
+- Added Python3TracebackLexer and ``python3`` option to
   PythonConsoleLexer.
 
 - Fixed a few bugs in the Haskell lexer.
@@ -607,7 +689,7 @@ Version 0.7
 
 - Added token stream filters, and a pygmentize option to use them.
 
-- Changed behavior of `in` Operator for tokens. 
+- Changed behavior of `in` Operator for tokens.
 
 - Added mimetypes for all lexers.
 

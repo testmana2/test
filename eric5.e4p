@@ -980,6 +980,12 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/SpeedDial/Page.py</Source>
     <Source>Helpviewer/SpeedDial/SpeedDialWriter.py</Source>
     <Source>Helpviewer/SpeedDial/SpeedDialReader.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/sql.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_postgres_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/jvm.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_scilab_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/shell.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/rrt.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

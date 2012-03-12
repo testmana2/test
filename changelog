@@ -35,6 +35,8 @@ Version 5.3-snapshot-2012mmdd:
      ten pages by pressing Meta+1 to Meta+0
   -- added a history sub-menu showing the most visited sites
   -- added the capability to restore closed tabs
+- Third Party packages
+  -- updated to Pygments 1.5
 
 Version 5.2.0:
 - bug fixes
