@@ -36,7 +36,7 @@ class SpeedDialWriter(QXmlStreamWriter):
             f = fileNameOrDevice
         else:
             f = QFile(fileNameOrDevice)
-            if not pages or not f.open(QFile.WriteOnly):
+            if not f.open(QFile.WriteOnly):
                 return False
         
         self.setDevice(f)

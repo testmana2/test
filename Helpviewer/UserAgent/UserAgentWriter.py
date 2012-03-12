@@ -34,7 +34,7 @@ class UserAgentWriter(QXmlStreamWriter):
             f = fileNameOrDevice
         else:
             f = QFile(fileNameOrDevice)
-            if not agents or not f.open(QFile.WriteOnly):
+            if not f.open(QFile.WriteOnly):
                 return False
         
         self.setDevice(f)

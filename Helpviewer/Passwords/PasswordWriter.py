@@ -36,7 +36,7 @@ class PasswordWriter(QXmlStreamWriter):
             f = fileNameOrDevice
         else:
             f = QFile(fileNameOrDevice)
-            if (not logins and not forms and not nevers) or not f.open(QFile.WriteOnly):
+            if not f.open(QFile.WriteOnly):
                 return False
         
         self.setDevice(f)
