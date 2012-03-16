@@ -207,7 +207,7 @@ class DebugClientBase(object):
         self.localsFilterObjects = []
 
         self.pendingResponse = DebugProtocol.ResponseOK
-        self.fncache = {}
+        self._fncache = {}
         self.dircache = []
         self.inRawMode = 0
         self.mainProcStr = None     # used for the passive mode
@@ -469,7 +469,7 @@ class DebugClientBase(object):
                 return
 
             if cmd == DebugProtocol.RequestLoad:
-                self.fncache = {}
+                self._fncache = {}
                 self.dircache = []
                 sys.argv = []
                 wd, fn, args, tracePython = arg.split('|')
@@ -1118,8 +1118,8 @@ class DebugClientBase(object):
             return fn
 
         # Check the cache.
-        if fn in self.fncache:
-            return self.fncache[fn]
+        if fn in self._fncache:
+            return self._fncache[fn]
 
         # Search sys.path.
         for p in sys.path:
@@ -1127,7 +1127,7 @@ class DebugClientBase(object):
             nafn = os.path.normcase(afn)
 
             if os.path.exists(nafn):
-                self.fncache[fn] = afn
+                self._fncache[fn] = afn
                 d = os.path.dirname(afn)
                 if (d not in sys.path) and (d not in self.dircache):
                     self.dircache.append(d)
@@ -1139,7 +1139,7 @@ class DebugClientBase(object):
             nafn = os.path.normcase(afn)
             
             if os.path.exists(nafn):
-                self.fncache[fn] = afn
+                self._fncache[fn] = afn
                 return afn
                 
         # Nothing found.
@@ -1736,7 +1736,7 @@ class DebugClientBase(object):
         self.__interact()
         
         # setup the debugger variables
-        self.fncache = {}
+        self._fncache = {}
         self.dircache = []
         self.mainFrame = None
         self.inRawMode = 0
@@ -1775,7 +1775,7 @@ class DebugClientBase(object):
         remoteAddress = self.__resolveHost(host)
         self.connectDebugger(port, remoteAddress, redirect)
         
-        self.fncache = {}
+        self._fncache = {}
         self.dircache = []
         sys.argv = progargs[:]
         sys.argv[0] = os.path.abspath(sys.argv[0])
