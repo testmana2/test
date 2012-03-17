@@ -7,7 +7,7 @@
 Module implementing a dialog to show the output of the svn proplist command process.
 """
 
-from PyQt4.QtCore import QTimer, QProcess, QRegExp, Qt
+from PyQt4.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
 from PyQt4.QtGui import QWidget, QHeaderView, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
@@ -35,6 +35,9 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.process = QProcess()
+        env = QProcessEnvironment.systemEnvironment()
+        env.insert("LANG", "C")
+        self.process.setProcessEnvironment(env)
         self.vcs = vcs
         
         self.propsList.headerItem().setText(self.propsList.columnCount(), "")
