@@ -48,7 +48,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.rx_path = QRegExp(r"Properties on '([^']+)':\s*")
-        self.rx_prop = QRegExp(r"  (.*) : (.*)[\r\n]")
+        self.rx_prop = QRegExp(r"  (.*) *: *(.*)[\r\n]")
         self.lastPath = None
         self.lastProp = None
         self.propBuffer = ""
@@ -75,7 +75,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         @param propName name of the property (string)
         @param propValue value of the property (string)
         """
-        QTreeWidgetItem(self.propsList, [path, propName, propValue])
+        QTreeWidgetItem(self.propsList, [path, propName, propValue.strip()])
         
     def closeEvent(self, e):
         """
