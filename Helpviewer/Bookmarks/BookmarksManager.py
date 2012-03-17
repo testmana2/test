@@ -8,6 +8,7 @@ Module implementing the bookmarks manager.
 """
 
 import os
+import tempfile
 
 from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, QByteArray, \
     QBuffer, QIODevice, QXmlStreamReader, QDate, QFileInfo, QUrl
@@ -347,9 +348,11 @@ class BookmarksManager(QObject):
         reader = XbelReader()
         importRootNode = None
         if fileName.endswith(".html"):
-            inFile = QFile(fileName)
-            inFile.open(QIODevice.ReadOnly)
-            if inFile.openMode == QIODevice.NotOpen:
+            try:
+                f = open(fileName, "r")
+                contents = f.read()
+                f.close()
+            except IOError:
                 E5MessageBox.warning(None,
                     self.trUtf8("Import Bookmarks"),
                     self.trUtf8("""Error opening bookmarks file <b>{0}</b>.""")\
@@ -357,11 +360,15 @@ class BookmarksManager(QObject):
                 return
             
             webpage = QWebPage()
-            webpage.mainFrame().setHtml(inFile.readAll())
+            webpage.mainFrame().setHtml(contents)
             result = webpage.mainFrame().evaluateJavaScript(extract_js)
-            buffer_ = QBuffer(result)
-            buffer_.open(QIODevice.ReadOnly)
-            importRootNode = reader.read(buffer_)
+            
+            fd, name = tempfile.mkstemp(text=True)
+            f = os.fdopen(fd, "w")
+            f.write(result)
+            f.close()
+            importRootNode = reader.read(name)
+            os.remove(name)
         else:
             importRootNode = reader.read(fileName)
         
@@ -369,7 +376,7 @@ class BookmarksManager(QObject):
             E5MessageBox.warning(None,
                 self.trUtf8("Import Bookmarks"),
                 self.trUtf8("""Error when importing bookmarks on"""
-                            """ line {0}, column [1}:\n{2}""")\
+                            """ line {0}, column {1}:\n{2}""")\
                     .format(reader.lineNumber(),
                             reader.columnNumber(),
                             reader.errorString()))
