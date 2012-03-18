@@ -19,6 +19,7 @@ from .SyncCheckPage import SyncCheckPage
 from . import SyncGlobals
 
 import UI.PixmapCache
+import Globals
 
 
 class SyncAssistantDialog(QWizard):
@@ -45,3 +46,5 @@ class SyncAssistantDialog(QWizard):
         self.setPixmap(QWizard.BackgroundPixmap, UI.PixmapCache.getPixmap("eric256.png"))
         
         self.setMinimumSize(650, 450)
+        if Globals.isWindowsPlatform():
+            self.setWizardStyle(QWizard.ModernStyle)
