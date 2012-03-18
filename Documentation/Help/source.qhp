@@ -202,6 +202,7 @@
             <section title="eric5.Helpviewer.Bookmarks" ref="index-eric5.Helpviewer.Bookmarks.html">
               <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters" ref="index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html">
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html" />
@@ -1815,6 +1816,15 @@
       <keyword name="Checker.scope" id="Checker.scope" ref="eric5.Utilities.py3flakes.checker.html#Checker.scope" />
       <keyword name="Checker.scope" id="Checker.scope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.scope" />
       <keyword name="CheckerPlugins (Package)" id="CheckerPlugins (Package)" ref="index-eric5.Plugins.CheckerPlugins.html" />
+      <keyword name="ChromeImporter" id="ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter" />
+      <keyword name="ChromeImporter (Constructor)" id="ChromeImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.__init__" />
+      <keyword name="ChromeImporter (Module)" id="ChromeImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html" />
+      <keyword name="ChromeImporter.__generateFolderNode" id="ChromeImporter.__generateFolderNode" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.__generateFolderNode" />
+      <keyword name="ChromeImporter.__generateUrlNode" id="ChromeImporter.__generateUrlNode" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.__generateUrlNode" />
+      <keyword name="ChromeImporter.__processRoots" id="ChromeImporter.__processRoots" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.__processRoots" />
+      <keyword name="ChromeImporter.importedBookmarks" id="ChromeImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.importedBookmarks" />
+      <keyword name="ChromeImporter.open" id="ChromeImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.open" />
+      <keyword name="ChromeImporter.setPath" id="ChromeImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.setPath" />
       <keyword name="Class" id="Class" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#Class" />
       <keyword name="Class" id="Class" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#Class" />
       <keyword name="Class" id="Class" ref="eric5.Utilities.ClassBrowsers.rbclbr.html#Class" />
@@ -11303,6 +11313,7 @@
       <keyword name="getIconEditor" id="getIconEditor" ref="eric5.Preferences.__init__.html#getIconEditor" />
       <keyword name="getIcons" id="getIcons" ref="eric5.Preferences.__init__.html#getIcons" />
       <keyword name="getImporter" id="getImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporter" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
@@ -11856,6 +11867,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html</file>

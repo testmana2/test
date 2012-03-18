@@ -991,6 +991,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/BookmarksImporter.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

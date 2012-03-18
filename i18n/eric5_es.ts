@@ -1595,12 +1595,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="26"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="29"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="41"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2454,6 +2454,50 @@ el botón de la derecha.&lt;/p&gt;</translation>
         <location filename="Cooperation/ChatWidget.py" line="547"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
+    <name>ChromeImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="37"/>
+        <source>Google Chrome stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="54"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="54"/>
+        <source>Chromium stores its bookmarks in the &lt;b&gt;Bookmarks&lt;/b&gt; text file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="100"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="117"/>
+        <source>File &apos;{0}&apos; cannot be read.
+Reason: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="127"/>
+        <source>Google Chrome Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="129"/>
+        <source>Chromium Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="131"/>
+        <source>Imported {0}</source>
+        <translation type="unfinished">Importado {0}</translation>
     </message>
 </context>
 <context>

@@ -57,6 +57,7 @@ BrowserSortFilterProxyModel QSortFilterProxyModel
 BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
+ChromeImporter BookmarksImporter
 Class ClbrBase
 ClassItem UMLItem
 ClassScope Scope

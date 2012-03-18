@@ -10,6 +10,7 @@ Package implementing bookmarks importers for various sources.
 from PyQt4.QtCore import QCoreApplication
 
 import UI.PixmapCache
+import Globals
 
 
 def getImporters():
@@ -19,17 +20,29 @@ def getImporters():
     @return list of tuples with an icon (QIcon), readable name (string) and
         internal name (string)
     """
-    return [
+    importers = []
+    importers.append(
         (UI.PixmapCache.getIcon("ericWeb48.png"),
          "eric5 Web Browser",
-         "e5browser"),
+         "e5browser"))
+    importers.append(
+        (UI.PixmapCache.getIcon("chrome.png"),
+         "Google Chrome",
+         "chrome"))
+    if not Globals.isWindowsPlatform() and not Globals.isMacPlatform():
+        importers.append(
+            (UI.PixmapCache.getIcon("chromium.png"),
+             "Chromium",
+             "chromium"))
+    importers.append(
         (UI.PixmapCache.getIcon("xbel.png"),
          QCoreApplication.translate("BookmarksImporters", "XBEL File"),
-         "xbel"),
+         "xbel"))
+    importers.append(
         (UI.PixmapCache.getIcon("html.png"),
          QCoreApplication.translate("BookmarksImporters", "HTML File"),
-         "html"),
-    ]
+         "html"))
+    return importers
 
 
 def getImporterInfo(id):
@@ -47,6 +60,11 @@ def getImporterInfo(id):
     elif id == "html":
         from . import HtmlImporter
         return HtmlImporter.getImporterInfo(id)
+    elif id in ["chrome", "chromium"]:
+        from . import ChromeImporter
+        return ChromeImporter.getImporterInfo(id)
+    else:
+        raise ValueError("Invalid importer ID given ({0}).".format(id))
 
 def getImporter(id, parent=None):
     """
@@ -62,5 +80,8 @@ def getImporter(id, parent=None):
     elif id == "html":
         from . import HtmlImporter
         return HtmlImporter.HtmlImporter(id, parent)
+    elif id in ["chrome", "chromium"]:
+        from . import ChromeImporter
+        return ChromeImporter.ChromeImporter(id, parent)
     else:
         raise ValueError("No importer for ID {0}.".format(id))
