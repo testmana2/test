@@ -204,6 +204,7 @@
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html" />
               </section>
@@ -6751,6 +6752,12 @@
       <keyword name="OpenSearchWriter (Module)" id="OpenSearchWriter (Module)" ref="eric5.Helpviewer.OpenSearch.OpenSearchWriter.html" />
       <keyword name="OpenSearchWriter.__write" id="OpenSearchWriter.__write" ref="eric5.Helpviewer.OpenSearch.OpenSearchWriter.html#OpenSearchWriter.__write" />
       <keyword name="OpenSearchWriter.write" id="OpenSearchWriter.write" ref="eric5.Helpviewer.OpenSearch.OpenSearchWriter.html#OpenSearchWriter.write" />
+      <keyword name="OperaImporter" id="OperaImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#OperaImporter" />
+      <keyword name="OperaImporter (Constructor)" id="OperaImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#OperaImporter.__init__" />
+      <keyword name="OperaImporter (Module)" id="OperaImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html" />
+      <keyword name="OperaImporter.importedBookmarks" id="OperaImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#OperaImporter.importedBookmarks" />
+      <keyword name="OperaImporter.open" id="OperaImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#OperaImporter.open" />
+      <keyword name="OperaImporter.setPath" id="OperaImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#OperaImporter.setPath" />
       <keyword name="PDFObjectTracker" id="PDFObjectTracker" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFObjectTracker" />
       <keyword name="PDFObjectTracker (Constructor)" id="PDFObjectTracker (Constructor)" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFObjectTracker.__init__" />
       <keyword name="PDFObjectTracker.add" id="PDFObjectTracker.add" ref="eric5.QScintilla.Exporters.ExporterPDF.html#PDFObjectTracker.add" />
@@ -11315,6 +11322,7 @@
       <keyword name="getImporter" id="getImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporter" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
       <keyword name="getImporters" id="getImporters" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporters" />
@@ -11869,6 +11877,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksManager.html</file>

@@ -396,6 +396,7 @@ OpenSearchEngineModel QAbstractTableModel
 OpenSearchManager QObject
 OpenSearchReader QXmlStreamReader
 OpenSearchWriter QXmlStreamWriter
+OperaImporter BookmarksImporter
 PackageDiagram UMLDialog
 PackageItem UMLItem
 PageScreenDialog QDialog Ui_PageScreenDialog

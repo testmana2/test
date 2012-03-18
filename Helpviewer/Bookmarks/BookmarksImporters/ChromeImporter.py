@@ -118,11 +118,10 @@ class ChromeImporter(BookmarksImporter):
                 .format(self.__fileName, str(err))
             return None
         
-        importRootNode = BookmarkNode(BookmarkNode.Root)
+        importRootNode = BookmarkNode(BookmarkNode.Folder)
         if contents["version"] == 1:
             self.__processRoots(contents["roots"], importRootNode)
         
-        importRootNode.setType(BookmarkNode.Folder)
         if self._id == "chrome":
             importRootNode.title = self.trUtf8("Google Chrome Import")
         elif self._id == "chromium":

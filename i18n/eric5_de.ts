@@ -1586,12 +1586,12 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="33"/>
         <source>XBEL File</source>
         <translation>XBEL Datei</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="41"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
         <source>HTML File</source>
         <translation>HTML Datei</translation>
     </message>
@@ -2437,17 +2437,17 @@ Reason: {1}</source>
 Ursache: {1}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="127"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="126"/>
         <source>Google Chrome Import</source>
         <translation>Google Chrome Import</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="129"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="128"/>
         <source>Chromium Import</source>
         <translation>Chromium Import</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="131"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="130"/>
         <source>Imported {0}</source>
         <translation>Importiert {0}</translation>
     </message>
@@ -26973,6 +26973,41 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
         <location filename="Helpviewer/OpenSearch/OpenSearchReader.py" line="47"/>
         <source>The file is not an OpenSearch 1.1 file.</source>
         <translation>Die Datei ist keine OpenSearch 1.1 Datei.</translation>
+    </message>
+</context>
+<context>
+    <name>OperaImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="35"/>
+        <source>Opera stores its bookmarks in the &lt;b&gt;bookmarks.adr&lt;/b&gt; text file. This file is usually located in</source>
+        <translation>Opera speichert die Lesezeichen in der Datei &lt;b&gt;bookmarks.adr&lt;/b&gt;. Diese Datei befindet sich gewöhnlich in</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="35"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation>Bitte wähle die Datei, um den Import von Lesezeichen zu starten.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="81"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation>Datei &apos;{0}&apos; existiert nicht.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="98"/>
+        <source>File &apos;{0}&apos; cannot be read.
+Reason: {1}</source>
+        <translation>Datei &apos;{0}&apos; kann nicht gelesen werden.
+Ursache: {1}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="122"/>
+        <source>Opera Import</source>
+        <translation>Opera Import</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="124"/>
+        <source>Imported {0}</source>
+        <translation>Importiert {0}</translation>
     </message>
 </context>
 <context>

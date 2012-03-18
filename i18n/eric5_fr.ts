@@ -1778,12 +1778,12 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="33"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="41"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2633,17 +2633,17 @@ Reason: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="127"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="126"/>
         <source>Google Chrome Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="129"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="128"/>
         <source>Chromium Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="131"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/ChromeImporter.py" line="130"/>
         <source>Imported {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29213,6 +29213,40 @@ Voulez-vous enregistrer les modifications?</translation>
     <message>
         <location filename="Helpviewer/OpenSearch/OpenSearchReader.py" line="47"/>
         <source>The file is not an OpenSearch 1.1 file.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OperaImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="35"/>
+        <source>Opera stores its bookmarks in the &lt;b&gt;bookmarks.adr&lt;/b&gt; text file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="35"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="81"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="98"/>
+        <source>File &apos;{0}&apos; cannot be read.
+Reason: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="122"/>
+        <source>Opera Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/OperaImporter.py" line="124"/>
+        <source>Imported {0}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
