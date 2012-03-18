@@ -32,6 +32,9 @@ def getImporters():
             (UI.PixmapCache.getIcon("chromium.png"), "Chromium", "chromium"))
     importers.append(
         (UI.PixmapCache.getIcon("opera.png"), "Opera", "opera"))
+    if Globals.isWindowsPlatform():
+        importers.append(
+            (UI.PixmapCache.getIcon("internet_explorer.png"), "Internet Explorer", "ie"))
     importers.append(
         (UI.PixmapCache.getIcon("xbel.png"),
          QCoreApplication.translate("BookmarksImporters", "XBEL File"),
@@ -68,6 +71,9 @@ def getImporterInfo(id):
     elif id == "firefox":
         from . import FirefoxImporter
         return FirefoxImporter.getImporterInfo(id)
+    elif id == "ie":
+        from . import IExplorerImporter
+        return IExplorerImporter.getImporterInfo(id)
     else:
         raise ValueError("Invalid importer ID given ({0}).".format(id))
 
@@ -94,5 +100,8 @@ def getImporter(id, parent=None):
     elif id == "firefox":
         from . import FirefoxImporter
         return FirefoxImporter.FirefoxImporter(id, parent)
+    elif id == "ie":
+        from . import IExplorerImporter
+        return IExplorerImporter.IExplorerImporter(id, parent)
     else:
         raise ValueError("No importer for ID {0}.".format(id))

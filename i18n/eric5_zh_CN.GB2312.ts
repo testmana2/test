@@ -1733,27 +1733,27 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="80"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="82"/>
         <source>Choose Directory ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="86"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="88"/>
         <source>Choose File ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="110"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="112"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="116"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="118"/>
         <source>Finish</source>
         <translation type="unfinished">完成</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="131"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="133"/>
         <source>Error importing bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1771,12 +1771,12 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="35"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="38"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="39"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23562,6 +23562,39 @@ Reason: {1}</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="88"/>
         <source>You can import bookmarks from any browser that supports HTML exporting. This file has usually the extension .htm or .html.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>IExplorerImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
+        <source>Internet Explorer stores its bookmarks in the &lt;b&gt;Favorites&lt;/b&gt; folder This folder is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
+        <source>Please choose the folder to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="82"/>
+        <source>Folder &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="87"/>
+        <source>&apos;{0}&apos; is not a folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="136"/>
+        <source>Internet Explorer Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="138"/>
+        <source>Imported {0}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

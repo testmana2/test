@@ -1810,6 +1810,11 @@ eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.setPath?
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter?1(id="", parent=None)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.getImporterInfo?4(id)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter.importedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter.open?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter.setPath?4(path)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter?1(id="", parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.getImporterInfo?4(id)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter.importedBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter.open?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter.setPath?4(path)

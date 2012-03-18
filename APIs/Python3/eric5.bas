@@ -58,7 +58,7 @@ BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
@@ -308,6 +308,7 @@ HistoryMostVisitedMenu E5ModelMenu
 HistoryMostVisitedMenuModel QSortFilterProxyModel
 HistoryTreeModel QAbstractProxyModel
 HtmlImporter BookmarksImporter
+IExplorerImporter BookmarksImporter
 IconEditCommand QUndoCommand
 IconEditorGrid QWidget
 IconEditorPalette QWidget

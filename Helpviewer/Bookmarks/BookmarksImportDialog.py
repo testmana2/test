@@ -16,6 +16,8 @@ from .Ui_BookmarksImportDialog import Ui_BookmarksImportDialog
 
 from . import BookmarksImporters
 
+import Utilities
+
 
 class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
     """
@@ -90,7 +92,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
                 self.__sourceFile)
         
         if path:
-            self.fileEdit.setText(path)
+            self.fileEdit.setText(Utilities.toNativeSeparators(path))
     
     @pyqtSlot()
     def on_nextButton_clicked(self):

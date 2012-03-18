@@ -1548,27 +1548,27 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="80"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="82"/>
         <source>Choose Directory ...</source>
         <translation>Wähle Verzeichnis ...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="86"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="88"/>
         <source>Choose File ...</source>
         <translation>Wähle Datei ...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="110"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="112"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation>&lt;b&gt;Imprtiere von {0}&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="116"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="118"/>
         <source>Finish</source>
         <translation>Abschließen</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="131"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="133"/>
         <source>Error importing bookmarks</source>
         <translation>Fehler beim Importieren von Lesezeichen</translation>
     </message>
@@ -1586,12 +1586,12 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="35"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="38"/>
         <source>XBEL File</source>
         <translation>XBEL Datei</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="39"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
         <source>HTML File</source>
         <translation>HTML Datei</translation>
     </message>
@@ -22045,6 +22045,39 @@ Ursache: {1}</translation>
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="88"/>
         <source>You can import bookmarks from any browser that supports HTML exporting. This file has usually the extension .htm or .html.</source>
         <translation>Es können Lesezeichen von jedem Browser, der den HTML Export unterstützt, importiert werden. Diese Datei hat üblicherweise die Endung .htm oder .html.</translation>
+    </message>
+</context>
+<context>
+    <name>IExplorerImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
+        <source>Internet Explorer stores its bookmarks in the &lt;b&gt;Favorites&lt;/b&gt; folder This folder is usually located in</source>
+        <translation>Internet Explorer speichert die Lesezeichen in dem Verzeichnis &lt;b&gt;Favorites&lt;/b&gt;. Dieses Verzeichnis befindet sich gewöhnlich in</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="36"/>
+        <source>Please choose the folder to begin importing bookmarks.</source>
+        <translation>Bitte wähle das Verzeichnis, um den Import von Lesezeichen zu starten.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="82"/>
+        <source>Folder &apos;{0}&apos; does not exist.</source>
+        <translation>Verzeichnis &apos;{0}&apos; existiert nicht.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="87"/>
+        <source>&apos;{0}&apos; is not a folder.</source>
+        <translation>&apos;{0}&apos; ist kein Verzeichnis.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="136"/>
+        <source>Internet Explorer Import</source>
+        <translation>Internet Explorer Import</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py" line="138"/>
+        <source>Imported {0}</source>
+        <translation>Importiert {0}</translation>
     </message>
 </context>
 <context>

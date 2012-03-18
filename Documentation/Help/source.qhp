@@ -205,6 +205,7 @@
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html" />
@@ -5749,6 +5750,12 @@
       <keyword name="HtmlImporter.importedBookmarks" id="HtmlImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.importedBookmarks" />
       <keyword name="HtmlImporter.open" id="HtmlImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.open" />
       <keyword name="HtmlImporter.setPath" id="HtmlImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.setPath" />
+      <keyword name="IExplorerImporter" id="IExplorerImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter" />
+      <keyword name="IExplorerImporter (Constructor)" id="IExplorerImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.__init__" />
+      <keyword name="IExplorerImporter (Module)" id="IExplorerImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html" />
+      <keyword name="IExplorerImporter.importedBookmarks" id="IExplorerImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.importedBookmarks" />
+      <keyword name="IExplorerImporter.open" id="IExplorerImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.open" />
+      <keyword name="IExplorerImporter.setPath" id="IExplorerImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#IExplorerImporter.setPath" />
       <keyword name="IconEditCommand" id="IconEditCommand" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand" />
       <keyword name="IconEditCommand (Constructor)" id="IconEditCommand (Constructor)" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.__init__" />
       <keyword name="IconEditCommand.redo" id="IconEditCommand.redo" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.redo" />
@@ -11330,6 +11337,7 @@
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
@@ -11886,6 +11894,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html</file>
