@@ -210,6 +210,7 @@ FileDialogWizardDialog QDialog Ui_FileDialogWizardDialog
 FiletypeAssociationDialog QDialog Ui_FiletypeAssociationDialog
 FindFileDialog QDialog Ui_FindFileDialog
 FindFileNameDialog QWidget Ui_FindFileNameDialog
+FirefoxImporter BookmarksImporter
 FontDialogWizard QObject
 FontDialogWizardDialog QDialog Ui_FontDialogWizardDialog
 FtpAccessHandler SchemeAccessHandler

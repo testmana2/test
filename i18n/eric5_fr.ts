@@ -1778,12 +1778,12 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="33"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="35"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="39"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14004,6 +14004,40 @@ et le curseurest placé après la parenthèse fermante</translation>
         <location filename="UI/FindFileNameDialog.py" line="54"/>
         <source>Stop</source>
         <translation>Arrêt</translation>
+    </message>
+</context>
+<context>
+    <name>FirefoxImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="37"/>
+        <source>Mozilla Firefox stores its bookmarks in the &lt;b&gt;places.sqlite&lt;/b&gt; SQLite database. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="37"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="84"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="94"/>
+        <source>Unable to open database.
+Reason: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="154"/>
+        <source>Mozilla Firefox Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="156"/>
+        <source>Imported {0}</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

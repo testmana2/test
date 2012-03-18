@@ -1586,12 +1586,12 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="33"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="35"/>
         <source>XBEL File</source>
         <translation>XBEL Datei</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="37"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="39"/>
         <source>HTML File</source>
         <translation>HTML Datei</translation>
     </message>
@@ -12866,6 +12866,41 @@ gesamte Auswahl.&lt;/li&gt;
         <location filename="UI/FindFileNameDialog.py" line="54"/>
         <source>Stop</source>
         <translation>Anhalten</translation>
+    </message>
+</context>
+<context>
+    <name>FirefoxImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="37"/>
+        <source>Mozilla Firefox stores its bookmarks in the &lt;b&gt;places.sqlite&lt;/b&gt; SQLite database. This file is usually located in</source>
+        <translation>Mozilla Firefox speichert die Lesezeichen in der SQLite Datenbank &lt;b&gt;places.sqlite&lt;/b&gt;. Diese Datei befindet sich gewöhnlich in</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="37"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation>Bitte wähle die Datei, um den Import von Lesezeichen zu starten.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="84"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation>Datei &apos;{0}&apos; existiert nicht.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="94"/>
+        <source>Unable to open database.
+Reason: {0}</source>
+        <translation>Die Datenbank kann nicht geöffnet werden.
+Ursache: {0}</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="154"/>
+        <source>Mozilla Firefox Import</source>
+        <translation>Mozilla Firefox Import</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/FirefoxImporter.py" line="156"/>
+        <source>Imported {0}</source>
+        <translation>Importiert {0}</translation>
     </message>
 </context>
 <context>

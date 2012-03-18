@@ -24,8 +24,10 @@ def getImporters():
     importers.append(
         (UI.PixmapCache.getIcon("ericWeb48.png"), "eric5 Web Browser", "e5browser"))
     importers.append(
+        (UI.PixmapCache.getIcon("firefox.png"), "Mozilla Firefox", "firefox"))
+    importers.append(
         (UI.PixmapCache.getIcon("chrome.png"), "Google Chrome", "chrome"))
-    if not Globals.isWindowsPlatform() and not Globals.isMacPlatform():
+    if Globals.isLinuxPlatform():
         importers.append(
             (UI.PixmapCache.getIcon("chromium.png"), "Chromium", "chromium"))
     importers.append(
@@ -39,7 +41,7 @@ def getImporters():
          QCoreApplication.translate("BookmarksImporters", "HTML File"),
          "html"))
     return importers
-    # TODO: importers for Safari, Firefox, IE
+    # TODO: importers for Safari, IE
 
 
 def getImporterInfo(id):
@@ -63,6 +65,9 @@ def getImporterInfo(id):
     elif id == "opera":
         from . import OperaImporter
         return OperaImporter.getImporterInfo(id)
+    elif id == "firefox":
+        from . import FirefoxImporter
+        return FirefoxImporter.getImporterInfo(id)
     else:
         raise ValueError("Invalid importer ID given ({0}).".format(id))
 
@@ -86,5 +91,8 @@ def getImporter(id, parent=None):
     elif id == "opera":
         from . import OperaImporter
         return OperaImporter.OperaImporter(id, parent)
+    elif id == "firefox":
+        from . import FirefoxImporter
+        return FirefoxImporter.FirefoxImporter(id, parent)
     else:
         raise ValueError("No importer for ID {0}.".format(id))

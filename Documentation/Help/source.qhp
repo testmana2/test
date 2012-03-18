@@ -203,6 +203,7 @@
               <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters" ref="index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html">
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
@@ -4277,6 +4278,12 @@
       <keyword name="FindFileNameDialog.on_searchDirEdit_textChanged" id="FindFileNameDialog.on_searchDirEdit_textChanged" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_searchDirEdit_textChanged" />
       <keyword name="FindFileNameDialog.on_syspathCheckBox_toggled" id="FindFileNameDialog.on_syspathCheckBox_toggled" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.on_syspathCheckBox_toggled" />
       <keyword name="FindFileNameDialog.show" id="FindFileNameDialog.show" ref="eric5.UI.FindFileNameDialog.html#FindFileNameDialog.show" />
+      <keyword name="FirefoxImporter" id="FirefoxImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter" />
+      <keyword name="FirefoxImporter (Constructor)" id="FirefoxImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.__init__" />
+      <keyword name="FirefoxImporter (Module)" id="FirefoxImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html" />
+      <keyword name="FirefoxImporter.importedBookmarks" id="FirefoxImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.importedBookmarks" />
+      <keyword name="FirefoxImporter.open" id="FirefoxImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.open" />
+      <keyword name="FirefoxImporter.setPath" id="FirefoxImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.setPath" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric5.DebugClients.Python.FlexCompleter.html" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric5.DebugClients.Python3.FlexCompleter.html" />
       <keyword name="FontDialogWizard" id="FontDialogWizard" ref="eric5.Plugins.PluginWizardQFontDialog.html#FontDialogWizard" />
@@ -11321,6 +11328,7 @@
       <keyword name="getIcons" id="getIcons" ref="eric5.Preferences.__init__.html#getIcons" />
       <keyword name="getImporter" id="getImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporter" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
@@ -11876,6 +11884,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
