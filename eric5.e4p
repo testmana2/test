@@ -986,6 +986,11 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Pygments/pygments/lexers/_scilab_builtins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/shell.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/rrt.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImportDialog.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImporters/__init__.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py</Source>
+    <Source>Helpviewer/Bookmarks/BookmarksImporters/BookmarksImporter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1270,6 +1275,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui</Form>
     <Form>Helpviewer/Sync/SyncEncryptionPage.ui</Form>
     <Form>Helpviewer/Sync/SyncDirectorySettingsPage.ui</Form>
+    <Form>Helpviewer/Bookmarks/BookmarksImportDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

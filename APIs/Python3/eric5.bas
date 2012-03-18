@@ -34,6 +34,8 @@ BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
 BookmarkedFilesDialog QDialog Ui_BookmarkedFilesDialog
 Bookmarks HgExtension
 BookmarksDialog QDialog Ui_BookmarksDialog
+BookmarksImportDialog QDialog Ui_BookmarksImportDialog
+BookmarksImporter QObject
 BookmarksManager QObject
 BookmarksMenu E5ModelMenu
 BookmarksMenuBarMenu BookmarksMenu
@@ -303,6 +305,7 @@ HistoryModel QAbstractTableModel
 HistoryMostVisitedMenu E5ModelMenu
 HistoryMostVisitedMenuModel QSortFilterProxyModel
 HistoryTreeModel QAbstractProxyModel
+HtmlImporter BookmarksImporter
 IconEditCommand QUndoCommand
 IconEditorGrid QWidget
 IconEditorPalette QWidget
@@ -663,6 +666,7 @@ WidgetArea QMdiArea
 WidgetView QWidget
 XMLStreamReaderBase QXmlStreamReader
 XMLStreamWriterBase QXmlStreamWriter
+XbelImporter BookmarksImporter
 XbelReader QXmlStreamReader
 XbelWriter QXmlStreamWriter
 XmlEntityResolver QXmlStreamEntityResolver

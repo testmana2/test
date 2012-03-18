@@ -1780,6 +1780,34 @@ eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.newUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog.reject?4()
 eric5.Helpviewer.Bookmarks.BookmarksDialog.BookmarksDialog?1(parent=None, manager=None)
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.SourcesListIdRole?7
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.getImportedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.on_cancelButton_clicked?4()
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.on_chooseButton_clicked?4()
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.on_fileEdit_textChanged?4(txt)
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.on_nextButton_clicked?4()
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog.on_sourcesList_itemSelectionChanged?4()
+eric5.Helpviewer.Bookmarks.BookmarksImportDialog.BookmarksImportDialog?1(parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter.error?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter.errorString?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter.importedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter.open?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter.setPath?4(path)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.BookmarksImporter?1(id="", parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.importedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.open?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.setPath?4(path)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter?1(id="", parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.extract_js?7
+eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.getImporterInfo?4(id)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.importedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.open?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.setPath?4(path)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter?1(id="", parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.getImporterInfo?4(id)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.getImporter?4(id, parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.getImporterInfo?4(id)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.getImporters?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BOOKMARKBAR?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BOOKMARKMENU?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.addBookmark?4(parent, node, row=-1)
@@ -1820,7 +1848,6 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.RemoveBookmarksCommand?1(bookmarksMa
 eric5.Helpviewer.Bookmarks.BookmarksManager.StartMenu?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.StartRoot?7
 eric5.Helpviewer.Bookmarks.BookmarksManager.StartToolBar?7
-eric5.Helpviewer.Bookmarks.BookmarksManager.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.createBaseMenu?4()
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.newUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksMenu.BookmarksMenu.openAll?4()

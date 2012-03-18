@@ -26,7 +26,7 @@ Module implementing the bookmarks manager.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>BOOKMARKBAR</td></tr><tr><td>BOOKMARKMENU</td></tr><tr><td>StartMenu</td></tr><tr><td>StartRoot</td></tr><tr><td>StartToolBar</td></tr><tr><td>extract_js</td></tr>
+<tr><td>BOOKMARKBAR</td></tr><tr><td>BOOKMARKMENU</td></tr><tr><td>StartMenu</td></tr><tr><td>StartRoot</td></tr><tr><td>StartToolBar</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -81,7 +81,10 @@ QObject
 </table>
 <h3>Class Methods</h3>
 <table>
-<tr><td>None</td></tr>
+<tr>
+<td><a href="#BookmarksManager.getFileName">getFileName</a></td>
+<td>Public method to get the file name of the bookmark file.</td>
+</tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -125,9 +128,6 @@ QObject
 <td><a href="#BookmarksManager.exportBookmarks">exportBookmarks</a></td>
 <td>Public method to export the bookmarks.</td>
 </tr><tr>
-<td><a href="#BookmarksManager.getFileName">getFileName</a></td>
-<td>Public method to get the file name of the bookmark file.</td>
-</tr><tr>
 <td><a href="#BookmarksManager.iconChanged">iconChanged</a></td>
 <td>Public slot to update the icon image for an URL.</td>
 </tr><tr>
@@ -166,7 +166,17 @@ QObject
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="BookmarksManager.__init__" ID="BookmarksManager.__init__"></a>
+<a NAME="BookmarksManager.getFileName" ID="BookmarksManager.getFileName"></a>
+<h4>BookmarksManager.getFileName (class method)</h4>
+<b>getFileName</b>(<i></i>)
+<p>
+        Public method to get the file name of the bookmark file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+name of the bookmark file (string)
+</dd>
+</dl><a NAME="BookmarksManager.__init__" ID="BookmarksManager.__init__"></a>
 <h4>BookmarksManager (Constructor)</h4>
 <b>BookmarksManager</b>(<i>parent=None</i>)
 <p>
@@ -311,17 +321,7 @@ reference to the bookmarks model (BookmarksModel)
 <b>exportBookmarks</b>(<i></i>)
 <p>
         Public method to export the bookmarks.
-</p><a NAME="BookmarksManager.getFileName" ID="BookmarksManager.getFileName"></a>
-<h4>BookmarksManager.getFileName</h4>
-<b>getFileName</b>(<i></i>)
-<p>
-        Public method to get the file name of the bookmark file.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-name of the bookmark file (string)
-</dd>
-</dl><a NAME="BookmarksManager.iconChanged" ID="BookmarksManager.iconChanged"></a>
+</p><a NAME="BookmarksManager.iconChanged" ID="BookmarksManager.iconChanged"></a>
 <h4>BookmarksManager.iconChanged</h4>
 <b>iconChanged</b>(<i>url</i>)
 <p>

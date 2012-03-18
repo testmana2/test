@@ -219,7 +219,10 @@ class BookmarksMenuBarMenu(BookmarksMenu):
         
         # initial actions
         for act in self.__initialActions:
-            self.addAction(act)
+            if act == "--SEPARATOR--":
+                self.addSeparator()
+            else:
+                self.addAction(act)
         if len(self.__initialActions) != 0:
             self.addSeparator()
         

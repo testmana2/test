@@ -1713,6 +1713,82 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>BookmarksImportDialog</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="20"/>
+        <source>Import Bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="36"/>
+        <source>Choose source from which you want to import bookmarks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="43"/>
+        <source>Choose the source to import from</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
+        <source>Next</source>
+        <translation type="obsolete">Suivant</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="179"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Annuler</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="80"/>
+        <source>Choose Directory ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="86"/>
+        <source>Choose File ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="110"/>
+        <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="116"/>
+        <source>Finish</source>
+        <translation type="unfinished">Installer</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.py" line="131"/>
+        <source>Error importing bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="124"/>
+        <source>Shows the name of the bookmarks file or directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="172"/>
+        <source>Next &gt;</source>
+        <translation type="unfinished">Suivant &gt;</translation>
+    </message>
+</context>
+<context>
+    <name>BookmarksImporters</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="26"/>
+        <source>XBEL File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="29"/>
+        <source>HTML File</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>BookmarksManager</name>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="29"/>
@@ -1725,108 +1801,77 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="189"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
         <source>Loading Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="201"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="147"/>
         <source>Toolbar Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="207"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="153"/>
         <source>Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="250"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
         <source>Saving Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="363"/>
-        <source>XBEL bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="364"/>
-        <source>HTML Netscape bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="397"/>
-        <source>Import Bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="415"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
         <source>Export Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="431"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
         <source>Exporting Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="566"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="469"/>
         <source>Remove Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="606"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="509"/>
         <source>Insert Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="645"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="548"/>
         <source>Name Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="648"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="551"/>
         <source>Address Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="250"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
         <source>Error saving bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="381"/>
-        <source>Error opening bookmarks file &lt;b&gt;{0}&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="397"/>
-        <source>Error when importing bookmarks on line {0}, column [1}:
-{2}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="407"/>
-        <source>Imported {0}</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="431"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
         <source>Error exporting bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="446"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="349"/>
         <source>Converted {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="415"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="189"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
 {2}</source>
         <translation type="unfinished"></translation>
@@ -1858,17 +1903,17 @@ avec une boite de dialogue.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksMenuBarMenu</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="254"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="257"/>
         <source>Default Home Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="257"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="260"/>
         <source>Speed Dial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="261"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="264"/>
         <source>Open all in Tabs</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16286,27 +16331,27 @@ You have %n tab(s) open.</source>
         <translation>&amp;Fichier</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1308"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1305"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edition</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1316"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1313"/>
         <source>&amp;View</source>
         <translation>&amp;Affichage</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1332"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1329"/>
         <source>&amp;Go</source>
         <translation>A&amp;ller</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1345"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1342"/>
         <source>H&amp;istory</source>
         <translation>&amp;Historique</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1352"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1349"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Signets</translation>
     </message>
@@ -17438,7 +17483,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1327"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1324"/>
         <source>Text Encoding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23435,6 +23480,51 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>HtmlImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="88"/>
+        <source>HTML Netscape Bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="88"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="136"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="153"/>
+        <source>File &apos;{0}&apos; cannot be read.
+Reason: {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="171"/>
+        <source>Error when importing bookmarks on line {0}, column {1}:
+{2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="180"/>
+        <source>HTML Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="182"/>
+        <source>Imported {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/HtmlImporter.py" line="88"/>
+        <source>You can import bookmarks from any browser that supports HTML exporting. This file has usually the extension .htm or .html.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -38612,17 +38702,17 @@ Il s&apos;activent lorsqu&apos;on tape la parenthèse ouvrante d&apos;une foncti
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="363"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="366"/>
         <source>Unable to load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="198"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
         <source>Saving Speed Dial data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="198"/>
+        <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="201"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -43262,7 +43352,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
 &lt;p&gt;Affiche les erreurs possibles de la commande &quot;proplist&quot; de Subversion&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="123"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -43282,7 +43372,7 @@ depuis le référentiel vers ce répertoire.&lt;/p&gt;</translation>
         <translation>Erreurs</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="120"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="123"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56431,6 +56521,55 @@ Commentaires acceptés par C++ de la forme :
     <message>
         <location filename="E5XML/XMLStreamReaderBase.py" line="83"/>
         <source>Bad value: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>XbelImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="33"/>
+        <source>eric5 Web Browser stores its bookmarks in the &lt;b&gt;{0}&lt;/b&gt; XML file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <source>XBEL Bookmarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="93"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="109"/>
+        <source>Error when importing bookmarks on line {0}, column [1}:
+{2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="118"/>
+        <source>eric5 Web Browser Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="120"/>
+        <source>XBEL Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="122"/>
+        <source>Imported {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <source>You can import bookmarks from any browser that supports XBEL exporting. This file has usually the extension .xbel or .xml.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

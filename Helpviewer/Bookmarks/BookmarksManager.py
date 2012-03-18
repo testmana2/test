@@ -11,8 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, QByteArray, \
     QBuffer, QIODevice, QXmlStreamReader, QDate, QFileInfo, QUrl
-from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication
-from PyQt4.QtWebKit import QWebPage
+from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -21,6 +20,7 @@ from .BookmarksModel import BookmarksModel
 from .DefaultBookmarks import DefaultBookmarks
 from .XbelReader import XbelReader
 from .XbelWriter import XbelWriter
+from .BookmarksImportDialog import BookmarksImportDialog
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities
@@ -32,61 +32,6 @@ BOOKMARKMENU = QT_TRANSLATE_NOOP("BookmarksManager", "Bookmarks Menu")
 StartRoot = 0
 StartMenu = 1
 StartToolBar = 2
-
-##########################################################################################
-
-extract_js = r"""
-function walk() {
-    var parent = arguments[0];
-    var indent = arguments[1];
-
-    var result = "";
-    var children = parent.childNodes;
-    var folderName = "";
-    var folded = "";
-    for (var i = 0; i < children.length; i++) {
-        var object = children.item(i);
-        if (object.nodeName == "HR") {
-            result += indent + "<separator/>\n";
-        }
-        if (object.nodeName == "H3") {
-            folderName = object.innerHTML;
-            folded = object.folded;
-            if (object.folded == undefined)
-                folded = "false";
-            else
-                folded = "true";
-        }
-        if (object.nodeName == "A") {
-            result += indent + "<bookmark href=\"" + encodeURI(object.href).replace(/&/g, '&amp;') + "\">\n";
-            result += indent + indent + "<title>" + object.innerHTML + "</title>\n";
-            result += indent + "</bookmark>\n";
-        }
-
-        var currentIndent = indent;
-        if (object.nodeName == "DL" && folderName != "") {
-            result += indent + "<folder folded=\"" + folded + "\">\n";
-            indent += "    ";
-            result += indent + "<title>" + folderName + "</title>\n";
-        }
-        result += walk(object, indent);
-        if (object.nodeName == "DL" && folderName != "") {
-            result += currentIndent + "</folder>\n";
-        }
-    }
-    return result;
-}
-
-var xbel = walk(document, "    ");
-
-if (xbel != "") {
-    xbel = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE xbel>\n<xbel version=\"1.0\">\n" + xbel + "</xbel>\n";
-}
-
-xbel;
-"""
-
-##########################################################################################
 
 
 class BookmarksManager(QObject):
@@ -132,7 +77,8 @@ class BookmarksManager(QObject):
         self.__bookmarksModel = None
         self.__commands = QUndoStack()
     
-    def getFileName(self):
+    @classmethod
+    def getFileName(cls):
         """
         Public method to get the file name of the bookmark file.
         
@@ -359,54 +305,11 @@ class BookmarksManager(QObject):
         """
         Public method to import bookmarks.
         """
-        supportedFormats = [
-            self.trUtf8("XBEL bookmarks") + " (*.xbel *.xml)",
-            self.trUtf8("HTML Netscape bookmarks") + " (*.html *.htm)"
-        ]
-        
-        fileName = E5FileDialog.getOpenFileName(
-            None,
-            self.trUtf8("Import Bookmarks"),
-            "",
-            ";;".join(supportedFormats))
-        if not fileName:
-            return
-        
-        reader = XbelReader()
-        importRootNode = None
-        if fileName.endswith(".html"):
-            inFile = QFile(fileName)
-            inFile.open(QIODevice.ReadOnly)
-            if inFile.openMode == QIODevice.NotOpen:
-                E5MessageBox.warning(None,
-                    self.trUtf8("Import Bookmarks"),
-                    self.trUtf8("""Error opening bookmarks file <b>{0}</b>.""")\
-                        .format(fileName))
-                return
-            
-            webpage = QWebPage()
-            webpage.mainFrame().setHtml(inFile.readAll())
-            result = webpage.mainFrame().evaluateJavaScript(extract_js)
-            buffer_ = QBuffer(result)
-            buffer_.open(QIODevice.ReadOnly)
-            importRootNode = reader.read(buffer_)
-        else:
-            importRootNode = reader.read(fileName)
-        
-        if reader.error() != QXmlStreamReader.NoError:
-            E5MessageBox.warning(None,
-                self.trUtf8("Import Bookmarks"),
-                self.trUtf8("""Error when importing bookmarks on"""
-                            """ line {0}, column [1}:\n{2}""")\
-                    .format(reader.lineNumber(),
-                            reader.columnNumber(),
-                            reader.errorString()))
-            return
-        
-        importRootNode.setType(BookmarkNode.Folder)
-        importRootNode.title = self.trUtf8("Imported {0}")\
-            .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
-        self.addBookmark(self.menu(), importRootNode)
+        dlg = BookmarksImportDialog()
+        if dlg.exec_() == QDialog.Accepted:
+            importRootNode = dlg.getImportedBookmarks()
+            if importRootNode is not None:
+                self.addBookmark(self.menu(), importRootNode)
     
     def exportBookmarks(self):
         """

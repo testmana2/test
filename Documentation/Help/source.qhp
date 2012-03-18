@@ -200,9 +200,16 @@
               <section title="eric5.Helpviewer.AdBlock.AdBlockSubscription" ref="eric5.Helpviewer.AdBlock.AdBlockSubscription.html" />
             </section>
             <section title="eric5.Helpviewer.Bookmarks" ref="index-eric5.Helpviewer.Bookmarks.html">
+              <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters" ref="index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html">
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html" />
+              </section>
               <section title="eric5.Helpviewer.Bookmarks.AddBookmarkDialog" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarkNode" ref="eric5.Helpviewer.Bookmarks.BookmarkNode.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html" />
+              <section title="eric5.Helpviewer.Bookmarks.BookmarksImportDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksManager" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksModel" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html" />
@@ -1361,6 +1368,25 @@
       <keyword name="BookmarksDialog.closeEvent" id="BookmarksDialog.closeEvent" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.closeEvent" />
       <keyword name="BookmarksDialog.reject" id="BookmarksDialog.reject" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.reject" />
       <keyword name="BookmarksExtension (Package)" id="BookmarksExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html" />
+      <keyword name="BookmarksImportDialog" id="BookmarksImportDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog" />
+      <keyword name="BookmarksImportDialog (Constructor)" id="BookmarksImportDialog (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.__init__" />
+      <keyword name="BookmarksImportDialog (Module)" id="BookmarksImportDialog (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html" />
+      <keyword name="BookmarksImportDialog.__enableNextButton" id="BookmarksImportDialog.__enableNextButton" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.__enableNextButton" />
+      <keyword name="BookmarksImportDialog.getImportedBookmarks" id="BookmarksImportDialog.getImportedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.getImportedBookmarks" />
+      <keyword name="BookmarksImportDialog.on_cancelButton_clicked" id="BookmarksImportDialog.on_cancelButton_clicked" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_cancelButton_clicked" />
+      <keyword name="BookmarksImportDialog.on_chooseButton_clicked" id="BookmarksImportDialog.on_chooseButton_clicked" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_chooseButton_clicked" />
+      <keyword name="BookmarksImportDialog.on_fileEdit_textChanged" id="BookmarksImportDialog.on_fileEdit_textChanged" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_fileEdit_textChanged" />
+      <keyword name="BookmarksImportDialog.on_nextButton_clicked" id="BookmarksImportDialog.on_nextButton_clicked" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_nextButton_clicked" />
+      <keyword name="BookmarksImportDialog.on_sourcesList_itemSelectionChanged" id="BookmarksImportDialog.on_sourcesList_itemSelectionChanged" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_sourcesList_itemSelectionChanged" />
+      <keyword name="BookmarksImporter" id="BookmarksImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter" />
+      <keyword name="BookmarksImporter (Constructor)" id="BookmarksImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.__init__" />
+      <keyword name="BookmarksImporter (Module)" id="BookmarksImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html" />
+      <keyword name="BookmarksImporter.error" id="BookmarksImporter.error" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.error" />
+      <keyword name="BookmarksImporter.errorString" id="BookmarksImporter.errorString" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.errorString" />
+      <keyword name="BookmarksImporter.importedBookmarks" id="BookmarksImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.importedBookmarks" />
+      <keyword name="BookmarksImporter.open" id="BookmarksImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.open" />
+      <keyword name="BookmarksImporter.setPath" id="BookmarksImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter.setPath" />
+      <keyword name="BookmarksImporters (Package)" id="BookmarksImporters (Package)" ref="index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html" />
       <keyword name="BookmarksManager" id="BookmarksManager" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager" />
       <keyword name="BookmarksManager (Constructor)" id="BookmarksManager (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.__init__" />
       <keyword name="BookmarksManager (Module)" id="BookmarksManager (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
@@ -5699,6 +5725,12 @@
       <keyword name="HistoryTreeModel.removeRows" id="HistoryTreeModel.removeRows" ref="eric5.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.removeRows" />
       <keyword name="HistoryTreeModel.rowCount" id="HistoryTreeModel.rowCount" ref="eric5.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.rowCount" />
       <keyword name="HistoryTreeModel.setSourceModel" id="HistoryTreeModel.setSourceModel" ref="eric5.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.setSourceModel" />
+      <keyword name="HtmlImporter" id="HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter" />
+      <keyword name="HtmlImporter (Constructor)" id="HtmlImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.__init__" />
+      <keyword name="HtmlImporter (Module)" id="HtmlImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
+      <keyword name="HtmlImporter.importedBookmarks" id="HtmlImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.importedBookmarks" />
+      <keyword name="HtmlImporter.open" id="HtmlImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.open" />
+      <keyword name="HtmlImporter.setPath" id="HtmlImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.setPath" />
       <keyword name="IconEditCommand" id="IconEditCommand" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand" />
       <keyword name="IconEditCommand (Constructor)" id="IconEditCommand (Constructor)" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.__init__" />
       <keyword name="IconEditCommand.redo" id="IconEditCommand.redo" ref="eric5.IconEditor.IconEditorGrid.html#IconEditCommand.redo" />
@@ -10979,6 +11011,12 @@
       <keyword name="XMLStreamWriterBase._write_unimplemented" id="XMLStreamWriterBase._write_unimplemented" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase._write_unimplemented" />
       <keyword name="XMLStreamWriterBase.writeBasics" id="XMLStreamWriterBase.writeBasics" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase.writeBasics" />
       <keyword name="XMLStreamWriterBase.writeXML" id="XMLStreamWriterBase.writeXML" ref="eric5.E5XML.XMLStreamWriterBase.html#XMLStreamWriterBase.writeXML" />
+      <keyword name="XbelImporter" id="XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#XbelImporter" />
+      <keyword name="XbelImporter (Constructor)" id="XbelImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#XbelImporter.__init__" />
+      <keyword name="XbelImporter (Module)" id="XbelImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
+      <keyword name="XbelImporter.importedBookmarks" id="XbelImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#XbelImporter.importedBookmarks" />
+      <keyword name="XbelImporter.open" id="XbelImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#XbelImporter.open" />
+      <keyword name="XbelImporter.setPath" id="XbelImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#XbelImporter.setPath" />
       <keyword name="XbelReader" id="XbelReader" ref="eric5.Helpviewer.Bookmarks.XbelReader.html#XbelReader" />
       <keyword name="XbelReader (Constructor)" id="XbelReader (Constructor)" ref="eric5.Helpviewer.Bookmarks.XbelReader.html#XbelReader.__init__" />
       <keyword name="XbelReader (Module)" id="XbelReader (Module)" ref="eric5.Helpviewer.Bookmarks.XbelReader.html" />
@@ -11264,6 +11302,11 @@
       <keyword name="getIcon" id="getIcon" ref="eric5.UI.PixmapCache.html#getIcon" />
       <keyword name="getIconEditor" id="getIconEditor" ref="eric5.Preferences.__init__.html#getIconEditor" />
       <keyword name="getIcons" id="getIcons" ref="eric5.Preferences.__init__.html#getIcons" />
+      <keyword name="getImporter" id="getImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporter" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
+      <keyword name="getImporters" id="getImporters" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporters" />
       <keyword name="getLexer" id="getLexer" ref="eric5.QScintilla.Lexers.__init__.html#getLexer" />
       <keyword name="getMessage" id="getMessage" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#getMessage" />
       <keyword name="getMultiProject" id="getMultiProject" ref="eric5.Preferences.__init__.html#getMultiProject" />
@@ -11811,6 +11854,11 @@
       <file>eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarkNode.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksDialog.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksManager.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksMenu.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksModel.html</file>
@@ -12382,6 +12430,7 @@
       <file>index-eric5.Globals.html</file>
       <file>index-eric5.Graphics.html</file>
       <file>index-eric5.Helpviewer.AdBlock.html</file>
+      <file>index-eric5.Helpviewer.Bookmarks.BookmarksImporters.html</file>
       <file>index-eric5.Helpviewer.Bookmarks.html</file>
       <file>index-eric5.Helpviewer.CookieJar.html</file>
       <file>index-eric5.Helpviewer.Download.html</file>
