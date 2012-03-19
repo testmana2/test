@@ -1820,6 +1820,11 @@ eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter.open?4
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter.setPath?4(path)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.OperaImporter?1(id="", parent=None)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.getImporterInfo?4(id)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.SafariImporter.importedBookmarks?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.SafariImporter.open?4()
+eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.SafariImporter.setPath?4(path)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.SafariImporter?1(id="", parent=None)
+eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.getImporterInfo?4(id)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.importedBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.open?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.XbelImporter.setPath?4(path)
@@ -7064,6 +7069,65 @@ eric5.Utilities._escape?8
 eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
+eric5.Utilities.binplistlib.BoolWrapper?1(value)
+eric5.Utilities.binplistlib.HashableWrapper?1(value)
+eric5.Utilities.binplistlib.PlistByteCounts?7
+eric5.Utilities.binplistlib.PlistReader.contents?7
+eric5.Utilities.binplistlib.PlistReader.currentOffset?7
+eric5.Utilities.binplistlib.PlistReader.file?7
+eric5.Utilities.binplistlib.PlistReader.getSizedInteger?4(data, bytes)
+eric5.Utilities.binplistlib.PlistReader.offsets?7
+eric5.Utilities.binplistlib.PlistReader.parse?4()
+eric5.Utilities.binplistlib.PlistReader.proc_extra?4()
+eric5.Utilities.binplistlib.PlistReader.readArray?4(count)
+eric5.Utilities.binplistlib.PlistReader.readAsciiString?4(length)
+eric5.Utilities.binplistlib.PlistReader.readData?4(length)
+eric5.Utilities.binplistlib.PlistReader.readDate?4()
+eric5.Utilities.binplistlib.PlistReader.readDict?4(count)
+eric5.Utilities.binplistlib.PlistReader.readInteger?4(bytes)
+eric5.Utilities.binplistlib.PlistReader.readObject?4()
+eric5.Utilities.binplistlib.PlistReader.readReal?4(length)
+eric5.Utilities.binplistlib.PlistReader.readRefs?4(count)
+eric5.Utilities.binplistlib.PlistReader.readRoot?4()
+eric5.Utilities.binplistlib.PlistReader.readUid?4(length)
+eric5.Utilities.binplistlib.PlistReader.readUnicode?4(length)
+eric5.Utilities.binplistlib.PlistReader.reset?4()
+eric5.Utilities.binplistlib.PlistReader.setCurrentOffsetToObjectNumber?4(objectNumber)
+eric5.Utilities.binplistlib.PlistReader.trailer?7
+eric5.Utilities.binplistlib.PlistReader?1(fileOrStream)
+eric5.Utilities.binplistlib.PlistTrailer?7
+eric5.Utilities.binplistlib.PlistWriter.binaryInt?4(obj, bytes=None)
+eric5.Utilities.binplistlib.PlistWriter.binaryReal?4(obj)
+eric5.Utilities.binplistlib.PlistWriter.byteCounts?7
+eric5.Utilities.binplistlib.PlistWriter.check_key?4()
+eric5.Utilities.binplistlib.PlistWriter.computeOffsets?4(obj, asReference=False, isRoot=False)
+eric5.Utilities.binplistlib.PlistWriter.computedUniques?7
+eric5.Utilities.binplistlib.PlistWriter.file?7
+eric5.Utilities.binplistlib.PlistWriter.header?7
+eric5.Utilities.binplistlib.PlistWriter.incrementByteCount?4(field, incr=1)
+eric5.Utilities.binplistlib.PlistWriter.intSize?4(obj)
+eric5.Utilities.binplistlib.PlistWriter.positionOfObjectReference?4(obj)
+eric5.Utilities.binplistlib.PlistWriter.proc_size?4()
+eric5.Utilities.binplistlib.PlistWriter.proc_variable_length?4(length)
+eric5.Utilities.binplistlib.PlistWriter.realSize?4(obj)
+eric5.Utilities.binplistlib.PlistWriter.referencePositions?7
+eric5.Utilities.binplistlib.PlistWriter.reset?4()
+eric5.Utilities.binplistlib.PlistWriter.trailer?7
+eric5.Utilities.binplistlib.PlistWriter.wrapRoot?4(root)
+eric5.Utilities.binplistlib.PlistWriter.wrappedFalse?7
+eric5.Utilities.binplistlib.PlistWriter.wrappedTrue?7
+eric5.Utilities.binplistlib.PlistWriter.writeObject?4(obj, output, setReferencePosition=False)
+eric5.Utilities.binplistlib.PlistWriter.writeObjectReference?4(obj, output)
+eric5.Utilities.binplistlib.PlistWriter.writeOffsetTable?4(output)
+eric5.Utilities.binplistlib.PlistWriter.writeRoot?4(root)
+eric5.Utilities.binplistlib.PlistWriter.writtenReferences?7
+eric5.Utilities.binplistlib.PlistWriter?1(file)
+eric5.Utilities.binplistlib.apple_reference_date_offset?7
+eric5.Utilities.binplistlib.is_stream_binary_plist?4(stream)
+eric5.Utilities.binplistlib.readPlist?4(pathOrFile)
+eric5.Utilities.binplistlib.readPlistFromBytes?4(data)
+eric5.Utilities.binplistlib.writePlist?4(rootObject, pathOrFile, binary=True)
+eric5.Utilities.binplistlib.writePlistToBytes?4(rootObject, binary=True)
 eric5.Utilities.checkBlacklistedVersions?4()
 eric5.Utilities.checkPyside?4()
 eric5.Utilities.codingBytes_regexps?7

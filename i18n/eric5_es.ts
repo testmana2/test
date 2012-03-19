@@ -1595,12 +1595,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="38"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="40"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="44"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35044,6 +35044,40 @@ es una expresión regular trivial que puede ser reemplazada por una expresión m
         <location filename="QScintilla/ReplaceWidget.ui" line="133"/>
         <source>Press to replace the selection and search for the next occurence</source>
         <translation>Pulsar para reemplazar la selección y buscar la siguiente ocurrencia</translation>
+    </message>
+</context>
+<context>
+    <name>SafariImporter</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="40"/>
+        <source>Apple Safari stores its bookmarks in the &lt;b&gt;Bookmarks.plist&lt;/b&gt; file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="40"/>
+        <source>Please choose the file to begin importing bookmarks.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="86"/>
+        <source>File &apos;{0}&apos; does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="101"/>
+        <source>Bookmarks file cannot be read.
+Reason: {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="111"/>
+        <source>Apple Safari Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py" line="113"/>
+        <source>Imported {0}</source>
+        <translation type="unfinished">Importado {0}</translation>
     </message>
 </context>
 <context>

@@ -58,7 +58,7 @@ BrowserSysPathItem BrowserItem
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBaseClasses.Class VisibilityMixin
+Class ClbrBase
 ClassItem UMLItem
 ClassScope Scope
 ClbrBase _ClbrBase
@@ -95,6 +95,7 @@ CooperationServer QTcpServer
 CorbaPage ConfigurationPageBase Ui_CorbaPage
 CreateDialogCodeDialog QDialog Ui_CreateDialogCodeDialog
 DCTestResult TestResult
+Data bytes
 DebugBase bdb.Bdb
 DebugClient AsyncIO DebugBase DebugClientBase.DebugClientBase
 DebugClientThreads AsyncIO DebugClientBase.DebugClientBase
@@ -326,6 +327,7 @@ InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
 InsertBookmarksCommand RemoveBookmarksCommand
 Interface ClbrBaseClasses.Class VisibilityMixin
 InterfacePage ConfigurationPageBase Ui_InterfacePage
+InvalidPlistException Exception
 JavaScriptEricObject QObject
 JavaScriptExternalObject QObject
 LateFutureImport Message
@@ -388,6 +390,7 @@ NetworkProtocolUnknownErrorReply QNetworkReply
 NetworkReply QNetworkReply
 NewDialogClassDialog QDialog Ui_NewDialogClassDialog
 NewPythonPackageDialog QDialog Ui_NewPythonPackageDialog
+NotBinaryPlistException Exception
 NumbersWidget QWidget Ui_NumbersWidget
 OfflineStorageConfigDialog QDialog Ui_OfflineStorageConfigDialog
 OpenSearchDialog QDialog Ui_OpenSearchDialog
@@ -499,6 +502,7 @@ RedefinedWhileUnused Message
 Redirector QObject
 RemoveBookmarksCommand QUndoCommand
 RevisionsValidator QValidator
+SafariImporter BookmarksImporter
 SchemeAccessHandler QObject
 Scope dict
 SearchReplaceWidget QWidget
@@ -622,6 +626,7 @@ UMLDialog QMainWindow
 UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
+Uid int
 UnBinding Binding
 UndefinedExport Message
 UndefinedLocal Message

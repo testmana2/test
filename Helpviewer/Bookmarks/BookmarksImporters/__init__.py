@@ -32,6 +32,8 @@ def getImporters():
             (UI.PixmapCache.getIcon("chromium.png"), "Chromium", "chromium"))
     importers.append(
         (UI.PixmapCache.getIcon("opera.png"), "Opera", "opera"))
+    importers.append(
+        (UI.PixmapCache.getIcon("safari.png"), "Apple Safari", "safari"))
     if Globals.isWindowsPlatform():
         importers.append(
             (UI.PixmapCache.getIcon("internet_explorer.png"), "Internet Explorer", "ie"))
@@ -74,6 +76,9 @@ def getImporterInfo(id):
     elif id == "ie":
         from . import IExplorerImporter
         return IExplorerImporter.getImporterInfo(id)
+    elif id == "safari":
+        from . import SafariImporter
+        return SafariImporter.getImporterInfo(id)
     else:
         raise ValueError("Invalid importer ID given ({0}).".format(id))
 
@@ -103,5 +108,8 @@ def getImporter(id, parent=None):
     elif id == "ie":
         from . import IExplorerImporter
         return IExplorerImporter.IExplorerImporter(id, parent)
+    elif id == "safari":
+        from . import SafariImporter
+        return SafariImporter.SafariImporter(id, parent)
     else:
         raise ValueError("No importer for ID {0}.".format(id))

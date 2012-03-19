@@ -207,6 +207,7 @@
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html" />
+                <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html" />
                 <section title="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html" />
               </section>
@@ -868,6 +869,7 @@
             <section title="eric5.Utilities.SingleApplication" ref="eric5.Utilities.SingleApplication.html" />
             <section title="eric5.Utilities.Startup" ref="eric5.Utilities.Startup.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
+            <section title="eric5.Utilities.binplistlib" ref="eric5.Utilities.binplistlib.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
           <section title="eric5.UtilitiesPython2" ref="index-eric5.UtilitiesPython2.html">
@@ -1485,6 +1487,9 @@
       <keyword name="BookmarksToolBar.__rebuild" id="BookmarksToolBar.__rebuild" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__rebuild" />
       <keyword name="BookmarksToolBar.__removeBookmark" id="BookmarksToolBar.__removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__removeBookmark" />
       <keyword name="BookmarksToolBar._createMenu" id="BookmarksToolBar._createMenu" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar._createMenu" />
+      <keyword name="BoolWrapper" id="BoolWrapper" ref="eric5.Utilities.binplistlib.html#BoolWrapper" />
+      <keyword name="BoolWrapper (Constructor)" id="BoolWrapper (Constructor)" ref="eric5.Utilities.binplistlib.html#BoolWrapper.__init__" />
+      <keyword name="BoolWrapper.__repr__" id="BoolWrapper.__repr__" ref="eric5.Utilities.binplistlib.html#BoolWrapper.__repr__" />
       <keyword name="BreakPointModel" id="BreakPointModel" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel" />
       <keyword name="BreakPointModel (Constructor)" id="BreakPointModel (Constructor)" ref="eric5.Debugger.BreakPointModel.html#BreakPointModel.__init__" />
       <keyword name="BreakPointModel (Module)" id="BreakPointModel (Module)" ref="eric5.Debugger.BreakPointModel.html" />
@@ -2332,6 +2337,7 @@
       <keyword name="DEBUGGER__.thnum" id="DEBUGGER__.thnum" ref="eric5.DebugClients.Ruby.Debuggee.html#DEBUGGER__.thnum" />
       <keyword name="DEBUGGER__.trace_func" id="DEBUGGER__.trace_func" ref="eric5.DebugClients.Ruby.Debuggee.html#DEBUGGER__.trace_func" />
       <keyword name="DEBUGGER__.waiting" id="DEBUGGER__.waiting" ref="eric5.DebugClients.Ruby.Debuggee.html#DEBUGGER__.waiting" />
+      <keyword name="Data" id="Data" ref="eric5.Utilities.binplistlib.html#Data" />
       <keyword name="DataViews (Package)" id="DataViews (Package)" ref="index-eric5.DataViews.html" />
       <keyword name="DebugBase" id="DebugBase" ref="eric5.DebugClients.Python.DebugBase.html#DebugBase" />
       <keyword name="DebugBase" id="DebugBase" ref="eric5.DebugClients.Python3.DebugBase.html#DebugBase" />
@@ -4391,6 +4397,9 @@
       <keyword name="HTMLGenerator" id="HTMLGenerator" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator" />
       <keyword name="HTMLGenerator (Constructor)" id="HTMLGenerator (Constructor)" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.__init__" />
       <keyword name="HTMLGenerator.generate" id="HTMLGenerator.generate" ref="eric5.QScintilla.Exporters.ExporterHTML.html#HTMLGenerator.generate" />
+      <keyword name="HashableWrapper" id="HashableWrapper" ref="eric5.Utilities.binplistlib.html#HashableWrapper" />
+      <keyword name="HashableWrapper (Constructor)" id="HashableWrapper (Constructor)" ref="eric5.Utilities.binplistlib.html#HashableWrapper.__init__" />
+      <keyword name="HashableWrapper.__repr__" id="HashableWrapper.__repr__" ref="eric5.Utilities.binplistlib.html#HashableWrapper.__repr__" />
       <keyword name="HelpAppearancePage" id="HelpAppearancePage" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage" />
       <keyword name="HelpAppearancePage (Constructor)" id="HelpAppearancePage (Constructor)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.__init__" />
       <keyword name="HelpAppearancePage (Module)" id="HelpAppearancePage (Module)" ref="eric5.Preferences.ConfigurationPages.HelpAppearancePage.html" />
@@ -5952,6 +5961,7 @@
       <keyword name="InterfacePage.on_stderrTextColourButton_clicked" id="InterfacePage.on_stderrTextColourButton_clicked" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_stderrTextColourButton_clicked" />
       <keyword name="InterfacePage.on_styleSheetButton_clicked" id="InterfacePage.on_styleSheetButton_clicked" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_styleSheetButton_clicked" />
       <keyword name="InterfacePage.save" id="InterfacePage.save" ref="eric5.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.save" />
+      <keyword name="InvalidPlistException" id="InvalidPlistException" ref="eric5.Utilities.binplistlib.html#InvalidPlistException" />
       <keyword name="JavaScriptEricObject" id="JavaScriptEricObject" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject" />
       <keyword name="JavaScriptEricObject (Constructor)" id="JavaScriptEricObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.__init__" />
       <keyword name="JavaScriptEricObject.providerString" id="JavaScriptEricObject.providerString" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptEricObject.providerString" />
@@ -6633,6 +6643,7 @@
       <keyword name="NoneSplashScreen.clearMessage" id="NoneSplashScreen.clearMessage" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.clearMessage" />
       <keyword name="NoneSplashScreen.finish" id="NoneSplashScreen.finish" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.finish" />
       <keyword name="NoneSplashScreen.showMessage" id="NoneSplashScreen.showMessage" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.showMessage" />
+      <keyword name="NotBinaryPlistException" id="NotBinaryPlistException" ref="eric5.Utilities.binplistlib.html#NotBinaryPlistException" />
       <keyword name="NumbersWidget" id="NumbersWidget" ref="eric5.UI.NumbersWidget.html#NumbersWidget" />
       <keyword name="NumbersWidget (Constructor)" id="NumbersWidget (Constructor)" ref="eric5.UI.NumbersWidget.html#NumbersWidget.__init__" />
       <keyword name="NumbersWidget (Module)" id="NumbersWidget (Module)" ref="eric5.UI.NumbersWidget.html" />
@@ -7008,6 +7019,43 @@
       <keyword name="PixmapDiagram.getDiagramName" id="PixmapDiagram.getDiagramName" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.getDiagramName" />
       <keyword name="PixmapDiagram.getStatus" id="PixmapDiagram.getStatus" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.getStatus" />
       <keyword name="PixmapDiagram.wheelEvent" id="PixmapDiagram.wheelEvent" ref="eric5.Graphics.PixmapDiagram.html#PixmapDiagram.wheelEvent" />
+      <keyword name="PlistReader" id="PlistReader" ref="eric5.Utilities.binplistlib.html#PlistReader" />
+      <keyword name="PlistReader (Constructor)" id="PlistReader (Constructor)" ref="eric5.Utilities.binplistlib.html#PlistReader.__init__" />
+      <keyword name="PlistReader.getSizedInteger" id="PlistReader.getSizedInteger" ref="eric5.Utilities.binplistlib.html#PlistReader.getSizedInteger" />
+      <keyword name="PlistReader.parse" id="PlistReader.parse" ref="eric5.Utilities.binplistlib.html#PlistReader.parse" />
+      <keyword name="PlistReader.proc_extra" id="PlistReader.proc_extra" ref="eric5.Utilities.binplistlib.html#PlistReader.proc_extra" />
+      <keyword name="PlistReader.readArray" id="PlistReader.readArray" ref="eric5.Utilities.binplistlib.html#PlistReader.readArray" />
+      <keyword name="PlistReader.readAsciiString" id="PlistReader.readAsciiString" ref="eric5.Utilities.binplistlib.html#PlistReader.readAsciiString" />
+      <keyword name="PlistReader.readData" id="PlistReader.readData" ref="eric5.Utilities.binplistlib.html#PlistReader.readData" />
+      <keyword name="PlistReader.readDate" id="PlistReader.readDate" ref="eric5.Utilities.binplistlib.html#PlistReader.readDate" />
+      <keyword name="PlistReader.readDict" id="PlistReader.readDict" ref="eric5.Utilities.binplistlib.html#PlistReader.readDict" />
+      <keyword name="PlistReader.readInteger" id="PlistReader.readInteger" ref="eric5.Utilities.binplistlib.html#PlistReader.readInteger" />
+      <keyword name="PlistReader.readObject" id="PlistReader.readObject" ref="eric5.Utilities.binplistlib.html#PlistReader.readObject" />
+      <keyword name="PlistReader.readReal" id="PlistReader.readReal" ref="eric5.Utilities.binplistlib.html#PlistReader.readReal" />
+      <keyword name="PlistReader.readRefs" id="PlistReader.readRefs" ref="eric5.Utilities.binplistlib.html#PlistReader.readRefs" />
+      <keyword name="PlistReader.readRoot" id="PlistReader.readRoot" ref="eric5.Utilities.binplistlib.html#PlistReader.readRoot" />
+      <keyword name="PlistReader.readUid" id="PlistReader.readUid" ref="eric5.Utilities.binplistlib.html#PlistReader.readUid" />
+      <keyword name="PlistReader.readUnicode" id="PlistReader.readUnicode" ref="eric5.Utilities.binplistlib.html#PlistReader.readUnicode" />
+      <keyword name="PlistReader.reset" id="PlistReader.reset" ref="eric5.Utilities.binplistlib.html#PlistReader.reset" />
+      <keyword name="PlistReader.setCurrentOffsetToObjectNumber" id="PlistReader.setCurrentOffsetToObjectNumber" ref="eric5.Utilities.binplistlib.html#PlistReader.setCurrentOffsetToObjectNumber" />
+      <keyword name="PlistWriter" id="PlistWriter" ref="eric5.Utilities.binplistlib.html#PlistWriter" />
+      <keyword name="PlistWriter (Constructor)" id="PlistWriter (Constructor)" ref="eric5.Utilities.binplistlib.html#PlistWriter.__init__" />
+      <keyword name="PlistWriter.binaryInt" id="PlistWriter.binaryInt" ref="eric5.Utilities.binplistlib.html#PlistWriter.binaryInt" />
+      <keyword name="PlistWriter.binaryReal" id="PlistWriter.binaryReal" ref="eric5.Utilities.binplistlib.html#PlistWriter.binaryReal" />
+      <keyword name="PlistWriter.check_key" id="PlistWriter.check_key" ref="eric5.Utilities.binplistlib.html#PlistWriter.check_key" />
+      <keyword name="PlistWriter.computeOffsets" id="PlistWriter.computeOffsets" ref="eric5.Utilities.binplistlib.html#PlistWriter.computeOffsets" />
+      <keyword name="PlistWriter.incrementByteCount" id="PlistWriter.incrementByteCount" ref="eric5.Utilities.binplistlib.html#PlistWriter.incrementByteCount" />
+      <keyword name="PlistWriter.intSize" id="PlistWriter.intSize" ref="eric5.Utilities.binplistlib.html#PlistWriter.intSize" />
+      <keyword name="PlistWriter.positionOfObjectReference" id="PlistWriter.positionOfObjectReference" ref="eric5.Utilities.binplistlib.html#PlistWriter.positionOfObjectReference" />
+      <keyword name="PlistWriter.proc_size" id="PlistWriter.proc_size" ref="eric5.Utilities.binplistlib.html#PlistWriter.proc_size" />
+      <keyword name="PlistWriter.proc_variable_length" id="PlistWriter.proc_variable_length" ref="eric5.Utilities.binplistlib.html#PlistWriter.proc_variable_length" />
+      <keyword name="PlistWriter.realSize" id="PlistWriter.realSize" ref="eric5.Utilities.binplistlib.html#PlistWriter.realSize" />
+      <keyword name="PlistWriter.reset" id="PlistWriter.reset" ref="eric5.Utilities.binplistlib.html#PlistWriter.reset" />
+      <keyword name="PlistWriter.wrapRoot" id="PlistWriter.wrapRoot" ref="eric5.Utilities.binplistlib.html#PlistWriter.wrapRoot" />
+      <keyword name="PlistWriter.writeObject" id="PlistWriter.writeObject" ref="eric5.Utilities.binplistlib.html#PlistWriter.writeObject" />
+      <keyword name="PlistWriter.writeObjectReference" id="PlistWriter.writeObjectReference" ref="eric5.Utilities.binplistlib.html#PlistWriter.writeObjectReference" />
+      <keyword name="PlistWriter.writeOffsetTable" id="PlistWriter.writeOffsetTable" ref="eric5.Utilities.binplistlib.html#PlistWriter.writeOffsetTable" />
+      <keyword name="PlistWriter.writeRoot" id="PlistWriter.writeRoot" ref="eric5.Utilities.binplistlib.html#PlistWriter.writeRoot" />
       <keyword name="PluginAbout (Module)" id="PluginAbout (Module)" ref="eric5.Plugins.PluginAbout.html" />
       <keyword name="PluginActivationError" id="PluginActivationError" ref="eric5.PluginManager.PluginExceptions.html#PluginActivationError" />
       <keyword name="PluginActivationError (Constructor)" id="PluginActivationError (Constructor)" ref="eric5.PluginManager.PluginExceptions.html#PluginActivationError.__init__" />
@@ -8141,6 +8189,13 @@
       <keyword name="RevisionsValidator (Constructor)" id="RevisionsValidator (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.__init__" />
       <keyword name="RevisionsValidator.validate" id="RevisionsValidator.validate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.validate" />
       <keyword name="Ruby (Package)" id="Ruby (Package)" ref="index-eric5.DebugClients.Ruby.html" />
+      <keyword name="SafariImporter" id="SafariImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter" />
+      <keyword name="SafariImporter (Constructor)" id="SafariImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.__init__" />
+      <keyword name="SafariImporter (Module)" id="SafariImporter (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html" />
+      <keyword name="SafariImporter.__processChildren" id="SafariImporter.__processChildren" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.__processChildren" />
+      <keyword name="SafariImporter.importedBookmarks" id="SafariImporter.importedBookmarks" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.importedBookmarks" />
+      <keyword name="SafariImporter.open" id="SafariImporter.open" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.open" />
+      <keyword name="SafariImporter.setPath" id="SafariImporter.setPath" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.setPath" />
       <keyword name="SchemeAccessHandler" id="SchemeAccessHandler" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html#SchemeAccessHandler" />
       <keyword name="SchemeAccessHandler (Constructor)" id="SchemeAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html#SchemeAccessHandler.__init__" />
       <keyword name="SchemeAccessHandler (Module)" id="SchemeAccessHandler (Module)" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
@@ -10101,6 +10156,8 @@
       <keyword name="UMLSceneSizeDialog (Constructor)" id="UMLSceneSizeDialog (Constructor)" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog.__init__" />
       <keyword name="UMLSceneSizeDialog (Module)" id="UMLSceneSizeDialog (Module)" ref="eric5.Graphics.UMLSceneSizeDialog.html" />
       <keyword name="UMLSceneSizeDialog.getData" id="UMLSceneSizeDialog.getData" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog.getData" />
+      <keyword name="Uid" id="Uid" ref="eric5.Utilities.binplistlib.html#Uid" />
+      <keyword name="Uid.__repr__" id="Uid.__repr__" ref="eric5.Utilities.binplistlib.html#Uid.__repr__" />
       <keyword name="UnBinding" id="UnBinding" ref="eric5.Utilities.py3flakes.checker.html#UnBinding" />
       <keyword name="UnBinding" id="UnBinding" ref="eric5.UtilitiesPython2.py2flakes.checker.html#UnBinding" />
       <keyword name="UndefinedExport" id="UndefinedExport" ref="eric5.Utilities.py3flakes.messages.html#UndefinedExport" />
@@ -11099,6 +11156,7 @@
       <keyword name="addSearchPath" id="addSearchPath" ref="eric5.UI.PixmapCache.html#addSearchPath" />
       <keyword name="analyze" id="analyze" ref="eric5.DataViews.CodeMetrics.html#analyze" />
       <keyword name="append_PKCS7_padding" id="append_PKCS7_padding" ref="eric5.Utilities.crypto.py3AES.html#append_PKCS7_padding" />
+      <keyword name="binplistlib (Module)" id="binplistlib (Module)" ref="eric5.Utilities.binplistlib.html" />
       <keyword name="blank_lines" id="blank_lines" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#blank_lines" />
       <keyword name="blank_lines" id="blank_lines" ref="eric5.UtilitiesPython2.pep8.html#blank_lines" />
       <keyword name="bookmarks (Module)" id="bookmarks (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html" />
@@ -11339,6 +11397,7 @@
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html#getImporterInfo" />
+      <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html#getImporterInfo" />
       <keyword name="getImporterInfo" id="getImporterInfo" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporterInfo" />
       <keyword name="getImporters" id="getImporters" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html#getImporters" />
@@ -11460,6 +11519,7 @@
       <keyword name="isLinuxPlatform" id="isLinuxPlatform" ref="eric5.Globals.__init__.html#isLinuxPlatform" />
       <keyword name="isMacPlatform" id="isMacPlatform" ref="eric5.Globals.__init__.html#isMacPlatform" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
+      <keyword name="is_stream_binary_plist" id="is_stream_binary_plist" ref="eric5.Utilities.binplistlib.html#is_stream_binary_plist" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric5.Utilities.__init__.html#isinpath" />
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#iter_child_nodes" />
@@ -11573,6 +11633,8 @@
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.UtilitiesPython2.Tools.html#readEncodedFile" />
       <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric5.Utilities.__init__.html#readEncodedFileWithHash" />
       <keyword name="readModule" id="readModule" ref="eric5.Utilities.ModuleParser.html#readModule" />
+      <keyword name="readPlist" id="readPlist" ref="eric5.Utilities.binplistlib.html#readPlist" />
+      <keyword name="readPlistFromBytes" id="readPlistFromBytes" ref="eric5.Utilities.binplistlib.html#readPlistFromBytes" />
       <keyword name="readShortcuts" id="readShortcuts" ref="eric5.Preferences.Shortcuts.html#readShortcuts" />
       <keyword name="readToolGroups" id="readToolGroups" ref="eric5.Preferences.__init__.html#readToolGroups" />
       <keyword name="readline" id="readline" ref="eric5.DebugClients.Ruby.AsyncFile.html#readline" />
@@ -11727,6 +11789,8 @@
       <keyword name="wrapperName" id="wrapperName" ref="eric5.uninstall.html#wrapperName" />
       <keyword name="write" id="write" ref="eric5.DebugClients.Ruby.AsyncFile.html#write" />
       <keyword name="writeEncodedFile" id="writeEncodedFile" ref="eric5.Utilities.__init__.html#writeEncodedFile" />
+      <keyword name="writePlist" id="writePlist" ref="eric5.Utilities.binplistlib.html#writePlist" />
+      <keyword name="writePlistToBytes" id="writePlistToBytes" ref="eric5.Utilities.binplistlib.html#writePlistToBytes" />
       <keyword name="writelines" id="writelines" ref="eric5.DebugClients.Ruby.AsyncFile.html#writelines" />
       <keyword name="yesNo" id="yesNo" ref="eric5.E5Gui.E5MessageBox.html#yesNo" />
     </keywords>
@@ -11896,6 +11960,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.OperaImporter.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.XbelImporter.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.__init__.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksManager.html</file>
@@ -12403,6 +12468,7 @@
       <file>eric5.Utilities.SingleApplication.html</file>
       <file>eric5.Utilities.Startup.html</file>
       <file>eric5.Utilities.__init__.html</file>
+      <file>eric5.Utilities.binplistlib.html</file>
       <file>eric5.Utilities.crypto.__init__.html</file>
       <file>eric5.Utilities.crypto.py3AES.html</file>
       <file>eric5.Utilities.crypto.py3PBKDF2.html</file>
