@@ -152,7 +152,7 @@ class ChromeImporter(BookmarksImporter):
         @param rootNode node to add the bookmarks to (BookmarkNode)
         """
         folder = BookmarkNode(BookmarkNode.Folder, rootNode)
-        folder.title = data["name"]
+        folder.title = data["name"].replace("&", "&&")
         for node in data["children"]:
             if node["type"] == "folder":
                 self.__generateFolderNode(node, folder)
@@ -168,4 +168,4 @@ class ChromeImporter(BookmarksImporter):
         """
         bookmark = BookmarkNode(BookmarkNode.Bookmark, rootNode)
         bookmark.url = data["url"]
-        bookmark.title = data["name"]
+        bookmark.title = data["name"].replace("&", "&&")

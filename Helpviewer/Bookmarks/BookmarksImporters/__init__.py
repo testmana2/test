@@ -44,7 +44,7 @@ def getImporters():
          QCoreApplication.translate("BookmarksImporters", "HTML File"),
          "html"))
     return importers
-    # TODO: importers for Safari, IE
+    # TODO: importers for Safari
 
 
 def getImporterInfo(id):

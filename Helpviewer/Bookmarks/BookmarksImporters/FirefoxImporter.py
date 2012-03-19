@@ -118,7 +118,7 @@ class FirefoxImporter(BookmarksImporter):
                 folder = BookmarkNode(BookmarkNode.Folder, folders[parent])
             else:
                 folder = BookmarkNode(BookmarkNode.Folder, importRootNode)
-            folder.title = title
+            folder.title = title.replace("&", "&&")
             folders[id_] = folder
         
         query = QSqlQuery(self.__db)
@@ -144,7 +144,7 @@ class FirefoxImporter(BookmarksImporter):
             else:
                 bookmark = BookmarkNode(BookmarkNode.Bookmark, importRootNode)
             bookmark.url = url.toString()
-            bookmark.title = title
+            bookmark.title = title.replace("&", "&&")
         
         if query.lastError().isValid():
             self._error = True

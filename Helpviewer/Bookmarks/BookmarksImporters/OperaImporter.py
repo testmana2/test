@@ -114,7 +114,7 @@ class OperaImporter(BookmarksImporter):
             elif line == "-":
                 folderStack.pop()
             elif line.startswith("NAME="):
-                node.title = line.replace("NAME=", "")
+                node.title = line.replace("NAME=", "").replace("&", "&&")
             elif line.startswith("URL="):
                 node.url = line.replace("URL=", "")
         
