@@ -5820,7 +5820,7 @@ class Editor(QsciScintillaCompat):
             if tmplName:
                 if e5App().getObject("TemplateViewer").hasTemplate(
                         tmplName, self.getLanguage()):
-                    self.__applyTemplate(tmplName)
+                    self.__applyTemplate(tmplName, self.getLanguage())
                     return
                 else:
                     templateNames = \
