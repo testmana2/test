@@ -583,6 +583,8 @@ class Project(QObject):
             .replace("\\", "@@")\
             .replace("/", "@@")\
             .replace("@@", r"[\\/]")
+        if ppathRe.endswith(r"[\\/]"):
+            ppathRe += "*"
         if Utilities.isWindowsPlatform():
             self.ppathRe = re.compile(ppathRe, re.IGNORECASE)
         else:
