@@ -191,6 +191,7 @@ EricapiPlugin QObject
 EricdocConfigDialog QDialog Ui_EricdocConfigDialog
 EricdocExecDialog QDialog Ui_EricdocExecDialog
 EricdocPlugin QObject
+ErrorLogDialog QDialog Ui_ErrorLogDialog
 ExceptionLogger QTreeWidget
 ExceptionsFilterDialog QDialog Ui_ExceptionsFilterDialog
 ExportBinding Binding

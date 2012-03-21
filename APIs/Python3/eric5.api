@@ -6760,6 +6760,10 @@ eric5.UI.EmailDialog.EmailDialog.on_sendButton_clicked?4()
 eric5.UI.EmailDialog.EmailDialog.on_subject_textChanged?4(txt)
 eric5.UI.EmailDialog.EmailDialog?1(mode="bug", parent=None)
 eric5.UI.EmailDialog._encode_base64?5(msg)
+eric5.UI.ErrorLogDialog.ErrorLogDialog.on_deleteButton_clicked?4()
+eric5.UI.ErrorLogDialog.ErrorLogDialog.on_emailButton_clicked?4()
+eric5.UI.ErrorLogDialog.ErrorLogDialog.on_keepButton_clicked?4()
+eric5.UI.ErrorLogDialog.ErrorLogDialog?1(logFile, parent=None)
 eric5.UI.FindFileDialog.FindFileDialog.designerFile?7
 eric5.UI.FindFileDialog.FindFileDialog.endRole?7
 eric5.UI.FindFileDialog.FindFileDialog.lineRole?7
@@ -6902,6 +6906,7 @@ eric5.UI.UserInterface.UserInterface.removeE5Actions?4(actions, type='ui')
 eric5.UI.UserInterface.UserInterface.reregisterToolbar?4(name, text)
 eric5.UI.UserInterface.UserInterface.setDebugProfile?4(save=True)
 eric5.UI.UserInterface.UserInterface.showAvailableVersionsInfo?4()
+eric5.UI.UserInterface.UserInterface.showEmailDialog?4(mode, attachFile=None, deleteAttachFile=False)
 eric5.UI.UserInterface.UserInterface.showEvent?4(evt)
 eric5.UI.UserInterface.UserInterface.showFindFileByNameDialog?4()
 eric5.UI.UserInterface.UserInterface.showFindFilesDialog?4(txt="", searchDir="")

@@ -997,6 +997,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/IExplorerImporter.py</Source>
     <Source>Utilities/binplistlib.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py</Source>
+    <Source>UI/ErrorLogDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1282,6 +1283,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Sync/SyncEncryptionPage.ui</Form>
     <Form>Helpviewer/Sync/SyncDirectorySettingsPage.ui</Form>
     <Form>Helpviewer/Bookmarks/BookmarksImportDialog.ui</Form>
+    <Form>UI/ErrorLogDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

@@ -836,6 +836,7 @@
             <section title="eric5.UI.DeleteFilesConfirmationDialog" ref="eric5.UI.DeleteFilesConfirmationDialog.html" />
             <section title="eric5.UI.DiffDialog" ref="eric5.UI.DiffDialog.html" />
             <section title="eric5.UI.EmailDialog" ref="eric5.UI.EmailDialog.html" />
+            <section title="eric5.UI.ErrorLogDialog" ref="eric5.UI.ErrorLogDialog.html" />
             <section title="eric5.UI.FindFileDialog" ref="eric5.UI.FindFileDialog.html" />
             <section title="eric5.UI.FindFileNameDialog" ref="eric5.UI.FindFileNameDialog.html" />
             <section title="eric5.UI.Info" ref="eric5.UI.Info.html" />
@@ -4107,6 +4108,12 @@
       <keyword name="EricdocPlugin.__projectShowMenu" id="EricdocPlugin.__projectShowMenu" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.__projectShowMenu" />
       <keyword name="EricdocPlugin.activate" id="EricdocPlugin.activate" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.activate" />
       <keyword name="EricdocPlugin.deactivate" id="EricdocPlugin.deactivate" ref="eric5.Plugins.PluginEricdoc.html#EricdocPlugin.deactivate" />
+      <keyword name="ErrorLogDialog" id="ErrorLogDialog" ref="eric5.UI.ErrorLogDialog.html#ErrorLogDialog" />
+      <keyword name="ErrorLogDialog (Constructor)" id="ErrorLogDialog (Constructor)" ref="eric5.UI.ErrorLogDialog.html#ErrorLogDialog.__init__" />
+      <keyword name="ErrorLogDialog (Module)" id="ErrorLogDialog (Module)" ref="eric5.UI.ErrorLogDialog.html" />
+      <keyword name="ErrorLogDialog.on_deleteButton_clicked" id="ErrorLogDialog.on_deleteButton_clicked" ref="eric5.UI.ErrorLogDialog.html#ErrorLogDialog.on_deleteButton_clicked" />
+      <keyword name="ErrorLogDialog.on_emailButton_clicked" id="ErrorLogDialog.on_emailButton_clicked" ref="eric5.UI.ErrorLogDialog.html#ErrorLogDialog.on_emailButton_clicked" />
+      <keyword name="ErrorLogDialog.on_keepButton_clicked" id="ErrorLogDialog.on_keepButton_clicked" ref="eric5.UI.ErrorLogDialog.html#ErrorLogDialog.on_keepButton_clicked" />
       <keyword name="ExceptionLogger" id="ExceptionLogger" ref="eric5.Debugger.ExceptionLogger.html#ExceptionLogger" />
       <keyword name="ExceptionLogger (Constructor)" id="ExceptionLogger (Constructor)" ref="eric5.Debugger.ExceptionLogger.html#ExceptionLogger.__init__" />
       <keyword name="ExceptionLogger (Module)" id="ExceptionLogger (Module)" ref="eric5.Debugger.ExceptionLogger.html" />
@@ -10371,7 +10378,6 @@
       <keyword name="UserInterface.__setWindowCaption" id="UserInterface.__setWindowCaption" ref="eric5.UI.UserInterface.html#UserInterface.__setWindowCaption" />
       <keyword name="UserInterface.__setupDockWindow" id="UserInterface.__setupDockWindow" ref="eric5.UI.UserInterface.html#UserInterface.__setupDockWindow" />
       <keyword name="UserInterface.__showAvailableVersionInfos" id="UserInterface.__showAvailableVersionInfos" ref="eric5.UI.UserInterface.html#UserInterface.__showAvailableVersionInfos" />
-      <keyword name="UserInterface.__showEmailDialog" id="UserInterface.__showEmailDialog" ref="eric5.UI.UserInterface.html#UserInterface.__showEmailDialog" />
       <keyword name="UserInterface.__showEricDoc" id="UserInterface.__showEricDoc" ref="eric5.UI.UserInterface.html#UserInterface.__showEricDoc" />
       <keyword name="UserInterface.__showExternalTools" id="UserInterface.__showExternalTools" ref="eric5.UI.UserInterface.html#UserInterface.__showExternalTools" />
       <keyword name="UserInterface.__showExtrasMenu" id="UserInterface.__showExtrasMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showExtrasMenu" />
@@ -10467,6 +10473,7 @@
       <keyword name="UserInterface.reregisterToolbar" id="UserInterface.reregisterToolbar" ref="eric5.UI.UserInterface.html#UserInterface.reregisterToolbar" />
       <keyword name="UserInterface.setDebugProfile" id="UserInterface.setDebugProfile" ref="eric5.UI.UserInterface.html#UserInterface.setDebugProfile" />
       <keyword name="UserInterface.showAvailableVersionsInfo" id="UserInterface.showAvailableVersionsInfo" ref="eric5.UI.UserInterface.html#UserInterface.showAvailableVersionsInfo" />
+      <keyword name="UserInterface.showEmailDialog" id="UserInterface.showEmailDialog" ref="eric5.UI.UserInterface.html#UserInterface.showEmailDialog" />
       <keyword name="UserInterface.showEvent" id="UserInterface.showEvent" ref="eric5.UI.UserInterface.html#UserInterface.showEvent" />
       <keyword name="UserInterface.showFindFileByNameDialog" id="UserInterface.showFindFileByNameDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFileByNameDialog" />
       <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric5.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
@@ -12448,6 +12455,7 @@
       <file>eric5.UI.DeleteFilesConfirmationDialog.html</file>
       <file>eric5.UI.DiffDialog.html</file>
       <file>eric5.UI.EmailDialog.html</file>
+      <file>eric5.UI.ErrorLogDialog.html</file>
       <file>eric5.UI.FindFileDialog.html</file>
       <file>eric5.UI.FindFileNameDialog.html</file>
       <file>eric5.UI.Info.html</file>

@@ -440,9 +440,6 @@ QMainWindow
 <td><a href="#UserInterface.__showAvailableVersionInfos">__showAvailableVersionInfos</a></td>
 <td>Private method to show the versions available for download.</td>
 </tr><tr>
-<td><a href="#UserInterface.__showEmailDialog">__showEmailDialog</a></td>
-<td>Private slot to show the email dialog in a given mode.</td>
-</tr><tr>
 <td><a href="#UserInterface.__showEricDoc">__showEricDoc</a></td>
 <td>Private slot to show the Eric documentation.</td>
 </tr><tr>
@@ -727,6 +724,9 @@ QMainWindow
 </tr><tr>
 <td><a href="#UserInterface.showAvailableVersionsInfo">showAvailableVersionsInfo</a></td>
 <td>Public method to show the eric5 versions available for download.</td>
+</tr><tr>
+<td><a href="#UserInterface.showEmailDialog">showEmailDialog</a></td>
+<td>Public slot to show the email dialog in a given mode.</td>
 </tr><tr>
 <td><a href="#UserInterface.showEvent">showEvent</a></td>
 <td>Protected method to handle the show event.</td>
@@ -1406,23 +1406,6 @@ caption of the dock window (string)
 <dt><i>versions</i></dt>
 <dd>
 contents of the downloaded versions file (list of strings)
-</dd>
-</dl><a NAME="UserInterface.__showEmailDialog" ID="UserInterface.__showEmailDialog"></a>
-<h4>UserInterface.__showEmailDialog</h4>
-<b>__showEmailDialog</b>(<i>mode, attachFile=None, deleteAttachFile=False</i>)
-<p>
-        Private slot to show the email dialog in a given mode.
-</p><dl>
-<dt><i>mode</i></dt>
-<dd>
-mode of the email dialog (string, "bug" or "feature")
-</dd><dt><i>attachFile</i></dt>
-<dd>
-name of a file to attach to the email (string)
-</dd><dt><i>deleteAttachFile</i></dt>
-<dd>
-flag indicating to delete the attached file after
-            it has been sent (boolean)
 </dd>
 </dl><a NAME="UserInterface.__showEricDoc" ID="UserInterface.__showEricDoc"></a>
 <h4>UserInterface.__showEricDoc</h4>
@@ -2185,7 +2168,24 @@ flag indicating that the current profile should
 <b>showAvailableVersionsInfo</b>(<i></i>)
 <p>
         Public method to show the eric5 versions available for download.
-</p><a NAME="UserInterface.showEvent" ID="UserInterface.showEvent"></a>
+</p><a NAME="UserInterface.showEmailDialog" ID="UserInterface.showEmailDialog"></a>
+<h4>UserInterface.showEmailDialog</h4>
+<b>showEmailDialog</b>(<i>mode, attachFile=None, deleteAttachFile=False</i>)
+<p>
+        Public slot to show the email dialog in a given mode.
+</p><dl>
+<dt><i>mode</i></dt>
+<dd>
+mode of the email dialog (string, "bug" or "feature")
+</dd><dt><i>attachFile</i></dt>
+<dd>
+name of a file to attach to the email (string)
+</dd><dt><i>deleteAttachFile</i></dt>
+<dd>
+flag indicating to delete the attached file after
+            it has been sent (boolean)
+</dd>
+</dl><a NAME="UserInterface.showEvent" ID="UserInterface.showEvent"></a>
 <h4>UserInterface.showEvent</h4>
 <b>showEvent</b>(<i>evt</i>)
 <p>

@@ -2791,17 +2791,17 @@ class UserInterface(QMainWindow):
         """
         Private slot to handle the Report Bug dialog.
         """
-        self.__showEmailDialog("bug")
+        self.showEmailDialog("bug")
         
     def __requestFeature(self):
         """
         Private slot to handle the Feature Request dialog.
         """
-        self.__showEmailDialog("feature")
+        self.showEmailDialog("feature")
         
-    def __showEmailDialog(self, mode, attachFile=None, deleteAttachFile=False):
+    def showEmailDialog(self, mode, attachFile=None, deleteAttachFile=False):
         """
-        Private slot to show the email dialog in a given mode.
+        Public slot to show the email dialog in a given mode.
         
         @param mode mode of the email dialog (string, "bug" or "feature")
         @param attachFile name of a file to attach to the email (string)
@@ -2866,41 +2866,9 @@ class UserInterface(QMainWindow):
         if Preferences.getUI("CheckErrorLog"):
             logFile = os.path.join(Utilities.getConfigDir(), "eric5_error.log")
             if os.path.exists(logFile):
-                dlg = E5MessageBox.E5MessageBox(E5MessageBox.Question,
-                    self.trUtf8("Error log found"),
-                    self.trUtf8("An error log file was found. "
-                                "What should be done with it?"),
-                    modal=True, parent=self)
-                try:
-                    f = open(logFile, "r", encoding="utf-8")
-                    txt = f.read()
-                    f.close()
-                    dlg.setDetailedText(txt)
-                except IOError:
-                    pass
-                emailButton = \
-                    dlg.addButton(self.trUtf8("Send Bug Email"),
-                                  E5MessageBox.AcceptRole)
-                deleteButton = \
-                    dlg.addButton(self.trUtf8("Ignore and Delete"),
-                                  E5MessageBox.AcceptRole)
-                keepButton = \
-                    dlg.addButton(self.trUtf8("Ignore but Keep"),
-                                  E5MessageBox.AcceptRole)
-                dlg.setDefaultButton(emailButton)
-                dlg.setEscapeButton(keepButton)
+                from .ErrorLogDialog import ErrorLogDialog
+                dlg = ErrorLogDialog(logFile, self)
                 dlg.exec_()
-                btn = dlg.clickedButton()
-                if btn == emailButton:
-                    # start email dialog
-                    self.__showEmailDialog("bug",
-                        attachFile=logFile, deleteAttachFile=True)
-                elif btn == deleteButton:
-                    # delete the error log
-                    os.remove(logFile)
-                elif btn == keepButton:
-                    # keep the error log
-                    pass
         
     def __compareFiles(self):
         """
