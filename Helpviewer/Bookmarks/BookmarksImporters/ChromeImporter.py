@@ -32,6 +32,9 @@ def getImporterInfo(id):
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars(
                 "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default")
+        elif Globals.isMacPlatform():
+            standardDir = os.path.expanduser(
+                "~/Library/Application Support/Google/Chrome/Default")
         else:
             standardDir = os.path.expanduser("~/.config/google-chrome/Default")
         return (
@@ -109,7 +112,7 @@ class ChromeImporter(BookmarksImporter):
         @return imported bookmarks (BookmarkNode)
         """
         try:
-            f = open(self.__fileName, "r")
+            f = open(self.__fileName, "r", encoding="utf-8")
             contents = json.load(f)
             f.close()
         except IOError as err:

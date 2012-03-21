@@ -8,9 +8,9 @@ Module implementing an importer for Firefox bookmarks.
 """
 
 import os
+import sqlite3
 
 from PyQt4.QtCore import QCoreApplication, QDate, Qt, QUrl
-from PyQt4.QtSql import QSqlDatabase, QSqlQuery
 
 from ..BookmarkNode import BookmarkNode
 
@@ -32,6 +32,9 @@ def getImporterInfo(id):
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars(
                 "%APPDATA%\\Mozilla\\Firefox\\Profiles")
+        elif Globals.isMacPlatform():
+            standardDir = os.path.expanduser(
+                "~/Library/Application Support/Firefox/Profiles")
         else:
             standardDir = os.path.expanduser("~/.mozilla/firefox")
         return (
@@ -85,14 +88,12 @@ class FirefoxImporter(BookmarksImporter):
                 .format(self.__fileName)
             return False
         
-        self.__db = QSqlDatabase.addDatabase("QSQLITE")
-        self.__db.setDatabaseName(self.__fileName)
-        opened = self.__db.open()
-        
-        if not opened:
+        try:
+            self.__db = sqlite3.connect(self.__fileName)
+        except sqlite3.DatabaseError as err:
             self._error = True
             self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
-                .format(self.__db.lastError().text())
+                .format(str(err))
             return False
         
         return True
@@ -103,53 +104,64 @@ class FirefoxImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
-        importRootNode = BookmarkNode(BookmarkNode.Folder)
+        importRootNode = BookmarkNode(BookmarkNode.Root)
         
         # step 1: build the hierarchy of bookmark folders
         folders = {}
-        query = QSqlQuery(self.__db)
-        query.exec_(
-            "SELECT id, parent, title FROM moz_bookmarks WHERE type = 2 and title !=''")
-        while query.next():
-            id_ = int(query.value(0))
-            parent = int(query.value(1))
-            title = query.value(2)
-            if parent in folders:
-                folder = BookmarkNode(BookmarkNode.Folder, folders[parent])
-            else:
-                folder = BookmarkNode(BookmarkNode.Folder, importRootNode)
-            folder.title = title.replace("&", "&&")
-            folders[id_] = folder
         
-        query = QSqlQuery(self.__db)
-        query.exec_(
-            "SELECT parent, title, fk, position FROM moz_bookmarks"
-            " WHERE type = 1 and title != '' ORDER BY position")
-        while query.next():
-            parent = int(query.value(0))
-            title = query.value(1).replace("&", "&&")
-            placesId = int(query.value(2))
-            
-            query2 = QSqlQuery(self.__db)
-            query2.exec_("SELECT url FROM moz_places WHERE id = {0}".format(placesId))
-            if not query2.next():
-                continue
-            
-            url = QUrl(query2.value(0))
-            if not title or url.isEmpty() or url.scheme() in ["place", "about"]:
-                continue
-            
-            if parent in folders:
-                bookmark = BookmarkNode(BookmarkNode.Bookmark, folders[parent])
-            else:
-                bookmark = BookmarkNode(BookmarkNode.Bookmark, importRootNode)
-            bookmark.url = url.toString()
-            bookmark.title = title.replace("&", "&&")
-        
-        if query.lastError().isValid():
+        try:
+            cursor = self.__db.cursor()
+            cursor.execute(
+                "SELECT id, parent, title FROM moz_bookmarks "
+                "WHERE type = 2 and title !=''")
+            for row in cursor:
+                id_ = row[0]
+                parent = row[1]
+                title = row[2]
+                if parent in folders:
+                    folder = BookmarkNode(BookmarkNode.Folder, folders[parent])
+                else:
+                    folder = BookmarkNode(BookmarkNode.Folder, importRootNode)
+                folder.title = title.replace("&", "&&")
+                folders[id_] = folder
+        except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = query.lastError().text()
+            self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
+                .format(str(err))
+            return None
         
+        try:
+            cursor = self.__db.cursor()
+            cursor.execute(
+                "SELECT parent, title, fk, position FROM moz_bookmarks"
+                " WHERE type = 1 and title != '' ORDER BY position")
+            for row in cursor:
+                parent = row[0]
+                title = row[1]
+                placesId = row[2]
+                
+                cursor2 = self.__db.cursor()
+                cursor2.execute(
+                    "SELECT url FROM moz_places WHERE id = {0}".format(placesId))
+                row2 = cursor2.fetchone()
+                if row2:
+                    url = QUrl(row2[0])
+                    if not title or url.isEmpty() or url.scheme() in ["place", "about"]:
+                        continue
+                    
+                    if parent in folders:
+                        bookmark = BookmarkNode(BookmarkNode.Bookmark, folders[parent])
+                    else:
+                        bookmark = BookmarkNode(BookmarkNode.Bookmark, importRootNode)
+                    bookmark.url = url.toString()
+                    bookmark.title = title.replace("&", "&&")
+        except sqlite3.DatabaseError as err:
+            self._error = True
+            self._errorString = self.trUtf8("Unable to open database.\nReason: {0}")\
+                .format(str(err))
+            return None
+        
+        importRootNode.setType(BookmarkNode.Folder)
         if self._id == "firefox":
             importRootNode.title = self.trUtf8("Mozilla Firefox Import")
         else:

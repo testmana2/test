@@ -33,9 +33,9 @@ def getImporterInfo(id):
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars(
                 "%APPDATA%\\Apple Computer\\Safari")
+        elif Globals.isMacPlatform():
+            standardDir = os.path.expanduser("~/Library/Safari")
         else:
-            # TODO: changes this on the Mac
-##            standardDir = os.path.expanduser("~/.config/google-chrome/Default")
             standardDir = ""
         return (
             UI.PixmapCache.getPixmap("safari.png"),

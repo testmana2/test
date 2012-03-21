@@ -7,6 +7,8 @@
 Module implementing a dialog for importing bookmarks from other sources.
 """
 
+import os
+
 from PyQt4.QtCore import pyqtSlot, Qt, QSize
 from PyQt4.QtGui import QDialog, QListWidgetItem, QFileDialog
 
@@ -17,6 +19,7 @@ from .Ui_BookmarksImportDialog import Ui_BookmarksImportDialog
 from . import BookmarksImporters
 
 import Utilities
+import Globals
 
 
 class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
@@ -85,11 +88,15 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
                 self.__sourceDir,
                 QFileDialog.Options(QFileDialog.Option(0)))
         else:
+            if Globals.isMacPlatform():
+                filter = "*{0}".format(os.path.splitext(self.__sourceFile)[1])
+            else:
+                filter = self.__sourceFile
             path = E5FileDialog.getOpenFileName(
                 self,
                 self.trUtf8("Choose File ..."),
-                self.__sourceDir,
-                self.__sourceFile)
+                self.__sourceDir, 
+                filter)
         
         if path:
             self.fileEdit.setText(Utilities.toNativeSeparators(path))

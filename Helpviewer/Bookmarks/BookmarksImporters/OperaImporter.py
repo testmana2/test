@@ -30,6 +30,9 @@ def getImporterInfo(id):
     if id == "opera":
         if Globals.isWindowsPlatform():
             standardDir = os.path.expandvars("%APPDATA%\\Opera\\Opera")
+        elif Globals.isMacPlatform():
+            standardDir = os.path.expanduser(
+                "~/Library/Opera")
         else:
             standardDir = os.path.expanduser("~/.opera")
         return (
@@ -90,7 +93,7 @@ class OperaImporter(BookmarksImporter):
         @return imported bookmarks (BookmarkNode)
         """
         try:
-            f = open(self.__fileName, "r")
+            f = open(self.__fileName, "r", encoding="utf-8")
             contents = f.read()
             f.close()
         except IOError as err:

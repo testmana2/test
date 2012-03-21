@@ -145,7 +145,7 @@ class HtmlImporter(BookmarksImporter):
         @return imported bookmarks (BookmarkNode)
         """
         try:
-            f = open(self.__fileName, "r")
+            f = open(self.__fileName, "r", encoding="utf-8")
             contents = f.read()
             f.close()
         except IOError as err:
