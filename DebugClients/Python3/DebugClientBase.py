@@ -1337,6 +1337,9 @@ class DebugClientBase(object):
                             mdict = loc["mdict"]
                             obj = loc["obj"]
                             ndict.update(mdict)
+                        except:
+                            pass
+                        try:
                             loc = {"dict": dict}
                             exec('mcdict = dict{0!s}.__class__.__dict__'\
                                  .format(access), globals(), loc)
@@ -1410,7 +1413,7 @@ class DebugClientBase(object):
                     vlist = []
             else:
                 qtVariable = False
-                if len(udict) > 0:
+                if len(dict) == 0 and len(udict) > 0:
                     if access:
                         loc = {"udict": udict}
                         exec('qvar = udict{0!s}'.format(access), globals(), loc)

@@ -1333,6 +1333,9 @@ class DebugClientBase(object):
                         try:
                             exec 'mdict = dict%s.__dict__' % access
                             ndict.update(mdict)     # __IGNORE_WARNING__
+                        except:
+                            pass
+                        try:
                             exec 'mcdict = dict%s.__class__.__dict__' % access
                             ndict.update(mcdict)     # __IGNORE_WARNING__
                             exec 'obj = dict%s' % access
@@ -1394,7 +1397,7 @@ class DebugClientBase(object):
                     vlist = []
             else:
                 qtVariable = False
-                if len(udict) > 0:
+                if len(dict) == 0 and len(udict) > 0:
                     if access:
                         exec 'qvar = udict%s' % access
                     # this has to be in line with VariablesViewer.indicators
