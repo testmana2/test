@@ -97,9 +97,22 @@ class NsHtmlWriter(QObject):
         @param node reference to the node to be written (BookmarkNode)
         @param indent size of the indentation (integer)
         """
+        if node.added.isValid():
+            added = " ADD_DATE=\"{0}\"".format(node.added.toTime_t())
+        else:
+            added = ""
+        if node.modified.isValid():
+            modified = " LAST_MODIFIED=\"{0}\"".format(node.modified.toTime_t())
+        else:
+            modified = ""
+        if node.visited.isValid():
+            visited = " LAST_VISIT=\"{0}\"".format(node.visited.toTime_t())
+        else:
+            visited = ""
+        
         self.__dev.write(" " * indent)
-        self.__dev.write("<DT><A HREF=\"{0}\">{1}</A>\n".format(
-            node.url, Utilities.html_uencode(node.title)
+        self.__dev.write("<DT><A HREF=\"{0}\"{1}{2}{3}>{4}</A>\n".format(
+            node.url, added, modified, visited, Utilities.html_uencode(node.title)
         ))
     
     def __writeFolder(self, node, indent):
@@ -114,9 +127,14 @@ class NsHtmlWriter(QObject):
         else:
             folded = " FOLDED"
         
+        if node.added.isValid():
+            added = " ADD_DATE=\"{0}\"".format(node.added.toTime_t())
+        else:
+            added = ""
+        
         self.__dev.write(" " * indent)
-        self.__dev.write("<DT><H3{0}>{1}</H3>\n".format(
-            folded, Utilities.html_uencode(node.title)
+        self.__dev.write("<DT><H3{0}{1}>{2}</H3>\n".format(
+            folded, added, Utilities.html_uencode(node.title)
         ))
         
         if node.desc:

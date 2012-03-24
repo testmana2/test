@@ -148,9 +148,10 @@ class UrlBar(E5LineEdit):
         manager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
         if manager.bookmarkForUrl(self.__browser.url()) is not None:
             self.__bookmarkButton.setIcon(self.__bmActiveIcon)
-            bookmark = manager.bookmarkForUrl(self.__browser.url())
-            manager.setTimestamp(bookmark, BookmarkNode.TsVisited,
-                                 QDateTime.currentDateTime())
+            bookmarks = manager.bookmarksForUrl(self.__browser.url())
+            for bookmark in bookmarks:
+                manager.setTimestamp(bookmark, BookmarkNode.TsVisited,
+                                     QDateTime.currentDateTime())
         elif Helpviewer.HelpWindow.HelpWindow.speedDial()\
            .pageForUrl(self.__browser.url()).url != "":
             self.__bookmarkButton.setIcon(self.__bmActiveIcon)

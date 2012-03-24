@@ -28,6 +28,7 @@ import Preferences
 import UI.PixmapCache
 
 from .Bookmarks.AddBookmarkDialog import AddBookmarkDialog
+from .Bookmarks.BookmarkNode import BookmarkNode
 from .JavaScriptResources import fetchLinks_js
 try:
     from .SslInfoDialog import SslInfoDialog
@@ -401,6 +402,15 @@ class HelpWebPage(QWebPage):
            reply.url() == self.mainFrame().url():
             self.__sslConfiguration = reply.sslConfiguration()
             self.__sslConfiguration.url = QUrl(reply.url())
+        
+        if reply.error() == QNetworkReply.NoError and \
+           mainFrameRequest and \
+           reply.url() == self.mainFrame().url():
+            modified = reply.header(QNetworkRequest.LastModifiedHeader)
+            if modified and modified.isValid():
+                manager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+                for bookmark in manager.bookmarksForUrl(reply.url()):
+                    manager.setTimestamp(bookmark, BookmarkNode.TsModified, modified)
     
     def getSslInfo(self):
         """
