@@ -392,6 +392,7 @@ NetworkReply QNetworkReply
 NewDialogClassDialog QDialog Ui_NewDialogClassDialog
 NewPythonPackageDialog QDialog Ui_NewPythonPackageDialog
 NotBinaryPlistException Exception
+NsHtmlWriter QObject
 NumbersWidget QWidget Ui_NumbersWidget
 OfflineStorageConfigDialog QDialog Ui_OfflineStorageConfigDialog
 OpenSearchDialog QDialog Ui_OpenSearchDialog

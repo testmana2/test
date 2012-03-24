@@ -42,6 +42,24 @@ def getImporterInfo(id):
                 """Please choose the file to begin importing bookmarks."""),
             os.path.dirname(bookmarksFile),
         )
+    elif id == "konqueror":
+        if os.path.exists(os.path.expanduser("~/.kde4")):
+            standardDir = os.path.expanduser("~/.kde4/share/apps/konqueror")
+        elif os.path.exists(os.path.expanduser("~/.kde")):
+            standardDir = os.path.expanduser("~/.kde/share/apps/konqueror")
+        else:
+            standardDir = ""
+        return (
+            UI.PixmapCache.getPixmap("konqueror.png"),
+            "Konqueror",
+            "bookmarks.xml",
+            QCoreApplication.translate("XbelImporter",
+                """Konqueror stores its bookmarks in the <b>bookmarks.xml</b> XML """
+                """file. This file is usually located in"""),
+            QCoreApplication.translate("XbelImporter",
+                """Please choose the file to begin importing bookmarks."""),
+            standardDir,
+        )
     elif id == "xbel":
         return (
             UI.PixmapCache.getPixmap("xbel.png"),
@@ -107,7 +125,7 @@ class XbelImporter(BookmarksImporter):
         if reader.error() != QXmlStreamReader.NoError:
             self._error = True
             self._errorString = self.trUtf8(
-                """Error when importing bookmarks on line {0}, column [1}:\n{2}""")\
+                """Error when importing bookmarks on line {0}, column {1}:\n{2}""")\
                 .format(reader.lineNumber(),
                         reader.columnNumber(),
                         reader.errorString())
@@ -116,6 +134,8 @@ class XbelImporter(BookmarksImporter):
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "e5browser":
             importRootNode.title = self.trUtf8("eric5 Web Browser Import")
+        elif self._id == "konqueror":
+            importRootNode.title = self.trUtf8("Konqueror Import")
         elif self._id == "xbel":
             importRootNode.title = self.trUtf8("XBEL Import")
         else:

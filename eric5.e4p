@@ -998,6 +998,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Utilities/binplistlib.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarksImporters/SafariImporter.py</Source>
     <Source>UI/ErrorLogDialog.py</Source>
+    <Source>Helpviewer/Bookmarks/NsHtmlWriter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

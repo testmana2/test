@@ -8,7 +8,7 @@ Module implementing a class to read XBEL bookmark files.
 """
 
 from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, QIODevice, \
-    QFile, QCoreApplication
+    QFile, QCoreApplication, QXmlStreamNamespaceDeclaration
 
 from .BookmarkNode import BookmarkNode
 
@@ -125,6 +125,8 @@ class XbelReader(QXmlStreamReader):
                     self.__readBookmarkNode(folder)
                 elif self.name() == "separator":
                     self.__readSeparator(folder)
+                elif self.name() == "info":
+                    self.__readInfo()
                 else:
                     self.__skipUnknownElement()
     
@@ -157,8 +159,18 @@ class XbelReader(QXmlStreamReader):
         @param node reference to the bookmark node the separator belongs to (BookmarkNode)
         """
         BookmarkNode(BookmarkNode.Separator, node)
+        
         # empty elements have a start and end element
-        self.readNext()
+        while not self.atEnd():
+            self.readNext()
+            if self.isEndElement():
+                break
+            
+            if self.isStartElement():
+                if self.name() == "info":
+                    self.__readInfo()
+                else:
+                    self.__skipUnknownElement()
     
     def __readBookmarkNode(self, node):
         """
@@ -182,23 +194,24 @@ class XbelReader(QXmlStreamReader):
                     self.__readTitle(bookmark)
                 elif self.name() == "desc":
                     self.__readDescription(bookmark)
+                elif self.name() == "info":
+                    self.__readInfo()
                 else:
                     self.__skipUnknownElement()
         
         if not bookmark.title:
             bookmark.title = QCoreApplication.translate("XbelReader", "Unknown title")
     
+    def __readInfo(self):
+        """
+        Private method to read and parse an info subtree.
+        """
+        self.addExtraNamespaceDeclaration(
+            QXmlStreamNamespaceDeclaration("bookmark", "http://www.python.org"))
+        self.skipCurrentElement()
+    
     def __skipUnknownElement(self):
         """
         Private method to skip over all unknown elements.
         """
-        if not self.isStartElement():
-            return
-        
-        while not self.atEnd():
-            self.readNext()
-            if self.isEndElement():
-                break
-            
-            if self.isStartElement():
-                self.__skipUnknownElement()
+        self.skipCurrentElement()

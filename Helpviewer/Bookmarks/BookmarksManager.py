@@ -20,6 +20,7 @@ from .BookmarksModel import BookmarksModel
 from .DefaultBookmarks import DefaultBookmarks
 from .XbelReader import XbelReader
 from .XbelWriter import XbelWriter
+from .NsHtmlWriter import NsHtmlWriter
 from .BookmarksImportDialog import BookmarksImportDialog
 
 from Utilities.AutoSaver import AutoSaver
@@ -319,7 +320,9 @@ class BookmarksManager(QObject):
             None,
             self.trUtf8("Export Bookmarks"),
             "eric5_bookmarks.xbel",
-            self.trUtf8("XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)"))
+            self.trUtf8("XBEL bookmarks (*.xbel);;"
+                        "XBEL bookmarks (*.xml);;"
+                        "HTML Bookmarks (*.html)"))
         if not fileName:
             return
         
@@ -329,7 +332,11 @@ class BookmarksManager(QObject):
             if ex:
                 fileName += ex
         
-        writer = XbelWriter()
+        ext = QFileInfo(fileName).suffix()
+        if ext == "html":
+            writer = NsHtmlWriter()
+        else:
+            writer = XbelWriter()
         if not writer.write(fileName, self.__bookmarkRootNode):
             E5MessageBox.critical(None,
                 self.trUtf8("Exporting Bookmarks"),

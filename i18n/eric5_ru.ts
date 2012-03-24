@@ -1594,12 +1594,12 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="40"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="44"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="46"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1607,44 +1607,44 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksManager</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="29"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="30"/>
         <source>Bookmarks Bar</source>
         <translation>Закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="30"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="31"/>
         <source>Bookmarks Menu</source>
         <translation>Выбор закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="136"/>
         <source>Loading Bookmarks</source>
         <translation>Добавление закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="136"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
 {2}</source>
         <translation>Ошибка при добавлении закладок в строке {0}, позиция {1}:
 {2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="147"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="148"/>
         <source>Toolbar Bookmarks</source>
         <translation>Коллекция закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="153"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="154"/>
         <source>Menu</source>
         <translation>Меню</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="197"/>
         <source>Saving Bookmarks</source>
         <translation>Сохранение закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="197"/>
         <source>Error saving bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Ошибка при сохранении закладок в файл &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
@@ -1674,42 +1674,42 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">Импортировано {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="319"/>
         <source>Export Bookmarks</source>
         <translation>Экспортировать закладки</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="341"/>
         <source>Exporting Bookmarks</source>
         <translation>Экспорт закладок</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="341"/>
         <source>Error exporting bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Ошибка при сохранении закладок в файл &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="349"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="356"/>
         <source>Converted {0}</source>
         <translation>Сконвертировано {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="469"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="476"/>
         <source>Remove Bookmark</source>
         <translation>Удалить закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="509"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="516"/>
         <source>Insert Bookmark</source>
         <translation>Вставить закладку</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="548"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="555"/>
         <source>Name Change</source>
         <translation>Изменить имя</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="551"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="558"/>
         <source>Address Change</source>
         <translation>Изменить адрес</translation>
     </message>
@@ -1723,7 +1723,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)</source>
-        <translation>XBEL закладки (*.xbel);;XBEL закладки (*.xml)</translation>
+        <translation type="obsolete">XBEL закладки (*.xbel);;XBEL закладки (*.xml)</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="319"/>
+        <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml);;HTML Bookmarks (*.html)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -52642,17 +52647,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>Please choose the file to begin importing bookmarks.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>XBEL Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="93"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="111"/>
         <source>File &apos;{0}&apos; does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52660,27 +52665,43 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="109"/>
         <source>Error when importing bookmarks on line {0}, column [1}:
 {2}</source>
-        <translation type="unfinished">Ошибка при импорте закладок в строке {0}, позиция {1}:
+        <translation type="obsolete">Ошибка при импорте закладок в строке {0}, позиция {1}:
 {2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="118"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="136"/>
         <source>eric5 Web Browser Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="120"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="140"/>
         <source>XBEL Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="122"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="142"/>
         <source>Imported {0}</source>
         <translation type="unfinished">Импортировано {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>You can import bookmarks from any browser that supports XBEL exporting. This file has usually the extension .xbel or .xml.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="52"/>
+        <source>Konqueror stores its bookmarks in the &lt;b&gt;bookmarks.xml&lt;/b&gt; XML file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="127"/>
+        <source>Error when importing bookmarks on line {0}, column {1}:
+{2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="138"/>
+        <source>Konqueror Import</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -52692,7 +52713,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Этот файл не соответствует XBEL 1.0.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/XbelReader.py" line="189"/>
+        <location filename="Helpviewer/Bookmarks/XbelReader.py" line="203"/>
         <source>Unknown title</source>
         <translation>Неизвестный файл</translation>
     </message>

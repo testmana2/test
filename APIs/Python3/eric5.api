@@ -1915,6 +1915,9 @@ eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.newUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar?1(mainWindow, model, parent=None)
 eric5.Helpviewer.Bookmarks.DefaultBookmarks.DefaultBookmarks?7
+eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter.indentSize?7
+eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter.write?4(fileNameOrDevice, root)
+eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter?1()
 eric5.Helpviewer.Bookmarks.XbelReader.XbelReader.read?4(fileNameOrDevice)
 eric5.Helpviewer.Bookmarks.XbelReader.XbelReader?1()
 eric5.Helpviewer.Bookmarks.XbelReader.XmlEntityResolver.resolveUndeclaredEntity?4(entity)

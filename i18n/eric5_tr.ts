@@ -1595,12 +1595,12 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksImporters</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="40"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="42"/>
         <source>XBEL File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="44"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/__init__.py" line="46"/>
         <source>HTML File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1608,44 +1608,44 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BookmarksManager</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="29"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="30"/>
         <source>Bookmarks Bar</source>
         <translation>Yerimleri Çubuğu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="30"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="31"/>
         <source>Bookmarks Menu</source>
         <translation>Yerimleri Menüsü</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="136"/>
         <source>Loading Bookmarks</source>
         <translation>Yerimleri Yükleniyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="135"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="136"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
 {2}</source>
         <translation>Yerimlerini yüklerken {0} satır, {1} sütunda hata var:
 {2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="147"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="148"/>
         <source>Toolbar Bookmarks</source>
         <translation>Yerimleri Araççubuğu</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="153"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="154"/>
         <source>Menu</source>
         <translation>Menü</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="197"/>
         <source>Saving Bookmarks</source>
         <translation>Yerimleri Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="196"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="197"/>
         <source>Error saving bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Yer imlerinin &lt;b&gt;{0}&lt;/b&gt;ne kaydederken hata oldu.</translation>
     </message>
@@ -1682,49 +1682,54 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="obsolete">İçe Aktarılmış {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="319"/>
         <source>Export Bookmarks</source>
         <translation>Yerimlerini Dışaaktar</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="318"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml)</source>
-        <translation>XBEL yerimleri (*.xbel);;XBEL yerimleri (*.xml)</translation>
+        <translation type="obsolete">XBEL yerimleri (*.xbel);;XBEL yerimleri (*.xml)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="341"/>
         <source>Exporting Bookmarks</source>
         <translation>Yerimleri Dışaaktarılıyor</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="334"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="341"/>
         <source>Error exporting bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Yerimlerini {0} ye dışa aktarırken hata oldu.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="349"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="356"/>
         <source>Converted {0}</source>
         <translation>Çevrilmiş {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="469"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="476"/>
         <source>Remove Bookmark</source>
         <translation>Yerimini kaldır</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="509"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="516"/>
         <source>Insert Bookmark</source>
         <translation>Yerimi Araya gir</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="548"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="555"/>
         <source>Name Change</source>
         <translation>İsim Değişikliği</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="551"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="558"/>
         <source>Address Change</source>
         <translation>Adres Değişikliği</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="319"/>
+        <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml);;HTML Bookmarks (*.html)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -52642,17 +52647,17 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>Please choose the file to begin importing bookmarks.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>XBEL Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="93"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="111"/>
         <source>File &apos;{0}&apos; does not exist.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -52660,27 +52665,43 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="109"/>
         <source>Error when importing bookmarks on line {0}, column [1}:
 {2}</source>
-        <translation type="unfinished">Yerimlerini içe aktarırken {0} satır, {1} sütunda hata var:
+        <translation type="obsolete">Yerimlerini içe aktarırken {0} satır, {1} sütunda hata var:
 {2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="118"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="136"/>
         <source>eric5 Web Browser Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="120"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="140"/>
         <source>XBEL Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="122"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="142"/>
         <source>Imported {0}</source>
         <translation type="unfinished">İçe Aktarılmış {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="46"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="64"/>
         <source>You can import bookmarks from any browser that supports XBEL exporting. This file has usually the extension .xbel or .xml.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="52"/>
+        <source>Konqueror stores its bookmarks in the &lt;b&gt;bookmarks.xml&lt;/b&gt; XML file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="127"/>
+        <source>Error when importing bookmarks on line {0}, column {1}:
+{2}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="138"/>
+        <source>Konqueror Import</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -52692,7 +52713,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Bu dosya bir XBEL sürüm1.0 dosyası değil.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/XbelReader.py" line="189"/>
+        <location filename="Helpviewer/Bookmarks/XbelReader.py" line="203"/>
         <source>Unknown title</source>
         <translation>Bilinmeyen başlık</translation>
     </message>

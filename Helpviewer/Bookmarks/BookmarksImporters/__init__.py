@@ -30,6 +30,8 @@ def getImporters():
     if Globals.isLinuxPlatform():
         importers.append(
             (UI.PixmapCache.getIcon("chromium.png"), "Chromium", "chromium"))
+        importers.append(
+            (UI.PixmapCache.getIcon("konqueror.png"), "Konqueror", "konqueror"))
     importers.append(
         (UI.PixmapCache.getIcon("opera.png"), "Opera", "opera"))
     importers.append(
@@ -46,7 +48,6 @@ def getImporters():
          QCoreApplication.translate("BookmarksImporters", "HTML File"),
          "html"))
     return importers
-    # TODO: importers for Safari
 
 
 def getImporterInfo(id):
@@ -58,7 +59,7 @@ def getImporterInfo(id):
         the default bookmarks file (string), an info text (string),
         a prompt (string) and the default directory of the bookmarks file (string)
     """
-    if id in ["e5browser", "xbel"]:
+    if id in ["e5browser", "xbel", "konqueror"]:
         from . import XbelImporter
         return XbelImporter.getImporterInfo(id)
     elif id == "html":
@@ -90,7 +91,7 @@ def getImporter(id, parent=None):
     @param parent reference to the parent object (QObject)
     @return bookmarks importer (BookmarksImporter)
     """
-    if id in ["e5browser", "xbel"]:
+    if id in ["e5browser", "xbel", "konqueror"]:
         from . import XbelImporter
         return XbelImporter.XbelImporter(id, parent)
     elif id == "html":
