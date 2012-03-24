@@ -149,6 +149,9 @@ QObject
 <td><a href="#BookmarksManager.save">save</a></td>
 <td>Public method to save the bookmarks.</td>
 </tr><tr>
+<td><a href="#BookmarksManager.setTimestamp">setTimestamp</a></td>
+<td>Public method to set the URL of a bookmark.</td>
+</tr><tr>
 <td><a href="#BookmarksManager.setTitle">setTitle</a></td>
 <td>Public method to set the title of a bookmark.</td>
 </tr><tr>
@@ -371,7 +374,24 @@ reference to the node to be removed (BookmarkNode)
 <b>save</b>(<i></i>)
 <p>
         Public method to save the bookmarks.
-</p><a NAME="BookmarksManager.setTitle" ID="BookmarksManager.setTitle"></a>
+</p><a NAME="BookmarksManager.setTimestamp" ID="BookmarksManager.setTimestamp"></a>
+<h4>BookmarksManager.setTimestamp</h4>
+<b>setTimestamp</b>(<i>node, timestampType, timestamp</i>)
+<p>
+        Public method to set the URL of a bookmark.
+</p><dl>
+<dt><i>node</i></dt>
+<dd>
+reference to the node to be changed (BookmarkNode)
+</dd><dt><i>timestampType</i></dt>
+<dd>
+type of the timestamp to set (BookmarkNode.TsAdded,
+            BookmarkNode.TsModified, BookmarkNode.TsVisited)
+</dd><dt><i>timestamp</i></dt>
+<dd>
+timestamp to set (QDateTime)
+</dd>
+</dl><a NAME="BookmarksManager.setTitle" ID="BookmarksManager.setTitle"></a>
 <h4>BookmarksManager.setTitle</h4>
 <b>setTitle</b>(<i>node, newTitle</i>)
 <p>

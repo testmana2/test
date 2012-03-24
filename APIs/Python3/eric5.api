@@ -1768,6 +1768,9 @@ eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.Bookmark?7
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.Folder?7
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.Root?7
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.Separator?7
+eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.TsAdded?7
+eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.TsModified?7
+eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.TsVisited?7
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.add?4(child, offset=-1)
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.children?4()
 eric5.Helpviewer.Bookmarks.BookmarkNode.BookmarkNode.parent?4()
@@ -1856,6 +1859,7 @@ eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.menu?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.reload?4()
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.removeBookmark?4(node)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.save?4()
+eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.setTimestamp?4(node, timestampType, timestamp)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.setTitle?4(node, newTitle)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.setUrl?4(node, newUrl)
 eric5.Helpviewer.Bookmarks.BookmarksManager.BookmarksManager.toolbar?4()

@@ -10,7 +10,7 @@ Module implementing the bookmarks manager.
 import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, QByteArray, \
-    QBuffer, QIODevice, QXmlStreamReader, QDate, QFileInfo, QUrl
+    QBuffer, QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl
 from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -216,6 +216,8 @@ class BookmarksManager(QObject):
         if not self.__loaded:
             return
         
+        self.setTimestamp(node,  BookmarkNode.TsAdded, QDateTime.currentDateTime())
+        
         command = InsertBookmarksCommand(self, parent, node, row)
         self.__commands.push(command)
     
@@ -258,6 +260,30 @@ class BookmarksManager(QObject):
         
         command = ChangeBookmarkCommand(self, node, newUrl, False)
         self.__commands.push(command)
+    
+    def setTimestamp(self, node, timestampType, timestamp):
+        """
+        Public method to set the URL of a bookmark.
+        
+        @param node reference to the node to be changed (BookmarkNode)
+        @param timestampType type of the timestamp to set (BookmarkNode.TsAdded,
+            BookmarkNode.TsModified, BookmarkNode.TsVisited)
+        @param timestamp timestamp to set (QDateTime)
+        """
+        if not self.__loaded:
+            return
+        
+        assert timestampType in [BookmarkNode.TsAdded,
+                                 BookmarkNode.TsModified,
+                                 BookmarkNode.TsVisited]
+        
+        if timestampType == BookmarkNode.TsAdded:
+            node.added = timestamp
+        elif timestampType == BookmarkNode.TsModified:
+            node.modified = timestamp
+        elif timestampType == BookmarkNode.TsVisited:
+            node.visited = timestamp
+        self.__saveTimer.changeOccurred()
     
     def bookmarks(self):
         """

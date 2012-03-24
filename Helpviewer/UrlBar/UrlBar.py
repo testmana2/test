@@ -7,7 +7,7 @@
 Module implementing the URL bar widget.
 """
 
-from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl
+from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime
 from PyQt4.QtGui import QColor, QPalette, QApplication, QLinearGradient, QIcon, QDialog
 try:
     from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
@@ -26,6 +26,7 @@ from .BookmarkInfoDialog import BookmarkInfoDialog
 from .BookmarkActionSelectionDialog import BookmarkActionSelectionDialog
 
 from Helpviewer.Feeds.FeedsDialog import FeedsDialog
+from Helpviewer.Bookmarks.BookmarkNode import BookmarkNode
 
 import UI.PixmapCache
 import Preferences
@@ -144,13 +145,17 @@ class UrlBar(E5LineEdit):
         """
         Private slot to check the current URL for the bookmarked state.
         """
-        if Helpviewer.HelpWindow.HelpWindow.bookmarksManager()\
-           .bookmarkForUrl(self.__browser.url()) is None and \
-           Helpviewer.HelpWindow.HelpWindow.speedDial()\
-           .pageForUrl(self.__browser.url()).url == "":
-            self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
-        else:
+        manager = Helpviewer.HelpWindow.HelpWindow.bookmarksManager()
+        if manager.bookmarkForUrl(self.__browser.url()) is not None:
             self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+            bookmark = manager.bookmarkForUrl(self.__browser.url())
+            manager.setTimestamp(bookmark, BookmarkNode.TsVisited,
+                                 QDateTime.currentDateTime())
+        elif Helpviewer.HelpWindow.HelpWindow.speedDial()\
+           .pageForUrl(self.__browser.url()).url != "":
+            self.__bookmarkButton.setIcon(self.__bmActiveIcon)
+        else:
+            self.__bookmarkButton.setIcon(self.__bmInactiveIcon)
     
     def __loadFinished(self, ok):
         """

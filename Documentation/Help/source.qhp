@@ -1418,6 +1418,7 @@
       <keyword name="BookmarksManager.reload" id="BookmarksManager.reload" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.reload" />
       <keyword name="BookmarksManager.removeBookmark" id="BookmarksManager.removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.removeBookmark" />
       <keyword name="BookmarksManager.save" id="BookmarksManager.save" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.save" />
+      <keyword name="BookmarksManager.setTimestamp" id="BookmarksManager.setTimestamp" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setTimestamp" />
       <keyword name="BookmarksManager.setTitle" id="BookmarksManager.setTitle" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setTitle" />
       <keyword name="BookmarksManager.setUrl" id="BookmarksManager.setUrl" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setUrl" />
       <keyword name="BookmarksManager.toolbar" id="BookmarksManager.toolbar" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.toolbar" />

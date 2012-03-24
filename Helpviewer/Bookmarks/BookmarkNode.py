@@ -7,6 +7,8 @@
 Module implementing the bookmark node.
 """
 
+from PyQt4.QtCore import QDateTime
+
 
 class BookmarkNode(object):
     """
@@ -17,6 +19,11 @@ class BookmarkNode(object):
     Folder = 1
     Bookmark = 2
     Separator = 3
+    
+    # possible timestamp types
+    TsAdded = 0
+    TsModified = 1
+    TsVisited = 2
     
     def __init__(self, type_=Root, parent=None):
         """
@@ -29,6 +36,9 @@ class BookmarkNode(object):
         self.title = ""
         self.desc = ""
         self.expanded = False
+        self.added = QDateTime()
+        self.modified = QDateTime()
+        self.visited = QDateTime()
         
         self._children = []
         self._parent = parent

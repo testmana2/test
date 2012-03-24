@@ -7,7 +7,7 @@
 Module implementing a class to write XBEL bookmark files.
 """
 
-from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile
+from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile, Qt
 
 from .BookmarkNode import BookmarkNode
 
@@ -69,6 +69,8 @@ class XbelWriter(QXmlStreamWriter):
         """
         if node.type() == BookmarkNode.Folder:
             self.writeStartElement("folder")
+            if node.added.isValid():
+                self.writeAttribute("added", node.added.toString(Qt.ISODate))
             self.writeAttribute("folded", node.expanded and "no" or "yes")
             self.writeTextElement("title", node.title)
             for child in node.children():
@@ -78,9 +80,17 @@ class XbelWriter(QXmlStreamWriter):
             self.writeStartElement("bookmark")
             if node.url:
                 self.writeAttribute("href", node.url)
+            if node.added.isValid():
+                self.writeAttribute("added", node.added.toString(Qt.ISODate))
+            if node.modified.isValid():
+                self.writeAttribute("modified", node.modified.toString(Qt.ISODate))
+            if node.visited.isValid():
+                self.writeAttribute("visited", node.visited.toString(Qt.ISODate))
             self.writeTextElement("title", node.title)
             if node.desc:
                 self.writeTextElement("desc", node.desc)
             self.writeEndElement()
         elif node.type() == BookmarkNode.Separator:
             self.writeEmptyElement("separator")
+            if node.added.isValid():
+                self.writeAttribute("added", node.added.toString(Qt.ISODate))

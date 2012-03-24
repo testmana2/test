@@ -8,7 +8,7 @@ Module implementing a class to read XBEL bookmark files.
 """
 
 from PyQt4.QtCore import QXmlStreamReader, QXmlStreamEntityResolver, QIODevice, \
-    QFile, QCoreApplication, QXmlStreamNamespaceDeclaration
+    QFile, QCoreApplication, QXmlStreamNamespaceDeclaration, QDateTime, Qt
 
 from .BookmarkNode import BookmarkNode
 
@@ -108,6 +108,7 @@ class XbelReader(QXmlStreamReader):
         
         folder = BookmarkNode(BookmarkNode.Folder, node)
         folder.expanded = self.attributes().value("folded") == "no"
+        folder.added = QDateTime.fromString(self.attributes().value("added"), Qt.ISODate)
         
         while not self.atEnd():
             self.readNext()
@@ -158,7 +159,8 @@ class XbelReader(QXmlStreamReader):
         
         @param node reference to the bookmark node the separator belongs to (BookmarkNode)
         """
-        BookmarkNode(BookmarkNode.Separator, node)
+        sep = BookmarkNode(BookmarkNode.Separator, node)
+        sep.added = QDateTime.fromString(self.attributes().value("added"), Qt.ISODate)
         
         # empty elements have a start and end element
         while not self.atEnd():
@@ -183,6 +185,12 @@ class XbelReader(QXmlStreamReader):
         
         bookmark = BookmarkNode(BookmarkNode.Bookmark, node)
         bookmark.url = self.attributes().value("href")
+        bookmark.added = QDateTime.fromString(
+            self.attributes().value("added"), Qt.ISODate)
+        bookmark.modified = QDateTime.fromString(
+            self.attributes().value("modified"), Qt.ISODate)
+        bookmark.visited = QDateTime.fromString(
+            self.attributes().value("visited"), Qt.ISODate)
         
         while not self.atEnd():
             self.readNext()
