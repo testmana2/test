@@ -1811,7 +1811,6 @@ eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.imported
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.open?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter.setPath?4(path)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.HtmlImporter?1(id="", parent=None)
-eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.extract_js?7
 eric5.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.getImporterInfo?4(id)
 eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter.importedBookmarks?4()
 eric5.Helpviewer.Bookmarks.BookmarksImporters.IExplorerImporter.IExplorerImporter.open?4()
@@ -1919,6 +1918,9 @@ eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.newUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar.openUrl?7
 eric5.Helpviewer.Bookmarks.BookmarksToolBar.BookmarksToolBar?1(mainWindow, model, parent=None)
 eric5.Helpviewer.Bookmarks.DefaultBookmarks.DefaultBookmarks?7
+eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader.indentSize?7
+eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader.read?4(fileNameOrDevice)
+eric5.Helpviewer.Bookmarks.NsHtmlReader.NsHtmlReader?1()
 eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter.indentSize?7
 eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter.write?4(fileNameOrDevice, root)
 eric5.Helpviewer.Bookmarks.NsHtmlWriter.NsHtmlWriter?1()
@@ -7081,6 +7083,7 @@ eric5.Utilities._escape?8
 eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
+eric5.Utilities._uunescape?8
 eric5.Utilities.binplistlib.BoolWrapper?1(value)
 eric5.Utilities.binplistlib.HashableWrapper?1(value)
 eric5.Utilities.binplistlib.PlistByteCounts?7
@@ -7216,6 +7219,7 @@ eric5.Utilities.get_coding?4(text)
 eric5.Utilities.get_codingBytes?4(text)
 eric5.Utilities.hasEnvironmentEntry?4(key)
 eric5.Utilities.html_encode?4(text, pattern=_escape)
+eric5.Utilities.html_udecode?4(text, pattern=_uunescape)
 eric5.Utilities.html_uencode?4(text, pattern=_uescape)
 eric5.Utilities.isExecutable?4(exe)
 eric5.Utilities.isinpath?4(file)
@@ -7327,6 +7331,7 @@ eric5.Utilities.uic.compileUiDir?4(dir, recurse = False, map = None, ** compileU
 eric5.Utilities.uic.compileUiFiles?4(dir, recurse=False)
 eric5.Utilities.uic.compile_ui?4(ui_dir, ui_file)
 eric5.Utilities.uic.pyName?4(py_dir, py_file)
+eric5.Utilities.unescape_uentities?4(m)
 eric5.Utilities.win32_GetUserName?4()
 eric5.Utilities.win32_Kill?4(pid)
 eric5.Utilities.writeEncodedFile?4(filename, text, orig_coding)

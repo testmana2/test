@@ -114,6 +114,11 @@ class NsHtmlWriter(QObject):
         self.__dev.write("<DT><A HREF=\"{0}\"{1}{2}{3}>{4}</A>\n".format(
             node.url, added, modified, visited, Utilities.html_uencode(node.title)
         ))
+        
+        if node.desc:
+            self.__dev.write(" " * indent)
+            self.__dev.write("<DD>{0}\n".format(
+                Utilities.html_uencode("".join(node.desc.splitlines()))))
     
     def __writeFolder(self, node, indent):
         """

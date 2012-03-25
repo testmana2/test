@@ -439,6 +439,34 @@ def html_uencode(text, pattern=_uescape):
     text = pattern.sub(escape_uentities, text)
     return text
 
+_uunescape = re.compile('&#\d+;')
+
+
+def unescape_uentities(m):
+    """
+    Function to decode html entities.
+    
+    @param m the match object
+    @return the converted text (string)
+    """
+    char = m.group()
+    ord = int(char[2:-1])
+    return chr(ord)
+
+
+def html_udecode(text, pattern=_uunescape):
+    """
+    Function to correctly decode a html text to a unicode text.
+    
+    @param text text to be decoded (string)
+    @param pattern search pattern for text to be decoded (string)
+    @return the decoded text (string)
+    """
+    if not text:
+        return ""
+    text = pattern.sub(unescape_uentities, text)
+    return text
+
 
 def convertLineEnds(text, eol):
     """

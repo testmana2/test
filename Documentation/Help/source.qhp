@@ -220,6 +220,7 @@
               <section title="eric5.Helpviewer.Bookmarks.BookmarksModel" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksToolBar" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html" />
               <section title="eric5.Helpviewer.Bookmarks.DefaultBookmarks" ref="eric5.Helpviewer.Bookmarks.DefaultBookmarks.html" />
+              <section title="eric5.Helpviewer.Bookmarks.NsHtmlReader" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html" />
               <section title="eric5.Helpviewer.Bookmarks.NsHtmlWriter" ref="eric5.Helpviewer.Bookmarks.NsHtmlWriter.html" />
               <section title="eric5.Helpviewer.Bookmarks.XbelReader" ref="eric5.Helpviewer.Bookmarks.XbelReader.html" />
               <section title="eric5.Helpviewer.Bookmarks.XbelWriter" ref="eric5.Helpviewer.Bookmarks.XbelWriter.html" />
@@ -6653,6 +6654,10 @@
       <keyword name="NoneSplashScreen.finish" id="NoneSplashScreen.finish" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.finish" />
       <keyword name="NoneSplashScreen.showMessage" id="NoneSplashScreen.showMessage" ref="eric5.UI.SplashScreen.html#NoneSplashScreen.showMessage" />
       <keyword name="NotBinaryPlistException" id="NotBinaryPlistException" ref="eric5.Utilities.binplistlib.html#NotBinaryPlistException" />
+      <keyword name="NsHtmlReader" id="NsHtmlReader" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html#NsHtmlReader" />
+      <keyword name="NsHtmlReader (Constructor)" id="NsHtmlReader (Constructor)" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html#NsHtmlReader.__init__" />
+      <keyword name="NsHtmlReader (Module)" id="NsHtmlReader (Module)" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html" />
+      <keyword name="NsHtmlReader.read" id="NsHtmlReader.read" ref="eric5.Helpviewer.Bookmarks.NsHtmlReader.html#NsHtmlReader.read" />
       <keyword name="NsHtmlWriter" id="NsHtmlWriter" ref="eric5.Helpviewer.Bookmarks.NsHtmlWriter.html#NsHtmlWriter" />
       <keyword name="NsHtmlWriter (Constructor)" id="NsHtmlWriter (Constructor)" ref="eric5.Helpviewer.Bookmarks.NsHtmlWriter.html#NsHtmlWriter.__init__" />
       <keyword name="NsHtmlWriter (Module)" id="NsHtmlWriter (Module)" ref="eric5.Helpviewer.Bookmarks.NsHtmlWriter.html" />
@@ -11505,6 +11510,7 @@
       <keyword name="hashPasswordTuple" id="hashPasswordTuple" ref="eric5.Utilities.crypto.py3PBKDF2.html#hashPasswordTuple" />
       <keyword name="hg (Module)" id="hg (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html" />
       <keyword name="html_encode" id="html_encode" ref="eric5.Utilities.__init__.html#html_encode" />
+      <keyword name="html_udecode" id="html_udecode" ref="eric5.Utilities.__init__.html#html_udecode" />
       <keyword name="html_uencode" id="html_uencode" ref="eric5.Utilities.__init__.html#html_uencode" />
       <keyword name="idlclbr (Module)" id="idlclbr (Module)" ref="eric5.Utilities.ClassBrowsers.idlclbr.html" />
       <keyword name="ignore_code" id="ignore_code" ref="eric5.Plugins.CheckerPlugins.Pep8.pep8.html#ignore_code" />
@@ -11770,6 +11776,7 @@
       <keyword name="transplant (Module)" id="transplant (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant.html" />
       <keyword name="uiStartUp" id="uiStartUp" ref="eric5.eric5.html#uiStartUp" />
       <keyword name="uic (Module)" id="uic (Module)" ref="eric5.Utilities.uic.html" />
+      <keyword name="unescape_uentities" id="unescape_uentities" ref="eric5.Utilities.__init__.html#unescape_uentities" />
       <keyword name="unified_diff" id="unified_diff" ref="eric5.UI.DiffDialog.html#unified_diff" />
       <keyword name="uninstall (Module)" id="uninstall (Module)" ref="eric5.uninstall.html" />
       <keyword name="uninstallEric" id="uninstallEric" ref="eric5.uninstall.html#uninstallEric" />
@@ -11987,6 +11994,7 @@
       <file>eric5.Helpviewer.Bookmarks.BookmarksModel.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksToolBar.html</file>
       <file>eric5.Helpviewer.Bookmarks.DefaultBookmarks.html</file>
+      <file>eric5.Helpviewer.Bookmarks.NsHtmlReader.html</file>
       <file>eric5.Helpviewer.Bookmarks.NsHtmlWriter.html</file>
       <file>eric5.Helpviewer.Bookmarks.XbelReader.html</file>
       <file>eric5.Helpviewer.Bookmarks.XbelWriter.html</file>

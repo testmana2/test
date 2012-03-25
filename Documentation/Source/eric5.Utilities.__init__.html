@@ -26,7 +26,7 @@ Package implementing various functions/classes needed everywhere within eric5.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>_escape</td></tr><tr><td>_escape_map</td></tr><tr><td>_uescape</td></tr><tr><td>codingBytes_regexps</td></tr><tr><td>coding_regexps</td></tr><tr><td>configDir</td></tr><tr><td>supportedCodecs</td></tr>
+<tr><td>_escape</td></tr><tr><td>_escape_map</td></tr><tr><td>_uescape</td></tr><tr><td>_uunescape</td></tr><tr><td>codingBytes_regexps</td></tr><tr><td>coding_regexps</td></tr><tr><td>configDir</td></tr><tr><td>supportedCodecs</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -158,6 +158,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#html_encode">html_encode</a></td>
 <td>Function to correctly encode a text for html.</td>
 </tr><tr>
+<td><a href="#html_udecode">html_udecode</a></td>
+<td>Function to correctly decode a html text to a unicode text.</td>
+</tr><tr>
 <td><a href="#html_uencode">html_uencode</a></td>
 <td>Function to correctly encode a unicode text for html.</td>
 </tr><tr>
@@ -223,6 +226,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 </tr><tr>
 <td><a href="#toNativeSeparators">toNativeSeparators</a></td>
 <td>Function returning a path, that is using native separator characters.</td>
+</tr><tr>
+<td><a href="#unescape_uentities">unescape_uentities</a></td>
+<td>Function to decode html entities.</td>
 </tr><tr>
 <td><a href="#win32_GetUserName">win32_GetUserName</a></td>
 <td>Function to get the user name under Win32.</td>
@@ -1050,6 +1056,27 @@ the encoded text (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="html_udecode" ID="html_udecode"></a>
+<h2>html_udecode</h2>
+<b>html_udecode</b>(<i>text, pattern=_uunescape</i>)
+<p>
+    Function to correctly decode a html text to a unicode text.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to be decoded (string)
+</dd><dt><i>pattern</i></dt>
+<dd>
+search pattern for text to be decoded (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the decoded text (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="html_uencode" ID="html_uencode"></a>
 <h2>html_uencode</h2>
 <b>html_uencode</b>(<i>text, pattern=_uescape</i>)
@@ -1470,6 +1497,24 @@ path to be converted (string)
 <dt>Returns:</dt>
 <dd>
 path with converted separator characters (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="unescape_uentities" ID="unescape_uentities"></a>
+<h2>unescape_uentities</h2>
+<b>unescape_uentities</b>(<i>m</i>)
+<p>
+    Function to decode html entities.
+</p><dl>
+<dt><i>m</i></dt>
+<dd>
+the match object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the converted text (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

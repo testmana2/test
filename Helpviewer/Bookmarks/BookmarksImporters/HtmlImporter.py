@@ -8,72 +8,15 @@ Module implementing an importer for HTML bookmark files.
 """
 
 import os
-import tempfile
 
-from PyQt4.QtCore import QCoreApplication, QXmlStreamReader, QDate, Qt
-from PyQt4.QtWebKit import QWebPage
+from PyQt4.QtCore import QCoreApplication, QDate, Qt
 
 from ..BookmarkNode import BookmarkNode
-from ..XbelReader import XbelReader
+from ..NsHtmlReader import NsHtmlReader
 
 from .BookmarksImporter import BookmarksImporter
 
 import UI.PixmapCache
-
-##########################################################################################
-
-extract_js = r"""
-function walk() {
-    var parent = arguments[0];
-    var indent = arguments[1];
-
-    var result = "";
-    var children = parent.childNodes;
-    var folderName = "";
-    var folded = "";
-    for (var i = 0; i < children.length; i++) {
-        var object = children.item(i);
-        if (object.nodeName == "HR") {
-            result += indent + "<separator/>\n";
-        }
-        if (object.nodeName == "H3") {
-            folderName = object.innerHTML;
-            folded = object.folded;
-            if (object.folded == undefined)
-                folded = "false";
-            else
-                folded = "true";
-        }
-        if (object.nodeName == "A") {
-            result += indent + "<bookmark href=\"" + encodeURI(object.href).replace(/&/g, '&amp;') + "\">\n";
-            result += indent + indent + "<title>" + object.innerHTML + "</title>\n";
-            result += indent + "</bookmark>\n";
-        }
-
-        var currentIndent = indent;
-        if (object.nodeName == "DL" && folderName != "") {
-            result += indent + "<folder folded=\"" + folded + "\">\n";
-            indent += "    ";
-            result += indent + "<title>" + folderName + "</title>\n";
-        }
-        result += walk(object, indent);
-        if (object.nodeName == "DL" && folderName != "") {
-            result += currentIndent + "</folder>\n";
-        }
-    }
-    return result;
-}
-
-var xbel = walk(document, "    ");
-
-if (xbel != "") {
-    xbel = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE xbel>\n<xbel version=\"1.0\">\n" + xbel + "</xbel>\n";
-}
-
-xbel;
-"""
-
-##########################################################################################
 
 
 def getImporterInfo(id):
@@ -144,36 +87,8 @@ class HtmlImporter(BookmarksImporter):
         
         @return imported bookmarks (BookmarkNode)
         """
-        try:
-            f = open(self.__fileName, "r", encoding="utf-8")
-            contents = f.read()
-            f.close()
-        except IOError as err:
-            self._error = True
-            self._errorString = self.trUtf8("File '{0}' cannot be read.\nReason: {1}")\
-                .format(self.__fileName, str(err))
-            return None
-        
-        reader = XbelReader()
-        webpage = QWebPage()
-        webpage.mainFrame().setHtml(contents)
-        result = webpage.mainFrame().evaluateJavaScript(extract_js)
-        
-        fd, name = tempfile.mkstemp(text=True)
-        f = os.fdopen(fd, "w")
-        f.write(result)
-        f.close()
-        importRootNode = reader.read(name)
-        os.remove(name)
-        
-        if reader.error() != QXmlStreamReader.NoError:
-            self._error = True
-            self._errorString = self.trUtf8(
-                """Error when importing bookmarks on line {0}, column {1}:\n{2}""")\
-                .format(reader.lineNumber(),
-                        reader.columnNumber(),
-                        reader.errorString())
-            return None
+        reader = NsHtmlReader()
+        importRootNode = reader.read(self.__fileName)
         
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "html":
