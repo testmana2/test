@@ -626,7 +626,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 if not os.path.exists(packagePath):
                     try:
                         os.mkdir(packagePath)
-                    except IOError as err:
+                    except OSError as err:
                         E5MessageBox.critical(self,
                             self.trUtf8("Add new Python package"),
                             self.trUtf8("""<p>The package directory <b>{0}</b> could"""
