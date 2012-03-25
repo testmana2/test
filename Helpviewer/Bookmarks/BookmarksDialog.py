@@ -15,6 +15,7 @@ from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 import Helpviewer.HelpWindow
 from .BookmarkNode import BookmarkNode
 from .BookmarksModel import BookmarksModel
+from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 from .Ui_BookmarksDialog import Ui_BookmarksDialog
 
@@ -150,6 +151,9 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         menu.addSeparator()
         act = menu.addAction(self.trUtf8("&Delete"), self.bookmarksTree.removeSelected)
         act.setEnabled(idx.flags() & Qt.ItemIsDragEnabled)
+        menu.addSeparator()
+        act = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
+        act.setEnabled(idx.flags() & Qt.ItemIsEditable)
         menu.exec_(QCursor.pos())
     
     def __activated(self, idx):
@@ -209,6 +213,16 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         idx = self.bookmarksTree.currentIndex()
         idx = idx.sibling(idx.row(), 1)
         self.bookmarksTree.edit(idx)
+    
+    def __edit(self):
+        """
+        Private slot to edit a bookmarks properties.
+        """
+        idx = self.bookmarksTree.currentIndex()
+        sourceIndex = self.__proxyModel.mapToSource(idx)
+        node = self.__bookmarksModel.node(sourceIndex)
+        dlg = BookmarkPropertiesDialog(node)
+        dlg.exec_()
     
     def __newFolder(self):
         """

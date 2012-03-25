@@ -85,7 +85,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         super().__init__(parent)
         self.setupUi(self)
         
-        self.__bookmarksManager = None
+        self.__bookmarksManager = bookmarksManager
         self.__addedNode = None
         self.__addFolder = False
         
@@ -146,6 +146,22 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         @return title of the bookmark (string)
         """
         return self.nameEdit.text()
+    
+    def setDescription(self, description):
+        """
+        Public method to set the description of the new bookmark.
+        
+        @param description description of the bookamrk (string)
+        """
+        self.descriptionEdit.setPlainText(description)
+    
+    def description(self):
+        """
+        Public method to get the description of the bookmark.
+        
+        @return description of the bookamrk (string)
+        """
+        return self.descriptionEdit.toPlainText()
     
     def setCurrentIndex(self, idx):
         """
@@ -222,6 +238,7 @@ class AddBookmarkDialog(QDialog, Ui_AddBookmarkDialog):
         bookmark.title = self.nameEdit.text()
         if not self.__addFolder:
             bookmark.url = self.addressEdit.text()
+        bookmark.desc = self.descriptionEdit.toPlainText()
         
         self.__bookmarksManager.addBookmark(parent, bookmark)
         self.__addedNode = bookmark

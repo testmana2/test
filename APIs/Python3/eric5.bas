@@ -31,6 +31,7 @@ AutoSaver QObject
 BinaryModel QAbstractTableModel
 BookmarkActionSelectionDialog QDialog Ui_BookmarkActionSelectionDialog
 BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
+BookmarkPropertiesDialog QDialog Ui_BookmarkPropertiesDialog
 BookmarkedFilesDialog QDialog Ui_BookmarkedFilesDialog
 Bookmarks HgExtension
 BookmarksDialog QDialog Ui_BookmarksDialog

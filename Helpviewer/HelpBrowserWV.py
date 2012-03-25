@@ -1296,6 +1296,9 @@ class HelpBrowser(QWebView):
         dlg = AddBookmarkDialog()
         dlg.setUrl(bytes(self.url().toEncoded()).decode())
         dlg.setTitle(self.title())
+        meta = self.page().mainFrame().metaData()
+        if "description" in meta:
+            dlg.setDescription(meta["description"][0])
         dlg.exec_()
     
     def dragEnterEvent(self, evt):

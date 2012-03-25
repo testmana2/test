@@ -213,6 +213,7 @@
               </section>
               <section title="eric5.Helpviewer.Bookmarks.AddBookmarkDialog" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarkNode" ref="eric5.Helpviewer.Bookmarks.BookmarkNode.html" />
+              <section title="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog" ref="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksImportDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html" />
               <section title="eric5.Helpviewer.Bookmarks.BookmarksManager" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html" />
@@ -1109,8 +1110,10 @@
       <keyword name="AddBookmarkDialog.accept" id="AddBookmarkDialog.accept" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.accept" />
       <keyword name="AddBookmarkDialog.addedNode" id="AddBookmarkDialog.addedNode" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.addedNode" />
       <keyword name="AddBookmarkDialog.currentIndex" id="AddBookmarkDialog.currentIndex" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.currentIndex" />
+      <keyword name="AddBookmarkDialog.description" id="AddBookmarkDialog.description" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.description" />
       <keyword name="AddBookmarkDialog.isFolder" id="AddBookmarkDialog.isFolder" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.isFolder" />
       <keyword name="AddBookmarkDialog.setCurrentIndex" id="AddBookmarkDialog.setCurrentIndex" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.setCurrentIndex" />
+      <keyword name="AddBookmarkDialog.setDescription" id="AddBookmarkDialog.setDescription" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.setDescription" />
       <keyword name="AddBookmarkDialog.setFolder" id="AddBookmarkDialog.setFolder" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.setFolder" />
       <keyword name="AddBookmarkDialog.setTitle" id="AddBookmarkDialog.setTitle" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.setTitle" />
       <keyword name="AddBookmarkDialog.setUrl" id="AddBookmarkDialog.setUrl" ref="eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html#AddBookmarkDialog.setUrl" />
@@ -1332,6 +1335,10 @@
       <keyword name="BookmarkNode.remove" id="BookmarkNode.remove" ref="eric5.Helpviewer.Bookmarks.BookmarkNode.html#BookmarkNode.remove" />
       <keyword name="BookmarkNode.setType" id="BookmarkNode.setType" ref="eric5.Helpviewer.Bookmarks.BookmarkNode.html#BookmarkNode.setType" />
       <keyword name="BookmarkNode.type" id="BookmarkNode.type" ref="eric5.Helpviewer.Bookmarks.BookmarkNode.html#BookmarkNode.type" />
+      <keyword name="BookmarkPropertiesDialog" id="BookmarkPropertiesDialog" ref="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html#BookmarkPropertiesDialog" />
+      <keyword name="BookmarkPropertiesDialog (Constructor)" id="BookmarkPropertiesDialog (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html#BookmarkPropertiesDialog.__init__" />
+      <keyword name="BookmarkPropertiesDialog (Module)" id="BookmarkPropertiesDialog (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html" />
+      <keyword name="BookmarkPropertiesDialog.accept" id="BookmarkPropertiesDialog.accept" ref="eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html#BookmarkPropertiesDialog.accept" />
       <keyword name="BookmarkedFilesDialog" id="BookmarkedFilesDialog" ref="eric5.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog" />
       <keyword name="BookmarkedFilesDialog (Constructor)" id="BookmarkedFilesDialog (Constructor)" ref="eric5.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.__init__" />
       <keyword name="BookmarkedFilesDialog (Module)" id="BookmarkedFilesDialog (Module)" ref="eric5.ViewManager.BookmarkedFilesDialog.html" />
@@ -1365,6 +1372,7 @@
       <keyword name="BookmarksDialog (Module)" id="BookmarksDialog (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html" />
       <keyword name="BookmarksDialog.__activated" id="BookmarksDialog.__activated" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__activated" />
       <keyword name="BookmarksDialog.__customContextMenuRequested" id="BookmarksDialog.__customContextMenuRequested" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__customContextMenuRequested" />
+      <keyword name="BookmarksDialog.__edit" id="BookmarksDialog.__edit" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__edit" />
       <keyword name="BookmarksDialog.__editAddress" id="BookmarksDialog.__editAddress" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__editAddress" />
       <keyword name="BookmarksDialog.__editName" id="BookmarksDialog.__editName" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__editName" />
       <keyword name="BookmarksDialog.__expandNodes" id="BookmarksDialog.__expandNodes" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__expandNodes" />
@@ -1419,6 +1427,7 @@
       <keyword name="BookmarksManager.reload" id="BookmarksManager.reload" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.reload" />
       <keyword name="BookmarksManager.removeBookmark" id="BookmarksManager.removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.removeBookmark" />
       <keyword name="BookmarksManager.save" id="BookmarksManager.save" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.save" />
+      <keyword name="BookmarksManager.setNodeChanged" id="BookmarksManager.setNodeChanged" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setNodeChanged" />
       <keyword name="BookmarksManager.setTimestamp" id="BookmarksManager.setTimestamp" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setTimestamp" />
       <keyword name="BookmarksManager.setTitle" id="BookmarksManager.setTitle" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setTitle" />
       <keyword name="BookmarksManager.setUrl" id="BookmarksManager.setUrl" ref="eric5.Helpviewer.Bookmarks.BookmarksManager.html#BookmarksManager.setUrl" />
@@ -1429,6 +1438,7 @@
       <keyword name="BookmarksMenu (Module)" id="BookmarksMenu (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html" />
       <keyword name="BookmarksMenu.__activated" id="BookmarksMenu.__activated" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__activated" />
       <keyword name="BookmarksMenu.__contextMenuRequested" id="BookmarksMenu.__contextMenuRequested" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__contextMenuRequested" />
+      <keyword name="BookmarksMenu.__edit" id="BookmarksMenu.__edit" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__edit" />
       <keyword name="BookmarksMenu.__openBookmark" id="BookmarksMenu.__openBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__openBookmark" />
       <keyword name="BookmarksMenu.__openBookmarkInNewTab" id="BookmarksMenu.__openBookmarkInNewTab" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__openBookmarkInNewTab" />
       <keyword name="BookmarksMenu.__removeBookmark" id="BookmarksMenu.__removeBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksMenu.html#BookmarksMenu.__removeBookmark" />
@@ -1483,6 +1493,7 @@
       <keyword name="BookmarksToolBar (Module)" id="BookmarksToolBar (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html" />
       <keyword name="BookmarksToolBar.__bookmarkActivated" id="BookmarksToolBar.__bookmarkActivated" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__bookmarkActivated" />
       <keyword name="BookmarksToolBar.__contextMenuRequested" id="BookmarksToolBar.__contextMenuRequested" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__contextMenuRequested" />
+      <keyword name="BookmarksToolBar.__edit" id="BookmarksToolBar.__edit" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__edit" />
       <keyword name="BookmarksToolBar.__newBookmark" id="BookmarksToolBar.__newBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__newBookmark" />
       <keyword name="BookmarksToolBar.__newFolder" id="BookmarksToolBar.__newFolder" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__newFolder" />
       <keyword name="BookmarksToolBar.__openBookmark" id="BookmarksToolBar.__openBookmark" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__openBookmark" />
@@ -11978,6 +11989,7 @@
       <file>eric5.Helpviewer.AdBlock.AdBlockSubscription.html</file>
       <file>eric5.Helpviewer.Bookmarks.AddBookmarkDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarkNode.html</file>
+      <file>eric5.Helpviewer.Bookmarks.BookmarkPropertiesDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html</file>
       <file>eric5.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html</file>

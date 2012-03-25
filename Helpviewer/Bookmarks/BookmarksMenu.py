@@ -16,6 +16,7 @@ import Helpviewer.HelpWindow
 
 from .BookmarksModel import BookmarksModel
 from .BookmarkNode import BookmarkNode
+from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 
 class BookmarksMenu(E5ModelMenu):
@@ -138,14 +139,16 @@ class BookmarksMenu(E5ModelMenu):
             
             menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
             menuAction.setData(v)
-            
             menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                 self.__openBookmarkInNewTab)
             menuAction.setData(v)
-        
             menu.addSeparator()
             
             menuAction = menu.addAction(self.trUtf8("&Remove"), self.__removeBookmark)
+            menuAction.setData(v)
+            menu.addSeparator()
+            
+            menuAction = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
             menuAction.setData(v)
             
             execAct = menu.exec_(QCursor.pos())
@@ -182,6 +185,15 @@ class BookmarksMenu(E5ModelMenu):
         """
         idx = self.index(self.sender())
         self.removeEntry(idx)
+    
+    def __edit(self):
+        """
+        Private slot to edit a bookmarks properties.
+        """
+        idx = self.index(self.sender())
+        node = self.model().node(idx)
+        dlg = BookmarkPropertiesDialog(node)
+        dlg.exec_()
 
 ##########################################################################################
 

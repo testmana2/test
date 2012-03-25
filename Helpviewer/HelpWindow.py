@@ -1804,10 +1804,15 @@ class HelpWindow(QMainWindow):
         view = self.currentBrowser()
         url = bytes(view.url().toEncoded()).decode()
         title = view.title()
+        description = ""
+        meta = view.page().mainFrame().metaData()
+        if "description" in meta:
+            description = meta["description"][0]
         
         dlg = AddBookmarkDialog()
         dlg.setUrl(url)
         dlg.setTitle(title)
+        dlg.setDescription(description)
         menu = self.bookmarksManager().menu()
         idx = self.bookmarksManager().bookmarksModel().nodeIndex(menu)
         dlg.setCurrentIndex(idx)
@@ -1851,6 +1856,9 @@ class HelpWindow(QMainWindow):
             bookmark = BookmarkNode(BookmarkNode.Bookmark)
             bookmark.url = bytes(browser.url().toEncoded()).decode()
             bookmark.title = browser.title()
+            meta = browser.page().mainFrame().metaData()
+            if "description" in meta:
+                bookmark.desc = meta["description"][0]
             
             self.bookmarksManager().addBookmark(folder, bookmark)
         

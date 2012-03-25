@@ -18,6 +18,7 @@ import Helpviewer.HelpWindow
 from .BookmarksModel import BookmarksModel
 from .BookmarksMenu import BookmarksMenu
 from .AddBookmarkDialog import AddBookmarkDialog
+from .BookmarkPropertiesDialog import BookmarkPropertiesDialog
 
 
 class BookmarksToolBar(E5ModelToolBar):
@@ -86,16 +87,17 @@ class BookmarksToolBar(E5ModelToolBar):
             if act.menu() is None:
                 menuAction = menu.addAction(self.trUtf8("&Open"), self.__openBookmark)
                 menuAction.setData(v)
-                
                 menuAction = menu.addAction(self.trUtf8("Open in New &Tab\tCtrl+LMB"),
                     self.__openBookmarkInNewTab)
                 menuAction.setData(v)
-                
                 menu.addSeparator()
             
             menuAction = menu.addAction(self.trUtf8("&Remove"), self.__removeBookmark)
             menuAction.setData(v)
+            menu.addSeparator()
             
+            menuAction = menu.addAction(self.trUtf8("&Properties..."), self.__edit)
+            menuAction.setData(v)
             menu.addSeparator()
         
         menu.addAction(self.trUtf8("Add &Bookmark..."), self.__newBookmark)
@@ -196,3 +198,12 @@ class BookmarksToolBar(E5ModelToolBar):
         menu.openUrl.connect(self.openUrl)
         menu.newUrl.connect(self.newUrl)
         return menu
+    
+    def __edit(self):
+        """
+        Private slot to edit a bookmarks properties.
+        """
+        idx = self.index(self.sender())
+        node = self.__bookmarksModel.node(idx)
+        dlg = BookmarkPropertiesDialog(node)
+        dlg.exec_()

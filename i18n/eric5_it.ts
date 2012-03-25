@@ -212,22 +212,22 @@
 <context>
     <name>AddBookmarkDialog</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.py" line="182"/>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.py" line="198"/>
         <source>Add Bookmark</source>
         <translation>Aggiungi segnalibro</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="28"/>
         <source>Type a name for the bookmark, and choose where to keep it.</source>
-        <translation>Inserisci il nome del segnalibro e scegli dove metterlo.</translation>
+        <translation type="obsolete">Inserisci il nome del segnalibro e scegli dove metterlo.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="41"/>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="42"/>
         <source>Enter the name</source>
         <translation>Inserisci il nome</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="48"/>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="56"/>
         <source>Enter the address</source>
         <translation>Inserisci l&apos;indirizzo</translation>
     </message>
@@ -242,9 +242,34 @@
         <translation>Titolo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.py" line="179"/>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.py" line="195"/>
         <source>Add Folder</source>
         <translation>Aggiungi cartella</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="35"/>
+        <source>Name:</source>
+        <translation type="unfinished">Nome:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="49"/>
+        <source>Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="63"/>
+        <source>Description:</source>
+        <translation type="unfinished">Descrizione:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="73"/>
+        <source>Enter a description</source>
+        <translation type="unfinished">Inserisci una descrizione</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/AddBookmarkDialog.ui" line="80"/>
+        <source>Folder:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1259,6 +1284,44 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>BookmarkPropertiesDialog</name>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="26"/>
+        <source>Bookmark Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="35"/>
+        <source>Name:</source>
+        <translation type="unfinished">Nome:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="42"/>
+        <source>Enter the name</source>
+        <translation type="unfinished">Inserisci il nome</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="49"/>
+        <source>Address:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="56"/>
+        <source>Enter the address</source>
+        <translation type="unfinished">Inserisci l&apos;indirizzo</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="63"/>
+        <source>Description:</source>
+        <translation type="unfinished">Descrizione:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui" line="73"/>
+        <source>Enter a description</source>
+        <translation type="unfinished">Inserisci una descrizione</translation>
+    </message>
+</context>
+<context>
     <name>BookmarkedFilesDialog</name>
     <message>
         <location filename="ViewManager/BookmarkedFilesDialog.ui" line="13"/>
@@ -1496,32 +1559,32 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Aggiungi &amp;Cartella</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="143"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="144"/>
         <source>&amp;Open</source>
         <translation>&amp;Apri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="144"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="145"/>
         <source>Open in New &amp;Tab</source>
         <translation>Apri in una nuova linguet&amp;ta</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="146"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="147"/>
         <source>Edit &amp;Name</source>
         <translation>Modifica &amp;Nome</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="149"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="150"/>
         <source>Edit &amp;Address</source>
         <translation>Modifica &amp;Indirizzo</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="151"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="152"/>
         <source>&amp;Delete</source>
         <translation>Can&amp;cella</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="237"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="251"/>
         <source>New Folder</source>
         <translation>Nuova Cartella</translation>
     </message>
@@ -1529,6 +1592,11 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="Helpviewer/Bookmarks/BookmarksDialog.ui" line="85"/>
         <source>Press to delete the selected entries</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksDialog.py" line="155"/>
+        <source>&amp;Properties...</source>
+        <translation type="unfinished">&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
@@ -1655,32 +1723,32 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation type="obsolete">Importa Segnalibri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="345"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="351"/>
         <source>Export Bookmarks</source>
         <translation>Esporta segnalibri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="367"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="373"/>
         <source>Exporting Bookmarks</source>
         <translation>Esportazione Segnalibri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="502"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="508"/>
         <source>Remove Bookmark</source>
         <translation>Rimuovi segnalibro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="542"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="548"/>
         <source>Insert Bookmark</source>
         <translation>Inserisci segnalibro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="581"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="587"/>
         <source>Name Change</source>
         <translation>Cambia Nome</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="584"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="590"/>
         <source>Address Change</source>
         <translation>Cambia Indirizzo</translation>
     </message>
@@ -1707,12 +1775,12 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation type="obsolete">Importato {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="367"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="373"/>
         <source>Error exporting bookmarks to &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Errore nell&apos;esportazione dei segnalibri su &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="382"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="388"/>
         <source>Converted {0}</source>
         <translation>Convertito {0}</translation>
     </message>
@@ -1729,7 +1797,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 {2}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="345"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksManager.py" line="351"/>
         <source>XBEL bookmarks (*.xbel);;XBEL bookmarks (*.xml);;HTML Bookmarks (*.html)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1737,12 +1805,12 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksMenu</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="97"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="98"/>
         <source>Open all in Tabs</source>
         <translation>Apri in tutte le linguette</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="139"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="140"/>
         <source>&amp;Open</source>
         <translation>&amp;Apri</translation>
     </message>
@@ -1752,25 +1820,30 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Apri in una nuova linguetta &amp;Tab<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
         <source>&amp;Remove</source>
         <translation>&amp;Rimuovi</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
+        <source>&amp;Properties...</source>
+        <translation type="unfinished">&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
     <name>BookmarksMenuBarMenu</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="257"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="269"/>
         <source>Default Home Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="260"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="272"/>
         <source>Speed Dial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="264"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="276"/>
         <source>Open all in Tabs</source>
         <translation type="unfinished">Apri in tutte le linguette</translation>
     </message>
@@ -1959,27 +2032,27 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 <context>
     <name>BookmarksToolBar</name>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="41"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="42"/>
         <source>Bookmarks</source>
         <translation>Segnalibri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="87"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="88"/>
         <source>&amp;Open</source>
         <translation>&amp;Apri</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="96"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="95"/>
         <source>&amp;Remove</source>
         <translation>&amp;Rimuovi</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
         <source>Add &amp;Bookmark...</source>
         <translation>&amp;Aggiungi segnalibro...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="102"/>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
         <source>Add &amp;Folder...</source>
         <translation>Aggiungi &amp;Cartella...</translation>
     </message>
@@ -1987,6 +2060,11 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
         <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Apri in una nuova linguetta &amp;Tab<byte value="x9"/>Ctrl+LMB</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="99"/>
+        <source>&amp;Properties...</source>
+        <translation type="unfinished">&amp;Proprietà...</translation>
     </message>
 </context>
 <context>
@@ -13421,17 +13499,17 @@ Reason: {0}</source>
         <translation>Web Inspector...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1643"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1646"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1647"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1650"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1650"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1653"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
@@ -13506,47 +13584,47 @@ Reason: {0}</source>
         <translation>&lt;p&gt;Non posso lanciare un&apos;applicazione per l&apos;URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1623"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1626"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1641"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1644"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1685"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1688"/>
         <source>Web Database Quota</source>
         <translation>Quota Web Database</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1685"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1688"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La quota per il database &lt;strong&gt;{0}&lt;/strong&gt; è stata superata durante l&apos;accesso al database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Deve essere cambiata?&lt;/P&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1693"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1696"/>
         <source>New Web Database Quota</source>
         <translation>Nuova quota Web Database</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1693"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1696"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Inserisci la nuova quota in MB (corrente = {0}, usata = {1}; incremento = 5MB):</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1713"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1716"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1716"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1719"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1719"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1722"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
@@ -13586,7 +13664,7 @@ Reason: {0}</source>
         <translation>Inserisci un nome per il motore</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1654"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1657"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
@@ -13601,7 +13679,7 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="2056"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2059"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Web Browser di eric5</translation>
     </message>
@@ -13691,7 +13769,7 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="2056"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="2059"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
@@ -13701,7 +13779,7 @@ Reason: {0}</source>
         <translation type="unfinished">User Agent</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpBrowserWV.py" line="1658"/>
+        <location filename="Helpviewer/HelpBrowserWV.py" line="1661"/>
         <source>Try Again</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15735,27 +15813,27 @@ Hai %n schede aperta.</numerusform>
         <translation>Filtrato per:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2265"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2273"/>
         <source>Could not find an associated content.</source>
         <translation>Non posso trovare un contenuto associato.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2374"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2382"/>
         <source>Updating search index</source>
         <translation>Aggiornamento indice di ricerca</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2426"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2434"/>
         <source>Looking for Documentation...</source>
         <translation>Ricerca documentazione...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2456"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2464"/>
         <source>Unfiltered</source>
         <translation>Non filtrato</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2475"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2483"/>
         <source>Help Engine</source>
         <translation>Motore di help</translation>
     </message>
@@ -15775,7 +15853,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Navigazione anonima&lt;/b&gt;&lt;p&gt;Attiva la navigazione anonima. In questa modalità la cronologia non è più registrata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2007"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2015"/>
         <source>Full Screen</source>
         <translation>Tutto schermo</translation>
     </message>
@@ -16098,7 +16176,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Aggiungi ai segnalibri tutte le linguette...&lt;/b&gt;&lt;p&gt;Apri un dialogo per aggiungere ai segnalibri tutte le linguette aperte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="1843"/>
+        <location filename="Helpviewer/HelpWindow.py" line="1848"/>
         <source>Saved Tabs</source>
         <translation>Salva Linguette</translation>
     </message>
@@ -16242,7 +16320,7 @@ Hai %n schede aperta.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Apre un dialogo per configurare le regole di sottoscrizione di AdBlock.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2435"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2443"/>
         <source>eric5 Web Browser</source>
         <translation>Web Browser di eric5</translation>
     </message>
@@ -16287,7 +16365,7 @@ Hai %n schede aperta.</numerusform>
         <translation>Configura motori di &amp;ricerca...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2036"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2044"/>
         <source>&lt;b&gt;Are you sure you want to turn on private browsing?&lt;/b&gt;&lt;p&gt;When private browsing is turned on, web pages are not added to the history, searches are not added to the list of recent searches and web site icons and cookies are not stored. HTML5 offline storage will be deactivated. Until you close the window, you can still click the Back and Forward buttons to return to the web pages you have opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sei sicuro di voler attivare la navigazione riservata?&lt;/b&gt;&lt;p&gt;Quando la navigazione riservata è attivata, le pagine web non sono aggiunte alla cronologia, le ricerche non sono aggiunte alla lista delle ultime ricerche e le icone dei siti e i cookie non sono salvati, l&apos;offline storage di HTML5 viene disattivato. Fino alla chiusura della finestra, puoi premere sui pulsanti Precedente e Successivo per tornare alle pagine web che hai visitato.&lt;/p&gt;</translation>
     </message>
@@ -16302,37 +16380,37 @@ Hai %n schede aperta.</numerusform>
         <translation type="obsolete">User Agent</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2797"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2805"/>
         <source>ISO</source>
         <translation>ISO</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2798"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2806"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2799"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2807"/>
         <source>ISCII</source>
         <translation>ISCII</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2800"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2808"/>
         <source>Unicode</source>
         <translation>Unicode</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2801"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2809"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2802"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2810"/>
         <source>IBM</source>
         <translation>IBM</translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2824"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2832"/>
         <source>Default Encoding</source>
         <translation>Encoding di default</translation>
     </message>
@@ -16392,12 +16470,12 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3075"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3083"/>
         <source>VirusTotal Scan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="3075"/>
+        <location filename="Helpviewer/HelpWindow.py" line="3083"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -16502,7 +16580,7 @@ Hai %n schede aperta.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/HelpWindow.py" line="2013"/>
+        <location filename="Helpviewer/HelpWindow.py" line="2021"/>
         <source>Restore Window</source>
         <translation type="unfinished"></translation>
     </message>

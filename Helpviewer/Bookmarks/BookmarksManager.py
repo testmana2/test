@@ -261,6 +261,12 @@ class BookmarksManager(QObject):
         command = ChangeBookmarkCommand(self, node, newUrl, False)
         self.__commands.push(command)
     
+    def setNodeChanged(self, node):
+        """
+        Public method to signal changes of bookmarks other than title, URL or timestamp.
+        """
+        self.__saveTimer.changeOccurred()
+    
     def setTimestamp(self, node, timestampType, timestamp):
         """
         Public method to set the URL of a bookmark.
