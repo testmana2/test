@@ -226,24 +226,25 @@ are show for the second command) please recheck the installation checks.
 -----------------
 Mac OS X already provides subversion. However, best performance for eric5 is
 gained with the pysvn interface to subversion. Therefore it is recommended to
-install pysvn. That should be done from sources. Please note, that pysvn needs
-an updated pycxx if you installed Python 3.2.x. Get pysvn via 
+install pysvn. Get pysvn via 
 
 http://pysvn.tigris.org/project_downloads.html
 
-Extract the downloaded sources, change to the sources directory and enter this
-command
+After the download finished open the downloaded package and install it.
 
-sudo python3 setup.py install
-
-In order to test, if everything worked ok open a Python shell and enter these
+In order to test, if everything worked ok, open a Python shell and enter these
 commands
 
 >>> import pysvn
 >>> pysvn.version
 
-This should print the pysvn version as a tuple like '(1, 7, 5, 0)'. If you get
+This should print the pysvn version as a tuple like '(1, 7, 6, 0)'. If you get
 an error please check your installation.
+
+Note: Mac OS X Lion provides Subversion 1.6.x. When downloading pysvn make sure
+      to download the variant compiled against that version. This is important
+      because the working copy format of Subversion 1.7.x is incompatible to the
+      old one.
 
 
 14. Install Mercurial
