@@ -215,7 +215,7 @@ class Terminal(QsciScintillaCompat):
         @param data data to be sent to the shell process (string)
         """
         pdata = QByteArray()
-        pdata.append(data)
+        pdata.append(bytes(data, encoding="utf-8"))
         self.__process.write(pdata)
         
     def __sendCtrl(self, cmd):
