@@ -57,7 +57,8 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         """
         Private slot to delete the log file.
         """
-        os.remove(self.__logFile)
+        if os.path.exists(self.__logFile):
+            os.remove(self.__logFile)
         self.accept()
     
     @pyqtSlot()
