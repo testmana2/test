@@ -429,7 +429,7 @@ class Terminal(QsciScintillaCompat):
         @return tuple of two values (int, int) giving the line and column
         """
         line = self.lines() - 1
-        return (line, self.lineLength(line))
+        return (line, len(self.text(line)))
         
     def __write(self, s):
         """
