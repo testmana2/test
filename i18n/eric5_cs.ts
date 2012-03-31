@@ -18267,27 +18267,27 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="190"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="191"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="190"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="191"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="215"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="216"/>
         <source>There is no difference.</source>
         <translation>Žádné rozdíly nebyly nalezeny.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="428"/>
         <source>Save Diff</source>
         <translation>Uložit Diff</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="395"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="396"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch soubory (*.diff)</translation>
     </message>
@@ -18297,12 +18297,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; již existuje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="427"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="428"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="412"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="413"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18312,12 +18312,12 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="228"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="229"/>
         <source>&lt;Start&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="229"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="230"/>
         <source>&lt;End&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19235,104 +19235,104 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Revize</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="183"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="184"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="183"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="184"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="266"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="267"/>
         <source>No log available for &apos;{0}&apos;</source>
         <translation>Log není pro &apos;{0}&apos; dostupný</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="299"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="300"/>
         <source>diff to {0}</source>
         <translation>diff na {0}</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="310"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="311"/>
         <source>Branches: {0}&lt;br /&gt;
 </source>
         <translation>Větve: {0}&lt;br/&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="312"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="313"/>
         <source>Tags: {0}&lt;br /&gt;
 </source>
         <translation>Tagy: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="317"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="318"/>
         <source>Parents: {0}&lt;br /&gt;
 </source>
         <translation>Rodiče: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="319"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="320"/>
         <source>&lt;i&gt;Author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Autor: {0}&lt;/i&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="322"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="323"/>
         <source>&lt;i&gt;Date: {0}, {1}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Datum: {0}, {1}&lt;/i&gt;&lt;br /&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="336"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="337"/>
         <source>Added {0}&lt;br /&gt;
 </source>
         <translation>Přidáno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="342"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="343"/>
         <source>Modified {0}&lt;br /&gt;
 </source>
         <translation>Změněno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="348"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="349"/>
         <source>Deleted {0}&lt;br /&gt;
 </source>
         <translation>Smazáno: {0}&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="233"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="234"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Hg proces neskončil do 30s.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="235"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="236"/>
         <source>Could not start the hg executable.</source>
         <translation>Nelze spustit hg program.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="238"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="239"/>
         <source>Mercurial Error</source>
         <translation>Mercurial chyba</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="332"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="333"/>
         <source>Added {0} (copied from {1})&lt;br /&gt;
 </source>
         <translation>Přidáno {0} (zkopírováno z {1})&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="315"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="316"/>
         <source>Bookmarks: {0}&lt;br /&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="308"/>
+        <location filename="Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="309"/>
         <source>Phase: {0}&lt;br /&gt;
 </source>
         <translation type="unfinished"></translation>
@@ -34433,54 +34433,74 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
 <context>
     <name>QtHelpFiltersDialog</name>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="13"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="14"/>
         <source>Manage QtHelp Filters</source>
         <translation>Uspořádat filtry QtNápovědy</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="21"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="25"/>
         <source>Filters:</source>
         <translation>Filtry:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="28"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="32"/>
         <source>Attributes:</source>
         <translation>Atributy:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="42"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="46"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="50"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="54"/>
         <source>Press to add a new filter</source>
         <translation>Stisknout pro přidání nového filtru</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="53"/>
         <source>Add...</source>
-        <translation>Přidat...</translation>
+        <translation type="obsolete">Přidat...</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="60"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="64"/>
         <source>Press to remove the selected filter</source>
         <translation>Stisknout pro odebrání vybraného filtru</translation>
     </message>
     <message>
         <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="63"/>
         <source>Remove</source>
-        <translation>Odebrat</translation>
+        <translation type="obsolete">Odebrat</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.py" line="103"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.py" line="106"/>
         <source>Add Filter</source>
         <translation>Přidat filtr</translation>
     </message>
     <message>
-        <location filename="Helpviewer/QtHelpFiltersDialog.py" line="103"/>
+        <location filename="Helpviewer/QtHelpFiltersDialog.py" line="106"/>
         <source>Filter name:</source>
         <translation>Název filtru:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="57"/>
+        <source>Add Filter ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="67"/>
+        <source>Remove Filter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="74"/>
+        <source>Press to remove the selected attribute</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/QtHelpFiltersDialog.ui" line="77"/>
+        <source>Remove Attribute</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -38551,12 +38571,12 @@ Not connected</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="98"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="98"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="99"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -38842,7 +38862,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.py" line="140"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -38852,7 +38872,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation> (binární)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.py" line="133"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDialog.py" line="140"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -38962,7 +38982,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="172"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="174"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -38987,7 +39007,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Zamčené soubory nejsou dostupné/vybrané.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="172"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="174"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -39174,12 +39194,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="550"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="555"/>
         <source>Revision</source>
         <translation>Revize</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="547"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="552"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
@@ -39319,7 +39339,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="246"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -39364,7 +39384,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <translation>Zatavit kopírování/přesun</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="242"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="246"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -40871,7 +40891,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="251"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -40886,7 +40906,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Instalovaná verze PySvn by měla být 1.4.0 nebo vyšší.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="250"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="251"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -41244,7 +41264,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>ano</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="385"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -41329,7 +41349,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Nejsou dostupné/vybrány soubory, které patří do seznamu změn.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="384"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="385"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
@@ -41642,7 +41662,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation>URL repozitáře je prázdný. Zrušeno...</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="151"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
@@ -41652,7 +41672,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation>Instalovaná verze PySvn by měla být 1.4.0 nebo vyšší.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="150"/>
+        <location filename="Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="151"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>

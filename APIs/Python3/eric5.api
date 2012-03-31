@@ -2578,6 +2578,7 @@ eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_addButton_clicked?4(
 eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_attributesList_itemChanged?4(item, column)
 eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_buttonBox_accepted?4()
 eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_filtersList_currentItemChanged?4(current, previous)
+eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_removeAttributeButton_clicked?4()
 eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog.on_removeButton_clicked?4()
 eric5.Helpviewer.QtHelpFiltersDialog.QtHelpFiltersDialog?1(engine, parent=None)
 eric5.Helpviewer.SearchWidget.SearchWidget.findNext?4()

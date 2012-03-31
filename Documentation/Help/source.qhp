@@ -8073,10 +8073,12 @@
       <keyword name="QtHelpFiltersDialog" id="QtHelpFiltersDialog" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog" />
       <keyword name="QtHelpFiltersDialog (Constructor)" id="QtHelpFiltersDialog (Constructor)" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.__init__" />
       <keyword name="QtHelpFiltersDialog (Module)" id="QtHelpFiltersDialog (Module)" ref="eric5.Helpviewer.QtHelpFiltersDialog.html" />
+      <keyword name="QtHelpFiltersDialog.__removeAttributes" id="QtHelpFiltersDialog.__removeAttributes" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.__removeAttributes" />
       <keyword name="QtHelpFiltersDialog.on_addButton_clicked" id="QtHelpFiltersDialog.on_addButton_clicked" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_addButton_clicked" />
       <keyword name="QtHelpFiltersDialog.on_attributesList_itemChanged" id="QtHelpFiltersDialog.on_attributesList_itemChanged" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_attributesList_itemChanged" />
       <keyword name="QtHelpFiltersDialog.on_buttonBox_accepted" id="QtHelpFiltersDialog.on_buttonBox_accepted" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_buttonBox_accepted" />
       <keyword name="QtHelpFiltersDialog.on_filtersList_currentItemChanged" id="QtHelpFiltersDialog.on_filtersList_currentItemChanged" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_filtersList_currentItemChanged" />
+      <keyword name="QtHelpFiltersDialog.on_removeAttributeButton_clicked" id="QtHelpFiltersDialog.on_removeAttributeButton_clicked" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_removeAttributeButton_clicked" />
       <keyword name="QtHelpFiltersDialog.on_removeButton_clicked" id="QtHelpFiltersDialog.on_removeButton_clicked" ref="eric5.Helpviewer.QtHelpFiltersDialog.html#QtHelpFiltersDialog.on_removeButton_clicked" />
       <keyword name="QtHelpGenerator" id="QtHelpGenerator" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator" />
       <keyword name="QtHelpGenerator (Constructor)" id="QtHelpGenerator (Constructor)" ref="eric5.DocumentationTools.QtHelpGenerator.html#QtHelpGenerator.__init__" />

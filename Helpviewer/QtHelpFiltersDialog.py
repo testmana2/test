@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the QtHelp filters.
 """
 
+import sqlite3
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, QInputDialog, QLineEdit
 from PyQt4.QtHelp import QHelpEngineCore
@@ -41,6 +43,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         self.__removedFilters = []
         self.__filterMap = {}
         self.__filterMapBackup = {}
+        self.__removedAttributes = []
         
         for filter in help.customFilters():
             atts = help.filterAttributes(filter)
@@ -131,6 +134,40 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
             self.filtersList.setCurrentRow(0)
     
     @pyqtSlot()
+    def on_removeAttributeButton_clicked(self):
+        """
+        Private slot to remove a filter attribute.
+        """
+        itm = self.attributesList.takeTopLevelItem(
+            self.attributesList.indexOfTopLevelItem(
+                self.attributesList.currentItem()))
+        if itm is None:
+            return
+        
+        attr = itm.text(0)
+        self.__removedAttributes.append(attr)
+        for filter in self.__filterMap:
+            if attr in self.__filterMap[filter]:
+                self.__filterMap[filter].remove(attr)
+        
+        del itm
+    
+    def __removeAttributes(self):
+        """
+        Private method to remove attributes from the Qt Help database.
+        """
+        try:
+            self.__db = sqlite3.connect(self.__engine.collectionFile())
+        except sqlite3.DatabaseError:
+            pass        # ignore database errors
+        
+        for attr in self.__removedAttributes:
+            self.__db.execute(
+                "DELETE FROM FilterAttributeTable WHERE Name = '{0}'".format(attr))
+        self.__db.commit()
+        self.__db.close()
+    
+    @pyqtSlot()
     def on_buttonBox_accepted(self):
         """
         Private slot to update the database, if the dialog is accepted.
@@ -161,7 +198,11 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
                 self.__engine.removeCustomFilter(filter)
             for filter in self.__filterMap:
                 self.__engine.addCustomFilter(filter, self.__filterMap[filter])
-            
+        
+        if self.__removedAttributes:
+            self.__removeAttributes()
+        
+        if filtersChanged or self.__removedAttributes:
             self.__engine.setupData()
         
         self.accept()
