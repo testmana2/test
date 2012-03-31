@@ -147,6 +147,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -155,6 +156,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
                 ).format('svn'))
         else:
             self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
         
     def __finish(self):
         """
@@ -169,8 +171,10 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         self.process = None
         

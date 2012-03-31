@@ -180,6 +180,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             procStarted = self.process.waitForStarted()
             if not procStarted:
                 self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
                 E5MessageBox.critical(self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(

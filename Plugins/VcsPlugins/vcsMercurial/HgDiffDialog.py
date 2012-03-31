@@ -187,6 +187,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             if not procStarted:
                 QApplication.restoreOverrideCursor()
                 self.inputGroup.setEnabled(False)
+                self.inputGroup.hide()
                 E5MessageBox.critical(self,
                     self.trUtf8('Process Generation Error'),
                     self.trUtf8(
