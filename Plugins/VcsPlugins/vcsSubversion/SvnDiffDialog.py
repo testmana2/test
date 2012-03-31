@@ -9,7 +9,7 @@ Module implementing a dialog to show the output of the svn diff command process.
 
 import os
 
-from PyQt4.QtCore import QTimer, QFileInfo, QProcess, pyqtSlot
+from PyQt4.QtCore import QTimer, QFileInfo, QProcess, pyqtSlot, Qt
 from PyQt4.QtGui import QWidget, QColor, QLineEdit, QBrush, QTextCursor, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
@@ -95,6 +95,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             (only valid for URL diffs) (boolean)
         """
         self.errorGroup.hide()
+        self.inputGroup.show()
         self.intercept = False
         self.filename = fn
         
@@ -169,6 +170,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -184,6 +186,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         if self.paras == 0:
             self.contents.insertPlainText(
@@ -191,6 +194,9 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             return
             
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
+        
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.Start)
         self.contents.setTextCursor(tc)

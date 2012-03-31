@@ -381,6 +381,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -389,6 +390,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                 ).format('svn'))
         else:
             self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
         
     def __finish(self):
         """
@@ -404,8 +406,10 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         self.refreshButton.setEnabled(True)
         
         self.__statusFilters.sort()
@@ -570,6 +574,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.inputGroup.setEnabled(True)
+        self.inputGroup.show()
         self.refreshButton.setEnabled(False)
         
         self.statusList.clear()

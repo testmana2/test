@@ -95,6 +95,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -103,6 +104,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
                 ).format('svn'))
         else:
             self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
         
     def __finish(self):
         """
@@ -117,8 +119,10 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         self.process = None
         

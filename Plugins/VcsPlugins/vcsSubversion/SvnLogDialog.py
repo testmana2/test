@@ -140,6 +140,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         @param exitStatus exit status of the process (QProcess.ExitStatus)
         """
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         self.contents.clear()
         

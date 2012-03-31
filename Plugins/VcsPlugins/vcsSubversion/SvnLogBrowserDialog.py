@@ -235,10 +235,14 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         
         self.process.setWorkingDirectory(self.dname)
         
+        self.inputGroup.setEnabled(True)
+        self.inputGroup.show()
+        
         self.process.start('svn', args)
         procStarted = self.process.waitForStarted()
         if not procStarted:
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -291,6 +295,8 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
+        self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         self.inputGroup.setEnabled(False)
     
     def __processBuffer(self):

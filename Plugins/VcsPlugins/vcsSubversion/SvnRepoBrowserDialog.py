@@ -247,6 +247,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         if not procStarted:
             self.__finish()
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -255,6 +256,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                 ).format('svn'))
         else:
             self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
     
     def __normalizeUrl(self, url):
         """
@@ -351,6 +353,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             self.process.waitForFinished(3000)
         
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         self.__resizeColumns()
         self.__resort()

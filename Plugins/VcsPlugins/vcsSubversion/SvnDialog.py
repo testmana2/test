@@ -9,7 +9,7 @@ Module implementing a dialog starting a process and showing its output.
 
 import os
 
-from PyQt4.QtCore import QTimer, QProcess, pyqtSlot
+from PyQt4.QtCore import QTimer, QProcess, pyqtSlot, Qt
 from PyQt4.QtGui import QLineEdit, QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
@@ -61,8 +61,14 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
         self.inputGroup.setEnabled(False)
+        self.inputGroup.hide()
         
         self.proc = None
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        self.buttonBox.button(QDialogButtonBox.Close).setFocus(Qt.OtherFocusReason)
         
         if Preferences.getVCS("AutoClose") and \
            self.normal and \
@@ -130,6 +136,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         if not procStarted:
             self.buttonBox.setFocus()
             self.inputGroup.setEnabled(False)
+            self.inputGroup.hide()
             E5MessageBox.critical(self,
                 self.trUtf8('Process Generation Error'),
                 self.trUtf8(
@@ -138,6 +145,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
                 ).format('svn'))
         else:
             self.inputGroup.setEnabled(True)
+            self.inputGroup.show()
         return procStarted
         
     def normalExit(self):
