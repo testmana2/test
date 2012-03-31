@@ -297,7 +297,6 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
-        self.inputGroup.setEnabled(False)
     
     def __processBuffer(self):
         """
