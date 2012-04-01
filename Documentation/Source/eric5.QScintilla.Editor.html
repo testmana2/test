@@ -869,8 +869,14 @@ QsciScintillaCompat
 <td><a href="#Editor.printPreviewFile">printPreviewFile</a></td>
 <td>Public slot to show a print preview of the text.</td>
 </tr><tr>
+<td><a href="#Editor.projectClosed">projectClosed</a></td>
+<td>Public slot to handle the closing of a project.</td>
+</tr><tr>
 <td><a href="#Editor.projectLexerAssociationsChanged">projectLexerAssociationsChanged</a></td>
 <td>Public slot to handle changes of the project lexer associations.</td>
+</tr><tr>
+<td><a href="#Editor.projectOpened">projectOpened</a></td>
+<td>Public slot to handle the opening of a project.</td>
 </tr><tr>
 <td><a href="#Editor.readFile">readFile</a></td>
 <td>Public slot to read the text from a file.</td>
@@ -3063,11 +3069,21 @@ properties for the breakpoint (tuple)
 <b>printPreviewFile</b>(<i></i>)
 <p>
         Public slot to show a print preview of the text.
+</p><a NAME="Editor.projectClosed" ID="Editor.projectClosed"></a>
+<h4>Editor.projectClosed</h4>
+<b>projectClosed</b>(<i></i>)
+<p>
+        Public slot to handle the closing of a project.
 </p><a NAME="Editor.projectLexerAssociationsChanged" ID="Editor.projectLexerAssociationsChanged"></a>
 <h4>Editor.projectLexerAssociationsChanged</h4>
 <b>projectLexerAssociationsChanged</b>(<i></i>)
 <p>
         Public slot to handle changes of the project lexer associations.
+</p><a NAME="Editor.projectOpened" ID="Editor.projectOpened"></a>
+<h4>Editor.projectOpened</h4>
+<b>projectOpened</b>(<i></i>)
+<p>
+        Public slot to handle the opening of a project.
 </p><a NAME="Editor.readFile" ID="Editor.readFile"></a>
 <h4>Editor.readFile</h4>
 <b>readFile</b>(<i>fn, createIt=False</i>)

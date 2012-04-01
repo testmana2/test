@@ -3634,7 +3634,9 @@
       <keyword name="Editor.previousUncovered" id="Editor.previousUncovered" ref="eric5.QScintilla.Editor.html#Editor.previousUncovered" />
       <keyword name="Editor.printFile" id="Editor.printFile" ref="eric5.QScintilla.Editor.html#Editor.printFile" />
       <keyword name="Editor.printPreviewFile" id="Editor.printPreviewFile" ref="eric5.QScintilla.Editor.html#Editor.printPreviewFile" />
+      <keyword name="Editor.projectClosed" id="Editor.projectClosed" ref="eric5.QScintilla.Editor.html#Editor.projectClosed" />
       <keyword name="Editor.projectLexerAssociationsChanged" id="Editor.projectLexerAssociationsChanged" ref="eric5.QScintilla.Editor.html#Editor.projectLexerAssociationsChanged" />
+      <keyword name="Editor.projectOpened" id="Editor.projectOpened" ref="eric5.QScintilla.Editor.html#Editor.projectOpened" />
       <keyword name="Editor.readFile" id="Editor.readFile" ref="eric5.QScintilla.Editor.html#Editor.readFile" />
       <keyword name="Editor.readSettings" id="Editor.readSettings" ref="eric5.QScintilla.Editor.html#Editor.readSettings" />
       <keyword name="Editor.receive" id="Editor.receive" ref="eric5.QScintilla.Editor.html#Editor.receive" />
@@ -10360,6 +10362,7 @@
       <keyword name="ViewManager.printCurrentEditor" id="ViewManager.printCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printCurrentEditor" />
       <keyword name="ViewManager.printEditor" id="ViewManager.printEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printEditor" />
       <keyword name="ViewManager.printPreviewCurrentEditor" id="ViewManager.printPreviewCurrentEditor" ref="eric5.ViewManager.ViewManager.html#ViewManager.printPreviewCurrentEditor" />
+      <keyword name="ViewManager.projectClosed" id="ViewManager.projectClosed" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectClosed" />
       <keyword name="ViewManager.projectFileRenamed" id="ViewManager.projectFileRenamed" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectFileRenamed" />
       <keyword name="ViewManager.projectLexerAssociationsChanged" id="ViewManager.projectLexerAssociationsChanged" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectLexerAssociationsChanged" />
       <keyword name="ViewManager.projectOpened" id="ViewManager.projectOpened" ref="eric5.ViewManager.ViewManager.html#ViewManager.projectOpened" />
