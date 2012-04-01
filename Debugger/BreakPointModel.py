@@ -192,10 +192,7 @@ class BreakPointModel(QAbstractItemModel):
             index2 = self.createIndex(row, len(self.breakpoints[row]),
                      self.breakpoints[row])
             self.dataAboutToBeChanged.emit(index1, index2)
-            i = 0
-            for value in [fn, line] + list(properties):
-                self.breakpoints[row][i] = value
-                i += 1
+            self.breakpoints[row] = [fn, line] + list(properties)
             self.dataChanged.emit(index1, index2)
 
     def setBreakPointEnabledByIndex(self, index, enabled):

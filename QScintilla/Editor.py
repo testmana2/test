@@ -187,6 +187,7 @@ class Editor(QsciScintillaCompat):
         self.inEolChanged = False       # true if we are propagating an eol change
         self.inEncodingChanged = False  # true if we are propagating an encoding change
         self.inDragDrop = False         # true if we are in drop mode
+        self.inLinesChanged = False     # true if we are propagating a lines changed event
         self.__hasTaskMarkers = False   # no task markers present
             
         self.macros = {}    # list of defined macros
@@ -1654,6 +1655,7 @@ class Editor(QsciScintillaCompat):
             if line0.startswith("#!") and \
                ("python2" in line0 or \
                 ("python" in line0 and not "python3" in line0)):
+                self.filetype = "Python2"
                 return True
             
             if self.fileName is not None:
@@ -1662,9 +1664,14 @@ class Editor(QsciScintillaCompat):
                    Preferences.getProject("DeterminePyFromProject") and \
                    self.project.isOpen() and \
                    self.project.isProjectFile(self.fileName):
-                    return self.project.getProjectLanguage() in ["Python", "Python2"]
+                    isProjectPy2 = \
+                        self.project.getProjectLanguage() in ["Python", "Python2"]
+                    if isProjectPy2:
+                        self.filetype = "Python2"
+                    return isProjectPy2
                 
                 if ext in self.dbs.getExtensions('Python2'):
+                    self.filetype = "Python2"
                     return True
         
         return False
@@ -1682,6 +1689,7 @@ class Editor(QsciScintillaCompat):
             line0 = self.text(0)
             if line0.startswith("#!") and \
                "python3" in line0:
+                self.filetype = "Python3"
                 return True
             
             if self.fileName is not None:
@@ -1690,9 +1698,13 @@ class Editor(QsciScintillaCompat):
                    Preferences.getProject("DeterminePyFromProject") and \
                    self.project.isOpen() and \
                    self.project.isProjectFile(self.fileName):
-                    return self.project.getProjectLanguage() in ["Python3"]
+                    isProjectPy3 = self.project.getProjectLanguage() in ["Python3"]
+                    if isProjectPy3:
+                        self.filetype = "Python3"
+                    return isProjectPy3
                 
                 if ext in self.dbs.getExtensions('Python3'):
+                    self.filetype = "Python3"
                     return True
         
         return False
@@ -1710,10 +1722,12 @@ class Editor(QsciScintillaCompat):
             line0 = self.text(0)
             if line0.startswith("#!") and \
                "ruby" in line0:
+                self.filetype = "Ruby"
                 return True
             
             if self.fileName is not None and \
                os.path.splitext(self.fileName)[1] in self.dbs.getExtensions('Ruby'):
+                self.filetype = "Ruby"
                 return True
         
         return False
@@ -1800,10 +1814,12 @@ class Editor(QsciScintillaCompat):
                 bps.append((ln, line, (cond, temp, enabled, ignorecount)))
                 self.markerDeleteHandle(handle)
             self.breaks = {}
+            self.inLinesChanged = True
             for bp in bps:
                 index = self.breakpointModel.getBreakPointIndex(self.fileName, bp[0])
                 self.breakpointModel.setBreakPointByIndex(index,
                     self.fileName, bp[1], bp[2])
+            self.inLinesChanged = False
         
     def __restoreBreakpoints(self):
         """
@@ -1868,6 +1884,9 @@ class Editor(QsciScintillaCompat):
         
         @param line linenumber of the breakpoint (integer)
         """
+        if self.inLinesChanged:
+            return
+        
         for handle, (ln, _, _, _, _) in list(self.breaks.items()):
             if self.markerLine(handle) == line - 1:
                 break
