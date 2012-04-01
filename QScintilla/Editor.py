@@ -411,6 +411,11 @@ class Editor(QsciScintillaCompat):
         # create the online syntax check timer
         self.__initOnlineSyntaxCheck()
         
+        if self.fileName and \
+           self.project.isOpen() and \
+           self.project.isProjectSource(self.fileName):
+            self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+        
         self.grabGesture(Qt.PinchGesture)
     
     def __registerImages(self):
@@ -5284,8 +5289,12 @@ class Editor(QsciScintillaCompat):
         
         if self.spell:
             self.spell.stopIncrementalCheck()
+        
+        try:
             self.project.projectPropertiesChanged.disconnect(
                 self.__projectPropertiesChanged)
+        except TypeError:
+            pass
         
         if self.fileName:
             self.taskViewer.clearFileTasks(self.fileName, True)
@@ -5881,7 +5890,27 @@ class Editor(QsciScintillaCompat):
             pwl, pel = self.project.getProjectDictionaries()
             self.__setSpellingLanguage(self.project.getProjectSpellLanguage(),
                                        pwl=pwl, pel=pel)
+        
+        self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+    
+    def projectOpened(self):
+        """
+        Public slot to handle the opening of a project.
+        """
+        if self.fileName and \
+           self.project.isProjectSource(self.fileName):
             self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
+            self.setSpellingForProject()
+    
+    def projectClosed(self):
+        """
+        Public slot to handle the closing of a project.
+        """
+        try:
+            self.project.projectPropertiesChanged.disconnect(
+                self.__projectPropertiesChanged)
+        except TypeError:
+            pass
     
     #######################################################################
     ## Spellchecking related methods
@@ -5909,7 +5938,6 @@ class Editor(QsciScintillaCompat):
                 self.spell = SpellChecker(self, self.spellingIndicator,
                                           checkRegion=self.isSpellCheckRegion)
             self.setSpellingForProject()
-            self.project.projectPropertiesChanged.connect(self.__projectPropertiesChanged)
             self.spell.setMinimumWordSize(
                 Preferences.getEditor("SpellCheckingMinWordSize"))
             

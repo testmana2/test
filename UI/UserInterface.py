@@ -366,6 +366,7 @@ class UserInterface(QMainWindow):
         
         self.project.sourceFile.connect(self.viewmanager.openSourceFile)
         self.project.projectOpened.connect(self.viewmanager.projectOpened)
+        self.project.projectClosed.connect(self.viewmanager.projectClosed)
         self.project.projectFileRenamed.connect(self.viewmanager.projectFileRenamed)
         self.project.lexerAssociationsChanged.connect(
             self.viewmanager.projectLexerAssociationsChanged)

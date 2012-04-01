@@ -4191,8 +4191,15 @@ class ViewManager(QObject):
         Public slot to handle the projectOpened signal.
         """
         for editor in self.editors:
-            editor.setSpellingForProject()
-        
+            editor.projectOpened()
+    
+    def projectClosed(self):
+        """
+        Public slot to handle the projectClosed signal.
+        """
+        for editor in self.editors:
+            editor.projectClosed()
+    
     def projectFileRenamed(self, oldfn, newfn):
         """
         Public slot to handle the projectFileRenamed signal.
