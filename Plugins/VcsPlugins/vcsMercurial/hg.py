@@ -2595,7 +2595,7 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
             res = dia.hasAddOrDelete()
-            self.vcs.checkVCSStatus()
+            self.checkVCSStatus()
         return res
     
     ############################################################################
