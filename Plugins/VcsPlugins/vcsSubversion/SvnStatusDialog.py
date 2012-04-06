@@ -246,11 +246,17 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         if revision == "":
             rev = ""
         else:
-            rev = int(revision)
+            try:
+                rev = int(revision)
+            except ValueError:
+                rev = revision
         if change == "":
             chg = ""
         else:
-            chg = int(change)
+            try:
+                chg = int(change)
+            except ValueError:
+                chg = change
         statusText = self.status[status]
         
         itm = QTreeWidgetItem(self.statusList)
