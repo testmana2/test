@@ -1946,7 +1946,7 @@ class Editor(QsciScintillaCompat):
         @param temporary flag indicating a temporary breakpoint (boolean)
         """
         if self.fileName and \
-           (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
+           (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
             self.breakpointModel.addBreakPoint(self.fileName, line,
                 ('', temporary, True, 0))
             self.breakpointToggled.emit(self)
@@ -4170,12 +4170,12 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Copy"].setEnabled(self.hasSelectedText())
         if not self.isResourcesFile:
             if self.fileName and \
-               (self.isPy2File() or self.isPy3File()):
+               (self.isPy3File() or self.isPy2File()):
                 self.menuActs["Show"].setEnabled(True)
             else:
                 self.menuActs["Show"].setEnabled(False)
             if self.fileName and \
-               (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
+               (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
                 self.menuActs["Diagrams"].setEnabled(True)
             else:
                 self.menuActs["Diagrams"].setEnabled(False)
@@ -4288,7 +4288,7 @@ class Editor(QsciScintillaCompat):
         Private slot handling the aboutToShow signal of the margins context menu.
         """
         if self.fileName and \
-           (self.isPy2File() or self.isPy3File() or self.isRubyFile()):
+           (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
             self.marginMenuActs["Breakpoint"].setEnabled(True)
             self.marginMenuActs["TempBreakpoint"].setEnabled(True)
             if self.markersAtLine(self.line) & self.breakpointMask:
