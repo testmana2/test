@@ -195,6 +195,9 @@ QWidget, Ui_PluginRepositoryDialog
 </tr><tr>
 <td><a href="#PluginRepositoryWidget.on_repositoryList_itemSelectionChanged">on_repositoryList_itemSelectionChanged</a></td>
 <td>Private slot to handle a change of the selection.</td>
+</tr><tr>
+<td><a href="#PluginRepositoryWidget.on_repositoryUrlEditButton_toggled">on_repositoryUrlEditButton_toggled</a></td>
+<td>Private slot to set the read only status of the repository URL line edit.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -427,7 +430,17 @@ reference to the old current item (QTreeWidgetItem)
 <b>on_repositoryList_itemSelectionChanged</b>(<i></i>)
 <p>
         Private slot to handle a change of the selection.
-</p>
+</p><a NAME="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" ID="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled"></a>
+<h4>PluginRepositoryWidget.on_repositoryUrlEditButton_toggled</h4>
+<b>on_repositoryUrlEditButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to set the read only status of the repository URL line edit.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the push button (boolean)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="PluginRepositoryWindow" ID="PluginRepositoryWindow"></a>

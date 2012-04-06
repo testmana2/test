@@ -3035,6 +3035,7 @@ eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.getDownloadedP
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_buttonBox_clicked?4(button)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_currentItemChanged?4(current, previous)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryList_itemSelectionChanged?4()
+eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget.on_repositoryUrlEditButton_toggled?4(checked)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWidget?1(parent=None)
 eric5.PluginManager.PluginRepositoryDialog.PluginRepositoryWindow?1(parent=None)
 eric5.PluginManager.PluginRepositoryDialog.authorRole?7

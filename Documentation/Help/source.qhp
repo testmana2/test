@@ -7224,6 +7224,7 @@
       <keyword name="PluginRepositoryWidget.on_buttonBox_clicked" id="PluginRepositoryWidget.on_buttonBox_clicked" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_buttonBox_clicked" />
       <keyword name="PluginRepositoryWidget.on_repositoryList_currentItemChanged" id="PluginRepositoryWidget.on_repositoryList_currentItemChanged" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryList_currentItemChanged" />
       <keyword name="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" id="PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryList_itemSelectionChanged" />
+      <keyword name="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" id="PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWidget.on_repositoryUrlEditButton_toggled" />
       <keyword name="PluginRepositoryWindow" id="PluginRepositoryWindow" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWindow" />
       <keyword name="PluginRepositoryWindow (Constructor)" id="PluginRepositoryWindow (Constructor)" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWindow.__init__" />
       <keyword name="PluginRepositoryWindow.__startPluginInstall" id="PluginRepositoryWindow.__startPluginInstall" ref="eric5.PluginManager.PluginRepositoryDialog.html#PluginRepositoryWindow.__startPluginInstall" />

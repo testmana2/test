@@ -77,6 +77,8 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__downloadCancelButton.setEnabled(False)
         self.__installButton.setEnabled(False)
         
+        self.repositoryUrlEdit.setText(Preferences.getUI("PluginRepositoryUrl5"))
+        
         self.repositoryList.headerItem().setText(self.repositoryList.columnCount(), "")
         self.repositoryList.header().setSortIndicator(0, Qt.AscendingOrder)
         
@@ -184,7 +186,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         """
         Private slot to download a new list and display the contents.
         """
-        url = Preferences.getUI("PluginRepositoryUrl5")
+        url = self.repositoryUrlEdit.text()
         self.__downloadFile(url,
                             self.pluginRepositoryFile,
                             self.__downloadRepositoryFileDone)
@@ -290,6 +292,14 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 self.repositoryList.resizeColumnToContents(1)
                 self.repositoryList.resizeColumnToContents(2)
                 self.__resortRepositoryList()
+                url = Preferences.getUI("PluginRepositoryUrl5")
+                if url != self.repositoryUrlEdit.text():
+                    self.repositoryUrlEdit.setText(url)
+                    E5MessageBox.warning(self,
+                        self.trUtf8("Plugins Repository URL Changed"),
+                        self.trUtf8("""The URL of the Plugins Repository has"""
+                                    """ changed. Select the "Update" button to get"""
+                                    """ the new repository file."""))
             else:
                 E5MessageBox.critical(self,
                     self.trUtf8("Read plugins repository file"),
@@ -504,6 +514,15 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         @return list of plugin filenames (list of strings)
         """
         return self.__pluginsDownloaded
+    
+    @pyqtSlot(bool)
+    def on_repositoryUrlEditButton_toggled(self, checked):
+        """
+        Private slot to set the read only status of the repository URL line edit.
+        
+        @param checked state of the push button (boolean)
+        """
+        self.repositoryUrlEdit.setReadOnly(not checked)
 
 
 class PluginRepositoryDialog(QDialog):
