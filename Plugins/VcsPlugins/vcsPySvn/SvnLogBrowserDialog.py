@@ -68,7 +68,8 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.flags = {
             'A': self.trUtf8('Added'),
             'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified')
+            'M': self.trUtf8('Modified'),
+            'R': self.trUtf8('Replaced'),
         }
         
         self.diff = None

@@ -87,6 +87,7 @@ class SvnLogBrowserDialog(QDialog, Ui_SvnLogBrowserDialog):
             'A': self.trUtf8('Added'),
             'D': self.trUtf8('Deleted'),
             'M': self.trUtf8('Modified'),
+            'R': self.trUtf8('Replaced'),
         }
         
         self.buf = []        # buffer for stdout
