@@ -93,6 +93,7 @@ def uninstallEric():
         "eric5_plugininstall", "eric5_pluginuninstall",
         "eric5_pluginrepository", "eric5_sqlbrowser",
         "eric5_webbrowser", "eric5_iconeditor",
+        "eric5_snap",
     ]
     for rem_wname in rem_wnames:
         rwname = wrapperName(getConfig('bindir'), rem_wname)

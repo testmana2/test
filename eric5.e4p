@@ -1001,6 +1001,11 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Helpviewer/Bookmarks/NsHtmlWriter.py</Source>
     <Source>Helpviewer/Bookmarks/NsHtmlReader.py</Source>
     <Source>Helpviewer/Bookmarks/BookmarkPropertiesDialog.py</Source>
+    <Source>Snapshot/__init__.py</Source>
+    <Source>Snapshot/SnapWidget.py</Source>
+    <Source>Snapshot/SnapshotRegionGrabber.py</Source>
+    <Source>eric5_snap.py</Source>
+    <Source>eric5_snap.pyw</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1288,6 +1293,7 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Helpviewer/Bookmarks/BookmarksImportDialog.ui</Form>
     <Form>UI/ErrorLogDialog.ui</Form>
     <Form>Helpviewer/Bookmarks/BookmarkPropertiesDialog.ui</Form>
+    <Form>Snapshot/SnapWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.qm</Translation>

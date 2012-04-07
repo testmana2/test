@@ -7976,7 +7976,7 @@ whole selection.&lt;/li&gt;
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6071"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
@@ -7986,12 +7986,12 @@ whole selection.&lt;/li&gt;
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6073"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6075"/>
+        <location filename="QScintilla/Editor.py" line="6079"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
@@ -36156,6 +36156,184 @@ Not connected</source>
     </message>
 </context>
 <context>
+    <name>SnapWidget</name>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="20"/>
+        <source>eric5 Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="113"/>
+        <source>Snapshot Mode:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="126"/>
+        <source>Select the snapshot mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="133"/>
+        <source>Delay:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="142"/>
+        <source>Enter the delay before taking the snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="148"/>
+        <source> Seconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="184"/>
+        <source>Press to save the snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="187"/>
+        <source>&amp;Save Snapshot ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="233"/>
+        <source>Press to take a snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="236"/>
+        <source>&amp;Take Snapshot ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="41"/>
+        <source>Fullscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="43"/>
+        <source>Rectangular Selection</source>
+        <translation type="unfinished">Прямоугольное выделение</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <source>Windows Bitmap File (*.bmp)</source>
+        <translation type="unfinished">Windows Bitmap файл (*.bmp)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="62"/>
+        <source>Graphic Interchange Format File (*.gif)</source>
+        <translation type="unfinished">GIF файл (*.gif)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <source>Windows Icon File (*.ico)</source>
+        <translation type="unfinished">Файлы иконок (*.ico)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="64"/>
+        <source>JPEG File (*.jpg)</source>
+        <translation type="unfinished">JPEG файлы (*.jpg)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="65"/>
+        <source>Multiple-Image Network Graphics File (*.mng)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <source>Portable Bitmap File (*.pbm)</source>
+        <translation type="unfinished">Bitmap файл (*.bmp)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="67"/>
+        <source>Paintbrush Bitmap File (*.pcx)</source>
+        <translation type="unfinished">Paintbrush Bitmap файл (*.pcx)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="68"/>
+        <source>Portable Graymap File (*.pgm)</source>
+        <translation type="unfinished">Graymap файл (*.pgm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="69"/>
+        <source>Portable Network Graphics File (*.png)</source>
+        <translation type="unfinished">PNG файл (*.png)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="70"/>
+        <source>Portable Pixmap File (*.ppm)</source>
+        <translation type="unfinished">Pixmap файл (*.ppm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="71"/>
+        <source>Silicon Graphics Image File (*.sgi)</source>
+        <translation type="unfinished">Silicon Graphics Image файл (*.sgi)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="72"/>
+        <source>Scalable Vector Graphics File (*.svg)</source>
+        <translation type="unfinished">SVG файл (*.svg)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="73"/>
+        <source>Targa Graphic File (*.tga)</source>
+        <translation type="unfinished">Targa Graphic файл (*.tga)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="74"/>
+        <source>TIFF File (*.tif)</source>
+        <translation type="unfinished">TIFF файл (*.tif)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="75"/>
+        <source>X11 Bitmap File (*.xbm)</source>
+        <translation type="unfinished">X11 Bitmap файл (*.xbm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="76"/>
+        <source>X11 Pixmap File (*.xpm)</source>
+        <translation type="unfinished">X11 Pixmap файл (*.xpm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <source>Save Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <source>Cannot write file &apos;{0}:
+{1}.</source>
+        <translation type="unfinished">Невозможно записать файл {0}:
+{1}.</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="210"/>
+        <source>Press to copy the snapshot to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="213"/>
+        <source>&amp;Copy</source>
+        <translation type="unfinished">&amp;Копировать</translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotRegionGrabber</name>
+    <message>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SpeedDial</name>
     <message>
         <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="366"/>
@@ -46483,7 +46661,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Показать версию&lt;/b&gt;&lt;p&gt;Информация о версии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2434"/>
+        <location filename="UI/UserInterface.py" line="2446"/>
         <source>Unittest</source>
         <translation>Unittest</translation>
     </message>
@@ -46498,103 +46676,103 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Запустить unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1955"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1955"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Предпочтения...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1946"/>
+        <location filename="UI/UserInterface.py" line="1958"/>
         <source>Set the prefered configuration</source>
         <translation>Установите предпочтительную конфигурацию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1947"/>
+        <location filename="UI/UserInterface.py" line="1959"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Предпочтения&lt;/b&gt;
 &lt;p&gt;Настройте Eric по своему вкусу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2336"/>
+        <location filename="UI/UserInterface.py" line="2348"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2309"/>
+        <location filename="UI/UserInterface.py" line="2321"/>
         <source>&amp;Tools</source>
         <translation>&amp;Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2302"/>
+        <location filename="UI/UserInterface.py" line="2314"/>
         <source>Wi&amp;zards</source>
         <translation>&amp;Мастера</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2367"/>
+        <location filename="UI/UserInterface.py" line="2379"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2433"/>
+        <location filename="UI/UserInterface.py" line="2445"/>
         <source>Tools</source>
         <translation>Сервис</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4257"/>
+        <location filename="UI/UserInterface.py" line="4271"/>
         <source>Help</source>
         <translation>Помощь</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2435"/>
+        <location filename="UI/UserInterface.py" line="2447"/>
         <source>Settings</source>
         <translation>Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2342"/>
+        <location filename="UI/UserInterface.py" line="2354"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4365"/>
+        <location filename="UI/UserInterface.py" line="4379"/>
         <source>Problem</source>
         <translation>Проблема</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4498"/>
+        <location filename="UI/UserInterface.py" line="4531"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2027"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Keyboard Shortcuts</source>
         <translation>Горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2027"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>Горячие &amp;клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2030"/>
+        <location filename="UI/UserInterface.py" line="2042"/>
         <source>Set the keyboard shortcuts</source>
         <translation>Задать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2031"/>
+        <location filename="UI/UserInterface.py" line="2043"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Горячие клавиши&lt;/b&gt;&lt;p&gt;Задайте горячие клавиши на свой вкус.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2297"/>
+        <location filename="UI/UserInterface.py" line="2309"/>
         <source>E&amp;xtras</source>
         <translation>До&amp;полнительно</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2817"/>
+        <location filename="UI/UserInterface.py" line="2830"/>
         <source>Report Bug</source>
         <translation>Сообщение об ошибке</translation>
     </message>
@@ -46614,43 +46792,43 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сообщить об ошибке...&lt;/b&gt;&lt;p&gt;Открывает диалог для сообщения об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5090"/>
+        <location filename="UI/UserInterface.py" line="5123"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Экспортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2039"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>&amp;Экспортировать горячие клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2043"/>
+        <location filename="UI/UserInterface.py" line="2055"/>
         <source>Export the keyboard shortcuts</source>
         <translation>Экспортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2044"/>
+        <location filename="UI/UserInterface.py" line="2056"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспортировать горячие клавиши&lt;/b&gt;
 &lt;p&gt;Экспортировать горячие клавиши приложения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5113"/>
+        <location filename="UI/UserInterface.py" line="5146"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Импортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2063"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>&amp;Импортировать горячие клавиши...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2055"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Import the keyboard shortcuts</source>
         <translation>Импортировать горячие клавиши</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2056"/>
+        <location filename="UI/UserInterface.py" line="2068"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Импортировать горячие клавиши&lt;/b&gt;
 &lt;p&gt;Импортировать горячие клавиши приложения.&lt;/p&gt;</translation>
@@ -46728,7 +46906,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим сценарием.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4034"/>
+        <location filename="UI/UserInterface.py" line="4048"/>
         <source>Unittest Project</source>
         <translation>Uniitest на проекте</translation>
     </message>
@@ -46743,12 +46921,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Сценарий Unittest&lt;/b&gt;&lt;p&gt;Выполнить Uniitest с текущим проектом.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2280"/>
+        <location filename="UI/UserInterface.py" line="2292"/>
         <source>&amp;Unittest</source>
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4034"/>
+        <location filename="UI/UserInterface.py" line="4048"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Для текущего проекта не определён главный сценарий. Отмена</translation>
     </message>
@@ -46796,7 +46974,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1882"/>
         <source>Compare Files &amp;side by side...</source>
-        <translation>Сравнить файлы с &amp;параллальным отображением (side by side)...</translation>
+        <translation type="obsolete">Сравнить файлы с &amp;параллальным отображением (side by side)...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1887"/>
@@ -46805,7 +46983,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Открыть диалог, в котором показаны различия между файлами в две колонки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5493"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
@@ -46871,52 +47049,52 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно просмотрщика скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>View Profiles</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>&amp;View Profiles...</source>
         <translation>&amp;Профили...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2004"/>
+        <location filename="UI/UserInterface.py" line="2016"/>
         <source>Configure view profiles</source>
         <translation>Конфигурация профилей</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="2017"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Профили&lt;/b&gt;&lt;p&gt;Конфигурация профилей. С помощью этого диалога вы можете устанавливать видимость разных окон для заданных профилей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4365"/>
+        <location filename="UI/UserInterface.py" line="4379"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; либо не существует, либо нулевой длины.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4143"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Designer.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4186"/>
+        <location filename="UI/UserInterface.py" line="4200"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Linguist.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4230"/>
+        <location filename="UI/UserInterface.py" line="4244"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить Qt-Assistant.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4498"/>
+        <location filename="UI/UserInterface.py" line="4531"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить инструмент &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Убедитесь, что он доступен в &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5493"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -46941,7 +47119,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;UI Previewer&lt;/b&gt;&lt;p&gt;Запустить the UI Previewer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4328"/>
+        <location filename="UI/UserInterface.py" line="4342"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить UI Previewer.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -46966,7 +47144,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Предпросмотр переводов&lt;/b&gt;&lt;p&gt;Запустить предпросмотр переводов.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4373"/>
+        <location filename="UI/UserInterface.py" line="4387"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить предпросмотр переводов.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -46992,22 +47170,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Оболочки скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1991"/>
         <source>Reload APIs</source>
         <translation>Перезагрузить API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1991"/>
         <source>Reload &amp;APIs</source>
         <translation>Перезагрузить &amp;API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1981"/>
+        <location filename="UI/UserInterface.py" line="1993"/>
         <source>Reload the API information</source>
         <translation>Перезагрузить информацию об API</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1994"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Перезагрузить API&lt;/b&gt;&lt;p&gt;Перезагрузить информацию об API.&lt;/p&gt;</translation>
     </message>
@@ -47033,48 +47211,48 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 &lt;p&gt;Если окно Задач скрыто, показать его. Иначе - закрыть.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5234"/>
+        <location filename="UI/UserInterface.py" line="5267"/>
         <source>Save tasks</source>
         <translation>Сохранить задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5234"/>
+        <location filename="UI/UserInterface.py" line="5267"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5256"/>
+        <location filename="UI/UserInterface.py" line="5289"/>
         <source>Read tasks</source>
         <translation>Прочитать задачи</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5256"/>
+        <location filename="UI/UserInterface.py" line="5289"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с задачами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4257"/>
+        <location filename="UI/UserInterface.py" line="4271"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Специальный просмотрщик не выбран.
 Используйте диалог с настройками для его выбора.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4269"/>
+        <location filename="UI/UserInterface.py" line="4283"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить специальный просмотрщик.&lt;br&gt;Убедитесь, что он находится в &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4850"/>
+        <location filename="UI/UserInterface.py" line="4883"/>
         <source>Documentation Missing</source>
         <translation>Документация отсутствует</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4850"/>
+        <location filename="UI/UserInterface.py" line="4883"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2817"/>
+        <location filename="UI/UserInterface.py" line="2830"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Почтовый адрес или адрес почтового сервера пуст. Настройте электронную почту в диалоге конфигурации.</translation>
     </message>
@@ -47150,22 +47328,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Alt+Shift+M</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="2075"/>
         <source>Activate current editor</source>
         <translation>Активизировать текущий редактор</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="2075"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2072"/>
+        <location filename="UI/UserInterface.py" line="2084"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2080"/>
+        <location filename="UI/UserInterface.py" line="2092"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
@@ -47205,37 +47383,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Qt-Лингвист 4&lt;/b&gt;&lt;p&gt;Запустить Qt-Лингвист 4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2159"/>
+        <location filename="UI/UserInterface.py" line="2171"/>
         <source>Qt4 Documentation</source>
         <translation>Документация Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2159"/>
+        <location filename="UI/UserInterface.py" line="2171"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Документация Qt&amp;4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2161"/>
+        <location filename="UI/UserInterface.py" line="2173"/>
         <source>Open Qt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2223"/>
+        <location filename="UI/UserInterface.py" line="2235"/>
         <source>Eric API Documentation</source>
         <translation>Документация API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2223"/>
+        <location filename="UI/UserInterface.py" line="2235"/>
         <source>&amp;Eric API Documentation</source>
         <translation>Документация API &amp;Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2225"/>
+        <location filename="UI/UserInterface.py" line="2237"/>
         <source>Open Eric API Documentation</source>
         <translation>Открыть документацию API Eric</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4288"/>
+        <location filename="UI/UserInterface.py" line="4302"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик помощи.&lt;br&gt;Убедитесь, что он доступен под именем &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -47302,92 +47480,92 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Проверить наличие &amp;обновлений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2174"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Qt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию Qt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2183"/>
         <source>PyQt4 Documentation</source>
         <translation>Документация PyQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2183"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>Документация P&amp;yQt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2173"/>
+        <location filename="UI/UserInterface.py" line="2185"/>
         <source>Open PyQt4 Documentation</source>
         <translation>Открыть документацию Qt4</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2174"/>
+        <location filename="UI/UserInterface.py" line="2186"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PyQt4&lt;/b&gt;
 &lt;p&gt;Отобразить документацию PyQt4. В зависимости от настроек, она отобразится либо во встроенном просмотрщике помощи Eric, либо вызовет интернет-браузер, либо Qt Assistant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2312"/>
+        <location filename="UI/UserInterface.py" line="2324"/>
         <source>Select Tool Group</source>
         <translation>Выберите группу инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2330"/>
         <source>Se&amp;ttings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2437"/>
+        <location filename="UI/UserInterface.py" line="2449"/>
         <source>Profiles</source>
         <translation>Профили</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3142"/>
+        <location filename="UI/UserInterface.py" line="3156"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Встроенные инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4482"/>
+        <location filename="UI/UserInterface.py" line="4515"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Запускается процесс &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4575"/>
+        <location filename="UI/UserInterface.py" line="4608"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Процесс &apos;{0}&apos; завершился.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4835"/>
+        <location filename="UI/UserInterface.py" line="4868"/>
         <source>Documentation</source>
         <translation>Документация</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4744"/>
+        <location filename="UI/UserInterface.py" line="4777"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PyQt4 не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5745"/>
+        <location filename="UI/UserInterface.py" line="5778"/>
         <source>Error during updates check</source>
         <translation>Ошибка при проверке обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5732"/>
+        <location filename="UI/UserInterface.py" line="5765"/>
         <source>Update available</source>
         <translation>Обновления доступны</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2766"/>
+        <location filename="UI/UserInterface.py" line="2779"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Номера версий&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5779"/>
+        <location filename="UI/UserInterface.py" line="5812"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -47402,42 +47580,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;p&gt;Невозможно прочитать файл таблиц стилей Qt &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3091"/>
+        <location filename="UI/UserInterface.py" line="3104"/>
         <source>Configure Tool Groups ...</source>
         <translation>Настроить группы Инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3094"/>
+        <location filename="UI/UserInterface.py" line="3107"/>
         <source>Configure current Tool Group ...</source>
         <translation>Настроить текущую группу Инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1992"/>
+        <location filename="UI/UserInterface.py" line="2004"/>
         <source>Show external tools</source>
         <translation>Показать внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1989"/>
+        <location filename="UI/UserInterface.py" line="2001"/>
         <source>Show external &amp;tools</source>
         <translation>Показать &amp;внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5745"/>
+        <location filename="UI/UserInterface.py" line="5778"/>
         <source>Could not perform updates check.</source>
         <translation>Невозможно запустить проверку обновлений.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5604"/>
+        <location filename="UI/UserInterface.py" line="5637"/>
         <source>&amp;Cancel</source>
         <translation>От&amp;мена</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5609"/>
+        <location filename="UI/UserInterface.py" line="5642"/>
         <source>Trying host {0}</source>
         <translation>Пробую узел {0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5819"/>
+        <location filename="UI/UserInterface.py" line="5852"/>
         <source>First time usage</source>
         <translation>Первое использование</translation>
     </message>
@@ -47447,63 +47625,63 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Инициализируется менеджер расширений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2353"/>
+        <location filename="UI/UserInterface.py" line="2365"/>
         <source>P&amp;lugins</source>
         <translation>&amp;Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2438"/>
+        <location filename="UI/UserInterface.py" line="2450"/>
         <source>Plugins</source>
         <translation>Расширения</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2096"/>
+        <location filename="UI/UserInterface.py" line="2108"/>
         <source>Plugin Infos</source>
         <translation>Информация о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2099"/>
+        <location filename="UI/UserInterface.py" line="2111"/>
         <source>Show Plugin Infos</source>
         <translation>Показать информацию о расширениях</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2112"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Информация о расширениях...&lt;/b&gt;
 &lt;p&gt;Открывает диалог, отображающий информацию о загруженных расширениях.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2096"/>
+        <location filename="UI/UserInterface.py" line="2108"/>
         <source>&amp;Plugin Infos...</source>
         <translation>Ин&amp;формация о подключаемых модулях...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2122"/>
+        <location filename="UI/UserInterface.py" line="2134"/>
         <source>Uninstall Plugin</source>
         <translation>Убрать подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2119"/>
+        <location filename="UI/UserInterface.py" line="2131"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>У&amp;брать подключаемый модуль...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2123"/>
+        <location filename="UI/UserInterface.py" line="2135"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Убрать подключаемый модуль...&lt;/b&gt;&lt;p&gt;Открывает диалог деинсталляции нового подключаемого модуля.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3150"/>
+        <location filename="UI/UserInterface.py" line="3164"/>
         <source>&amp;Plugin Tools</source>
         <translation>Инструменты для &amp;плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3303"/>
+        <location filename="UI/UserInterface.py" line="3317"/>
         <source>&amp;Show all</source>
         <translation>Показать &amp;всё</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3305"/>
+        <location filename="UI/UserInterface.py" line="3319"/>
         <source>&amp;Hide all</source>
         <translation>Ск&amp;рыть всё</translation>
     </message>
@@ -47538,42 +47716,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Невозможно скачать файл версий.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5766"/>
+        <location filename="UI/UserInterface.py" line="5799"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Доступные версии&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2130"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>Plugin Repository</source>
         <translation>Репозиторий плагинов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2130"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>Plugin &amp;Repository...</source>
         <translation>&amp;Репозиторий плагинов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2133"/>
+        <location filename="UI/UserInterface.py" line="2145"/>
         <source>Show Plugins available for download</source>
         <translation>Показать плагины, доступные для загрузки</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2135"/>
+        <location filename="UI/UserInterface.py" line="2147"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Репозиторий плагинов...&lt;/b&gt;&lt;p&gt;Открывает диалог, который показывает список плагинов, доступных для скачивания с интернета.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2111"/>
+        <location filename="UI/UserInterface.py" line="2123"/>
         <source>Install Plugins</source>
         <translation>Установить плагины</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2120"/>
         <source>&amp;Install Plugins...</source>
         <translation>&amp;Установить плагины...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2112"/>
+        <location filename="UI/UserInterface.py" line="2124"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Установить плагины...&lt;/b&gt;&lt;p&gt;Открывает диалог для установки или обновления плагинов.&lt;/p&gt;</translation>
     </message>
@@ -47603,22 +47781,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&amp;Лингвист 4...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>Toolbars</source>
         <translation>Панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>Tool&amp;bars...</source>
         <translation>Панели &amp;инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2017"/>
+        <location filename="UI/UserInterface.py" line="2029"/>
         <source>Configure toolbars</source>
         <translation>Настроить панели инструментов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2018"/>
+        <location filename="UI/UserInterface.py" line="2030"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Панели инструментов&lt;/b&gt;&lt;p&gt;Настроить панели инструментов. В этом диалоге Вы можете изменить имеющиеся панели инструментов, а так же создать новые.&lt;/p&gt;</translation>
     </message>
@@ -47628,22 +47806,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Восстановление менеджера панелей инструментов...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2680"/>
+        <location filename="UI/UserInterface.py" line="2693"/>
         <source>External Tools/{0}</source>
         <translation>Внешние инструменты/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4446"/>
+        <location filename="UI/UserInterface.py" line="4479"/>
         <source>External Tools</source>
         <translation>Внешние инструменты</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4440"/>
+        <location filename="UI/UserInterface.py" line="4473"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Запись для внешней программы &apos;{0}&apos; не найдена в группе &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4446"/>
+        <location filename="UI/UserInterface.py" line="4479"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Запись для группы &apos;{0}&apos; не найдена.</translation>
     </message>
@@ -47678,42 +47856,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Просмотрщик &amp;шаблонов</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5271"/>
+        <location filename="UI/UserInterface.py" line="5304"/>
         <source>Save session</source>
         <translation>Сохранить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5271"/>
+        <location filename="UI/UserInterface.py" line="5304"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу записать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5294"/>
+        <location filename="UI/UserInterface.py" line="5327"/>
         <source>Read session</source>
         <translation>Загрузить сессию</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5294"/>
+        <location filename="UI/UserInterface.py" line="5327"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не могу прочитать файл сессии &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2586"/>
+        <location filename="UI/UserInterface.py" line="2599"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую кодировку редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2600"/>
+        <location filename="UI/UserInterface.py" line="2613"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса указывает на возможность записи открытого в редакторе файла.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5794"/>
+        <location filename="UI/UserInterface.py" line="5827"/>
         <source>SSL Errors</source>
         <translation>Ошибки SSL</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5794"/>
+        <location filename="UI/UserInterface.py" line="5827"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Ошибки SSL: &lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Игнорировать?&lt;/p&gt;</translation>
     </message>
@@ -47738,22 +47916,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Послать запрос...&lt;/b&gt;&lt;p&gt;Показать диалог создания запроса.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2579"/>
+        <location filename="UI/UserInterface.py" line="2592"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает язык текущего окна редактора.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2609"/>
+        <location filename="UI/UserInterface.py" line="2622"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает имя файла открытого в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2616"/>
+        <location filename="UI/UserInterface.py" line="2629"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает номер текущей строки в редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2623"/>
+        <location filename="UI/UserInterface.py" line="2636"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает текущую позицию курсора в редакторе.&lt;/p&gt;</translation>
     </message>
@@ -47798,12 +47976,12 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Переключить горизонтальную панель инструментов&lt;/b&gt;&lt;p&gt;Показать/скрыть горизонтальную панель инструментов&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3059"/>
+        <location filename="UI/UserInterface.py" line="3072"/>
         <source>Restart application</source>
         <translation>Перезапустить приложение</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3059"/>
+        <location filename="UI/UserInterface.py" line="3072"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Необходимо перезапустить приложение. Сделать это сейчас?</translation>
     </message>
@@ -47844,72 +48022,72 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2362"/>
+        <location filename="UI/UserInterface.py" line="2374"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2593"/>
+        <location filename="UI/UserInterface.py" line="2606"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Эта часть строки статуса показывает режим конца строки в текущем редакторе.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2088"/>
+        <location filename="UI/UserInterface.py" line="2100"/>
         <source>Switch between tabs</source>
         <translation>Переключиться между закладками</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2088"/>
+        <location filename="UI/UserInterface.py" line="2100"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1956"/>
+        <location filename="UI/UserInterface.py" line="1968"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1956"/>
+        <location filename="UI/UserInterface.py" line="1968"/>
         <source>E&amp;xport Preferences...</source>
         <translation>&amp;Экспорт предпочтений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1959"/>
+        <location filename="UI/UserInterface.py" line="1971"/>
         <source>Export the current configuration</source>
         <translation>Экспорт текущих настроек</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1960"/>
+        <location filename="UI/UserInterface.py" line="1972"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Экспорт предпочтений&lt;/b&gt;&lt;p&gt;Экспорт текущих предпочтений в файл.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1967"/>
+        <location filename="UI/UserInterface.py" line="1979"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1967"/>
+        <location filename="UI/UserInterface.py" line="1979"/>
         <source>I&amp;mport Preferences...</source>
         <translation>&amp;Импорт предпочтений...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1970"/>
+        <location filename="UI/UserInterface.py" line="1982"/>
         <source>Import a previously exported configuration</source>
         <translation>Импорт сохранённых ранее настроек</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1972"/>
+        <location filename="UI/UserInterface.py" line="1984"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Импорт настроек&lt;/b&gt;&lt;p&gt;Импорт сохранённых ранее настроек.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2072"/>
+        <location filename="UI/UserInterface.py" line="2084"/>
         <source>Show next</source>
         <translation>Показать следующую закладку</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2080"/>
+        <location filename="UI/UserInterface.py" line="2092"/>
         <source>Show previous</source>
         <translation>Показать предыдущую закладку</translation>
     </message>
@@ -47997,7 +48175,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Просмотрщик SQL&lt;/b&gt;&lt;p&gt;Просмотреть SQL базу данных.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4392"/>
+        <location filename="UI/UserInterface.py" line="4406"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить просмотрщик SQL.&lt;br&gt;Убедитесь, что он доступен как &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -48047,32 +48225,32 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Редактор &amp;иконок...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4209"/>
+        <location filename="UI/UserInterface.py" line="4223"/>
         <source>Qt 3 support</source>
         <translation>Поддержка Qt3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2243"/>
+        <location filename="UI/UserInterface.py" line="2255"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация PySide&lt;/b&gt;&lt;p&gt;Показать документацию PySide. В зависимости от настроек документация будет показана или во внутреннем просмотрщике помощи, в WEB просмотрщике или в Qt Assistant. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4835"/>
+        <location filename="UI/UserInterface.py" line="4868"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Корень документации PySide не найден.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2240"/>
+        <location filename="UI/UserInterface.py" line="2252"/>
         <source>PySide Documentation</source>
         <translation>Документация PySide</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2240"/>
+        <location filename="UI/UserInterface.py" line="2252"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Документация Py&amp;Side</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2242"/>
+        <location filename="UI/UserInterface.py" line="2254"/>
         <source>Open PySide Documentation</source>
         <translation>Открыть документацию PySide</translation>
     </message>
@@ -48112,37 +48290,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1993"/>
+        <location filename="UI/UserInterface.py" line="2005"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2226"/>
+        <location filename="UI/UserInterface.py" line="2238"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4209"/>
+        <location filename="UI/UserInterface.py" line="4223"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt3 не поддерживается в eric5.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5732"/>
+        <location filename="UI/UserInterface.py" line="5765"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5741"/>
+        <location filename="UI/UserInterface.py" line="5774"/>
         <source>Eric5 is up to date</source>
         <translation>Eric5 не требует обновлений</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5741"/>
+        <location filename="UI/UserInterface.py" line="5774"/>
         <source>You are using the latest version of eric5</source>
         <translation>Вы используете самую последнюю версию eric5</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5819"/>
+        <location filename="UI/UserInterface.py" line="5852"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации.</translation>
     </message>
@@ -48239,72 +48417,72 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5113"/>
+        <location filename="UI/UserInterface.py" line="5146"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Файл горячих клавиш (*.e4k)</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2187"/>
+        <location filename="UI/UserInterface.py" line="2199"/>
         <source>Python 3 Documentation</source>
         <translation>Документация Pyton 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2187"/>
+        <location filename="UI/UserInterface.py" line="2199"/>
         <source>Python &amp;3 Documentation</source>
         <translation>Документация Pyton &amp;3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2189"/>
+        <location filename="UI/UserInterface.py" line="2201"/>
         <source>Open Python 3 Documentation</source>
         <translation>Открыть документацию Python 3</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2190"/>
+        <location filename="UI/UserInterface.py" line="2202"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 3&lt;/b&gt;&lt;p&gt;Показать Pyton 3 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 3 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON3DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2202"/>
+        <location filename="UI/UserInterface.py" line="2214"/>
         <source>Python 2 Documentation</source>
         <translation>Документация Pyton 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2202"/>
+        <location filename="UI/UserInterface.py" line="2214"/>
         <source>Python &amp;2 Documentation</source>
         <translation>Документация Pyton &amp;2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2204"/>
+        <location filename="UI/UserInterface.py" line="2216"/>
         <source>Open Python 2 Documentation</source>
         <translation>Открыть документацию Python 2</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2205"/>
+        <location filename="UI/UserInterface.py" line="2217"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Документация Pyton 2&lt;/b&gt;&lt;p&gt;Показать Pyton 2 документацию. Если местонахождение документации не было настроено, то искать в подкаталоге &lt;i&gt;doc&lt;/i&gt; каталога где находится исполняемый файл Python 2 под Windows и в подкаталоге &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; под UNIX. Местонахождение документации можно задать с помощью переменной окружения PYTHON2DOCDIR.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5692"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5653"/>
+        <location filename="UI/UserInterface.py" line="5686"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4969"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4969"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5692"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48387,6 +48565,36 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1774"/>
         <source>&lt;b&gt;Rerun Failed Tests&lt;/b&gt;&lt;p&gt;Rerun all tests that failed during the last unittest run.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1882"/>
+        <source>Compare &amp;Files side by side...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1943"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1943"/>
+        <source>&amp;Snapshot...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1947"/>
+        <source>Take snapshots of a screen region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1948"/>
+        <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="4453"/>
+        <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

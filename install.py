@@ -309,6 +309,7 @@ def cleanUp():
         "eric5_plugininstall", "eric5_pluginuninstall",
         "eric5_pluginrepository", "eric5_sqlbrowser",
         "eric5_webbrowser", "eric5_iconeditor",
+        "eric5_snap",
     ]
     
     try:
@@ -388,6 +389,7 @@ def installEric():
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginuninstall"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregexp"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_re"))
+    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_snap"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_sqlbrowser"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_tray"))
     wnames.append(createPyWrapper(cfg['ericDir'], "eric5_trpreviewer"))

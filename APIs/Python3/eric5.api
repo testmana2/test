@@ -6436,6 +6436,24 @@ eric5.QScintilla.TypingCompleters.CompleterRuby.CompleterRuby?1(editor, parent=N
 eric5.QScintilla.TypingCompleters.getCompleter?4(language, editor, parent=None)
 eric5.QScintilla.ZoomDialog.ZoomDialog.getZoomSize?4()
 eric5.QScintilla.ZoomDialog.ZoomDialog?1(zoom, parent, name=None, modal=False)
+eric5.Snapshot.SnapWidget.SnapWidget.on_copyButton_clicked?4()
+eric5.Snapshot.SnapWidget.SnapWidget.on_saveButton_clicked?4(checked)
+eric5.Snapshot.SnapWidget.SnapWidget.on_takeButton_clicked?4(checked)
+eric5.Snapshot.SnapWidget.SnapWidget?1(parent=None)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.FillMask?7
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.ModeFullscreen?7
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.ModeRectangle?7
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.StrokeMask?7
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.grabbed?7
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.keyPressEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.mouseDoubleClickEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.mouseMoveEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.mousePressEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.mouseReleaseEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.paintEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber.resizeEvent?4(evt)
+eric5.Snapshot.SnapshotRegionGrabber.SnapshotRegionGrabber?1(mode, delay)
+eric5.Snapshot.SnapshotRegionGrabber.drawRect?4(painter, rect, outline, fill=QColor())
 eric5.SqlBrowser.SqlBrowser.SqlBrowser?1(connections=[], parent=None)
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.addConnection?4(driver, dbName, user, password, host, port)
 eric5.SqlBrowser.SqlBrowserWidget.SqlBrowserWidget.addConnectionByDialog?4()
@@ -7811,6 +7829,8 @@ eric5.eric5_qregexp.createMainWidget?4(argv)
 eric5.eric5_qregexp.main?4()
 eric5.eric5_re.createMainWidget?4(argv)
 eric5.eric5_re.main?4()
+eric5.eric5_snap.createMainWidget?4(argv)
+eric5.eric5_snap.main?4()
 eric5.eric5_sqlbrowser.createMainWidget?4(argv)
 eric5.eric5_sqlbrowser.main?4()
 eric5.eric5_tray.createMainWidget?4(argv)

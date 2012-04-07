@@ -7434,7 +7434,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Tüm seçimi iptal et</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6071"/>
+        <location filename="QScintilla/Editor.py" line="6075"/>
         <source>Check spelling...</source>
         <translation>Yazım Kontrolü...</translation>
     </message>
@@ -8119,12 +8119,12 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6073"/>
+        <location filename="QScintilla/Editor.py" line="6077"/>
         <source>Add to dictionary</source>
         <translation>Sözlüğe ekle</translation>
     </message>
     <message>
-        <location filename="QScintilla/Editor.py" line="6075"/>
+        <location filename="QScintilla/Editor.py" line="6079"/>
         <source>Ignore All</source>
         <translation>Hepsini Yoksay</translation>
     </message>
@@ -36310,6 +36310,184 @@ Bağlantı yok</translation>
     </message>
 </context>
 <context>
+    <name>SnapWidget</name>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="20"/>
+        <source>eric5 Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="113"/>
+        <source>Snapshot Mode:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="126"/>
+        <source>Select the snapshot mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="133"/>
+        <source>Delay:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="142"/>
+        <source>Enter the delay before taking the snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="148"/>
+        <source> Seconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="184"/>
+        <source>Press to save the snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="187"/>
+        <source>&amp;Save Snapshot ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="233"/>
+        <source>Press to take a snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="236"/>
+        <source>&amp;Take Snapshot ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="41"/>
+        <source>Fullscreen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="43"/>
+        <source>Rectangular Selection</source>
+        <translation type="unfinished">Köşeli Seçim</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <source>Windows Bitmap File (*.bmp)</source>
+        <translation type="unfinished">Windows Bitmap Dosyası (*.bmp)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="62"/>
+        <source>Graphic Interchange Format File (*.gif)</source>
+        <translation type="unfinished">Graphic Interchange Format Dosyası (*.gif)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <source>Windows Icon File (*.ico)</source>
+        <translation type="unfinished">Windows İkon Dosyası (*.ico)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="64"/>
+        <source>JPEG File (*.jpg)</source>
+        <translation type="unfinished">JPEG Dosyası (*.jpg)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="65"/>
+        <source>Multiple-Image Network Graphics File (*.mng)</source>
+        <translation type="unfinished">Çoklu-Resim Ağ Grafik Dosyası (*.mng)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <source>Portable Bitmap File (*.pbm)</source>
+        <translation type="unfinished">Portable Bitmap Dosyası (*.pbm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="67"/>
+        <source>Paintbrush Bitmap File (*.pcx)</source>
+        <translation type="unfinished">Paintbrush Bitmap Dosyası (*.pcx)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="68"/>
+        <source>Portable Graymap File (*.pgm)</source>
+        <translation type="unfinished">Portable Graymap Dosyası (*.pgm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="69"/>
+        <source>Portable Network Graphics File (*.png)</source>
+        <translation type="unfinished">Portable Network Graphics Dosyası (*.png)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="70"/>
+        <source>Portable Pixmap File (*.ppm)</source>
+        <translation type="unfinished">Portable Pixmap Dosyası (*.ppm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="71"/>
+        <source>Silicon Graphics Image File (*.sgi)</source>
+        <translation type="unfinished">Silikon Gragik Resim Dosyası (*.sgi)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="72"/>
+        <source>Scalable Vector Graphics File (*.svg)</source>
+        <translation type="unfinished">Ölçeklenebilir Vektörel Grafik Dosyası (*.svg)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="73"/>
+        <source>Targa Graphic File (*.tga)</source>
+        <translation type="unfinished">Targa Gragik Dosyası (*.tga)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="74"/>
+        <source>TIFF File (*.tif)</source>
+        <translation type="unfinished">TIFF Dosyası (*.tif)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="75"/>
+        <source>X11 Bitmap File (*.xbm)</source>
+        <translation type="unfinished">X11 Bitmap Dosyası (*.xbm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="76"/>
+        <source>X11 Pixmap File (*.xpm)</source>
+        <translation type="unfinished">X11 Pixmap Dosyası (*.xpm)</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <source>Save Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <source>Cannot write file &apos;{0}:
+{1}.</source>
+        <translation type="unfinished">Dosyaya yazılamıyor &apos;{0}:
+{1}.</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="210"/>
+        <source>Press to copy the snapshot to the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="213"/>
+        <source>&amp;Copy</source>
+        <translation type="unfinished">&amp;Kopyala</translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotRegionGrabber</name>
+    <message>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SpeedDial</name>
     <message>
         <location filename="Helpviewer/SpeedDial/SpeedDial.py" line="366"/>
@@ -46999,7 +47177,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2817"/>
+        <location filename="UI/UserInterface.py" line="2830"/>
         <source>Report Bug</source>
         <translation>Hata Raporu</translation>
     </message>
@@ -47039,7 +47217,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2434"/>
+        <location filename="UI/UserInterface.py" line="2446"/>
         <source>Unittest</source>
         <translation>Birimtest</translation>
     </message>
@@ -47099,7 +47277,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4034"/>
+        <location filename="UI/UserInterface.py" line="4048"/>
         <source>Unittest Project</source>
         <translation>Proje Birimtesti</translation>
     </message>
@@ -47226,7 +47404,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1882"/>
         <source>Compare Files &amp;side by side...</source>
-        <translation>Do&amp;syaları yan yana karşılaştır...</translation>
+        <translation type="obsolete">Do&amp;syaları yan yana karşılaştır...</translation>
     </message>
     <message>
         <location filename="UI/UserInterface.py" line="1887"/>
@@ -47309,347 +47487,347 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1955"/>
         <source>Preferences</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1943"/>
+        <location filename="UI/UserInterface.py" line="1955"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Seçenekler...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1946"/>
+        <location filename="UI/UserInterface.py" line="1958"/>
         <source>Set the prefered configuration</source>
         <translation>tercih edilen ayarları yapınız</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1947"/>
+        <location filename="UI/UserInterface.py" line="1959"/>
         <source>&lt;b&gt;Preferences&lt;/b&gt;&lt;p&gt;Set the configuration items of the application with your prefered values.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tercihler&lt;/b&gt;&lt;p&gt;Uygulamanın ayarlama maddelerini tercih ettiğiniz değerlerle ayarlayınız.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1956"/>
+        <location filename="UI/UserInterface.py" line="1968"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1956"/>
+        <location filename="UI/UserInterface.py" line="1968"/>
         <source>E&amp;xport Preferences...</source>
         <translation>Tercihleri Dı&amp;şa Aktar...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1959"/>
+        <location filename="UI/UserInterface.py" line="1971"/>
         <source>Export the current configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1960"/>
+        <location filename="UI/UserInterface.py" line="1972"/>
         <source>&lt;b&gt;Export Preferences&lt;/b&gt;&lt;p&gt;Export the current configuration to a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1967"/>
+        <location filename="UI/UserInterface.py" line="1979"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1967"/>
+        <location filename="UI/UserInterface.py" line="1979"/>
         <source>I&amp;mport Preferences...</source>
         <translation>Tercihleri İ&amp;çeri Aktar...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1970"/>
+        <location filename="UI/UserInterface.py" line="1982"/>
         <source>Import a previously exported configuration</source>
         <translation>daha önce dışa aktarılan ayrlamaları içe aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1972"/>
+        <location filename="UI/UserInterface.py" line="1984"/>
         <source>&lt;b&gt;Import Preferences&lt;/b&gt;&lt;p&gt;Import a previously exported configuration.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1991"/>
         <source>Reload APIs</source>
         <translation>API&apos;leri yeniden yükle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1979"/>
+        <location filename="UI/UserInterface.py" line="1991"/>
         <source>Reload &amp;APIs</source>
         <translation>&amp;API&apos;leri yeniden yükle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1981"/>
+        <location filename="UI/UserInterface.py" line="1993"/>
         <source>Reload the API information</source>
         <translation>API bilgisini yeniden yükle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1982"/>
+        <location filename="UI/UserInterface.py" line="1994"/>
         <source>&lt;b&gt;Reload APIs&lt;/b&gt;&lt;p&gt;Reload the API information.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1992"/>
+        <location filename="UI/UserInterface.py" line="2004"/>
         <source>Show external tools</source>
         <translation>Harici araçları göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1989"/>
+        <location filename="UI/UserInterface.py" line="2001"/>
         <source>Show external &amp;tools</source>
         <translation>Karak&amp;ter tablosunu göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="1993"/>
+        <location filename="UI/UserInterface.py" line="2005"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>View Profiles</source>
         <translation>Görünüm Kesiti</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2001"/>
+        <location filename="UI/UserInterface.py" line="2013"/>
         <source>&amp;View Profiles...</source>
         <translation>&amp;Görünüm Kesiti...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2004"/>
+        <location filename="UI/UserInterface.py" line="2016"/>
         <source>Configure view profiles</source>
         <translation>Görünüm kesitlerini ayarla</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2005"/>
+        <location filename="UI/UserInterface.py" line="2017"/>
         <source>&lt;b&gt;View Profiles&lt;/b&gt;&lt;p&gt;Configure the view profiles. With this dialog you may set the visibility of the various windows for the predetermined view profiles.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>Toolbars</source>
         <translation>Araççubuğu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2014"/>
+        <location filename="UI/UserInterface.py" line="2026"/>
         <source>Tool&amp;bars...</source>
         <translation>Araççu&amp;buğu...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2017"/>
+        <location filename="UI/UserInterface.py" line="2029"/>
         <source>Configure toolbars</source>
         <translation>Araççubuğunu ayarla</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2018"/>
+        <location filename="UI/UserInterface.py" line="2030"/>
         <source>&lt;b&gt;Toolbars&lt;/b&gt;&lt;p&gt;Configure the toolbars. With this dialog you may change the actions shown on the various toolbars and define your own toolbars.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2027"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Keyboard Shortcuts</source>
         <translation>Klavye Kısayolları</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2027"/>
+        <location filename="UI/UserInterface.py" line="2039"/>
         <source>Keyboard &amp;Shortcuts...</source>
         <translation>Klavye Kı&amp;sayolları...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2030"/>
+        <location filename="UI/UserInterface.py" line="2042"/>
         <source>Set the keyboard shortcuts</source>
         <translation>Klavye kısayollarını ayarla</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2031"/>
+        <location filename="UI/UserInterface.py" line="2043"/>
         <source>&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Set the keyboard shortcuts of the application with your prefered values.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5090"/>
+        <location filename="UI/UserInterface.py" line="5123"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Kılavye Kısa Yollarını Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2039"/>
+        <location filename="UI/UserInterface.py" line="2051"/>
         <source>&amp;Export Keyboard Shortcuts...</source>
         <translation>Kılavye Kısa Yo&amp;llarını Dışa Aktar...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2043"/>
+        <location filename="UI/UserInterface.py" line="2055"/>
         <source>Export the keyboard shortcuts</source>
         <translation>Kılavye kısa yollarını dışa aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2044"/>
+        <location filename="UI/UserInterface.py" line="2056"/>
         <source>&lt;b&gt;Export Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Export the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5113"/>
+        <location filename="UI/UserInterface.py" line="5146"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Klavye kısayollarını İçe Aktar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2051"/>
+        <location filename="UI/UserInterface.py" line="2063"/>
         <source>&amp;Import Keyboard Shortcuts...</source>
         <translation>Klavye K&amp;ısayollarını İçe Aktar...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2055"/>
+        <location filename="UI/UserInterface.py" line="2067"/>
         <source>Import the keyboard shortcuts</source>
         <translation>Klavye kısayolları içeri aktarılıyor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2056"/>
+        <location filename="UI/UserInterface.py" line="2068"/>
         <source>&lt;b&gt;Import Keyboard Shortcuts&lt;/b&gt;&lt;p&gt;Import the keyboard shortcuts of the application.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="2075"/>
         <source>Activate current editor</source>
         <translation>Geçerli düzenleyiciyi aktif yap</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2063"/>
+        <location filename="UI/UserInterface.py" line="2075"/>
         <source>Alt+Shift+E</source>
         <translation>Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2072"/>
+        <location filename="UI/UserInterface.py" line="2084"/>
         <source>Show next</source>
         <translation>Sonrakini göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2072"/>
+        <location filename="UI/UserInterface.py" line="2084"/>
         <source>Ctrl+Alt+Tab</source>
         <translation>Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2080"/>
+        <location filename="UI/UserInterface.py" line="2092"/>
         <source>Show previous</source>
         <translation>Öncekini göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2080"/>
+        <location filename="UI/UserInterface.py" line="2092"/>
         <source>Shift+Ctrl+Alt+Tab</source>
         <translation>Shift+Ctrl+Alt+Tab</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2088"/>
+        <location filename="UI/UserInterface.py" line="2100"/>
         <source>Switch between tabs</source>
         <translation>Sekmeler arasında değiştir</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2088"/>
+        <location filename="UI/UserInterface.py" line="2100"/>
         <source>Ctrl+1</source>
         <translation>Ctrl+1</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2096"/>
+        <location filename="UI/UserInterface.py" line="2108"/>
         <source>Plugin Infos</source>
         <translation>Eklenti Bilgisi</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2096"/>
+        <location filename="UI/UserInterface.py" line="2108"/>
         <source>&amp;Plugin Infos...</source>
         <translation>Eklenti Bil&amp;gisi...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2099"/>
+        <location filename="UI/UserInterface.py" line="2111"/>
         <source>Show Plugin Infos</source>
         <translation>Eklenti Bilgisini Göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2100"/>
+        <location filename="UI/UserInterface.py" line="2112"/>
         <source>&lt;b&gt;Plugin Infos...&lt;/b&gt;&lt;p&gt;This opens a dialog, that show some information about loaded plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eklenti Bilgileri...&lt;/b&gt;&lt;p&gt;Bu yüklenen eklentiler hakkında bazı bilgileri gösteren bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2111"/>
+        <location filename="UI/UserInterface.py" line="2123"/>
         <source>Install Plugins</source>
         <translation>Eklenti Kur</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2108"/>
+        <location filename="UI/UserInterface.py" line="2120"/>
         <source>&amp;Install Plugins...</source>
         <translation>Ekle&amp;nti Kur...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2112"/>
+        <location filename="UI/UserInterface.py" line="2124"/>
         <source>&lt;b&gt;Install Plugins...&lt;/b&gt;&lt;p&gt;This opens a dialog to install or update plugins.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eklenti Kur...&lt;/b&gt;&lt;p&gt;Bu eklenti kurmak yada güncellemek için bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2122"/>
+        <location filename="UI/UserInterface.py" line="2134"/>
         <source>Uninstall Plugin</source>
         <translation>Eklenti Kaldır</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2119"/>
+        <location filename="UI/UserInterface.py" line="2131"/>
         <source>&amp;Uninstall Plugin...</source>
         <translation>Ekle&amp;nti Kaldır...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2123"/>
+        <location filename="UI/UserInterface.py" line="2135"/>
         <source>&lt;b&gt;Uninstall Plugin...&lt;/b&gt;&lt;p&gt;This opens a dialog to uninstall a plugin.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eklenti Kaldır...&lt;/b&gt;&lt;p&gt;Bu bir eklentiyi kaldırmak için bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2130"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>Plugin Repository</source>
         <translation>Eklenti Havuzu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2130"/>
+        <location filename="UI/UserInterface.py" line="2142"/>
         <source>Plugin &amp;Repository...</source>
         <translation>Eklenti Hav&amp;uzu...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2133"/>
+        <location filename="UI/UserInterface.py" line="2145"/>
         <source>Show Plugins available for download</source>
         <translation>İndirme için uygun olan eklentileri göster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2135"/>
+        <location filename="UI/UserInterface.py" line="2147"/>
         <source>&lt;b&gt;Plugin Repository...&lt;/b&gt;&lt;p&gt;This opens a dialog, that shows a list of plugins available on the Internet.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eklenti Kaynak Havuzu...&lt;/b&gt;&lt;p&gt;Bu internette hazır olan eklentilerin listelendiği bir diyalog açar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2159"/>
+        <location filename="UI/UserInterface.py" line="2171"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2159"/>
+        <location filename="UI/UserInterface.py" line="2171"/>
         <source>Qt&amp;4 Documentation</source>
         <translation>Qt&amp;4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2161"/>
+        <location filename="UI/UserInterface.py" line="2173"/>
         <source>Open Qt4 Documentation</source>
         <translation>QT4 Belgelerini Aç</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2162"/>
+        <location filename="UI/UserInterface.py" line="2174"/>
         <source>&lt;b&gt;Qt4 Documentation&lt;/b&gt;&lt;p&gt;Display the Qt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2183"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2171"/>
+        <location filename="UI/UserInterface.py" line="2183"/>
         <source>P&amp;yQt4 Documentation</source>
         <translation>P&amp;yQt4 Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2173"/>
+        <location filename="UI/UserInterface.py" line="2185"/>
         <source>Open PyQt4 Documentation</source>
         <translation>PyQt4 Begelerini aç</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2174"/>
+        <location filename="UI/UserInterface.py" line="2186"/>
         <source>&lt;b&gt;PyQt4 Documentation&lt;/b&gt;&lt;p&gt;Display the PyQt4 Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47669,177 +47847,177 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Python belgelerini açın</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2223"/>
+        <location filename="UI/UserInterface.py" line="2235"/>
         <source>Eric API Documentation</source>
         <translation>Eric API Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2223"/>
+        <location filename="UI/UserInterface.py" line="2235"/>
         <source>&amp;Eric API Documentation</source>
         <translation>&amp;Eric API Dökümanı</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2225"/>
+        <location filename="UI/UserInterface.py" line="2237"/>
         <source>Open Eric API Documentation</source>
         <translation>Eric API Belgelerini Aç</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2226"/>
+        <location filename="UI/UserInterface.py" line="2238"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2240"/>
+        <location filename="UI/UserInterface.py" line="2252"/>
         <source>PySide Documentation</source>
         <translation>PySide Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2240"/>
+        <location filename="UI/UserInterface.py" line="2252"/>
         <source>Py&amp;Side Documentation</source>
         <translation>Py&amp;Side Belgeleri</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2242"/>
+        <location filename="UI/UserInterface.py" line="2254"/>
         <source>Open PySide Documentation</source>
         <translation>PySide belgelerini açın</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2243"/>
+        <location filename="UI/UserInterface.py" line="2255"/>
         <source>&lt;b&gt;PySide Documentation&lt;/b&gt;&lt;p&gt;Display the PySide Documentation. Dependant upon your settings, this will either show the help in Eric&apos;s internal help viewer, or execute a web browser or Qt Assistant. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2280"/>
+        <location filename="UI/UserInterface.py" line="2292"/>
         <source>&amp;Unittest</source>
         <translation>Bir&amp;imtest</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2297"/>
+        <location filename="UI/UserInterface.py" line="2309"/>
         <source>E&amp;xtras</source>
         <translation>İla&amp;veler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2302"/>
+        <location filename="UI/UserInterface.py" line="2314"/>
         <source>Wi&amp;zards</source>
         <translation>Sihirba&amp;z</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2309"/>
+        <location filename="UI/UserInterface.py" line="2321"/>
         <source>&amp;Tools</source>
         <translation>&amp;Araçlar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2312"/>
+        <location filename="UI/UserInterface.py" line="2324"/>
         <source>Select Tool Group</source>
         <translation>Araç Grubunu Seç</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2318"/>
+        <location filename="UI/UserInterface.py" line="2330"/>
         <source>Se&amp;ttings</source>
         <translation>Ayar&amp;lar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2336"/>
+        <location filename="UI/UserInterface.py" line="2348"/>
         <source>&amp;Window</source>
         <translation>&amp;Pencere</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2342"/>
+        <location filename="UI/UserInterface.py" line="2354"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Araççubuğu</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2353"/>
+        <location filename="UI/UserInterface.py" line="2365"/>
         <source>P&amp;lugins</source>
         <translation>Ek&amp;lentiler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2362"/>
+        <location filename="UI/UserInterface.py" line="2374"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2367"/>
+        <location filename="UI/UserInterface.py" line="2379"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2433"/>
+        <location filename="UI/UserInterface.py" line="2445"/>
         <source>Tools</source>
         <translation>Araçlar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2435"/>
+        <location filename="UI/UserInterface.py" line="2447"/>
         <source>Settings</source>
         <translation>Ayarlar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4257"/>
+        <location filename="UI/UserInterface.py" line="4271"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2437"/>
+        <location filename="UI/UserInterface.py" line="2449"/>
         <source>Profiles</source>
         <translation>Kesitler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2438"/>
+        <location filename="UI/UserInterface.py" line="2450"/>
         <source>Plugins</source>
         <translation>Eklentiler</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2579"/>
+        <location filename="UI/UserInterface.py" line="2592"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2586"/>
+        <location filename="UI/UserInterface.py" line="2599"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2593"/>
+        <location filename="UI/UserInterface.py" line="2606"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2600"/>
+        <location filename="UI/UserInterface.py" line="2613"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2609"/>
+        <location filename="UI/UserInterface.py" line="2622"/>
         <source>&lt;p&gt;This part of the status bar displays the name of the file of the current editor.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2616"/>
+        <location filename="UI/UserInterface.py" line="2629"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2623"/>
+        <location filename="UI/UserInterface.py" line="2636"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2680"/>
+        <location filename="UI/UserInterface.py" line="2693"/>
         <source>External Tools/{0}</source>
         <translation>Harici Araçlar/{0}</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2766"/>
+        <location filename="UI/UserInterface.py" line="2779"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Sürüm Numaraları&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5779"/>
+        <location filename="UI/UserInterface.py" line="5812"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2817"/>
+        <location filename="UI/UserInterface.py" line="2830"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>E-posta adresi veya posta  sunucu adresi  boş. Lütfen e-posta ayarlarını özellikler diyaloğundan giriniz.</translation>
     </message>
@@ -47869,234 +48047,234 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Yoksay ama hatırla</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3059"/>
+        <location filename="UI/UserInterface.py" line="3072"/>
         <source>Restart application</source>
         <translation>Uygulmayı yeniden başlat</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3059"/>
+        <location filename="UI/UserInterface.py" line="3072"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Uygulama yeniden başlatılmaya ihtiyaç duyuyor. Şimdi yapılsın mı?</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3091"/>
+        <location filename="UI/UserInterface.py" line="3104"/>
         <source>Configure Tool Groups ...</source>
         <translation>Alet Grupları Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3094"/>
+        <location filename="UI/UserInterface.py" line="3107"/>
         <source>Configure current Tool Group ...</source>
         <translation>Geçerli alet grubunu ayarla...</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3142"/>
+        <location filename="UI/UserInterface.py" line="3156"/>
         <source>&amp;Builtin Tools</source>
         <translation>Ya&amp;pılandırma Araçları</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3150"/>
+        <location filename="UI/UserInterface.py" line="3164"/>
         <source>&amp;Plugin Tools</source>
         <translation>Eklen&amp;ti Araçları</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3303"/>
+        <location filename="UI/UserInterface.py" line="3317"/>
         <source>&amp;Show all</source>
         <translation>Hepsini Gö&amp;ster</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="3305"/>
+        <location filename="UI/UserInterface.py" line="3319"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Hepsini gizle</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4034"/>
+        <location filename="UI/UserInterface.py" line="4048"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Bugeçerli projede tanımlanan ana betik değil. Durduruluyor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4209"/>
+        <location filename="UI/UserInterface.py" line="4223"/>
         <source>Qt 3 support</source>
         <translation>Qt3 Desteği</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4209"/>
+        <location filename="UI/UserInterface.py" line="4223"/>
         <source>Qt v.3 is not supported by eric5.</source>
         <translation>Qt v.3 eric5 tarafından desteklenmiyor.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4365"/>
+        <location filename="UI/UserInterface.py" line="4379"/>
         <source>Problem</source>
         <translation>Problem</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4365"/>
+        <location filename="UI/UserInterface.py" line="4379"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4498"/>
+        <location filename="UI/UserInterface.py" line="4531"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4129"/>
+        <location filename="UI/UserInterface.py" line="4143"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4186"/>
+        <location filename="UI/UserInterface.py" line="4200"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4230"/>
+        <location filename="UI/UserInterface.py" line="4244"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4257"/>
+        <location filename="UI/UserInterface.py" line="4271"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Hali hazırda kullanıcı göstericisi seçilmedi. Lütfen .birini belirlemek için özellikler diyaloğunu kullanının.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4269"/>
+        <location filename="UI/UserInterface.py" line="4283"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4288"/>
+        <location filename="UI/UserInterface.py" line="4302"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4328"/>
+        <location filename="UI/UserInterface.py" line="4342"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4373"/>
+        <location filename="UI/UserInterface.py" line="4387"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4392"/>
+        <location filename="UI/UserInterface.py" line="4406"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4446"/>
+        <location filename="UI/UserInterface.py" line="4479"/>
         <source>External Tools</source>
         <translation>Harici Araçlar</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4440"/>
+        <location filename="UI/UserInterface.py" line="4473"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4446"/>
+        <location filename="UI/UserInterface.py" line="4479"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4482"/>
+        <location filename="UI/UserInterface.py" line="4515"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4498"/>
+        <location filename="UI/UserInterface.py" line="4531"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4575"/>
+        <location filename="UI/UserInterface.py" line="4608"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4850"/>
+        <location filename="UI/UserInterface.py" line="4883"/>
         <source>Documentation Missing</source>
         <translation>Eksik Belgeleme</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4850"/>
+        <location filename="UI/UserInterface.py" line="4883"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4835"/>
+        <location filename="UI/UserInterface.py" line="4868"/>
         <source>Documentation</source>
         <translation>Belgeleme</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4744"/>
+        <location filename="UI/UserInterface.py" line="4777"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;PyQt4 Belgelerinin başlama noktası ayarlanmamış.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4835"/>
+        <location filename="UI/UserInterface.py" line="4868"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5234"/>
+        <location filename="UI/UserInterface.py" line="5267"/>
         <source>Save tasks</source>
         <translation>Görevleri kaydet</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5234"/>
+        <location filename="UI/UserInterface.py" line="5267"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5256"/>
+        <location filename="UI/UserInterface.py" line="5289"/>
         <source>Read tasks</source>
         <translation>Görevler Okunuyor</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5256"/>
+        <location filename="UI/UserInterface.py" line="5289"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5271"/>
+        <location filename="UI/UserInterface.py" line="5304"/>
         <source>Save session</source>
         <translation>Oturumu kaydet</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5271"/>
+        <location filename="UI/UserInterface.py" line="5304"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5294"/>
+        <location filename="UI/UserInterface.py" line="5327"/>
         <source>Read session</source>
         <translation>Oturumu oku</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5294"/>
+        <location filename="UI/UserInterface.py" line="5327"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5493"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5460"/>
+        <location filename="UI/UserInterface.py" line="5493"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; bir dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5604"/>
+        <location filename="UI/UserInterface.py" line="5637"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Vazgeç</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5609"/>
+        <location filename="UI/UserInterface.py" line="5642"/>
         <source>Trying host {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48111,37 +48289,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">Sürüm dosyası indirilemiyor.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5732"/>
+        <location filename="UI/UserInterface.py" line="5765"/>
         <source>Update available</source>
         <translation>Güncelleme mümkün değil</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5732"/>
+        <location filename="UI/UserInterface.py" line="5765"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5741"/>
+        <location filename="UI/UserInterface.py" line="5774"/>
         <source>Eric5 is up to date</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5741"/>
+        <location filename="UI/UserInterface.py" line="5774"/>
         <source>You are using the latest version of eric5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5745"/>
+        <location filename="UI/UserInterface.py" line="5778"/>
         <source>Error during updates check</source>
         <translation>Güncellemeleri kontrol esnasında hata</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5745"/>
+        <location filename="UI/UserInterface.py" line="5778"/>
         <source>Could not perform updates check.</source>
         <translation>Güncellemelere ulaşamıyorum.</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5766"/>
+        <location filename="UI/UserInterface.py" line="5799"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Mümkün sürümler&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -48151,22 +48329,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="obsolete">&lt;b&gt;&apos;{0}&apos; proxy&apos;sini kullanarak bağlan:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5794"/>
+        <location filename="UI/UserInterface.py" line="5827"/>
         <source>SSL Errors</source>
         <translation>SSL Hataları</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5794"/>
+        <location filename="UI/UserInterface.py" line="5827"/>
         <source>&lt;p&gt;SSL Errors:&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5819"/>
+        <location filename="UI/UserInterface.py" line="5852"/>
         <source>First time usage</source>
         <translation>İlk kullanım</translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5819"/>
+        <location filename="UI/UserInterface.py" line="5852"/>
         <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
         <translation>Eric5 henüz ayarlanmadı. Ayarlar Diyaloğu başlatılıyor.</translation>
     </message>
@@ -48231,72 +48409,72 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2187"/>
+        <location filename="UI/UserInterface.py" line="2199"/>
         <source>Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2187"/>
+        <location filename="UI/UserInterface.py" line="2199"/>
         <source>Python &amp;3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2189"/>
+        <location filename="UI/UserInterface.py" line="2201"/>
         <source>Open Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2190"/>
+        <location filename="UI/UserInterface.py" line="2202"/>
         <source>&lt;b&gt;Python 3 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 3 documentation. If no documentation directory is configured, the location of the Python 3 documentation is assumed to be the doc directory underneath the location of the Python 3 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; on Unix. Set PYTHON3DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2202"/>
+        <location filename="UI/UserInterface.py" line="2214"/>
         <source>Python 2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2202"/>
+        <location filename="UI/UserInterface.py" line="2214"/>
         <source>Python &amp;2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2204"/>
+        <location filename="UI/UserInterface.py" line="2216"/>
         <source>Open Python 2 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="2205"/>
+        <location filename="UI/UserInterface.py" line="2217"/>
         <source>&lt;b&gt;Python 2 Documentation&lt;/b&gt;&lt;p&gt;Display the Python 2 documentation. If no documentation directory is configured, the location of the Python 2 documentation is assumed to be the doc directory underneath the location of the configured Python 2 executable on Windows and &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt; on Unix. Set PYTHON2DOCDIR in your environment to override this. &lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5113"/>
+        <location filename="UI/UserInterface.py" line="5146"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5692"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5653"/>
+        <location filename="UI/UserInterface.py" line="5686"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4969"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="4936"/>
+        <location filename="UI/UserInterface.py" line="4969"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="UI/UserInterface.py" line="5659"/>
+        <location filename="UI/UserInterface.py" line="5692"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48379,6 +48557,36 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="UI/UserInterface.py" line="1774"/>
         <source>&lt;b&gt;Rerun Failed Tests&lt;/b&gt;&lt;p&gt;Rerun all tests that failed during the last unittest run.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1882"/>
+        <source>Compare &amp;Files side by side...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1943"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1943"/>
+        <source>&amp;Snapshot...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1947"/>
+        <source>Take snapshots of a screen region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="1948"/>
+        <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="UI/UserInterface.py" line="4453"/>
+        <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

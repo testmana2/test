@@ -524,6 +524,8 @@ ShortcutsWriter XMLStreamWriterBase
 SideWidget QWidget
 SingleApplicationServer QLocalServer
 SiteInfoDialog QDialog Ui_SiteInfoDialog
+SnapWidget QWidget Ui_SnapWidget
+SnapshotRegionGrabber QWidget
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpeedDial QObject

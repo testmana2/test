@@ -806,6 +806,10 @@
             <section title="eric5.QScintilla.Terminal" ref="eric5.QScintilla.Terminal.html" />
             <section title="eric5.QScintilla.ZoomDialog" ref="eric5.QScintilla.ZoomDialog.html" />
           </section>
+          <section title="eric5.Snapshot" ref="index-eric5.Snapshot.html">
+            <section title="eric5.Snapshot.SnapWidget" ref="eric5.Snapshot.SnapWidget.html" />
+            <section title="eric5.Snapshot.SnapshotRegionGrabber" ref="eric5.Snapshot.SnapshotRegionGrabber.html" />
+          </section>
           <section title="eric5.SqlBrowser" ref="index-eric5.SqlBrowser.html">
             <section title="eric5.SqlBrowser.SqlBrowser" ref="eric5.SqlBrowser.SqlBrowser.html" />
             <section title="eric5.SqlBrowser.SqlBrowserWidget" ref="eric5.SqlBrowser.SqlBrowserWidget.html" />
@@ -918,6 +922,7 @@
           <section title="eric5.eric5_pluginuninstall" ref="eric5.eric5_pluginuninstall.html" />
           <section title="eric5.eric5_qregexp" ref="eric5.eric5_qregexp.html" />
           <section title="eric5.eric5_re" ref="eric5.eric5_re.html" />
+          <section title="eric5.eric5_snap" ref="eric5.eric5_snap.html" />
           <section title="eric5.eric5_sqlbrowser" ref="eric5.eric5_sqlbrowser.html" />
           <section title="eric5.eric5_tray" ref="eric5.eric5_tray.html" />
           <section title="eric5.eric5_trpreviewer" ref="eric5.eric5_trpreviewer.html" />
@@ -8482,6 +8487,31 @@
       <keyword name="SiteInfoDialog.__saveImage" id="SiteInfoDialog.__saveImage" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__saveImage" />
       <keyword name="SiteInfoDialog.on_imagesTree_currentItemChanged" id="SiteInfoDialog.on_imagesTree_currentItemChanged" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_imagesTree_currentItemChanged" />
       <keyword name="SiteInfoDialog.on_securityDetailsButton_clicked" id="SiteInfoDialog.on_securityDetailsButton_clicked" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_securityDetailsButton_clicked" />
+      <keyword name="SnapWidget" id="SnapWidget" ref="eric5.Snapshot.SnapWidget.html#SnapWidget" />
+      <keyword name="SnapWidget (Constructor)" id="SnapWidget (Constructor)" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__init__" />
+      <keyword name="SnapWidget (Module)" id="SnapWidget (Module)" ref="eric5.Snapshot.SnapWidget.html" />
+      <keyword name="SnapWidget.__captured" id="SnapWidget.__captured" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__captured" />
+      <keyword name="SnapWidget.__initFileFilters" id="SnapWidget.__initFileFilters" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__initFileFilters" />
+      <keyword name="SnapWidget.on_copyButton_clicked" id="SnapWidget.on_copyButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyButton_clicked" />
+      <keyword name="SnapWidget.on_saveButton_clicked" id="SnapWidget.on_saveButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_saveButton_clicked" />
+      <keyword name="SnapWidget.on_takeButton_clicked" id="SnapWidget.on_takeButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_takeButton_clicked" />
+      <keyword name="Snapshot (Package)" id="Snapshot (Package)" ref="index-eric5.Snapshot.html" />
+      <keyword name="SnapshotRegionGrabber" id="SnapshotRegionGrabber" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber" />
+      <keyword name="SnapshotRegionGrabber (Constructor)" id="SnapshotRegionGrabber (Constructor)" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__init__" />
+      <keyword name="SnapshotRegionGrabber (Module)" id="SnapshotRegionGrabber (Module)" ref="eric5.Snapshot.SnapshotRegionGrabber.html" />
+      <keyword name="SnapshotRegionGrabber.__grabRect" id="SnapshotRegionGrabber.__grabRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__grabRect" />
+      <keyword name="SnapshotRegionGrabber.__handleMask" id="SnapshotRegionGrabber.__handleMask" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__handleMask" />
+      <keyword name="SnapshotRegionGrabber.__initialize" id="SnapshotRegionGrabber.__initialize" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__initialize" />
+      <keyword name="SnapshotRegionGrabber.__limitPointToRect" id="SnapshotRegionGrabber.__limitPointToRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__limitPointToRect" />
+      <keyword name="SnapshotRegionGrabber.__normalizeSelection" id="SnapshotRegionGrabber.__normalizeSelection" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__normalizeSelection" />
+      <keyword name="SnapshotRegionGrabber.__updateHandles" id="SnapshotRegionGrabber.__updateHandles" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__updateHandles" />
+      <keyword name="SnapshotRegionGrabber.keyPressEvent" id="SnapshotRegionGrabber.keyPressEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.keyPressEvent" />
+      <keyword name="SnapshotRegionGrabber.mouseDoubleClickEvent" id="SnapshotRegionGrabber.mouseDoubleClickEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.mouseDoubleClickEvent" />
+      <keyword name="SnapshotRegionGrabber.mouseMoveEvent" id="SnapshotRegionGrabber.mouseMoveEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.mouseMoveEvent" />
+      <keyword name="SnapshotRegionGrabber.mousePressEvent" id="SnapshotRegionGrabber.mousePressEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.mousePressEvent" />
+      <keyword name="SnapshotRegionGrabber.mouseReleaseEvent" id="SnapshotRegionGrabber.mouseReleaseEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.mouseReleaseEvent" />
+      <keyword name="SnapshotRegionGrabber.paintEvent" id="SnapshotRegionGrabber.paintEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.paintEvent" />
+      <keyword name="SnapshotRegionGrabber.resizeEvent" id="SnapshotRegionGrabber.resizeEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.resizeEvent" />
       <keyword name="SourceStat" id="SourceStat" ref="eric5.DataViews.CodeMetrics.html#SourceStat" />
       <keyword name="SourceStat (Constructor)" id="SourceStat (Constructor)" ref="eric5.DataViews.CodeMetrics.html#SourceStat.__init__" />
       <keyword name="SourceStat.dedent" id="SourceStat.dedent" ref="eric5.DataViews.CodeMetrics.html#SourceStat.dedent" />
@@ -10434,6 +10464,7 @@
       <keyword name="UserInterface.__showWindowMenu" id="UserInterface.__showWindowMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showWindowMenu" />
       <keyword name="UserInterface.__showWizardsMenu" id="UserInterface.__showWizardsMenu" ref="eric5.UI.UserInterface.html#UserInterface.__showWizardsMenu" />
       <keyword name="UserInterface.__shutdown" id="UserInterface.__shutdown" ref="eric5.UI.UserInterface.html#UserInterface.__shutdown" />
+      <keyword name="UserInterface.__snapshot" id="UserInterface.__snapshot" ref="eric5.UI.UserInterface.html#UserInterface.__snapshot" />
       <keyword name="UserInterface.__sqlBrowser" id="UserInterface.__sqlBrowser" ref="eric5.UI.UserInterface.html#UserInterface.__sqlBrowser" />
       <keyword name="UserInterface.__sslErrors" id="UserInterface.__sslErrors" ref="eric5.UI.UserInterface.html#UserInterface.__sslErrors" />
       <keyword name="UserInterface.__startToolProcess" id="UserInterface.__startToolProcess" ref="eric5.UI.UserInterface.html#UserInterface.__startToolProcess" />
@@ -11300,6 +11331,7 @@
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_pluginuninstall.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_qregexp.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_re.html#createMainWidget" />
+      <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_snap.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_sqlbrowser.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_tray.html#createMainWidget" />
       <keyword name="createMainWidget" id="createMainWidget" ref="eric5.eric5_trpreviewer.html#createMainWidget" />
@@ -11326,6 +11358,7 @@
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsPySvn.html#displayString" />
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsSubversion.html#displayString" />
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
+      <keyword name="drawRect" id="drawRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#drawRect" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="encryptData" id="encryptData" ref="eric5.Utilities.crypto.py3AES.html#encryptData" />
       <keyword name="eric5 (Module)" id="eric5 (Module)" ref="eric5.eric5.html" />
@@ -11342,6 +11375,7 @@
       <keyword name="eric5_pluginuninstall (Module)" id="eric5_pluginuninstall (Module)" ref="eric5.eric5_pluginuninstall.html" />
       <keyword name="eric5_qregexp (Module)" id="eric5_qregexp (Module)" ref="eric5.eric5_qregexp.html" />
       <keyword name="eric5_re (Module)" id="eric5_re (Module)" ref="eric5.eric5_re.html" />
+      <keyword name="eric5_snap (Module)" id="eric5_snap (Module)" ref="eric5.eric5_snap.html" />
       <keyword name="eric5_sqlbrowser (Module)" id="eric5_sqlbrowser (Module)" ref="eric5.eric5_sqlbrowser.html" />
       <keyword name="eric5_tray (Module)" id="eric5_tray (Module)" ref="eric5.eric5_tray.html" />
       <keyword name="eric5_trpreviewer (Module)" id="eric5_trpreviewer (Module)" ref="eric5.eric5_trpreviewer.html" />
@@ -11584,6 +11618,7 @@
       <keyword name="main" id="main" ref="eric5.eric5_pluginuninstall.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_qregexp.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_re.html#main" />
+      <keyword name="main" id="main" ref="eric5.eric5_snap.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_sqlbrowser.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_tray.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_trpreviewer.html#main" />
@@ -12470,6 +12505,8 @@
       <file>eric5.QScintilla.TypingCompleters.CompleterRuby.html</file>
       <file>eric5.QScintilla.TypingCompleters.__init__.html</file>
       <file>eric5.QScintilla.ZoomDialog.html</file>
+      <file>eric5.Snapshot.SnapWidget.html</file>
+      <file>eric5.Snapshot.SnapshotRegionGrabber.html</file>
       <file>eric5.SqlBrowser.SqlBrowser.html</file>
       <file>eric5.SqlBrowser.SqlBrowserWidget.html</file>
       <file>eric5.SqlBrowser.SqlConnectionDialog.html</file>
@@ -12556,6 +12593,7 @@
       <file>eric5.eric5_pluginuninstall.html</file>
       <file>eric5.eric5_qregexp.html</file>
       <file>eric5.eric5_re.html</file>
+      <file>eric5.eric5_snap.html</file>
       <file>eric5.eric5_sqlbrowser.html</file>
       <file>eric5.eric5_tray.html</file>
       <file>eric5.eric5_trpreviewer.html</file>
@@ -12648,6 +12686,7 @@
       <file>index-eric5.QScintilla.Lexers.html</file>
       <file>index-eric5.QScintilla.TypingCompleters.html</file>
       <file>index-eric5.QScintilla.html</file>
+      <file>index-eric5.Snapshot.html</file>
       <file>index-eric5.SqlBrowser.html</file>
       <file>index-eric5.Tasks.html</file>
       <file>index-eric5.Templates.html</file>

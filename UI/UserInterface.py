@@ -1881,7 +1881,7 @@ class UserInterface(QMainWindow):
 
         self.compareAct = E5Action(self.trUtf8('Compare Files side by side'),
                 UI.PixmapCache.getIcon("compareFiles.png"),
-                self.trUtf8('Compare Files &side by side...'),
+                self.trUtf8('Compare &Files side by side...'),
                 0, 0, self, 'compare_files')
         self.compareAct.setStatusTip(self.trUtf8('Compare two files'))
         self.compareAct.setWhatsThis(self.trUtf8(
@@ -1939,6 +1939,18 @@ class UserInterface(QMainWindow):
         ))
         self.iconEditorAct.triggered[()].connect(self.__editPixmap)
         self.actions.append(self.iconEditorAct)
+
+        self.snapshotAct = E5Action(self.trUtf8('Snapshot'),
+                UI.PixmapCache.getIcon("ericSnap.png"),
+                self.trUtf8('&Snapshot...'),
+                0, 0, self, 'snapshot')
+        self.snapshotAct.setStatusTip(self.trUtf8('Take snapshots of a screen region'))
+        self.snapshotAct.setWhatsThis(self.trUtf8(
+            """<b>Snapshot</b>"""
+            """<p>This opens a dialog to take snapshots of a screen region.</p>"""
+        ))
+        self.snapshotAct.triggered[()].connect(self.__snapshot)
+        self.actions.append(self.snapshotAct)
 
         self.prefAct = E5Action(self.trUtf8('Preferences'),
                 UI.PixmapCache.getIcon("configure.png"),
@@ -2469,6 +2481,7 @@ class UserInterface(QMainWindow):
         toolstb.addSeparator()
         toolstb.addAction(self.miniEditorAct)
         toolstb.addAction(self.iconEditorAct)
+        toolstb.addAction(self.snapshotAct)
         toolstb.addSeparator()
         toolstb.addAction(self.webBrowserAct)
         self.toolbarManager.addToolBar(toolstb, toolstb.windowTitle())
@@ -3111,6 +3124,7 @@ class UserInterface(QMainWindow):
             self.__menus["tools"].addAction(self.sqlBrowserAct)
             self.__menus["tools"].addAction(self.miniEditorAct)
             self.__menus["tools"].addAction(self.iconEditorAct)
+            self.__menus["tools"].addAction(self.snapshotAct)
             self.__menus["tools"].addAction(self.webBrowserAct)
         elif self.currentToolGroup == -2:
             act.setEnabled(False)
@@ -4423,6 +4437,25 @@ class UserInterface(QMainWindow):
         """
         dlg = SvgDiagram(fn, self)
         dlg.show()
+        
+    def __snapshot(self):
+        """
+        Private slot to start the snapshot tool.
+        """
+        proc = QProcess()
+        
+        snap = os.path.join(getConfig("ericDir"), "eric5_snap.py")
+        
+        args = []
+        args.append(snap)
+        
+        if not os.path.isfile(snap) or not proc.startDetached(sys.executable, args):
+            E5MessageBox.critical(self,
+                self.trUtf8('Process Generation Error'),
+                self.trUtf8(
+                    '<p>Could not start Snapshot tool.<br>'
+                    'Ensure that it is available as <b>{0}</b>.</p>'
+                ).format(snap))
         
     def __toolActionTriggered(self):
         """
