@@ -11,7 +11,7 @@ import re
 import difflib
 
 from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
-    QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
+    pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
 from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, QActionGroup, \
     QDialog, QAbstractPrintDialog, QInputDialog, QApplication, QMenu, QPalette, QFont
 from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
@@ -5986,7 +5986,10 @@ class Editor(QsciScintillaCompat):
         Public method to set the automatic spell checking.
         """
         if Preferences.getEditor("AutoSpellCheckingEnabled"):
-            self.SCN_CHARADDED.connect(self.__spellCharAdded)
+            try:
+                self.SCN_CHARADDED.connect(self.__spellCharAdded, Qt.UniqueConnection)
+            except TypeError:
+                pass
             self.spell.checkDocumentIncrementally()
         else:
             try:
@@ -6010,6 +6013,7 @@ class Editor(QsciScintillaCompat):
                        self.lexer_.isStringStyle(style)
         return True
     
+    @pyqtSlot(int)
     def __spellCharAdded(self, charNumber):
         """
         Public slot called to handle the user entering a character.
