@@ -48907,7 +48907,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Comparaison de fichiers côte à côte</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="113"/>
+        <location filename="Tools/TrayStarter.py" line="115"/>
         <source>Preferences</source>
         <translation>Préférences</translation>
     </message>
@@ -48917,12 +48917,12 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">IDE eric4</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="134"/>
+        <location filename="Tools/TrayStarter.py" line="136"/>
         <source>Quit</source>
         <translation>Quitter</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -48932,22 +48932,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Impossible de démarrer la version.&lt;br&gt;Assurez-vous qu&apos;il est bien disponible  &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="105"/>
+        <location filename="Tools/TrayStarter.py" line="107"/>
         <source>Install Plugin</source>
         <translation>Installer un plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="109"/>
         <source>Uninstall Plugin</source>
         <translation>Désinstaller un plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="111"/>
         <source>Plugin Repository</source>
         <translation>Référentiel de plugins</translation>
     </message>
@@ -48977,33 +48977,38 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished">Lanceur eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="115"/>
+        <location filename="Tools/TrayStarter.py" line="117"/>
         <source>eric5 IDE</source>
         <translation type="unfinished">IDE eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="117"/>
+        <location filename="Tools/TrayStarter.py" line="119"/>
         <source>eric5 Mini Editor</source>
         <translation type="unfinished">Mini-éditeur eric4 {5 ?}</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="121"/>
-        <source>Preferences (tray starter)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="103"/>
         <source>Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="101"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="123"/>
+        <source>Configure Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

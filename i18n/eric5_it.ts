@@ -45318,37 +45318,37 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Confronta file lato a lato</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="113"/>
+        <location filename="Tools/TrayStarter.py" line="115"/>
         <source>Preferences</source>
         <translation>Preferenze</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="134"/>
+        <location filename="Tools/TrayStarter.py" line="136"/>
         <source>Quit</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="105"/>
+        <location filename="Tools/TrayStarter.py" line="107"/>
         <source>Install Plugin</source>
         <translation>Installa Plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="109"/>
         <source>Uninstall Plugin</source>
         <translation>Disinstalla Plugin</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="111"/>
         <source>Plugin Repository</source>
         <translation>Repository Plugin</translation>
     </message>
@@ -45373,27 +45373,27 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <translation>Eric5 tray starter </translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="115"/>
+        <location filename="Tools/TrayStarter.py" line="117"/>
         <source>eric5 IDE</source>
         <translation>IDE eric5</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="117"/>
+        <location filename="Tools/TrayStarter.py" line="119"/>
         <source>eric5 Mini Editor</source>
         <translation>Mini Editor di eric5</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare il processo.&lt;br&gt;Assicurarsi sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="121"/>
         <source>Preferences (tray starter)</source>
-        <translation>Preferenze (tray starter)</translation>
+        <translation type="obsolete">Preferenze (tray starter)</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="103"/>
         <source>Icon Editor</source>
         <translation type="unfinished">Editor di icone</translation>
     </message>
@@ -45401,6 +45401,16 @@ venire cambiato con un dialogo di configurazione.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Web Browser di eric5</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="101"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="123"/>
+        <source>Configure Tray Starter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

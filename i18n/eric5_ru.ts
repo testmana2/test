@@ -45485,42 +45485,42 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Сравнить файлы с параллальным отображением (side by side)</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="113"/>
+        <location filename="Tools/TrayStarter.py" line="115"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="134"/>
+        <location filename="Tools/TrayStarter.py" line="136"/>
         <source>Quit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>Process Generation Error</source>
         <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить процесс.&lt;br&gt;Убедитесь, что он доступен как &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="105"/>
+        <location filename="Tools/TrayStarter.py" line="107"/>
         <source>Install Plugin</source>
         <translation>Установить подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="109"/>
         <source>Uninstall Plugin</source>
         <translation>Убрать подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="111"/>
         <source>Plugin Repository</source>
         <translation>Репозиторий плагинов</translation>
     </message>
@@ -45545,22 +45545,22 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Запуск Eric5 в системном лотке</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="115"/>
+        <location filename="Tools/TrayStarter.py" line="117"/>
         <source>eric5 IDE</source>
         <translation>eric5 IDE</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="117"/>
+        <location filename="Tools/TrayStarter.py" line="119"/>
         <source>eric5 Mini Editor</source>
         <translation>Мини-редактор eric5</translation>
     </message>
     <message>
         <location filename="Tools/TrayStarter.py" line="121"/>
         <source>Preferences (tray starter)</source>
-        <translation>Предпочтения (системный лоток)</translation>
+        <translation type="obsolete">Предпочтения (системный лоток)</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="103"/>
         <source>Icon Editor</source>
         <translation type="unfinished">Редактор иконок</translation>
     </message>
@@ -45568,6 +45568,16 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="101"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="123"/>
+        <source>Configure Tray Starter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

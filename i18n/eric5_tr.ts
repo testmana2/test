@@ -45507,62 +45507,57 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>SQL Gözatıcısı</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="105"/>
+        <location filename="Tools/TrayStarter.py" line="107"/>
         <source>Install Plugin</source>
         <translation>Eklenti Kur</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="107"/>
+        <location filename="Tools/TrayStarter.py" line="109"/>
         <source>Uninstall Plugin</source>
         <translation>Eklenti Kaldır</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="109"/>
+        <location filename="Tools/TrayStarter.py" line="111"/>
         <source>Plugin Repository</source>
         <translation>Eklenti Havuzu</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="113"/>
+        <location filename="Tools/TrayStarter.py" line="115"/>
         <source>Preferences</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="115"/>
+        <location filename="Tools/TrayStarter.py" line="117"/>
         <source>eric5 IDE</source>
         <translation>eric5 IDE</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="117"/>
+        <location filename="Tools/TrayStarter.py" line="119"/>
         <source>eric5 Mini Editor</source>
         <translation>eric5 Mini Düzenleyici</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="134"/>
+        <location filename="Tools/TrayStarter.py" line="136"/>
         <source>Quit</source>
         <translation>Çık</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>Process Generation Error</source>
         <translation>İşlem Üretecinde Hata</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;İşlem başlatılamıyor.&lt;br&gt;Bu durum büyük olasılıkla şundan kaynaklanıyto &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="210"/>
+        <location filename="Tools/TrayStarter.py" line="212"/>
         <source>OK</source>
         <translation>TAMAM</translation>
     </message>
     <message>
-        <location filename="Tools/TrayStarter.py" line="121"/>
-        <source>Preferences (tray starter)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Tools/TrayStarter.py" line="101"/>
+        <location filename="Tools/TrayStarter.py" line="103"/>
         <source>Icon Editor</source>
         <translation type="unfinished">İkon Düzenleyici</translation>
     </message>
@@ -45570,6 +45565,16 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="Tools/TrayStarter.py" line="87"/>
         <source>eric5 Web Browser</source>
         <translation type="unfinished">Eric5 Web Gözatıcısı</translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="101"/>
+        <source>Snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Tools/TrayStarter.py" line="123"/>
+        <source>Configure Tray Starter</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

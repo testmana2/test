@@ -10136,6 +10136,7 @@
       <keyword name="TrayStarter.__startProc" id="TrayStarter.__startProc" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startProc" />
       <keyword name="TrayStarter.__startPyRe" id="TrayStarter.__startPyRe" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startPyRe" />
       <keyword name="TrayStarter.__startQRegExp" id="TrayStarter.__startQRegExp" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startQRegExp" />
+      <keyword name="TrayStarter.__startSnapshot" id="TrayStarter.__startSnapshot" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startSnapshot" />
       <keyword name="TrayStarter.__startSqlBrowser" id="TrayStarter.__startSqlBrowser" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startSqlBrowser" />
       <keyword name="TrayStarter.__startTRPreviewer" id="TrayStarter.__startTRPreviewer" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startTRPreviewer" />
       <keyword name="TrayStarter.__startUIPreviewer" id="TrayStarter.__startUIPreviewer" ref="eric5.Tools.TrayStarter.html#TrayStarter.__startUIPreviewer" />

@@ -98,6 +98,8 @@ class TrayStarter(QSystemTrayIcon):
             self.trUtf8("SQL Browser"), self.__startSqlBrowser)
         self.__menu.addSeparator()
         
+        self.__menu.addAction(UI.PixmapCache.getIcon("ericSnap.png"),
+            self.trUtf8("Snapshot"), self.__startSnapshot)
         self.__menu.addAction(UI.PixmapCache.getIcon("iconEditor.png"),
             self.trUtf8("Icon Editor"), self.__startIconEditor)
         self.__menu.addSeparator()
@@ -119,7 +121,7 @@ class TrayStarter(QSystemTrayIcon):
         self.__menu.addSeparator()
         
         self.__menu.addAction(UI.PixmapCache.getIcon("configure.png"),
-            self.trUtf8('Preferences (tray starter)'), self.__showPreferences)
+            self.trUtf8('Configure Tray Starter'), self.__showPreferences)
         self.__menu.addSeparator()
         
         # recent files
@@ -311,6 +313,13 @@ class TrayStarter(QSystemTrayIcon):
         Private slot to start the eric5 icon editor dialog.
         """
         self.__startProc("eric5_iconeditor.py", "--config={0}".format(
+            Utilities.getConfigDir()))
+
+    def __startSnapshot(self):
+        """
+        Private slot to start the eric5 snapshot dialog.
+        """
+        self.__startProc("eric5_snap.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startQRegExp(self):
