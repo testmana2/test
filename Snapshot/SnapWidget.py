@@ -28,6 +28,7 @@ from .SnapshotTimer import SnapshotTimer
 
 import UI.PixmapCache
 import Preferences
+import Globals
 
 
 class SnapWidget(QWidget, Ui_SnapWidget):
@@ -312,8 +313,11 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         elif self.__mode == SnapWidget.ModeFreehand:
             self.__grabFreehand()
         else:
-            self.__grabberWidget.show()
-            self.__grabberWidget.grabMouse(Qt.CrossCursor)
+            if Globals.isMacPlatform():
+                self.__performGrab()
+            else:
+                self.__grabberWidget.show()
+                self.__grabberWidget.grabMouse(Qt.CrossCursor)
     
     def __grabRectangle(self):
         """
@@ -370,6 +374,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if not self.__savedPosition.isNull():
             self.move(self.__savedPosition)
         self.show()
+        self.raise_()
         
         self.saveButton.setEnabled(not self.__snapshot.isNull())
         self.copyButton.setEnabled(not self.__snapshot.isNull())
