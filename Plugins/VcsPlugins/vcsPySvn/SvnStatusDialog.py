@@ -324,10 +324,10 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                     uptodate = True
                     if file.repos_text_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
-                            file.repos_text_status == file.text_status
+                            file.repos_text_status != pysvn.wc_status_kind.modified
                     if file.repos_prop_status != pysvn.wc_status_kind.none:
                         uptodate = uptodate and \
-                            file.repos_prop_status == file.prop_status
+                            file.repos_prop_status != pysvn.wc_status_kind.modified
                     
                     lockState = " "
                     if file.entry is not None and \

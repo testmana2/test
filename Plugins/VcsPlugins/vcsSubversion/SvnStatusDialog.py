@@ -189,11 +189,11 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         }
         
         self.rx_status = \
-            QRegExp('(.{8})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
-            # flags (8 anything), revision, changed rev, author, path
+            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+            # flags (8 or 9 anything), revision, changed rev, author, path
         self.rx_status2 = \
-            QRegExp('(.{8})\\s+(.+)\\s*')
-            # flags (8 anything), path
+            QRegExp('(.{8,9})\\s+(.+)\\s*')
+            # flags (8 or 9 anything), path
         self.rx_changelist = \
             QRegExp('--- \\S+ .([\\w\\s]+).:\\s+')
             # three dashes, Changelist (translated), quote,
@@ -492,14 +492,14 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                     path = self.rx_status.cap(5).strip()
                     
                     self.__generateItem(flags[0], flags[1], flags[2], flags[3],
-                                        flags[4], flags[5], flags[7], rev,
+                                        flags[4], flags[5], flags[-1], rev,
                                         change, author, path)
                 elif self.rx_status2.exactMatch(s):
                     flags = self.rx_status2.cap(1)
                     path = self.rx_status2.cap(2).strip()
                     
                     self.__generateItem(flags[0], flags[1], flags[2], flags[3],
-                                        flags[4], flags[5], flags[7], "", "",
+                                        flags[4], flags[5], flags[-1], "", "",
                                         "", path)
                 elif self.rx_changelist.exactMatch(s):
                     self.currentChangelist = self.rx_changelist.cap(1)

@@ -73,9 +73,11 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
             for file in allFiles:
                 uptodate = True
                 if file.repos_text_status != pysvn.wc_status_kind.none:
-                    uptodate = uptodate and file.repos_text_status == file.text_status
+                    uptodate = uptodate and \
+                        file.repos_text_status != pysvn.wc_status_kind.modified
                 if file.repos_prop_status != pysvn.wc_status_kind.none:
-                    uptodate = uptodate and file.repos_prop_status == file.prop_status
+                    uptodate = uptodate and \
+                        file.repos_prop_status != pysvn.wc_status_kind.modified
                 
                 status = ""
                 if not uptodate:

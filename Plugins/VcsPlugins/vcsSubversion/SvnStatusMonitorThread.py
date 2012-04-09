@@ -32,9 +32,9 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.rx_status1 = \
-            QRegExp('(.{8})\\s+([0-9-]+)\\s+(.+)\\s*')
+            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+(.+)\\s*')
         self.rx_status2 = \
-            QRegExp('(.{8})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
+            QRegExp('(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+([\\w?]+)\\s+(.+)\\s*')
     
     def _performMonitor(self):
         """
@@ -85,8 +85,8 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     else:
                         continue
                     if flags[0] in "ACDMR" or \
-                       (flags[0] == " " and flags[7] == "*"):
-                        if flags[7] == "*":
+                       (flags[0] == " " and flags[-1] == "*"):
+                        if flags[-1] == "*":
                             status = "U"
                         else:
                             status = flags[0]
