@@ -4,12 +4,12 @@
 #
 
 """
-Module implementing the snapshot region grabber widget.
+Module implementing a grabber widget for a rectangular snapshot region.
 """
 
 from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer
 from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, QPainter, \
-    QPalette, QToolTip
+    QPalette, QToolTip, QPaintEngine, QPen, QBrush
 
 
 def drawRect(painter, rect, outline, fill=QColor()):
@@ -38,7 +38,7 @@ def drawRect(painter, rect, outline, fill=QColor()):
 
 class SnapshotRegionGrabber(QWidget):
     """
-    Class implementing the snapshot region grabber widget.
+    Class implementing a grabber widget for a rectangular snapshot region.
     
     @signal grabbed(QPixmap) emitted after the region was grabbed
     """
@@ -47,21 +47,22 @@ class SnapshotRegionGrabber(QWidget):
     StrokeMask = 0
     FillMask = 1
     
-    ModeFullscreen = 0
-    ModeRectangle = 1
+    Rectangle = 0
+    Ellipse = 1
     
-    def __init__(self, mode, delay):
+    def __init__(self, mode=Rectangle):
         """
         Constructor
         
-        @param mode snapshot mode (SnapshotRegionGrabber.ModeFullscreen,
-            SnapshotRegionGrabber.ModeRectangle)
-        @param delay delay in seconds before taking the snapshot (int)
+        @param mode region grabber mode (SnapshotRegionGrabber.Rectangle or
+            SnapshotRegionGrabber.Ellipse)
         """
         super().__init__(None,
             Qt.X11BypassWindowManagerHint | Qt.WindowStaysOnTopHint | 
             Qt.FramelessWindowHint | Qt.Tool)
         
+        assert mode in [SnapshotRegionGrabber.Rectangle,
+                        SnapshotRegionGrabber.Ellipse]
         self.__mode = mode
         
         self.__selection = QRect()
@@ -98,27 +99,20 @@ class SnapshotRegionGrabber(QWidget):
         
         self.setMouseTracking(True)
         
-        if delay == 0:
-            delay = 200
-        else:
-            delay = delay * 1000
-        QTimer.singleShot(delay, self.__initialize)
+        QTimer.singleShot(200, self.__initialize)
     
     def __initialize(self):
         """
         Private slot to initialize the rest of the widget.
         """
         self.__pixmap = QPixmap.grabWindow(QApplication.desktop().winId())
-        if self.__mode == SnapshotRegionGrabber.ModeFullscreen:
-            self.grabbed.emit(self.__pixmap.copy())
-        else:
-            self.resize(self.__pixmap.size())
-            self.move(0, 0)
-            self.setCursor(Qt.CrossCursor)
-            self.show()
+        self.resize(self.__pixmap.size())
+        self.move(0, 0)
+        self.setCursor(Qt.CrossCursor)
+        self.show()
 
-            self.grabMouse()
-            self.grabKeyboard()
+        self.grabMouse()
+        self.grabKeyboard()
     
     def paintEvent(self, evt):
         """
@@ -144,12 +138,16 @@ class SnapshotRegionGrabber(QWidget):
         r = QRect(self.__selection)
         if not self.__selection.isNull():
             grey = QRegion(self.rect())
-            grey = grey.subtracted(QRegion(r))
+            if self.__mode == SnapshotRegionGrabber.Ellipse:
+                reg = QRegion(r, QRegion.Ellipse)
+            else:
+                reg = QRegion(r)
+            grey = grey.subtracted(reg)
             painter.setClipRegion(grey)
             painter.setPen(Qt.NoPen)
             painter.setBrush(overlayColor)
             painter.drawRect(self.rect())
-            painter.setClipRegion(QRegion(self.rect()))
+            painter.setClipRect(self.rect())
             drawRect(painter, r, handleColor)
         
         if self.__showHelp:
@@ -168,7 +166,7 @@ class SnapshotRegionGrabber(QWidget):
         # The grabbed region is everything which is covered by the drawn
         # rectangles (border included). This means that there is no 0px
         # selection, since a 0px wide rectangle will always be drawn as a line.
-        txt = "{0}, {1} ({2}x{3})".format(
+        txt = "{0:n}, {1:n} ({2:n} x {3:n})".format(
             self.__selection.x(), self.__selection.y(),
             self.__selection.width(), self.__selection.height())
         textRect = painter.boundingRect(self.rect(), Qt.AlignLeft, txt)
@@ -451,7 +449,38 @@ class SnapshotRegionGrabber(QWidget):
         """
         Private method to grab the selected rectangle (i.e. do the snapshot).
         """
-        r = QRect(self.__selection)
-        if not r.isNull() and r.isValid():
-            self.__grabbing = True
-            self.grabbed.emit(self.__pixmap.copy(r))
+        if self.__mode == SnapshotRegionGrabber.Ellipse:
+            ell = QRegion(self.__selection, QRegion.Ellipse)
+            if not ell.isEmpty():
+                self.__grabbing = True
+                
+                xOffset = self.__pixmap.rect().x() - ell.boundingRect().x()
+                yOffset = self.__pixmap.rect().y() - ell.boundingRect().y()
+                translatedEll = ell.translated(xOffset, yOffset)
+                
+                pixmap2 = QPixmap(ell.boundingRect().size())
+                pixmap2.fill(Qt.transparent)
+                
+                pt = QPainter()
+                pt.begin(pixmap2)
+                if pt.paintEngine().hasFeature(QPaintEngine.PorterDuff):
+                    pt.setRenderHints(QPainter.Antialiasing | \
+                        QPainter.HighQualityAntialiasing | QPainter.SmoothPixmapTransform,
+                        True)
+                    pt.setBrush(Qt.black)
+                    pt.setPen(QPen(QBrush(Qt.black), 0.5))
+                    pt.drawEllipse(translatedEll.boundingRect())
+                    pt.setCompositionMode(QPainter.CompositionMode_SourceIn)
+                else:
+                    pt.setClipRegion(translatedEll)
+                    pt.setCompositionMode(QPainter.CompositionMode_Source)
+                
+                pt.drawPixmap(pixmap2.rect(), self.__pixmap, ell.boundingRect())
+                pt.end()
+                
+                self.grabbed.emit(pixmap2)
+        else:
+            r = QRect(self.__selection)
+            if not r.isNull() and r.isValid():
+                self.__grabbing = True
+                self.grabbed.emit(self.__pixmap.copy(r))

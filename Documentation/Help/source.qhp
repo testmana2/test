@@ -808,7 +808,10 @@
           </section>
           <section title="eric5.Snapshot" ref="index-eric5.Snapshot.html">
             <section title="eric5.Snapshot.SnapWidget" ref="eric5.Snapshot.SnapWidget.html" />
+            <section title="eric5.Snapshot.SnapshotFreehandGrabber" ref="eric5.Snapshot.SnapshotFreehandGrabber.html" />
+            <section title="eric5.Snapshot.SnapshotPreview" ref="eric5.Snapshot.SnapshotPreview.html" />
             <section title="eric5.Snapshot.SnapshotRegionGrabber" ref="eric5.Snapshot.SnapshotRegionGrabber.html" />
+            <section title="eric5.Snapshot.SnapshotTimer" ref="eric5.Snapshot.SnapshotTimer.html" />
           </section>
           <section title="eric5.SqlBrowser" ref="index-eric5.SqlBrowser.html">
             <section title="eric5.SqlBrowser.SqlBrowser" ref="eric5.SqlBrowser.SqlBrowser.html" />
@@ -8490,12 +8493,47 @@
       <keyword name="SnapWidget" id="SnapWidget" ref="eric5.Snapshot.SnapWidget.html#SnapWidget" />
       <keyword name="SnapWidget (Constructor)" id="SnapWidget (Constructor)" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__init__" />
       <keyword name="SnapWidget (Module)" id="SnapWidget (Module)" ref="eric5.Snapshot.SnapWidget.html" />
+      <keyword name="SnapWidget.__autoIncFilename" id="SnapWidget.__autoIncFilename" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__autoIncFilename" />
       <keyword name="SnapWidget.__captured" id="SnapWidget.__captured" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__captured" />
+      <keyword name="SnapWidget.__dragSnapshot" id="SnapWidget.__dragSnapshot" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__dragSnapshot" />
+      <keyword name="SnapWidget.__grabEllipse" id="SnapWidget.__grabEllipse" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__grabEllipse" />
+      <keyword name="SnapWidget.__grabFreehand" id="SnapWidget.__grabFreehand" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__grabFreehand" />
+      <keyword name="SnapWidget.__grabRectangle" id="SnapWidget.__grabRectangle" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__grabRectangle" />
+      <keyword name="SnapWidget.__grabTimerTimeout" id="SnapWidget.__grabTimerTimeout" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__grabTimerTimeout" />
       <keyword name="SnapWidget.__initFileFilters" id="SnapWidget.__initFileFilters" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__initFileFilters" />
+      <keyword name="SnapWidget.__initShortcuts" id="SnapWidget.__initShortcuts" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__initShortcuts" />
+      <keyword name="SnapWidget.__performGrab" id="SnapWidget.__performGrab" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__performGrab" />
+      <keyword name="SnapWidget.__quickSave" id="SnapWidget.__quickSave" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__quickSave" />
+      <keyword name="SnapWidget.__redisplay" id="SnapWidget.__redisplay" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__redisplay" />
+      <keyword name="SnapWidget.__saveImage" id="SnapWidget.__saveImage" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__saveImage" />
+      <keyword name="SnapWidget.__startUndelayedGrab" id="SnapWidget.__startUndelayedGrab" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__startUndelayedGrab" />
+      <keyword name="SnapWidget.__updateCaption" id="SnapWidget.__updateCaption" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__updateCaption" />
+      <keyword name="SnapWidget.__updatePreview" id="SnapWidget.__updatePreview" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.__updatePreview" />
+      <keyword name="SnapWidget.closeEvent" id="SnapWidget.closeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.closeEvent" />
+      <keyword name="SnapWidget.eventFilter" id="SnapWidget.eventFilter" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.eventFilter" />
       <keyword name="SnapWidget.on_copyButton_clicked" id="SnapWidget.on_copyButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_copyButton_clicked" />
       <keyword name="SnapWidget.on_saveButton_clicked" id="SnapWidget.on_saveButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_saveButton_clicked" />
       <keyword name="SnapWidget.on_takeButton_clicked" id="SnapWidget.on_takeButton_clicked" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.on_takeButton_clicked" />
+      <keyword name="SnapWidget.resizeEvent" id="SnapWidget.resizeEvent" ref="eric5.Snapshot.SnapWidget.html#SnapWidget.resizeEvent" />
       <keyword name="Snapshot (Package)" id="Snapshot (Package)" ref="index-eric5.Snapshot.html" />
+      <keyword name="SnapshotFreehandGrabber" id="SnapshotFreehandGrabber" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber" />
+      <keyword name="SnapshotFreehandGrabber (Constructor)" id="SnapshotFreehandGrabber (Constructor)" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.__init__" />
+      <keyword name="SnapshotFreehandGrabber (Module)" id="SnapshotFreehandGrabber (Module)" ref="eric5.Snapshot.SnapshotFreehandGrabber.html" />
+      <keyword name="SnapshotFreehandGrabber.__grabRegion" id="SnapshotFreehandGrabber.__grabRegion" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.__grabRegion" />
+      <keyword name="SnapshotFreehandGrabber.__initialize" id="SnapshotFreehandGrabber.__initialize" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.__initialize" />
+      <keyword name="SnapshotFreehandGrabber.keyPressEvent" id="SnapshotFreehandGrabber.keyPressEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.keyPressEvent" />
+      <keyword name="SnapshotFreehandGrabber.mouseDoubleClickEvent" id="SnapshotFreehandGrabber.mouseDoubleClickEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.mouseDoubleClickEvent" />
+      <keyword name="SnapshotFreehandGrabber.mouseMoveEvent" id="SnapshotFreehandGrabber.mouseMoveEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.mouseMoveEvent" />
+      <keyword name="SnapshotFreehandGrabber.mousePressEvent" id="SnapshotFreehandGrabber.mousePressEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.mousePressEvent" />
+      <keyword name="SnapshotFreehandGrabber.mouseReleaseEvent" id="SnapshotFreehandGrabber.mouseReleaseEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.mouseReleaseEvent" />
+      <keyword name="SnapshotFreehandGrabber.paintEvent" id="SnapshotFreehandGrabber.paintEvent" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#SnapshotFreehandGrabber.paintEvent" />
+      <keyword name="SnapshotPreview" id="SnapshotPreview" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview" />
+      <keyword name="SnapshotPreview (Constructor)" id="SnapshotPreview (Constructor)" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview.__init__" />
+      <keyword name="SnapshotPreview (Module)" id="SnapshotPreview (Module)" ref="eric5.Snapshot.SnapshotPreview.html" />
+      <keyword name="SnapshotPreview.mouseMoveEvent" id="SnapshotPreview.mouseMoveEvent" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview.mouseMoveEvent" />
+      <keyword name="SnapshotPreview.mousePressEvent" id="SnapshotPreview.mousePressEvent" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview.mousePressEvent" />
+      <keyword name="SnapshotPreview.mouseReleaseEvent" id="SnapshotPreview.mouseReleaseEvent" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview.mouseReleaseEvent" />
+      <keyword name="SnapshotPreview.setPreview" id="SnapshotPreview.setPreview" ref="eric5.Snapshot.SnapshotPreview.html#SnapshotPreview.setPreview" />
       <keyword name="SnapshotRegionGrabber" id="SnapshotRegionGrabber" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber" />
       <keyword name="SnapshotRegionGrabber (Constructor)" id="SnapshotRegionGrabber (Constructor)" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.__init__" />
       <keyword name="SnapshotRegionGrabber (Module)" id="SnapshotRegionGrabber (Module)" ref="eric5.Snapshot.SnapshotRegionGrabber.html" />
@@ -8512,6 +8550,14 @@
       <keyword name="SnapshotRegionGrabber.mouseReleaseEvent" id="SnapshotRegionGrabber.mouseReleaseEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.mouseReleaseEvent" />
       <keyword name="SnapshotRegionGrabber.paintEvent" id="SnapshotRegionGrabber.paintEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.paintEvent" />
       <keyword name="SnapshotRegionGrabber.resizeEvent" id="SnapshotRegionGrabber.resizeEvent" ref="eric5.Snapshot.SnapshotRegionGrabber.html#SnapshotRegionGrabber.resizeEvent" />
+      <keyword name="SnapshotTimer" id="SnapshotTimer" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer" />
+      <keyword name="SnapshotTimer (Constructor)" id="SnapshotTimer (Constructor)" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.__init__" />
+      <keyword name="SnapshotTimer (Module)" id="SnapshotTimer (Module)" ref="eric5.Snapshot.SnapshotTimer.html" />
+      <keyword name="SnapshotTimer.__bell" id="SnapshotTimer.__bell" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.__bell" />
+      <keyword name="SnapshotTimer.enterEvent" id="SnapshotTimer.enterEvent" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.enterEvent" />
+      <keyword name="SnapshotTimer.paintEvent" id="SnapshotTimer.paintEvent" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.paintEvent" />
+      <keyword name="SnapshotTimer.start" id="SnapshotTimer.start" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.start" />
+      <keyword name="SnapshotTimer.stop" id="SnapshotTimer.stop" ref="eric5.Snapshot.SnapshotTimer.html#SnapshotTimer.stop" />
       <keyword name="SourceStat" id="SourceStat" ref="eric5.DataViews.CodeMetrics.html#SourceStat" />
       <keyword name="SourceStat (Constructor)" id="SourceStat (Constructor)" ref="eric5.DataViews.CodeMetrics.html#SourceStat.__init__" />
       <keyword name="SourceStat.dedent" id="SourceStat.dedent" ref="eric5.DataViews.CodeMetrics.html#SourceStat.dedent" />
@@ -11359,6 +11405,7 @@
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsPySvn.html#displayString" />
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsSubversion.html#displayString" />
       <keyword name="doDependancyChecks" id="doDependancyChecks" ref="eric5.install.html#doDependancyChecks" />
+      <keyword name="drawPolygon" id="drawPolygon" ref="eric5.Snapshot.SnapshotFreehandGrabber.html#drawPolygon" />
       <keyword name="drawRect" id="drawRect" ref="eric5.Snapshot.SnapshotRegionGrabber.html#drawRect" />
       <keyword name="encode" id="encode" ref="eric5.Utilities.__init__.html#encode" />
       <keyword name="encryptData" id="encryptData" ref="eric5.Utilities.crypto.py3AES.html#encryptData" />
@@ -12507,7 +12554,10 @@
       <file>eric5.QScintilla.TypingCompleters.__init__.html</file>
       <file>eric5.QScintilla.ZoomDialog.html</file>
       <file>eric5.Snapshot.SnapWidget.html</file>
+      <file>eric5.Snapshot.SnapshotFreehandGrabber.html</file>
+      <file>eric5.Snapshot.SnapshotPreview.html</file>
       <file>eric5.Snapshot.SnapshotRegionGrabber.html</file>
+      <file>eric5.Snapshot.SnapshotTimer.html</file>
       <file>eric5.SqlBrowser.SqlBrowser.html</file>
       <file>eric5.SqlBrowser.SqlBrowserWidget.html</file>
       <file>eric5.SqlBrowser.SqlConnectionDialog.html</file>

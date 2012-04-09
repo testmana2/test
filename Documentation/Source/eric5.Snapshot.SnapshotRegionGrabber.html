@@ -22,7 +22,7 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric5.Snapshot.SnapshotRegionGrabber</h1>
 <p>
-Module implementing the snapshot region grabber widget.
+Module implementing a grabber widget for a rectangular snapshot region.
 </p>
 <h3>Global Attributes</h3>
 <table>
@@ -32,7 +32,7 @@ Module implementing the snapshot region grabber widget.
 <table>
 <tr>
 <td><a href="#SnapshotRegionGrabber">SnapshotRegionGrabber</a></td>
-<td>Class implementing the snapshot region grabber widget.</td>
+<td>Class implementing a grabber widget for a rectangular snapshot region.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -46,7 +46,7 @@ Module implementing the snapshot region grabber widget.
 <a NAME="SnapshotRegionGrabber" ID="SnapshotRegionGrabber"></a>
 <h2>SnapshotRegionGrabber</h2>
 <p>
-    Class implementing the snapshot region grabber widget.
+    Class implementing a grabber widget for a rectangular snapshot region.
 </p><h3>Signals</h3>
 <dl>
 <dt>grabbed(QPixmap)</dt>
@@ -58,7 +58,7 @@ emitted after the region was grabbed
 QWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>FillMask</td></tr><tr><td>ModeFullscreen</td></tr><tr><td>ModeRectangle</td></tr><tr><td>StrokeMask</td></tr>
+<tr><td>Ellipse</td></tr><tr><td>FillMask</td></tr><tr><td>Rectangle</td></tr><tr><td>StrokeMask</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -116,17 +116,14 @@ QWidget
 </table>
 <a NAME="SnapshotRegionGrabber.__init__" ID="SnapshotRegionGrabber.__init__"></a>
 <h4>SnapshotRegionGrabber (Constructor)</h4>
-<b>SnapshotRegionGrabber</b>(<i>mode, delay</i>)
+<b>SnapshotRegionGrabber</b>(<i>mode=Rectangle</i>)
 <p>
         Constructor
 </p><dl>
 <dt><i>mode</i></dt>
 <dd>
-snapshot mode (SnapshotRegionGrabber.ModeFullscreen,
-            SnapshotRegionGrabber.ModeRectangle)
-</dd><dt><i>delay</i></dt>
-<dd>
-delay in seconds before taking the snapshot (int)
+region grabber mode (SnapshotRegionGrabber.Rectangle or
+            SnapshotRegionGrabber.Ellipse)
 </dd>
 </dl><a NAME="SnapshotRegionGrabber.__grabRect" ID="SnapshotRegionGrabber.__grabRect"></a>
 <h4>SnapshotRegionGrabber.__grabRect</h4>

@@ -39035,178 +39035,242 @@ Il s&apos;activent lorsqu&apos;on tape la parenthèse ouvrante d&apos;une foncti
 <context>
     <name>SnapWidget</name>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="20"/>
+        <location filename="Snapshot/SnapWidget.py" line="475"/>
         <source>eric5 Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="113"/>
+        <location filename="Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="126"/>
+        <location filename="Snapshot/SnapWidget.ui" line="67"/>
         <source>Select the snapshot mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="133"/>
+        <location filename="Snapshot/SnapWidget.ui" line="74"/>
         <source>Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="142"/>
+        <location filename="Snapshot/SnapWidget.ui" line="83"/>
         <source>Enter the delay before taking the snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="148"/>
-        <source> Seconds</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="Snapshot/SnapWidget.ui" line="184"/>
+        <location filename="Snapshot/SnapWidget.ui" line="156"/>
         <source>Press to save the snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="187"/>
+        <location filename="Snapshot/SnapWidget.ui" line="159"/>
         <source>&amp;Save Snapshot ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="233"/>
+        <location filename="Snapshot/SnapWidget.ui" line="205"/>
         <source>Press to take a snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="236"/>
+        <location filename="Snapshot/SnapWidget.ui" line="208"/>
         <source>&amp;Take Snapshot ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="41"/>
+        <location filename="Snapshot/SnapWidget.py" line="57"/>
         <source>Fullscreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="43"/>
+        <location filename="Snapshot/SnapWidget.py" line="59"/>
         <source>Rectangular Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <location filename="Snapshot/SnapWidget.py" line="111"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="62"/>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <location filename="Snapshot/SnapWidget.py" line="113"/>
         <source>Windows Icon File (*.ico)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="64"/>
+        <location filename="Snapshot/SnapWidget.py" line="114"/>
         <source>JPEG File (*.jpg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="65"/>
+        <location filename="Snapshot/SnapWidget.py" line="115"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <location filename="Snapshot/SnapWidget.py" line="116"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="67"/>
+        <location filename="Snapshot/SnapWidget.py" line="117"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="68"/>
+        <location filename="Snapshot/SnapWidget.py" line="118"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="69"/>
+        <location filename="Snapshot/SnapWidget.py" line="119"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="70"/>
+        <location filename="Snapshot/SnapWidget.py" line="120"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="71"/>
+        <location filename="Snapshot/SnapWidget.py" line="121"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="72"/>
+        <location filename="Snapshot/SnapWidget.py" line="122"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="73"/>
+        <location filename="Snapshot/SnapWidget.py" line="123"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="74"/>
+        <location filename="Snapshot/SnapWidget.py" line="124"/>
         <source>TIFF File (*.tif)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="75"/>
+        <location filename="Snapshot/SnapWidget.py" line="125"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="76"/>
+        <location filename="Snapshot/SnapWidget.py" line="126"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <location filename="Snapshot/SnapWidget.py" line="236"/>
         <source>Save Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <location filename="Snapshot/SnapWidget.py" line="217"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <location filename="Snapshot/SnapWidget.py" line="236"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="210"/>
+        <location filename="Snapshot/SnapWidget.ui" line="182"/>
         <source>Press to copy the snapshot to the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="213"/>
+        <location filename="Snapshot/SnapWidget.ui" line="185"/>
         <source>&amp;Copy</source>
         <translation type="unfinished">&amp;Copier</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="89"/>
+        <source> No delay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="92"/>
+        <source> s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="125"/>
+        <source>Path Name:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="132"/>
+        <source>Shows the name of the directory used for saving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <source>Ellipical Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <source>Freehand Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <source>Current Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="77"/>
+        <source>snapshot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="452"/>
+        <source>The application contains an unsaved snapshot.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="404"/>
+        <source>Preview of the snapshot image ({0:n} x {1:n})</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotFreehandGrabber</name>
+    <message>
+        <location filename="Snapshot/SnapshotFreehandGrabber.py" line="65"/>
+        <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SnapshotRegionGrabber</name>
     <message>
-        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotTimer</name>
+    <message numerus="yes">
+        <location filename="Snapshot/SnapshotTimer.py" line="99"/>
+        <source>Snapshot will be taken in %n seconds</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>

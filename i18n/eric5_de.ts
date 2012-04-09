@@ -35564,179 +35564,243 @@ nicht verbunden</translation>
 <context>
     <name>SnapWidget</name>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="20"/>
+        <location filename="Snapshot/SnapWidget.py" line="475"/>
         <source>eric5 Snapshot</source>
         <translation>eric5 Bildschirmfoto</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="113"/>
+        <location filename="Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
         <translation>Bildschirmfoto-Modus:</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="126"/>
+        <location filename="Snapshot/SnapWidget.ui" line="67"/>
         <source>Select the snapshot mode</source>
         <translation>Wähle den Modus für das Bildschirmfoto</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="133"/>
+        <location filename="Snapshot/SnapWidget.ui" line="74"/>
         <source>Delay:</source>
         <translation>Verzögerung:</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="142"/>
+        <location filename="Snapshot/SnapWidget.ui" line="83"/>
         <source>Enter the delay before taking the snapshot</source>
         <translation>Wähle die Verzögerung für die Aufnahme des Bildschirmfotos</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="148"/>
-        <source> Seconds</source>
-        <translation>Sekunden</translation>
-    </message>
-    <message>
-        <location filename="Snapshot/SnapWidget.ui" line="184"/>
+        <location filename="Snapshot/SnapWidget.ui" line="156"/>
         <source>Press to save the snapshot</source>
         <translation>Drücken, um das Bildschirmfoto zu speichern</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="187"/>
+        <location filename="Snapshot/SnapWidget.ui" line="159"/>
         <source>&amp;Save Snapshot ...</source>
         <translation>Bildschirmfoto &amp;speichern ...</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="233"/>
+        <location filename="Snapshot/SnapWidget.ui" line="205"/>
         <source>Press to take a snapshot</source>
         <translation>Drücken, um ein Bildschirmfoto aufzunehmen</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="236"/>
+        <location filename="Snapshot/SnapWidget.ui" line="208"/>
         <source>&amp;Take Snapshot ...</source>
         <translation>Bildschirmfoto &amp;aufnehmen ...</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="41"/>
+        <location filename="Snapshot/SnapWidget.py" line="57"/>
         <source>Fullscreen</source>
         <translation>Vollbild</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="43"/>
+        <location filename="Snapshot/SnapWidget.py" line="59"/>
         <source>Rectangular Selection</source>
         <translation>Rechteck-Auswahl</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <location filename="Snapshot/SnapWidget.py" line="111"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap Datei (*.bmp)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="62"/>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format Datei (*.gif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <location filename="Snapshot/SnapWidget.py" line="113"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows Icon Datei (*.ico)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="64"/>
+        <location filename="Snapshot/SnapWidget.py" line="114"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG Datei (*.jpg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="65"/>
+        <location filename="Snapshot/SnapWidget.py" line="115"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics Datei (*.mng)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <location filename="Snapshot/SnapWidget.py" line="116"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap Datei (*.pbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="67"/>
+        <location filename="Snapshot/SnapWidget.py" line="117"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap Datei (*.pcx)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="68"/>
+        <location filename="Snapshot/SnapWidget.py" line="118"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap Datei (*.pgm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="69"/>
+        <location filename="Snapshot/SnapWidget.py" line="119"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics Datei (*.png)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="70"/>
+        <location filename="Snapshot/SnapWidget.py" line="120"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap Datei (*.ppm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="71"/>
+        <location filename="Snapshot/SnapWidget.py" line="121"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silicon Graphics Bild Datei (*.sgi)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="72"/>
+        <location filename="Snapshot/SnapWidget.py" line="122"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Scalable Vector Graphics Datei (*.svg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="73"/>
+        <location filename="Snapshot/SnapWidget.py" line="123"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Grapfik Datei (*.tga)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="74"/>
+        <location filename="Snapshot/SnapWidget.py" line="124"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF Datei (*.tif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="75"/>
+        <location filename="Snapshot/SnapWidget.py" line="125"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap Datei (*.xbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="76"/>
+        <location filename="Snapshot/SnapWidget.py" line="126"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap Datei (*.xpm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <location filename="Snapshot/SnapWidget.py" line="236"/>
         <source>Save Snapshot</source>
         <translation>Bildschirmfoto speichern</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <location filename="Snapshot/SnapWidget.py" line="217"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="131"/>
+        <location filename="Snapshot/SnapWidget.py" line="236"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Datei {0} kann nicht geschrieben werden:
 {1}.</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="210"/>
+        <location filename="Snapshot/SnapWidget.ui" line="182"/>
         <source>Press to copy the snapshot to the clipboard</source>
         <translation>Drücken, um das Bildschirmfoto in die Zwischenablage zu kopieren</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.ui" line="213"/>
+        <location filename="Snapshot/SnapWidget.ui" line="185"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="89"/>
+        <source> No delay</source>
+        <translation>Keine Verzögerung</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="92"/>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="125"/>
+        <source>Path Name:</source>
+        <translation>Pfadname:</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.ui" line="132"/>
+        <source>Shows the name of the directory used for saving</source>
+        <translation>Zeigt den Namen des zum Speichern verwendeten Verzeichnisses</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <source>Ellipical Selection</source>
+        <translation>Elliptische Auswahl</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <source>Freehand Selection</source>
+        <translation>Freihändige Auswahl</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <source>Current Screen</source>
+        <translation>Aktueller Bildschirm</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="77"/>
+        <source>snapshot</source>
+        <translation>bildschirmfoto</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="452"/>
+        <source>The application contains an unsaved snapshot.</source>
+        <translation>Die Anwendung enthält ein nicht gespeichertes Bildschirmfoto.</translation>
+    </message>
+    <message>
+        <location filename="Snapshot/SnapWidget.py" line="404"/>
+        <source>Preview of the snapshot image ({0:n} x {1:n})</source>
+        <translation>Vorschau des Bildschirmfotos ({0:n} x {1:n})</translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotFreehandGrabber</name>
+    <message>
+        <location filename="Snapshot/SnapshotFreehandGrabber.py" line="65"/>
+        <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
+        <translation>Wählen sie mit der Maus einen Bereich aus. Um das Bildschirmfoto aufzunehmen, drücken sie die Eingabetaste oder tätigen sie einen Doppelklick. Zum Abbrechen drücken sie Escape.</translation>
     </message>
 </context>
 <context>
     <name>SnapshotRegionGrabber</name>
     <message>
-        <location filename="Snapshot/SnapshotRegionGrabber.py" line="93"/>
+        <location filename="Snapshot/SnapshotRegionGrabber.py" line="94"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
         <translation>Wählen sie mit der Maus einen Bereich aus. Um das Bildschirmfoto aufzunehmen, drücken sie die Eingabetaste oder tätigen sie einen Doppelklick. Zum Abbrechen drücken sie Escape.</translation>
+    </message>
+</context>
+<context>
+    <name>SnapshotTimer</name>
+    <message numerus="yes">
+        <location filename="Snapshot/SnapshotTimer.py" line="99"/>
+        <source>Snapshot will be taken in %n seconds</source>
+        <translation>
+            <numerusform>Bildschirmfoto wird in einer Sekunde erstellt</numerusform>
+            <numerusform>Bildschirmfoto wird in %n Sekunden erstellt</numerusform>
+        </translation>
     </message>
 </context>
 <context>

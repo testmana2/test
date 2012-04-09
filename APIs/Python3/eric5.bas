@@ -525,7 +525,10 @@ SideWidget QWidget
 SingleApplicationServer QLocalServer
 SiteInfoDialog QDialog Ui_SiteInfoDialog
 SnapWidget QWidget Ui_SnapWidget
+SnapshotFreehandGrabber QWidget
+SnapshotPreview QLabel
 SnapshotRegionGrabber QWidget
+SnapshotTimer QWidget
 SpecialArrayElementVarItem SpecialVarItem
 SpecialVarItem VariableItem
 SpeedDial QObject

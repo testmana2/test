@@ -9,7 +9,8 @@ Version 5.3-snapshot-2012mmdd:
   -- added capability to save project tasks automatically (configurable on
      project configuration page of configuration dialog)
 - Tools
-  -- added a tool to take screenshots (fullscreen or rectangular selection)
+  -- added a tool to take screenshots (fullscreen, selected screen, rectangular
+     selection, elliptical selection or freehand selection)
 - Version Control System Interfaces
   -- Mercurial
      --- added support for the graft command as of Mercurial 2.0

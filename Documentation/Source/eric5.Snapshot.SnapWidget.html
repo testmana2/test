@@ -49,7 +49,7 @@ Module implementing the snapshot widget.
 QWidget, Ui_SnapWidget
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>ModeEllipse</td></tr><tr><td>ModeFreehand</td></tr><tr><td>ModeFullscreen</td></tr><tr><td>ModeRectangle</td></tr><tr><td>ModeScreen</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -61,11 +61,59 @@ QWidget, Ui_SnapWidget
 <td><a href="#SnapWidget.__init__">SnapWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#SnapWidget.__autoIncFilename">__autoIncFilename</a></td>
+<td>Private method to auto-increment the file name.</td>
+</tr><tr>
 <td><a href="#SnapWidget.__captured">__captured</a></td>
 <td>Private slot to show a preview of the snapshot.</td>
 </tr><tr>
+<td><a href="#SnapWidget.__dragSnapshot">__dragSnapshot</a></td>
+<td>Private slot handling the dragging of the preview picture.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__grabEllipse">__grabEllipse</a></td>
+<td>Private method to grab an elliptical screen region.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__grabFreehand">__grabFreehand</a></td>
+<td>Private method to grab a non-rectangular screen region.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__grabRectangle">__grabRectangle</a></td>
+<td>Private method to grab a rectangular screen region.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__grabTimerTimeout">__grabTimerTimeout</a></td>
+<td>Private slot to perform a delayed grab operation.</td>
+</tr><tr>
 <td><a href="#SnapWidget.__initFileFilters">__initFileFilters</a></td>
 <td>Private method to define the supported image file filters.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__initShortcuts">__initShortcuts</a></td>
+<td>Private method to initialize the keyboard shortcuts.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__performGrab">__performGrab</a></td>
+<td>Private method to perform a screen grab other than a selected region.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__quickSave">__quickSave</a></td>
+<td>Private slot to save the snapshot bypassing the file selection dialog.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__redisplay">__redisplay</a></td>
+<td>Private method to redisplay the window.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__saveImage">__saveImage</a></td>
+<td>Private method to save the snapshot.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__startUndelayedGrab">__startUndelayedGrab</a></td>
+<td>Private slot to perform an undelayed grab operation.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__updateCaption">__updateCaption</a></td>
+<td>Private method to update the window caption.</td>
+</tr><tr>
+<td><a href="#SnapWidget.__updatePreview">__updatePreview</a></td>
+<td>Private slot to update the preview picture.</td>
+</tr><tr>
+<td><a href="#SnapWidget.closeEvent">closeEvent</a></td>
+<td>Protected method handling the close event.</td>
+</tr><tr>
+<td><a href="#SnapWidget.eventFilter">eventFilter</a></td>
+<td>Public method to handle event for other objects.</td>
 </tr><tr>
 <td><a href="#SnapWidget.on_copyButton_clicked">on_copyButton_clicked</a></td>
 <td>Private slot to copy the snapshot to the clipboard.</td>
@@ -75,6 +123,9 @@ QWidget, Ui_SnapWidget
 </tr><tr>
 <td><a href="#SnapWidget.on_takeButton_clicked">on_takeButton_clicked</a></td>
 <td>Private slot to take a snapshot.</td>
+</tr><tr>
+<td><a href="#SnapWidget.resizeEvent">resizeEvent</a></td>
+<td>Protected method handling a resizing of the window.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -91,7 +142,12 @@ QWidget, Ui_SnapWidget
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="SnapWidget.__captured" ID="SnapWidget.__captured"></a>
+</dl><a NAME="SnapWidget.__autoIncFilename" ID="SnapWidget.__autoIncFilename"></a>
+<h4>SnapWidget.__autoIncFilename</h4>
+<b>__autoIncFilename</b>(<i></i>)
+<p>
+        Private method to auto-increment the file name.
+</p><a NAME="SnapWidget.__captured" ID="SnapWidget.__captured"></a>
 <h4>SnapWidget.__captured</h4>
 <b>__captured</b>(<i>pixmap</i>)
 <p>
@@ -101,27 +157,140 @@ reference to the parent widget (QWidget)
 <dd>
 pixmap of the snapshot (QPixmap)
 </dd>
-</dl><a NAME="SnapWidget.__initFileFilters" ID="SnapWidget.__initFileFilters"></a>
+</dl><a NAME="SnapWidget.__dragSnapshot" ID="SnapWidget.__dragSnapshot"></a>
+<h4>SnapWidget.__dragSnapshot</h4>
+<b>__dragSnapshot</b>(<i></i>)
+<p>
+        Private slot handling the dragging of the preview picture.
+</p><a NAME="SnapWidget.__grabEllipse" ID="SnapWidget.__grabEllipse"></a>
+<h4>SnapWidget.__grabEllipse</h4>
+<b>__grabEllipse</b>(<i></i>)
+<p>
+        Private method to grab an elliptical screen region.
+</p><a NAME="SnapWidget.__grabFreehand" ID="SnapWidget.__grabFreehand"></a>
+<h4>SnapWidget.__grabFreehand</h4>
+<b>__grabFreehand</b>(<i></i>)
+<p>
+        Private method to grab a non-rectangular screen region.
+</p><a NAME="SnapWidget.__grabRectangle" ID="SnapWidget.__grabRectangle"></a>
+<h4>SnapWidget.__grabRectangle</h4>
+<b>__grabRectangle</b>(<i></i>)
+<p>
+        Private method to grab a rectangular screen region.
+</p><a NAME="SnapWidget.__grabTimerTimeout" ID="SnapWidget.__grabTimerTimeout"></a>
+<h4>SnapWidget.__grabTimerTimeout</h4>
+<b>__grabTimerTimeout</b>(<i></i>)
+<p>
+        Private slot to perform a delayed grab operation.
+</p><a NAME="SnapWidget.__initFileFilters" ID="SnapWidget.__initFileFilters"></a>
 <h4>SnapWidget.__initFileFilters</h4>
 <b>__initFileFilters</b>(<i></i>)
 <p>
         Private method to define the supported image file filters.
-</p><a NAME="SnapWidget.on_copyButton_clicked" ID="SnapWidget.on_copyButton_clicked"></a>
+</p><a NAME="SnapWidget.__initShortcuts" ID="SnapWidget.__initShortcuts"></a>
+<h4>SnapWidget.__initShortcuts</h4>
+<b>__initShortcuts</b>(<i></i>)
+<p>
+        Private method to initialize the keyboard shortcuts.
+</p><a NAME="SnapWidget.__performGrab" ID="SnapWidget.__performGrab"></a>
+<h4>SnapWidget.__performGrab</h4>
+<b>__performGrab</b>(<i></i>)
+<p>
+        Private method to perform a screen grab other than a selected region.
+</p><a NAME="SnapWidget.__quickSave" ID="SnapWidget.__quickSave"></a>
+<h4>SnapWidget.__quickSave</h4>
+<b>__quickSave</b>(<i></i>)
+<p>
+        Private slot to save the snapshot bypassing the file selection dialog.
+</p><a NAME="SnapWidget.__redisplay" ID="SnapWidget.__redisplay"></a>
+<h4>SnapWidget.__redisplay</h4>
+<b>__redisplay</b>(<i></i>)
+<p>
+        Private method to redisplay the window.
+</p><a NAME="SnapWidget.__saveImage" ID="SnapWidget.__saveImage"></a>
+<h4>SnapWidget.__saveImage</h4>
+<b>__saveImage</b>(<i>fileName</i>)
+<p>
+        Private method to save the snapshot.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file to save to (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="SnapWidget.__startUndelayedGrab" ID="SnapWidget.__startUndelayedGrab"></a>
+<h4>SnapWidget.__startUndelayedGrab</h4>
+<b>__startUndelayedGrab</b>(<i></i>)
+<p>
+        Private slot to perform an undelayed grab operation.
+</p><a NAME="SnapWidget.__updateCaption" ID="SnapWidget.__updateCaption"></a>
+<h4>SnapWidget.__updateCaption</h4>
+<b>__updateCaption</b>(<i></i>)
+<p>
+        Private method to update the window caption.
+</p><a NAME="SnapWidget.__updatePreview" ID="SnapWidget.__updatePreview"></a>
+<h4>SnapWidget.__updatePreview</h4>
+<b>__updatePreview</b>(<i></i>)
+<p>
+        Private slot to update the preview picture.
+</p><a NAME="SnapWidget.closeEvent" ID="SnapWidget.closeEvent"></a>
+<h4>SnapWidget.closeEvent</h4>
+<b>closeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling the close event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+close event (QCloseEvent)
+</dd>
+</dl><a NAME="SnapWidget.eventFilter" ID="SnapWidget.eventFilter"></a>
+<h4>SnapWidget.eventFilter</h4>
+<b>eventFilter</b>(<i>obj, evt</i>)
+<p>
+        Public method to handle event for other objects.
+</p><dl>
+<dt><i>obj</i></dt>
+<dd>
+reference to the object (QObject)
+</dd><dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the event should be filtered out (boolean)
+</dd>
+</dl><a NAME="SnapWidget.on_copyButton_clicked" ID="SnapWidget.on_copyButton_clicked"></a>
 <h4>SnapWidget.on_copyButton_clicked</h4>
 <b>on_copyButton_clicked</b>(<i></i>)
 <p>
         Private slot to copy the snapshot to the clipboard.
 </p><a NAME="SnapWidget.on_saveButton_clicked" ID="SnapWidget.on_saveButton_clicked"></a>
 <h4>SnapWidget.on_saveButton_clicked</h4>
-<b>on_saveButton_clicked</b>(<i>checked</i>)
+<b>on_saveButton_clicked</b>(<i></i>)
 <p>
         Private slot to save the snapshot.
 </p><a NAME="SnapWidget.on_takeButton_clicked" ID="SnapWidget.on_takeButton_clicked"></a>
 <h4>SnapWidget.on_takeButton_clicked</h4>
-<b>on_takeButton_clicked</b>(<i>checked</i>)
+<b>on_takeButton_clicked</b>(<i></i>)
 <p>
         Private slot to take a snapshot.
-</p>
+</p><a NAME="SnapWidget.resizeEvent" ID="SnapWidget.resizeEvent"></a>
+<h4>SnapWidget.resizeEvent</h4>
+<b>resizeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling a resizing of the window.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+resize event (QResizeEvent)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

@@ -1006,6 +1006,9 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Snapshot/SnapshotRegionGrabber.py</Source>
     <Source>eric5_snap.py</Source>
     <Source>eric5_snap.pyw</Source>
+    <Source>Snapshot/SnapshotPreview.py</Source>
+    <Source>Snapshot/SnapshotTimer.py</Source>
+    <Source>Snapshot/SnapshotFreehandGrabber.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
