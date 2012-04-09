@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html><head>
+<title>eric5.Plugins.CheckerPlugins.Pep8.pep8</title>
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.Plugins.CheckerPlugins.Pep8.pep8</h1>
+
+<h3>Global Attributes</h3>
+<table>
+<tr><td>BENCHMARK_KEYS</td></tr><tr><td>BINARY_OPERATORS</td></tr><tr><td>DEFAULT_EXCLUDE</td></tr><tr><td>DEFAULT_IGNORE</td></tr><tr><td>DOCSTRING_REGEX</td></tr><tr><td>E225NOT_KEYWORDS</td></tr><tr><td>ERRORCODE_REGEX</td></tr><tr><td>EXTRANEOUS_WHITESPACE_REGEX</td></tr><tr><td>INDENT_REGEX</td></tr><tr><td>MAX_LINE_LENGTH</td></tr><tr><td>OPERATORS</td></tr><tr><td>RAISE_COMMA_REGEX</td></tr><tr><td>SELFTEST_REGEX</td></tr><tr><td>SKIP_TOKENS</td></tr><tr><td>UNARY_OPERATORS</td></tr><tr><td>WHITESPACE</td></tr><tr><td>WHITESPACE_AROUND_NAMED_PARAMETER_REGEX</td></tr><tr><td>WHITESPACE_AROUND_OPERATOR_REGEX</td></tr><tr><td>__version__</td></tr><tr><td>args</td></tr><tr><td>options</td></tr><tr><td>pep8_messages</td></tr><tr><td>pep8_messages_sample_args</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Checker">Checker</a></td>
+<td>Load a Python source file, tokenize it, check coding style.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#_main">_main</a></td>
+<td>Parse options and run checks on Python source.</td>
+</tr><tr>
+<td><a href="#blank_lines">blank_lines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#compound_statements">compound_statements</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#excluded">excluded</a></td>
+<td>Check if options.exclude contains a pattern that matches filename.</td>
+</tr><tr>
+<td><a href="#expand_indent">expand_indent</a></td>
+<td>Return the amount of indentation.</td>
+</tr><tr>
+<td><a href="#extraneous_whitespace">extraneous_whitespace</a></td>
+<td>Avoid extraneous whitespace in the following situations:</td>
+</tr><tr>
+<td><a href="#filename_match">filename_match</a></td>
+<td>Check if options.filename contains a pattern that matches filename.</td>
+</tr><tr>
+<td><a href="#find_checks">find_checks</a></td>
+<td>Find all globally visible functions where the first argument name starts with argument_name.</td>
+</tr><tr>
+<td><a href="#getMessage">getMessage</a></td>
+<td>Function to get a translated and formatted message for a given code.</td>
+</tr><tr>
+<td><a href="#get_count">get_count</a></td>
+<td>Return the total count of errors and warnings.</td>
+</tr><tr>
+<td><a href="#get_error_statistics">get_error_statistics</a></td>
+<td>Get error statistics.</td>
+</tr><tr>
+<td><a href="#get_statistics">get_statistics</a></td>
+<td>Get statistics for message codes that start with the prefix.</td>
+</tr><tr>
+<td><a href="#get_warning_statistics">get_warning_statistics</a></td>
+<td>Get warning statistics.</td>
+</tr><tr>
+<td><a href="#ignore_code">ignore_code</a></td>
+<td>Check if options.ignore contains a prefix of the error code.</td>
+</tr><tr>
+<td><a href="#imports_on_separate_lines">imports_on_separate_lines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#indentation">indentation</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#input_dir">input_dir</a></td>
+<td>Check all Python source files in this directory and all subdirectories.</td>
+</tr><tr>
+<td><a href="#input_file">input_file</a></td>
+<td>Run all checks on a Python source file.</td>
+</tr><tr>
+<td><a href="#maximum_line_length">maximum_line_length</a></td>
+<td>Limit all lines to a maximum of 79 characters.</td>
+</tr><tr>
+<td><a href="#message">message</a></td>
+<td>Print a message.</td>
+</tr><tr>
+<td><a href="#missing_newline">missing_newline</a></td>
+<td>JCR: The last line should have a newline.</td>
+</tr><tr>
+<td><a href="#missing_whitespace">missing_whitespace</a></td>
+<td>JCR: Each comma, semicolon or colon should be followed by whitespace.</td>
+</tr><tr>
+<td><a href="#missing_whitespace_around_operator">missing_whitespace_around_operator</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#mute_string">mute_string</a></td>
+<td>Replace contents with 'xxx' to prevent syntax matching.</td>
+</tr><tr>
+<td><a href="#print_benchmark">print_benchmark</a></td>
+<td>Print benchmark numbers.</td>
+</tr><tr>
+<td><a href="#print_statistics">print_statistics</a></td>
+<td>Print overall statistics (number of errors and warnings).</td>
+</tr><tr>
+<td><a href="#process_options">process_options</a></td>
+<td>Process options passed either via arglist or via command line args.</td>
+</tr><tr>
+<td><a href="#python_3000_backticks">python_3000_backticks</a></td>
+<td>Backticks are removed in Python 3000.</td>
+</tr><tr>
+<td><a href="#python_3000_has_key">python_3000_has_key</a></td>
+<td>The {}.has_key() method will be removed in the future version of Python.</td>
+</tr><tr>
+<td><a href="#python_3000_not_equal">python_3000_not_equal</a></td>
+<td>!= can also be written <>, but this is an obsolete usage kept for backwards compatibility only.</td>
+</tr><tr>
+<td><a href="#python_3000_raise_comma">python_3000_raise_comma</a></td>
+<td>When raising an exception, use "raise ValueError('message')" instead of the older form "raise ValueError, 'message'".</td>
+</tr><tr>
+<td><a href="#readlines">readlines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#readlines_1">readlines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#reset_counters">reset_counters</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#run_tests">run_tests</a></td>
+<td>Run all the tests from a file.</td>
+</tr><tr>
+<td><a href="#selftest">selftest</a></td>
+<td>Test all check functions with test cases in docstrings.</td>
+</tr><tr>
+<td><a href="#tabs_obsolete">tabs_obsolete</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#tabs_or_spaces">tabs_or_spaces</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#trailing_blank_lines">trailing_blank_lines</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#trailing_whitespace">trailing_whitespace</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#whitespace_around_comma">whitespace_around_comma</a></td>
+<td>Avoid extraneous whitespace in the following situations:</td>
+</tr><tr>
+<td><a href="#whitespace_around_named_parameter_equals">whitespace_around_named_parameter_equals</a></td>
+<td>Don't use spaces around the '=' sign when used to indicate a keyword argument or a default parameter value.</td>
+</tr><tr>
+<td><a href="#whitespace_around_operator">whitespace_around_operator</a></td>
+<td>Avoid extraneous whitespace in the following situations:</td>
+</tr><tr>
+<td><a href="#whitespace_before_inline_comment">whitespace_before_inline_comment</a></td>
+<td>Separate inline comments by at least two spaces.</td>
+</tr><tr>
+<td><a href="#whitespace_before_parameters">whitespace_before_parameters</a></td>
+<td>Avoid extraneous whitespace in the following situations:</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="Checker" ID="Checker"></a>
+<h2>Checker</h2>
+<p>
+    Load a Python source file, tokenize it, check coding style.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Checker.__init__">Checker</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Checker.build_tokens_line">build_tokens_line</a></td>
+<td>Build a logical line from tokens.</td>
+</tr><tr>
+<td><a href="#Checker.check_all">check_all</a></td>
+<td>Run all checks on the input file.</td>
+</tr><tr>
+<td><a href="#Checker.check_logical">check_logical</a></td>
+<td>Build a line from tokens and run all logical checks on it.</td>
+</tr><tr>
+<td><a href="#Checker.check_physical">check_physical</a></td>
+<td>Run all physical checks on a raw input line.</td>
+</tr><tr>
+<td><a href="#Checker.readline">readline</a></td>
+<td>Get the next line from the input buffer.</td>
+</tr><tr>
+<td><a href="#Checker.readline_check_physical">readline_check_physical</a></td>
+<td>Check and return the next physical line.</td>
+</tr><tr>
+<td><a href="#Checker.report_error">report_error</a></td>
+<td>Report an error, according to options.</td>
+</tr><tr>
+<td><a href="#Checker.run_check">run_check</a></td>
+<td>Run a check plugin.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Checker.__init__" ID="Checker.__init__"></a>
+<h4>Checker (Constructor)</h4>
+<b>Checker</b>(<i>filename, lines=None</i>)
+<a NAME="Checker.build_tokens_line" ID="Checker.build_tokens_line"></a>
+<h4>Checker.build_tokens_line</h4>
+<b>build_tokens_line</b>(<i></i>)
+<p>
+        Build a logical line from tokens.
+</p><a NAME="Checker.check_all" ID="Checker.check_all"></a>
+<h4>Checker.check_all</h4>
+<b>check_all</b>(<i>expected=None, line_offset=0</i>)
+<p>
+        Run all checks on the input file.
+</p><a NAME="Checker.check_logical" ID="Checker.check_logical"></a>
+<h4>Checker.check_logical</h4>
+<b>check_logical</b>(<i></i>)
+<p>
+        Build a line from tokens and run all logical checks on it.
+</p><a NAME="Checker.check_physical" ID="Checker.check_physical"></a>
+<h4>Checker.check_physical</h4>
+<b>check_physical</b>(<i>line</i>)
+<p>
+        Run all physical checks on a raw input line.
+</p><a NAME="Checker.readline" ID="Checker.readline"></a>
+<h4>Checker.readline</h4>
+<b>readline</b>(<i></i>)
+<p>
+        Get the next line from the input buffer.
+</p><a NAME="Checker.readline_check_physical" ID="Checker.readline_check_physical"></a>
+<h4>Checker.readline_check_physical</h4>
+<b>readline_check_physical</b>(<i></i>)
+<p>
+        Check and return the next physical line. This method can be
+        used to feed tokenize.generate_tokens.
+</p><a NAME="Checker.report_error" ID="Checker.report_error"></a>
+<h4>Checker.report_error</h4>
+<b>report_error</b>(<i>line_number, offset, text, check</i>)
+<p>
+        Report an error, according to options.
+</p><a NAME="Checker.run_check" ID="Checker.run_check"></a>
+<h4>Checker.run_check</h4>
+<b>run_check</b>(<i>check, argument_names</i>)
+<p>
+        Run a check plugin.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="_main" ID="_main"></a>
+<h2>_main</h2>
+<b>_main</b>(<i></i>)
+<p>
+    Parse options and run checks on Python source.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="blank_lines" ID="blank_lines"></a>
+<h2>blank_lines</h2>
+<b>blank_lines</b>(<i>logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level, blank_lines_before_comment</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="compound_statements" ID="compound_statements"></a>
+<h2>compound_statements</h2>
+<b>compound_statements</b>(<i>logical_line</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="excluded" ID="excluded"></a>
+<h2>excluded</h2>
+<b>excluded</b>(<i>filename</i>)
+<p>
+    Check if options.exclude contains a pattern that matches filename.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="expand_indent" ID="expand_indent"></a>
+<h2>expand_indent</h2>
+<b>expand_indent</b>(<i>line</i>)
+<p>
+    Return the amount of indentation.
+    Tabs are expanded to the next multiple of 8.
+</p><p>
+    >>> expand_indent('    ')
+    4
+    >>> expand_indent('\\t')
+    8
+    >>> expand_indent('    \\t')
+    8
+    >>> expand_indent('       \\t')
+    8
+    >>> expand_indent('        \\t')
+    16
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="extraneous_whitespace" ID="extraneous_whitespace"></a>
+<h2>extraneous_whitespace</h2>
+<b>extraneous_whitespace</b>(<i>logical_line</i>)
+<p>
+    Avoid extraneous whitespace in the following situations:
+</p><p>
+    - Immediately inside parentheses, brackets or braces.
+</p><p>
+    - Immediately before a comma, semicolon, or colon.
+</p><p>
+    Okay: spam(ham[1], {eggs: 2})
+    E201: spam( ham[1], {eggs: 2})
+    E201: spam(ham[ 1], {eggs: 2})
+    E201: spam(ham[1], { eggs: 2})
+    E202: spam(ham[1], {eggs: 2} )
+    E202: spam(ham[1 ], {eggs: 2})
+    E202: spam(ham[1], {eggs: 2 })
+</p><p>
+    E203: if x == 4: print x, y; x, y = y , x
+    E203: if x == 4: print x, y ; x, y = y, x
+    E203: if x == 4 : print x, y; x, y = y, x
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="filename_match" ID="filename_match"></a>
+<h2>filename_match</h2>
+<b>filename_match</b>(<i>filename</i>)
+<p>
+    Check if options.filename contains a pattern that matches filename.
+    If options.filename is unspecified, this always returns True.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="find_checks" ID="find_checks"></a>
+<h2>find_checks</h2>
+<b>find_checks</b>(<i>argument_name</i>)
+<p>
+    Find all globally visible functions where the first argument name
+    starts with argument_name.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getMessage" ID="getMessage"></a>
+<h2>getMessage</h2>
+<b>getMessage</b>(<i>code, *args</i>)
+<p>
+    Function to get a translated and formatted message for a given code.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+message code (string)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments for a formatted message (list)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+translated and formatted message (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="get_count" ID="get_count"></a>
+<h2>get_count</h2>
+<b>get_count</b>(<i>prefix=''</i>)
+<p>
+Return the total count of errors and warnings.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="get_error_statistics" ID="get_error_statistics"></a>
+<h2>get_error_statistics</h2>
+<b>get_error_statistics</b>(<i></i>)
+<p>
+Get error statistics.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="get_statistics" ID="get_statistics"></a>
+<h2>get_statistics</h2>
+<b>get_statistics</b>(<i>prefix=''</i>)
+<p>
+    Get statistics for message codes that start with the prefix.
+</p><p>
+    prefix='' matches all errors and warnings
+    prefix='E' matches all errors
+    prefix='W' matches all warnings
+    prefix='E4' matches all errors that have to do with imports
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="get_warning_statistics" ID="get_warning_statistics"></a>
+<h2>get_warning_statistics</h2>
+<b>get_warning_statistics</b>(<i></i>)
+<p>
+Get warning statistics.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="ignore_code" ID="ignore_code"></a>
+<h2>ignore_code</h2>
+<b>ignore_code</b>(<i>code</i>)
+<p>
+    Check if options.ignore contains a prefix of the error code.
+    If options.select contains a prefix of the error code, do not ignore it.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="imports_on_separate_lines" ID="imports_on_separate_lines"></a>
+<h2>imports_on_separate_lines</h2>
+<b>imports_on_separate_lines</b>(<i>logical_line</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="indentation" ID="indentation"></a>
+<h2>indentation</h2>
+<b>indentation</b>(<i>logical_line, previous_logical, indent_char, indent_level, previous_indent_level</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="input_dir" ID="input_dir"></a>
+<h2>input_dir</h2>
+<b>input_dir</b>(<i>dirname, runner=None</i>)
+<p>
+    Check all Python source files in this directory and all subdirectories.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="input_file" ID="input_file"></a>
+<h2>input_file</h2>
+<b>input_file</b>(<i>filename</i>)
+<p>
+    Run all checks on a Python source file.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="maximum_line_length" ID="maximum_line_length"></a>
+<h2>maximum_line_length</h2>
+<b>maximum_line_length</b>(<i>physical_line</i>)
+<p>
+    Limit all lines to a maximum of 79 characters.
+</p><p>
+    There are still many devices around that are limited to 80 character
+    lines; plus, limiting windows to 80 characters makes it possible to have
+    several windows side-by-side.  The default wrapping on such devices looks
+    ugly.  Therefore, please limit all lines to a maximum of 79 characters.
+    For flowing long blocks of text (docstrings or comments), limiting the
+    length to 72 characters is recommended.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="message" ID="message"></a>
+<h2>message</h2>
+<b>message</b>(<i>text</i>)
+<p>
+Print a message.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="missing_newline" ID="missing_newline"></a>
+<h2>missing_newline</h2>
+<b>missing_newline</b>(<i>physical_line</i>)
+<p>
+    JCR: The last line should have a newline.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="missing_whitespace" ID="missing_whitespace"></a>
+<h2>missing_whitespace</h2>
+<b>missing_whitespace</b>(<i>logical_line</i>)
+<p>
+    JCR: Each comma, semicolon or colon should be followed by whitespace.
+</p><p>
+    Okay: [a, b]
+    Okay: (3,)
+    Okay: a[1:4]
+    Okay: a[:4]
+    Okay: a[1:]
+    Okay: a[1:4:2]
+    E231: ['a','b']
+    E231: foo(bar,baz)
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="missing_whitespace_around_operator" ID="missing_whitespace_around_operator"></a>
+<h2>missing_whitespace_around_operator</h2>
+<b>missing_whitespace_around_operator</b>(<i>logical_line, tokens</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="mute_string" ID="mute_string"></a>
+<h2>mute_string</h2>
+<b>mute_string</b>(<i>text</i>)
+<p>
+    Replace contents with 'xxx' to prevent syntax matching.
+</p><p>
+    >>> mute_string('"abc"')
+    '"xxx"'
+    >>> mute_string("'''abc'''")
+    "'''xxx'''"
+    >>> mute_string("r'abc'")
+    "r'xxx'"
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="print_benchmark" ID="print_benchmark"></a>
+<h2>print_benchmark</h2>
+<b>print_benchmark</b>(<i>elapsed</i>)
+<p>
+    Print benchmark numbers.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="print_statistics" ID="print_statistics"></a>
+<h2>print_statistics</h2>
+<b>print_statistics</b>(<i>prefix=''</i>)
+<p>
+Print overall statistics (number of errors and warnings).
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="process_options" ID="process_options"></a>
+<h2>process_options</h2>
+<b>process_options</b>(<i>arglist=None</i>)
+<p>
+    Process options passed either via arglist or via command line args.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="python_3000_backticks" ID="python_3000_backticks"></a>
+<h2>python_3000_backticks</h2>
+<b>python_3000_backticks</b>(<i>logical_line</i>)
+<p>
+    Backticks are removed in Python 3000.
+    Use repr() instead.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="python_3000_has_key" ID="python_3000_has_key"></a>
+<h2>python_3000_has_key</h2>
+<b>python_3000_has_key</b>(<i>logical_line</i>)
+<p>
+    The {}.has_key() method will be removed in the future version of
+    Python. Use the 'in' operation instead, like:
+    d = {"a": 1, "b": 2}
+    if "b" in d:
+        print d["b"]
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="python_3000_not_equal" ID="python_3000_not_equal"></a>
+<h2>python_3000_not_equal</h2>
+<b>python_3000_not_equal</b>(<i>logical_line</i>)
+<p>
+    != can also be written <>, but this is an obsolete usage kept for
+    backwards compatibility only. New code should always use !=.
+    The older syntax is removed in Python 3000.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="python_3000_raise_comma" ID="python_3000_raise_comma"></a>
+<h2>python_3000_raise_comma</h2>
+<b>python_3000_raise_comma</b>(<i>logical_line</i>)
+<p>
+    When raising an exception, use "raise ValueError('message')"
+    instead of the older form "raise ValueError, 'message'".
+</p><p>
+    The paren-using form is preferred because when the exception arguments
+    are long or include string formatting, you don't need to use line
+    continuation characters thanks to the containing parentheses.  The older
+    form will be removed in Python 3000.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readlines" ID="readlines"></a>
+<h2>readlines</h2>
+<b>readlines</b>(<i>filename</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readlines_1" ID="readlines_1"></a>
+<h2>readlines</h2>
+<b>readlines</b>(<i>filename</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="reset_counters" ID="reset_counters"></a>
+<h2>reset_counters</h2>
+<b>reset_counters</b>(<i></i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="run_tests" ID="run_tests"></a>
+<h2>run_tests</h2>
+<b>run_tests</b>(<i>filename</i>)
+<p>
+    Run all the tests from a file.
+</p><p>
+    A test file can provide many tests.  Each test starts with a declaration.
+    This declaration is a single line starting with '#:'.
+    It declares codes of expected failures, separated by spaces or 'Okay'
+    if no failure is expected.
+    If the file does not contain such declaration, it should pass all tests.
+    If the declaration is empty, following lines are not checked, until next
+    declaration.
+</p><p>
+    Examples:
+</p><p>
+     * Only E224 and W701 are expected:         #: E224 W701
+     * Following example is conform:            #: Okay
+     * Don't check these lines:                 #:
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="selftest" ID="selftest"></a>
+<h2>selftest</h2>
+<b>selftest</b>(<i></i>)
+<p>
+    Test all check functions with test cases in docstrings.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="tabs_obsolete" ID="tabs_obsolete"></a>
+<h2>tabs_obsolete</h2>
+<b>tabs_obsolete</b>(<i>physical_line</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="tabs_or_spaces" ID="tabs_or_spaces"></a>
+<h2>tabs_or_spaces</h2>
+<b>tabs_or_spaces</b>(<i>physical_line, indent_char</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="trailing_blank_lines" ID="trailing_blank_lines"></a>
+<h2>trailing_blank_lines</h2>
+<b>trailing_blank_lines</b>(<i>physical_line, lines, line_number</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="trailing_whitespace" ID="trailing_whitespace"></a>
+<h2>trailing_whitespace</h2>
+<b>trailing_whitespace</b>(<i>physical_line</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="whitespace_around_comma" ID="whitespace_around_comma"></a>
+<h2>whitespace_around_comma</h2>
+<b>whitespace_around_comma</b>(<i>logical_line</i>)
+<p>
+    Avoid extraneous whitespace in the following situations:
+</p><p>
+    - More than one space around an assignment (or other) operator to
+      align it with another.
+</p><p>
+    JCR: This should also be applied around comma etc.
+    Note: these checks are disabled by default
+</p><p>
+    Okay: a = (1, 2)
+    E241: a = (1,  2)
+    E242: a = (1,\t2)
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="whitespace_around_named_parameter_equals" ID="whitespace_around_named_parameter_equals"></a>
+<h2>whitespace_around_named_parameter_equals</h2>
+<b>whitespace_around_named_parameter_equals</b>(<i>logical_line</i>)
+<p>
+    Don't use spaces around the '=' sign when used to indicate a
+    keyword argument or a default parameter value.
+</p><p>
+    Okay: def complex(real, imag=0.0):
+    Okay: return magic(r=real, i=imag)
+    Okay: boolean(a == b)
+    Okay: boolean(a != b)
+    Okay: boolean(a <= b)
+    Okay: boolean(a >= b)
+</p><p>
+    E251: def complex(real, imag = 0.0):
+    E251: return magic(r = real, i = imag)
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="whitespace_around_operator" ID="whitespace_around_operator"></a>
+<h2>whitespace_around_operator</h2>
+<b>whitespace_around_operator</b>(<i>logical_line</i>)
+<p>
+    Avoid extraneous whitespace in the following situations:
+</p><p>
+    - More than one space around an assignment (or other) operator to
+      align it with another.
+</p><p>
+    Okay: a = 12 + 3
+    E221: a = 4  + 5
+    E222: a = 4 +  5
+    E223: a = 4\t+ 5
+    E224: a = 4 +\t5
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="whitespace_before_inline_comment" ID="whitespace_before_inline_comment"></a>
+<h2>whitespace_before_inline_comment</h2>
+<b>whitespace_before_inline_comment</b>(<i>logical_line, tokens</i>)
+<p>
+    Separate inline comments by at least two spaces.
+</p><p>
+    An inline comment is a comment on the same line as a statement.  Inline
+    comments should be separated by at least two spaces from the statement.
+    They should start with a # and a single space.
+</p><p>
+    Okay: x = x + 1  # Increment x
+    Okay: x = x + 1    # Increment x
+    E261: x = x + 1 # Increment x
+    E262: x = x + 1  #Increment x
+    E262: x = x + 1  #  Increment x
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="whitespace_before_parameters" ID="whitespace_before_parameters"></a>
+<h2>whitespace_before_parameters</h2>
+<b>whitespace_before_parameters</b>(<i>logical_line, tokens</i>)
+<p>
+    Avoid extraneous whitespace in the following situations:
+</p><p>
+    - Immediately before the open parenthesis that starts the argument
+      list of a function call.
+</p><p>
+    - Immediately before the open parenthesis that starts an indexing or
+      slicing.
+</p><p>
+    Okay: spam(1)
+    E211: spam (1)
+</p><p>
+    Okay: dict['key'] = list[index]
+    E211: dict ['key'] = list[index]
+    E211: dict['key'] = list [index]
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
