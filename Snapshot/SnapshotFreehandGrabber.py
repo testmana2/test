@@ -77,9 +77,13 @@ class SnapshotFreehandGrabber(QWidget):
         """
         Private slot to initialize the rest of the widget.
         """
-        self.__pixmap = QPixmap.grabWindow(QApplication.desktop().winId())
+        self.__desktop = QApplication.desktop()
+        x = self.__desktop.x()
+        y = self.__desktop.y()
+        self.__pixmap = QPixmap.grabWindow(self.__desktop.winId(), x, y,
+            self.__desktop.width(), self.__desktop.height())
         self.resize(self.__pixmap.size())
-        self.move(0, 0)
+        self.move(x, y)
         self.setCursor(Qt.CrossCursor)
         self.show()
 
@@ -129,7 +133,8 @@ class SnapshotFreehandGrabber(QWidget):
             painter.setPen(textColor)
             painter.setBrush(textBackgroundColor)
             self.__helpTextRect = painter.boundingRect(self.rect().adjusted(2, 2, -2, -2),
-                Qt.TextWordWrap, self.__helpText)
+                Qt.TextWordWrap, self.__helpText).translated(
+                -self.__desktop.x(), -self.__desktop.y())
             self.__helpTextRect.adjust(-2, -2, 4, 2)
             drawPolygon(painter, self.__helpTextRect, textColor, textBackgroundColor)
             painter.drawText(self.__helpTextRect.adjusted(3, 3, -3, -3),
