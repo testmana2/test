@@ -345,7 +345,9 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         self.__grabTimer.stop()
         
         if self.__mode == SnapWidget.ModeFullscreen:
-            self.__snapshot = QPixmap.grabWindow(QApplication.desktop().winId())
+            desktop = QApplication.desktop()
+            self.__snapshot = QPixmap.grabWindow(desktop.winId(),
+                desktop.x(), desktop.y(), desktop.width(), desktop.height())
         elif self.__mode == SnapWidget.ModeScreen:
             desktop = QApplication.desktop()
             screenId = desktop.screenNumber(QCursor.pos())
