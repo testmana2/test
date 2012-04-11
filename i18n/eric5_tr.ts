@@ -36219,7 +36219,7 @@ Bağlantı yok</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="79"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="309"/>
         <source>Size:</source>
         <translation type="unfinished">Boyut:</translation>
     </message>
@@ -36269,50 +36269,85 @@ Bağlantı yok</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="348"/>
         <source>Security</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="159"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="174"/>
         <source>Preview not available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="175"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="190"/>
         <source>Copy Image Location to Clipboard</source>
         <translation type="unfinished">Görüntünün Yerini  Panoya kopyala</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="178"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="193"/>
         <source>Copy Image Name to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="249"/>
         <source>Save Image</source>
         <translation type="unfinished">Görüntüyü Kaydet</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="214"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="229"/>
         <source>This image is not available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="222"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="237"/>
         <source>All Files (*)</source>
         <translation type="unfinished">Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="249"/>
         <source>&lt;p&gt;Cannot write to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
+        <source>Databases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="254"/>
+        <source>&lt;b&gt;Database details&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="263"/>
+        <source>Name:</source>
+        <translation type="unfinished">Adı:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="322"/>
+        <source>&lt;database not selected&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="286"/>
+        <source>Path:</source>
+        <translation type="unfinished">Yol:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="133"/>
+        <source>No databases are used by this page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="247"/>
+        <source>Shows a list of databases used by the site</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>SnapWidget</name>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="475"/>
+        <location filename="Snapshot/SnapWidget.py" line="482"/>
         <source>eric5 Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36357,107 +36392,107 @@ Bağlantı yok</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="57"/>
+        <location filename="Snapshot/SnapWidget.py" line="58"/>
         <source>Fullscreen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="59"/>
+        <location filename="Snapshot/SnapWidget.py" line="60"/>
         <source>Rectangular Selection</source>
         <translation type="unfinished">Köşeli Seçim</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="111"/>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation type="unfinished">Windows Bitmap Dosyası (*.bmp)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <location filename="Snapshot/SnapWidget.py" line="113"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation type="unfinished">Graphic Interchange Format Dosyası (*.gif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="113"/>
+        <location filename="Snapshot/SnapWidget.py" line="114"/>
         <source>Windows Icon File (*.ico)</source>
         <translation type="unfinished">Windows İkon Dosyası (*.ico)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="114"/>
+        <location filename="Snapshot/SnapWidget.py" line="115"/>
         <source>JPEG File (*.jpg)</source>
         <translation type="unfinished">JPEG Dosyası (*.jpg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="115"/>
+        <location filename="Snapshot/SnapWidget.py" line="116"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation type="unfinished">Çoklu-Resim Ağ Grafik Dosyası (*.mng)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="116"/>
+        <location filename="Snapshot/SnapWidget.py" line="117"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation type="unfinished">Portable Bitmap Dosyası (*.pbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="117"/>
+        <location filename="Snapshot/SnapWidget.py" line="118"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation type="unfinished">Paintbrush Bitmap Dosyası (*.pcx)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="118"/>
+        <location filename="Snapshot/SnapWidget.py" line="119"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation type="unfinished">Portable Graymap Dosyası (*.pgm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="119"/>
+        <location filename="Snapshot/SnapWidget.py" line="120"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation type="unfinished">Portable Network Graphics Dosyası (*.png)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="120"/>
+        <location filename="Snapshot/SnapWidget.py" line="121"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation type="unfinished">Portable Pixmap Dosyası (*.ppm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="121"/>
+        <location filename="Snapshot/SnapWidget.py" line="122"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation type="unfinished">Silikon Gragik Resim Dosyası (*.sgi)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="122"/>
+        <location filename="Snapshot/SnapWidget.py" line="123"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation type="unfinished">Ölçeklenebilir Vektörel Grafik Dosyası (*.svg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="123"/>
+        <location filename="Snapshot/SnapWidget.py" line="124"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation type="unfinished">Targa Gragik Dosyası (*.tga)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="124"/>
+        <location filename="Snapshot/SnapWidget.py" line="125"/>
         <source>TIFF File (*.tif)</source>
         <translation type="unfinished">TIFF Dosyası (*.tif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="125"/>
+        <location filename="Snapshot/SnapWidget.py" line="126"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation type="unfinished">X11 Bitmap Dosyası (*.xbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="126"/>
+        <location filename="Snapshot/SnapWidget.py" line="127"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation type="unfinished">X11 Pixmap Dosyası (*.xpm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="236"/>
+        <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Save Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="217"/>
+        <location filename="Snapshot/SnapWidget.py" line="218"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="236"/>
+        <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation type="unfinished">Dosyaya yazılamıyor &apos;{0}:
@@ -36494,32 +36529,32 @@ Bağlantı yok</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <location filename="Snapshot/SnapWidget.py" line="62"/>
         <source>Ellipical Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <location filename="Snapshot/SnapWidget.py" line="64"/>
         <source>Freehand Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <location filename="Snapshot/SnapWidget.py" line="67"/>
         <source>Current Screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="77"/>
+        <location filename="Snapshot/SnapWidget.py" line="78"/>
         <source>snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="452"/>
+        <location filename="Snapshot/SnapWidget.py" line="459"/>
         <source>The application contains an unsaved snapshot.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="404"/>
+        <location filename="Snapshot/SnapWidget.py" line="411"/>
         <source>Preview of the snapshot image ({0:n} x {1:n})</source>
         <translation type="unfinished"></translation>
     </message>
@@ -41533,7 +41568,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Altsürüm işlem süreci başlatılamıyor.</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="112"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="114"/>
         <source>Subversion status checked successfully (using pysvn)</source>
         <translation>Altsürüm durumu tam olarak kontrol edildi (pysvn kullanıldı)</translation>
     </message>

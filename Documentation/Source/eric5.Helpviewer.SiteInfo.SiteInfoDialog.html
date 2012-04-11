@@ -70,6 +70,9 @@ QDialog, Ui_SiteInfoDialog
 <td><a href="#SiteInfoDialog.__saveImage">__saveImage</a></td>
 <td>Private slot to save the selected image to disk.</td>
 </tr><tr>
+<td><a href="#SiteInfoDialog.on_databasesList_currentItemChanged">on_databasesList_currentItemChanged</a></td>
+<td>Private slot to show data about the selected database.</td>
+</tr><tr>
 <td><a href="#SiteInfoDialog.on_imagesTree_currentItemChanged">on_imagesTree_currentItemChanged</a></td>
 <td>Private slot to show a preview of the selected image.</td>
 </tr><tr>
@@ -114,7 +117,20 @@ position for the menu (QPoint)
 <b>__saveImage</b>(<i></i>)
 <p>
         Private slot to save the selected image to disk.
-</p><a NAME="SiteInfoDialog.on_imagesTree_currentItemChanged" ID="SiteInfoDialog.on_imagesTree_currentItemChanged"></a>
+</p><a NAME="SiteInfoDialog.on_databasesList_currentItemChanged" ID="SiteInfoDialog.on_databasesList_currentItemChanged"></a>
+<h4>SiteInfoDialog.on_databasesList_currentItemChanged</h4>
+<b>on_databasesList_currentItemChanged</b>(<i>current, previous</i>)
+<p>
+        Private slot to show data about the selected database.
+</p><dl>
+<dt><i>current</i></dt>
+<dd>
+current database entry (QTreeWidgetItem)
+</dd><dt><i>previous</i></dt>
+<dd>
+old current entry (QTreeWidgetItem)
+</dd>
+</dl><a NAME="SiteInfoDialog.on_imagesTree_currentItemChanged" ID="SiteInfoDialog.on_imagesTree_currentItemChanged"></a>
 <h4>SiteInfoDialog.on_imagesTree_currentItemChanged</h4>
 <b>on_imagesTree_currentItemChanged</b>(<i>current, previous</i>)
 <p>

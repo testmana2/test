@@ -11,7 +11,7 @@ import os
 
 from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QFile
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QPixmap, QGraphicsScene, QMenu, \
-    QCursor, QApplication, QFileDialog
+    QCursor, QApplication, QListWidgetItem
 from PyQt4.QtWebKit import QWebSettings
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -45,20 +45,21 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         # put icons
         self.tabWidget.setTabIcon(0, UI.PixmapCache.getIcon("siteinfo-general.png"))
         self.tabWidget.setTabIcon(1, UI.PixmapCache.getIcon("siteinfo-media.png"))
-        self.tabWidget.setTabIcon(2, UI.PixmapCache.getIcon("siteinfo-security.png"))
+        self.tabWidget.setTabIcon(2, UI.PixmapCache.getIcon("siteinfo-databases.png"))
+        self.tabWidget.setTabIcon(3, UI.PixmapCache.getIcon("siteinfo-security.png"))
         
-        frame = browser.page().mainFrame()
+        self.__mainFrame = browser.page().mainFrame()
         title = browser.title()
         sslInfo = browser.page().getSslInfo()
         
         # populate General tab
         self.heading.setText("<b>{0}</b>".format(title))
-        self.siteAddressLabel.setText(frame.baseUrl().toString())
+        self.siteAddressLabel.setText(self.__mainFrame.baseUrl().toString())
         self.sizeLabel.setText(dataString(browser.page().totalBytes()))
         encoding = ""
         
         # populate Meta tags
-        meta = frame.findAllElements("meta")
+        meta = self.__mainFrame.findAllElements("meta")
         for element in meta:
             content = element.attribute("content")
             name = element.attribute("name")
@@ -92,7 +93,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             self.securityDetailsButton.setEnabled(False)
         
         # populate Media tab
-        images = frame.findAllElements("img")
+        images = self.__mainFrame.findAllElements("img")
         for element in images:
             src = element.attribute("src")
             alt = element.attribute("alt")
@@ -117,6 +118,20 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         self.imagesTree.setContextMenuPolicy(Qt.CustomContextMenu)
         self.imagesTree.customContextMenuRequested.connect(
             self.__imagesTreeContextMenuRequested)
+        
+        # populate the Databases tab
+        databases = self.__mainFrame.securityOrigin().databases()
+        counter = 0
+        for database in databases:
+            itm = QListWidgetItem(self.databasesList)
+            itm.setText(database.displayName())
+            itm.setData(Qt.UserRole, counter)
+            counter += 1
+        
+        if counter == 0:
+            itm = QListWidgetItem(self.databasesList)
+            itm.setText(self.trUtf8("No databases are used by this page."))
+            itm.setFlags(itm.flags() & Qt.ItemIsSelectable)
     
     @pyqtSlot()
     def on_securityDetailsButton_clicked(self):
@@ -224,7 +239,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             self.trUtf8("Save Image"),
             fn,
             self.trUtf8("All Files (*)"),
-            QFileDialog.Options(QFileDialog.DontConfirmOverwrite))
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
         if not filename:
             return
@@ -238,3 +253,25 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
             return
         f.write(cacheData.readAll())
         f.close()
+    
+    @pyqtSlot(QListWidgetItem, QListWidgetItem)
+    def on_databasesList_currentItemChanged(self, current, previous):
+        """
+        Private slot to show data about the selected database.
+        
+        @param current current database entry (QTreeWidgetItem)
+        @param previous old current entry (QTreeWidgetItem)
+        """
+        if current is None:
+            return
+        
+        id = current.data(Qt.UserRole)
+        databases = self.__mainFrame.securityOrigin().databases()
+        
+        if id >= len(databases):
+            return
+        
+        db = databases[id]
+        self.databaseName.setText("{0} ({1})".format(db.displayName(), db.name()))
+        self.databasePath.setText(db.fileName())
+        self.databaseSize.setText(dataString(db.size()))

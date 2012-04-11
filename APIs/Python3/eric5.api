@@ -2593,6 +2593,7 @@ eric5.Helpviewer.SearchWidget.SearchWidget.showFind?4()
 eric5.Helpviewer.SearchWidget.SearchWidget?1(mainWindow, parent=None)
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.nokStyle?7
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.okStyle?7
+eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_databasesList_currentItemChanged?4(current, previous)
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_imagesTree_currentItemChanged?4(current, previous)
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog.on_securityDetailsButton_clicked?4()
 eric5.Helpviewer.SiteInfo.SiteInfoDialog.SiteInfoDialog?1(browser, parent=None)

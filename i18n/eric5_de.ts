@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1762,8 +1763,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksMenu.py" line="147"/>
@@ -2004,7 +2005,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
         <translation>In neuem &amp;Register öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -13369,7 +13370,7 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="Helpviewer/HelpBrowserWV.py" line="909"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Link in neuem Fenster öffnen\tStrg+LMK</translation>
     </message>
     <message>
@@ -35471,7 +35472,7 @@ nicht verbunden</translation>
         <translation>Kodierung:</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="79"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="309"/>
         <source>Size:</source>
         <translation>Größe:</translation>
     </message>
@@ -35521,50 +35522,85 @@ nicht verbunden</translation>
         <translation>&lt;b&gt;Vorschau&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="348"/>
         <source>Security</source>
         <translation>Sicherheit</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="159"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="174"/>
         <source>Preview not available.</source>
         <translation>Vorschau nicht verfügbar.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="175"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="190"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Bildadresse in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="178"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="193"/>
         <source>Copy Image Name to Clipboard</source>
         <translation>Bildbezeichnung in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="249"/>
         <source>Save Image</source>
         <translation>Bild speichern</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="214"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="229"/>
         <source>This image is not available.</source>
         <translation>Dieses Bild ist nicht verfügbar.</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="222"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="237"/>
         <source>All Files (*)</source>
         <translation>Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="234"/>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="249"/>
         <source>&lt;p&gt;Cannot write to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;In die Datei &lt;b&gt;{0}&lt;/b&gt; kann nicht geschrieben werden.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="241"/>
+        <source>Databases</source>
+        <translation>Datenbanken</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="254"/>
+        <source>&lt;b&gt;Database details&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Datenbankdetails&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="263"/>
+        <source>Name:</source>
+        <translation>Name:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="322"/>
+        <source>&lt;database not selected&gt;</source>
+        <translation>&lt;keine Datenbank ausgewählt&gt;</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="286"/>
+        <source>Path:</source>
+        <translation>Pfad:</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.py" line="133"/>
+        <source>No databases are used by this page.</source>
+        <translation>Diese Seite verwendet keine Datenbanken.</translation>
+    </message>
+    <message>
+        <location filename="Helpviewer/SiteInfo/SiteInfoDialog.ui" line="247"/>
+        <source>Shows a list of databases used by the site</source>
+        <translation>Zeigt eine Liste von der Seite verwendeter Datenbanken</translation>
     </message>
 </context>
 <context>
     <name>SnapWidget</name>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="475"/>
+        <location filename="Snapshot/SnapWidget.py" line="482"/>
         <source>eric5 Snapshot</source>
         <translation>eric5 Bildschirmfoto</translation>
     </message>
@@ -35609,107 +35645,107 @@ nicht verbunden</translation>
         <translation>Bildschirmfoto &amp;aufnehmen ...</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="57"/>
+        <location filename="Snapshot/SnapWidget.py" line="58"/>
         <source>Fullscreen</source>
         <translation>Vollbild</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="59"/>
+        <location filename="Snapshot/SnapWidget.py" line="60"/>
         <source>Rectangular Selection</source>
         <translation>Rechteck-Auswahl</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="111"/>
+        <location filename="Snapshot/SnapWidget.py" line="112"/>
         <source>Windows Bitmap File (*.bmp)</source>
         <translation>Windows Bitmap Datei (*.bmp)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="112"/>
+        <location filename="Snapshot/SnapWidget.py" line="113"/>
         <source>Graphic Interchange Format File (*.gif)</source>
         <translation>Graphic Interchange Format Datei (*.gif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="113"/>
+        <location filename="Snapshot/SnapWidget.py" line="114"/>
         <source>Windows Icon File (*.ico)</source>
         <translation>Windows Icon Datei (*.ico)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="114"/>
+        <location filename="Snapshot/SnapWidget.py" line="115"/>
         <source>JPEG File (*.jpg)</source>
         <translation>JPEG Datei (*.jpg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="115"/>
+        <location filename="Snapshot/SnapWidget.py" line="116"/>
         <source>Multiple-Image Network Graphics File (*.mng)</source>
         <translation>Multiple-Image Network Graphics Datei (*.mng)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="116"/>
+        <location filename="Snapshot/SnapWidget.py" line="117"/>
         <source>Portable Bitmap File (*.pbm)</source>
         <translation>Portable Bitmap Datei (*.pbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="117"/>
+        <location filename="Snapshot/SnapWidget.py" line="118"/>
         <source>Paintbrush Bitmap File (*.pcx)</source>
         <translation>Paintbrush Bitmap Datei (*.pcx)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="118"/>
+        <location filename="Snapshot/SnapWidget.py" line="119"/>
         <source>Portable Graymap File (*.pgm)</source>
         <translation>Portable Graymap Datei (*.pgm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="119"/>
+        <location filename="Snapshot/SnapWidget.py" line="120"/>
         <source>Portable Network Graphics File (*.png)</source>
         <translation>Portable Network Graphics Datei (*.png)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="120"/>
+        <location filename="Snapshot/SnapWidget.py" line="121"/>
         <source>Portable Pixmap File (*.ppm)</source>
         <translation>Portable Pixmap Datei (*.ppm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="121"/>
+        <location filename="Snapshot/SnapWidget.py" line="122"/>
         <source>Silicon Graphics Image File (*.sgi)</source>
         <translation>Silicon Graphics Bild Datei (*.sgi)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="122"/>
+        <location filename="Snapshot/SnapWidget.py" line="123"/>
         <source>Scalable Vector Graphics File (*.svg)</source>
         <translation>Scalable Vector Graphics Datei (*.svg)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="123"/>
+        <location filename="Snapshot/SnapWidget.py" line="124"/>
         <source>Targa Graphic File (*.tga)</source>
         <translation>Targa Grapfik Datei (*.tga)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="124"/>
+        <location filename="Snapshot/SnapWidget.py" line="125"/>
         <source>TIFF File (*.tif)</source>
         <translation>TIFF Datei (*.tif)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="125"/>
+        <location filename="Snapshot/SnapWidget.py" line="126"/>
         <source>X11 Bitmap File (*.xbm)</source>
         <translation>X11 Bitmap Datei (*.xbm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="126"/>
+        <location filename="Snapshot/SnapWidget.py" line="127"/>
         <source>X11 Pixmap File (*.xpm)</source>
         <translation>X11 Pixmap Datei (*.xpm)</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="236"/>
+        <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Save Snapshot</source>
         <translation>Bildschirmfoto speichern</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="217"/>
+        <location filename="Snapshot/SnapWidget.py" line="218"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="236"/>
+        <location filename="Snapshot/SnapWidget.py" line="237"/>
         <source>Cannot write file &apos;{0}:
 {1}.</source>
         <translation>Datei {0} kann nicht geschrieben werden:
@@ -35746,32 +35782,32 @@ nicht verbunden</translation>
         <translation>Zeigt den Namen des zum Speichern verwendeten Verzeichnisses</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="61"/>
+        <location filename="Snapshot/SnapWidget.py" line="62"/>
         <source>Ellipical Selection</source>
         <translation>Elliptische Auswahl</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="63"/>
+        <location filename="Snapshot/SnapWidget.py" line="64"/>
         <source>Freehand Selection</source>
         <translation>Freihändige Auswahl</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="66"/>
+        <location filename="Snapshot/SnapWidget.py" line="67"/>
         <source>Current Screen</source>
         <translation>Aktueller Bildschirm</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="77"/>
+        <location filename="Snapshot/SnapWidget.py" line="78"/>
         <source>snapshot</source>
         <translation>bildschirmfoto</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="452"/>
+        <location filename="Snapshot/SnapWidget.py" line="459"/>
         <source>The application contains an unsaved snapshot.</source>
         <translation>Die Anwendung enthält ein nicht gespeichertes Bildschirmfoto.</translation>
     </message>
     <message>
-        <location filename="Snapshot/SnapWidget.py" line="404"/>
+        <location filename="Snapshot/SnapWidget.py" line="411"/>
         <source>Preview of the snapshot image ({0:n} x {1:n})</source>
         <translation>Vorschau des Bildschirmfotos ({0:n} x {1:n})</translation>
     </message>
@@ -40808,7 +40844,7 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
         <translation>Subversion Status erfolgreich überprüft (mit svn)</translation>
     </message>
     <message>
-        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="112"/>
+        <location filename="Plugins/VcsPlugins/vcsPySvn/SvnStatusMonitorThread.py" line="114"/>
         <source>Subversion status checked successfully (using pysvn)</source>
         <translation>Subversion Status erfolgreich überprüft (mit pysvn)</translation>
     </message>

@@ -8488,6 +8488,7 @@
       <keyword name="SiteInfoDialog.__copyAction" id="SiteInfoDialog.__copyAction" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__copyAction" />
       <keyword name="SiteInfoDialog.__imagesTreeContextMenuRequested" id="SiteInfoDialog.__imagesTreeContextMenuRequested" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__imagesTreeContextMenuRequested" />
       <keyword name="SiteInfoDialog.__saveImage" id="SiteInfoDialog.__saveImage" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.__saveImage" />
+      <keyword name="SiteInfoDialog.on_databasesList_currentItemChanged" id="SiteInfoDialog.on_databasesList_currentItemChanged" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_databasesList_currentItemChanged" />
       <keyword name="SiteInfoDialog.on_imagesTree_currentItemChanged" id="SiteInfoDialog.on_imagesTree_currentItemChanged" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_imagesTree_currentItemChanged" />
       <keyword name="SiteInfoDialog.on_securityDetailsButton_clicked" id="SiteInfoDialog.on_securityDetailsButton_clicked" ref="eric5.Helpviewer.SiteInfo.SiteInfoDialog.html#SiteInfoDialog.on_securityDetailsButton_clicked" />
       <keyword name="SnapWidget" id="SnapWidget" ref="eric5.Snapshot.SnapWidget.html#SnapWidget" />
