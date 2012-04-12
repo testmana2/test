@@ -2657,6 +2657,11 @@ class HelpWindow(QMainWindow):
         @return icon for the URL (QIcon)
         """
         icon = HelpWindow.__getWebIcon(url)
+        if icon.isNull():
+            hostUrl = QUrl()
+            hostUrl.setScheme(url.scheme())
+            hostUrl.setHost(url.host())
+            icon = HelpWindow.__getWebIcon(hostUrl)
         
         if icon.isNull():
             pixmap = QWebSettings.webGraphic(QWebSettings.DefaultFrameIconGraphic)
@@ -2675,6 +2680,16 @@ class HelpWindow(QMainWindow):
         @param url URL to get icon for (QUrl)
         @return icon for the URL (QIcon)
         """
+        scheme = url.scheme()
+        if scheme in ["eric", "about"]:
+            return UI.PixmapCache.getIcon("ericWeb.png")
+        elif scheme == "qthelp":
+            return UI.PixmapCache.getIcon("qthelp.png")
+        elif scheme == "file":
+            return UI.PixmapCache.getIcon("fileMisc.png")
+        elif scheme == "abp":
+            return UI.PixmapCache.getIcon("adBlockPlus.png")
+        
         icon = QWebSettings.iconForUrl(url)
         if icon.isNull():
             # try again

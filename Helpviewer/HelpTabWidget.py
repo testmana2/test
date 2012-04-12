@@ -699,7 +699,7 @@ class HelpTabWidget(E5TabWidget):
         if browser is not None:
             index = self.indexOf(browser)
             self.resetAnimation(index)
-            self.setTabIcon(index, browser.icon())
+            self.setTabIcon(index, Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
             if ok:
                 self.showMessage.emit(self.trUtf8("Finished loading"))
             else:
@@ -714,7 +714,8 @@ class HelpTabWidget(E5TabWidget):
         browser = self.sender()
         
         if browser is not None:
-            self.setTabIcon(self.indexOf(browser), browser.icon())
+            self.setTabIcon(self.indexOf(browser),
+                Helpviewer.HelpWindow.HelpWindow.icon(browser.url()))
             Helpviewer.HelpWindow.HelpWindow.bookmarksManager().iconChanged(browser.url())
     
     def getSourceFileList(self):
