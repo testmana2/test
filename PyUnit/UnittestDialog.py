@@ -274,7 +274,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             project = e5App().getObject("Project")
             if project.isOpen() and project.isProjectSource(prog):
                 mainScript = project.getMainScript(True)
-                clientType = self.project.getProjectLanguage()
+                clientType = project.getProjectLanguage()
             else:
                 mainScript = os.path.abspath(prog)
                 flags = Utilities.extractFlagsFromFile(mainScript)
