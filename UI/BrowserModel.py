@@ -299,7 +299,7 @@ class BrowserModel(QAbstractItemModel):
             # step 1: check for new entries
             children = itm.children()
             for f in entryInfoList:
-                fpath = f.absoluteFilePath()
+                fpath = Utilities.toNativeSeparators(f.absoluteFilePath())
                 childFound = False
                 for child in children:
                     if child.name() == fpath:
@@ -326,9 +326,10 @@ class BrowserModel(QAbstractItemModel):
             if len(entryInfoList) != itm.childCount():
                 for row in range(oldCnt - 1, -1, -1):
                     child = itm.child(row)
+                    childname = Utilities.fromNativeSeparators(child.name())
                     entryFound = False
                     for f in entryInfoList:
-                        if f.absoluteFilePath() == child.name():
+                        if f.absoluteFilePath() == childname:
                             entryFound = True
                             entryInfoList.remove(f)
                             break
