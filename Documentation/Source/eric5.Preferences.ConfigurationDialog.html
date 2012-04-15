@@ -86,6 +86,9 @@ QDialog
 <td><a href="#ConfigurationDialog.__preferencesChanged">__preferencesChanged</a></td>
 <td>Private slot to handle a change of the preferences.</td>
 </tr><tr>
+<td><a href="#ConfigurationDialog.accept">accept</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#ConfigurationDialog.getConfigurationPageName">getConfigurationPageName</a></td>
 <td>Public method to get the page name of the current page.</td>
 </tr><tr>
@@ -142,7 +145,10 @@ new master password (string)
 <b>__preferencesChanged</b>(<i></i>)
 <p>
         Private slot to handle a change of the preferences.
-</p><a NAME="ConfigurationDialog.getConfigurationPageName" ID="ConfigurationDialog.getConfigurationPageName"></a>
+</p><a NAME="ConfigurationDialog.accept" ID="ConfigurationDialog.accept"></a>
+<h4>ConfigurationDialog.accept</h4>
+<b>accept</b>(<i></i>)
+<a NAME="ConfigurationDialog.getConfigurationPageName" ID="ConfigurationDialog.getConfigurationPageName"></a>
 <h4>ConfigurationDialog.getConfigurationPageName</h4>
 <b>getConfigurationPageName</b>(<i></i>)
 <p>
@@ -237,13 +243,19 @@ name of the configuration page (string)
     Class implementing a dialog for the configuration of eric5.
 </p><h3>Signals</h3>
 <dl>
-<dt>masterPasswordChanged(str, str)</dt>
+<dt>accepted()</dt>
+<dd>
+emitted to indicate acceptance of the changes
+</dd><dt>masterPasswordChanged(str, str)</dt>
 <dd>
 emitted after the master
         password has been changed with the old and the new password
 </dd><dt>preferencesChanged()</dt>
 <dd>
 emitted after settings have been changed
+</dd><dt>rejected()</dt>
+<dd>
+emitted to indicate rejection of the changes
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -276,6 +288,9 @@ QWidget
 </tr><tr>
 <td><a href="#ConfigurationWidget.__showConfigurationPage">__showConfigurationPage</a></td>
 <td>Private slot to show a selected configuration page.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.accept">accept</a></td>
+<td>Public slot to accept the buttonBox accept signal.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.calledFromEric">calledFromEric</a></td>
 <td>Public method to check, if invoked from within eric.</td>
@@ -380,7 +395,12 @@ reference to the selected item (QTreeWidgetItem)
 <dd>
 column that was selected (integer) (ignored)
 </dd>
-</dl><a NAME="ConfigurationWidget.calledFromEric" ID="ConfigurationWidget.calledFromEric"></a>
+</dl><a NAME="ConfigurationWidget.accept" ID="ConfigurationWidget.accept"></a>
+<h4>ConfigurationWidget.accept</h4>
+<b>accept</b>(<i></i>)
+<p>
+        Public slot to accept the buttonBox accept signal.
+</p><a NAME="ConfigurationWidget.calledFromEric" ID="ConfigurationWidget.calledFromEric"></a>
 <h4>ConfigurationWidget.calledFromEric</h4>
 <b>calledFromEric</b>(<i></i>)
 <p>
