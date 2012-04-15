@@ -103,8 +103,6 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         """
         scheme = self.protocolCombo.currentText()
         url = self.vcsUrlEdit.text()
-        if scheme == "file://" and url[0] not in ["\\", "/"]:
-            url = "/{0}".format(url)
         vcsdatadict = {
             "url": '{0}{1}'.format(scheme, url),
             "message": self.vcsLogEdit.text(),
