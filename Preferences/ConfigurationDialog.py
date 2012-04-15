@@ -320,9 +320,6 @@ class ConfigurationWidget(QWidget):
                     [self.trUtf8("Help Documentation"),
                     "preferences-helpdocumentation.png",
                     "HelpDocumentationPage", "0helpPage", None],
-                "helpViewersPage": \
-                    [self.trUtf8("Help Viewers"), "preferences-helpviewers.png",
-                    "HelpViewersPage", "0helpPage", None],
                 "helpVirusTotalPage": \
                     [self.trUtf8("VirusTotal Interface"), "virustotal.png",
                     "HelpVirusTotalPage", "0helpPage", None],
