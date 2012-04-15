@@ -62,9 +62,13 @@ class ConfigurationWidget(QWidget):
     @signal preferencesChanged() emitted after settings have been changed
     @signal masterPasswordChanged(str, str) emitted after the master
         password has been changed with the old and the new password
+    @signal accepted() emitted to indicate acceptance of the changes
+    @signal rejected() emitted to indicate rejection of the changes
     """
     preferencesChanged = pyqtSignal()
     masterPasswordChanged = pyqtSignal(str, str)
+    accepted = pyqtSignal()
+    rejected = pyqtSignal()
     
     DefaultMode = 0
     HelpBrowserMode = 1
@@ -358,9 +362,21 @@ class ConfigurationWidget(QWidget):
         
         self.configList.itemActivated.connect(self.__showConfigurationPage)
         self.configList.itemClicked.connect(self.__showConfigurationPage)
+        self.buttonBox.accepted.connect(self.accept)
+        self.buttonBox.rejected.connect(self.rejected)
         
         if displayMode != ConfigurationWidget.TrayStarterMode:
             self.__initLexers()
+        
+    def accept(self):
+        """
+        Public slot to accept the buttonBox accept signal.
+        """
+        wdg = self.focusWidget()
+        if wdg == self.configList:
+            return
+        
+        self.accepted.emit()
         
     def __setupUi(self):
         """
@@ -689,8 +705,8 @@ class ConfigurationDialog(QDialog):
         self.layout.addWidget(self.cw)
         self.resize(size)
         
-        self.cw.buttonBox.accepted[()].connect(self.accept)
-        self.cw.buttonBox.rejected[()].connect(self.reject)
+        self.cw.accepted[()].connect(self.accept)
+        self.cw.rejected[()].connect(self.reject)
         self.cw.preferencesChanged.connect(self.__preferencesChanged)
         self.cw.masterPasswordChanged.connect(self.__masterPasswordChanged)
         
@@ -730,6 +746,9 @@ class ConfigurationDialog(QDialog):
         Public method called to store the selected values into the preferences storage.
         """
         self.cw.setPreferences()
+    
+    def accept(self):
+        super().accept()
 
 
 class ConfigurationWindow(QMainWindow):
@@ -749,8 +768,8 @@ class ConfigurationWindow(QMainWindow):
         self.setCentralWidget(self.cw)
         self.resize(size)
         
-        self.cw.buttonBox.accepted[()].connect(self.accept)
-        self.cw.buttonBox.rejected[()].connect(self.close)
+        self.cw.accepted[()].connect(self.accept)
+        self.cw.rejected[()].connect(self.close)
         
     def showConfigurationPageByName(self, pageName):
         """
